@@ -91,9 +91,10 @@ S1(명세)과 S2(변환기)는 서로 의존하지 않아 같이 간다.
 - 확인: 절마다 "구현이 가리킬 번호"가 있고, 사용자가 읽고 승인한다. 나머지 규칙은 S5 에서 필요할 때 이 문서에 먼저 추가한다
 
 ## S2. 콘텐츠 형식과 변환기 (M2) ★
-- [ ] 형식 ★ (예시 존 하나를 YAML 로 보여 주고 확정): 존 디렉토리 `content/<zone>/` 에 `zone.yaml`, `rooms.yaml`, `mobs.yaml`, `objects.yaml`, `shops.yaml`, `resets.yaml`.
+- [ ] 형식 ★ (예시 존 하나를 YAML 로 보여 주고 확정) — 예시: `third_party/tbamud/examples/` (초보자 지역, `tools/prototype_convert.py`), 확인 대기: 존 디렉토리 `content/<zone>/` 에 `zone.yaml`, `rooms.yaml`, `mobs.yaml`, `objects.yaml`, `shops.yaml`, `resets.yaml`.
   변환된 tbaMUD 콘텐츠는 라이선스 때문에 `third_party/tbamud/content/` 에 둔다
-- [x] ID 체계(D12): 변환물은 `tba:<존>:<vnum>`(예: `tba:30:3001`), 존 번호는 사람이 읽기 위해 넣고 로더가 vnum 과 맞는지 검사. vnum 대응표를 함께 둔다. 새 콘텐츠는 `이름공간:이름`(D10)
+- [x] ID 체계(D12 → D16): 변환물은 `tba:<존>:<종류>:<vnum>`(예: `tba:30:room:3001`, `tba:186:mob:18602`). tbaMUD 는 종류마다 번호를 따로 매기므로 종류를 넣는다.
+  존 번호는 사람이 읽기 위해 넣고 로더가 vnum 과 맞는지 검사. vnum 대응표를 함께 둔다. 새 콘텐츠는 `이름공간:이름`(D10)
 - [ ] 검증: Rust 타입이 곧 스키마(모르는 키 거부), 편집기용 JSON Schema 는 타입에서 생성. 교차 검사(출구가 있는 방을 가리킨다, 리셋의 몹·물건이 있다, 상점 주인이 있다)
 - [x] 변환기는 Rust(`mundi-convert`) ★: 로더와 같은 타입을 쓰므로 "변환 결과 = 로더가 읽는 것"이 컴파일러로 보장된다. anima 의 Python 파서를 대조용으로 쓴다(같은 개수, 같은 값) — D15
 - [ ] 번역 덧씌움: `locales/ko/<zone>.yaml` (ID → 이름·설명·키워드). 초보 지역·Midgaard 를 LLM 일괄 번역 후 검수 (S4 이후)

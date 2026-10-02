@@ -1,0 +1,237 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 186.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+tba:186:obj:18601:
+  type: weapon
+  keywords: [sword, newbie]
+  short: a shiny newbie sword
+  long: A shiny newbie sword is lying here waiting to be possessed.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: slash
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+tba:186:obj:18602:
+  type: armor
+  keywords: [vest, newbie]
+  short: a bright green newbie vest
+  long: A bright green newbie vest is lying here looking for a body to hug.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+
+tba:186:obj:18603:
+  type: armor
+  keywords: [helm, helmet, newbie]
+  short: a bright newbie helm
+  long: A bright newbie helm is hoping a loose head will wander by.
+  flags: [glow, magic]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+
+tba:186:obj:18604:
+  type: armor
+  keywords: [cloak, dark, newbie]
+  short: a dark newbie cloak
+  long: A dark newbie cloak is lying here hoping to smother you.
+  flags: [glow, magic]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: wis
+    modifier: 1
+
+tba:186:obj:18605:
+  type: armor
+  keywords: [ring, signet, newbie]
+  short: a newbie signet ring
+  long: A newbie signet ring is lying in the dust here.
+  flags: [invisible, magic]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+
+tba:186:obj:18606:
+  type: weapon
+  keywords: [dagger, newbie]
+  short: a shiny newbie dagger
+  long: A shiny newbie dagger is lying here looking for a back to stab.
+  flags: [glow, magic]
+  wear: [take, wield, hold]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+tba:186:obj:18607:
+  type: armor
+  keywords: [collar, dragon]
+  short: a pet dragon collar
+  long: Someone's pet dragon has escaped and left his collar here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: ac
+    modifier: -1
+
+tba:186:obj:18608:
+  type: key
+  keywords: [key, newbie]
+  short: a wee little key
+  long: A key with the newbie crest on it is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+tba:186:obj:18609:
+  type: light
+  keywords: [light, jar]
+  short: a brightly glowing jar
+  long: A jar of glowing fluid wants to brighten your day.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    hours: -1
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -1
+
+tba:186:obj:18610:
+  type: armor
+  keywords: [horns, horn]
+  short: the horns of the Minotaur
+  long: The horns of the great Minotaur lie here.
+  flags: [anti_cleric]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+
+tba:186:obj:18611:
+  type: worn
+  keywords: [hide, skin]
+  short: the smelly hide of the Minotaur
+  long: The hide of the great Minotaur is lying here.
+  flags: [anti_cleric]
+  wear: [take, body, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: hit
+    modifier: 15
+
+tba:186:obj:18612:
+  type: armor
+  keywords: [leggings, newbie]
+  short: some cool newbie leggings
+  long: A pair of neat looking leggings are here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 0
+
+tba:186:obj:18613:
+  type: armor
+  keywords: [sleeves, newbie]
+  short: some cool newbie sleeves
+  long: A set of nifty sleeves is here.
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+tba:186:obj:18614:
+  type: weapon
+  keywords: [mace, newbie]
+  short: a glowing newbie mace
+  long: A finely crafted newbie mace is waiting for a worthy owner.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2

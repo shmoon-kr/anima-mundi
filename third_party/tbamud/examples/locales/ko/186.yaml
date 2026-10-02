@@ -1,0 +1,39 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Korean overlay for zone tba:186 (Newbie Zone).
+# Same IDs and the same shape as the base files, IDs carry the kind (D16); only translatable strings. Anything missing falls back to English.
+# keywords are the words a Korean player types to name the thing (공격 괴물, 열기 문) — the English ones keep working.
+# Example entries, translated by hand; the zone's full overlay comes from an LLM batch plus review (S2/S4).
+
+tba:186:room:18600:
+  name: 초보자 지역 입구
+  description: >-
+    아아... 초보자 지역의 입구다! 바로 당신이 찾던 곳이다. 준비가 되었으면 북쪽으로 들어가면 된다.
+  exits:
+    north:
+      look: 초보자 지역의 시작이 보인다.
+    west:
+      look: 그쪽으로 가면 길로 돌아간다... 벌써 겁먹은 건가?
+
+tba:186:room:18602:
+  name: 지저분한 복도
+  description: >-
+    복도를 따라 계속 걷는다. 여기도 별다를 것은 없지만, 남쪽 문 너머와 동쪽에서 분명히 소리가 들린다. 벽은 조금
+    끈적이고 곰팡이가 슬어 있다... 웩, 청소할 사람 하나 못 구했나? 초보자들이 뭐라고 생각하겠어? 뭐, 복도를 따라 동쪽이나
+    서쪽으로 계속 갈 수 있다.
+  exits:
+    south:
+      look: 남쪽으로 작은 방이 있다... 안에서 무언가 움직이는 소리가 들린다.
+      door:
+        keywords: [문]
+
+tba:186:mob:18601:
+  keywords: [구덩이짐승, 짐승]
+  short: 구덩이 짐승
+  long: 크고 못생긴 구덩이 짐승이 당신을 위아래로 훑어보며 서 있다.
+
+tba:186:mob:18602:
+  keywords: [초보, 괴물]
+  short: 초보자 괴물
+  long: 초보자 괴물이 어리둥절한 얼굴로 서 있다. 죽여! 죽여!
+  description: >-
+    참 이상하게 생긴 작은 짐승이다. 해롭지 않아 보이지만 알 수 없는 일이다. 키는 120센티미터쯤인데 꽤 근육질이다...
+    도와줄 게 있냐고 물어볼까? 아니... 그냥 죽이자.
