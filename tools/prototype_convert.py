@@ -103,6 +103,19 @@ def prose(text):
     return Prose("\n".join(paras))      # one line per paragraph: one blank line in the file
 
 
+def dice(text):
+    """'NdS+B' -> an int when nothing is rolled (0d0+20 is 20, 1d1+50 is 51), else the dice text."""
+    m = re.fullmatch(r"(\d+)d(\d+)([+-]\d+)?", text)
+    if not m:
+        return text
+    n, sides, bonus = int(m.group(1)), int(m.group(2)), int(m.group(3) or 0)
+    if n == 0 or sides == 0:
+        return bonus
+    if sides == 1:
+        return n + bonus
+    return text if bonus else f"{n}d{sides}"
+
+
 # --- zones (for ids of rooms in other zones)
 zones = {}
 for f in sorted((WORLD / "zon").glob("*.zon")):
@@ -208,7 +221,7 @@ while i < len(ls):
     af = flags(f[4], AFF_BITS) if len(f) >= 10 else []
     if af:
         mob["affects"] = af
-    mob["combat"] = {"thac0": int(thac0), "armor": int(ac), "hit_points": hp, "damage": dam}
+    mob["combat"] = {"thac0": int(thac0), "armor": int(ac), "hit_points": dice(hp), "damage": dice(dam)}
     if extra:
         mob["combat"].update(extra)
     mob["gold"], mob["exp"] = int(gold), int(exp)
@@ -380,7 +393,7 @@ LEGEND = {
                 "# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door\n"
                 "# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).\n"),
  "mobs.yaml": ("# keywords: words to name it in commands; short: in sentences (\"the pit beast\"); long: its line in a room.\n"
-               "# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage are dice.\n"),
+               "# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.\n"),
  "objects.yaml": ("# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).\n"
                   "# level: minimum level to use it. affects: apply + modifier while worn.\n"),
  "resets.yaml": ("# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object\n"

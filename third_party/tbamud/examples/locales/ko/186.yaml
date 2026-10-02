@@ -1,6 +1,7 @@
 # tbaMUD-derived (third_party/tbamud/NOTICE.md). Korean overlay for zone tba:186 (Newbie Zone).
 # Same IDs and the same shape as the base files, IDs carry the kind (D16); only translatable strings. Anything missing falls back to English.
-# keywords are the words a Korean player types to name the thing (공격 괴물, 열기 문) — the English ones keep working.
+# Commands are English (D17): keywords are not translated. The renderer shows the English keyword next to the
+# Korean name where you would type it, e.g. 구덩이 짐승(beast) (D18).
 # Example entries, translated by hand; the zone's full overlay comes from an LLM batch plus review (S2/S4).
 
 tba:186:room:18600:
@@ -22,16 +23,12 @@ tba:186:room:18602:
   exits:
     south:
       look: 남쪽으로 작은 방이 있다... 안에서 무언가 움직이는 소리가 들린다.
-      door:
-        keywords: [문]
 
 tba:186:mob:18601:
-  keywords: [구덩이짐승, 짐승]
   short: 구덩이 짐승
   long: 크고 못생긴 구덩이 짐승이 당신을 위아래로 훑어보며 서 있다.
 
 tba:186:mob:18602:
-  keywords: [초보, 괴물]
   short: 초보자 괴물
   long: 초보자 괴물이 어리둥절한 얼굴로 서 있다. 죽여! 죽여!
   description: >-
