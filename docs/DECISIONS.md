@@ -67,3 +67,24 @@ tbaMUD 소스를 읽어 규칙을 `docs/MECHANICS.md` 에 사실·공식·표로
 ## D12. 변환된 tbaMUD 콘텐츠의 ID 는 `tba:<존>:<vnum>` (2026-10-03)
 예: `tba:30:3001`. vnum 만으로도 유일하지만, 사람이 ID 를 읽을 때 존이 바로 보이도록 존 번호를 넣는다.
 존 번호는 vnum 에서 계산되는 값이므로 변환기가 넣고, 로더는 두 값이 맞는지 검사한다. vnum 대응표는 함께 둔다. 새 콘텐츠는 `이름공간:이름`(D10)
+
+## D13. 크레이트 구조: 지각은 시뮬레이션 안, 계약 타입은 따로 (2026-10-03)
+`mundi-protocol`(계약 타입) · `mundi-content` · `mundi-convert` · `mundi-sim` · `mundi-render` · `mundi-store` · `mundi-net` · `mundi-server`.
+- **지각 필터는 `mundi-sim` 안.** "이 캐릭터가 지금 이걸 볼 수 있나"는 빛·자세·위치·실명·투명으로 정해지는 시뮬레이션의 사실이다.
+  사건 → 지각 필터(수신자와 각자 보는 내용) → 수신자별 이벤트 → 에이전트에겐 그대로, 사람에겐 렌더러를 거쳐 문장. 렌더러에 두면 문장만 걸러지고
+  에이전트에게 가는 이벤트가 필터를 건너뛸 수 있다(원칙 2 위반)
+- **`mundi-protocol`** 은 sim·render·net 이 공통으로 의존하는 계약 타입. 렌더러는 sim 에 의존하지 않는다
+- 원칙은 의존 관계로 강제하고 테스트로 지킨다(`crates/mundi-server/tests/architecture.rs`): sim 은 render·store·net 과 그 라이브러리(tokio, rusqlite, fluent)에
+  닿지 않고, render 는 sim 에, net 은 sim·store 에 닿지 않는다. 새 크레이트는 규칙표에 넣어야 테스트가 통과한다
+
+## D14. 엔진 계약: anima PROTOCOL v0 1부 + 네 가지 추가 (2026-10-03)
+Mundi 는 anima `PROTOCOL.md` v0 1부를 구현하고, 텍스트 어댑터로는 채울 수 없던 것을 채운다(호환 추가, anima 와 함께 v0.x 로 올린다):
+- 모든 엔티티의 고유 `id` (v0 에 선택 필드로 자리만 있던 것)
+- 사람용 **렌더링된 문장** (수신자의 언어·관점, 이벤트와 함께)
+- 정확한 수치 (`damage` 등)
+- 접속 시 클라이언트가 원하는 **언어** (`lang: en|ko`, 없으면 영어)
+의도 명령(`move`, `attack(id)`)은 1단계에서 텍스트 명령으로 대신하고 자리만 둔다
+
+## D15. tbaMUD 변환기는 Rust (2026-10-03)
+`mundi-convert` 는 `mundi-content` 의 타입으로 쓴다. 로더와 같은 타입이라 "변환기가 쓴 것을 로더가 그대로 읽는다"가 컴파일러로 보장된다.
+anima 의 Python 파서(`anima/memoria/importers/tbamud.py`)는 대조용(같은 개수·같은 값)

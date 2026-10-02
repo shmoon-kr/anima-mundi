@@ -1,0 +1,18 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "AGPL-3.0-only"
+repository = "https://github.com/shmoon-kr/anima-mundi"
+rust-version = "1.85"
+
+[workspace.dependencies]
+mundi-protocol = { path = "crates/mundi-protocol" }
+mundi-content = { path = "crates/mundi-content" }
+mundi-sim = { path = "crates/mundi-sim" }
+mundi-render = { path = "crates/mundi-render" }
+mundi-store = { path = "crates/mundi-store" }
+mundi-net = { path = "crates/mundi-net" }
