@@ -34,6 +34,7 @@
 from __future__ import annotations
 
 import hashlib
+import glob
 import json
 import random
 import re
@@ -796,7 +797,6 @@ def apply_proposals(zone, terms, examples):
 
 
 QUEUE = LOCALE / "queue.yaml"
-REFILL = 5
 
 
 def untranslated_zones():
@@ -819,18 +819,47 @@ def untranslated_zones():
     return [z for *_, z in sorted(out)]
 
 
-def next_from_queue(log):
-    """The next zone of the queue (taken off it); an empty queue is filled first. None: nothing left."""
+def visited_zones(pattern):
+    """Zones someone has been in, most visited first: the room views (`"type": "room"`, an id that is a
+    room number) of the play recordings that match the glob (anima's recordings/mundi/*.jsonl)."""
+    zone_of = {}
+    for d in CONTENT.iterdir():
+        f = d / "rooms.yaml"
+        if d.name.isdigit() and f.exists():
+            for id_ in (yaml.safe_load(f.read_text(encoding="utf-8")) or {}):
+                zone_of[int(str(id_).rsplit(":", 1)[-1])] = d.name
+    seen = {}
+    for path in glob.glob(pattern):
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                if '"room"' not in line:
+                    continue
+                try:
+                    e = json.loads(line)
+                except ValueError:
+                    continue
+                v = (e.get("data") or {}).get("id") if e.get("type") == "room" else None
+                if isinstance(v, int) and v in zone_of:
+                    seen[zone_of[v]] = seen.get(zone_of[v], 0) + 1
+    return sorted(seen, key=lambda z: -seen[z])
+
+
+def next_from_queue(log, visited=None):
+    """The next zone of the queue (taken off it). An empty queue is filled only with untranslated zones
+    someone has actually been in (`visited`, a recordings glob); without it, not at all: Claude ends
+    up reviewing nearly every field of a zone (20-40% wrong), so only zones that are played are worth
+    it (2026-10-04). None: nothing to do now."""
     q = (read_yaml(QUEUE, {}) or {}).get("zones", [])
-    if not q:
-        q = untranslated_zones()[:REFILL]
+    if not q and visited:
+        todo = set(untranslated_zones())
+        q = [z for z in visited_zones(visited) if z in todo]
         if q:
-            log(f"queue empty: filled with {q}")
+            log(f"queue empty: filled with zones that were played: {q}")
     if not q:
         return None
     zone, rest = str(q[0]), q[1:]
-    QUEUE.write_text("# Zones to translate next, first first (tools/translate_ko.py --queue takes one at a time and\n"
-                     "# fills it when empty). Edit freely: it is read again before each zone.\n"
+    QUEUE.write_text("# Zones to translate next, first first (tools/translate_ko.py --queue takes one at a time; empty, it\n"
+                     "# is filled only with zones that were played: --visited). Edit freely: it is read again before each zone.\n"
                      + yaml.safe_dump({"zones": rest}, allow_unicode=True), encoding="utf-8")
     return zone
 
@@ -842,6 +871,15 @@ def main():
     queue = "--queue" in args
     if queue:
         args.remove("--queue")
+    visited = watch = None
+    if "--visited" in args:
+        i = args.index("--visited")
+        visited = args[i + 1]
+        del args[i:i + 2]
+    if "--watch" in args:                     # with nothing to do, look again after this many minutes
+        i = args.index("--watch")
+        watch = float(args[i + 1])
+        del args[i:i + 2]
     if "--review" in args:
         i = args.index("--review")
         reviewer = args[i + 1]
@@ -864,8 +902,11 @@ def main():
     def work():
         yield from zones
         while queue:
-            z = next_from_queue(log)
+            z = next_from_queue(log, visited)
             if z is None:
+                if watch:
+                    time.sleep(watch * 60)
+                    continue
                 log("nothing left to translate")
                 return
             yield z
