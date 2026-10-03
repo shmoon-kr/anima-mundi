@@ -614,16 +614,13 @@ def sample(zone, n=REVIEW_N):
             for i, k, en, kv in rng.sample(pairs, min(n, len(pairs)))]
 
 
-def review(zone, reviewer, log):
-    """Claude's review of a sample of the zone, kept and applied. The wrong rate (None if no review)."""
-    items = sample(zone)
-    if not items:
-        return None
+def judge(zone, items, reviewer, log):
+    """Claude's verdict on these fields, written into each item (verdict, note, fix). The reply, or None."""
     user = json.dumps([{"n": n, "en": it["en"], "ko": it["ko"]} for n, it in enumerate(items, 1)], ensure_ascii=False)
     argv = [*reviewer.split(), "-p", "--output-format", "text", "--tools", "", "--no-session-persistence",
             "--strict-mcp-config", "--system-prompt", REVIEW_SYSTEM]
     try:
-        out = subprocess.run(argv, input=user, capture_output=True, text=True, timeout=600, check=True).stdout
+        out = subprocess.run(argv, input=user, capture_output=True, text=True, timeout=900, check=True).stdout
         verdict = json.loads(out[out.find("{"):out.rfind("}") + 1])
     except (OSError, subprocess.SubprocessError, ValueError) as e:
         log(f"zone {zone}: review failed ({type(e).__name__}: {str(e)[:200]})")
@@ -633,6 +630,50 @@ def review(zone, reviewer, log):
         it["verdict"], it["note"] = by_n.get(n, {}).get("verdict", "?"), by_n.get(n, {}).get("note", "")
         if it["verdict"] in ("wrong", "awkward") and by_n.get(n, {}).get("fix"):
             it["fix"] = by_n[n]["fix"]
+    return verdict
+
+
+FULL_BATCH = 30
+
+
+def review_all(zone, reviewer, log):
+    """Every field of a zone through Claude, a batch at a time, fixes and proposals applied: for a zone
+    whose sample was too often wrong (the batch stopped). Kept in reviews/<zone>.full.yaml."""
+    items = sample(zone, n=10 ** 9)
+    done, added, fixed = [], [], []
+    for i in range(0, len(items), FULL_BATCH):
+        batch = items[i:i + FULL_BATCH]
+        verdict = judge(zone, batch, reviewer, log)
+        if verdict is None:
+            continue
+        fixed += apply_fixes(zone, batch)
+        added += apply_proposals(zone, verdict.get("glossary", []), verdict.get("examples", []))
+        done += batch
+        log(f"zone {zone}: full review {min(i + FULL_BATCH, len(items))}/{len(items)}")
+    if not done:
+        return None
+    wrong = sum(it["verdict"] == "wrong" for it in done) / len(done)
+    awkward = sum(it["verdict"] == "awkward" for it in done) / len(done)
+    REVIEWS.mkdir(exist_ok=True)
+    record = {"zone": str(zone), "date": time.strftime("%Y-%m-%d %H:%M"), "reviewer": "claude", "full": True,
+              "n": len(done), "of": len(items), "wrong_rate": round(wrong, 3), "awkward_rate": round(awkward, 3),
+              "added_to_glossary": added, "fixed": fixed,
+              "not_ok": [it for it in done if it["verdict"] != "ok"]}
+    (REVIEWS / f"{zone}.full.yaml").write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False, width=120),
+                                               encoding="utf-8")
+    log(f"zone {zone}: full review of {len(done)}/{len(items)} fields: wrong {wrong:.0%}, awkward {awkward:.0%}, "
+        f"{len(fixed)} fixed, {len(added)} added to the glossary")
+    return wrong
+
+
+def review(zone, reviewer, log):
+    """Claude's review of a sample of the zone, kept and applied. The wrong rate (None if no review)."""
+    items = sample(zone)
+    if not items:
+        return None
+    verdict = judge(zone, items, reviewer, log)
+    if verdict is None:
+        return None
     fixed = apply_fixes(zone, items)
     wrong = sum(it["verdict"] == "wrong" for it in items) / len(items)
     awkward = sum(it["verdict"] == "awkward" for it in items) / len(items)
@@ -760,6 +801,13 @@ def main():
     zones = args
     if cmd == "check":
         sys.exit(1 if any([check(z) for z in zones]) else 0)
+
+    def log(msg):
+        print(time.strftime("%H:%M:%S"), msg, flush=True)
+    if cmd == "review-all":
+        for z in zones:
+            review_all(z, reviewer, log)
+        return
 
     def log(msg):
         print(time.strftime("%H:%M:%S"), msg, flush=True)
