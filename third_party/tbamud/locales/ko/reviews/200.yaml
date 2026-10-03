@@ -1,0 +1,130 @@
+zone: '200'
+date: 2026-10-04 03:46
+reviewer: claude
+n: 15
+wrong_rate: 0.267
+awkward_rate: 0.267
+stopped: true
+added_to_glossary:
+- term highway -> 대로
+- term woodsman -> 나무꾼
+- term solid (재료 앞) -> 순- / 통-
+- term fur (상품) -> 모피
+- term lunatic -> 미치광이
+- example Jaron, the lunatic
+- example The trees continue to thin to the north.
+- example you could never find a better bargain anywhere else
+fixed:
+- tba:200:obj:20006 short
+- tba:200:room:20005 name
+- tba:200:obj:20003 short
+- tba:200:room:20004 description
+- tba:200:mob:20007 description
+- tba:200:room:20021 description
+- tba:200:room:20022 description
+- tba:200:mob:20010 short
+sample:
+- id: tba:200:obj:20007
+  field: short
+  en: a rabbit's foot
+  ko: 토끼 발
+  verdict: ok
+  note: ''
+- id: tba:200:obj:20006
+  field: short
+  en: an axe of a woodsman
+  ko: 산림 노동자의 도끼
+  verdict: awkward
+  note: '''산림 노동자''는 현대 행정 용어라 판타지 분위기에 맞지 않는다. woodsman은 ''나무꾼''이 자연스럽다.'
+  fix: 나무꾼의 도끼
+- id: tba:200:room:20005
+  field: name
+  en: Western Highway
+  ko: 서쪽 고속도로
+  verdict: wrong
+  note: highway를 '고속도로'로 옮기면 현대 자동차 도로가 된다. 중세 판타지의 간선 도로이므로 '대로'가 맞다. Western도 방향보다는 고유 지명으로 '서부'가 자연스럽다.
+  fix: 서부 대로
+- id: tba:200:obj:20015
+  field: short
+  en: a thick black fur coat
+  ko: 두꺼운 검은 털가죽 코트
+  verdict: ok
+  note: ''
+- id: tba:200:room:20027
+  field: name
+  en: Dirt Road
+  ko: 흙길
+  verdict: ok
+  note: ''
+- id: tba:200:obj:20003
+  field: short
+  en: a solid brass crucifix
+  ko: 단단한 황동 십자가
+  verdict: wrong
+  note: solid는 '단단한'이 아니라 다른 재료를 섞지 않고 전부 황동으로 만들었다는 뜻이다.
+  fix: 순황동 십자가
+- id: tba:200:mob:20009
+  field: long
+  en: A red fox lopes along, trying to keep a safe distance from you.
+  ko: 붉은 여우가 당신과 안전한 거리를 유지하려 하며 가볍게 뛰어간다.
+  verdict: ok
+  note: ''
+- id: tba:200:obj:20019
+  field: extras.0.text
+  en: These gloves are well made and extremely sturdy.
+  ko: 이 장갑은 잘 만들어졌으며 매우 튼튼하다.
+  verdict: ok
+  note: ''
+- id: tba:200:obj:20024
+  field: extras.0.text
+  en: The twine looks like hemp, but hard to tell.  It has been braided into a looping knot that can fit over your finger.
+  ko: 삼으로 만든 실처럼 보이지만 확신할 수는 없다. 손가락에 끼울 수 있는 크기로 매듭을 지어 고리 모양으로 엮어 놓았다.
+  verdict: ok
+  note: ''
+- id: tba:200:room:20004
+  field: description
+  en: You continue your way along the western highway.  It stretches east, back to the Capital and west deeper into the wilderness,
+    plains to the south and thick forest to the north.
+  ko: 당신은 서쪽 고속도로를 따라 계속 나아간다. 이 도로는 동쪽으로는 수도까지, 서쪽으로는 황야 깊숙한 곳까지 이어지며, 남쪽으로는 평원이, 북쪽으로는 울창한 숲이 펼쳐져 있다.
+  verdict: wrong
+  note: highway를 '고속도로'로 오역했다. 'back to the Capital'의 '되돌아가는' 뉘앙스도 빠졌다. 문장이 너무 길어서 나누는 편이 자연스럽다.
+  fix: 당신은 서부 대로를 따라 계속 나아간다. 길은 동쪽으로는 수도로 되돌아가고, 서쪽으로는 황야 깊숙이 이어진다. 남쪽으로는 평원이, 북쪽으로는 울창한 숲이 펼쳐져 있다.
+- id: tba:200:mob:20007
+  field: description
+  en: This old man looks at you with a toothless grin and begins to haggle with you immediately.  He swears that he sells
+    the finest furs in the realm and you could never find a better bargain anywhere else.
+  ko: 이 노인은 이가 빠진 웃음을 지으며 당신을 바라보더니 곧바로 흥정을 시작한다. 그는 이 땅에서 가장 좋은 털을 판다고 맹세하며, 다른 어디에서도 이보다 더 좋은 bargains을 찾을 수 없다고 주장한다.
+  verdict: wrong
+  note: '''bargains''를 번역하지 않고 영어 그대로 남겼다. 상품으로서의 furs는 ''털''보다 ''모피''가 맞다.'
+  fix: 이 노인은 이가 다 빠진 입으로 히죽 웃으며 당신을 바라보더니 곧바로 흥정을 걸어온다. 그는 이 땅에서 가장 좋은 모피를 판다고 맹세하며, 다른 어디에서도 이보다 싼 값에 살 수는 없을 거라고 장담한다.
+- id: tba:200:room:20021
+  field: description
+  en: As you move along the dirt road you notice the trees have grown in closer to the path, hanging around you.  Thick underbrush
+    has begun to form to the sides and the road looks unkept.  It is slowly being consumed by the forest around it.
+  ko: 흙길을 따라 걷다 보니 나무들이 길 쪽으로 더 가까이 자라나 당신을 둘러싸고 있다. 양쪽으로 짙은 덤불이 형성되기 시작했고, 길은 관리가 되지 않는 모습이다. 주변 숲이 이 길을 서서히 삼켜가고 있다.
+  verdict: awkward
+  note: 의미는 맞지만 '덤불이 형성되기 시작했고', '관리가 되지 않는 모습이다'가 딱딱하다. hanging around you는 가지가 드리운 모습을 뜻한다.
+  fix: 흙길을 따라 걷다 보니 나무들이 길 가까이까지 자라 들어와 당신 주위로 가지를 드리우고 있다. 길 양옆으로는 덤불이 무성해지기 시작했고, 길은 돌보는 이 없이 방치된 모습이다. 주변 숲이 길을 서서히 집어삼키고
+    있다.
+- id: tba:200:room:20037
+  field: name
+  en: Dirt Road
+  ko: 흙길
+  verdict: ok
+  note: ''
+- id: tba:200:room:20022
+  field: description
+  en: The sounds of wildlife fill the woods.  Birds, squirrels, and other unseen animals stay just out of sight.  They seem
+    unused to travellers and are very wary.  The trees continue to thin to the north.
+  ko: 야생동물들의 소리가 숲을 가득 채운다. 새와 다람쥐, 그리고 다른 보이지 않는 동물들은 시야에서 살짝 벗어나 있다. 그들은 여행객에 익숙하지 않은 듯 매우 경계하고 있다. 북쪽으로 갈수록 나무들은 계속 옅어진다.
+  verdict: awkward
+  note: '''보이지 않는 동물들은 시야에서 벗어나 있다''는 같은 말을 되풀이한다. 나무가 thin한다는 표현을 ''옅어진다''로 옮긴 것도 어색하다. 이때는 ''듬성듬성해진다''가 자연스럽다.'
+  fix: 야생동물 소리가 숲을 가득 채운다. 새와 다람쥐, 그리고 모습을 드러내지 않는 다른 동물들이 보일 듯 말 듯한 곳에 머물러 있다. 여행자에게 익숙하지 않은지 몹시 경계하는 눈치다. 북쪽으로 갈수록 나무가 점점
+    듬성듬성해진다.
+- id: tba:200:mob:20010
+  field: short
+  en: Jaron, the lunatic
+  ko: 자론, 광인
+  verdict: awkward
+  note: '''이름, the 칭호'' 구조를 쉼표째 직역했다. 한국어에서는 칭호를 이름 앞에 둔다.'
+  fix: 미치광이 자론

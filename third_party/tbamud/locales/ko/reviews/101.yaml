@@ -1,0 +1,131 @@
+zone: '101'
+date: 2026-10-04 03:01
+reviewer: claude
+n: 15
+wrong_rate: 0.2
+awkward_rate: 0.2
+stopped: true
+added_to_glossary:
+- term moonshine -> 밀주
+- example To the east and west farmland stretches as far as you can see.
+- example A lifetime's worth of hard work on the farm has aged him beyond his years.
+- example He reeks of homemade moonshine.
+- example A gust of warm wind blows in from the east warning you that the desert isn't far off.
+fixed:
+- tba:101:mob:10100 description
+- tba:101:room:10117 description
+- tba:101:room:10120 description
+- tba:101:room:10101 description
+- tba:101:mob:10112 long
+- tba:101:mob:10112 description
+sample:
+- id: tba:101:mob:10100
+  field: description
+  en: He looks very old and tired.  A lifetime's worth of hard work on the farm has aged him beyond his years.
+  ko: 그는 매우 늙고 지쳐 보인다. 농장에서 평생 해온 힘든 노동이 그의 나이를 훨씬 넘어서게 만들었다.
+  verdict: awkward
+  note: '''aged him beyond his years''는 ''제 나이보다 늙어 보이게 했다''는 뜻이다. ''그의 나이를 훨씬 넘어서게 만들었다''는 직역이라 뜻이 흐리고 어색하다.'
+  fix: 그는 몹시 늙고 지쳐 보인다. 농장에서 평생 해 온 고된 노동 탓에 제 나이보다 훨씬 늙어 보인다.
+- id: tba:101:obj:10104
+  field: long
+  en: A shovel covered in cow manure smells here.
+  ko: 소 분뇨로 뒤덮인 삽에서 냄새가 풍긴다.
+  verdict: ok
+  note: ''
+- id: tba:101:room:10114
+  field: name
+  en: The South Road
+  ko: 남쪽 길
+  verdict: ok
+  note: ''
+- id: tba:101:room:10101
+  field: extras.0.text
+  en: You are looking at the great gates of XXXX.  The citywall towers before you, there is no way you could get in, save
+    through these huge gates.
+  ko: 당신은 XXXX의 거대한 성문을 바라보고 있다. 도시의 성벽이 눈앞에 우뚝 서 있으며, 이 거대한 성문을 통하지 않고는 들어갈 수 있는 방법이 없다.
+  verdict: ok
+  note: ''
+- id: tba:101:obj:10112
+  field: short
+  en: some camouflage gloves
+  ko: 위장 장갑
+  verdict: ok
+  note: ''
+- id: tba:101:room:10119
+  field: name
+  en: The South Road
+  ko: 남쪽 길
+  verdict: ok
+  note: ''
+- id: tba:101:room:10117
+  field: description
+  en: You are walking on the south road between the city and Haven.  It continues to the north and south while to the east,
+    your path and view are blocked by a formation of rocks.  To the west grassy plains stretch as far as you can see.
+  ko: 당신은 도시와 헤이븐 사이의 남쪽 도로를 걷고 있다. 이 도로는 북쪽과 남쪽으로 이어지며, 동쪽에는 바위 지형이 당신의 길과 시야를 가로막고 있다. 서쪽으로는 눈이 닿는 한계까지 풀이 우거진 평원이 펼쳐져 있다.
+  verdict: awkward
+  note: '''눈이 닿는 한계까지''는 ''as far as you can see''를 직역한 딱딱한 표현이다.'
+  fix: 당신은 도시와 헤이븐 사이의 남쪽 도로를 걷고 있다. 도로는 북쪽과 남쪽으로 이어지며, 동쪽은 바위 무더기가 길과 시야를 가로막고 있다. 서쪽으로는 눈길이 닿는 데까지 풀이 우거진 평원이 펼쳐져 있다.
+- id: tba:101:room:10120
+  field: description
+  en: You are walking on the south road, somewhere between the city and Haven. The road continues east and west from here
+    while to the north, your view and path are blocked by a small formation of rocks.  In the distance to the south you can
+    barely see the beginning of a seemingly ancient dense forest.
+  ko: 당신은 도시와 헤이븐 사이의 남쪽 도로를 걷고 있다. 이 도로에서 동서로 이어지며, 북쪽으로는 작은 바위 덩어리가 시야와 길을 가로막고 있다. 남쪽 멀리로는 고대처럼 보이는 울창한 숲의 시작 부분이 희미하게
+    보인다.
+  verdict: wrong
+  note: '''somewhere''(어딘가)가 빠졌다. ''이 도로에서 동서로 이어지며''는 주어가 없어 문장이 성립하지 않는다. 원문은 ''길은 여기서 동서로 이어진다''는 뜻이다. ''barely''는 ''겨우''가
+    더 정확하다.'
+  fix: 당신은 도시와 헤이븐 사이 어딘가의 남쪽 도로를 걷고 있다. 도로는 여기서 동쪽과 서쪽으로 이어지며, 북쪽은 작은 바위 무더기가 시야와 길을 가로막고 있다. 남쪽 멀리로 아주 오래되어 보이는 울창한 숲의 초입이
+    겨우 보인다.
+- id: tba:101:room:10101
+  field: description
+  en: You are just south of the gates to a city.  A gust of warm wind blows in from the east warning you that the desert isn't
+    far off in that direction.  The road leads off to the south, and north into the capital.  To the east and west farmland
+    stretches as far as you can see.
+  ko: 당신은 도시의 성문 바로 남쪽에 서 있다. 동쪽에서 불어오는 따뜻한 바람이 그 방향으로 사막이 그리 멀지 않음을 경고한다. 길은 남쪽으로 뻗어 있고, 북쪽으로는 수도로 이어진다. 동쪽과 서쪽으로는 시야가 닿는
+    한계까지 농지가 펼쳐져 있다.
+  verdict: awkward
+  note: 바람이 '경고한다'는 직역투이다. '시야가 닿는 한계까지'도 딱딱하다.
+  fix: 당신은 도시의 성문 바로 남쪽에 서 있다. 동쪽에서 따뜻한 바람이 훅 불어와 그쪽으로 사막이 멀지 않음을 알려 준다. 길은 남쪽으로 뻗어 있고, 북쪽으로는 수도로 이어진다. 동쪽과 서쪽으로는 눈길이 닿는 데까지
+    농지가 펼쳐져 있다.
+- id: tba:101:room:10126
+  field: name
+  en: A Small Trali
+  ko: 작은 오솔길
+  verdict: ok
+  note: 원문 'Trali'는 'Trail'의 오타로 보이며, 번역은 올바르다.
+- id: tba:101:mob:10112
+  field: short
+  en: Bubba
+  ko: 버바
+  verdict: ok
+  note: ''
+- id: tba:101:room:10120
+  field: name
+  en: The South Road
+  ko: 남쪽 길
+  verdict: ok
+  note: ''
+- id: tba:101:mob:10112
+  field: long
+  en: Bubba staggers by, a little tipsy from his moonshine.
+  ko: 버바가 자작주에 살짝 취해 비틀거리며 지나간다.
+  verdict: wrong
+  note: '''moonshine''은 몰래 빚은 술, 곧 ''밀주''이다. ''자작주''는 쓰이지 않는 말이고, ''자작''은 ''스스로 술을 따라 마심''으로 읽힌다.'
+  fix: 버바가 밀주에 살짝 취해 비틀거리며 지나간다.
+- id: tba:101:room:10105
+  field: description
+  en: You are walking on the south road between the city and Haven.  Farmland dominates the view to the east and west while
+    the road continues to the north and south.  A gust of warm wind blowing in from the east reminds you that you are not
+    as far off from the desert as you might have thought.
+  ko: 당신은 도시와 헤이븐 사이의 남쪽 도로를 걷고 있다. 동쪽과 서쪽 시야는 농지로 가득 차 있으며, 도로는 북쪽과 남쪽으로 이어진다. 동쪽에서 불어오는 따뜻한 바람 한 줄기가 사막이 생각보다 그리 멀지 않음을
+    일깨워 준다.
+  verdict: ok
+  note: ''
+- id: tba:101:mob:10112
+  field: description
+  en: He reeks of homemade moonshine, most likely made from corn.  He is the typical hillbilly, and fits his name to a tee.
+  ko: 그는 아마 옥수수로 만든 자작주의 냄새가 진동한다. 그는 전형적인 산골 촌놈이며, 그의 이름은 그에게 딱 들어맞는다.
+  verdict: wrong
+  note: '''moonshine''을 ''자작주''로 잘못 옮겼다. ''그는 ... 냄새가 진동한다''는 주어 호응이 틀렸고 ''그에게서''가 맞다. ''그의 이름은 그에게 딱 들어맞는다''는 반복이 많아 어색하다.'
+  fix: 그에게서 아마도 옥수수로 빚었을 집에서 담근 밀주 냄새가 진동한다. 전형적인 산골 촌뜨기로, 이름이 그에게 딱 어울린다.

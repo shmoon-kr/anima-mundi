@@ -1,0 +1,123 @@
+zone: '37'
+date: 2026-10-04 06:00
+reviewer: claude
+n: 15
+wrong_rate: 0.067
+awkward_rate: 0.333
+stopped: false
+added_to_glossary:
+- term pipe (하수도 구조물) -> 배관
+- term large -> 큰, 커다란
+- term pool (동굴·하수도) -> 물웅덩이
+- example Around your ankles you feel the water flowing towards it.
+- example A three-way crossing.
+- example Your torch' presence has made it blind.
+fixed:
+- tba:37:room:3707 extras.1.text
+- tba:37:room:3740 name
+- tba:37:room:3710 description
+- tba:37:room:3717 exits.south.look
+- tba:37:mob:3709 description
+- tba:37:room:3705 exits.north.look
+sample:
+- id: tba:37:room:3707
+  field: extras.1.text
+  en: The hole is about 3 feet high, and must've been dug out by big rats.  It's full of marks of teeth.
+  ko: 구멍은 약 90센티미터 높이며, 큰 쥐들이 파낸 것이 틀림없다. 이빨 자국으로 가득 차 있다.
+  verdict: awkward
+  note: 의미는 맞지만 '약 90센티미터 높이며'는 번역투이다. '높이가 ~쯤 되며'가 자연스럽다. 마지막 문장은 주어 없이 '이빨 자국으로 가득 차 있다'라고 해서 무엇이 가득 찼는지 흐릿하다.
+  fix: 구멍은 높이가 90센티미터쯤 되는데, 큰 쥐들이 파낸 것이 틀림없다. 구멍 안은 온통 이빨 자국투성이다.
+- id: tba:37:room:3714
+  field: exits.north.look
+  en: The dirt tunnel continues.
+  ko: 흙 터널이 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:37:mob:3705
+  field: short
+  en: the bat
+  ko: 박쥐
+  verdict: ok
+  note: ''
+- id: tba:37:room:3740
+  field: name
+  en: The pool
+  ko: 연못
+  verdict: awkward
+  note: '''연못''은 주로 정원이나 마을의 못을 떠올리게 한다. 눈먼 물고기가 사는 동굴 속 물이므로 ''물웅덩이''가 맞아 보인다. 다만 방 본문을 보지 못했으므로 확인이 필요하다.'
+  fix: 물웅덩이
+- id: tba:37:obj:3710
+  field: long
+  en: An extremely dirty key is lying here.
+  ko: 여기에는 매우 더러운 열쇠가 놓여 있다.
+  verdict: ok
+  note: ''
+- id: tba:37:room:3710
+  field: description
+  en: The pipe bends here, going south and west.  West you see a drainhole and around your ankles you feel the water flowing
+    towards it.  The fungus on the walls are luminous, so you have every chance to study the dirty ceiling, the green slime,
+    and the big rats.  From the west you hear the sounds of big creatures eating - or is it many small?
+  ko: 파이프가 여기서 남쪽과 서쪽으로 굽어진다. 서쪽에는 배수구가 보이며, 발목 주변으로 물이 그쪽으로 흐르는 것을 느낄 수 있다. 벽에 자라는 곰팡이가 발광하므로 더러운 천장, 초록색 점액, 그리고 큰 쥐들을 자세히
+    살펴볼 수 있다. 서쪽에서 큰 생물들이 먹는 소리가 들린다 - 아니면 작은 생물들이 많이?
+  verdict: awkward
+  note: 다른 항목에서는 pipe를 '배관'으로 옮겼는데 여기서만 '파이프'라고 해서 용어가 어긋난다. '~것을 느낄 수 있다', '발광하므로'는 딱딱한 표현이다. 마지막 문장의 '- 아니면 작은 생물들이 많이?'는
+    문장이 끊긴 채 대시를 그대로 옮긴 번역투이다.
+  fix: 배관이 여기서 남쪽과 서쪽으로 꺾인다. 서쪽에 배수구가 보이고, 발목께로 물이 그쪽을 향해 흘러가는 것이 느껴진다. 벽에 핀 곰팡이가 빛을 내고 있어서 더러운 천장과 초록색 점액, 큰 쥐들을 마음껏 살펴볼
+    수 있다. 서쪽에서 커다란 생물들이 무언가를 먹는 소리가 들린다. 아니, 작은 것들이 여럿인 걸까?
+- id: tba:37:room:3717
+  field: exits.south.look
+  en: A large pipe leads southwards.
+  ko: 거대한 배관이 남쪽으로 이어진다.
+  verdict: wrong
+  note: large는 '큰/커다란'이라는 뜻인데, '거대한'(huge, enormous)으로 옮겨 크기를 과장했다.
+  fix: 커다란 배관이 남쪽으로 이어진다.
+- id: tba:37:room:3712
+  field: name
+  en: A dirt tunnel
+  ko: 흙 터널
+  verdict: ok
+  note: ''
+- id: tba:37:mob:3709
+  field: description
+  en: Having spent it's entire life in this cave, the fish has never used its eyes. Your torch' presence has made it blind.
+  ko: 이 동굴에서 평생 살았던 탓에 이 물고기는 눈을 한 번도 사용하지 않았다. 당신의 횃불이 그 눈을 멀게 만들었다.
+  verdict: awkward
+  note: 뜻은 맞지만 '살았던 탓에', '사용하지 않았다'가 어색하다. '당신의 횃불이 그 눈을 멀게 만들었다'는 사역형을 그대로 옮긴 번역투이다.
+  fix: 평생을 이 동굴에서 살아온 탓에 이 물고기는 눈을 한 번도 써 본 적이 없다. 당신의 횃불 빛에 그만 눈이 멀어 버렸다.
+- id: tba:37:mob:3701
+  field: description
+  en: This rat doesn't look very menacing, but if you press it hard it'll certainly fight back.
+  ko: 이 쥐는 그렇게 위협적으로 보이지 않지만, 심하게 몰아붙이면 분명히 반격할 것이다.
+  verdict: ok
+  note: ''
+- id: tba:37:room:3705
+  field: exits.north.look
+  en: A three-way crossing.
+  ko: 삼거리 교차로이다.
+  verdict: awkward
+  note: '''삼거리''라는 말에 이미 교차로라는 뜻이 들어 있으므로 ''교차로''를 덧붙이면 겹말이 된다.'
+  fix: 삼거리이다.
+- id: tba:37:room:3710
+  field: name
+  en: Near the northern drainhole
+  ko: 북쪽 배수구 근처
+  verdict: ok
+  note: ''
+- id: tba:37:obj:3710
+  field: short
+  en: a dirty key
+  ko: 더러운 열쇠
+  verdict: ok
+  note: ''
+- id: tba:37:room:3704
+  field: exits.south.look
+  en: A turn in the pipe.
+  ko: 배관이 꺾이는 곳이다.
+  verdict: ok
+  note: ''
+- id: tba:37:room:3701
+  field: exits.east.look
+  en: A pipe is here.
+  ko: 여기 배관이 하나 있다.
+  verdict: ok
+  note: 번역 자체는 괜찮다. 다만 이 줄은 물건의 바닥 묘사로 보인다. 만약 담배 파이프라면 '배관'은 틀린 번역이 되므로, 해당 물건의 이름과 종류를 확인해야 한다.

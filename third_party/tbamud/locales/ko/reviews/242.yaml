@@ -1,0 +1,146 @@
+zone: '242'
+date: 2026-10-04 05:04
+reviewer: claude
+n: 15
+wrong_rate: 0.333
+awkward_rate: 0.267
+stopped: true
+added_to_glossary:
+- term catwalk -> 캣워크
+- term dressing room -> 분장실
+- term aisle (theater) -> 통로
+- term the odd (tree 등) -> 드문드문 있는, 이따금 보이는
+- term light (humming/sound) -> 희미한, 나지막한
+- term ripped off -> 바가지를 쓰다
+- example A fancy black dress has been left here.
+- example You are on Emerald Avenue.
+- example You can see some street vendors here.
+- example They feel very soft.
+fixed:
+- tba:242:room:24242 description
+- tba:242:obj:24213 long
+- tba:242:room:24268 name
+- tba:242:room:24284 description
+- tba:242:room:24252 name
+- tba:242:obj:24203 extras.1.text
+- tba:242:room:24208 description
+- tba:242:room:24253 description
+- tba:242:room:24204 description
+sample:
+- id: tba:242:room:24242
+  field: description
+  en: You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see the stage, far in
+    front of you. Except for the lights of the stage, this area is totally dark.
+  ko: 당신은 극장의 좌석에 있다. 좌석은 짙은 붉은색이며, 매우 부드럽게 느껴진다. 정면 멀리 앞쪽에는 무대가 보인다. 무대 조명을 제외하면 이 일대는 완전히 어둡다.
+  verdict: awkward
+  note: '''정면 멀리 앞쪽에는''은 뜻이 겹치고, ''부드럽게 느껴진다''는 번역투다. ''좌석에 있다''보다 ''객석에 있다''가 자연스럽다.'
+  fix: 당신은 극장 객석에 있다. 좌석은 짙은 붉은색이고, 무척 푹신하다. 저 멀리 정면에 무대가 보인다. 무대 조명을 빼면 이곳은 완전히 깜깜하다.
+- id: tba:242:obj:24213
+  field: long
+  en: A fancy black dress has been left here.
+  ko: 화려한 검은색 드레스가 여기 남겨져 있다.
+  verdict: awkward
+  note: '''has been left here''를 ''남겨져 있다''로 옮긴 수동 번역투다. 바닥 물건 묘사는 ''놓여 있다''가 자연스럽다.'
+  fix: 화려한 검은 드레스 한 벌이 여기 놓여 있다.
+- id: tba:242:obj:24223
+  field: short
+  en: the first page of a script
+  ko: 극본의 첫 번째 페이지
+  verdict: ok
+  note: ''
+- id: tba:242:room:24268
+  field: name
+  en: Catwalk
+  ko: 카트워크
+  verdict: wrong
+  note: Catwalk를 '카트워크'로 잘못 음차했다. 표준 표기는 '캣워크'다.
+  fix: 캣워크
+- id: tba:242:room:24296
+  field: description
+  en: You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs from the ceiling.
+    The floor is cement, and has scuff marks all over it. The passage is quite wide. It seems as though this hall used to
+    be used for hauling equipment and goods. A wooden door leads north.
+  ko: 낡고 어두운 통로에 있다. 벽의 페인트가 벗겨져 있고, 천장에는 전구 하나가 매달려 있다. 바닥은 시멘트로 되어 있으며 여기저기 긁힌 자국이 가득하다. 통로는 꽤 넓다. 이 복도는 예전에 장비나 물자를 운반하는
+    데 쓰였던 것 같다. 북쪽으로 나무 문이 하나 있다.
+  verdict: ok
+  note: ''
+- id: tba:242:room:24223
+  field: name
+  en: The Computer Store
+  ko: 컴퓨터 가게
+  verdict: ok
+  note: ''
+- id: tba:242:room:24284
+  field: description
+  en: You're standing on the very middle of sheet 2. The ice is slippery, and it's fairly cold in here. You can hear the light
+    humming of a machine somewhere. Bright lights shine down on you from above, illuminating this area quite well.
+  ko: 당신은 시트 2의 정중앙에 서 있다. 얼음은 미끄럽고, 여기는 꽤 춥다. 어딘가에서 기계의 부드러운 윙윙거리는 소리가 들린다. 위에서 밝은 빛이 쏟아져 내려 이 지역을 꽤 잘 비추고 있다.
+  verdict: wrong
+  note: '''light humming''의 light는 ''희미한''이라는 뜻인데 ''부드러운''으로 오역했다. ''this area''를 ''이 지역''으로 옮긴 것도 방 묘사에는 어색하다.'
+  fix: 당신은 시트 2의 정중앙에 서 있다. 얼음은 미끄럽고, 이곳은 꽤 춥다. 어딘가에서 기계가 희미하게 윙윙거리는 소리가 들린다. 위에서 밝은 조명이 내리쬐어 이곳을 환히 비추고 있다.
+- id: tba:242:room:24252
+  field: name
+  en: Dressing Room Three
+  ko: 드레스룸 3
+  verdict: wrong
+  note: 극장의 dressing room은 '분장실'이다. '드레스룸'은 한국어에서 옷방이나 붙박이 옷장을 뜻한다.
+  fix: 분장실 3
+- id: tba:242:obj:24203
+  field: extras.1.text
+  en: You've been ripped off!  It says here at the bottom of the label, in really really small letters, 'Bottled in the Midgaard
+    branch of Evian Inc.  This water is from the natural, mostly clean River of Midgaard.  '
+  ko: 당신은 속은 것이다! 라벨 하단에 정말로 정말로 작은 글씨로 이렇게 적혀 있다. '에비앙 주식회사 미드가르드 지사에서 병입함. 이 물은 미드가르드의 자연적이고 대부분 깨끗한 강에서 온 것입니다.'
+  verdict: awkward
+  note: '''You''ve been ripped off!''는 ''바가지를 썼다!''가 자연스럽다. ''정말로 정말로''는 반복이 어색하다. ''River of Midgaard''는 고유명사인 ''미드가르드 강''으로
+    옮기는 편이 낫다.'
+  fix: 바가지를 썼다! 라벨 맨 아래에 아주아주 작은 글씨로 이렇게 적혀 있다. '에비앙 주식회사 미드가르드 지사에서 병입. 이 물은 천연의, 대체로 깨끗한 미드가르드 강에서 왔습니다.'
+- id: tba:242:obj:24223
+  field: long
+  en: The first page of a play script is lying here.
+  ko: 극본의 첫 번째 페이지가 여기 놓여 있다.
+  verdict: ok
+  note: ''
+- id: tba:242:room:24208
+  field: description
+  en: Razor's Square is the southernmost square in Midgaard. South of you is wall road, while to the north you can see most
+    of the city of Midgaard. You can see some street vendors here, standing inside small kiosks. You can see everything from
+    cheap jewelry to leather jackets for sale.
+  ko: 레이저 광장은 미드가르드에서 가장 남쪽에 있는 광장이다. 남쪽으로는 성벽길이 이어지고, 북쪽으로는 미드가르드 도시의 대부분이 보인다. 여기저기 작은 부스 안에 서 있는 길거리 상인들을 볼 수 있다. 값싼 장신구부터
+    가죽 재킷까지 온갖 물건이 팔리고 있다.
+  verdict: awkward
+  note: '''여기저기''는 원문에 없는 말이다. ''볼 수 있다''를 반복해 번역투가 됐다. kiosk는 ''가판대''가 더 자연스럽다.'
+  fix: 레이저 광장은 미드가르드에서 가장 남쪽에 있는 광장이다. 남쪽으로는 성벽길이 있고, 북쪽으로는 미드가르드 시가지 대부분이 눈에 들어온다. 이곳에는 작은 가판대 안에 선 노점상 몇이 있다. 싸구려 장신구부터
+    가죽 재킷까지 온갖 물건을 판다.
+- id: tba:242:room:24253
+  field: description
+  en: You're in the middle of the left aisle of the theater. The stage is now directly in front of you, with some stairs leading
+    up to it. Bright lights shine all across it, making it look quite bright.
+  ko: 당신은 극장의 왼쪽 복도 한가운데에 서 있다. 무대가 바로 앞에 있으며, 무대로 올라가는 계단이 몇 개 있다. 밝은 불빛이 무대 전체를 비추어 꽤 환해 보인다.
+  verdict: wrong
+  note: 극장 aisle은 좌석 사이 '통로'다. '복도'는 오역이다. '서 있다'는 원문에 없고, 'now'(이제)가 빠졌다.
+  fix: 당신은 극장 왼쪽 통로 한가운데에 있다. 이제 무대가 바로 앞에 있고, 무대로 올라가는 계단이 몇 단 나 있다. 밝은 조명이 무대 전체를 비추어 꽤 환해 보인다.
+- id: tba:242:room:24204
+  field: description
+  en: You are on Emerald Avenue. The road looks brand new, as do the shops and buildings that line the road. This is obviously
+    the newer part of Midgaard. People are bustling about, while street vendors are trying hard to sell hotdogs and other
+    less legal merchandise. Streetlights can be seen along the road, and you also notice the odd tree. You can see the southern
+    docks to the north.
+  ko: 당신은 에메랄드 거리 위에 있다. 길은 새것처럼 보이며, 길 양쪽에 늘어서 있는 상점과 건물들도 마찬가지다. 분명히 미드가르드의 신축 지역이다. 사람들이 분주히 오가고 있으며, 길거리 상인들은 핫도그와 다른
+    좀 더 불법적인 상품들을 팔기 위해 애쓰고 있다. 길 boyunca 가로등이 설치되어 있는 것을 볼 수 있고, 기이한 나무들도 눈에 띈다. 북쪽으로는 남쪽 부두가 보인다.
+  verdict: wrong
+  note: 튀르키예어 'boyunca'가 섞여 있다. 'the odd tree'는 '드문드문 있는 나무'라는 뜻인데 '기이한 나무'로 오역했다. 'less legal merchandise'는 '덜 합법적인 물건'이라는
+    반어 표현인데 '좀 더 불법적인'으로 직역했다. '거리 위에 있다'도 어색하다.
+  fix: 당신은 에메랄드 거리에 있다. 길은 갓 닦은 듯 새것이고, 길가에 늘어선 상점과 건물들도 마찬가지다. 누가 봐도 미드가르드의 새로 생긴 구역이다. 사람들이 분주히 오가고, 노점상들은 핫도그와 그다지 합법적이지
+    않은 물건들을 팔려고 애쓴다. 길을 따라 가로등이 서 있고, 드문드문 나무도 눈에 띈다. 북쪽으로 남쪽 부두가 보인다.
+- id: tba:242:mob:24200
+  field: short
+  en: the cityguard
+  ko: 경비병
+  verdict: ok
+  note: '''city''가 빠졌지만 몹 이름으로는 통한다. 다른 존과 용어를 통일해야 한다면 ''도시 경비병''으로 쓰는 것을 검토할 것.'
+- id: tba:242:room:24271
+  field: name
+  en: Midgaard Curling Club Entrance Hall
+  ko: 미드가르드 컬링 클럽 입구 홀
+  verdict: ok
+  note: ''
