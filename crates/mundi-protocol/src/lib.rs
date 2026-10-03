@@ -819,6 +819,10 @@ pub enum Event {
         who: String,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         who_id: Option<String>,
+        /// `new_leader` of a group just made ("becomes leader"), not one that passed on ("has
+        /// assumed leadership"). Mundi addition: tbaMUD has two sentences, PROTOCOL.md one event.
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        formed: bool,
     },
     /// Someone else starts or stops following someone (Mundi addition).
     #[serde(rename = "occupant.follow")]
@@ -1038,6 +1042,12 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         who_id: Option<String>,
     },
+    /// PROTOCOL.md `char.vitals_max`: the maxima `score` shows.
+    #[serde(rename = "char.vitals_max")]
+    VitalsMax { hp: i32, mp: i32, mv: i32 },
+    /// PROTOCOL.md `char.score`: what `score` says (MECHANICS §18). The renderer makes its lines.
+    #[serde(rename = "char.score")]
+    Score(Box<Score>),
     /// The practice list (PROTOCOL.md `char.skills`, with numbers and sessions left).
     #[serde(rename = "char.skills")]
     Skills { practices: i32, spells: bool, skills: Vec<Known> },
@@ -1090,6 +1100,43 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         line: Option<LineRef>,
     },
+}
+
+/// `score`'s values (MECHANICS §18).
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Score {
+    pub age: i32,
+    pub birthday: bool,
+    pub hp: i32,
+    pub hp_max: i32,
+    pub mp: i32,
+    pub mp_max: i32,
+    pub mv: i32,
+    pub mv_max: i32,
+    pub ac: i32,
+    pub alignment: i32,
+    pub exp: i64,
+    pub gold: i64,
+    pub quest_points: i32,
+    /// None at immortal levels.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub exp_to_next: Option<i64>,
+    pub quests: i32,
+    pub played_days: i64,
+    pub played_hours: i64,
+    pub name: String,
+    pub title: String,
+    pub level: i32,
+    pub position: Position,
+    /// Whom they fight, as they see them ("thin air" when no one).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub fighting: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub fighting_id: Option<String>,
+    /// In do_score's order: intoxicated, hungry, thirsty, blind, invisible, detect_invisible,
+    /// sanctuary, poisoned, charmed, armored, infravision.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub states: Vec<String>,
 }
 
 /// The content line an event's English text came from: a trigger's ID and the line's key there

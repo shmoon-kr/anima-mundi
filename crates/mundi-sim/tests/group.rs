@@ -79,7 +79,7 @@ fn a_group_shares_a_kill_and_talks() {
     t.enter("Ana", BEGGAR_ROOM);
     t.enter("Bo", BEGGAR_ROOM);
     t.cmd("Ana", "group new");
-    assert!(t.got("Ana", |e| matches!(e, Event::GroupChange { event, who, .. } if event == "leader" && who == "Ana")));
+    assert!(t.got("Ana", |e| matches!(e, Event::GroupChange { event, who, formed: true, .. } if event == "new_leader" && who == "Ana")));
     t.cmd("Bo", "group join ana");
     assert!(t.got("Ana", |e| matches!(e, Event::GroupChange { event, who, .. } if event == "joined" && who == "Bo")));
     t.cmd("Bo", "gsay hello");

@@ -27,6 +27,7 @@ mod objects;
 mod perception;
 mod positions;
 mod resets;
+mod score;
 mod rng;
 mod skills;
 mod specials;

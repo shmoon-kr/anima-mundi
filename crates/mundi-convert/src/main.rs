@@ -49,9 +49,10 @@ fn write_tables(src: &str, out: &str) -> Result<(), String> {
     write("abilities.yaml", "src/constants.c (str_app, dex_app, dex_app_skill, con_app, int_app, wis_app)", yaml(&t.abilities))?;
     write("specials.yaml", "src/spec_assign.c (ASSIGNMOB/OBJ/ROOM), class.c (guild_info)", yaml(&t.specials))?;
     write("spells.yaml", "src/spells.h, spell_parser.c (spello, skillo), class.c (init_spell_levels)", yaml(&t.spells))?;
-    write("classes.yaml", "src/class.c (thaco, level_exp, saving_throws, prac_params)", yaml(&t.classes))?;
+    write("classes.yaml", "src/class.c (thaco, level_exp, saving_throws, prac_params, title_male, title_female)", yaml(&t.classes))?;
     write("world.yaml", "src/constants.c, limits.c, spell_parser.c, config.c, class.c do_start", yaml(&t.world))?;
-    let back = load_tables(&out).map_err(|e| e.to_string())?;
+    let mut back = load_tables(&out).map_err(|e| e.to_string())?;
+    back.triggers = t.triggers.clone(); // triggers.yaml is written by hand, not converted
     if back != t {
         return Err("tables do not read back the same".into());
     }

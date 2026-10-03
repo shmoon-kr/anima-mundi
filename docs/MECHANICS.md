@@ -691,6 +691,20 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 대상: 힘(명중·피해·carry_w·wield_w, constants.c:607-638), 민첩(방어·기술 보정, constants.c:643-700), 체질(constants.c:706+), 지능 학습(constants.c:736-763), 지혜(constants.c:767-794),
 직업 THAC0(class.c:1190-1358), 레벨표(§9.3), 저항(saving throws, class.c), 주문 음절(spell_parser.c:43-56), 액체(§6.3), 지형(§2.3)
 
+## 18. score (act.informative.c:886-1025, S6 에서 추가)
+플레이어만. 이 순서의 줄:
+1. `You are N years old.` — 나이(§17.2). 게임 달·날이 0 이면(태어난 날) 같은 줄에 `  It's your birthday today.` (게임 시간: 시간 = 틱, 하루 24시간, 한 달 35일, 1년 17달, utils.c mud_time_passed)
+2. `You have H(Hmax) hit, M(Mmax) mana and V(Vmax) movement points.`
+3. `Your armor class is AC/10, and your alignment is A.` — AC 는 §7.4 compute_armor_class
+4. `You have E exp, G gold coins, and Q questpoints.` — Mundi 에는 퀘스트가 없어 Q = 0
+5. 레벨 31 미만이면 `You need N exp to reach your next level.` — N = level_exp(직업, 레벨+1) − 경험치
+6. `You have earned Q quest points.` / `You have completed 0 quests, and you are not on a quest at the moment.`
+7. `You have been playing for D day(s) and H hour(s).` — 게임 안에서 보낸 실제 시간(`lived`: Mundi 의 나이와 같은 시계). 하루 86400초 (utils.c real_time_passed)
+8. `This ranks you as NAME TITLE (level L).` — 칭호는 class.c title_male/title_female (여자면 female), 레벨 0 이하·구현자는 함수 앞의 답, 직업 표에 없는 레벨은 그 직업의 default (전사 21-30: "the Warrior"). `tables/classes.yaml` titles
+9. 자세: DEAD / mortally wounded / incapacitated / stunned / sleeping / resting / sitting / `fighting X` (보이는 이름, 없으면 thin air) / standing
+10. 상태 (있는 것만, 이 순서): 취함(drunk > 10), 배고픔(full 0), 목마름(thirst 0), 실명(불멸 미만), 투명, 투명 감지, 성역, 독, 매혹, armor 주문, 적외선 시야, summonable(Mundi 에는 없음)
+- 사건: `char.vitals_max {hp, mp, mv}` 와 `char.score` (위의 값 전부; 문장은 렌더러). anima PROTOCOL.md §3
+
 ## 미확인 (구현 전에 확인하거나 시험으로 정할 것)
 - 죽음의 방에서 시체가 남는가 (§2.4)
 - 몹 THAC0 의 +2 (§7.4), 한 몹이 한 번의 행동에서 공격과 기억 공격을 둘 다 하는가 (§14.2)

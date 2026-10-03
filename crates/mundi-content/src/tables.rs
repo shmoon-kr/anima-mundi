@@ -209,6 +209,15 @@ pub struct Class {
     /// By saving throw: paralysis, rod, petrification, breath, spell.
     pub saving_throws: IndexMap<String, Vec<i32>>,
     pub practice: Practice,
+    /// class.c title_male, title_female: the title at each level, 0 to the implementor's.
+    pub titles: Titles,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Titles {
+    pub male: Vec<String>,
+    pub female: Vec<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]

@@ -465,7 +465,7 @@ impl Sim {
             let (name, id) = (self.chars.get(vict).unwrap().name.clone(), self.id_of(vict));
             for m in self.groups.get(g).map(|g| g.members.clone()).unwrap_or_default() {
                 if m != vict && self.chars.get(m).is_some_and(|c| !c.is_mob()) {
-                    self.deliver(m, Event::GroupChange { event: "died".into(), who: name.clone(), who_id: id.clone() });
+                    self.deliver(m, Event::GroupChange { event: "died".into(), who: name.clone(), who_id: id.clone(), formed: false });
                 }
             }
         }

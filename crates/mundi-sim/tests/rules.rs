@@ -146,3 +146,20 @@ fn the_boot_reset_puts_mobs_and_objects_in_their_rooms() {
         assert!(v.objects.iter().any(|o| o.id.as_deref().is_some_and(|id| id.starts_with(&format!("{}/", obj.object)))), "{:?}", v.objects);
     }
 }
+
+#[test]
+fn score_says_what_do_score_says() {
+    // MECHANICS §18: the maxima, then the values; a level 1 warrior is "the Swordpupil"
+    let mut sim = Sim::new(&zones(&[30]), &tables(), 1, 12);
+    enter(&mut sim, "War", Class::Warrior, None);
+    sim.submit(Input::Command { name: "War".into(), text: "score".into() });
+    let out = sim.step();
+    let got = to(&out, "War");
+    let s = sim.save("War").unwrap();
+    assert!(got.iter().any(|e| matches!(e, Event::VitalsMax { hp, .. } if *hp == s.max_hp)));
+    let Some(Event::Score(sc)) = got.iter().find(|e| matches!(e, Event::Score(_))) else { panic!("{got:?}") };
+    assert_eq!((sc.level, sc.title.as_str(), sc.age, sc.exp, sc.quests), (1, "the Swordpupil", 17, 1, 0));
+    assert_eq!(sc.exp_to_next, Some(2000 - 1), "level_exp(warrior, 2) - exp");
+    assert_eq!(sc.position, mundi_protocol::Position::Standing);
+    assert!(sc.states.is_empty());
+}

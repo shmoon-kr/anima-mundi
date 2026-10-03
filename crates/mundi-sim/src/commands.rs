@@ -102,6 +102,7 @@ impl Sim {
             "unlock" => self.door_cmd(key, crate::doors::DoorCmd::Unlock, arg),
             "pick" => self.door_cmd(key, crate::doors::DoorCmd::Pick, arg),
             "practice" => self.practice_cmd(key, arg),
+            "score" => self.score(key),
             "buy" | "sell" | "value" | "list" => self.deliver(key, Event::Refused { reason: Refusal::NotHereShop }),
             p if crate::group::PREFS.contains(&p) => self.auto_toggle(key, p),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),

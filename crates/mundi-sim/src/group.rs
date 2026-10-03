@@ -49,10 +49,10 @@ impl Sim {
         self.chars.get_mut(k).unwrap().master = Some(leader);
         self.chars.get_mut(leader).unwrap().followers.insert(0, k);
         let (name, id) = self.seen_name(k, leader);
-        self.deliver(k, Event::GroupChange { event: "following".into(), who: name, who_id: id });
+        self.deliver(k, Event::GroupChange { event: "following".into(), who: name, who_id: id, formed: false });
         if self.can_see(leader, k) {
             let (me, mid) = (self.chars.get(k).unwrap().name.clone(), self.id_of(k));
-            self.deliver(leader, Event::GroupChange { event: "followed_by".into(), who: me, who_id: mid });
+            self.deliver(leader, Event::GroupChange { event: "followed_by".into(), who: me, who_id: mid, formed: false });
         }
         self.follow_seen(k, leader, false);
     }
@@ -60,11 +60,11 @@ impl Sim {
     pub(crate) fn stop_follower(&mut self, k: Key) {
         let Some(leader) = self.chars.get(k).and_then(|c| c.master) else { return };
         let (name, id) = self.seen_name(k, leader);
-        self.deliver(k, Event::GroupChange { event: "stopped_following".into(), who: name, who_id: id });
+        self.deliver(k, Event::GroupChange { event: "stopped_following".into(), who: name, who_id: id, formed: false });
         self.follow_seen(k, leader, true);
         if self.can_see(leader, k) {
             let (me, mid) = (self.chars.get(k).unwrap().name.clone(), self.id_of(k));
-            self.deliver(leader, Event::GroupChange { event: "follower_left".into(), who: me, who_id: mid });
+            self.deliver(leader, Event::GroupChange { event: "follower_left".into(), who: me, who_id: mid, formed: false });
         }
         self.chars.get_mut(k).unwrap().master = None;
         if let Some(l) = self.chars.get_mut(leader) {
@@ -116,7 +116,7 @@ impl Sim {
         }
     }
 
-    fn seen_name(&self, viewer: Key, k: Key) -> (String, Option<String>) {
+    pub(crate) fn seen_name(&self, viewer: Key, k: Key) -> (String, Option<String>) {
         if self.can_see(viewer, k) {
             (self.chars.get(k).map(|c| c.name.clone()).unwrap_or_default(), self.id_of(k))
         } else {
@@ -197,9 +197,9 @@ impl Sim {
                 return self.deliver(k, Event::GroupFailed { reason: "not_member".into(), who: Some(n), who_id: id });
             }
             let (n, id) = (self.chars.get(vict).unwrap().name.clone(), self.id_of(vict));
-            self.deliver(k, Event::GroupChange { event: "kicked".into(), who: n, who_id: id });
+            self.deliver(k, Event::GroupChange { event: "kicked".into(), who: n, who_id: id, formed: false });
             let me = self.chars.get(k).unwrap().name.clone();
-            self.deliver(vict, Event::GroupChange { event: "kicked_out".into(), who: me, who_id: None });
+            self.deliver(vict, Event::GroupChange { event: "kicked_out".into(), who: me, who_id: None, formed: false });
             self.leave_group(vict);
         } else if is("leave") {
             if my_group.is_none() {
@@ -238,15 +238,15 @@ impl Sim {
         }
         self.chars.get_mut(k).unwrap().group = Some(g);
         let (name, id) = (self.chars.get(k).unwrap().name.clone(), self.id_of(k));
-        let event = if became_leader { "leader" } else { "joined" };
-        self.to_group(g, None, Event::GroupChange { event: event.into(), who: name, who_id: id });
+        let event = if became_leader { "new_leader" } else { "joined" };
+        self.to_group(g, None, Event::GroupChange { event: event.into(), who: name, who_id: id, formed: became_leader });
     }
 
     /// handler.c leave_group: everyone hears it, the leaver too; a new leader is drawn if needed.
     pub(crate) fn leave_group(&mut self, k: Key) {
         let Some(g) = self.chars.get(k).and_then(|c| c.group) else { return };
         let (name, id) = (self.chars.get(k).unwrap().name.clone(), self.id_of(k));
-        self.to_group(g, None, Event::GroupChange { event: "left".into(), who: name, who_id: id });
+        self.to_group(g, None, Event::GroupChange { event: "left".into(), who: name, who_id: id, formed: false });
         let grp = self.groups.get_mut(g).unwrap();
         grp.members.retain(|m| *m != k);
         self.chars.get_mut(k).unwrap().group = None;
@@ -261,7 +261,7 @@ impl Sim {
             let new = self.groups.get(g).unwrap().members[pick];
             self.groups.get_mut(g).unwrap().leader = Some(new);
             let (name, id) = (self.chars.get(new).unwrap().name.clone(), self.id_of(new));
-            self.to_group(g, None, Event::GroupChange { event: "new_leader".into(), who: name, who_id: id });
+            self.to_group(g, None, Event::GroupChange { event: "new_leader".into(), who: name, who_id: id, formed: false });
         }
     }
 

@@ -211,6 +211,37 @@ fn label(name: &str) -> Option<String> {
     })
 }
 
+/// class.c title_male / title_female: each class's title by level, 0 to LVL_IMPL. The function's
+/// first two answers are for levels out of range and the implementor; a level the class's switch
+/// does not name gets its `default`.
+fn titles(src: &str, signature: &str) -> Result<IndexMap<String, Vec<String>>, String> {
+    let body = function(src, signature)?;
+    let quoted = |s: &str| -> Vec<String> { s.split('"').skip(1).step_by(2).map(str::to_string).collect() };
+    let head = quoted(&body[..body.find("switch").ok_or("titles: no switch")?]);
+    let (outside, implementor) = (head.first().cloned().unwrap_or_default(), head.get(1).cloned().unwrap_or_default());
+    let top: usize = label("LVL_IMPL").unwrap().parse().unwrap();
+    let mut out = IndexMap::new();
+    for (c, name) in CLASSES {
+        let start = body.find(&format!("case {c}:")).ok_or(format!("{signature}: no {c}"))?;
+        let rest = &body[start..];
+        let end = rest.find("default:").ok_or(format!("{signature} {c}: no default"))?;
+        let default = quoted(&rest[end..]).first().cloned().ok_or(format!("{signature} {c}: default"))?;
+        let mut levels = vec![default; top + 1];
+        levels[0] = outside.clone();
+        levels[top] = implementor.clone();
+        for part in rest[..end].split("case ").skip(2) {
+            let (lab, after) = part.split_once(':').ok_or(format!("{signature} {c}: case"))?;
+            let lab = lab.trim();
+            let level: usize = label(lab).unwrap_or(lab.to_string()).parse().map_err(|_| format!("{signature} {c}: level {lab}"))?;
+            if let (Some(t), Some(slot)) = (quoted(after).first(), levels.get_mut(level)) {
+                *slot = t.clone();
+            }
+        }
+        out.insert(name.to_string(), levels);
+    }
+    Ok(out)
+}
+
 /// A list indexed by level from the (labels, value) pairs whose labels start with `prefix`.
 fn by_level(cases: &[(Vec<String>, i64)], prefix: &[&str]) -> Result<Vec<i64>, String> {
     let mut out: Vec<Option<i64>> = Vec::new();
@@ -431,6 +462,7 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
     let exp = cases(function(&class, "int level_exp(")?, &label)?;
     let saves = cases(function(&class, "byte saving_throws(")?, &label)?;
     let prac = rows(array(&class, "prac_params")?.replace("SPELL", "0").replace("SKILL", "1").as_str())?;
+    let (male, female) = (titles(&class, "const char *title_male(")?, titles(&class, "const char *title_female(")?);
     let mut classes = IndexMap::new();
     for (i, (_, name)) in CLASSES.iter().enumerate() {
         let mut saving_throws = IndexMap::new();
@@ -438,6 +470,7 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
             saving_throws.insert(s.to_string(), i32s(&by_level(&saves, &[name, s])?));
         }
         classes.insert(name.to_string(), Class {
+            titles: Titles { male: male[*name].clone(), female: female[*name].clone() },
             thac0: i32s(&by_level(&thaco, &[name])?),
             level_exp: by_level(&exp, &[name])?,
             saving_throws,

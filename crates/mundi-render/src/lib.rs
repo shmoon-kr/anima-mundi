@@ -535,6 +535,8 @@ impl Renderer {
             Event::Blocked { who: w, who_id } => {
                 if w == mundi_protocol::SELF { vec![m("blocked-you")] } else { one("blocked-room", &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())]) }
             }
+            Event::VitalsMax { .. } => vec![],
+            Event::Score(sc) => self.score(v, sc),
             Event::Skills { practices, spells, skills } => {
                 let sessions = m(if *practices == 1 { "practice-session" } else { "practice-sessions" });
                 let mut out = vec![
@@ -573,9 +575,10 @@ impl Renderer {
                 vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
             }
             Event::Toggle { .. } => vec![],
-            Event::GroupChange { event: ev, who: w, who_id } => {
-                let line = self.msg(v, &format!("group-{ev}"), &[("who", who(w, who_id))]);
-                let prefixed = matches!(ev.as_str(), "joined" | "leader" | "left" | "new_leader" | "died");
+            Event::GroupChange { event: ev, who: w, who_id, formed } => {
+                let key = if *formed { "leader" } else { ev.as_str() };
+                let line = self.msg(v, &format!("group-{key}"), &[("who", who(w, who_id))]);
+                let prefixed = matches!(ev.as_str(), "joined" | "left" | "new_leader" | "died");
                 vec![if prefixed { self.group_line(v, &line) } else { line }]
             }
             Event::OccupantFollow { who: w, who_id, leader, leader_id, stopped } => {
@@ -803,6 +806,46 @@ impl Renderer {
             }
         }
         out.push_str(rest);
+        out
+    }
+
+    /// do_score's lines (MECHANICS §18).
+    fn score(&self, v: Viewer, sc: &mundi_protocol::Score) -> Vec<String> {
+        let m = |id: &str, args: &[(&str, String)]| self.msg(v, id, args);
+        let plural = |n: i64| if n == 1 { "" } else { "s" }.to_string();
+        let mut out = vec![m(if sc.birthday { "score-age-birthday" } else { "score-age" }, &[("age", sc.age.to_string())])];
+        out.push(m("score-points", &[
+            ("hp", sc.hp.to_string()), ("hpmax", sc.hp_max.to_string()), ("mp", sc.mp.to_string()),
+            ("mpmax", sc.mp_max.to_string()), ("mv", sc.mv.to_string()), ("mvmax", sc.mv_max.to_string()),
+        ]));
+        out.push(m("score-ac", &[("ac", sc.ac.to_string()), ("align", sc.alignment.to_string())]));
+        out.push(m("score-exp", &[("exp", sc.exp.to_string()), ("gold", sc.gold.to_string()), ("qp", sc.quest_points.to_string())]));
+        if let Some(need) = sc.exp_to_next {
+            out.push(m("score-need", &[("need", need.to_string())]));
+        }
+        out.push(m("score-quest-points", &[("qp", sc.quest_points.to_string())]));
+        out.push(m("score-quests", &[("n", sc.quests.to_string()), ("s", plural(sc.quests as i64))]));
+        out.push(m("score-played", &[
+            ("days", sc.played_days.to_string()), ("ds", plural(sc.played_days)),
+            ("hours", sc.played_hours.to_string()), ("hs", plural(sc.played_hours)),
+        ]));
+        out.push(m("score-rank", &[("name", escape(&sc.name)), ("title", escape(&sc.title)), ("level", sc.level.to_string())]));
+        let pos = match sc.position {
+            Position::Dead => "dead",
+            Position::MortallyWounded => "mortally-wounded",
+            Position::Incapacitated => "incapacitated",
+            Position::Stunned => "stunned",
+            Position::Sleeping => "sleeping",
+            Position::Resting => "resting",
+            Position::Sitting => "sitting",
+            Position::Fighting => "fighting",
+            Position::Standing => "standing",
+        };
+        let foe = sc.fighting.as_deref().map(|f| self.name(v, f, sc.fighting_id.as_deref(), Spot::Prose)).unwrap_or_default();
+        out.push(m(&format!("score-pos-{pos}"), &[("who", foe)]));
+        for st in &sc.states {
+            out.push(m(&format!("score-state-{st}"), &[]));
+        }
         out
     }
 
