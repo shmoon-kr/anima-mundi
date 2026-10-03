@@ -36,6 +36,8 @@ pub struct Room {
     pub flags: Vec<RoomFlag>,
     /// Indexed by `Dir::ALL` order.
     pub exits: [Option<Exit>; 6],
+    /// The keywords of the room's extra descriptions (things to look at, not to take).
+    pub extras: Vec<Vec<String>>,
 }
 
 #[derive(Debug, Clone, Default)]
@@ -99,6 +101,7 @@ impl World {
                     sector: r.sector,
                     flags: r.flags.clone(),
                     exits: Default::default(),
+                    extras: r.extras.iter().map(|e| e.keywords.clone()).collect(),
                 });
             }
         }

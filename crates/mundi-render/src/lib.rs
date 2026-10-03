@@ -55,6 +55,8 @@ pub struct Renderer {
     beings: RwLock<HashMap<String, Being>>,
     /// Particle endings set for names the rule gets wrong (D23), by the name as shown.
     finals: Overrides,
+    /// Object keywords by prototype, for D18 in lists.
+    obj_keywords: HashMap<String, Vec<String>>,
 }
 
 /// Where a name stands in a sentence (D18): `Target` is a place a command can name it from.
@@ -95,7 +97,8 @@ impl Renderer {
                 beings.insert(id.clone(), Being { sex, keywords: m.keywords.clone() });
             }
         }
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals })
+        let obj_keywords = zones.iter().flat_map(|z| z.objects.iter().map(|(id, o)| (id.clone(), o.keywords.clone()))).collect();
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -156,6 +159,7 @@ impl Renderer {
                 Refusal::Fighting => "refused-fighting",
                 Refusal::NothingToSay => "refused-nothing-to-say",
                 Refusal::QuitInFull => "refused-quit-in-full",
+                Refusal::NotYet => "refused-not-yet",
                 Refusal::NotHere => "refused-not-here",
                 Refusal::InvalidTarget | Refusal::NoTarget => "refused-invalid-target",
                 _ => "refused-unknown-command",
@@ -219,8 +223,17 @@ impl Renderer {
                 LinkState::Lost => one("link-lost", &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())]),
                 LinkState::Reconnected => one("link-reconnected", &[("who", who(w, who_id))]),
             },
-            Event::Condition { hungry, thirsty, sober, .. } => {
+            Event::Condition { hungry, thirsty, sober, full, quenched, drunk } => {
                 let mut out = vec![];
+                if *drunk == Some(true) {
+                    out.push(m("cond-drunk"));
+                }
+                if *quenched == Some(true) {
+                    out.push(m("cond-quenched"));
+                }
+                if *full == Some(true) {
+                    out.push(m("cond-full"));
+                }
                 if *hungry == Some(true) {
                     out.push(m("cond-hungry"));
                 }
@@ -239,6 +252,68 @@ impl Renderer {
             Event::LightFlicker { who: w, who_id } => one("light-flicker", &[("who", who(w, who_id))]),
             Event::LightOut { who: w, .. } if w == mundi_protocol::SELF => vec![m("light-out-self")],
             Event::LightOut { who: w, who_id } => one("light-out", &[("who", who(w, who_id))]),
+            Event::Got { text, id, from, from_id } => match from {
+                Some(c) => one("got-from", &[("p", self.thing(v, text, id)), ("c", self.thing(v, c, from_id))]),
+                None => one("got", &[("p", self.thing(v, text, id))]),
+            },
+            Event::Coins { amount } => {
+                if *amount == 1 { vec![m("coins-one")] } else { one("coins", &[("n", amount.to_string())]) }
+            }
+            Event::Gave { text, id, to, to_id } => one("gave", &[("p", self.thing(v, text, id)), ("c", who(to, to_id))]),
+            Event::Received { text, id, from, from_id } => one("received", &[("who", who(from, from_id)), ("p", self.thing(v, text, id))]),
+            Event::Used { action, text, id, into, into_id, slot, liquid } => {
+                let mid = used_id("used", *action, slot.as_deref());
+                let mut args = vec![("p", self.thing(v, text, id))];
+                if let Some(c) = into {
+                    args.push(("c", self.thing(v, c, into_id)));
+                }
+                if let Some(l) = liquid {
+                    args.push(("liquid", self.msg(v, &format!("liquid-{}", l.replace(' ', "-")), &[])));
+                }
+                one(&mid, &args)
+            }
+            Event::OccupantItem { who: w, who_id, action, text, id, other, other_id, slot, liquid } => {
+                let mid = used_id("room", *action, slot.as_deref());
+                let mut args = vec![("who", who(w, who_id)), ("p", self.thing(v, text, id)), ("his", self.pronoun(who_id.as_deref(), "his").into())];
+                if let Some(c) = other {
+                    let name = if *action == mundi_protocol::ItemAction::Give { who(c, other_id) } else { self.thing(v, c, other_id) };
+                    args.push(("c", name));
+                }
+                if let Some(l) = liquid {
+                    args.push(("liquid", self.msg(v, &format!("liquid-{}", l.replace(' ', "-")), &[])));
+                }
+                one(&mid, &args)
+            }
+            Event::Zapped { who: w, who_id, text, id } if w == mundi_protocol::SELF => one("zapped", &[("p", self.thing(v, text, id))]),
+            Event::Zapped { who: w, who_id, text, id } => one("room-zapped", &[("who", who(w, who_id)), ("p", self.thing(v, text, id))]),
+            Event::TastedStrange { who: w, drink, .. } if w == mundi_protocol::SELF => vec![m(if *drink { "strange-drink" } else { "strange-eat" })],
+            Event::TastedStrange { who: w, who_id, drink } => one(if *drink { "room-strange-drink" } else { "room-strange-eat" }, &[("who", who(w, who_id))]),
+            Event::Inventory { items } => {
+                let mut out = vec![m("inventory")];
+                if items.is_empty() {
+                    out.push(m("list-nothing"));
+                }
+                for it in items {
+                    let name = self.carried_name(v, &it.text, &it.id);
+                    out.push(if it.count > 1 { format!("({:2}) {name}", it.count) } else { name });
+                }
+                out
+            }
+            Event::Equipment { slots } => {
+                let mut out = vec![m("equipment")];
+                if slots.is_empty() {
+                    out.push(m("equipment-nothing"));
+                }
+                for s in slots {
+                    let label = pad(&self.msg(v, &format!("slot-{}", s.slot), &[]), 21);
+                    let name = if s.id.is_none() && s.text == "something" { m("worn-something") } else { self.carried_name(v, &s.text, &s.id) };
+                    out.push(format!("{label}{name}"));
+                }
+                out
+            }
+            Event::ItemFailed { action, reason, text, id, keyword, other, other_id, slot } => {
+                vec![self.item_failure(v, *action, *reason, text.as_deref(), id.as_deref(), keyword.as_deref(), other.as_deref(), other_id.as_deref(), slot.as_deref())]
+            }
             Event::WorldTime { phase } => vec![m(match phase {
                 DayPhase::Sunrise => "time-sunrise",
                 DayPhase::Day => "time-day",
@@ -286,6 +361,87 @@ impl Renderer {
             out.push(format!("{{yellow}}{}{{/yellow}}", self.occupant_line(v, o, kw.as_deref())));
         }
         out
+    }
+
+    /// An object named in a sentence: its short description, Korean from the overlay.
+    fn thing(&self, v: Viewer, english: &str, id: &Option<String>) -> String {
+        if v.lang == Lang::Ko {
+            if let Some(short) = id.as_deref().and_then(|i| self.ko_text.get(proto(i))).and_then(|t| t.short.clone()) {
+                return short;
+            }
+        }
+        escape(english)
+    }
+
+    /// An object in an inventory or equipment list: a place a command names it from (D18).
+    fn carried_name(&self, v: Viewer, english: &str, id: &Option<String>) -> String {
+        let name = self.thing(v, english, id);
+        if v.lang == Lang::Ko && v.keywords != KeywordMode::Off {
+            if let Some(kw) = id.as_deref().and_then(|i| self.obj_keywords.get(proto(i))).and_then(|k| prefer(k, english).into_iter().next()) {
+                return format!("{name}({kw})");
+            }
+        }
+        name
+    }
+
+    #[allow(clippy::too_many_arguments)]
+    fn item_failure(
+        &self,
+        v: Viewer,
+        action: mundi_protocol::ItemAction,
+        reason: mundi_protocol::ItemFailure,
+        text: Option<&str>,
+        id: Option<&str>,
+        keyword: Option<&str>,
+        other: Option<&str>,
+        other_id: Option<&str>,
+        slot: Option<&str>,
+    ) -> String {
+        use mundi_protocol::ItemFailure as F;
+        let act = serde_json::to_value(action).ok().and_then(|j| j.as_str().map(str::to_string)).unwrap_or_default();
+        let mut why = serde_json::to_value(reason).ok().and_then(|j| j.as_str().map(|s| s.replace('_', "-"))).unwrap_or_default();
+        if reason == F::AlreadyWearing {
+            return self.msg(v, &format!("already-{}", slot.unwrap_or("hold")), &[]);
+        }
+        // Variants by what is known: a word not found in a container, a scenery word, none of them in a container.
+        if reason == F::NotHere && other.is_some() {
+            why = "not-here-in".into();
+        } else if reason == F::CantTake && text.is_none() {
+            why = "cant-take-scenery".into();
+        } else if reason == F::NoneOf && text.is_some() {
+            why = "none-of-in".into();
+        }
+        let word = keyword.unwrap_or("");
+        let w = if v.lang == Lang::En { format!("{} {}", an(word), escape(word)) } else { escape(word) };
+        let p = text.map(|t| self.thing(v, t, &id.map(str::to_string))).unwrap_or_default();
+        let c = other.map(|o| self.name_or_thing(v, o, other_id)).unwrap_or_default();
+        let args = [
+            ("p", p),
+            ("c", c),
+            ("w", w),
+            ("word", escape(word)),
+            ("che", self.pronoun(other_id, "he").into()),
+            ("chis", self.pronoun(other_id, "his").into()),
+        ];
+        for id in [format!("fail-{act}-{why}"), format!("fail-{why}")] {
+            if self.has(v, &id) {
+                return self.msg(v, &id, &args);
+            }
+        }
+        format!("[fail-{act}-{why}]")
+    }
+
+    /// The other party of an object failure: a person (by `pc:`/mob ID) or an object.
+    fn name_or_thing(&self, v: Viewer, text: &str, id: Option<&str>) -> String {
+        match id {
+            Some(i) if i.starts_with("pc:") || i.contains(":mob:") => self.name(v, text, Some(i), Spot::Prose),
+            _ => self.thing(v, text, &id.map(str::to_string)),
+        }
+    }
+
+    fn has(&self, v: Viewer, id: &str) -> bool {
+        let b = if v.lang == Lang::Ko { &self.ko } else { &self.en };
+        b.has_message(id) || self.en.has_message(id)
     }
 
     /// An object's line in a room (MECHANICS §3.3): its long description (Korean from the overlay,
@@ -454,6 +610,24 @@ fn position_id(prefix: &str, to: Position, from: Position) -> String {
         _ => "down",
     };
     if to == Position::Sleeping { format!("{prefix}-sleeping") } else { format!("{prefix}-{}-{}", n(to), n(from)) }
+}
+
+/// `used-wear-body`, `room-get`: the template of an object action, by slot for wearing.
+fn used_id(prefix: &str, action: mundi_protocol::ItemAction, slot: Option<&str>) -> String {
+    use mundi_protocol::ItemAction as A;
+    match (action, slot) {
+        (A::Wear, Some(s)) => format!("{prefix}-wear-{s}"),
+        (A::Hold, Some("light")) => format!("{prefix}-light"),
+        _ => {
+            let a = serde_json::to_value(action).ok().and_then(|j| j.as_str().map(str::to_string)).unwrap_or_default();
+            if prefix == "room" { format!("room-{a}") } else { format!("used-{a}") }
+        }
+    }
+}
+
+/// "a" or "an" before a typed word (utils.h AN).
+fn an(word: &str) -> &'static str {
+    if word.starts_with(['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']) { "an" } else { "a" }
 }
 
 /// Keywords that are words of the English name first: "the pit beast" is named `beast` before

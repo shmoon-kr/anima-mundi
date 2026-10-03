@@ -1,4 +1,7 @@
-//! Commands: the table, abbreviations and the position each needs (MECHANICS §4.2).
+//! Commands: tbaMUD's command table (third_party/tbamud/tables/commands.yaml), abbreviations, the
+//! level and position each needs (MECHANICS §4.2), and which of them Mundi does so far.
+
+use mundi_protocol::PositionCommand;
 
 use crate::*;
 
@@ -17,74 +20,80 @@ impl Sim {
         };
         let arg = arg.trim();
         let word = word.to_lowercase();
-        let Some(cmd) = COMMANDS.iter().find(|c| c.name.starts_with(&word)) else {
+        let level = self.chars.get(key).unwrap().level;
+        // The first non-social command the word begins, among those the level may use (interpreter.c:520-524).
+        let entry = self.tables.commands.iter().find(|c| !c.social && c.name.starts_with(&word) && level >= c.level).cloned();
+        let Some(entry) = entry else {
             self.deliver(key, Event::Refused { reason: Refusal::UnknownCommand });
             return;
         };
         let position = self.chars.get(key).unwrap().position;
-        if position < cmd.min {
+        if position < protocol_position(entry.position) {
             self.deliver(key, Event::Refused { reason: refusal_for(position) });
             return;
         }
-        match cmd.action {
-            Action::Move(d) => self.move_dir(key, d),
-            Action::Look => {
+        let dir = |d: usize| move |s: &mut Sim| s.move_dir(key, d);
+        match entry.name.as_str() {
+            "north" => dir(0)(self),
+            "east" => dir(1)(self),
+            "south" => dir(2)(self),
+            "west" => dir(3)(self),
+            "up" => dir(4)(self),
+            "down" => dir(5)(self),
+            "look" => {
                 if arg.is_empty() {
                     self.look(key)
                 } else {
                     self.deliver(key, Event::Refused { reason: Refusal::InvalidTarget })
                 }
             }
-            Action::Say => self.say(key, arg),
-            Action::Position(p) => self.position(key, p, arg),
-            Action::QuitPrefix => self.deliver(key, Event::Refused { reason: Refusal::QuitInFull }),
-            Action::Quit => {
+            "say" | "'" => self.say(key, arg),
+            "stand" => self.position(key, PositionCommand::Stand, arg),
+            "sit" => self.position(key, PositionCommand::Sit, arg),
+            "rest" => self.position(key, PositionCommand::Rest, arg),
+            "sleep" => self.position(key, PositionCommand::Sleep, arg),
+            "wake" => self.position(key, PositionCommand::Wake, arg),
+            "qui" => self.deliver(key, Event::Refused { reason: Refusal::QuitInFull }),
+            "quit" => {
                 if position == Position::Fighting {
                     self.deliver(key, Event::Refused { reason: Refusal::Fighting });
                 } else {
                     self.quit(key);
                 }
             }
+            "get" | "take" => self.get(key, arg),
+            "drop" => self.drop_cmd(key, arg),
+            "put" => self.put_cmd(key, arg),
+            "give" => self.give(key, arg),
+            "inventory" => self.inventory(key),
+            "equipment" => self.equipment(key),
+            "wear" => self.wear(key, arg),
+            "wield" => self.wield(key, arg),
+            "hold" | "grab" => self.hold(key, arg),
+            "remove" => self.remove(key, arg),
+            "eat" => self.eat(key, arg, false),
+            "taste" => self.eat(key, arg, true),
+            "drink" => self.drink(key, arg, false),
+            "sip" => self.drink(key, arg, true),
+            _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }
     }
 }
 
-#[derive(Clone, Copy)]
-pub(crate) enum Action {
-    Move(usize),
-    Look,
-    QuitPrefix,
-    Quit,
-    Say,
-    Position(PositionCommand),
+fn protocol_position(p: mundi_content::names::Position) -> Position {
+    use mundi_content::names::Position as P;
+    match p {
+        P::Dead => Position::Dead,
+        P::MortallyWounded => Position::MortallyWounded,
+        P::Incapacitated => Position::Incapacitated,
+        P::Stunned => Position::Stunned,
+        P::Sleeping => Position::Sleeping,
+        P::Resting => Position::Resting,
+        P::Sitting => Position::Sitting,
+        P::Fighting => Position::Fighting,
+        P::Standing => Position::Standing,
+    }
 }
-
-pub(crate) struct Cmd {
-    name: &'static str,
-    min: Position,
-    action: Action,
-}
-
-/// The commands so far, in tbaMUD's table order: the first whose name starts with what was typed wins
-/// (interpreter.c:67-283, MECHANICS §2.1).
-pub(crate) const COMMANDS: &[Cmd] = &[
-    Cmd { name: "north", min: Position::Standing, action: Action::Move(0) },
-    Cmd { name: "east", min: Position::Standing, action: Action::Move(1) },
-    Cmd { name: "south", min: Position::Standing, action: Action::Move(2) },
-    Cmd { name: "west", min: Position::Standing, action: Action::Move(3) },
-    Cmd { name: "up", min: Position::Standing, action: Action::Move(4) },
-    Cmd { name: "down", min: Position::Standing, action: Action::Move(5) },
-    Cmd { name: "look", min: Position::Resting, action: Action::Look },
-    Cmd { name: "qui", min: Position::Dead, action: Action::QuitPrefix },
-    Cmd { name: "quit", min: Position::Dead, action: Action::Quit },
-    Cmd { name: "rest", min: Position::Resting, action: Action::Position(PositionCommand::Rest) },
-    Cmd { name: "say", min: Position::Resting, action: Action::Say },
-    Cmd { name: "sit", min: Position::Resting, action: Action::Position(PositionCommand::Sit) },
-    Cmd { name: "sleep", min: Position::Sleeping, action: Action::Position(PositionCommand::Sleep) },
-    Cmd { name: "stand", min: Position::Resting, action: Action::Position(PositionCommand::Stand) },
-    Cmd { name: "wake", min: Position::Sleeping, action: Action::Position(PositionCommand::Wake) },
-    Cmd { name: "'", min: Position::Resting, action: Action::Say },
-];
 
 /// MECHANICS §4.2 table: the refusal for a position too low for the command.
 pub(crate) fn refusal_for(p: Position) -> Refusal {

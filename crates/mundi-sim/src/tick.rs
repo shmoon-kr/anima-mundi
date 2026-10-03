@@ -59,13 +59,13 @@ impl Sim {
         let sober = step(&mut c.conditions.drunk) && was_drunk;
         let thirsty = step(&mut c.conditions.thirst);
         if hungry {
-            self.deliver(k, Event::Condition { hungry: Some(true), thirsty: None, full: None, quenched: None, sober: None });
+            self.deliver(k, Event::Condition { hungry: Some(true), thirsty: None, full: None, quenched: None, sober: None, drunk: None });
         }
         if sober {
-            self.deliver(k, Event::Condition { hungry: None, thirsty: None, full: None, quenched: None, sober: Some(true) });
+            self.deliver(k, Event::Condition { hungry: None, thirsty: None, full: None, quenched: None, sober: Some(true), drunk: None });
         }
         if thirsty {
-            self.deliver(k, Event::Condition { hungry: None, thirsty: Some(true), full: None, quenched: None, sober: None });
+            self.deliver(k, Event::Condition { hungry: None, thirsty: Some(true), full: None, quenched: None, sober: None, drunk: None });
         }
     }
 

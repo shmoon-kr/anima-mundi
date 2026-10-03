@@ -195,7 +195,7 @@ const SAVES: [(&str, &str); 5] =
 
 fn label(name: &str) -> Option<String> {
     CLASSES.iter().chain(SAVES.iter()).find(|(c, _)| *c == name).map(|(_, n)| n.to_string()).or(match name {
-        "LVL_IMMORT" => Some("31".into()),
+        "LVL_IMMORT" | "LVL_BUILDER" => Some("31".into()),
         "LVL_GOD" => Some("32".into()),
         "LVL_GRGOD" => Some("33".into()),
         "LVL_IMPL" => Some("34".into()),
@@ -235,8 +235,42 @@ fn i32s(v: &[i64]) -> Vec<i32> {
     v.iter().map(|&x| x as i32).collect()
 }
 
-/// Reads `<src>/constants.c`, `class.c`, `config.c`, `spell_parser.c`, `limits.c`.
+/// interpreter.c cmd_info: `{ "name", "sort", POS_X, do_fn, LEVEL, SCMD }` rows in order.
+fn commands(interp: &str) -> Result<Vec<CommandEntry>, String> {
+    use mundi_content::names::Position;
+    let body = array(interp, "cmd_info")?;
+    let mut out = Vec::new();
+    for row in body.split('{').skip(1) {
+        let row = row.split('}').next().unwrap_or("");
+        let parts: Vec<&str> = row.split(',').map(str::trim).collect();
+        let name = parts.first().map(|p| p.trim_matches('"')).unwrap_or("");
+        if name.is_empty() || name == "RESERVED" || name == "\\n" || parts.len() < 5 {
+            continue;
+        }
+        let position = match parts[2] {
+            "POS_DEAD" | "0" => Position::Dead,
+            "POS_MORTALLYW" => Position::MortallyWounded,
+            "POS_INCAP" => Position::Incapacitated,
+            "POS_STUNNED" => Position::Stunned,
+            "POS_SLEEPING" => Position::Sleeping,
+            "POS_RESTING" => Position::Resting,
+            "POS_SITTING" => Position::Sitting,
+            "POS_FIGHTING" => Position::Fighting,
+            "POS_STANDING" => Position::Standing,
+            p => return Err(format!("command {name}: position {p}")),
+        };
+        let level = match parts[4] {
+            l if l.parse::<i32>().is_ok() => l.parse().unwrap(),
+            l => label(l).and_then(|n| n.parse().ok()).ok_or(format!("command {name}: level {l}"))?,
+        };
+        out.push(CommandEntry { name: name.to_string(), position, level, social: parts[3] == "do_action" });
+    }
+    Ok(out)
+}
+
+/// Reads `<src>/interpreter.c`, `constants.c`, `class.c`, `config.c`, `spell_parser.c`, `limits.c`.
 pub fn read_tables(src: &Path) -> Result<Tables, String> {
+    let interp = strip_comments(&read(&src.join("interpreter.c"))?);
     let constants = strip_comments(&read(&src.join("constants.c"))?);
     let class = strip_comments(&read(&src.join("class.c"))?);
     let config = strip_comments(&read(&src.join("config.c"))?);
@@ -332,7 +366,7 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
             },
         },
     };
-    Ok(Tables { abilities, classes, world })
+    Ok(Tables { commands: commands(&interp)?, abilities, classes, world })
 }
 
 /// Reads tbaMUD's `lib/misc/messages`: `M`, the number, then twelve lines (die, miss, hit, god, each

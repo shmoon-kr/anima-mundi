@@ -135,6 +135,17 @@ pub struct ObjValues {
     pub poisoned: Option<bool>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub coins: Option<i64>,
+    /// A container's lock bits (closeable 1, pickproof 2, closed 4, locked 8: values.doc).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub lock_flags: Option<i64>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub corpse: Option<bool>,
+}
+
+impl ObjValues {
+    pub fn corpse(&self) -> bool {
+        self.corpse == Some(true)
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

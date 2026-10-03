@@ -13,10 +13,25 @@ use crate::names::Sector;
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Tables {
+    /// tbaMUD's command table in its order (MECHANICS §4.2): a typed word is the first name it begins.
+    pub commands: Vec<CommandEntry>,
     pub abilities: Abilities,
     /// By class name: magic_user, cleric, thief, warrior.
     pub classes: IndexMap<String, Class>,
     pub world: WorldTables,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct CommandEntry {
+    pub name: String,
+    /// The lowest position it can be used in.
+    pub position: crate::names::Position,
+    /// The lowest level that may use it (31 and up: immortals).
+    pub level: i32,
+    /// A social (do_action): matched after every other command.
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub social: bool,
 }
 
 /// MECHANICS §7.4, §9.4, §12.4, §13.1. Indexed by the ability score; strength 26-30 are 18/01-50,
@@ -183,9 +198,14 @@ fn read<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T, LoadError> {
     serde_saphyr::from_str(&text).map_err(|e| err(e.to_string()))
 }
 
-/// `<dir>/abilities.yaml`, `classes.yaml`, `world.yaml`.
+/// `<dir>/commands.yaml`, `abilities.yaml`, `classes.yaml`, `world.yaml`.
 pub fn load_tables(dir: &Path) -> Result<Tables, LoadError> {
-    Ok(Tables { abilities: read(&dir.join("abilities.yaml"))?, classes: read(&dir.join("classes.yaml"))?, world: read(&dir.join("world.yaml"))? })
+    Ok(Tables {
+        commands: read(&dir.join("commands.yaml"))?,
+        abilities: read(&dir.join("abilities.yaml"))?,
+        classes: read(&dir.join("classes.yaml"))?,
+        world: read(&dir.join("world.yaml"))?,
+    })
 }
 
 pub fn load_messages(path: &Path) -> Result<CombatMessages, LoadError> {

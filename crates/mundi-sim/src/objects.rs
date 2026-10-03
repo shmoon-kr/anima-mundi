@@ -1,5 +1,6 @@
 //! Objects: made from prototypes, moved between rooms, characters and containers, taken out of
-//! the world. New things go to the front of a list, as tbaMUD puts them (handler.c obj_to_*).
+//! the world. New things go to the front of a character's or container's list and to the end of a
+//! room's, as this tbaMUD puts them (handler.c obj_to_char, obj_to_obj, obj_to_room).
 
 use mundi_content::names::{EquipPos, ItemType};
 
@@ -18,6 +19,8 @@ impl Sim {
             liquid: v.liquid,
             poisoned: v.poisoned,
             coins: v.coins,
+            lock_flags: v.lock_flags,
+            corpse: v.corpse,
         };
         let serial = self.next_serial();
         let key = self.objs.insert(Obj {
@@ -77,7 +80,8 @@ impl Sim {
     pub(crate) fn put(&mut self, k: Key, place: Place) {
         self.unplace(k);
         match place {
-            Place::Room(r) => self.things[r].insert(0, k),
+            // This tbaMUD appends to a room (handler.c:772-793), so `last.<word>` is the newest.
+            Place::Room(r) => self.things[r].push(k),
             Place::Carried(c) => self.chars.get_mut(c).unwrap().inventory.insert(0, k),
             Place::Worn(c, pos) => {
                 self.chars.get_mut(c).unwrap().equipment.insert(pos, k);
@@ -136,7 +140,16 @@ impl Sim {
         let proto = o.proto.clone()?;
         let base = self.world.obj_protos.get(&proto)?;
         let v = &base.values;
-        let initial = ObjValues { hours: v.hours, capacity: v.capacity, contains: v.contains, liquid: v.liquid, poisoned: v.poisoned, coins: v.coins };
+        let initial = ObjValues {
+            hours: v.hours,
+            capacity: v.capacity,
+            contains: v.contains,
+            liquid: v.liquid,
+            poisoned: v.poisoned,
+            coins: v.coins,
+            lock_flags: v.lock_flags,
+            corpse: v.corpse,
+        };
         Some(SavedObj {
             proto,
             values: if o.values == initial { ObjValues::default() } else { o.values.clone() },

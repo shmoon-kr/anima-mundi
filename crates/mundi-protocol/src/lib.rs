@@ -149,6 +149,8 @@ pub enum Refusal {
     NothingToSay,
     /// `qui`: quit must be typed in full (MECHANICS §4.2). Mundi addition.
     QuitInFull,
+    /// A tbaMUD command Mundi does not do yet. Mundi addition, until phase 1 is complete.
+    NotYet,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -230,6 +232,101 @@ pub enum WakeFailure {
     AlreadyAwake,
     Magic,
     BadShape,
+}
+
+/// What someone did with an object (MECHANICS §13, §6.2, §6.3).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ItemAction {
+    Get,
+    Drop,
+    Put,
+    Give,
+    Wear,
+    Wield,
+    Hold,
+    Remove,
+    Eat,
+    Taste,
+    Drink,
+    Sip,
+}
+
+/// Why an object command did nothing. The renderer picks tbaMUD's sentence by action and reason.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ItemFailure {
+    /// No argument ("Get what?").
+    What,
+    /// `all.` with nothing after it ("Get all of what?").
+    AllOfWhat,
+    /// Not in the room ("You don't see a sword here.").
+    NotHere,
+    /// Not carried ("You don't seem to have a sword.").
+    NotCarried,
+    /// Not worn ("You don't seem to be using a sword.").
+    NotUsing,
+    /// `all.<word>` matched nothing ("You don't seem to have any swords.").
+    NoneOf,
+    /// `all` matched nothing.
+    Nothing,
+    CantTake,
+    TooMany,
+    TooHeavy,
+    /// A container in hand is full by count ("$p: you can't hold any more items.").
+    HoldNoMore,
+    NotContainer,
+    Closed,
+    Empty,
+    /// The container was not found ("You don't have a bag.").
+    NoContainer,
+    /// Corpses take nothing in.
+    IntoCorpse,
+    WontFit,
+    IntoItself,
+    /// put with no container named.
+    IntoWhat,
+    Cursed,
+    /// A cursed thing into a container on the floor.
+    OutOfHand,
+    NoPerson,
+    /// give with no person named.
+    ToWho,
+    GiveSelf,
+    HandsFull,
+    CantCarry,
+    Level,
+    CantWear,
+    CantWearThere,
+    /// Something is already in that slot (`slot` says which).
+    AlreadyWearing,
+    BadLocation,
+    CantWield,
+    TooHeavyToWield,
+    CantHold,
+    NotFood,
+    TooFull,
+    CantFind,
+    CantDrink,
+    MustHold,
+    MissMouth,
+    StomachFull,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct Carried {
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
+    pub text: String,
+    pub count: u32,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct Worn {
+    pub slot: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
+    pub text: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -410,6 +507,9 @@ pub enum Event {
         quenched: Option<bool>,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         sober: Option<bool>,
+        /// "You feel drunk." Mundi addition.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        drunk: Option<bool>,
     },
     /// A light down to its last hour (Mundi addition) or out (PROTOCOL.md `items.light_out`).
     #[serde(rename = "items.light_flicker")]
@@ -424,6 +524,116 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         who_id: Option<String>,
     },
+    #[serde(rename = "items.got")]
+    Got {
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from_id: Option<String>,
+    },
+    #[serde(rename = "items.received")]
+    Received {
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        from: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from_id: Option<String>,
+    },
+    #[serde(rename = "items.gave")]
+    Gave {
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        to: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        to_id: Option<String>,
+    },
+    /// I did something with an object. `into` is the container (put, drink from), `slot` where it
+    /// went (wear), `liquid` what was drunk. Mundi fills more than PROTOCOL.md `items.used`.
+    #[serde(rename = "items.used")]
+    Used {
+        action: ItemAction,
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        into: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        into_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        slot: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        liquid: Option<String>,
+    },
+    /// Someone else did something with an object (Mundi addition): `other` is the container or
+    /// the person given to.
+    #[serde(rename = "occupant.item")]
+    OccupantItem {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        action: ItemAction,
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        other: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        other_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        slot: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        liquid: Option<String>,
+    },
+    /// Coins picked up turn into money at once ("There were 12 coins."). Mundi addition.
+    #[serde(rename = "items.coins")]
+    Coins { amount: i64 },
+    #[serde(rename = "items.failed")]
+    ItemFailed {
+        action: ItemAction,
+        reason: ItemFailure,
+        /// The object (its short description), when there is one.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        text: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        /// The word as typed, for "You don't see a sword here.".
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        keyword: Option<String>,
+        /// The container or the person.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        other: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        other_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        slot: Option<String>,
+    },
+    /// Put on and at once dropped back into the pack: wrong alignment or class (MECHANICS §13.3).
+    #[serde(rename = "items.zapped")]
+    Zapped {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+    },
+    /// Poisoned food or drink: "Oops, that tasted rather strange!" and the room's cough.
+    #[serde(rename = "items.tasted_strange")]
+    TastedStrange {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        drink: bool,
+    },
+    #[serde(rename = "items.inventory")]
+    Inventory { items: Vec<Carried> },
+    #[serde(rename = "items.equipment")]
+    Equipment { slots: Vec<Worn> },
     #[serde(rename = "world.time")]
     WorldTime { phase: DayPhase },
     #[serde(rename = "comm.say")]

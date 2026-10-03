@@ -45,6 +45,7 @@ fn write_tables(src: &str, out: &str) -> Result<(), String> {
     let write = |file: &str, from: &str, body: String| {
         std::fs::write(out.join(file), DATA_HEADER.replace("{from}", from) + &body).map_err(|e| e.to_string())
     };
+    write("commands.yaml", "src/interpreter.c (cmd_info: name, position, level, in order)", yaml(&t.commands))?;
     write("abilities.yaml", "src/constants.c (str_app, dex_app, dex_app_skill, con_app, int_app, wis_app)", yaml(&t.abilities))?;
     write("classes.yaml", "src/class.c (thaco, level_exp, saving_throws, prac_params)", yaml(&t.classes))?;
     write("world.yaml", "src/constants.c, limits.c, spell_parser.c, config.c, class.c do_start", yaml(&t.world))?;
@@ -52,7 +53,7 @@ fn write_tables(src: &str, out: &str) -> Result<(), String> {
     if back != t {
         return Err("tables do not read back the same".into());
     }
-    println!("tables: {} strength rows, {} classes, {} liquids, {} syllables", t.abilities.strength.len(), t.classes.len(), t.world.liquids.len(), t.world.syllables.len());
+    println!("tables: {} commands, {} strength rows, {} classes, {} liquids, {} syllables", t.commands.len(), t.abilities.strength.len(), t.classes.len(), t.world.liquids.len(), t.world.syllables.len());
     Ok(())
 }
 

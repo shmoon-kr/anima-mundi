@@ -14,6 +14,7 @@
 
 mod commands;
 mod enter;
+mod items;
 mod levels;
 pub mod entity;
 mod look;
@@ -72,6 +73,14 @@ pub enum Input {
     SetAffect { name: String, affect: Affect, on: bool },
     /// Whether the character holds a lit light (until objects, S5).
     SetLight { name: String, on: bool },
+    /// Makes an object of a prototype in a character's pack, or on the floor of their room (tests and
+    /// admin tools, logged).
+    Load {
+        name: String,
+        object: String,
+        #[serde(default)]
+        carry: bool,
+    },
     /// Sets hit points, mana or moves, and hunger, thirst or drink (tests and admin tools, logged).
     SetPoints {
         name: String,
@@ -286,6 +295,14 @@ impl Sim {
                     self.test_lights.retain(|x| *x != k);
                     if on {
                         self.test_lights.push(k);
+                    }
+                }
+            }
+            Input::Load { name, object, carry } => {
+                if let Some(&k) = self.by_name.get(&key_name(&name)) {
+                    if let Some(o) = self.make_obj(&object) {
+                        let room = self.chars.get(k).unwrap().room;
+                        self.put(o, if carry { Place::Carried(k) } else { Place::Room(room) });
                     }
                 }
             }

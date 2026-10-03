@@ -184,3 +184,36 @@ fn korean_templates_are_complete_and_name_known_pairs() {
         assert!(mundi_render::josa::PAIRS.contains(&pair), "unknown particle pair {pair}");
     }
 }
+
+#[test]
+fn object_sentences_in_both_languages() {
+    use mundi_protocol::{ItemAction, ItemFailure, Worn};
+    let r = renderer();
+    r.register_player("Ana", Sex::Female, None);
+    let bread = || Some("tba:186:obj:18601/3".to_string());
+    let got = Event::Got { text: "a waybread".into(), id: None, from: None, from_id: None };
+    assert_eq!(line(&r, &got), "You get a waybread.");
+    let wear = Event::OccupantItem {
+        who: "Ana".into(),
+        who_id: Some("pc:ana".into()),
+        action: ItemAction::Wear,
+        text: "a breast plate".into(),
+        id: None,
+        other: None,
+        other_id: None,
+        slot: Some("body".into()),
+        liquid: None,
+    };
+    assert_eq!(line(&r, &wear), "Ana wears a breast plate on her body.");
+    let miss = |kw: &str| Event::ItemFailed { action: ItemAction::Get, reason: ItemFailure::NotHere, text: None, id: None, keyword: Some(kw.into()), other: None, other_id: None, slot: None };
+    assert_eq!(line(&r, &miss("sword")), "You don't see a sword here.");
+    assert_eq!(line(&r, &miss("apple")), "You don't see an apple here.");
+    assert_eq!(see(&r, &miss("sword"), KO), "여기엔 sword가 보이지 않는다.");
+    let eq = Event::Equipment { slots: vec![Worn { slot: "body".into(), id: None, text: "a breast plate".into() }] };
+    assert_eq!(line(&r, &eq), "You are using:\n<worn on body>       a breast plate");
+    assert_eq!(line(&r, &Event::Inventory { items: vec![] }), "You are carrying:\n  Nothing.");
+    // A Korean object name from the overlay, with its particle.
+    let k = Event::Got { text: "a newbie dagger".into(), id: bread(), from: None, from_id: None };
+    let ko = see(&r, &k, KO);
+    assert_eq!(ko, "반짝이는 초보자의 검을 집었다.");
+}

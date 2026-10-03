@@ -71,8 +71,8 @@ fn hunger_and_thirst_and_their_effect_on_regeneration() {
     let out = ticks(&mut sim, 23);
     assert!(to(&out, "War").iter().all(|e| !matches!(e, Event::Condition { .. })));
     let out = ticks(&mut sim, 1);
-    assert!(to(&out, "War").contains(&&Event::Condition { hungry: Some(true), thirsty: None, full: None, quenched: None, sober: None }));
-    assert!(to(&out, "War").contains(&&Event::Condition { hungry: None, thirsty: Some(true), full: None, quenched: None, sober: None }));
+    assert!(to(&out, "War").contains(&&Event::Condition { hungry: Some(true), thirsty: None, full: None, quenched: None, sober: None, drunk: None }));
+    assert!(to(&out, "War").contains(&&Event::Condition { hungry: None, thirsty: Some(true), full: None, quenched: None, sober: None, drunk: None }));
     let out = ticks(&mut sim, 1);
     assert_eq!(to(&out, "War").iter().filter(|e| matches!(e, Event::Condition { .. })).count(), 2, "again each tick at zero");
 
