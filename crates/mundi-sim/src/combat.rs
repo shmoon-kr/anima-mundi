@@ -291,9 +291,9 @@ impl Sim {
         if self.chars.get(vict).unwrap().position == Position::Dead {
             let v = self.chars.get(vict).unwrap();
             let gives_exp = ch != vict && (v.is_mob() || v.linked);
-            let (vexp, vlevel, valign, vname) = (v.exp, v.level, v.alignment, v.name.clone());
+            let (vexp, vlevel, valign, vname, vpc, vgold) = (v.exp, v.level, v.alignment, v.name.clone(), !v.is_mob(), v.gold);
             if gives_exp {
-                self.kill_gain(ch, vexp, vlevel, valign);
+                self.kill_reward(ch, vexp, vlevel, valign, vpc);
             }
             if !self.chars.get(vict).unwrap().is_mob() {
                 if let Some(c) = self.chars.get_mut(ch) {
@@ -301,7 +301,10 @@ impl Sim {
                 }
             }
             self.die(vict, Some(ch));
-            self.after_kill(ch, room);
+            if ch != vict {
+                self.after_kill(ch, vgold);
+            }
+            let _ = room;
             return -1;
         }
         dam
@@ -450,6 +453,20 @@ impl Sim {
         c.position = Position::Standing;
         let _ = killer;
         self.death_cry(vict);
+        // raw_kill tells the group; extracting the character (the menu, for a player) drops the group
+        // and the follows (fight.c:307-308, handler.c extract_char_final).
+        if let Some(g) = self.chars.get(vict).unwrap().group {
+            let (name, id) = (self.chars.get(vict).unwrap().name.clone(), self.id_of(vict));
+            for m in self.groups.get(g).map(|g| g.members.clone()).unwrap_or_default() {
+                if m != vict && self.chars.get(m).is_some_and(|c| !c.is_mob()) {
+                    self.deliver(m, Event::GroupChange { event: "died".into(), who: name.clone(), who_id: id.clone() });
+                }
+            }
+        }
+        if !self.chars.get(vict).unwrap().is_mob() {
+            self.leave_group(vict);
+            self.drop_follows(vict);
+        }
         self.update_pos(vict);
         self.make_corpse(vict);
         if self.chars.get(vict).unwrap().is_mob() {

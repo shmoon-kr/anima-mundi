@@ -15,6 +15,7 @@
 mod combat;
 mod commands;
 mod enter;
+mod group;
 mod items;
 mod levels;
 mod mobact;
@@ -44,7 +45,7 @@ use rand_core::SeedableRng;
 use serde::{Deserialize, Serialize};
 
 pub use entity::{Abilities, Class, Conditions, Save, SavedObj};
-use entity::{Char, Obj, Place};
+use entity::{Char, Group, Obj, Place};
 use store::{Key, Store};
 use world::{RoomIx, World};
 
@@ -153,6 +154,7 @@ pub struct Sim {
     test_lights: Vec<Key>,
     /// Who is fighting, the one who started last first (fight.c combat_list).
     combat: Vec<Key>,
+    groups: Store<Group>,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
@@ -183,6 +185,7 @@ impl Sim {
             serial: 0,
             test_lights: Vec::new(),
             combat: Vec::new(),
+            groups: Store::default(),
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,

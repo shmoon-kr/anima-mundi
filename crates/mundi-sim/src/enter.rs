@@ -99,6 +99,10 @@ impl Sim {
             wait: 0,
             wimpy: 0,
             memory: Vec::new(),
+            master: None,
+            followers: Vec::new(),
+            group: None,
+            prefs: Default::default(),
         });
         self.advance_level(key);
         let c = self.chars.get_mut(key).unwrap();
@@ -141,8 +145,12 @@ impl Sim {
             queue: VecDeque::new(),
             fighting: None,
             wait: 0,
-            wimpy: 0,
+            wimpy: s.wimpy,
             memory: Vec::new(),
+            master: None,
+            followers: Vec::new(),
+            group: None,
+            prefs: s.prefs.iter().cloned().collect(),
         }
     }
 
@@ -169,6 +177,8 @@ impl Sim {
             skills: c.skills.clone(),
             lived: self.tick as i64 - c.born,
             objects: self.save_objects(k),
+            prefs: c.prefs.iter().cloned().collect(),
+            wimpy: c.wimpy,
         }
     }
 
@@ -195,6 +205,8 @@ impl Sim {
         } else {
             self.by_name.remove(&key_name(&name));
         }
+        self.leave_group(key);
+        self.drop_follows(key);
         if self.chars.get(key).is_some_and(|c| c.fighting.is_some()) {
             self.stop_fighting(key);
         }

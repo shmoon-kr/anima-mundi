@@ -404,6 +404,7 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
   "You receive your share of experience -- %d points." (1 이하 "... -- one measly little point!")
 - 정렬: 내 정렬 += (−대상 정렬 − 내 정렬) / 16
 - 피해를 줄 때마다 얻는 경험치(§8.1-6)와 **따로** 받는다
+- 몹도 때릴 때마다 경험치를 얻는다(레벨 × 피해, 몹은 상한 없이: limits.c:231-234). 그래서 오래 싸운 몹은 죽일 때 더 많이 준다(시험으로 확인, S5)
 
 ### 9.3 레벨표 (class.c:1673-1847)
 레벨 1 = 1. 그 레벨에 필요한 누적 경험치:

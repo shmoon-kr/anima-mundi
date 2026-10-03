@@ -336,7 +336,13 @@ impl Renderer {
             Event::FleeFailed { reason } => vec![m(if reason == "panic" { "flee-panic" } else { "flee-bad-shape" })],
             Event::FleeSeen { who: w, who_id, failed } => one(if *failed { "flee-seen-failed" } else { "flee-seen" }, &[("who", who(w, who_id))]),
             Event::Aggro { who: w, who_id, .. } => one("aggro-remembered", &[("who", who(w, who_id))]),
-            Event::Assisted { who: w, who_id, target, target_id } => one("assisted", &[("who", who(w, who_id)), ("target", who(target, target_id))]),
+            Event::Assisted { who: w, who_id, target, target_id, jumped: true } => one("assisted", &[("who", who(w, who_id)), ("target", who(target, target_id))]),
+            Event::Assisted { who: w, target, .. } if w == mundi_protocol::SELF => {
+                let _ = target;
+                vec![m("assist-joined")]
+            }
+            Event::Assisted { who: w, who_id, target, .. } if target == mundi_protocol::SELF => one("assist-you", &[("who", who(w, who_id))]),
+            Event::Assisted { who: w, who_id, target, target_id, .. } => one("assist-room", &[("who", who(w, who_id)), ("target", who(target, target_id))]),
             Event::Appear { who: w, who_id } => one("appear", &[("who", who(w, who_id))]),
             Event::AttackRefused { reason } => {
                 let r = serde_json::to_value(reason).ok().and_then(|j| j.as_str().map(|s| s.replace('_', "-"))).unwrap_or_default();
@@ -363,7 +369,80 @@ impl Renderer {
                     _ => vec![],
                 }
             }
+            Event::Toggle { name, value } if value.is_boolean() => {
+                vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
+            }
             Event::Toggle { .. } => vec![],
+            Event::GroupChange { event: ev, who: w, who_id } => {
+                let line = self.msg(v, &format!("group-{ev}"), &[("who", who(w, who_id))]);
+                let prefixed = matches!(ev.as_str(), "joined" | "leader" | "left" | "new_leader" | "died");
+                vec![if prefixed { self.group_line(v, &line) } else { line }]
+            }
+            Event::OccupantFollow { who: w, who_id, leader, leader_id, stopped } => {
+                one(if *stopped { "room-unfollow" } else { "room-follow" }, &[("who", who(w, who_id)), ("leader", who(leader, leader_id))])
+            }
+            Event::FollowMoved { leader, leader_id, .. } => one("follow-moved", &[("leader", who(leader, leader_id))]),
+            Event::GroupStatus { members } => {
+                let mut out = vec![m("group-status")];
+                for g in members {
+                    let name = pad(&self.name(v, &g.name, g.id.as_deref(), Spot::Prose), 22);
+                    let colour = if g.leader { "bright_green" } else { "green" };
+                    out.push(format!(
+                        "{name}: {{{colour}}}[{:4}/{:<4}]H [{:4}/{:<4}]M [{:4}/{:<4}]V{{/{colour}}}",
+                        g.hp, g.hp_max, g.mp, g.mp_max, g.mv, g.mv_max
+                    ));
+                }
+                out
+            }
+            Event::GroupReport { member: g } => {
+                let args = [
+                    ("who", self.name(v, &g.name, g.id.as_deref(), Spot::Prose)),
+                    ("hp", g.hp.to_string()),
+                    ("hpm", g.hp_max.to_string()),
+                    ("mp", g.mp.to_string()),
+                    ("mpm", g.mp_max.to_string()),
+                    ("mv", g.mv.to_string()),
+                    ("mvm", g.mv_max.to_string()),
+                ];
+                vec![self.group_line(v, &self.msg(v, "group-report", &args))]
+            }
+            Event::GroupOption { open, anonymous } => match (open, anonymous) {
+                (Some(true), _) => vec![m("group-option-open")],
+                (Some(false), _) => vec![m("group-option-closed")],
+                (_, Some(true)) => vec![m("group-option-anonymous")],
+                _ => vec![m("group-option-visible")],
+            },
+            Event::GroupFailed { reason, who: w, who_id } => {
+                let name = w.as_deref().map(|n| self.name(v, n, who_id.as_deref(), Spot::Prose)).unwrap_or_default();
+                one(&format!("gfail-{reason}"), &[("who", name), ("him", self.pronoun(who_id.as_deref(), "him").into())])
+            }
+            Event::Gtell { from, from_id, text, direction } => match direction {
+                Direction::Out => vec![format!("{{green}}{}{{/green}}", self.msg(v, "gsay-out", &[("text", escape(text))]))],
+                Direction::In => {
+                    let line = format!("{{green}}{}{{/green}}", self.msg(v, "gsay-in", &[("who", who(from, from_id)), ("text", escape(text))]));
+                    vec![self.group_line(v, &line)]
+                }
+            },
+            Event::Split { from, from_id, amount, share, rest, members } => {
+                let coins = if *rest == 1 { "coin" } else { "coins" }.to_string();
+                let were = if *rest == 1 { "was" } else { "were" }.to_string();
+                let mut args = vec![
+                    ("who", who(from, from_id)),
+                    ("amount", amount.to_string()),
+                    ("share", share.to_string()),
+                    ("n", members.to_string()),
+                    ("rest", rest.to_string()),
+                    ("coins", coins),
+                    ("were", were),
+                ];
+                let me = from == mundi_protocol::SELF;
+                let mut out = vec![self.msg(v, if me { "split-self" } else { "split-other" }, &args)];
+                if *rest > 0 {
+                    args.push(("x", String::new()));
+                    out.push(self.msg(v, if me { "split-self-rest" } else { "split-other-rest" }, &args));
+                }
+                out
+            }
             Event::WorldTime { phase } => vec![m(match phase {
                 DayPhase::Sunrise => "time-sunrise",
                 DayPhase::Day => "time-day",
@@ -504,6 +583,11 @@ impl Renderer {
             }
         }
         cap(&out)
+    }
+
+    /// A line sent to a group: "[Group] " in green before it (comm.c send_to_group).
+    fn group_line(&self, v: Viewer, line: &str) -> String {
+        format!("{{green}}[{{bright_green}}{}{{/bright_green}}]{{/green}} {line}", self.msg(v, "group-prefix", &[]).trim_matches(['[', ']']))
     }
 
     /// An object named in a sentence: its short description, Korean from the overlay.

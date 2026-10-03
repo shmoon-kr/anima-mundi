@@ -194,6 +194,10 @@ impl Sim {
             wait: 0,
             wimpy: 0,
             memory: Vec::new(),
+            master: None,
+            followers: Vec::new(),
+            group: None,
+            prefs: Default::default(),
         });
         *self.counts.entry(proto.to_string()).or_default() += 1;
         self.mobs.push(key);

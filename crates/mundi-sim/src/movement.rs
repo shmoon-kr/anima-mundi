@@ -48,6 +48,7 @@ impl Sim {
         if !mob {
             self.look(key);
         }
+        self.followers_follow(key, from, d);
         true
     }
 

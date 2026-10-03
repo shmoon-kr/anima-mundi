@@ -135,7 +135,7 @@ impl Sim {
             });
             if let Some((friend, foe)) = target {
                 let (fname, fid) = (self.chars.get(friend).unwrap().name.clone(), self.id_of(friend));
-                self.to_room(k, room, false, |who, who_id| Event::Assisted { who, who_id, target: fname.clone(), target_id: fid.clone() });
+                self.to_room(k, room, false, |who, who_id| Event::Assisted { who, who_id, target: fname.clone(), target_id: fid.clone(), jumped: true });
                 self.hit(k, foe, None);
             }
         }

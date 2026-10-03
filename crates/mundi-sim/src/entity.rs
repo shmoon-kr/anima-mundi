@@ -111,6 +111,22 @@ pub(crate) struct Char {
     pub wimpy: i32,
     /// Players a memory mob remembers attacking it, by name (MECHANICS §7.5).
     pub memory: Vec<String>,
+    /// Whom they follow, and who follows them, the newest first (MECHANICS §2.5).
+    pub master: Option<Key>,
+    pub followers: Vec<Key>,
+    /// Their group (MECHANICS §12.1).
+    pub group: Option<Key>,
+    /// autoloot, autogold, autosplit, autoassist, autosac (MECHANICS §12.3).
+    pub prefs: std::collections::BTreeSet<String>,
+}
+
+/// A group (handler.c group_data): its leader and members in the order they joined.
+#[derive(Debug, Clone)]
+pub(crate) struct Group {
+    pub leader: Option<Key>,
+    pub members: Vec<Key>,
+    pub open: bool,
+    pub anonymous: bool,
 }
 
 impl Char {
@@ -228,6 +244,14 @@ pub struct Save {
     pub lived: i64,
     #[serde(default)]
     pub objects: Vec<SavedObj>,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub prefs: Vec<String>,
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub wimpy: i32,
+}
+
+fn is_zero(n: &i32) -> bool {
+    *n == 0
 }
 
 /// Rolls an amount (MECHANICS §17.1): a fixed number, or `NdS+B` dice.

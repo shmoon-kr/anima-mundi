@@ -80,6 +80,14 @@ impl Sim {
             "hit" | "kill" => self.hit_cmd(key, arg),
             "flee" => self.flee_cmd(key),
             "toggle" => self.toggle(key, arg),
+            "follow" => self.follow_cmd(key, arg),
+            "unfollow" => self.unfollow(key),
+            "group" => self.group_cmd(key, arg),
+            "gsay" | "gtell" => self.gsay(key, arg),
+            "report" => self.report(key),
+            "split" => self.split(key, arg),
+            "assist" => self.assist(key, arg),
+            p if crate::group::PREFS.contains(&p) => self.auto_toggle(key, p),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }
     }

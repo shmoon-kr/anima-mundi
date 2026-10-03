@@ -87,9 +87,4 @@ impl Sim {
         c.alignment += (-valign - c.alignment) / 16;
     }
 
-    /// What the killer does next (fight.c:784-813): auto-looting comes with step 5.
-    pub(crate) fn after_kill(&mut self, _k: Key, _room: RoomIx) {}
-
-    /// Group members joining a fight (fight.c:968-988): comes with groups (step 5).
-    pub(crate) fn autoassist(&mut self, _k: Key) {}
 }

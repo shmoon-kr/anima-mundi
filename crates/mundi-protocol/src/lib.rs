@@ -377,6 +377,20 @@ pub enum AttackRefusal {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct GroupMember {
+    pub name: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
+    pub hp: i32,
+    pub hp_max: i32,
+    pub mp: i32,
+    pub mp_max: i32,
+    pub mv: i32,
+    pub mv_max: i32,
+    pub leader: bool,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct RoomExit {
     pub dir: String,
     pub closed: bool,
@@ -769,6 +783,80 @@ pub enum Event {
         target: String,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         target_id: Option<String>,
+        /// A helper mob's "jumps to the aid of" rather than assist's "assists".
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        jumped: bool,
+    },
+    /// PROTOCOL.md `group.change`: joined, leader (became leader of a new group), new_leader (took
+    /// over), left, kicked (I kicked `who`), kicked_out (I was), following, followed_by,
+    /// stopped_following, follower_left.
+    #[serde(rename = "group.change")]
+    GroupChange {
+        event: String,
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    /// Someone else starts or stops following someone (Mundi addition).
+    #[serde(rename = "occupant.follow")]
+    OccupantFollow {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        leader: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        leader_id: Option<String>,
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        stopped: bool,
+    },
+    /// "You follow $N." (PROTOCOL.md `follow.moved`).
+    #[serde(rename = "follow.moved")]
+    FollowMoved {
+        leader: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        leader_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        dir: Option<String>,
+    },
+    #[serde(rename = "group.status")]
+    GroupStatus { members: Vec<GroupMember> },
+    /// "%s reports: ..." to the group (Mundi addition).
+    #[serde(rename = "group.report")]
+    GroupReport { member: GroupMember },
+    #[serde(rename = "group.option")]
+    GroupOption {
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        open: Option<bool>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        anonymous: Option<bool>,
+    },
+    /// Why a group, follow, split or assist command did nothing; `who` when it names someone.
+    #[serde(rename = "group.failed")]
+    GroupFailed {
+        reason: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "comm.gtell")]
+    Gtell {
+        from: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from_id: Option<String>,
+        text: String,
+        direction: Direction,
+    },
+    /// Gold shared (act.other.c do_split): `from` is "self" for the splitter. Mundi addition.
+    #[serde(rename = "items.split")]
+    Split {
+        from: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from_id: Option<String>,
+        amount: i64,
+        share: i64,
+        rest: i64,
+        members: i64,
     },
     #[serde(rename = "combat.appear")]
     Appear {
