@@ -200,11 +200,24 @@ attacker (English "you" = the attacker: 당신), .victim by the victim ("you" = 
 Short vivid 해라체 narration ("~다", "~했다!"). Keep exclamation marks and jokes."""
 
 
+EXAMPLES_PER_PROMPT = 12
+_WORD = re.compile(r"[a-z]{4,}")
+
+
+def examples_for(batch):
+    """The examples closest to this batch (most shared words of 4+ letters), at most EXAMPLES_PER_PROMPT.
+    Every review adds some; all 82 in every prompt halved the speed (180 -> 80 words a minute)."""
+    words = set(_WORD.findall(" ".join(text_of(e) for e in batch.values()).lower()))
+    scored = [(len(words & set(_WORD.findall(e["en"].lower()))), i, e) for i, e in enumerate(rules()[0])]
+    best = sorted(scored, key=lambda x: (-x[0], x[1]))[:EXAMPLES_PER_PROMPT]
+    return [e for _, _, e in sorted(best, key=lambda x: x[1])]
+
+
 def prompt(batch, conventions, terms):
     used = {t["en"]: t for e in batch.values() for t in terms_in(text_of(e), terms)}
     gl = "\n".join(f"  {t['en']} = {t['ko']}" + (f"  ({t['note']})" if t.get("note") else "") for t in used.values()) or "  (none)"
     conv = "\n".join(f"- {k}: {v}" for k, v in conventions.items())
-    ex = "".join(f"  {e['en']}\n    not: {e['bad']}\n    but: {e['good']}\n" for e in rules()[0])
+    ex = "".join(f"  {e['en']}\n    not: {e['bad']}\n    but: {e['good']}\n" for e in examples_for(batch))
     system = SYSTEM.format(conventions=conv, glossary=gl,
                            examples=f"- Examples of what to avoid and what to write instead:\n{ex}" if ex else "")
     if any(id_.startswith("attack:") for id_ in batch):
