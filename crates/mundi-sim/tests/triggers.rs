@@ -52,13 +52,17 @@ fn a_new_player_is_welcomed() {
     t.enter("Ana", TEMPLE);
     assert!(t.got("Ana", |e| matches!(e, Event::NewCharacter {})));
     t.run(5 * PULSES_PER_SEC);
-    let welcome = |e: &Event| matches!(e, Event::Echo { text } if text == "A booming voice announces, 'Welcome Ana to the realm!'");
+    // The line goes with its key and names, for a translation (the text is the English).
+    let welcome = |e: &Event| {
+        matches!(e, Event::Echo { text, line: Some(l) }
+            if text == "A booming voice announces, 'Welcome Ana to the realm!'" && l.id == "tba:30:trg:3017" && l.key == "welcome" && l.names[0].name == "Ana")
+    };
     assert!(t.got("Ana", welcome) && t.got("Old", welcome), "the whole zone hears it");
     assert!(t.sim.save("Ana").unwrap().objects.is_empty(), "no kit at login");
 }
 
 #[test]
-fn the_kind_soul_dresses_the_naked_and_fills_a_gap() {
+fn outfit_newcomers_dresses_the_naked_and_fills_a_gap() {
     // 30.trg #3016, seen live: the whole kit worn, two seconds after coming in
     let mut t = T::new();
     t.enter("Ana", TEMPLE);
@@ -115,7 +119,7 @@ fn the_dump_rewards_a_drop() {
     t.input(Input::Load { name: "Ana".into(), object: "tba:30:obj:3040".into(), carry: true });
     let exp = t.sim.save("Ana").unwrap().exp;
     t.cmd("Ana", "drop plate");
-    assert!(t.got("Ana", |e| matches!(e, Event::Echo { text } if text == "You are awarded for outstanding performance.")));
+    assert!(t.got("Ana", |e| matches!(e, Event::Echo { text, .. } if text == "You are awarded for outstanding performance.")));
     assert!(t.sim.save("Ana").unwrap().objects.is_empty());
     let gain = t.sim.save("Ana").unwrap().exp - exp;
     assert!((1..=50).contains(&gain), "{gain}");

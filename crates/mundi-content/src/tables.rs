@@ -54,11 +54,14 @@ pub struct Specials {
     pub guild_guards: Vec<GuildGuard>,
 }
 
-/// One trigger's native rule. `kind`: guild_guard, mortal_greet, kind_soul, cityguard, fido,
-/// janitor, dump, teleporter. The lines are the script's, `%s` the name it puts in.
+/// One trigger as a general behaviour and its content (MECHANICS §14.3). The lines are the
+/// script's, `%s` the names it puts in.
 #[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Trigger {
+    /// The engine's general behaviour this script is (MECHANICS §14.3): zone_welcome,
+    /// outfit_newcomers, guard, eat_corpses, pick_up_litter, reward_drops, guild_guard, none.
+    /// What is particular to the zone (who, which things, the lines, the numbers) is here.
     pub kind: String,
     /// lib/world/trg file and number, for reading the script.
     pub source: String,
@@ -72,11 +75,25 @@ pub struct Trigger {
     pub below_level: Option<i32>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub max_cost: Option<i64>,
+    /// guard: spits at those with less charisma than this.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub below_charisma: Option<i32>,
+    /// reward_drops: cost / per, from min to max.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub reward: Option<Reward>,
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub lines: IndexMap<String, String>,
-    /// kind_soul: what it hands out, in the order it checks.
+    /// outfit_newcomers: what it hands out, in the order it checks; a piece's line is `kit.<index>`.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub kit: Vec<KitPiece>,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Reward {
+    pub per: i64,
+    pub min: i64,
+    pub max: i64,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -339,5 +356,12 @@ pub fn load_tables(dir: &Path) -> Result<Tables, LoadError> {
 }
 
 pub fn load_messages(path: &Path) -> Result<CombatMessages, LoadError> {
+    read(path)
+}
+
+/// Content lines in another language by trigger ID and line key (`locales/ko/triggers.yaml`).
+pub type TriggerLines = std::collections::HashMap<String, std::collections::HashMap<String, String>>;
+
+pub fn load_trigger_lines(path: &Path) -> Result<TriggerLines, LoadError> {
     read(path)
 }

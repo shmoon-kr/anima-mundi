@@ -42,7 +42,7 @@ use std::collections::{BTreeMap, HashMap, VecDeque};
 use mundi_content::names::{Affect, DoorState, RoomFlag, Sector};
 use mundi_content::{Tables, ZoneContent};
 use mundi_protocol::{
-    ArrivedHow, CloseReason, DayPhase, Direction, Event, InGameHow, LeftHow, LinkState, MoveFailure, Occupant,
+    ArrivedHow, CloseReason, DayPhase, Direction, Event, InGameHow, LeftHow, LineRef, LinkState, MoveFailure, Named, Occupant,
     Position, PositionCommand, PositionRefusal, Refusal, RoomExit, RoomView, WakeFailure, SELF,
 };
 use rand_chacha::ChaCha8Rng;

@@ -23,7 +23,7 @@ use fluent_bundle::{FluentArgs, FluentResource, FluentValue};
 use mundi_content::{load_locale, Locale, ZoneContent};
 use mundi_protocol::{
     ArrivedHow, DayPhase, Direction, Event, HitOutcome, InGameHow, KeywordMode, KoFinal, Lang, LeftHow, LinkState, LoginFailure,
-    LoginStage, MoveFailure, Occupant, Position, PositionCommand, PositionRefusal, Refusal, RoomView, Sex, WakeFailure,
+    LineRef, LoginStage, MoveFailure, Occupant, Position, PositionCommand, PositionRefusal, Refusal, RoomView, Sex, WakeFailure,
 };
 
 pub use mundi_content::markup::plain;
@@ -91,6 +91,8 @@ pub struct Renderer {
     combat: Option<mundi_content::CombatMessages>,
     /// Its Korean lines (`locales/ko/combat.yaml`): act() codes with particle pairs (`$N{을/를}`).
     combat_ko: Option<mundi_content::CombatMessages>,
+    /// Content lines in Korean by trigger and key (`locales/ko/triggers.yaml`): `%s` names, `%s{이/가}`.
+    lines_ko: HashMap<String, HashMap<String, String>>,
     /// Spells' wear-off lines from the spell table (English).
     wearoffs: HashMap<i32, String>,
 }
@@ -132,6 +134,8 @@ impl Renderer {
         let combat = locales.parent().map(|p| p.join("messages/combat.yaml")).filter(|p| p.exists()).map(|p| mundi_content::load_messages(&p)).transpose().map_err(|e| e.to_string())?;
         let ko_combat = locales.join("ko/combat.yaml");
         let combat_ko = ko_combat.exists().then(|| mundi_content::load_messages(&ko_combat)).transpose().map_err(|e| e.to_string())?;
+        let ko_lines = locales.join("ko/triggers.yaml");
+        let lines_ko = ko_lines.exists().then(|| mundi_content::load_trigger_lines(&ko_lines)).transpose().map_err(|e| e.to_string())?.unwrap_or_default();
         let wearoffs = locales
             .parent()
             .map(|p| p.join("tables"))
@@ -139,7 +143,7 @@ impl Renderer {
             .and_then(|p| mundi_content::load_tables(&p).ok())
             .map(|t| t.spells.into_iter().filter_map(|s| Some((s.number, s.wearoff?))).collect())
             .unwrap_or_default();
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, combat_ko, wearoffs })
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, combat_ko, lines_ko, wearoffs })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -562,8 +566,8 @@ impl Renderer {
                 (_, Some(r)) => vec![m(&format!("practiced-{r}"))],
                 _ => vec![],
             },
-            Event::Emote { who: w, who_id, text } => one("emote", &[("who", who(w, who_id)), ("text", escape(text))]),
-            Event::Echo { text } => vec![escape(text)],
+            Event::Emote { who: w, who_id, text, line } => one("emote", &[("who", who(w, who_id)), ("text", self.content_line(v, text, line))]),
+            Event::Echo { text, line } => vec![self.content_line(v, text, line)],
             Event::NewCharacter {} => vec![m("new-character-1"), m("new-character-2"), m("new-character-3")],
             Event::Toggle { name, value } if value.is_boolean() => {
                 vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
@@ -645,9 +649,9 @@ impl Renderer {
                 DayPhase::Sunset => "time-sunset",
                 DayPhase::Night => "time-night",
             })],
-            Event::Say { from, from_id, text, direction } => match direction {
-                Direction::Out => one("say-out", &[("text", escape(text))]),
-                Direction::In => one("say-in", &[("who", who(from, from_id)), ("text", escape(text))]),
+            Event::Say { from, from_id, text, direction, line } => match direction {
+                Direction::Out => one("say-out", &[("text", self.content_line(v, text, line))]),
+                Direction::In => one("say-in", &[("who", who(from, from_id)), ("text", self.content_line(v, text, line))]),
             },
         }
     }
@@ -796,6 +800,32 @@ impl Renderer {
             if let Some(pair) = rest.strip_prefix('{').and_then(|r| r.split_once('}')).filter(|(pair, _)| josa::particle(pair, Final::None).is_some()) {
                 out.push_str(&particle_after(&self.finals, &word, pair.0));
                 rest = pair.1;
+            }
+        }
+        out.push_str(rest);
+        out
+    }
+
+    /// A content line (a trigger's): the reader's language when the overlay has it, its `%s` the
+    /// names in order (당신 for the reader) and a pair after one its particle (D23); else the English.
+    fn content_line(&self, v: Viewer, english: &str, line: &Option<LineRef>) -> String {
+        let ko = line.as_ref().filter(|_| v.lang == Lang::Ko).and_then(|l| Some((l, self.lines_ko.get(&l.id)?.get(&l.key)?)));
+        let Some((l, pattern)) = ko else { return escape(english) };
+        let mut names = l.names.iter();
+        let mut out = String::new();
+        let mut rest = pattern.as_str();
+        while let Some(at) = rest.find("%s") {
+            out.push_str(&rest[..at]);
+            rest = &rest[at + 2..];
+            let word = match names.next() {
+                Some(n) if n.name == mundi_protocol::SELF => "당신".to_string(),
+                Some(n) => self.name(v, &n.name, n.id.as_deref(), Spot::Prose),
+                None => String::new(),
+            };
+            out.push_str(&word);
+            if let Some((pair, after)) = rest.strip_prefix('{').and_then(|r| r.split_once('}')).filter(|(pair, _)| josa::particle(pair, Final::None).is_some()) {
+                out.push_str(&particle_after(&self.finals, &word, pair));
+                rest = after;
             }
         }
         out.push_str(rest);

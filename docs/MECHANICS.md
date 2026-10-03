@@ -614,7 +614,15 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 
 ### 14.3 트리거로 된 행동 (S5 에서 발견)
 - 이 tbaMUD 는 길드 경비·fido·janitor·cityguard·snake·thief·magic_user·puff 를 **DG 스크립트**(lib/world/trg, 몹에 붙은 트리거)로 한다(spec_assign.c:62-63). spec_assign.c 의 코드 배정은 길드 주인(guild) 등 몇 개뿐
-- Mundi 1단계: 트리거는 범위 밖. **길드 경비만** 같은 규칙을 데이터로 한다(30.trg #3000-#3003 = class.c guild_info: 마법사 3017 남, 성직자 3004 북, 도적 3027 동, 전사 3021 동; 경비가 깨어 있고 볼 때 그 직업만 지나간다). 다른 트리거 동작(fido 가 시체를 먹기, janitor 가 줍기, cityguard 등)은 하지 않는다 — 비교 때 차이로 나온다
+- Mundi 1단계 (사용자 결정 a): 스크립트 계층 없이, 파티가 만나는 트리거를 **엔진의 일반 행동** + **콘텐츠 데이터**로 한다(원칙 6, D9).
+  엔진(`crates/mundi-sim/src/triggers.rs`)은 행동만 안다. 어느 몹·방이 하는지, 무엇을 주는지, 무슨 말을 하는지, 수치는 `third_party/tbamud/tables/triggers.yaml`,
+  그 문구의 한국어는 `locales/ko/triggers.yaml` (사건이 문구의 키를 함께 보내 렌더러가 고른다, D22 추가). 2단계 스크립트 계층의 첫 재료
+  - `guild_guard`: 30.trg #3000-#3003 = class.c guild_info (마법사 3017 남, 성직자 3004 북, 도적 3027 동, 전사 3021 동; 경비가 깨어 있고 볼 때 그 직업만)
+  - `zone_welcome` (로그인, #3017): `delay` 초 뒤 존 전체에 `welcome` 문구. 스크립트의 레벨 0 장비는 do_start 가 먼저 레벨 1 로 만들어 돌지 않는다(실서버 확인)
+  - `outfit_newcomers` (인사, #3016): `below_level` 미만 플레이어가 들어오면 `delay` 초 뒤, 아무것도 안 입었으면 `kit` 전부를 입히고 `full` 문구, 아니면 빠진 첫 조각을 그 줄의 말과 함께 준다
+  - 무작위 (13초마다, 플레이어가 있는 존의 몹, `chance`%): `guard` (#3009: 보이는 하나를 골라 매력 `below_charisma` 미만이면 침, 공격자보다 정렬이 높고 0 이상인 피해자 편에 끼어든다),
+    `eat_corpses` (#3010: 첫 시체), `pick_up_litter` (#3011: 분수가 아니고 가격 `max_cost` 이하인 것 모두)
+  - `reward_drops` (방의 drop, #3004): 버린 물건을 가져가고 `reward` (가격/per, min~max) 를 `below_level` 미만이면 경험치, 아니면 돈으로
 
 ### 14.2 몹 행동 (mobact.c:41-197, 10초마다, 이 순서로)
 1. 특수 동작(상점·길드·뱀 등)이 있으면 하고, 했으면 이번은 끝

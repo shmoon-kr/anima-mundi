@@ -1059,10 +1059,16 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         who_id: Option<String>,
         text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        line: Option<LineRef>,
     },
     /// A script's line, already with its names (zone echoes, sends): the world's text. Mundi addition.
     #[serde(rename = "world.echo")]
-    Echo { text: String },
+    Echo {
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        line: Option<LineRef>,
+    },
     /// tbaMUD's start message for a character's first entry (config.c START_MESSG). Mundi addition.
     #[serde(rename = "connection.new_character")]
     NewCharacter {},
@@ -1080,7 +1086,29 @@ pub enum Event {
         from_id: Option<String>,
         text: String,
         direction: Direction,
+        /// A mob's line from the content (a trigger's), for readers in another language. Mundi addition.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        line: Option<LineRef>,
     },
+}
+
+/// The content line an event's English text came from: a trigger's ID and the line's key there
+/// (`tba:30:trg:3016`, `full` or `kit.3`), and the names that fill its `%s` in order. A renderer
+/// shows its own language's line when it has one, else the text. Mundi addition (D22).
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct LineRef {
+    pub id: String,
+    pub key: String,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub names: Vec<Named>,
+}
+
+/// A being named in a line: as the event names it (`self` for the reader) and its ID.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Named {
+    pub name: String,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
 }
 
 fn is_zero(n: &u32) -> bool {
@@ -1160,7 +1188,7 @@ mod tests {
             tick: 7,
             seq: 1,
             agent: "Vallen".into(),
-            event: Event::Say { from: SELF.into(), from_id: None, text: "hi".into(), direction: Direction::Out },
+            event: Event::Say { from: SELF.into(), from_id: None, text: "hi".into(), direction: Direction::Out, line: None },
             text: vec!["You say, 'hi'".into()],
         };
         let json = serde_json::to_value(&e).unwrap();

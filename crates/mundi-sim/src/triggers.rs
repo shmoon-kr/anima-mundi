@@ -1,6 +1,8 @@
-//! The DG Script triggers the party meets, as native rules (MECHANICS §14.3; tables/triggers.yaml
-//! says what each script does): the welcome at login, the kind soul, cityguards, fido, the janitor,
-//! the dump. A script's `wait` is a scheduled step.
+//! General behaviours that tbaMUD writes as DG Script triggers (MECHANICS §14.3). The engine knows
+//! only the behaviours (welcome a zone's arrivals, outfit newcomers, guard, eat corpses, pick up
+//! litter, reward drops); which mob or room does it, what it hands out, what it says and its
+//! numbers are content (`tables/triggers.yaml`). Lines go out with their key so readers in another
+//! language get them translated. A script's `wait` is a scheduled step.
 
 use mundi_content::names::{EquipPos, ItemType};
 use mundi_content::tables::Trigger;
@@ -12,31 +14,47 @@ pub(crate) const PULSE_SCRIPT: u64 = 13 * PULSES_PER_SEC;
 
 #[derive(Debug, Clone)]
 pub(crate) enum Scheduled {
-    KindSoul { mob: Key, actor: Key, trigger: String },
-    Welcome { name: String, zone: u32, text: String },
+    Outfit { mob: Key, actor: Key, trigger: String },
+    Welcome { actor: Key, zone: u32, trigger: String },
+}
+
+/// A trigger's line: its English text with the names filled in, and the reference to it.
+struct Line {
+    text: String,
+    line: LineRef,
 }
 
 impl Sim {
-    fn mob_triggers(&self, k: Key) -> Vec<Trigger> {
+    fn triggers_of(&self, ids: &[String]) -> Vec<(String, Trigger)> {
+        ids.iter().filter_map(|id| self.tables.triggers.get(id).map(|t| (id.clone(), t.clone()))).collect()
+    }
+
+    fn mob_triggers(&self, k: Key) -> Vec<(String, Trigger)> {
         let Some(m) = self.chars.get(k).and_then(|c| c.mob.as_ref()) else { return vec![] };
         let ids = self.world.mob_protos.get(&m.proto).map(|p| p.triggers.clone()).unwrap_or_default();
-        ids.iter().filter_map(|id| self.tables.triggers.get(id).cloned()).collect()
+        self.triggers_of(&ids)
     }
 
-    fn room_triggers(&self, room: RoomIx) -> Vec<Trigger> {
-        self.world.rooms[room].triggers.iter().filter_map(|id| self.tables.triggers.get(id).cloned()).collect()
+    fn room_triggers(&self, room: RoomIx) -> Vec<(String, Trigger)> {
+        self.triggers_of(&self.world.rooms[room].triggers)
     }
 
-    fn line(t: &Trigger, key: &str) -> String {
-        t.lines.get(key).cloned().unwrap_or_default()
-    }
-
-    fn fill(line: &str, names: &[&str]) -> String {
-        let mut out = line.to_string();
-        for n in names {
-            out = out.replacen("%s", n, 1);
+    /// A line of a trigger, its `%s` filled with these beings' names in order.
+    fn line(&self, id: &str, t: &Trigger, key: &str, names: &[Key]) -> Line {
+        let english = match key.strip_prefix("kit.").and_then(|i| i.parse::<usize>().ok()) {
+            Some(i) => t.kit.get(i).and_then(|p| p.say.clone()),
+            None => t.lines.get(key).cloned(),
         }
-        out
+        .unwrap_or_default();
+        let named: Vec<Named> = names
+            .iter()
+            .map(|k| Named { name: self.chars.get(*k).map(|c| c.name.clone()).unwrap_or_default(), id: self.id_of(*k) })
+            .collect();
+        let mut text = english;
+        for n in &named {
+            text = text.replacen("%s", &n.name, 1);
+        }
+        Line { text, line: LineRef { id: id.into(), key: key.into(), names: named } }
     }
 
     /// Steps whose wait is over, in the order they were scheduled.
@@ -45,12 +63,13 @@ impl Sim {
         self.scheduled = later;
         for (_, s) in due {
             match s {
-                Scheduled::KindSoul { mob, actor, trigger } => self.kind_soul(mob, actor, &trigger),
-                Scheduled::Welcome { name, zone, text } => {
-                    let line = Sim::fill(&text, &[&name]);
+                Scheduled::Outfit { mob, actor, trigger } => self.outfit(mob, actor, &trigger),
+                Scheduled::Welcome { actor, zone, trigger } => {
+                    let Some(t) = self.tables.triggers.get(&trigger).cloned() else { continue };
+                    let l = self.line(&trigger, &t, "welcome", &[actor]);
                     for k in self.order.clone() {
                         if self.chars.get(k).is_some_and(|c| self.world.rooms[c.room].zone == zone) {
-                            self.deliver(k, Event::Echo { text: line.clone() });
+                            self.deliver(k, Event::Echo { text: l.text.clone(), line: Some(l.line.clone()) });
                         }
                     }
                 }
@@ -58,21 +77,20 @@ impl Sim {
         }
     }
 
-    /// Login triggers of the room one enters the game in (interpreter.c:1318).
+    /// Login triggers of the room one enters the game in (interpreter.c:1318): zone_welcome.
     pub(crate) fn login_triggers(&mut self, k: Key) {
         let room = self.chars.get(k).unwrap().room;
-        for t in self.room_triggers(room) {
-            if t.kind == "mortal_greet" {
-                let name = self.chars.get(k).unwrap().name.clone();
+        for (id, t) in self.room_triggers(room) {
+            if t.kind == "zone_welcome" {
                 let at = self.tick + t.delay.unwrap_or(0) as u64 * PULSES_PER_SEC;
                 let zone = self.world.rooms[room].zone;
-                self.scheduled.push((at, Scheduled::Welcome { name, zone, text: Sim::line(&t, "welcome") }));
+                self.scheduled.push((at, Scheduled::Welcome { actor: k, zone, trigger: id }));
             }
         }
     }
 
     /// Greet triggers of the mobs in a room someone comes into (dg_triggers.c greet_mtrigger): awake,
-    /// not fighting, seeing them.
+    /// not fighting, seeing them. outfit_newcomers: players under the trigger's level.
     pub(crate) fn greet(&mut self, actor: Key) {
         let room = self.chars.get(actor).unwrap().room;
         for mob in self.people[room].clone() {
@@ -80,26 +98,24 @@ impl Sim {
             if mob == actor || !m.is_mob() || m.position <= Position::Sleeping || m.fighting.is_some() || !self.can_see(mob, actor) {
                 continue;
             }
-            let ids = self.world.mob_protos.get(&m.mob.as_ref().unwrap().proto).map(|p| p.triggers.clone()).unwrap_or_default();
-            for id in ids {
-                let Some(t) = self.tables.triggers.get(&id).cloned() else { continue };
-                if t.kind == "kind_soul" {
-                    let a = self.chars.get(actor).unwrap();
-                    if !a.is_mob() && a.level < t.below_level.unwrap_or(5) {
-                        let at = self.tick + t.delay.unwrap_or(0) as u64 * PULSES_PER_SEC;
-                        self.scheduled.push((at, Scheduled::KindSoul { mob, actor, trigger: id.clone() }));
-                    }
+            for (id, t) in self.mob_triggers(mob) {
+                let a = self.chars.get(actor).unwrap();
+                if t.kind == "outfit_newcomers" && !a.is_mob() && t.below_level.is_some_and(|l| a.level < l) {
+                    let at = self.tick + t.delay.unwrap_or(0) as u64 * PULSES_PER_SEC;
+                    self.scheduled.push((at, Scheduled::Outfit { mob, actor, trigger: id }));
                 }
             }
         }
     }
 
-    /// 30.trg #3016, after its wait: nothing worn, the whole kit worn; else the first missing piece.
-    fn kind_soul(&mut self, mob: Key, actor: Key, trigger: &str) {
+    /// outfit_newcomers, after its wait: wearing nothing, the whole kit worn; else the first missing
+    /// piece, its line said and the piece given (30.trg #3016).
+    fn outfit(&mut self, mob: Key, actor: Key, trigger: &str) {
         let (Some(_), Some(a)) = (self.chars.get(mob), self.chars.get(actor)) else { return };
         let Some(t) = self.tables.triggers.get(trigger).cloned() else { return };
         if a.equipment.is_empty() {
-            self.say(mob, &Sim::line(&t, "full"));
+            let l = self.line(trigger, &t, "full", &[]);
+            self.say_line(mob, &l.text, Some(l.line));
             for piece in &t.kit {
                 for slot in &piece.slots {
                     if let Some(o) = self.make_obj(&piece.object) {
@@ -111,12 +127,13 @@ impl Sim {
         }
         let name = a.name.clone();
         let worn = |s: &Sim, slot: &EquipPos| s.chars.get(actor).is_some_and(|c| c.equipment.contains_key(slot));
-        let Some(piece) = t.kit.iter().find(|p| !p.full_only && p.slots.iter().any(|s| !worn(self, s))).cloned() else { return };
-        if let Some(say) = &piece.say {
-            self.say(mob, &Sim::fill(say, &[&name]));
+        let Some(i) = t.kit.iter().position(|p| !p.full_only && p.slots.iter().any(|s| !worn(self, s))) else { return };
+        if t.kit[i].say.is_some() {
+            let l = self.line(trigger, &t, &format!("kit.{i}"), &[actor]);
+            self.say_line(mob, &l.text, Some(l.line));
         }
         // The social (shake, sigh, roll, smile) comes with socials.
-        let Some(o) = self.make_obj(&piece.object) else { return };
+        let Some(o) = self.make_obj(&t.kit[i].object) else { return };
         self.put(o, Place::Carried(mob));
         let kw = self.objs.get(o).and_then(|x| x.keywords.first().cloned()).unwrap_or_default();
         self.give(mob, &format!("{kw} {}", name.to_lowercase()));
@@ -132,15 +149,15 @@ impl Sim {
             if !occupied || c.has(mundi_content::names::Affect::Charm) {
                 continue;
             }
-            for t in self.mob_triggers(mob) {
+            for (id, t) in self.mob_triggers(mob) {
                 let Some(chance) = t.chance else { continue };
                 if self.rand(1, 100) as i32 > chance {
                     continue;
                 }
                 match t.kind.as_str() {
-                    "cityguard" => self.cityguard(mob, &t),
-                    "fido" => self.fido(mob, &t),
-                    "janitor" => self.janitor(mob, &t),
+                    "guard" => self.guard(mob, &id, &t),
+                    "eat_corpses" => self.eat_corpse(mob, &id, &t),
+                    "pick_up_litter" => self.pick_up_litter(mob, &t),
                     _ => {}
                 }
                 break;
@@ -148,8 +165,9 @@ impl Sim {
         }
     }
 
-    /// 30.trg #3009.
-    fn cityguard(&mut self, mob: Key, t: &Trigger) {
+    /// guard: picks one it sees; spits at low charisma; joins a fight on the side of a victim who is
+    /// better aligned (0 or more) than the attacker (30.trg #3009).
+    fn guard(&mut self, mob: Key, id: &str, t: &Trigger) {
         let Some(g) = self.chars.get(mob) else { return };
         if g.fighting.is_some() {
             return;
@@ -167,40 +185,41 @@ impl Sim {
             }
         }
         let Some(actor) = actor else { return };
-        let (gname, aname) = (self.chars.get(mob).unwrap().name.clone(), self.chars.get(actor).unwrap().name.clone());
-        if self.abilities_now(actor).cha < 6 {
-            self.deliver(actor, Event::Echo { text: cap_first(&Sim::fill(&Sim::line(t, "spit_you"), &[&gname])) });
-            let around = cap_first(&Sim::fill(&Sim::line(t, "spit_room"), &[&gname, &aname]));
+        if t.below_charisma.is_some_and(|b| self.abilities_now(actor).cha < b) {
+            let you = self.line(id, t, "spit_you", &[mob]);
+            self.deliver(actor, Event::Echo { text: cap_first(&you.text), line: Some(you.line) });
+            let around = self.line(id, t, "spit_room", &[mob, actor]);
             for w in self.people[room].clone() {
                 if w != actor && self.awake_and_linked_pub(w) {
-                    self.deliver(w, Event::Echo { text: around.clone() });
+                    self.deliver(w, Event::Echo { text: cap_first(&around.text), line: Some(around.line.clone()) });
                 }
             }
         }
         let Some(victim) = self.chars.get(actor).and_then(|a| a.fighting) else { return };
         let (aa, va) = (self.chars.get(actor).unwrap().alignment, self.chars.get(victim).map_or(-1000, |v| v.alignment));
         if aa < va && va >= 0 {
-            let text = Sim::line(t, "protect");
-            self.to_room(mob, room, false, |who, who_id| Event::Emote { who, who_id, text: text.clone() });
+            let l = self.line(id, t, "protect", &[]);
+            self.to_room(mob, room, false, |who, who_id| Event::Emote { who, who_id, text: l.text.clone(), line: Some(l.line.clone()) });
             // kill %actor.name%: the name's first word, as the command would read it.
+            let aname = self.chars.get(actor).unwrap().name.clone();
             let word = aname.split_whitespace().next().unwrap_or("").to_lowercase();
             self.hit_cmd(mob, &word);
         }
     }
 
-    /// 30.trg #3010: the first corpse in the room.
-    fn fido(&mut self, mob: Key, t: &Trigger) {
+    /// eat_corpses: the first corpse in the room (30.trg #3010).
+    fn eat_corpse(&mut self, mob: Key, id: &str, t: &Trigger) {
         let room = self.chars.get(mob).unwrap().room;
         let Some(corpse) = self.things[room].iter().copied().find(|o| self.objs.get(*o).is_some_and(|x| x.values.corpse())) else { return };
-        let text = Sim::line(t, "devours");
-        self.to_room(mob, room, false, |who, who_id| Event::Emote { who, who_id, text: text.clone() });
+        let l = self.line(id, t, "devours", &[]);
+        self.to_room(mob, room, false, |who, who_id| Event::Emote { who, who_id, text: l.text.clone(), line: Some(l.line.clone()) });
         self.extract_obj(corpse);
     }
 
-    /// 30.trg #3011: `take` everything cheap that is not a fountain.
-    fn janitor(&mut self, mob: Key, t: &Trigger) {
+    /// pick_up_litter: `take` everything up to the trigger's cost that is not a fountain (30.trg #3011).
+    fn pick_up_litter(&mut self, mob: Key, t: &Trigger) {
         let room = self.chars.get(mob).unwrap().room;
-        let max = t.max_cost.unwrap_or(15);
+        let Some(max) = t.max_cost else { return };
         for o in self.things[room].clone() {
             let Some(obj) = self.objs.get(o) else { continue };
             if obj.kind != ItemType::Fountain && obj.cost <= max {
@@ -210,23 +229,26 @@ impl Sim {
         }
     }
 
-    /// 30.trg #3004, a drop trigger: the dump rewards and keeps the thing. Whether it took the drop.
+    /// reward_drops, a room's drop trigger: the thing is taken and rewarded, in experience below the
+    /// trigger's level, else gold (30.trg #3004). Whether it took the drop.
     pub(crate) fn drop_trigger(&mut self, actor: Key, o: Key) -> bool {
         let room = self.chars.get(actor).unwrap().room;
-        let Some(t) = self.room_triggers(room).into_iter().find(|t| t.kind == "dump") else { return false };
-        let name = self.chars.get(actor).unwrap().name.clone();
-        self.deliver(actor, Event::Echo { text: Sim::line(&t, "you") });
-        let around = Sim::fill(&Sim::line(&t, "room"), &[&name]);
+        let Some((id, t)) = self.room_triggers(room).into_iter().find(|(_, t)| t.kind == "reward_drops") else { return false };
+        let you = self.line(&id, &t, "you", &[]);
+        self.deliver(actor, Event::Echo { text: you.text, line: Some(you.line) });
+        let around = self.line(&id, &t, "room", &[actor]);
         for w in self.people[room].clone() {
             if w != actor && self.awake_and_linked_pub(w) {
-                self.deliver(w, Event::Echo { text: around.clone() });
+                self.deliver(w, Event::Echo { text: around.text.clone(), line: Some(around.line.clone()) });
             }
         }
-        let value = (self.objs.get(o).map_or(0, |x| x.cost) / 10).clamp(1, 50);
-        if self.chars.get(actor).unwrap().level < t.below_level.unwrap_or(3) {
-            self.gain_exp(actor, value);
-        } else {
-            self.chars.get_mut(actor).unwrap().gold += value;
+        if let Some(r) = t.reward {
+            let value = (self.objs.get(o).map_or(0, |x| x.cost) / r.per).clamp(r.min, r.max);
+            if t.below_level.is_some_and(|l| self.chars.get(actor).unwrap().level < l) {
+                self.gain_exp(actor, value);
+            } else {
+                self.chars.get_mut(actor).unwrap().gold += value;
+            }
         }
         self.extract_obj(o);
         true

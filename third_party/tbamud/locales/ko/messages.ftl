@@ -688,7 +688,7 @@ practiced-not_here = 기술은 길드에서만 연습할 수 있다.
 refused-not-here-shop = 미안하지만, 여기서는 그럴 수 없다!
 
 ## scripts and the start
-emote = { $who } { $text }
+emote = { $who }{ JOSA($who, "이/가") } { $text }
 new-character-1 = 환영한다.  이것이 당신의 새 tbaMUD 캐릭터다!  이제 금화를 벌고,
 new-character-2 = 경험을 쌓고, 무기와 장비를 찾고, 그 밖에도 많은 것을 할 수 있다 --
 new-character-3 = 세계 곳곳에서 온 사람들과 만나면서!

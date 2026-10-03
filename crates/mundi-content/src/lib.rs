@@ -14,4 +14,4 @@ pub mod tables;
 pub use load::{check_world, load_world, load_zone, parse_id, write_zone, Report};
 pub use locale::{load_locale, Locale};
 pub use model::*;
-pub use tables::{load_messages, load_tables, CombatMessages, Tables};
+pub use tables::{load_messages, load_tables, load_trigger_lines, CombatMessages, Tables, TriggerLines};

@@ -1,6 +1,8 @@
 # tbaMUD-derived (third_party/tbamud/NOTICE.md). Native rules for the DG Script triggers of the zones
 # the party plays (lib/world/trg/30.trg), written from the scripts by hand: Mundi does not run DG
-# Scripts (MECHANICS §14.3). Each entry says what its script does; the lines are the script's own.
+# Scripts (MECHANICS §14.3). The engine has general behaviours (`kind`); what is particular to the
+# zone — which mob, which things, the lines, the numbers — is here, so the engine has none of it.
+# Each entry says what its script does; the lines are the script's own (Korean: locales/ko/triggers.yaml).
 # Checked on the live server (S5 comparison): the kind soul's kit, the welcome, no kit at login.
 
 # Guild guards: class.c guild_info has the same rooms, ways and classes (tables/specials.yaml).
@@ -12,9 +14,10 @@ tba:30:trg:3003: {kind: guild_guard, source: "30.trg #3003"}
 # Room 3030, the dump: a drop is rewarded (cost / 10, 1 to 50) in exp below level 3, else gold,
 # and the thing is gone.
 tba:30:trg:3004:
-  kind: dump
+  kind: reward_drops
   source: "30.trg #3004"
   below_level: 3
+  reward: {per: 10, min: 1, max: 50}
   lines:
     you: You are awarded for outstanding performance.
     room: "%s has been awarded for being a good citizen."
@@ -22,9 +25,10 @@ tba:30:trg:3004:
 # Cityguards (random 50%): a random one in the room they see; spit at charisma under 6; join a
 # fight where the attacker's alignment is lower than a victim's that is 0 or more.
 tba:30:trg:3009:
-  kind: cityguard
+  kind: guard
   source: "30.trg #3009"
   chance: 50
+  below_charisma: 6
   lines:
     spit_you: "%s spits in your face."
     spit_room: "%s spits in %s's face."
@@ -32,7 +36,7 @@ tba:30:trg:3009:
 
 # Fido (random 100%): eats the first corpse in the room.
 tba:30:trg:3010:
-  kind: fido
+  kind: eat_corpses
   source: "30.trg #3010"
   chance: 100
   lines:
@@ -40,19 +44,19 @@ tba:30:trg:3010:
 
 # Janitor (random 100%): takes every thing in the room that is not a fountain and costs 15 or less.
 tba:30:trg:3011:
-  kind: janitor
+  kind: pick_up_litter
   source: "30.trg #3011"
   chance: 100
   max_cost: 15
 
 # The teleporter (object 3006): only the login kit gives it, which never runs (below).
-tba:30:trg:3014: {kind: teleporter, source: "30.trg #3014"}
-tba:30:trg:3015: {kind: teleporter, source: "30.trg #3015"}
+tba:30:trg:3014: {kind: none, source: "30.trg #3014"}
+tba:30:trg:3015: {kind: none, source: "30.trg #3015"}
 
 # The kind soul (mob 3012, greet): a player under level 5 who comes in, 2 seconds later: wearing
 # nothing, the whole kit worn; else the first missing piece, said and given.
 tba:30:trg:3016:
-  kind: kind_soul
+  kind: outfit_newcomers
   source: "30.trg #3016"
   delay: 2
   below_level: 5
@@ -78,7 +82,7 @@ tba:30:trg:3016:
 # Room 3001, login: 4 seconds later the zone hears the welcome. The script's kit for level 0 never
 # runs: do_start makes a new player level 1 before its 1-second wait ends (seen live).
 tba:30:trg:3017:
-  kind: mortal_greet
+  kind: zone_welcome
   source: "30.trg #3017"
   delay: 4
   lines:

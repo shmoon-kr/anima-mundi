@@ -166,7 +166,7 @@ impl Sim {
     fn keeper_says(&mut self, keeper: Key, text: &str) {
         let room = self.chars.get(keeper).unwrap().room;
         let said = text.to_string();
-        self.to_room(keeper, room, false, move |from, from_id| Event::Say { from, from_id, text: said.clone(), direction: Direction::In });
+        self.to_room(keeper, room, false, move |from, from_id| Event::Say { from, from_id, text: said.clone(), direction: Direction::In, line: None });
     }
 
     /// The keeper tells the customer (do_tell). Shop messages start with "%s " for the customer's

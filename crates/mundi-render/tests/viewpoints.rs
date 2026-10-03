@@ -43,7 +43,7 @@ fn mob(id: &str, english_long: &str) -> Occupant {
 #[test]
 fn say_from_both_sides_and_unseen() {
     let r = renderer();
-    let say = |from: &str, d| Event::Say { from: from.into(), from_id: None, text: "hi {red}".into(), direction: d };
+    let say = |from: &str, d| Event::Say { from: from.into(), from_id: None, text: "hi {red}".into(), direction: d, line: None };
     assert_eq!(line(&r, &say(SELF, Direction::Out)), "You say, 'hi {red}'");
     assert_eq!(line(&r, &say("Ana", Direction::In)), "Ana says, 'hi {red}'");
     assert_eq!(line(&r, &say("someone", Direction::In)), "Someone says, 'hi {red}'");
@@ -107,9 +107,9 @@ fn pronouns_follow_the_account() {
 #[test]
 fn korean_lines_with_particles() {
     let r = renderer();
-    let say = Event::Say { from: "Vallen".into(), from_id: Some("pc:vallen".into()), text: "안녕".into(), direction: Direction::In };
+    let say = Event::Say { from: "Vallen".into(), from_id: Some("pc:vallen".into()), text: "안녕".into(), direction: Direction::In, line: None };
     assert_eq!(see(&r, &say, KO), "Vallen이 말한다, '안녕'");
-    let say = Event::Say { from: "Ana".into(), from_id: Some("pc:ana".into()), text: "hi".into(), direction: Direction::In };
+    let say = Event::Say { from: "Ana".into(), from_id: Some("pc:ana".into()), text: "hi".into(), direction: Direction::In, line: None };
     assert_eq!(see(&r, &say, KO), "Ana가 말한다, 'hi'");
     // The override for a name the rule gets wrong (D23).
     r.register_player("Bob", Sex::Male, Some(KoFinal::Other));
@@ -117,7 +117,7 @@ fn korean_lines_with_particles() {
     assert_eq!(see(&r, &left, KO), "Bob이 북쪽으로 떠났다.");
     let left = Event::Left { who: "Ana".into(), who_id: Some("pc:ana".into()), dir: Some("west".into()), how: None };
     assert_eq!(see(&r, &left, KO), "Ana가 서쪽으로 떠났다.");
-    let unseen = Event::Say { from: "someone".into(), from_id: None, text: "누구?".into(), direction: Direction::In };
+    let unseen = Event::Say { from: "someone".into(), from_id: None, text: "누구?".into(), direction: Direction::In, line: None };
     assert_eq!(see(&r, &unseen, KO), "누군가가 말한다, '누구?'");
     assert_eq!(see(&r, &Event::Refused { reason: Refusal::UnknownCommand }, KO), "뭐라고?!");
 }
@@ -246,4 +246,35 @@ fn blows_from_each_side() {
     let miss = line(&r, &blow("self", "the beggar", 0, 0, HitOutcome::Miss));
     assert!(!miss.is_empty() && miss.contains("beggar"), "{miss}");
     assert_eq!(see(&r, &blow("Ana", "the beggar", 8, 4, HitOutcome::Hit), KO), "Ana가 베기로 the beggar를 세게 맞혔다.");
+}
+
+#[test]
+fn content_lines_in_korean_by_their_key() {
+    use mundi_protocol::{LineRef, Named};
+    let r = renderer();
+    r.register_player("Ana", Sex::Female, None);
+    let ana = Named { name: "Ana".into(), id: Some("pc:ana".into()) };
+    let welcome = Event::Echo {
+        text: "A booming voice announces, 'Welcome Ana to the realm!'".into(),
+        line: Some(LineRef { id: "tba:30:trg:3017".into(), key: "welcome".into(), names: vec![ana.clone()] }),
+    };
+    assert_eq!(line(&r, &welcome), "A booming voice announces, 'Welcome Ana to the realm!'");
+    assert_eq!(see(&r, &welcome, KO), "우렁찬 목소리가 울려 퍼진다, 'Ana, 이 세계에 온 것을 환영한다!'");
+    // A pair after a name takes its particle; the reader is 당신.
+    let spit = |names: Vec<Named>| Event::Echo {
+        text: "The cityguard spits in Ana's face.".into(),
+        line: Some(LineRef { id: "tba:30:trg:3009".into(), key: "spit_room".into(), names }),
+    };
+    let guard = Named { name: "the cityguard".into(), id: Some("tba:30:mob:3060/1".into()) };
+    assert_eq!(see(&r, &spit(vec![guard.clone(), ana.clone()]), KO), "경비병이 Ana의 얼굴에 침을 뱉는다.");
+    // A mob's say: the line by key, else the English.
+    let say = |key: &str| Event::Say {
+        from: "the kind soul".into(),
+        from_id: None,
+        text: "you won't get far without some body armor Ana.".into(),
+        direction: Direction::In,
+        line: Some(LineRef { id: "tba:30:trg:3016".into(), key: key.into(), names: vec![ana.clone()] }),
+    };
+    assert!(see(&r, &say("kit.3"), KO).ends_with("'갑옷 없이는 멀리 못 가, Ana.'"), "{}", see(&r, &say("kit.3"), KO));
+    assert!(see(&r, &say("kit.99"), KO).ends_with("'you won't get far without some body armor Ana.'"));
 }
