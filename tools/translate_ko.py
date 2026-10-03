@@ -153,8 +153,11 @@ def prompt(batch, conventions, terms):
             f"<|im_start|>assistant\n<think>\n\n</think>\n\n"), used
 
 
-def ask(text):
-    body = {"model": MODEL, "prompt": text, "temperature": 0.2, "max_tokens": 6000, "stop": ["<|im_end|>"]}
+def ask(text, size):
+    """`size`: characters of the batch's source JSON. The answer gets about as many tokens (Korean takes
+    more tokens per character than English), so a model stuck repeating itself stops early."""
+    limit = min(6000, max(800, size))
+    body = {"model": MODEL, "prompt": text, "temperature": 0.2, "max_tokens": limit, "stop": ["<|im_end|>"]}
     rq = urllib.request.Request(URL, json.dumps(body).encode(), {"Content-Type": "application/json"})
     with urllib.request.urlopen(rq, timeout=1800) as r:
         out = json.loads(r.read())
@@ -293,30 +296,43 @@ def translate(zone, conventions, terms, log):
     todo = [id_ for id_, (_, f) in src.items() if f and not up_to_date(id_, f)]
     log(f"zone {zone}: {len(src)} entries, {len(todo)} to translate")
     t0, words = time.time(), 0
-    for i in range(0, len(todo), BATCH):
-        ids = todo[i:i + BATCH]
+    def attempt_batch(ids):
         batch = {id_: src[id_][1] for id_ in ids}
         for attempt in range(1, TRIES + 1):
             text, used = prompt(batch, conventions, terms)
             try:
-                raw, usage = ask(text)
+                raw, usage = ask(text, len(json.dumps(batch, ensure_ascii=False)))
                 out = parse(raw)
                 bad = problems(batch, out, list(used.values()))
             except (ValueError, KeyError, OSError) as e:
                 bad, out = [f"{type(e).__name__}: {e}"], None
             if not bad:
-                break
+                return batch, out
             log(f"  {ids[0]}.. attempt {attempt}: {bad[:3]}")
-        if bad:
-            log(f"  gave up on {ids}: {bad[:3]}")
-            continue
-        for id_ in ids:
+        log(f"  gave up on {ids}: {bad[:3]}")
+        return batch, None
+
+    def keep(batch, out):
+        nonlocal words
+        for id_ in batch:
             existing[id_] = out[id_]
             used_here = terms_in(text_of(batch[id_]), terms)
             state[id_] = {"source": sha(batch[id_]), "glossary": {t["en"]: term_hash(t) for t in used_here}}
         words += sum(len(text_of(f).split()) for f in batch.values())
         write_locale(zone, list(src), existing)
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+
+    for i in range(0, len(todo), BATCH):
+        ids = todo[i:i + BATCH]
+        batch, out = attempt_batch(ids)
+        if out is not None:
+            keep(batch, out)
+        elif len(ids) > 1:
+            # One bad entry should not cost the others: try each alone.
+            for id_ in ids:
+                one, out = attempt_batch([id_])
+                if out is not None:
+                    keep(one, out)
         el = time.time() - t0
         log(f"  {min(i + BATCH, len(todo))}/{len(todo)}  {words} words in {el / 60:.1f} min ({words / max(el, 1) * 60:.0f}/min)")
     write_locale(zone, list(src), existing)
