@@ -6,7 +6,7 @@ use std::path::Path;
 use mundi_content::names::{DoorState, Sector};
 use mundi_content::{load_tables, load_zone, Tables, ZoneContent};
 use mundi_protocol::{ArrivedHow, Direction, Event, MoveFailure, Refusal};
-use mundi_sim::{Delivery, Input, Sim};
+use mundi_sim::{Delivery, Input, NewChar, Sim};
 
 const START_ROOM: &str = "tba:30:room:3001";
 
@@ -24,7 +24,7 @@ fn midgaard() -> Vec<ZoneContent> {
 }
 
 fn enter(sim: &mut Sim, name: &str, room: Option<&str>) -> Vec<Delivery> {
-    sim.submit(Input::Enter { name: name.into(), room: room.map(Into::into) });
+    sim.submit(Input::Enter { name: name.into(), save: None, new: NewChar { room: room.map(Into::into), ..Default::default() } });
     sim.step()
 }
 
@@ -89,10 +89,11 @@ fn quitting_leaves_the_game_and_reports_the_place() {
     assert!(matches!(&to(&out, "Bo")[..], [Event::Left { who, dir: None, how: Some(_), .. }] if who == "Ana"));
     assert!(matches!(&to(&out, "Ana")[..], [Event::Closed { .. }]));
     let gone = sim.take_departures();
-    assert_eq!(gone[0].room, START_ROOM);
+    assert_eq!(gone[0].save.room.as_deref(), Some(START_ROOM));
     assert_eq!(sim.room_of("Ana"), None);
-    // Entering again at the saved place.
-    let out = enter(&mut sim, "Ana", Some(&gone[0].room));
+    // Entering again from the save.
+    sim.submit(Input::Enter { name: "Ana".into(), save: Some(Box::new(gone[0].save.clone())), new: NewChar::default() });
+    let out = sim.step();
     assert!(matches!(to(&out, "Ana")[1], Event::Room(v) if v.id.as_deref() == Some(START_ROOM)));
 }
 

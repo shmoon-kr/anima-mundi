@@ -73,7 +73,7 @@ impl Store {
              );",
         )?;
         // Columns added after the first schema: added to older files, ignored if there.
-        for column in ["sex TEXT", "ko_final TEXT"] {
+        for column in ["sex TEXT", "ko_final TEXT", "data TEXT"] {
             let _ = db.execute(&format!("ALTER TABLE characters ADD COLUMN {column}"), []);
         }
         Ok(Store { db })
@@ -121,6 +121,25 @@ impl Store {
             "UPDATE characters SET sex = coalesce(?2, sex), ko_final = coalesce(?3, ko_final) WHERE name = ?1",
             params![name.to_lowercase(), sex, ko_final],
         )?;
+        Ok(())
+    }
+
+    /// A character's saved state (the simulation's save, as JSON), if any yet.
+    pub fn data(&self, name: &str) -> Result<Option<String>> {
+        Ok(self
+            .db
+            .query_row("SELECT data FROM characters WHERE name = ?1", [name.to_lowercase()], |r| r.get::<_, Option<String>>(0))
+            .optional()?
+            .flatten())
+    }
+
+    /// Saves characters' states (name, room, JSON) in one transaction.
+    pub fn save_data<'a>(&mut self, items: impl IntoIterator<Item = (&'a str, Option<&'a str>, &'a str)>) -> Result<()> {
+        let tx = self.db.transaction()?;
+        for (name, room, data) in items {
+            tx.execute("UPDATE characters SET data = ?2, room = coalesce(?3, room) WHERE name = ?1", params![name.to_lowercase(), data, room])?;
+        }
+        tx.commit()?;
         Ok(())
     }
 
@@ -181,6 +200,7 @@ mod tests {
         assert_eq!(s.display("ana").unwrap().as_deref(), Some("Ana"));
         assert_eq!(s.room("ANA").unwrap().as_deref(), Some("tba:30:room:3002"));
         assert_eq!(s.profile("Ana").unwrap(), (Some("female".into()), Some("none".into())));
+        assert_eq!(s.data("ana").unwrap(), None);
         let stored: String = s.db.query_row("SELECT password_hash FROM accounts", [], |r| r.get(0)).unwrap();
         assert!(stored.starts_with("$argon2id$") && !stored.contains("pw1"));
     }

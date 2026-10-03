@@ -14,16 +14,21 @@
 
 mod commands;
 mod enter;
+mod levels;
+pub mod entity;
 mod look;
 mod movement;
+mod objects;
 mod perception;
 mod positions;
+mod resets;
+mod rng;
 pub mod store;
 mod talk;
 mod tick;
 pub mod world;
 
-use std::collections::{BTreeMap, VecDeque};
+use std::collections::{BTreeMap, HashMap, VecDeque};
 
 use mundi_content::names::{Affect, DoorState, RoomFlag, Sector};
 use mundi_content::{Tables, ZoneContent};
@@ -35,6 +40,8 @@ use rand_chacha::ChaCha8Rng;
 use rand_core::SeedableRng;
 use serde::{Deserialize, Serialize};
 
+pub use entity::{Abilities, Class, Conditions, Save, SavedObj};
+use entity::{Char, Obj, Place};
 use store::{Key, Store};
 use world::{RoomIx, World};
 
@@ -48,8 +55,15 @@ const DIRS: [&str; 6] = ["north", "east", "south", "west", "up", "down"];
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case")]
 pub enum Input {
-    /// A player enters the game, or takes their linkless character back. `room` is the saved place.
-    Enter { name: String, room: Option<String> },
+    /// A player enters the game, or takes their linkless character back. `save` is what the store
+    /// kept; without one a new character is made (MECHANICS §17.2) of `new`'s class and sex.
+    Enter {
+        name: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        save: Option<Box<Save>>,
+        #[serde(default)]
+        new: NewChar,
+    },
     Command { name: String, text: String },
     /// The connection went away without `quit`: the character stays, linkless (MECHANICS §5.3).
     LinkLost { name: String },
@@ -58,6 +72,28 @@ pub enum Input {
     SetAffect { name: String, affect: Affect, on: bool },
     /// Whether the character holds a lit light (until objects, S5).
     SetLight { name: String, on: bool },
+    /// Sets hit points, mana or moves, and hunger, thirst or drink (tests and admin tools, logged).
+    SetPoints {
+        name: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        hp: Option<i32>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        mana: Option<i32>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        mv: Option<i32>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        conditions: Option<Conditions>,
+    },
+}
+
+/// The choices a new character makes (interpreter.c: sex, then class).
+#[derive(Debug, Clone, PartialEq, Eq, Default, Serialize, Deserialize)]
+pub struct NewChar {
+    pub class: Option<Class>,
+    pub sex: mundi_protocol::Sex,
+    /// Where to start instead of the start room: for tests and admin tools.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub room: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -74,35 +110,11 @@ pub struct Delivery {
     pub event: Event,
 }
 
-/// A character that left the game this step, and where they were: what the store saves.
+/// A character that left the game this step, and what the store keeps of them.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Departure {
     pub name: String,
-    pub room: String,
-}
-
-#[derive(Debug, Clone)]
-struct Char {
-    name: String,
-    room: RoomIx,
-    position: Position,
-    level: i32,
-    hp: i32,
-    max_hp: i32,
-    mana: i32,
-    max_mana: i32,
-    mv: i32,
-    max_mv: i32,
-    linked: bool,
-    queue: VecDeque<String>,
-    affects: Vec<Affect>,
-    light: bool,
-}
-
-impl Char {
-    fn has(&self, a: Affect) -> bool {
-        self.affects.contains(&a)
-    }
+    pub save: Save,
 }
 
 pub struct Sim {
@@ -110,15 +122,25 @@ pub struct Sim {
     /// tbaMUD's numbers (D21): terrain costs, regeneration curves, the start room, new characters.
     tables: Tables,
     chars: Store<Char>,
+    objs: Store<Obj>,
     by_name: BTreeMap<String, Key>,
-    /// Characters in the order they entered: the order commands are taken each pulse.
+    /// Players in the order they entered: the order commands are taken each pulse.
     order: Vec<Key>,
+    /// Mobs in the order they were made: the order they act (MECHANICS §14.2).
+    mobs: Vec<Key>,
     /// Who is in each room, latest arrival first (MECHANICS §2.4).
     people: Vec<Vec<Key>>,
+    /// What lies in each room, latest first.
+    things: Vec<Vec<Key>>,
+    /// Live copies of each mob and object prototype, for reset limits (MECHANICS §14.1).
+    counts: HashMap<String, i32>,
+    /// The next serial for instance IDs (`<prototype>/<serial>`).
+    serial: u64,
+    /// Test-only light (until a lit light in the light slot replaces it).
+    test_lights: Vec<Key>,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
-    #[allow(dead_code)] // the first rule that rolls dice uses it
     rng: ChaCha8Rng,
     log: Vec<Logged>,
     out: Vec<Delivery>,
@@ -127,16 +149,24 @@ pub struct Sim {
 
 impl Sim {
     /// `hour` is the game hour the world starts at (0..24).
+    /// The world is reset once, as at boot (MECHANICS §14.1).
     pub fn new(zones: &[ZoneContent], tables: &Tables, seed: u64, hour: u32) -> Sim {
         let world = World::build(zones);
         let people = vec![Vec::new(); world.rooms.len()];
-        Sim {
+        let things = vec![Vec::new(); world.rooms.len()];
+        let mut sim = Sim {
             world,
             tables: tables.clone(),
             chars: Store::default(),
+            objs: Store::default(),
             by_name: BTreeMap::new(),
             order: Vec::new(),
+            mobs: Vec::new(),
             people,
+            things,
+            counts: HashMap::new(),
+            serial: 0,
+            test_lights: Vec::new(),
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,
@@ -144,7 +174,11 @@ impl Sim {
             log: Vec::new(),
             out: Vec::new(),
             departed: Vec::new(),
+        };
+        for z in 0..sim.world.zone_list.len() {
+            sim.reset_zone(z);
         }
+        sim
     }
 
     /// Runs an input log on a fresh world and returns every delivery.
@@ -189,6 +223,16 @@ impl Sim {
             .collect()
     }
 
+    /// What the store keeps of every player in the game now.
+    pub fn saves(&self) -> Vec<(String, Save)> {
+        self.order.iter().filter_map(|k| Some((self.chars.get(*k)?.name.clone(), self.save_of(*k)))).collect()
+    }
+
+    /// What a player would save now (for tests and tools).
+    pub fn save(&self, name: &str) -> Option<Save> {
+        Some(self.save_of(*self.by_name.get(&key_name(name))?))
+    }
+
     /// Characters that left the game in the last steps, drained.
     pub fn take_departures(&mut self) -> Vec<Departure> {
         std::mem::take(&mut self.departed)
@@ -210,9 +254,12 @@ impl Sim {
             let Some(text) = self.chars.get_mut(key).and_then(|c| c.queue.pop_front()) else { continue };
             self.command(key, &text);
         }
+        if self.tick % (10 * PULSES_PER_SEC) == 0 {
+            self.zone_update();
+        }
         if self.tick % PULSES_PER_TICK == 0 {
             self.game_hour();
-            self.regen();
+            self.point_update();
         }
         self.prompts();
         std::mem::take(&mut self.out)
@@ -220,7 +267,7 @@ impl Sim {
 
     fn apply(&mut self, input: Input) {
         match input {
-            Input::Enter { name, room } => self.enter(&name, room.as_deref()),
+            Input::Enter { name, save, new } => self.enter(&name, save.map(|s| *s), new),
             Input::Command { name, text } => {
                 if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
                     c.queue.push_back(text);
@@ -235,8 +282,19 @@ impl Sim {
                 }
             }
             Input::SetLight { name, on } => {
+                if let Some(&k) = self.by_name.get(&key_name(&name)) {
+                    self.test_lights.retain(|x| *x != k);
+                    if on {
+                        self.test_lights.push(k);
+                    }
+                }
+            }
+            Input::SetPoints { name, hp, mana, mv, conditions } => {
                 if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
-                    c.light = on;
+                    c.hp = hp.unwrap_or(c.hp);
+                    c.mana = mana.unwrap_or(c.mana);
+                    c.mv = mv.unwrap_or(c.mv);
+                    c.conditions = conditions.unwrap_or(c.conditions);
                 }
             }
             Input::LinkLost { name } => {
@@ -266,4 +324,20 @@ fn key_name(name: &str) -> String {
 /// A player's ID in events: `pc:<name>`, the same across sessions.
 pub fn char_id(name: &str) -> String {
     format!("pc:{}", key_name(name))
+}
+
+impl Sim {
+    /// A character's ID in events: `pc:<name>` for players, `<prototype>/<serial>` for mobs.
+    fn id_of(&self, k: Key) -> Option<String> {
+        let c = self.chars.get(k)?;
+        Some(match &c.mob {
+            Some(m) => format!("{}/{}", m.proto, m.serial),
+            None => char_id(&c.name),
+        })
+    }
+
+    fn next_serial(&mut self) -> u64 {
+        self.serial += 1;
+        self.serial
+    }
 }

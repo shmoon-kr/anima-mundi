@@ -219,6 +219,26 @@ impl Renderer {
                 LinkState::Lost => one("link-lost", &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())]),
                 LinkState::Reconnected => one("link-reconnected", &[("who", who(w, who_id))]),
             },
+            Event::Condition { hungry, thirsty, sober, .. } => {
+                let mut out = vec![];
+                if *hungry == Some(true) {
+                    out.push(m("cond-hungry"));
+                }
+                if *thirsty == Some(true) {
+                    out.push(m("cond-thirsty"));
+                }
+                if *sober == Some(true) {
+                    out.push(m("cond-sober"));
+                }
+                out
+            }
+            Event::LightFlicker { who: w, who_id } if w == mundi_protocol::SELF => {
+                let _ = who_id;
+                vec![m("light-flicker-self")]
+            }
+            Event::LightFlicker { who: w, who_id } => one("light-flicker", &[("who", who(w, who_id))]),
+            Event::LightOut { who: w, .. } if w == mundi_protocol::SELF => vec![m("light-out-self")],
+            Event::LightOut { who: w, who_id } => one("light-out", &[("who", who(w, who_id))]),
             Event::WorldTime { phase } => vec![m(match phase {
                 DayPhase::Sunrise => "time-sunrise",
                 DayPhase::Day => "time-day",
@@ -255,6 +275,10 @@ impl Renderer {
             .collect();
         let exits = if exits.is_empty() { self.msg(v, "exits-none", &[]) } else { exits };
         out.push(format!("{{cyan}}[ {}: {exits}]{{/cyan}}", self.msg(v, "exits-label", &[])));
+        let obj_keywords = unique_keywords(room.objects.iter().map(|o| prefer(&o.keywords, &o.text)).collect());
+        for (o, kw) in room.objects.iter().zip(obj_keywords) {
+            out.push(format!("{{green}}{}{{/green}}", self.object_line(v, o, kw.as_deref())));
+        }
         let keywords = unique_keywords(
             room.occupants.iter().map(|o| prefer(&self.keywords_of(o), if o.name.is_empty() { o.long.as_deref().unwrap_or("") } else { &o.name })).collect(),
         );
@@ -262,6 +286,30 @@ impl Renderer {
             out.push(format!("{{yellow}}{}{{/yellow}}", self.occupant_line(v, o, kw.as_deref())));
         }
         out
+    }
+
+    /// An object's line in a room (MECHANICS §3.3): its long description (Korean from the overlay,
+    /// with the keyword where D18 puts it), the count, and tbaMUD's tags.
+    fn object_line(&self, v: Viewer, o: &mundi_protocol::RoomObject, keyword: Option<&str>) -> String {
+        let tr = if v.lang == Lang::Ko { o.id.as_deref().and_then(|id| self.ko_text.get(proto(id))) } else { None };
+        let mut line = tr.and_then(|t| t.long.clone()).unwrap_or_else(|| o.text.clone());
+        if v.lang == Lang::Ko && v.keywords != KeywordMode::Off {
+            if let Some(kw) = keyword {
+                line = match tr.and_then(|t| t.short.as_deref()) {
+                    Some(short) if line.contains(short) => line.replacen(short, &format!("{short}({kw})"), 1),
+                    _ => format!("{line} ({kw})"),
+                };
+            }
+        }
+        if o.count > 1 {
+            line = format!("({:2}) {line}", o.count);
+        }
+        for flag in ["invisible", "glow", "hum"] {
+            if o.flags.iter().any(|f| f == flag) {
+                line = format!("{line} {}", self.msg(v, &format!("obj-flag-{flag}"), &[]));
+            }
+        }
+        line
     }
 
     /// An occupant's line (MECHANICS §3.4) in English, plain: the screen line of D22.

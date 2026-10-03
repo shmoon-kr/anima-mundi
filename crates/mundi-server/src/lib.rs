@@ -15,7 +15,7 @@ use mundi_content::{load_tables, load_world};
 use mundi_net::{ConnId, Net, NetEvent};
 use mundi_protocol::{ClientMessage, Envelope, Event, KoFinal, LoginFailure, LoginStage, Sex, VERSION};
 use mundi_render::{ansi, plain, Renderer, Viewer};
-use mundi_sim::{Input, Sim, PULSES_PER_SEC};
+use mundi_sim::{Class, Input, NewChar, Save, Sim, PULSES_PER_SEC};
 use mundi_store::{valid_name, Login, Store};
 use tokio::sync::{mpsc, oneshot};
 
@@ -53,7 +53,8 @@ struct LoginResult {
 /// A logged-in character as the store knows it.
 struct Player {
     name: String,
-    room: Option<String>,
+    save: Option<Save>,
+    new: NewChar,
     sex: Sex,
     ko_final: Option<KoFinal>,
 }
@@ -103,7 +104,7 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                     conns.insert(c, Conn { viewer: Viewer::default(), plain: false, name: None, seq: 0 });
                     send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginPrompt { stage: LoginStage::Name });
                 }
-                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain, keywords, sex, ko_final }) => {
+                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain, keywords, sex, ko_final, class }) => {
                     let Some(conn) = conns.get_mut(&c) else { continue };
                     if conn.name.is_some() {
                         continue;
@@ -126,9 +127,11 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                                         s.set_profile(&name, name_of(sex).as_deref(), name_of(ko_final).as_deref()).map_err(e)?;
                                     }
                                     let display = s.display(&name).map_err(e)?.unwrap_or(name);
-                                    let room = s.room(&display).map_err(e)?;
+                                    let save = s.data(&display).map_err(e)?.and_then(|d| serde_json::from_str::<Save>(&d).ok());
                                     let (sex, ko_final) = s.profile(&display).map_err(e)?;
-                                    Some(Player { name: display, room, sex: named(sex).unwrap_or_default(), ko_final: named(ko_final) })
+                                    let sex: Sex = named(sex).unwrap_or_default();
+                                    let new = NewChar { class: named::<Class>(class), sex, room: None };
+                                    Some(Player { name: display, save, new, sex, ko_final: named(ko_final) })
                                 }
                             })
                         })();
@@ -160,7 +163,7 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
         }
         while let Ok(LoginResult { conn: c, outcome }) = logins.try_recv() {
             match outcome {
-                Ok(Some(Player { name, room, sex, ko_final })) if conns.contains_key(&c) => {
+                Ok(Some(Player { name, save, new, sex, ko_final })) if conns.contains_key(&c) => {
                     renderer.register_player(&name, sex, ko_final);
                     // A second login takes the character over: the old connection goes.
                     if let Some(old) = by_char.insert(name.to_lowercase(), c) {
@@ -170,8 +173,7 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                         net.close(old);
                     }
                     conns.get_mut(&c).unwrap().name = Some(name.clone());
-                    let room = sim.room_of(&name).map(str::to_string).or(room).filter(|r| sim.has_room(r));
-                    sim.submit(Input::Enter { name, room });
+                    sim.submit(Input::Enter { name, save: save.map(Box::new), new });
                 }
                 Ok(None) => send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginFailed { reason: LoginFailure::WrongPassword }),
                 Ok(Some(_)) => {}
@@ -192,9 +194,9 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                 net.close(c);
             }
         }
-        let gone = sim.take_departures();
+        let gone: Vec<(String, Save)> = sim.take_departures().into_iter().map(|d| (d.name, d.save)).collect();
         if !gone.is_empty() {
-            let _ = store.save_rooms(gone.iter().map(|g| (g.name.as_str(), g.room.as_str())));
+            save_saves(&mut store, &gone);
         }
         if sim.tick() % SAVE_EVERY == 0 {
             save_all(&mut store, &sim);
@@ -211,8 +213,13 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
 }
 
 fn save_all(store: &mut Store, sim: &Sim) {
-    let places = sim.places();
-    if let Err(e) = store.save_rooms(places.iter().map(|(n, r)| (n.as_str(), r.as_str()))) {
+    save_saves(store, &sim.saves());
+}
+
+fn save_saves(store: &mut Store, saves: &[(String, Save)]) {
+    let json: Vec<(&str, Option<&str>, String)> =
+        saves.iter().map(|(n, s)| (n.as_str(), s.room.as_deref(), serde_json::to_string(s).unwrap())).collect();
+    if let Err(e) = store.save_data(json.iter().map(|(n, r, d)| (*n, *r, d.as_str()))) {
         eprintln!("save: {e}");
     }
 }

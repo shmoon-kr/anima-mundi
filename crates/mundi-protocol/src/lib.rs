@@ -249,6 +249,9 @@ pub struct RoomObject {
     /// Words a command can name it by, in the content's order. Mundi addition.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub keywords: Vec<String>,
+    /// What tbaMUD shows after it: invisible, glow, hum. Mundi addition.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub flags: Vec<String>,
 }
 
 /// One being in a room as its perceiver sees it. `text` is the screen line (PROTOCOL.md v0): the
@@ -393,6 +396,34 @@ pub enum Event {
         who_id: Option<String>,
         state: LinkState,
     },
+    /// Hunger and thirst at zero (each tick while so), sober again (PROTOCOL.md `condition`;
+    /// `sober` is a Mundi addition).
+    #[serde(rename = "condition")]
+    Condition {
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        hungry: Option<bool>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        thirsty: Option<bool>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        full: Option<bool>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        quenched: Option<bool>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        sober: Option<bool>,
+    },
+    /// A light down to its last hour (Mundi addition) or out (PROTOCOL.md `items.light_out`).
+    #[serde(rename = "items.light_flicker")]
+    LightFlicker {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "items.light_out")]
+    LightOut {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
     #[serde(rename = "world.time")]
     WorldTime { phase: DayPhase },
     #[serde(rename = "comm.say")]
@@ -431,6 +462,9 @@ pub enum ClientMessage {
         sex: Option<Sex>,
         #[serde(default)]
         ko_final: Option<KoFinal>,
+        /// magic_user, cleric, thief or warrior (default warrior), for a new character.
+        #[serde(default)]
+        class: Option<String>,
     },
     Command { text: String },
     /// Display settings, any time after login.
@@ -448,7 +482,7 @@ pub enum ClientMessage {
 impl std::fmt::Debug for ClientMessage {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ClientMessage::Login { name, lang, plain, keywords, sex, ko_final, .. } => f
+            ClientMessage::Login { name, lang, plain, keywords, sex, ko_final, class, .. } => f
                 .debug_struct("Login")
                 .field("name", name)
                 .field("password", &"***")
@@ -457,6 +491,7 @@ impl std::fmt::Debug for ClientMessage {
                 .field("keywords", keywords)
                 .field("sex", sex)
                 .field("ko_final", ko_final)
+                .field("class", class)
                 .finish(),
             ClientMessage::Command { text } => f.debug_struct("Command").field("text", text).finish(),
             ClientMessage::Settings { keywords, lang, plain } => {

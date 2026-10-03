@@ -123,3 +123,19 @@ refused-not-here = No one by that name here.
 glowing-eyes = You see a pair of glowing red eyes looking your way.
 flag-invisible = (invisible)
 flag-hidden = (hidden)
+
+## conditions [6.1] (limits.c gain_condition)
+cond-hungry = You are hungry.
+cond-thirsty = You are thirsty.
+cond-sober = You are now sober.
+
+## lights [3.1] (handler.c update_char_objects)
+light-flicker-self = Your light begins to flicker and fade.
+light-flicker = { $who }'s light begins to flicker and fade.
+light-out-self = Your light sputters out and dies.
+light-out = { $who }'s light sputters out and dies.
+
+## objects in a list [3.3] (act.informative.c show_obj_to_char)
+obj-flag-invisible = (invisible)
+obj-flag-glow = ..It has a soft glowing aura!
+obj-flag-hum = ..It emits a faint humming sound!

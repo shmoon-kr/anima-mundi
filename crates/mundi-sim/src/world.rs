@@ -2,9 +2,9 @@
 
 use std::collections::HashMap;
 
-use mundi_content::names::{DoorState, RoomFlag, Sector, ZoneFlag};
+use mundi_content::names::{DoorState, ResetWhen, RoomFlag, Sector, ZoneFlag};
 use mundi_content::names::Dir;
-use mundi_content::{parse_id, ZoneContent};
+use mundi_content::{parse_id, Mob, Object, Resets, ZoneContent};
 
 pub type RoomIx = usize;
 
@@ -12,7 +12,12 @@ pub type RoomIx = usize;
 pub struct Door {
     /// The first door keyword, which messages name the door by (MECHANICS §2.2).
     pub keyword: Option<String>,
+    pub keywords: Vec<String>,
     pub state: DoorState,
+    /// What the zone reset sets it to.
+    pub reset: Option<DoorState>,
+    pub key: Option<String>,
+    pub pickproof: bool,
 }
 
 #[derive(Debug, Clone)]
@@ -39,15 +44,30 @@ pub struct ZoneInfo {
     pub closed: bool,
 }
 
+/// A zone's reset clock and commands (MECHANICS §14.1).
+#[derive(Debug, Clone)]
+pub struct ZoneState {
+    pub num: u32,
+    pub resets: Resets,
+    pub every_minutes: i32,
+    pub when: ResetWhen,
+    /// Minutes since the last reset; `None` when queued for reset.
+    pub age: Option<i32>,
+}
+
 #[derive(Debug, Default)]
 pub struct World {
     pub rooms: Vec<Room>,
     pub index: HashMap<String, RoomIx>,
     pub zones: HashMap<u32, ZoneInfo>,
+    /// Zones in load order: the order they reset in.
+    pub zone_list: Vec<ZoneState>,
+    pub mob_protos: HashMap<String, Mob>,
+    pub obj_protos: HashMap<String, Object>,
 }
 
 impl World {
-    /// Doors start in the state their zone reset puts them in, as at boot (MECHANICS §14.1).
+    /// Doors start open; the boot reset puts them in their zone's state (MECHANICS §14.1).
     pub fn build(zones: &[ZoneContent]) -> World {
         let mut w = World::default();
         for z in zones {
@@ -57,7 +77,16 @@ impl World {
                     min_level: zone.levels.as_ref().map(|l| l.min),
                     closed: zone.flags.contains(&ZoneFlag::Closed),
                 });
+                w.zone_list.push(ZoneState {
+                    num,
+                    resets: z.resets.clone(),
+                    every_minutes: zone.reset.every_minutes,
+                    when: zone.reset.when,
+                    age: Some(0),
+                });
             }
+            w.mob_protos.extend(z.mobs.iter().map(|(k, v)| (k.clone(), v.clone())));
+            w.obj_protos.extend(z.objects.iter().map(|(k, v)| (k.clone(), v.clone())));
             for id in z.rooms.keys() {
                 w.index.insert(id.clone(), w.rooms.len());
                 let zone = parse_id(id).map(|(z, _, _)| z).unwrap_or(0);
@@ -81,7 +110,11 @@ impl World {
                         to: e.to.as_ref().and_then(|t| w.index.get(t).copied()),
                         door: e.door.as_ref().map(|d| Door {
                             keyword: d.keywords.first().cloned(),
-                            state: d.reset.unwrap_or(DoorState::Open),
+                            keywords: d.keywords.clone(),
+                            state: DoorState::Open,
+                            reset: d.reset,
+                            key: d.key.clone(),
+                            pickproof: d.kind == mundi_content::names::DoorKind::Pickproof,
                         }),
                     };
                     w.rooms[ix].exits[dir_index(*dir)] = Some(exit);

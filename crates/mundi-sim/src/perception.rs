@@ -6,7 +6,7 @@ impl Sim {
     /// Whether a room is lit (MECHANICS §3.1): a light in it, else not `dark`, and indoors or in a
     /// city or in daytime.
     pub(crate) fn lit(&self, room: RoomIx) -> bool {
-        if self.people[room].iter().any(|k| self.chars.get(*k).is_some_and(|c| c.light)) {
+        if self.people[room].iter().any(|k| self.holds_light(*k)) {
             return true;
         }
         let r = &self.world.rooms[room];

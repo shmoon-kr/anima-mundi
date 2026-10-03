@@ -10,7 +10,7 @@ use mundi_content::names::Affect;
 use mundi_content::{load_tables, load_zone};
 use mundi_protocol::{Event, KeywordMode, Lang};
 use mundi_render::{plain, Renderer, Viewer};
-use mundi_sim::{Delivery, Input, Sim};
+use mundi_sim::{Delivery, Input, NewChar, Sim};
 
 const NAMES: [&str; 3] = ["Ana", "Bo", "Cy"];
 
@@ -28,7 +28,7 @@ impl World {
         let tables = load_tables(&root.join("tables")).unwrap();
         let mut w = World { sim: Sim::new(&zones, &tables, 3, hour), render: Renderer::load(&root.join("locales"), &zones).unwrap(), seen: vec![] };
         for n in NAMES {
-            w.input(Input::Enter { name: n.into(), room: Some(room.into()) });
+            w.input(Input::Enter { name: n.into(), save: None, new: NewChar { room: Some(room.into()), ..Default::default() } });
         }
         w
     }

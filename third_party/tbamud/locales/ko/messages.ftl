@@ -124,3 +124,19 @@ refused-not-here = 그런 이름을 가진 이는 여기 없다.
 glowing-eyes = 붉게 빛나는 한 쌍의 눈이 당신 쪽을 보고 있다.
 flag-invisible = (투명)
 flag-hidden = (숨음)
+
+## conditions [6.1]
+cond-hungry = 배가 고프다.
+cond-thirsty = 목이 마르다.
+cond-sober = 술이 깼다.
+
+## lights [3.1]
+light-flicker-self = 빛이 깜빡이며 희미해지기 시작한다.
+light-flicker = { $who }의 빛이 깜빡이며 희미해지기 시작한다.
+light-out-self = 빛이 지직거리다 꺼져 버렸다.
+light-out = { $who }의 빛이 지직거리다 꺼져 버렸다.
+
+## objects in a list [3.3]
+obj-flag-invisible = (투명)
+obj-flag-glow = ..은은한 빛을 두르고 있다!
+obj-flag-hum = ..희미하게 웅웅거리는 소리를 낸다!
