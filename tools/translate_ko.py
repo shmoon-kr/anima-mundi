@@ -597,6 +597,7 @@ Then propose what would stop the same mistake in the next zones: glossary terms 
 mistranslated words, and examples (en, bad, good) for a style mistake. Only for mistakes you saw.
 For each wrong or awkward item also give "fix": the whole corrected Korean, keeping every " / " paragraph
 break and every {markup} tag exactly as in the given Korean.
+Write every note and "why" in Korean.
 Reply with JSON only: {"items": [{"n": 1, "verdict": "ok|awkward|wrong", "note": "...", "fix": "..."}],
 "glossary": [{"en": "...", "ko": "...", "avoid": ["..."], "why": "..."}],
 "examples": [{"en": "...", "bad": "...", "good": "..."}]}"""

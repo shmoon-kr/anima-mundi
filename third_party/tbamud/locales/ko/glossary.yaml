@@ -14,6 +14,10 @@ examples:
 # `en` (optional) a regex the English must match for it to count.
   - {"en": "There is an especially dark part of the forest this way.", "bad": "이쪽으로는 숲의 특히 어두운 부분이 있다.", "good": "이쪽으로 가면 숲이 유난히 어두워지는 곳이 나온다.", "added_by": "review 35 2026-10-03"}
   - {"en": "You are on a north-south trail through the woods.", "bad": "당신은 숲을 관통하는 북-남 방향의 산길 위에 있다.", "good": "당신은 숲을 남북으로 가로지르는 오솔길 위에 있다.", "added_by": "review 35 2026-10-03"}
+  - {"en": "A cell door is set into the western wall.", "bad": "서쪽 벽에 감방 문이 설치되어 있다.", "good": "서쪽 벽에 감방 문이 하나 나 있다.", "added_by": "review 150 2026-10-03"}
+  - {"en": "As all members of the Guard, Brian wears...", "bad": "근위대원 모두처럼, 브라이언은 ... 착용하고 있다.", "good": "모든 근위대원이 그렇듯, 브라이언도 ... 입고 있다.", "added_by": "review 150 2026-10-03"}
+  - {"en": "It is only dimly lit and quite narrow.", "bad": "조명은 어둡고 꽤 좁다.", "good": "불빛은 어둑하고 폭도 꽤 좁다.", "added_by": "review 150 2026-10-03"}
+  - {"en": "he wouldn't take kindly to an attempt to get past him", "bad": "그를 지나가려는 시도를 좋게 받아들이지 않을 것 같다", "good": "그를 지나쳐 가려 하면 순순히 보고만 있지는 않을 것 같다", "added_by": "review 150 2026-10-03"}
 
 forbid:
   - {ko: "^당신은 .+[을를] 본다\\.$", why: "'You see X.' is 'X이/가 보인다.'"}
@@ -123,7 +127,7 @@ terms:
   - {en: knight, ko: 기사, kind: mob}
   - {en: assassin, ko: 암살자, kind: mob}
   - {en: sorcerer, ko: 주술사, kind: mob, note: "not 마법사 (that is the class)"}
-  - {en: wizard, ko: 마법 상점 주인, kind: mob, note: "the Magic Shop's keeper (\"the wizard\")"}
+  - {en: the wizard, ko: 마법 상점 주인, kind: mob, strict: false, note: "Midgaard's Magic Shop keeper only; any other wizard is 마법사"}
   - {en: cryogenicist, ko: 냉동 기술자, kind: mob}
   - {en: receptionist, ko: 접수원, kind: mob}
   - {en: postmaster, ko: 우체국장, kind: mob}
@@ -190,3 +194,8 @@ terms:
   - {en: the Maid, ko: 종업원, kind: mob, avoid: [여종], note: "the Park Cafe's waitress"}
   - {"en": "trail", "ko": "오솔길", "kind": "review", "strict": false, "added_by": "review 35 2026-10-03", "note": "숲·들판의 좁은 길은 오솔길 (산길이라 하면 산의 뜻이 더해진다). 산속을 지나는 길이면 산길이 맞다"}
   - {"en": "bard", "ko": "음유시인", "kind": "review", "strict": false, "added_by": "review 35 2026-10-03", "avoid_proposed": ["시인"], "note": "시인은 poet이다. 판타지 직업인 bard는 음유시인으로 옮긴다."}
+  - {"en": "the Guard (castle)", "ko": "근위대 / 근위대원", "kind": "review", "strict": false, "added_by": "review 150 2026-10-03", "avoid_proposed": ["경비대", "경비대원"], "note": "The same organization was translated two ways (items 8 and 11). This assumes it is the castle's royal guard; needs verification against the zone file."}
+  - {"en": "Jeanette", "ko": "자네트", "kind": "review", "strict": false, "added_by": "review 150 2026-10-03", "avoid_proposed": ["제아네트"], "note": "Letter-by-letter transliteration instead of the actual pronunciation."}
+  - {"en": "more than one (battle)", "ko": "여러 번 / 여러 차례", "kind": "review", "strict": false, "added_by": "review 150 2026-10-03", "avoid_proposed": ["한두 번"], "note": "한두 번 understates the meaning."}
+  - {"en": "part of the Castle", "ko": "구역", "kind": "review", "strict": false, "added_by": "review 150 2026-10-03", "avoid_proposed": ["부분"], "note": "부분 is unnatural for an area of a building."}
+  - {"en": "the actual King's Road", "ko": "본격적인 왕의 길", "kind": "review", "strict": false, "added_by": "review 150 2026-10-03", "avoid_proposed": ["진정한"], "note": "'actual' here means proper/real start, not 'true' or 'genuine'."}
