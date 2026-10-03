@@ -46,9 +46,12 @@ impl Server {
 }
 
 async fn login(url: &str, name: &str, password: &str, plain: bool) -> Ws {
+    login_as(url, json!({"type": "login", "name": name, "password": password, "plain": plain})).await
+}
+
+async fn login_as(url: &str, msg: Value) -> Ws {
     let (mut ws, _) = tokio_tungstenite::connect_async(url).await.unwrap();
     until(&mut ws, |e| e["type"] == "connection.login_prompt").await;
-    let msg = json!({"type": "login", "name": name, "password": password, "plain": plain});
     ws.send(Message::text(msg.to_string())).await.unwrap();
     ws
 }
@@ -80,15 +83,56 @@ fn text_is(e: &Value, s: &str) -> bool {
     e["text"].as_array().is_some_and(|t| t.iter().any(|l| l == s))
 }
 
-#[tokio::test(flavor = "multi_thread")]
-async fn two_clients_see_each_other_and_places_survive_a_restart() {
-    // Midgaard only: the start room is there and it loads fast.
-    let tmp = tempfile::tempdir().unwrap();
-    let content = tmp.path().join("content");
+/// Midgaard only: the start room is there and it loads fast.
+fn midgaard(tmp: &Path) -> (std::path::PathBuf, std::path::PathBuf) {
+    let content = tmp.join("content");
     std::fs::create_dir(&content).unwrap();
     let midgaard = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud/content/30");
     std::os::unix::fs::symlink(midgaard.canonicalize().unwrap(), content.join("30")).unwrap();
-    let data = tmp.path().join("data");
+    (content, tmp.join("data"))
+}
+
+#[tokio::test(flavor = "multi_thread")]
+async fn one_scene_in_english_and_korean_at_once() {
+    let tmp = tempfile::tempdir().unwrap();
+    let (content, data) = midgaard(tmp.path());
+    let server = start(&content, &data).await;
+    let mut ana = login(&server.url, "Ana", "pw-a", true).await;
+    until(&mut ana, |e| e["type"] == "room").await;
+    let mut min = login_as(&server.url, json!({"type": "login", "name": "Min", "password": "pw-m", "plain": true, "lang": "ko", "sex": "female"})).await;
+    until(&mut ana, |e| text_is(e, "Min has entered the game.")).await;
+    let room = until(&mut min, |e| e["type"] == "room").await;
+    let text: Vec<&str> = room["text"].as_array().unwrap().iter().map(|l| l.as_str().unwrap()).collect();
+    assert_eq!(text[0], "미드가르드 신전");
+    let exits = text.iter().find(|l| l.starts_with("[ 출구: ")).expect("a Korean exits line");
+    assert!(exits.contains("북(n)") || exits.contains("동(e)") || exits.contains("남(s)"), "{exits}");
+    assert!(text.contains(&"Ana가 여기 서 있다."), "{text:?}");
+    assert_eq!(room["data"]["name"], "The Temple Of Midgaard", "the event stays the world's, only the text is Korean");
+
+    command(&mut ana, "say hello").await;
+    until(&mut ana, |e| text_is(e, "You say, 'hello'")).await;
+    until(&mut min, |e| text_is(e, "Ana가 말한다, 'hello'")).await;
+    command(&mut min, "say 안녕").await;
+    until(&mut min, |e| text_is(e, "당신은 말한다, '안녕'")).await;
+    until(&mut ana, |e| text_is(e, "Min says, '안녕'")).await;
+
+    // Keywords off: the same exits, without what to type.
+    min.send(Message::text(json!({"type": "settings", "keywords": "off"}).to_string())).await.unwrap();
+    command(&mut min, "look").await;
+    let room = until(&mut min, |e| e["type"] == "room").await;
+    let exits = room["text"].as_array().unwrap().iter().find(|l| l.as_str().unwrap().starts_with("[ 출구")).unwrap().clone();
+    assert!(!exits.as_str().unwrap().contains('('), "{exits}");
+
+    // Ana's link drops; the English pronoun follows her account (no sex given: "its"), Min's text is Korean.
+    drop(ana);
+    until(&mut min, |e| text_is(e, "Ana의 연결이 끊겼다.")).await;
+    server.stop().await;
+}
+
+#[tokio::test(flavor = "multi_thread")]
+async fn two_clients_see_each_other_and_places_survive_a_restart() {
+    let tmp = tempfile::tempdir().unwrap();
+    let (content, data) = midgaard(tmp.path());
 
     let server = start(&content, &data).await;
     let mut ana = login(&server.url, "ana", "first-pw", false).await;

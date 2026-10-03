@@ -387,6 +387,7 @@ impl Sim {
                 fighting: None,
                 flags: if c.linked { vec![] } else { vec!["linkless".into()] },
                 hints: vec![],
+                keywords: vec![],
             })
             .collect();
         let view = RoomView {

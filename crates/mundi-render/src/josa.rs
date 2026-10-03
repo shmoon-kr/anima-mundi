@@ -42,9 +42,9 @@ pub fn particle(pair: &str, f: Final) -> Option<String> {
     })
 }
 
-/// How a displayed name ends: markup, one trailing parenthesis (the keyword, D18), and trailing
-/// quotes, stops and spaces are left out; the last remaining character decides.
-pub fn final_of(text: &str) -> Final {
+/// The word a particle follows: markup, one trailing parenthesis (the keyword, D18), and trailing
+/// quotes, stops and spaces left out.
+pub fn base_of(text: &str) -> String {
     let mut s = strip_markup(text);
     let trimmed = s.trim_end();
     if trimmed.ends_with(')') {
@@ -52,7 +52,13 @@ pub fn final_of(text: &str) -> Final {
             s = trimmed[..open].to_string();
         }
     }
-    let s = s.trim_end_matches(|c: char| c.is_whitespace() || "'\".,!?~…".contains(c));
+    s.trim_end_matches(|c: char| c.is_whitespace() || "'\".,!?~…".contains(c)).to_string()
+}
+
+/// How a displayed name ends: the last character of [`base_of`] decides.
+pub fn final_of(text: &str) -> Final {
+    let s = base_of(text);
+    let s = s.as_str();
     let Some(last) = s.chars().last() else { return Final::Unknown };
     match last {
         '가'..='힣' => match (last as u32 - 0xAC00) % 28 {

@@ -11,9 +11,24 @@ login-password = Password:
 login-invalid-name = Invalid name, please try another.
 login-wrong-password = Wrong password.
 
+## directions
+dir-north = north
+dir-east = east
+dir-south = south
+dir-west = west
+dir-up = up
+dir-down = down
+exit-north = n
+exit-east = e
+exit-south = s
+exit-west = w
+exit-up = u
+exit-down = d
+
 ## rooms [3.2]
 room-dark = It is pitch black...
 room-blind = You see nothing but infinite darkness...
+exits-label = Exits
 exits-none = None!
 occupant-standing = { $who } is standing here.
 occupant-sitting = { $who } is sitting here.
@@ -37,7 +52,7 @@ arrived = { $who } has arrived.
 arrived-entered-game = { $who } has entered the game.
 left = { $who } leaves { $dir }.
 left-game = { $who } has left the game.
-link-lost = { $who } has lost its link.
+link-lost = { $who } has lost { $his } link.
 link-reconnected = { $who } has reconnected.
 
 ## talking (act.comm.c:40-72)

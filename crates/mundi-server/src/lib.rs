@@ -13,8 +13,8 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 use mundi_content::{load_tables, load_world};
 use mundi_net::{ConnId, Net, NetEvent};
-use mundi_protocol::{ClientMessage, Envelope, Event, Lang, LoginFailure, LoginStage, VERSION};
-use mundi_render::{ansi, plain, Renderer};
+use mundi_protocol::{ClientMessage, Envelope, Event, KoFinal, LoginFailure, LoginStage, Sex, VERSION};
+use mundi_render::{ansi, plain, Renderer, Viewer};
 use mundi_sim::{Input, Sim, PULSES_PER_SEC};
 use mundi_store::{valid_name, Login, Store};
 use tokio::sync::{mpsc, oneshot};
@@ -38,7 +38,7 @@ pub struct Config {
 const SAVE_EVERY: u64 = 10 * PULSES_PER_SEC;
 
 struct Conn {
-    lang: Lang,
+    viewer: Viewer,
     plain: bool,
     /// The character, once logged in.
     name: Option<String>,
@@ -47,18 +47,35 @@ struct Conn {
 
 struct LoginResult {
     conn: ConnId,
-    outcome: Result<Option<(String, Option<String>)>, String>,
+    outcome: Result<Option<Player>, String>,
+}
+
+/// A logged-in character as the store knows it.
+struct Player {
+    name: String,
+    room: Option<String>,
+    sex: Sex,
+    ko_final: Option<KoFinal>,
+}
+
+fn named<T: serde::de::DeserializeOwned>(s: Option<String>) -> Option<T> {
+    s.and_then(|s| serde_json::from_value(serde_json::Value::String(s)).ok())
+}
+
+fn name_of<T: serde::Serialize>(v: Option<T>) -> Option<String> {
+    v.and_then(|v| serde_json::to_value(v).ok()).and_then(|j| j.as_str().map(str::to_string))
 }
 
 /// Runs until `shutdown` fires. `ready` gets the bound address once the world is loaded.
 pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::Sender<SocketAddr>) -> Result<(), String> {
     let zones = load_world(&cfg.content).map_err(|e| e.to_string())?;
-    let renderer = Renderer::load(&cfg.locales)?;
+
     std::fs::create_dir_all(&cfg.data).map_err(|e| e.to_string())?;
     let db = cfg.data.join("mundi.db");
     let mut store = Store::open(&db).map_err(|e| e.to_string())?;
     let tables = load_tables(&cfg.tables).map_err(|e| e.to_string())?;
     let mut sim = Sim::new(&zones, &tables, cfg.seed, cfg.hour);
+    let renderer = Renderer::load(&cfg.locales, &zones)?;
     drop(zones);
 
     let started = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
@@ -83,15 +100,15 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
         while let Ok(e) = incoming.try_recv() {
             match e {
                 NetEvent::Connected(c) => {
-                    conns.insert(c, Conn { lang: Lang::En, plain: false, name: None, seq: 0 });
+                    conns.insert(c, Conn { viewer: Viewer::default(), plain: false, name: None, seq: 0 });
                     send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginPrompt { stage: LoginStage::Name });
                 }
-                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain }) => {
+                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain, keywords, sex, ko_final }) => {
                     let Some(conn) = conns.get_mut(&c) else { continue };
                     if conn.name.is_some() {
                         continue;
                     }
-                    conn.lang = lang;
+                    conn.viewer = Viewer { lang, keywords };
                     conn.plain = plain;
                     if !valid_name(&name) {
                         send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginFailed { reason: LoginFailure::InvalidName });
@@ -101,12 +118,17 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                     tokio::task::spawn_blocking(move || {
                         let outcome = (|| {
                             let s = Store::open(&db).map_err(|e| e.to_string())?;
-                            Ok(match s.login(&name, &password).map_err(|e| e.to_string())? {
+                            let e = |e: mundi_store::Error| e.to_string();
+                            Ok(match s.login(&name, &password).map_err(e)? {
                                 Login::WrongPassword => None,
-                                Login::Ok | Login::Created => {
-                                    let display = s.display(&name).map_err(|e| e.to_string())?.unwrap_or(name);
-                                    let room = s.room(&display).map_err(|e| e.to_string())?;
-                                    Some((display, room))
+                                created @ (Login::Ok | Login::Created) => {
+                                    if created == Login::Created {
+                                        s.set_profile(&name, name_of(sex).as_deref(), name_of(ko_final).as_deref()).map_err(e)?;
+                                    }
+                                    let display = s.display(&name).map_err(e)?.unwrap_or(name);
+                                    let room = s.room(&display).map_err(e)?;
+                                    let (sex, ko_final) = s.profile(&display).map_err(e)?;
+                                    Some(Player { name: display, room, sex: named(sex).unwrap_or_default(), ko_final: named(ko_final) })
                                 }
                             })
                         })();
@@ -116,6 +138,13 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                 NetEvent::Message(c, ClientMessage::Command { text }) => {
                     if let Some(name) = conns.get(&c).and_then(|k| k.name.clone()) {
                         sim.submit(Input::Command { name, text });
+                    }
+                }
+                NetEvent::Message(c, ClientMessage::Settings { keywords, lang, plain }) => {
+                    if let Some(conn) = conns.get_mut(&c) {
+                        conn.viewer.keywords = keywords.unwrap_or(conn.viewer.keywords);
+                        conn.viewer.lang = lang.unwrap_or(conn.viewer.lang);
+                        conn.plain = plain.unwrap_or(conn.plain);
                     }
                 }
                 NetEvent::Malformed(_) => {}
@@ -131,7 +160,8 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
         }
         while let Ok(LoginResult { conn: c, outcome }) = logins.try_recv() {
             match outcome {
-                Ok(Some((name, room))) if conns.contains_key(&c) => {
+                Ok(Some(Player { name, room, sex, ko_final })) if conns.contains_key(&c) => {
+                    renderer.register_player(&name, sex, ko_final);
                     // A second login takes the character over: the old connection goes.
                     if let Some(old) = by_char.insert(name.to_lowercase(), c) {
                         if let Some(k) = conns.get_mut(&old) {
@@ -191,7 +221,7 @@ fn save_all(store: &mut Store, sim: &Sim) {
 fn send(net: &Net, renderer: &Renderer, conns: &mut HashMap<ConnId, Conn>, c: ConnId, tick: u64, mut event: Event) {
     let Some(conn) = conns.get_mut(&c) else { return };
     let text = renderer
-        .lines(&event, conn.lang)
+        .lines(&event, conn.viewer)
         .iter()
         .map(|l| if conn.plain { plain(l) } else { ansi(l) })
         .collect();

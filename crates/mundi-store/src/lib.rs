@@ -72,6 +72,10 @@ impl Store {
                  room TEXT
              );",
         )?;
+        // Columns added after the first schema: added to older files, ignored if there.
+        for column in ["sex TEXT", "ko_final TEXT"] {
+            let _ = db.execute(&format!("ALTER TABLE characters ADD COLUMN {column}"), []);
+        }
         Ok(Store { db })
     }
 
@@ -100,6 +104,24 @@ impl Store {
                 Ok(Login::Created)
             }
         }
+    }
+
+    /// Sex (for English pronouns) and particle ending (D23) of a character, as names: "male",
+    /// "female", "neutral"; "none", "rieul", "other". Unset fields are None.
+    pub fn profile(&self, name: &str) -> Result<(Option<String>, Option<String>)> {
+        Ok(self
+            .db
+            .query_row("SELECT sex, ko_final FROM characters WHERE name = ?1", [name.to_lowercase()], |r| Ok((r.get(0)?, r.get(1)?)))
+            .optional()?
+            .unwrap_or((None, None)))
+    }
+
+    pub fn set_profile(&self, name: &str, sex: Option<&str>, ko_final: Option<&str>) -> Result<()> {
+        self.db.execute(
+            "UPDATE characters SET sex = coalesce(?2, sex), ko_final = coalesce(?3, ko_final) WHERE name = ?1",
+            params![name.to_lowercase(), sex, ko_final],
+        )?;
+        Ok(())
     }
 
     /// The name as the world shows it.
@@ -152,10 +174,13 @@ mod tests {
             assert_eq!(s.login("Ana", "nope").unwrap(), Login::WrongPassword);
             assert_eq!(s.room("Ana").unwrap(), None);
             s.save_rooms([("Ana", "tba:30:room:3002")]).unwrap();
+            s.set_profile("ana", Some("female"), None).unwrap();
+            s.set_profile("ana", None, Some("none")).unwrap();
         }
         let s = Store::open(&path).unwrap();
         assert_eq!(s.display("ana").unwrap().as_deref(), Some("Ana"));
         assert_eq!(s.room("ANA").unwrap().as_deref(), Some("tba:30:room:3002"));
+        assert_eq!(s.profile("Ana").unwrap(), (Some("female".into()), Some("none".into())));
         let stored: String = s.db.query_row("SELECT password_hash FROM accounts", [], |r| r.get(0)).unwrap();
         assert!(stored.starts_with("$argon2id$") && !stored.contains("pw1"));
     }

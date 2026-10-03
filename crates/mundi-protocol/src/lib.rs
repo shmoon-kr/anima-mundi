@@ -50,6 +50,36 @@ impl Lang {
     }
 }
 
+/// Where a Korean screen shows the English keyword beside a name (D18): only where a command can
+/// name it (`targets`, the default), everywhere, or nowhere.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum KeywordMode {
+    Always,
+    #[default]
+    Targets,
+    Off,
+}
+
+/// For English pronouns (he, she, it).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Sex {
+    #[default]
+    Neutral,
+    Male,
+    Female,
+}
+
+/// How a name ends for Korean particles, when the rule gets it wrong (D23: "Bob" is 밥).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum KoFinal {
+    None,
+    Rieul,
+    Other,
+}
+
 /// Body positions (MECHANICS §4.1), lowest first.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
@@ -185,6 +215,9 @@ pub struct RoomObject {
     pub id: Option<String>,
     pub text: String,
     pub count: u32,
+    /// Words a command can name it by, in the content's order. Mundi addition.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub keywords: Vec<String>,
 }
 
 /// One being in a room as its perceiver sees it. `text` is the screen line (PROTOCOL.md v0): the
@@ -208,6 +241,9 @@ pub struct Occupant {
     pub flags: Vec<String>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub hints: Vec<String>,
+    /// Words a command can name it by (a mob's keywords; empty for players, whose name is the word).
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub keywords: Vec<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -310,6 +346,7 @@ pub enum Event {
 pub enum ClientMessage {
     /// Logs in, creating the character the first time a name is used. `lang` picks the language of
     /// the rendered text (D14); `plain` asks for text without colour codes (agents, D20).
+    /// `sex` and `ko_final` are kept for a new character (tbaMUD asks the sex when a name is new).
     Login {
         name: String,
         password: String,
@@ -317,18 +354,43 @@ pub enum ClientMessage {
         lang: Lang,
         #[serde(default)]
         plain: bool,
+        #[serde(default)]
+        keywords: KeywordMode,
+        #[serde(default)]
+        sex: Option<Sex>,
+        #[serde(default)]
+        ko_final: Option<KoFinal>,
     },
     Command { text: String },
+    /// Display settings, any time after login.
+    Settings {
+        #[serde(default)]
+        keywords: Option<KeywordMode>,
+        #[serde(default)]
+        lang: Option<Lang>,
+        #[serde(default)]
+        plain: Option<bool>,
+    },
 }
 
 /// Never prints the password (PROTOCOL.md §5).
 impl std::fmt::Debug for ClientMessage {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ClientMessage::Login { name, lang, plain, .. } => {
-                f.debug_struct("Login").field("name", name).field("password", &"***").field("lang", lang).field("plain", plain).finish()
-            }
+            ClientMessage::Login { name, lang, plain, keywords, sex, ko_final, .. } => f
+                .debug_struct("Login")
+                .field("name", name)
+                .field("password", &"***")
+                .field("lang", lang)
+                .field("plain", plain)
+                .field("keywords", keywords)
+                .field("sex", sex)
+                .field("ko_final", ko_final)
+                .finish(),
             ClientMessage::Command { text } => f.debug_struct("Command").field("text", text).finish(),
+            ClientMessage::Settings { keywords, lang, plain } => {
+                f.debug_struct("Settings").field("keywords", keywords).field("lang", lang).field("plain", plain).finish()
+            }
         }
     }
 }
