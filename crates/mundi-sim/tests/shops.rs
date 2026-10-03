@@ -11,6 +11,8 @@ const WEAPONS: &str = "tba:30:room:3011";
 const MAGE_GUARD: &str = "tba:30:room:3017";
 const MAGE_GUILD: &str = "tba:30:room:3019";
 const DAGGER: &str = "tba:30:obj:3020";
+const MAGIC: &str = "tba:30:room:3033";
+const SMALL_SWORD: &str = "tba:30:obj:3021";
 
 struct T {
     sim: Sim,
@@ -19,9 +21,12 @@ struct T {
 
 impl T {
     fn new() -> T {
+        T::seeded(1)
+    }
+    fn seeded(seed: u64) -> T {
         let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud");
         let z = vec![load_zone(&root.join("content/30")).unwrap()];
-        T { sim: Sim::new(&z, &load_tables(&root.join("tables")).unwrap(), 1, 12), seen: vec![] }
+        T { sim: Sim::new(&z, &load_tables(&root.join("tables")).unwrap(), seed, 12), seen: vec![] }
     }
     fn input(&mut self, i: Input) {
         self.sim.submit(i);
@@ -70,6 +75,30 @@ fn buy_at_the_charisma_price_and_list() {
     t.gold("War", 0);
     let out = t.cmd("War", "buy bread");
     assert!(!T::tells(&out).is_empty(), "the you-cannot-afford line");
+}
+
+#[test]
+fn prices_as_the_live_server_lists_them() {
+    // §15.2 precision: a charisma 7 character on the live server (2026-10-03) saw these; in
+    // double precision the staff would be 850, and the weaponsmith offered 22 for a small sword
+    let seed = (1..500).find(|&s| {
+        let mut t = T::seeded(s);
+        t.enter("War", Class::Warrior, MAGIC);
+        t.sim.save("War").unwrap().abilities.cha == 7
+    }).expect("a seed giving charisma 7");
+    let mut t = T::seeded(seed);
+    t.enter("War", Class::Warrior, MAGIC);
+    let list = t.cmd("War", "list");
+    let Some(Event::ShopList { items, .. }) = list.iter().find(|e| matches!(e, Event::ShopList { .. })) else { panic!("{list:?}") };
+    let mut prices: Vec<i64> = items.iter().map(|i| i.price).collect();
+    prices.sort();
+    assert_eq!(prices, [243, 486, 486, 851, 6078]);
+    t.input(Input::Load { name: "War".into(), object: SMALL_SWORD.into(), carry: true });
+    for step in ["south", "east", "east", "east", "east", "north"] {
+        t.cmd("War", step);
+    }
+    let out = t.cmd("War", "value sword");
+    assert!(T::tells(&out).iter().any(|m| m == "I'll give you 22 gold coins for that!"), "{:?}", T::tells(&out));
 }
 
 #[test]

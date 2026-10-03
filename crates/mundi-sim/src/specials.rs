@@ -231,18 +231,19 @@ impl Sim {
         true
     }
 
-    /// shop.c buy_price, sell_price (MECHANICS §15.2).
+    /// shop.c buy_price, sell_price (MECHANICS §15.2). The profits are C floats, so this is single
+    /// precision as there; double gives some prices one less than the live server.
     fn buy_price(&self, o: Key, shop: &mundi_content::Shop, keeper: Key, buyer: Key) -> i64 {
-        let cost = self.objs.get(o).map_or(0, |o| o.cost) as f64;
-        let c = (self.abilities_now(keeper).cha - self.abilities_now(buyer).cha) as f64;
-        (cost * shop.profit.buy * (1.0 + c / 70.0)) as i64
+        let cost = self.objs.get(o).map_or(0, |o| o.cost) as f32;
+        let c = (self.abilities_now(keeper).cha - self.abilities_now(buyer).cha) as f32;
+        (cost * shop.profit.buy as f32 * (1.0 + c / 70.0)) as i64
     }
 
     fn sell_price(&self, o: Key, shop: &mundi_content::Shop, keeper: Key, seller: Key) -> i64 {
-        let cost = self.objs.get(o).map_or(0, |o| o.cost) as f64;
+        let cost = self.objs.get(o).map_or(0, |o| o.cost) as f32;
         let c = (self.abilities_now(keeper).cha - self.abilities_now(seller).cha) as f64;
-        let sell = shop.profit.sell * (1.0 - c / 70.0);
-        let buy = shop.profit.buy * (1.0 + c / 70.0);
+        let sell = (shop.profit.sell as f32 as f64 * (1.0 - c / 70.0)) as f32;
+        let buy = (shop.profit.buy as f32 as f64 * (1.0 + c / 70.0)) as f32;
         (cost * sell.min(buy)) as i64
     }
 

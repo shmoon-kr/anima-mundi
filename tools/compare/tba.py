@@ -99,3 +99,40 @@ class Mud:
             except Exception:
                 pass
             self.w.close()
+
+
+def _rooms():
+    import yaml
+    return yaml.safe_load((ROOT / "third_party/tbamud/content/30/rooms.yaml").read_text())
+
+
+async def _here(m, rooms):
+    """The zone 30 room this character stands in, by its name (the first line of `look`)."""
+    out = await m.cmd("look")
+    name = next((l.strip() for l in out.splitlines() if l.strip() and not l.startswith(">")), "")
+    return next((k for k, r in rooms.items() if r.get("name") == name), None)
+
+
+async def walk_to(self, target):
+    """Walks to a zone 30 room by the shortest path through the content's exits."""
+    from collections import deque
+    rooms = _rooms()
+    start = await _here(self, rooms)
+    if start is None:
+        raise RuntimeError("cannot tell where this character is")
+    q, seen = deque([(start, [])]), {start}
+    while q:
+        at, path = q.popleft()
+        if at == target:
+            for d in path:
+                await self.cmd(d)
+            return
+        for d, e in (rooms.get(at, {}).get("exits") or {}).items():
+            to = e.get("to")
+            if to and to not in seen:
+                seen.add(to)
+                q.append((to, path + [d]))
+    raise RuntimeError(f"no way from {start} to {target}")
+
+
+Mud.walk_to = walk_to
