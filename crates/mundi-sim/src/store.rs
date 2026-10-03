@@ -50,6 +50,16 @@ impl<T> Store<T> {
         Some(value)
     }
 
+    /// Every live key, by slot: the same inputs give the same order.
+    pub fn keys(&self) -> Vec<Key> {
+        self.slots
+            .iter()
+            .enumerate()
+            .filter(|(_, s)| s.value.is_some())
+            .map(|(i, s)| Key { index: i as u32, generation: s.generation })
+            .collect()
+    }
+
     pub fn get(&self, key: Key) -> Option<&T> {
         let slot = self.slots.get(key.index as usize)?;
         if slot.generation == key.generation { slot.value.as_ref() } else { None }

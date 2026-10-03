@@ -44,6 +44,39 @@ impl Sim {
         Some(key)
     }
 
+    /// Coins as a thing (handler.c create_money): named by the pile (`made.money`).
+    pub(crate) fn make_money(&mut self, amount: i64) -> Key {
+        let made = self.tables.world.made.clone();
+        let (short, long, keywords) = if amount == 1 {
+            (made.coin_short.clone(), made.coin_long.clone(), vec!["coin".to_string(), "gold".to_string()])
+        } else {
+            let short = made.money.iter().find(|m| amount <= m.up_to).map_or(made.money_more.clone(), |m| m.short.clone());
+            let mut long = format!("{short} is lying here.");
+            if let Some(f) = long.get_mut(0..1) {
+                f.make_ascii_uppercase();
+            }
+            (short, long, vec!["coins".to_string(), "gold".to_string()])
+        };
+        let serial = self.next_serial();
+        self.objs.insert(Obj {
+            proto: None,
+            serial,
+            kind: ItemType::Money,
+            keywords,
+            short,
+            long,
+            flags: vec![],
+            wear: vec![mundi_content::names::Wear::Take],
+            weight: 0,
+            cost: amount,
+            level: 0,
+            values: ObjValues { coins: Some(amount), ..Default::default() },
+            timer: -1,
+            place: Place::Nowhere,
+            contents: Vec::new(),
+        })
+    }
+
     /// An object's ID in events: `<prototype>/<serial>`, or `made/<serial>` for corpses and money.
     pub(crate) fn obj_id(&self, k: Key) -> Option<String> {
         let o = self.objs.get(k)?;

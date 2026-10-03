@@ -1,6 +1,6 @@
 //! What mobs do on their own every 10 seconds (MECHANICS §14.2, mobact.c mobile_activity): pick up
-//! the best thing in the room, wander. Aggression, memory and helping come with combat (S5 step 4);
-//! special procedures with shops and guilds.
+//! the best thing in the room, wander, attack, remember, help. Special procedures come with shops
+//! and guilds.
 
 use mundi_content::names::{ItemType, MobFlag, RoomFlag, Wear};
 use mundi_protocol::ItemAction;
@@ -25,6 +25,7 @@ impl Sim {
                     self.move_dir(k, door);
                 }
             }
+            self.aggression(k);
         }
     }
 
@@ -83,5 +84,60 @@ impl Sim {
             return false;
         }
         !c.has(mundi_content::names::Affect::Charm)
+    }
+
+    /// mobact.c:110-191 (MECHANICS §7.5): aggressive mobs, memory, helpers. One attack each.
+    fn aggression(&mut self, k: Key) {
+        let Some(c) = self.chars.get(k) else { return };
+        if c.fighting.is_some() || c.position <= Position::Sleeping {
+            return;
+        }
+        let room = c.room;
+        let blind_or_charmed = c.has(mundi_content::names::Affect::Blind) || c.has(mundi_content::names::Affect::Charm);
+        let aggressive = [MobFlag::Aggressive, MobFlag::AggrEvil, MobFlag::AggrGood, MobFlag::AggrNeutral].iter().any(|f| c.has_flag(*f));
+        if !c.has_flag(MobFlag::Helper) && !blind_or_charmed && aggressive {
+            let target = self.people[room].iter().copied().find(|&v| {
+                let Some(t) = self.chars.get(v) else { return false };
+                if t.is_mob() || !self.can_see(k, v) {
+                    return false;
+                }
+                if c.has_flag(MobFlag::Wimpy) && t.position > Position::Sleeping {
+                    return false;
+                }
+                c.has_flag(MobFlag::Aggressive)
+                    || (c.has_flag(MobFlag::AggrEvil) && t.alignment <= -350)
+                    || (c.has_flag(MobFlag::AggrGood) && t.alignment >= 350)
+                    || (c.has_flag(MobFlag::AggrNeutral) && t.alignment > -350 && t.alignment < 350)
+            });
+            if let Some(v) = target {
+                self.hit(k, v, None);
+                return;
+            }
+        }
+        let Some(c) = self.chars.get(k) else { return };
+        if c.has_flag(MobFlag::Memory) && !c.memory.is_empty() && c.fighting.is_none() {
+            let memory = c.memory.clone();
+            let target = self.people[room].iter().copied().find(|&v| {
+                self.chars.get(v).is_some_and(|t| !t.is_mob() && memory.contains(&t.name)) && self.can_see(k, v)
+            });
+            if let Some(v) = target {
+                self.to_room(k, room, false, |who, who_id| Event::Aggro { who, who_id, reason: "remembered".into() });
+                self.hit(k, v, None);
+                return;
+            }
+        }
+        let Some(c) = self.chars.get(k) else { return };
+        if c.has_flag(MobFlag::Helper) && !blind_or_charmed && c.fighting.is_none() {
+            let target = self.people[room].iter().copied().find_map(|v| {
+                let t = self.chars.get(v)?;
+                let foe = t.fighting?;
+                (v != k && t.is_mob() && self.chars.get(foe).is_some_and(|f| !f.is_mob()) && foe != k).then_some((v, foe))
+            });
+            if let Some((friend, foe)) = target {
+                let (fname, fid) = (self.chars.get(friend).unwrap().name.clone(), self.id_of(friend));
+                self.to_room(k, room, false, |who, who_id| Event::Assisted { who, who_id, target: fname.clone(), target_id: fid.clone() });
+                self.hit(k, foe, None);
+            }
+        }
     }
 }

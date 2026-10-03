@@ -95,6 +95,10 @@ impl Sim {
             equipment: BTreeMap::new(),
             linked: true,
             queue: VecDeque::new(),
+            fighting: None,
+            wait: 0,
+            wimpy: 0,
+            memory: Vec::new(),
         });
         self.advance_level(key);
         let c = self.chars.get_mut(key).unwrap();
@@ -135,6 +139,10 @@ impl Sim {
             equipment: BTreeMap::new(),
             linked: true,
             queue: VecDeque::new(),
+            fighting: None,
+            wait: 0,
+            wimpy: 0,
+            memory: Vec::new(),
         }
     }
 
@@ -186,6 +194,14 @@ impl Sim {
             *self.counts.entry(m.proto.clone()).or_default() -= 1;
         } else {
             self.by_name.remove(&key_name(&name));
+        }
+        if self.chars.get(key).is_some_and(|c| c.fighting.is_some()) {
+            self.stop_fighting(key);
+        }
+        for k in self.combat.clone() {
+            if self.chars.get(k).and_then(|c| c.fighting) == Some(key) {
+                self.stop_fighting(k);
+            }
         }
         self.people[room].retain(|k| *k != key);
         self.order.retain(|k| *k != key);

@@ -217,3 +217,33 @@ fn object_sentences_in_both_languages() {
     let ko = see(&r, &k, KO);
     assert_eq!(ko, "반짝이는 초보자의 검을 집었다.");
 }
+
+#[test]
+fn blows_from_each_side() {
+    use mundi_protocol::{HitKind, HitOutcome};
+    let r = renderer();
+    r.register_player("Ana", Sex::Female, None);
+    let blow = |attacker: &str, victim: &str, damage: i32, severity: u8, outcome| Event::Hit {
+        attacker: attacker.into(),
+        attacker_id: (attacker == "Ana").then(|| "pc:ana".into()),
+        victim: victim.into(),
+        victim_id: None,
+        verb: "slash".into(),
+        severity,
+        kind: HitKind::Weapon,
+        damage,
+        attack: 303,
+        outcome,
+        variant: Some(1),
+        weapon: None,
+        weapon_id: None,
+    };
+    assert_eq!(line(&r, &blow("self", "the beggar", 8, 4, HitOutcome::Hit)), "You slash the beggar hard.");
+    assert_eq!(line(&r, &blow("Ana", "self", 8, 4, HitOutcome::Hit)), "Ana slashes you hard.");
+    assert_eq!(line(&r, &blow("Ana", "the beggar", 1, 1, HitOutcome::Hit)), "Ana tickles the beggar as she slashes it.");
+    assert_eq!(line(&r, &blow("Ana", "the beggar", 30, 8, HitOutcome::Hit)), "Ana OBLITERATES the beggar with her deadly slash!!");
+    // A miss with a weapon comes from the message file when it has the attack (303: slash).
+    let miss = line(&r, &blow("self", "the beggar", 0, 0, HitOutcome::Miss));
+    assert!(!miss.is_empty() && miss.contains("beggar"), "{miss}");
+    assert_eq!(see(&r, &blow("Ana", "the beggar", 8, 4, HitOutcome::Hit), KO), "Ana가 베기로 the beggar를 세게 맞혔다.");
+}

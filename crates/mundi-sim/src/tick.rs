@@ -1,5 +1,6 @@
 //! The tick: game time, regeneration (MECHANICS §1.2, §5), and the prompt that closes each block.
 
+use crate::combat::{TYPE_SUFFERING, SPELL_POISON};
 use crate::*;
 
 impl Sim {
@@ -20,9 +21,9 @@ impl Sim {
         }
     }
 
-    /// The tick's work on characters (MECHANICS §5.3): hunger, drink and thirst; regeneration for
-    /// those stunned or better; a player's light burning down. Bleeding, poison and corpses come
-    /// with combat (S5 step 4).
+    /// The tick's work (MECHANICS §5.3): for characters hunger, drink and thirst; regeneration and
+    /// poison for those stunned or better, bleeding for those worse; a player's light burning down;
+    /// then corpses rot (§8.4).
     pub(crate) fn point_update(&mut self) {
         let all: Vec<Key> = self.order.iter().chain(self.mobs.iter()).copied().collect();
         for k in all {
@@ -34,10 +35,57 @@ impl Sim {
                 c.hp = (c.hp + hp).min(c.max_hp);
                 c.mana = (c.mana + mana).min(c.max_mana);
                 c.mv = (c.mv + mv).min(c.max_mv);
+                if c.has(mundi_content::names::Affect::Poison) && self.damage(k, k, 2, SPELL_POISON, None) == -1 {
+                    continue;
+                }
+                if self.chars.get(k).is_some_and(|c| c.position <= Position::Stunned) {
+                    self.update_pos(k);
+                }
+            } else if c.position == Position::Incapacitated {
+                if self.damage(k, k, 1, TYPE_SUFFERING, None) == -1 {
+                    continue;
+                }
+            } else if c.position == Position::MortallyWounded && self.damage(k, k, 2, TYPE_SUFFERING, None) == -1 {
+                continue;
             }
-            if !self.chars.get(k).unwrap().is_mob() {
+            if self.chars.get(k).is_some_and(|c| !c.is_mob()) {
                 self.light_tick(k);
             }
+        }
+        self.corpses_rot();
+    }
+
+    /// limits.c:436-460: a corpse's timer runs down; at 0 it goes, spilling what it holds.
+    fn corpses_rot(&mut self) {
+        for o in self.objs.keys() {
+            let Some(obj) = self.objs.get_mut(o) else { continue };
+            if !obj.values.corpse() || obj.timer <= 0 {
+                continue;
+            }
+            obj.timer -= 1;
+            if obj.timer > 0 {
+                continue;
+            }
+            let (place, text) = (obj.place, obj.short.clone());
+            let id = self.obj_id(o);
+            let spill = match place {
+                Place::Carried(c) | Place::Worn(c, _) => {
+                    self.deliver(c, Event::Decayed { text, id, carried: true });
+                    self.chars.get(c).map(|ch| Place::Room(ch.room)).unwrap_or(Place::Nowhere)
+                }
+                Place::Room(r) => {
+                    for w in self.people[r].clone() {
+                        self.deliver(w, Event::Decayed { text: text.clone(), id: id.clone(), carried: false });
+                    }
+                    Place::Room(r)
+                }
+                Place::In(c) => Place::In(c),
+                Place::Nowhere => Place::Nowhere,
+            };
+            for inner in self.objs.get(o).map(|x| x.contents.clone()).unwrap_or_default() {
+                self.put(inner, spill);
+            }
+            self.extract_obj(o);
         }
     }
 

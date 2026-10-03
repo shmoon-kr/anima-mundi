@@ -103,6 +103,14 @@ pub(crate) struct Char {
     pub equipment: BTreeMap<EquipPos, Key>,
     pub linked: bool,
     pub queue: VecDeque<String>,
+    /// Who they fight (MECHANICS §7).
+    pub fighting: Option<Key>,
+    /// Pulses before the next command (players) or round (mobs) (MECHANICS §7.1).
+    pub wait: i32,
+    /// Flee below this many hit points (MECHANICS §10.1); 0 never.
+    pub wimpy: i32,
+    /// Players a memory mob remembers attacking it, by name (MECHANICS §7.5).
+    pub memory: Vec<String>,
 }
 
 impl Char {

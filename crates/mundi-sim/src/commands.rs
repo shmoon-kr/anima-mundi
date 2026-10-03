@@ -32,7 +32,9 @@ impl Sim {
             self.deliver(key, Event::Refused { reason: refusal_for(position) });
             return;
         }
-        let dir = |d: usize| move |s: &mut Sim| s.move_dir(key, d);
+        let dir = |d: usize| move |s: &mut Sim| {
+            s.move_dir(key, d);
+        };
         match entry.name.as_str() {
             "north" => dir(0)(self),
             "east" => dir(1)(self),
@@ -75,6 +77,9 @@ impl Sim {
             "taste" => self.eat(key, arg, true),
             "drink" => self.drink(key, arg, false),
             "sip" => self.drink(key, arg, true),
+            "hit" | "kill" => self.hit_cmd(key, arg),
+            "flee" => self.flee_cmd(key),
+            "toggle" => self.toggle(key, arg),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }
     }

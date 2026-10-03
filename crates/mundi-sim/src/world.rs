@@ -66,6 +66,8 @@ pub struct World {
     pub zone_list: Vec<ZoneState>,
     pub mob_protos: HashMap<String, Mob>,
     pub obj_protos: HashMap<String, Object>,
+    /// Mobs that keep a shop: protected from attack (MECHANICS §8.1, §15.1).
+    pub keepers: std::collections::HashSet<String>,
 }
 
 impl World {
@@ -89,6 +91,7 @@ impl World {
             }
             w.mob_protos.extend(z.mobs.iter().map(|(k, v)| (k.clone(), v.clone())));
             w.obj_protos.extend(z.objects.iter().map(|(k, v)| (k.clone(), v.clone())));
+            w.keepers.extend(z.shops.values().filter_map(|s| s.keeper.clone()));
             for id in z.rooms.keys() {
                 w.index.insert(id.clone(), w.rooms.len());
                 let zone = parse_id(id).map(|(z, _, _)| z).unwrap_or(0);

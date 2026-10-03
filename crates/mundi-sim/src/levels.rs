@@ -1,4 +1,4 @@
-//! Levels (MECHANICS §9.4): what a level gives.
+//! Experience and levels (MECHANICS §9): gains and losses, a kill's share, what a level gives.
 
 use crate::*;
 
@@ -32,4 +32,64 @@ impl Sim {
         c.max_mv += (moves as i32).max(1);
         c.practices += practices;
     }
+
+    /// limits.c gain_exp (MECHANICS §9.1): capped gains raise levels up to 30, losses floor at 0.
+    pub(crate) fn gain_exp(&mut self, k: Key, gain: i64) {
+        let cfg = self.tables.world.config.clone();
+        let Some(c) = self.chars.get_mut(k) else { return };
+        if c.is_mob() {
+            c.exp += gain;
+            return;
+        }
+        if c.level < 1 || c.level >= 31 {
+            return;
+        }
+        if gain > 0 {
+            c.exp += gain.min(cfg.max_exp_gain);
+            let class = c.class.unwrap_or(Class::Warrior);
+            let mut levels = 0;
+            loop {
+                let c = self.chars.get(k).unwrap();
+                let next = self.tables.classes.get(class.key()).and_then(|t| t.level_exp.get(c.level as usize + 1).copied());
+                match next {
+                    Some(need) if c.level < 30 && c.exp >= need => {
+                        self.chars.get_mut(k).unwrap().level += 1;
+                        self.advance_level(k);
+                        levels += 1;
+                    }
+                    _ => break,
+                }
+            }
+            if levels > 0 {
+                self.deliver(k, Event::LevelUp { levels });
+            }
+        } else if gain < 0 {
+            let c = self.chars.get_mut(k).unwrap();
+            c.exp = (c.exp + gain.max(-cfg.max_exp_loss)).max(0);
+        }
+    }
+
+    /// A kill's experience (fight.c solo_gain, MECHANICS §9.2), from the victim's experience before
+    /// death halves it. Groups come with step 5.
+    pub(crate) fn kill_gain(&mut self, k: Key, vexp: i64, vlevel: i32, valign: i32) {
+        let Some(c) = self.chars.get(k) else { return };
+        let cap = self.tables.world.config.max_exp_gain;
+        let mut exp = (vexp / 3).min(cap);
+        let most = if c.is_mob() { 4 } else { 8 };
+        exp += (exp * (vlevel - c.level).min(most) as i64 / 8).max(0);
+        exp = exp.max(1);
+        let is_mob = c.is_mob();
+        if !is_mob {
+            self.deliver(k, Event::ExpGain { amount: exp, kind: "solo".into() });
+        }
+        self.gain_exp(k, exp);
+        let c = self.chars.get_mut(k).unwrap();
+        c.alignment += (-valign - c.alignment) / 16;
+    }
+
+    /// What the killer does next (fight.c:784-813): auto-looting comes with step 5.
+    pub(crate) fn after_kill(&mut self, _k: Key, _room: RoomIx) {}
+
+    /// Group members joining a fight (fight.c:968-988): comes with groups (step 5).
+    pub(crate) fn autoassist(&mut self, _k: Key) {}
 }

@@ -22,7 +22,7 @@ use fluent_bundle::concurrent::FluentBundle;
 use fluent_bundle::{FluentArgs, FluentResource, FluentValue};
 use mundi_content::{load_locale, Locale, ZoneContent};
 use mundi_protocol::{
-    ArrivedHow, DayPhase, Direction, Event, InGameHow, KeywordMode, KoFinal, Lang, LeftHow, LinkState, LoginFailure,
+    ArrivedHow, DayPhase, Direction, Event, HitOutcome, InGameHow, KeywordMode, KoFinal, Lang, LeftHow, LinkState, LoginFailure,
     LoginStage, MoveFailure, Occupant, Position, PositionCommand, PositionRefusal, Refusal, RoomView, Sex, WakeFailure,
 };
 
@@ -57,6 +57,8 @@ pub struct Renderer {
     finals: Overrides,
     /// Object keywords by prototype, for D18 in lists.
     obj_keywords: HashMap<String, Vec<String>>,
+    /// tbaMUD's combat message file (`third_party/tbamud/messages/combat.yaml`), if there.
+    combat: Option<mundi_content::CombatMessages>,
 }
 
 /// Where a name stands in a sentence (D18): `Target` is a place a command can name it from.
@@ -98,7 +100,8 @@ impl Renderer {
             }
         }
         let obj_keywords = zones.iter().flat_map(|z| z.objects.iter().map(|(id, o)| (id.clone(), o.keywords.clone()))).collect();
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords })
+        let combat = locales.parent().map(|p| p.join("messages/combat.yaml")).filter(|p| p.exists()).map(|p| mundi_content::load_messages(&p)).transpose().map_err(|e| e.to_string())?;
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -314,6 +317,53 @@ impl Renderer {
             Event::ItemFailed { action, reason, text, id, keyword, other, other_id, slot } => {
                 vec![self.item_failure(v, *action, *reason, text.as_deref(), id.as_deref(), keyword.as_deref(), other.as_deref(), other_id.as_deref(), slot.as_deref())]
             }
+            Event::Hit { .. } => self.blow(v, event),
+            Event::CombatCondition { who: w, who_id, state } => {
+                let st = match state {
+                    mundi_protocol::DownState::MortallyWounded => "mortally_wounded",
+                    mundi_protocol::DownState::Incapacitated => "incapacitated",
+                    mundi_protocol::DownState::Stunned => "stunned",
+                };
+                if w == mundi_protocol::SELF { vec![m(&format!("down-self-{st}"))] } else { one(&format!("down-{st}"), &[("who", who(w, who_id))]) }
+            }
+            Event::Death { who: w, who_id } => one("dead", &[("who", who(w, who_id))]),
+            Event::SelfDied {} => vec![m("dead-self")],
+            Event::DeathCry { who: Some(w), who_id, .. } => one("death-cry", &[("who", who(w, who_id))]),
+            Event::DeathCry { who: None, .. } => vec![m("death-cry-nearby")],
+            Event::Pain { bleeding } => vec![m(if *bleeding { "pain-bleeding" } else { "pain-hurt" })],
+            Event::Wimpy {} => vec![m("wimpy-out")],
+            Event::SelfFled { .. } => vec![m("fled")],
+            Event::FleeFailed { reason } => vec![m(if reason == "panic" { "flee-panic" } else { "flee-bad-shape" })],
+            Event::FleeSeen { who: w, who_id, failed } => one(if *failed { "flee-seen-failed" } else { "flee-seen" }, &[("who", who(w, who_id))]),
+            Event::Aggro { who: w, who_id, .. } => one("aggro-remembered", &[("who", who(w, who_id))]),
+            Event::Assisted { who: w, who_id, target, target_id } => one("assisted", &[("who", who(w, who_id)), ("target", who(target, target_id))]),
+            Event::Appear { who: w, who_id } => one("appear", &[("who", who(w, who_id))]),
+            Event::AttackRefused { reason } => {
+                let r = serde_json::to_value(reason).ok().and_then(|j| j.as_str().map(|s| s.replace('_', "-"))).unwrap_or_default();
+                vec![m(&format!("attack-{r}"))]
+            }
+            Event::SelfHit { who: w, .. } if w == mundi_protocol::SELF => vec![m("self-hit")],
+            Event::SelfHit { who: w, who_id } => one("room-self-hit", &[("who", who(w, who_id)), ("him", self.pronoun(who_id.as_deref(), "him").into())]),
+            Event::ExpGain { amount, kind } => {
+                let k = if kind == "share" { "exp-share" } else { "exp-solo" };
+                if *amount <= 1 { vec![m(&format!("{k}-one"))] } else { one(k, &[("n", amount.to_string())]) }
+            }
+            Event::LevelUp { levels } => {
+                if *levels == 1 { vec![m("level-up")] } else { one("levels-up", &[("n", levels.to_string())]) }
+            }
+            Event::Decayed { text, id, carried } => one(if *carried { "decayed-carried" } else { "decayed" }, &[("p", self.thing(v, text, id))]),
+            Event::Toggle { name, value } if name == "wimpy" => {
+                let refused = value.get("refused").and_then(|r| r.as_str());
+                match (refused, value.get("current").and_then(|c| c.as_i64()), value.as_i64()) {
+                    (Some(r), _, _) => vec![m(&format!("wimpy-{}", r.replace('_', "-")))],
+                    (None, Some(0), _) => vec![m("wimpy-none")],
+                    (None, Some(n), _) => one("wimpy-current", &[("n", n.to_string())]),
+                    (None, None, Some(0)) => vec![m("wimpy-off")],
+                    (None, None, Some(n)) => one("wimpy-set", &[("n", n.to_string())]),
+                    _ => vec![],
+                }
+            }
+            Event::Toggle { .. } => vec![],
             Event::WorldTime { phase } => vec![m(match phase {
                 DayPhase::Sunrise => "time-sunrise",
                 DayPhase::Day => "time-day",
@@ -361,6 +411,99 @@ impl Renderer {
             out.push(format!("{{yellow}}{}{{/yellow}}", self.occupant_line(v, o, kw.as_deref())));
         }
         out
+    }
+
+    /// One blow for its viewer (MECHANICS §7.6, §8.2): the message file's lines when it has some for
+    /// this attack and outcome (always for skills and spells; weapons only on a miss or a kill),
+    /// else fight.c's damage table by severity.
+    fn blow(&self, v: Viewer, e: &Event) -> Vec<String> {
+        let Event::Hit { attacker, attacker_id, victim, victim_id, verb, severity, kind, attack, outcome, variant, weapon, weapon_id, .. } = e else {
+            return vec![];
+        };
+        let me = mundi_protocol::SELF;
+        let role = if victim == me { "victim" } else if attacker == me { "attacker" } else { "room" };
+        let from_file = *kind != mundi_protocol::HitKind::Weapon || matches!(outcome, HitOutcome::Miss | HitOutcome::Die);
+        if from_file {
+            if let Some(set) = self.combat_lines(*attack, *variant) {
+                let lines = match outcome {
+                    HitOutcome::Miss => &set.miss,
+                    HitOutcome::Hit => &set.hit,
+                    HitOutcome::Die => &set.die,
+                    HitOutcome::God => &set.god,
+                };
+                let line = match role {
+                    "attacker" => &lines.attacker,
+                    "victim" => &lines.victim,
+                    _ => &lines.room,
+                };
+                return line
+                    .iter()
+                    .map(|l| {
+                        let text = self.act(v, l, (attacker, attacker_id.as_deref()), (victim, victim_id.as_deref()), weapon.as_deref().map(|w| (w, weapon_id)));
+                        let colour = match role {
+                            "attacker" => "yellow",
+                            "victim" => "red",
+                            _ => "",
+                        };
+                        if colour.is_empty() { text } else { format!("{{{colour}}}{text}{{/{colour}}}") }
+                    })
+                    .collect();
+            }
+        }
+        let word = self.msg(v, &format!("verb-{verb}"), &[]);
+        let words = self.msg(v, &format!("verb-{verb}-s"), &[]);
+        let a = self.name(v, attacker, attacker_id.as_deref(), Spot::Prose);
+        let vn = self.name(v, victim, victim_id.as_deref(), Spot::Prose);
+        let args = [
+            ("a", a),
+            ("v", vn),
+            ("w", word),
+            ("ws", words),
+            ("ae", self.pronoun(attacker_id.as_deref(), "he").into()),
+            ("as", self.pronoun(attacker_id.as_deref(), "his").into()),
+            ("vm", self.pronoun(victim_id.as_deref(), "him").into()),
+        ];
+        vec![self.msg(v, &format!("dam-{severity}-{role}"), &args)]
+    }
+
+    /// The message file's set for an attack, the variant chosen by the event's roll.
+    fn combat_lines(&self, attack: i32, roll: Option<u32>) -> Option<&mundi_content::tables::MessageSet> {
+        let a = self.combat.as_ref()?.attacks.iter().find(|a| a.number == attack)?;
+        let n = a.variants.len().max(1);
+        a.variants.get((roll.unwrap_or(1) as usize).saturating_sub(1) % n)
+    }
+
+    /// act()'s codes in a message-file line: $n $N names, $e $E he, $m $M him, $s $S his, $p the
+    /// weapon, $$ a dollar; the line's first letter capitalised (comm.c perform_act).
+    fn act(&self, v: Viewer, line: &str, n: (&str, Option<&str>), big_n: (&str, Option<&str>), p: Option<(&str, &Option<String>)>) -> String {
+        let me = mundi_protocol::SELF;
+        let who = |(name, id): (&str, Option<&str>)| if name == me { "you".to_string() } else { self.name(v, name, id, Spot::Prose) };
+        let mut out = String::new();
+        let mut chars = line.chars();
+        while let Some(c) = chars.next() {
+            if c != '$' {
+                out.push(c);
+                continue;
+            }
+            match chars.next() {
+                Some('n') => out.push_str(&who(n)),
+                Some('N') => out.push_str(&who(big_n)),
+                Some('e') => out.push_str(self.pronoun(n.1, "he")),
+                Some('E') => out.push_str(self.pronoun(big_n.1, "he")),
+                Some('m') => out.push_str(self.pronoun(n.1, "him")),
+                Some('M') => out.push_str(self.pronoun(big_n.1, "him")),
+                Some('s') => out.push_str(self.pronoun(n.1, "his")),
+                Some('S') => out.push_str(self.pronoun(big_n.1, "his")),
+                Some('p') => out.push_str(&p.map(|(t, id)| self.thing(v, t, id)).unwrap_or_else(|| "something".into())),
+                Some('$') => out.push('$'),
+                Some(x) => {
+                    out.push('$');
+                    out.push(x);
+                }
+                None => out.push('$'),
+            }
+        }
+        cap(&out)
     }
 
     /// An object named in a sentence: its short description, Korean from the overlay.

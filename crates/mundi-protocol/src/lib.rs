@@ -329,6 +329,53 @@ pub struct Worn {
     pub text: String,
 }
 
+/// Which lines of a combat message a hit used (MECHANICS §7.6, §8.2).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum HitOutcome {
+    Miss,
+    Hit,
+    Die,
+    God,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum HitKind {
+    Weapon,
+    Skill,
+    Spell,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum DownState {
+    Stunned,
+    Incapacitated,
+    MortallyWounded,
+}
+
+/// Why an attack did not start (MECHANICS §7.2, §8.1).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum AttackRefusal {
+    /// hit with no target.
+    Who,
+    NotHere,
+    /// Already fighting: one cannot switch with hit.
+    AlreadyFighting,
+    Peaceful,
+    Protected,
+    /// do_hit's "Player killing is not allowed.".
+    NoPlayerKilling,
+    /// damage()'s "Player killing is not permitted.".
+    NotPermitted,
+    /// Charmed, attacking the master.
+    Friend,
+    /// "You can't fight while sitting!!": a round lost for being down.
+    Sitting,
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct RoomExit {
     pub dir: String,
@@ -634,6 +681,127 @@ pub enum Event {
     Inventory { items: Vec<Carried> },
     #[serde(rename = "items.equipment")]
     Equipment { slots: Vec<Worn> },
+    /// One blow (PROTOCOL.md `combat.hit`). `attacker`/`victim` are "self" for the recipient.
+    /// Mundi gives the exact damage, the attack number, and which message-file lines and variant
+    /// were used, so every viewer's sentence is the same blow.
+    #[serde(rename = "combat.hit")]
+    Hit {
+        attacker: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        attacker_id: Option<String>,
+        victim: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        victim_id: Option<String>,
+        /// The attack's word (slash, pierce...; a skill's or spell's name).
+        verb: String,
+        severity: u8,
+        kind: HitKind,
+        damage: i32,
+        attack: i32,
+        outcome: HitOutcome,
+        /// The message file's variant used, if the message came from it.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        variant: Option<u32>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        weapon: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        weapon_id: Option<String>,
+    },
+    #[serde(rename = "combat.condition")]
+    CombatCondition {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        state: DownState,
+    },
+    /// Someone else died (PROTOCOL.md `combat.death`).
+    #[serde(rename = "combat.death")]
+    Death {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "combat.death_cry")]
+    DeathCry {
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        nearby: bool,
+    },
+    #[serde(rename = "self.died")]
+    SelfDied {},
+    /// "That really did HURT!" (`hurt`) or "...BLEEDING so much!" (`bleeding`). Mundi addition.
+    #[serde(rename = "combat.pain")]
+    Pain { bleeding: bool },
+    #[serde(rename = "self.fled")]
+    SelfFled {
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        dir: Option<String>,
+    },
+    #[serde(rename = "self.flee_failed")]
+    FleeFailed { reason: String },
+    #[serde(rename = "combat.wimpy")]
+    Wimpy {},
+    /// "$n panics, and attempts to flee!" (`failed: false`) or "$n tries to flee, but can't!".
+    #[serde(rename = "combat.flee_seen")]
+    FleeSeen {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        failed: bool,
+    },
+    #[serde(rename = "combat.aggro")]
+    Aggro {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        reason: String,
+    },
+    /// "$n slowly fades into existence." Mundi addition.
+    /// "$n jumps to the aid of $N!" (PROTOCOL.md `combat.assist`).
+    #[serde(rename = "combat.assist")]
+    Assisted {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        target: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        target_id: Option<String>,
+    },
+    #[serde(rename = "combat.appear")]
+    Appear {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "combat.refused")]
+    AttackRefused { reason: AttackRefusal },
+    /// "You hit yourself...OUCH!." and the room's "$n hits $mself, and says OUCH!". Mundi addition.
+    #[serde(rename = "combat.self_hit")]
+    SelfHit {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "exp.gain")]
+    ExpGain { amount: i64, kind: String },
+    #[serde(rename = "level.up")]
+    LevelUp { levels: i32 },
+    /// A corpse rotting away (MECHANICS §8.4). Mundi addition.
+    #[serde(rename = "items.decayed")]
+    Decayed {
+        text: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        carried: bool,
+    },
+    #[serde(rename = "toggle.state")]
+    Toggle {
+        name: String,
+        value: serde_json::Value,
+    },
     #[serde(rename = "world.time")]
     WorldTime { phase: DayPhase },
     #[serde(rename = "comm.say")]

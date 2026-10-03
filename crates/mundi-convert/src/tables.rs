@@ -99,8 +99,16 @@ fn strings(body: &str) -> Vec<String> {
     out
 }
 
+/// The body of a function, skipping declarations (`signature ... ;` before any `{`).
 fn function<'a>(src: &'a str, signature: &str) -> Result<&'a str, String> {
-    let at = src.find(signature).ok_or(format!("no function {signature}"))?;
+    let at = src
+        .match_indices(signature)
+        .map(|(i, _)| i)
+        .find(|&i| {
+            let rest = &src[i..];
+            matches!((rest.find('{'), rest.find(';')), (Some(b), Some(c)) if b < c) || matches!((rest.find('{'), rest.find(';')), (Some(_), None))
+        })
+        .ok_or(format!("no function {signature}"))?;
     let open = at + src[at..].find('{').unwrap();
     let mut depth = 0;
     for (i, c) in src[open..].char_indices() {
@@ -346,12 +354,41 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
     };
     let syls = strings(array(&parser, "syls")?);
     let syllables = syls.chunks(2).take_while(|p| p.len() == 2 && !p[0].is_empty()).map(|p| [p[0].clone(), p[1].clone()]).collect();
+    let handler = strip_comments(&read(&src.join("handler.c"))?);
+    let fight = strip_comments(&read(&src.join("fight.c"))?);
+    let money_fn = function(&handler, "const char *money_desc(")?;
+    let rows: Vec<MoneyName> = money_fn
+        .split('{')
+        .skip(1)
+        .filter_map(|r| {
+            let r = r.split('}').next()?;
+            let (n, d) = r.split_once(',')?;
+            let up_to: i64 = n.trim().parse().ok()?;
+            let short = d.trim().trim_matches('"').to_string();
+            (up_to > 0).then_some(MoneyName { up_to, short })
+        })
+        .collect();
+    let more = strings(money_fn.rsplit("return").next().unwrap_or("")).first().cloned().unwrap_or_default();
+    let corpse = function(&fight, "static void make_corpse(")?;
+    let corpse_strings = strings(corpse);
+    let find = |pre: &str| corpse_strings.iter().find(|s| s.starts_with(pre)).cloned().ok_or(format!("make_corpse: no {pre}"));
+    let create = function(&handler, "struct obj_data *create_money(")?;
+    let create_strings = strings(create);
+    let made = Made {
+        corpse_short: find("the corpse of")?,
+        corpse_long: find("The corpse of")?,
+        coin_short: create_strings.iter().find(|s| s.as_str() == "a gold coin").cloned().ok_or("create_money: no coin")?,
+        coin_long: create_strings.iter().find(|s| s.starts_with("One miserable")).cloned().ok_or("create_money: no coin long")?,
+        money: rows,
+        money_more: more,
+    };
     let start = function(&class, "void do_start(")?;
     let world = WorldTables {
         movement_cost,
         liquids,
         regen: Regen { hit: curve("int hit_gain(")?, mana: curve("int mana_gain(")?, moves: curve("int move_gain(")? },
         syllables,
+        made,
         config: Config {
             start_room: format!("tba:30:room:{}", setting(&config, "room_vnum mortal_start_room")?),
             tunnel_size: setting(&config, "int tunnel_size")? as i32,

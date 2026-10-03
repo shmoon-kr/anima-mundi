@@ -112,6 +112,28 @@ pub struct WorldTables {
     /// Spell words to what others hear, tried in order (MECHANICS §11.2).
     pub syllables: Vec<[String; 2]>,
     pub config: Config,
+    /// Names of things the game makes: corpses and coins (fight.c make_corpse, handler.c money_desc).
+    pub made: Made,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Made {
+    /// `%s` is the dead one's name.
+    pub corpse_short: String,
+    pub corpse_long: String,
+    pub coin_short: String,
+    pub coin_long: String,
+    /// Piles of coins by the most they hold; above the last, `money_more`.
+    pub money: Vec<MoneyName>,
+    pub money_more: String,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct MoneyName {
+    pub up_to: i64,
+    pub short: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]

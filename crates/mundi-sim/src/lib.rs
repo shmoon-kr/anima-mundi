@@ -12,6 +12,7 @@
 //! applied at the start of the next [`Sim::step`] and logged with the tick it was applied in. The same
 //! world, seed and input log give the same deliveries, byte for byte ([`Sim::replay`]).
 
+mod combat;
 mod commands;
 mod enter;
 mod items;
@@ -82,6 +83,8 @@ pub enum Input {
         #[serde(default)]
         carry: bool,
     },
+    /// Makes a mob of a prototype in a character's room (tests and admin tools, logged).
+    LoadMob { name: String, mob: String },
     /// Sets hit points, mana or moves, and hunger, thirst or drink (tests and admin tools, logged).
     SetPoints {
         name: String,
@@ -148,6 +151,8 @@ pub struct Sim {
     serial: u64,
     /// Test-only light (until a lit light in the light slot replaces it).
     test_lights: Vec<Key>,
+    /// Who is fighting, the one who started last first (fight.c combat_list).
+    combat: Vec<Key>,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
@@ -177,6 +182,7 @@ impl Sim {
             counts: HashMap::new(),
             serial: 0,
             test_lights: Vec::new(),
+            combat: Vec::new(),
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,
@@ -266,12 +272,22 @@ impl Sim {
             self.apply(input);
         }
         for key in self.order.clone() {
-            let Some(text) = self.chars.get_mut(key).and_then(|c| c.queue.pop_front()) else { continue };
+            // A command waits out the wait state (comm.c:931-976): one pulse after any command, more
+            // after some (hit, skills).
+            let Some(c) = self.chars.get_mut(key) else { continue };
+            if c.wait > 0 {
+                c.wait -= 1;
+                continue;
+            }
+            let Some(text) = c.queue.pop_front() else { continue };
             self.command(key, &text);
         }
         if self.tick % (10 * PULSES_PER_SEC) == 0 {
             self.zone_update();
             self.mobile_activity();
+        }
+        if self.tick % (2 * PULSES_PER_SEC) == 0 {
+            self.violence();
         }
         if self.tick % PULSES_PER_TICK == 0 {
             self.game_hour();
@@ -311,6 +327,12 @@ impl Sim {
                         let room = self.chars.get(k).unwrap().room;
                         self.put(o, if carry { Place::Carried(k) } else { Place::Room(room) });
                     }
+                }
+            }
+            Input::LoadMob { name, mob } => {
+                if let Some(&k) = self.by_name.get(&key_name(&name)) {
+                    let room = self.chars.get(k).unwrap().room;
+                    self.make_mob(&mob, room);
                 }
             }
             Input::SetPoints { name, hp, mana, mv, conditions } => {
