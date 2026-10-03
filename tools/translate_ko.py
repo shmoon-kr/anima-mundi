@@ -14,6 +14,10 @@
   Latin letters, digits, punctuation and glossary terms kept in English are fine), glossary terms used.
 - Markup (D20): `{yellow}...{/yellow}` must survive translation — the same tags, in the same order, paired; else retry.
 - Verbatim texts ({preformatted}: maps, pictures) are left in English in phase 1.
+- What a review found goes back in four ways (glossary.yaml): terms and conventions; `examples`, pairs of
+  a bad and a good Korean line, in every prompt (a local model follows examples better than rules);
+  `forbid` patterns and a term's `avoid` words, checked like Han leaks (a hit means a retry); and a
+  translation memory: an English field already translated anywhere is reused, not sent again.
 - Combat messages: one entry per attack variant, its lines keyed `die.attacker` .. `god.room`. act() codes:
   $n (the attacker; 당신 when it is the reader) and $N (the victim) stay, a particle after one is a pair in braces
   (`$N{을/를}`, D23), $p (the weapon) stays, and the pronoun codes ($e $m $s, $E $M $S) become the name again.
@@ -135,6 +139,19 @@ def load_glossary():
     return g["conventions"], g["terms"]
 
 
+_RULES = None
+
+
+def rules():
+    """glossary.yaml `examples` (en, bad, good) and `forbid` (ko regex, why, optional en regex)."""
+    global _RULES
+    if _RULES is None:
+        g = yaml.safe_load(GLOSSARY.read_text(encoding="utf-8"))
+        _RULES = (g.get("examples", []), [dict(f, ko_re=re.compile(f["ko"]), en_re=re.compile(f["en"], re.I) if f.get("en") else None)
+                                          for f in g.get("forbid", [])])
+    return _RULES
+
+
 def text_of(f):
     return " ".join(v if isinstance(v, str) else " ".join(v) for v in f.values())
 
@@ -161,7 +178,7 @@ Rules:
   words it surrounds, in the same order. Do not add, drop or translate tags.
 - Use these glossary terms exactly when the English term appears:
 {glossary}
-Reply with the JSON object only."""
+{examples}Reply with the JSON object only."""
 
 COMBAT_RULES = """
 These are combat messages. In each line $n is the attacker and $N the victim (a name, or 당신 for the reader); $p is
@@ -177,7 +194,9 @@ def prompt(batch, conventions, terms):
     used = {t["en"]: t for e in batch.values() for t in terms_in(text_of(e), terms)}
     gl = "\n".join(f"  {t['en']} = {t['ko']}" + (f"  ({t['note']})" if t.get("note") else "") for t in used.values()) or "  (none)"
     conv = "\n".join(f"- {k}: {v}" for k, v in conventions.items())
-    system = SYSTEM.format(conventions=conv, glossary=gl)
+    ex = "".join(f"  {e['en']}\n    not: {e['bad']}\n    but: {e['good']}\n" for e in rules()[0])
+    system = SYSTEM.format(conventions=conv, glossary=gl,
+                           examples=f"- Examples of what to avoid and what to write instead:\n{ex}" if ex else "")
     if any(id_.startswith("attack:") for id_ in batch):
         system += COMBAT_RULES
     user = json.dumps(batch, ensure_ascii=False, indent=1)
@@ -252,13 +271,34 @@ def problems(src, out, used):
             for k, v in f.items():
                 if isinstance(t.get(k), str):
                     bad += [f"{id_}.{k}: {p}" for p in act_problems(v, t[k], k.split(".")[1])]
+        for k, v in f.items():
+            bad += [f"{id_}.{k}: {p}" for p in forbidden(v, t.get(k))]
         tr = text_of(t)
         for term in terms_in(text_of(f), used):
+            for word in term.get("avoid", []):
+                if word in tr:
+                    bad.append(f"{id_}: {term['en']} is {term['ko']}, not {word}")
             # strict: false marks everyday words that are game terms only sometimes ("the water
             # level", "experience in warfare"): in the prompt as guidance, not enforced.
             if term.get("strict", True) and term["ko"] not in tr:
                 bad.append(f"{id_}: glossary {term['en']} -> {term['ko']} not used")
     return bad
+
+
+def forbidden(en, ko):
+    """glossary.yaml `forbid` hits in a field (its paragraphs side by side with the English)."""
+    if ko is None:
+        return []
+    ens = en if isinstance(en, list) else [en]
+    kos = ko if isinstance(ko, list) else [ko]
+    out = []
+    for e, k in zip(ens, kos):
+        if not isinstance(k, str):
+            continue
+        for f in rules()[1]:
+            if f["ko_re"].search(k) and (f["en_re"] is None or f["en_re"].search(e)):
+                out.append(f"{f['why']} ({f['ko_re'].search(k).group(0)})")
+    return out
 
 
 PAIRS = {"이/가", "은/는", "을/를", "과/와", "으로/로", "아/야"}
@@ -400,8 +440,27 @@ def flatten(nested):
 
 # ---------------------------------------------------------------- commands
 
+def memory():
+    """English field → its Korean, from every zone already translated (the first one found; a field
+    that a review would reject is left out)."""
+    tm = {}
+    for path in sorted(LOCALE.glob("*.yaml")):
+        if not path.stem.isdigit():
+            continue
+        src = load_zone(path.stem)
+        for id_, v in (read_yaml(path, {}) or {}).items():
+            if id_ not in src:
+                continue
+            ko = flatten(v)
+            for k, en in src[id_][1].items():
+                if k in ko and not forbidden(en, ko[k]):
+                    tm.setdefault(json.dumps(en, ensure_ascii=False), ko[k])
+    return tm
+
+
 def translate(zone, conventions, terms, log):
     src = load_zone(zone)
+    tm = memory() if zone != "combat" else {}
     state_path = LOCALE / f"{zone}.state.json"
     state = read_yaml(state_path, {}) if state_path.exists() else {}
     existing = read_combat() if zone == "combat" else {
@@ -413,13 +472,25 @@ def translate(zone, conventions, terms, log):
         s = state.get(id_)
         if not s or s.get("source") != sha(f) or id_ not in existing:
             return False
+        # a translation that a later review's rules reject is done again
+        tr = existing[id_]
+        if any(forbidden(v, tr.get(k)) for k, v in f.items()):
+            return False
+        if any(w in text_of(tr) for t in terms_in(text_of(f), terms) for w in t.get("avoid", [])):
+            return False
         return all(en in by_en and term_hash(by_en[en]) == h for en, h in s.get("glossary", {}).items())
 
     todo = [id_ for id_, (_, f) in src.items() if f and not up_to_date(id_, f)]
-    log(f"zone {zone}: {len(src)} entries, {len(todo)} to translate")
+    log(f"zone {zone}: {len(src)} entries, {len(todo)} to translate, {len(tm)} fields in memory")
+
+    def recalled(id_):
+        """The entry's fields the memory has, and the rest."""
+        f = src[id_][1]
+        known = {k: tm[json.dumps(v, ensure_ascii=False)] for k, v in f.items() if json.dumps(v, ensure_ascii=False) in tm}
+        return known, {k: v for k, v in f.items() if k not in known}
     t0, words = time.time(), 0
     def attempt_batch(ids):
-        batch = {id_: src[id_][1] for id_ in ids}
+        batch = {id_: recalled(id_)[1] for id_ in ids}
         for attempt in range(1, TRIES + 1):
             text, used = prompt(batch, conventions, terms)
             try:
@@ -437,14 +508,23 @@ def translate(zone, conventions, terms, log):
     def keep(batch, out):
         nonlocal words
         for id_ in batch:
-            existing[id_] = out[id_]
-            used_here = terms_in(text_of(batch[id_]), terms)
-            state[id_] = {"source": sha(batch[id_]), "glossary": {t["en"]: term_hash(t) for t in used_here}}
+            full = src[id_][1]
+            existing[id_] = {k: out[id_][k] if k in out[id_] else recalled(id_)[0][k] for k in full}
+            for k, v in out[id_].items():
+                tm.setdefault(json.dumps(full[k], ensure_ascii=False), v)
+            used_here = terms_in(text_of(full), terms)
+            state[id_] = {"source": sha(full), "glossary": {t["en"]: term_hash(t) for t in used_here}}
         words += sum(len(text_of(f).split()) for f in batch.values())
         save(list(src), existing)
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
     size = 2 if zone == "combat" else BATCH  # a variant is a dozen lines; one bad line costs the batch
+    # Entries the memory covers whole need no model.
+    whole = [id_ for id_ in todo if not recalled(id_)[1]]
+    if whole:
+        keep({id_: {} for id_ in whole}, {id_: {} for id_ in whole})
+        log(f"  {len(whole)} entries from memory")
+    todo = [id_ for id_ in todo if id_ not in whole]
     for i in range(0, len(todo), size):
         ids = todo[i:i + size]
         batch, out = attempt_batch(ids)
