@@ -449,7 +449,17 @@ def flatten(nested):
 
 # ---------------------------------------------------------------- commands
 
-def memory():
+def missed_review_term(en, ko, terms):
+    """A term a review added whose English is in the field and whose Korean is not: the field was
+    translated before the review taught it (an update to make)."""
+    if ko is None:
+        return False
+    e = " ".join(en) if isinstance(en, list) else en
+    k = " ".join(ko) if isinstance(ko, list) else ko
+    return any(t["ko"] not in k for t in terms_in(e, [t for t in terms if t.get("added_by")]))
+
+
+def memory(terms=()):
     """English field → its Korean, from every zone already translated (the first one found; a field
     that a review would reject is left out)."""
     tm = {}
@@ -462,14 +472,14 @@ def memory():
                 continue
             ko = flatten(v)
             for k, en in src[id_][1].items():
-                if k in ko and not forbidden(en, ko[k]):
+                if k in ko and not forbidden(en, ko[k]) and not missed_review_term(en, ko[k], terms):
                     tm.setdefault(json.dumps(en, ensure_ascii=False), ko[k])
     return tm
 
 
 def translate(zone, conventions, terms, log):
     src = load_zone(zone)
-    tm = memory() if zone != "combat" else {}
+    tm = memory(terms) if zone != "combat" else {}
     state_path = LOCALE / f"{zone}.state.json"
     state = read_yaml(state_path, {}) if state_path.exists() else {}
     existing = read_combat() if zone == "combat" else {
@@ -486,6 +496,11 @@ def translate(zone, conventions, terms, log):
         if any(forbidden(v, tr.get(k)) for k, v in f.items()):
             return False
         if any(w in text_of(tr) for t in terms_in(text_of(f), terms) for w in t.get("avoid", [])):
+            return False
+        # a review taught a term after this was translated: once, with the term in view (its choice then stands)
+        learned = s.get("glossary", {})
+        new_terms = [t for t in terms if t.get("added_by") and t["en"] not in learned]
+        if any(missed_review_term(v, tr.get(k), new_terms) for k, v in f.items()):
             return False
         return all(en in by_en and term_hash(by_en[en]) == h for en, h in s.get("glossary", {}).items())
 
@@ -579,7 +594,9 @@ narration is 해라체 (~다) and addresses the player as 당신. For each item,
 - "ok"
 Then propose what would stop the same mistake in the next zones: glossary terms (en, ko, words to avoid) for
 mistranslated words, and examples (en, bad, good) for a style mistake. Only for mistakes you saw.
-Reply with JSON only: {"items": [{"n": 1, "verdict": "ok|awkward|wrong", "note": "..."}],
+For each wrong or awkward item also give "fix": the whole corrected Korean, keeping every " / " paragraph
+break and every {markup} tag exactly as in the given Korean.
+Reply with JSON only: {"items": [{"n": 1, "verdict": "ok|awkward|wrong", "note": "...", "fix": "..."}],
 "glossary": [{"en": "...", "ko": "...", "avoid": ["..."], "why": "..."}],
 "examples": [{"en": "...", "bad": "...", "good": "..."}]}"""
 
@@ -612,17 +629,43 @@ def review(zone, reviewer, log):
     by_n = {v.get("n"): v for v in verdict.get("items", [])}
     for n, it in enumerate(items, 1):
         it["verdict"], it["note"] = by_n.get(n, {}).get("verdict", "?"), by_n.get(n, {}).get("note", "")
+        if it["verdict"] in ("wrong", "awkward") and by_n.get(n, {}).get("fix"):
+            it["fix"] = by_n[n]["fix"]
+    fixed = apply_fixes(zone, items)
     wrong = sum(it["verdict"] == "wrong" for it in items) / len(items)
     awkward = sum(it["verdict"] == "awkward" for it in items) / len(items)
     added = apply_proposals(zone, verdict.get("glossary", []), verdict.get("examples", []))
     REVIEWS.mkdir(exist_ok=True)
     record = {"zone": str(zone), "date": time.strftime("%Y-%m-%d %H:%M"), "reviewer": "claude", "n": len(items),
               "wrong_rate": round(wrong, 3), "awkward_rate": round(awkward, 3), "stopped": wrong > STOP_RATE,
-              "added_to_glossary": added, "sample": items}
+              "added_to_glossary": added, "fixed": fixed, "sample": items}
     (REVIEWS / f"{zone}.yaml").write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False, width=120),
                                           encoding="utf-8")
-    log(f"zone {zone}: review of {len(items)} fields: wrong {wrong:.0%}, awkward {awkward:.0%}, {len(added)} added to the glossary")
+    log(f"zone {zone}: review of {len(items)} fields: wrong {wrong:.0%}, awkward {awkward:.0%}, "
+        f"{len(fixed)} fixed, {len(added)} added to the glossary")
     return wrong
+
+
+def apply_fixes(zone, items):
+    """The reviewer's corrected Korean for the sample's wrong and awkward fields, each only if it passes
+    the checks every translation passes (same paragraphs and markup, no Han, nothing forbidden)."""
+    src = load_zone(zone)
+    path = LOCALE / f"{zone}.yaml"
+    tr = {i: flatten(v) for i, v in (read_yaml(path, {}) or {}).items()}
+    done = []
+    for it in items:
+        fix = it.get("fix")
+        if not fix or it["id"] not in tr:
+            continue
+        en = src[it["id"]][1][it["field"]]
+        new = [p.strip() for p in fix.split(" / ")] if isinstance(en, list) else fix.strip()
+        if problems({it["id"]: {it["field"]: en}}, {it["id"]: {it["field"]: new}}, []):
+            continue
+        tr[it["id"]][it["field"]] = new
+        done.append(f"{it['id']} {it['field']}")
+    if done:
+        write_locale(zone, list(src), tr)
+    return done
 
 
 def apply_proposals(zone, terms, examples):
@@ -682,10 +725,17 @@ def main():
         translate(z, conventions, terms, log)
         check(z)
         if reviewer and z != "combat":
+            before = len(load_glossary()[1])
             wrong = review(z, reviewer, log)
             if wrong is not None and wrong > STOP_RATE:
                 log(f"zone {z}: {wrong:.0%} of the sample is wrong (> {STOP_RATE:.0%}): stopping before the next zone")
                 sys.exit(3)
+            conventions, terms = load_glossary()
+            _RULES = None
+            if len(terms) > before:
+                # the review taught terms: every zone translated so far gets the fields that missed them
+                for done in sorted(p.stem for p in LOCALE.glob("*.yaml") if p.stem.isdigit()):
+                    translate(done, conventions, terms, log)
 
 
 if __name__ == "__main__":
