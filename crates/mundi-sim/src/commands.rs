@@ -32,6 +32,10 @@ impl Sim {
             self.deliver(key, Event::Refused { reason: refusal_for(position) });
             return;
         }
+        // A mob's special in the room may take the command first (interpreter.c special).
+        if self.special(key, &entry.name, arg) {
+            return;
+        }
         let dir = |d: usize| move |s: &mut Sim| {
             s.move_dir(key, d);
         };
@@ -97,6 +101,8 @@ impl Sim {
             "lock" => self.door_cmd(key, crate::doors::DoorCmd::Lock, arg),
             "unlock" => self.door_cmd(key, crate::doors::DoorCmd::Unlock, arg),
             "pick" => self.door_cmd(key, crate::doors::DoorCmd::Pick, arg),
+            "practice" => self.practice_cmd(key, arg),
+            "buy" | "sell" | "value" | "list" => self.deliver(key, Event::Refused { reason: Refusal::NotHereShop }),
             p if crate::group::PREFS.contains(&p) => self.auto_toggle(key, p),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }

@@ -29,6 +29,7 @@ mod positions;
 mod resets;
 mod rng;
 mod skills;
+mod specials;
 mod spells;
 pub mod store;
 mod talk;
@@ -105,6 +106,8 @@ pub enum Input {
         mv: Option<i32>,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         conditions: Option<Conditions>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        gold: Option<i64>,
     },
 }
 
@@ -357,8 +360,9 @@ impl Sim {
                     self.make_mob(&mob, room);
                 }
             }
-            Input::SetPoints { name, hp, mana, mv, conditions } => {
+            Input::SetPoints { name, hp, mana, mv, conditions, gold } => {
                 if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
+                    c.gold = gold.unwrap_or(c.gold);
                     c.hp = hp.unwrap_or(c.hp);
                     c.mana = mana.unwrap_or(c.mana);
                     c.mv = mv.unwrap_or(c.mv);

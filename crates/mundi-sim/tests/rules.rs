@@ -77,14 +77,14 @@ fn hunger_and_thirst_and_their_effect_on_regeneration() {
     assert_eq!(to(&out, "War").iter().filter(|e| matches!(e, Event::Condition { .. })).count(), 2, "again each tick at zero");
 
     // A warrior of 17 standing gains graf(17, 8,12,20,...) = 13 hit points; hungry, a quarter.
-    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }) });
+    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }), gold: None });
     ticks(&mut sim, 1);
     assert_eq!(sim.save("War").unwrap().hp, 1 + 13);
-    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 0, thirst: 24 }) });
+    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 0, thirst: 24 }), gold: None });
     ticks(&mut sim, 1);
     assert_eq!(sim.save("War").unwrap().hp, 1 + 13 / 4);
     // Resting: + a quarter (13 + 3).
-    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }) });
+    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }), gold: None });
     sim.submit(Input::Command { name: "War".into(), text: "rest".into() });
     ticks(&mut sim, 1);
     assert_eq!(sim.save("War").unwrap().hp, 1 + 16);
@@ -95,7 +95,7 @@ fn casters_regenerate_hit_points_at_half_and_mana_double() {
     // MECHANICS §5.2: mana graf(17, 4,8,12,...) = 8, ×2 for a caster; hit points 13 / 2 = 6.
     let mut sim = Sim::new(&zones(&[30]), &tables(), 1, 12);
     enter(&mut sim, "Mag", Class::MagicUser, None);
-    sim.submit(Input::SetPoints { name: "Mag".into(), hp: Some(1), mana: Some(0), mv: None, conditions: None });
+    sim.submit(Input::SetPoints { name: "Mag".into(), hp: Some(1), mana: Some(0), mv: None, conditions: None, gold: None });
     ticks(&mut sim, 1);
     let s = sim.save("Mag").unwrap();
     assert_eq!((s.hp, s.mana), (1 + 6, 16));

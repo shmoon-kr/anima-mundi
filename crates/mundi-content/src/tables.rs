@@ -16,6 +16,8 @@ pub struct Tables {
     /// tbaMUD's command table in its order (MECHANICS §4.2): a typed word is the first name it begins.
     pub commands: Vec<CommandEntry>,
     pub abilities: Abilities,
+    /// Special procedures tbaMUD assigns in code (spec_assign.c) and the guild guards (class.c).
+    pub specials: Specials,
     /// Spells and skills (spell_parser.c spello/skillo, class.c init_spell_levels; MECHANICS §10, §11).
     pub spells: Vec<Spell>,
     /// By class name: magic_user, cleric, thief, warrior.
@@ -34,6 +36,28 @@ pub struct CommandEntry {
     /// A social (do_action): matched after every other command.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")]
     pub social: bool,
+}
+
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Specials {
+    /// Mob → its special (guild, cityguard, fido, janitor, snake, magic_user, ...).
+    pub mobs: IndexMap<String, String>,
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub objects: IndexMap<String, String>,
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub rooms: IndexMap<String, String>,
+    /// Guild guards: in `room`, going `dir`, only `class` (or none: "all" is blocked) passes.
+    pub guild_guards: Vec<GuildGuard>,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct GuildGuard {
+    /// magic_user, cleric, thief, warrior; "all" lets no class through.
+    pub class: String,
+    pub room: String,
+    pub dir: crate::names::Dir,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -263,6 +287,7 @@ pub fn load_tables(dir: &Path) -> Result<Tables, LoadError> {
     Ok(Tables {
         commands: read(&dir.join("commands.yaml"))?,
         abilities: read(&dir.join("abilities.yaml"))?,
+        specials: read(&dir.join("specials.yaml"))?,
         spells: read(&dir.join("spells.yaml"))?,
         classes: read(&dir.join("classes.yaml"))?,
         world: read(&dir.join("world.yaml"))?,

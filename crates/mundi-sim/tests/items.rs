@@ -144,7 +144,7 @@ fn eating_and_drinking() {
     t.enter("Ana", Class::Warrior, None);
     t.load("Ana", WAYBREAD, true);
     assert_eq!(failed(&t.cmd("Ana", "eat bread"), "Ana"), Some(ItemFailure::TooFull), "full 24 > 20");
-    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }) });
+    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }), gold: None });
     let out = t.cmd("Ana", "eat bread");
     assert!(to(&out, "Ana").iter().any(|e| matches!(e, Event::Used { action: ItemAction::Eat, .. })), "{:?}", to(&out, "Ana"));
     assert!(to(&out, "Ana").iter().any(|e| matches!(e, Event::Condition { full: Some(true), .. })), "2 + 24 > 20: full");
@@ -153,7 +153,7 @@ fn eating_and_drinking() {
 
     assert_eq!(failed(&{ t.load("Ana", BOTTLE, true); t.cmd("Ana", "drink bottle") }, "Ana"), Some(ItemFailure::StomachFull), "full > 20 and thirsty");
     // Beer: drunk 3, so amount = (25 - thirst) / 3; the bottle holds 8.
-    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }) });
+    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }), gold: None });
     let out = t.cmd("Ana", "drink bottle");
     assert!(to(&out, "Ana").iter().any(|e| matches!(e, Event::Used { action: ItemAction::Drink, liquid: Some(l), .. } if l == "beer")));
     let c = t.sim.save("Ana").unwrap().conditions;

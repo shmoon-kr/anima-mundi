@@ -357,6 +357,48 @@ fn spells(header: &str, parser: &str, class: &str) -> Result<Vec<Spell>, String>
     Ok(out)
 }
 
+/// spec_assign.c ASSIGNMOB/OBJ/ROOM by vnum (made IDs with the world's zones), class.c guild_info.
+fn specials(src: &Path, class: &str) -> Result<Specials, String> {
+    let assign = strip_comments(&read(&src.join("spec_assign.c"))?);
+    let world = src.join("../lib/world");
+    let zones = crate::tba::read_zones(&world);
+    let ids = crate::tba::Ids::new(&zones);
+    let mut out = Specials::default();
+    for (mac, kind) in [("ASSIGNMOB(", "mob"), ("ASSIGNOBJ(", "obj"), ("ASSIGNROOM(", "room")] {
+        for call in assign.split(mac).skip(1) {
+            let inner = &call[..call.find(')').unwrap_or(0)];
+            let a = args(inner);
+            let (Ok(vnum), Some(name)) = (a[0].parse::<u32>(), a.get(1)) else { continue };
+            let id = ids.id(kind, vnum);
+            let map = match kind {
+                "mob" => &mut out.mobs,
+                "obj" => &mut out.objects,
+                _ => &mut out.rooms,
+            };
+            map.insert(id, name.clone());
+        }
+    }
+    let body = array(class, "guild_info")?;
+    for row in body.split('{').skip(1) {
+        let a = args(row.split('}').next().unwrap_or(""));
+        let (Some(c), Some(room), Some(dir)) = (a.first(), a.get(1).and_then(|r| r.parse::<u32>().ok()), a.get(2)) else { continue };
+        let class = match c.as_str() {
+            "-999" => "all".to_string(),
+            c => CLASSES.iter().find(|(n, _)| *n == c).map(|(_, n)| n.to_string()).unwrap_or_default(),
+        };
+        let dir = match dir.as_str() {
+            "NORTH" => mundi_content::names::Dir::North,
+            "EAST" => mundi_content::names::Dir::East,
+            "SOUTH" => mundi_content::names::Dir::South,
+            "WEST" => mundi_content::names::Dir::West,
+            "UP" => mundi_content::names::Dir::Up,
+            _ => mundi_content::names::Dir::Down,
+        };
+        out.guild_guards.push(GuildGuard { class, room: ids.id("room", room), dir });
+    }
+    Ok(out)
+}
+
 /// Reads `<src>/interpreter.c`, `constants.c`, `class.c`, `config.c`, `spell_parser.c`, `limits.c`.
 pub fn read_tables(src: &Path) -> Result<Tables, String> {
     let interp = strip_comments(&read(&src.join("interpreter.c"))?);
@@ -485,7 +527,7 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
         },
     };
     let header = read(&src.join("spells.h"))?;
-    Ok(Tables { commands: commands(&interp)?, abilities, spells: spells(&header, &parser, &class)?, classes, world })
+    Ok(Tables { commands: commands(&interp)?, abilities, specials: specials(src, &class)?, spells: spells(&header, &parser, &class)?, classes, world })
 }
 
 /// Reads tbaMUD's `lib/misc/messages`: `M`, the number, then twelve lines (die, miss, hit, god, each

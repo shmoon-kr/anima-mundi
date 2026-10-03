@@ -133,7 +133,7 @@ fn cure_light_armor_and_its_wear_off() {
     t.enter("Cle", Class::Cleric, BEGGAR_ROOM);
     t.skill("Cle", "cure light", 100);
     t.skill("Cle", "armor", 100);
-    t.input(Input::SetPoints { name: "Cle".into(), hp: Some(1), mana: None, mv: None, conditions: None });
+    t.input(Input::SetPoints { name: "Cle".into(), hp: Some(1), mana: None, mv: None, conditions: None, gold: None });
     t.cmd("Cle", "cast 'cure light'");
     t.run(25);
     if t.got("Cle", |e| matches!(e, Event::SpellEffect { spell: 16, .. })) {
@@ -168,7 +168,7 @@ fn poison_hurts_each_tick_and_remove_poison_ends_it() {
         if t.sim.save("Bo").unwrap().spells.iter().any(|s| s.spell == 33) {
             break;
         }
-        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None });
+        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None, gold: None });
         t.cmd("Cle", "cast 'poison' bo");
         t.run(25);
     }
@@ -184,7 +184,7 @@ fn poison_hurts_each_tick_and_remove_poison_ends_it() {
         if !t.sim.save("Bo").unwrap().spells.iter().any(|s| s.spell == 33) {
             break;
         }
-        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None });
+        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None, gold: None });
         t.cmd("Cle", "cast 'remove poison' bo");
         t.run(25);
     }
@@ -205,7 +205,7 @@ fn create_food_makes_a_waybread() {
         if t.sim.save("Cle").unwrap().objects.iter().any(|o| o.proto == "tba:0:obj:10") {
             break;
         }
-        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None });
+        t.input(Input::SetPoints { name: "Cle".into(), hp: None, mana: Some(100), mv: None, conditions: None, gold: None });
         t.cmd("Cle", "cast 'create food'");
         t.run(25);
     }

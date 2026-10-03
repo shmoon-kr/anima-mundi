@@ -172,6 +172,7 @@ impl Renderer {
                 Refusal::NothingToSay => "refused-nothing-to-say",
                 Refusal::QuitInFull => "refused-quit-in-full",
                 Refusal::NotYet => "refused-not-yet",
+                Refusal::NotHereShop => "refused-not-here-shop",
                 Refusal::NotHere => "refused-not-here",
                 Refusal::InvalidTarget | Refusal::NoTarget => "refused-invalid-target",
                 _ => "refused-unknown-command",
@@ -463,6 +464,75 @@ impl Renderer {
                 };
                 one(mid, &[("who", who(w, who_id)), ("cmd", command.clone()), ("door", escape(door.as_deref().unwrap_or("door"))), ("p", p), ("did", did)])
             }
+            Event::Tell { from, from_id, to, to_id, text, direction } => match direction {
+                Direction::In => one("tell-in", &[("who", who(from, from_id)), ("text", escape(text))]),
+                Direction::Out => one("tell-out", &[("who", who(to, to_id)), ("text", escape(text))]),
+            },
+            Event::ShopList { items, none_matching } => {
+                if *none_matching {
+                    return vec![m("shop-none-of")];
+                }
+                if items.is_empty() {
+                    return vec![m("shop-none")];
+                }
+                let mut out = vec![m("shop-header"), "-".repeat(76)];
+                for it in items {
+                    let mut name = self.thing(v, &it.text, &it.id);
+                    if let Some(l) = &it.liquid {
+                        let liquid = self.msg(v, &format!("liquid-{}", l.replace(' ', "-")), &[]);
+                        name = self.msg(v, "shop-of", &[("item", name), ("liquid", liquid)]);
+                    }
+                    let available = it.count.map_or_else(|| m("shop-unlimited"), |n| n.to_string());
+                    out.push(format!(" {:2})  {:>9}   {} {:6}", it.index, available, pad(&cap(&name), 48), it.price));
+                }
+                out
+            }
+            Event::ShopResult { action, who: w, who_id, text } => {
+                let me = w == mundi_protocol::SELF;
+                let id = match (action.as_str(), me) {
+                    ("buy", true) => "shop-you-buy",
+                    ("sell", true) => "shop-you-sell",
+                    ("buy", false) => "shop-room-buy",
+                    ("sell", false) => "shop-room-sell",
+                    ("too_many", _) => "shop-too_many",
+                    _ => "shop-too_heavy",
+                };
+                one(id, &[("who", who(w, who_id)), ("text", escape(text))])
+            }
+            Event::Blocked { who: w, who_id } => {
+                if w == mundi_protocol::SELF { vec![m("blocked-you")] } else { one("blocked-room", &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())]) }
+            }
+            Event::Skills { practices, spells, skills } => {
+                let sessions = m(if *practices == 1 { "practice-session" } else { "practice-sessions" });
+                let mut out = vec![
+                    self.msg(v, "practice-left", &[("n", practices.to_string()), ("sessions", sessions)]),
+                    m(if *spells { "practice-know-spells" } else { "practice-know-skills" }),
+                ];
+                for k in skills {
+                    let how = match k.percent {
+                        ..0 => "how-not-learned",
+                        0 => "how-not-learned",
+                        ..=10 => "how-awful",
+                        ..=20 => "how-bad",
+                        ..=40 => "how-poor",
+                        ..=55 => "how-average",
+                        ..=70 => "how-fair",
+                        ..=80 => "how-good",
+                        ..=85 => "how-very-good",
+                        _ => "how-superb",
+                    };
+                    out.push(format!("{} {}", pad(&k.name, 20), m(how)));
+                }
+                out
+            }
+            Event::Practiced { result, reason, spells, .. } => match (result.as_str(), reason.as_deref()) {
+                ("improved", _) => vec![m("practiced-improved")],
+                ("learned", _) => vec![m("practiced-improved"), m("practiced-learned")],
+                ("maxed", _) => vec![m("practiced-maxed")],
+                (_, Some("unknown_skill")) => vec![m(if *spells { "practiced-unknown_skill-spells" } else { "practiced-unknown_skill-skills" })],
+                (_, Some(r)) => vec![m(&format!("practiced-{r}"))],
+                _ => vec![],
+            },
             Event::Toggle { name, value } if value.is_boolean() => {
                 vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
             }

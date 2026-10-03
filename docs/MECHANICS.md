@@ -612,6 +612,10 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 - Mundi 의 순서: 지우기 → 놓기(파일 순서) → 문. tbaMUD 는 한 목록에서 섞어 하지만 지우기는 보통 그것을 다시 놓는 줄 바로 앞에 있다
 - 리셋 뒤 나이 0
 
+### 14.3 트리거로 된 행동 (S5 에서 발견)
+- 이 tbaMUD 는 길드 경비·fido·janitor·cityguard·snake·thief·magic_user·puff 를 **DG 스크립트**(lib/world/trg, 몹에 붙은 트리거)로 한다(spec_assign.c:62-63). spec_assign.c 의 코드 배정은 길드 주인(guild) 등 몇 개뿐
+- Mundi 1단계: 트리거는 범위 밖. **길드 경비만** 같은 규칙을 데이터로 한다(30.trg #3000-#3003 = class.c guild_info: 마법사 3017 남, 성직자 3004 북, 도적 3027 동, 전사 3021 동; 경비가 깨어 있고 볼 때 그 직업만 지나간다). 다른 트리거 동작(fido 가 시체를 먹기, janitor 가 줍기, cityguard 등)은 하지 않는다 — 비교 때 차이로 나온다
+
 ### 14.2 몹 행동 (mobact.c:41-197, 10초마다, 이 순서로)
 1. 특수 동작(상점·길드·뱀 등)이 있으면 하고, 했으면 이번은 끝
 2. 싸우거나 깨어 있지 않으면 끝

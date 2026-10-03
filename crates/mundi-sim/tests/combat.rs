@@ -90,7 +90,7 @@ fn a_player_dies_comes_back_and_loses_half_the_experience() {
     // The passage is dark: without a light the zombie cannot see whom to attack.
     t.input(Input::SetLight { name: "War".into(), on: true });
     t.input(Input::Load { name: "War".into(), object: "tba:30:obj:3009".into(), carry: true });
-    t.input(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: None });
+    t.input(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: None, gold: None });
     let exp = t.sim.save("War").unwrap().exp;
     assert!(t.until(10 * 60 * PULSES_PER_SEC, |e| matches!(e, Event::SelfDied {})), "the aggressive zombie kills a 1 hp warrior");
     let s = t.sim.save("War").unwrap();
@@ -124,7 +124,7 @@ fn flee_wimpy_and_refusals() {
     let mut t = T::new(5);
     t.enter("War", DRUNK_ROOM);
     t.cmd("War", "toggle wimpy 5");
-    t.input(Input::SetPoints { name: "War".into(), hp: Some(8), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }) });
+    t.input(Input::SetPoints { name: "War".into(), hp: Some(8), mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 24, thirst: 24 }), gold: None });
     t.cmd("War", "kill drunk");
     let _ = t.until(2 * 60 * PULSES_PER_SEC, |e| matches!(e, Event::Wimpy {}));
 }

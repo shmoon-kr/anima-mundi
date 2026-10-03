@@ -252,7 +252,13 @@ impl Sim {
                 self.deliver(ch, Event::AttackRefused { reason: AttackRefusal::Peaceful });
                 return 0;
             }
-            if self.chars.get(vict).unwrap().has_flag(MobFlag::NoKill) || self.is_shopkeeper(vict) {
+            // shop.c ok_damage_shopkeeper: a keeper whose shop does not fight (WILL_START_FIGHT, 1)
+            // warns and is protected.
+            let keeper_safe = self.shop_of(vict).is_some_and(|s| s.flags & 1 == 0);
+            if keeper_safe {
+                self.keeper_tells(vict, ch, "Get out of here before I call the guards!");
+            }
+            if self.chars.get(vict).unwrap().has_flag(MobFlag::NoKill) || keeper_safe {
                 self.deliver(ch, Event::AttackRefused { reason: AttackRefusal::Protected });
                 return 0;
             }
@@ -311,10 +317,6 @@ impl Sim {
             return -1;
         }
         dam
-    }
-
-    fn is_shopkeeper(&self, k: Key) -> bool {
-        self.chars.get(k).and_then(|c| c.mob.as_ref()).is_some_and(|m| self.world.keepers.contains(&m.proto))
     }
 
     /// fight.c appear.

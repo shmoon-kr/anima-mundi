@@ -151,6 +151,8 @@ pub enum Refusal {
     QuitInFull,
     /// A tbaMUD command Mundi does not do yet. Mundi addition, until phase 1 is complete.
     NotYet,
+    /// A shop command outside a shop: "Sorry, but you cannot do that here!".
+    NotHereShop,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
@@ -388,6 +390,27 @@ pub struct GroupMember {
     pub mv: i32,
     pub mv_max: i32,
     pub leader: bool,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ShopItem {
+    pub index: u32,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub id: Option<String>,
+    pub text: String,
+    pub price: i64,
+    /// None: made to order ("Unlimited").
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub count: Option<u32>,
+    /// A drink container's liquid ("a bottle of beer").
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub liquid: Option<String>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct Known {
+    pub name: String,
+    pub percent: i32,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -977,6 +1000,57 @@ pub enum Event {
         reason: String,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         word: Option<String>,
+    },
+    /// PROTOCOL.md `comm.tell`. Shopkeepers talk to customers this way.
+    #[serde(rename = "comm.tell")]
+    Tell {
+        from: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        from_id: Option<String>,
+        to: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        to_id: Option<String>,
+        text: String,
+        direction: Direction,
+    },
+    /// PROTOCOL.md `shop.list`.
+    #[serde(rename = "shop.list")]
+    ShopList {
+        items: Vec<ShopItem>,
+        /// A name was given and nothing matched it.
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        none_matching: bool,
+    },
+    /// A purchase or sale done: `text` is "a bread" or "a bread (x 3)"; `who` is "self" for the
+    /// customer. PROTOCOL.md `shop.result` with Mundi fields.
+    #[serde(rename = "shop.result")]
+    ShopResult {
+        action: String,
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        text: String,
+    },
+    /// "The guard humiliates you, and blocks your way." Mundi addition.
+    #[serde(rename = "move.blocked")]
+    Blocked {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    /// The practice list (PROTOCOL.md `char.skills`, with numbers and sessions left).
+    #[serde(rename = "char.skills")]
+    Skills { practices: i32, spells: bool, skills: Vec<Known> },
+    /// PROTOCOL.md `char.practiced`: improved, learned, maxed, cannot (reason: no_practices,
+    /// unknown_skill, not_here).
+    #[serde(rename = "char.practiced")]
+    Practiced {
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        skill: Option<String>,
+        result: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        reason: Option<String>,
+        spells: bool,
     },
     #[serde(rename = "toggle.state")]
     Toggle {
