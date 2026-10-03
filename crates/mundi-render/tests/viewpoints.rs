@@ -357,3 +357,70 @@ fn a_door_is_named_in_korean_with_the_word_one_types() {
     assert_eq!(see(&r, &closed("gate"), Viewer { keywords: KeywordMode::Off, ..KO }), "대문이 닫혀 있는 것 같다.");
     assert_eq!(see(&r, &closed("moongate"), KO), "moongate가 닫혀 있는 것 같다.", "no Korean name: as it is");
 }
+
+#[test]
+fn filling_and_pouring_in_both_languages() {
+    // MECHANICS §6.4: act.item.c do_pour
+    use mundi_protocol::{ItemAction, ItemFailure};
+    let r = renderer();
+    r.register_player("Ana", Sex::Female, None);
+    let bottle = || Some("tba:30:obj:3001/4".to_string());
+    let fountain = || Some("tba:30:obj:3035/2".to_string());
+    let used = |action, into: Option<&str>, into_id, keyword: Option<&str>| Event::Used {
+        action,
+        text: "a bottle".into(),
+        id: bottle(),
+        into: into.map(Into::into),
+        into_id,
+        slot: None,
+        liquid: Some("clear water".into()),
+        keyword: keyword.map(Into::into),
+        amount: Some(8),
+    };
+    let fill = used(ItemAction::Fill, Some("the large fountain"), fountain(), None);
+    assert_eq!(line(&r, &fill), "You gently fill a bottle from the large fountain.");
+    assert_eq!(see(&r, &fill, KO), "큰 분수에서 병을 조심스레 채웠다.");
+    let room = |action, other: Option<&str>, other_id| Event::OccupantItem {
+        who: "Ana".into(),
+        who_id: Some("pc:ana".into()),
+        action,
+        text: "a bottle".into(),
+        id: bottle(),
+        other: other.map(Into::into),
+        other_id,
+        slot: None,
+        liquid: None,
+    };
+    let seen = room(ItemAction::Fill, Some("the large fountain"), fountain());
+    assert_eq!(line(&r, &seen), "Ana gently fills a bottle from the large fountain.");
+    assert_eq!(see(&r, &seen, KO), "Ana가 큰 분수에서 병을 조심스레 채운다.");
+    let pour = used(ItemAction::Pour, Some("a bottle"), Some("tba:30:obj:3001/5".into()), Some("2.bottle"));
+    assert_eq!(line(&r, &pour), "You pour the clear water into the 2.bottle.");
+    assert_eq!(see(&r, &pour, KO), "맑은 물을 병에 부었다.");
+    let out = used(ItemAction::Pour, None, None, None);
+    assert_eq!(line(&r, &out), "You empty a bottle.");
+    assert_eq!(see(&r, &out, KO), "병을 비웠다.");
+    let seen = room(ItemAction::Pour, None, None);
+    assert_eq!(line(&r, &seen), "Ana empties a bottle.");
+    assert_eq!(see(&r, &seen, KO), "Ana가 병을 비운다.");
+    let fail = |action, reason, text: Option<&str>, keyword: Option<&str>| Event::ItemFailed {
+        action,
+        reason,
+        text: text.map(Into::into),
+        id: None,
+        keyword: keyword.map(Into::into),
+        other: None,
+        other_id: None,
+        slot: None,
+    };
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::What, None, None)), "What do you want to fill?  And what are you filling it from?");
+    assert_eq!(line(&r, &fail(ItemAction::Pour, ItemFailure::What, None, None)), "From what do you want to pour?");
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::CantFind, None, None)), "You can't find it!");
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::FromWhat, Some("a bottle"), None)), "What do you want to fill a bottle from?");
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::NoSource, None, Some("ocean"))), "There doesn't seem to be an ocean here.");
+    assert_eq!(see(&r, &fail(ItemAction::Fill, ItemFailure::NoSource, None, Some("well")), KO), "여기엔 well이 없는 것 같다.");
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::Empty, Some("the large fountain"), None)), "The the large fountain is empty.");
+    assert_eq!(line(&r, &fail(ItemAction::Fill, ItemFailure::NoRoom, None, None)), "There is no room for more.");
+    assert_eq!(line(&r, &fail(ItemAction::Pour, ItemFailure::OtherLiquid, None, None)), "There is already another liquid in it!");
+    assert_eq!(line(&r, &fail(ItemAction::Pour, ItemFailure::TooMuch, None, None)), "You can't pour that out! There's simply too much in it.");
+}

@@ -82,6 +82,8 @@ impl Sim {
             "taste" => self.eat(key, arg, true),
             "drink" => self.drink(key, arg, false),
             "sip" => self.drink(key, arg, true),
+            "fill" => self.fill(key, arg),
+            "pour" => self.pour(key, arg),
             "hit" | "kill" => self.hit_cmd(key, arg),
             "flee" => self.flee_cmd(key),
             "toggle" => self.toggle(key, arg),

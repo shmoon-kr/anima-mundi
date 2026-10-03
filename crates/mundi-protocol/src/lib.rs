@@ -254,6 +254,10 @@ pub enum ItemAction {
     Sip,
     /// act.item.c SCMD_JUNK: the thing vanishes (MECHANICS §13.2).
     Junk,
+    /// act.item.c SCMD_FILL: a drink container from a fountain (MECHANICS §6.4).
+    Fill,
+    /// act.item.c SCMD_POUR: a drink container out, or into another (MECHANICS §6.4).
+    Pour,
 }
 
 /// Why an object command did nothing. The renderer picks tbaMUD's sentence by action and reason.
@@ -317,6 +321,28 @@ pub enum ItemFailure {
     MustHold,
     MissMouth,
     StomachFull,
+    /// fill: the thing is not a drink container ("You can't fill $p!").
+    CantFill,
+    /// fill with no source named ("What do you want to fill $p from?").
+    FromWhat,
+    /// fill: the source is not in the room ("There doesn't seem to be a fountain here.").
+    NoSource,
+    /// fill: the source is not a fountain ("You can't fill something from $p.").
+    NotFountain,
+    /// pour: the thing is not a drink container ("You can't pour from that!").
+    CantPour,
+    /// pour with no target ("Where do you want it?  Out or in what?").
+    PourWhere,
+    /// pour out of an unlimited container ("You can't pour that out! There's simply too much in it.").
+    TooMuch,
+    /// pour into what is neither a drink container nor a fountain ("You can't pour anything into that.").
+    CantPourInto,
+    /// pour into the same container ("A most unproductive effort.").
+    Unproductive,
+    /// fill/pour onto a different liquid ("There is already another liquid in it!").
+    OtherLiquid,
+    /// fill/pour into an unlimited or full container ("There is no room for more.").
+    NoRoom,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -645,8 +671,10 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         to_id: Option<String>,
     },
-    /// I did something with an object. `into` is the container (put, drink from), `slot` where it
-    /// went (wear), `liquid` what was drunk. Mundi fills more than PROTOCOL.md `items.used`.
+    /// I did something with an object. `into` is the other object: the container (put, pour into)
+    /// or the fountain (fill from); `slot` where it went (wear), `liquid` what was drunk, filled or
+    /// poured. `keyword` is the word as typed (pour: "into the bottle"), `amount` how much liquid
+    /// moved (fill, pour). Mundi fills more than PROTOCOL.md `items.used`.
     #[serde(rename = "items.used")]
     Used {
         action: ItemAction,
@@ -661,6 +689,10 @@ pub enum Event {
         slot: Option<String>,
         #[serde(default, skip_serializing_if = "Option::is_none")]
         liquid: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        keyword: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        amount: Option<i64>,
     },
     /// Someone else did something with an object (Mundi addition): `other` is the container or
     /// the person given to.

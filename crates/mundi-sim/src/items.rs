@@ -1,9 +1,10 @@
 //! Objects in hand (MECHANICS §13, §6.2, §6.3): finding them by keyword, get, drop, put, give,
-//! inventory, equipment, wear, wield, hold, remove, eat, taste, drink, sip.
+//! inventory, equipment, wear, wield, hold, remove, eat, taste, drink, sip, fill, pour.
 
-use mundi_content::names::{EquipPos, ItemType, ObjFlag, Wear};
+use mundi_content::names::{EquipPos, ItemType, Liquid, ObjFlag, Wear};
 use mundi_protocol::{Carried, ItemAction, ItemFailure, Worn};
 
+use crate::entity::ObjValues;
 use crate::*;
 
 /// A typed object name (handler.c get_number, find_all_dots; MECHANICS §13.0).
@@ -95,6 +96,30 @@ const PLACES: [(&str, EquipPos); 12] = [
 
 fn slot_name(p: EquipPos) -> String {
     p.name().to_string()
+}
+
+/// Words tbaMUD's one_argument skips (interpreter.c fill[]): `fill bottle from fountain`.
+const FILL_WORDS: [&str; 7] = ["in", "from", "with", "the", "on", "at", "to"];
+
+/// interpreter.c two_arguments: the first two words that are not fill words.
+fn two_arguments(arg: &str) -> (Option<String>, Option<String>) {
+    let mut words = arg.split_whitespace().map(str::to_lowercase).filter(|w| !FILL_WORDS.contains(&w.as_str()));
+    (words.next(), words.next())
+}
+
+/// A drink container's liquid as tbaMUD's number: none (emptied) is 0, water (MECHANICS §6.3).
+fn liquid_ix(v: &ObjValues) -> usize {
+    v.liquid.map(|l| Liquid::ALL.iter().position(|x| *x == l).unwrap_or(0)).unwrap_or(0)
+}
+
+/// Capacity and contents not negative (act.item.c LIMITED_DRINK_CONTAINER, MECHANICS §6.3).
+fn limited(v: &ObjValues) -> bool {
+    v.capacity.unwrap_or(0) >= 0 && v.contains.unwrap_or(0) >= 0
+}
+
+/// act.item.c EMPTY_DRINK_CONTAINER: limited and nothing in it.
+fn empty(v: &ObjValues) -> bool {
+    limited(v) && v.contains.unwrap_or(0) < 1
 }
 
 impl Sim {
@@ -467,7 +492,7 @@ impl Sim {
             return self.fail_obj(k, action, ItemFailure::Cursed, o);
         }
         let (text, id) = (self.short(o), self.obj_id(o));
-        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: None });
+        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: None, keyword: None, amount: None });
         self.others_see(k, action, o, None, None, None);
         self.junked += (self.objs.get(o).map_or(0, |x| x.cost) / 16).clamp(1, 200);
         self.extract_obj(o);
@@ -482,7 +507,7 @@ impl Sim {
             return self.fail_obj(k, ItemAction::Drop, ItemFailure::Cursed, o);
         }
         let (text, id) = (self.short(o), self.obj_id(o));
-        self.deliver(k, Event::Used { action: ItemAction::Drop, text, id, into: None, into_id: None, slot: None, liquid: None });
+        self.deliver(k, Event::Used { action: ItemAction::Drop, text, id, into: None, into_id: None, slot: None, liquid: None, keyword: None, amount: None });
         self.others_see(k, ItemAction::Drop, o, None, None, None);
         let room = self.chars.get(k).unwrap().room;
         // obj_to_room appends in this tbaMUD (handler.c:772-793): the newest is last.
@@ -573,7 +598,7 @@ impl Sim {
         self.put(o, Place::In(cont));
         self.others_see(k, ItemAction::Put, o, Some(other.clone()), None, None);
         let (text, id) = (self.short(o), self.obj_id(o));
-        self.deliver(k, Event::Used { action: ItemAction::Put, text, id, into: Some(other.0), into_id: other.1, slot: None, liquid: None });
+        self.deliver(k, Event::Used { action: ItemAction::Put, text, id, into: Some(other.0), into_id: other.1, slot: None, liquid: None, keyword: None, amount: None });
     }
 
     /// `give <obj> <person>` (act.item.c do_give, perform_give). Gold comes with shops.
@@ -854,7 +879,7 @@ impl Sim {
         // The message first, then equip_char may refuse it (handler.c:590-596).
         self.others_see(k, action, o, None, Some(slot_name(pos)), None);
         let (text, id) = (self.short(o), self.obj_id(o));
-        self.deliver(k, Event::Used { action, text: text.clone(), id: id.clone(), into: None, into_id: None, slot: Some(slot_name(pos)), liquid: None });
+        self.deliver(k, Event::Used { action, text: text.clone(), id: id.clone(), into: None, into_id: None, slot: Some(slot_name(pos)), liquid: None, keyword: None, amount: None });
         if self.invalid_for(k, o) {
             let room = self.chars.get(k).unwrap().room;
             self.deliver(k, Event::Zapped { who: SELF.into(), who_id: None, text: text.clone(), id: id.clone() });
@@ -985,7 +1010,7 @@ impl Sim {
         }
         self.put(o, Place::Carried(k));
         let (text, id) = (self.short(o), self.obj_id(o));
-        self.deliver(k, Event::Used { action: ItemAction::Remove, text, id, into: None, into_id: None, slot: Some(slot_name(pos)), liquid: None });
+        self.deliver(k, Event::Used { action: ItemAction::Remove, text, id, into: None, into_id: None, slot: Some(slot_name(pos)), liquid: None, keyword: None, amount: None });
         self.others_see(k, ItemAction::Remove, o, None, Some(slot_name(pos)), None);
     }
 
@@ -1018,7 +1043,7 @@ impl Sim {
             return self.fail(k, action, ItemFailure::TooFull);
         }
         let (text, id) = (self.short(food), self.obj_id(food));
-        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: None });
+        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: None, keyword: None, amount: None });
         self.others_see(k, action, food, None, None, None);
         let fills = self.food_left(food);
         let amount = if taste { 1 } else { fills };
@@ -1122,7 +1147,7 @@ impl Sim {
         let liq = self.tables.world.liquids.get(liquid_ix).cloned().unwrap_or_else(|| self.tables.world.liquids[0].clone());
         let (text, id) = (obj.short.clone(), self.obj_id(o));
         self.others_see(k, action, o, None, None, Some(liq.name.clone()));
-        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: Some(liq.name.clone()) });
+        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: Some(liq.name.clone()), keyword: None, amount: None });
         let mut amount = if sip {
             1
         } else if liq.drunk > 0 {
@@ -1169,5 +1194,217 @@ impl Sim {
                 v.poisoned = Some(false);
             }
         }
+    }
+
+    /// One carried or lying object by a typed word (get_obj_in_list_vis).
+    fn find_one(&self, k: Key, list: &[Key], word: &str) -> Option<Key> {
+        match target(word) {
+            Some(Target::One { word, nth }) => self.find_obj(k, list, &word, nth),
+            _ => None,
+        }
+    }
+
+    /// `fill <container> [from] <fountain>` (act.item.c do_pour SCMD_FILL, MECHANICS §6.4).
+    pub(crate) fn fill(&mut self, k: Key, arg: &str) {
+        let a = ItemAction::Fill;
+        let (first, second) = two_arguments(arg);
+        let Some(first) = first else {
+            return self.fail(k, a, ItemFailure::What);
+        };
+        let inv = self.chars.get(k).unwrap().inventory.clone();
+        let Some(to) = self.find_one(k, &inv, &first) else {
+            return self.fail(k, a, ItemFailure::CantFind);
+        };
+        if self.objs.get(to).unwrap().kind != ItemType::Drinkcon {
+            return self.fail_obj(k, a, ItemFailure::CantFill, to);
+        }
+        let Some(second) = second else {
+            return self.fail_obj(k, a, ItemFailure::FromWhat, to);
+        };
+        let room = self.chars.get(k).unwrap().room;
+        let Some(from) = self.find_one(k, &self.things[room].clone(), &second) else {
+            return self.fail_word(k, a, ItemFailure::NoSource, &second);
+        };
+        if self.objs.get(from).unwrap().kind != ItemType::Fountain {
+            return self.fail_obj(k, a, ItemFailure::NotFountain, from);
+        }
+        if empty(&self.objs.get(from).unwrap().values) {
+            return self.fail_obj(k, a, ItemFailure::Empty, from);
+        }
+        self.pour_into(k, a, from, to, None);
+    }
+
+    /// `pour <container> out`, `pour <container> [in] <container>` (act.item.c do_pour SCMD_POUR,
+    /// MECHANICS §6.4).
+    pub(crate) fn pour(&mut self, k: Key, arg: &str) {
+        let a = ItemAction::Pour;
+        let (first, second) = two_arguments(arg);
+        let Some(first) = first else {
+            return self.fail(k, a, ItemFailure::What);
+        };
+        let inv = self.chars.get(k).unwrap().inventory.clone();
+        let Some(from) = self.find_one(k, &inv, &first) else {
+            return self.fail(k, a, ItemFailure::CantFind);
+        };
+        if self.objs.get(from).unwrap().kind != ItemType::Drinkcon {
+            return self.fail(k, a, ItemFailure::CantPour);
+        }
+        let fv = self.objs.get(from).unwrap().values.clone();
+        if empty(&fv) {
+            return self.fail_obj(k, a, ItemFailure::Empty, from);
+        }
+        let Some(second) = second else {
+            return self.fail(k, a, ItemFailure::PourWhere);
+        };
+        if second == "out" {
+            if !limited(&fv) {
+                return self.fail(k, a, ItemFailure::TooMuch);
+            }
+            let now = fv.contains.unwrap_or(0);
+            let liquid = self.liquid_name(&fv);
+            self.others_see(k, a, from, None, None, None);
+            let (text, id) = (self.short(from), self.obj_id(from));
+            self.deliver(k, Event::Used { action: a, text, id, into: None, into_id: None, slot: None, liquid: Some(liquid), keyword: None, amount: Some(now) });
+            let o = self.objs.get_mut(from).unwrap();
+            o.weight -= now;
+            o.values.contains = Some(0);
+            o.values.liquid = None;
+            o.values.poisoned = Some(false);
+            return;
+        }
+        let Some(to) = self.find_one(k, &inv, &second) else {
+            return self.fail(k, a, ItemFailure::CantFind);
+        };
+        if !matches!(self.objs.get(to).unwrap().kind, ItemType::Drinkcon | ItemType::Fountain) {
+            return self.fail(k, a, ItemFailure::CantPourInto);
+        }
+        self.pour_into(k, a, from, to, Some(second));
+    }
+
+    /// The rest of do_pour, shared by fill and pour: the checks on the receiving container, the
+    /// lines, and the liquid, its poison and its weight moving over.
+    fn pour_into(&mut self, k: Key, a: ItemAction, from: Key, to: Key, word: Option<String>) {
+        if from == to {
+            return self.fail(k, a, ItemFailure::Unproductive);
+        }
+        let fv = self.objs.get(from).unwrap().values.clone();
+        let tv = self.objs.get(to).unwrap().values.clone();
+        if !empty(&tv) && liquid_ix(&tv) != liquid_ix(&fv) {
+            return self.fail(k, a, ItemFailure::OtherLiquid);
+        }
+        let (to_max, to_now) = (tv.capacity.unwrap_or(0), tv.contains.unwrap_or(0));
+        if !limited(&tv) || to_now >= to_max {
+            return self.fail(k, a, ItemFailure::NoRoom);
+        }
+        let from_limited = limited(&fv);
+        let amount = if from_limited { fv.contains.unwrap_or(0).min(to_max - to_now) } else { to_max - to_now };
+        let liquid = self.liquid_name(&fv);
+        let (to_text, to_id) = (self.short(to), self.obj_id(to));
+        let (from_text, from_id) = (self.short(from), self.obj_id(from));
+        if a == ItemAction::Fill {
+            self.deliver(k, Event::Used { action: a, text: to_text, id: to_id, into: Some(from_text.clone()), into_id: from_id.clone(), slot: None, liquid: Some(liquid), keyword: None, amount: Some(amount) });
+            self.others_see(k, a, to, Some((from_text, from_id)), None, None);
+        } else {
+            self.deliver(k, Event::Used { action: a, text: from_text, id: from_id, into: Some(to_text), into_id: to_id, slot: None, liquid: Some(liquid), keyword: word, amount: Some(amount) });
+        }
+        let liq = Liquid::ALL[liquid_ix(&fv)];
+        // The source loses only if limited; emptied, it forgets its liquid and poison first, so
+        // a poisoned source poured out to the last drop does not poison the other (act.item.c:1184-1200).
+        let mut from_poisoned = fv.poisoned == Some(true);
+        if from_limited {
+            let o = self.objs.get_mut(from).unwrap();
+            let left = fv.contains.unwrap_or(0) - amount;
+            o.values.contains = Some(left);
+            o.weight -= amount;
+            if left == 0 {
+                o.values.liquid = None;
+                o.values.poisoned = Some(false);
+                from_poisoned = false;
+            }
+        }
+        let o = self.objs.get_mut(to).unwrap();
+        o.values.liquid = Some(liq);
+        o.values.contains = Some(to_now + amount);
+        o.values.poisoned = Some(tv.poisoned == Some(true) || from_poisoned);
+        o.weight += amount;
+    }
+
+    /// The liquid's English name from the table (constants.c drinks).
+    fn liquid_name(&self, v: &ObjValues) -> String {
+        let liquids = &self.tables.world.liquids;
+        liquids.get(liquid_ix(v)).unwrap_or(&liquids[0]).name.clone()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use std::path::Path;
+
+    use super::*;
+
+    /// Zone 30 with Ana in a field, carrying `carried` and `lying` on the ground: her pack in order
+    /// (`1.bottle` first), then what lies there.
+    fn ana_with(carried: &[&str], lying: &[&str]) -> (Sim, Key, Vec<Key>) {
+        let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud");
+        let zones = vec![mundi_content::load_zone(&root.join("content/30")).unwrap()];
+        let mut sim = Sim::new(&zones, &mundi_content::load_tables(&root.join("tables")).unwrap(), 5, 12);
+        let new = NewChar { class: Some(Class::Warrior), room: Some("tba:30:room:3065".into()), ..Default::default() };
+        sim.submit(Input::Enter { name: "Ana".into(), save: None, new });
+        for (list, carry) in [(carried, true), (lying, false)] {
+            for o in list {
+                sim.submit(Input::Load { name: "Ana".into(), object: o.to_string(), carry });
+            }
+        }
+        sim.step();
+        let k = sim.by_name[&key_name("Ana")];
+        let room = sim.chars.get(k).unwrap().room;
+        let mut keys: Vec<Key> = sim.chars.get(k).unwrap().inventory.clone();
+        keys.extend(sim.things[room].iter().copied().filter(|o| sim.objs.get(*o).unwrap().proto.as_deref().is_some_and(|p| lying.contains(&p))));
+        (sim, k, keys)
+    }
+
+    fn cmd(sim: &mut Sim, text: &str) {
+        sim.submit(Input::Command { name: "Ana".into(), text: text.into() });
+        sim.step();
+    }
+
+    const BOTTLE: &str = "tba:30:obj:3001";
+    const FOUNTAIN: &str = "tba:30:obj:3035";
+
+    #[test]
+    fn liquid_moves_its_weight() {
+        // MECHANICS §6.4: weight_change_object by the amount; an unlimited source keeps its weight.
+        let (mut sim, _, keys) = ana_with(&[BOTTLE], &[FOUNTAIN]);
+        let (bottle, fountain) = (keys[0], keys[1]);
+        assert_eq!(sim.objs.get(bottle).unwrap().weight, 10);
+        cmd(&mut sim, "pour bottle out");
+        assert_eq!(sim.objs.get(bottle).unwrap().weight, 2, "8 of beer gone");
+        cmd(&mut sim, "fill bottle fountain");
+        assert_eq!(sim.objs.get(bottle).unwrap().weight, 10);
+        assert_eq!(sim.objs.get(fountain).unwrap().weight, 505 - 8, "this fountain is limited: 500 of 500");
+        assert_eq!(sim.objs.get(fountain).unwrap().values.contains, Some(492));
+        cmd(&mut sim, "pour bottle out");
+        sim.objs.get_mut(fountain).unwrap().values.contains = Some(-1);
+        cmd(&mut sim, "fill bottle fountain");
+        assert_eq!(sim.objs.get(bottle).unwrap().values.contains, Some(8), "unlimited: the bottle fills up");
+        assert_eq!(sim.objs.get(fountain).unwrap().weight, 497, "and the fountain weighs the same");
+    }
+
+    #[test]
+    fn poison_goes_along_unless_the_source_runs_dry() {
+        // MECHANICS §6.4: the source is cleaned when emptied, before the poison is passed on.
+        let (mut sim, _, keys) = ana_with(&[BOTTLE, BOTTLE], &[]);
+        let (a, b) = (keys[0], keys[1]);
+        sim.objs.get_mut(a).unwrap().values.poisoned = Some(true);
+        sim.objs.get_mut(a).unwrap().values.contains = Some(4);
+        sim.objs.get_mut(b).unwrap().values.contains = Some(2);
+        cmd(&mut sim, "pour 1.bottle 2.bottle");
+        assert_eq!(sim.objs.get(a).unwrap().values.contains, Some(0));
+        assert_eq!(sim.objs.get(b).unwrap().values.contains, Some(6));
+        assert_eq!(sim.objs.get(b).unwrap().values.poisoned, Some(false), "the last drop leaves its poison behind");
+        sim.objs.get_mut(a).unwrap().values = ObjValues { contains: Some(8), liquid: Some(Liquid::Beer), poisoned: Some(true), ..sim.objs.get(a).unwrap().values.clone() };
+        cmd(&mut sim, "pour 1.bottle 2.bottle");
+        assert_eq!(sim.objs.get(a).unwrap().values.contains, Some(6));
+        assert_eq!(sim.objs.get(b).unwrap().values.poisoned, Some(true));
     }
 }

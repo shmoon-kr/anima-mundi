@@ -266,6 +266,28 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 - 액체표 (constants.c:551-568) 술/배부름/갈증: 물 0/1/10, 맥주 3/2/5, 포도주 5/2/5, 에일 2/2/5, 흑맥주 1/2/5, 위스키 6/1/4, 레모네이드 0/1/8, 화주 10/0/0,
   지역 특산주 3/3/3, 슬라임 곰팡이 즙 0/4/-8, 우유 0/3/6, 차 0/1/6, 커피 0/1/6, 피 0/2/-1, 바닷물 0/1/-2, 맑은 물 0/0/13
 
+### 6.4 채우기와 붓기 (act.item.c:1071-1210; `fill`, `pour`, 둘 다 최소 자세 섬)
+- 인자는 two_arguments: 채움말(in, from, with, the, on, at, to; interpreter.c:425-434)을 건너뛴 앞의 두 낱말. `fill bottle from fountain`, `pour cup in bottle`.
+  **into 는 채움말이 아니라** `pour cup into bottle` 은 into 를 물건 이름으로 찾아 "You can't find it!"
+- 용량·남은 양·액체·독과 무한(용량이나 남은 양이 음수)은 §6.3. 비었다 = 유한이고 남은 양 < 1
+- `fill <물통> <분수>`: "What do you want to fill?  And what are you filling it from?"(인자 없음) → 물통은 소지품에서, 없으면 "You can't find it!" →
+  물통(drinkcon)이 아니면 "You can't fill $p!" → 둘째 인자 없음 "What do you want to fill $p from?" → 분수는 **방 바닥에서만**, 없으면
+  "There doesn't seem to be %s %s here."(a/an + 친 낱말) → 분수(fountain)가 아니면 "You can't fill something from $p." → 분수가 비었으면 "The $p is empty."
+- `pour <물통> out|<물통>`: "From what do you want to pour?"(인자 없음) → 붓는 쪽은 소지품에서, 없으면 "You can't find it!" → 물통이 아니면
+  "You can't pour from that!" → 비었으면 "The $p is empty." → 둘째 인자 없음 "Where do you want it?  Out or in what?" →
+  - `out`: 무한이면 "You can't pour that out! There's simply too much in it." 아니면 ROOM "$n empties $p.", CHAR "You empty $p." →
+    무게 -= 남은 양, 남은 양·액체·독을 0 으로(빈 물통)
+  - 그 밖: 받는 쪽도 **소지품에서만**(바닥의 물통·분수에는 못 붓는다), 없으면 "You can't find it!" → 물통·분수가 아니면 "You can't pour anything into that."
+- 여기부터 둘이 같다: 같은 물건이면 "A most unproductive effort." → 받는 쪽이 비지 않았고 액체 번호가 다르면 "There is already another liquid in it!"
+  (빈 물통의 액체는 0 = 물) → 받는 쪽이 무한이거나 가득(남은 양 ≥ 용량)이면 "There is no room for more." →
+  pour 는 CHAR "You pour the <액체> into the <친 둘째 낱말>." (방에는 없음), fill 은 CHAR "You gently fill $p from $P.", ROOM "$n gently fills $p from $P."
+- 옮기기: 받는 쪽 액체 = 주는 쪽 액체. 주는 쪽이 유한이면 양 = min(주는 쪽 남은 양, 받는 쪽 용량 - 남은 양), 주는 쪽에서 빼고 받는 쪽에 더한다.
+  주는 쪽이 0 이 되면 빈 물통(액체·독 0). 무한이면 양 = 받는 쪽 용량 - 남은 양, 받는 쪽은 가득
+- 독: 받는 쪽 독 = 받는 쪽 독 또는 주는 쪽 독. **주는 쪽이 비워져 독이 지워진 뒤에 계산**하므로 마지막 한 방울까지 부은 독은 옮겨 가지 않는다
+- 무게(weight_change_object, act.item.c:763-784): 주는 쪽이 유한이면 주는 쪽 -양, 받는 쪽은 언제나 +양. 마시기와 달리 무게 아래로 깎지 않는 제한은 없다
+- 이름: tbaMUD 는 빈 물통에 액체를 받으면 키워드에 액체 이름(drinknames)을 덧붙이고(name_to_drinkcon), 비워지면 뗀다(name_from_drinkcon). Mundi 는 하지 않는다(아래 표)
+- Midgaard 의 큰 분수(3035)는 **유한**: 맑은 물 500 중 500. 채울 때마다 줄고, 분수를 다시 채우는 규칙은 tbaMUD 에 없다
+
 ---
 
 ## 7. 전투
@@ -727,3 +749,4 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 | §13.4 | 플레이어가 가진 시간 있는 물건이 한 틱에 2~3 줄어든다(두 군데서 뺀다) | 한 틱에 1 | 의도가 아닌 이중 감소로 보인다 |
 | §8.4 | 시체 무게 = 몸무게 + 소지품 | 소지품만 | 콘텐츠에 몸무게가 없다(1단계에서 시체 무게를 쓰는 규칙이 없다) |
 | §8.3 | 죽은 플레이어는 메뉴로, 1 을 고르면 다시 들어온다 | 메뉴 없이 바로 시작 방에서 다시 들어온다 | 메뉴는 화면의 일(승인된 규칙) |
+| §6.3, §6.4 | 물통에 액체가 들면 키워드에 액체 이름을 덧붙이고 비면 뗀다(name_to_drinkcon, name_from_drinkcon) | 키워드는 원형 그대로 | 저장에 키워드가 없고(원형에서 다시 만든다) 마시기도 아직 떼지 않는다. 원형 키워드에 처음 액체가 이미 들어 있다(`bottle beer`) |

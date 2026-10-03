@@ -1,4 +1,4 @@
-//! Objects in hand (MECHANICS §13, §6.2, §6.3, §3.1), each test pointing at its section.
+//! Objects in hand (MECHANICS §13, §6.2, §6.3, §6.4, §3.1), each test pointing at its section.
 
 use std::path::Path;
 
@@ -13,6 +13,7 @@ const BAG: &str = "tba:30:obj:3032";
 const WAYBREAD: &str = "tba:30:obj:3009";
 const BOTTLE: &str = "tba:30:obj:3001";
 const DAGGER: &str = "tba:30:obj:3020";
+const FOUNTAIN: &str = "tba:30:obj:3035";
 const FIELD: &str = "tba:30:room:3065";
 
 fn world() -> (Vec<ZoneContent>, Tables) {
@@ -239,4 +240,111 @@ fn junk_makes_things_vanish_and_the_gods_pay() {
     assert_eq!(s.gold, gold + 180 / 16, "rewarded the plate's worth: cost 180 / 16");
     let out = t.cmd("Ana", "junk sword");
     assert!(failed(&out, "Ana").is_some());
+}
+
+/// Each bottle carried: (contains, liquid), in the pack's order. A save keeps values only when
+/// they differ from the prototype's (8 of beer).
+fn bottles(t: &T, name: &str) -> Vec<(Option<i64>, Option<String>)> {
+    t.sim
+        .save(name)
+        .unwrap()
+        .objects
+        .iter()
+        .filter(|o| o.proto == BOTTLE)
+        .map(|o| if o.values.capacity.is_none() { (Some(8), Some("beer".into())) } else { (o.values.contains, o.values.liquid.map(|l| l.name().to_string())) })
+        .collect()
+}
+
+#[test]
+fn fill_from_a_fountain() {
+    // §6.4: act.item.c do_pour SCMD_FILL
+    let mut t = T::new(12);
+    t.enter("Ana", Class::Warrior, Some(FIELD));
+    t.enter("Bo", Class::Warrior, Some(FIELD));
+    t.load("Ana", BOTTLE, true);
+    t.load("Ana", WAYBREAD, true);
+    t.load("Ana", FOUNTAIN, false);
+    assert_eq!(failed(&t.cmd("Ana", "fill"), "Ana"), Some(ItemFailure::What));
+    assert_eq!(failed(&t.cmd("Ana", "fill jug fountain"), "Ana"), Some(ItemFailure::CantFind));
+    assert_eq!(failed(&t.cmd("Ana", "fill bread fountain"), "Ana"), Some(ItemFailure::CantFill));
+    assert_eq!(failed(&t.cmd("Ana", "fill bottle"), "Ana"), Some(ItemFailure::FromWhat));
+    assert_eq!(failed(&t.cmd("Ana", "fill bottle from the"), "Ana"), Some(ItemFailure::FromWhat), "fill words are skipped");
+    let out = t.cmd("Ana", "fill bottle well");
+    assert!(matches!(&to(&out, "Ana")[..], [Event::ItemFailed { reason: ItemFailure::NoSource, keyword: Some(w), .. }] if w == "well"));
+    t.cmd("Ana", "drop bread");
+    assert_eq!(failed(&t.cmd("Ana", "fill bottle bread"), "Ana"), Some(ItemFailure::NotFountain));
+    // The bottle holds beer; the fountain clear water.
+    assert_eq!(failed(&t.cmd("Ana", "fill bottle fountain"), "Ana"), Some(ItemFailure::OtherLiquid));
+    let out = t.cmd("Ana", "pour bottle out");
+    assert!(matches!(&to(&out, "Ana")[..], [Event::Used { action: ItemAction::Pour, into: None, amount: Some(8), .. }]));
+    assert!(matches!(&to(&out, "Bo")[..], [Event::OccupantItem { action: ItemAction::Pour, other: None, who, .. }] if who == "Ana"));
+    assert_eq!(bottles(&t, "Ana"), vec![(Some(0), None)], "emptied: no liquid");
+    // Empty, it takes any liquid: capacity - contains of it.
+    let out = t.cmd("Ana", "fill bottle from fountain");
+    assert!(
+        matches!(&to(&out, "Ana")[..], [Event::Used { action: ItemAction::Fill, text, into: Some(f), liquid: Some(l), amount: Some(8), .. }] if text == "a bottle" && f == "the large fountain" && l == "clear water"),
+        "{:?}",
+        to(&out, "Ana")
+    );
+    assert!(matches!(&to(&out, "Bo")[..], [Event::OccupantItem { action: ItemAction::Fill, other: Some(f), .. }] if f == "the large fountain"));
+    assert_eq!(bottles(&t, "Ana"), vec![(Some(8), Some("clear_water".into()))]);
+    assert_eq!(failed(&t.cmd("Ana", "fill bottle fountain"), "Ana"), Some(ItemFailure::NoRoom), "full");
+    // Seven drunk (a clear water amount is random 3..10, so drink a sip at a time) and topped up again.
+    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }), gold: None });
+    for _ in 0..3 {
+        t.cmd("Ana", "sip bottle");
+    }
+    let out = t.cmd("Ana", "fill bottle fountain");
+    assert!(matches!(&to(&out, "Ana")[..], [Event::Used { action: ItemAction::Fill, amount: Some(3), .. }]), "{:?}", to(&out, "Ana"));
+}
+
+#[test]
+fn pour_out_and_into_another() {
+    // §6.4: act.item.c do_pour SCMD_POUR
+    let mut t = T::new(12);
+    t.enter("Ana", Class::Warrior, Some(FIELD));
+    t.load("Ana", BOTTLE, true);
+    t.load("Ana", BOTTLE, true);
+    t.load("Ana", WAYBREAD, true);
+    t.load("Ana", FOUNTAIN, false);
+    assert_eq!(failed(&t.cmd("Ana", "pour"), "Ana"), Some(ItemFailure::What));
+    assert_eq!(failed(&t.cmd("Ana", "pour jug out"), "Ana"), Some(ItemFailure::CantFind));
+    assert_eq!(failed(&t.cmd("Ana", "pour bread out"), "Ana"), Some(ItemFailure::CantPour));
+    assert_eq!(failed(&t.cmd("Ana", "pour bottle"), "Ana"), Some(ItemFailure::PourWhere));
+    assert_eq!(failed(&t.cmd("Ana", "pour bottle bread"), "Ana"), Some(ItemFailure::CantPourInto));
+    assert_eq!(failed(&t.cmd("Ana", "pour bottle fountain"), "Ana"), Some(ItemFailure::CantFind), "only into what one carries");
+    assert_eq!(failed(&t.cmd("Ana", "pour bottle bottle"), "Ana"), Some(ItemFailure::Unproductive));
+    assert_eq!(failed(&t.cmd("Ana", "pour bottle 2.bottle"), "Ana"), Some(ItemFailure::NoRoom), "both full");
+    // Beer: (25 - 2) / 3 = 7 drunk from the first, one left.
+    t.sim.submit(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: Some(Conditions { drunk: 0, full: 2, thirst: 2 }), gold: None });
+    t.cmd("Ana", "drink bottle");
+    let held = bottles(&t, "Ana");
+    assert!(held.contains(&(Some(1), Some("beer".into()))) && held.contains(&(Some(8), Some("beer".into()))), "{held:?}");
+    // Only what the receiver has room for moves: 7 of 8.
+    let (full, low) = if held[0].0 == Some(8) { ("1.bottle", "2.bottle") } else { ("2.bottle", "1.bottle") };
+    // "into" is not one of tbaMUD's fill words: it is taken for the container.
+    assert_eq!(failed(&t.cmd("Ana", &format!("pour {full} into {low}")), "Ana"), Some(ItemFailure::CantFind));
+    let out = t.cmd("Ana", &format!("pour {full} in {low}"));
+    assert!(
+        matches!(&to(&out, "Ana")[..], [Event::Used { action: ItemAction::Pour, liquid: Some(l), keyword: Some(w), amount: Some(7), into: Some(_), .. }] if l == "beer" && w == low),
+        "{:?}",
+        to(&out, "Ana")
+    );
+    let mut held: Vec<_> = bottles(&t, "Ana").into_iter().map(|b| b.0).collect();
+    held.sort();
+    assert_eq!(held, vec![Some(1), Some(8)]);
+    // Out, then the last drop into the empty one: the source forgets its liquid.
+    let held = bottles(&t, "Ana");
+    let (full, low) = if held[0].0 == Some(8) { ("1.bottle", "2.bottle") } else { ("2.bottle", "1.bottle") };
+    t.cmd("Ana", &format!("pour {full} out"));
+    assert_eq!(failed(&t.cmd("Ana", &format!("pour {full} out")), "Ana"), Some(ItemFailure::Empty));
+    t.cmd("Ana", &format!("pour {low} {full}"));
+    let mut held = bottles(&t, "Ana");
+    held.sort();
+    assert_eq!(held, vec![(Some(0), None), (Some(1), Some("beer".into()))]);
+    // Water fills the emptied one; beer can't go into water.
+    let empty = if bottles(&t, "Ana")[0].0 == Some(0) { "1.bottle" } else { "2.bottle" };
+    let beer = if empty == "1.bottle" { "2.bottle" } else { "1.bottle" };
+    t.cmd("Ana", &format!("fill {empty} fountain"));
+    assert_eq!(failed(&t.cmd("Ana", &format!("pour {beer} {empty}")), "Ana"), Some(ItemFailure::OtherLiquid));
 }

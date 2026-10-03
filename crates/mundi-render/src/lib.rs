@@ -313,9 +313,15 @@ impl Renderer {
             }
             Event::Gave { text, id, to, to_id } => one("gave", &[("p", self.thing(v, text, id)), ("c", who(to, to_id))]),
             Event::Received { text, id, from, from_id } => one("received", &[("who", who(from, from_id)), ("p", self.thing(v, text, id))]),
-            Event::Used { action, text, id, into, into_id, slot, liquid } => {
-                let mid = used_id("used", *action, slot.as_deref());
+            Event::Used { action, text, id, into, into_id, slot, liquid, keyword, .. } => {
+                let mut mid = used_id("used", *action, slot.as_deref());
+                if *action == mundi_protocol::ItemAction::Pour && into.is_none() {
+                    mid.push_str("-out");
+                }
                 let mut args = vec![("p", self.thing(v, text, id))];
+                if let Some(w) = keyword {
+                    args.push(("word", escape(w)));
+                }
                 if let Some(c) = into {
                     args.push(("c", self.thing(v, c, into_id)));
                 }
@@ -325,7 +331,10 @@ impl Renderer {
                 one(&mid, &args)
             }
             Event::OccupantItem { who: w, who_id, action, text, id, other, other_id, slot, liquid } => {
-                let mid = used_id("room", *action, slot.as_deref());
+                let mut mid = used_id("room", *action, slot.as_deref());
+                if *action == mundi_protocol::ItemAction::Pour && other.is_none() {
+                    mid.push_str("-out");
+                }
                 let mut args = vec![("who", who(w, who_id)), ("p", self.thing(v, text, id)), ("his", self.pronoun(who_id.as_deref(), "his").into())];
                 if let Some(c) = other {
                     let name = if *action == mundi_protocol::ItemAction::Give { who(c, other_id) } else { self.thing(v, c, other_id) };
