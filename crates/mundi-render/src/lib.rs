@@ -253,7 +253,7 @@ impl Renderer {
                 one(id, &self.pronouns(v, w, who_id.as_deref()))
             }
             Event::MoveFailed { reason, door, .. } => vec![match (reason, door) {
-                (MoveFailure::Closed | MoveFailure::Locked, Some(d)) => self.msg(v, "move-closed-door", &[("door", escape(d))]),
+                (MoveFailure::Closed | MoveFailure::Locked, Some(d)) => self.msg(v, "move-closed-door", &[("door", self.door_name(v, d))]),
                 (MoveFailure::Closed | MoveFailure::Locked, None) => m("move-closed"),
                 (MoveFailure::Exhausted, _) => m("move-exhausted"),
                 (MoveFailure::Forbidden, _) => m("move-forbidden"),
@@ -485,7 +485,7 @@ impl Renderer {
             }
             Event::DoorChanged { command, who: w, who_id, door, text, id, far } => {
                 if *far {
-                    return one(&format!("door-far-{command}"), &[("door", escape(door.as_deref().unwrap_or("door")))]);
+                    return one(&format!("door-far-{command}"), &[("door", self.door_name(v, door.as_deref().unwrap_or("door")))]);
                 }
                 if w == mundi_protocol::SELF {
                     return vec![m(&format!("door-done-{command}"))];
@@ -498,7 +498,7 @@ impl Renderer {
                     (_, true) => "door-room-obj",
                     _ => "door-room",
                 };
-                one(mid, &[("who", who(w, who_id)), ("cmd", command.clone()), ("door", escape(door.as_deref().unwrap_or("door"))), ("p", p), ("did", did)])
+                one(mid, &[("who", who(w, who_id)), ("cmd", command.clone()), ("door", self.door_name(v, door.as_deref().unwrap_or("door"))), ("p", p), ("did", did)])
             }
             Event::Tell { from, from_id, to, to_id, text, direction } => match direction {
                 Direction::In => one("tell-in", &[("who", who(from, from_id)), ("text", escape(text))]),
@@ -853,6 +853,18 @@ impl Renderer {
             out.push(m(&format!("score-state-{st}"), &[]));
         }
         out
+    }
+
+    /// A door by its keyword, as tbaMUD names it ("The door seems to be closed."). Korean: the
+    /// word from `door-name-<keyword>` when there is one, with the keyword where keywords show (D18:
+    /// `문(door)`, what `open` takes); a keyword without one stays as it is.
+    fn door_name(&self, v: Viewer, keyword: &str) -> String {
+        let id = format!("door-name-{}", keyword.to_lowercase());
+        if v.lang == Lang::Ko && self.ko.has_message(&id) {
+            let word = self.msg(v, &id, &[]);
+            return if v.keywords == KeywordMode::Off { word } else { format!("{word}({})", escape(keyword)) };
+        }
+        escape(keyword)
     }
 
     /// A content line (a trigger's): the reader's language when the overlay has it, its `%s` the

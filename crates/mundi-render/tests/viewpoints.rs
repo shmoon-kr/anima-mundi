@@ -346,3 +346,14 @@ fn whom_they_fight_and_numbers_take_their_particles() {
     assert_eq!(see(&r, &exp(155), ko), "경험치 155를 얻었다.");
     assert_eq!(see(&r, &exp(150), ko), "경험치 150을 얻었다.");
 }
+
+#[test]
+fn a_door_is_named_in_korean_with_the_word_one_types() {
+    use mundi_protocol::MoveFailure;
+    let r = renderer();
+    let closed = |d: &str| Event::MoveFailed { reason: MoveFailure::Closed, door: Some(d.into()), dir: None };
+    assert_eq!(line(&r, &closed("door")), "The door seems to be closed.");
+    assert_eq!(see(&r, &closed("door"), KO), "문(door)이 닫혀 있는 것 같다.");
+    assert_eq!(see(&r, &closed("gate"), Viewer { keywords: KeywordMode::Off, ..KO }), "대문이 닫혀 있는 것 같다.");
+    assert_eq!(see(&r, &closed("moongate"), KO), "moongate가 닫혀 있는 것 같다.", "no Korean name: as it is");
+}
