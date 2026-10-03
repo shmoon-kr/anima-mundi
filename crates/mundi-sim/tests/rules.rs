@@ -91,6 +91,20 @@ fn hunger_and_thirst_and_their_effect_on_regeneration() {
 }
 
 #[test]
+fn movement_points_by_position_as_seen_live() {
+    // MECHANICS §5.2: graf(17, 16,20,24,...) = 20; the live server gave a new 17-year-old
+    // +20 standing and +25 resting (2026-10-03, tools/compare/regen.py); sleeping + a half.
+    let mut sim = Sim::new(&zones(&[30]), &tables(), 1, 12);
+    enter(&mut sim, "War", Class::Warrior, None);
+    for (position, gain) in [("stand", 20), ("rest", 25), ("sleep", 30)] {
+        sim.submit(Input::SetPoints { name: "War".into(), hp: None, mana: None, mv: Some(1), conditions: None, gold: None });
+        sim.submit(Input::Command { name: "War".into(), text: position.into() });
+        ticks(&mut sim, 1);
+        assert_eq!(sim.save("War").unwrap().mv, 1 + gain, "{position}");
+    }
+}
+
+#[test]
 fn casters_regenerate_hit_points_at_half_and_mana_double() {
     // MECHANICS §5.2: mana graf(17, 4,8,12,...) = 8, ×2 for a caster; hit points 13 / 2 = 6.
     let mut sim = Sim::new(&zones(&[30]), &tables(), 1, 12);

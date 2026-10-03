@@ -47,6 +47,36 @@ struct Being {
 
 type Overrides = Arc<RwLock<HashMap<String, Final>>>;
 
+/// The particle of a pair (`이/가`) that follows `word` (D23), with the names' overrides.
+fn particle_after(finals: &Overrides, word: &str, pair: &str) -> String {
+    let end = finals.read().unwrap().get(&josa::base_of(word)).copied().unwrap_or_else(|| josa::final_of(word));
+    josa::particle(pair, end).unwrap_or_else(|| format!("[{pair}]"))
+}
+
+/// A message-file set's line for an outcome and a reader's role.
+fn pick<'a>(set: &'a mundi_content::tables::MessageSet, outcome: &HitOutcome, role: &str) -> &'a Option<String> {
+    let lines = match outcome {
+        HitOutcome::Miss => &set.miss,
+        HitOutcome::Hit => &set.hit,
+        HitOutcome::Die => &set.die,
+        HitOutcome::God => &set.god,
+    };
+    match role {
+        "attacker" => &lines.attacker,
+        "victim" => &lines.victim,
+        _ => &lines.room,
+    }
+}
+
+/// Blows the reader deals in yellow, blows they take in red (fight.c's CCYEL, CCRED).
+fn colour_for(role: &str, text: String) -> String {
+    match role {
+        "attacker" => format!("{{yellow}}{text}{{/yellow}}"),
+        "victim" => format!("{{red}}{text}{{/red}}"),
+        _ => text,
+    }
+}
+
 pub struct Renderer {
     en: FluentBundle<FluentResource>,
     ko: FluentBundle<FluentResource>,
@@ -59,6 +89,8 @@ pub struct Renderer {
     obj_keywords: HashMap<String, Vec<String>>,
     /// tbaMUD's combat message file (`third_party/tbamud/messages/combat.yaml`), if there.
     combat: Option<mundi_content::CombatMessages>,
+    /// Its Korean lines (`locales/ko/combat.yaml`): act() codes with particle pairs (`$N{을/를}`).
+    combat_ko: Option<mundi_content::CombatMessages>,
     /// Spells' wear-off lines from the spell table (English).
     wearoffs: HashMap<i32, String>,
 }
@@ -81,12 +113,7 @@ impl Renderer {
             let (Some(FluentValue::String(word)), Some(FluentValue::String(pair))) = (pos.first(), pos.get(1)) else {
                 return FluentValue::Error;
             };
-            let base = josa::base_of(word);
-            let end = f.read().unwrap().get(&base).copied().unwrap_or_else(|| josa::final_of(word));
-            match josa::particle(pair, end) {
-                Some(p) => FluentValue::from(p),
-                None => FluentValue::from(format!("[{pair}]")),
-            }
+            FluentValue::from(particle_after(&f, word, pair))
         })
         .map_err(|e| format!("JOSA: {e:?}"))?;
         let ko_text = load_locale(&locales.join("ko")).map_err(|e| e.to_string())?;
@@ -103,6 +130,8 @@ impl Renderer {
         }
         let obj_keywords = zones.iter().flat_map(|z| z.objects.iter().map(|(id, o)| (id.clone(), o.keywords.clone()))).collect();
         let combat = locales.parent().map(|p| p.join("messages/combat.yaml")).filter(|p| p.exists()).map(|p| mundi_content::load_messages(&p)).transpose().map_err(|e| e.to_string())?;
+        let ko_combat = locales.join("ko/combat.yaml");
+        let combat_ko = ko_combat.exists().then(|| mundi_content::load_messages(&ko_combat)).transpose().map_err(|e| e.to_string())?;
         let wearoffs = locales
             .parent()
             .map(|p| p.join("tables"))
@@ -110,7 +139,7 @@ impl Renderer {
             .and_then(|p| mundi_content::load_tables(&p).ok())
             .map(|t| t.spells.into_iter().filter_map(|s| Some((s.number, s.wearoff?))).collect())
             .unwrap_or_default();
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, wearoffs })
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, combat_ko, wearoffs })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -669,30 +698,18 @@ impl Renderer {
         let me = mundi_protocol::SELF;
         let role = if victim == me { "victim" } else if attacker == me { "attacker" } else { "room" };
         let from_file = *kind != mundi_protocol::HitKind::Weapon || matches!(outcome, HitOutcome::Miss | HitOutcome::Die);
+        if from_file && v.lang == Lang::Ko {
+            let line = self.combat_lines(self.combat_ko.as_ref(), *attack, *variant).and_then(|set| pick(set, outcome, role).clone());
+            if let Some(l) = line {
+                let text = self.act_ko(v, &l, (attacker, attacker_id.as_deref()), (victim, victim_id.as_deref()), weapon.as_deref().map(|w| (w, weapon_id)));
+                return vec![colour_for(role, text)];
+            }
+        }
         if from_file {
-            if let Some(set) = self.combat_lines(*attack, *variant) {
-                let lines = match outcome {
-                    HitOutcome::Miss => &set.miss,
-                    HitOutcome::Hit => &set.hit,
-                    HitOutcome::Die => &set.die,
-                    HitOutcome::God => &set.god,
-                };
-                let line = match role {
-                    "attacker" => &lines.attacker,
-                    "victim" => &lines.victim,
-                    _ => &lines.room,
-                };
-                return line
+            if let Some(set) = self.combat_lines(self.combat.as_ref(), *attack, *variant) {
+                return pick(set, outcome, role)
                     .iter()
-                    .map(|l| {
-                        let text = self.act(v, l, (attacker, attacker_id.as_deref()), (victim, victim_id.as_deref()), weapon.as_deref().map(|w| (w, weapon_id)));
-                        let colour = match role {
-                            "attacker" => "yellow",
-                            "victim" => "red",
-                            _ => "",
-                        };
-                        if colour.is_empty() { text } else { format!("{{{colour}}}{text}{{/{colour}}}") }
-                    })
+                    .map(|l| colour_for(role, self.act(v, l, (attacker, attacker_id.as_deref()), (victim, victim_id.as_deref()), weapon.as_deref().map(|w| (w, weapon_id)))))
                     .collect();
             }
         }
@@ -713,8 +730,8 @@ impl Renderer {
     }
 
     /// The message file's set for an attack, the variant chosen by the event's roll.
-    fn combat_lines(&self, attack: i32, roll: Option<u32>) -> Option<&mundi_content::tables::MessageSet> {
-        let a = self.combat.as_ref()?.attacks.iter().find(|a| a.number == attack)?;
+    fn combat_lines<'a>(&self, file: Option<&'a mundi_content::CombatMessages>, attack: i32, roll: Option<u32>) -> Option<&'a mundi_content::tables::MessageSet> {
+        let a = file?.attacks.iter().find(|a| a.number == attack)?;
         let n = a.variants.len().max(1);
         a.variants.get((roll.unwrap_or(1) as usize).saturating_sub(1) % n)
     }
@@ -750,6 +767,39 @@ impl Renderer {
             }
         }
         cap(&out)
+    }
+
+    /// A Korean message-file line: $n $N names (당신 for the reader), a pair in braces after a code
+    /// its particle (D23), $p the weapon. The translation writes names for English's pronoun codes;
+    /// any left are 그.
+    fn act_ko(&self, v: Viewer, line: &str, n: (&str, Option<&str>), big_n: (&str, Option<&str>), p: Option<(&str, &Option<String>)>) -> String {
+        let me = mundi_protocol::SELF;
+        let who = |(name, id): (&str, Option<&str>)| if name == me { "당신".to_string() } else { self.name(v, name, id, Spot::Prose) };
+        let mut out = String::new();
+        let mut rest = line;
+        while let Some(at) = rest.find('$') {
+            out.push_str(&rest[..at]);
+            let mut chars = rest[at + 1..].chars();
+            let code = chars.next();
+            rest = chars.as_str();
+            let word = match code {
+                Some('n') => who(n),
+                Some('N') => who(big_n),
+                Some('p') => p.map(|(t, id)| self.thing(v, t, id)).unwrap_or_else(|| "무언가".into()),
+                Some('e' | 'E' | 'm' | 'M') => "그".into(),
+                Some('s' | 'S') => "그의".into(),
+                Some('$') => "$".into(),
+                Some(x) => format!("${x}"),
+                None => "$".into(),
+            };
+            out.push_str(&word);
+            if let Some(pair) = rest.strip_prefix('{').and_then(|r| r.split_once('}')).filter(|(pair, _)| josa::particle(pair, Final::None).is_some()) {
+                out.push_str(&particle_after(&self.finals, &word, pair.0));
+                rest = pair.1;
+            }
+        }
+        out.push_str(rest);
+        out
     }
 
     /// A line sent to a group: "[Group] " in green before it (comm.c send_to_group).
@@ -1155,6 +1205,40 @@ fn sgr(tag: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn every_korean_combat_line_renders_clean() {
+        let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud");
+        let r = Renderer::load(&root.join("locales"), &[]).unwrap();
+        let ko = Viewer { lang: Lang::Ko, keywords: KeywordMode::Off };
+        let Some(file) = &r.combat_ko else { return };
+        let dagger = Some("tba:30:obj:3020".to_string());
+        for a in &file.attacks {
+            for set in &a.variants {
+                for lines in [&set.die, &set.miss, &set.hit, &set.god] {
+                    for l in [&lines.attacker, &lines.victim, &lines.room].into_iter().flatten() {
+                        let text = r.act_ko(ko, l, ("Ana", None), ("the beggar", None), Some(("a dagger", &dagger)));
+                        assert!(!text.contains('$') && !text.contains('[') && !text.contains('/'), "attack {}: {l} -> {text}", a.number);
+                    }
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn korean_combat_lines_take_particles_after_names() {
+        let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud");
+        let r = Renderer::load(&root.join("locales"), &[]).unwrap();
+        let ko = Viewer { lang: Lang::Ko, keywords: KeywordMode::Off };
+        r.register_player("Ana", Sex::Female, None);
+        r.register_player("Bob", Sex::Male, Some(KoFinal::Other));
+        let line = "$n{이/가} $N{을/를} 노렸지만 $N{은/는} 피했다! $$";
+        let text = r.act_ko(ko, line, ("Ana", Some("pc:ana")), ("Bob", Some("pc:bob")), None);
+        assert_eq!(text, "Ana가 Bob을 노렸지만 Bob은 피했다! $");
+        let text = r.act_ko(ko, line, (mundi_protocol::SELF, None), ("Ana", Some("pc:ana")), None);
+        assert_eq!(text, "당신이 Ana를 노렸지만 Ana는 피했다! $");
+        assert_eq!(r.act_ko(ko, "$p{으로/로} {yellow}$N{/yellow}", ("Ana", None), ("Ana", None), None), "무언가로 {yellow}Ana{/yellow}");
+    }
 
     #[test]
     fn ansi_reapplies_outer_tags() {

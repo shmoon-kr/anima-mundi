@@ -2,6 +2,7 @@
 
   python tools/translate_ko.py translate 186 30     # translate zones (resumable, skips what is up to date)
   python tools/translate_ko.py check 186 30         # list fields with no translation (missing-translation report)
+  python tools/translate_ko.py translate combat     # the combat message file (messages/combat.yaml -> ko/combat.yaml)
 
 - Source: third_party/tbamud/content/<zone>/{rooms,mobs,objects}.yaml (English, the base)
 - Output: third_party/tbamud/locales/ko/<zone>.yaml (same IDs and shape, only translated strings; D11, D17: no keywords)
@@ -13,6 +14,9 @@
   Latin letters, digits, punctuation and glossary terms kept in English are fine), glossary terms used.
 - Markup (D20): `{yellow}...{/yellow}` must survive translation — the same tags, in the same order, paired; else retry.
 - Verbatim texts ({preformatted}: maps, pictures) are left in English in phase 1.
+- Combat messages: one entry per attack variant, its lines keyed `die.attacker` .. `god.room`. act() codes:
+  $n (the attacker; 당신 when it is the reader) and $N (the victim) stay, a particle after one is a pair in braces
+  (`$N{을/를}`, D23), $p (the weapon) stays, and the pronoun codes ($e $m $s, $E $M $S) become the name again.
 """
 from __future__ import annotations
 
@@ -72,7 +76,24 @@ def fields(kind, entry):
     return out
 
 
+COMBAT = ROOT / "third_party/tbamud/messages/combat.yaml"
+OUTCOMES = ("die", "miss", "hit", "god")
+ROLES = ("attacker", "victim", "room")
+
+
+def load_combat():
+    """{"attack:<number>:<variant>": ("combat", {"die.attacker": line, ...})}, null lines left out."""
+    out = {}
+    for a in yaml.safe_load(COMBAT.read_text(encoding="utf-8"))["attacks"]:
+        for i, v in enumerate(a["variants"], 1):
+            f = {f"{o}.{r}": v[o][r] for o in OUTCOMES for r in ROLES if (v.get(o) or {}).get(r)}
+            out[f"attack:{a['number']}:{i}"] = ("combat", f)
+    return out
+
+
 def load_zone(zone):
+    if zone == "combat":
+        return load_combat()
     out = {}
     for kind in ("rooms", "mobs", "objects"):
         f = CONTENT / str(zone) / f"{kind}.yaml"
@@ -142,12 +163,23 @@ Rules:
 {glossary}
 Reply with the JSON object only."""
 
+COMBAT_RULES = """
+These are combat messages. In each line $n is the attacker and $N the victim (a name, or 당신 for the reader); $p is
+the weapon. Keep $n, $N and $p as written. Write a Korean particle after a code as a pair in braces, never attached:
+$n{이/가}, $N{을/를}, $n{은/는}, $N{과/와}, $p{으로/로}, $N{아/야} (only these six pairs). Particles that never
+change (의, 에게, 에, 도, 만, 에서, 한테) are written attached: $N에게, $n의. Do not use $e $m $s $E $M $S (he, him, his): write
+$n or $N again, or leave the person out when Korean reads better without it. Keys ending in .attacker are seen by the
+attacker (English "you" = the attacker: 당신), .victim by the victim ("you" = the victim: 당신), .room by others.
+Short vivid 해라체 narration ("~다", "~했다!"). Keep exclamation marks and jokes."""
+
 
 def prompt(batch, conventions, terms):
     used = {t["en"]: t for e in batch.values() for t in terms_in(text_of(e), terms)}
     gl = "\n".join(f"  {t['en']} = {t['ko']}" + (f"  ({t['note']})" if t.get("note") else "") for t in used.values()) or "  (none)"
     conv = "\n".join(f"- {k}: {v}" for k, v in conventions.items())
     system = SYSTEM.format(conventions=conv, glossary=gl)
+    if any(id_.startswith("attack:") for id_ in batch):
+        system += COMBAT_RULES
     user = json.dumps(batch, ensure_ascii=False, indent=1)
     return (f"<|im_start|>system\n{system}<|im_end|>\n<|im_start|>user\n{user}<|im_end|>\n"
             f"<|im_start|>assistant\n<think>\n\n</think>\n\n"), used
@@ -207,6 +239,10 @@ def problems(src, out, used):
                     bad.append(f"{id_}.{k}: empty")
                 if FORBIDDEN.search(s):
                     bad.append(f"{id_}.{k}: Han/kana {FORBIDDEN.findall(s)[:3]}")
+        if id_.startswith("attack:"):
+            for k, v in f.items():
+                if isinstance(t.get(k), str):
+                    bad += [f"{id_}.{k}: {p}" for p in act_problems(v, t[k])]
         tr = text_of(t)
         for term in terms_in(text_of(f), used):
             # strict: false marks everyday words that are game terms only sometimes ("the water
@@ -214,6 +250,67 @@ def problems(src, out, used):
             if term.get("strict", True) and term["ko"] not in tr:
                 bad.append(f"{id_}: glossary {term['en']} -> {term['ko']} not used")
     return bad
+
+
+PAIRS = {"이/가", "은/는", "을/를", "과/와", "으로/로", "아/야"}
+CODE = re.compile(r"\$(.)")
+# A particle that changes with the final consonant must be a pair; 의, 에게, 도 .. attach as they are.
+VARYING = re.compile(r"(이|가|은|는|을|를|과|와|으로|로|아|야)(?![가-힣])")
+
+
+def act_problems(en, ko):
+    """A combat line's codes: the names it speaks of kept, no pronoun codes, particles as pairs."""
+    bad = []
+    src = {c for c in CODE.findall(en)}
+    out = {c for c in CODE.findall(ko)}
+    if out & set("emsEMS"):
+        bad.append(f"pronoun codes {sorted(out & set('emsEMS'))}")
+    if out - set("nNp$emsEMS"):
+        bad.append(f"unknown codes {sorted(out - set('nNp$emsEMS'))}")
+    for c in "nNp":
+        if c in src and c not in out:
+            bad.append(f"${c} dropped")
+    if "n" in out and not src & set("nems") or "N" in out and not src & set("NEMS"):
+        bad.append("a name the English does not speak of")
+    for m in re.finditer(r"\$[nNp](\{[^}]*\}|[가-힣])?", ko):
+        part = m.group(1)
+        if part and part.startswith("{") and part[1:-1] not in PAIRS:
+            bad.append(f"particle {part}")
+        elif part and not part.startswith("{") and VARYING.match(ko[m.end() - 1:]):
+            bad.append(f"particle attached: {ko[m.start():m.end() + 2]}")
+    return bad
+
+
+def write_combat(order, translations):
+    """ko/combat.yaml: the base file's shape (attacks, variants, outcomes, roles), only translated lines."""
+    attacks = {}
+    for a in yaml.safe_load(COMBAT.read_text(encoding="utf-8"))["attacks"]:
+        variants = []
+        for i in range(1, len(a["variants"]) + 1):
+            t = translations.get(f"attack:{a['number']}:{i}", {})
+            v = {}
+            for o in OUTCOMES:
+                lines = {r: t[f"{o}.{r}"] for r in ROLES if f"{o}.{r}" in t}
+                if lines:
+                    v[o] = lines
+            variants.append(v)
+        if any(variants):
+            attacks[a["number"]] = {"number": a["number"], "name": a["name"], "variants": [
+                {o: v.get(o, {}) for o in OUTCOMES} for v in variants]}
+    head = ("# tbaMUD-derived (third_party/tbamud/NOTICE.md). Korean overlay for messages/combat.yaml, made by\n"
+            "# tools/translate_ko.py. act() codes: $n $N names, $N{을/를} a particle (D23), $p the weapon.\n"
+            "# A missing line falls back to English.\n")
+    text = yaml.safe_dump({"attacks": list(attacks.values())}, allow_unicode=True, sort_keys=False, width=120)
+    (LOCALE / "combat.yaml").write_text(head + text, encoding="utf-8")
+
+
+def read_combat():
+    path = LOCALE / "combat.yaml"
+    out = {}
+    for a in (read_yaml(path, {}) or {}).get("attacks", []):
+        for i, v in enumerate(a["variants"], 1):
+            out[f"attack:{a['number']}:{i}"] = {f"{o}.{r}": x for o in OUTCOMES for r, x in (v.get(o) or {}).items()}
+    return out
 
 
 # ---------------------------------------------------------------- files
@@ -289,7 +386,9 @@ def translate(zone, conventions, terms, log):
     src = load_zone(zone)
     state_path = LOCALE / f"{zone}.state.json"
     state = read_yaml(state_path, {}) if state_path.exists() else {}
-    existing = {id_: flatten(v) for id_, v in (read_yaml(LOCALE / f"{zone}.yaml", {}) or {}).items()}
+    existing = read_combat() if zone == "combat" else {
+        id_: flatten(v) for id_, v in (read_yaml(LOCALE / f"{zone}.yaml", {}) or {}).items()}
+    save = write_combat if zone == "combat" else (lambda order, tr: write_locale(zone, order, tr))
     by_en = {t["en"]: t for t in terms}
 
     def up_to_date(id_, f):
@@ -324,7 +423,7 @@ def translate(zone, conventions, terms, log):
             used_here = terms_in(text_of(batch[id_]), terms)
             state[id_] = {"source": sha(batch[id_]), "glossary": {t["en"]: term_hash(t) for t in used_here}}
         words += sum(len(text_of(f).split()) for f in batch.values())
-        write_locale(zone, list(src), existing)
+        save(list(src), existing)
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
     for i in range(0, len(todo), BATCH):
@@ -340,13 +439,14 @@ def translate(zone, conventions, terms, log):
                     keep(one, out)
         el = time.time() - t0
         log(f"  {min(i + BATCH, len(todo))}/{len(todo)}  {words} words in {el / 60:.1f} min ({words / max(el, 1) * 60:.0f}/min)")
-    write_locale(zone, list(src), existing)
+    save(list(src), existing)
 
 
 def check(zone):
     """Missing-translation report: fields of the base that the overlay does not translate."""
     src = load_zone(zone)
-    tr = {id_: flatten(v) for id_, v in (read_yaml(LOCALE / f"{zone}.yaml", {}) or {}).items()}
+    tr = read_combat() if zone == "combat" else {
+        id_: flatten(v) for id_, v in (read_yaml(LOCALE / f"{zone}.yaml", {}) or {}).items()}
     missing = []
     for id_, (_, f) in src.items():
         have = tr.get(id_, {})
