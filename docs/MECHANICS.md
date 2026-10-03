@@ -282,6 +282,8 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 ### 7.2 싸움의 시작 (fight.c:145-185, 659-678; act.offensive.c:68-125)
 - 피해를 주면(피해 0 도 포함) 양쪽 모두, 기절보다 높고 싸우지 않던 사람은 싸움을 시작한다. 기억(memory) 몹은 플레이어 공격자를 기억한다
 - 싸움을 시작하면 자세가 싸움, 수면 주문이 풀린다. 싸움이 끝나면 자세는 섬 → 체력으로 갱신(§4.1)
+- **자는 사람도 맞으면 깬다**: 잠(4)은 기절(3)보다 높아서 첫 피해에 바로 싸움 자세가 된다(fight.c:664-665, 167). 그래서 "반드시 맞고 ×2"(§7.4)는 **첫 한 방**에만 해당한다.
+  (PHASE-1-PLAN S1 표의 "맞아도 깨지 않는다"는 이 줄로 고친다. 앉거나 쉬던 사람도 같다: 일어서지는 않고 싸움 자세가 된다)
 - 투명하거나 숨은 공격자는 나타난다: ROOM "$n slowly fades into existence."
 - 플레이어끼리(PK)는 설정상 금지(config.c:52): "Player killing is not permitted." 몹이 끼면 언제나 허용
 - `hit`/`kill <대상>`(최소 자세 싸움): "Hit who?", "That player is not here.", 자기 자신 "You hit yourself...OUCH!." / ROOM "$n hits $mself, and says OUCH!",
