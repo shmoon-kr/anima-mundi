@@ -116,3 +116,20 @@ fn autoassist_joins_a_group_members_fight() {
     t.cmd("Ana", "kill drunk");
     assert!(t.until(10 * PULSES_PER_SEC, |d| d.to == "Bo" && matches!(&d.event, Event::Assisted { who, .. } if who == "self")), "Bo joins the fight");
 }
+
+#[test]
+fn a_member_alone_in_the_room_splits_among_one() {
+    // act.other.c:532-543: the count includes the splitter, so a group member with nobody else
+    // in the room splits among 1 ("You split 10 coins among 1 members"); "With whom do you wish
+    // to share your gold?" is for one in no group. An autosplit after a lone backstab kill got
+    // the refusal.
+    let mut t = T::new(3);
+    t.enter("Ana", BEGGAR_ROOM);
+    t.enter("Bo", DRUNK_ROOM);
+    t.input(Input::SetPoints { name: "Ana".into(), hp: None, mana: None, mv: None, conditions: None, gold: Some(10) });
+    t.cmd("Ana", "split 10");
+    assert!(t.got("Ana", |e| matches!(e, Event::GroupFailed { reason, .. } if reason == "split_whom")), "no group: with whom");
+    t.cmd("Ana", "group new");
+    t.cmd("Ana", "split 10");
+    assert!(t.got("Ana", |e| matches!(e, Event::Split { members: 1, share: 10, rest: 0, .. })), "grouped, alone here: among 1");
+}

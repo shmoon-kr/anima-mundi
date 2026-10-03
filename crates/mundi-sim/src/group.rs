@@ -322,10 +322,7 @@ impl Sim {
         let room = self.chars.get(k).unwrap().room;
         let Some(g) = self.chars.get(k).unwrap().group else { return self.group_fail(k, "split_whom") };
         let others: Vec<Key> = self.groups.get(g).unwrap().members.iter().copied().filter(|m| *m != k && self.chars.get(*m).is_some_and(|c| !c.is_mob() && c.room == room)).collect();
-        let num = others.len() as i64 + 1;
-        if num < 2 {
-            return self.group_fail(k, "split_whom");
-        }
+        let num = others.len() as i64 + 1;          // the splitter counts too: alone, among 1 (act.other.c:532-537)
         let (share, rest) = (amount / num, amount % num);
         self.chars.get_mut(k).unwrap().gold -= share * (num - 1);
         let (name, id) = (self.chars.get(k).unwrap().name.clone(), self.id_of(k));
