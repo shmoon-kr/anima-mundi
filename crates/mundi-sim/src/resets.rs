@@ -198,6 +198,7 @@ impl Sim {
             followers: Vec::new(),
             group: None,
             prefs: Default::default(),
+            spells: Vec::new(),
         });
         *self.counts.entry(proto.to_string()).or_default() += 1;
         self.mobs.push(key);

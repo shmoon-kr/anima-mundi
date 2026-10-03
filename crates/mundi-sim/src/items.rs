@@ -1011,13 +1011,15 @@ impl Sim {
         self.objs.get(food).and_then(|o| o.values.hours).unwrap_or(0) as i32
     }
 
-    /// Poisoned by food or drink for `hours` ticks (MECHANICS §11.4). The affect's own timer comes
-    /// with spells; until then the poison stays.
-    pub(crate) fn poison(&mut self, k: Key, _hours: i32) {
+    /// Poisoned by food or drink for `hours` ticks (act.item.c affect_join without adding: a new
+    /// poison replaces the old, MECHANICS §11.4).
+    pub(crate) fn poison(&mut self, k: Key, hours: i32) {
         let c = self.chars.get_mut(k).unwrap();
-        if c.level < 31 && !c.has(mundi_content::names::Affect::Poison) {
-            c.affects.push(mundi_content::names::Affect::Poison);
+        if c.level >= 31 {
+            return;
         }
+        c.spells.retain(|s| !(s.spell == crate::combat::SPELL_POISON && s.apply.is_none()));
+        c.spells.insert(0, crate::entity::SpellAffect { spell: crate::combat::SPELL_POISON, duration: hours, apply: None, modifier: 0, bit: Some(mundi_content::names::Affect::Poison) });
     }
 
     /// `drink <container>`, `sip <container>` (act.item.c do_drink, MECHANICS §6.3).

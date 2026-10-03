@@ -103,6 +103,7 @@ impl Sim {
             followers: Vec::new(),
             group: None,
             prefs: Default::default(),
+            spells: Vec::new(),
         });
         self.advance_level(key);
         let c = self.chars.get_mut(key).unwrap();
@@ -151,6 +152,7 @@ impl Sim {
             followers: Vec::new(),
             group: None,
             prefs: s.prefs.iter().cloned().collect(),
+            spells: s.spells.clone(),
         }
     }
 
@@ -179,6 +181,7 @@ impl Sim {
             objects: self.save_objects(k),
             prefs: c.prefs.iter().cloned().collect(),
             wimpy: c.wimpy,
+            spells: c.spells.clone(),
         }
     }
 

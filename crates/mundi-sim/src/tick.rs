@@ -24,6 +24,40 @@ impl Sim {
     /// The tick's work (MECHANICS §5.3): for characters hunger, drink and thirst; regeneration and
     /// poison for those stunned or better, bleeding for those worse; a player's light burning down;
     /// then corpses rot (§8.4).
+    /// magic.c affect_update (MECHANICS §11.4): a tick off every spell; one at 0 goes the tick after,
+    /// with its wear-off line if it is the spell's last affect.
+    pub(crate) fn affect_update(&mut self) {
+        let all: Vec<Key> = self.order.iter().chain(self.mobs.iter()).copied().collect();
+        for k in all {
+            let Some(c) = self.chars.get_mut(k) else { continue };
+            let mut gone = Vec::new();
+            let mut i = 0;
+            while i < c.spells.len() {
+                let a = &mut c.spells[i];
+                if a.duration >= 1 {
+                    a.duration -= 1;
+                    i += 1;
+                } else if a.duration == -1 {
+                    i += 1;
+                } else {
+                    let spell = a.spell;
+                    let last = c.spells.get(i + 1).is_none_or(|n| n.spell != spell || n.duration > 0);
+                    c.spells.remove(i);
+                    if last {
+                        gone.push(spell);
+                    }
+                }
+            }
+            for spell in gone {
+                self.deliver(k, Event::WoreOff { spell, name: self.spell_name(spell) });
+            }
+        }
+    }
+
+    pub(crate) fn spell_name(&self, n: i32) -> String {
+        self.tables.spells.iter().find(|s| s.number == n).map(|s| s.name.clone()).unwrap_or_default()
+    }
+
     pub(crate) fn point_update(&mut self) {
         let all: Vec<Key> = self.order.iter().chain(self.mobs.iter()).copied().collect();
         for k in all {

@@ -47,6 +47,7 @@ fn write_tables(src: &str, out: &str) -> Result<(), String> {
     };
     write("commands.yaml", "src/interpreter.c (cmd_info: name, position, level, in order)", yaml(&t.commands))?;
     write("abilities.yaml", "src/constants.c (str_app, dex_app, dex_app_skill, con_app, int_app, wis_app)", yaml(&t.abilities))?;
+    write("spells.yaml", "src/spells.h, spell_parser.c (spello, skillo), class.c (init_spell_levels)", yaml(&t.spells))?;
     write("classes.yaml", "src/class.c (thaco, level_exp, saving_throws, prac_params)", yaml(&t.classes))?;
     write("world.yaml", "src/constants.c, limits.c, spell_parser.c, config.c, class.c do_start", yaml(&t.world))?;
     let back = load_tables(&out).map_err(|e| e.to_string())?;

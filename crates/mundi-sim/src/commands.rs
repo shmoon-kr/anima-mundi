@@ -87,13 +87,18 @@ impl Sim {
             "report" => self.report(key),
             "split" => self.split(key, arg),
             "assist" => self.assist(key, arg),
+            "kick" => self.kick(key, arg),
+            "bash" => self.bash(key, arg),
+            "rescue" => self.rescue(key, arg),
+            "backstab" => self.backstab(key, arg),
+            "cast" => self.cast(key, arg),
             p if crate::group::PREFS.contains(&p) => self.auto_toggle(key, p),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }
     }
 }
 
-fn protocol_position(p: mundi_content::names::Position) -> Position {
+pub(crate) fn protocol_position(p: mundi_content::names::Position) -> Position {
     use mundi_content::names::Position as P;
     match p {
         P::Dead => Position::Dead,

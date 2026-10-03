@@ -1,0 +1,782 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Values only, from tbaMUD src/spells.h, spell_parser.c (spello, skillo), class.c (init_spell_levels), by `mundi-convert`.
+# Do not edit by hand: regenerate. The engine reads this file (D21); MECHANICS.md says what each value means.
+- number: 1
+  name: armor
+  mana_max: 30
+  mana_min: 15
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - affects
+  wearoff: You feel less protected.
+  levels:
+    magic_user: 4
+    cleric: 1
+- number: 2
+  name: teleport
+  mana_max: 75
+  mana_min: 50
+  mana_change: 3
+  position: standing
+  targets:
+  - char_room
+  routines:
+  - manual
+- number: 3
+  name: bless
+  mana_max: 35
+  mana_min: 5
+  mana_change: 3
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  routines:
+  - affects
+  - alter_objs
+  wearoff: You feel less righteous.
+  levels:
+    cleric: 5
+- number: 4
+  name: blindness
+  mana_max: 35
+  mana_min: 25
+  mana_change: 1
+  position: standing
+  targets:
+  - char_room
+  - not_self
+  routines:
+  - affects
+  wearoff: You feel a cloak of blindness dissolve.
+  levels:
+    magic_user: 9
+    cleric: 6
+- number: 5
+  name: burning hands
+  mana_max: 30
+  mana_min: 10
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 5
+- number: 6
+  name: call lightning
+  mana_max: 40
+  mana_min: 25
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    cleric: 15
+- number: 7
+  name: charm person
+  mana_max: 75
+  mana_min: 50
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  - not_self
+  violent: true
+  routines:
+  - manual
+  wearoff: You feel more self-confident.
+  levels:
+    magic_user: 16
+- number: 8
+  name: chill touch
+  mana_max: 30
+  mana_min: 10
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  - affects
+  wearoff: You feel your strength return.
+  levels:
+    magic_user: 3
+- number: 9
+  name: clone
+  mana_max: 80
+  mana_min: 65
+  mana_change: 5
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - summons
+  levels:
+    magic_user: 30
+- number: 10
+  name: color spray
+  mana_max: 30
+  mana_min: 15
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 11
+- number: 11
+  name: control weather
+  mana_max: 75
+  mana_min: 25
+  mana_change: 5
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - manual
+  levels:
+    cleric: 17
+- number: 12
+  name: create food
+  mana_max: 30
+  mana_min: 5
+  mana_change: 4
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - creations
+  levels:
+    cleric: 2
+- number: 13
+  name: create water
+  mana_max: 30
+  mana_min: 5
+  mana_change: 4
+  position: standing
+  targets:
+  - obj_inv
+  - obj_equip
+  routines:
+  - manual
+  levels:
+    cleric: 2
+- number: 14
+  name: cure blind
+  mana_max: 30
+  mana_min: 5
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  routines:
+  - unaffects
+  levels:
+    cleric: 4
+- number: 15
+  name: cure critic
+  mana_max: 30
+  mana_min: 10
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - points
+  levels:
+    cleric: 9
+- number: 16
+  name: cure light
+  mana_max: 30
+  mana_min: 10
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - points
+  levels:
+    cleric: 1
+- number: 17
+  name: curse
+  mana_max: 80
+  mana_min: 50
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  violent: true
+  routines:
+  - affects
+  - alter_objs
+  wearoff: You feel more optimistic.
+  levels:
+    magic_user: 14
+- number: 18
+  name: detect alignment
+  mana_max: 20
+  mana_min: 10
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: You feel less aware.
+  levels:
+    cleric: 4
+- number: 19
+  name: detect invisibility
+  mana_max: 20
+  mana_min: 10
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: Your eyes stop tingling.
+  levels:
+    magic_user: 2
+    cleric: 6
+- number: 20
+  name: detect magic
+  mana_max: 20
+  mana_min: 10
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: The detect magic wears off.
+  levels:
+    magic_user: 2
+- number: 21
+  name: detect poison
+  mana_max: 15
+  mana_min: 5
+  mana_change: 1
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  - obj_room
+  routines:
+  - manual
+  wearoff: The detect poison wears off.
+  levels:
+    magic_user: 10
+    cleric: 3
+- number: 22
+  name: dispel evil
+  mana_max: 40
+  mana_min: 25
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    cleric: 14
+- number: 23
+  name: earthquake
+  mana_max: 40
+  mana_min: 25
+  mana_change: 3
+  position: fighting
+  targets:
+  - ignore
+  violent: true
+  routines:
+  - areas
+  levels:
+    cleric: 12
+- number: 24
+  name: enchant weapon
+  mana_max: 150
+  mana_min: 100
+  mana_change: 10
+  position: standing
+  targets:
+  - obj_inv
+  routines:
+  - manual
+  levels:
+    magic_user: 26
+- number: 25
+  name: energy drain
+  mana_max: 40
+  mana_min: 25
+  mana_change: 1
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  - manual
+  levels:
+    magic_user: 13
+- number: 26
+  name: fireball
+  mana_max: 40
+  mana_min: 30
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 15
+- number: 27
+  name: harm
+  mana_max: 75
+  mana_min: 45
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    cleric: 19
+- number: 28
+  name: heal
+  mana_max: 60
+  mana_min: 40
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - points
+  - unaffects
+  levels:
+    cleric: 16
+- number: 29
+  name: invisibility
+  mana_max: 35
+  mana_min: 25
+  mana_change: 1
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  - obj_room
+  routines:
+  - affects
+  - alter_objs
+  wearoff: You feel yourself exposed.
+  levels:
+    magic_user: 4
+- number: 30
+  name: lightning bolt
+  mana_max: 30
+  mana_min: 15
+  mana_change: 1
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 9
+- number: 31
+  name: locate object
+  mana_max: 25
+  mana_min: 20
+  mana_change: 1
+  position: standing
+  targets:
+  - obj_world
+  routines:
+  - manual
+  levels:
+    magic_user: 6
+- number: 32
+  name: magic missile
+  mana_max: 25
+  mana_min: 10
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 1
+- number: 33
+  name: poison
+  mana_max: 50
+  mana_min: 20
+  mana_change: 3
+  position: standing
+  targets:
+  - char_room
+  - not_self
+  - obj_inv
+  violent: true
+  routines:
+  - affects
+  - alter_objs
+  wearoff: You feel less sick.
+  levels:
+    magic_user: 14
+    cleric: 8
+- number: 34
+  name: protection from evil
+  mana_max: 40
+  mana_min: 10
+  mana_change: 3
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: You feel less protected.
+  levels:
+    cleric: 8
+- number: 35
+  name: remove curse
+  mana_max: 45
+  mana_min: 25
+  mana_change: 5
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  - obj_equip
+  routines:
+  - unaffects
+  - alter_objs
+  levels:
+    cleric: 26
+- number: 36
+  name: sanctuary
+  mana_max: 110
+  mana_min: 85
+  mana_change: 5
+  position: standing
+  targets:
+  - char_room
+  routines:
+  - affects
+  wearoff: The white aura around your body fades.
+  levels:
+    cleric: 15
+- number: 37
+  name: shocking grasp
+  mana_max: 30
+  mana_min: 15
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    magic_user: 7
+- number: 38
+  name: sleep
+  mana_max: 40
+  mana_min: 25
+  mana_change: 5
+  position: standing
+  targets:
+  - char_room
+  violent: true
+  routines:
+  - affects
+  wearoff: You feel less tired.
+  levels:
+    magic_user: 8
+- number: 39
+  name: strength
+  mana_max: 35
+  mana_min: 30
+  mana_change: 1
+  position: standing
+  targets:
+  - char_room
+  routines:
+  - affects
+  wearoff: You feel weaker.
+  levels:
+    magic_user: 6
+- number: 40
+  name: summon
+  mana_max: 75
+  mana_min: 50
+  mana_change: 3
+  position: standing
+  targets:
+  - char_world
+  - not_self
+  routines:
+  - manual
+  levels:
+    cleric: 10
+- number: 42
+  name: word of recall
+  mana_max: 20
+  mana_min: 10
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - manual
+  levels:
+    cleric: 12
+- number: 43
+  name: remove poison
+  mana_max: 40
+  mana_min: 8
+  mana_change: 4
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  - obj_room
+  routines:
+  - unaffects
+  - alter_objs
+  levels:
+    cleric: 10
+- number: 44
+  name: sense life
+  mana_max: 20
+  mana_min: 10
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: You feel less aware of your surroundings.
+  levels:
+    cleric: 18
+- number: 45
+  name: animate dead
+  mana_max: 35
+  mana_min: 10
+  mana_change: 3
+  position: standing
+  targets:
+  - obj_room
+  routines:
+  - summons
+- number: 46
+  name: dispel good
+  mana_max: 40
+  mana_min: 25
+  mana_change: 3
+  position: fighting
+  targets:
+  - char_room
+  - fight_vict
+  violent: true
+  routines:
+  - damage
+  levels:
+    cleric: 14
+- number: 47
+  name: group armor
+  mana_max: 50
+  mana_min: 30
+  mana_change: 2
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - groups
+  levels:
+    cleric: 9
+- number: 48
+  name: group heal
+  mana_max: 80
+  mana_min: 60
+  mana_change: 5
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - groups
+  levels:
+    cleric: 22
+- number: 50
+  name: infravision
+  mana_max: 25
+  mana_min: 10
+  mana_change: 1
+  position: standing
+  targets:
+  - char_room
+  - self_only
+  routines:
+  - affects
+  wearoff: Your night vision seems to fade.
+  levels:
+    magic_user: 3
+    cleric: 7
+- number: 51
+  name: waterwalk
+  mana_max: 40
+  mana_min: 20
+  mana_change: 2
+  position: standing
+  targets:
+  - char_room
+  routines:
+  - affects
+  wearoff: Your feet seem less buoyant.
+- number: 52
+  name: identify
+  mana_max: 50
+  mana_min: 25
+  mana_change: 5
+  position: standing
+  targets:
+  - char_room
+  - obj_inv
+  - obj_room
+  routines:
+  - manual
+  levels:
+    magic_user: 20
+    cleric: 11
+- number: 53
+  name: fly
+  mana_max: 40
+  mana_min: 20
+  mana_change: 2
+  position: fighting
+  targets:
+  - char_room
+  routines:
+  - affects
+  wearoff: You drift slowly to the ground.
+  levels:
+    magic_user: 22
+- number: 54
+  name: darkness
+  mana_max: 30
+  mana_min: 5
+  mana_change: 4
+  position: standing
+  targets:
+  - ignore
+  routines:
+  - rooms
+  levels:
+    cleric: 12
+- number: 131
+  name: backstab
+  skill: true
+  position: dead
+  levels:
+    thief: 3
+- number: 132
+  name: bash
+  skill: true
+  position: dead
+  levels:
+    warrior: 12
+- number: 133
+  name: hide
+  skill: true
+  position: dead
+  levels:
+    thief: 5
+- number: 134
+  name: kick
+  skill: true
+  position: dead
+  levels:
+    warrior: 1
+- number: 135
+  name: pick lock
+  skill: true
+  position: dead
+  levels:
+    thief: 2
+- number: 136
+  name: whirlwind
+  skill: true
+  position: dead
+  levels:
+    warrior: 16
+- number: 137
+  name: rescue
+  skill: true
+  position: dead
+  levels:
+    warrior: 3
+- number: 138
+  name: sneak
+  skill: true
+  position: dead
+  levels:
+    thief: 1
+- number: 139
+  name: steal
+  skill: true
+  position: dead
+  levels:
+    thief: 4
+- number: 140
+  name: track
+  skill: true
+  position: dead
+  levels:
+    thief: 6
+    warrior: 9
+- number: 141
+  name: bandage
+  skill: true
+  position: dead
+  levels:
+    warrior: 7
+- number: 298
+  name: Script-inflicted
+  position: sitting
+  targets:
+  - ignore
+  violent: true

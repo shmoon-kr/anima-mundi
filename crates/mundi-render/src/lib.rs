@@ -59,6 +59,8 @@ pub struct Renderer {
     obj_keywords: HashMap<String, Vec<String>>,
     /// tbaMUD's combat message file (`third_party/tbamud/messages/combat.yaml`), if there.
     combat: Option<mundi_content::CombatMessages>,
+    /// Spells' wear-off lines from the spell table (English).
+    wearoffs: HashMap<i32, String>,
 }
 
 /// Where a name stands in a sentence (D18): `Target` is a place a command can name it from.
@@ -101,7 +103,14 @@ impl Renderer {
         }
         let obj_keywords = zones.iter().flat_map(|z| z.objects.iter().map(|(id, o)| (id.clone(), o.keywords.clone()))).collect();
         let combat = locales.parent().map(|p| p.join("messages/combat.yaml")).filter(|p| p.exists()).map(|p| mundi_content::load_messages(&p)).transpose().map_err(|e| e.to_string())?;
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat })
+        let wearoffs = locales
+            .parent()
+            .map(|p| p.join("tables"))
+            .filter(|p| p.join("spells.yaml").exists())
+            .and_then(|p| mundi_content::load_tables(&p).ok())
+            .map(|t| t.spells.into_iter().filter_map(|s| Some((s.number, s.wearoff?))).collect())
+            .unwrap_or_default();
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, wearoffs })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -367,6 +376,59 @@ impl Renderer {
                     (None, None, Some(0)) => vec![m("wimpy-off")],
                     (None, None, Some(n)) => one("wimpy-set", &[("n", n.to_string())]),
                     _ => vec![],
+                }
+            }
+            Event::SkillResult { ok: true, .. } => vec![m("skill-ok")],
+            Event::SkillResult { skill, reason, who: w, who_id, .. } => {
+                let r = reason.as_deref().unwrap_or("failed");
+                let name = w.as_deref().map(|n| who(n, who_id)).unwrap_or_default();
+                one(&format!("skill-{skill}-{r}"), &[("who", name), ("him", self.pronoun(who_id.as_deref(), "him").into())])
+            }
+            Event::Rescue { rescuer, rescuer_id, rescued, rescued_id } => {
+                let me = mundi_protocol::SELF;
+                if rescuer == me {
+                    vec![m("rescue-self")]
+                } else if rescued == me {
+                    one("rescue-you", &[("who", who(rescuer, rescuer_id))])
+                } else {
+                    one("rescue-room", &[("a", who(rescuer, rescuer_id)), ("b", who(rescued, rescued_id))])
+                }
+            }
+            Event::Noticed { who: w, who_id, by, by_id } => {
+                let me = mundi_protocol::SELF;
+                let pron = [("he", self.pronoun(who_id.as_deref(), "he").into()), ("him", self.pronoun(who_id.as_deref(), "him").into())];
+                if w == me {
+                    one("noticed-you", &[("by", who(by, by_id))])
+                } else if by == me {
+                    one("noticed-by-you", &[("who", who(w, who_id)), pron[0].clone(), pron[1].clone()])
+                } else {
+                    one("noticed-room", &[("who", who(w, who_id)), ("by", who(by, by_id)), pron[1].clone()])
+                }
+            }
+            Event::SpellSaid { who: w, who_id, words, target, target_id, at_object, at_self } => {
+                let base = [("who", who(w, who_id)), ("words", escape(words)), ("his", self.pronoun(who_id.as_deref(), "his").into())];
+                match (target, at_self) {
+                    (_, true) => one("said-self", &base),
+                    (Some(t), _) if t == mundi_protocol::SELF => one("said-at-you", &base),
+                    (Some(t), _) => {
+                        let name = if *at_object { self.thing(v, t, target_id) } else { who(t, target_id) };
+                        let mut a = base.to_vec();
+                        a.push(("target", name));
+                        one("said-at", &a)
+                    }
+                    (None, _) => one("said", &base),
+                }
+            }
+            Event::SpellEffect { spell, line, who: w, who_id, text, id } => {
+                let p = text.as_deref().map(|t| self.thing(v, t, id)).unwrap_or_default();
+                one(&format!("spell-{spell}-{line}"), &[("who", who(w, who_id)), ("p", p)])
+            }
+            Event::WoreOff { spell, .. } => {
+                let id = format!("wearoff-{spell}");
+                if v.lang == Lang::Ko && self.ko.has_message(&id) {
+                    vec![m(&id)]
+                } else {
+                    self.wearoffs.get(spell).cloned().into_iter().collect()
                 }
             }
             Event::Toggle { name, value } if value.is_boolean() => {

@@ -118,6 +118,22 @@ pub(crate) struct Char {
     pub group: Option<Key>,
     /// autoloot, autogold, autosplit, autoassist, autosac (MECHANICS §12.3).
     pub prefs: std::collections::BTreeSet<String>,
+    /// Spells on them, the newest first (handler.c affect_to_char; MECHANICS §11.4).
+    pub spells: Vec<SpellAffect>,
+}
+
+/// One affect of a spell: how long, what it changes, which flag it gives.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct SpellAffect {
+    pub spell: i32,
+    /// Ticks left; -1 lasts for ever.
+    pub duration: i32,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub apply: Option<mundi_content::names::Apply>,
+    #[serde(default)]
+    pub modifier: i32,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub bit: Option<Affect>,
 }
 
 /// A group (handler.c group_data): its leader and members in the order they joined.
@@ -130,8 +146,13 @@ pub(crate) struct Group {
 }
 
 impl Char {
+    /// An innate flag (the mob file's, or set for tests) or one a spell gives.
     pub fn has(&self, a: Affect) -> bool {
-        self.affects.contains(&a)
+        self.affects.contains(&a) || self.spells.iter().any(|s| s.bit == Some(a))
+    }
+
+    pub fn affected_by(&self, spell: i32) -> bool {
+        self.spells.iter().any(|s| s.spell == spell)
     }
 
     pub fn is_mob(&self) -> bool {
@@ -248,6 +269,9 @@ pub struct Save {
     pub prefs: Vec<String>,
     #[serde(default, skip_serializing_if = "is_zero")]
     pub wimpy: i32,
+    /// Spells still on them (tbaMUD saves affects with the player).
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub spells: Vec<SpellAffect>,
 }
 
 fn is_zero(n: &i32) -> bool {

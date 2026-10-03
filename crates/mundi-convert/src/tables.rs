@@ -276,6 +276,87 @@ fn commands(interp: &str) -> Result<Vec<CommandEntry>, String> {
     Ok(out)
 }
 
+/// Splits `a, "b, c", d` at the commas outside quotes.
+fn args(s: &str) -> Vec<String> {
+    let (mut out, mut cur, mut quoted) = (Vec::new(), String::new(), false);
+    for c in s.chars() {
+        match c {
+            '"' => {
+                quoted = !quoted;
+                cur.push(c);
+            }
+            ',' if !quoted => out.push(std::mem::take(&mut cur).trim().to_string()),
+            _ => cur.push(c),
+        }
+    }
+    out.push(cur.trim().to_string());
+    out
+}
+
+/// spells.h numbers, spell_parser.c spello/skillo calls, class.c spell_level calls.
+fn spells(header: &str, parser: &str, class: &str) -> Result<Vec<Spell>, String> {
+    use mundi_content::names::Position;
+    let mut numbers = std::collections::HashMap::new();
+    for line in header.lines() {
+        let mut w = line.split_whitespace();
+        if let (Some("#define"), Some(name), Some(n)) = (w.next(), w.next(), w.next()) {
+            if (name.starts_with("SPELL_") || name.starts_with("SKILL_")) && n.parse::<i32>().is_ok() {
+                numbers.insert(name.to_string(), n.parse::<i32>().unwrap());
+            }
+        }
+    }
+    let body = function(parser, "void mag_assign_spells(")?;
+    let mut out: Vec<Spell> = Vec::new();
+    for (call, skill) in body.split("spello(").skip(1).map(|c| (c, false)).chain(body.split("skillo(").skip(1).map(|c| (c, true))) {
+        let inner = &call[..call.find(");").ok_or("spello: no end")?];
+        let a = args(inner);
+        let Some(&number) = numbers.get(a[0].as_str()) else { continue };
+        let name = a[1].trim_matches('"').to_string();
+        if skill {
+            out.push(Spell { number, name, skill: true, mana_max: 0, mana_min: 0, mana_change: 0, position: Position::Dead, targets: vec![], violent: false, routines: vec![], wearoff: None, levels: IndexMap::new() });
+            continue;
+        }
+        let flags = |s: &str, prefix: &str| -> Vec<String> {
+            s.split('|').map(str::trim).filter_map(|f| f.strip_prefix(prefix)).map(|f| f.to_lowercase()).collect()
+        };
+        let position = match a[5].as_str() {
+            "POS_DEAD" => Position::Dead,
+            "POS_SLEEPING" => Position::Sleeping,
+            "POS_RESTING" => Position::Resting,
+            "POS_SITTING" => Position::Sitting,
+            "POS_FIGHTING" => Position::Fighting,
+            "POS_STANDING" => Position::Standing,
+            p => return Err(format!("spell {name}: position {p}")),
+        };
+        let wearoff = a.get(9).map(|w| w.trim()).filter(|w| *w != "NULL").map(|w| w.trim_matches('"').to_string());
+        out.push(Spell {
+            number,
+            name,
+            skill: false,
+            mana_max: a[2].parse().unwrap_or(0),
+            mana_min: a[3].parse().unwrap_or(0),
+            mana_change: a[4].parse().unwrap_or(0),
+            position,
+            targets: flags(&a[6], "TAR_"),
+            violent: a[7] == "TRUE",
+            routines: flags(&a[8], "MAG_"),
+            wearoff,
+            levels: IndexMap::new(),
+        });
+    }
+    let levels = function(class, "void init_spell_levels(")?;
+    for call in levels.split("spell_level(").skip(1) {
+        let inner = &call[..call.find(')').unwrap_or(0)];
+        let a = args(inner);
+        let (Some(&n), Some(class), Ok(level)) = (numbers.get(a[0].as_str()), CLASSES.iter().find(|(c, _)| *c == a[1]).map(|(_, n)| *n), a[2].parse::<i32>()) else { continue };
+        if let Some(sp) = out.iter_mut().find(|s| s.number == n) {
+            sp.levels.insert(class.to_string(), level);
+        }
+    }
+    out.sort_by_key(|s| s.number);
+    Ok(out)
+}
+
 /// Reads `<src>/interpreter.c`, `constants.c`, `class.c`, `config.c`, `spell_parser.c`, `limits.c`.
 pub fn read_tables(src: &Path) -> Result<Tables, String> {
     let interp = strip_comments(&read(&src.join("interpreter.c"))?);
@@ -403,7 +484,8 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
             },
         },
     };
-    Ok(Tables { commands: commands(&interp)?, abilities, classes, world })
+    let header = read(&src.join("spells.h"))?;
+    Ok(Tables { commands: commands(&interp)?, abilities, spells: spells(&header, &parser, &class)?, classes, world })
 }
 
 /// Reads tbaMUD's `lib/misc/messages`: `M`, the number, then twelve lines (die, miss, hit, god, each

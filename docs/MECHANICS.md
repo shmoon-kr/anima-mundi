@@ -521,6 +521,8 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 | poison | 50/20/3 | 섬 | 성직자 8, 마법사 14 | 대상이 저항 못 하면 힘 −2, 독, 시전자 레벨 틱. "You feel very sick." / ROOM "$n gets violently ill!", 끝 "You feel less sick." |
 | remove poison | 40/8/4 | 섬 | 성직자 10 | 독 제거 "A warm feeling runs through your body!" / ROOM "$n looks better." |
 - 이미 걸린 효과(겹치지 않는 것) "Nothing seems to happen."
+- 피해 주문(magic missile)은 대상이 저항(§11.1 의 저항 굴림, 주문 종류)하면 **피해가 절반**(magic.c:288-289). 저항 굴림: 직업 표(몹은 전사 표)[종류][레벨] + 몹 파일의 저항 + 저항 보정 apply, max(1, 값) < 0~99 면 저항 성공(magic.c:36-55)
+- 음식·물의 독은 기존 독을 **바꾼다**(시간을 더하지 않는다, affect_join 의 add_dur 거짓). 주문 표·직업 레벨은 `third_party/tbamud/tables/spells.yaml`
 - 더 높은 레벨의 주문은 파티가 그 레벨에 닿을 때 이 표에 더한다
 
 ### 11.4 효과와 독 (magic.c:58-79, limits.c:399-405)

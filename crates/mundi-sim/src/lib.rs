@@ -27,6 +27,8 @@ mod perception;
 mod positions;
 mod resets;
 mod rng;
+mod skills;
+mod spells;
 pub mod store;
 mod talk;
 mod tick;
@@ -86,6 +88,11 @@ pub enum Input {
     },
     /// Makes a mob of a prototype in a character's room (tests and admin tools, logged).
     LoadMob { name: String, mob: String },
+    /// Sets how well a character knows a skill or spell (tests and admin tools, logged; practice
+    /// at a guild is the game's way).
+    SetSkill { name: String, skill: String, value: i32 },
+    /// Sets a character's level (tests and admin tools, logged; tbaMUD's `advance`).
+    SetLevel { name: String, level: i32 },
     /// Sets hit points, mana or moves, and hunger, thirst or drink (tests and admin tools, logged).
     SetPoints {
         name: String,
@@ -294,6 +301,7 @@ impl Sim {
         }
         if self.tick % PULSES_PER_TICK == 0 {
             self.game_hour();
+            self.affect_update();
             self.point_update();
         }
         self.prompts();
@@ -330,6 +338,16 @@ impl Sim {
                         let room = self.chars.get(k).unwrap().room;
                         self.put(o, if carry { Place::Carried(k) } else { Place::Room(room) });
                     }
+                }
+            }
+            Input::SetLevel { name, level } => {
+                if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
+                    c.level = level;
+                }
+            }
+            Input::SetSkill { name, skill, value } => {
+                if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
+                    c.skills.insert(skill, value);
                 }
             }
             Input::LoadMob { name, mob } => {

@@ -885,6 +885,74 @@ pub enum Event {
         id: Option<String>,
         carried: bool,
     },
+    /// A spell's last affect gone: its wear-off line (magic.c affect_update). Mundi addition.
+    #[serde(rename = "affect.wore_off")]
+    WoreOff { spell: i32, name: String },
+    /// A skill's or spell's outcome when it is not a blow (PROTOCOL.md `skill.result`); `reason`
+    /// names tbaMUD's sentence, `who` the person it names.
+    #[serde(rename = "skill.result")]
+    SkillResult {
+        skill: String,
+        ok: bool,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        reason: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    /// The rescue's lines: `rescuer` and `rescued` are "self" for the recipient. Mundi addition.
+    #[serde(rename = "combat.rescue")]
+    Rescue {
+        rescuer: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        rescuer_id: Option<String>,
+        rescued: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        rescued_id: Option<String>,
+    },
+    /// A backstab noticed by an aware mob (act.offensive.c:158-163). Mundi addition.
+    #[serde(rename = "combat.noticed")]
+    Noticed {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        by: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        by_id: Option<String>,
+    },
+    /// The words of a spell (spell_parser.c say_spell): `words` are the spell's name to those of the
+    /// caster's class, its syllables to the rest. Mundi addition.
+    #[serde(rename = "spell.said")]
+    SpellSaid {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        words: String,
+        /// Whom or what it is cast at ("self" for the recipient), if not the caster.
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        target: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        target_id: Option<String>,
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        at_object: bool,
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        at_self: bool,
+    },
+    /// A spell's line: `line` is "vict" (to the one it is on), "room" (the rest) or "steams" (an
+    /// object). Mundi addition.
+    #[serde(rename = "spell.effect")]
+    SpellEffect {
+        spell: i32,
+        line: String,
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        text: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+    },
     #[serde(rename = "toggle.state")]
     Toggle {
         name: String,

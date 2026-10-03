@@ -16,6 +16,8 @@ pub struct Tables {
     /// tbaMUD's command table in its order (MECHANICS §4.2): a typed word is the first name it begins.
     pub commands: Vec<CommandEntry>,
     pub abilities: Abilities,
+    /// Spells and skills (spell_parser.c spello/skillo, class.c init_spell_levels; MECHANICS §10, §11).
+    pub spells: Vec<Spell>,
     /// By class name: magic_user, cleric, thief, warrior.
     pub classes: IndexMap<String, Class>,
     pub world: WorldTables,
@@ -32,6 +34,42 @@ pub struct CommandEntry {
     /// A social (do_action): matched after every other command.
     #[serde(default, skip_serializing_if = "std::ops::Not::not")]
     pub social: bool,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Spell {
+    /// spells.h: spells 1-130, skills 131 and up.
+    pub number: i32,
+    pub name: String,
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub skill: bool,
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub mana_max: i32,
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub mana_min: i32,
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub mana_change: i32,
+    pub position: crate::names::Position,
+    /// tar_*: ignore, char_room, char_world, fight_self, fight_vict, self_only, not_self, obj_inv,
+    /// obj_room, obj_world, obj_equip.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub targets: Vec<String>,
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub violent: bool,
+    /// mag_*: damage, affects, unaffects, points, alter_objs, groups, masses, areas, summons,
+    /// creations, manual, rooms.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub routines: Vec<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub wearoff: Option<String>,
+    /// The level each class may learn it at.
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub levels: IndexMap<String, i32>,
+}
+
+fn is_zero(n: &i32) -> bool {
+    *n == 0
 }
 
 /// MECHANICS §7.4, §9.4, §12.4, §13.1. Indexed by the ability score; strength 26-30 are 18/01-50,
@@ -220,11 +258,12 @@ fn read<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T, LoadError> {
     serde_saphyr::from_str(&text).map_err(|e| err(e.to_string()))
 }
 
-/// `<dir>/commands.yaml`, `abilities.yaml`, `classes.yaml`, `world.yaml`.
+/// `<dir>/commands.yaml`, `abilities.yaml`, `spells.yaml`, `classes.yaml`, `world.yaml`.
 pub fn load_tables(dir: &Path) -> Result<Tables, LoadError> {
     Ok(Tables {
         commands: read(&dir.join("commands.yaml"))?,
         abilities: read(&dir.join("abilities.yaml"))?,
+        spells: read(&dir.join("spells.yaml"))?,
         classes: read(&dir.join("classes.yaml"))?,
         world: read(&dir.join("world.yaml"))?,
     })

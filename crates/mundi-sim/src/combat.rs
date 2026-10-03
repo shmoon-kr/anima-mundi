@@ -11,6 +11,7 @@ pub(crate) const TYPE_HIT: i32 = 300;
 pub(crate) const TYPE_SUFFERING: i32 = 399;
 /// spells.h SPELL_POISON: poison's damage each tick (MECHANICS §11.4).
 pub(crate) const SPELL_POISON: i32 = 33;
+pub(crate) const SPELL_SLEEP: i32 = 38;
 
 /// Position as tbaMUD numbers it (MECHANICS §4.1), for the damage multiplier.
 pub(crate) fn pos_number(p: Position) -> i32 {
@@ -33,14 +34,15 @@ impl Sim {
     /// The sum of an apply over everything worn.
     pub(crate) fn applied(&self, k: Key, what: Apply) -> i32 {
         let Some(c) = self.chars.get(k) else { return 0 };
-        c.equipment
+        let spells: i32 = c.spells.iter().filter(|s| s.apply == Some(what)).map(|s| s.modifier).sum();
+        spells + c.equipment
             .values()
             .filter_map(|o| self.objs.get(*o))
             .filter_map(|o| o.proto.as_ref().and_then(|p| self.world.obj_protos.get(p)))
             .flat_map(|p| p.affects.iter())
             .filter(|a| a.apply == what)
             .map(|a| a.modifier as i32)
-            .sum()
+            .sum::<i32>()
     }
 
     pub(crate) fn abilities_now(&self, k: Key) -> Abilities {
@@ -90,6 +92,7 @@ impl Sim {
         self.combat.insert(0, ch);
         let c = self.chars.get_mut(ch).unwrap();
         c.affects.retain(|a| *a != Affect::Sleep);
+        c.spells.retain(|s| s.spell != SPELL_SLEEP);
         c.fighting = Some(vict);
         c.position = Position::Fighting;
     }
@@ -450,6 +453,7 @@ impl Sim {
         }
         let c = self.chars.get_mut(vict).unwrap();
         c.affects.clear();
+        c.spells.clear();
         c.position = Position::Standing;
         let _ = killer;
         self.death_cry(vict);
