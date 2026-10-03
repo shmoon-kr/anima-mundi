@@ -1,0 +1,125 @@
+zone: '41'
+date: 2026-10-03 21:18
+reviewer: claude
+n: 15
+wrong_rate: 0.133
+awkward_rate: 0.267
+stopped: false
+added_to_glossary:
+- term as evil as -> ~만큼 사악한
+- term elbow turn -> 꺾이는 모퉁이
+- term Well, (감탄사) -> 흠, / 음,
+- example to the west you can see what almost appears to be a golden light.
+- example It wasn't meant to be food.
+- example A small intelligent looking mage is standing here.
+- example almost allowing for four people to travel abreast with ease.
+fixed:
+- tba:41:obj:4100 extras.0.text
+- tba:41:room:4101 description
+- tba:41:room:4107 description
+- tba:41:mob:4101 description
+- tba:41:obj:4103 extras.0.text
+- tba:41:mob:4100 long
+sample:
+- id: tba:41:obj:4100
+  field: extras.0.text
+  en: You'll become as evil as the weapon, if you use it as you sense the forces of evil controlling the weapon...
+  ko: 당신이 이 무기를 사용하게 되면, 악의 힘에 의해 무기가 통제되는 것을 느끼며 악마처럼 악해질 것이다...
+  verdict: wrong
+  note: '''as evil as the weapon''(무기만큼 사악해진다)을 ''악마처럼 악해질''로 오역했다. 원문에 없는 ''악마''가 들어갔고, 비교 대상인 무기가 빠졌다. 또 ''느끼며''가 사악해지는
+    것과 동시에 일어나는 일처럼 읽혀 문장 구조가 어색하다.'
+  fix: 이 무기를 사용하면 당신도 무기만큼이나 사악해질 것이다. 악의 힘이 이 무기를 지배하고 있는 것이 느껴진다...
+- id: tba:41:mob:4106
+  field: description
+  en: He doesn't look friendly at all...
+  ko: 전혀 우호적이지 않아 보인다...
+  verdict: ok
+  note: ''
+- id: tba:41:room:4101
+  field: description
+  en: The tunnel seems to be slightly sloped here as it continues in its east-west direction.  The tunnel walls are far apart,
+    almost allowing for four people to travel abreast with ease.  The walls do not seem to be very damp, but there is a small
+    rivulet running along the northern wall of the tunnel.
+  ko: 터널은 동서 방향으로 이어지다가 이 지점에서 약간 경사가 있는 듯하다. 터널 벽면은 꽤 멀리 떨어져 있어 네 명이 나란히 걷기에도 무리가 없을 정도다. 벽면은 그리 축축해 보이지 않지만, 터널 북쪽 벽면을 따라
+    작은 물줄기가 흐르고 있다.
+  verdict: wrong
+  note: '''almost allowing''의 ''거의''가 빠져 네 명이 나란히 걷는 데 무리가 없다고 단정하게 되었다. ''이어지다가''도 원문에 없는 방향 변화를 암시한다.'
+  fix: 터널은 동서로 이어지며 이 지점에서 약간 경사져 있는 듯하다. 터널 벽 사이가 꽤 넓어서 네 명이 거의 나란히 걸을 수 있을 정도다. 벽면은 그리 축축해 보이지 않지만, 터널 북쪽 벽을 따라 작은 물줄기가
+    흐르고 있다.
+- id: tba:41:room:4102
+  field: name
+  en: The Long Tunnel
+  ko: 긴 터널
+  verdict: ok
+  note: ''
+- id: tba:41:mob:4100
+  field: short
+  en: the mage
+  ko: 마법사
+  verdict: ok
+  note: ''
+- id: tba:41:room:4107
+  field: description
+  en: You are standing at the elbow turn of a small passageway.  It turns quite sharply to the south and west.  To the south,
+    it appears that the passage continues, but to the west you can see what almost appears to be a golden light.
+  ko: 당신은 작은 통로의 굽은 구석에 서 있다. 통로는 남쪽과 서쪽으로 상당히 급하게 꺾여 있다. 남쪽으로는 통로가 계속 이어지는 것처럼 보이지만, 서쪽으로는 거의 황금빛으로 보이는 것이 보인다.
+  verdict: awkward
+  note: '''굽은 구석''은 elbow turn(꺾이는 모퉁이)의 표현으로 부자연스럽다. ''보이는 것이 보인다''는 같은 말이 반복된다.'
+  fix: 당신은 작은 통로가 꺾이는 모퉁이에 서 있다. 통로는 남쪽과 서쪽으로 상당히 급하게 꺾여 있다. 남쪽으로는 통로가 계속 이어지는 듯하지만, 서쪽으로는 황금빛에 가까운 빛이 보인다.
+- id: tba:41:room:4110
+  field: name
+  en: The Hole
+  ko: 구멍
+  verdict: ok
+  note: ''
+- id: tba:41:mob:4101
+  field: description
+  en: Well, it looks dangerous!
+  ko: 글쎄, 위험해 보인다!
+  verdict: awkward
+  note: 감탄사 'Well'을 망설임을 나타내는 '글쎄'로 옮겨 느낌표와 어조가 맞지 않는다.
+  fix: 흠, 위험해 보인다!
+- id: tba:41:obj:4103
+  field: extras.0.text
+  en: It wasn't meant to be food -- at least, certainly not for humans.
+  ko: 이것은 음식으로 만들어지지 않았다 -- 적어도 인간을 위한 것은 확실히 아니다.
+  verdict: awkward
+  note: '''음식으로 만들어지지 않았다''는 직역투이고, ''인간을 위한 것''도 딱딱하다.'
+  fix: 이것은 먹으라고 만든 것이 아니다 -- 적어도 인간이 먹을 것은 절대 아니다.
+- id: tba:41:room:4107
+  field: name
+  en: The Passage
+  ko: 통로
+  verdict: ok
+  note: ''
+- id: tba:41:room:4114
+  field: name
+  en: The Golden Cave
+  ko: 황금의 동굴
+  verdict: ok
+  note: ''
+- id: tba:41:mob:4100
+  field: long
+  en: A small intelligent looking mage is standing here.
+  ko: 작고 지적인 인상인 마법사가 여기 서 있다.
+  verdict: awkward
+  note: '''지적인 인상인 마법사''는 관형형이 부자연스럽다. ''지적으로 보이는''이 자연스럽다.'
+  fix: 작고 지적으로 보이는 마법사가 여기 서 있다.
+- id: tba:41:room:4111
+  field: name
+  en: The Tunnel
+  ko: 터널
+  verdict: ok
+  note: ''
+- id: tba:41:room:4116
+  field: name
+  en: The Passage
+  ko: 통로
+  verdict: ok
+  note: ''
+- id: tba:41:obj:4101
+  field: extras.0.text
+  en: They look like the right kind of equipment to use when fighting.
+  ko: 전투 시 착용하기에 적합한 장비처럼 보인다.
+  verdict: ok
+  note: ''

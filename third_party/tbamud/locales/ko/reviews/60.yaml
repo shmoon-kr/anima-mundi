@@ -1,0 +1,137 @@
+zone: '60'
+date: 2026-10-03 22:00
+reviewer: claude
+n: 15
+wrong_rate: 0.267
+awkward_rate: 0.333
+stopped: true
+added_to_glossary:
+- term crown (of a tree) -> 우듬지
+- term bobcat -> 보브캣
+- term dense forest -> 울창한 숲
+- term unreal -> 비현실적인
+- term in a tree -> 나무 위에
+- example Small animals and birds scatter at your approach, rustling the leaves all about you.
+- example The small path leads west through the trees.
+- example A medium sized bird's nest is close to you here.
+- example The shaded path is probably used by the small animals living in the forest.
+fixed:
+- tba:60:room:6060 exits.south.look
+- tba:60:room:6063 name
+- tba:60:room:6006 description
+- tba:60:room:6008 exits.west.look
+- tba:60:room:6030 description
+- tba:60:room:6064 description
+- tba:60:room:6072 extras.1.text
+- tba:60:room:6032 extras.4.text
+- tba:60:room:6030 extras.3.text
+sample:
+- id: tba:60:room:6091
+  field: exits.west.look
+  en: You see the large forest, Haon-Dor, stretching out far to the west, and to the northwest you the forest gives way to
+    hills.
+  ko: 서쪽으로는 거대한 숲, 하온-도르가 멀리까지 펼쳐져 있고, 서북쪽으로는 숲이 끝나고 언덕이 시작된다.
+  verdict: ok
+  note: 의미가 정확하다. '서북쪽'보다 '북서쪽'이 더 흔하지만 오류는 아니다.
+- id: tba:60:room:6060
+  field: exits.south.look
+  en: Through a break in the tree line you see the main trail that heads back towards Midgaard.
+  ko: 나무 줄기 사이로 미드가르드로 돌아가는 큰길이 보인다.
+  verdict: wrong
+  note: '''a break in the tree line''은 늘어선 나무들이 끊긴 틈을 말한다. ''나무 줄기 사이로''는 뜻이 다르다.'
+  fix: 늘어선 나무들이 끊긴 틈으로 미드가르드로 돌아가는 큰길이 보인다.
+- id: tba:60:room:6072
+  field: description
+  en: You are on a small shaded path leading between the trees.  The forest gradually becomes more dense to the west.  Paths
+    lead north and east, and you see a small clearing to the south.
+  ko: 당신은 나무들 사이로 이어지는 작은 그늘진 오솔길 위에 있다. 숲은 서쪽으로 갈수록 점차 더 짙어진다. 오솔길이 북쪽과 동쪽으로 이어지며, 남쪽에는 작은 빈터가 보인다.
+  verdict: ok
+  note: 의미와 문체 모두 적절하다.
+- id: tba:60:room:6063
+  field: name
+  en: A Shaded Path Through The Dense Forest
+  ko: 조밀한 숲을 지나는 그늘진 오솔길
+  verdict: awkward
+  note: 숲에 '조밀한'을 쓰면 딱딱하다. '울창한'이나 '빽빽한'이 자연스럽다.
+  fix: 울창한 숲을 지나는 그늘진 오솔길
+- id: tba:60:room:6006
+  field: description
+  en: You are on a small path leading through the dense forest.  The crowns of the old trees leave the forest in an unreal
+    twilight illumination.  The path continues north and east.
+  ko: 당신은 짙은 숲을 관통하는 작은 길 위에 있다. 오래된 나무들의 그루터기가 숲을 초현실적인 황혼의 빛으로 물들인다. 이 길은 북쪽과 동쪽으로 이어진다.
+  verdict: wrong
+  note: '''crowns''(나무의 윗부분)를 ''그루터기''로 오역했다. ''초현실적인''보다 ''비현실적인''이 원문에 가깝다. ''조밀한'' 대신 ''울창한''이 자연스럽다.'
+  fix: 당신은 울창한 숲을 지나는 작은 길 위에 있다. 오래된 나무들의 우듬지 탓에 숲은 비현실적인 어스름에 잠겨 있다. 길은 북쪽과 동쪽으로 이어진다.
+- id: tba:60:room:6010
+  field: exits.south.look
+  en: The wooden door leads south.
+  ko: 나무 문이 남쪽으로 나 있다.
+  verdict: ok
+  note: 자연스럽다.
+- id: tba:60:room:6017
+  field: exits.west.look
+  en: The small path leads west through the trees to a lighter part of the forest.
+  ko: 좁은 오솔길이 나무 사이를 지나 서쪽으로 숲이 밝아지는 곳으로 이어진다.
+  verdict: ok
+  note: 자연스럽다.
+- id: tba:60:room:6008
+  field: exits.west.look
+  en: The small path leads west through the trees.
+  ko: 작은 길이 나무 사이로 서쪽으로 이어진다.
+  verdict: awkward
+  note: '''사이로 서쪽으로''처럼 ''~으로''가 겹쳐 어색하다.'
+  fix: 작은 길이 나무 사이를 지나 서쪽으로 이어진다.
+- id: tba:60:room:6030
+  field: description
+  en: You are in a huge oak, about one third of the way to the top.  The branches above you block out much of the light, but
+    enough filters through for you to see.  Small animals and birds scatter at your approach, rustling the leaves all about
+    you.  You could easily climb back down to the ground, or continue up the tree.  One large branch juts outward to the west,
+    possibly providing a third choice of exit.
+  ko: 당신은 거대한 참나무 안에 있다. 꼭대기까지 약 3분의 1쯤 올라온 위치다. 머리 위의 가지들이 빛의 대부분을 가리지만, 여전히 볼 수 있을 만큼 빛이 스며든다. 작은 동물들과 새들이 당신의 접근에 흩어지며
+    당신 주위의 나뭇잎을 바스락거리게 한다. 쉽게 땅으로 내려갈 수도 있고, 나무를 계속 올라갈 수도 있다. 서쪽으로 뻗어 나온 굵은 가지 하나가 있다. 아마도 세 번째 출구가 될 수 있을 것이다.
+  verdict: wrong
+  note: '''in a huge oak''는 나무 위에 올라가 있다는 뜻이다. ''참나무 안에''라고 하면 줄기 속에 있는 것으로 읽힌다. ''당신의 접근에 흩어지며 … 바스락거리게 한다''는 번역투다.'
+  fix: 당신은 거대한 참나무 위, 꼭대기까지 3분의 1쯤 올라온 곳에 있다. 머리 위의 가지들이 빛을 대부분 가리지만, 앞을 볼 수 있을 만큼은 빛이 스며든다. 당신이 다가가자 작은 동물들과 새들이 흩어지고, 주위의
+    나뭇잎이 온통 바스락거린다. 땅으로 쉽게 내려갈 수도 있고, 나무를 계속 올라갈 수도 있다. 굵은 가지 하나가 서쪽으로 뻗어 있어 어쩌면 세 번째 길이 될지도 모른다.
+- id: tba:60:room:6064
+  field: description
+  en: You are on a small shadowy path leading through the dense forest.  The crowns of the old trees leave the forest in an
+    unreal twilight illumination. The path continues north and south.
+  ko: 당신은 조밀한 숲을 관통하는 작은 어두운 오솔길 위에 있다. 오래된 나무들의 수관이 숲을 초현실적인 황혼의 빛으로 비추고 있다. 오솔길이 북쪽과 남쪽으로 이어진다.
+  verdict: awkward
+  note: 의미는 맞다. 다만 '조밀한'과 '수관'은 딱딱하고, '초현실적인'은 원문보다 뜻이 강하다.
+  fix: 당신은 울창한 숲을 지나는 작고 어둑한 오솔길 위에 있다. 오래된 나무들의 우듬지 탓에 숲은 비현실적인 어스름에 잠겨 있다. 오솔길은 북쪽과 남쪽으로 이어진다.
+- id: tba:60:room:6072
+  field: extras.1.text
+  en: The shaded path is probably used by the small animals living in the forest.
+  ko: 그늘진 오솔길은 아마도 숲에 사는 작은 동물들이 사용하는 것이다.
+  verdict: awkward
+  note: '''사용하는 것이다''는 번역투다. 추측을 나타내는 ''~일 것이다''로 맺는 것이 자연스럽다.'
+  fix: 이 그늘진 오솔길은 아마 숲에 사는 작은 동물들이 다니는 길일 것이다.
+- id: tba:60:room:6032
+  field: extras.4.text
+  en: A medium sized bird's nest is close to you here, and it looks like it has some nice looking eggs in it too!
+  ko: 여기 당신 근처에 중간 크기의 새 둥지가 하나 있고, 그 안에는 꽤 예쁜 알들이 있는 것 같다!
+  verdict: awkward
+  note: '''여기 당신 근처에''는 직역투다. ''nice looking eggs''의 뜻은 ''예쁜''보다 ''탐스러운''에 가깝다.'
+  fix: 바로 곁에 중간 크기의 새 둥지가 있는데, 안에 제법 탐스러운 알도 몇 개 들어 있는 것 같다!
+- id: tba:60:room:6030
+  field: extras.3.text
+  en: The shape above you moves with definite grace and confidence.  You think that it must be a Bobcat, stalking smaller
+    tree-dwelling animals.
+  ko: 머리 위의 형체는 확실히 우아하고 자신감 있게 움직인다. 아마도 작은 나무에 사는 동물들을 사냥하는 야생고양이일 것이다.
+  verdict: wrong
+  note: Bobcat은 '야생고양이'가 아니라 보브캣이다. 'small tree-dwelling animals'를 '작은 나무에 사는 동물'로 옮겨 수식 관계가 틀렸다. 'You think'의 뉘앙스도 빠졌다.
+  fix: 머리 위의 형체는 분명 우아하고 자신감 있게 움직인다. 나무에 사는 작은 동물들을 노리는 보브캣이 틀림없다는 생각이 든다.
+- id: tba:60:room:6066
+  field: exits.south.look
+  en: The path winds its way between the trees.
+  ko: 오솔길은 나무 사이로 굽이쳐 이어진다.
+  verdict: ok
+  note: 자연스럽다.
+- id: tba:60:obj:6021
+  field: long
+  en: .A hidden bird's nest.
+  ko: 숨겨진 새 둥지다.
+  verdict: ok
+  note: 원문 앞의 마침표는 원본 오타로 보인다. 번역에서 뺀 것은 적절하다.

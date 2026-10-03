@@ -1,0 +1,115 @@
+zone: '150'
+date: 2026-10-03 20:40
+reviewer: claude
+n: 15
+wrong_rate: 0.133
+awkward_rate: 0.0
+stopped: false
+added_to_glossary:
+- term Great Hall -> 대연회장
+- term come to attention -> 차렷 자세를 취하다
+- example As all members of the Guard, Peter wears the chain mail required of them as uniform.
+- example To the east there is an exit to the Great Hall.
+fixed:
+- tba:150:room:15015 description
+- tba:150:mob:15012 description
+sample:
+- id: tba:150:room:15015
+  field: description
+  en: You are in a passage, that leads north and south. To the east there is an exit to the Great Hall.
+  ko: 당신은 북쪽과 남쪽으로 이어지는 통로에 있다. 동쪽으로는 대강당으로 나가는 출구가 있다.
+  verdict: wrong
+  note: 성의 'Great Hall'은 연회와 의식이 열리는 중심 홀이다. 그래서 학교나 공공시설을 떠올리게 하는 '대강당'은 맞지 않는다. 또 '나가는 출구'는 같은 뜻이 겹친다.
+  fix: 당신은 북쪽과 남쪽으로 이어지는 통로에 있다. 동쪽으로는 대연회장으로 통하는 출구가 있다.
+- id: tba:150:room:15051
+  field: exits.west.look
+  en: There is a large and cosy room to the west.
+  ko: 서쪽에는 크고 아늑한 방이 있다.
+  verdict: ok
+  note: ''
+- id: tba:150:room:15029
+  field: extras.0.text
+  en: They seem to be made of granite, and stretch down into a more dimly lit area than where you come from.
+  ko: 화강암으로 된 것 같으며, 당신이 온 곳보다 더 어둑한 곳으로 이어져 내려간다.
+  verdict: ok
+  note: ''
+- id: tba:150:room:15021
+  field: exits.west.look
+  en: The door to the west is made out of wood.
+  ko: 서쪽의 문은 나무로 만들어져 있다.
+  verdict: ok
+  note: ''
+- id: tba:150:obj:15005
+  field: extras.0.text
+  en: 'A small sign says: / Made in Siberia.'
+  ko: '작은 표지판에 이렇게 적혀 있다: / 시베리아산.'
+  verdict: ok
+  note: ''
+- id: tba:150:mob:15026
+  field: short
+  en: Jerry
+  ko: 제리
+  verdict: ok
+  note: ''
+- id: tba:150:room:15074
+  field: exits.east.look
+  en: A narrow path leads away into the darkness.
+  ko: 좁은 길이 어둠 속으로 이어져 나간다.
+  verdict: ok
+  note: ''
+- id: tba:150:room:15069
+  field: name
+  en: A House
+  ko: 집
+  verdict: ok
+  note: ''
+- id: tba:150:room:15006
+  field: description
+  en: You are standing in a small passage, that is clearly intended mostly for the servants of the Castle.  It is only dimly
+    lit and quite narrow. The passage leads west, and to the east there is a small door.
+  ko: 당신은 작은 통로에 서 있다. 분명 주로 성의 하인들이 쓰도록 만든 통로다. 불빛은 어둑하고 폭도 꽤 좁다. 통로는 서쪽으로 이어지고, 동쪽에는 작은 문이 하나 있다.
+  verdict: ok
+  note: ''
+- id: tba:150:mob:15012
+  field: description
+  en: As all members of the Guard, Peter wears the chain mail required of them as uniform.  Even though all the other guards
+    seem well trained, you realize none of them would stand a chance against this man in a fight.  He stands at least two
+    meters tall, but still moves with an almost feline grace.  He actually radiates strength and confidence, and you have
+    to fight a sudden urge to come to attention as you see him.
+  ko: 근위대원 모두처럼 피터도 제복으로 지정된 사슬 갑옷을 입고 있다. 다른 근위대원들도 모두 잘 훈련되어 보이지만, 당신도 이 남자와의 싸움에서 그 누구도 승산이 없다는 것을 깨닫는다. 그는 최소한 2미터는 되어
+    보이지만, 여전히 거의 고양이 같은 우아함으로 움직인다. 그는 실제로 힘과 자신감을 뿜어내며, 그를 보자마자 갑자기 경례를 하고 싶은 충동을 억누르느라 정신이 없다.
+  verdict: wrong
+  note: 원문은 '근위대원 중 누구도 이 남자를 이길 수 없다'는 뜻인데 번역에 '당신도'가 덧붙어 의미가 달라졌다. 'come to attention'은 경례가 아니라 차렷 자세를 취하는 것이다. '정신이 없다'는
+    원문에 없는 내용이다. 그 밖에 '근위대원 모두처럼', '실제로'는 번역투다.
+  fix: 다른 근위대원들과 마찬가지로 피터도 제복으로 정해진 사슬 갑옷을 입고 있다. 다른 근위대원들도 모두 잘 훈련된 듯 보이지만, 싸움이 붙으면 그들 중 누구도 이 남자를 당해 내지 못하리라는 것을 당신은 깨닫는다.
+    키가 적어도 2미터는 되는데도 그는 고양이처럼 우아한 몸놀림으로 움직인다. 그에게서는 그야말로 힘과 자신감이 뿜어져 나오고, 그를 본 당신은 갑자기 차렷 자세를 취하고 싶은 충동을 억눌러야 한다.
+- id: tba:150:room:15072
+  field: name
+  en: A Dark Path
+  ko: 어두운 길
+  verdict: ok
+  note: ''
+- id: tba:150:room:15002
+  field: exits.west.look
+  en: The King's Road continues in a straight line to the west.
+  ko: 왕의 길이 서쪽으로 똑바로 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:150:obj:15020
+  field: long
+  en: There is some delicious-looking Russian caviar here, making your mouth water.
+  ko: 여기에 맛있어 보이는 러시아 캐비어가 있어 당신의 침샘을 자극한다.
+  verdict: ok
+  note: ''
+- id: tba:150:room:15032
+  field: exits.west.look
+  en: You see the corridor continue.
+  ko: 복도가 이어지는 것이 보인다.
+  verdict: ok
+  note: ''
+- id: tba:150:obj:15011
+  field: long
+  en: A large wooden chest stands here in a corner.
+  ko: 큰 나무 상자가 구석에 놓여 있다.
+  verdict: ok
+  note: ''
