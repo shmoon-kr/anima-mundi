@@ -10,6 +10,8 @@
 //! `third_party/tbamud/locales/en/`, D9). Lines come out with markup (D20); [`ansi`] and [`plain`]
 //! turn them into what a terminal or an agent receives.
 
+pub mod josa;
+
 use std::path::Path;
 
 use fluent_bundle::concurrent::FluentBundle;
