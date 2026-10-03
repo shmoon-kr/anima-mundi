@@ -177,10 +177,12 @@ MECHANICS.md 의 절 번호를 가리키며, 규칙마다 단위 테스트. **an
   - **시험 캐릭터 설정 — 배고프지 않음**: Vallen Carmilla Elysia Lil Lumina Senia (위 DB, Mundi 시험 캐릭터만) 의 배부름·갈증·술 = -1
     (tbaMUD 불멸자 값, 엔진 규칙은 그대로). 이유: 돈 없는 레벨 1 파티가 굶어 회복이 ¼ (2026-10-03, 사용자 결정). `tools/never_hungry.py`
   - 런타임 덮어쓰기: 거점·순환을 초보자 지역으로 (`anima animus set party policy.rally/circuit`, 사다리가 레벨 1 을 못 가는 지역 40 으로 보냄)
+  - **2026-10-04 둘 다 껐다** (사용자 결정, 파티 레벨 7–9): `never_hungry.py off` (배부름·갈증 24), `anima animus revert --all`.
+    속도도 실시간으로 (`mundi-server` 에 `--speed` 없음, anima `speed = 1`). 이제 사다리가 레벨에 맞는 지역을 고른다
 - 확인: anima 6인이 Mundi 에 로그인·그룹·사냥·야영·사망 후 복귀
 
 ## S7. 비교와 다국어 확인 (M8)
-- [ ] **먼저 S6 의 시험 설정을 끈다**: `python tools/never_hungry.py <mundi.db> off <6인>` — 배고픔은 회복을 ¼ 로 줄여 야영 시간과 성장 지표에 직접 영향.
+- [x] **먼저 S6 의 시험 설정을 끈다** (2026-10-04 끔, S6 참고): `python tools/never_hungry.py <mundi.db> off <6인>` — 배고픔은 회복을 ¼ 로 줄여 야영 시간과 성장 지표에 직접 영향.
   거점 덮어쓰기도 끈다(`anima animus revert --all`). 두 서버의 조건이 같아야 비교가 된다
 - 같은 파티를 tbaMUD 와 Mundi 에서 각 1시간: `anima stats` 의 성장(레벨/시간, D34)·사망·이탈. 차이는 원인과 함께 기록
 - 한국어 화면으로 사람이 둘러보기(조사·키워드 병기·정렬), 병기된 키워드만 보고 영어 명령을 쳐서 대상이 맞는지
