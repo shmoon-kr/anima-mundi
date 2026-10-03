@@ -26,6 +26,10 @@ pub struct Entry {
     pub long: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<Text>,
+    /// An object's action description (the base `action`). Translated with the rest of the zone; no
+    /// command shows it yet, but a zone file that has it must still load (zone 61 stopped the server).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub action: Option<String>,
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub exits: IndexMap<Dir, ExitEntry>,
     /// In the order of the base entry's extras.
@@ -89,5 +93,7 @@ mod tests {
         assert_eq!(entrance.name.as_deref(), Some("초보자 지역의 입구"));
         assert!(entrance.exits.contains_key(&Dir::North));
         assert!(ko.get("tba:186:mob:18601").and_then(|m| m.short.as_deref()).is_some());
+        // an object's action description is part of a zone file too (zone 61's sign)
+        assert!(ko.get("tba:61:obj:6121").and_then(|o| o.action.as_deref()).is_some());
     }
 }
