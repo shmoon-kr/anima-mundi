@@ -3,6 +3,7 @@
   python tools/translate_ko.py translate 186 30     # translate zones (resumable, skips what is up to date)
   python tools/translate_ko.py check 186 30         # list fields with no translation (missing-translation report)
   python tools/translate_ko.py translate combat     # the combat message file (messages/combat.yaml -> ko/combat.yaml)
+  python tools/translate_ko.py translate --review CLAUDE 56 40    # and after each zone, a sample review (below)
 
 - Source: third_party/tbamud/content/<zone>/{rooms,mobs,objects}.yaml (English, the base)
 - Output: third_party/tbamud/locales/ko/<zone>.yaml (same IDs and shape, only translated strings; D11, D17: no keywords)
@@ -18,6 +19,12 @@
   a bad and a good Korean line, in every prompt (a local model follows examples better than rules);
   `forbid` patterns and a term's `avoid` words, checked like Han leaks (a hit means a retry); and a
   translation memory: an English field already translated anywhere is reused, not sent again.
+- Per zone (the unit a review changes the next translation by): the glossary is read again before each
+  zone, so what the last review added is used; after it, with --review (a `claude` command), Claude
+  reviews a random sample (REVIEW_N fields): ok / awkward / wrong. The review is kept in
+  locales/ko/reviews/<zone>.yaml (the trend), its proposed terms and examples go into the glossary
+  marked `added_by` (a person confirms them in the daily report: tools/translate_report.py), and a
+  wrong rate above STOP_RATE stops the batch before the next zone, so bad work does not pile up overnight.
 - Combat messages: one entry per attack variant, its lines keyed `die.attacker` .. `god.room`. act() codes:
   $n (the attacker; 당신 when it is the reader) and $N (the victim) stay, a particle after one is a pair in braces
   (`$N{을/를}`, D23), $p (the weapon) stays, and the pronoun codes ($e $m $s, $E $M $S) become the name again.
@@ -26,7 +33,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import random
 import re
+import subprocess
 import sys
 import time
 import urllib.request
@@ -558,17 +567,125 @@ def check(zone):
     return missing
 
 
+REVIEW_N = 15
+STOP_RATE = 0.15
+REVIEWS = LOCALE / "reviews"
+
+REVIEW_SYSTEM = """You review Korean translations of a fantasy text MUD (tbaMUD rooms, mobs and objects). The
+narration is 해라체 (~다) and addresses the player as 당신. For each item, judge the Korean against the English:
+- "wrong": the meaning is wrong, something is left out or added, or a word is mistranslated (e.g. arm armour
+  "sleeves" as 팔찌, a waitress as 여종, "ever been in" as 들어본)
+- "awkward": right but unnatural or stiff Korean (e.g. 당신은 큰길을 본다 for "You see the main street.")
+- "ok"
+Then propose what would stop the same mistake in the next zones: glossary terms (en, ko, words to avoid) for
+mistranslated words, and examples (en, bad, good) for a style mistake. Only for mistakes you saw.
+Reply with JSON only: {"items": [{"n": 1, "verdict": "ok|awkward|wrong", "note": "..."}],
+"glossary": [{"en": "...", "ko": "...", "avoid": ["..."], "why": "..."}],
+"examples": [{"en": "...", "bad": "...", "good": "..."}]}"""
+
+
+def sample(zone, n=REVIEW_N):
+    """Random fields of a translated zone, English beside Korean (the same draw for a zone on a day)."""
+    src = load_zone(zone)
+    ko = {id_: flatten(v) for id_, v in (read_yaml(LOCALE / f"{zone}.yaml", {}) or {}).items()}
+    pairs = [(id_, k, v, ko[id_][k]) for id_, (_, f) in src.items() if id_ in ko for k, v in f.items() if k in ko[id_]]
+    rng = random.Random(f"{zone}:{time.strftime('%Y-%m-%d')}")
+    join = lambda v: " / ".join(v) if isinstance(v, list) else v
+    return [{"id": i, "field": k, "en": join(en), "ko": join(kv)}
+            for i, k, en, kv in rng.sample(pairs, min(n, len(pairs)))]
+
+
+def review(zone, reviewer, log):
+    """Claude's review of a sample of the zone, kept and applied. The wrong rate (None if no review)."""
+    items = sample(zone)
+    if not items:
+        return None
+    user = json.dumps([{"n": n, "en": it["en"], "ko": it["ko"]} for n, it in enumerate(items, 1)], ensure_ascii=False)
+    argv = [*reviewer.split(), "-p", "--output-format", "text", "--tools", "", "--no-session-persistence",
+            "--strict-mcp-config", "--system-prompt", REVIEW_SYSTEM]
+    try:
+        out = subprocess.run(argv, input=user, capture_output=True, text=True, timeout=600, check=True).stdout
+        verdict = json.loads(out[out.find("{"):out.rfind("}") + 1])
+    except (OSError, subprocess.SubprocessError, ValueError) as e:
+        log(f"zone {zone}: review failed ({type(e).__name__}: {str(e)[:200]})")
+        return None
+    by_n = {v.get("n"): v for v in verdict.get("items", [])}
+    for n, it in enumerate(items, 1):
+        it["verdict"], it["note"] = by_n.get(n, {}).get("verdict", "?"), by_n.get(n, {}).get("note", "")
+    wrong = sum(it["verdict"] == "wrong" for it in items) / len(items)
+    awkward = sum(it["verdict"] == "awkward" for it in items) / len(items)
+    added = apply_proposals(zone, verdict.get("glossary", []), verdict.get("examples", []))
+    REVIEWS.mkdir(exist_ok=True)
+    record = {"zone": str(zone), "date": time.strftime("%Y-%m-%d %H:%M"), "reviewer": "claude", "n": len(items),
+              "wrong_rate": round(wrong, 3), "awkward_rate": round(awkward, 3), "stopped": wrong > STOP_RATE,
+              "added_to_glossary": added, "sample": items}
+    (REVIEWS / f"{zone}.yaml").write_text(yaml.safe_dump(record, allow_unicode=True, sort_keys=False, width=120),
+                                          encoding="utf-8")
+    log(f"zone {zone}: review of {len(items)} fields: wrong {wrong:.0%}, awkward {awkward:.0%}, {len(added)} added to the glossary")
+    return wrong
+
+
+def apply_proposals(zone, terms, examples):
+    """A review's proposed terms and examples into the glossary, marked so a person confirms them. A term
+    already there is left alone. Forbidden patterns are not taken: a bad one would block good work.
+    Terms come in unenforced (strict false, avoid_proposed); confirming one makes it binding."""
+    g = yaml.safe_load(GLOSSARY.read_text(encoding="utf-8"))
+    have = {t["en"].lower() for t in g["terms"]}
+    seen = {e["en"].lower() for e in g.get("examples", [])}
+    mark = f"review {zone} {time.strftime('%Y-%m-%d')}"
+    text = GLOSSARY.read_text(encoding="utf-8").rstrip("\n") + "\n"
+    added = []
+    for t in terms:
+        if not t.get("en") or not t.get("ko") or t["en"].lower() in have:
+            continue
+        # guidance in the prompt until a person confirms it: not enforced (strict false), and its words
+        # to avoid only proposed (a review's "trail -> 오솔길, not 산길" would reject a mountain trail)
+        entry = {"en": t["en"], "ko": t["ko"], "kind": "review", "strict": False, "added_by": mark}
+        if t.get("avoid"):
+            entry["avoid_proposed"] = list(t["avoid"])
+        if t.get("why"):
+            entry["note"] = t["why"]
+        text += "  - " + json.dumps(entry, ensure_ascii=False) + "\n"
+        have.add(t["en"].lower())
+        added.append(f"term {t['en']} -> {t['ko']}")
+    fresh = [e for e in examples if e.get("en") and e.get("bad") and e.get("good") and e["en"].lower() not in seen]
+    if fresh:
+        block = "".join("  - " + json.dumps({"en": e["en"], "bad": e["bad"], "good": e["good"], "added_by": mark},
+                                            ensure_ascii=False) + "\n" for e in fresh)
+        i = text.find("\nforbid:")
+        if i >= 0:
+            text = text[:i].rstrip("\n") + "\n" + block + text[i:]
+            added += [f"example {e['en']}" for e in fresh]
+    yaml.safe_load(text)                      # still a glossary
+    GLOSSARY.write_text(text, encoding="utf-8")
+    return added
+
+
 def main():
-    cmd, zones = sys.argv[1], sys.argv[2:]
+    args = sys.argv[1:]
+    cmd = args.pop(0)
+    reviewer = None
+    if "--review" in args:
+        i = args.index("--review")
+        reviewer = args[i + 1]
+        del args[i:i + 2]
+    zones = args
     if cmd == "check":
         sys.exit(1 if any([check(z) for z in zones]) else 0)
-    conventions, terms = load_glossary()
 
     def log(msg):
         print(time.strftime("%H:%M:%S"), msg, flush=True)
+    global _RULES
     for z in zones:
+        conventions, terms = load_glossary()       # each zone starts with what the last review added
+        _RULES = None
         translate(z, conventions, terms, log)
         check(z)
+        if reviewer and z != "combat":
+            wrong = review(z, reviewer, log)
+            if wrong is not None and wrong > STOP_RATE:
+                log(f"zone {z}: {wrong:.0%} of the sample is wrong (> {STOP_RATE:.0%}): stopping before the next zone")
+                sys.exit(3)
 
 
 if __name__ == "__main__":

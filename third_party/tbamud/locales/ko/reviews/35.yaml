@@ -1,0 +1,88 @@
+zone: '35'
+date: 2026-10-03 18:13
+reviewer: claude
+n: 12
+wrong_rate: 0.167
+awkward_rate: 0.167
+stopped: true
+added_to_glossary:
+- term trail -> 오솔길
+- term bard -> 음유시인
+- example There is an especially dark part of the forest this way.
+- example You are on a north-south trail through the woods.
+sample:
+- id: tba:35:room:3511
+  field: description
+  en: You are on a north-south trail through the woods.  To the west, impassable mountains glare at you, and the thick woods
+    and undergrowth prevent any movement westward.
+  ko: 당신은 숲을 관통하는 북-남 방향의 산길 위에 있다. 서쪽으로는 넘을 수 없는 산들이 당신을 노려보고 있으며, 빽빽한 숲과 덤불이 서쪽 방향의 이동을 막고 있다.
+  verdict: wrong
+  note: '''trail through the woods''를 산길(mountain path)로 옮겨 원문에 없는 산의 의미가 더해졌다. 또 ''북-남 방향의''는 딱딱하다. 제안: ''당신은 숲을 남북으로 가로지르는
+    오솔길 위에 있다. 서쪽으로는 넘을 수 없는 산들이 당신을 노려보고 있고, 빽빽한 숲과 덤불 때문에 서쪽으로는 나아갈 수 없다.'''
+- id: tba:35:room:3584
+  field: exits.east.look
+  en: Back to along the trail.
+  ko: 길로 돌아가는 곳.
+  verdict: awkward
+  note: '원문은 ''Back along the trail''의 오기로 보인다(추정). ''길로 돌아가는 곳''은 어색한 명사구다. 제안: ''오솔길을 따라 되돌아가는 길이다.'''
+- id: tba:35:room:3514
+  field: exits.north.look
+  en: More forest.
+  ko: 숲이 더 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:35:room:3513
+  field: name
+  en: The Miden'nir
+  ko: 미덴니르
+  verdict: ok
+  note: 고유명사 음차로 적절하다. 다른 존에서도 같은 표기를 쓰는지 확인이 필요하다.
+- id: tba:35:room:3584
+  field: name
+  en: A Dead End Trail
+  ko: 막다른 길
+  verdict: ok
+  note: trail을 오솔길로 통일한다면 '막다른 오솔길'도 가능하다.
+- id: tba:35:obj:3507
+  field: short
+  en: an ornate dagger
+  ko: 화려한 단검
+  verdict: ok
+  note: '''장식이 화려한 단검''이 ornate의 뜻에 더 가깝지만 현재 번역도 허용 범위다.'
+- id: tba:35:room:3506
+  field: description
+  en: You are in a dark forest.  To the east, mountains block passage.  From here, only the lighter forest to the west or
+    south offer a way to travel.
+  ko: 당신은 어두운 숲속에 있다. 동쪽으로는 산이 길을 막고 있다. 여기서 이동할 수 있는 길은 서쪽이나 남쪽의 더 밝은 숲뿐이다.
+  verdict: ok
+  note: ''
+- id: tba:35:room:3556
+  field: exits.north.look
+  en: The tunnel heads north.
+  ko: 터널이 북쪽으로 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:35:obj:3504
+  field: long
+  en: A small spear lies here.
+  ko: 작은 창이 여기 놓여 있다.
+  verdict: ok
+  note: ''
+- id: tba:35:room:3583
+  field: exits.west.look
+  en: The tracks lead east.
+  ko: 발자국이 동쪽으로 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:35:room:3510
+  field: exits.east.look
+  en: There is an especially dark part of the forest this way.
+  ko: 이쪽으로는 숲의 특히 어두운 부분이 있다.
+  verdict: awkward
+  note: '''숲의 특히 어두운 부분이 있다''는 영어 구조를 그대로 옮긴 직역이다. 제안: ''이쪽으로 가면 숲이 유난히 어두워지는 곳이 나온다.'''
+- id: tba:35:mob:3506
+  field: short
+  en: the bard
+  ko: 시인
+  verdict: wrong
+  note: 'bard는 판타지 직업인 음유시인이다. ''시인''(poet)은 오역이다. 제안: ''음유시인'''
