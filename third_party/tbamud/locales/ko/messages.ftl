@@ -724,3 +724,27 @@ score-state-poisoned = 당신은 중독되었다!
 score-state-charmed = 당신은 매혹되었다!
 score-state-armored = 당신은 보호받고 있다고 느낀다.
 score-state-infravision = 당신의 눈이 붉게 빛나고 있다.
+
+# Things the engine makes (tables/world.yaml made): corpses and coins
+made-corpse = { $who }의 시체
+made-corpse-long = { $who }의 시체가 여기 놓여 있다.
+made-coin-long = 초라한 금화 한 닢이 여기 놓여 있다.
+made-money-long = { $what }{ JOSA($what, "이/가") } 여기 놓여 있다.
+made-money-coin = 금화 한 닢
+made-money-0 = 금화 한 닢
+made-money-1 = 금화 몇 닢
+made-money-2 = 금화 한 줌
+made-money-3 = 자그마한 금화 더미
+made-money-4 = 작은 금화 더미
+made-money-5 = 금화 더미
+made-money-6 = 큰 금화 더미
+made-money-7 = 커다란 금화 무더기
+made-money-8 = 거대한 금화 언덕
+made-money-9 = 엄청난 금화 언덕
+made-money-10 = 작은 금화 산
+made-money-11 = 금화 산
+made-money-12 = 거대한 금화 산
+made-money-13 = 엄청난 금화 산
+made-money-more = 어마어마하게 거대한 금화 산
+exit-closed = ({ $exit })
+exit-closed-keyword = { $exit }닫힘

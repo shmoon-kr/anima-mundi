@@ -25,6 +25,7 @@ impl Sim {
         let serial = self.next_serial();
         let key = self.objs.insert(Obj {
             proto: Some(proto.to_string()),
+            made: None,
             serial,
             kind: p.kind,
             keywords: p.keywords.clone(),
@@ -60,6 +61,7 @@ impl Sim {
         let serial = self.next_serial();
         self.objs.insert(Obj {
             proto: None,
+            made: Some(format!("money:{amount}")),
             serial,
             kind: ItemType::Money,
             keywords,
@@ -77,10 +79,11 @@ impl Sim {
         })
     }
 
-    /// An object's ID in events: `<prototype>/<serial>`, or `made/<serial>` for corpses and money.
+    /// An object's ID in events: `<prototype>/<serial>`; for made things what they are, as
+    /// `corpse:tba:30:mob:3062/<serial>` or `money:12/<serial>`.
     pub(crate) fn obj_id(&self, k: Key) -> Option<String> {
         let o = self.objs.get(k)?;
-        Some(format!("{}/{}", o.proto.as_deref().unwrap_or("made"), o.serial))
+        Some(format!("{}/{}", o.proto.as_deref().or(o.made.as_deref()).unwrap_or("made"), o.serial))
     }
 
     /// Takes an object out of wherever it is (it stays in the world, nowhere).

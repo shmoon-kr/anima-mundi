@@ -719,3 +719,5 @@ score-state-poisoned = You are poisoned!
 score-state-charmed = You have been charmed!
 score-state-armored = You feel protected.
 score-state-infravision = Your eyes are glowing red.
+exit-closed = ({ $exit })
+exit-closed-keyword = ({ $exit })

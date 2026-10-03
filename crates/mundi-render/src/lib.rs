@@ -95,6 +95,9 @@ pub struct Renderer {
     lines_ko: HashMap<String, HashMap<String, String>>,
     /// Spells' wear-off lines from the spell table (English).
     wearoffs: HashMap<i32, String>,
+    /// The engine's made things' English names (tables/world.yaml `made`), to find a corpse's owner
+    /// in its English name and a pile's size.
+    made: Option<mundi_content::tables::Made>,
 }
 
 /// Where a name stands in a sentence (D18): `Target` is a place a command can name it from.
@@ -136,14 +139,14 @@ impl Renderer {
         let combat_ko = ko_combat.exists().then(|| mundi_content::load_messages(&ko_combat)).transpose().map_err(|e| e.to_string())?;
         let ko_lines = locales.join("ko/triggers.yaml");
         let lines_ko = ko_lines.exists().then(|| mundi_content::load_trigger_lines(&ko_lines)).transpose().map_err(|e| e.to_string())?.unwrap_or_default();
-        let wearoffs = locales
+        let tables = locales
             .parent()
             .map(|p| p.join("tables"))
             .filter(|p| p.join("spells.yaml").exists())
-            .and_then(|p| mundi_content::load_tables(&p).ok())
-            .map(|t| t.spells.into_iter().filter_map(|s| Some((s.number, s.wearoff?))).collect())
-            .unwrap_or_default();
-        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, combat_ko, lines_ko, wearoffs })
+            .and_then(|p| mundi_content::load_tables(&p).ok());
+        let made = tables.as_ref().map(|t| t.world.made.clone());
+        let wearoffs = tables.map(|t| t.spells.into_iter().filter_map(|s| Some((s.number, s.wearoff?))).collect()).unwrap_or_default();
+        Ok(Renderer { en: bundle("en", &locales.join("en"))?, ko, ko_text, beings: RwLock::new(beings), finals, obj_keywords, combat, combat_ko, lines_ko, wearoffs, made })
     }
 
     /// A player as the world will name them, with what their account says.
@@ -677,7 +680,10 @@ impl Renderer {
                     let word = self.msg(v, &format!("exit-{}", e.dir), &[]);
                     if v.keywords == KeywordMode::Off { word } else { format!("{word}({typed})") }
                 };
-                if e.closed { format!("{{red}}({shown}){{/red}} ") } else { format!("{shown} ") }
+                // tbaMUD puts a closed exit in parentheses; Korean, whose exits already carry the
+                // keyword in parentheses, says 닫힘 instead (exit-closed-keyword).
+                let closed = if v.keywords == KeywordMode::Off { "exit-closed" } else { "exit-closed-keyword" };
+                if e.closed { format!("{{red}}{}{{/red}} ", self.msg(v, closed, &[("exit", shown)])) } else { format!("{shown} ") }
             })
             .collect();
         let exits = if exits.is_empty() { self.msg(v, "exits-none", &[]) } else { exits };
@@ -882,12 +888,39 @@ impl Renderer {
 
     /// An object named in a sentence: its short description, Korean from the overlay.
     fn thing(&self, v: Viewer, english: &str, id: &Option<String>) -> String {
+        if let Some(name) = self.made_name(v, english, id.as_deref(), false) {
+            return name;
+        }
         if v.lang == Lang::Ko {
             if let Some(short) = id.as_deref().and_then(|i| self.ko_text.get(proto(i))).and_then(|t| t.short.clone()) {
                 return short;
             }
         }
         escape(english)
+    }
+
+    /// A thing the engine made (a corpse, coins) in the reader's language: its ID says what it is
+    /// (`corpse:<whose>`, `money:<coins>`); English keeps the engine's name. `long`: its room line.
+    fn made_name(&self, v: Viewer, english: &str, id: Option<&str>, long: bool) -> Option<String> {
+        if v.lang == Lang::En {
+            return None;
+        }
+        let kind = proto(id?);
+        let made = self.made.as_ref()?;
+        if let Some(whose) = kind.strip_prefix("corpse:") {
+            // The dead one's name: Korean for a mob with one, else as the English name has it.
+            let template = if long { &made.corpse_long } else { &made.corpse_short };
+            let (pre, post) = template.split_once("%s")?;
+            let in_english = english.strip_prefix(pre).or_else(|| english.strip_prefix(&cap(pre)))?.strip_suffix(post)?;
+            let who = self.ko_text.get(whose).and_then(|t| t.short.clone()).unwrap_or_else(|| escape(in_english));
+            return Some(self.msg(v, if long { "made-corpse-long" } else { "made-corpse" }, &[("who", who)]));
+        }
+        let coins: i64 = kind.strip_prefix("money:")?.parse().ok()?;
+        let size = if coins == 1 { "coin".to_string() } else {
+            made.money.iter().position(|m| coins <= m.up_to).map_or("more".to_string(), |i| i.to_string())
+        };
+        let name = self.msg(v, &format!("made-money-{size}"), &[]);
+        Some(if long { self.msg(v, if coins == 1 { "made-coin-long" } else { "made-money-long" }, &[("what", name)]) } else { name })
     }
 
     /// An object in an inventory or equipment list: a place a command names it from (D18).
@@ -965,10 +998,12 @@ impl Renderer {
     /// with the keyword where D18 puts it), the count, and tbaMUD's tags.
     fn object_line(&self, v: Viewer, o: &mundi_protocol::RoomObject, keyword: Option<&str>) -> String {
         let tr = if v.lang == Lang::Ko { o.id.as_deref().and_then(|id| self.ko_text.get(proto(id))) } else { None };
-        let mut line = tr.and_then(|t| t.long.clone()).unwrap_or_else(|| o.text.clone());
+        let made = self.made_name(v, &o.text, o.id.as_deref(), true);
+        let made_short = made.as_ref().and_then(|_| self.made_name(v, &o.text, o.id.as_deref(), false));
+        let mut line = made.clone().or_else(|| tr.and_then(|t| t.long.clone())).unwrap_or_else(|| o.text.clone());
         if v.lang == Lang::Ko && v.keywords != KeywordMode::Off {
             if let Some(kw) = keyword {
-                line = match tr.and_then(|t| t.short.as_deref()) {
+                line = match made_short.as_deref().or(tr.and_then(|t| t.short.as_deref())) {
                     Some(short) if line.contains(short) => line.replacen(short, &format!("{short}({kw})"), 1),
                     _ => format!("{line} ({kw})"),
                 };

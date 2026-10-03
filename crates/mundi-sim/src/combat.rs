@@ -505,8 +505,10 @@ impl Sim {
         let cfg = &self.tables.world.config;
         let timer = if is_mob { cfg.npc_corpse_ticks } else { cfg.pc_corpse_ticks };
         let serial = self.next_serial();
+        let whose = self.id_of(k).map(|id| id.split('/').next().unwrap_or_default().to_string()).unwrap_or_default();
         let corpse = self.objs.insert(Obj {
             proto: None,
+            made: Some(format!("corpse:{whose}")),
             serial,
             kind: ItemType::Container,
             keywords: vec!["corpse".into()],

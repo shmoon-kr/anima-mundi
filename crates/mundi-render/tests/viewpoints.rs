@@ -144,7 +144,7 @@ fn a_korean_room_with_keywords_where_they_can_be_typed() {
     let lines: Vec<&str> = text.lines().collect();
     assert_eq!(lines[0], "초보자 지역의 입구");
     assert!(lines[1].starts_with("아아... 초보자 지역의 입구!"), "{}", lines[1]);
-    assert_eq!(lines[2], "[ 출구: 북(n) (서(w)) ]");
+    assert_eq!(lines[2], "[ 출구: 북(n) 서(w)닫힘 ]", "Korean says closed: its exits already have parentheses");
     assert_eq!(lines[3], "크고 추한 구덩이 짐승(beast)이 여기 서서 당신을 주시하고 있다.");
     assert_eq!(lines[4], "Ana가 여기 서 있다.");
 
@@ -277,4 +277,32 @@ fn content_lines_in_korean_by_their_key() {
     };
     assert!(see(&r, &say("kit.3"), KO).ends_with("'갑옷 없이는 멀리 못 가, Ana.'"), "{}", see(&r, &say("kit.3"), KO));
     assert!(see(&r, &say("kit.99"), KO).ends_with("'you won't get far without some body armor Ana.'"));
+}
+
+#[test]
+fn corpses_and_coins_are_named_in_the_readers_language() {
+    use mundi_protocol::RoomObject;
+    let r = renderer();
+    let obj = |id: &str, text: &str| RoomObject { id: Some(id.into()), text: text.into(), count: 1, keywords: vec!["corpse".into()], flags: vec![] };
+    let room = Event::Room(RoomView {
+        id: None,
+        name: "A Nexus".into(),
+        desc: String::new(),
+        exits: vec![],
+        objects: vec![
+            obj("corpse:tba:186:mob:18601/9", "The corpse of the pit beast is lying here."),
+            obj("corpse:pc:ana/10", "The corpse of Ana is lying here."),
+            obj("money:15/11", "A handful of gold coins is lying here."),
+        ],
+        occupants: vec![],
+        dark: false,
+    });
+    let en = line(&r, &room);
+    assert!(en.contains("The corpse of the pit beast is lying here."), "English keeps the engine's name: {en}");
+    let ko = see(&r, &room, Viewer { lang: Lang::Ko, keywords: KeywordMode::Off });
+    assert!(ko.contains("구덩이 짐승의 시체가 여기 놓여 있다."), "{ko}");
+    assert!(ko.contains("Ana의 시체가 여기 놓여 있다."), "{ko}");
+    assert!(ko.contains("금화 한 줌이 여기 놓여 있다."), "{ko}");
+    let got = Event::Got { text: "the corpse of the pit beast".into(), id: Some("corpse:tba:186:mob:18601/9".into()), from: None, from_id: None };
+    assert_eq!(see(&r, &got, KO), "구덩이 짐승의 시체를 집었다.");
 }

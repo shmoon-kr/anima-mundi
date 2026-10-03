@@ -206,6 +206,9 @@ pub(crate) enum Place {
 pub(crate) struct Obj {
     /// Its prototype; None for made things (corpses, money).
     pub proto: Option<Id>,
+    /// What a made thing is, for its ID and so a renderer can name it in any language:
+    /// `corpse:<whose, by prototype or player ID>` or `money:<coins>`.
+    pub made: Option<String>,
     pub serial: u64,
     pub kind: ItemType,
     pub keywords: Vec<String>,
