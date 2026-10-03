@@ -32,6 +32,9 @@ pub struct Config {
     pub data: PathBuf,
     pub seed: u64,
     pub hour: u32,
+    /// Pulses run this many times faster than tbaMUD's 10 a second: for bots that test the rules
+    /// (MECHANICS §1.1). The rules are counted in pulses, so nothing else changes. 1 is real time.
+    pub speed: u32,
 }
 
 /// Places are saved this often, besides on quit and at shutdown.
@@ -90,7 +93,7 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
     let (login_tx, mut logins) = mpsc::unbounded_channel::<LoginResult>();
     let mut conns: HashMap<ConnId, Conn> = HashMap::new();
     let mut by_char: HashMap<String, ConnId> = HashMap::new();
-    let mut pulse = tokio::time::interval(Duration::from_millis(1000 / PULSES_PER_SEC));
+    let mut pulse = tokio::time::interval(Duration::from_micros(1_000_000 / PULSES_PER_SEC / u64::from(cfg.speed.max(1))));
     let mut shutdown = shutdown;
 
     loop {

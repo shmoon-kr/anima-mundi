@@ -1,7 +1,7 @@
 //! `mundi-server`: wires the crates together. The only crate that knows all of them.
 //!
 //! Usage: mundi-server [--addr 127.0.0.1:4000] [--data data] [--content third_party/tbamud/content]
-//!                     [--locales third_party/tbamud/locales] [--tables third_party/tbamud/tables] [--seed N] [--hour H]
+//!                     [--locales third_party/tbamud/locales] [--tables third_party/tbamud/tables] [--seed N] [--hour H] [--speed N]
 //! Clients speak WebSocket: one JSON message per frame (`{"type":"login",...}`, `{"type":"command","text":"look"}`),
 //! and receive one envelope per frame. Ctrl-C saves and stops.
 
@@ -20,6 +20,7 @@ async fn main() -> ExitCode {
         data: PathBuf::from("data"),
         seed: 1,
         hour: 12,
+        speed: 1,
     };
     let args: Vec<String> = std::env::args().skip(1).collect();
     for pair in args.chunks(2) {
@@ -47,6 +48,7 @@ async fn main() -> ExitCode {
             }
             "--seed" => value.parse().map(|s| cfg.seed = s).is_ok(),
             "--hour" => value.parse().map(|h| cfg.hour = h).is_ok(),
+            "--speed" => value.parse().map(|n: u32| cfg.speed = n.max(1)).is_ok(),
             _ => false,
         };
         if !ok {

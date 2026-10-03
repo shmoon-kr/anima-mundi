@@ -40,6 +40,7 @@ async fn a_person_with_a_telnet_client() {
         data: tmp.path().join("data"),
         seed: 7,
         hour: 12,
+        speed: 1,
     };
     let (stop, shutdown) = oneshot::channel();
     let (ready, bound) = oneshot::channel();

@@ -30,6 +30,7 @@ async fn start(content: &Path, data: &Path) -> Server {
         data: data.to_path_buf(),
         seed: 7,
         hour: 12,
+        speed: 1,
     };
     let (stop, shutdown) = oneshot::channel();
     let (ready, bound) = oneshot::channel();
