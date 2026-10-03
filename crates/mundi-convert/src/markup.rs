@@ -1,7 +1,8 @@
 //! tbaMUD colour codes to the content format's markup (D20).
 //!
 //! tbaMUD switches colours on and off inline: `@y` turns yellow on until `@n` (or another colour),
-//! `@+` bold, `@_` underline, `@-` blink, `@=` reverse, `@[fRGB]` an xterm colour (channels 0..5), `@@` a literal `@`
+//! `@+` bold, `@_` underline, `@-` blink, `@=` reverse, `@[fRGB]` an xterm colour (channels 0..5), `@*` a literal `@`
+//! and `@@` shown as `@@` (it only stops the second `@` from starting a code)
 //! (modify.c parse_at, protocol.c ProcessOutput). Unknown codes show nothing.
 //! The markup is paired: `{yellow}...{/yellow}`. A new colour closes the open one first; `@n` closes
 //! everything; whatever is open at the end of a paragraph is closed there and opened again at the start
@@ -52,7 +53,11 @@ fn convert(text: &str, open: &mut Open) -> String {
             '}' => out.push_str("}}"),
             '@' => match chars.next() {
                 None => out.push('@'),
-                Some('@') | Some('*') => out.push('@'),
+                // parse_at (modify.c), run on world text at load (db.c fread_string), leaves "@@" as two
+                // characters and the client shows both (checked live 2026-10-03: say "a@@b" -> 'a@@b');
+                // "@*" is a single "@" (protocol.c)
+                Some('@') => out.push_str("@@"),
+                Some('*') => out.push('@'),
                 Some('n') => {
                     let mut o = std::mem::take(open);
                     o.close_all(&mut out);
@@ -142,7 +147,7 @@ mod tests {
                    "\"{bright_red}Tell guide help{/bright_red}{yellow}\" for assistance.{/yellow}");
         assert_eq!(markup("@rred without an end"), "{red}red without an end{/red}");
         assert_eq!(markup("@+@ybold yellow@n plain"), "{bold}{yellow}bold yellow{/yellow}{/bold} plain");
-        assert_eq!(markup("mail@@host and {braces}"), "mail@host and {{braces}}");
+        assert_eq!(markup("mail@@host @*x and {braces}"), "mail@@host @x and {{braces}}");
         assert_eq!(markup("@[f511]rose@n @qunknown"), "{x203}rose{/x203} unknown");      // 16 + 36*5 + 6*1 + 1
     }
 
