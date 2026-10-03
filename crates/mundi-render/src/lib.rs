@@ -1041,7 +1041,12 @@ impl Renderer {
             Position::Sitting => "occupant-sitting",
             Position::Resting => "occupant-resting",
             Position::Sleeping => "occupant-sleeping",
-            Position::Fighting => "occupant-fighting",
+            Position::Fighting => match o.fighting.as_deref() {
+                None => "occupant-fighting-air",
+                Some(mundi_protocol::SELF) => "occupant-fighting-you",
+                Some("") => "occupant-fighting-left",
+                Some(_) => "occupant-fighting",
+            },
             Position::Stunned => "occupant-stunned",
             Position::Incapacitated => "occupant-incapacitated",
             Position::MortallyWounded => "occupant-mortally-wounded",
@@ -1059,7 +1064,9 @@ impl Renderer {
                 name = format!("{name} {}", self.msg(v, &format!("flag-{flag}"), &[]));
             }
         }
-        self.msg(v, id, &[("who", name)])
+        let foe = o.fighting.as_deref().map(|f| self.name(v, f, o.fighting_id.as_deref(), Spot::Prose)).unwrap_or_default();
+        // The name first, its first letter up (act.informative.c:345 UPPER(*short_descr)).
+        cap(&self.msg(v, id, &[("who", name), ("foe", foe)]))
     }
 
     /// Fills the screen-line fields the simulation leaves empty (D22): plain English.
@@ -1313,6 +1320,34 @@ fn sgr(tag: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn korean_messages_take_particles_after_values_through_josa() {
+        // D23: a value's particle depends on how it ends (155 is 백오십오: 를), so it is never
+        // written in the message itself ("{ $n }을" was wrong for 155).
+        let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud/locales/ko");
+        let varying = ["으로", "이", "가", "은", "는", "을", "를", "과", "와", "로", "아", "야"];
+        for entry in std::fs::read_dir(&root).unwrap() {
+            let path = entry.unwrap().path();
+            if path.extension().is_none_or(|e| e != "ftl") {
+                continue;
+            }
+            for (i, line) in std::fs::read_to_string(&path).unwrap().lines().enumerate() {
+                for (at, _) in line.match_indices(" }") {
+                    let after = &line[at + 2..];
+                    let Some(p) = varying.iter().find(|p| after.starts_with(*p)) else { continue };
+                    let next = after[p.len()..].chars().next();
+                    let is_value = line[..at].rfind("{ $").is_some_and(|open| !line[open..at].contains('}'));
+                    assert!(
+                        !is_value || next.is_some_and(|c| ('가'..='힣').contains(&c)),
+                        "{}:{}: a particle written after a value: {line}",
+                        path.display(),
+                        i + 1
+                    );
+                }
+            }
+        }
+    }
 
     #[test]
     fn every_korean_combat_line_renders_clean() {

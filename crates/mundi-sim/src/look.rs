@@ -1,7 +1,7 @@
 //! Looking (MECHANICS §3.2-3.4, §3.7).
 
 use mundi_content::names::ObjFlag;
-use mundi_protocol::RoomObject;
+use mundi_protocol::{RoomObject, SELF};
 
 use crate::*;
 
@@ -41,14 +41,29 @@ impl Sim {
             .filter(|k| **k != key && self.can_see(key, **k))
             .filter_map(|k| self.chars.get(*k).map(|c| (*k, c)))
             .filter(|(_, c)| !c.mob.as_ref().is_some_and(|m| m.long.starts_with('.')))
-            .map(|(k, c)| Occupant {
+            .map(|(k, c)| {
+                // act.informative.c:372-382: fighting YOU, fighting <whom as we see them>, or
+                // someone who has already left
+                let foe = c.fighting.map(|f| {
+                    if f == key {
+                        (SELF.to_string(), None)
+                    } else if self.chars.get(f).is_some_and(|x| x.room == room) {
+                        self.seen_name(key, f)
+                    } else {
+                        (String::new(), None)
+                    }
+                });
+                (k, c, foe)
+            })
+            .map(|(k, c, foe)| Occupant {
                 id: self.id_of(k),
                 text: String::new(),
                 name: c.name.clone(),
                 // A mob in its default position shows its own line (MECHANICS §3.4).
                 long: c.mob.as_ref().filter(|m| c.position == m.default_position && !m.long.is_empty()).map(|m| m.long.clone()),
                 position: c.position,
-                fighting: None,
+                fighting: foe.as_ref().map(|f| f.0.clone()),
+                fighting_id: foe.and_then(|f| f.1),
                 flags: [
                     (c.has(Affect::Invisible), "invisible"),
                     (c.has(Affect::Hide), "hidden"),

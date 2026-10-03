@@ -450,8 +450,13 @@ pub struct Occupant {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub long: Option<String>,
     pub position: Position,
+    /// Whom they fight (PROTOCOL.md): `self` for the reader, else the opponent as the reader sees
+    /// them; empty when the opponent is no longer here; None when not fighting anyone.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub fighting: Option<String>,
+    /// The opponent's ID, so a renderer can name them in its language. Mundi addition.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub fighting_id: Option<String>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub flags: Vec<String>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]

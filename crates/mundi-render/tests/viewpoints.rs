@@ -30,6 +30,7 @@ fn person(name: &str) -> Occupant {
         long: None,
         position: Position::Standing,
         fighting: None,
+        fighting_id: None,
         flags: vec![],
         hints: vec![],
         keywords: vec![],
@@ -79,6 +80,7 @@ fn a_room_and_its_screen_lines() {
             long: None,
             position: Position::Standing,
             fighting: None,
+            fighting_id: None,
             flags: vec!["linkless".into()],
             hints: vec![],
             keywords: vec![],
@@ -305,4 +307,42 @@ fn corpses_and_coins_are_named_in_the_readers_language() {
     assert!(ko.contains("금화 한 줌이 여기 놓여 있다."), "{ko}");
     let got = Event::Got { text: "the corpse of the pit beast".into(), id: Some("corpse:tba:186:mob:18601/9".into()), from: None, from_id: None };
     assert_eq!(see(&r, &got, KO), "구덩이 짐승의 시체를 집었다.");
+}
+
+#[test]
+fn whom_they_fight_and_numbers_take_their_particles() {
+    let r = renderer();
+    r.register_player("Vallen", Sex::Male, None);
+    let fighting = |foe: Option<&str>, foe_id: Option<&str>| Event::Room(RoomView {
+        id: None,
+        name: "A Nexus".into(),
+        desc: String::new(),
+        exits: vec![],
+        objects: vec![],
+        occupants: vec![Occupant {
+            position: Position::Fighting,
+            fighting: foe.map(Into::into),
+            fighting_id: foe_id.map(Into::into),
+            ..mob("tba:186:mob:18601/1", "unused")
+        }],
+        dark: false,
+    });
+    let pick = |e: &Event, v: Viewer| see(&r, e, v).lines().last().unwrap().to_string();
+    let ko = Viewer { lang: Lang::Ko, keywords: KeywordMode::Off };
+    // act.informative.c:372-382, with whom: the reader, a name, no one left, no one at all
+    let mut m = fighting(Some(SELF), None);
+    if let Event::Room(v) = &mut m { v.occupants[0].long = None; v.occupants[0].name = "the pit beast".into(); }
+    assert_eq!(pick(&m, Viewer::default()), "The pit beast is here, fighting YOU!");
+    assert_eq!(pick(&m, ko), "구덩이 짐승이 여기서 당신과 싸우고 있다!");
+    let mut m = fighting(Some("Vallen"), Some("pc:vallen"));
+    if let Event::Room(v) = &mut m { v.occupants[0].long = None; v.occupants[0].name = "the pit beast".into(); }
+    assert_eq!(pick(&m, Viewer::default()), "The pit beast is here, fighting Vallen!");
+    assert_eq!(pick(&m, ko), "구덩이 짐승이 여기서 Vallen과 싸우고 있다!");
+    let mut m = fighting(None, None);
+    if let Event::Room(v) = &mut m { v.occupants[0].long = None; v.occupants[0].name = "the pit beast".into(); }
+    assert_eq!(pick(&m, Viewer::default()), "The pit beast is here struggling with thin air.");
+    // a number's particle by how it is read: 155 is 백오십오 (를), 150 백오십 (을)
+    let exp = |n: i64| Event::ExpGain { amount: n, kind: "solo".into() };
+    assert_eq!(see(&r, &exp(155), ko), "경험치 155를 얻었다.");
+    assert_eq!(see(&r, &exp(150), ko), "경험치 150을 얻었다.");
 }
