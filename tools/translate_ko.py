@@ -4,6 +4,7 @@
   python tools/translate_ko.py check 186 30         # list fields with no translation (missing-translation report)
   python tools/translate_ko.py translate combat     # the combat message file (messages/combat.yaml -> ko/combat.yaml)
   python tools/translate_ko.py translate --review CLAUDE 56 40    # and after each zone, a sample review (below)
+  python tools/translate_ko.py translate --review CLAUDE --queue  # zones from locales/ko/queue.yaml, refilled when empty
 
 - Source: third_party/tbamud/content/<zone>/{rooms,mobs,objects}.yaml (English, the base)
 - Output: third_party/tbamud/locales/ko/<zone>.yaml (same IDs and shape, only translated strings; D11, D17: no keywords)
@@ -704,10 +705,53 @@ def apply_proposals(zone, terms, examples):
     return added
 
 
+QUEUE = LOCALE / "queue.yaml"
+REFILL = 5
+
+
+def untranslated_zones():
+    """Zones worth translating that are not done yet: content and a level range (not builders', gods' or
+    examples'), lowest levels first; a zone with missing fields counts as not done."""
+    out = []
+    for d in sorted(CONTENT.iterdir(), key=lambda d: d.name):
+        if not d.name.isdigit() or not (d / "zone.yaml").exists():
+            continue
+        lv = (yaml.safe_load((d / "zone.yaml").read_text(encoding="utf-8")) or {}).get("levels") or {}
+        if not lv.get("max"):
+            continue
+        src = load_zone(d.name)
+        if not any(f for _, f in src.values()):
+            continue
+        tr = {i: flatten(v) for i, v in (read_yaml(LOCALE / f"{d.name}.yaml", {}) or {}).items()}
+        if all(k in tr.get(i, {}) for i, (_, f) in src.items() for k in f):
+            continue
+        out.append((lv.get("min", 0), lv.get("max", 0), int(d.name), d.name))
+    return [z for *_, z in sorted(out)]
+
+
+def next_from_queue(log):
+    """The next zone of the queue (taken off it); an empty queue is filled first. None: nothing left."""
+    q = (read_yaml(QUEUE, {}) or {}).get("zones", [])
+    if not q:
+        q = untranslated_zones()[:REFILL]
+        if q:
+            log(f"queue empty: filled with {q}")
+    if not q:
+        return None
+    zone, rest = str(q[0]), q[1:]
+    QUEUE.write_text("# Zones to translate next, first first (tools/translate_ko.py --queue takes one at a time and\n"
+                     "# fills it when empty). Edit freely: it is read again before each zone.\n"
+                     + yaml.safe_dump({"zones": rest}, allow_unicode=True), encoding="utf-8")
+    return zone
+
+
 def main():
     args = sys.argv[1:]
     cmd = args.pop(0)
     reviewer = None
+    queue = "--queue" in args
+    if queue:
+        args.remove("--queue")
     if "--review" in args:
         i = args.index("--review")
         reviewer = args[i + 1]
@@ -719,7 +763,16 @@ def main():
     def log(msg):
         print(time.strftime("%H:%M:%S"), msg, flush=True)
     global _RULES
-    for z in zones:
+
+    def work():
+        yield from zones
+        while queue:
+            z = next_from_queue(log)
+            if z is None:
+                log("nothing left to translate")
+                return
+            yield z
+    for z in work():
         conventions, terms = load_glossary()       # each zone starts with what the last review added
         _RULES = None
         translate(z, conventions, terms, log)
