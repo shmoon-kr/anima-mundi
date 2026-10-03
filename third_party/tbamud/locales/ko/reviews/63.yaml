@@ -1,0 +1,133 @@
+zone: '63'
+date: 2026-10-04 01:02
+reviewer: claude
+n: 15
+wrong_rate: 0.267
+awkward_rate: 0.333
+stopped: true
+added_to_glossary:
+- term Ethereal Web -> 에테르 거미줄
+- term orc -> 오크
+- term dishevelled -> 꾀죄죄한, 행색이 흐트러진
+- term veteran (warrior) -> 노련한, 역전의
+- example There is evidence of webbing here, but it is of a finer quality.
+- example A trap has been carefully crafted to catch unwary travellers.
+- example 'Get back to work, maggots!'
+fixed:
+- tba:63:room:6311 description
+- tba:63:mob:6311 description
+- tba:63:room:6328 name
+- tba:63:room:6334 description
+- tba:63:room:6335 name
+- tba:63:mob:6304 long
+- tba:63:room:6324 description
+- tba:63:room:6380 description
+- tba:63:room:6365 name
+sample:
+- id: tba:63:room:6311
+  field: description
+  en: You feel that you can rest here safely.  There is evidence of webbing here, but it is of a finer quality.
+  ko: 여기서는 안전하게 쉴 수 있을 것 같다. 거미줄의 흔적이 있지만, 더 고품질인 것 같다.
+  verdict: awkward
+  note: '''더 고품질인 것 같다''는 상품 설명 같은 번역투다. ''of a finer quality''는 거미줄이 더 곱고 정교하다는 뜻이다.'
+  fix: 여기서는 안전하게 쉴 수 있을 것 같다. 거미줄의 흔적이 있지만, 이곳의 것은 더 곱고 정교하다.
+- id: tba:63:room:6327
+  field: description
+  en: This strand is weightier, more sturdy.  It shimmers as you step on it.  You are definitely not in the Midgaardian realms
+    anymore.  Just where you are you can't tell.  It feels like you're moving through ether.  You can still get back down
+    to more surer lands.
+  ko: 이 가닥은 더 무겁고 단단하다. 당신이 밟자 반짝인다. 분명 더 이상 미드가르드의 영역에 있지 않다. 정확히 어디에 있는지 알 수 없다. 에테르를 통과하며 이동하는 것 같다. 그래도 더 단단한 땅으로 내려갈
+    수는 있다.
+  verdict: ok
+  note: 의미가 정확하고 문장도 자연스럽다.
+- id: tba:63:mob:6311
+  field: description
+  en: A dishevelled veteran warrior in disguise is what he is, but he means well.
+  ko: 그는 위장한 거친 외모의 베테랑 전사지만, 마음은 선하다.
+  verdict: wrong
+  note: dishevelled는 '거친 외모'가 아니라 행색이 흐트러지고 꾀죄죄하다는 뜻이다. '베테랑'은 외래어라 세계관에 맞지 않는다. 'means well'은 '나쁜 뜻은 없다'에 가깝다.
+  fix: 그는 변장한 꾀죄죄한 차림의 노련한 전사지만, 나쁜 뜻은 없다.
+- id: tba:63:room:6328
+  field: name
+  en: The Entrance Of The Ethereal Web
+  ko: 에테리얼 거미줄의 입구
+  verdict: awkward
+  note: '''에테리얼''은 형용사를 그대로 음차한 표현이라 어색하다. 2번의 ''에테르''와도 맞지 않는다.'
+  fix: 에테르 거미줄의 입구
+- id: tba:63:room:6334
+  field: description
+  en: This cloud is rather thick in consistency.  You suddenly realize this is not a typical cloud, but it might be the nest
+    of an aerial creature.
+  ko: 이 구름은 질감이 꽤 단단하다. 문득 이것이 일반적인 구름이 아니라, 공중 생물들의 둥지일지도 모른다는 생각이 든다.
+  verdict: wrong
+  note: '''thick in consistency''는 짙고 빽빽하다는 뜻이지 ''단단하다''가 아니다. 원문은 단수 ''an aerial creature''인데 ''생물들''로 복수가 덧붙었다.'
+  fix: 이 구름은 꽤 짙고 빽빽하다. 문득 이것이 평범한 구름이 아니라, 하늘을 나는 어떤 생물의 둥지일지도 모른다는 생각이 든다.
+- id: tba:63:mob:6313
+  field: short
+  en: the guardian
+  ko: 수호자
+  verdict: ok
+  note: 정확하다.
+- id: tba:63:room:6335
+  field: name
+  en: A Link In The Ethereal Web
+  ko: 이계의 거미줄의 한 고리
+  verdict: wrong
+  note: Ethereal을 '이계의'(다른 세계)로 옮겨 뜻이 달라졌다. 4번의 '에테리얼'과 같은 고유 지명인데 표기도 서로 다르다. '~의 ~의'도 겹친다.
+  fix: 에테르 거미줄의 한 고리
+- id: tba:63:mob:6304
+  field: long
+  en: The orc is stuck in the web and he can't get out.
+  ko: 오르크가 거미줄에 걸려 빠져나오지 못하고 있다.
+  verdict: awkward
+  note: orc는 한국어 판타지에서 '오크'로 표기하는 것이 표준이다.
+  fix: 오크가 거미줄에 걸려 빠져나오지 못하고 있다.
+- id: tba:63:room:6324
+  field: description
+  en: You have entered the slave pit.  A voice blares in the distance, 'Get back to work, maggots!'  Rails upon rails of mined
+    gold and silver clutter the trail beneath you.
+  ko: 당신은 노예 구덩이에 들어섰다. 멀리서 목소리가 크게 울려 퍼진다. '일하러 돌아가, 이 벌레들아!' 당신 발밑의 오솔길에는 채굴된 금과 은이 레일 위에 레일로 쌓여 있다.
+  verdict: awkward
+  note: '''일하러 돌아가''는 직역투라 감독관의 호통으로 들리지 않는다. maggots는 ''구더기''가 더 정확하다. ''레일 위에 레일로 쌓여''는 ''rails upon rails''를 그대로 옮긴 어색한
+    표현이다. 원문 자체가 모호해 ''rails''의 정확한 뜻은 확실하지 않다.'
+  fix: 당신은 노예 구덩이에 들어섰다. 멀리서 고함이 울려 퍼진다. '일이나 해라, 이 구더기 같은 놈들아!' 발밑의 길에는 채굴된 금과 은이 실린 레일이 겹겹이 어지럽게 깔려 있다.
+- id: tba:63:obj:6301
+  field: short
+  en: a very sharp knife
+  ko: 아주 날카로운 칼
+  verdict: ok
+  note: 정확하다.
+- id: tba:63:room:6380
+  field: description
+  en: The room is dark and filled with shadows.  A trap has been carefully crafted to catch unwary travellers.  There seems
+    to be no way out.  A few looted corpses are piled in one corner.
+  ko: 방은 어둡고 그림자로 가득 차 있다. 경계심이 부족한 여행자를 잡기 위해 정교하게 만들어진 함정이 있다. 나갈 길이 전혀 없어 보인다. 한 구석에는 약탈당한 시체 몇 구가 쌓여 있다.
+  verdict: awkward
+  note: '''경계심이 부족한 여행자''는 딱딱하다. ''unwary''는 ''방심한''이 자연스럽다. ''그림자로 가득 차 있다''도 ''가득하다''로 줄이는 편이 낫다.'
+  fix: 방은 어둡고 그림자로 가득하다. 방심한 여행자를 잡으려고 공들여 만든 함정이 놓여 있다. 나갈 길이 전혀 없어 보인다. 한 구석에는 약탈당한 시체 몇 구가 쌓여 있다.
+- id: tba:63:obj:6303
+  field: extras.0.text
+  en: A starchy headress worn by powerful secular types.
+  ko: 권력 있는 세속 인사들이 쓰는 뻣뻣한 머리 장식이다.
+  verdict: ok
+  note: 정확하다.
+- id: tba:63:room:6365
+  field: name
+  en: A Link In The Ethereal Web
+  ko: 이계의 거미줄의 한 고리
+  verdict: wrong
+  note: 7번과 같은 문제다. Ethereal을 '이계의'로 잘못 옮겼다.
+  fix: 에테르 거미줄의 한 고리
+- id: tba:63:room:6392
+  field: description
+  en: Before you you see a large, web-like door.  Various designs of ancient runes and names of Midgaard heroes are etched
+    into the webwork.  Perhaps lists of victims?  You can't tell.
+  ko: 당신 앞에 거미줄로 된 거대한 문이 보인다. 고대 룬의 다양한 문양과 미드가르드 영웅들의 이름이 거미줄에 새겨져 있다. 어쩌면 희생자 목록일지도 모른다. 알 수 없다.
+  verdict: ok
+  note: 정확하고 자연스럽다.
+- id: tba:63:room:6320
+  field: name
+  en: The Webless Path
+  ko: 거미줄 없는 길
+  verdict: ok
+  note: 정확하다.

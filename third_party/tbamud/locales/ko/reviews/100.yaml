@@ -1,0 +1,132 @@
+zone: '100'
+date: 2026-10-04 02:01
+reviewer: claude
+n: 15
+wrong_rate: 0.4
+awkward_rate: 0.2
+stopped: true
+added_to_glossary:
+- term Light Forest -> 성긴 숲
+- term peddler -> 행상인
+- term wade (across) -> 걸어서 건너다
+- term fur -> 털, 모피, 털가죽
+- example The well-made path makes travel easy.
+- example This odd creature has eyes that look to be made for seeing in the dark.
+- example The walls of the city look to be made from huge blocks of granite-like rock.
+fixed:
+- tba:100:obj:10008 long
+- tba:100:room:10068 name
+- tba:100:room:10065 description
+- tba:100:mob:10008 long
+- tba:100:obj:10015 long
+- tba:100:mob:10009 description
+- tba:100:obj:10007 extras.0.text
+- tba:100:room:10031 description
+- tba:100:room:10095 description
+sample:
+- id: tba:100:room:10062
+  field: description
+  en: The trees here are all tall hardwoods, spread far apart so you can see for some distance.  To the east the trees grow
+    even more sparse and finally give way to the plains.  West will take you back into the thick forest.
+  ko: 여기의 나무들은 모두 키가 큰 활엽수이며, 서로 멀리 떨어져 있어 꽤 먼 곳까지 시야가 트인다. 동쪽으로 갈수록 나무는 더 드물어지고, 마침내 평원으로 이어진다. 서쪽으로 가면 다시 짙은 숲속으로 들어간다.
+  verdict: ok
+  note: 의미와 문체 모두 자연스럽다.
+- id: tba:100:obj:10008
+  field: long
+  en: A filthy looking shirt has been left here.
+  ko: 꼬질이해 보이는 셔츠 하나가 여기 놓여 있다.
+  verdict: wrong
+  note: '''꼬질이해''는 없는 말이다. filthy는 ''더러운/지저분한''으로 옮겨야 한다.'
+  fix: 더러워 보이는 셔츠 한 벌이 여기 놓여 있다.
+- id: tba:100:room:10068
+  field: name
+  en: Light Forest
+  ko: 밝은 숲
+  verdict: wrong
+  note: 여기서 Light는 '밝다'가 아니라 나무가 '드문드문하다'는 뜻이다. 1번 방 묘사(나무가 서로 멀리 떨어져 있다)와도 맞지 않는다.
+  fix: 성긴 숲
+- id: tba:100:room:10097
+  field: name
+  en: Beside the City Walls of Dun Maura
+  ko: 둔모라의 성벽 옆
+  verdict: ok
+  note: 고유명사 음역에 문제가 없다.
+- id: tba:100:mob:10016
+  field: description
+  en: Covered in hides and fur from her past killings, she looks very experienced and adept.
+  ko: 과거에 사냥한 짐승의 가죽과 털로 온몸을 덮고 있어, 매우 숙련되고 능숙해 보인다.
+  verdict: ok
+  note: past killings를 '사냥한 짐승'으로 풀었지만 문맥상 자연스럽다.
+- id: tba:100:room:10036
+  field: name
+  en: A Curve in the Northern Road
+  ko: 북쪽 길의 굽이
+  verdict: ok
+  note: ''
+- id: tba:100:room:10065
+  field: description
+  en: You walk along the northern road.  The well-made path makes travel easy. The road continues north and south.  To the
+    east and west is thick forest.  You think you can see an intersection of roads to the north.
+  ko: 당신은 북쪽 길을 따라 걷고 있다. 잘 닦인 길이 이동하기 편하게 해 준다. 길은 북쪽과 남쪽으로 이어진다. 동쪽과 서쪽에는 짙은 숲이 펼쳐져 있다. 북쪽으로 길의 교차로가 보이는 것 같다.
+  verdict: awkward
+  note: '''잘 닦인 길이 이동하기 편하게 해 준다''는 무생물 주어를 그대로 옮긴 번역투이다. ''길의 교차로''도 어색하므로 ''갈림길''이 낫다.'
+  fix: 당신은 북쪽 길을 따라 걷고 있다. 길이 잘 닦여 있어 걷기가 수월하다. 길은 북쪽과 남쪽으로 이어진다. 동쪽과 서쪽에는 짙은 숲이 펼쳐져 있다. 북쪽에 갈림길이 보이는 듯하다.
+- id: tba:100:mob:10012
+  field: short
+  en: the skunk
+  ko: 스컹크
+  verdict: ok
+  note: ''
+- id: tba:100:mob:10008
+  field: long
+  en: A peddler is bringing his wares to the city to sell.
+  ko: 노점상이 도시에서 팔기 위해 상품들을 들고 왔다.
+  verdict: wrong
+  note: peddler는 돌아다니며 파는 '행상인'이고, '노점상'은 오역이다. 원문은 지금 물건을 가지고 가는 중인데 번역은 '들고 왔다'로 이미 도착한 것처럼 옮겼다.
+  fix: 행상인 하나가 도시에 내다 팔 물건을 지고 가고 있다.
+- id: tba:100:room:10029
+  field: name
+  en: By the River
+  ko: 강가
+  verdict: ok
+  note: ''
+- id: tba:100:obj:10015
+  field: long
+  en: A pile of fur with straps on it looks like it might be a backpack.
+  ko: 끈이 달린 가죽 더미로, 아마도 배낭인 것 같다.
+  verdict: wrong
+  note: fur는 '털/모피'이다. 이 존에서는 hide(가죽)와 fur(털)를 구분하고 있는데(5번 참고) '가죽'으로 옮겨 둘이 섞였다.
+  fix: 끈이 달린 털가죽 더미가 있는데, 아무래도 배낭인 것 같다.
+- id: tba:100:mob:10009
+  field: description
+  en: This odd creature has eyes that look to be made for seeing in the dark. It's about 2 feet long including a hairless
+    tail.  It looks stupid and slow.
+  ko: 이 기이한 동물은 어둠 속에서 볼 수 있도록 만들어진 듯한 눈을 가지고 있다. 털이 없는 꼬리를 포함해 약 60센티미터 정도 된다. 멍청하고 느릿해 보인다.
+  verdict: awkward
+  note: '''~한 눈을 가지고 있다''는 have를 직역한 번역투이다. 의미는 맞다.'
+  fix: 이 기이한 동물의 눈은 어둠 속에서 보기 알맞게 생긴 듯하다. 털 없는 꼬리까지 합쳐 길이가 60센티미터쯤 된다. 멍청하고 굼떠 보인다.
+- id: tba:100:obj:10007
+  field: extras.0.text
+  en: These pants are filthy. They look like they have not been washed in years. Besides the filth and smell they are in relatively
+    good shape.
+  ko: 이 바지는 꼬질이다. 수년째 세탁하지 않은 것처럼 보인다. 더러움과 냄새를 제외하면 비교적 상태가 좋다.
+  verdict: wrong
+  note: '''꼬질이다''는 없는 말이다. ''상태가 좋다''보다는 ''멀쩡하다''가 바지에 더 자연스럽다.'
+  fix: 이 바지는 몹시 더럽다. 몇 년째 빨지 않은 것 같다. 때와 냄새만 빼면 그런대로 멀쩡하다.
+- id: tba:100:room:10031
+  field: description
+  en: As you walk along the edge of the lake you come to its outlet.  A small river blocks the way north.  Though small, the
+    rivers current looks fast and strong. You doubt you could wade across without being swept downstream.
+  ko: 호숫가를 따라 걷다 보니 물이 빠져나가는 출구에 도착한다. 작은 강이 북쪽 길을 가로막고 있다. 비록 작지만, 강물의 흐름은 빠르고 강해 보인다. 당신은 물살에 떠내려가지 않고는 헤엄쳐 건너기 어려울 것이라
+    생각한다.
+  verdict: wrong
+  note: wade across는 '걸어서 건너다'인데 '헤엄쳐'로 오역했다. '물이 빠져나가는 출구'는 어색하고, 'the way north'는 '북쪽 길'이 아니라 '북쪽으로 가는 길'이다.
+  fix: 호숫가를 따라 걷다 보니 호수 물이 흘러 나가는 어귀에 이른다. 작은 강이 북쪽으로 가는 길을 가로막고 있다. 작긴 해도 물살이 빠르고 거세 보인다. 걸어서 건너려 했다가는 하류로 떠내려갈 것만 같다.
+- id: tba:100:room:10095
+  field: description
+  en: The walls of the city look to be made from huge blocks of granite-like rock. You couldn't imagine any human being able
+    to lift such things.  The walls are definite eye sores, but they serve their purpose well.
+  ko: 도시의 성벽은 거대한 화강암 같은 돌덩이로 만들어져 보인다. 그런 것을 들어 올릴 수 있는 인간은 상상조차 되지 않는다. 성벽은 분명 눈살을 찌푸리게 하지만, 그 역할을 훌륭히 수행하고 있다.
+  verdict: awkward
+  note: '''만들어져 보인다''는 비문에 가깝다. ''인간은 상상조차 되지 않는다''는 주술 호응이 맞지 않는다. eye sore는 ''흉물스럽다''가 더 정확하다.'
+  fix: 도시의 성벽은 화강암 같은 거대한 돌덩이로 쌓은 듯하다. 그런 돌을 들어 올릴 수 있는 인간이 있으리라고는 상상하기 어렵다. 성벽은 분명 흉물스럽지만, 제 역할만큼은 훌륭히 해내고 있다.
