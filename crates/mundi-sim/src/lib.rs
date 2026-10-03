@@ -16,6 +16,7 @@ mod commands;
 mod enter;
 mod items;
 mod levels;
+mod mobact;
 pub mod entity;
 mod look;
 mod movement;
@@ -237,6 +238,11 @@ impl Sim {
         self.order.iter().filter_map(|k| Some((self.chars.get(*k)?.name.clone(), self.save_of(*k)))).collect()
     }
 
+    /// Every mob: its ID (`<prototype>/<serial>`) and room (for tests and tools).
+    pub fn mob_places(&self) -> Vec<(String, String)> {
+        self.mobs.iter().filter_map(|k| Some((self.id_of(*k)?, self.world.rooms[self.chars.get(*k)?.room].id.clone()))).collect()
+    }
+
     /// What a player would save now (for tests and tools).
     pub fn save(&self, name: &str) -> Option<Save> {
         Some(self.save_of(*self.by_name.get(&key_name(name))?))
@@ -265,6 +271,7 @@ impl Sim {
         }
         if self.tick % (10 * PULSES_PER_SEC) == 0 {
             self.zone_update();
+            self.mobile_activity();
         }
         if self.tick % PULSES_PER_TICK == 0 {
             self.game_hour();

@@ -20,7 +20,8 @@ impl Sim {
             return;
         }
         let zone = self.world.zones.get(&self.world.rooms[to].zone).cloned().unwrap_or_default();
-        if zone.min_level.is_some_and(|min| min > c.level) {
+        let mob = c.is_mob();
+        if !mob && zone.min_level.is_some_and(|min| min > c.level) {
             self.deliver(key, Event::ZoneAboveLevel {});
         }
         if zone.closed {
@@ -28,19 +29,24 @@ impl Sim {
             return;
         }
         let cost = (self.sector_cost(self.world.rooms[from].sector) + self.sector_cost(self.world.rooms[to].sector)) / 2;
+        // Only players pay and are stopped by tiredness (act.movement.c:252-264, MECHANICS §2.3).
         let c = self.chars.get_mut(key).unwrap();
-        if c.mv < cost {
-            self.deliver(key, Event::MoveFailed { dir: Some(dir), reason: MoveFailure::Exhausted, door: None });
-            return;
+        if !mob {
+            if c.mv < cost {
+                self.deliver(key, Event::MoveFailed { dir: Some(dir), reason: MoveFailure::Exhausted, door: None });
+                return;
+            }
+            c.mv -= cost;
         }
-        c.mv -= cost;
         let left = dir.clone();
         self.to_room(key, from, true, move |who, who_id| Event::Left { who, who_id, dir: Some(left.clone()), how: None });
         self.people[from].retain(|k| *k != key);
         self.people[to].insert(0, key);
         self.chars.get_mut(key).unwrap().room = to;
         self.to_room(key, to, true, |who, who_id| Event::Arrived { who, who_id, from_dir: None, how: None });
-        self.look(key);
+        if !mob {
+            self.look(key);
+        }
     }
 
     /// Movement points a room's terrain costs (MECHANICS §2.3).
