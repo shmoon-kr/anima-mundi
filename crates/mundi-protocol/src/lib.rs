@@ -953,6 +953,31 @@ pub enum Event {
         #[serde(default, skip_serializing_if = "Option::is_none")]
         id: Option<String>,
     },
+    /// A door or container opened, closed, locked, unlocked or picked (MECHANICS §2.7). `who` is
+    /// "self" for the one who did it; `door` names an exit's door, `text` a container; `far` is
+    /// the room on the other side hearing it. Mundi addition.
+    #[serde(rename = "door.changed")]
+    DoorChanged {
+        command: String,
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        door: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        text: Option<String>,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        id: Option<String>,
+        #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+        far: bool,
+    },
+    #[serde(rename = "door.failed")]
+    DoorFailed {
+        command: String,
+        reason: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        word: Option<String>,
+    },
     #[serde(rename = "toggle.state")]
     Toggle {
         name: String,

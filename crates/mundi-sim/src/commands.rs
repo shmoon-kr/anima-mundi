@@ -92,6 +92,11 @@ impl Sim {
             "rescue" => self.rescue(key, arg),
             "backstab" => self.backstab(key, arg),
             "cast" => self.cast(key, arg),
+            "open" => self.door_cmd(key, crate::doors::DoorCmd::Open, arg),
+            "close" => self.door_cmd(key, crate::doors::DoorCmd::Close, arg),
+            "lock" => self.door_cmd(key, crate::doors::DoorCmd::Lock, arg),
+            "unlock" => self.door_cmd(key, crate::doors::DoorCmd::Unlock, arg),
+            "pick" => self.door_cmd(key, crate::doors::DoorCmd::Pick, arg),
             p if crate::group::PREFS.contains(&p) => self.auto_toggle(key, p),
             _ => self.deliver(key, Event::Refused { reason: Refusal::NotYet }),
         }

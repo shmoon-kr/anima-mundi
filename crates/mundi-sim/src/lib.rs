@@ -14,6 +14,7 @@
 
 mod combat;
 mod commands;
+mod doors;
 mod enter;
 mod group;
 mod items;

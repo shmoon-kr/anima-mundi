@@ -251,7 +251,9 @@ impl Sim {
     }
 
     fn get_from_container(&mut self, k: Key, cont: Key, what: &str, how_many: usize, carried: bool) {
-        // Containers' closed state comes with doors and locks (S5 step 8).
+        if self.container_closed(cont) {
+            return self.fail_obj(k, ItemAction::Get, ItemFailure::Closed, cont);
+        }
         let contents = self.objs.get(cont).unwrap().contents.clone();
         let other = (self.short(cont), self.obj_id(cont));
         match target(what) {
@@ -472,6 +474,9 @@ impl Sim {
         };
         if self.objs.get(cont).unwrap().kind != ItemType::Container {
             return self.fail_obj(k, ItemAction::Put, ItemFailure::NotContainer, cont);
+        }
+        if self.container_closed(cont) {
+            return self.fail(k, ItemAction::Put, ItemFailure::Closed);
         }
         match target(what) {
             Some(Target::One { word, nth }) => match self.find_obj(k, &inv, &word, nth) {

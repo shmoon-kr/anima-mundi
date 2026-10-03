@@ -7,7 +7,7 @@ use mundi_protocol::{Direction, GroupMember};
 use crate::*;
 
 /// The auto settings `autoloot` and the rest switch (act.other.c do_gen_tog).
-pub(crate) const PREFS: [&str; 5] = ["autoloot", "autogold", "autosplit", "autosac", "autoassist"];
+pub(crate) const PREFS: [&str; 7] = ["autoloot", "autogold", "autosplit", "autosac", "autoassist", "autodoor", "autokey"];
 
 impl Sim {
     // ---- following (act.movement.c do_follow, utils.c add_follower, stop_follower) ----------------

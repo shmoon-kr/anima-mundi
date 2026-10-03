@@ -431,6 +431,38 @@ impl Renderer {
                     self.wearoffs.get(spell).cloned().into_iter().collect()
                 }
             }
+            Event::DoorFailed { command, reason, word } => {
+                if reason == "what" {
+                    return vec![m(&format!("door-what-{command}"))];
+                }
+                let w = word.as_deref().unwrap_or("");
+                let done = match command.as_str() {
+                    "open" => "opened",
+                    "close" => "closed",
+                    "lock" => "locked",
+                    "unlock" => "unlocked",
+                    _ => "picked",
+                };
+                let article = if v.lang == Lang::En { format!("{} {}", an(w), escape(w)) } else { escape(w) };
+                one(&format!("door-{reason}"), &[("cmd", command.clone()), ("word", escape(w)), ("w", article), ("done", done.into())])
+            }
+            Event::DoorChanged { command, who: w, who_id, door, text, id, far } => {
+                if *far {
+                    return one(&format!("door-far-{command}"), &[("door", escape(door.as_deref().unwrap_or("door")))]);
+                }
+                if w == mundi_protocol::SELF {
+                    return vec![m(&format!("door-done-{command}"))];
+                }
+                let did = self.msg(v, &format!("door-did-{command}"), &[]);
+                let p = text.as_deref().map(|t| self.thing(v, t, id)).unwrap_or_default();
+                let mid = match (command.as_str(), text.is_some()) {
+                    ("pick", false) => "door-room-pick",
+                    ("pick", true) => "door-room-pick-obj",
+                    (_, true) => "door-room-obj",
+                    _ => "door-room",
+                };
+                one(mid, &[("who", who(w, who_id)), ("cmd", command.clone()), ("door", escape(door.as_deref().unwrap_or("door"))), ("p", p), ("did", did)])
+            }
             Event::Toggle { name, value } if value.is_boolean() => {
                 vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
             }
