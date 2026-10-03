@@ -6,9 +6,8 @@
 //! the simulation produces these types, the renderer and the network only consume them.
 //!
 //! Names and fields follow PROTOCOL.md so a Mundi event and a text-adapter event of the same thing are
-//! the same JSON. Where Mundi knows more it fills the optional fields (`id`, `who_id`); where the text
-//! adapter put a screen line (`Occupant.text`) Mundi gives the parts (`name`, `position`) and leaves the
-//! sentence to the renderer.
+//! the same JSON. Mundi only adds (D22): where it knows more it fills the optional fields (`id`, `who_id`)
+//! and puts new fields beside the old ones (`Occupant.name` beside `Occupant.text`), never instead.
 
 use serde::{Deserialize, Serialize};
 
@@ -188,13 +187,17 @@ pub struct RoomObject {
     pub count: u32,
 }
 
-/// One being in a room as its perceiver sees it. `name` is what they are called in sentences
-/// (a mob's short description, a player's name); `long` is a mob's own line when it stands in its
-/// default position (MECHANICS §3.4), which the renderer shows as it is.
+/// One being in a room as its perceiver sees it. `text` is the screen line (PROTOCOL.md v0): the
+/// simulation writes no sentence and leaves it empty, and the server fills it with the English line,
+/// markup removed, before it goes out (D22). The rest are Mundi's parts of that line: `name` is what
+/// they are called in sentences (a mob's short description, a player's name); `long` is a mob's own
+/// line when it stands in its default position (MECHANICS §3.4).
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Occupant {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub id: Option<String>,
+    #[serde(default)]
+    pub text: String,
     pub name: String,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub long: Option<String>,

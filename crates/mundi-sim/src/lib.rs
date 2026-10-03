@@ -368,6 +368,7 @@ impl Sim {
             .filter(|(k, _)| self.can_see(key, **k))
             .map(|(_, c)| Occupant {
                 id: Some(char_id(&c.name)),
+                text: String::new(),
                 name: c.name.clone(),
                 long: None,
                 position: c.position,
