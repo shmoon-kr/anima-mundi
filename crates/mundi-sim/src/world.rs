@@ -95,15 +95,3 @@ impl World {
 pub fn dir_index(d: Dir) -> usize {
     Dir::ALL.iter().position(|x| *x == d).unwrap()
 }
-
-/// Movement points a room's terrain costs (MECHANICS §2.3).
-pub fn sector_cost(s: Sector) -> i32 {
-    match s {
-        Sector::Inside | Sector::City | Sector::WaterNoswim | Sector::Flying => 1,
-        Sector::Field => 2,
-        Sector::Forest => 3,
-        Sector::Hills | Sector::WaterSwim => 4,
-        Sector::Underwater => 5,
-        Sector::Mountains => 6,
-    }
-}

@@ -11,7 +11,7 @@ use std::net::SocketAddr;
 use std::path::PathBuf;
 use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
-use mundi_content::load_world;
+use mundi_content::{load_tables, load_world};
 use mundi_net::{ConnId, Net, NetEvent};
 use mundi_protocol::{ClientMessage, Envelope, Event, Lang, LoginFailure, LoginStage, VERSION};
 use mundi_render::{ansi, plain, Renderer};
@@ -26,6 +26,8 @@ pub struct Config {
     pub content: PathBuf,
     /// `third_party/tbamud/locales`
     pub locales: PathBuf,
+    /// `third_party/tbamud/tables` (D21)
+    pub tables: PathBuf,
     /// Where the database and the input logs go.
     pub data: PathBuf,
     pub seed: u64,
@@ -55,13 +57,14 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
     std::fs::create_dir_all(&cfg.data).map_err(|e| e.to_string())?;
     let db = cfg.data.join("mundi.db");
     let mut store = Store::open(&db).map_err(|e| e.to_string())?;
-    let mut sim = Sim::new(&zones, cfg.seed, cfg.hour);
+    let tables = load_tables(&cfg.tables).map_err(|e| e.to_string())?;
+    let mut sim = Sim::new(&zones, &tables, cfg.seed, cfg.hour);
     drop(zones);
 
     let started = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_secs();
     let log_path = cfg.data.join(format!("inputs-{started}.jsonl"));
     let mut log = std::fs::File::create(&log_path).map_err(|e| e.to_string())?;
-    writeln!(log, "{}", serde_json::json!({"seed": cfg.seed, "hour": cfg.hour, "content": cfg.content})).map_err(|e| e.to_string())?;
+    writeln!(log, "{}", serde_json::json!({"seed": cfg.seed, "hour": cfg.hour, "content": cfg.content, "tables": cfg.tables})).map_err(|e| e.to_string())?;
     let mut logged = 0;
 
     let (addr, net, mut incoming) = mundi_net::listen(cfg.addr).await.map_err(|e| e.to_string())?;

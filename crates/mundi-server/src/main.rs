@@ -1,7 +1,7 @@
 //! `mundi-server`: wires the crates together. The only crate that knows all of them.
 //!
 //! Usage: mundi-server [--addr 127.0.0.1:4000] [--data data] [--content third_party/tbamud/content]
-//!                     [--locales third_party/tbamud/locales] [--seed N] [--hour H]
+//!                     [--locales third_party/tbamud/locales] [--tables third_party/tbamud/tables] [--seed N] [--hour H]
 //! Clients speak WebSocket: one JSON message per frame (`{"type":"login",...}`, `{"type":"command","text":"look"}`),
 //! and receive one envelope per frame. Ctrl-C saves and stops.
 
@@ -16,6 +16,7 @@ async fn main() -> ExitCode {
         addr: "127.0.0.1:4000".parse().unwrap(),
         content: PathBuf::from("third_party/tbamud/content"),
         locales: PathBuf::from("third_party/tbamud/locales"),
+        tables: PathBuf::from("third_party/tbamud/tables"),
         data: PathBuf::from("data"),
         seed: 1,
         hour: 12,
@@ -34,6 +35,10 @@ async fn main() -> ExitCode {
             }
             "--content" => {
                 cfg.content = value.into();
+                true
+            }
+            "--tables" => {
+                cfg.tables = value.into();
                 true
             }
             "--locales" => {

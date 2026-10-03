@@ -116,8 +116,9 @@ S1(명세)과 S2(변환기)는 서로 의존하지 않아 같이 간다.
 - [x] verbatim: 45개 설명이 `{preformatted: ...}` 로(존 정보표, 그림). 표본 확인
 - [x] 다듬은 형식: 여러 문단은 문단마다 접힌 블록의 목록(직렬화 도구의 접기가 문단 구분을 잃는 문제), `P`(상자에 넣기)는 그 상자의 가장 최근 사본에(building.txt)
 - [x] **tbaMUD 색 코드** → 중립 마크업 `{yellow}…{/yellow}`(D20): 짝 맞춤, 문단별 균형, `@[fRGB]` → xterm, 로더의 문법 검사, 번역 배치의 태그 보존 검사. 629개 글, 오류 0.
-- [ ] **전투 문구 파일**(`lib/misc/messages`, MECHANICS §8.2) → `third_party/tbamud/` 콘텐츠로 변환 (D21). 공격 종류·주문·기술별 죽음/빗나감/맞음/신 × (공격자, 대상, 방)
-- [ ] **숫자표**(MECHANICS §16) → `third_party/tbamud/` 의 YAML, 원본에서 값만 (D21). 엔진은 읽기만 한다
+- [x] **전투 문구 파일**(`lib/misc/messages`, MECHANICS §8.2) → `third_party/tbamud/messages/combat.yaml` (D21), `mundi-convert messages`. 38개 종류, 55개 변형. 공격 종류·주문·기술별 죽음/빗나감/맞음/신 × (공격자, 대상, 방)
+- [x] **숫자표**(MECHANICS §16) → `third_party/tbamud/tables/{abilities,classes,world}.yaml`, `mundi-convert tables` (D21): C 의 배열과 `case N: return V;` 에서 값만.
+  sim 의 지형 비용·회복 곡선·시작 방·새 캐릭터 수치도 이 표를 읽는다. `crates/mundi-convert/tests/tables.rs`: 저장된 표 = 지금 원본에서 읽은 것
   렌더러(S4): ANSI·CSS·평문(에이전트). `@@` 는 실서버 확인대로 `@@` 그대로
 - 확인: **양쪽 문 검사**(한쪽이 문이면 반대쪽도 문, 리셋 상태·열쇠가 같다), **verbatim 표시 검사**(지도·그림 같은 글에 `|` 블록이 실제로 들어가는지 표본과 개수로), 189개 존 전부 변환·검증 통과, 개수가 원본과 같다(방 12,730 / 몹 3,705 / 물건 4,765 / 상점 334), 로드 시간 측정, anima 파서와 무작위 표본 대조
 

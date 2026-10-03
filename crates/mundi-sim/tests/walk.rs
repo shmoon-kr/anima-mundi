@@ -4,13 +4,19 @@
 use std::path::Path;
 
 use mundi_content::names::{DoorState, Sector};
-use mundi_content::{load_zone, ZoneContent};
+use mundi_content::{load_tables, load_zone, Tables, ZoneContent};
 use mundi_protocol::{ArrivedHow, Direction, Event, MoveFailure, Refusal};
-use mundi_sim::{Delivery, Input, Sim, START_ROOM};
+use mundi_sim::{Delivery, Input, Sim};
+
+const START_ROOM: &str = "tba:30:room:3001";
 
 fn zones(nums: &[u32]) -> Vec<ZoneContent> {
     let root = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud/content");
     nums.iter().map(|n| load_zone(&root.join(n.to_string())).expect("zone loads")).collect()
+}
+
+fn tables() -> Tables {
+    load_tables(&Path::new(env!("CARGO_MANIFEST_DIR")).join("../../third_party/tbamud/tables")).expect("tables load")
 }
 
 fn midgaard() -> Vec<ZoneContent> {
@@ -34,7 +40,7 @@ fn to<'a>(out: &'a [Delivery], name: &str) -> Vec<&'a Event> {
 #[test]
 fn entering_and_moving_seen_from_each_side() {
     let zones = midgaard();
-    let mut sim = Sim::new(&zones, 1, 12);
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
     let out = enter(&mut sim, "Ana", None);
     let ana = to(&out, "Ana");
     assert!(matches!(ana[1], Event::Room(v) if v.id.as_deref() == Some(START_ROOM) && v.occupants.is_empty()));
@@ -58,7 +64,7 @@ fn entering_and_moving_seen_from_each_side() {
 #[test]
 fn say_has_three_viewpoints_and_refusals() {
     let zones = midgaard();
-    let mut sim = Sim::new(&zones, 1, 12);
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
     enter(&mut sim, "Ana", None);
     enter(&mut sim, "Bo", None);
     let out = cmd(&mut sim, "Ana", "say hello there");
@@ -76,7 +82,7 @@ fn say_has_three_viewpoints_and_refusals() {
 #[test]
 fn quitting_leaves_the_game_and_reports_the_place() {
     let zones = midgaard();
-    let mut sim = Sim::new(&zones, 1, 12);
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
     enter(&mut sim, "Ana", None);
     enter(&mut sim, "Bo", None);
     let out = cmd(&mut sim, "Ana", "quit");
@@ -105,7 +111,7 @@ fn closed_doors_stop_movement() {
             })
         })
         .expect("zone 31 has a closed door");
-    let mut sim = Sim::new(&zones, 1, 12);
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
     enter(&mut sim, "Ana", Some(&room));
     let out = cmd(&mut sim, "Ana", dir);
     assert!(matches!(&to(&out, "Ana")[..], [Event::MoveFailed { reason: MoveFailure::Closed, door, .. }] if *door == keyword));
@@ -121,7 +127,7 @@ fn outdoors_is_dark_at_night_and_hides_who_arrives() {
         .find(|(_, r)| !matches!(r.sector, Sector::Inside | Sector::City) && r.flags.is_empty())
         .map(|(id, _)| id.clone())
         .expect("Midgaard has fields");
-    let mut sim = Sim::new(&zones, 1, 23);
+    let mut sim = Sim::new(&zones, &tables(), 1, 23);
     let out = enter(&mut sim, "Ana", Some(&room));
     assert!(matches!(to(&out, "Ana")[1], Event::RoomDark { .. }));
     let out = enter(&mut sim, "Bo", Some(&room));
@@ -133,7 +139,7 @@ fn outdoors_is_dark_at_night_and_hides_who_arrives() {
 #[test]
 fn one_command_per_character_per_pulse() {
     let zones = midgaard();
-    let mut sim = Sim::new(&zones, 1, 12);
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
     enter(&mut sim, "Ana", None);
     sim.submit(Input::Command { name: "Ana".into(), text: "say one".into() });
     sim.submit(Input::Command { name: "Ana".into(), text: "say two".into() });
@@ -146,7 +152,7 @@ fn one_command_per_character_per_pulse() {
 #[test]
 fn replaying_the_input_log_gives_the_same_bytes() {
     let zones = midgaard();
-    let mut sim = Sim::new(&zones, 42, 12);
+    let mut sim = Sim::new(&zones, &tables(), 42, 12);
     let mut live = Vec::new();
     live.extend(enter(&mut sim, "Ana", None));
     live.extend(enter(&mut sim, "Bo", None));
@@ -161,7 +167,7 @@ fn replaying_the_input_log_gives_the_same_bytes() {
     let log = sim.input_log().to_vec();
 
     let bytes = |d: &[Delivery]| d.iter().map(|d| serde_json::to_string(d).unwrap() + "\n").collect::<String>();
-    let again = Sim::replay(&zones, 42, 12, &log);
+    let again = Sim::replay(&zones, &tables(), 42, 12, &log);
     assert_eq!(bytes(&again), bytes(&live));
-    assert_eq!(bytes(&Sim::replay(&zones, 42, 12, &log)), bytes(&again));
+    assert_eq!(bytes(&Sim::replay(&zones, &tables(), 42, 12, &log)), bytes(&again));
 }

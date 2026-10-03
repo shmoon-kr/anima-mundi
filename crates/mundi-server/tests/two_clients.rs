@@ -26,6 +26,7 @@ async fn start(content: &Path, data: &Path) -> Server {
         addr: "127.0.0.1:0".parse().unwrap(),
         content: content.to_path_buf(),
         locales: root.join("third_party/tbamud/locales"),
+        tables: root.join("third_party/tbamud/tables"),
         data: data.to_path_buf(),
         seed: 7,
         hour: 12,

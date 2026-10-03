@@ -366,7 +366,7 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 
 ### 8.2 문구 파일 (lib/misc/messages, fight.c:540-607)
 - 공격 종류마다 여러 묶음, 한 묶음은 죽음·빗나감·맞음·신 각각 (공격자, 대상, 방) 세 줄. 무작위로 한 묶음
-- 이 파일은 tbaMUD 의 텍스트(콘텐츠)이므로 **변환기로 옮긴다**(S2 보강). 형식은 S4 에서 정한다
+- 이 파일은 tbaMUD 의 텍스트(콘텐츠)이므로 변환기로 옮겼다: `third_party/tbamud/messages/combat.yaml` (번호, 이름, 변형마다 die·miss·hit·god × attacker·victim·room, 없는 줄은 비움). 변형의 순서는 파일 순서
 
 ### 8.3 죽음 (fight.c:267-329)
 1. 경험치를 **절반** 잃는다(최대 500,000 까지, 0 아래로는 안 간다). 플레이어의 살인자·도둑 표시가 지워진다
@@ -634,7 +634,7 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 - 상점 문구(%s 손님, %d 값)는 상점마다 콘텐츠에 있다(변환됨)
 
 ## 16. 숫자표
-순수 숫자표는 이 문서에 다 적지 않고, 원본에서 **값만** 옮겨 `third_party/tbamud/` 의 데이터 파일(YAML)로 둔다. 엔진은 시작할 때 그 파일을 읽는다(D9, D21).
+순수 숫자표는 이 문서에 다 적지 않고, 원본에서 **값만** 옮겨 `third_party/tbamud/tables/` 의 `abilities.yaml`·`classes.yaml`·`world.yaml` 로 둔다. 엔진은 시작할 때 그 파일을 읽는다(D9, D21).
 엔진 크레이트(AGPL)에는 tbaMUD 에서 온 표가 들어가지 않는다. 표를 바꿔 실험할 때도 파일만 바꾸면 된다.
 대상: 힘(명중·피해·carry_w·wield_w, constants.c:607-638), 민첩(방어·기술 보정, constants.c:643-700), 체질(constants.c:706+), 지능 학습(constants.c:736-763), 지혜(constants.c:767-794),
 직업 THAC0(class.c:1190-1358), 레벨표(§9.3), 저항(saving throws, class.c), 주문 음절(spell_parser.c:43-56), 액체(§6.3), 지형(§2.3)

@@ -18,7 +18,7 @@ pub mod world;
 use std::collections::{BTreeMap, VecDeque};
 
 use mundi_content::names::{DoorState, RoomFlag, Sector};
-use mundi_content::ZoneContent;
+use mundi_content::{Tables, ZoneContent};
 use mundi_protocol::{
     ArrivedHow, CloseReason, DayPhase, Direction, Event, InGameHow, LeftHow, LinkState, MoveFailure, Occupant,
     Position, Refusal, RoomExit, RoomView, SELF,
@@ -28,14 +28,12 @@ use rand_core::SeedableRng;
 use serde::{Deserialize, Serialize};
 
 use store::{Key, Store};
-use world::{sector_cost, RoomIx, World};
+use world::{RoomIx, World};
 
 /// Pulses per second (MECHANICS §1.1).
 pub const PULSES_PER_SEC: u64 = 10;
 /// One tick, one game hour: 75 seconds (MECHANICS §1.1, §1.2).
 pub const PULSES_PER_TICK: u64 = 75 * PULSES_PER_SEC;
-/// Where new characters and characters with no saved place enter (config.c:183).
-pub const START_ROOM: &str = "tba:30:room:3001";
 /// Directions in command-table and exit-list order (MECHANICS §2.1, §3.2).
 const DIRS: [&str; 6] = ["north", "east", "south", "west", "up", "down"];
 
@@ -88,6 +86,8 @@ struct Char {
 
 pub struct Sim {
     world: World,
+    /// tbaMUD's numbers (D21): terrain costs, regeneration curves, the start room, new characters.
+    tables: Tables,
     chars: Store<Char>,
     by_name: BTreeMap<String, Key>,
     /// Characters in the order they entered: the order commands are taken each pulse.
@@ -106,11 +106,12 @@ pub struct Sim {
 
 impl Sim {
     /// `hour` is the game hour the world starts at (0..24).
-    pub fn new(zones: &[ZoneContent], seed: u64, hour: u32) -> Sim {
+    pub fn new(zones: &[ZoneContent], tables: &Tables, seed: u64, hour: u32) -> Sim {
         let world = World::build(zones);
         let people = vec![Vec::new(); world.rooms.len()];
         Sim {
             world,
+            tables: tables.clone(),
             chars: Store::default(),
             by_name: BTreeMap::new(),
             order: Vec::new(),
@@ -126,8 +127,8 @@ impl Sim {
     }
 
     /// Runs an input log on a fresh world and returns every delivery.
-    pub fn replay(zones: &[ZoneContent], seed: u64, hour: u32, log: &[Logged]) -> Vec<Delivery> {
-        let mut sim = Sim::new(zones, seed, hour);
+    pub fn replay(zones: &[ZoneContent], tables: &Tables, seed: u64, hour: u32, log: &[Logged]) -> Vec<Delivery> {
+        let mut sim = Sim::new(zones, tables, seed, hour);
         let mut all = Vec::new();
         let last = log.last().map_or(0, |l| l.tick);
         let mut next = log.iter().peekable();
@@ -228,21 +229,23 @@ impl Sim {
         }
         let room = saved
             .and_then(|r| self.world.index.get(r))
-            .or_else(|| self.world.index.get(START_ROOM))
+            .or_else(|| self.world.index.get(&self.tables.world.config.start_room))
             .copied()
             .unwrap_or(0);
         // A new character (MECHANICS §9.4); the level-up roll and classes come with S5.
+        let new = &self.tables.world.config.new_character;
+        let (hp, mana, mv) = (new.max_hit, new.max_mana, new.max_move);
         let key = self.chars.insert(Char {
             name: name.to_string(),
             room,
             position: Position::Standing,
             level: 1,
-            hp: 10,
-            max_hp: 10,
-            mana: 100,
-            max_mana: 100,
-            mv: 82,
-            max_mv: 82,
+            hp,
+            max_hp: hp,
+            mana,
+            max_mana: mana,
+            mv,
+            max_mv: mv,
             linked: true,
             queue: VecDeque::new(),
         });
@@ -334,7 +337,7 @@ impl Sim {
             self.deliver(key, Event::MoveFailed { dir: Some(dir), reason: MoveFailure::Forbidden, door: None });
             return;
         }
-        let cost = (sector_cost(self.world.rooms[from].sector) + sector_cost(self.world.rooms[to].sector)) / 2;
+        let cost = (self.sector_cost(self.world.rooms[from].sector) + self.sector_cost(self.world.rooms[to].sector)) / 2;
         let c = self.chars.get_mut(key).unwrap();
         if c.mv < cost {
             self.deliver(key, Event::MoveFailed { dir: Some(dir), reason: MoveFailure::Exhausted, door: None });
@@ -431,6 +434,7 @@ impl Sim {
 
     /// MECHANICS §5.2 for a character of age 17 with no class yet; hunger, thirst and poison come with S5.
     fn regen(&mut self) {
+        let curves = self.tables.world.regen.clone();
         for key in self.order.clone() {
             let c = self.chars.get_mut(key).unwrap();
             if c.position < Position::Stunned {
@@ -442,9 +446,9 @@ impl Sim {
                 Position::Sitting => base + base / sit,
                 _ => base,
             };
-            let hp = bonus(graf(17, [8, 12, 20, 32, 16, 10, 4]), 2, 4, 8, c.position);
-            let mv = bonus(graf(17, [16, 20, 24, 20, 16, 12, 10]), 2, 4, 8, c.position);
-            let base_mana = graf(17, [4, 8, 12, 16, 12, 10, 8]);
+            let hp = bonus(graf(17, curves.hit), 2, 4, 8, c.position);
+            let mv = bonus(graf(17, curves.moves), 2, 4, 8, c.position);
+            let base_mana = graf(17, curves.mana);
             let mana = match c.position {
                 Position::Sleeping => base_mana * 2,
                 Position::Resting => base_mana + base_mana / 2,
@@ -470,6 +474,11 @@ impl Sim {
             let event = Event::Prompt { hp: Some(c.hp), mp: Some(c.mana), mv: Some(c.mv) };
             self.out.push(Delivery { tick: self.tick, to: name, event });
         }
+    }
+
+    /// Movement points a room's terrain costs (MECHANICS §2.3).
+    fn sector_cost(&self, s: Sector) -> i32 {
+        self.tables.world.movement_cost.get(&s).copied().unwrap_or(1)
     }
 
     // ---- perception (MECHANICS §3.1, §3.5, §3.6) ------------------------------------------------
