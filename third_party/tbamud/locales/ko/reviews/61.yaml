@@ -1,0 +1,113 @@
+zone: '61'
+date: 2026-10-03 23:18
+reviewer: claude
+n: 15
+wrong_rate: 0.067
+awkward_rate: 0.2
+stopped: false
+added_to_glossary:
+- term cocoon -> 고치
+- example The large, black wolf eyes you with interest while licking its lips.
+- example A large, gray wolf is here, glaring hungrily at you.
+fixed:
+- tba:61:mob:6103 description
+- tba:61:room:6101 exits.west.look
+- tba:61:mob:6102 long
+- tba:61:room:6134 extras.0.text
+sample:
+- id: tba:61:room:6150
+  field: description
+  en: This trail looks much spookier than any other that's you have seen.  The usual animal claw marks and bites on the trees
+    are becoming few and far between.  The trail continues north.
+  ko: 이 오솔길은 당신이 본 다른 어떤 오솔길보다 훨씬 더 섬뜩해 보인다. 나무에 흔히 보이는 짐승의 발톱 자국과 이빨 자국이 점점 드물어지고 있다. 오솔길은 북쪽으로 이어진다.
+  verdict: ok
+  note: 의미와 어조 모두 원문에 맞다.
+- id: tba:61:room:6136
+  field: exits.east.look
+  en: The trees standing on the sides of the path have scratch marks on them.
+  ko: 길 양옆에 서 있는 나무들에 긁힌 자국이 있다.
+  verdict: ok
+  note: ''
+- id: tba:61:room:6132
+  field: extras.0.text
+  en: The spider web stretches out to the west.  It looks as if it is possible to walk on it.
+  ko: 거미줄이 서쪽으로 뻗어 있다. 그 위를 걸을 수 있을 것 같다.
+  verdict: ok
+  note: ''
+- id: tba:61:room:6123
+  field: exits.west.look
+  en: The narrow path winds its way through the trees to the west.
+  ko: 좁은 오솔길이 나무들 사이를 굽이치며 서쪽으로 이어진다.
+  verdict: ok
+  note: ''
+- id: tba:61:mob:6103
+  field: description
+  en: The large, black wolf eyes you with interest while licking its lips.
+  ko: 크고 검은 늑대가 당신을 흥미롭게 바라보며 입술을 핥고 있다.
+  verdict: awkward
+  note: 짐승에게 '입술을 핥다'는 어색하다. 'licking its lips'는 입맛을 다시는 관용 표현이므로 '입맛을 다시며'가 자연스럽다.
+  fix: 크고 검은 늑대가 입맛을 다시며 당신을 흥미롭게 바라보고 있다.
+- id: tba:61:room:6142
+  field: extras.0.text
+  en: The disgusting smell of a large reptile emanates from the cave opening.
+  ko: 동굴 입구에서 거대한 파충류의 역겨운 냄새가 풍겨 나온다.
+  verdict: ok
+  note: '''large''를 ''거대한''으로 옮겨 다소 강해졌지만 허용 범위다. ''커다란''이 더 정확하다.'
+- id: tba:61:room:6142
+  field: name
+  en: Outside A Cave In The Deep, Dark Forest
+  ko: 깊고 어두운 숲 속, 동굴 밖
+  verdict: ok
+  note: ''
+- id: tba:61:room:6150
+  field: name
+  en: The Narrow Trail
+  ko: 좁은 오솔길
+  verdict: ok
+  note: ''
+- id: tba:61:room:6138
+  field: name
+  en: On The Narrow Trail
+  ko: 좁은 오솔길 위
+  verdict: ok
+  note: ''
+- id: tba:61:room:6101
+  field: exits.west.look
+  en: The narrow, dusty trail leads west through the forest.
+  ko: 좁고 먼지가 많은 오솔길이 숲을 지나 서쪽으로 이어진다.
+  verdict: awkward
+  note: '''먼지가 많은 오솔길''은 딱딱하다. 길을 묘사할 때는 ''먼지 자욱한''이 자연스럽다.'
+  fix: 먼지 자욱한 좁은 오솔길이 숲을 지나 서쪽으로 이어진다.
+- id: tba:61:room:6136
+  field: extras.1.text
+  en: The trees standing on the sides of the path have scratch marks on them.
+  ko: 길 양옆에 서 있는 나무들에 긁힌 자국이 있다.
+  verdict: ok
+  note: ''
+- id: tba:61:room:6125
+  field: description
+  en: You are on a narrow path leading through the deep, dark forest. Ancient gray trees loom everywhere.  To the south a
+    dark river flows westward through the forest.  The path continues north and east.
+  ko: 당신은 깊고 어두운 숲을 가로지르는 좁은 오솔길 위에 있다. 회색빛 오래된 나무들이 사방에서 우뚝 솟아 있다. 남쪽으로는 어두운 강이 숲을 가로질러 서쪽으로 흐른다. 오솔길은 북쪽과 동쪽으로 이어진다.
+  verdict: ok
+  note: 의미는 정확하다. 'Ancient gray trees'를 '잿빛 고목들'로 옮기면 더 문학적이지만 필수는 아니다.
+- id: tba:61:mob:6102
+  field: long
+  en: A large, gray wolf is here, glaring hungrily at you.
+  ko: 크고 회색인 늑대가 여기 있다. 당신을 향해 굶주린 듯 노려보고 있다.
+  verdict: awkward
+  note: '''크고 회색인 늑대''는 형용사 나열이 부자연스럽고, 문장을 둘로 끊어 흐름이 딱딱하다.'
+  fix: 커다란 회색 늑대가 굶주린 눈으로 당신을 노려보고 있다.
+- id: tba:61:room:6133
+  field: extras.1.text
+  en: The immense spider web moves softly.
+  ko: 거대한 거미줄이 부드럽게 움직인다.
+  verdict: ok
+  note: ''
+- id: tba:61:room:6134
+  field: extras.0.text
+  en: The cocoons are burst open as if something inside really wanted to get out. They are at the size of a human head.
+  ko: 번데기들은 안쪽에서 무언가가 정말로 빠져나오려 했는지 터져 있다. 크기는 사람의 머리만 하다.
+  verdict: wrong
+  note: '''cocoon''은 ''고치''다. ''번데기''는 pupa로, 고치 안에 든 벌레 자체를 뜻하므로 오역이다. 거미 둥지 맥락에서는 ''고치''가 맞다.'
+  fix: 고치들은 안에서 무언가가 정말로 빠져나오고 싶었던 듯 터져 있다. 크기는 사람의 머리만 하다.

@@ -1,0 +1,158 @@
+zone: '62'
+date: 2026-10-04 00:07
+reviewer: claude
+n: 15
+wrong_rate: 0.333
+awkward_rate: 0.267
+stopped: true
+added_to_glossary:
+- term game trail -> 짐승이 다니는 길
+- term sleeping pallet -> 잠자리
+- term side trail -> 샛길
+- term fresh (cut, wound, tracks) -> 갓 ~한
+- term once (과거) -> 한때
+- term furry -> 털북숭이, 털이 많은
+- term energy barrier enclosure -> 에너지 장벽(의 경계)
+- example There is dried blood on it.
+- example the current looking quite dangerous in fact.
+- example This path leads south into the forest.
+- example A side trail leads south here, and the trail also leads back ... to the east.
+- example A steel cell door.
+fixed:
+- tba:62:room:6252 description
+- tba:62:room:6221 extras.0.text
+- tba:62:room:6218 description
+- tba:62:mob:6212 description
+- tba:62:mob:6201 description
+- tba:62:room:6233 description
+- tba:62:room:6216 description
+- tba:62:room:6261 exits.west.look
+- tba:62:room:6214 description
+sample:
+- id: tba:62:room:6252
+  field: description
+  en: This must be the orc chief's area.  There's an old prize -- a stolen timeworn human armchair sitting near the south
+    wall as a throne.  A mammoth sleeping pallet made of piled furs is nearby.  Next to that is the pile of orc treasure;
+    a pile of well-polished coppers.  You look at the pile of worthless coins and wonder at the image of orcish raiders. /
+    These orcs aren't raiders, they are victims.
+  ko: 여기가 바로 오크 족장의 영역인 것 같다. 남쪽 벽 근처에 오래된 전리품으로 보이는, 낡고 마모된 인간의 안락의자가 왕좌처럼 놓여 있다. 그 옆에는 두꺼운 모피를 겹쳐 만든 거대한 수면용 이불이 있다. 그 옆에는
+    오크의 보물이라고 불리는, 반짝반짝하게 닦인 구리 동전 더미가 쌓여 있다. 당신은 이 쓸모없는 동전 더미를 바라보며, 오크 약탈꾼들의 이미지에 대해 의문을 품는다. / 이 오크들은 약탈꾼이 아니다. 그들은 피해자다.
+  verdict: wrong
+  note: '''stolen''(훔쳐 온)이 빠졌고 ''오크의 보물이라고 불리는''은 원문에 없는 말이다. ''sleeping pallet''은 이불이 아니라 깔고 자는 잠자리다. ''must be''는 추측보다 확신에
+    가깝다. ''그 옆에는''도 두 번 반복된다.'
+  fix: 여기는 오크 족장의 거처임이 틀림없다. 남쪽 벽 근처에는 오래된 전리품인, 훔쳐 온 낡은 인간용 안락의자가 왕좌처럼 놓여 있다. 그 가까이에는 모피를 쌓아 만든 거대한 잠자리가 있다. 그 옆에는 오크의 보물
+    더미, 곧 반들반들하게 닦인 구리 동전 더미가 있다. 당신은 쓸모없는 동전 더미를 바라보며 오크 약탈꾼이라는 이미지에 의문을 품는다. / 이 오크들은 약탈꾼이 아니라 피해자다.
+- id: tba:62:room:6221
+  field: extras.0.text
+  en: There is dried blood on it.
+  ko: 그 위에 말라붙은 피가 있다.
+  verdict: awkward
+  note: '''그 위에 ~ 피가 있다''는 직역투다. 피는 ''묻어 있다''가 자연스럽다.'
+  fix: 말라붙은 피가 묻어 있다.
+- id: tba:62:room:6223
+  field: name
+  en: A Forest Trail
+  ko: 숲속의 오솔길
+  verdict: ok
+  note: ''
+- id: tba:62:room:6218
+  field: description
+  en: This trail leads north-south... obviously a gaming trail.  The woods, mostly deciduous trees with the accompanying ground
+    foliage, crowd in to either side. A shrub to your left shows a fresh cutting wound... looks like a sharp object like a
+    knife or machete did the damage. / A crackle in the leaves spins you around, to see nothing.  Something is watching you,
+    you feel it. Where?
+  ko: 이 오솔길은 남북 방향으로 뻗어 있다... 분명 사냥꾼들이 다니는 길이다. 대부분 낙엽수인 나무들과 함께 자라는 풀숲이 양쪽을 가득 메우고 있다. 왼쪽에 있는 관목에 신선한 베인 자국이 보인다... 칼이나 마체테
+    같은 날카로운 물건으로 베인 것 같다. / 잎사귀가 바스락거리는 소리에 돌아보니 아무것도 없다. 무언가가 당신을 지켜보고 있다는 느낌이 든다. 어디에?
+  verdict: wrong
+  note: '''gaming trail''(game trail)은 짐승이 다니는 길이다. 사냥꾼의 길이 아니다. ''fresh cutting wound''의 ''신선한''은 어색하므로 ''갓 베인''으로 고쳤다. ''Where?''는
+    ''어디서?''가 자연스럽다.'
+  fix: 이 오솔길은 남북으로 뻗어 있다... 누가 봐도 짐승들이 다니는 길이다. 대부분 낙엽수인 나무들과 그 아래 자라는 덤불이 양옆으로 빽빽하게 들어차 있다. 왼쪽 관목에 갓 베인 자국이 보인다... 칼이나 마체테
+    같은 날카로운 물건에 베인 것 같다. / 낙엽이 바스락거리는 소리에 휙 돌아보지만 아무것도 없다. 무언가가 당신을 지켜보고 있다. 느낌으로 안다. 어디서?
+- id: tba:62:room:6208
+  field: name
+  en: In The Forest
+  ko: 숲속
+  verdict: ok
+  note: ''
+- id: tba:62:mob:6212
+  field: description
+  en: It might've been an orc, once.  Now it is a living terror, pushing everything out of its way to get at you.
+  ko: 언젠가는 오크였을지도 모른다. 하지만 지금은 살아있는 공포 그 자체로, 당신에게 닿기 위해 모든 것을 밀어내며 앞으로 나아간다.
+  verdict: awkward
+  note: '''언젠가는''은 미래로 읽히기 쉽다. 과거를 뜻하는 ''once''는 ''한때는''으로 옮겨야 한다. 뒷문장도 다소 늘어진다.'
+  fix: 한때는 오크였을지도 모른다. 하지만 지금은 살아 있는 공포 그 자체로, 당신에게 달려들려고 길을 막는 것은 무엇이든 밀쳐 낸다.
+- id: tba:62:mob:6201
+  field: description
+  en: It is a small, furry rodent with big ears.
+  ko: 귀가 크고 털이 부드러운 작은 설치류다.
+  verdict: wrong
+  note: '''furry''는 털이 많다는 뜻이다. ''부드러운''이라는 의미가 덧붙었다.'
+  fix: 귀가 큰, 털북숭이 작은 설치류다.
+- id: tba:62:room:6233
+  field: description
+  en: The ground is growing more rocky here.  The trees and other foliage in the forest grow sparse here, finding it hard
+    to find purchase in the soil.   The forest ends just to the west, with the trail you are on leading right on up to the
+    side of the mountains.  A side trail leads south here, and the trail also leads back into the thick of the forest to the
+    east.
+  ko: 여기서는 땅이 점점 더 바위투성이로 변한다. 숲속의 나무와 다른 식물은 뿌리를 내리기 어려워하며 드물게 자란다. 서쪽 바로 앞에서는 숲이 끝나고, 당신이 걷고 있는 오솔길은 산의 측면으로 곧장 이어진다. 여기서는
+    작은 오솔길이 남쪽으로 나 있으며, 동쪽으로는 오솔길이 다시 숲의 깊은 곳으로 이어진다.
+  verdict: awkward
+  note: '''여기서''가 반복되고 ''side trail''을 ''작은 오솔길''로 옮겨 어색하다. ''샛길''이 적절하다. ''side of the mountains''는 ''산비탈''이 자연스럽다.'
+  fix: 이곳은 땅이 점점 더 바위투성이가 된다. 숲의 나무와 다른 식물들은 흙에 뿌리를 내리기 어려운지 듬성듬성 자란다. 바로 서쪽에서 숲이 끝나고, 당신이 걷는 오솔길은 산비탈까지 곧장 이어진다. 여기서 샛길 하나가
+    남쪽으로 나 있고, 오솔길은 동쪽으로 다시 울창한 숲속으로 이어진다.
+- id: tba:62:room:6244
+  field: name
+  en: A Tunnel
+  ko: 터널
+  verdict: ok
+  note: ''
+- id: tba:62:room:6200
+  field: name
+  en: In The Forest
+  ko: 숲속
+  verdict: ok
+  note: ''
+- id: tba:62:room:6216
+  field: description
+  en: A large out-cropping of rock blocks this path along the river to the west, and you don't spot any way around it; the
+    woods are too thick to the south, the river too swift to the north, the magical barrier above you.  This is a nice area,
+    however, as evidenced by the amount of traffic this path gets.  From the marks in the grass, you guess that this is a
+    favored resting spot.
+  ko: 서쪽, 강을 따라 이어지는 이 오솔길을 거대한 바위 덩어리가 가로막고 있다. 우회할 만한 길은 보이지 않는다. 남쪽은 숲이 너무 짙고, 북쪽은 강물이 너무 거세며, 머리 위에는 마법 장벽이 쳐져 있다. 하지만
+    이 곳은 꽤 좋은 장소인 듯하다. 이 오솔길을 지나는 발자국이 그 증거다. 풀에 남은 자국으로 보아, 이곳은 사람들이 즐겨 쉬어 가는 곳인 것 같다.
+  verdict: wrong
+  note: '''사람들이''는 원문에 없는 주어다. 이 존의 주민은 오크일 수 있다. ''amount of traffic''을 ''발자국이 그 증거다''로 옮긴 것도 의미가 좁아졌다. ''이 곳''은 ''이곳''으로
+    붙여 써야 한다.'
+  fix: 서쪽으로 강을 따라 이어지는 이 길을 커다란 바위 덩어리가 가로막고 있는데, 돌아갈 길은 보이지 않는다. 남쪽은 숲이 너무 빽빽하고, 북쪽은 강물이 너무 거세며, 머리 위에는 마법 장벽이 있다. 그래도 이곳은
+    꽤 괜찮은 곳이다. 이 길을 많이 오간 흔적만 봐도 알 수 있다. 풀에 남은 자국으로 보아 이곳은 즐겨 쉬어 가는 자리인 것 같다.
+- id: tba:62:mob:6212
+  field: short
+  en: the mutant thing
+  ko: 돌연변이 괴물
+  verdict: ok
+  note: ''
+- id: tba:62:room:6261
+  field: exits.west.look
+  en: A steel cell door.
+  ko: 강철 감방 문이 보인다.
+  verdict: awkward
+  note: 원문은 명사구 설명이다. '보인다'를 덧붙이기보다 '~이다'로 끝내는 편이 맞다.
+  fix: 강철 감방 문이다.
+- id: tba:62:room:6214
+  field: description
+  en: A beautiful river flows swiftly by, the current looking quite dangerous in fact.  Out in the center of the river you
+    spot the energy barrier enclosure... no way out here. Looking up, you see a bird fly right through the barrier overhead
+    and wonder as to the force field's nature.  This path leads south into the forest, and westwards along the river's edge.
+  ko: 아름다운 강이 빠르게 흐르고, 물살은 사실 꽤 위험해 보인다. 강 중앙에는 에너지 장벽으로 둘러싸인 구역이 보인다... 여기서 나갈 방법은 없다. 고개를 들자, 새 한 마리가 머리 위를 날아가며 장벽을 그대로
+    통과하는 것을 보고, 그 힘의 장벽이 무엇인지 궁금해진다. 이 오솔길은 남쪽으로 숲속으로 이어지고, 서쪽으로는 강가를 따라 이어진다.
+  verdict: wrong
+  note: '''energy barrier enclosure''는 장벽 울타리 자체가 강 한가운데를 지난다는 뜻이다. ''장벽으로 둘러싸인 구역''으로 옮기면 의미가 달라진다. ''사실''은 직역투이고, ''남쪽으로
+    숲속으로''처럼 ''으로''가 겹쳐 어색하다.'
+  fix: 아름다운 강이 빠르게 흘러간다. 실은 물살이 꽤 위험해 보인다. 강 한가운데에 에너지 장벽의 경계가 보인다... 이쪽으로는 빠져나갈 수 없다. 고개를 들어 보니 새 한 마리가 머리 위 장벽을 그대로 뚫고 날아가고,
+    당신은 이 역장의 정체가 궁금해진다. 이 길은 남쪽으로는 숲속까지, 서쪽으로는 강가를 따라 이어진다.
+- id: tba:62:room:6259
+  field: name
+  en: The Laboratory
+  ko: 실험실
+  verdict: ok
+  note: ''
