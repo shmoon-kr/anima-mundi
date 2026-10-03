@@ -29,10 +29,6 @@ enum On {
 }
 
 impl Sim {
-    fn spell(&self, n: i32) -> Option<Spell> {
-        self.tables.spells.iter().find(|s| s.number == n).cloned()
-    }
-
     fn cast_fail(&mut self, k: Key, reason: &str) {
         self.deliver(k, Event::SkillResult { skill: "cast".into(), ok: false, reason: Some(reason.into()), who: None, who_id: None });
     }

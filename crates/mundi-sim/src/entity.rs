@@ -65,7 +65,6 @@ pub(crate) struct MobPart {
     pub default_position: Position,
     pub long: String,
     pub damage: (i32, i32),
-    pub exp: i64,
 }
 
 #[derive(Debug, Clone)]

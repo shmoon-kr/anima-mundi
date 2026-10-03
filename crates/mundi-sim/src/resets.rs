@@ -161,7 +161,6 @@ impl Sim {
                 default_position: pos(p.position.default),
                 long: p.long.clone(),
                 damage: (dn, ds),
-                exp: p.exp,
             }),
             room,
             position: pos(p.position.load),

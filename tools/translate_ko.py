@@ -209,7 +209,9 @@ def problems(src, out, used):
                     bad.append(f"{id_}.{k}: Han/kana {FORBIDDEN.findall(s)[:3]}")
         tr = text_of(t)
         for term in terms_in(text_of(f), used):
-            if term["ko"] not in tr:
+            # strict: false marks everyday words that are game terms only sometimes ("the water
+            # level", "experience in warfare"): in the prompt as guidance, not enforced.
+            if term.get("strict", True) and term["ko"] not in tr:
                 bad.append(f"{id_}: glossary {term['en']} -> {term['ko']} not used")
     return bad
 
