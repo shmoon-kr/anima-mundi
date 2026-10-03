@@ -201,6 +201,37 @@ pub enum DayPhase {
     Night,
 }
 
+/// The position commands (MECHANICS §4.3).
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PositionCommand {
+    Stand,
+    Sit,
+    Rest,
+    Sleep,
+    Wake,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PositionRefusal {
+    /// Already in that position (or awake, for wake).
+    Already,
+    /// Asleep: wake up first.
+    Asleep,
+    Fighting,
+    /// Magical sleep.
+    Magic,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum WakeFailure {
+    AlreadyAwake,
+    Magic,
+    BadShape,
+}
+
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct RoomExit {
     pub dir: String,
@@ -288,6 +319,42 @@ pub enum Event {
         id: Option<String>,
         #[serde(default, skip_serializing_if = "std::ops::Not::not")]
         blind: bool,
+        /// Beings with infravision looking this way, seen only as eyes (MECHANICS §3.4). Mundi addition.
+        #[serde(default, skip_serializing_if = "is_zero")]
+        glowing_eyes: u32,
+    },
+    /// My own position changed (PROTOCOL.md `position`); `from` is a Mundi addition.
+    #[serde(rename = "position")]
+    SelfPosition {
+        position: Position,
+        from: Position,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        awakened_by: Option<String>,
+    },
+    #[serde(rename = "occupant.position")]
+    OccupantPosition {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        position: Position,
+        from: Position,
+    },
+    /// A position command that changed nothing (MECHANICS §4.3). Mundi addition.
+    #[serde(rename = "position.refused")]
+    PositionRefused { command: PositionCommand, reason: PositionRefusal },
+    /// I woke someone (`wake <name>`). Mundi addition.
+    #[serde(rename = "occupant.woken")]
+    Woke {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+    },
+    #[serde(rename = "occupant.wake_failed")]
+    WakeFailed {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        reason: WakeFailure,
     },
     #[serde(rename = "move.failed")]
     MoveFailed {
@@ -336,6 +403,10 @@ pub enum Event {
         text: String,
         direction: Direction,
     },
+}
+
+fn is_zero(n: &u32) -> bool {
+    *n == 0
 }
 
 /// What a client sends, one JSON object per WebSocket text frame. A Mundi addition: the text adapter
@@ -432,7 +503,7 @@ mod tests {
     fn empty_struct_events_and_optional_fields() {
         let json = serde_json::to_string(&Event::ZoneAboveLevel {}).unwrap();
         assert_eq!(json, r#"{"type":"zone.above_level","data":{}}"#);
-        let json = serde_json::to_string(&Event::RoomDark { id: None, blind: false }).unwrap();
+        let json = serde_json::to_string(&Event::RoomDark { id: None, blind: false, glowing_eyes: 0 }).unwrap();
         assert_eq!(json, r#"{"type":"room.dark","data":{}}"#);
     }
 }

@@ -23,7 +23,7 @@ use fluent_bundle::{FluentArgs, FluentResource, FluentValue};
 use mundi_content::{load_locale, Locale, ZoneContent};
 use mundi_protocol::{
     ArrivedHow, DayPhase, Direction, Event, InGameHow, KeywordMode, KoFinal, Lang, LeftHow, LinkState, LoginFailure,
-    LoginStage, MoveFailure, Occupant, Position, Refusal, RoomView, Sex,
+    LoginStage, MoveFailure, Occupant, Position, PositionCommand, PositionRefusal, Refusal, RoomView, Sex, WakeFailure,
 };
 
 pub use mundi_content::markup::plain;
@@ -156,11 +156,49 @@ impl Renderer {
                 Refusal::Fighting => "refused-fighting",
                 Refusal::NothingToSay => "refused-nothing-to-say",
                 Refusal::QuitInFull => "refused-quit-in-full",
-                Refusal::InvalidTarget | Refusal::NoTarget | Refusal::NotHere => "refused-invalid-target",
+                Refusal::NotHere => "refused-not-here",
+                Refusal::InvalidTarget | Refusal::NoTarget => "refused-invalid-target",
                 _ => "refused-unknown-command",
             })],
             Event::Room(room) => self.room(v, room),
-            Event::RoomDark { blind, .. } => vec![m(if *blind { "room-blind" } else { "room-dark" })],
+            Event::RoomDark { blind, glowing_eyes, .. } => {
+                let mut out = vec![m(if *blind { "room-blind" } else { "room-dark" })];
+                out.extend((0..*glowing_eyes).map(|_| format!("{{red}}{}{{/red}}", m("glowing-eyes"))));
+                out
+            }
+            Event::SelfPosition { position, from, awakened_by } => match awakened_by {
+                Some(by) => one("pos-awakened-by", &[("who", self.name(v, by, None, Spot::Prose))]),
+                None => vec![m(&position_id("pos", *position, *from))],
+            },
+            Event::OccupantPosition { who: w, who_id, position, from } => {
+                let id = position_id("pos-room", *position, *from);
+                one(&id, &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())])
+            }
+            Event::PositionRefused { command, reason } => {
+                let c = match command {
+                    PositionCommand::Stand => "stand",
+                    PositionCommand::Sit => "sit",
+                    PositionCommand::Rest => "rest",
+                    PositionCommand::Sleep => "sleep",
+                    PositionCommand::Wake => "wake",
+                };
+                let r = match reason {
+                    PositionRefusal::Already => "already",
+                    PositionRefusal::Asleep => "asleep",
+                    PositionRefusal::Fighting => "fighting",
+                    PositionRefusal::Magic => "magic",
+                };
+                vec![m(&format!("refused-{c}-{r}"))]
+            }
+            Event::Woke { who: w, who_id } => one("woke", &self.pronouns(v, w, who_id.as_deref())),
+            Event::WakeFailed { who: w, who_id, reason } => {
+                let id = match reason {
+                    WakeFailure::AlreadyAwake => "wake-failed-already-awake",
+                    WakeFailure::Magic => "wake-failed-magic",
+                    WakeFailure::BadShape => "wake-failed-bad-shape",
+                };
+                one(id, &self.pronouns(v, w, who_id.as_deref()))
+            }
             Event::MoveFailed { reason, door, .. } => vec![match (reason, door) {
                 (MoveFailure::Closed | MoveFailure::Locked, Some(d)) => self.msg(v, "move-closed-door", &[("door", escape(d))]),
                 (MoveFailure::Closed | MoveFailure::Locked, None) => m("move-closed"),
@@ -178,7 +216,7 @@ impl Renderer {
                 (Some(LeftHow::LeftGame), _) | (None, None) => one("left-game", &[("who", who(w, who_id))]),
             },
             Event::Link { who: w, who_id, state } => match state {
-                LinkState::Lost => one("link-lost", &[("who", who(w, who_id)), ("his", self.his(who_id.as_deref()).into())]),
+                LinkState::Lost => one("link-lost", &[("who", who(w, who_id)), ("his", self.pronoun(who_id.as_deref(), "his").into())]),
                 LinkState::Reconnected => one("link-reconnected", &[("who", who(w, who_id))]),
             },
             Event::WorldTime { phase } => vec![m(match phase {
@@ -260,8 +298,10 @@ impl Renderer {
                 name = format!("{name}({kw})");
             }
         }
-        if o.flags.iter().any(|f| f == "linkless") {
-            name = format!("{name} {}", self.msg(v, "flag-linkless", &[]));
+        for flag in ["invisible", "hidden", "linkless"] {
+            if o.flags.iter().any(|f| f == flag) {
+                name = format!("{name} {}", self.msg(v, &format!("flag-{flag}"), &[]));
+            }
         }
         self.msg(v, id, &[("who", name)])
     }
@@ -301,12 +341,28 @@ impl Renderer {
         o.id.as_deref().and_then(|id| self.beings.read().unwrap().get(proto(id)).map(|b| b.keywords.clone())).unwrap_or_default()
     }
 
-    fn his(&self, id: Option<&str>) -> &'static str {
-        match id.and_then(|id| self.beings.read().unwrap().get(proto(id)).map(|b| b.sex)) {
-            Some(Sex::Male) => "his",
-            Some(Sex::Female) => "her",
-            _ => "its",
+    /// An English pronoun ("he", "him" or "his") for a being, by its sex; "it" when unknown.
+    fn pronoun(&self, id: Option<&str>, case: &str) -> &'static str {
+        let sex = id.and_then(|id| self.beings.read().unwrap().get(proto(id)).map(|b| b.sex)).unwrap_or_default();
+        match (sex, case) {
+            (Sex::Male, "he") => "he",
+            (Sex::Male, "him") => "him",
+            (Sex::Male, _) => "his",
+            (Sex::Female, "he") => "she",
+            (Sex::Female, _) => "her",
+            (Sex::Neutral, "his") => "its",
+            (Sex::Neutral, _) => "it",
         }
+    }
+
+    /// The arguments of a sentence about someone: their name and pronouns.
+    fn pronouns(&self, v: Viewer, name: &str, id: Option<&str>) -> Vec<(&'static str, String)> {
+        vec![
+            ("who", self.name(v, name, id, Spot::Prose)),
+            ("he", self.pronoun(id, "he").into()),
+            ("him", self.pronoun(id, "him").into()),
+            ("his", self.pronoun(id, "his").into()),
+        ]
     }
 
     fn msg(&self, v: Viewer, id: &str, args: &[(&str, String)]) -> String {
@@ -337,6 +393,19 @@ fn bundle(lang: &str, dir: &Path) -> Result<FluentBundle<FluentResource>, String
         b.add_resource(res).map_err(|errs| format!("{}: {errs:?}", f.display()))?;
     }
     Ok(b)
+}
+
+/// `pos-standing-sitting`: the template of a position change. Falling asleep reads the same from any position.
+fn position_id(prefix: &str, to: Position, from: Position) -> String {
+    let n = |p: Position| match p {
+        Position::Standing => "standing",
+        Position::Sitting => "sitting",
+        Position::Resting => "resting",
+        Position::Sleeping => "sleeping",
+        Position::Fighting => "fighting",
+        _ => "down",
+    };
+    if to == Position::Sleeping { format!("{prefix}-sleeping") } else { format!("{prefix}-{}-{}", n(to), n(from)) }
 }
 
 /// Keywords that are words of the English name first: "the pit beast" is named `beast` before

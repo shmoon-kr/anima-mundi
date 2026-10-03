@@ -81,3 +81,46 @@ time-night = 밤이 시작되었다.
 
 ## prompt
 prompt = { $hp }H { $mp }M { $mv }V >
+
+## positions [4.3]
+pos-standing-sitting = 당신은 일어선다.
+pos-room-standing-sitting = { $who }{ JOSA($who, "이/가") } 몸을 일으켜 선다.
+pos-standing-resting = 당신은 쉬기를 그만두고 일어선다.
+pos-room-standing-resting = { $who }{ JOSA($who, "이/가") } 쉬기를 그만두고 몸을 일으켜 선다.
+pos-sitting-standing = 당신은 앉는다.
+pos-room-sitting-standing = { $who }{ JOSA($who, "이/가") } 앉는다.
+pos-sitting-resting = 당신은 쉬기를 그만두고 일어나 앉는다.
+pos-room-sitting-resting = { $who }{ JOSA($who, "이/가") } 쉬기를 그만둔다.
+pos-resting-standing = 당신은 앉아서 지친 몸을 쉰다.
+pos-room-resting-standing = { $who }{ JOSA($who, "이/가") } 앉아서 쉰다.
+pos-resting-sitting = 당신은 지친 몸을 쉰다.
+pos-room-resting-sitting = { $who }{ JOSA($who, "이/가") } 쉰다.
+pos-sleeping = 당신은 잠이 든다.
+pos-room-sleeping = { $who }{ JOSA($who, "이/가") } 누워 잠이 든다.
+pos-sitting-sleeping = 당신은 잠에서 깨어 일어나 앉는다.
+pos-room-sitting-sleeping = { $who }{ JOSA($who, "이/가") } 잠에서 깬다.
+pos-awakened-by = { $who }{ JOSA($who, "이/가") } 당신을 깨웠다.
+refused-stand-already = 이미 서 있다.
+refused-stand-asleep = 먼저 잠에서 깨야 한다!
+refused-stand-fighting = 싸우는 게 서 있는 게 아니면 뭔가?
+refused-sit-already = 이미 앉아 있다.
+refused-sit-asleep = 먼저 잠에서 깨야 한다.
+refused-sit-fighting = 싸우는 중에 앉겠다고? 제정신인가?
+refused-rest-already = 이미 쉬고 있다.
+refused-rest-asleep = 먼저 잠에서 깨야 한다.
+refused-rest-fighting = 싸우는 중에 쉬겠다고?  제정신인가?
+refused-sleep-already = 이미 깊이 잠들어 있다.
+refused-sleep-fighting = 싸우는 중에 자겠다고?  제정신인가?
+refused-wake-already = 이미 깨어 있다...
+refused-wake-asleep = 당신부터 잠에서 깨는 게 좋겠다.
+refused-wake-magic = 깨어날 수가 없다!
+woke = { $who }{ JOSA($who, "을/를") } 깨웠다.
+wake-failed-already-awake = { $who }{ JOSA($who, "은/는") } 이미 깨어 있다.
+wake-failed-magic = { $who }{ JOSA($who, "을/를") } 깨울 수가 없다!
+wake-failed-bad-shape = { $who }{ JOSA($who, "은/는") } 상태가 너무 나쁘다!
+refused-not-here = 그런 이름을 가진 이는 여기 없다.
+
+## perception [3.4]
+glowing-eyes = 붉게 빛나는 한 쌍의 눈이 당신 쪽을 보고 있다.
+flag-invisible = (투명)
+flag-hidden = (숨음)

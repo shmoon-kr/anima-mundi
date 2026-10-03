@@ -80,3 +80,46 @@ time-night = The night has begun.
 
 ## prompt (comm.c:1225-1235)
 prompt = { $hp }H { $mp }M { $mv }V >
+
+## positions [4.3] (act.movement.c:731-950). pos-<to>-<from> to the actor, pos-room-<to>-<from> to the room.
+pos-standing-sitting = You stand up.
+pos-room-standing-sitting = { $who } clambers to { $his } feet.
+pos-standing-resting = You stop resting, and stand up.
+pos-room-standing-resting = { $who } stops resting, and clambers on { $his } feet.
+pos-sitting-standing = You sit down.
+pos-room-sitting-standing = { $who } sits down.
+pos-sitting-resting = You stop resting, and sit up.
+pos-room-sitting-resting = { $who } stops resting.
+pos-resting-standing = You sit down and rest your tired bones.
+pos-room-resting-standing = { $who } sits down and rests.
+pos-resting-sitting = You rest your tired bones.
+pos-room-resting-sitting = { $who } rests.
+pos-sleeping = You go to sleep.
+pos-room-sleeping = { $who } lies down and falls asleep.
+pos-sitting-sleeping = You awaken, and sit up.
+pos-room-sitting-sleeping = { $who } awakens.
+pos-awakened-by = You are awakened by { $who }.
+refused-stand-already = You are already standing.
+refused-stand-asleep = You have to wake up first!
+refused-stand-fighting = Do you not consider fighting as standing?
+refused-sit-already = You're sitting already.
+refused-sit-asleep = You have to wake up first.
+refused-sit-fighting = Sit down while fighting? Are you MAD?
+refused-rest-already = You are already resting.
+refused-rest-asleep = You have to wake up first.
+refused-rest-fighting = Rest while fighting?  Are you MAD?
+refused-sleep-already = You are already sound asleep.
+refused-sleep-fighting = Sleep while fighting?  Are you MAD?
+refused-wake-already = You are already awake...
+refused-wake-asleep = Maybe you should wake yourself up first.
+refused-wake-magic = You can't wake up!
+woke = You wake { $him } up.
+wake-failed-already-awake = { $he } is already awake.
+wake-failed-magic = You can't wake { $him } up!
+wake-failed-bad-shape = { $he }'s in pretty bad shape!
+refused-not-here = No one by that name here.
+
+## perception [3.4]
+glowing-eyes = You see a pair of glowing red eyes looking your way.
+flag-invisible = (invisible)
+flag-hidden = (hidden)

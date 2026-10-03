@@ -17,11 +17,11 @@ pub mod world;
 
 use std::collections::{BTreeMap, VecDeque};
 
-use mundi_content::names::{DoorState, RoomFlag, Sector};
+use mundi_content::names::{Affect, DoorState, RoomFlag, Sector};
 use mundi_content::{Tables, ZoneContent};
 use mundi_protocol::{
     ArrivedHow, CloseReason, DayPhase, Direction, Event, InGameHow, LeftHow, LinkState, MoveFailure, Occupant,
-    Position, Refusal, RoomExit, RoomView, SELF,
+    Position, PositionCommand, PositionRefusal, Refusal, RoomExit, RoomView, WakeFailure, SELF,
 };
 use rand_chacha::ChaCha8Rng;
 use rand_core::SeedableRng;
@@ -45,6 +45,11 @@ pub enum Input {
     Command { name: String, text: String },
     /// The connection went away without `quit`: the character stays, linkless (MECHANICS §5.3).
     LinkLost { name: String },
+    /// Sets or clears an affect. Until spells and objects exist (S5) this is how tests and admin
+    /// tools put one on; it is logged like every input, so replays see it.
+    SetAffect { name: String, affect: Affect, on: bool },
+    /// Whether the character holds a lit light (until objects, S5).
+    SetLight { name: String, on: bool },
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -82,6 +87,14 @@ struct Char {
     max_mv: i32,
     linked: bool,
     queue: VecDeque<String>,
+    affects: Vec<Affect>,
+    light: bool,
+}
+
+impl Char {
+    fn has(&self, a: Affect) -> bool {
+        self.affects.contains(&a)
+    }
 }
 
 pub struct Sim {
@@ -205,6 +218,19 @@ impl Sim {
                     c.queue.push_back(text);
                 }
             }
+            Input::SetAffect { name, affect, on } => {
+                if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
+                    c.affects.retain(|a| *a != affect);
+                    if on {
+                        c.affects.push(affect);
+                    }
+                }
+            }
+            Input::SetLight { name, on } => {
+                if let Some(c) = self.by_name.get(&key_name(&name)).and_then(|k| self.chars.get_mut(*k)) {
+                    c.light = on;
+                }
+            }
             Input::LinkLost { name } => {
                 let Some(&key) = self.by_name.get(&key_name(&name)) else { return };
                 let Some(c) = self.chars.get_mut(key) else { return };
@@ -248,6 +274,8 @@ impl Sim {
             max_mv: mv,
             linked: true,
             queue: VecDeque::new(),
+            affects: Vec::new(),
+            light: false,
         });
         self.by_name.insert(key_name(name), key);
         self.order.push(key);
@@ -272,6 +300,8 @@ impl Sim {
     // ---- commands (MECHANICS §4.2) --------------------------------------------------------------
 
     fn command(&mut self, key: Key, text: &str) {
+        // Any command ends hiding (interpreter.c:487, MECHANICS §3.5).
+        self.chars.get_mut(key).unwrap().affects.retain(|a| *a != Affect::Hide);
         let text = text.trim_start();
         if text.is_empty() {
             return;
@@ -302,6 +332,7 @@ impl Sim {
                 }
             }
             Action::Say => self.say(key, arg),
+            Action::Position(p) => self.position(key, p, arg),
             Action::QuitPrefix => self.deliver(key, Event::Refused { reason: Refusal::QuitInFull }),
             Action::Quit => {
                 if position == Position::Fighting {
@@ -355,11 +386,21 @@ impl Sim {
 
     /// MECHANICS §3.2. Objects and mobs come with the zone resets (S5).
     fn look(&mut self, key: Key) {
-        let room = self.chars.get(key).unwrap().room;
+        let me = self.chars.get(key).unwrap();
+        let room = me.room;
         let r = &self.world.rooms[room];
+        if me.has(Affect::Blind) {
+            self.deliver(key, Event::RoomDark { id: Some(r.id.clone()), blind: true, glowing_eyes: 0 });
+            return;
+        }
         if !self.can_see_in(key, room) {
-            let id = Some(r.id.clone());
-            self.deliver(key, Event::RoomDark { id, blind: false });
+            // In the dark, those with infravision show as eyes (act.informative.c list_char_to_char).
+            let eyes = self.people[room]
+                .iter()
+                .filter(|k| **k != key && !self.can_see(key, **k))
+                .filter(|k| self.chars.get(**k).is_some_and(|c| c.has(Affect::Infravision)))
+                .count() as u32;
+            self.deliver(key, Event::RoomDark { id: Some(r.id.clone()), blind: false, glowing_eyes: eyes });
             return;
         }
         let exits = r
@@ -385,7 +426,15 @@ impl Sim {
                 long: None,
                 position: c.position,
                 fighting: None,
-                flags: if c.linked { vec![] } else { vec!["linkless".into()] },
+                flags: [
+                    (c.has(Affect::Invisible), "invisible"),
+                    (c.has(Affect::Hide), "hidden"),
+                    (!c.linked, "linkless"),
+                ]
+                .iter()
+                .filter(|(on, _)| *on)
+                .map(|(_, f)| f.to_string())
+                .collect(),
                 hints: vec![],
                 keywords: vec![],
             })
@@ -412,6 +461,73 @@ impl Sim {
         let said = text.to_string();
         self.to_room(key, room, false, move |from, from_id| Event::Say { from, from_id, text: said.clone(), direction: Direction::In });
         self.deliver(key, Event::Say { from: SELF.into(), from_id: None, text: text.into(), direction: Direction::Out });
+    }
+
+    /// stand, sit, rest, sleep, wake (MECHANICS §4.3, act.movement.c:731-950).
+    fn position(&mut self, key: Key, cmd: PositionCommand, arg: &str) {
+        let c = self.chars.get(key).unwrap();
+        let (from, room) = (c.position, c.room);
+        let refuse = |reason| Event::PositionRefused { command: cmd, reason };
+        if cmd == PositionCommand::Wake && !arg.is_empty() {
+            return self.wake_other(key, arg);
+        }
+        let to = match (cmd, from) {
+            (PositionCommand::Stand, Position::Sitting | Position::Resting) => Position::Standing,
+            (PositionCommand::Sit, Position::Standing | Position::Resting) => Position::Sitting,
+            (PositionCommand::Rest, Position::Standing | Position::Sitting) => Position::Resting,
+            (PositionCommand::Sleep, Position::Standing | Position::Sitting | Position::Resting) => Position::Sleeping,
+            (PositionCommand::Wake, Position::Sleeping) if c.has(Affect::Sleep) => {
+                return self.deliver(key, refuse(PositionRefusal::Magic));
+            }
+            (PositionCommand::Wake, Position::Sleeping) => Position::Sitting,
+            (PositionCommand::Wake, _) => return self.deliver(key, refuse(PositionRefusal::Already)),
+            (PositionCommand::Sleep, Position::Sleeping) => return self.deliver(key, refuse(PositionRefusal::Already)),
+            (_, Position::Fighting) => return self.deliver(key, refuse(PositionRefusal::Fighting)),
+            (_, Position::Sleeping) => return self.deliver(key, refuse(PositionRefusal::Asleep)),
+            _ => return self.deliver(key, refuse(PositionRefusal::Already)),
+        };
+        self.chars.get_mut(key).unwrap().position = to;
+        self.deliver(key, Event::SelfPosition { position: to, from, awakened_by: None });
+        // "$n sits down." is the one shown to those who cannot see (as "Someone"): act(..., FALSE, ...).
+        let must_see = !(to == Position::Sitting && from == Position::Standing);
+        self.to_room(key, room, must_see, |who, who_id| Event::OccupantPosition { who, who_id, position: to, from });
+    }
+
+    fn wake_other(&mut self, key: Key, arg: &str) {
+        let c = self.chars.get(key).unwrap();
+        if c.position == Position::Sleeping {
+            return self.deliver(key, Event::PositionRefused { command: PositionCommand::Wake, reason: PositionRefusal::Asleep });
+        }
+        let room = c.room;
+        let target = self.people[room].iter().copied().find(|k| {
+            self.can_see(key, *k) && self.chars.get(*k).is_some_and(|t| t.name.eq_ignore_ascii_case(arg))
+        });
+        let Some(target) = target else {
+            return self.deliver(key, Event::Refused { reason: Refusal::NotHere });
+        };
+        if target == key {
+            return self.position(key, PositionCommand::Wake, "");
+        }
+        let t = self.chars.get(target).unwrap();
+        let (who, who_id) = (t.name.clone(), Some(char_id(&t.name)));
+        let failure = if t.position > Position::Sleeping {
+            Some(WakeFailure::AlreadyAwake)
+        } else if t.has(Affect::Sleep) {
+            Some(WakeFailure::Magic)
+        } else if t.position < Position::Sleeping {
+            Some(WakeFailure::BadShape)
+        } else {
+            None
+        };
+        if let Some(reason) = failure {
+            return self.deliver(key, Event::WakeFailed { who, who_id, reason });
+        }
+        let me = self.chars.get(key).unwrap().name.clone();
+        self.deliver(key, Event::Woke { who, who_id });
+        self.chars.get_mut(target).unwrap().position = Position::Sitting;
+        // "You are awakened by $n." reaches the sleeper (TO_SLEEP), named only if they could see them.
+        let by = if self.can_see(target, key) { me } else { "someone".into() };
+        self.deliver(target, Event::SelfPosition { position: Position::Sitting, from: Position::Sleeping, awakened_by: Some(by) });
     }
 
     // ---- the tick (MECHANICS §1.2, §5) ----------------------------------------------------------
@@ -484,8 +600,12 @@ impl Sim {
 
     // ---- perception (MECHANICS §3.1, §3.5, §3.6) ------------------------------------------------
 
-    /// Whether the room is lit for this viewer. Lights and infravision come with objects and affects.
-    fn can_see_in(&self, _viewer: Key, room: RoomIx) -> bool {
+    /// Whether a room is lit (MECHANICS §3.1): a light in it, else not `dark`, and indoors or in a
+    /// city or in daytime.
+    fn lit(&self, room: RoomIx) -> bool {
+        if self.people[room].iter().any(|k| self.chars.get(*k).is_some_and(|c| c.light)) {
+            return true;
+        }
         let r = &self.world.rooms[room];
         if r.flags.contains(&RoomFlag::Dark) {
             return false;
@@ -496,12 +616,22 @@ impl Sim {
         !matches!(self.hour, 21..=23 | 0..=4)
     }
 
+    /// The viewer's light condition (MECHANICS §3.5): not blind, and the room lit or infravision.
+    fn can_see_in(&self, viewer: Key, room: RoomIx) -> bool {
+        let Some(v) = self.chars.get(viewer) else { return false };
+        !v.has(Affect::Blind) && (self.lit(room) || v.has(Affect::Infravision))
+    }
+
+    /// MECHANICS §3.5: oneself always; others with light, and past invisibility and hiding only
+    /// with the senses for them.
     fn can_see(&self, viewer: Key, target: Key) -> bool {
         if viewer == target {
             return true;
         }
-        let Some(v) = self.chars.get(viewer) else { return false };
+        let (Some(v), Some(t)) = (self.chars.get(viewer), self.chars.get(target)) else { return false };
         self.can_see_in(viewer, v.room)
+            && (!t.has(Affect::Invisible) || v.has(Affect::DetectInvis))
+            && (!t.has(Affect::Hide) || v.has(Affect::SenseLife))
     }
 
     /// An event about `actor` to everyone else in `room` who is awake. With `must_see` only those who
@@ -541,6 +671,7 @@ enum Action {
     QuitPrefix,
     Quit,
     Say,
+    Position(PositionCommand),
 }
 
 struct Cmd {
@@ -561,7 +692,12 @@ const COMMANDS: &[Cmd] = &[
     Cmd { name: "look", min: Position::Resting, action: Action::Look },
     Cmd { name: "qui", min: Position::Dead, action: Action::QuitPrefix },
     Cmd { name: "quit", min: Position::Dead, action: Action::Quit },
+    Cmd { name: "rest", min: Position::Resting, action: Action::Position(PositionCommand::Rest) },
     Cmd { name: "say", min: Position::Resting, action: Action::Say },
+    Cmd { name: "sit", min: Position::Resting, action: Action::Position(PositionCommand::Sit) },
+    Cmd { name: "sleep", min: Position::Sleeping, action: Action::Position(PositionCommand::Sleep) },
+    Cmd { name: "stand", min: Position::Resting, action: Action::Position(PositionCommand::Stand) },
+    Cmd { name: "wake", min: Position::Sleeping, action: Action::Position(PositionCommand::Wake) },
     Cmd { name: "'", min: Position::Resting, action: Action::Say },
 ];
 

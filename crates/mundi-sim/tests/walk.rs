@@ -171,3 +171,34 @@ fn replaying_the_input_log_gives_the_same_bytes() {
     assert_eq!(bytes(&again), bytes(&live));
     assert_eq!(bytes(&Sim::replay(&zones, &tables(), 42, 12, &log)), bytes(&again));
 }
+
+#[test]
+fn positions_follow_the_table() {
+    use mundi_protocol::{Position, PositionCommand, PositionRefusal};
+    let zones = midgaard();
+    let mut sim = Sim::new(&zones, &tables(), 1, 12);
+    enter(&mut sim, "Ana", None);
+    let steps = [
+        ("stand", Err((PositionCommand::Stand, PositionRefusal::Already))),
+        ("sit", Ok((Position::Sitting, Position::Standing))),
+        ("sit", Err((PositionCommand::Sit, PositionRefusal::Already))),
+        ("rest", Ok((Position::Resting, Position::Sitting))),
+        ("sleep", Ok((Position::Sleeping, Position::Resting))),
+        ("sleep", Err((PositionCommand::Sleep, PositionRefusal::Already))),
+        ("wake", Ok((Position::Sitting, Position::Sleeping))),
+        ("wake", Err((PositionCommand::Wake, PositionRefusal::Already))),
+        ("stand", Ok((Position::Standing, Position::Sitting))),
+    ];
+    for (text, want) in steps {
+        let out = cmd(&mut sim, "Ana", text);
+        match (&to(&out, "Ana")[..], want) {
+            ([Event::SelfPosition { position, from, .. }], Ok((p, f))) => assert_eq!((*position, *from), (p, f), "{text}"),
+            ([Event::PositionRefused { command, reason }], Err((c, r))) => assert_eq!((*command, *reason), (c, r), "{text}"),
+            (got, _) => panic!("{text}: {got:?}"),
+        }
+    }
+    // Asleep, moving is refused by the command table (MECHANICS §4.2).
+    cmd(&mut sim, "Ana", "sleep");
+    let out = cmd(&mut sim, "Ana", "north");
+    assert!(matches!(to(&out, "Ana")[..], [Event::Refused { reason: Refusal::Sleeping }]));
+}
