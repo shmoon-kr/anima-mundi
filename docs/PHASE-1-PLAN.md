@@ -155,8 +155,16 @@ MECHANICS.md 의 절 번호를 가리키며, 규칙마다 단위 테스트. **an
 - [x] 1-9 (2026-10-03): 자세·회복·배고픔·먹고 마시기, 물건·장비·광원, 몹 리셋·배회·선공, 근접 전투·사망·시체·경험치, 그룹·따라가기·autoassist·autoloot·split,
   기술(kick bash rescue backstab)·주문(1단계 7개)·효과 시간, 독, 문, 상점·길드. 테스트 `crates/mundi-sim/tests/{rules,items,mobs,combat,group,magic,doors,shops}.rs`
   - tbaMUD 의 수치표·주문표·명령표·특수 배정·시체와 돈의 이름을 `third_party/tbamud/tables/` 로 뽑았다(D21)
-  - 발견: 이 tbaMUD 의 길드 경비·fido·janitor·cityguard 등은 DG 스크립트 트리거다(MECHANICS §14.3). 길드 경비만 데이터로 했다 — **사용자 결정 필요**
-- [ ] 비교: 가능한 규칙은 tbaMUD 실서버(192.168.1.101)와 같은 상황의 결과를 견준다(같은 몹, 같은 레벨에서 피해 분포, 회복량, 가격)
+  - 발견: 이 tbaMUD 의 길드 경비·fido·janitor·cityguard 등은 DG 스크립트 트리거다(MECHANICS §14.3)
+- [x] 트리거 (사용자 결정 a, 2026-10-03): 파티가 만나는 것을 네이티브 규칙으로 — 콘텐츠에 트리거 ID, `tables/triggers.yaml` 에 동작과 문구.
+  kind soul(벌거벗은 초보에게 장비), 로그인 환영, cityguard, fido, janitor, 쓰레기장. 테스트 `tests/triggers.rs`
+- 비교 (tbaMUD 실서버, 새 테스트 캐릭터만, `tools/compare/`, 비밀번호는 `run/compare-secret.toml`):
+  - [x] 로그인·트리거: 첫 로그인에 장비 없음(do_start 가 스크립트 검사보다 먼저), 환영 문구, 시작 안내, kind soul 장비
+  - [x] 가격 (`prices.py`): 상점 셋 16품목과 되파는 값이 매력 7 하나로 모두 맞음. **차이 1개 발견·수정**: 배율이 C float 이라 단정도
+    계산(배정도는 gnarled staff 851 → 850). MECHANICS §15.2
+  - [x] 회복 (`regen.py`): 17세 서기 +20, 쉬기 +25 이동력 — 같음. 잠자기는 최대치에 막혀 미확인(공식상 +30)
+  - [ ] 명중·피해 분포: 필멸자는 힘·민첩을 볼 수 없어(score 에 나이·AC 만) 명중률은 통계적으로만(±5% 단위) 비교 가능. 몹의 명중(몹 thac0·hitroll 은
+    파일에 있음)을 우리 AC 로 수백 번 세는 방식이 가장 낫다 — S7 비교 실행 때
 - 확인: 규칙마다 테스트가 MECHANICS 절을 가리킨다
 
 ## S6. anima 연결과 텔넷 (M5 나머지, M7)

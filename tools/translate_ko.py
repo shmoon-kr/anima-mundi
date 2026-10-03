@@ -202,6 +202,15 @@ def ask(text, size, attempt=1):
 def parse(text):
     text = re.sub(r"(?s)^.*</think>", "", text).strip()
     text = re.sub(r"^```(json)?|```$", "", text.strip()).strip()
+    # A pronoun code left in: the name it stands for ($M -> $N, $s -> $n의).
+    text = re.sub(r"\$([emsEMS])(의?)", lambda m: "$" + ("n" if m.group(1).islower() else "N") + ("의" if m.group(1) in "sS" and not m.group(2) else "") + m.group(2), text)
+    # A single particle in braces ($N{에게}, 당신{의}) is harmless: unbrace it; a stray half after a pair goes.
+    text = re.sub(r"\{([가-힣]+)\}", r"\1", text)
+    text = re.sub(r"(\{(?:이/가|은/는|을/를|과/와|으로/로|아/야)\})/[가-힣]", r"\1", text)
+    # A pair after a word, not a code (당신{은/는}): the word is fixed, so is its particle.
+    text = re.sub(r"당신\{(이/가|은/는|을/를|과/와|으로/로|아/야)\}", lambda m: "당신" + m.group(1).split("/")[0], text)
+    # A varying particle attached ($N은) is the right particle in the wrong notation: make it the pair.
+    text = re.sub(r"(\$[nNp])(으로|이|가|은|는|을|를|과|와|로|아|야)(?![가-힣])", lambda m: m.group(1) + "{" + PAIR_OF[m.group(2)] + "}", text)
     return json.loads(text[text.find("{"):text.rfind("}") + 1])
 
 
@@ -242,7 +251,7 @@ def problems(src, out, used):
         if id_.startswith("attack:"):
             for k, v in f.items():
                 if isinstance(t.get(k), str):
-                    bad += [f"{id_}.{k}: {p}" for p in act_problems(v, t[k])]
+                    bad += [f"{id_}.{k}: {p}" for p in act_problems(v, t[k], k.split(".")[1])]
         tr = text_of(t)
         for term in terms_in(text_of(f), used):
             # strict: false marks everyday words that are game terms only sometimes ("the water
@@ -253,13 +262,16 @@ def problems(src, out, used):
 
 
 PAIRS = {"이/가", "은/는", "을/를", "과/와", "으로/로", "아/야"}
+PAIR_OF = {w: p for p in PAIRS for w in p.split("/")}
 CODE = re.compile(r"\$(.)")
 # A particle that changes with the final consonant must be a pair; 의, 에게, 도 .. attach as they are.
 VARYING = re.compile(r"(이|가|은|는|을|를|과|와|으로|로|아|야)(?![가-힣])")
 
 
-def act_problems(en, ko):
-    """A combat line's codes: the names it speaks of kept, no pronoun codes, particles as pairs."""
+def act_problems(en, ko, role="room"):
+    """A combat line's codes: the names it speaks of kept, no pronoun codes, particles as pairs.
+    The reader's own code may stand for English "you" (it renders as 당신): $n in an attacker's line,
+    $N in a victim's."""
     bad = []
     src = {c for c in CODE.findall(en)}
     out = {c for c in CODE.findall(ko)}
@@ -270,7 +282,11 @@ def act_problems(en, ko):
     for c in "nNp":
         if c in src and c not in out:
             bad.append(f"${c} dropped")
-    if "n" in out and not src & set("nems") or "N" in out and not src & set("NEMS"):
+    if src & set("nems") or role == "attacker":
+        src.add("n")
+    if src & set("NEMS") or role == "victim":
+        src.add("N")
+    if "n" in out and "n" not in src or "N" in out and "N" not in src:
         bad.append("a name the English does not speak of")
     for m in re.finditer(r"\$[nNp](\{[^}]*\}|[가-힣])?", ko):
         part = m.group(1)
@@ -278,6 +294,8 @@ def act_problems(en, ko):
             bad.append(f"particle {part}")
         elif part and not part.startswith("{") and VARYING.match(ko[m.end() - 1:]):
             bad.append(f"particle attached: {ko[m.start():m.end() + 2]}")
+    if re.search(r"(?<!\$[nNp])\{(" + "|".join(PAIRS) + r")\}", ko):
+        bad.append("a particle pair after a word, not a code")
     return bad
 
 
@@ -426,8 +444,9 @@ def translate(zone, conventions, terms, log):
         save(list(src), existing)
         state_path.write_text(json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
 
-    for i in range(0, len(todo), BATCH):
-        ids = todo[i:i + BATCH]
+    size = 2 if zone == "combat" else BATCH  # a variant is a dozen lines; one bad line costs the batch
+    for i in range(0, len(todo), size):
+        ids = todo[i:i + size]
         batch, out = attempt_batch(ids)
         if out is not None:
             keep(batch, out)
@@ -438,7 +457,7 @@ def translate(zone, conventions, terms, log):
                 if out is not None:
                     keep(one, out)
         el = time.time() - t0
-        log(f"  {min(i + BATCH, len(todo))}/{len(todo)}  {words} words in {el / 60:.1f} min ({words / max(el, 1) * 60:.0f}/min)")
+        log(f"  {min(i + size, len(todo))}/{len(todo)}  {words} words in {el / 60:.1f} min ({words / max(el, 1) * 60:.0f}/min)")
     save(list(src), existing)
 
 
