@@ -724,3 +724,14 @@ score-state-armored = You feel protected.
 score-state-infravision = Your eyes are glowing red.
 exit-closed = ({ $exit })
 exit-closed-keyword = ({ $exit })
+
+# junk (act.item.c SCMD_JUNK, MECHANICS §13.2)
+used-junk = You junk { $p }.  It vanishes in a puff of smoke!
+room-junk = { $who } junks { $p }.  It vanishes in a puff of smoke!
+fail-junk-what = What do you want to junk?
+fail-junk-all-of-what = What do you want to junk all of?
+fail-junk-nothing = You don't seem to be carrying anything.
+fail-junk-cursed = You can't junk { $p }, it must be CURSED!
+fail-junk-everything = Go to the dump if you want to junk EVERYTHING!
+junk-reward = You have been rewarded by the gods!
+room-junk-reward = { $who } has been rewarded by the gods!

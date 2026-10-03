@@ -780,3 +780,14 @@ door-name-closet = 벽장
 door-name-manhole = 맨홀
 door-name-glassdoor = 유리문
 door-name-elevator = 승강기
+
+# junk (MECHANICS §13.2)
+used-junk = { $p }{ JOSA($p, "을/를") } 버렸다. 그것은 연기와 함께 사라진다!
+room-junk = { $who }{ JOSA($who, "이/가") } { $p }{ JOSA($p, "을/를") } 버린다. 그것은 연기와 함께 사라진다!
+fail-junk-what = 무엇을 버릴까?
+fail-junk-all-of-what = 무엇을 모두 버릴까?
+fail-junk-nothing = 아무것도 가지고 있지 않은 것 같다.
+fail-junk-cursed = { $p }{ JOSA($p, "을/를") } 버릴 수 없다. 저주받은 게 틀림없다!
+fail-junk-everything = 전부 버리고 싶으면 쓰레기장으로 가라!
+junk-reward = 신들이 당신에게 상을 내렸다!
+room-junk-reward = { $who }{ JOSA($who, "이/가") } 신들에게 상을 받았다!

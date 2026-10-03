@@ -252,6 +252,8 @@ pub enum ItemAction {
     Taste,
     Drink,
     Sip,
+    /// act.item.c SCMD_JUNK: the thing vanishes (MECHANICS §13.2).
+    Junk,
 }
 
 /// Why an object command did nothing. The renderer picks tbaMUD's sentence by action and reason.
@@ -289,6 +291,8 @@ pub enum ItemFailure {
     /// put with no container named.
     IntoWhat,
     Cursed,
+    /// `junk all`: "Go to the dump if you want to junk EVERYTHING!"
+    Everything,
     /// A cursed thing into a container on the floor.
     OutOfHand,
     NoPerson,
@@ -679,6 +683,14 @@ pub enum Event {
         liquid: Option<String>,
     },
     /// Coins picked up turn into money at once ("There were 12 coins."). Mundi addition.
+    /// "You have been rewarded by the gods!" after junking (amount: the gold). Mundi addition.
+    #[serde(rename = "items.junk_reward")]
+    JunkReward {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        amount: i64,
+    },
     #[serde(rename = "items.coins")]
     Coins { amount: i64 },
     #[serde(rename = "items.failed")]

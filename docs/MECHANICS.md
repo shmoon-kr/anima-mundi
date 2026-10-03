@@ -581,7 +581,11 @@ ROOM "$n coughs and utters some strange sounds." 그리고 독(값0×2 시간) �
 - drop: 저주(nodrop) "You can't drop $p, it must be CURSED!", 성공 "You drop $p." / "$n drops $p."
 - give: 저주 "You can't let go of $p!!  Yeech!", 받는 쪽 개수 "$N seems to have $S hands full.", 무게 "$E can't carry that much weight.",
   성공 CHAR "You give $p to $N." VICT "$n gives you $p." NOTVICT "$n gives $p to $N."
-- junk, donate 는 범위 밖
+- junk (act.item.c:453-503, 519-623; S6 에서 추가, anima 가 남는 물건을 버린다): drop 과 같은 대상 고르기(`junk X`, `junk 3 X`, `junk all.X`).
+  `junk all` 은 "Go to the dump if you want to junk EVERYTHING!". 저주 "You can't junk $p, it must be CURSED!".
+  성공 "You junk $p.  It vanishes in a puff of smoke!" / ROOM "$n junks $p.  It vanishes in a puff of smoke!" — 물건은 없어진다(쓰레기장 트리거는 drop 에만).
+  물건마다 값 = max(1, min(200, 가격 / 16)), 합이 있으면 "You have been rewarded by the gods!" / ROOM "$n has been rewarded by the gods!" 그리고 그만큼 금화
+- donate 는 범위 밖
 
 ### 13.3 입기 (act.item.c:1218-1565, handler.c:557-603)
 - 물건 레벨 > 내 레벨 "You are not experienced enough to use that."

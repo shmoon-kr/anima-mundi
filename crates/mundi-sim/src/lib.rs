@@ -172,6 +172,8 @@ pub struct Sim {
     scheduled: Vec<(u64, triggers::Scheduled)>,
     /// Players whose command was handled this pulse: they get a prompt even without output.
     prompt_due: Vec<String>,
+    /// The gold the junking of one command comes to (act.item.c do_drop `amount`).
+    junked: i64,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
@@ -205,6 +207,7 @@ impl Sim {
             groups: Store::default(),
             scheduled: Vec::new(),
             prompt_due: Vec::new(),
+            junked: 0,
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,

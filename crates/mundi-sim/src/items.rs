@@ -397,47 +397,80 @@ impl Sim {
 
     /// `drop <obj>`, `drop all[.<w>]`, `drop <n> <obj>` (act.item.c do_drop, perform_drop).
     pub(crate) fn drop_cmd(&mut self, k: Key, arg: &str) {
+        self.drop_like(k, arg, ItemAction::Drop);
+    }
+
+    /// `junk ...` (act.item.c SCMD_JUNK, MECHANICS §13.2): as drop, but the things vanish and the
+    /// gods reward their worth.
+    pub(crate) fn junk_cmd(&mut self, k: Key, arg: &str) {
+        self.junked = 0;
+        self.drop_like(k, arg, ItemAction::Junk);
+        let amount = std::mem::take(&mut self.junked);
+        if amount > 0 {
+            self.deliver(k, Event::JunkReward { who: SELF.into(), who_id: None, amount });
+            let room = self.chars.get(k).unwrap().room;
+            self.to_room(k, room, true, |who, who_id| Event::JunkReward { who, who_id, amount });
+            self.chars.get_mut(k).unwrap().gold += amount;
+        }
+    }
+
+    fn drop_like(&mut self, k: Key, arg: &str, action: ItemAction) {
         let args: Vec<&str> = arg.split_whitespace().collect();
         let inv = self.chars.get(k).unwrap().inventory.clone();
         match args.as_slice() {
-            [] => self.fail(k, ItemAction::Drop, ItemFailure::What),
+            [] => self.fail(k, action, ItemFailure::What),
             [n, what, ..] if n.chars().all(|c| c.is_ascii_digit()) => {
                 let n: usize = n.parse().unwrap_or(1);
                 let mut matching: Vec<Key> = inv.iter().copied().filter(|o| self.objs.get(*o).is_some_and(|x| isname(what, &x.keywords)) && self.can_see_obj(k, *o)).collect();
                 if matching.is_empty() {
-                    return self.fail_word(k, ItemAction::Drop, ItemFailure::NoneOf, what);
+                    return self.fail_word(k, action, ItemFailure::NoneOf, what);
                 }
                 matching.truncate(n);
                 for o in matching {
-                    self.drop_one(k, o);
+                    self.drop_or_junk(k, o, action);
                 }
             }
             [what, ..] => match target(what) {
+                Some(Target::All) if action == ItemAction::Junk => self.fail(k, action, ItemFailure::Everything),
                 Some(Target::All) => {
                     if inv.is_empty() {
-                        return self.fail(k, ItemAction::Drop, ItemFailure::Nothing);
+                        return self.fail(k, action, ItemFailure::Nothing);
                     }
                     for o in inv {
-                        self.drop_one(k, o);
+                        self.drop_or_junk(k, o, action);
                     }
                 }
-                Some(Target::AllDot(w)) if w.is_empty() => self.fail(k, ItemAction::Drop, ItemFailure::AllOfWhat),
+                Some(Target::AllDot(w)) if w.is_empty() => self.fail(k, action, ItemFailure::AllOfWhat),
                 Some(Target::AllDot(w)) => {
                     let matching: Vec<Key> = inv.iter().copied().filter(|o| self.objs.get(*o).is_some_and(|x| isname(&w, &x.keywords)) && self.can_see_obj(k, *o)).collect();
                     if matching.is_empty() {
-                        return self.fail_word(k, ItemAction::Drop, ItemFailure::NoneOf, &w);
+                        return self.fail_word(k, action, ItemFailure::NoneOf, &w);
                     }
                     for o in matching {
-                        self.drop_one(k, o);
+                        self.drop_or_junk(k, o, action);
                     }
                 }
                 Some(Target::One { word, nth }) => match self.find_obj(k, &inv, &word, nth) {
-                    Some(o) => self.drop_one(k, o),
-                    None => self.fail_word(k, ItemAction::Drop, ItemFailure::NotCarried, &word),
+                    Some(o) => self.drop_or_junk(k, o, action),
+                    None => self.fail_word(k, action, ItemFailure::NotCarried, &word),
                 },
-                None => self.fail_word(k, ItemAction::Drop, ItemFailure::NotCarried, what),
+                None => self.fail_word(k, action, ItemFailure::NotCarried, what),
             },
         }
+    }
+
+    fn drop_or_junk(&mut self, k: Key, o: Key, action: ItemAction) {
+        if action == ItemAction::Drop {
+            return self.drop_one(k, o);
+        }
+        if self.objs.get(o).unwrap().flags.contains(&ObjFlag::NoDrop) {
+            return self.fail_obj(k, action, ItemFailure::Cursed, o);
+        }
+        let (text, id) = (self.short(o), self.obj_id(o));
+        self.deliver(k, Event::Used { action, text, id, into: None, into_id: None, slot: None, liquid: None });
+        self.others_see(k, action, o, None, None, None);
+        self.junked += (self.objs.get(o).map_or(0, |x| x.cost) / 16).clamp(1, 200);
+        self.extract_obj(o);
     }
 
     fn drop_one(&mut self, k: Key, o: Key) {

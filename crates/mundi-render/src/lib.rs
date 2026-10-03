@@ -305,6 +305,9 @@ impl Renderer {
                 Some(c) => one("got-from", &[("p", self.thing(v, text, id)), ("c", self.thing(v, c, from_id))]),
                 None => one("got", &[("p", self.thing(v, text, id))]),
             },
+            Event::JunkReward { who: w, who_id, .. } => {
+                if w == mundi_protocol::SELF { vec![m("junk-reward")] } else { one("room-junk-reward", &[("who", who(w, who_id))]) }
+            }
             Event::Coins { amount } => {
                 if *amount == 1 { vec![m("coins-one")] } else { one("coins", &[("n", amount.to_string())]) }
             }

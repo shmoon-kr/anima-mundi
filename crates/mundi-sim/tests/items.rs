@@ -220,3 +220,23 @@ fn objects_come_back_with_the_save() {
     let bag = save.objects.iter().find(|o| o.proto == BAG).unwrap();
     assert_eq!(bag.contents[0].proto, WAYBREAD);
 }
+
+#[test]
+fn junk_makes_things_vanish_and_the_gods_pay() {
+    // MECHANICS §13.2: act.item.c SCMD_JUNK; worth max(1, min(200, cost / 16)) each
+    let mut t = T::new(12);
+    t.enter("Ana", Class::Warrior, Some(FIELD));
+    t.load("Ana", PLATE, true);
+    t.load("Ana", DAGGER, true);
+    let gold = t.sim.save("Ana").unwrap().gold;
+    let out = t.cmd("Ana", "junk all");
+    assert_eq!(failed(&out, "Ana"), Some(ItemFailure::Everything), "go to the dump for everything");
+    let out = t.cmd("Ana", "junk plate");
+    assert!(to(&out, "Ana").iter().any(|e| matches!(e, Event::Used { action: ItemAction::Junk, .. })));
+    assert!(to(&out, "Ana").iter().any(|e| matches!(e, Event::JunkReward { who, .. } if who == "self")));
+    let s = t.sim.save("Ana").unwrap();
+    assert_eq!(s.objects.len(), 1, "the plate is gone, not on the floor");
+    assert_eq!(s.gold, gold + 180 / 16, "rewarded the plate's worth: cost 180 / 16");
+    let out = t.cmd("Ana", "junk sword");
+    assert!(failed(&out, "Ana").is_some());
+}

@@ -69,6 +69,7 @@ impl Sim {
             }
             "get" | "take" => self.get(key, arg),
             "drop" => self.drop_cmd(key, arg),
+            "junk" => self.junk_cmd(key, arg),
             "put" => self.put_cmd(key, arg),
             "give" => self.give(key, arg),
             "inventory" => self.inventory(key),
