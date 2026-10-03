@@ -77,8 +77,8 @@
 "tba:27:obj:2703":
   type: light
   keywords: [phosphorescent, mushroom, fungi, fungus]
-  short: "@Ga phosphorescent mushroom@n"
-  long: "@GA phosphorescent mushroom@g grows here, glowing faintly.@n"
+  short: "{bright_green}a phosphorescent mushroom{/bright_green}"
+  long: "{bright_green}A phosphorescent mushroom{/bright_green}{green} grows here, glowing faintly.{/green}"
   wear: [take, hold]
   values:
     hours: -1
@@ -95,8 +95,8 @@
 "tba:27:obj:2704":
   type: fountain
   keywords: [dark, red, pool, liquid]
-  short: "@ra dark red pool@n"
-  long: "@rDark red rivulets of liquid form a pool here.@n"
+  short: "{red}a dark red pool{/red}"
+  long: "{red}Dark red rivulets of liquid form a pool here.{/red}"
   wear: []
   values:
     capacity: 50
@@ -151,25 +151,25 @@
     text:
     - >
       This dark leather book is almost falling apart, although there appears to be very little written
-      inside it. The word @gPRIVATE@n has been carefully carved into the cover.
+      inside it. The word {green}PRIVATE{/green} has been carefully carved into the cover.
     - (type look 1, 2, or 3 to view pages)
   - keywords: ["3"]
     text:
-    - "@G @gEntry 3@n"
+    - "{bright_green} {/bright_green}{green}Entry 3{/green}"
     - >
       Somehow I fear this may be my last entry.  I have been recruited, along with several others for a
       secret task by the sorceress' evil bird.  What the task is I do not yet know, but I know that the
       sorceress has a particular way of keeping her secrets, and it does not involve the survival of witnesses.
   - keywords: ["2"]
     text:
-    - "@G @gEntry 2@n"
+    - "{bright_green} {/bright_green}{green}Entry 2{/green}"
     - >
       Someone came to help us today, he told me he knew how to destroy the sorceress once and for all.  I
       thought he would be the one to succeed but he was killed by the toothy one.  Now the abominable
       creature has holed itself into a cave from which there is no return... or so it is claimed.
   - keywords: ["1"]
     text:
-    - "@G @gEntry 1@n"
+    - "{bright_green} {/bright_green}{green}Entry 1{/green}"
     - >
       I have lost all interest in keeping this diary.  Since the sorceress has taken over, life has not
       been worth writing about.  I shall instead record anything I observe that may aid in her demise,
@@ -238,8 +238,8 @@
 "tba:27:obj:2710":
   type: food
   keywords: [candystick]
-  short: a @rc@na@rn@nd@ry@ns@rt@ni@rc@nk
-  long: A @rc@na@rn@nd@ry@ns@rt@ni@rc@nk lies here
+  short: a {red}c{/red}a{red}n{/red}d{red}y{/red}s{red}t{/red}i{red}c{/red}k
+  long: A {red}c{/red}a{red}n{/red}d{red}y{/red}s{red}t{/red}i{red}c{/red}k lies here
   wear: [take]
   values:
     hours: 50
@@ -352,8 +352,8 @@
 "tba:27:obj:2716":
   type: other
   keywords: [fragrant, flower]
-  short: a @Mfragrant flower@n
-  long: "@wA @Mfragrant flower@n blossoms here."
+  short: a {bright_magenta}fragrant flower{/bright_magenta}
+  long: "{white}A {/white}{bright_magenta}fragrant flower{/bright_magenta} blossoms here."
   flags: [no_sell]
   wear: [take, hold]
   values:
@@ -486,8 +486,8 @@
 "tba:27:obj:2724":
   type: weapon
   keywords: [fiery, spine]
-  short: a @Rfiery spine@n
-  long: A @Rfiery spine@n lies here.
+  short: a {bright_red}fiery spine{/bright_red}
+  long: A {bright_red}fiery spine{/bright_red} lies here.
   wear: [take, wield]
   values:
     damage: 3d9
@@ -547,8 +547,8 @@
 "tba:27:obj:2727":
   type: treasure
   keywords: [glowing, blue, shard, glass]
-  short: "@Ba glowing blue shard of glass@n"
-  long: "@BA glowing blue shard of glass@n lies here."
+  short: "{bright_blue}a glowing blue shard of glass{/bright_blue}"
+  long: "{bright_blue}A glowing blue shard of glass{/bright_blue} lies here."
   flags: [magic, no_sell]
   wear: [take, neck]
   values:
@@ -571,8 +571,8 @@
 "tba:27:obj:2728":
   type: treasure
   keywords: [glowing, red, shard, glass]
-  short: "@Ra glowing red shard of glass@n"
-  long: "@RA glowing red shard of glass@n lies here."
+  short: "{bright_red}a glowing red shard of glass{/bright_red}"
+  long: "{bright_red}A glowing red shard of glass{/bright_red} lies here."
   flags: [magic, no_sell]
   wear: [take, neck]
   values:
@@ -595,8 +595,8 @@
 "tba:27:obj:2729":
   type: treasure
   keywords: [glowing, green, shard, glass]
-  short: "@Ga glowing green shard of glass@n"
-  long: "@GA glowing green shard of glass@n lies here."
+  short: "{bright_green}a glowing green shard of glass{/bright_green}"
+  long: "{bright_green}A glowing green shard of glass{/bright_green} lies here."
   flags: [magic, no_sell]
   wear: [take, neck]
   values:
@@ -619,8 +619,8 @@
 "tba:27:obj:2730":
   type: treasure
   keywords: [glowing, purple, shard, glass]
-  short: "@Ma glowing purple shard of glass@n"
-  long: "@MA glowing purple shard of glass lies here.@n"
+  short: "{bright_magenta}a glowing purple shard of glass{/bright_magenta}"
+  long: "{bright_magenta}A glowing purple shard of glass lies here.{/bright_magenta}"
   flags: [magic, no_sell]
   wear: [take, neck]
   values:
@@ -703,8 +703,8 @@
 "tba:27:obj:2735":
   type: other
   keywords: [bright, circle]
-  short: "@Ca bright circle of light@n"
-  long: "@CA bright circle of light glows from the floor.@n"
+  short: "{bright_cyan}a bright circle of light{/bright_cyan}"
+  long: "{bright_cyan}A bright circle of light glows from the floor.{/bright_cyan}"
   flags: [magic]
   wear: []
   values:
@@ -751,8 +751,8 @@
 "tba:27:obj:2738":
   type: light
   keywords: [suspended, orb, glowing, water]
-  short: "@Ca suspended orb of glowing water@n"
-  long: "@CA suspended orb of glowing water@n"
+  short: "{bright_cyan}a suspended orb of glowing water{/bright_cyan}"
+  long: "{bright_cyan}A suspended orb of glowing water{/bright_cyan}"
   flags: [no_rent, no_donate, magic, no_sell]
   wear: [take, hold]
   values:
@@ -1631,7 +1631,7 @@
     text: >
       This cool glassy ring has been forged from a silvery metal and interwoven with blue crystal, the
       two substances spiralling around each other in a never-ending circle, a symbol of the flowing of unseen
-      forces.  It looks as though it may impart some powerful magic unto the wearer if@c used@n.
+      forces.  It looks as though it may impart some powerful magic unto the wearer if{cyan} used{/cyan}.
 
 "tba:27:obj:2777":
   type: staff

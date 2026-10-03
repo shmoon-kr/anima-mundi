@@ -11,6 +11,7 @@
 - Model: the LM Studio host's dense model (quality over speed; overnight batch). Thinking off (empty <think> prefill).
 - Checks on every answer, else retry: same IDs and fields, same paragraph count, no Han or kana (Qwen leaks Chinese;
   Latin letters, digits, punctuation and glossary terms kept in English are fine), glossary terms used.
+- Markup (D20): `{yellow}...{/yellow}` must survive translation — the same tags, in the same order, paired; else retry.
 - Verbatim texts ({preformatted}: maps, pictures) are left in English in phase 1.
 """
 from __future__ import annotations
@@ -81,6 +82,27 @@ def load_zone(zone):
     return out
 
 
+TAG = re.compile(r"\{\{|\}\}|\{(/?[a-z0-9_:]+)\}")
+
+
+def tags(text):
+    """Markup tags of a text in order (D20); ValueError if unbalanced."""
+    out, stack = [], []
+    for m in TAG.finditer(text):
+        if m.group(1) is None:
+            continue
+        t = m.group(1)
+        if t.startswith("/"):
+            if not stack or stack.pop() != t[1:]:
+                raise ValueError(f"unbalanced {{{t}}}")
+        else:
+            stack.append(t)
+        out.append(t)
+    if stack:
+        raise ValueError(f"{{{stack[-1]}}} not closed")
+    return out
+
+
 def sha(obj):
     return hashlib.sha256(json.dumps(obj, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:16]
 
@@ -114,6 +136,8 @@ Rules:
 - Translate every string. Keep the JSON structure exactly: the same IDs, the same keys, and for a list the same
   number of paragraphs in the same order.
 - Write Korean. Do not write Chinese characters (漢字) or Japanese kana. Latin letters only where the glossary says.
+- Keep every markup tag like {{yellow}} and {{/yellow}} exactly as written, around the Korean words that translate the
+  words it surrounds, in the same order. Do not add, drop or translate tags.
 - Use these glossary terms exactly when the English term appears:
 {glossary}
 Reply with the JSON object only."""
@@ -165,6 +189,13 @@ def problems(src, out, used):
                     bad.append(f"{id_}.{k}: not a string")
                     continue
                 strings = [tv]
+            src_strings = v if isinstance(v, list) else [v]
+            for s_src, s in zip(src_strings, strings):
+                try:
+                    if tags(s) != tags(s_src):
+                        bad.append(f"{id_}.{k}: markup {tags(s)} != {tags(s_src)}")
+                except ValueError as e:
+                    bad.append(f"{id_}.{k}: markup {e}")
             for s in strings:
                 if not s.strip():
                     bad.append(f"{id_}.{k}: empty")

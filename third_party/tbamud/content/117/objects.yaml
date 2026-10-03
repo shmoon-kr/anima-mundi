@@ -34,8 +34,8 @@
 "tba:117:obj:11702":
   type: weapon
   keywords: [yellow, straightsword]
-  short: "@YYellow@n straightsword"
-  long: A @YYellow@n straightsword is lying here.
+  short: "{bright_yellow}Yellow{/bright_yellow} straightsword"
+  long: A {bright_yellow}Yellow{/bright_yellow} straightsword is lying here.
   flags: [glow]
   wear: [take, wield]
   values:
@@ -55,8 +55,8 @@
 "tba:117:obj:11703":
   type: armor
   keywords: [yellow, field, plate]
-  short: "@YYellow@n field plate"
-  long: A @YYellow@n field plate is lying here.
+  short: "{bright_yellow}Yellow{/bright_yellow} field plate"
+  long: A {bright_yellow}Yellow{/bright_yellow} field plate is lying here.
   flags: [hum, anti_thief]
   wear: [take, body]
   values:
@@ -75,8 +75,8 @@
 "tba:117:obj:11704":
   type: weapon
   keywords: [silver, scimitar]
-  short: "@DSilver@n scimitar"
-  long: A @DSilver@n scimitar has been left here.
+  short: "{grey}Silver{/grey} scimitar"
+  long: A {grey}Silver{/grey} scimitar has been left here.
   flags: [glow]
   wear: [take, wield]
   values:
@@ -115,8 +115,8 @@
 "tba:117:obj:11706":
   type: armor
   keywords: [silver, splint, mail]
-  short: a @DSilver@n splint mail
-  long: A @DSilver@n splint mail has been left here.
+  short: a {grey}Silver{/grey} splint mail
+  long: A {grey}Silver{/grey} splint mail has been left here.
   flags: [hum, anti_mage]
   wear: [take, body]
   values:
@@ -267,8 +267,10 @@
 "tba:117:obj:11714":
   type: fountain
   keywords: [road, heaven, wine]
-  short: "@RRoad@n @Yto@n @CHeaven@n"
-  long: A @RRoad@n @Yto@n @CHeaven@n has been left here.
+  short: "{bright_red}Road{/bright_red} {bright_yellow}to{/bright_yellow} {bright_cyan}Heaven{/bright_cyan}"
+  long: >-
+    A {bright_red}Road{/bright_red} {bright_yellow}to{/bright_yellow} {bright_cyan}Heaven{/bright_cyan}
+    has been left here.
   wear: [take]
   values:
     capacity: 100
@@ -282,10 +284,10 @@
   extras:
   - keywords: [road, heaven, wine]
     text: >
-      This dark red wine is called the @RRoad@n @Yto@n @CHeaven@n because it is extremely intoxicating
-      but filling.  The bottle that contains it is huge and probably will keep you busy for quite some time. 
-      The wine has a smell of a mixture of many fruits, though it is difficult to tell which ones were
-      used.
+      This dark red wine is called the {bright_red}Road{/bright_red} {bright_yellow}to{/bright_yellow}
+      {bright_cyan}Heaven{/bright_cyan} because it is extremely intoxicating but filling.  The bottle that
+      contains it is huge and probably will keep you busy for quite some time.  The wine has a smell of a
+      mixture of many fruits, though it is difficult to tell which ones were used.
 
 "tba:117:obj:11715":
   type: fountain
@@ -386,13 +388,20 @@
   level: 0
   extras:
   - keywords: [chalice, wine]
-    text: "@WO@n@DM@n@WG@n @WO@n@DM@n@WG@n that isn't @mwine@n it's @rblood!!!!!  @n"
+    text: >
+      {bright_white}O{/bright_white}{grey}M{/grey}{bright_white}G{/bright_white}
+      {bright_white}O{/bright_white}{grey}M{/grey}{bright_white}G{/bright_white} that isn't {magenta}wine{/magenta} it's
+      {red}blood!!!!!  {/red}
 
 "tba:117:obj:11720":
   type: weapon
   keywords: [defender]
-  short: the @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n
-  long: The @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n has been left here.
+  short: >-
+    the
+    {red}D{/red}{magenta}e{/magenta}{red}f{/red}{magenta}e{/magenta}{red}n{/red}{magenta}d{/magenta}{red}e{/red}{magenta}r{/magenta}
+  long: >-
+    The
+    {red}D{/red}{magenta}e{/magenta}{red}f{/red}{magenta}e{/magenta}{red}n{/red}{magenta}d{/magenta}{red}e{/red}{magenta}r{/magenta} has been left here.
   flags: [glow, hum, no_donate, anti_mage, anti_cleric, anti_thief, no_sell]
   wear: [take, wield]
   values:
@@ -405,16 +414,17 @@
   extras:
   - keywords: [defender]
     text: >
-      The @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n is a valiant sword only usable by masters of the
-      world.  The blade is a dull gray and the hilt is made of silver with a leather bound handle for a good
-      grip.  Legend goes it was used to protect Los Torres from i nvasion of the Valdurain Army.  It is only
-      wieldable by the warriors of the land.
+      The
+      {red}D{/red}{magenta}e{/magenta}{red}f{/red}{magenta}e{/magenta}{red}n{/red}{magenta}d{/magenta}{red}e{/red}{magenta}r{/magenta} is a valiant sword only usable by masters of the world.  The blade
+      is a dull gray and the hilt is made of silver with a leather bound handle for a good grip.  Legend
+      goes it was used to protect Los Torres from i nvasion of the Valdurain Army.  It is only wieldable by
+      the warriors of the land.
 
 "tba:117:obj:11721":
   type: armor
   keywords: [optical, blue, helm]
-  short: an @DOptical@n @bBlue@n helm
-  long: An @DOptical@n @bBlue@n helm has been left here.
+  short: an {grey}Optical{/grey} {blue}Blue{/blue} helm
+  long: An {grey}Optical{/grey} {blue}Blue{/blue} helm has been left here.
   wear: [take, head]
   values:
     armor: 10
@@ -601,8 +611,12 @@
 "tba:117:obj:11730":
   type: worn
   keywords: [obscenity]
-  short: an @WO@n@Yb@n@Rs@n@Mc@n@Be@n@Cn@n@Gi@n@Kt@n@Wy@n
-  long: An @WO@n@Yb@n@Rs@n@Mc@n@Be@n@Cn@n@Gi@n@Kt@n@Wy@n has been left here.
+  short: >-
+    an
+    {bright_white}O{/bright_white}{bright_yellow}b{/bright_yellow}{bright_red}s{/bright_red}{bright_magenta}c{/bright_magenta}{bright_blue}e{/bright_blue}{bright_cyan}n{/bright_cyan}{bright_green}i{/bright_green}t{bright_white}y{/bright_white}
+  long: >-
+    An
+    {bright_white}O{/bright_white}{bright_yellow}b{/bright_yellow}{bright_red}s{/bright_red}{bright_magenta}c{/bright_magenta}{bright_blue}e{/bright_blue}{bright_cyan}n{/bright_cyan}{bright_green}i{/bright_green}t{bright_white}y{/bright_white} has been left here.
   flags: [glow, hum, no_donate, no_sell]
   wear: [take, hold]
   values:
@@ -664,8 +678,8 @@
 "tba:117:obj:11733":
   type: worn
   keywords: [red, cloth, costume]
-  short: a @RRed Cloth Costume@n
-  long: A @RRed Cloth Costume@n has been left here.
+  short: a {bright_red}Red Cloth Costume{/bright_red}
+  long: A {bright_red}Red Cloth Costume{/bright_red} has been left here.
   wear: [take, body]
   values:
     raw: [0, 0, 0, 0]
@@ -717,8 +731,8 @@
   extras:
   - keywords: [bouquet, exotic, flowers]
     text: >
-      A hand picked bouquet of @rred@n, @ggreen@n, @yyellow@n and @bblue@n flowers nicely arranged into a
-      bouquet could make the perfect gift for anyone.
+      A hand picked bouquet of {red}red{/red}, {green}green{/green}, {yellow}yellow{/yellow} and
+      {blue}blue{/blue} flowers nicely arranged into a bouquet could make the perfect gift for anyone.
 
 "tba:117:obj:11736":
   type: weapon

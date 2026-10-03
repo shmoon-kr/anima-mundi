@@ -5,6 +5,7 @@
 //! disagree (D15). Content has no behaviour and knows nothing of the simulation.
 
 pub mod load;
+pub mod markup;
 pub mod model;
 pub mod names;
 

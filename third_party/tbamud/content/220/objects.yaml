@@ -4,8 +4,10 @@
 "tba:220:obj:22000":
   type: armor
   keywords: [cheese, triangle, hat]
-  short: a triangle of @Ycheese@n
-  long: A big triangle of cheese looks @Gdelicious@n. @BM@Cm@Rm!@n
+  short: a triangle of {bright_yellow}cheese{/bright_yellow}
+  long: >-
+    A big triangle of cheese looks {bright_green}delicious{/bright_green}.
+    {bright_blue}M{/bright_blue}{bright_cyan}m{/bright_cyan}{bright_red}m!{/bright_red}
   flags: [glow]
   wear: [take, head]
   values:
@@ -23,8 +25,8 @@
 "tba:220:obj:22001":
   type: armor
   keywords: [oreo's, collar]
-  short: "@DO@Wre@Do@n's collar"
-  long: A black collar with a silver @Bpendant@n is here.
+  short: "{grey}O{/grey}{bright_white}re{/bright_white}{grey}o{/grey}'s collar"
+  long: A black collar with a silver {bright_blue}pendant{/bright_blue} is here.
   wear: [take, neck]
   values:
     armor: -2
@@ -37,13 +39,14 @@
     modifier: 2
   extras:
   - keywords: [pendant]
-    text: The pendant is engraved with the name @DO@WRE@DO@n.
+    text: >
+      The pendant is engraved with the name {grey}O{/grey}{bright_white}RE{/bright_white}{grey}O{/grey}.
 
 "tba:220:obj:22002":
   type: weapon
   keywords: [icepick, toothpick]
-  short: an @Cice@Dpick@n
-  long: A long, @Cice-coated @ytoothpick@n sits here.
+  short: an {bright_cyan}ice{/bright_cyan}{grey}pick{/grey}
+  long: A long, {bright_cyan}ice-coated {/bright_cyan}{yellow}toothpick{/yellow} sits here.
   flags: [glow]
   wear: [take, wield]
   values:
@@ -57,13 +60,15 @@
   - keywords: [toothpick]
     text: >
       It looks a like a toothpick was thrown into a freezer and left for a while. It has been covered in
-      a thick layer of sharp, @Rdeadly@n @Cice@n.
+      a thick layer of sharp, {bright_red}deadly{/bright_red} {bright_cyan}ice{/bright_cyan}.
 
 "tba:220:obj:22003":
   type: food
   keywords: [burnt, cookie]
-  short: a @Dburnt @Ycookie@n
-  long: "@nA @gginormous @Ycookie @nsits here, steaming slightly. Looks kinda @yburnt@n..."
+  short: a {grey}burnt {/grey}{bright_yellow}cookie{/bright_yellow}
+  long: >-
+    A {green}ginormous {/green}{bright_yellow}cookie {/bright_yellow}sits here, steaming slightly.
+    Looks kinda {yellow}burnt{/yellow}...
   flags: [no_sell]
   wear: [take]
   values:
@@ -75,13 +80,13 @@
   level: 0
   extras:
   - keywords: [burnt, cookie]
-    text: "@nThis rock-hard lump of overcooked cookie smells horrible!"
+    text: This rock-hard lump of overcooked cookie smells horrible!
 
 "tba:220:obj:22004":
   type: weapon
   keywords: [spork, plastic]
-  short: a @Dplastic @Wspork@n
-  long: A @Dplastic @Wspork@n is sitting here.
+  short: a {grey}plastic {/grey}{bright_white}spork{/bright_white}
+  long: A {grey}plastic {/grey}{bright_white}spork{/bright_white} is sitting here.
   wear: [take, wield]
   values:
     damage: 4d4
@@ -97,8 +102,10 @@
 "tba:220:obj:22005":
   type: fountain
   keywords: [drippy, faucet, water]
-  short: "@ca @ndrippy @cfaucet@n"
-  long: "@nThe drippy @cfaucet @nleaks @Wclean @Cwa@Bt@Cer@n at its base."
+  short: "{cyan}a {/cyan}drippy {cyan}faucet{/cyan}"
+  long: >-
+    The drippy {cyan}faucet {/cyan}leaks {bright_white}clean
+    {/bright_white}{bright_cyan}wa{/bright_cyan}{bright_blue}t{/bright_blue}{bright_cyan}er{/bright_cyan} at its base.
   wear: []
   values:
     capacity: 500
@@ -112,5 +119,6 @@
   extras:
   - keywords: [leaky, faucet, water]
     text: >
-      @nThe faucet has a leak at its base, creating a pool of @Wclean @Cwa@Bt@Cer @nwhich is spilling
-      like a waterfall into the sink.
+      The faucet has a leak at its base, creating a pool of {bright_white}clean
+      {/bright_white}{bright_cyan}wa{/bright_cyan}{bright_blue}t{/bright_blue}{bright_cyan}er {/bright_cyan}which is spilling like a
+      waterfall into the sink.

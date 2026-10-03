@@ -1,5 +1,6 @@
 //! tbaMUD world files to the content format (D15). The binary is `mundi-convert`.
 
+pub mod markup;
 pub mod tba;
 
 use std::path::Path;

@@ -147,8 +147,8 @@
 "tba:19:obj:1907":
   type: worn
   keywords: [stained, bone, necklace, bones]
-  short: "@ya stained bone necklace@n"
-  long: "@yA necklace of stained bones@g is lying here."
+  short: "{yellow}a stained bone necklace{/yellow}"
+  long: "{yellow}A necklace of stained bones{/yellow}{green} is lying here.{/green}"
   wear: [take, neck]
   values:
     raw: [0, 0, 0, 0]
@@ -240,8 +240,8 @@
   - keywords: [tiny, silver, tag, chain]
     text: >
       A somewhat crudely forged silver chain supports this little metal tag.  On one side the words
-      @DCALIMSHAN'S 12TH CAVALRY BRIGADE@n are engraved, and on the other the tiny sentence @D'Come back to
-      me'@n has been scrawled.
+      {grey}CALIMSHAN'S 12TH CAVALRY BRIGADE{/grey} are engraved, and on the other the tiny sentence {grey}'Come
+      back to me'{/grey} has been scrawled.
 
 "tba:19:obj:1912":
   type: weapon
@@ -461,8 +461,8 @@
 "tba:19:obj:1923":
   type: armor
   keywords: [smooth, piece, velvety, leather, cloak, blanket, hide]
-  short: "@ma smooth velvety piece of hide@n"
-  long: "@mA piece of smooth velvety leather lies forgotten here.@n"
+  short: "{magenta}a smooth velvety piece of hide{/magenta}"
+  long: "{magenta}A piece of smooth velvety leather lies forgotten here.{/magenta}"
   flags: [anti_good]
   wear: [take, about]
   values:
@@ -485,8 +485,8 @@
 "tba:19:obj:1924":
   type: worn
   keywords: [glistening, woven, long, silk, cord]
-  short: "@Wa glistening silk cord@n"
-  long: "@WA long cord of woven silk lies glistening here.@n"
+  short: "{bright_white}a glistening silk cord{/bright_white}"
+  long: "{bright_white}A long cord of woven silk lies glistening here.{/bright_white}"
   wear: [take, waist]
   values:
     raw: [0, 0, 0, 0]
@@ -507,8 +507,8 @@
 "tba:19:obj:1925":
   type: worn
   keywords: [dark, shimmering, retina]
-  short: "@Da dark shimmering retina@n"
-  long: "@DThe dark retina of an orb spider lies here.@n"
+  short: "{grey}a dark shimmering retina{/grey}"
+  long: "{grey}The dark retina of an orb spider lies here.{/grey}"
   wear: [take, head]
   values:
     raw: [0, 0, 0, 0]
@@ -834,7 +834,7 @@
     text: >
       Fragile and shimmering like starlight, this curvacious teardrop pendant is a symbol of feminine
       beauty and sadness.  Perfectly smooth, only a tiny glowing name has been engraved into the back -
-      @CEilistraee@n.
+      {bright_cyan}Eilistraee{/bright_cyan}.
 
 "tba:19:obj:1943":
   type: container
@@ -882,8 +882,8 @@
 "tba:19:obj:1945":
   type: other
   keywords: [silvery-webbed, silver, red, vial]
-  short: a silvery-webbed @Rred vial@n
-  long: "@RA silvery-webbed red vial lies here.@n"
+  short: a silvery-webbed {bright_red}red vial{/bright_red}
+  long: "{bright_red}A silvery-webbed red vial lies here.{/bright_red}"
   flags: [magic, no_sell]
   wear: [take]
   values:
@@ -901,8 +901,8 @@
 "tba:19:obj:1946":
   type: other
   keywords: [silvery-webbed, silver, blue, vial]
-  short: a silvery-webbed @Bblue vial@n
-  long: "@BA silvery-webbed blue vial lies here.@n"
+  short: a silvery-webbed {bright_blue}blue vial{/bright_blue}
+  long: "{bright_blue}A silvery-webbed blue vial lies here.{/bright_blue}"
   flags: [magic, no_sell]
   wear: [take]
   values:
@@ -920,8 +920,8 @@
 "tba:19:obj:1947":
   type: other
   keywords: [silvery-webbed, silver, green, vial]
-  short: a silvery-webbed @Ggreen vial@n
-  long: "@GA silvery-webbed green vial lies here.@n"
+  short: a silvery-webbed {bright_green}green vial{/bright_green}
+  long: "{bright_green}A silvery-webbed green vial lies here.{/bright_green}"
   flags: [magic, no_sell]
   wear: [take]
   values:
@@ -963,10 +963,10 @@
         to the front of the machine.  The red button is inscribed with the word - press,
         the blue button with switch, and green with turn.
         
-                    @R _______       @B  ________       @G  ______@n
-                  @R  |       |   @B    |        |    @G   |      |@n
-                  @R  | @nPRESS@R |   @B    | @nSWITCH@B |      @G | @nTURN@G |@n
-                   @R |_______|     @B  |________|    @G   |______|@n
+                    {bright_red} _______       {/bright_red}{bright_blue}  ________       {/bright_blue}{bright_green}  ______{/bright_green}
+                  {bright_red}  |       |   {/bright_red}{bright_blue}    |        |    {/bright_blue}{bright_green}   |      |{/bright_green}
+                  {bright_red}  | {/bright_red}PRESS{bright_red} |   {/bright_red}{bright_blue}    | {/bright_blue}SWITCH{bright_blue} |      {/bright_blue}{bright_green} | {/bright_green}TURN{bright_green} |{/bright_green}
+                   {bright_red} |_______|     {/bright_red}{bright_blue}  |________|    {/bright_blue}{bright_green}   |______|{/bright_green}
 
 "tba:19:obj:1949":
   type: drinkcon
@@ -1034,8 +1034,8 @@
 "tba:19:obj:1952":
   type: other
   keywords: [silvery-webbed, silver, black, vial]
-  short: a silvery-webbed @Dblack vial@n
-  long: "@DA silvery-webbed black vial lies here.@n"
+  short: a silvery-webbed {grey}black vial{/grey}
+  long: "{grey}A silvery-webbed black vial lies here.{/grey}"
   flags: [no_sell]
   wear: [take]
   values:

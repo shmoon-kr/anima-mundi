@@ -272,6 +272,47 @@ pub fn check_world(zones: &[ZoneContent]) -> Report {
             }
         }
     }
+    // markup (D20): every paragraph and every short string balanced, known names only
+    let mut marked = 0usize;
+    let mut text = |where_: &str, s: &str, r: &mut Report| match crate::markup::tags(s) {
+        Ok(t) => marked += usize::from(!t.is_empty()),
+        Err(e) => r.errors.push(format!("{where_}: {e}")),
+    };
+    for z in zones {
+        for (id, rm) in &z.rooms {
+            text(&format!("{id} name"), &rm.name, &mut r);
+            for p in rm.description.paragraphs() {
+                text(&format!("{id} description"), p, &mut r);
+            }
+            for (d, ex) in &rm.exits {
+                for p in ex.look.iter().flat_map(|l| l.paragraphs()) {
+                    text(&format!("{id} exit {} look", d.name()), p, &mut r);
+                }
+            }
+            for ex in &rm.extras {
+                for p in ex.text.paragraphs() {
+                    text(&format!("{id} extra"), p, &mut r);
+                }
+            }
+        }
+        for (id, m) in &z.mobs {
+            for (k, s) in [("short", &m.short), ("long", &m.long)] {
+                text(&format!("{id} {k}"), s, &mut r);
+            }
+            for p in m.description.paragraphs() {
+                text(&format!("{id} description"), p, &mut r);
+            }
+        }
+        for (id, o) in &z.objects {
+            for (k, s) in [("short", &o.short), ("long", &o.long)] {
+                text(&format!("{id} {k}"), s, &mut r);
+            }
+            for p in o.extras.iter().flat_map(|e| e.text.paragraphs()) {
+                text(&format!("{id} extra"), p, &mut r);
+            }
+        }
+    }
+    *r.counts.entry("texts with markup").or_default() = marked;
     *r.counts.entry("preformatted texts").or_default() =
         rooms.values().filter(|rm| matches!(rm.description, Text::Preformatted(_))).count();
     r

@@ -11,6 +11,8 @@ use indexmap::IndexMap;
 use mundi_content::model::*;
 use mundi_content::names::*;
 
+use crate::markup::{markup, markup_paragraphs};
+
 /// Problems the converter noticed but could convert around (unknown bits, bad references).
 #[derive(Debug, Default)]
 pub struct Notes(pub Vec<String>);
@@ -82,7 +84,7 @@ pub fn prose(text: &str) -> Text {
         inner_gap || rule
     });
     if art {
-        return Text::Preformatted(format!("{raw}\n"));
+        return Text::Preformatted(markup(&format!("{raw}\n")));
     }
     let mut paras: Vec<String> = Vec::new();
     let mut cur: Vec<&str> = Vec::new();
@@ -98,7 +100,7 @@ pub fn prose(text: &str) -> Text {
     if !cur.is_empty() {
         paras.push(cur.join(" "));
     }
-    Text::Prose(paras.join("\n"))
+    Text::Prose(markup_paragraphs(paras.iter().map(String::as_str)).join("\n"))
 }
 
 /// `NdS+B`: a number when nothing is rolled (0d0+20 is 20, 1d1+50 is 51).
@@ -221,7 +223,7 @@ pub fn read_rooms(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, Roo
         let what = format!("room {v}");
         let sector = head.last().and_then(|s| s.parse::<usize>().ok()).and_then(Sector::from_index).unwrap_or(Sector::Inside);
         let mut room = Room {
-            name: name.trim().into(),
+            name: markup(name.trim()),
             description: prose(&desc),
             sector,
             flags: head.get(1).map(|t| flags(t, RoomFlag::ALL, 0, &[], &what, notes)).unwrap_or_default(),
@@ -316,8 +318,8 @@ pub fn read_mobs(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, Mob>
                   ("SavingSpell", "spell")];
         let mob = Mob {
             keywords: kw.split_whitespace().map(str::to_string).collect(),
-            short: short.trim().into(),
-            long: long.trim().into(),
+            short: markup(short.trim()),
+            long: markup(long.trim()),
             description: prose(&desc),
             level: int(s(0)) as i32,
             sex: pos.get(2).and_then(|x| x.parse().ok()).and_then(Sex::from_index).unwrap_or(Sex::Neutral),
@@ -408,9 +410,9 @@ pub fn read_objects(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, O
         let mut obj = Object {
             kind,
             keywords: kw.split_whitespace().map(str::to_string).collect(),
-            short: short.trim().into(),
-            long: long.trim().into(),
-            action: (!action.trim().is_empty()).then(|| action.trim().to_string()),
+            short: markup(short.trim()),
+            long: markup(long.trim()),
+            action: (!action.trim().is_empty()).then(|| markup(action.trim())),
             flags: if head.len() >= 13 { flags(&head[1], ObjFlag::ALL, 0, &[], &what, notes) } else { Vec::new() },
             wear: if head.len() >= 13 { flags(&head[5], Wear::ALL, 0, &[], &what, notes) } else { Vec::new() },
             values: values(kind, v4, ids, &what, notes),

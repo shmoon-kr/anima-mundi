@@ -3,22 +3,24 @@
 # renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
 # (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
 "tba:220:room:22000":
-  name: "@nZone Description Room for the @REnchanted @WKitchen@n"
+  name: >-
+    Zone Description Room for the {bright_red}Enchanted
+    {/bright_red}{bright_white}Kitchen{/bright_white}
   description:
     preformatted: |2
-         @n
-      @WZone name@n : An Enchanted Kitchen
-      @WLocation@n  : It should probably be part of an enchanted house.
-      @WLevel@n     : 10-20
-      @WRooms@n     : Approximately 24
-      @WMobs@n      : 9 unique mobs
-      @WObjects@n   : 4
-      @WAlignment@n : All mobs will have a good alignment, except for the
+         
+      {bright_white}Zone name{/bright_white} : An Enchanted Kitchen
+      {bright_white}Location{/bright_white}  : It should probably be part of an enchanted house.
+      {bright_white}Level{/bright_white}     : 10-20
+      {bright_white}Rooms{/bright_white}     : Approximately 24
+      {bright_white}Mobs{/bright_white}      : 9 unique mobs
+      {bright_white}Objects{/bright_white}   : 4
+      {bright_white}Alignment{/bright_white} : All mobs will have a good alignment, except for the
                   icemonster and Oreo the cat.
-      @WTheme@n     : Imagine a huge, giant-sized kitchen, in which utensils are
+      {bright_white}Theme{/bright_white}     : Imagine a huge, giant-sized kitchen, in which utensils are
                   about as tall as the average man. Its complete with a fridge
                   and oven to explore, counters, and even a mouse hole.
-      @WPlot@n      : Snuffins the mouse is sick of being tormented by his rival,
+      {bright_white}Plot{/bright_white}      : Snuffins the mouse is sick of being tormented by his rival,
                   Oreo the cat. It's the player's job to help save Snuffins.
                   Other than that, there isn't much. It's a big kitchen with
                   kitchen-like things. :)
@@ -31,44 +33,46 @@
       complete with a fridge and oven to explore, counters, and even a mouse hole.
 
 "tba:220:room:22001":
-  name: "@WThe Open Doorway@n"
+  name: "{bright_white}The Open Doorway{/bright_white}"
   description: >
-    @yThe gigantic door is, thankfully, already wide open.  Smells wafting in from the north are highly
-    @Gun@gpl@Gea@gsa@Gnt@y, and everything around is tremendous in size.  The temperature is agreeable,
-    though definitely on the @rwarm@y side.  The cavernous room looks to be some sort of...@Wkitchen@y.@n
+    {yellow}The gigantic door is, thankfully, already wide open.  Smells wafting in from the north are
+    highly
+    {/yellow}{bright_green}un{/bright_green}{green}pl{/green}{bright_green}ea{/bright_green}{green}sa{/green}{bright_green}nt{/bright_green}{yellow}, and everything around is tremendous in size.  The
+    temperature is agreeable, though definitely on the {/yellow}{red}warm{/red}{yellow} side.  The
+    cavernous room looks to be some sort of...{/yellow}{bright_white}kitchen{/bright_white}{yellow}.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22002
-      look: "@DTo the north, a large chair is pulled out from under a table.  @n"
+      look: "{grey}To the north, a large chair is pulled out from under a table.  {/grey}"
 
 "tba:220:room:22002":
-  name: "@WBeneath the Big Chair@w"
+  name: "{bright_white}Beneath the Big Chair{/bright_white}{white}{/white}"
   description: >
-    @yA gigantic chair with black, @Dsteel legs @ystands here.  It is pulled away from the table
-    slightly, and you can hardly see over the @cpale blue @ycushion.  A refrigerator is visible to the east, as
-    well as an enormous table to the north.  Also, ominous clouds of dust seem to stir, almost as if
-    they were alive...@n
+    {yellow}A gigantic chair with black, {/yellow}{grey}steel legs {/grey}{yellow}stands here.  It is
+    pulled away from the table slightly, and you can hardly see over the {/yellow}{cyan}pale blue
+    {/cyan}{yellow}cushion.  A refrigerator is visible to the east, as well as an enormous table to the north. 
+    Also, ominous clouds of dust seem to stir, almost as if they were alive...{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22003
-      look: "@DNothing can be made out in the darkness under the table to the north.  @n"
+      look: "{grey}Nothing can be made out in the darkness under the table to the north.  {/grey}"
     east:
       to: tba:220:room:22010
-      look: "@DThe fridge door to the east is pulled open.  @n"
+      look: "{grey}The fridge door to the east is pulled open.  {/grey}"
     south:
       to: tba:220:room:22001
-      look: "@DA doorway lies to the south.  @n"
+      look: "{grey}A doorway lies to the south.  {/grey}"
     west:
       to: tba:220:room:22009
-      look: "@DA phone has fallen off the hook to the west.  @n"
+      look: "{grey}A phone has fallen off the hook to the west.  {/grey}"
     up:
       to: tba:220:room:22011
       look: >
-        @DRivets on the chair's legs are great for climbing down, but the height is staggering!  @n
+        {grey}Rivets on the chair's legs are great for climbing down, but the height is staggering!  {/grey}
   extras:
   - keywords: [steel, legs]
     text: >
@@ -76,12 +80,12 @@
       looks as though he might be able to climb up...
 
 "tba:220:room:22003":
-  name: "@WUnderneath the Table@w"
+  name: "{bright_white}Underneath the Table{/bright_white}{white}{/white}"
   description: >
-    @yLooking up, the kitchen table forms a ceiling high above.  It blocks all light, and even with a
-    lantern, the strange shadows lurking about are scarcely visible.  Whispers seem to come from all
-    directions, while clouds of dust dance noxiously by.  To the east, the oven door is left open.  It looks
-    like an easy climb from here.@n
+    {yellow}Looking up, the kitchen table forms a ceiling high above.  It blocks all light, and even
+    with a lantern, the strange shadows lurking about are scarcely visible.  Whispers seem to come from all
+    directions, while clouds of dust dance noxiously by.  To the east, the oven door is left open.  It
+    looks like an easy climb from here.{/yellow}
   sector: inside
   flags: [dark, indoors]
   exits:
@@ -93,12 +97,11 @@
       to: tba:220:room:22002
 
 "tba:220:room:22004":
-  name: "@WOutside the Mouse Hole@w"
+  name: "{bright_white}Outside the Mouse Hole{/bright_white}{white}{/white}"
   description: >
-    @yAn over-sized mousetrap with a piece of @yrotted @Ycheese@y sits just outside a large hole about
-    as tall as a human man.  A tiny @wg@yl@Yo@Ww@y is coming from the inside, though it is impossible to
-    make anything out. To the west, a monstrous looking cat watches the space you occupy intently, as if
-    it were waiting for something or someone to appear.@n
+    {yellow}An over-sized mousetrap with a piece of {/yellow}{yellow}rotted
+    {/yellow}{bright_yellow}cheese{/bright_yellow}{yellow} sits just outside a large hole about as tall as a human man.  A tiny
+    {/yellow}{white}g{/white}{yellow}l{/yellow}{bright_yellow}o{/bright_yellow}{bright_white}w{/bright_white}{yellow} is coming from the inside, though it is impossible to make anything out. To the west, a monstrous looking cat watches the space you occupy intently, as if it were waiting for something or someone to appear.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
@@ -114,13 +117,15 @@
       look: A large cat prowls, guarding its space.
 
 "tba:220:room:22005":
-  name: "@WSnuffins' Dwelling@n"
+  name: "{bright_white}Snuffins' Dwelling{/bright_white}"
   description: >
-    @yEverything inside is, refreshingly, average-sized.  A spartan twin bed covered in thick blankets
-    is pushed to the side, while a large, cherrywood desk dominates most of the room.  Candles burning
-    atop it give off an aesthetic vanilla scent and just enough heat to keep the room at a comfortable
-    temperature.  One of the walls is decorated with family @Dphotos @yportraying a happy group of mice.  The
-    presence of numerous @Wbooks@y, @Ymaps @yand @gglobes @yhints at a person who enjoys travel.@n
+    {yellow}Everything inside is, refreshingly, average-sized.  A spartan twin bed covered in thick
+    blankets is pushed to the side, while a large, cherrywood desk dominates most of the room.  Candles
+    burning atop it give off an aesthetic vanilla scent and just enough heat to keep the room at a
+    comfortable temperature.  One of the walls is decorated with family {/yellow}{grey}photos
+    {/grey}{yellow}portraying a happy group of mice.  The presence of numerous
+    {/yellow}{bright_white}books{/bright_white}{yellow}, {/yellow}{bright_yellow}maps {/bright_yellow}{yellow}and {/yellow}{green}globes
+    {/green}{yellow}hints at a person who enjoys travel.{/yellow}
   sector: inside
   flags: [indoors, peaceful]
   exits:
@@ -133,32 +138,37 @@
       they're all books on history or geography.  There are several atlases, as well.
   - keywords: [diary]
     text: >
-      @WDay @W39 : @n@n I am trapped.  My punishment for leaving home so early to travel the world has
-      come back to bite me in the butt.  I had only planned to stay in this place for a night, merely to rest
-      before I continued my journey, but it seems as if I've met my match in the devilcat named
-      @DO@Wre@Do@n.
+      {bright_white}Day {/bright_white}{bright_white}39 : {/bright_white} I am trapped.  My punishment
+      for leaving home so early to travel the world has come back to bite me in the butt.  I had only planned
+      to stay in this place for a night, merely to rest before I continued my journey, but it seems as if
+      I've met my match in the devilcat named {grey}O{/grey}{bright_white}re{/bright_white}{grey}o{/grey}.
   - keywords: [desk]
     text: >
       This desk is cluttered with paperwads and chewed-up pens.  A thick book is pulled open, and looks
-      to be a kind of @Ddiary@n.
+      to be a kind of {grey}diary{/grey}.
   - keywords: [photos, walls, pictures]
     text: >
       A happy mouse family is depicted in the many pictures along the walls.  One of the most
-      @Ceye-catching@n is the image of a young mouse at a theme park, wearing what looks to be a set of plastic
-      @yhuman ears@n over his head. @WStr@wan@Dge@n...
+      {bright_cyan}eye-catching{/bright_cyan} is the image of a young mouse at a theme park, wearing what looks to be
+      a set of plastic {yellow}human ears{/yellow} over his head.
+      {bright_white}Str{/bright_white}{white}an{/white}{grey}ge{/grey}...
   - keywords: [maps, globes]
     text: >
       Several different-size globes sit around the room, and maps are spread out in various places. 
-      Comically large thumbtacks are placed on random locations over the world.  Cities like @CVe@cni@Cce@n,
-      @RNe@Ww Yo@Brk@n, @yR@Yom@ye@n and @GTo@gky@Go@n are circled in bold @Rred@n.
+      Comically large thumbtacks are placed on random locations over the world.  Cities like
+      {bright_cyan}Ve{/bright_cyan}{cyan}ni{/cyan}{bright_cyan}ce{/bright_cyan}, {bright_red}Ne{/bright_red}{bright_white}w
+      Yo{/bright_white}{bright_blue}rk{/bright_blue},
+      {yellow}R{/yellow}{bright_yellow}om{/bright_yellow}{yellow}e{/yellow} and {bright_green}To{/bright_green}{green}ky{/green}{bright_green}o{/bright_green}
+      are circled in bold {bright_red}red{/bright_red}.
 
 "tba:220:room:22006":
-  name: "@WThe Cat Corner@n"
+  name: "{bright_white}The Cat Corner{/bright_white}"
   description: >
-    @yThis corner of the kitchen is littered with tell-tale furballs and pieces of kitty kibble.  A
-    plush @rred @Rcushion @ylies in the furthest corner of the room, and a collection of multi-colored
-    jingle balls and squeaky toys are scattered around it.  A food-and-water bowl lies empty, @Gmold
-    @ycreeping over it.@n
+    {yellow}This corner of the kitchen is littered with tell-tale furballs and pieces of kitty kibble. 
+    A plush {/yellow}{red}red {/red}{bright_red}cushion {/bright_red}{yellow}lies in the furthest corner
+    of the room, and a collection of multi-colored jingle balls and squeaky toys are scattered around
+    it.  A food-and-water bowl lies empty, {/yellow}{bright_green}mold {/bright_green}{yellow}creeping over
+    it.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
@@ -166,15 +176,16 @@
       to: tba:220:room:22004
   extras:
   - keywords: [pendant, collar]
-    text: The name @DO@WRE@DO@n is engraved into a silver pendant.
+    text: >
+      The name {grey}O{/grey}{bright_white}RE{/bright_white}{grey}O{/grey} is engraved into a silver
+      pendant.
 
 "tba:220:room:22007":
-  name: "@WThe Back Door@n"
+  name: "{bright_white}The Back Door{/bright_white}"
   description: >
-    @yThe dust settled on the ground here is thick, so much that you can see deep paw prints smudged
-    into the layer of muck.  Pieces of kitty kibble are thrown randomly, and a ray of @Yl@yi@wg@ch@Ct@y
-    falls curiously over this spot.  A mousehole is nearby to the west.  Paint peels off the door, which is
-    blocked by a heavy @Dpackage@y.@n
+    {yellow}The dust settled on the ground here is thick, so much that you can see deep paw prints
+    smudged into the layer of muck.  Pieces of kitty kibble are thrown randomly, and a ray of
+    {/yellow}{bright_yellow}l{/bright_yellow}{yellow}i{/yellow}{white}g{/white}{cyan}h{/cyan}{bright_cyan}t{/bright_cyan}{yellow} falls curiously over this spot.  A mousehole is nearby to the west.  Paint peels off the door, which is blocked by a heavy {/yellow}{grey}package{/grey}{yellow}.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
@@ -184,32 +195,34 @@
       to: tba:220:room:22004
   extras:
   - keywords: [package]
-    text: "@n @RKrazy @BKitty @GKibble@c, for the @CKrazy@c in your Kitty@n"
+    text: >2
+       {bright_red}Krazy {/bright_red}{bright_blue}Kitty {/bright_blue}{bright_green}Kibble{/bright_green}{cyan}, for the {/cyan}{bright_cyan}Krazy{/bright_cyan}{cyan} in your Kitty{/cyan}
 
 "tba:220:room:22008":
-  name: "@WOn the Oven Door@n"
+  name: "{bright_white}On the Oven Door{/bright_white}"
   description: >
-    @yThe oven door has been left open, and bits of @Dfilth @ycrawl along the steel.  An unpleasant
-    smell fills the stuffy air, and heat waves blow in from the east.  A string of @Rspaghetti @yis dangling
-    from the top of the oven.  @GGross!@n
+    {yellow}The oven door has been left open, and bits of {/yellow}{grey}filth {/grey}{yellow}crawl
+    along the steel.  An unpleasant smell fills the stuffy air, and heat waves blow in from the east.  A
+    string of {/yellow}{bright_red}spaghetti {/bright_red}{yellow}is dangling from the top of the oven. 
+    {/yellow}{bright_green}Gross!{/bright_green}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22007
-      look: "@DPaw prints mar the layer of dust to the north.  @n"
+      look: "{grey}Paw prints mar the layer of dust to the north.  {/grey}"
     east:
       to: tba:220:room:22012
-      look: "@DGlowing bars pulse ominously to the east.  @n"
+      look: "{grey}Glowing bars pulse ominously to the east.  {/grey}"
     south:
       to: tba:220:room:22010
-      look: "@DThe fridge door is open to the south.  @n"
+      look: "{grey}The fridge door is open to the south.  {/grey}"
     west:
       to: tba:220:room:22003
-      look: "@DDark dust clouds curl underneath the table to the west.  @n"
+      look: "{grey}Dark dust clouds curl underneath the table to the west.  {/grey}"
     up:
       to: tba:220:room:22021
-      look: "@DA spaghetti noodle leads upwards.  @n"
+      look: "{grey}A spaghetti noodle leads upwards.  {/grey}"
   extras:
   - keywords: [spaghetti, string]
     text: >
@@ -217,103 +230,111 @@
       break easily.  Maybe it could be climbed...
 
 "tba:220:room:22009":
-  name: "@WThe Phone@n"
+  name: "{bright_white}The Phone{/bright_white}"
   description: >
-    @yA tremendous phone seems to have fallen off the hook, and rests here on its side.  The buttons
-    are huge, each one as big as your head. A dial tone blares from one of the speakers, and a @RPOWER@y
-    light blinks angrily.  The @Wcord@y is very thick and spirals upward.@n
+    {yellow}A tremendous phone seems to have fallen off the hook, and rests here on its side.  The
+    buttons are huge, each one as big as your head. A dial tone blares from one of the speakers, and a
+    {/yellow}{bright_red}POWER{/bright_red}{yellow} light blinks angrily.  The
+    {/yellow}{bright_white}cord{/bright_white}{yellow} is very thick and spirals upward.{/yellow}
   sector: inside
   exits:
     east:
       to: tba:220:room:22002
-      look: "@DTo the east, a large chair is pulled out from under a table.  @n"
+      look: "{grey}To the east, a large chair is pulled out from under a table.  {/grey}"
     up:
       to: tba:220:room:22013
-      look: "@DThe phone cord looks climbable.  @n"
+      look: "{grey}The phone cord looks climbable.  {/grey}"
   extras:
   - keywords: [cord]
     text: >
-      The pale @Wwhite@n cord is thick and springy.  If a person grabbed on, he could probably climb it
-      fairly high.
+      The pale {bright_white}white{/bright_white} cord is thick and springy.  If a person grabbed on, he
+      could probably climb it fairly high.
 
 "tba:220:room:22010":
-  name: "@WBefore the Fridge@w"
+  name: "{bright_white}Before the Fridge{/bright_white}{white}{/white}"
   description: >
-    @yMultiple @Dsticky notes @yand pictures are posted on the outside of the fridge door.  It is
-    cracked open, making it easy to see inside and climb up the racks on the inside of it.  The smell of
-    rotten food is thick and choking.  A lightbulb high above you flickers incessantly, and there is some
-    mumbling coming from up high.@n
+    {yellow}Multiple {/yellow}{grey}sticky notes {/grey}{yellow}and pictures are posted on the outside
+    of the fridge door.  It is cracked open, making it easy to see inside and climb up the racks on the
+    inside of it.  The smell of rotten food is thick and choking.  A lightbulb high above you flickers
+    incessantly, and there is some mumbling coming from up high.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22008
-      look: "@DA burning smell wafts in from the north.  @n"
+      look: "{grey}A burning smell wafts in from the north.  {/grey}"
     west:
       to: tba:220:room:22002
-      look: "@DA kitchen chair is pulled out from the table.  @n"
+      look: "{grey}A kitchen chair is pulled out from the table.  {/grey}"
     up:
       to: tba:220:room:22017
-      look: "@DStrange mumbling noises are coming from way up high...  @n"
+      look: "{grey}Strange mumbling noises are coming from way up high...  {/grey}"
   extras:
   - keywords: [sticky, notes]
     text: >
-      A sticky note tacked onto the fridge reads @WDon't forget to take the cat out.  Call mouse
-      exterminator when you get home@n.  Weird.
+      A sticky note tacked onto the fridge reads {bright_white}Don't forget to take the cat out.  Call
+      mouse exterminator when you get home{/bright_white}.  Weird.
   - keywords: [photos]
-    text: An autographed photo of @MBritney @CSpears@n reads @WTo Hank, love Britney xoxo@n.
+    text: >
+      An autographed photo of {bright_magenta}Britney {/bright_magenta}{bright_cyan}Spears{/bright_cyan}
+      reads {bright_white}To Hank, love Britney xoxo{/bright_white}.
 
 "tba:220:room:22011":
-  name: "@WPile of Boxes@n"
+  name: "{bright_white}Pile of Boxes{/bright_white}"
   description: >
-    @yA pile of @Bmail @ypostmarked ages ago sits on the @cpale blue @ychair cushion.  The packages are
-    tall, brown and lumpy.  The way they are situated seems ideal for climbing.  The side of the cushion
-    is torn, and fluff spills out of it.@n
+    {yellow}A pile of {/yellow}{bright_blue}mail {/bright_blue}{yellow}postmarked ages ago sits on the
+    {/yellow}{cyan}pale blue {/cyan}{yellow}chair cushion.  The packages are tall, brown and lumpy.  The
+    way they are situated seems ideal for climbing.  The side of the cushion is torn, and fluff spills
+    out of it.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22025
-      look: "@DThe kitchen table is just a leap away.  @n"
+      look: "{grey}The kitchen table is just a leap away.  {/grey}"
     down:
       to: tba:220:room:22002
       look: >
-        @DRivets on the chair's legs are great for climbing down, but the height is staggering!  @n
+        {grey}Rivets on the chair's legs are great for climbing down, but the height is staggering!  {/grey}
   extras:
   - keywords: [packages, mail]
     text: >
-      The lumpy, brown packages have angry, red circles surrounding the addresses. One has @BHappy
-      Birthday @WHank@n written on it.
+      The lumpy, brown packages have angry, red circles surrounding the addresses. One has
+      {bright_blue}Happy Birthday {/bright_blue}{bright_white}Hank{/bright_white} written on it.
 
 "tba:220:room:22012":
-  name: "@RInside the Oven@n"
+  name: "{bright_red}Inside the Oven{/bright_red}"
   description: >
-    @yIt feels like a sauna in here!  The temperature is uncomfortably @Rhot@y and @Rhumid@y, and heat
-    waves @Db@wl@Wu@Dr@y your vision slightly.  Thick layers of oven @Dscum@y, @ggrease@y and ancient
-    @Gfood@y ingredients coat all four walls.  To the back, pulsing heat rods glow a @Rvibrant @Yorange
-    @ycolor, dimly lighting the oven.  Steel beams form a baking rack above.@n
+    {yellow}It feels like a sauna in here!  The temperature is uncomfortably
+    {/yellow}{bright_red}hot{/bright_red}{yellow} and {/yellow}{bright_red}humid{/bright_red}{yellow}, and heat waves
+    {/yellow}{grey}b{/grey}{white}l{/white}{bright_white}u{/bright_white}{grey}r{/grey}{yellow} your vision slightly. 
+    Thick layers of oven {/yellow}{grey}scum{/grey}{yellow}, {/yellow}{green}grease{/green}{yellow} and
+    ancient {/yellow}{bright_green}food{/bright_green}{yellow} ingredients coat all four walls.  To the
+    back, pulsing heat rods glow a {/yellow}{bright_red}vibrant {/bright_red}{bright_yellow}orange
+    {/bright_yellow}{yellow}color, dimly lighting the oven.  Steel beams form a baking rack above.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     west:
       to: tba:220:room:22008
-      look: "@DTo the west, the oven door lies open.  @n"
+      look: "{grey}To the west, the oven door lies open.  {/grey}"
 
 "tba:220:room:22013":
-  name: "@WOn the Counter@n"
+  name: "{bright_white}On the Counter{/bright_white}"
   description: >
-    @yThe counterspace here is mostly taken up by a large, spiral datebook that is flipped open to a
-    random @Dpage@y.  A tall @Dpen@y is leaning precariously against one of the walls, though beads of ink
-    stream down its sides.  The corners of the counter are crawling with dust and spiderwebs.@n
+    {yellow}The counterspace here is mostly taken up by a large, spiral datebook that is flipped open
+    to a random {/yellow}{grey}page{/grey}{yellow}.  A tall {/yellow}{grey}pen{/grey}{yellow} is leaning
+    precariously against one of the walls, though beads of ink stream down its sides.  The corners of the
+    counter are crawling with dust and spiderwebs.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22014
-      look: "@DChopped vegetables are piled to the north.  @n"
+      look: "{grey}Chopped vegetables are piled to the north.  {/grey}"
     down:
       to: tba:220:room:22009
-      look: "@DThe thick phone cord provide means of going down.  @n"
+      look: "{grey}The thick phone cord provide means of going down.  {/grey}"
   extras:
   - keywords: [page, datebook, book, spiral]
     text: >
@@ -321,55 +342,58 @@
       written on was at least two years ago!
   - keywords: [pen]
     text: >
-      Visible through the rivulets of ink dripping down, the words @WHank's Auto Repair@n are painted
-      onto the pen in small caps.
+      Visible through the rivulets of ink dripping down, the words {bright_white}Hank's Auto
+      Repair{/bright_white} are painted onto the pen in small caps.
 
 "tba:220:room:22014":
-  name: "@WChopped Vegetables@n"
+  name: "{bright_white}Chopped Vegetables{/bright_white}"
   description: >
-    @yThis place has an enormous cutting board, at least a foot high off the counter.  A rather
-    terrifying @DChef's knife@y is sunk halfway into a rotted @Rtomato@y, and carrot slices are piled into a
-    tower on the corner of the cutting board.  The stench from other @gvegetables@y make the area smell
-    terrible.  Looking @Ddown@y, a kitchen drawer is slightly cracked open.@n
+    {yellow}This place has an enormous cutting board, at least a foot high off the counter.  A rather
+    terrifying {/yellow}{grey}Chef's knife{/grey}{yellow} is sunk halfway into a rotted
+    {/yellow}{bright_red}tomato{/bright_red}{yellow}, and carrot slices are piled into a tower on the corner of the cutting
+    board.  The stench from other {/yellow}{green}vegetables{/green}{yellow} make the area smell
+    terrible.  Looking {/yellow}{grey}down{/grey}{yellow}, a kitchen drawer is slightly cracked open.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22015
-      look: "@DThere is a sink in the north.  @n"
+      look: "{grey}There is a sink in the north.  {/grey}"
     south:
       to: tba:220:room:22013
-      look: "@DA large spiral notebook is sitting to the south.  @n"
+      look: "{grey}A large spiral notebook is sitting to the south.  {/grey}"
     down:
       to: tba:220:room:22016
-      look: "@DThe kitchen drawer is cracked open, and a person could probably squeeze into it.  @n"
+      look: >
+        {grey}The kitchen drawer is cracked open, and a person could probably squeeze into it.  {/grey}
   extras:
   - keywords: [chef, knife]
-    text: This gigantic @DChef's knife@n is covered in rust and cobwebs.
+    text: This gigantic {grey}Chef's knife{/grey} is covered in rust and cobwebs.
   - keywords: [other, vegetables]
     text: >
-      @gMoldy@n bits of celery, piles of cheese gone bad and stinking potato slices appear to have been
-      sitting for ages.  They're hardly recognizable!
+      {green}Moldy{/green} bits of celery, piles of cheese gone bad and stinking potato slices appear to
+      have been sitting for ages.  They're hardly recognizable!
 
 "tba:220:room:22015":
-  name: "@WThe Sink@n"
+  name: "{bright_white}The Sink{/bright_white}"
   description: >
-    @yThe sink is filled halfway with smelly water.  Capsized boats, plastic forks, spoons and thin
-    saucers float around on the surface. There are metal utensils sunk to the bottom, though they are
-    covered in @Ggreen @gmold@y.  Unrecognizable chunks of food are also drifting past.@n
+    {yellow}The sink is filled halfway with smelly water.  Capsized boats, plastic forks, spoons and
+    thin saucers float around on the surface. There are metal utensils sunk to the bottom, though they are
+    covered in {/yellow}{bright_green}green {/bright_green}{green}mold{/green}{yellow}.  Unrecognizable
+    chunks of food are also drifting past.{/yellow}
   sector: water_swim
   flags: [indoors]
   exits:
     south:
       to: tba:220:room:22014
-      look: "@DA big cutting board lies to the south.  @n"
+      look: "{grey}A big cutting board lies to the south.  {/grey}"
 
 "tba:220:room:22016":
-  name: "@WInside of a Drawer@n"
+  name: "{bright_white}Inside of a Drawer{/bright_white}"
   description: >
-    @yThis kitchen drawer has all the utensils.  Heavy metal forks, knives and spoons are organized
-    into a plastic brown tray.  It smells musty, like it hasn't been aired out in a long time. Cobwebs are
-    forming over the various utensils, and dust is building in the darker corners.@n
+    {yellow}This kitchen drawer has all the utensils.  Heavy metal forks, knives and spoons are
+    organized into a plastic brown tray.  It smells musty, like it hasn't been aired out in a long time. Cobwebs
+    are forming over the various utensils, and dust is building in the darker corners.{/yellow}
   sector: inside
   flags: [dark, indoors]
   exits:
@@ -377,24 +401,26 @@
       to: tba:220:room:22014
 
 "tba:220:room:22017":
-  name: "@WInside the Fridge@w"
+  name: "{bright_white}Inside the Fridge{/bright_white}{white}{/white}"
   description: >
-    @yA gallon-sized jug of @Wmilk@y dominates this space, though there are a bunch of boxes and jars
-    in the space surrounding it. The colorful labels resemble towers to form a kind of city around the
-    milk, with a main 'road' leading east to what lies behind.  A jar of mustard has been knocked over and
-    left as it is, so some places are @Ggreen @ywhere there should be @Yyellow@y.@n
+    {yellow}A gallon-sized jug of {/yellow}{bright_white}milk{/bright_white}{yellow} dominates this
+    space, though there are a bunch of boxes and jars in the space surrounding it. The colorful labels
+    resemble towers to form a kind of city around the milk, with a main 'road' leading east to what lies
+    behind.  A jar of mustard has been knocked over and left as it is, so some places are
+    {/yellow}{bright_green}green {/bright_green}{yellow}where there should be
+    {/yellow}{bright_yellow}yellow{/bright_yellow}{yellow}.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     east:
       to: tba:220:room:22018
-      look: "@cA shadow cast by something behind the milk is moving...  @n"
+      look: "{cyan}A shadow cast by something behind the milk is moving...  {/cyan}"
     up:
       to: tba:220:room:22019
-      look: "@DA chill jet of air is coming from above.  @n"
+      look: "{grey}A chill jet of air is coming from above.  {/grey}"
     down:
       to: tba:220:room:22010
-      look: "@cThe trip back to the kitchen floor isn't a long one.  @n"
+      look: "{cyan}The trip back to the kitchen floor isn't a long one.  {/cyan}"
   extras:
   - keywords: [milk]
     text: >
@@ -402,52 +428,61 @@
       it.  Better keep away...
 
 "tba:220:room:22018":
-  name: "@WBehind the Milk@w"
+  name: "{bright_white}Behind the Milk{/bright_white}{white}{/white}"
   description: >
-    @yEverything just stops, and this area is mostly empty except for an upturned @Dlid@y in the
-    corner.  The flickering lightbulb is here, making the room warm and @Wblindingly @Ybright@y.  A strong
-    smell of generic @Ccleaner @ylingers in the air, much like a hospital.@n
+    {yellow}Everything just stops, and this area is mostly empty except for an upturned
+    {/yellow}{grey}lid{/grey}{yellow} in the corner.  The flickering lightbulb is here, making the room warm and
+    {/yellow}{bright_white}blindingly {/bright_white}{bright_yellow}bright{/bright_yellow}{yellow}.  A strong
+    smell of generic {/yellow}{bright_cyan}cleaner {/bright_cyan}{yellow}lingers in the air, much like a
+    hospital.{/yellow}
   sector: inside
   flags: [indoors, peaceful]
   exits:
     west:
       to: tba:220:room:22017
-      look: "@DA city made out of pasta boxes, baking soda boxes and jelly jars lies west. @n"
+      look: "{grey}A city made out of pasta boxes, baking soda boxes and jelly jars lies west. {/grey}"
   extras:
   - keywords: [lid]
-    text: The tin lid reads @BCreamy@W-@BBrand @WMayo!  @n A gray growth is forming on the rim.
+    text: >
+      The tin lid reads {bright_blue}Creamy{/bright_blue}{bright_white}-{/bright_white}{bright_blue}Brand
+      {/bright_blue}{bright_white}Mayo!  {/bright_white} A gray growth is forming on the rim.
 
 "tba:220:room:22019":
-  name: "@WThe @WF@Cr@ce@we@Dz@Ce@Wr@n"
+  name: "{bright_white}The {/bright_white}{bright_white}F{/bright_white}{bright_cyan}r{/bright_cyan}{cyan}e{/cyan}{white}e{/white}{grey}z{/grey}{bright_cyan}e{/bright_cyan}{bright_white}r{/bright_white}"
   description: >
-    @yThis first part of the freezer is empty, for the most part.  A thick layer of soft, spongy ice
-    coats the floor and walls around you.  Ominous tracks lead to the east, and you can hear a maddening
-    @c-@Cdrip@c-@Wdrip@c-@Cdrip@c- @ysound coming from there.  A half-eaten @Mpopsicle @ylies covered in
-    torn wrapping to the side, a fine layer of ice crawling over it.@n
+    {yellow}This first part of the freezer is empty, for the most part.  A thick layer of soft, spongy
+    ice coats the floor and walls around you.  Ominous tracks lead to the east, and you can hear a
+    maddening
+    {/yellow}{cyan}-{/cyan}{bright_cyan}drip{/bright_cyan}{cyan}-{/cyan}{bright_white}drip{/bright_white}{cyan}-{/cyan}{bright_cyan}drip{/bright_cyan}{cyan}- {/cyan}{yellow}sound coming from there.  A
+    half-eaten {/yellow}{bright_magenta}popsicle {/bright_magenta}{yellow}lies covered in torn wrapping to
+    the side, a fine layer of ice crawling over it.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     east:
       to: tba:220:room:22020
       look: >
-        @DFrosty, cryptic mists creep and crawl, almost as though they're reaching out to you...  @n
+        {grey}Frosty, cryptic mists creep and crawl, almost as though they're reaching out to you... 
+        {/grey}
     down:
       to: tba:220:room:22017
-      look: "@DThe fridge is below.  @n"
+      look: "{grey}The fridge is below.  {/grey}"
 
 "tba:220:room:22020":
-  name: "@WLair of the @CIce@Dm@Bo@Dn@Bs@Dt@Be@Dr@n"
+  name: "{bright_white}Lair of the {/bright_white}{bright_cyan}Ice{/bright_cyan}{grey}m{/grey}{bright_blue}o{/bright_blue}{grey}n{/grey}{bright_blue}s{/bright_blue}{grey}t{/grey}{bright_blue}e{/bright_blue}{grey}r{/grey}"
   description: >
-    @yThe temperature is freezing, and even the icicles around you seem to shiver amidst the cold. 
-    @DBoxes @yof frozen dinners long past their expiration date are piled about, and an @Cice rack @ysits
-    against one ice-covered wall.  The floor is dangerously slippery here, as something liquid is leaking
-    from the frosted ceiling high above.  A large bulb toward the back spreads plenty of @Ylight@y.@n
+    {yellow}The temperature is freezing, and even the icicles around you seem to shiver amidst the
+    cold.  {/yellow}{grey}Boxes {/grey}{yellow}of frozen dinners long past their expiration date are piled
+    about, and an {/yellow}{bright_cyan}ice rack {/bright_cyan}{yellow}sits against one ice-covered wall. 
+    The floor is dangerously slippery here, as something liquid is leaking from the frosted ceiling high
+    above.  A large bulb toward the back spreads plenty of
+    {/yellow}{bright_yellow}light{/bright_yellow}{yellow}.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     west:
       to: tba:220:room:22019
-      look: "@DA @Mpopsicle @Dlies to the west. @n"
+      look: "{grey}A {/grey}{bright_magenta}popsicle {/bright_magenta}{grey}lies to the west. {/grey}"
   extras:
   - keywords: [liquid, ceiling]
     text: >
@@ -458,51 +493,52 @@
     text: >
       Boxes of frozen deserts, kids' meals and microwaveable lasagna form colorful towers.  The
       expiration dates seem to all have been at least a year ago, sometimes more!  The tempting pictures of a
-      gigantic @Dfudge @ybrownie@n sure look tempting, though.
+      gigantic {grey}fudge {/grey}{yellow}brownie{/yellow} sure look tempting, though.
   - keywords: [icerack, rack]
     text: >
-      Huge cubes of ice fill in the squares of a @mpurple@n icerack.  They're big enough to stand on or
-      make cool ice sculptures out of.
+      Huge cubes of ice fill in the squares of a {magenta}purple{/magenta} icerack.  They're big enough
+      to stand on or make cool ice sculptures out of.
 
 "tba:220:room:22021":
-  name: "@WOn Top of the Stove: @RFirst Burner@n"
+  name: "{bright_white}On Top of the Stove: {/bright_white}{bright_red}First Burner{/bright_red}"
   description: >
-    @yA vast stove stretches out to the north and east.  A coil is here, though it is rusted over and
-    probably hasn't been used a long while.  The steel top of the stove is coated in @Dgrime@y.@n
+    {yellow}A vast stove stretches out to the north and east.  A coil is here, though it is rusted over
+    and probably hasn't been used a long while.  The steel top of the stove is coated in
+    {/yellow}{grey}grime{/grey}{yellow}.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22024
-      look: "@DAnother burner lies to the north.  @n"
+      look: "{grey}Another burner lies to the north.  {/grey}"
     east:
       to: tba:220:room:22022
-      look: "@DThere is a faint @Rglow @Dto the east.  @n"
+      look: "{grey}There is a faint {/grey}{bright_red}glow {/bright_red}{grey}to the east.  {/grey}"
     down:
       to: tba:220:room:22008
 
 "tba:220:room:22022":
-  name: "@WOn Top of the Stove: @RSecond Burner@n"
+  name: "{bright_white}On Top of the Stove: {/bright_white}{bright_red}Second Burner{/bright_red}"
   description: >
-    @RWhoa!! @yA glowing coil is here, so hot that it is almost melting in some places.  Someone
-    probably forgot to turn this burner off. The heat is completely overwhelming, and the air is very stuffy.
-    Thick spots of grossly cooked grime bubble close to the coil.@n
+    {bright_red}Whoa!! {/bright_red}{yellow}A glowing coil is here, so hot that it is almost melting in
+    some places.  Someone probably forgot to turn this burner off. The heat is completely overwhelming,
+    and the air is very stuffy. Thick spots of grossly cooked grime bubble close to the coil.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     north:
       to: tba:220:room:22023
-      look: "@DLooks like another burner to the north.  @n"
+      look: "{grey}Looks like another burner to the north.  {/grey}"
     west:
       to: tba:220:room:22021
-      look: "@DA trail of blackened spaghetti sauce leads west.  @n"
+      look: "{grey}A trail of blackened spaghetti sauce leads west.  {/grey}"
 
 "tba:220:room:22023":
-  name: "@WOn Top of the Stove: @RThird Burner@n"
+  name: "{bright_white}On Top of the Stove: {/bright_white}{bright_red}Third Burner{/bright_red}"
   description: >
-    @yRust crawls over an unused metal coil.  This one is smaller than the rest and surrounded by thick
-    layers of stove scum and grime.  Chunks of molded food have fallen beneath the coil, and a nasty
-    smell pollutes the stuffy air here.@n
+    {yellow}Rust crawls over an unused metal coil.  This one is smaller than the rest and surrounded by
+    thick layers of stove scum and grime.  Chunks of molded food have fallen beneath the coil, and a
+    nasty smell pollutes the stuffy air here.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
@@ -512,33 +548,37 @@
       to: tba:220:room:22024
 
 "tba:220:room:22024":
-  name: "@WOn Top of the Stove: @RFourth Burner@n"
+  name: "{bright_white}On Top of the Stove: {/bright_white}{bright_red}Fourth Burner{/bright_red}"
   description: >
-    @yA @rrusted@y metal pot is sitting on the burner here.  Thick, stinking liquid spills over the
-    edge of the pot in @Gch@gu@Gnks@y, and the lid has fallen off.  There are noises coming from within,
-    strange, wet-sounding @Gglop@y-@gglop@y-@Dglops@y.  The smell in this area is rank and overpowering.@n
+    {yellow}A {/yellow}{red}rusted{/red}{yellow} metal pot is sitting on the burner here.  Thick,
+    stinking liquid spills over the edge of the pot in
+    {/yellow}{bright_green}ch{/bright_green}{green}u{/green}{bright_green}nks{/bright_green}{yellow}, and the lid has fallen off.  There are noises coming from
+    within, strange, wet-sounding
+    {/yellow}{bright_green}glop{/bright_green}{yellow}-{/yellow}{green}glop{/green}{yellow}-{/yellow}{grey}glops{/grey}{yellow}.  The smell in this area is rank and
+    overpowering.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     east:
       to: tba:220:room:22023
-      look: "@DA burner is visible to the east.  @n"
+      look: "{grey}A burner is visible to the east.  {/grey}"
     south:
       to: tba:220:room:22021
-      look: "@DA trail of blackened spaghetti sauce leads south.  @n"
+      look: "{grey}A trail of blackened spaghetti sauce leads south.  {/grey}"
 
 "tba:220:room:22025":
-  name: "@WOn Top of the Table@n"
+  name: "{bright_white}On Top of the Table{/bright_white}"
   description: >
-    @yThe table is covered in a thick layer of dust and crumbs.  It was set for @Ddinner@y, but most of
-    the @Dfood@y has decayed or been eaten, probably by the ants that are crawling everywhere.  The view
-    from here is pretty nice- you can see the fridge, stove and even a fluffy cat in the corner.@n
+    {yellow}The table is covered in a thick layer of dust and crumbs.  It was set for
+    {/yellow}{grey}dinner{/grey}{yellow}, but most of the {/yellow}{grey}food{/grey}{yellow} has decayed or been eaten,
+    probably by the ants that are crawling everywhere.  The view from here is pretty nice- you can see the
+    fridge, stove and even a fluffy cat in the corner.{/yellow}
   sector: inside
   flags: [indoors]
   exits:
     south:
       to: tba:220:room:22011
-      look: "@DA pile of boxes is just a leap away.  @n"
+      look: "{grey}A pile of boxes is just a leap away.  {/grey}"
   extras:
   - keywords: [dinner, set, food]
     text: >

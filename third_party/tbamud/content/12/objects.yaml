@@ -15,7 +15,7 @@
   level: 0
   extras:
   - keywords: [list, email, staff]
-    text: "@RHELP CONTACT@n for the most recent listing or:"
+    text: "{bright_red}HELP CONTACT{/bright_red} for the most recent listing or:"
 
 "tba:12:obj:1201":
   type: other
@@ -55,7 +55,7 @@
   type: light
   keywords: [color, test, object]
   short: a color test object
-  long: This is a @Rred@n test object
+  long: This is a {bright_red}red{/bright_red} test object
   wear: [take]
   values:
     hours: 23
@@ -150,8 +150,11 @@
 "tba:12:obj:1211":
   type: note
   keywords: [neon, sign]
-  short: a @Rn@Ge@Yo@Wn @Bs@Ci@Mg@Rn@n
-  long: "@WA @Rn@Ge@Yo@Wn @Bs@Ci@Mg@Rn@W has been placed here, and is POINTING to the message board!@n"
+  short: >-
+    a
+    {bright_red}n{/bright_red}{bright_green}e{/bright_green}{bright_yellow}o{/bright_yellow}{bright_white}n
+    {/bright_white}{bright_blue}s{/bright_blue}{bright_cyan}i{/bright_cyan}{bright_magenta}g{/bright_magenta}{bright_red}n{/bright_red}
+  long: "{bright_white}A {/bright_white}{bright_red}n{/bright_red}{bright_green}e{/bright_green}{bright_yellow}o{/bright_yellow}{bright_white}n {/bright_white}{bright_blue}s{/bright_blue}{bright_cyan}i{/bright_cyan}{bright_magenta}g{/bright_magenta}{bright_red}n{/bright_red}{bright_white} has been placed here, and is POINTING to the message board!{/bright_white}"
   wear: []
   values:
     raw: [0, 0, 0, 0]
@@ -429,7 +432,7 @@
   type: armor
   keywords: [notebook, notes, book]
   short: Elaseth's notebook
-  long: "@nA book entitled \"@YElaseth's Notes: A Madwoman's Account@n\" lies here."
+  long: "A book entitled \"{bright_yellow}Elaseth's Notes: A Madwoman's Account{/bright_yellow}\" lies here."
   wear: [take, hold]
   values:
     armor: 0

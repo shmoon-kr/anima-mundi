@@ -9,6 +9,7 @@ Written by `mundi-convert` (tbaMUD world → content format). Regenerated with t
 - preformatted texts: 45
 - rooms: 12700
 - shops: 334
+- texts with markup: 629
 - zones: 189
 
 ## Converter notes (13)

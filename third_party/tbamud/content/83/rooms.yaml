@@ -7,23 +7,23 @@
   description:
     preformatted: |
       
-      @yBuilder      : @cMeyekul
-      @yZone         : @c83 Glumgold's Sea
-      @yPlayer Level : @c10-30
-      @yRooms        : @c96
-      @yMobs         : @c15
-      @yObjects      : @c20
-      @yShops        : @c0
-      @yTriggers     : @c22
-      @yTheme        : @cAn oceanic zone.  These waters are controlled by Glumgold the Pirate.
-      @yNotes        : @cPlayers have the option of a sea battle with Glumgold, but his ship is
-      @c               extremely tough.  The best way to take him down is from the inside.
-      @c
-      @c               Originally written for @oAnywhere But Home - anywhere.wolfpaw.net:5555@n
-      @c
-      @yZone 83 is linked to the following zones:
-      @c ??                                 at  8301 (east) --->  ????
-      @n
+      {yellow}Builder      : {/yellow}{cyan}Meyekul
+      {/cyan}{yellow}Zone         : {/yellow}{cyan}83 Glumgold's Sea
+      {/cyan}{yellow}Player Level : {/yellow}{cyan}10-30
+      {/cyan}{yellow}Rooms        : {/yellow}{cyan}96
+      {/cyan}{yellow}Mobs         : {/yellow}{cyan}15
+      {/cyan}{yellow}Objects      : {/yellow}{cyan}20
+      {/cyan}{yellow}Shops        : {/yellow}{cyan}0
+      {/cyan}{yellow}Triggers     : {/yellow}{cyan}22
+      {/cyan}{yellow}Theme        : {/yellow}{cyan}An oceanic zone.  These waters are controlled by Glumgold the Pirate.
+      {/cyan}{yellow}Notes        : {/yellow}{cyan}Players have the option of a sea battle with Glumgold, but his ship is
+      {/cyan}{cyan}               extremely tough.  The best way to take him down is from the inside.
+      {/cyan}{cyan}
+      {/cyan}{cyan}               Originally written for {/cyan}{orange}Anywhere But Home - anywhere.wolfpaw.net:5555{/orange}
+      {cyan}
+      {/cyan}{yellow}Zone 83 is linked to the following zones:
+      {/yellow}{cyan} ??                                 at  8301 (east) --->  ????
+      {/cyan}
       Donateable
   sector: inside
   flags: [private]
@@ -1663,7 +1663,7 @@
       look: The hallway continues south to some more doorways.
     west:
       to: tba:83:room:8380
-      look: There is a door marked '@oGALLEY@n' to the west.
+      look: There is a door marked '{orange}GALLEY{/orange}' to the west.
       door:
         keywords: [door, galley]
         kind: door
@@ -1799,12 +1799,13 @@
     down:
       to: tba:83:room:8376
       look: >
-        The deck of the ship is far below you.  You could @ojump@n down, but it is not recommended...
+        The deck of the ship is far below you.  You could {orange}jump{/orange} down, but it is not
+        recommended...
   extras:
   - keywords: [flag, jolly, roger]
     text:
       preformatted: |2
-           @RMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+           {bright_red}MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
            MMMMMMMMMMMMMMMMMMMMMi'           ;JMMMMMMMMMMMMMMMMMMMMMM
            MMMMMMMMMMMMMMMMMMM>                 MMMMMMMMMMMMMMMMMMMMM
            MMMMMMMMMMMMMMMMMM;                   5MMMMMMMMMMMMMMMMMMM
@@ -1824,10 +1825,10 @@
            MMMMMMMMMMMMM>     .:iMMMMMMMMMMMMMMMMt>'    +MMMMMMMMMMMM
            MMMMMMMMMMMMM    iMMMMMMMMMMMMMMMMMMMMMMMM   .MMMMMMMMMMMM
            MMMMMMMMMMMMMc>=MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-           MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM@n
+           MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM{/bright_red}
         
         
-           @gSome believe the Jolly Roger gets its name from the French
+           {green}Some believe the Jolly Roger gets its name from the French
            "Jolie Rouge" or "Red Flag."  The flag was first used by a
            French order of militant monks known as the "Poor Soldiers
            of Christ and the Temple of Solomon" -- commonly known as
@@ -1839,27 +1840,19 @@
            by the folks on the mainland, as pirates.
         
            For more history of the Jolly Roger,
-           visit@n http://www.skullandcrossbones.org
+           visit{/green} http://www.skullandcrossbones.org
 
 "tba:83:room:8386":
-  name: "@bDavy Jones' Locker@n"
+  name: "{blue}Davy Jones' Locker{/blue}"
   description:
     preformatted: |2
-         @
-      @bSPLASH!@c  You hit the icy water.@n
-      @
-      @
-      @bDeeper..@n
-      @
-      @
-      @b          Deeper...@n
-      @
-      @
-      @
-      @c                     ..and deeper you sink.  You begin to lose any hope of
+         {blue}SPLASH!{/blue}{cyan}  You hit the icy water.{/cyan}
+      {blue}Deeper..{/blue}
+      {blue}          Deeper...{/blue}
+      {cyan}                     ..and deeper you sink.  You begin to lose any hope of
       getting back to the surface as your arms grow tired of flailing about.  Your
       vision fades to black as you lose conciousness and drown in your sleep.
-      @n
+      {/cyan}
   sector: water_swim
   flags: [no_mob]
   exits:
