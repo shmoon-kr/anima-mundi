@@ -1,0 +1,155 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 7.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:7:obj:719
+  room: tba:7:room:702
+  limit: 99
+- object: tba:7:obj:717
+  room: tba:7:room:703
+  limit: 99
+- object: tba:7:obj:704
+  room: tba:7:room:701
+  limit: 99
+- mob: tba:7:mob:702
+  room: tba:7:room:799
+  limit: 1
+  equip:
+    body:
+      object: tba:7:obj:702
+      limit: 5
+- mob: tba:7:mob:701
+  room: tba:7:room:799
+  limit: 2
+  equip:
+    hold:
+      object: tba:7:obj:715
+      limit: 99
+    wield:
+      object: tba:7:obj:701
+      limit: 16
+- object: tba:7:obj:704
+  room: tba:7:room:799
+  limit: 99
+- object: tba:7:obj:716
+  room: tba:7:room:786
+  limit: 1
+- mob: tba:7:mob:706
+  room: tba:7:room:786
+  limit: 8
+  equip:
+    wrist_right:
+      object: tba:7:obj:703
+      limit: 14
+- mob: tba:7:mob:700
+  room: tba:7:room:791
+  limit: 8
+  equip:
+    hands:
+      object: tba:7:obj:709
+      limit: 99
+- mob: tba:7:mob:711
+  room: tba:7:room:781
+  limit: 2
+  equip:
+    arms:
+      object: tba:7:obj:708
+      limit: 99
+- mob: tba:7:mob:710
+  room: tba:7:room:779
+  limit: 2
+  equip:
+    feet:
+      object: tba:7:obj:710
+      limit: 99
+    neck_2:
+      object: tba:7:obj:713
+      limit: 99
+- mob: tba:7:mob:709
+  room: tba:7:room:797
+  limit: 1
+  equip:
+    finger_left:
+      object: tba:7:obj:714
+      limit: 99
+- mob: tba:7:mob:708
+  room: tba:7:room:776
+  limit: 6
+  equip:
+    about:
+      object: tba:7:obj:707
+      limit: 100
+    shield:
+      object: tba:7:obj:706
+      limit: 11
+- mob: tba:7:mob:708
+  room: tba:7:room:784
+  limit: 6
+  equip:
+    shield:
+      object: tba:7:obj:706
+      limit: 11
+    about:
+      object: tba:7:obj:707
+      limit: 12
+- mob: tba:7:mob:708
+  room: tba:7:room:795
+  limit: 6
+  equip:
+    about:
+      object: tba:7:obj:707
+      limit: 12
+    shield:
+      object: tba:7:obj:706
+      limit: 11
+- mob: tba:7:mob:707
+  room: tba:7:room:796
+  limit: 1
+  equip:
+    waist:
+      object: tba:7:obj:705
+      limit: 14
+- mob: tba:7:mob:705
+  room: tba:7:room:783
+  limit: 8
+  equip:
+    wrist_right:
+      object: tba:7:obj:703
+      limit: 14
+- mob: tba:7:mob:705
+  room: tba:7:room:788
+  limit: 8
+  equip:
+    wrist_right:
+      object: tba:7:obj:703
+      limit: 99
+- mob: tba:7:mob:704
+  room: tba:7:room:775
+  limit: 1
+- mob: tba:7:mob:703
+  room: tba:7:room:793
+  limit: 8
+  carry:
+  - object: tba:7:obj:700
+    limit: 99
+- mob: tba:7:mob:703
+  room: tba:7:room:780
+  limit: 8
+  carry:
+  - object: tba:7:obj:700
+    limit: 99
+- mob: tba:7:mob:700
+  room: tba:7:room:777
+  limit: 8
+removes:
+- room: tba:7:room:702
+  object: tba:7:obj:719
+- room: tba:7:room:703
+  object: tba:7:obj:717
+- room: tba:7:room:701
+  object: tba:7:obj:704
+- room: tba:7:room:799
+  object: tba:7:obj:704
+- room: tba:7:room:786
+  object: tba:7:obj:716

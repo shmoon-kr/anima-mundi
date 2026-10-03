@@ -1,0 +1,152 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 262.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:262:obj:26200":
+  type: weapon
+  keywords: [claws, bear]
+  short: some bear's claws
+  long: A terribly wicked looking set of bear's claws have been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d7
+    attack: claw
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [claws, bear]
+    text: >
+      They look as if they might fit well into the palms of your hand - maybe to use as weapon, hmm...
+
+"tba:262:obj:26201":
+  type: armor
+  keywords: [belt, skin, snake]
+  short: a snake skin belt
+  long: A pile of rattlesnake skin has been dropped here.
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 6
+  cost: 40
+  rent: 0
+  level: 7
+  extras:
+  - keywords: [belt, skin, snake]
+    text: >
+      The skin is naturally decorated by the diamonds that cover the skin of most rattlesnakes from the
+      forest area east of Midgaard.
+
+"tba:262:obj:26202":
+  type: other
+  keywords: [rattle, snake]
+  short: a rattlesnake's rattle
+  long: A severed rattle from a rattlesnake has been dropped here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 30
+  rent: 0
+  level: 7
+  affects:
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [rattle, snake]
+    text: If there's a rattle here, then where's the rest of the snake?
+
+"tba:262:obj:26203":
+  type: armor
+  keywords: [tooth, wolf]
+  short: a Wolf's Tooth
+  long: A wolf's tooth is on the ground.
+  wear: [take, neck]
+  values:
+    armor: 4
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 12
+  extras:
+  - keywords: [tooth, wolf]
+    text: It is slightly yellowed, but still razor sharp.
+
+"tba:262:obj:26204":
+  type: armor
+  keywords: [paw, wolf]
+  short: the Wolf's Paws
+  long: A set of wolf's paws have been left here.
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 10
+  cost: 300
+  rent: 0
+  level: 12
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [paws, wolf]
+    text: >
+      They seem like they would fit right over your own hands as a defense against blows and an attack
+      with the claws they still boast.
+
+"tba:262:obj:26205":
+  type: armor
+  keywords: [necklace, fang, bear]
+  short: a Bear's Fang Necklace
+  long: A necklace made from bear fangs has been left here.
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 13
+  affects:
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [necklace, fang, bear]
+    text: It is long, curved, and scythe-like.
+
+"tba:262:obj:26206":
+  type: armor
+  keywords: [hide, bear]
+  short: a bear's hide
+  long: A furry, shaggy brown hide has been left here.
+  wear: [take, about]
+  values:
+    armor: 9
+  weight: 18
+  cost: 20
+  rent: 0
+  level: 15
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:262:obj:26207":
+  type: light
+  keywords: [skull]
+  short: a bear skull
+  long: A bear's skull shines with a strange brightness.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 200
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 15
+  affects:
+  - apply: hit
+    modifier: 5
+  extras:
+  - keywords: [skull, bear]
+    text: Strange that a bear's skull would shine with a light - must be enchanted.

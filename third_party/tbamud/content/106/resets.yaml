@@ -1,0 +1,555 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 106.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:106:mob:10607
+  room: tba:106:room:10608
+  limit: 5
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 5
+    wield:
+      object: tba:106:obj:10606
+      limit: 4
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+    body:
+      object: tba:106:obj:10607
+      limit: 3
+    hold:
+      object: tba:106:obj:10602
+      limit: 20
+- mob: tba:106:mob:10605
+  room: tba:106:room:10605
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10602
+      limit: 5
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    feet:
+      object: tba:106:obj:10611
+      limit: 15
+- mob: tba:106:mob:10606
+  room: tba:106:room:10605
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10603
+      limit: 10
+    head:
+      object: tba:106:obj:10610
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 15
+- mob: tba:106:mob:10617
+  room: tba:106:room:10605
+  limit: 1
+  carry:
+  - object: tba:106:obj:10600
+    limit: 99
+- mob: tba:106:mob:10608
+  room: tba:106:room:10645
+  limit: 1
+  equip:
+    wrist_left:
+      object: tba:106:obj:10609
+      limit: 99
+    finger_right:
+      object: tba:106:obj:10635
+      limit: 1
+    wrist_right:
+      object: tba:106:obj:10609
+      limit: 99
+- mob: tba:106:mob:10634
+  room: tba:106:room:10632
+  limit: 1
+  carry:
+  - object: tba:106:obj:10621
+    limit: 99
+  - object: tba:106:obj:10620
+    limit: 99
+  - object: tba:106:obj:10618
+    limit: 99
+  - object: tba:106:obj:10617
+    limit: 99
+  - object: tba:106:obj:10616
+    limit: 99
+- mob: tba:106:mob:10610
+  room: tba:106:room:10604
+  limit: 5
+  equip:
+    wield:
+      object: tba:106:obj:10613
+      limit: 5
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+    legs:
+      object: tba:106:obj:10617
+      limit: 30
+    arms:
+      object: tba:106:obj:10618
+      limit: 20
+- object: tba:106:obj:10604
+  room: tba:106:room:10604
+  limit: 1
+- mob: tba:106:mob:10640
+  room: tba:106:room:10604
+  limit: 1
+  equip:
+    wield:
+      object: tba:106:obj:10641
+      limit: 1
+- object: tba:106:obj:10640
+  room: tba:106:room:10633
+  limit: 1
+- mob: tba:106:mob:10633
+  room: tba:106:room:10633
+  limit: 1
+- mob: tba:106:mob:10632
+  room: tba:106:room:10634
+  limit: 1
+  carry:
+  - object: tba:106:obj:10613
+    limit: 25
+  - object: tba:106:obj:10614
+    limit: 10
+- mob: tba:106:mob:10638
+  room: tba:106:room:10638
+  limit: 1
+  carry:
+  - object: tba:106:obj:10637
+    limit: 99
+  - object: tba:106:obj:10638
+    limit: 99
+  - object: tba:106:obj:10636
+    limit: 100
+- mob: tba:106:mob:10636
+  room: tba:106:room:10636
+  limit: 1
+  equip:
+    hold:
+      object: tba:106:obj:10615
+      limit: 1
+- mob: tba:106:mob:10639
+  room: tba:106:room:10639
+  limit: 1
+  carry:
+  - object: tba:106:obj:10631
+    limit: 100
+  - object: tba:106:obj:10632
+    limit: 100
+  - object: tba:106:obj:10633
+    limit: 100
+  - object: tba:106:obj:10634
+    limit: 100
+  - object: tba:106:obj:10639
+    limit: 100
+- mob: tba:106:mob:10637
+  room: tba:106:room:10637
+  limit: 1
+- mob: tba:106:mob:10614
+  room: tba:106:room:10637
+  limit: 1
+  carry:
+  - object: tba:106:obj:10628
+    limit: 100
+  - object: tba:106:obj:10629
+    limit: 100
+  - object: tba:106:obj:10630
+    limit: 100
+- mob: tba:106:mob:10616
+  room: tba:106:room:10654
+  limit: 2
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    body:
+      object: tba:106:obj:10607
+      limit: 15
+    head:
+      object: tba:106:obj:10610
+      limit: 5
+    wield:
+      object: tba:106:obj:10627
+      limit: 1
+- mob: tba:106:mob:10615
+  room: tba:106:room:10653
+  limit: 2
+  equip:
+    finger_right:
+      object: tba:106:obj:10626
+      limit: 2
+    legs:
+      object: tba:106:obj:10625
+      limit: 2
+- mob: tba:106:mob:10615
+  room: tba:106:room:10653
+  limit: 2
+  equip:
+    finger_right:
+      object: tba:106:obj:10626
+      limit: 2
+    legs:
+      object: tba:106:obj:10625
+      limit: 2
+- mob: tba:106:mob:10613
+  room: tba:106:room:10648
+  limit: 4
+- mob: tba:106:mob:10613
+  room: tba:106:room:10648
+  limit: 4
+- mob: tba:106:mob:10613
+  room: tba:106:room:10648
+  limit: 4
+- mob: tba:106:mob:10613
+  room: tba:106:room:10648
+  limit: 4
+- object: tba:106:obj:10624
+  room: tba:106:room:10648
+  limit: 1
+- mob: tba:106:mob:10603
+  room: tba:106:room:10647
+  limit: 1
+  equip:
+    wield:
+      object: tba:106:obj:10622
+      limit: 1
+    neck_1:
+      object: tba:106:obj:10623
+      limit: 10
+- mob: tba:106:mob:10635
+  room: tba:106:room:10635
+  limit: 1
+- mob: tba:106:mob:10611
+  room: tba:106:room:10603
+  limit: 2
+  equip:
+    wield:
+      object: tba:106:obj:10614
+      limit: 2
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+    legs:
+      object: tba:106:obj:10617
+      limit: 30
+    arms:
+      object: tba:106:obj:10618
+      limit: 20
+    about:
+      object: tba:106:obj:10619
+      limit: 5
+    head:
+      object: tba:106:obj:10621
+      limit: 5
+- mob: tba:106:mob:10610
+  room: tba:106:room:10610
+  limit: 5
+  equip:
+    wield:
+      object: tba:106:obj:10613
+      limit: 5
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+    legs:
+      object: tba:106:obj:10617
+      limit: 30
+    arms:
+      object: tba:106:obj:10618
+      limit: 20
+- mob: tba:106:mob:10610
+  room: tba:106:room:10616
+  limit: 5
+  equip:
+    wield:
+      object: tba:106:obj:10613
+      limit: 5
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+    legs:
+      object: tba:106:obj:10617
+      limit: 30
+    arms:
+      object: tba:106:obj:10618
+      limit: 20
+- mob: tba:106:mob:10609
+  room: tba:106:room:10623
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10609
+  room: tba:106:room:10630
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10609
+  room: tba:106:room:10618
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10609
+  room: tba:106:room:10620
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10609
+  room: tba:106:room:10607
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10605
+  room: tba:106:room:10607
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10609
+  room: tba:106:room:10615
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10605
+  room: tba:106:room:10615
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10609
+  room: tba:106:room:10617
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10605
+  room: tba:106:room:10617
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10609
+  room: tba:106:room:10612
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10609
+  room: tba:106:room:10613
+  limit: 10
+  equip:
+    wield:
+      object: tba:106:obj:10612
+      limit: 10
+    body:
+      object: tba:106:obj:10616
+      limit: 30
+    shield:
+      object: tba:106:obj:10620
+      limit: 30
+- mob: tba:106:mob:10606
+  room: tba:106:room:10627
+  limit: 5
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 5
+    wield:
+      object: tba:106:obj:10603
+      limit: 5
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+    shield:
+      object: tba:106:obj:10620
+      limit: 5
+- mob: tba:106:mob:10606
+  room: tba:106:room:10624
+  limit: 5
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 5
+    wield:
+      object: tba:106:obj:10603
+      limit: 5
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+    shield:
+      object: tba:106:obj:10620
+      limit: 5
+- mob: tba:106:mob:10605
+  room: tba:106:room:10625
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10605
+  room: tba:106:room:10641
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10605
+  room: tba:106:room:10611
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- mob: tba:106:mob:10605
+  room: tba:106:room:10606
+  limit: 10
+  equip:
+    waist:
+      object: tba:106:obj:10608
+      limit: 15
+    wield:
+      object: tba:106:obj:10602
+      limit: 10
+    feet:
+      object: tba:106:obj:10611
+      limit: 10
+- object: tba:106:obj:10601
+  room: tba:106:room:10601
+  limit: 1
+- mob: tba:106:mob:10602
+  room: tba:106:room:10601
+  limit: 1
+  equip:
+    neck_2:
+      object: tba:106:obj:10605
+      limit: 1
+removes:
+- room: tba:106:room:10604
+  object: tba:106:obj:10604
+- room: tba:106:room:10633
+  object: tba:106:obj:10640

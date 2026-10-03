@@ -1,0 +1,1142 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 244.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:244:room:24400":
+  name: Cell A1
+  description:
+  - >
+    You're in a small, dark, prison cell. The dark stone walls look ancient, and are quite damp. The
+    dirt covered floor is made of cement, and a small hole in the northwestern corner of the cell serves as
+    a toilet. There is no bed, no chairs, and no lights. This place obviously isn't maintained anymore.
+    A sturdy iron door leads south.
+  - A small notice has been engraved in the door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    south:
+      to: tba:244:room:24404
+      look: The main hallway is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice, door]
+    text:
+      preformatted: |2
+           The notice looks like this:
+           x-------------------------------------------------------------------x
+           |                    C O O L A N D   P R I S O N                    |
+           |                                                                   |
+           |  You are now an inmate of Cooland Prison. You have been sent      |
+           |  here because you committed an intolerable offense. Although      |
+           |  extremely difficult, it is possible to escape this prison. If    |
+           |  you happen to die here, you will permanently lose ALL of your    |
+           |  equipment. You cannot talk to people or cast spells while here.  |
+           |  Don't bother calling for the GODs either, they'll ignore you.    |
+           |  You're on your own now!                                          |
+           |                                                                   |
+           |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |
+           x-------------------------------------------------------------------x
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           x---------------------------------------------------------------------x
+        |                  COOLAND PRISON - FOR CIRCLEMUD 3.1                 |
+        |                     Written in 2002 by Crazyman                     |
+        |                         www.nt.net/saarinen                         |
+        x---------------------------------------------------------------------x
+        This zone is the jail on my MUD. Although highly unlikely, it is
+        possible to escape. On my MUD, I don't like throwing people into the
+        icebox or freezing them. When this happens, the player has no control
+        over anything. By putting them in a jail, the player has the
+        opportunity to escape, giving them control of the situation. The
+        locked jail cells can only be opened with a key found on the prison
+        guards, and since they are inaccessible by someone in a cell, a GOD or
+        IMP has to open the doors. Besides, a GOD or an IMP should visit the
+        player in jail anyway to advise them of their situation. The cell room
+        numbers are as follows:
+        Cell A1 - room #00           Cell A2 - room #08
+        Cell B1 - room #01           Cell B2 - room #09 (death trap)
+        Cell C1 - room #02           Cell C2 - room #10
+        As you can see, there are five functional jail cells, as cell B2 is a
+        death trap. If you need more than that, I think you're being pretty
+        mean to your players! :)
+        Ensure that the entrance to the jail (I have mine attached to the;my New Southern Midgaard, room # 3111) is either locked or inaccessible,
+        because you wouldn't want anyone to accidentally enter and be killed. I
+        like making the jail door accessible to everyone, that way a player
+        outside the jail has the chance to get in and rescue someone inside. I
+        have a jail bulletin board set up in the cafeteria, so you'll have to
+        remove it or add your own.
+            Written entirely from scratch in WordPad. Feel free to edit, modify,
+        and do what you want with this zone!
+        x---------------------------------------------------------------------x
+        Builder      : Crazyman
+        Zone         : 244 Cooland Prison
+        Began        : 2001
+        Player Level : 30
+        Rooms        : 57
+        Mobs         : 2
+        Objects      : 1
+        Links        :
+
+"tba:244:room:24401":
+  name: Cell B1
+  description:
+  - >
+    You're in a small, dark, prison cell. The dark stone walls look ancient, and are quite damp. The
+    dirt covered floor is made of cement, and a small hole in the northwestern corner of the cell serves as
+    a toilet. There is no bed, no chairs, and no lights. This place obviously isn't maintained anymore.
+    A sturdy iron door leads south.
+  - A small notice has been engraved in the door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    south:
+      to: tba:244:room:24405
+      look: The main hallway is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice, door]
+    text:
+      preformatted: |2
+           The notice looks like this:
+           x-------------------------------------------------------------------x
+           |                    C O O L A N D   P R I S O N                    |
+           |                                                                   |
+           |  You are now an inmate of Cooland Prison. You have been sent      |
+           |  here because you committed an intolerable offense. Although      |
+           |  extremely difficult, it is possible to escape this prison. If    |
+           |  you happen to die here, you will permanently lose ALL of your    |
+           |  equipment. You cannot talk to people or cast spells while here.  |
+           |  Don't bother calling for the GODs either, they'll ignore you.    |
+           |  You're on your own now!                                          |
+           |                                                                   |
+           |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |
+           x-------------------------------------------------------------------x
+
+"tba:244:room:24402":
+  name: Cell C1
+  description:
+  - >
+    You're in a small, dark, prison cell. The dark stone walls look ancient, and are quite damp. The
+    dirt covered floor is made of cement, and a small hole in the northwestern corner of the cell serves as
+    a toilet. There is no bed, no chairs, and no lights. This place obviously isn't maintained anymore.
+    A sturdy iron door leads south.
+  - A small notice has been engraved in the door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    south:
+      to: tba:244:room:24406
+      look: The main hallway is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice, door]
+    text:
+      preformatted: |2
+           The notice looks like this:
+           x-------------------------------------------------------------------x
+           |                    C O O L A N D   P R I S O N                    |
+           |                                                                   |
+           |  You are now an inmate of Cooland Prison. You have been sent      |
+           |  here because you committed an intolerable offense. Although      |
+           |  extremely difficult, it is possible to escape this prison. If    |
+           |  you happen to die here, you will permanently lose ALL of your    |
+           |  equipment. You cannot talk to people or cast spells while here.  |
+           |  Don't bother calling for the GODs either, they'll ignore you.    |
+           |  You're on your own now!                                          |
+           |                                                                   |
+           |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |
+           x-------------------------------------------------------------------x
+
+"tba:244:room:24403":
+  name: Sprial Staircase
+  description: >
+    You're at the bottom of a cold metal spiral staircase. The main cell hallway is west, while
+    darkness leads up. You can hear dripping water from above you.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24404
+      look: The main hallway is East.
+    up:
+      to: tba:244:room:24415
+      look: Darkness leads Up.
+
+"tba:244:room:24404":
+  name: Cell Hallway
+  description: >
+    You're in a wide dimly lit hallway. The light blue paint on the walls is peeling, and a few
+    flickering light bulbs hang from the ceiling. You can see old rusty iron doors leading north and south.
+    These lead to the A1 and A2 cells. It's rather cold in here.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24400
+      look: Cell A1 is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    east:
+      to: tba:244:room:24405
+      look: The cell hallway is East.
+    south:
+      to: tba:244:room:24408
+      look: Cell A2 is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    west:
+      to: tba:244:room:24403
+      look: A spiral staircase is West.
+
+"tba:244:room:24405":
+  name: Cell Hallway
+  description:
+  - >
+    You're in a wide dimly lit hallway. The light blue paint on the walls is peeling, and a few
+    flickering light bulbs hang from the ceiling. You can see old rusty iron doors leading north and south.
+    These lead to the B1 and B2 cells. It's rather cold in here.
+  - You can see some words scratched on the wall beside the southern door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24401
+      look: Cell B1 is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    east:
+      to: tba:244:room:24406
+      look: The cell hallway is East.
+    south:
+      to: tba:244:room:24409
+      look: Cell B2 is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    west:
+      to: tba:244:room:24404
+      look: The cell hallway is West.
+  extras:
+  - keywords: [words, sign, notice, door]
+    text:
+      preformatted: |2
+           The scratchings look like this:
+         _____    ______     _____   _____          _______    _____    _____
+        |      | /      \    \     \ /     \ |\   |    |      /     \  /     \
+        |     /         | .  |     | \     \ | \  \    |      |        \     \
+        |-----\    ____/     |     |  |    | | \  |    |      | ___     |    |
+        |      |  /       .  |     |  |    | |  \ |    |      |    \    |    |
+        |_____/   \______    |____/   \____/ |   \|    |       \___/    \____/
+
+"tba:244:room:24406":
+  name: Cell Hallway
+  description: >
+    You're in a wide dimly lit hallway. The light blue paint on the walls is peeling, and a few
+    flickering light bulbs hang from the ceiling. You can see old rusty iron doors leading north and south.
+    These lead to the C1 and C2 cells. It's rather cold in here.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24402
+      look: Cell B1 is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    east:
+      to: tba:244:room:24407
+      look: The Cafeteria is East.
+    south:
+      to: tba:244:room:24410
+      look: Cell B2 is South.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+    west:
+      to: tba:244:room:24405
+      look: The cell hallway is West.
+
+"tba:244:room:24407":
+  name: Cafeteria
+  description: >
+    You're overwhelmed by the stink of rotting food. Several long wooden tables stretch the entire
+    length of the room, with many half destroyed chairs scattered around. At the far end of the room is a
+    food counter, and several stainless steel food bowls are sitting on it. That must be where the stink is
+    coming from. About a dozen rows of flickering lights hang from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    west:
+      to: tba:244:room:24406
+      look: The cell hallway is West.
+
+"tba:244:room:24408":
+  name: Cell A2
+  description:
+  - >
+    You're in a small, dark, prison cell. The dark stone walls look ancient, and are quite damp. The
+    dirt covered floor is made of cement, and a small hole in the northwestern corner of the cell serves as
+    a toilet. There is no bed, no chairs, and no lights. This place obviously isn't maintained anymore.
+    A sturdy iron door leads south.
+  - A small notice has been engraved in the door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24404
+      look: The main hallway is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice, door]
+    text:
+      preformatted: |2
+           The notice looks like this:
+           x-------------------------------------------------------------------x
+           |                    C O O L A N D   P R I S O N                    |
+           |                                                                   |
+           |  You are now an inmate of Cooland Prison. You have been sent      |
+           |  here because you committed an intolerable offense. Although      |
+           |  extremely difficult, it is possible to escape this prison. If    |
+           |  you happen to die here, you will permanently lose ALL of your    |
+           |  equipment. You cannot talk to people or cast spells while here.  |
+           |  Don't bother calling for the GODs either, they'll ignore you.    |
+           |  You're on your own now!                                          |
+           |                                                                   |
+           |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |
+           x-------------------------------------------------------------------x
+
+"tba:244:room:24409":
+  name: Cell B2
+  description: >
+    As soon as you enter the cell, the floor collapses, and you feel yourself falling, falling deep
+    into the ground. You finally land, and you feel both of your legs snap under your weight. As you scream
+    out in pain, the rest of the debris from the cement floor lands on you, crushing your body.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24405
+      look: The main hallway is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+
+"tba:244:room:24410":
+  name: Cell C2
+  description:
+  - >
+    You're in a small, dark, prison cell. The dark stone walls look ancient, and are quite damp. The
+    dirt covered floor is made of cement, and a small hole in the northwestern corner of the cell serves as
+    a toilet. There is no bed, no chairs, and no lights. This place obviously isn't maintained anymore.
+    A sturdy iron door leads south.
+  - A small notice has been engraved in the door.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24406
+      look: The main hallway is North.
+      door:
+        keywords: [door, iron]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice, door]
+    text:
+      preformatted: |2
+           The notice looks like this:
+           x-------------------------------------------------------------------x
+           |                    C O O L A N D   P R I S O N                    |
+           |                                                                   |
+           |  You are now an inmate of Cooland Prison. You have been sent      |
+           |  here because you committed an intolerable offense. Although      |
+           |  extremely difficult, it is possible to escape this prison. If    |
+           |  you happen to die here, you will permanently lose ALL of your    |
+           |  equipment. You cannot talk to people or cast spells while here.  |
+           |  Don't bother calling for the GODs either, they'll ignore you.    |
+           |  You're on your own now!                                          |
+           |                                                                   |
+           |         IF YOU CAN'T DO THE TIME, DON'T DO THE CRIME!             |
+           x-------------------------------------------------------------------x
+
+"tba:244:room:24411":
+  name: A Warm Room
+  description: >
+    As soon as you step through the door, you fall about twenty feet and land on a bed of red hot
+    coals. Your body is engulfed in flames, and you quickly roast to death.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24412":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. You
+    see a small greasy rat scuttle through a small hole in the wall, while a long burnt out light bulb
+    hangs from the ceiling. You can feel an intense heat coming from an iron door to the north, while you
+    feel an extreme coldness coming from an iron door leading south.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24411
+      look: A hot room is North.
+      door:
+        keywords: [door, iron]
+        kind: door
+    east:
+      to: tba:244:room:24414
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24413
+      look: A cold room is South.
+      door:
+        keywords: [door, iron]
+        kind: door
+
+"tba:244:room:24413":
+  name: A Cold Room
+  description: >
+    As soon as you step through the door, you fall about twenty feet and land hard on a sheet of ice.
+    The room is extremely cold, and your body quickly freezes solid.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24414":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24415
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24412
+      look: The corridor continues West.
+
+"tba:244:room:24415":
+  name: A Prison Corridor at a Staircase
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling. A steel spiral staircase leads down into darkness.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24416
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24414
+      look: The corridor continues West.
+    down:
+      to: tba:244:room:24403
+      look: The staircase leads Down.
+
+"tba:244:room:24416":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24417
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24415
+      look: The corridor continues West.
+
+"tba:244:room:24417":
+  name: A Prison Corridor Intersection
+  description: >
+    You're at an intersection in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24453
+      look: The corridor continues North.
+    east:
+      to: tba:244:room:24418
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24435
+      look: The corridor continues South.
+    west:
+      to: tba:244:room:24416
+      look: The corridor continues West.
+
+"tba:244:room:24418":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24419
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24417
+      look: The corridor continues West.
+
+"tba:244:room:24419":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24420
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24418
+      look: The corridor continues West.
+
+"tba:244:room:24420":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24421
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24419
+      look: The corridor continues West.
+
+"tba:244:room:24421":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24422
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24420
+      look: The corridor continues West.
+
+"tba:244:room:24422":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24423
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24421
+      look: The corridor continues West.
+
+"tba:244:room:24423":
+  name: A Prison Corridor Intersection
+  description: >
+    You're at a dark intersection in the Cooland Prison. The walls are quite damp, and the dark gray
+    paint is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24425
+      look: The corridor leads North.
+    east:
+      to: tba:244:room:24424
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24422
+      look: The corridor continues West.
+
+"tba:244:room:24424":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24420
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24423
+      look: The corridor continues West.
+
+"tba:244:room:24425":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24426
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24423
+      look: The corridor continues South.
+
+"tba:244:room:24426":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24427
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24425
+      look: The corridor continues South.
+
+"tba:244:room:24427":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    south:
+      to: tba:244:room:24426
+      look: The corridor continues South.
+    west:
+      to: tba:244:room:24428
+      look: The corridor continues West.
+
+"tba:244:room:24428":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24427
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24430
+      look: The corridor continues West.
+
+"tba:244:room:24430":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24428
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24431
+      look: The corridor continues South.
+
+"tba:244:room:24431":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24430
+      look: The corridor continues North.
+    west:
+      to: tba:244:room:24432
+      look: The corridor continues West.
+
+"tba:244:room:24432":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24431
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24433
+      look: The corridor continues West.
+
+"tba:244:room:24433":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24432
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24434
+      look: The corridor continues South.
+
+"tba:244:room:24434":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24435":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24417
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24436
+      look: The corridor continues South.
+
+"tba:244:room:24436":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24435
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24437
+      look: The corridor continues South.
+
+"tba:244:room:24437":
+  name: A Prison Corridor Intersection
+  description: >
+    You're at a dark intersection in the Cooland Prison. The walls are quite damp, and the dark gray
+    paint is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24436
+      look: The corridor continues North.
+    east:
+      to: tba:244:room:24445
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24438
+      look: The corridor continues South.
+    west:
+      to: tba:244:room:24449
+      look: The corridor continues West.
+
+"tba:244:room:24438":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24437
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24439
+      look: The corridor continues South.
+
+"tba:244:room:24439":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24438
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24440
+      look: The corridor continues South.
+
+"tba:244:room:24440":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24439
+      look: The corridor continues North.
+    east:
+      to: tba:244:room:24442
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24441
+      look: The corridor continues South.
+    west:
+      to: tba:244:room:24452
+      look: The corridor continues West.
+
+"tba:244:room:24441":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24442":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24443
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24440
+      look: The corridor continues West.
+
+"tba:244:room:24443":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24444
+      look: The corridor continues North.
+    west:
+      to: tba:244:room:24442
+      look: The corridor continues West.
+
+"tba:244:room:24444":
+  name: A Prison Corridor at a Staircase
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling. A steel spiral staircase leads up.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    south:
+      to: tba:244:room:24443
+      look: The corridor continues South.
+    up:
+      to: tba:244:room:24455
+      look: The staircase leads Up into darkness.
+
+"tba:244:room:24445":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24446
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24437
+      look: The corridor continues West.
+
+"tba:244:room:24446":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:244:room:24447
+      look: The corridor continues North.
+    south:
+      to: tba:244:room:24454
+      look: The corridor continues South.
+    west:
+      to: tba:244:room:24445
+      look: The corridor continues West.
+
+"tba:244:room:24447":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24448
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24446
+      look: The corridor continues South.
+
+"tba:244:room:24448":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24449":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24437
+      look: The corridor continues East.
+    west:
+      to: tba:244:room:24450
+      look: The corridor continues West.
+
+"tba:244:room:24450":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor, and you wonder if can support you. A
+    long burnt out light bulb hangs from the ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    east:
+      to: tba:244:room:24449
+      look: The corridor continues East.
+    south:
+      to: tba:244:room:24451
+      look: The corridor continues South.
+
+"tba:244:room:24451":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24452":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24453":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24454":
+  name: A Prison Corridor
+  description: >
+    You're in a dark corridor in the Cooland Prison. The walls are quite damp, and the dark gray paint
+    is flaking. You notice large cracks in the old cement floor. As you wonder if it can support you, the
+    floor gives way and you fall down a bottomless pit.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track, no_magic]
+
+"tba:244:room:24455":
+  name: Prison Upper Level
+  description:
+  - >
+    You're on the upper level of the Cooland Prison. A metal spiral staircase leads down into darkness.
+    This is where the prisoners are kept.
+  - A sign written in red lettering is attached to the wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:244:room:24456
+      look: The hallway continues West.
+    down:
+      to: tba:244:room:24444
+      look: The staircase leads Down into darkness.
+  extras:
+  - keywords: [sign, notice, red, lettering]
+    text:
+      preformatted: |2
+           This sign looks like this:
+            x-------------------------------------------------------x
+            |              THIS IS YOUR FINAL WARNING!!!            |
+            |                                                       |
+            |   Cooland Prison is EXTREMELY dangerous! DO NOT go    |
+            |   down this staircase if you wish to live.            |
+            |                                                       |
+            x-------------------------------------------------------x
+
+"tba:244:room:24456":
+  name: Prison Upper Level
+  description: >
+    You're on the upper level of the Cooland Prison. The walls are made of cinderblocks, and an
+    immensely huge thick metal door leads west. This must be the main door that keeps the prisoners safely
+    locked up. A small stool sits beside the door, which is where Joe the gateguard sits.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:244:room:24455
+      look: The hallway continues East.
+    west:
+      to: tba:244:room:24457
+      look: The hallway continues West.
+      door:
+        keywords: [door, metal, thick, huge]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+
+"tba:244:room:24457":
+  name: Cooland Prison
+  description:
+  - >
+    You're in the main entrance of the Cooland Prison. The walls are made of thick cinderblocks, and
+    the floor looks like it could support a freight train. The three windows looking out onto Midgaard have
+    thick bars across them. An immensely huge thick metal door leads east. This must be the main door
+    that keeps the prisoners safely locked up. A large desk sits along the northern wall, but it looks
+    empty. Maybe this prison isn't maintained anymore.
+  - A sign has been attached to the wall beside the door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:244:room:24456
+      look: The hallway leads East.
+      door:
+        keywords: [door, metal, thick, huge]
+        kind: pickproof
+        key: tba:244:obj:24499
+        reset: locked
+  extras:
+  - keywords: [sign, notice]
+    text:
+      preformatted: |2
+           The sign looks like this:
+           x------------------------------------------------------------x
+           |               C O O L A N D   P R I S O N                  |
+           |                                                            |
+           |  WARNING: Cooland Prison is an extremely dangerous place,  |
+           |           filled with death traps, aggressive monsters,    |
+           |           and a maze-like design. If you value your life,  |
+           |           DO NOT enter!                                    |
+           |                                                            |
+           x------------------------------------------------------------x

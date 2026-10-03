@@ -1,0 +1,582 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 6.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:6:mob:600":
+  keywords: [snail]
+  short: a snail
+  long: A snail is here, nestled in the sand.
+  description: >
+    The snail looks quite comfortable sitting there in the sand.  You can see his small little eyes
+    looking at you, almost watching you.
+  level: 10
+  sex: male
+  alignment: 250
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:602":
+  keywords: [clam]
+  short: a clam
+  long: A clam is here.
+  description: The clam looks dead.  It's just lying there in the sand, but looks can be deceiving.
+  level: 10
+  sex: neutral
+  alignment: -220
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:606":
+  keywords: [fishfly, fly]
+  short: a fishfly
+  long: An ugly fishfly is here.
+  description: >
+    Her wings are quite long and make a soft humming noise when she moves.  He is quite ugly, and could
+    easily scare her enemies away.
+  level: 11
+  sex: female
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:611":
+  keywords: [crab]
+  short: a crab
+  long: A small crab is crawling around in the sand.
+  description: >
+    The claws of this creature are huge!  He could easily tear you apart if you provoked him.  His eyes
+    are small and black, almost like death.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:612":
+  keywords: [seagull, bird]
+  short: a seagull
+  long: A seagull is here.
+  description: The bird is filthy.  His feather that were once white are now brown from the dirt.
+  level: 12
+  sex: female
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:613":
+  keywords: [water, snake]
+  short: a water snake
+  long: A water snake is at the waters edge.
+  description: >
+    He is small and black.  He almost looks like an eel.  He appears to be harmless, but looks can be
+    deceiving.
+  level: 13
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:619":
+  keywords: [mosquito]
+  short: a mosquito
+  long: A large mosquito is here.
+  description: The creature is rather large.  You can see blood sitting in its stomach. How revolting!
+  level: 14
+  sex: neutral
+  alignment: -220
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:622":
+  keywords: [parrot, bird, polly]
+  short: Polly
+  long: A beautiful parrot is here.
+  description: >
+    The colors of the creature blend like paint on a canvas.  You wonder why such a beautiful bird
+    would be on such a small island like this.
+  level: 15
+  sex: male
+  alignment: -250
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:626":
+  keywords: [crayfish]
+  short: a crayfish
+  long: An ugly little crayfish is here.
+  description: >
+    Her eyes are tiny are black, they watch you very cautiously.  She may be small, but can move quite
+    fast.
+  level: 14
+  sex: female
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:627":
+  keywords: [lobster]
+  short: a lobster
+  long: A mean looking lobster is here.
+  description: His claws are enormous!  He could easily tear you apart if provoked.
+  level: 13
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:632":
+  keywords: [sparrow, bird]
+  short: a sparrow
+  long: A sparrow is flying around above you.
+  description: >
+    She is a beautiful creature.  Her feathers are a light brown.  You see them glistening in the
+    sunlight.
+  level: 13
+  sex: female
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:634":
+  keywords: [waitress]
+  short: a waitress
+  long: The waitress is here, ready to serve you.
+  description: >
+    She is a pretty little thing, slender with long brown hair.  She has the most friendliest smile you
+    have ever seen.
+  level: 25
+  sex: female
+  alignment: 500
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: blast
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:635":
+  keywords: [herman]
+  short: Herman
+  long: Herman the shopkeeper is here.
+  description: >
+    He looks like a friendly gentleman.  He is balding on top, but still has some hair on the sides. 
+    He's a short, husky man.  One who would be good at protecting what he owns.
+  level: 25
+  sex: male
+  alignment: 500
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: slash
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:641":
+  keywords: [spider]
+  short: a black widow spider
+  long: A black widow spider is here.
+  description: The spider is small, but fierce looking.  She looks to be in excellent condition.
+  level: 15
+  sex: female
+  alignment: -330
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:643":
+  keywords: [snake, rattlesnake]
+  short: a coiled up rattlesnake is here.
+  long: A coiled up rattle snake is here.
+  description: >
+    The snake is coiled up on the ground, looking at you, ready to attack. Maybe you should just leave
+    it alone.
+  level: 15
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  affects: [detect_align]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:644":
+  keywords: [wasp]
+  short: a wasp
+  long: A wasp is flying around you.
+  description: >
+    The wasp is rather large.  You see its incredibly large stinger, waiting to dive into your skin!
+  level: 13
+  sex: neutral
+  alignment: -275
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:648":
+  keywords: [scorpion]
+  short: a scorpion
+  long: A scorpion is here.
+  description: >
+    She is nasty little thing and would kill you without a second thought.  She should be the least of
+    your worries.
+  level: 13
+  sex: female
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:649":
+  keywords: [scorpion, queen]
+  short: a scorpion queen
+  long: The scorpion queen is here.
+  description: >
+    She looks much tougher than the average scorpion.  She has two stingers instead of one!  Maybe you
+    should stay away.
+  level: 14
+  sex: female
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:650":
+  keywords: [scorpion, leader]
+  short: a scorpion leader
+  long: The scorpion leader is standing here.
+  description: >
+    He looks at you as his stinger shakes slightly.  You suddenly feel terror run through you.  Maybe
+    you shouldn't have come here.
+  level: 15
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:664":
+  keywords: [dragon, earth]
+  short: an earth dragon
+  long: Earth dragon is here.
+  description: >
+    The creature is quite large.  It towers over you, drooling.  You suddenly feel like someone's lunch.
+  level: 15
+  sex: neutral
+  alignment: -350
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:665":
+  keywords: [purple, dragon]
+  short: a purple dragon
+  long: Purple dragon is here.
+  description: The dragon is purple with glowing yellow eyes.  You are frozen in terror.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: pierce
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:671":
+  keywords: [dragon, ice]
+  short: an ice dragon
+  long: Ice dragon is here.
+  description: >
+    The creature is white and gives off a cold mist of steam.  You can see the ice hanging off her
+    scales.
+  level: 14
+  sex: female
+  alignment: -600
+  flags: [sentinel]
+  affects: [detect_align]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:678":
+  keywords: [polar, bear]
+  short: a polar bear
+  long: A large polar bear is standing here.
+  description: >
+    The bear looks cuddly, but as you look closer you can tell he has long fangs stained with blood.
+  level: 13
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:679":
+  keywords: [penguin]
+  short: a penguin
+  long: A cute penguin is here.
+  description: It looks like an average looking penguin.  You see nothing special about it.
+  level: 12
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:683":
+  keywords: [bear]
+  short: a bear
+  long: A bear is standing in front of you.
+  description: He is mean looking.  You can hear a soft growl coming from within him.
+  level: 14
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:6:mob:684":
+  keywords: [fox]
+  short: a fox
+  long: A fox is here.
+  description: >
+    The creature is slightly larger than normal, but looks nice enough.  You notice a large scar down
+    the side of its stomach.
+  level: 11
+  sex: male
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing

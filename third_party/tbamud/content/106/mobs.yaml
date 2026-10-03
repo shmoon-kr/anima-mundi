@@ -1,0 +1,570 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 106.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:106:mob:10602":
+  keywords: [priest]
+  short: the Elcardorian priest
+  long: An Elcardorian orthodox priest stands here with a stern look on his face.
+  description: >
+    At first sight, he's not the kind of priest you want to leave your children with.  Than again, with
+    the aura of calmness oozing out of him.  Maybe taking a rest next to him would not be such a big
+    risk.
+  level: 14
+  sex: male
+  alignment: 1000
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  abilities:
+    str: 3
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10603":
+  keywords: [executioner]
+  short: the executioner
+  long: The Executioner stands here waiting for his next beheading.
+  description: >
+    A black hood covers his entire face.  Three holes have been cut out of the dark cloth.  The eyes
+    peering out behind the mask look to be slightly crazed and definitely blood thirsty.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, aggressive, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: crush
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10605":
+  keywords: [suncas, rebel, foot, soldier]
+  short: a Suncas rebel foot soldier
+  long: A rebel from the Suncas clan looks at you, paranoia in his eyes.
+  description: >
+    No more than a boy this teenager stands before you waiting for the overthrow of the Elcardian
+    Empire.  No more than a boy this teenager stands before you waiting for the overthrow of the Elcardorian
+    Empire.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: fighting
+
+"tba:106:mob:10606":
+  keywords: [elite, Suncas, rebel, soldier]
+  short: an elite Suncas rebel soldier
+  long: An elite Suncas rebel soldier is standing here.
+  description: >
+    This grizzled veteran looks more like a mercenary than a soldier.  Which in fact may actually be
+    the case.  The Suncas rebels have been known to hire help when they need it.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10607":
+  keywords: [suncas, rebel, commando]
+  short: a rebel commando
+  long: A rebel commando from the Suncas clan stands here.
+  description: >
+    Scars seem to cover this middle-aged man from head to toe.  He appears to be missing a few fingers
+    and he walks with a favoring to his left leg.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10608":
+  keywords: [rebel, leader, Sujin, Suncas]
+  short: Sujin Suncas
+  long: The rebel leader Sujin Suncas is sitting here.
+  description: >
+    The mastermind behind the latest attempt at overthrowing the Mayor.  He is young, but a brilliant
+    fire burns in his eyes that some people would call craziness, but he calls eccentricity.  He is the
+    motivation behind all the rebels.
+  level: 10
+  sex: male
+  alignment: -350
+  flags: [sentinel, aggr_good, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: standing
+
+"tba:106:mob:10609":
+  keywords: [elcardorian, infantry]
+  short: an Elcardorian infantry man
+  long: An Elcardorian infantry man stands here.
+  description: >
+    This grunt has no purpose other than to sacrifice his life for his army, and maybe take a few
+    enemies out in the pursuit of that end.  He is heavily muscled and adequately trained.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10610":
+  keywords: [officer, elcardorian, military]
+  short: an Elcardorian military officer
+  long: An officer of the Elcardorian military guards his township here.
+  description: >
+    He holds himself with an air of authority.  A hard look in his eyes shows his years of experience
+    and training.  He has probably led more men into battle than you've ever met.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10611":
+  keywords: [elcardorian, military, captain]
+  short: an elcardorian military captain
+  long: An Elcardorian military captain struts his sword around here.
+  description: >
+    The Captain is in charge of keeping the peace by order of the Mayor.  It is the Captain's
+    responsibility that everyone within the city behaves.  More often than not this includes crushing any rebel
+    uprisings.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone, aggr_evil]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10613":
+  keywords: [sick, dying, man]
+  short: a sick and dying man
+  long: A man is slowly dying from loss of blood.
+  description: >
+    Wounds cover his body.  Some from whips, others from jagged blades, and still others from piercing
+    weapons and hot brands.  This poor soul looks to have been broken with pain to spill his guts and
+    tell his story.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: incapacitated
+    default: sitting
+
+"tba:106:mob:10614":
+  keywords: [grandfather, sunshine]
+  short: grandfather sunshine
+  long: Grandfather sunshine is here tending the cash.
+  description: >
+    His beaming smile seems to brighten everyone's day.  The typical elderly grandfather he looks very
+    trusting and kind.  White hair, beard, and mustache give him a jovial look.
+  level: 7
+  sex: male
+  alignment: 10
+  flags: [sentinel, scavenger, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10615":
+  keywords: [political, prisoner, parliaments, elcardorian]
+  short: a political prisoner
+  long: A member of the Elcardorian parliaments stands before you, now as a prisoner.
+  description: >
+    At one time this guy used to stick his nose up in the air believing that he was above the law
+    because of his position he held within the government.  Now he has been humbled by chains and torture.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10616":
+  keywords: [suncas, prison, guard]
+  short: a Suncas prison guard
+  long: The Suncas prison guard is here making sure that no one leaves the dungeons.
+  description: >
+    He looks tired and inept.  The monotony of his job has caused him to become bored and lax.  Of
+    course so few of the prisoners stay long enough down here to even attempt to escape so a guard is more
+    for looks than need.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10617":
+  keywords: [panhandler, bum, beggar]
+  short: a panhandler
+  long: A panhandler broke off her ass, begging for your charity is sitting here.
+  description: >
+    This poor lady has seen better days.  At least she is begging and not selling her soul body.  That
+    will probably come later.  She looks up at you with those pitiful puppy-dog eyes trying to find a
+    little sympathy.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:106:mob:10632":
+  keywords: [brack]
+  short: Brack, the weaponsmith
+  long: Brack, the weaponsmith displays his creations with pride.
+  description: >
+    The burly man resembles the anvil that he pounds upon.  Blunt is about the only word to describe
+    him.  He definitely knows his metal-working though.  He holds his tools and works the forge with a love
+    for the craft that only the gifted can possess.
+  level: 10
+  sex: female
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 20
+    int: 15
+    wis: 15
+    dex: 20
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10633":
+  keywords: [penny, teller]
+  short: Penny, the bank teller
+  long: Penny, the bank teller is handling some money.
+  description: >
+    A strange gleam flickers in her eyes as she counts out some coins behind the counter.  She does not
+    look like the kind of person you would want to trust your fortune with.  She immediately puts on a
+    facade when she realizes you are staring.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  abilities:
+    str: 10
+    int: 20
+    wis: 20
+    dex: 10
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10634":
+  keywords: [tring, armorer]
+  short: Tring, the armorer
+  long: Tring, the armorer pounds away at a stubborn cast.
+  description: >
+    Elcardorian armor has been known for its strength and durability around the realm.  It is just
+    about as famous as its outrageous prices.  This stocky old man makes some of the finest in the city, and
+    he prices it that way too.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10635":
+  keywords: [mayor's, wife]
+  short: the mayor's wife
+  long: The mayor's wife is here hinting at you to leave.
+  description: >
+    They say behind every great man there is a woman, and she is one of those women.  She has long
+    black here with green eyes and looks deceivingly frail.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10636":
+  keywords: [elcardorian, mayor]
+  short: the Elcardorian Mayor
+  long: Coughing in bed, the Elcadorian mayor really doesn't want to fight any more.
+  description: >
+    This once powerful man has withered away into almost nothing.  His strength and will has been
+    drained from him.  Too bad it will soon be too late for you to know what happened to him.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 5
+    int: 5
+    wis: 5
+    dex: 5
+  gold: 100
+  exp: 10000
+  position:
+    load: resting
+    default: resting
+
+"tba:106:mob:10637":
+  keywords: [grandmother, sunshine]
+  short: grandmother sunshine
+  long: Grandmother sunshine is here baking goodies.
+  description: >
+    Her mere presence brightens the room.  She treats everyone like a long lost grandson and
+    immediately makes you feel at home.  Her kindness and sincerity puts you to ease immediately.  The cookies she
+    is baking smell delicious.
+  level: 7
+  sex: female
+  alignment: 1000
+  flags: [sentinel, scavenger, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10638":
+  keywords: [grocer, elcardorian]
+  short: the elcardorian grocer
+  long: The grocer of Elcardo smiles at you in hopes of a sale.
+  description: >
+    His business continues to do well no matter who is fighting who, or who is running what.  The
+    grocer could care less about rebels.  As long as people need food and supplies, he's happy.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 15
+    int: 25
+    wis: 10
+    dex: 25
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10639":
+  keywords: [lara]
+  short: Lara
+  long: Lara is here looking you up and down.
+  description: >
+    Rumors state that Lara was an outcast from a far distant city of mages.  She was caught up in some
+    horrible feud and had no choice but to flee.  So she setup shop in Elcardo and seems happy and
+    successful with the change.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  abilities:
+    str: 15
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:106:mob:10640":
+  keywords: [Shape, Dark, Hooded, Man]
+  short: a Shadowy figure
+  long: A dark hooded man roams the streets
+  description: >
+    You can see almost nothing about this man because his black cloak covers him fully.  Just between
+    the opening of the coat, a glint of steel catches your eyes.  Odds are this man would like to be left
+    alone.  He is almost certainly a rebel which is apparent by the symbol on the head hilt of the
+    dagger.  Who is he stalking?
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

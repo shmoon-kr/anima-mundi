@@ -1,0 +1,367 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 12.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:12:mob:1200":
+  keywords: [innkeeper, receptionists]
+  short: the Immortal Innkeeper
+  long: The Immortal Innkeeper is organizing her books here.
+  description: She appears to be having no problem tallying things up.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1201":
+  keywords: [postmaster]
+  short: the Immortal Postmaster
+  long: The Immortal Postmaster is hard at work here.
+  description: Scary...  A postal worker...  Working?
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1202":
+  keywords: [being, amorphous, spirit, wandering]
+  short: the wandering spirit
+  long: A strange amorphous being wanders these halls eternally cleaning.
+  description: >
+    This spirit, having lived out its days in the mortal world, now works off its final sins by doing
+    menial labor in this realm's purgatory.  In this case, those chores seem to be cleaning up after the
+    immortals of the land.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track, sneak]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1203":
+  keywords: [malikar, twat]
+  short: Malikar the Janitor
+  long: Malikar the Janitor stands here, looking lost.
+  description: >
+    It looks like Malikar is suffering from a bad conscience he must have buggered Emershia one time
+    too many.
+  level: 3
+  sex: male
+  alignment: -1000
+  flags: [scavenger, stay_zone, no_charm, no_sleep, no_blind]
+  affects: [blind]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: punch
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1204":
+  keywords: [imp]
+  short: the Imp
+  long: A small imp sits here, grinning devilishly.
+  description: This small imp is used for testing.
+  level: 3
+  sex: neutral
+  alignment: -1000
+  flags: [scavenger, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1205":
+  keywords: [bug]
+  short: the bug
+  long: a nasty little bug is crawling around here, annoying the implementors.
+  description: >
+    You are looking at a nasty little bug, it seems to be consisting of binary numbers. 
+    000@r1@n0@r1@n00 00@r1@n00@r1@n0@r1@n @r1@n0@r11111@n0 @r11111111@n @r11111111@n @r1@n0@r11111@n0
+    00@r1@n0@r1@n00@r1@n 00@r1@n00@r1@n00
+  level: 3
+  sex: male
+  alignment: -1000
+  flags: [aggressive, stay_zone, no_charm, no_summon, no_sleep, no_bash]
+  affects: [no_track]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: sting
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1206":
+  keywords: [frosty, little, ice, cube, icecube]
+  short: the frosty little ice cube
+  long: A frosty little ice cube walks about doing whatever Spector says.
+  description: >
+    It is a little ice cube that Spector has given life to.  It looks like a normal ice cube, only now
+    it has little arms and feet made out of ice.  From what you can see, it has no eyes, yet it can make
+    it's way about without bumping into things.
+  level: 26
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1207":
+  keywords: [cluster, faeries, faery]
+  short: a cluster of rainbow-colored faeries
+  long: Zipping from plant to plant is a cluster of rainbow-colored faeries.
+  description: >
+    There are about twenty tiny, ickle faeries floating around, each a completely different shade from
+    its friends.  They are all female and continually giggle and dart around sharing their own jokes and
+    keeping forbidden people out of this holy sanctuary.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1209":
+  keywords: [Julia]
+  short: Julia
+  long: Taylor's secretary stands here holding a note pad.
+  description: >
+    She is a very pretty woman, her hair is shoulder length and a beautiful brown, and here body is
+    slim and curvy.  She stands about 5'4" and looks to be light.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1210":
+  keywords: [Dragon]
+  short: a Large Dragon
+  long: Puff the @gMagic @rDragon
+  description: A Large Dragon
+  level: 31
+  sex: male
+  alignment: -1000
+  flags: [stay_zone, no_summon, no_bash]
+  affects: [detect_invis, scuba]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+    bare_hand_attack: bite
+  abilities:
+    str: 25
+    int: 25
+    wis: 25
+    dex: 25
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1211":
+  keywords: [Santa]
+  short: Santa's helper
+  long: Santa's helper looks forward to Christmas.
+  description: >
+    Santa's helper stands here, dressed in her requisite red outfit with the white faux fur trim.  A
+    red Santa hat is perched jauntily on her short brown curls with the pompom bouncing against her left
+    ear with every movement.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, aggressive, no_charm, no_summon, no_bash]
+  affects: [detect_invis, curse, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1212":
+  keywords: [scoreboard, mob]
+  short: the scoreboard mob
+  long: A mob is here keeping score for everyone that uses the game console.
+  description: >
+    She stands here, holding a chalkboard and a piece of chalk to mark the scores.  Waiting for a
+    player must be pretty boring.  She looks hopefully at you and suggests that you check out the console.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1217":
+  keywords: [dog, puppy, peishu]
+  short: a shitzu puppy dog
+  long: A friendly Shitzu puppy dog named Peishu is playing here.
+  description: >
+    Peishu is a friendly Shitzu puppy dog bred from ancient chinese ancestors he has a long line of
+    genealogy dating back to the times of Confucius.  He is Gina's favorite pet and doesn't look too
+    dangerous.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: bite
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1233":
+  keywords: [hidden, mob]
+  short: the hidden mob
+  long: .a hidden mob
+  description: This mob is hidden so no one can see it.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1267":
+  keywords: [color, mob]
+  short: "@Rtests the color mob@n"
+  long: The color test mob.
+  description: The color test mob is so colorful.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:12:mob:1299":
+  keywords: [test, mob]
+  short: the test mob
+  long: .the test mob is our friend.
+  description: Test mobs can be whatever you want them to be.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, helper, no_charm, no_summon, no_sleep]
+  affects: [no_track, fly, scuba, sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing

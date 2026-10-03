@@ -1,0 +1,1417 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 26.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:26:room:2600":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - A silver door can be seen to the north.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2601
+      door:
+        keywords: [door, silver]
+        kind: door
+        reset: closed
+    east:
+      to: tba:25:room:2599
+    west:
+      to: tba:26:room:2604
+
+"tba:26:room:2601":
+  name: A Store Room
+  description:
+  - >
+    You are in a large store room.  Raw materials are neatly bundled and piled here and here.  Many
+    freshly cut staves rods and wands of different sizes are here.
+  - You can see a silver door to the west.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2600
+      door:
+        keywords: [door, silver]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2602
+      door:
+        keywords: [door, silver]
+        kind: door
+        reset: closed
+
+"tba:26:room:2602":
+  name: The Master Spellbinder's Chamber
+  description:
+  - >
+    You are in the chambers of the Master Spellbinder.  Unlike other work shops of similar nature, this
+    one is without furnishings or tools.  The spell binder obviously needs none for the working of his
+    art.
+  - A silver door can be seen to the west.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2601
+      door:
+        keywords: [door, silver]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2603
+      door:
+        keywords: [door, silver]
+        kind: pickproof
+        key: tba:25:obj:2524
+        reset: closed
+
+"tba:26:room:2603":
+  name: The Spellbinder's Cache
+  description:
+  - >
+    You have discovered the cache of the Master Spellbinder.  There are three very large silver chased
+    cabinets here, other than that, the room is bare.
+  - A silver door can be seen to the south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2602
+      door:
+        keywords: [door, silver]
+        kind: pickproof
+        key: tba:25:obj:2524
+        reset: closed
+    south:
+      to: tba:26:room:2605
+      door:
+        keywords: [door, silver]
+        kind: pickproof
+        key: tba:25:obj:2524
+        reset: closed
+
+"tba:26:room:2604":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2600
+    west:
+      to: tba:26:room:2605
+
+"tba:26:room:2605":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - A silver door can be seen to the north.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2603
+      door:
+        keywords: [door, silver]
+        kind: pickproof
+        key: tba:25:obj:2524
+        reset: closed
+    east:
+      to: tba:26:room:2604
+    west:
+      to: tba:26:room:2606
+
+"tba:26:room:2606":
+  name: A Bend In The Hallway
+  description:
+  - >
+    You are at a bend in the long hallway.  The walls emit a faint magical glow which provides enough
+    light to see by.
+  - The hallway continues east and south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2605
+    south:
+      to: tba:26:room:2607
+
+"tba:26:room:2607":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2606
+    south:
+      to: tba:26:room:2608
+
+"tba:26:room:2608":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - A rusty old door can be seen to the west.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2607
+    south:
+      to: tba:26:room:2613
+    west:
+      to: tba:26:room:2609
+      door:
+        keywords: [door, rusty]
+        kind: door
+        reset: closed
+
+"tba:26:room:2609":
+  name: The Golem Master's Workshop
+  description: >
+    You are in the golem master's workshop.  A few unfinished looking humanoid forms of different make
+    are here, some moving, some not.  The animated forms lunge to attack you.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2610
+    east:
+      to: tba:26:room:2608
+      door:
+        keywords: [door, rusty]
+        kind: door
+        reset: closed
+    south:
+      to: tba:26:room:2611
+    down:
+      to: tba:26:room:2612
+      door:
+        keywords: [trapdoor]
+        kind: door
+        reset: closed
+
+"tba:26:room:2610":
+  name: A Store Room
+  description: >
+    You are in a small store room.  Large chunks of clay, stone, wood and many other raw materials are
+    here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2609
+
+"tba:26:room:2611":
+  name: The Golem Chamber
+  description: >
+    You are in the golem chamber.  Golems made of every imaginable material are here, ranging in size
+    from a hand-span to nearly the ceiling.  They all seem to be sleeping.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2609
+
+"tba:26:room:2612":
+  name: It Is Very Dark Here...
+  description: It is very dark here...
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    up:
+      to: tba:26:room:2609
+      door:
+        keywords: [trapdoor]
+        kind: door
+        reset: closed
+    down:
+      to: tba:25:room:2581
+      door:
+        keywords: [vent]
+        kind: door
+
+"tba:26:room:2613":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2608
+    south:
+      to: tba:26:room:2614
+
+"tba:26:room:2614":
+  name: A Bend In The Hallway
+  description:
+  - >
+    You are at a bend in the long hallway.  The walls emit a faint magical glow which provides enough
+    light to see by.
+  - The hallway continues north and east from here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2613
+    east:
+      to: tba:26:room:2615
+
+"tba:26:room:2615":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2616
+    west:
+      to: tba:26:room:2614
+
+"tba:26:room:2616":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - An emerald door can be seen to the south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2619
+    south:
+      to: tba:26:room:2617
+      door:
+        keywords: [door, emerald]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2615
+
+"tba:26:room:2617":
+  name: The Illusion Master's Chamber
+  description: >
+    You are in the chamber of the Master of Illusions.  The walls here are ever changing in color and
+    texture, as if they were reforming before your very eyes.  Many splendorous treasures lie all around
+    in heaps and piles, or at least they seem to be treasures...
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2616
+      door:
+        keywords: [door, emerald]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2618
+
+"tba:26:room:2618":
+  name: A Bedroom
+  description:
+  - >
+    You are in the bedroom of the Master of Illusions.  Strange looking items and artifacts float here
+    and there in the air.  The ripples of strong magic can be felt everywhere.
+  - The room seems much larger than it looks...
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2618
+      look: The room stretches off to the north.
+    east:
+      to: tba:26:room:2617
+    south:
+      to: tba:26:room:2618
+      look: The room stretches off to the south.
+    west:
+      to: tba:26:room:2618
+      look: The room stretches off to the west.
+
+"tba:26:room:2619":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading east and west.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - A glass door can be seen to the south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2621
+    south:
+      to: tba:26:room:2620
+      door:
+        keywords: [door, glass]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2616
+
+"tba:26:room:2620":
+  name: The Meditation Chamber
+  description:
+  - >
+    You are in a meditation chamber.  It is very silent here, in fact you can not even hear your own
+    footsteps.
+  - You feel very peaceful.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track]
+  exits:
+    north:
+      to: tba:26:room:2619
+      door:
+        keywords: [door, glass]
+        kind: door
+        reset: closed
+
+"tba:26:room:2621":
+  name: A Bend In The Hallway
+  description:
+  - >
+    You are at a bend in the long hallway.  The walls emit a faint magical glow which provides enough
+    light to see by.
+  - The hallway continues north and west from here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2622
+    west:
+      to: tba:26:room:2619
+
+"tba:26:room:2622":
+  name: A Hallway
+  description:
+  - >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  - A blackened door can be seen to the east.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2626
+    east:
+      to: tba:26:room:2623
+      door:
+        keywords: [door, black]
+        kind: door
+        reset: closed
+    south:
+      to: tba:26:room:2621
+
+"tba:26:room:2623":
+  name: A Dark Room
+  description: >
+    You are in a large dark room.  The air here seems quite stale, and a sense of extreme dread comes
+    over you.  The stench of rotten flesh seems to be wafting in from the open doorway to the north.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2624
+    west:
+      to: tba:26:room:2622
+      door:
+        keywords: [door, black]
+        kind: door
+        reset: closed
+
+"tba:26:room:2624":
+  name: A Dark Room
+  description:
+  - >
+    You are in a large dark room.  The stench here makes you gag and retch. There are body parts and
+    half rotted corpses strewn about with complete abandon.  Several operating tables with still forms that
+    resemble nothing you have ever seen alive are here.
+  - Tortured screams can be heard from the north.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2625
+      look: Gazing northwards, you are filled with deep dread.
+    south:
+      to: tba:26:room:2623
+
+"tba:26:room:2625":
+  name: The Necromancer's Lair
+  description: >
+    You are in the lair of the evil Necromancer.  Undead minions of all types, human and otherwise
+    stand here waiting to do their master's bidding. Some glowing arcane sigils have been etched into walls
+    and floor, no doubt to protect the evil master from his own ungodly creations.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2624
+
+"tba:26:room:2626":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2627
+    south:
+      to: tba:26:room:2622
+
+"tba:26:room:2627":
+  name: A Hallway
+  description: >
+    You are in a long hallway leading north and south.  The walls emit a faint magical glow which
+    provides enough light to see by.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2628
+    south:
+      to: tba:26:room:2626
+
+"tba:26:room:2628":
+  name: The End Of The Hallway
+  description:
+  - >
+    You are at the end of a long hallway.  The walls here glow with a faint magical energy which
+    provides plenty of light.
+  - Stairs lead up to the next level here and the hallway continues south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2627
+    up:
+      to: tba:26:room:2629
+
+"tba:26:room:2629":
+  name: A Corridor
+  description: >
+    You are at the east end of a long corridor.  Obsidian walls engraved with ancient runes of power
+    stretch out before you. Magical energies seem to crackle with power all around and whisper in tongues
+    long forgotten, almost as if the corridor itself were alive.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2630
+    down:
+      to: tba:26:room:2628
+
+"tba:26:room:2630":
+  name: A Corridor
+  description: >
+    You are in a long corridor.  Obsidian walls engraved with ancient runes of power stretch out before
+    you.  Magical energies seem to crackle with power all around and whisper in tongues long forgotten,
+    almost as if the corridor itself were alive.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2629
+    west:
+      to: tba:26:room:2631
+
+"tba:26:room:2631":
+  name: A Bend In The Corridor
+  description: >
+    You are at a bend in the long corridor.  Obsidian walls engraved with ancient runes of power
+    stretch out before you.  Magical energies seem to crackle with power all around and whisper in tongues long
+    forgotten, almost as if the corridor itself were alive.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2630
+    south:
+      to: tba:26:room:2632
+
+"tba:26:room:2632":
+  name: A Corridor
+  description: >
+    You are in a long corridor leading north and south.  Obsidian walls engraved with ancient runes of
+    power stretch out before you.  Magical energies seem to crackle with power all around and whisper in
+    tongues long forgotten, almost as if the corridor itself were alive.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2631
+    south:
+      to: tba:26:room:2633
+
+"tba:26:room:2633":
+  name: An Intersection
+  description: >
+    You are at an intersection in the corridor.  The obsidian walled halls lead off in every direction
+    from here, pulsing with the power of their ancient runes.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2632
+    east:
+      to: tba:26:room:2634
+    south:
+      to: tba:26:room:2646
+    west:
+      to: tba:26:room:2636
+
+"tba:26:room:2634":
+  name: A Corridor
+  description: >
+    You are at the end of a long corridor.  Obsidian walls engraved with ancient runes of power stretch
+    out before you.  A darkened door is to the east.  Tendrils of mist cling to the floor here, they
+    seem to be seeping from under the door.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2635
+      door:
+        keywords: [door, black]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2633
+
+"tba:26:room:2635":
+  name: The Scrying Chamber
+  description: >
+    You are in the scrying chamber of the high tower of sorcerery.  It is here that arcane rituals are
+    performed to enable those of the art to look in upon denizens throughout the world and spy out their
+    darkest secrets. A huge black cauldron is in the center of the room, bubbling and gurgling, it pours
+    forth a constant stream of smokey fog into the air about you.  Here and there on stands of different
+    sizes are crystal balls and oddly shaped mirrors.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2634
+      door:
+        keywords: [door, black]
+        kind: door
+        reset: closed
+
+"tba:26:room:2636":
+  name: A Corridor
+  description: >
+    You have reached an end in the long corridor.  Obsidian walls engraved with ancient runes of power
+    stretch out before you.  The sound of snoring can barely be heard through the door to the west.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2633
+    west:
+      to: tba:26:room:2637
+      door:
+        keywords: [door, wooden]
+        kind: door
+
+"tba:26:room:2637":
+  name: The Entrance To The Library
+  description: >
+    You are in the entrance to the great library of magic.  A giant desk is here, covered with books
+    parchments and scrolls.  Long shelves loaded with row upon row of books stretch out in every direction
+    as far as the eye can see.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2639
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2636
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    south:
+      to: tba:26:room:2640
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2638
+      look: All you can see are books.
+
+"tba:26:room:2638":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2641
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2637
+      look: All you can see are books.
+    south:
+      to: tba:26:room:2642
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2643
+      look: All you can see are books.
+
+"tba:26:room:2639":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2640
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2642
+      look: All you can see are books.
+    south:
+      to: tba:26:room:2637
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2641
+      look: All you can see are books.
+
+"tba:26:room:2640":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2637
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2641
+      look: All you can see are books.
+    south:
+      to: tba:26:room:2639
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2642
+      look: All you can see are books.
+
+"tba:26:room:2641":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2642
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2639
+      look: All you can see are books.
+    south:
+      to: tba:26:room:2638
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2640
+      look: All you can see are books.
+
+"tba:26:room:2642":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2638
+      look: All you can see are books.
+    east:
+      to: tba:26:room:2640
+      look: All you can see are books.
+    south:
+      to: tba:26:room:2641
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2639
+      look: All you can see are books.
+
+"tba:26:room:2643":
+  name: In The Library
+  description: >
+    You are in the great library of magic.  A strong musty smell permeates the entire area.  Upon
+    shelves which float just out of reach are hundreds of books, tomes and scrolls of every possible shape
+    size and color.  The elusive books seem to wink in and out of existence before your untrained eyes.  It
+    is very quiet here.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2638
+      look: All you can see are books.
+    west:
+      to: tba:26:room:2644
+      look: You see a small gap between some shelves.
+
+"tba:26:room:2644":
+  name: Between The Shelves
+  description:
+  - >
+    You are in the great library of magic.  The shelves seem uncomfortably close here, you can barely
+    maneuver between them.  The musty smell is still strong, and the elusive books still hover just out of
+    reach.
+  - A faint flicker of light can barely be made out to the north.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2645
+    east:
+      to: tba:26:room:2643
+
+"tba:26:room:2645":
+  name: The Reading Room
+  description: >
+    You are in a small room completely devoid of furnishings.  The only thing here is an enormous tome,
+    lying face open on the floor.  The great book looks both heavy and ancient.  Its jewel encrusted
+    bindings are well worn as the bark of a tree.  Spidery writings seem to crawls across the pages, totally
+    incomprehensible to your mortal eye.  Something seems to be wedged between the pages.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2644
+
+"tba:26:room:2646":
+  name: A Corridor
+  description: >
+    You are in a long corridor leading north and south.  Obsidian walls engraved with ancient runes of
+    power stretch out before you.  Magical energies seem to crackle with power all around and whisper in
+    tongues long forgotten, almost as if the corridor itself were alive.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2633
+    south:
+      to: tba:26:room:2647
+
+"tba:26:room:2647":
+  name: The End Of The Corridor
+  description:
+  - >
+    You are at the end of a long corridor.  The obsidian walls come to an abrupt halt at the edge of a
+    golden archway here.  The hum of power is so strong it nearly numbs your body.
+  - The archway lies before you, glowing and pulsing with energy.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2646
+    south:
+      to: tba:26:room:2648
+
+"tba:26:room:2648":
+  name: The Arched Entrance
+  description: >
+    You feel a slight tingle as you pass through the archway, as if the living magical energies here
+    had infused your body, found it wanting and left.  The intense glow from the arch above you is almost
+    blinding.  Through the light you can barely make out a stairway leading up.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2647
+    up:
+      to: tba:26:room:2649
+
+"tba:26:room:2649":
+  name: The Landing
+  description: >
+    You are on a small landing in the middle of a long stairway leading up. Your senses seem dulled
+    here, no sound or smell can be detected at all, and the only thing you can see in any direction is
+    endless stairway.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    up:
+      to: tba:26:room:2650
+    down:
+      to: tba:26:room:2648
+
+"tba:26:room:2650":
+  name: An Intersection
+  description:
+  - >
+    You are at an intersection of several hallways.  You feel as if strange mystical forces are pushing
+    and pulling at each other from all around you. The sensation of being trapped, in the middle is
+    almost tangible in the air here.
+  - >
+    A gray tiled hallway leads south, black tiled east, white tiled west, and a multi-colored hallway
+    swirling with patterns that remain just barely unrecognizable is to the north.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2673
+    east:
+      to: tba:26:room:2658
+    south:
+      to: tba:26:room:2651
+    west:
+      to: tba:26:room:2665
+    down:
+      to: tba:26:room:2649
+
+"tba:26:room:2651":
+  name: A Gray Tiled Hallway
+  description: >
+    You are in a gray tiled hallway leading north and south.  Dim balls of energy float here and there
+    shedding a warm light, and showing the way.  A feeling of peace and balance comes over you.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2650
+    south:
+      to: tba:26:room:2652
+
+"tba:26:room:2652":
+  name: A Gray Tiled Hallway
+  description:
+  - >
+    You are in a gray tiled hallway leading north and south.  Dim balls of energy float here and there
+    shedding a warm light, and showing the way.  A feeling of peace and balance comes over you.
+  - Large, gray metal double doors can be seen to the south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2651
+    south:
+      to: tba:26:room:2653
+      door:
+        keywords: [door, gray]
+        kind: door
+        reset: closed
+
+"tba:26:room:2653":
+  name: The Antechamber
+  description:
+  - >
+    You are in the antechamber of the Master Magician of the Gray Light. A feeling of strong magic
+    floats in the air about you, almost as if you could taste the power held within these walls.
+  - Once your eyes adjust to the semi-light, you can make out a larger room to the south.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2652
+      door:
+        keywords: [door, gray]
+        kind: door
+        reset: closed
+    south:
+      to: tba:26:room:2654
+
+"tba:26:room:2654":
+  name: The Main Chamber
+  description: >
+    A feeling of tranquility comes over you as you enter the main chamber of Neutrality.  Some
+    artifacts are hung on the walls here, or set on stands. The room in general looks both comfortable and
+    official.  Probably where the Master of Neutrality holds audience.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2653
+    east:
+      to: tba:26:room:2656
+    south:
+      to: tba:26:room:2657
+    west:
+      to: tba:26:room:2655
+
+"tba:26:room:2655":
+  name: The Study
+  description: >
+    You are in a large study.  Shelves filled with many books or arcane knowledge are on every wall.  A
+    large oaken desk is in the center, with many parchments and scrolls on it.  The most notable thing
+    in the room is a small set of scales, which floats about eye level.  In perfect balance, the scales
+    are no doubt a sign of the Master's neutrality.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2654
+
+"tba:26:room:2656":
+  name: A Closet
+  description: You are in a small closet.  It is filled with many cloaks, and some other apparel.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2654
+
+"tba:26:room:2657":
+  name: A Bedroom
+  description: >
+    You are in the bedroom of the Master Magician of Neutrality. Curtained windows can be seen on the
+    south wall.  A large comfortable looking bed takes up most of the room.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2654
+
+"tba:26:room:2658":
+  name: A Dark Hallway
+  description: >
+    You are in a long dark hallway leading east and west.  Not much can be seen in the unnatural
+    darkness here, but you get a deep sense of dread the further you go.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2659
+    west:
+      to: tba:26:room:2650
+
+"tba:26:room:2659":
+  name: A Dark Hallway
+  description: >
+    You are in a long dark hallway leading east and west.  Not much can be seen in the unnatural
+    darkness here, but you get a deep sense of dread the further you go.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2660
+    west:
+      to: tba:26:room:2658
+
+"tba:26:room:2660":
+  name: The End Of The Hallway
+  description:
+  - >
+    You are at the end of a long dark hallway.  The darkness here is almost tangible in its thickness. 
+    A deep sense of fear and loathing comes over you.
+  - A pair of obsidian doors can be seen to the east.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2661
+      door:
+        keywords: [door, obsidian]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2659
+
+"tba:26:room:2661":
+  name: The Chamber Of Darkness
+  description: >
+    You are in a vast chamber.  The walls fade into darkness, leaving you with a very vague idea of the
+    actual size of the room.  Swirling here and there in the dark, are patches of pure black which seem
+    to suck in your light and leave it that much darker here.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2662
+    east:
+      to: tba:26:room:2664
+    south:
+      to: tba:26:room:2663
+    west:
+      to: tba:26:room:2660
+      door:
+        keywords: [door, obsidian]
+        kind: door
+        reset: closed
+
+"tba:26:room:2662":
+  name: It Is Very Dark Here...
+  description: It is very dark here...
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2661
+
+"tba:26:room:2663":
+  name: A Torture Chamber
+  description:
+  - >
+    You are in an ill lit chamber.  Instruments of torture hang from a rack on the wall, they seem to
+    quiver with anticipation of a victim as if they had a mind of their own.  An operating table is here,
+    though it is bare.
+  - An extreme feeling of evil permeates the entire area.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2661
+
+"tba:26:room:2664":
+  name: The Inner Chamber
+  description: >
+    You are in a small dark chamber.  Upon the walls are glowing sigils of dark power, scrawled and
+    traced in an evil language no longer known to most of this plane of existence.  There is an obsidian
+    altar here which seems to glow, but does not shed any light, in fact it seems to be taking light in.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2661
+
+"tba:26:room:2665":
+  name: A Bright Hallway
+  description: >
+    You are in a long well lit hallway leading east and west.  The walls here are a milky white color,
+    and glow with a warm luminescence, as does the floor.  A feeling of goodness permeates the area, and
+    you feel unworthy to tread upon these sacred floors.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2650
+    west:
+      to: tba:26:room:2666
+
+"tba:26:room:2666":
+  name: A Bright Hallway
+  description:
+  - >
+    You are in a long well lit hallway leading east and west.  The walls here are a milky white color,
+    and glow with a warm luminescence, as does the floor.  A feeling of goodness permeates the area, and
+    you feel unworthy to tread upon these sacred floors.
+  - A huge set of double doors in finely worked ivory can be seen to the west.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2665
+    west:
+      to: tba:26:room:2667
+      door:
+        keywords: [door, ivory]
+        kind: door
+        reset: closed
+
+"tba:26:room:2667":
+  name: An Antechamber
+  description: >
+    You are in a small antechamber.  It is well lit here, though the source of light cannot be seen. 
+    It is almost as if the room itself exudes a warm glow of goodness.  A larger chamber can be seen to
+    the west, but you do not feel worthy to pass into it.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2666
+      door:
+        keywords: [door, ivory]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2669
+
+"tba:26:room:2669":
+  name: The Chamber Of The White Light
+  description: >
+    You are in a vast chamber, its walls floor and ceiling are of an unknown metallic material, the
+    brightest white, almost blindingly stark. A flickering flame is in the center of the room, seeming to
+    feed off of darkness and cleansing the room of any evil.  You feel a slight tug at your being as the
+    flame flickers towards you.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2670
+    east:
+      to: tba:26:room:2667
+    south:
+      to: tba:26:room:2671
+    west:
+      to: tba:26:room:2672
+
+"tba:26:room:2670":
+  name: The Meditation Chamber
+  description: >
+    You are in a small meditation chamber.  White silk cushions are everywhere, looking very
+    comfortable.  You get an easy peaceful feeling of relaxation here, almost making you want to lie down and fall
+    asleep.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:26:room:2669
+
+"tba:26:room:2671":
+  name: A Study
+  description: >
+    You are in a spacious study.  It is extremely tidy here, to an almost antiseptic nature.  One would
+    wonder how anyone could study without a mess all around them, the master of this chamber obviously
+    can.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2669
+
+"tba:26:room:2672":
+  name: A Closet
+  description: >
+    You are in a small closet.  Cloaks and vests hang from hooks in the wall, and a few old boots are
+    all that can be seen here.  Rather featureless all in all.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2669
+
+"tba:26:room:2673":
+  name: A Wide Hallway
+  description:
+  - >
+    You are in a large hallway, wide enough to accommodate several people standing abreast.  The floor
+    here is a swirl of multicolored patterns, in constant motion.
+  - A huge, gray metal door blocks the way north, it looks quite sturdy.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2674
+      door:
+        keywords: [door, metal, gray]
+        kind: pickproof
+        key: tba:25:obj:2593
+        reset: locked
+    south:
+      to: tba:26:room:2650
+
+"tba:26:room:2674":
+  name: A Wide Hallway
+  description:
+  - >
+    You are in a large hallway, wide enough to accommodate several people standing abreast.  The floor
+    here is a swirl of multicolored patterns, in constant motion.
+  - A huge, black obsidian door blocks the way north, it looks quite sturdy.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2675
+      door:
+        keywords: [door, obsidian, black]
+        kind: pickproof
+        key: tba:25:obj:2594
+        reset: locked
+    south:
+      to: tba:26:room:2673
+      door:
+        keywords: [door, metal, gray]
+        kind: pickproof
+        key: tba:25:obj:2593
+        reset: locked
+
+"tba:26:room:2675":
+  name: A Wide Hallway
+  description:
+  - >
+    You are in a large hallway, wide enough to accommodate several people standing abreast.  The floor
+    here is a swirl of multicolored patterns, in constant motion.
+  - A huge, white ivory door blocks the way north, it looks quite sturdy.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2676
+      door:
+        keywords: [door, ivory, white]
+        kind: pickproof
+        key: tba:25:obj:2595
+        reset: locked
+    south:
+      to: tba:26:room:2674
+      door:
+        keywords: [door, obsidian, black]
+        kind: pickproof
+        key: tba:25:obj:2594
+        reset: locked
+
+"tba:26:room:2676":
+  name: The Entranceway
+  description: >
+    You are at the entrance to the audience chamber of the Grand Master of Magic.  Beautiful tapestries
+    displaying the ancient masters of lore are on the walls, and the floor is covered with a plush
+    multicolored carpet, which seems to rustle and move at the touch of your boots.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2677
+    south:
+      to: tba:26:room:2675
+      door:
+        keywords: [door, white, ivory]
+        kind: pickproof
+        key: tba:25:obj:2595
+        reset: locked
+
+"tba:26:room:2677":
+  name: The Audience Chamber
+  description: >
+    You are in a large chamber.  Small bolts of energy leap from wall to wall, crackling with power. 
+    The floor is a swirl of indeterminable colors and patterns ever changing.  Bright bursts of color seem
+    to explode into the air and fade again at random times.  All this splendor plays about and draws
+    attention to a large throne in the center of the room, it seems to be cut from a single enormous emerald.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:26:room:2680
+    east:
+      to: tba:26:room:2678
+    south:
+      to: tba:26:room:2676
+    west:
+      to: tba:26:room:2679
+  extras:
+  - keywords: [throne]
+    text: The giant emerald is flawless, and must be incredibly valuable.
+
+"tba:26:room:2678":
+  name: A Dressing Room
+  description: >
+    You are in a plush dressing room.  Fine garments of many styles and some outlandish colors hang
+    from a rack suspended in mid air at eye level.  The only other interesting feature in the room is a
+    large silver mirror on a finely crafted gold stand.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2677
+
+"tba:26:room:2679":
+  name: The Library
+  description: >
+    You are in a small cosy looking library.  A few well made books sit atop shelves which span every
+    wall.  A large oaken writing table is in the center of the room with odd papers and parchments on it. 
+    The illumination here, to your surprise is a quite un-magical oil lamp.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2677
+
+"tba:26:room:2680":
+  name: The Altar
+  description: >
+    You are in a small chapel designed around a beautifully crafted golden altar.  Many icons to lesser
+    deities line the room, but it is obvious by one glance at the symbols on the altar, that this room
+    was designed for the worship of Mystra, the goddess of magic.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2681
+      door:
+        keywords: [door, secret]
+        kind: door
+        reset: closed
+    south:
+      to: tba:26:room:2677
+    west:
+      to: tba:26:room:2682
+      door:
+        keywords: [door, secret]
+        kind: door
+        reset: closed
+
+"tba:26:room:2681":
+  name: The Treasury
+  description: >
+    You are in a small chamber, the stale air here is testament to the fact that it has gone
+    undisturbed for many years.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:26:room:2680
+      door:
+        keywords: [door, secret]
+        kind: door
+        reset: closed
+
+"tba:26:room:2682":
+  name: A Passage
+  description: >
+    You are in a small dark passage, which would be unremarkable if not for the fact that it ends in a
+    blinding blue light to the west.  On hooks set into the wall here there hang several travel worthy
+    cloaks, and a small leather backpack.  It looks as if someone has prepared this room to be used in the
+    event speedy of a evacuation.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:26:room:2680
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:26:room:2683
+
+"tba:26:room:2683":
+  name: In The Light
+  description:
+  - >
+    You seem to be floating in a magical energy field, though you cannot see the source of the energy,
+    you can feel its power pushing at you from all sides, completely negating the effects of gravity.
+  - An imperfection in the uniform blue can be seen overhead, it might be an exit.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    up:
+      to: tba:30:room:3001

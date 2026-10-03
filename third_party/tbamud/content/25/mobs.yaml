@@ -1,0 +1,1415 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 25.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:25:mob:2500":
+  keywords: [shadow, guardian]
+  short: the shadow guardian
+  long: A shadow guardian screams a challenge and attacks.
+  description: It seems to be made of nothing more than darkness...
+  level: 9
+  sex: neutral
+  alignment: -350
+  flags: [scavenger, aggressive, stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2501":
+  keywords: [adventurer]
+  short: the lost adventurer
+  long: An emaciated adventurer is here looking lost and hopeless.
+  description: He looks haggard and sickly; no doubt he's been lost here for quite some time.
+  level: 8
+  sex: male
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: sitting
+    default: standing
+
+"tba:25:mob:2502":
+  keywords: [edgar]
+  short: Edgar
+  long: Edgar the Human Swordpupil is standing here, looking quite lost.
+  description: >
+    Edgar says 'pardon me, can you tell me where to buy cups?  ' You see before you, one of Midgaard's
+    finest fighting elite, the mighty bunny slayer himself, Edgar the Horrible!
+  level: 1
+  sex: male
+  alignment: 1000
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2503":
+  keywords: [diamond, golem]
+  short: the diamond golem
+  long: A huge diamond golem is standing guard here.
+  description: It looks quite strong.
+  level: 23
+  sex: neutral
+  alignment: 500
+  flags: [sentinel, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2504":
+  keywords: [mage, young]
+  short: the mage
+  long: A young mage wanders about, oblivious to all.
+  description: >
+    He seems to be contemplating life, love and the mysteries of the universe. Then again, he may just
+    have a headache.
+  level: 10
+  sex: male
+  alignment: 450
+  flags: [stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2505":
+  keywords: [strick, bartender]
+  short: Strick the bartender
+  long: Strick is here levitating drinks to his customers.
+  description: He looks rather harmless, but then again so does a sleeping dragon.
+  level: 25
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2506":
+  keywords: [tatorious, wizard]
+  short: Tatorious
+  long: Tatorious the wizard is here counting his earnings.
+  description: Tatorious winks at you mischievously.
+  level: 25
+  sex: male
+  alignment: 900
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2507":
+  keywords: [ezmerelda, cook]
+  short: Ezmerelda
+  long: Ezmerelda the cook is here stirring a large pot of something.
+  description: >
+    She does not look like the typical cook you would find in a kitchen, but she certainly fits what
+    you would expect in a tower fulls of mages.
+  level: 20
+  sex: female
+  alignment: -500
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2508":
+  keywords: [assistant, mage, cook]
+  short: the cook's assistant
+  long: The cook's assistant is here assisting the cook.
+  description: This young man is busy adding strange ingredients to the large pot.
+  level: 11
+  sex: male
+  alignment: -200
+  flags: [sentinel, stay_zone, wimpy, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2509":
+  keywords: [prisoner]
+  short: the prisoner
+  long: A prisoner is chained to the wall here.
+  description: >
+    Though his clothes are all in rags, you can see that at one time they must have been fine
+    garments.  A metal muzzle has been fitted over the poor wretch's mouth, whether to keep him from screaming, or
+    to silence his spell casting you cannot tell.  He looks quite mad, no doubt he has been mistreated
+    horribly.
+  level: 16
+  sex: male
+  alignment: 100
+  flags: [sentinel, stay_zone, wimpy]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2510":
+  keywords: [jailor, mage]
+  short: the Jailor
+  long: The Jailor is here enjoying a comfortable nap.
+  description: He looks rather dirty.
+  level: 17
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:25:mob:2511":
+  keywords: [broom]
+  short: the broom
+  long: A straw broom is here leaning against the wall.
+  description: The broom screams 'Take that you lout!  '
+  level: 7
+  sex: neutral
+  alignment: 50
+  flags: [sentinel, aware, aggressive, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2512":
+  keywords: [lesser, guardian, hands]
+  short: the pair of disembodied hands
+  long: A pair of disembodied hands floats in the air here.
+  description: The hands twitch with anticipation of strangling someone.
+  level: 9
+  sex: neutral
+  alignment: -400
+  flags: [aggressive, stay_zone, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2513":
+  keywords: [guardian, greater, eyes]
+  short: the pair of disembodied eyes
+  long: A pair of disembodied eyes floats here glaring at you.
+  description: The eyes smoulder with hatred.
+  level: 15
+  sex: neutral
+  alignment: -600
+  flags: [aggressive, stay_zone, no_sleep, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2514":
+  keywords: [mage, visitor]
+  short: the mage
+  long: A visiting mage is here snoring away in peaceful slumber.
+  description: He looks quite sleepy.
+  level: 12
+  sex: male
+  alignment: 250
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:25:mob:2515":
+  keywords: [apprentice, young]
+  short: the young apprentice magic user
+  long: A young apprentice magic user is here doing magical studies.
+  description: She looks quite intent on her studies.
+  level: 7
+  sex: female
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:25:mob:2516":
+  keywords: [apprentice, young]
+  short: the young apprentice
+  long: A young apprentice is here mumbling words of magic to himself.
+  description: He looks to be oblivious to all but the spell he is memorizing.
+  level: 7
+  sex: male
+  alignment: 380
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2517":
+  keywords: [apprentice, young]
+  short: the young apprentice
+  long: A young apprentice is sleeping here.
+  description: He seems to be dreaming.
+  level: 7
+  sex: male
+  alignment: 350
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:25:mob:2518":
+  keywords: [apprentice, young]
+  short: the young apprentice
+  long: A young apprentice is here teasing a cornered kitten.
+  description: He looks like a mischievous youth.
+  level: 7
+  sex: male
+  alignment: -200
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2519":
+  keywords: [kitten]
+  short: the small kitten
+  long: A small kitten is here meowing in terror.
+  description: >
+    The little ball of fur looks very unhappy.  Singed fur and a few minor burns mark its mottled coat.
+  level: 1
+  sex: female
+  alignment: 500
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2520":
+  keywords: [student]
+  short: the student
+  long: A student of spells is here looking quite bored.
+  description: The student yawns.
+  level: 8
+  sex: male
+  alignment: 350
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:25:mob:2521":
+  keywords: [instructor, teacher, mage]
+  short: the instructor of magic
+  long: The instructor screams at your interruption and attacks you.
+  description: He looks quite angry at your interruption.
+  level: 14
+  sex: male
+  alignment: 300
+  flags: [sentinel, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2522":
+  keywords: [student]
+  short: the student of spells
+  long: A student of spells is here trying to master invisibility.
+  description: He blinks in and out of existence, trying to master the spell.
+  level: 8
+  sex: male
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2523":
+  keywords: [teacher, mage]
+  short: the spell teacher
+  long: A spell teacher screams at your interruption and attacks.
+  description: The teacher is quite fierce and rather frightening.
+  level: 15
+  sex: male
+  alignment: 300
+  flags: [sentinel, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2524":
+  keywords: [student]
+  short: the student of spells
+  long: A student of spells has fallen asleep at her desk here.
+  description: She looks to have collapsed from sheer boredom.
+  level: 9
+  sex: female
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:25:mob:2525":
+  keywords: [wizard, speaker, mage]
+  short: the wizard
+  long: An old wizard is here making a speech here.
+  description: >
+    This wizened old man looks like he could easily pass for the oldest living man.  Of course, having
+    heard stories about some of the magic available to the people living here, and what toll the magic
+    draws...  This man might be as young as you.
+  level: 18
+  sex: male
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2526":
+  keywords: [mage, young]
+  short: the young mage
+  long: A young mage is here learning hand to hand combat.
+  description: This young fellow looks quite confident in his abilities to defend himself.
+  level: 9
+  sex: male
+  alignment: 300
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2527":
+  keywords: [mistress, battle]
+  short: the battle mistress
+  long: The battle mistress is here teaching the fine uses of a dagger.
+  description: She looks quite rugged.  In fact, she more resembles a warrior than a magic user.
+  level: 17
+  sex: female
+  alignment: 200
+  flags: [sentinel, aggressive, wimpy, memory, no_bash]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2528":
+  keywords: [mage, teacher]
+  short: the spell teacher
+  long: A spell teacher is here relaxing.
+  description: >
+    The teacher looks to be worn out by a long day of magic working, difficult spells, and inattentive
+    students.
+  level: 15
+  sex: male
+  alignment: 200
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: resting
+    default: resting
+
+"tba:25:mob:2529":
+  keywords: [wizard]
+  short: the aged wizard
+  long: An aged wizard is sleeping here.
+  description: >
+    Dreams of magic and power are probably flowing through his head right now, better not wake him up.
+  level: 20
+  sex: male
+  alignment: 350
+  flags: [aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: sleeping
+    default: standing
+
+"tba:25:mob:2530":
+  keywords: [scribe, mage]
+  short: the scribe
+  long: A scribe is here working on some manuscripts.
+  description: He appears to be copying out some spell ingredients or components right now.
+  level: 14
+  sex: male
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2531":
+  keywords: [scribe, mage]
+  short: the scribe
+  long: A scribe is here working diligently on some translations.
+  description: >
+    She is quite cute.  Too bad her only interest seems to be the words of lore she is translating.
+  level: 15
+  sex: female
+  alignment: 500
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2532":
+  keywords: [master, scribe]
+  short: the Master Scribe
+  long: The Master Scribe is here looking a little upset
+  description: >
+    He seems to be so old, his skin has become nothing but a giant wrinkle.  The master scribe screams
+    'How dare you interrupt my important work???  '
+  level: 22
+  sex: male
+  alignment: 100
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2533":
+  keywords: [assistant, scribe]
+  short: the scribe's assistant
+  long: The scribe's assistant is here folding parchments.
+  description: >
+    You can tell that he isn't trusted with the more important documents, since those ones are rolled
+    and sealed with wax.
+  level: 16
+  sex: male
+  alignment: 100
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2534":
+  keywords: [master, enchanter, mage]
+  short: the Enchanter
+  long: The Enchanter is here placing a dweomer upon well made sword.
+  description: >
+    The Enchanter is hard at work, concentrating on a spell which could either destroy the weapon or
+    make it many times more powerful than it already is.
+  level: 23
+  sex: male
+  alignment: -200
+  flags: [sentinel, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2535":
+  keywords: [sword, dancing]
+  short: the dancing sword
+  long: A well crafted sword lies on the work table here.
+  description: It looks quite sharp.
+  level: 10
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, aggressive, wimpy, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2536":
+  keywords: [alchemist]
+  short: the Mad Alchemist
+  long: The Mad Alchemist babbles something incomprehensible and attacks.
+  description: >
+    He looks like he has been quaffing too many potions.  His eyes dart around wildly, and he starts to
+    drool.  The Mad Alchemist throws back his head and cackles with insane glee!
+  level: 24
+  sex: male
+  alignment: 150
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2537":
+  keywords: [master, summoner]
+  short: the Master Summoner
+  long: The Master Summoner is here holding gateways open to other planes.
+  description: >
+    The Summoner looks to be hard at work, concentrating on keeping control over the gateway before he
+    loses his soul to the creatures on the other side of it.
+  level: 22
+  sex: male
+  alignment: -200
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2538":
+  keywords: [master, charmer]
+  short: the Master Charmer
+  long: The Master Charmer utters the words, 'uuuzzldctz'.
+  description: The Master Charmer sizes you up, always looking for a new pet.
+  level: 23
+  sex: male
+  alignment: -400
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2539":
+  keywords: [golem, wooden]
+  short: the wooden golem
+  long: A wooden golem stands a silent vigil here, guarding the stairs.
+  description: He looks flammable.
+  level: 16
+  sex: neutral
+  alignment: 100
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2540":
+  keywords: [master, spellbinder]
+  short: the Master Spellbinder
+  long: The Master Spellbinder is here re-charging a blackened wand.
+  description: The Master Spellbinder snarls at you and attacks.
+  level: 23
+  sex: male
+  alignment: -500
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2541":
+  keywords: [master, maker]
+  short: the Golem Maker
+  long: The Golem Maker is here chiseling some stone.
+  description: >
+    The Golem Master appears to be very meticulous about his work, to the point of fussing over it.
+  level: 21
+  sex: male
+  alignment: 300
+  flags: [sentinel, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2542":
+  keywords: [golem, granite]
+  short: the granite golem
+  long: A granite golem stands here waiting to do its master's bidding.
+  description: It looks like a statue, until you see it shamble towards you.
+  level: 20
+  sex: neutral
+  alignment: 300
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2543":
+  keywords: [golem, bronze]
+  short: the bronze golem
+  long: A bronze golem stands here shining in the light.
+  description: He looks rather dim witted.
+  level: 18
+  sex: neutral
+  alignment: 350
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2544":
+  keywords: [golem, flesh]
+  short: the flesh golem
+  long: A flesh golem stands guard here
+  description: >
+    It looks to be made of a potpourri of different body parts; some don't even resemble anything human.
+  level: 12
+  sex: neutral
+  alignment: 200
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2545":
+  keywords: [golem, cloth]
+  short: the cloth golem
+  long: A cloth golem wanders around here.
+  description: It looks like a bunch of old rags, quite surprising it can actually walk.
+  level: 8
+  sex: neutral
+  alignment: 350
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2546":
+  keywords: [golem, adamantite]
+  short: the adamantite golem
+  long: An adamantite golem stands here looking very dangerous.
+  description: >
+    It seems to be forged of dark metal.  It looks strong and durable, but somewhat un-intelligent.
+  level: 25
+  sex: neutral
+  alignment: 350
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2547":
+  keywords: [golem, clay]
+  short: the clay golem
+  long: A clay golem stands guard here.
+  description: This large golem almost looks like it is made of dirt.
+  level: 15
+  sex: neutral
+  alignment: 200
+  flags: [sentinel, aggressive, stay_zone, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2548":
+  keywords: [master, illusionist, mage, dragon]
+  short: the Master of Illusions
+  long: An enormous multi-colored three-headed dragon growls at you.
+  description: >
+    The image of an ugly dragon flickers slightly, and where the dragon was now stands a small harmless
+    looking old man.
+  level: 21
+  sex: male
+  alignment: 150
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2549":
+  keywords: [necromancer, master]
+  short: the Necromancer
+  long: The Necromancer is here raising undead servants.
+  description: >
+    Attired all in black, the Necromancer is tall and gangly, but still quite an imposing figure.  A
+    dark cowl shrouds most of his face, but two blazing embers which serve as eyes can be seen through the
+    shadow.  The Necromancer shrieks some obscenities and orders his minions to attack.
+  level: 25
+  sex: male
+  alignment: -950
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2550":
+  keywords: [skeleton, undead]
+  short: the animated skeleton
+  long: An animated skeleton screams silently and attacks.
+  description: It feels no pain, and hacks at you ruthlessly.
+  level: 15
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, aggressive, wimpy, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2551":
+  keywords: [undead, giant]
+  short: the undead giant
+  long: An undead giant lumbers towards you.
+  description: This thing seems to be the reanimated corpse of a giant, creating an enormous zombie.
+  level: 18
+  sex: neutral
+  alignment: -500
+  flags: [scavenger, aggressive, stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2552":
+  keywords: [witch, hag]
+  short: the ugly witch
+  long: An ugly witch is here scrying out secrets.
+  description: >
+    She has no face at all, just blank skin, rather disturbing.  From about where her mouth should be,
+    comes a disgusting giggling sound that makes your skin crawl with revulsion.
+  level: 20
+  sex: female
+  alignment: -450
+  flags: [scavenger, aggressive, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2553":
+  keywords: [librarian, mage]
+  short: the Librarian
+  long: The Librarian has fallen asleep at his desk here.
+  description: He looks like a rather peaceful old man.
+  level: 23
+  sex: male
+  alignment: 450
+  flags: [sentinel, aggressive, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: sleeping
+    default: standing
+
+"tba:25:mob:2554":
+  keywords: [apprentice]
+  short: the Master's apprentice
+  long: The Master's apprentice leaps to halt your passage.
+  description: >
+    A powerful wizard in his own right, the apprentice of the master of balance has given up his
+    station in the mage guild hierarchy in order to serve the Great Master in hopes of gleaning secrets one
+    could never hope to uncover alone.
+  level: 24
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aggressive, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2555":
+  keywords: [cat, gray, familiar]
+  short: the gray cat
+  long: A gray cat is lounging lazily here.
+  description: >
+    The gray cat cocks an ear towards you, sensing your scrutiny, then purrs contentedly.  It looks
+    rather harmless, until you notice its very large claws.
+  level: 15
+  sex: female
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2556":
+  keywords: [master, guildmaster, gray]
+  short: the Master of Neutrality
+  long: The Master of Neutrality is here contemplating the balance of the Universe.
+  description: He looks quite peaceful.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, stay_zone, aggr_evil, aggr_good, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2557":
+  keywords: [apprentice, black]
+  short: the black robed apprentice
+  long: A black robed apprentice jumps from the shadows and attacks.
+  description: >
+    She bears a wicked looking scar down the side of her face, though once she must have been
+    beautiful, now the scar combined with what seems to be a permanent scowl make her looks quite fearsome.
+  level: 20
+  sex: female
+  alignment: -750
+  flags: [sentinel, scavenger, aggressive, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2558":
+  keywords: [cat, black, familiar]
+  short: the black cat
+  long: A black cat with its fur up hisses at you.
+  description: It looks both mean and dangerous.  Petting seems to be completely out of the question.
+  level: 16
+  sex: neutral
+  alignment: -800
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2559":
+  keywords: [master, guildmaster, black]
+  short: the Master of the Black Robes
+  long: The Master of the Black Robes is here plotting vile deeds.
+  description: The Master glares at you.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, stay_zone, aggr_good, aggr_neutral, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2560":
+  keywords: [apprentice, white]
+  short: the white robed apprentice
+  long: A white robed apprentice screams at your desecration of goodness.
+  description: >
+    He looks like a fanatic.  The white robed apprentice screams 'Thou art unworthy of this honor!  '
+  level: 20
+  sex: male
+  alignment: 750
+  flags: [sentinel, scavenger, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2561":
+  keywords: [cat, white, familiar]
+  short: the white cat
+  long: A white cat is here preening its fur.
+  description: It seems to be nothing more than a large ball of fluff with claws.
+  level: 15
+  sex: neutral
+  alignment: 800
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2562":
+  keywords: [master, guildmaster, white]
+  short: the Master of Goodness
+  long: The Master of Goodness is here frowning at your intrusion.
+  description: He looks like a self-righteous bastard.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, stay_zone, aggr_evil, aggr_neutral, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2563":
+  keywords: [cat, calico, familiar]
+  short: the calico cat
+  long: A large calico cat is lounging about here.
+  description: >
+    It looks incredibly large for a cat, no doubt a giant of its species.  A beautiful jewel encrusted
+    collar about its neck is its only adornment.
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:25:mob:2564":
+  keywords: [guildmaster, grand, mistress]
+  short: the Grand Mistress
+  long: The Grand Mistress of Magic is sitting here.
+  description: >
+    She looks quite comfortable on her emerald throne.  Amazingly young and pretty for one of such
+    stature in the guild, no doubt she has kept her youthful appearance through the use of strong magicks. 
+    The Grand Mistress pets her familiar and smiles at you in confidence.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

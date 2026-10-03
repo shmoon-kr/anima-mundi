@@ -1,0 +1,808 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 242.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:242:obj:24200":
+  type: drinkcon
+  keywords: [tea, cup, tea]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: tea
+    poisoned: false
+  weight: 13
+  cost: 5
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a small simple cup.
+
+"tba:242:obj:24201":
+  type: drinkcon
+  keywords: [milk, cup, milk]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: milk
+    poisoned: false
+  weight: 13
+  cost: 7
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a small simple cup.
+
+"tba:242:obj:24202":
+  type: drinkcon
+  keywords: [water, cup, water]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 12
+    contains: 12
+    liquid: clear_water
+    poisoned: false
+  weight: 17
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a large simple cup.
+
+"tba:242:obj:24203":
+  type: drinkcon
+  keywords: [water, bottle, water]
+  short: a bottle
+  long: A bottle of Evian natural spring water is here.
+  wear: [take]
+  values:
+    capacity: 24
+    contains: 24
+    liquid: clear_water
+    poisoned: false
+  weight: 29
+  cost: 10
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [bottle]
+    text: It is a large, clean bottle.  There is a large label pasted on the side.
+  - keywords: [label]
+    text: >
+      You've been ripped off!  It says here at the bottom of the label, in really really small letters,
+      'Bottled in the Midgaard branch of Evian Inc.  This water is from the natural, mostly clean River of
+      Midgaard.  '
+
+"tba:242:obj:24204":
+  type: drinkcon
+  keywords: [water, canteen, water]
+  short: a canteen
+  long: A canteen has been set on the ground here.
+  wear: [take]
+  values:
+    capacity: 80
+    contains: 80
+    liquid: clear_water
+    poisoned: false
+  weight: 85
+  cost: 45
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [canteen]
+    text: It is a fairly big canteen.  Looks like it can hold a lot of liquid.
+
+"tba:242:obj:24205":
+  type: armor
+  keywords: [red, usher, usher's, vest]
+  short: a red usher's vest
+  long: A red ushers vest has been left here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [red, usher, usher's, vest]
+    text: >
+      This vest is made out of thick cloth.  It has bright gold buttons running down the middle of it,
+      and it has two small pockets on either side.
+
+"tba:242:obj:24206":
+  type: light
+  keywords: [flashlight, flash, light]
+  short: a small black flashlight
+  long: A small black metal flashlight is lying here.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    hours: -1
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flashlight, flash, light]
+    text: This is a small flashlight, used by the ushers at the theater.
+
+"tba:242:obj:24207":
+  type: armor
+  keywords: [leather, work, gloves]
+  short: a pair of leather work gloves
+  long: A pair of thick leather work gloves have been left here.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, work, gloves]
+    text: >
+      This pair of gloves looks fairly new.  The palms have an extra strip of leather across them, while
+      the tops have a layer of thick yellow fabric.
+
+"tba:242:obj:24208":
+  type: armor
+  keywords: [denim, overalls]
+  short: a pair of denim overalls
+  long: A pair of denim overalls have been discarded here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [denim, overalls]
+    text: >
+      This pair of overalls looks quite big.  They're a dark blue color, with a large pocket over the
+      chest.
+
+"tba:242:obj:24209":
+  type: armor
+  keywords: [expensive, suit, jacket]
+  short: an expensive suit jacket
+  long: An expensive looking black suit jacket is sitting here.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 4
+  cost: 400
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [expensive, suit, jacket]
+    text: This jacket looks pretty nice.  It seems to fit you perfectly.
+
+"tba:242:obj:24210":
+  type: armor
+  keywords: [white, dress, shirt]
+  short: a white dress shirt
+  long: A white dress shirt has been neatly folded here.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 4
+  cost: 750
+  rent: 250
+  level: 0
+  extras:
+  - keywords: [white, dress, shirt]
+    text: >
+      The shirt has no patterns or colors on it whatsover.  It's a thin white shirt with white buttons.
+
+"tba:242:obj:24211":
+  type: armor
+  keywords: [black, dress, pants]
+  short: a pair of black dress pants
+  long: A pair of black dress pants is lying here.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 3
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [black, dress, pants]
+    text: This pair of dress pants feel soft, and seem to fit you well.
+
+"tba:242:obj:24212":
+  type: armor
+  keywords: [leather, dress, shoes]
+  short: a pair of men's leather dress shoes
+  long: A pair of men's black leather dress shoes are sitting here.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 2
+  cost: 400
+  rent: 500
+  level: 0
+  extras:
+  - keywords: [leather, dress, shoes]
+    text: >
+      These shoes look quite comfortable.  The leather is soft, and has an elaborate pattern printed on
+      it.
+
+"tba:242:obj:24213":
+  type: armor
+  keywords: [fancy, dress]
+  short: a fancy black dress
+  long: A fancy black dress has been left here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 400
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [fancy, dress]
+    text: This dress is very nice.  It's rather tight, but it fits you quite well.
+
+"tba:242:obj:24214":
+  type: armor
+  keywords: [dress, heels]
+  short: a pair of dress heels
+  long: A pair of women's dress heels are sitting here.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 2
+  cost: 400
+  rent: 500
+  level: 0
+  extras:
+  - keywords: [dress, heels]
+    text: These shoes look quite comfortable.  The leather is soft, the heels aren't too high.
+
+"tba:242:obj:24215":
+  type: armor
+  keywords: [black, bow, tie]
+  short: a black bow tie
+  long: A black bow tie is here, waiting for you to pick it up.
+  wear: [take, neck]
+  values:
+    armor: 2
+  weight: 1
+  cost: 250
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [black, bow, tie]
+    text: This bow tie looks brand new.  It would go well with a suit.
+
+"tba:242:obj:24216":
+  type: key
+  keywords: [key, city]
+  short: the City Key
+  long: The very big City Key is lying here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 1000
+  rent: 500
+  level: 0
+  extras:
+  - keywords: [key, city]
+    text: >
+      It is probably the biggest key you have seen in your life.  It is made from polished gold and has
+      various patterns on it along with the Midgaard Coat of Arms.
+
+"tba:242:obj:24217":
+  type: other
+  keywords: [pda, personal, digital, assistant]
+  short: a PDA
+  long: A PDA (Personal Digital Assistant) is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 250
+  rent: 50
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [pda, personal, digital, assistant]
+    text: >
+      This PDA looks pretty complicated.  It's a small black box, about the size of a small book.  On the
+      screen are several icons.
+
+"tba:242:obj:24218":
+  type: other
+  keywords: [cell, phone, cellphone]
+  short: a black cellphone
+  long: A black cell phone is here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 150
+  rent: 50
+  level: 0
+  affects:
+  - apply: move
+    modifier: 30
+  extras:
+  - keywords: [cell, phone, cellphone]
+    text: >
+      A cellphone is a pretty worthless item.  Why use a cellphone when you can use a regular phone?  And
+      besides, on a MUD, you can magically communicate without phones anyway.
+
+"tba:242:obj:24219":
+  type: other
+  keywords: [laptop, lap, top]
+  short: a brand new laptop
+  long: A brand new laptop is here, waiting to be stolen.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 550
+  rent: 55
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [laptop, lap, top]
+    text: >
+      This laptop looks brand new.  Black in color, it features a 1.  6 GHz processor, 512 MB of RAM, a
+      64 MB video card, and a 40x DVD/CD burner.  Pretty fancy.
+
+"tba:242:obj:24220":
+  type: money
+  keywords: [sack, coins, gold]
+  short: a huge sack of gold coins
+  long: A huge sack of gold coins sits here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:242:obj:24221":
+  type: weapon
+  keywords: [sword, long]
+  short: a long sword
+  long: A long sword has been left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 8
+  cost: 600
+  rent: 10
+  level: 0
+
+"tba:242:obj:24222":
+  type: food
+  keywords: [meat, chunk]
+  short: a piece of meat
+  long: A rather dubious looking piece of meat is on the ground here.
+  wear: [take]
+  values:
+    hours: 14
+    poisoned: false
+  weight: 5
+  cost: 24
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [meat, chunk]
+    text: >
+      It isn't so much that the meat looks poisoned or anything, but that you just are not sure of its
+      origins.  You doubt that a hunter would drop a side of venison or rabbit meat...  What in the world
+      could this meat have come from, you wonder...
+
+"tba:242:obj:24223":
+  type: other
+  keywords: [script, first, "1", one]
+  short: the first page of a script
+  long: The first page of a play script is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 10
+  extras:
+  - keywords: [script, "1", one]
+    text:
+      preformatted: |2
+           x-------------------------------------------------x
+           |                                            pg 1 |
+           |           THE STREET VENDOR FROM HELL           |
+           |                   by Crazyman                   |
+           |                                                 |
+           |  (The play begins on a street in downtown       |
+           |  New Sparta. It's about noon, and it's          |
+           |  raining. Joe Smith is seated on a bench,       |
+           |  along with a cop.)                             |
+           |                                                 |
+           |  Joe: Oh, how I wish it would stop raining! I   |
+           |       grow weary of this foul weather.          |
+           |                                                 |
+           |  Cop: Actually, I like this rain. It gives me   |
+           |       an excuse to sit in the 7-11 and eat      |
+           |       donuts.                                   |
+           |                                                 |
+           |  Joe: Yes, you would like that.                 |
+           |                                                 |
+           |   (A high pitched scream pierces the silence.)  |
+           |                                                 |
+           |  Joe: What the hell was that? Is somebody       |
+           |       trying to kill Abe again?                 |
+           |                                                 |
+           |  Cop: I don't know. I'll go check it out.       |
+           |       (The cop stands up, and hurries down      |
+           |       the street.)                              |
+           |                                                 |
+           |  Joe: (To himself) I think I'm heading home.    |
+           |       (He gets up to leave.)                    |
+           |                                                 |
+           x-------------------------------------------------x
+
+"tba:242:obj:24224":
+  type: other
+  keywords: [script, second, "2", two]
+  short: the second page of a script
+  long: The second page of a play script is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 10
+  extras:
+  - keywords: [script, second, "2", two]
+    text:
+      preformatted: |2
+           x-------------------------------------------------x
+           |                                            pg 2 |
+           |                                                 |
+           |  (A street vendor dashes out from behind a      |
+           |  building, and rushes over to Joe)              |
+           |                                                 |
+           |  Vendor: Good afternoon good sir! May I inter-  |
+           |          est you in this beautiful gold watch?  |
+           |          (The vendor pulls out a gold watch     |
+           |          from his pocket, obviously one of      |
+           |          many.)                                 |
+           |                                                 |
+           |  Joe: Is it stolen? It doesn't matter anyway,   |
+           |       I don't need another watch. Besides, I    |
+           |       don't even any money right now.           |
+           |                                                 |
+           |  Vendor: (Snarling) Look son, I want to sell    |
+           |          you this watch. It's not stolen, and   |
+           |          it's only 50 coins, a very reasonable  |
+           |          price.                                 |
+           |                                                 |
+           |  Joe: That's true, it is a reasonable price.    |
+           |       My answer is still no.                    |
+           |                                                 |
+           |  Vendor: Ok, this is what I'm going to do. (He  |
+           |          reaches inside his coat and pulls      |
+           |          out a switchblade.) You're going to    |
+           |          buy this watch, or I'll cut you        |
+           |          bitch. I've got 5 kids to feed.        |
+           |                                                 |
+           x-------------------------------------------------x
+
+"tba:242:obj:24225":
+  type: other
+  keywords: [script, third, "3", three]
+  short: the third page of a script
+  long: The third page of a script is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 10
+  extras:
+  - keywords: [script, third, "3", three]
+    text:
+      preformatted: |2
+           x-------------------------------------------------x
+           |                                            pg 3 |
+           |                                                 |
+           |  Joe: Put that shit away man. I told you, I     |
+           |       don't have the money for that.            |
+           |                                                 |
+           |  Vendor: That's it. (He slashes Joe with his    |
+           |          knife, cutting him in the arm.)        |
+           |                                                 |
+           |  Joe: Help! Police! I'm being murdered!         |
+           |                                                 |
+           |  Vendor: Shut the hell up. You're gonna be      |
+           |          sorry you didn't buy this from me.     |
+           |          (He puts the watch away, and pulls out |
+           |          a handgun. He cocks the trigger, and   |
+           |          points it at Joe's chest.)             |
+           |                                                 |
+           |  Joe: No!!!!                                    |
+           |                                                 |
+           |  Vendor: Good-bye, friend. (He pulls the        |
+           |          trigger, and the bullet rips through)  |
+           |          Joe's body.)                           |
+           |                                                 |
+           |  Joe: (Falling to the ground.) You bastard.     |
+           |       How unfair life can be! (He dies.)        |
+           |                                                 |
+           |  Vendor: Haha! Hopefully the next customer      |
+           |          will be more cooperative!              |
+           |                                                 |
+           |                  T H E   E N D                  |
+           |                                                 |
+           x-------------------------------------------------x
+
+"tba:242:obj:24226":
+  type: weapon
+  keywords: [mop]
+  short: a mop
+  long: A wooden handled mop has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  extras:
+  - keywords: [mop]
+    text: >
+      This looks like a very useful mop.  It has a soft cloth end, which looks like it would be great at
+      washing a floor.  The wooden handle is quite thick and hard.  It would make an idea weapon.
+
+"tba:242:obj:24227":
+  type: weapon
+  keywords: [broom, curling]
+  short: a curling broom
+  long: A plastic curling broom has been left.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: slash
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  extras:
+  - keywords: [broom, curling]
+    text: >
+      This is a curling broom.  It has a long thin plastic handle, and an end consisting of rough fabric
+      stretched over a piece of foam attached to a wooden block.  Curlers use these to sweep the ice in
+      front of the rocks.
+
+"tba:242:obj:24228":
+  type: other
+  keywords: [red, curling, rock]
+  short: a red curling rock
+  long: A red curling rock has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 14
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [red, curling, rock]
+    text: >
+      The curling rock is made of a gray stone, and has a red handle and red stripes on it.  It feels
+      quite heavy.
+
+"tba:242:obj:24229":
+  type: other
+  keywords: [yellow, curling, rock]
+  short: a yellow curling rock
+  long: A yellow curling rock has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 14
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [yellow, curling, rock]
+    text: >
+      The curling rock is made of a gray stone, and has a yellow handle and yellow stripes on it.  It
+      feels quite heavy.
+
+"tba:242:obj:24291":
+  type: drinkcon
+  keywords: [coffee, cup, coffee]
+  short: a cup
+  long: A cup of coffee has been set here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: coffee
+    poisoned: false
+  weight: 7
+  cost: 7
+  rent: 1
+  level: 0
+
+"tba:242:obj:24292":
+  type: food
+  keywords: [hamburger, burger]
+  short: a tasty hamburger
+  long: A tasty looking hamburger has been left here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [hamburger, burger]
+    text: >
+      This hamburger was made at the Newbie Zoo.  It's still in its foil wrapper, so it's still warm.
+
+"tba:242:obj:24293":
+  type: food
+  keywords: [poutine, box, cheesy]
+  short: a box of poutine
+  long: A box of cheesy poutine has been left here.
+  wear: [take]
+  values:
+    hours: 36
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [poutine, box, cheesy]
+    text: >
+      This box of poutine is quite large.  For those who don't know, poutine is composed of french fries
+      covered with gravy and cheese curds.
+
+"tba:242:obj:24294":
+  type: food
+  keywords: [hotdog, foot, long, foot-long]
+  short: a foot-long hotdog
+  long: A foot-long is lying here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [hotdog, foot, long, foot-long]
+    text: This hot dog was made at the Newbie Zoo.  It looks pretty tasty.
+
+"tba:242:obj:24295":
+  type: drinkcon
+  keywords: [water, bottle, water]
+  short: a bottle of water
+  long: A bottle of water has been left here.
+  wear: [take]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: water
+    poisoned: false
+  weight: 9
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:242:obj:24296":
+  type: other
+  keywords: [bag, potato, chips]
+  short: a bag of potato chips
+  long: A bag of potato chips has been left here.
+  wear: [take]
+  values:
+    raw: [12, 0, 0, 0]
+  weight: 1
+  cost: 15
+  rent: 5
+  level: 0
+
+"tba:242:obj:24297":
+  type: container
+  keywords: [box, pretzels]
+  short: a box of pretzels
+  long: A box of pretzels is here.
+  wear: [take]
+  values:
+    capacity: 18
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 18
+  rent: 10
+  level: 0
+
+"tba:242:obj:24298":
+  type: key
+  keywords: [sturdy, key]
+  short: a sturdy key
+  long: A sturdy key is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:242:obj:24299":
+  type: key
+  keywords: [silver, key]
+  short: a silver key
+  long: A shiny silver key has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

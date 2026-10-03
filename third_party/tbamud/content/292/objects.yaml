@@ -1,0 +1,841 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 292.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:292:obj:29200":
+  type: wand
+  keywords: [white, glove]
+  short: a white glove
+  long: There is a small white glove on the ground here.
+  flags: [magic]
+  wear: [take, hands, hold]
+  values:
+    raw: [30, 25, 20, 1]
+  weight: 1
+  cost: 525
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [white, glove]
+    text: This white glove looks rather like its worth no protection what-so-ever.
+
+"tba:292:obj:29201":
+  type: armor
+  keywords: [crystal, shard]
+  short: a crystal shard
+  long: There is a tiny piece of broken crystal on the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    armor: 3
+  weight: 2
+  cost: 750
+  rent: 20
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 35
+
+"tba:292:obj:29202":
+  type: wand
+  keywords: [book, dragons]
+  short: the book of dragons
+  long: There is a book here with a scaled cover.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [18, 3, 3, 26]
+  weight: 10
+  cost: 1000
+  rent: 200
+  level: 0
+  extras:
+  - keywords: [book, dragons]
+    text: >
+      This book has so much information about dragons it would take you weeks to decide what you wanted
+      to read...
+
+"tba:292:obj:29203":
+  type: armor
+  keywords: [robe, liche]
+  short: the robe of the Liche
+  long: A partly rotted robe lies in the corner.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 5
+  cost: 150
+  rent: 10
+  level: 0
+  affects:
+  - apply: con
+    modifier: -2
+  - apply: wis
+    modifier: 3
+  extras:
+  - keywords: [robe, liche]
+    text: This robe looks like it once belonged to something dead.  Maybe you shouldn't keep it.
+
+"tba:292:obj:29204":
+  type: weapon
+  keywords: [epee]
+  short: an epee
+  long: A nice looking epee lies here, begging to be picked up.
+  wear: [take, wield]
+  values:
+    damage: 12d1
+    attack: pierce
+  weight: 12
+  cost: 250
+  rent: 17
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:292:obj:29205":
+  type: food
+  keywords: [powwee]
+  short: a powwee
+  long: There is a strange blue spiraled fruit on the ground here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 3
+  cost: 12
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [powwee]
+    text: This fruit tastes something like apples with peanut better spread on.
+
+"tba:292:obj:29206":
+  type: weapon
+  keywords: [war, ribbon]
+  short: a war ribbon
+  long: There is a coiled up piece of ribbon here.
+  wear: [take, wield]
+  values:
+    damage: 8d2
+    attack: whip
+  weight: 11
+  cost: 200
+  rent: 25
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -4
+  - apply: damroll
+    modifier: 4
+  extras:
+  - keywords: [war, ribbon]
+    text: >
+      This weapon is certainly one of the more exotic you've seen: a coiled up piece of incredibly sharp
+      metal used to coil around an opponent's limb and rip off as much flesh as possible.
+
+"tba:292:obj:29207":
+  type: food
+  keywords: [zucchini]
+  short: a zucchini
+  long: A pale, light green zucchini.
+  wear: [take, hold]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 2
+  cost: 6
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [zucchini]
+    text: It looks rather sickly, as if it didn't get enough sun.
+
+"tba:292:obj:29208":
+  type: wand
+  keywords: [manual, protection]
+  short: a manual of protection
+  long: There is a thin manual with big red letters here.
+  wear: [take, hold]
+  values:
+    raw: [1, 3, 3, 1]
+  weight: 5
+  cost: 300
+  rent: 36
+  level: 0
+  extras:
+  - keywords: [manual, protection]
+    text: >
+      As you read the manual, you begin to realize that its better NOT to get hit during a fight...
+
+"tba:292:obj:29209":
+  type: wand
+  keywords: [brochure]
+  short: a travel brochure
+  long: There is a travel brochure here, inviting you to see the sights.
+  wear: [take, hold]
+  values:
+    raw: [8, 1, 1, 2]
+  weight: 1
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [brochure]
+    text: >
+      Hey you know, now that you think of it, there's a lot of places you haven't been...  This is the
+      perfect opportunity!
+
+"tba:292:obj:29210":
+  type: armor
+  keywords: [bird, perch, plate]
+  short: a plate bird perch
+  long: There is some sort of bird perch here, attached to something metal.
+  flags: [no_drop]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 12
+  cost: 180
+  rent: 30
+  level: 0
+  affects:
+  - apply: int
+    modifier: -3
+  extras:
+  - keywords: [bird, perch, plate]
+    text: >
+      This is a bird perch made to affix to the shoulder plate of some armor.  You don't have a clue why.
+
+"tba:292:obj:29211":
+  type: weapon
+  keywords: [arbalest]
+  short: an arbalest
+  long: There is an arbalest here, nearly as tall as you!
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: pierce
+  weight: 24
+  cost: 500
+  rent: 34
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -5
+
+"tba:292:obj:29212":
+  type: armor
+  keywords: [target, armor]
+  short: a suit of target armor
+  long: |-
+    There is a light set of armor here, with a big bulls-eye painted on
+    the front...
+  flags: [hum, magic]
+  wear: [take, body]
+  values:
+    armor: -10
+  weight: 15
+  cost: 300
+  rent: 10
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: str
+    modifier: 2
+
+"tba:292:obj:29213":
+  type: armor
+  keywords: [quick, sheathe]
+  short: a quick sheathe
+  long: There is a nice-looking break-away sheathe discarded here.
+  wear: [take, waist]
+  values:
+    armor: 0
+  weight: 10
+  cost: 500
+  rent: 25
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:292:obj:29214":
+  type: food
+  keywords: [tin, can, worms, nightcrawlers]
+  short: a tin of nightcrawlers
+  long: There is a tin can of worms lying here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 5
+  cost: 4
+  rent: 1
+  level: 0
+
+"tba:292:obj:29215":
+  type: armor
+  keywords: [amulet]
+  short: an amulet of Rumble
+  long: There is a valuble amulet inscribed with Rumble's symbol here.
+  flags: [glow, invisible, magic]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 5
+  cost: 300
+  rent: 40
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+
+"tba:292:obj:29216":
+  type: armor
+  keywords: [eagle, pendant]
+  short: an eagle pendant
+  long: There is a pendant in the shape of an eagle here.
+  flags: [glow, invisible, magic]
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 7
+  cost: 250
+  rent: 45
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: mana
+    modifier: 10
+
+"tba:292:obj:29217":
+  type: trash
+  keywords: [fly, lure]
+  short: a fly lure
+  long: There is a small fishing lure here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+
+"tba:292:obj:29218":
+  type: wand
+  keywords: [dusk, basil]
+  short: a dusk of basil
+  long: You see a small dusk of an herb here.
+  wear: [take, hold]
+  values:
+    raw: [9, 1, 1, 3]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:292:obj:29219":
+  type: wand
+  keywords: [fern, seed]
+  short: a fern seed
+  long: You see a very tiny seed here.
+  wear: [take, hold]
+  values:
+    raw: [4, 1, 1, 29]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:292:obj:29220":
+  type: wand
+  keywords: [clump, hemlock]
+  short: a clump of hemlock
+  long: There is a clump of hemlock lying on the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [5, 1, 1, 4]
+  weight: 1
+  cost: 400
+  rent: 35
+  level: 0
+
+"tba:292:obj:29221":
+  type: wand
+  keywords: [leaf, betony]
+  short: a betony leaf
+  long: A small bright green leaf lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [7, 1, 1, 38]
+  weight: 1
+  cost: 750
+  rent: 75
+  level: 0
+
+"tba:292:obj:29222":
+  type: armor
+  keywords: [crown, elder, berries]
+  short: a crown of elder berries
+  long: A ring of red berries lies here.
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 1
+  cost: 200
+  rent: 40
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+
+"tba:292:obj:29223":
+  type: key
+  keywords: [guild, key]
+  short: a guild key
+  long: There is a small green key on the floor.
+  wear: [take, hold]
+  values:
+    raw: [29252, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:292:obj:29224":
+  type: key
+  keywords: [blank, key]
+  short: a blank key
+  long: There is a blank key here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:292:obj:29225":
+  type: key
+  keywords: [odd, scroll]
+  short: an odd scroll
+  long: There is an odd-looking scroll here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:292:obj:29226":
+  type: key
+  keywords: [jailer's, key]
+  short: a jailer's key
+  long: There is a jailer's key here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:292:obj:29227":
+  type: weapon
+  keywords: [flaming, sword]
+  short: a flaming sword
+  long: There is a sword here with a blade of red.
+  flags: [glow, magic, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: slash
+  weight: 12
+  cost: 180
+  rent: 18
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -8
+
+"tba:292:obj:29228":
+  type: weapon
+  keywords: [dreamblade, blade]
+  short: the dreamblade
+  long: A sword lies here with a shifting blade that hurts your eyes.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 5
+  cost: 500
+  rent: 10
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [dreamblade, blade]
+    text: The inscription on the pommel reads, 'Strike True'
+
+"tba:292:obj:29229":
+  type: armor
+  keywords: [chimaera, cloak]
+  short: a chimaera cloak
+  long: You spot a cloak out of the corner of your eye.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 15
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+
+"tba:292:obj:29230":
+  type: armor
+  keywords: [jerkin]
+  short: a magic jerkin
+  long: There is a nice looking shirt here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 3
+  cost: 360
+  rent: 80
+  level: 0
+
+"tba:292:obj:29231":
+  type: container
+  keywords: [space, warp, wand, space-warp]
+  short: the space-warp wand
+  long: A wand might be here.
+  flags: [magic]
+  wear: [take]
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 500
+  rent: 15
+  level: 0
+
+"tba:292:obj:29232":
+  type: weapon
+  keywords: [elite, sword]
+  short: an elite sword
+  long: A beautiful sword has been discarded here.
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 8
+  cost: 800
+  rent: 80
+  level: 0
+
+"tba:292:obj:29233":
+  type: armor
+  keywords: [amulet, protection]
+  short: an amulet of protection
+  long: An amulet is here, not wanted by anybody.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    armor: 8
+  weight: 7
+  cost: 750
+  rent: 20
+  level: 0
+
+"tba:292:obj:29234":
+  type: light
+  keywords: [staff, memory]
+  short: the memory staff
+  long: A staff stands against the wall here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 10
+  cost: 200
+  rent: 30
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:292:obj:29235":
+  type: weapon
+  keywords: [flail]
+  short: a flail
+  long: A sharp-looking flail is here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: crush
+  weight: 10
+  cost: 600
+  rent: 10
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:292:obj:29236":
+  type: wand
+  keywords: [painting]
+  short: a painting
+  long: A painting of the goddess of healing hangs here.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [10, 5, 5, 15]
+  weight: 15
+  cost: 150
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [painting, art, arla]
+    text: >
+      This is a painting of Arla, goddess of healing.  There seems to be no artist's signiture, however.
+
+"tba:292:obj:29237":
+  type: weapon
+  keywords: [axe]
+  short: an axe
+  long: A big axe is here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: slash
+  weight: 14
+  cost: 900
+  rent: 20
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 4
+
+"tba:292:obj:29238":
+  type: armor
+  keywords: [talisman, hope]
+  short: a talisman of hope
+  long: A talisman lies here, filleted in gold.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    armor: 4
+  weight: 1
+  cost: 400
+  rent: 10
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+
+"tba:292:obj:29239":
+  type: armor
+  keywords: [armor, living, blob]
+  short: a blob of living armor
+  long: A blob of something that pulses slightly is lumped here.
+  flags: [magic]
+  wear: [take, neck, body, legs, feet, arms, waist, wrist]
+  values:
+    armor: 5
+  weight: 5
+  cost: 100
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [armor, living, blob]
+    text: >
+      It seems to be rather cohesive, and feels dry to the touch. It grips your finger firmly as you poke
+      it.  You wonder WHO would want such a thing.
+
+"tba:292:obj:29240":
+  type: food
+  keywords: [apple]
+  short: a pale apple
+  long: An extremely pale apple sits here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 3
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [apple]
+    text: It looks like it didn't get enough sun.
+
+"tba:292:obj:29241":
+  type: food
+  keywords: [potato, potatoe]
+  short: a potato
+  long: A potato sits here, eyeing you.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [potato, potatoe]
+    text: Looks like a potatoe^H.
+
+"tba:292:obj:29242":
+  type: food
+  keywords: [onion]
+  short: an onion
+  long: You can smell that onion from here!
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [onion]
+    text: That's a pretty strong onion!
+
+"tba:292:obj:29243":
+  type: armor
+  keywords: [plate, breast]
+  short: a breast plate
+  long: A steel breast plate lies here.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 15
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:292:obj:29244":
+  type: armor
+  keywords: [cap, steel, round]
+  short: a round, steel cap
+  long: A round, steel cap lies here, discarded.
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 5
+  cost: 100
+  rent: 30
+  level: 0
+
+"tba:292:obj:29245":
+  type: armor
+  keywords: [leggings, chain]
+  short: a pair of chain leggings
+  long: A pair of chain leggings are piled here.
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 20
+  cost: 600
+  rent: 75
+  level: 0
+
+"tba:292:obj:29246":
+  type: container
+  keywords: [chest]
+  short: a chest
+  long: An ornate looking chest sits here.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:292:obj:29247":
+  type: fountain
+  keywords: [water, well, water]
+  short: a well
+  long: A well sits in the center of the intersection here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [well]
+    text: >
+      It goes deep, deep, deep into the ground.  There's a grate overtop to keep people from throwing
+      trash down inside it.
+
+"tba:292:obj:29248":
+  type: drinkcon
+  keywords: [beer, bottle, beer]
+  short: a bottle
+  long: A bottle with a brightly colored label sits here.
+  wear: [take]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: beer
+    poisoned: false
+  weight: 9
+  cost: 10
+  rent: 2
+  level: 0
+
+"tba:292:obj:29249":
+  type: drinkcon
+  keywords: [wine, carafe, wine]
+  short: a carafe
+  long: A wooden carafe sits on a table here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: wine
+    poisoned: false
+  weight: 13
+  cost: 20
+  rent: 5
+  level: 0
+
+"tba:292:obj:29250":
+  type: drinkcon
+  keywords: [firebreather, shotglass, glass, firebreather]
+  short: a shotglass
+  long: A shotglass has been discarded here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: firebreather
+    poisoned: false
+  weight: 7
+  cost: 15
+  rent: 4
+  level: 0

@@ -1,0 +1,134 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 253.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:253:obj:25300":
+  type: armor
+  keywords: [armor, suit, steel]
+  short: a suit of steel MoS armor
+  long: A steel suit of MoS is laying here on the ground.
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 11
+  cost: 450
+  rent: 0
+  level: 10
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: -40
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [armor, suit, steal]
+    text: >
+      Polished to a high sheen, this suit of steel completely encases the upper torso.  Looks as if it
+      has never seen battle.
+
+"tba:253:obj:25301":
+  type: weapon
+  keywords: [sword, steel]
+  short: a steel sword
+  long: A steel sword with a blade-breaker guard sits on the ground.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: stab
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, steel]
+    text: >
+      This finely crafted weapon still shines when the light hits it right, it looks as if it has never
+      been to battle.
+
+"tba:253:obj:25302":
+  type: armor
+  keywords: [shield, steel]
+  short: an MoS shield
+  long: An MoS shield has been left here.
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 5
+  cost: 12
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [shield, steel]
+    text: >
+      This shield bears the sigil of the Militant Order of the Sword two swords, point down, crossing
+      each other.
+
+"tba:253:obj:25303":
+  type: other
+  keywords: [clipboard, board]
+  short: a clipboard
+  long: A clipboard has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: dex
+    modifier: -2
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [clipboard, board]
+    text: Brown wood surface, steel clip affixed to the wood - yep, it's a clipboard.
+
+"tba:253:obj:25304":
+  type: armor
+  keywords: [bands, wrist, steel]
+  short: a steel wrist band
+  long: A steel wrist band have been left here.
+  flags: [glow]
+  wear: [take, wrist]
+  values:
+    armor: 7
+  weight: 5
+  cost: 46
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: -5
+  extras:
+  - keywords: [bands, wrist, steel]
+    text: Quite simply, you wear it on your wrist and it is steel.
+
+"tba:253:obj:25305":
+  type: other
+  keywords: [banner, gray, piece, cloth]
+  short: a gray piece of cloth
+  long: A gray piece of cloth lies thrown in a corner.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [banner, gray, piece, cloth]
+    text: >
+      This cloth tapestry depicts the Elven Lore of the Ancients, from the beginning of time to present
+      day.  All the history and magic that is the Elven Society is depicted on this tapestry.

@@ -1,0 +1,152 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 282.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:282:mob:28200":
+  keywords: [balrog, small]
+  short: a small balrog
+  long: A small winged balrog is here gazing at you with demonic red eyes
+  description: >
+    The Balrog is a winged creature with eyes which seem to pervade your being and tear your soul apart.
+  level: 31
+  sex: male
+  alignment: -100
+  flags: [stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28201":
+  keywords: [balrog, winged, elder]
+  short: the Elder Balrog
+  long: The Elder Balrog is here...gnawing happily on your body.
+  description: Well hes trying to consume you, bones and all.  Yuck.
+  level: 32
+  sex: male
+  alignment: -150
+  flags: [stay_zone, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28202":
+  keywords: [balrog, winged, grand]
+  short: the Grand Balrog
+  long: The Grand High Balrog is here, kicking your ass.
+  description: Hes umm, killing you
+  level: 33
+  sex: female
+  alignment: -200
+  flags: [stay_zone, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28204":
+  keywords: [slave, human, chained]
+  short: a human slave
+  long: A human slave is chained to the wall here.
+  description: He looks pretty pathetic, maybe you should end his misery
+  level: 30
+  sex: male
+  alignment: 50
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28205":
+  keywords: [kerjim, lord, evil]
+  short: Kerjim
+  long: Kerjim, lord of the balrogs sits here on his throne.
+  description: >
+    His wings spread throughout the room blocking some exits, his demonic red eyes glow as red as
+    blood.  He looks very angry.
+  level: 33
+  sex: neutral
+  alignment: -50
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28206":
+  keywords: [lilith]
+  short: Lilith
+  long: Lileth stands here in all her magnificence.
+  description: >
+    She is extremely beautiful, with glowing gold hair cascading down her shoulders, adorned with
+    precious jewelry from all over the cosmos.
+  level: 33
+  sex: female
+  alignment: 30
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:282:mob:28207":
+  keywords: [undead, zombie]
+  short: the undead zombie
+  long: The Undead Corpse is here, attempting to persuade you to join the living dead
+  description: Hes just a rotted corpse, with gangly ripped arms and a detachable head
+  level: 31
+  sex: neutral
+  alignment: -500
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,630 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 106.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:106:obj:10600":
+  type: worn
+  keywords: [shirt, "off", back, panhandler]
+  short: the shirt off the panhandlers back
+  long: A panhandler must of lost his shirt here
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shirt, "off", back, panhandler]
+    text: The thing is filthy and smells like the gutters along the street.
+
+"tba:106:obj:10601":
+  type: treasure
+  keywords: [altar]
+  short: a large altar
+  long: An altar stands tall at the back of the room
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:106:obj:10602":
+  type: weapon
+  keywords: [quarterstaff, flame, hardened]
+  short: a flame hardened quarterstaff
+  long: A nicely burnt quarterstaff is lying here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: crush
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+
+"tba:106:obj:10603":
+  type: weapon
+  keywords: [spear, cast, iron, rebel]
+  short: a cast iron rebel spear
+  long: A long thin shaft with a sharpened tip lies here.
+  flags: [anti_good, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 7
+  cost: 350
+  rent: 35
+  level: 0
+
+"tba:106:obj:10604":
+  type: fountain
+  keywords: [marble, fountain]
+  short: a fountain
+  long: A large marble fountain is here in the middle of the square.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:106:obj:10605":
+  type: other
+  keywords: [elcadorian, cross]
+  short: a wooden orthodox Elcardorian cross
+  long: A blood coated cross is here, someone must have slain the owner.
+  flags: [hum]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:106:obj:10606":
+  type: weapon
+  keywords: [pole, arm]
+  short: a long iron bladed pole arm
+  long: A badly finished pole arm with a hefty blade on the end.
+  flags: [anti_good, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 8
+  cost: 400
+  rent: 40
+  level: 0
+
+"tba:106:obj:10607":
+  type: armor
+  keywords: [suncas, bodyplate]
+  short: a forged Suncas bodyplate
+  long: A roughly shaped forged bodyplate lays here with the symbol of Suncas on it.
+  flags: [anti_good]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 20
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:106:obj:10608":
+  type: armor
+  keywords: [suncas, kilt, cloth]
+  short: a Suncas cloth kilt
+  long: A protective kilt lays here with the symbol of Suncas on it.
+  flags: [anti_good]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 7
+  cost: 7
+  rent: 0
+  level: 0
+
+"tba:106:obj:10609":
+  type: armor
+  keywords: [suncas, banded, wristguard]
+  short: a Suncas banded wristguard
+  long: A ring made of forged iron lays here with the symbol of Suncas embossed in it.
+  flags: [anti_good]
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 6
+  cost: 300
+  rent: 30
+  level: 0
+
+"tba:106:obj:10610":
+  type: armor
+  keywords: [suncas, tin, plated, leather, helmet]
+  short: a Suncas tin scaled leather helmet
+  long: An tin scaled leather helmet is here, seemingly collasped into itself.
+  flags: [anti_good]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 10
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:106:obj:10611":
+  type: armor
+  keywords: [sandal, suncas, rebel]
+  short: a pair of Suncas untanned leather sandals
+  long: A pair of sandals made from untanned leather lies here.
+  flags: [anti_good]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:106:obj:10612":
+  type: weapon
+  keywords: [elcadorian, military, sword]
+  short: a two-handed Elcardorian military sword
+  long: A crudely fashioned two-handed military sword is lying here.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: slash
+  weight: 20
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:106:obj:10613":
+  type: weapon
+  keywords: [longsword, elcardorian, military]
+  short: an Elcardorian military longsword
+  long: A well-made longsword is lying here with the Elcardorian badge on it.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 14
+  cost: 700
+  rent: 70
+  level: 0
+
+"tba:106:obj:10614":
+  type: weapon
+  keywords: [rapier, military, elcardorian]
+  short: an Elcardorian military rapier
+  long: A finely polished silver edged rapier is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: stab
+  weight: 5
+  cost: 250
+  rent: 25
+  level: 0
+
+"tba:106:obj:10615":
+  type: light
+  keywords: [platinum, Elcardorian, sceptre]
+  short: a platinum Elcardorian sceptre
+  long: A sceptre belonging to the late mayor of Elcardo lays here now, unwanted.
+  flags: [magic, anti_evil, anti_neutral, anti_warrior]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 600
+  rent: 60
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 15
+
+"tba:106:obj:10616":
+  type: armor
+  keywords: [military, combat, plate, elcardorian]
+  short: an Elcardorian military combat plate
+  long: An awkwardly shaped plate lays here collecting dust.
+  flags: [magic, anti_evil]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 15
+  cost: 750
+  rent: 75
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 15
+
+"tba:106:obj:10617":
+  type: armor
+  keywords: [elcardorian, military, shin, guard]
+  short: an Elcardorian military shin guard
+  long: Some plates of bent metal lay here, looking like they belong to the military.
+  flags: [anti_evil, anti_neutral]
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 16
+  cost: 800
+  rent: 80
+  level: 0
+
+"tba:106:obj:10618":
+  type: armor
+  keywords: [arm, plate, elcardorian, military]
+  short: some Elcardorian military arm plates
+  long: Some plates of raw metal have been tossed here.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:106:obj:10619":
+  type: armor
+  keywords: [cloak, elcardorian]
+  short: a blue elcardorian cloak
+  long: A cloth of soft blue material lies on the ground.
+  flags: [anti_evil, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:106:obj:10620":
+  type: armor
+  keywords: [shield, elcardorian]
+  short: a leather underlined Elcardorian shield
+  long: A piece of metal plate with Elcardorian decorations lies here on the ground.
+  flags: [anti_evil, anti_mage, anti_cleric, anti_thief]
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 23
+  cost: 150
+  rent: 11
+  level: 0
+
+"tba:106:obj:10621":
+  type: armor
+  keywords: [helmet, elcardorian]
+  short: a full faced Elcardorian helmet
+  long: A large alloy helmet lays here on the ground.
+  flags: [anti_evil, anti_thief]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 15
+  cost: 750
+  rent: 75
+  level: 0
+
+"tba:106:obj:10622":
+  type: weapon
+  keywords: [axe, executioner]
+  short: a tempered bladed executioner's axe
+  long: A huge axe is lying here stuck one sided into the ground.
+  flags: [hum, magic, anti_good, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 4d7
+    attack: slash
+  weight: 30
+  cost: 267
+  rent: 26
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+  - apply: damroll
+    modifier: 3
+
+"tba:106:obj:10623":
+  type: worn
+  keywords: [noose]
+  short: a rope noose
+  long: Circular pieces of rope lie here on the ground.
+  flags: [no_drop]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -50
+  - apply: mana
+    modifier: -50
+  - apply: move
+    modifier: -50
+
+"tba:106:obj:10624":
+  type: other
+  keywords: [torture, rack]
+  short: a torture rack
+  long: A torture rack stands here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torture, rack]
+    text: >
+      An old and blood stained sticky torture rack buckles up and ready to split the next victim.
+
+"tba:106:obj:10625":
+  type: armor
+  keywords: [cast, iron, shackles]
+  short: a pair of cast iron shackles
+  long: A pair of cast iron shackles lay here on the floor.
+  flags: [no_invis, magic, no_drop]
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 15
+  cost: 750
+  rent: 75
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+
+"tba:106:obj:10626":
+  type: other
+  keywords: [parliament, ring]
+  short: a parliament ring
+  long: A solid gold ring lies here.
+  flags: [magic, anti_evil]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 950
+  rent: 100
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [ring, gold]
+    text: The ring is engraved symbol of Elcardo.
+
+"tba:106:obj:10627":
+  type: weapon
+  keywords: [wire, barbed, whip]
+  short: a barb wire whip
+  long: A coil of barb wire lays here on the ground with a handle on the end.
+  flags: [no_drop, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: whip
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:106:obj:10628":
+  type: food
+  keywords: [cinnamon, danish]
+  short: a cinnamon danish
+  long: A soil covered cinnamon danish is here on the ground.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:106:obj:10629":
+  type: food
+  keywords: [savoury, muffins]
+  short: a savoury muffin
+  long: A crumbled muffin has been dropped here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 170
+  rent: 17
+  level: 0
+
+"tba:106:obj:10630":
+  type: food
+  keywords: [cheese, bun]
+  short: a cheese bun
+  long: A bun coated with tasty cheese has been left here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 170
+  rent: 17
+  level: 0
+
+"tba:106:obj:10631":
+  type: potion
+  keywords: [ebony, vial, jar]
+  short: an ebony vial
+  long: A dark glass jar lies here.
+  wear: [take]
+  values:
+    raw: [12, 29, -1, -1]
+  weight: 2
+  cost: 300
+  rent: 30
+  level: 0
+
+"tba:106:obj:10632":
+  type: potion
+  keywords: [blue, waters]
+  short: a jar of blue waters
+  long: An empty looking jar lays here.
+  wear: [take]
+  values:
+    raw: [12, 51, -1, -1]
+  weight: 4
+  cost: 180
+  rent: 20
+  level: 0
+
+"tba:106:obj:10633":
+  type: potion
+  keywords: [bright, yellow, gel, jar]
+  short: a jar containing bright yellow gel
+  long: A jar glowing in bright yellow sits here.
+  wear: [take]
+  values:
+    raw: [12, 44, -1, -1]
+  weight: 5
+  cost: 160
+  rent: 16
+  level: 0
+
+"tba:106:obj:10634":
+  type: potion
+  keywords: [cherry, tube]
+  short: a cherry colored tube
+  long: A long cherry colored test tube lays here.
+  wear: [take]
+  values:
+    raw: [12, 21, -1, -1]
+  weight: 4
+  cost: 170
+  rent: 17
+  level: 0
+
+"tba:106:obj:10635":
+  type: other
+  keywords: [ring, suncas, authority]
+  short: an authority ring of the Suncas clan
+  long: A symbol of authority and power sits in a ring lying here in the middle of the room.
+  flags: [anti_good, anti_neutral, anti_mage]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 495
+  rent: 55
+  level: 0
+
+"tba:106:obj:10636":
+  type: container
+  keywords: [backpack, lamb, skin]
+  short: a lamb skin backpack
+  long: A backpack either made or covered of lamb skin lays here.
+  wear: [take, about]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 15
+  cost: 75
+  rent: 7
+  level: 0
+
+"tba:106:obj:10637":
+  type: light
+  keywords: [torch]
+  short: a kerosene soaked torch
+  long: A kerosene soaked torch reeks.
+  wear: [take, hold]
+  values:
+    hours: 10
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:106:obj:10638":
+  type: drinkcon
+  keywords: [waterskin, buffalo, water]
+  short: a buffalo waterskin
+  long: A small buffalo waterskin is leaking onto the ground.
+  wear: [take]
+  values:
+    capacity: 20
+    contains: 20
+    liquid: water
+    poisoned: false
+  weight: 25
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:106:obj:10639":
+  type: potion
+  keywords: ["null", gravity, potion]
+  short: a null gravity potion
+  long: A small jar is here floating in the middle of the room.
+  wear: [take]
+  values:
+    raw: [12, 53, -1, -1]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:106:obj:10640":
+  type: other
+  keywords: [banks]
+  short: the bank
+  long: A vault for collection and deposits is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:106:obj:10641":
+  type: weapon
+  keywords: [assassins, dagger]
+  short: an assassins dagger
+  long: A long slender dagger is lying here
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: pierce
+  weight: 1
+  cost: 100
+  rent: 10
+  level: 0

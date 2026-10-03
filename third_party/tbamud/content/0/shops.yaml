@@ -1,0 +1,63 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 0.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:0:shop:0":
+  keeper: tba:0:mob:98
+  rooms: [tba:1:room:100]
+  products:
+  - tba:0:obj:82
+  profit:
+    buy: 1.2
+    sell: 0.9
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:0:shop:1":
+  keeper: null
+  rooms: []
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:0:shop:99":
+  keeper: tba:0:mob:97
+  rooms: [tba:0:room:99]
+  products:
+  - tba:0:obj:91
+  - tba:0:obj:92
+  - tba:0:obj:97
+  - tba:0:obj:90
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0

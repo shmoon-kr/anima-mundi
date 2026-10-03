@@ -1,0 +1,186 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 238.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:238:obj:23870
+  room: tba:238:room:23870
+  limit: 1
+- object: tba:238:obj:23837
+  room: tba:238:room:23837
+  limit: 1
+  contents:
+  - object: tba:238:obj:23838
+    limit: 99
+- mob: tba:238:mob:23874
+  room: tba:238:room:23874
+  limit: 1
+  equip:
+    light:
+      object: tba:238:obj:23874
+      limit: 100
+  carry:
+  - object: tba:238:obj:23800
+    limit: 1
+- object: tba:238:obj:23863
+  room: tba:238:room:23861
+  limit: 1
+- object: tba:238:obj:23855
+  room: tba:238:room:23855
+  limit: 1
+- mob: tba:238:mob:23855
+  room: tba:238:room:23855
+  limit: 1
+  equip:
+    finger_right:
+      object: tba:238:obj:23801
+      limit: 100
+    finger_left:
+      object: tba:238:obj:23801
+      limit: 100
+    hold:
+      object: tba:238:obj:23802
+      limit: 40
+    about:
+      object: tba:238:obj:23804
+      limit: 100
+    feet:
+      object: tba:238:obj:23807
+      limit: 100
+  carry:
+  - object: tba:238:obj:23805
+    limit: 100
+    contents:
+    - object: tba:238:obj:23806
+      limit: 100
+- object: tba:238:obj:23803
+  room: tba:238:room:23881
+  limit: 1
+- mob: tba:238:mob:23875
+  room: tba:238:room:23881
+  limit: 1
+  equip:
+    wield:
+      object: tba:238:obj:23875
+      limit: 20
+    head:
+      object: tba:238:obj:23899
+      limit: 100
+- mob: tba:238:mob:23802
+  room: tba:238:room:23804
+  limit: 20
+- mob: tba:238:mob:23876
+  room: tba:238:room:23804
+  limit: 20
+- mob: tba:238:mob:23877
+  room: tba:238:room:23804
+  limit: 10
+- mob: tba:238:mob:23878
+  room: tba:238:room:23804
+  limit: 20
+- mob: tba:238:mob:23880
+  room: tba:238:room:23815
+  limit: 30
+- mob: tba:238:mob:23880
+  room: tba:238:room:23816
+  limit: 12
+- mob: tba:238:mob:23877
+  room: tba:238:room:23816
+  limit: 20
+- mob: tba:238:mob:23878
+  room: tba:238:room:23807
+  limit: 20
+- mob: tba:238:mob:23879
+  room: tba:238:room:23807
+  limit: 20
+- mob: tba:238:mob:23877
+  room: tba:238:room:23807
+  limit: 20
+- mob: tba:238:mob:23879
+  room: tba:238:room:23821
+  limit: 20
+- mob: tba:238:mob:23877
+  room: tba:238:room:23821
+  limit: 20
+- mob: tba:238:mob:23879
+  room: tba:238:room:23817
+  limit: 9
+- mob: tba:238:mob:23877
+  room: tba:238:room:23832
+  limit: 10
+- mob: tba:238:mob:23878
+  room: tba:238:room:23832
+  limit: 10
+- mob: tba:238:mob:23878
+  room: tba:238:room:23830
+  limit: 12
+- mob: tba:238:mob:23876
+  room: tba:238:room:23818
+  limit: 20
+- mob: tba:238:mob:23849
+  room: tba:238:room:23849
+  limit: 1
+  equip:
+    feet:
+      object: tba:238:obj:23845
+      limit: 100
+    hands:
+      object: tba:238:obj:23846
+      limit: 100
+    wrist_right:
+      object: tba:238:obj:23847
+      limit: 100
+    legs:
+      object: tba:238:obj:23848
+      limit: 100
+    waist:
+      object: tba:238:obj:23849
+      limit: 100
+- mob: tba:238:mob:23842
+  room: tba:238:room:23842
+  limit: 6
+- object: tba:238:obj:23862
+  room: tba:238:room:23866
+  limit: 1
+- object: tba:238:obj:23861
+  room: tba:238:room:23865
+  limit: 1
+- mob: tba:238:mob:23860
+  room: tba:238:room:23860
+  limit: 1
+  equip:
+    neck_1:
+      object: tba:238:obj:23860
+      limit: 30
+- mob: tba:238:mob:23851
+  room: tba:238:room:23851
+  limit: 1
+- mob: tba:238:mob:23833
+  room: tba:238:room:23833
+  limit: 2
+  equip:
+    wield:
+      object: tba:238:obj:23833
+      limit: 20
+- mob: tba:238:mob:23802
+  room: tba:238:room:23820
+  limit: 30
+- object: tba:238:obj:23844
+  room: tba:238:room:23844
+  limit: 10
+- object: tba:238:obj:23843
+  room: tba:238:room:23843
+  limit: 1
+- mob: tba:238:mob:23841
+  room: tba:238:room:23841
+  limit: 1
+  equip:
+    neck_2:
+      object: tba:238:obj:23841
+      limit: 100
+- object: tba:238:obj:23840
+  room: tba:238:room:23840
+  limit: 1
+removes:
+- room: tba:238:room:23855
+  object: tba:238:obj:23855

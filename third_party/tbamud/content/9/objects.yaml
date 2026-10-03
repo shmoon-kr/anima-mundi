@@ -1,0 +1,179 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 9.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:9:obj:900":
+  type: key
+  keywords: [key, golden, heavy]
+  short: a golden key
+  long: A heavy golden key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [900, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:9:obj:901":
+  type: armor
+  keywords: [shield, minotaur]
+  short: a dark minotaur shield
+  long: A dark minotaur shield has been left here.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 12
+  cost: 500
+  rent: 135
+  level: 0
+  affects:
+  - apply: save_breath
+    modifier: -2
+  extras:
+  - keywords: [shield, minotaur]
+    text: >
+      A strong, sturdy shield.  It brings to mind legends of a shield that provided protection from
+      poisonous gases.
+
+"tba:9:obj:902":
+  type: potion
+  keywords: [potion, speckled]
+  short: a speckled potion
+  long: A speckled potion speckles here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [15, 15, 15, 15]
+  weight: 2
+  cost: 130
+  rent: 50
+  level: 0
+
+"tba:9:obj:903":
+  type: armor
+  keywords: [gauntlets, troll]
+  short: a pair of troll gauntlets
+  long: A pair of gauntlets made from troll skin lie on the ground.
+  flags: [magic]
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 8
+  cost: 200
+  rent: 135
+  level: 0
+
+"tba:9:obj:904":
+  type: light
+  keywords: [ring, platinum]
+  short: a platinum ring
+  long: A shining ring of platinum lies here.  It has a tiny inscription.
+  flags: [glow, magic]
+  wear: [take, finger, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 200
+  rent: 550
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 10
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [ring, platinum, inscription]
+    text:
+    - "The inscription on the ring reads:"
+    - >
+      Cursed be the gods that supply coins to mortals! And cursed be the mortal that accepts valuable
+      gifts from the gods! Especially cursed are those who do not leave the toilet seat up!
+
+"tba:9:obj:905":
+  type: weapon
+  keywords: [flail]
+  short: a flail
+  long: A flail has been carelessly left here.
+  flags: [invisible, magic, no_drop]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pound
+  weight: 8
+  cost: 500
+  rent: 350
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:9:obj:906":
+  type: money
+  keywords: [coins, gold, treasure]
+  short: a great pile of treasure
+  long: A great, gleaming pile of treasure lies at your feet.
+  wear: [take]
+  values:
+    coins: 43500
+  weight: 20
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:9:obj:907":
+  type: weapon
+  keywords: [spear, heavy]
+  short: a heavy spear
+  long: A heavy spear has been tossed on the ground here.
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: pierce
+  weight: 8
+  cost: 450
+  rent: 200
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:9:obj:908":
+  type: weapon
+  keywords: [trident]
+  short: a trident
+  long: There is a warrior's trident here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 8
+  cost: 350
+  rent: 200
+  level: 0
+  extras:
+  - keywords: [trident]
+    text: >
+      This is a common trident, often used by gladiators or mermen.  It has three sharp prongs jutting
+      from the business end and a smooth wooden handle with two comfortable grip points.
+
+"tba:9:obj:909":
+  type: boat
+  keywords: [boots, boat]
+  short: a pair of boots
+  long: A pair of boots sit here in a puddle of water.
+  flags: [no_donate, no_invis, no_sell]
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 185
+  level: 0
+  affects:
+  - apply: move
+    modifier: -20
+  extras:
+  - keywords: [boots, boat]
+    text: The boots are made of a strange lightweight hide and float in a puddle of water.

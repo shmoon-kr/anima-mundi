@@ -1,0 +1,833 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 17.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:17:mob:1700":
+  keywords: [knight, renown]
+  short: a knight
+  long: A knight of renown slaps you with his gauntlet and challenges you!
+  description: >
+    The knight of renown is mounted on a warhorse, balancing a lance, and you can see his morningstar
+    on his saddle.  His colors fly from a banner carried by his squire.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1701":
+  keywords: [knight, quality]
+  short: a knight
+  long: A knight of quality looks down upon you from his mount.
+  description: The knight is in full plate mail on a barded horse and carries a lance.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1702":
+  keywords: [king, arthur]
+  short: King Arthur
+  long: King Arthur sits upon his throne awaiting the return of the grail.
+  description: >
+    King Arthur is a black bearded, barrel-chested man.  He is in full plate armor emblazoned with the
+    sign of a gold dragon.  He carries Excalibur in a strange looking sheath.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1703":
+  keywords: [serf]
+  short: a serf
+  long: A dirty serf shuffles along here.
+  description: The serf is in rags, smells, and you actually think you can see lice on him.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1704":
+  keywords: [squire]
+  short: a squire
+  long: A squire is here on an errand from his lord.
+  description: He is practicing diligently to become a knight.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1705":
+  keywords: [black, knight]
+  short: the black knight
+  long: A knight dressed in black armor says "NONE SHALL PASS"
+  description: >
+    The black knight has black armor and a visored helm.  He stands resting on a two handed sword.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1706":
+  keywords: [lamorak, knight]
+  short: Sir Lamorak
+  long: Sir Lamorak hefts his bastard sword as he considers you.
+  description: >
+    Sir Lamorak, son of King Pellinore, lover of Queen Morgause, vanquisher of the twelve of Morgan le
+    Fey, and enemy of Sir Gawaine, is fully armored and mounted.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1707":
+  keywords: [lancelot]
+  short: Sir Lancelot
+  long: Sir Lancelot, champion of the Round Table, smiles at you.
+  description: >
+    Sir Lancelot is wearing polished steel armor.  His visor is up and his hand raises in salute to you.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1708":
+  keywords: [woman, morgan]
+  short: Morgan Le Fey
+  long: A beautifully dressed woman beckons you closer.
+  description: >
+    Upon closer inspection you realize the woman is Morgan le Fey, the evil enchantress and the scourge
+    of Camelot.  She snarls as you have seen through her disguise.  She is wearing silk robes which do
+    little to hide her ugly, hateful, and twisted body.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [stay_zone, memory]
+  affects: [invisible, detect_invis, sense_life, sneak, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1709":
+  keywords: [lady]
+  short: a lady
+  long: A lady-in-waiting bats her eyes at you!
+  description: >
+    The lady-in-waiting snuggles up closer to you, pressing you for the details of your last campaign. 
+    She is clad in a long gown and garlands of flowers are in her hair.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1710":
+  keywords: [queen, guinevere]
+  short: Queen Guinevere
+  long: A raven haired queen winks at you from behind her fan.
+  description: Guinevere tells you a sorry tale about her forbidden love with Lancelot.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1711":
+  keywords: [nobleman]
+  short: a nobleman
+  long: A nobleman stands here in all his finery.
+  description: >
+    The nobleman wears the finest cotton and wool clothing available.  Riches adorn him in the form of
+    chains and a rather heavy looking purse.  He seems intent on going somewhere.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1712":
+  keywords: [merchant]
+  short: a merchant
+  long: A brightly clothed merchant hawks his goods to you!
+  description: The merchant wears a bright tunic to draw attention and signify his wares.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1713":
+  keywords: [monk]
+  short: a monk
+  long: A monk is here, mumbling in Latin.
+  description: >
+    The monk has a brown robe with a hood on it.  He has tied it off with a piece of rope.  The top of
+    his head is shaved in the Fransician fashion.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  affects: [protect_evil]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1714":
+  keywords: [troubadour]
+  short: a troubadour
+  long: A troubadour is here, strumming a merry tune.
+  description: The troubadour, dressed in festival colors, is playing on a mandolin.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1715":
+  keywords: [bard]
+  short: a bard
+  long: A bard is here, singing a sweet ballad.
+  description: The bard is dressed in silk leggings, a leather vest, and bright orange shirt.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1716":
+  keywords: [entertainer]
+  short: an entertainer
+  long: An entertainer is here, leaping with great acrobatic prowess!
+  description: The entertainer is doing handsprings and backflips in a dizzying progression.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1717":
+  keywords: [servant]
+  short: a servant
+  long: A servant is rushing by
+  description: The servant has a plate of hot food that looks delicious.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1718":
+  keywords: [stablehand]
+  short: a stablehand
+  long: A stablehand is cleaning up after the horses.
+  description: >
+    He looks like he was raised in these stables.  He walks with a wide gait and has a piece of straw
+    between his teeth.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1719":
+  keywords: [stirrup]
+  short: Stirrup
+  long: Stirrup, the stable master of Camelot is here.
+  description: Stirrup is a short man, wearing a leather jerkin, and smells of the barn.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1720":
+  keywords: [horse]
+  short: a riding horse
+  long: A riding horse is here.
+  description: The riding horse is saddled with light tack, and has long slender limbs for speed.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1721":
+  keywords: [horse, warhorse]
+  short: a horse
+  long: A medium warhorse is tethered here.
+  description: >
+    This medium warhorse has heavy tack and leather barding.  It looks well trained and waits patiently
+    to be taken out of its stall.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1722":
+  keywords: [horse, warhorse]
+  short: a warhorse
+  long: A heavy warhorse paws the ground and snorts in preparation for battle!
+  description: The heavy warhorse has full chain barding and stands 17 hands.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1723":
+  keywords: [slave]
+  short: a slave
+  long: A slave is here, cringing from everything.
+  description: >
+    The slave is dirty and unkempt, but she retains a vestige of her former station and bearing.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1724":
+  keywords: [scot, clan, chief]
+  short: the scottish clan chief
+  long: The Scot clan chief is here, seizing his clansmen's women and whiskey!
+  description: >
+    The Scot clan chief towers over you.  He looks like he could toss a tree end over end and have it
+    land pointing away from him.  He looks like he could heave a sheaf with a fork more than 20 feet in
+    the air.  He looks like he could down a barrel of ale and still have his whiskey.  He looks...
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1725":
+  keywords: [scottish, clansmen]
+  short: a scottish clansman
+  long: A Scot clansman is here, ready to seize your women and whiskey!
+  description: >
+    The Scot clansman is wearing a kilt and leather sandals and has a long swath of cloth wrapped
+    around his shoulders.  He carries a beautiful claymore which is about four feet long.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1726":
+  keywords: [spectator]
+  short: a spectator
+  long: A spectator is enthralled in the jousting match.
+  description: >
+    She jumps up and down screaming in an annoying ear-piercing shriek.  She is very much into the game
+    and seems to have the hots for one of the jousters.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [stay_zone, memory]
+  affects: [no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1727":
+  keywords: [sheep]
+  short: a sheep
+  long: A sheep is grazing here.
+  description: Looks like you could make some nice clothes out of the wool from that sheep.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1728":
+  keywords: [ram]
+  short: a ram
+  long: A ram is guarding his flock.
+  description: Yet another animal with a set of horns.  He looks mean.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1729":
+  keywords: [ox]
+  short: an ox
+  long: An ox is pulling a plow, tilling the fields.
+  description: A large beast with some impressive horns.  It looks like it could plow all day.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, no_sleep, no_bash]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1730":
+  keywords: [archbishop, bishop]
+  short: the archbishop
+  long: The Archbishop of Cantebury is praying that you'll leave him alone.
+  description: >
+    You've heard about this guy before.  He is close to King Arthur, having known him most of his life.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1731":
+  keywords: [goat]
+  short: a goat
+  long: A goat with some wicked looking horns is about to charge.
+  description: You've done nothing to this goat but it seems ready to attack you.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1732":
+  keywords: [mule]
+  short: a stubborn mule
+  long: A stubborn mule is standing in your way.
+  description: This mule doesn't move for anybody.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1733":
+  keywords: [cow]
+  short: a cow
+  long: A cow looks at you stupidly.
+  description: >
+    The thick brown hair covering this cow is matted in mud and refuse.  Flies are everywhere.  You try
+    to keep your distance.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1734":
+  keywords: [shepherd]
+  short: a shepherd
+  long: A shepherd is looking for his flock of sheep.
+  description: He watches over his flock, keeping an eye out for wolves.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1735":
+  keywords: [sheep, dog]
+  short: a sheep dog
+  long: A sheep dog barks at you playfully.
+  description: This dog seems smarter than most people you've known.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1736":
+  keywords: [farmer]
+  short: a farmer
+  long: A farmer is hard at work.
+  description: He looks tired and overworked.  He must put in long hours and make very little money.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:17:mob:1737":
+  keywords: [guard]
+  short: a guard
+  long: A guard is protecting the city.
+  description: He looks like he's in a bad mood.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

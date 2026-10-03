@@ -1,0 +1,1596 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 274.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:274:room:27400":
+  name: Inside Southern Gate
+  description: >
+    The Southern Gate is here, The road abruptly ends south, but begins north as it leads off into the
+    village.  It is a street of dirt with a few stray cobbles, dating back when the Roman's conquered
+    this land.  There are buildings on each side of the street.  A guard gate post is to the east here,
+    where it is manned twenty-four by seven days a week.
+  sector: city
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:274:room:27403
+    east:
+      to: tba:274:room:27402
+    south:
+      to: tba:274:room:27422
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall./fi
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [credits]
+    text: >
+      This Zone was created by Brett Lynnes and Andy McLeod We're just some bored college students from
+      Montana...  So you don't need to credit us for it. Besides, I sorta stole the idea off of a mud I
+      played a while back. Smurfville is an anooying place with lots of do-gooder smurfs and (of course)
+      Gargamel's castle.  ** added bonus- Barney's playland I made the entrance on wld ##00
+
+"tba:274:room:27401":
+  name: Inside Southern Gate
+  description: >
+    You stand in and at the main southern gate of Saint Brigid.  It is the southern most village and
+    free town of the realm knwon as Adria.  The street is dirt here, mud when it rains, but it continues to
+    the north deeper into the small village.  To the east is a guard gate here and south is the gate
+    itself that leaves this place.
+  sector: city
+  exits:
+    east:
+      to: tba:274:room:27402
+
+"tba:274:room:27402":
+  name: Inside Guard Gate
+  description: >
+    The inside of the guard gate is empty, except for a desk, a lantern or two to light it at night and
+    a chair.  There is a small cot in the corner for the guard to sleep, usually this is a two man job
+    to guard the gates here.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    west:
+      to: tba:274:room:27400
+
+"tba:274:room:27403":
+  name: Southern End of Saint Brigid
+  description: >
+    Walking up a north-south street, the street continues toward what appears to be a town square in
+    the distance to the the north.  The gate to the south clearly visible to the south.  A residence is to
+    the east, and the Saint Brigid Bank is to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27404
+    east:
+      to: tba:274:room:27449
+    south:
+      to: tba:274:room:27400
+    west:
+      to: tba:274:room:27448
+
+"tba:274:room:27404":
+  name: Southern End of Saint Brigid
+  description: >
+    This is a north-south street, at the edge of a townsquare to the north.  It continues on to the
+    south toward a gate in the distance or enters the square. There is a residence here to the east or the
+    church entry to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27473
+    east:
+      to: tba:274:room:27451
+    south:
+      to: tba:274:room:27403
+    west:
+      to: tba:274:room:27450
+
+"tba:274:room:27405":
+  name: Southern Road
+  description: >
+    The road continues north and south here, among the abudant crops that are growing here.  In the
+    distance is the village of Saint Brigid and its southernmost gate and south the road snakes off across
+    the farmland until it reaches the edge of another grove of forest in the distance, and grassy plains.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27422
+    east:
+      to: tba:274:room:27480
+    south:
+      to: tba:274:room:27474
+    west:
+      to: tba:274:room:27476
+
+"tba:274:room:27406":
+  name: On Western Side of Saint Brigid
+  description: >
+    This is a east-west street, at the edge of a townsquare to the east.  It continues on to the west
+    toward a gate in the distance or enters the square.  A residence is to the south and the Apothecary is
+    to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27435
+    east:
+      to: tba:274:room:27473
+    south:
+      to: tba:274:room:27436
+    west:
+      to: tba:274:room:27407
+
+"tba:274:room:27407":
+  name: On Western Side of Saint Brigid
+  description: >
+    The street continues to the east and west, the smell of deicious bread makes it well known that you
+    are outsie the Saint Brigid Bakery to the south.  North a residence is there too.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27433
+    east:
+      to: tba:274:room:27406
+    south:
+      to: tba:274:room:27434
+    west:
+      to: tba:274:room:27408
+
+"tba:274:room:27408":
+  name: Across Bridge of the Rhillion River
+  description: >
+    Standing on the bridge above the rushing wild river waters of the Rhillion River as it flows from
+    the Aleser Mountains.  The bridge crosses safely over it to the west and east.  East toward the
+    townsquare and west toward the Western Gate.
+  sector: city
+  exits:
+    east:
+      to: tba:274:room:27407
+    west:
+      to: tba:274:room:27409
+
+"tba:274:room:27409":
+  name: On Western Side of Saint Brigid.
+  description: >
+    The street continues to the west and east here.  There is an entry to what appears to be a heavily
+    fortified building that makes up the Saint Brigid Jeweler and a residence to the south.  The street
+    has a mud puddle here from a recent rain, making it a mud bath for those to cross.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27431
+    east:
+      to: tba:274:room:27408
+    south:
+      to: tba:274:room:27432
+    west:
+      to: tba:274:room:27410
+
+"tba:274:room:27410":
+  name: Inside Western Gate
+  description: >
+    This is the inside of the Western Gate.  The street begins or ends here. Leading to the town square
+    to the east in the distance.  There is a guard gate to the north here.  The gate is a simple one,
+    attached to a six foot wall to partially fortify the village.
+  sector: city
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:274:room:27424
+    east:
+      to: tba:274:room:27409
+    west:
+      to: tba:274:room:27423
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+
+"tba:274:room:27411":
+  name: On Eastern Side of Saint Brigid
+  description: >
+    This is a east-west street, at the edge of a townsquare to the west.  It continues on to the east
+    toward a gate in the distance or enters the square. The Saint Brigid Training Center is to the north
+    and a path to the Belltower which is the main alarm for the village.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27437
+    east:
+      to: tba:274:room:27412
+    south:
+      to: tba:274:room:27438
+    west:
+      to: tba:274:room:27473
+
+"tba:274:room:27412":
+  name: On Eastern Side of Saint Brigid
+  description: >
+    The street continues over a small hill here, to the west and east.  It is a bit narrow here but
+    there is a way past.  The General Store is to the north and a residence is to the south.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27440
+    east:
+      to: tba:274:room:27413
+    south:
+      to: tba:274:room:27439
+    west:
+      to: tba:274:room:27411
+
+"tba:274:room:27413":
+  name: Inside Eastern Gate
+  description: >
+    This is the inside of the Eastern Gate.  The street begins or ends here. Leading to the town square
+    to the west in the distance.  There is a guard gate to the north here.  The gate is a simple one,
+    attached to a six foot wall to partially fortify the village.
+  sector: city
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:274:room:27425
+    east:
+      to: tba:274:room:27414
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:274:room:27412
+
+"tba:274:room:27414":
+  name: Outside Eastern Gate
+  description: >
+    Outside the eastern gate, the road continues on in a sweeping curve ] to the southeast.  There is
+    Malvern Forest's edge to the north and the road stays clear of it as it leaves the edge at this
+    point.  There is a junction to the east, where a path breaks away and goes into the forest.  The Eastern
+    Gate is to the west.
+  sector: forest
+  exits:
+    east:
+      to: tba:274:room:27426
+    west:
+      to: tba:274:room:27413
+      look: >
+        The gate is forged of iron, and it has spikes on the outside making it formidable as it is attached
+        to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+
+"tba:274:room:27415":
+  name: On Northern Side of Saint Brigid
+  description: >
+    This is a north-south street, at the edge of a townsquare to the south.  It continues on to the
+    south toward a gate in the distance or enters the square. A residence is to the east and Broderick's
+    Tavern is to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27416
+    east:
+      to: tba:274:room:27443
+    south:
+      to: tba:274:room:27473
+    west:
+      to: tba:274:room:27442
+
+"tba:274:room:27416":
+  name: On Bridge Crossing Rhillion River
+  description: >
+    Standing on the bridge above the rushing wild river waters of the Rhillion River as it flows from
+    the Aleser Mountains.  The bridge crosses safely over it and the street continues to the north and
+    south.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27417
+    south:
+      to: tba:274:room:27415
+
+"tba:274:room:27417":
+  name: On Northern Side of Saint Brigid
+  description: >
+    The pounding sound of metal, and the smell of brimstone alert that you now are outside the Saint
+    Brigid Blacksmithe Shoppe.  The reverb of the hammer strikes can be felt as one stands outside to the
+    west.  East is the Armory in which all items from the Blacksmithe are sent to be sold.  The street
+    cointinues onto the north and south.  North the gate can be seen in the distance.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27418
+    east:
+      to: tba:274:room:27445
+    south:
+      to: tba:274:room:27416
+    west:
+      to: tba:274:room:27444
+
+"tba:274:room:27418":
+  name: On Northern Side of Saint Brigid
+  description: >
+    The adjacent area to the Northern Gate.  It is an open area and the street continues to the north
+    and south.  Residences are to the east and west.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27419
+    east:
+      to: tba:274:room:27447
+    south:
+      to: tba:274:room:27417
+    west:
+      to: tba:274:room:27446
+
+"tba:274:room:27419":
+  name: Inside Northern Gate
+  description: >
+    The Northern Gate is here.  The road abruptly ends north, but begins south as it leads off into the
+    village.  It is a street of dirt with a few stray cobbles,dating back when the Roman's conquered
+    this land.  There are buildings on each side of the street.  A guard gate post is to the east here,
+    where it is manned twenty-four by seven days a week.
+  sector: inside
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:274:room:27420
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    east:
+      to: tba:274:room:27471
+    south:
+      to: tba:274:room:27418
+
+"tba:274:room:27420":
+  name: Outside Northern Gate
+  description: >
+    You stand on the outside of the wall and the gate of Saint Brigid.  From here it is nothing more
+    than forest that runs off to the north as the road snakes off through it.  The main gate is south.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27421
+    south:
+      to: tba:274:room:27419
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+
+"tba:274:room:27421":
+  name: Beginning/End of Malvern Road
+  description: >
+    As you step into the forest, the ominous silence echoes around you with the form of rustling in the
+    undergrowth, birds chirping, and even the occasional snap of the twig.  The road snakes onward north
+    and south it comes to a clearing among the forest to civilization in the form of Saint Brigid.
+  sector: forest
+  exits:
+    south:
+      to: tba:274:room:27420
+
+"tba:274:room:27422":
+  name: Outside Southern Gate
+  description: >
+    You stand on the southern road outside the south gate of Saint Brigid.  It is the farmlands here on
+    this side with rich fertile land and ripe crops that grow abundantly here.  The road continues off
+    between the many crops that are growing here as far as the eye can see until it reaches forest far in
+    the distance.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27400
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    east: {}
+    south:
+      to: tba:274:room:27405
+
+"tba:274:room:27423":
+  name: Outside the Western Gate
+  description: >
+    The gate is here, built into what appears to be the moutains.  It is made of wood and the gate is a
+    huge wooden gate that is fortified with sentery posts on top and arrow slits on the sides of the
+    gate, all built over the roaring Rhillion River that seems run from underground into the open air.  The
+    street continues east through the gate to the east or west into the mountains.
+  sector: mountains
+  exits:
+    east:
+      to: tba:274:room:27410
+      look: >
+        The gate is forged of iron, and it has spikes on the outside ] making it formidable as it is
+        attached to the six foot wall.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+
+"tba:274:room:27424":
+  name: Inside Guard Gate
+  description: >
+    The inside of the guard gate is empty, except for a desk, a lantern or two tolight it at night and
+    a chair.  There is a small cot in the corner for the guardto sleep, usually this is a two man job to
+    guard the gates here.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    north: {}
+    south:
+      to: tba:274:room:27410
+    up: {}
+
+"tba:274:room:27425":
+  name: Insie Guard Gate
+  description: >
+    The inside of the guard gate is empty, except for a desk, a lantern or two tolight it at night and
+    a chair.  There is a small cot in the corner for the guardto sleep, usually this is a two man job to
+    guard the gates here.
+  sector: inside
+  flags: [no_mob, indoors, tunnel]
+  exits:
+    south:
+      to: tba:274:room:27413
+
+"tba:274:room:27426":
+  name: Saint Brigid-Furze Road
+  description: >
+    The road junctions here, not officially, but there is a path that leads off to the north into the
+    forest from the road.  And looking closer you can see the remains of what was a house build there.  It
+    seems there was a road to it but it got overgrown through the years of lack of use.  The road
+    continues east or the west top the Western Saint Brigid Gate.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27428
+    east:
+      to: tba:274:room:27427
+    west:
+      to: tba:274:room:27414
+
+"tba:274:room:27427":
+  name: Saint Brigid-Furze Road
+  description: >
+    The road begins to slope to the south east here and it continues onto around the edge of the forest
+    to the north through meadows and groves of trees where the forest spreads out across the land like a
+    snake with a thick emerald green folage.  The road seems to go west too toward civilization and
+    toward a gate nearby.
+  sector: forest
+  exits:
+    west:
+      to: tba:274:room:27426
+
+"tba:274:room:27428":
+  name: Narrow Forest Path
+  description: >
+    The path is pretty narrow but you manage to squeak through the trees and undergrowth to the north
+    through the foliage toward the structure.  The only way back to the road is to the south.
+  sector: forest
+  exits:
+    north:
+      to: tba:274:room:27429
+    south:
+      to: tba:274:room:27426
+
+"tba:274:room:27429":
+  name: Narrow Forest Path
+  description: >
+    Outside the old house of the Leather Woman's Hut.  An outcast of Saint Brigid who was said to weave
+    magic of wicca and powers of black hearts.  She worked leather mending for a living and made a
+    meagre living but she was feared by all. The path leads south toward the road or you can enter the home
+    north.
+  sector: forest
+  exits:
+    north:
+      to: tba:274:room:27430
+    south:
+      to: tba:274:room:27428
+
+"tba:274:room:27430":
+  name: Inside Leatherwoman's Hut
+  description: >
+    The house is half dilapadated, and falling apart, the ceiling is crumbling and there was holes int
+    he walls, but they looks like they were patched at one time.  It is a wreck.  There is nothing here,
+    but memories and no evil as it was said by the populace of Saint Brigid.  The only exit is south into
+    the forest.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:274:room:27429
+
+"tba:274:room:27431":
+  name: Saint Brigid Jeweler
+  description: >
+    The Jewelry shoppe and appraiser works ehind a fortified steel cage as you walk in and everything
+    is in glass cases.  That includes glass cases for even mediocre stuff in middle of the shop is under
+    glass.  It looks like a bank or a keep than a regular store.  The only exit is south onto the main
+    street.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    south:
+      to: tba:274:room:27409
+
+"tba:274:room:27432":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is north onto the street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27409
+
+"tba:274:room:27433":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is south onto the street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:274:room:27407
+
+"tba:274:room:27434":
+  name: Saint Brigid Bread Market
+  description: >
+    The break market has a wonderful smell as you walk in and the store is setup where everything is in
+    baskets to shop for or just examine.  A large counter is to the south where the keeper works and
+    takes purchases and behind it you can see the huge ovens in which the bread is baked.  MMM Delicious. 
+    The only exit is north onto the street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    north:
+      to: tba:274:room:27407
+
+"tba:274:room:27435":
+  name: Apothecary/Magic Shoppe
+  description: >
+    A foul stench waifs through the air as you step in and you try not to wrench onto the floor from
+    the awful stench that you could smell outside.  It is an array of chaos in this store.  It has aisles
+    upon aisels of potions of every sort and count, but they are all mixed up and out of order.  The only
+    escape is the shop keeper who works behind her counter on the north wall, where her assistants work
+    behind a cauldron that brew some sort of noxious potion.  They sell water here, and you wonder if it
+    was could be tained from all the chemicals they used in these awful potions.  The only exit out of the
+    smell is to the south onto the street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    south:
+      to: tba:274:room:27406
+
+"tba:274:room:27436":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is north into the street.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27406
+
+"tba:274:room:27437":
+  name: Saint Brigid Training
+  description: >
+    The room is open and airy with racks, mats and practice dummys that indicate this area is for
+    training for levels of all classes.  The room seems to have sparring areas, and a work out area with
+    weights and you get the feeling that Ulysess is not here for his health.  The only exit is south into the
+    street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    south:
+      to: tba:274:room:27411
+
+"tba:274:room:27438":
+  name: Bottom of Belltower
+  description: >
+    Standing at the bottom of the narrow tower that makes up the belltower.  The only way is to the
+    north to the main street or climbing the ladder to the top of the tower itself.
+  sector: city
+  exits:
+    north:
+      to: tba:274:room:27411
+    up:
+      to: tba:274:room:27441
+
+"tba:274:room:27439":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The onl exit is north onto the street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27412
+
+"tba:274:room:27440":
+  name: Saint Brigid General Store
+  description: >
+    The General Store is setup the same way as many of the other shops, in a neat and orderly fashion. 
+    Rows of shelves house the equipment to be sold and a counter where purchases to be made is to the
+    south.  A glass counter in the front of the store depict hot items for sale or newly arrived.  The only
+    exit is south onto the street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    south:
+      to: tba:274:room:27412
+
+"tba:274:room:27441":
+  name: Top of Bell Tower
+  description: >
+    This is the top of the bell-tower.  You stand inside the large massive bell that now hangs here and
+    covered by the roof over it which makes up the steeple of the tower.  The only way down is the
+    ladder to the bottom.  From here is a pretty good view of everything around the village in the distance.
+  sector: city
+  flags: [dark, no_mob, indoors, soundproof, tunnel]
+  exits:
+    down:
+      to: tba:274:room:27438
+
+"tba:274:room:27442":
+  name: Foyer to Brodericks Tavern
+  description: >
+    Inside the foyer to Broderick's place.  It has an archway to the west leading into the main hall
+    where laughter and chatter echo loudly in the room.  There is a staircase here leading upward to the
+    upper floor that is open and can look down over the main hall.  It is where the Hotel bedrooms and the
+    working girls are located.  The exit to the street is to the east.  The foyer here is dity and dusty
+    and barren of any furnishings because of the many fights that break out usually outside the Inn.  A
+    dangerous place here.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:274:room:27415
+    west:
+      to: tba:274:room:27458
+    up:
+      to: tba:274:room:27460
+
+"tba:274:room:27443":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is west to the main street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:274:room:27415
+
+"tba:274:room:27444":
+  name: Francis' Blacksmith Shoppe/Forge
+  description: >
+    The forge area is very hot here, an array of vices, benches, tools, presses, andother tools that
+    are setup throughout the whole room.  His main fire forge dominates the center of the room with a stack
+    going up through the planked ceiling of wood that covers it.  The only exit is east into the open
+    street.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    east:
+      to: tba:274:room:27417
+
+"tba:274:room:27445":
+  name: Saint Brigid Armory
+  description: >
+    The Armory is a shop made up of neat rows of items all organized for the buyer to find in an easy
+    manner.  There is a large glas case on the eastern wall that holds the hot items, which are on special
+    or discount.  It is an array of a well kept shop of it appears great prices.  The only exit is to
+    the west to the main street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    west:
+      to: tba:274:room:27417
+
+"tba:274:room:27446":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is east into the main street.
+  sector: inside
+  exits:
+    east:
+      to: tba:274:room:27418
+
+"tba:274:room:27447":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is west into the main street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:274:room:27418
+
+"tba:274:room:27448":
+  name: Saint Brigid Bank
+  description: >
+    The bank is empty save a couple of grated windows on the western wall for deposits and/or
+    withdrawls.  There is no line but it looks fortified like a typical bank.  The only exit is east onto the
+    street.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    east:
+      to: tba:274:room:27403
+
+"tba:274:room:27449":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is west onto the street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:274:room:27403
+
+"tba:274:room:27450":
+  name: Foyer of Saint Brigid Church
+  description: >
+    Inside the foyer of the church it is quite plush here where passages lead to the west and south
+    from the entry/exit point.  It has tiled floor here and paneled walls, with artwork, sculptures of wood
+    and marble, and art that depict many events in religous history.  Two main doors to the south look
+    like the main entry point to the chapel as it continues on.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27404
+    south:
+      to: tba:274:room:27452
+    west:
+      to: tba:274:room:27457
+
+"tba:274:room:27451":
+  name: A Residence
+  description: >
+    The residences are simple shacks with a large cooking area on one end and a sleeping arragement of
+    folding beds on the other, the shacks are dingy with dirt floors, and have a warm stone hearth in the
+    center of it to heat it.  The only exit is west onto the street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:274:room:27404
+
+"tba:274:room:27452":
+  name: Outside Main Chapel
+  description: >
+    Standing outside the main doors of the chapel the passage continues to the north t the foyer or
+    south where it curves abruptly west.  It has the same paneled walls, and tiled floor and is quite
+    peaceful here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27450
+    south:
+      to: tba:274:room:27455
+    west:
+      to: tba:274:room:27453
+      look: >
+        A set of double doors made of oak are here, and they have stained glass in the center of them. 
+        They have huge bronze hinges holding them to the wall and bronze handles to allow them to be opened.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27453":
+  name: Inside Main Chapel
+  description: >
+    Inside the main chapel there is a main altar to the west end of the room with side doors to the
+    north and south exiting out into side halls.  It is not like any Chapel you have seen, instead of pews
+    there are simple wood benches.  There are relics and statues and art lining the walls but that is
+    all.  Main door to the east exit to the main hallway exit.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:274:room:27457
+      look: >
+        An oak door is here with bronze hinges and fixtures. It seems to be a side door leading from the
+        chapel
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:274:room:27452
+    south:
+      to: tba:274:room:27456
+      look: >
+        An oak door is here with bronze hinges and fixtures.  It seems to be a side door leading from the
+        chapel.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:274:room:27454
+
+"tba:274:room:27454":
+  name: In Front of Altar
+  description: >
+    At the main altar, here a podium stands for the the Cure to speak and do his sermons in front of a
+    sinister altar made of marble, trimmed in oak and gold. Simple steps lead east down to the audience
+    level here.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    down:
+      to: tba:274:room:27453
+
+"tba:274:room:27455":
+  name: Narrow Hallway
+  description: >
+    Ther hallway turns here from the north-south to the west-east direction and it continues onward
+    along the same paneled walls and tiled floors.  More religious relics line the walls and along hall, and
+    the smell of incense is strong in the air here.  An alcove is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27452
+    west:
+      to: tba:274:room:27456
+
+"tba:274:room:27456":
+  name: Small Alcove
+  description: >
+    Inside a small alcove the hallway ends into a circular chamber.  It is here that you can sit and
+    pray, or just relax as light from a skylight lets the light from the outside shine down into the room,
+    The hallway returns to the east/north or a door north leads into the main chapel.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27453
+      look: >
+        An oak door is here with bronze hinges and fixtures. It seems to be a side door into the main
+        chapel.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:274:room:27455
+
+"tba:274:room:27457":
+  name: Small Alcove
+  description: >
+    Inside a small alcove the hallway ends into a circular chamber.  It is here that you can sit and
+    pray, or just relax as light from a skylight lets the light from the outside shine down into the room,
+    The hallway returns to the east to the foyer or south into the main chapel.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27450
+    south:
+      to: tba:274:room:27453
+      look: >
+        An oak door is here with bronze hinges and fixtures.  It seems to be a side door into the main
+        chapel.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27458":
+  name: Main Hall
+  description: >
+    This is the main hall where many tables lie throughout, crammed with many unwashed bodies of
+    adventurers who seek fortune and glory.  There is a bar to the west that spreads along the western wall and
+    east is the exit.  A bandstand seems to be to the north where live entertainment plays.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27472
+    east:
+      to: tba:274:room:27442
+    west:
+      to: tba:274:room:27459
+
+"tba:274:room:27459":
+  name: At the Bar
+  description: >
+    The bar here dominates the western wall and serves the patrons of the tavern. It has a long counter
+    here made of oak and behind it is a large display that show many bottles of booze which is served
+    here.  The display also has a mirror that reflects your image there.  The main hall is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27458
+
+"tba:274:room:27460":
+  name: Upper Floor
+  description: >
+    Standing on the top of the narrow staircase that leads down to the foyer below.  The open hallway
+    continues to the west, passing the many bedrooms that are located in this hall for the working girls
+    to do business with the adventurers who pass through here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27464
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door is the number 'One' nailed here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:274:room:27465
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door is the number 'Two' nailed here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:274:room:27461
+    down:
+      to: tba:274:room:27442
+
+"tba:274:room:27461":
+  name: Upper Floor
+  description: >
+    Standing on the upper open floor of the Tavern.  You can see down to the hellof the main hall
+    below, to the people laughing, drinking and having a good time,or to the many fights that break out there
+    too.  This is a ring side seat. The hallway goes west and east, passing the many bedrooms for the
+    working girls who do business with the adventurers who pass through here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27460
+    south:
+      to: tba:274:room:27466
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door, the number 'Three' is nailed
+        here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:274:room:27462
+
+"tba:274:room:27462":
+  name: Upper Floor
+  description: >
+    The hallway turns here and it turns a different direction it goes north and east or south and east
+    depending on your point of view.  You have a ring side seat to the action below to the drinking,
+    singing, fighting that happens in the hall below.  It passes more bedrooms to the north and some to the
+    east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27463
+    east:
+      to: tba:274:room:27461
+    south:
+      to: tba:274:room:27467
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door, the number 'Four' is nailed
+        here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:274:room:27468
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door, the number 'Five' has been
+        nailed here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27463":
+  name: Upper Floor
+  description: >
+    The hall ends here.  You stand outside the Madam's room to the north who takes an active
+    participation in working with the adventurers too.  The hallway returns to the south passing the bedrooms as
+    before.  Below it is is harder to see the hall but you can see enough, and hear it all.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27470
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door the words 'Madam Guineveer
+        Purty.' are nailed here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:274:room:27462
+    west:
+      to: tba:274:room:27469
+      look: >
+        An oak door with bronze hinges and fixtures are here.  On the door, the number 'Six' has been
+        nailed here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27464":
+  name: Bedroom One
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that whenused warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is west into the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:274:room:27460
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27465":
+  name: Bedroom Two
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that whenused warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is north into the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27460
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27466":
+  name: Bedroom Three
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that whenused warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is north into the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27461
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27467":
+  name: Bedroom Four
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that whenused warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is north into the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:274:room:27462
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27468":
+  name: Bedroom Five
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that when used warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is to the ewast through the doorway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:274:room:27462
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27469":
+  name: Bedroom Six
+  description: >
+    The bedroom here is a simple one, with a large bed in the middle and that of a dresser with a
+    mirror to one side.  It has a fireplace in the corner that when used warms the entire room.  Otherwise it
+    is relatively empty.  The only exit is a door to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north: {}
+    east:
+      to: tba:274:room:27463
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27470":
+  name: Madam Guineveer's Room
+  description: >
+    Inside the Madam's room, it is a sinister red lighted room with lanterns throughout covered in red
+    parchment to make it that color.  A bed seems to be in the center of the room, shaped in the form of
+    a heart and it is covered with a hand-sewn comforter over the rough looking thin sheets that are
+    under it. Large pillows are sitting on the top near the headboard made of ash wood and the foot also made
+    of ash wood.  There is a dresser on the left side of this large room and what appears to be mirrors
+    throughout.  Kinky...  The only exit is south through the door into the hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:274:room:27463
+      look: An oak door with bronze hinges and fixtures are here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:274:room:27471":
+  name: Inside Guard Gate
+  description: >
+    The inside of the guard gate is empty, except for a desk, a lantern or two tolight it at night and
+    a chair.  There is a small cot in the corner for the guardto sleep, usually this is a two man job to
+    guard the gates here.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    west:
+      to: tba:274:room:27419
+
+"tba:274:room:27472":
+  name: Bandstand
+  description: >
+    An empty bandstand is here, half cluttered with broken chairs and tables after the many fights that
+    break out in this rough establishment.  It probably was once used but when the place got rough it
+    was not able to be used the way it was intended.  The main hall is to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:274:room:27458
+
+"tba:274:room:27473":
+  name: Town Square
+  description: >
+    The townsquare is circular and it goes off in all directions to each section of the village.  It is
+    empty right now, usually it is hopping with vendors and sellers of sorts but not right now for some
+    reason.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27415
+    east:
+      to: tba:274:room:27411
+    south:
+      to: tba:274:room:27404
+    west:
+      to: tba:274:room:27406
+
+"tba:274:room:27474":
+  name: Southern Road
+  description: >
+    The road continues north and south here, among the abudant crops that are growing here.  In the
+    distance is the village of Saint Brigid and its southernmost gate and south the road snakes off across
+    the farmland until it reaches the edge of another grove of forest in the distance, and grassy plains .
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27405
+    east:
+      to: tba:274:room:27488
+    south:
+      to: tba:274:room:27475
+    west:
+      to: tba:274:room:27484
+
+"tba:274:room:27475":
+  name: Southern Road
+  description: >
+    The road continues north and south here, among the abudant crops that are growing here.  In the
+    distance is the village of Saint Brigid and its southernmost gate and south the road snakes off across
+    the farmland until it reaches the edge of another grove of forest in the distance, and grassy plains .
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27474
+    east:
+      to: tba:274:room:27496
+    south:
+      to: tba:274:room:27495
+    west:
+      to: tba:274:room:27492
+
+"tba:274:room:27476":
+  name: Inside Cornfield
+  description: >
+    At the edge of the cornfield.  The road is adjacent to the east and leaves and ears of corn can be
+    seen to the west.  You can just carely force your way through the stalks.
+  sector: inside
+  exits:
+    east:
+      to: tba:274:room:27405
+    south:
+      to: tba:274:room:27484
+    west:
+      to: tba:274:room:27477
+
+"tba:274:room:27477":
+  name: Inside Cornfield
+  description: >
+    At the edge of the cornfield.  The road is adjacent to the east and leaves and ears of corn can be
+    seen to the west.  You can just carely force your way through the stalks.
+  sector: inside
+  exits:
+    east:
+      to: tba:274:room:27476
+    south:
+      to: tba:274:room:27485
+    west:
+      to: tba:274:room:27478
+
+"tba:274:room:27478":
+  name: Edge of Cornfield
+  description: >
+    At the edge of the cornfield.  The road is adjacent to the east and leaves and ears of corn can be
+    seen to the west.  You can just carely force your way through the stalks.
+  sector: inside
+  exits:
+    east:
+      to: tba:274:room:27477
+    south:
+      to: tba:274:room:27486
+    west:
+      to: tba:274:room:27479
+
+"tba:274:room:27479":
+  name: Edge of Cornfield
+  description: >
+    A large ditch makes it impssible to cross to the south and the fences to the west and north to
+    cross any further out of this field.  The only way it seems is to the east deeper into the field.
+  sector: inside
+  exits:
+    east:
+      to: tba:274:room:27478
+
+"tba:274:room:27480":
+  name: Edge of Cotton Patch
+  description: >
+    You stand at the edge of a cotton path, with thick growth of the plants here and thick tufts of
+    white from the cotton plants plainly visible here.  The patch continues east and south.  West is the
+    road.
+  sector: field
+  exits:
+    east:
+      to: tba:274:room:27481
+    south:
+      to: tba:274:room:27489
+    west:
+      to: tba:274:room:27405
+
+"tba:274:room:27481":
+  name: Middle of Cotton Patch
+  description: >
+    You stand at the edge of a cotton path, with thick growth of the plants here and thick tufts of
+    white from the cotton plants plainly visible here.  The patch continues east, west and south.  .  S
+  sector: field
+  exits:
+    east:
+      to: tba:274:room:27482
+    south:
+      to: tba:274:room:27489
+    west:
+      to: tba:274:room:27480
+
+"tba:274:room:27482":
+  name: Middle of Cotton Patch
+  description: >
+    You stand at the edge of a cotton path, with thick growth of the plants here and thick tufts of
+    white from the cotton plants plainly visible here.  The patch continues west, south and east.
+  sector: field
+  exits:
+    east:
+      to: tba:274:room:27483
+    south:
+      to: tba:274:room:27490
+    west:
+      to: tba:274:room:27481
+
+"tba:274:room:27483":
+  name: Edge of Cotton Patch
+  description: >
+    The north east fence line is here, the patch continues to the west and south through the thick
+    growth, and wisps of cotton.
+  sector: field
+  exits:
+    south:
+      to: tba:274:room:27491
+    west:
+      to: tba:274:room:27482
+
+"tba:274:room:27484":
+  name: Inside Cornfield
+  description: >
+    At the edge of the cornfield.  The road is adjacent to the east and leaves and ears of corn can be
+    seen to the west.  You can just carely force your way through the stalks.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27476
+    east:
+      to: tba:274:room:27474
+    south:
+      to: tba:274:room:27492
+    west:
+      to: tba:274:room:27485
+
+"tba:274:room:27485":
+  name: Inside Cornfield
+  description: >
+    You are lost and disoriented in the corn field.  There seems to be ways to go in three directions
+    to go and can't seem to orient yourself!
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27477
+    east:
+      to: tba:274:room:27484
+    west:
+      to: tba:274:room:27486
+
+"tba:274:room:27486":
+  name: Inide Cornfield
+  description: >
+    You are lost and disoriented in the corn field.  There seems to be ways to go in three directions
+    to go and can't seem to orient yourself!
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27479
+    east:
+      to: tba:274:room:27485
+    south:
+      to: tba:274:room:27494
+    west:
+      to: tba:274:room:27487
+
+"tba:274:room:27487":
+  name: Edge of Cornfield
+  description: >
+    Walking along a fence you can continue to the north, south or east in which you gcan easily ghet
+    lost inside the cornfield itself.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27479
+    east:
+      to: tba:274:room:27486
+
+"tba:274:room:27488":
+  name: Edge of Cotton Patch
+  description: >
+    You stand at the edge of a cotton path, with thick growth of the plants here and thick tufts of
+    white from the cotton plants plainly visible here.  The patch continues to the east, south, and north. 
+    West is the road.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27480
+    east:
+      to: tba:274:room:27489
+    south:
+      to: tba:274:room:27496
+    west:
+      to: tba:274:room:27474
+
+"tba:274:room:27489":
+  name: Middle of Cotton Patch
+  description: >
+    The middle of the cotton patch is disorienting, but you are thankfully able to see to the west the
+    road that runs between the fields.  Field runs off in three directions, north, west, and east.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27491
+    east:
+      to: tba:274:room:27490
+    west:
+      to: tba:274:room:27488
+
+"tba:274:room:27490":
+  name: Middle of Cotton Patch
+  description: >
+    The middle of the cotton patch is disorienting, but you are thankfully able to see to the west the
+    road that runs between the fields.  Field runs off in three directions, north, south, east, and west.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27482
+    east:
+      to: tba:274:room:27491
+    south:
+      to: tba:274:room:27488
+    west:
+      to: tba:274:room:27489
+
+"tba:274:room:27491":
+  name: Edge of Cotton Patch
+  description: >
+    This is the eastern end of the fence.  The only way back is north, south or west to the road that
+    runs between the patch of cotton and corn fields.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27483
+    south:
+      to: tba:274:room:27499
+    west:
+      to: tba:274:room:27490
+
+"tba:274:room:27492":
+  name: Inside Cornfield
+  description: >
+    At the edge of the cornfield.  The road is adjacent to the east and leaves and ears of corn can be
+    seen to the west.  You can just carely force your way through the stalks.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27485
+    east:
+      to: tba:274:room:27475
+    west:
+      to: tba:274:room:27493
+
+"tba:274:room:27493":
+  name: Inside Cornfield
+  description: >
+    You are lost in a corn field, the surroundings are do disorientating that each direction seems like
+    the same and you struggle to orient yourself.  You can go off in all directions.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27485
+    east:
+      to: tba:274:room:27492
+    west:
+      to: tba:274:room:27494
+
+"tba:274:room:27494":
+  name: Inside Cornfield
+  description: >
+    The ede of the cornfield is here to the south, a fence blocks the way to the south making it
+    impossible to travel that way.  The only way to go is west north and east.
+  sector: inside
+  exits:
+    north:
+      to: tba:274:room:27486
+    east:
+      to: tba:274:room:27493
+    south: {}
+
+"tba:274:room:27495":
+  name: Edge of Forest
+  description: >
+    You stand at the edge of a forest in which it ends and enters an open field of meadow and crops
+    that seem to belong to someone ahead.  A road starts here. And it goes to the north toward the field. 
+    South enters a forest, onto a thick overgrown path.
+  sector: forest
+  exits:
+    north:
+      to: tba:274:room:27475
+
+"tba:274:room:27496":
+  name: Edge of Cotton Patch
+  description: >
+    You stand at the edge of a cotton path, with thick growth of the plants here and thick tufts of
+    white from the cotton plants plainly visible here.  The patch continues to the north and east, west is
+    the road.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27488
+    east:
+      to: tba:274:room:27497
+    west:
+      to: tba:274:room:27475
+
+"tba:274:room:27497":
+  name: Edge of Cotton Patch
+  description: >
+    This is the edge of the cotton path at the fence.  There is no other way to go here through the
+    plants than west, north or east.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27489
+    east:
+      to: tba:274:room:27498
+    west:
+      to: tba:274:room:27496
+
+"tba:274:room:27498":
+  name: Edge of Cotton Patch
+  description: >
+    This is the edge of the cotton path at the fence.  There is no other way to go here than west, east
+    or north through the wisps of cotton.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27490
+    east:
+      to: tba:274:room:27499
+    west:
+      to: tba:274:room:27497
+
+"tba:274:room:27499":
+  name: Edge of Cotton Patch
+  description: >
+    This is the southeastern end and fence of the Cotton Field.  There is no way to go from here than
+    north or west through the wisps of cotton.
+  sector: field
+  exits:
+    north:
+      to: tba:274:room:27491
+    west:
+      to: tba:274:room:27498

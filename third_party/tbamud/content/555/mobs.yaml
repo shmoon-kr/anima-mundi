@@ -1,0 +1,2306 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 555.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:555:mob:55500":
+  keywords: [insects, swarm, bugs]
+  short: the insects
+  long: You hear buzzing, and see a swarm of insects flying at you.
+  description: >
+    These insects are more of an annoyance than a threat.  It is made up of hundreds of annoying
+    insects.
+  level: 1
+  sex: neutral
+  alignment: -10
+  flags: [aggressive, stay_zone]
+  affects: [fly]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: sting
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55501":
+  keywords: [bat]
+  short: the bat
+  long: A black furry bat flies into your face.
+  description: >
+    You hear a high pitch screech.  It is a black furry bat.  This annoying creature usually travels in
+    flocks, so WATCH OUT.
+  level: 1
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, aggressive]
+  affects: [fly]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55502":
+  keywords: [shepherd, man]
+  short: the shepherd
+  long: A humble shepherd is here, looking after his sheep.
+  description: >
+    The shepherd is a patient old man who has spent all his days looking after his sheep and all his
+    nights studying the virtue of Humility.  Through the wrinkles on his face you can see his proud dignity
+    and begin to sense that he was once a warrior.
+  level: 2
+  sex: male
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55503":
+  keywords: [girl, child]
+  short: the girl
+  long: A smiling young girl is here.
+  description: >
+    The girl looks shyly at you.  Even at this young age, she has learned enough of her culture to be
+    humble.  She jumps rope and looks up at you expectantly.
+  level: 1
+  sex: female
+  alignment: 1000
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55504":
+  keywords: [sheep]
+  short: the sheep
+  long: A sheep peacefully eats grass.
+  description: >
+    Even the sheep in New Magincia seem to exude humbleness.  The sheep has pure white fleece.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55505":
+  keywords: [Katrina, woman, shepherd]
+  short: Katrina the Shepherd
+  long: Katrina the Shepherd is here, looking over the village.
+  description: >
+    Katrina was one of the Warriors of Destiny.  She epitomizes the virtue of humility.  After her
+    great Enlightenment, she traveled back to her home and helped rebuild Magincia.  She still is a great
+    warrior and an able guardian of New Magincia.
+  level: 5
+  sex: female
+  alignment: 1000
+  flags: [scavenger, stay_zone]
+  affects: [detect_magic]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  saves:
+    para: 1
+    rod: 1
+    petri: 1
+    breath: 1
+    spell: 1
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55506":
+  keywords: [rat]
+  short: the giant rat
+  long: A rat is gnawing on a book.
+  description: >
+    This giant rat is smelly and fleas jump up from its fur.  The rats have been a great problem in the
+    Library because they eat and shred the books.  This rat seems to be rabid, so beware its teeth.
+  level: 5
+  sex: neutral
+  alignment: -50
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  saves:
+    para: 1
+    rod: 1
+    petri: 1
+    breath: 1
+    spell: 1
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55507":
+  keywords: [spider]
+  short: the giant spider
+  long: A giant spider sits on its web.
+  description: >
+    This scavenger has seemed to have collected many things, including books, scrolls, and other
+    scraps.  Its glistening teeth drip with poison.
+  level: 6
+  sex: neutral
+  alignment: -50
+  flags: [sentinel, scavenger, aggressive]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+    bare_hand_attack: bite
+  saves:
+    para: 1
+    rod: 1
+    petri: 1
+    breath: 1
+    spell: 1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55508":
+  keywords: [mage]
+  short: the mage
+  long: A mage stands here, reading a book.
+  description: >
+    The mage, in his ever-increasing search for Honesty and Truth, has come to the library to peruse
+    the ancient tomes of knowledge.  He glances at you, and returns to his study.
+  level: 6
+  sex: male
+  alignment: 500
+  flags: [stay_zone]
+  affects: [detect_magic]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  saves:
+    para: 1
+    rod: 1
+    petri: 1
+    breath: 1
+    spell: 1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55509":
+  keywords: [Nystul, librarian, mage]
+  short: Nystul the Librarian
+  long: Nystul the Librarian sits at his desk, writing some scrolls.
+  description: >
+    Nystul is the mentor, teacher, mage of the Lyceum.  He is a shining example of Truth.  His head is
+    bowed over a book, but power radiates from him.
+  level: 20
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+    con: 13
+    cha: 13
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55510":
+  keywords: [mariah, mage]
+  short: Mariah the Mage
+  long: Mariah walks around the stacks, busily looking for a book.
+  description: >
+    Mariah is another Warrior of Destiny.  She joined the Avatar to add some magical punch during his
+    Enlightenment.  She seems serene in her total devotion to the virtue of Honesty.
+  level: 8
+  sex: female
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55511":
+  keywords: [slime, puddle, mass]
+  short: the slime
+  long: An ugly green mass sits on the ground in a puddle.
+  description: >
+    The slime is an amorphous goo.  It seems pretty wimpy, but it has a lot of friends.  As you look at
+    it you wonder how these things reproduce.
+  level: 7
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: maul
+  saves:
+    para: 1
+    rod: 1
+    petri: 1
+    breath: 1
+    spell: 1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55512":
+  keywords: [snake]
+  short: the snake
+  long: The snake strikes.
+  description: >
+    The green snake's tongue darts in and out tasting the air.  It senses spilled beer and the
+    distinctive taste of human.
+  level: 9
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: sting
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55513":
+  keywords: [horse, Smithy]
+  short: Mr. Smithy
+  long: Mr. Smithy, the talking horse, is chewing hay.
+  description: >
+    This useless horse is a novelty, he can talk.  Though his talk is often meaningless and he gives
+    out irrelevant clues, his sleek body and his much practiced jaw muscles can be very dangerous.
+  level: 15
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: crush
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55514":
+  keywords: [bard, musician]
+  short: the bard
+  long: A bard sits here, strumming his mandolin.
+  description: >
+    The bard seems happy and content to play his mandolin.  He is a seeker of Compassion, but in his
+    spare time he sings and dances.
+  level: 9
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55515":
+  keywords: [beggar]
+  short: the beggar
+  long: A beggar is here with his hand out.
+  description: >
+    He is more accustomed to receiving Compassion than giving it.  But help him out guv, give him a few
+    coins.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55516":
+  keywords: [Iolo, bard, musician]
+  short: Iolo the Bard
+  long: Iolo sits here with a bottle in his hand and a smile on his face.
+  description: >
+    Iolo is one of the first Warriors of Destiny.  He seems to be a little bit tipsy from the party and
+    you wonder why he has wandered down to the cellar. Anyway, in the spirit of the virtue Compassion
+    that he embodies, he holds out a bottle for you.
+  level: 12
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55517":
+  keywords: [jester, Chuckles]
+  short: Chuckles the Jester
+  long: Chuckles the Jester is juggling and entertaining.
+  description: >
+    Chuckles the Jester is here mumbling, 'Spam Spam.'  This annoying character is Lord British's major
+    entertainment.  He is laughing and telling corny jokes. He seems to hold his dinner in his hands,
+    and when he dances, the bells on his hat jingle merrily.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55518":
+  keywords: [townsman, man]
+  short: the townsman
+  long: A townsman is here downing drinks.
+  description: >
+    This townsman is here partying and having many drinks.  Though he is also an ardent believer in
+    Compassion, and a responsible citizen, he knows the value of a good party.
+  level: 9
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55519":
+  keywords: [Gwenno, bard]
+  short: Gwenno the Bard
+  long: Gwenno the Bard, Iolo's happy wife, wanders around with bow in hand.
+  description: >
+    You see a pretty woman with finally sculptured musculature.  She seems to guard the party with her
+    Infinity Bow, the best bow in the Ultima world.  Her kindly eyes seem to emit pure Compassion, and as
+    she wanders, she helps the drunks up and leads them out the door.
+  level: 25
+  sex: female
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55520":
+  keywords: [orc, ape]
+  short: the orc
+  long: A mutated ape carries a spear.
+  description: >
+    This orc is a disgusting animal.  As you look, this ape-like monster scratches its armpits.  It
+    travels in herds and is a coward.
+  level: 11
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: slash
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55521":
+  keywords: [troll]
+  short: the troll
+  long: A stony troll swings his club.
+  description: >
+    This huge monster is immense and powerful.  Over a chest and a head taller then you, his meaty arms
+    swing a club at you.
+  level: 13
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: maul
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55522":
+  keywords: [wisp, ball]
+  short: the wisp
+  long: A blue ball of light soars over to you and winks.
+  description: >
+    The Wisp is constantly blinking.  It wishes information exchange.  It looks peaceful, but will
+    defend itself.
+  level: 15
+  sex: neutral
+  alignment: 500
+  flags: [scavenger, stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55523":
+  keywords: [druid]
+  short: the forest druid
+  long: A chanting druid walks the woods.
+  description: >
+    Dressed in a hooded robe that obscures his face, the druid is softly chanting words and traveling
+    through the woods.  He is one that is secure in his sense of Justice, and enlightened in the ways of
+    judging others.  Through his communion with nature, he has gained power.
+  level: 14
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55524":
+  keywords: [druid]
+  short: the city druid
+  long: A druid walks around a flame.
+  description: >
+    This druid seems to be entranced by the fire.  She chants softly as she waves her hand and stares
+    into the flame.  She is one with the flame.  When she looks at you, her hard eyes only judge, seeking
+    Justice.
+  level: 14
+  sex: female
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55525":
+  keywords: [judge]
+  short: the Judge
+  long: The Judge sits here.
+  description: >
+    You cannot help but shiver as you see the Judge sit here silently.  His eyes pierce into your soul,
+    and he knows.  He knows your faults.  He knows your virtues.  He knows if you've been bad or
+    good....  So be good.  This ultimate purveyor of Justice sends criminals to jail everyday, sometimes with
+    his bare hands.
+  level: 25
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55526":
+  keywords: [Jaana, druid]
+  short: Jaana the Druid
+  long: Jaana the Druid is in deep meditation.
+  description: >
+    You meet another Warrior of Destiny.  She helped to lead the magical force to the Avatar.  The
+    Avatar's mentor in Justice, she has gone to the woods to drive life into a corner.
+  level: 16
+  sex: female
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sense_life, sanctuary]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  saves:
+    para: 4
+    rod: 4
+    petri: 4
+    breath: 4
+    spell: 4
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55527":
+  keywords: [prisoner]
+  short: the dirty prisoner
+  long: The Prisoner grips the bars with his dirty hands.
+  description: >
+    The Prisoner seems to be a slimy character.  He was a thief, and Justice was done to him.  You
+    glimpse light shining off something in his hands.
+  level: 11
+  sex: male
+  alignment: -100
+  flags: [sentinel]
+  affects: [sneak, hide]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55528":
+  keywords: [prisoner]
+  short: the prisoner
+  long: The Prisoner is big and grins evilly at you.
+  description: >
+    This Prisoner was convicted of one of the most heinous crimes, MURDER.  It took many guards and
+    druids to restrain this beast.
+  level: 14
+  sex: male
+  alignment: -100
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55529":
+  keywords: [citizen, yewsman]
+  short: the citizen of Yew
+  long: A citizen of Yew walks around.
+  description: >
+    Being the second largest city in Britannia, second only to Britain itself, this city employs and
+    houses many people.  This citizen of the city of Justice strolls the street, sure of his Virtue.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55530":
+  keywords: [bartender]
+  short: the bartender
+  long: A bartender stands here in the the middle of a throng of people.
+  description: >
+    A smiling face asks you what you would like to drink.  Well versed in Compassion, he has heard and
+    sympathized with many people who have gone to him for advice.  His advice to you is to kick back and
+    enjoy a drink.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55531":
+  keywords: [owner, bartender]
+  short: the pub owner
+  long: The owner of the pub walks around, talking to her customers.
+  description: The pub owner waves and smiles to you.  She asks what you want to drink and eat.
+  level: 13
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55532":
+  keywords: [ettin]
+  short: the ettin
+  long: The ettin scratches its heads and attacks.
+  description: >
+    With its two heads, it should make sense that this monster would have double the intelligence. 
+    But, in fact, it has only half.
+  level: 15
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: maul
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55533":
+  keywords: [gremlin, creature]
+  short: the gremlin
+  long: This little creature sneaks around and steals your food.
+  description: >
+    It seems to be just a head with little hands and feet sticking out of it. It does not seem like
+    these things could hurt you, but your money pouch seems much lighter.
+  level: 15
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, stay_zone, wimpy]
+  affects: [sneak, hide]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: claw
+  saves:
+    para: 3
+    rod: 3
+    petri: 3
+    breath: 3
+    spell: 3
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55534":
+  keywords: [headless]
+  short: the headless
+  long: The headless creature seems to be heading right for you!
+  description: >
+    No one really understands how these things can sense but, as it unerringly reaches for you, you
+    know it does.  In any case these creatures are strong and endurable.
+  level: 19
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: maul
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+    con: 12
+    cha: 12
+  saves:
+    para: 4
+    rod: 4
+    petri: 4
+    breath: 4
+    spell: 4
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55535":
+  keywords: [fighter]
+  short: the fighter
+  long: A muscular fighter searches here.
+  description: >
+    This fighter is cleaning out the dungeons.  In the peaceful time following the Avatar's success,
+    there are few ways to show Valor.  One of the more dangerous is to descend into the pits of hell and
+    clean them out.
+  level: 18
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+    con: 12
+    cha: 12
+  saves:
+    para: 4
+    rod: 4
+    petri: 4
+    breath: 4
+    spell: 4
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55536":
+  keywords: [Geoffrey]
+  short: Geoffrey the Fighter
+  long: Geoffrey the Fighter leads this campaign.
+  description: >
+    The muscle power of the Warriors of Destiny, Geoffrey is immense.  His broad shoulders make you
+    look like a mouse.  He epitomizes Valor.
+  level: 20
+  sex: male
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+    con: 13
+    cha: 13
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55537":
+  keywords: [lord, serpent, Simon]
+  short: Lord Simon
+  long: Lord Simon of the Serpent Hold stares at your form.
+  description: >
+    His movements are liquid and art.  As he makes a few practice swings, you HOPE that you are never
+    on the receiving end of his immense sword.  This is The Lord of Serpent Hold, courage itself
+    solidified into a human form.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55538":
+  keywords: [mimic, chest]
+  short: the mimic
+  long: A treasure chest is here, overflowing with gold.
+  description: >
+    The treasure chest reforms, and spits out a glob of poison.  Beware, adventurer, of the Mimic.
+  level: 21
+  sex: neutral
+  alignment: -500
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55539":
+  keywords: [gazer, eyeball]
+  short: the gazer
+  long: A floating eyeball glares at you.
+  description: >
+    This creature is comprised of one main eyeball and several auxiliary eyeballs coming out of the
+    main.  The eyeballs draw you in, making you forget who you are....
+  level: 21
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55540":
+  keywords: [tinker]
+  short: a tinker
+  long: A tinker is fiddling with one device or another.
+  description: >
+    The tinker has huge rippling muscles and a scarred skin.  You realize that his great Sacrifice to
+    his craft has led to his incredible strength and weaponskill.  This is not one you wish to fight.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55541":
+  keywords: [Julia]
+  short: Julia the Tinker
+  long: Julia the Tinker is here, forging a sword.
+  description: >
+    Julia the Tinker provided some of the muscle power to the Avatar during his Great Quest for
+    enlightenment.  She was a Warrior of Destiny and you see that not much has changed since those days.  She
+    represents Sacrifice in everything she does.  She is the Keeper of Oral History, as well as a prominent
+    weaponsmith.
+  level: 24
+  sex: female
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55542":
+  keywords: [lady]
+  short: the Lady of Empath Abbey
+  long: The Lady of Empath Abbey stands here.
+  description: >
+    When you see her your heart almost stops as you feel the intense waves of pure Love come from her
+    body.  Her love for you almost knocks you down.  You cannot hurt this one.
+  level: 30
+  sex: female
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55543":
+  keywords: [sandtrap, tentacle]
+  short: the sandtrap
+  long: A tentacle reaches out of the sand and latches onto your leg.
+  description: >
+    The Sandtrap burrows around under the sand and comes onto travellers, hidden. No one is really sure
+    what the Sandtrap looks like but it is a dangerous foe.
+  level: 18
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, aggressive, stay_zone, wimpy]
+  affects: [sneak, hide]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: whip
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+    con: 12
+    cha: 12
+  saves:
+    para: 4
+    rod: 4
+    petri: 4
+    breath: 4
+    spell: 4
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55544":
+  keywords: [dragon]
+  short: the dragon
+  long: A dragon lies on his heap of treasure with fire billowing out of his maw.
+  description: >
+    The dragon looks like every other dragon you've seen; wings, tail, fire. Only this one doesn't have
+    a dorky color attached to it.  And doesn't talk about annoying C terms.
+  level: 20
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: claw
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+    con: 13
+    cha: 13
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55545":
+  keywords: [paladin]
+  short: the paladin
+  long: A paladin practices his sword strokes here.
+  description: >
+    This paladin works hard to keep his Honor and the Honor of his people. Honor does not lead his
+    life, Honor is his life.  His shiny armor and equally shiny sword serves to remind you that he is among
+    Britannia's most powerful battalion.
+  level: 20
+  sex: male
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+    con: 13
+    cha: 13
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55546":
+  keywords: [Dupre, paladin]
+  short: Dupre the Paladin
+  long: Sitting here, Dupre the Paladin consults his maps.
+  description: >
+    Dupre the Paladin was constant companion of the Avatar and a Warrior of Destiny.  He is a symbol of
+    Honor.  He is right now trying to figure out a plan of attack to get the dragon.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55547":
+  keywords: [reaper]
+  short: the reaper
+  long: The reaper strikes out with its tentacles.
+  description: >
+    The reaper is immobilized and attached to the ground.  Even with this disadvantage its tentacles
+    and magical powers more then make up for any disadvantage.
+  level: 18
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: whip
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+    con: 12
+    cha: 12
+  saves:
+    para: 4
+    rod: 4
+    petri: 4
+    breath: 4
+    spell: 4
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55548":
+  keywords: [gargoyle, king, Draxthanum]
+  short: Draxthanum the Gargoyle
+  long: The King of Gargoyles is here.
+  description: >
+    Draxthanum, the Winged Gargoyle, is here to observe the odd habits of humans and their combat
+    tactics.  He is red with wings, very strong and his aura is overpowering.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: claw
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55549":
+  keywords: [ghost, spirit]
+  short: the spirit
+  long: The spirit of a peaceful man floats around here.
+  description: >
+    This ghost seems peaceful, even though he is chained to the earth through some responsibility.
+  level: 25
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55550":
+  keywords: [ghost, spirit]
+  short: the ghost
+  long: This ghost was an evil man in a past life.
+  description: Even on its transparent face, you can see a grimace of evil as it swoops over to you.
+  level: 25
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55551":
+  keywords: [skeleton]
+  short: the skeleton
+  long: The skeleton walks around in tattered clothing.
+  description: >
+    The skeleton has rotting bits of flesh attached to its bones.  It carries a rusty shield and
+    sword.  In fact the only thing completely clean on it are its white teeth, perhaps from its nightly meals
+    of flesh and bone.
+  level: 23
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+    con: 15
+    cha: 15
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55552":
+  keywords: [daemon, demon]
+  short: the daemon
+  long: The daemon unfurls his wings and swoops towards you.
+  description: >
+    The most dangerous undead, and among the most dangerous of all monsters, this beast can use all
+    magics, is strong and hardy.  Right now he seems to be busy... Killing you.
+  level: 23
+  sex: male
+  alignment: -500
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: claw
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+    con: 15
+    cha: 15
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55553":
+  keywords: [mourner]
+  short: the mourner
+  long: A mourner bows her head over the grave.
+  description: >
+    A mourner is in tears.  She is crying over the grave of a loved one.  She is expressing poignant
+    Spirituality.  This gives her strength to persevere.
+  level: 23
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+    con: 15
+    cha: 15
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55554":
+  keywords: [Shamino, ranger]
+  short: Shamino the Ranger
+  long: Shamino the Ranger sits here, meditating.
+  description: >
+    The last Warrior of Destiny, Shamino sits here in a yoga position.  The Enlightened smile on his
+    face confirms that he indeed is one with the spirit of Spirituality.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55555":
+  keywords: [timelord]
+  short: the Timelord
+  long: The Timelord is here in an aura of power.
+  description: >
+    The Hourglass that he holds in his hand actually controls the fickle powers of time.  This being is
+    so awe-inspiring that you feel an urge to prostrate yourself to him.  But as all godly powers must
+    be, he is truly and totally neutral.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55556":
+  keywords: [guardian]
+  short: the Guardian
+  long: The Guardian, as far as you can tell, is just a big red face.
+  description: >
+    First you hear a booming voice.  'You will join the Fellowship.'  He is the latest, and some people
+    say greatest, of the Avatar's enemies.  And now you have the joy of meeting him.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55557":
+  keywords: [Blackthorn]
+  short: Blackthorn
+  long: Blackthorn wonders how he lost the throne.
+  description: >
+    Blackthorn was more misguided rather then evil.  Though he was still a foe of Avatar that
+    eventually was destroyed, during this era he still is corrupt and VERY, VERY dangerous.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55558":
+  keywords: [Exodus]
+  short: Exodus
+  long: Exodus is here, reveling in his island fortress.
+  description: >
+    Exodus, the horrible progeny of Minax and Mondain, is here.  More powerful then his parents, he is
+    also more dangerous.  He was the last of the Triad that the Avatar destroyed.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55559":
+  keywords: [Minax]
+  short: Minax
+  long: Minax is here, conjuring up the evil spirits.
+  description: >
+    More powerful then her master and lover, Minax is as beautiful as she is dangerous.  Bold enough to
+    take on the forces of evil without the gem, she eventually proved to be their mistress.  Without the
+    Avatar the world would still be under her complete power.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55560":
+  keywords: [Mondain]
+  short: Mondain
+  long: Mondain grips his evil gem and conjures magic to destroy you.
+  description: >
+    Mondain, the first of the Triad of Evil, was the first foe that the man, later to be known as the
+    Avatar, was to face.  Mondain has killed his father to gain the power of the dark gem that he wielded.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55561":
+  keywords: [Sentri, guard]
+  short: Sentri
+  long: Sentri stoically stands here, protecting his Lord and castle.
+  description: >
+    Sentri is a powerful man whose only job is to protect the life of Lord British.  In seeing this
+    done he is completely armored and wields a heavy blade.
+  level: 25
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+    con: 16
+    cha: 16
+  saves:
+    para: 6
+    rod: 6
+    petri: 6
+    breath: 6
+    spell: 6
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55562":
+  keywords: [Batlin]
+  short: Batlin
+  long: Batlin says, 'Join the Fellowship.'
+  description: >
+    Batlin is an evil man that goes around and corrupts the young.  You see also that he has a full set
+    of mantras, probably stolen from their rightful owners. He is protected though by the power of his
+    god.
+  level: 30
+  sex: male
+  alignment: -750
+  flags: [scavenger, stay_zone]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 7
+    rod: 7
+    petri: 7
+    breath: 7
+    spell: 7
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55563":
+  keywords: [avatar]
+  short: the Avatar
+  long: The Avatar is here, chatting to Lord British.
+  description: >
+    The Avatar is the symbol of courage and truth and love, and all that descends from it.  He has
+    mastered Compassion, Humility, Justice, Spirituality, Honesty, Sacrifice, Valor, and Honor.  He truly is
+    an inspiration to those who know him.
+  level: 32
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 8
+    rod: 8
+    petri: 8
+    breath: 8
+    spell: 8
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55564":
+  keywords: [Lord, British]
+  short: Lord British
+  long: Lord British is healing the Avatar's wounds.
+  description: >
+    Lord British sits on his throne.  When you see him, you know the meaning of true leadership.  His
+    charisma is almost tangible.  On him you see the three crown jewels.  These hold power both
+    figuratively and literally.
+  level: 32
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [sanctuary]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 8
+    rod: 8
+    petri: 8
+    breath: 8
+    spell: 8
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55565":
+  keywords: [shark]
+  short: the shark
+  long: The shark smells blood.
+  description: This fish can sense blood in the water and comes to kill you.
+  level: 21
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  affects: [waterwalk]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55566":
+  keywords: [seahorse, sea, horse]
+  short: the seahorse
+  long: The peaceful seahorse swims here.
+  description: The seahorse is an amazingly beautiful creature.  Its swimming and diving pleases you.
+  level: 21
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  affects: [waterwalk]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: dead
+
+"tba:555:mob:55567":
+  keywords: [squid]
+  short: the squid
+  long: The squid's tentacles reach for you.
+  description: >
+    The squid easily is double a boat in size.  Its tentacles are huge and you fear as it grabs for you.
+  level: 21
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: whip
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+    con: 14
+    cha: 14
+  saves:
+    para: 5
+    rod: 5
+    petri: 5
+    breath: 5
+    spell: 5
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55568":
+  keywords: [armorer]
+  short: the armorer
+  long: The Armorer stands here.
+  description: The Armorer sells...  Armor.
+  level: 32
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [sense_life]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 8
+    rod: 8
+    petri: 8
+    breath: 8
+    spell: 8
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55569":
+  keywords: [weaponseller]
+  short: the weaponseller
+  long: The Weaponseller stands here.
+  description: The Weaponseller sells...  Weapons.
+  level: 32
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [sense_life]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 8
+    rod: 8
+    petri: 8
+    breath: 8
+    spell: 8
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:555:mob:55570":
+  keywords: [boatseller]
+  short: the boatseller
+  long: The Boatseller stands here.
+  description: The Boatseller sells...  Boats.
+  level: 32
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [sense_life]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+    con: 18
+    cha: 18
+  saves:
+    para: 8
+    rod: 8
+    petri: 8
+    breath: 8
+    spell: 8
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing

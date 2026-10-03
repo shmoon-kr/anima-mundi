@@ -1,0 +1,240 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 273.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:273:mob:27300":
+  keywords: [facehugger, alien]
+  short: a facehugger alien
+  long: A facehugger stage alien sees you and springs!
+  description: A facehugger is trying to wrap it's tail around your throat!
+  level: 25
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone, helper, no_sleep]
+  affects: [sneak]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: claw
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27301":
+  keywords: [alien]
+  short: a drooling alien
+  long: A slime drooling alien is here waiting for lunch!
+  description: The alien 'smiles' back at you and extends its inner jaws!  SNAP SNAP SNAP!
+  level: 28
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone, helper]
+  affects: [sneak]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+    bare_hand_attack: maul
+  abilities:
+    str: 22
+    dex: 22
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27302":
+  keywords: [queen, alien]
+  short: the queen alien
+  long: The queen alien is here laying eggpods!
+  description: The queen alien is less than pleased at your presence.  You should die now!
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, memory, helper, no_charm, no_summon, no_sleep, no_bash]
+  affects: [sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: maul
+  abilities:
+    str: 24
+    dex: 20
+  gold: 300
+  exp: 90000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:273:mob:27303":
+  keywords: [Predator, alien]
+  short: a Predator alien
+  long: A Predator alien is here scouting for trophies.
+  description: >
+    The Predator is a huge bipedal monstrosity with vertically aligned jaws and 'hair' that reminds you
+    of when you used to fight gorgons!  He is nearly twice your size and already has a nice polished
+    human skull hanging from his trophy belt.  It looks like you are next!
+  level: 29
+  sex: male
+  alignment: 0
+  flags: [scavenger, aggressive, stay_zone, wimpy, memory, helper, no_charm, no_summon, no_bash]
+  affects: [invisible, detect_invis, sense_life, sneak]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: claw
+  abilities:
+    str: 24
+    int: 22
+    dex: 24
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27304":
+  keywords: [Captain, Vance, Marshal, captain, vance, marshal]
+  short: Captain Vance Marshal
+  long: Captain Vance Marshal is here in his exoskeleton armor!
+  description: >
+    Captain Vance Marshal has obviously gone mad!  Then again you would too if you had survived as long
+    as he has on this cursed space station!
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aggressive, wimpy, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: punch
+  abilities:
+    str: 20
+    str_add: 100
+    int: 19
+    wis: 18
+    dex: 20
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27305":
+  keywords: [panther, alien]
+  short: a panther alien
+  long: A four-legged panther alien is here waiting to rip your guts out!
+  description: >
+    You thought the regular aliens had a lot of teeth?!  This man-eater has twice as many at the
+    bipedal aliens.  It also looks a lot nastier.  It moves with such speed on all fours that there is just no
+    way you can out run it.  You must stand and fight this black monstrosity!
+  level: 27
+  sex: neutral
+  alignment: -500
+  flags: [aggressive, stay_zone, memory]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: maul
+  abilities:
+    str: 24
+    str_add: 100
+    int: 12
+    wis: 7
+    dex: 23
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27306":
+  keywords: [oshura, woman]
+  short: Lt. Miko Oshura
+  long: Lt. Miko Oshura is standing here in torn clothing.
+  description: >
+    This tough young lady has been through hell and has managed to keep her wits about her...  Not to
+    mention her weapons!  Man is she ever glad to see a smiling HUMAN face!
+  level: 28
+  sex: female
+  alignment: 500
+  flags: [scavenger, stay_zone, wimpy, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  abilities:
+    str: 18
+    str_add: 100
+    dex: 19
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27307":
+  keywords: [captain, alien, predator]
+  short: the Predator Captain
+  long: The Predator Captain is standing here looking angry!
+  description: >
+    Uh oh...  Now you've done it!  There are some places you just shouldn't go ...  This is one of
+    them!  The Captain of the Predators is very angry that you have invaded his ship.  He will have to
+    'discuss' it with his crew-members after he finishes polishing your skull!
+  level: 29
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aggressive, stay_zone, wimpy, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  abilities:
+    str: 23
+    dex: 23
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:273:mob:27308":
+  keywords: [crew, crewmember]
+  short: a crewmember
+  long: A Space Station Alpha crewmember is here trying to stay alive!
+  description: >
+    This poor haggard soul has been fleeing the onslaught of two different species of alien
+    aggressors.  How he has managed to stay alive this long is anyone's guess.  He must be extremely resourceful!
+  level: 25
+  sex: male
+  alignment: 367
+  flags: [scavenger, stay_zone, wimpy, aggr_evil, memory]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,442 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 140.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:140:mob:14000":
+  keywords: [Wyvern, guard, commander, wyv]
+  short: the wyvern guard commander
+  long: A mighty wyvern stands here defending his city.
+  description: >
+    This huge wyvern holds himself with military precision.  His claws are extremely sharp as if he has
+    taken the time to file them to fine points.  His scales are a dull red and flex over the massive
+    muscles underneath his hide. His glance scans the room and focuses on you intently.  He crooks one huge
+    talon as you look at him as if to ask what you want from him, better not waist his time.
+  level: 18
+  sex: male
+  alignment: -400
+  flags: [sentinel, aware, stay_zone, memory, no_charm, no_summon]
+  affects: [detect_align, detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14001":
+  keywords: [Dust, Devil, wyv]
+  short: a dust devil
+  long: A small tornado of dust spins here.
+  description: >
+    This is a funnel of air about three feet tall.  It spins in circles kicking up sand and dust as it
+    goes.  There looks to be a human face within the tiny storm.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: blast
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14002":
+  keywords: [Sand, Crab, Wyv]
+  short: a sand crab
+  long: A small crab is crawling across the sand here.
+  description: >
+    This little crab has two large claws to defend itself and a thick shell to hide under.  Looks like
+    you wouldn't want it to get a good hold of you with those pincers.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [aware, stay_zone, memory]
+  affects: [sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14003":
+  keywords: [Heat, Monster, wyv]
+  short: a heat monster
+  long: A monster made entirely of heat walks here in human form.
+  description: >
+    This figure looks vaguely human in shape but keeps wavering in the light. Waves of heated air flow
+    from it and you wonder what kind of energy it took to create this thing.  The fiendish face of the
+    monster grins demonically at you.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14004":
+  keywords: [guardian, red, dragon, wyv]
+  short: the guardian red dragon
+  long: A gigantic red dragon lies here blocking your way.
+  description: >
+    This huge dragon sprawls across your way leaving you only a little room to pass by it.  Smoke and
+    hot air Jet forth from its fanged maw and nostrils, while sparks of reddish light reflect off its deep
+    red scales and the treasure imbedded in its belly.  Its eyes are closed and although it is over 100
+    feet long if it is sleeping..  You might be able to get passed it.  What a guardian!
+  level: 26
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, aware, stay_zone, memory, no_summon]
+  affects: [detect_align, detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14005":
+  keywords: [wyvern, citizen, wyv]
+  short: a wyvern citizen
+  long: A working class wyvern walks these streets without fear.
+  description: >
+    This is an adult wyvern on his way to run some errands.  His gaze passes over you and dismisses you
+    as soon as it does.  How pathetic you are.
+  level: 3
+  sex: female
+  alignment: -200
+  flags: [scavenger, stay_zone, memory]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14006":
+  keywords: [Hatchling, Wyvern, wyv]
+  short: a hatchling wyvern
+  long: A newly hatched wyvern is here.
+  description: >
+    This is a tiny version of the other larger inhabitants of this city.  It is so young that its
+    scales are still shiny from birth.  The baby wyvern looks back at you with curiosity, who is this strange
+    being?
+  level: 3
+  sex: male
+  alignment: -100
+  flags: [scavenger, stay_zone, wimpy, memory]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14007":
+  keywords: [Wyvern, guard, wyv]
+  short: a wyvern guard
+  long: A wyvern guard is here on duty.
+  description: >
+    This wyvern is powerfully built and carries himself with confidence.  He watches the crowds
+    intently looking for signs of trouble within his city.  His dull red scales glint faintly in the light and
+    his footsteps echo heavily over the voices of those of his lighter brethren.  A deadly opponent.
+  level: 7
+  sex: male
+  alignment: -250
+  flags: [aware, stay_zone, memory, no_charm, no_summon, no_sleep]
+  affects: [sense_life, protect_evil]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14008":
+  keywords: [wyvern, sentry, wyv]
+  short: a wyvern sentry
+  long: A mighty wyvern stands here watching the gates.
+  description: >
+    This is a truly majestic example of the wyvern race.  She stands with neck raised to a height of
+    ten feet and her dull blue scales reflect the light giving everything around her a bluish tinge.  She
+    looks at you as if assessing your possible danger to her.  A forked tung flickers in and out of her
+    mouth tasting the air.
+  level: 10
+  sex: female
+  alignment: -350
+  flags: [sentinel, aware, stay_zone, memory, helper, no_summon]
+  affects: [detect_align, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14009":
+  keywords: [wyvern, royal, attendant, wyv]
+  short: a royal wyvern attendant
+  long: A wyvern in royal colors stands here.
+  description: >
+    This wyvern is dressed in the house colors of the ruling family of the city. Deep red scales match
+    a set of glowing red eyes which look at you distastefully. Though he says nothing the 15 foot long
+    reptile conveys a feeling of great arrogance and disdain.  He must be very important.
+  level: 14
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone, memory, no_charm, no_summon]
+  affects: [detect_align, detect_invis, detect_magic, protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14010":
+  keywords: [Lord, wyverns, wyvern, wyv]
+  short: the Lord of the wyverns
+  long: The great Lord of the wyverns is here in all his glory.
+  description: >
+    This is the largest wyvern you have ever seen.  Fully 20 feet long, he dwarfs even some dragons
+    you've seen.  Unlike other males his coloring is a deep crimson.  There is an other difference as well,
+    he has a set of huge wings folded across his back.  His eyes pass serenely over you and the rest of
+    the room.  You represent no threat to such a creature.
+  level: 22
+  sex: male
+  alignment: -500
+  flags: [sentinel, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14011":
+  keywords: [Wyvern, wyv, wizard]
+  short: a wyvern wizard
+  long: A wyvern wizard is here researching new items to sell.
+  description: >
+    This wyvern holds a wand in one hand and a spell book in the other.  He looks at you carefully to
+    make sure you don't try to walk off with anything from his shop.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: blast
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14012":
+  keywords: [wyvern, water, worker, wyv]
+  short: a wyvern water worker
+  long: A wyvern stands here filling cups and barrels with water.
+  description: >
+    This wyvern holds a forked stick in one hand and the Handel of a pump in the other.  He watches you
+    with interest.  Wonder if he's hungry or looking for business?
+  level: 22
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14013":
+  keywords: [Wyvern, wyv, trader]
+  short: a wyvern trader
+  long: A wyvern is here checking over his goods.
+  description: >
+    This wyvern holds a jeweler's monocle in one hand and a tablet in the other. There is a shrewd look
+    in his eye.  Looks like he drives a hard bargain.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14014":
+  keywords: [wyvern, weapon, master, wyv]
+  short: a wyvern weapon master
+  long: A huge wyvern is here sharpening his claws.
+  description: >
+    He looks very well capable of crushing you with one claw tied behind his back.  It's a good thing
+    he's selling weapons and not using them...  On you.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: slash
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14015":
+  keywords: [wyvern, armor, expert, wyv]
+  short: a wyvern armor expert
+  long: A wyvern is here tanning some hides.
+  description: >
+    This wyvern holds a knife in one hand and a piece of hide in the other. Wonder if she wants your
+    hide too?
+  level: 22
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14016":
+  keywords: [wyvern, cook, wyv]
+  short: a wyvern cook
+  long: A big wyvern is here selling his home cooked meals.
+  description: >
+    This wyvern looks like he's had a few too many of his own creations.  On the other hand maybe he's
+    had a few too many of his customers.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:140:mob:14017":
+  keywords: [wyvern, healer, wyv]
+  short: a wyvern healer
+  long: A wyvern in the garb of a healer stands here.
+  description: >
+    This wyvern holds a staff in one hand and a bag of herbs in the other.  Is that a smile on his
+    face?  Or is he just thinking of how much he can charge you?
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing

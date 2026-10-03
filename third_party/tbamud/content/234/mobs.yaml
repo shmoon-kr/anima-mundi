@@ -1,0 +1,279 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 234.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:234:mob:23400":
+  keywords: [samantha, clerk]
+  short: Samantha, the clerk
+  long: Samantha smiles as you enter her shop.
+  description: >
+    Samantha is a beautiful young elf, who seems to be happy with what she does. She is very pleased to
+    see you.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23401":
+  keywords: [newbie, training, mob]
+  short: a newbie training mob
+  long: The newbie training mob stands here mocking you.
+  description: The newbie training mob looks very scrawny and sickly.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23402":
+  keywords: [newbie, dummy, mob]
+  short: the dummy mob
+  long: A newbie dummy mob is unsure what it is doing.
+  description: >
+    This mob looks like a punching bag, that would bounce right back up, if it got knocked to the
+    ground.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23403":
+  keywords: [Kobold]
+  short: a kobold
+  long: A Kobold is sneering at you.
+  description: >
+    You see a small rat man, which stands about 3 feet tall.  In his hand is a small dagger which is
+    jagged and chipped.  The clothes on this rat man are torn and a bit oversized.
+  level: 1
+  sex: male
+  alignment: 1
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: pierce
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23404":
+  keywords: [Badger]
+  short: a badger
+  long: A badger is here hissing.
+  description: >
+    You see a large badger with red eyes staring back at you.  The badger seems to be unusually strong.
+  level: 2
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23405":
+  keywords: [Brownie]
+  short: a brownie
+  long: A brownie is here trying to hide.
+  description: >
+    You see a tiny humanoid.  The brownie is a little larger than a fairy, and does not have wings. 
+    They are skilled with ranged items.
+  level: 2
+  sex: male
+  alignment: 6
+  flags: [stay_zone]
+  affects: [invisible, detect_invis, sense_life, sneak]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: sting
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23406":
+  keywords: [Bulette]
+  short: a bulette
+  long: You see a bulette snooping around
+  description: >
+    You see a very large insect type creature that looks like an overgrown beetle.  It is armored with
+    a very tough shell.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: pound
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23407":
+  keywords: [Osquip]
+  short: a osquip
+  long: An osquip snaps at you.
+  description: >
+    You see a large rodent with 6 legs and appears to be of a beaver family. It also looks like a large
+    Rat.  The Osquip is the size of a small dog.
+  level: 3
+  sex: neutral
+  alignment: -8
+  flags: [stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23408":
+  keywords: [urd]
+  short: a urd
+  long: An urd is flying overhead
+  description: >
+    An Urd is of the Kobold family, except that the Urd has wings and can fly. Urds are three feet tall
+    and have short ivory horns and red rimmed eyes.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: thrash
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23409":
+  keywords: [Water, weird]
+  short: a water weird
+  long: A water weird is angered to see you.
+  description: >
+    This water weird is still young.  It seems to be made out of water, and seems to be of a serpent
+    type.  It's body blends into the water.
+  level: 4
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: slash
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23410":
+  keywords: [Armorer]
+  short: the armorer
+  long: The Armorer is watching you eagerly.
+  description: >
+    The Armorer is the size of a hobbit.  He looks well equipped and seems to have been in a battle or
+    two.  He has a kind looking face.
+  level: 10
+  sex: male
+  alignment: -250
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:234:mob:23495":
+  keywords: [Brownie]
+  short: a brownie
+  long: A brownie is here trying to hide.
+  description: >
+    You see a tiny humanoid.  The brownie is a little larger than a fairy, and does not have wings. 
+    They are skilled with ranged items.
+  level: 2
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  affects: [invisible, detect_invis, sense_life]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: sting
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing

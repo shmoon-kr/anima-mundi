@@ -1,0 +1,209 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 201.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:201:mob:20101":
+  keywords: [crab]
+  short: a grumpy-looking crab
+  long: A very unhappy crab crawls around the area.
+  description: >
+    The crab has a protective shell that serves to shield its soft inner body. When danger approaches,
+    it uses its razor-sharp pincers to defend itself.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  affects: [hide]
+  combat:
+    thac0: 17
+    armor: 2
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 0
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20102":
+  keywords: [jellyfish, fish, jelly]
+  short: a pale-looking jellyfish
+  long: An innocent-looking jellyfish floats here.
+  description: >
+    This jellyfish has no features, except for its tentacles and the rounded top. It's white and near
+    translucent, and you can see its insides which looks like silverish ribbons.
+  level: 15
+  sex: neutral
+  alignment: -200
+  flags: [sentinel, aggressive, no_summon]
+  affects: [invisible, sneak, hide]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20103":
+  keywords: [seagull, bird]
+  short: a hungry seagull
+  long: A seagull flies here, flapping its wings and soaring in the sky.
+  description: >
+    The seagull has a white body, but the tip of its wings and the tail are painted black.  Its beck is
+    yellow, which it uses to break the shells of crabs, its main food source.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  affects: [waterwalk, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20104":
+  keywords: [creature, siren]
+  short: a stunningly beautiful siren
+  long: A siren rests here, singing in a soothing voice.
+  description: >
+    The siren has golden-colored eyes, and her body is lean.  She has a fair complexion, and her
+    voluptuous, full lips are the main features of this marvelous creature.
+  level: 20
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, no_summon]
+  affects: [detect_invis, sense_life, protect_evil]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20105":
+  keywords: [woman, lady, tryny, shopkeeper, widow]
+  short: Tryny the Widow
+  long: "@W[GREET]@n Tryny the Widow Shopkeeper is here, waiting to sell you things."
+  description: >
+    Tryny has looks depressed and in need of comforting.  Her black hair lined with streaks of gray,
+    and her face has numerous wrinkles on it.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  affects: [protect_evil]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 0
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20106":
+  keywords: [Old, Fool]
+  short: an old fool
+  long: "@W[GREET]@n An Old Fool is muttering nonsense here."
+  description: >
+    An old man stands before you, lean and wiry from time.  His skin is wrinkled and charred black from
+    the sun, and he is bald, with only a few miserable strands of hair left on his head.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 70
+  exp: 0
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20197":
+  keywords: [receptionist, woman, blonde]
+  short: a blonde receptionist
+  long: An blonde woman in her late 40s is here, waiting to help you.
+  description: >
+    The receptionist wears a smart business suit and holds a suitcase that holds plenty of important
+    documents.  To delete/add questflags to unable you to do the quest again or enable quest, type @rplease
+    add/delete@n
+  level: 34
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+10000
+    damage: 5d5+5
+  gold: 10000
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20198":
+  keywords: [tourguide, guide, man]
+  short: a cheerful tour guide
+  long: A tour guide stands here, ready to assist you.
+  description: >
+    Hair neatly comb, and with a smile plastered on his face, this tour guide will give you some stuff
+    to begin your exploration of the Sapphire Islands.
+  level: 34
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:201:mob:20199":
+  keywords: [woman, chef, cook]
+  short: a plump cook
+  long: A horizontally-challenged cook is here, awaiting your orders.
+  description: This lady looks plump and is undeniably horizontally challenged.
+  level: 34
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing

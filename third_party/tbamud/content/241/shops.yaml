@@ -1,0 +1,29 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 241.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:241:shop:24100":
+  keeper: tba:241:mob:24107
+  rooms: [tba:241:room:24121]
+  products:
+  - tba:241:obj:24120
+  - tba:241:obj:24121
+  - tba:241:obj:24122
+  - tba:241:obj:24123
+  - tba:241:obj:24124
+  - tba:241:obj:24125
+  buys:
+  - type: undefined
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s I'm sorry, but I don't have that right now!"
+    you_dont_have_it: "%s I don't want to buy anything from you."
+    does_not_buy: "%s I don't want to buy anything from you."
+    shop_cannot_afford: "%s I don't want to buy anything from you."
+    you_cannot_afford: "%s You don't have the money, stranger."
+    bought: "%s That will cost you %d coins. Enjoy your drink."
+    sold: "%s I don't want to buy anything from you."
+  temper: -1
+  flags: 7
+  trade_with: 0

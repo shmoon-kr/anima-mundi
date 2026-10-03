@@ -1,0 +1,1202 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 292.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:292:mob:29200":
+  keywords: [MouseRider]
+  short: MouseRider
+  long: MouseRider sits on his throne here, his head in his hands.
+  description: >
+    MouseRider is the greatest mortal sage ever.  He is also a most troubled man, knowing things you
+    couldn't even guess at.  You wonder how he could have all that knowledge and not want power.
+  level: 5
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29201":
+  keywords: [Sentinel, Beast]
+  short: the Sentinel Beast
+  long: The Sentinel Beast's eyes glow chaotically as it attacks!
+  description: >
+    The Sentinel Beast is somewhat reminiscent of a wolf if you ignore the multi-colored glowing eyes,
+    the horns, the six inch long claws...
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29202":
+  keywords: [Leonna]
+  short: Leonna
+  long: Leonna, guildmaster of the Mages' Guild of Kerofk, greets you.
+  description: >
+    Leonna seems to be a nice, fun-loving woman.  Obviously she became guildmaster due more to her
+    personality than her wizardly power.  Her powers are no small matter, however; she is still one of the
+    best mages in the city.
+  level: 24
+  sex: female
+  alignment: 700
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29203":
+  keywords: [Bookstore, Owner, guildguard]
+  short: the Bookstore Owner
+  long: The Bookstore Owner looks up from a paperback as you come in.
+  description: >
+    The Bookstore Owner looks very bored in his job here.  From the way his fingers twitch and his eyes
+    dart, you wonder if he really is what he appears...
+  level: 23
+  sex: male
+  alignment: -500
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29204":
+  keywords: [Seobagn, Thieves, Thief, Guildmaster]
+  short: Seobagn
+  long: The Thieves' Guildmaster, Seobagn, watches you with narrowed eyes.
+  description: >
+    Seobagn snickers at you while he spins a coin around his fingers with practised ease.  You wonder
+    if its your coin.
+  level: 24
+  sex: male
+  alignment: -800
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29205":
+  keywords: [Bartender]
+  short: the Bartender
+  long: The Bartender pours drinks several at a time to keep up with the rush.
+  description: >
+    The Bartender looks harried as he tries to keep up with several different orders at the same time. 
+    Maybe you should bother him later...
+  level: 14
+  sex: male
+  alignment: 250
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29206":
+  keywords: [Barmaid]
+  short: the Barmaid
+  long: The barmaids rush about delivering drinks and taking orders.
+  description: >
+    The barmaid looks at you with a tired glance as she struggles to keep up with the thirsty
+    populace.  'What do you want?  ' she asks while pulling out an order pad.
+  level: 5
+  sex: female
+  alignment: 100
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29207":
+  keywords: [drunk, person]
+  short: the Drunk
+  long: A drunk person is here, babbling about something incessantly.
+  description: The drunk person looks at you and slurs, 'Whatre you lookin' at, bozo?  '
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29208":
+  keywords: [lucky, gambler]
+  short: the Gambler
+  long: A lucky gambler is here, striking it rich!
+  description: The lucky gambler looks at you and snickers.  Poor Boy!
+  level: 12
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29209":
+  keywords: [dealer]
+  short: the Dealer
+  long: The dealer sets out a new hand for all to play.
+  description: >
+    The dealer looks at you flatly and says, 'Are you in or out?  ' He really doesn't seem to care one
+    way or another.
+  level: 23
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29210":
+  keywords: [Ben, Benzaldehyde]
+  short: Ben
+  long: Ben counts his money, ignoring you completely.
+  description: >
+    Benzaldehyde is a big man, reminding you of some elephants you've seen. His eyes light up while he
+    counts his money--a man possessed by his greed.
+  level: 24
+  sex: male
+  alignment: -785
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29211":
+  keywords: [Ginger, shopkeeper]
+  short: the Shopkeeper
+  long: The shopkeeper smiles at you as you enter her store.
+  description: >
+    The shopkeeper here is the legendary Bob's wife Ginger.  She welcomes you to her establishment and
+    invites you to browse as long as you wish.
+  level: 23
+  sex: female
+  alignment: 900
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29212":
+  keywords: [unlucky, gambler]
+  short: the Gambler
+  long: An unlucky gambler struggles to hold back tears as his money disappears.
+  description: >
+    The unlucky gambler just doesn't say a word, he just keeps putting the money down, hoping to at
+    least break even.  It doesn't even look like he's got a chance.
+  level: 12
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29213":
+  keywords: [citizen]
+  short: the Citizen
+  long: A citizen is here, debating politics with anyone who will listen.
+  description: >
+    The citizen seems very upset about something.  You're not sure exactly what, but he seems anxious
+    to tell you.  The more he talks, the more your attention wanders until you're ready to go.
+  level: 8
+  sex: male
+  alignment: 350
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29214":
+  keywords: [receptionist, wife]
+  short: the Receptionist
+  long: The receptionist smiles and offers you a room.
+  description: >
+    Myrama is all smiles as you look at her.  She is bright, witty, and the only reason why Kell is so
+    successful.  Myrama is truly marvelous!
+  level: 5
+  sex: female
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29215":
+  keywords: [herbalist, shopkeeper]
+  short: the Herbalist
+  long: The herbalist is here, reading to her plants.
+  description: >
+    The herbalist is an ancient woman, but she still seems spry and sharp-minded when it comes to
+    plants.  You've no doubt this woman is an expert in her field.
+  level: 23
+  sex: female
+  alignment: 500
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29216":
+  keywords: [lawyer]
+  short: the Lawyer
+  long: The lawyer is here, ready to lie his tongue out.
+  description: >
+    The lawyer looks at you, ready to spot anything he can sue you for.  This has got to be one of the
+    most loathsome mobs in the whole mud!
+  level: 14
+  sex: male
+  alignment: -1000
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29217":
+  keywords: [secretary]
+  short: the Secretary
+  long: The secretary pops his gum and asks you what you want.
+  description: >
+    The secretary is a bored, out-of-place looking man, until you spot the hidden daggers in his
+    sleeve, boot, shirt, down his back, etc.  (not too good at hiding them, is he?  ).  Obviously, this man is
+    here more to protect the mayor than to do office work.
+  level: 24
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29218":
+  keywords: [mayor, kell]
+  short: Kell
+  long: Mayor Kell greets you into his office with a welcoming hand.
+  description: >
+    The mayor seems happy to see you, even though you interrupted his putting practice.  He sits you
+    down, offers you a drink, and asks what he can do for you.
+  level: 5
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29219":
+  keywords: [council, guard]
+  short: the Council Guard
+  long: The Council Guards look ready to rip you apart if you disturb the meeting.
+  description: >
+    The Council Guards are impressive.  As you look upon their pikes and plate armor, a little part of
+    your brain start screaming about how you'd be crazy to mess with them.
+  level: 23
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29220":
+  keywords: [council, members]
+  short: the Council Member
+  long: The council member looks quite upset as you interrupt them!
+  description: The council member is not just another politician...  He can fight, too!
+  level: 15
+  sex: male
+  alignment: 350
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29221":
+  keywords: [jailer]
+  short: the Jailer
+  long: The jailer reads his newspaper while sitting in his chair.
+  description: The jailer looks bored, as if he was in a Fortran class.  That bored... Really!
+  level: 10
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29222":
+  keywords: [prisoner]
+  short: the Prisoner
+  long: A prisoner here has given up all hopes of escape.
+  description: >
+    The prisoner looks up at you weakly and mumbles, 'I am not a number!  ' He gasps and looks dejected
+    again.
+  level: 5
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29223":
+  keywords: [innguard, guard]
+  short: the Innguard
+  long: A innguard is here, ready to fight off some marauding hordes.
+  description: >
+    The innguard looks fearless and ready to defend the patrons of the Fortress at a moments notice.
+  level: 25
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29224":
+  keywords: [Jenk]
+  short: Jenk
+  long: Jenk is here, ready to sell you anything!
+  description: >
+    Jenk is a lowdown no good shopkeeper who'll sell anything to make a gold! He's corrupt, greedy, and
+    you're kind of man!
+  level: 25
+  sex: male
+  alignment: -500
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29225":
+  keywords: [black, marketeer]
+  short: the Black Marketeer
+  long: The black marketeer is here ready to sell you anything you want.
+  description: >
+    The black marketeer has set up shop in Jenk's place to sell just what you need...  Now what is it
+    that you need?
+  level: 25
+  sex: male
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29226":
+  keywords: [priest, guildguard]
+  short: the Priest
+  long: A priest is here, performing his absolutions.
+  description: >
+    The priest looks like a kindly man who has seen too much suffering for one life.  He now devotes
+    his life to XXXX, hoping to one day ascend to immortality.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, wimpy, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29227":
+  keywords: [high, priest, guildmaster]
+  short: the High Priest
+  long: The High Priest is here, glowing with the benevolence of AO.
+  description: >
+    The High Priest will be ascending to XXXX soon, and now his entire body glows with the same light
+    as his soul.
+  level: 24
+  sex: male
+  alignment: 1000
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29228":
+  keywords: [sergeant, recruiting]
+  short: the Sergeant
+  long: The recruiting sergeant tries to make you sign his forms.
+  description: >
+    The recruiting sergeant has seen the world.  Now he's trying to make you do the same.  ARGH!!! 
+    Resist!  Resist!!
+  level: 23
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29229":
+  keywords: [captain, guard]
+  short: the Captain
+  long: The Captain of the Guard salutes you with his epee.
+  description: >
+    The Captain has a true love of civilized fighting.  He raises his eyebrow to you...  Shall we have
+    a go at it?
+  level: 25
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29230":
+  keywords: [beggar]
+  short: the Beggar
+  long: A beggar sits here, waiting for handouts.
+  description: >
+    The beggar looks up at you with sad eyes.  However, you notice something shiny clenched in his
+    hand...  What is he hiding?
+  level: 5
+  sex: male
+  alignment: 900
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29231":
+  keywords: [citizen]
+  short: the Citizen
+  long: A citizen is here, waiting in line.
+  description: >
+    The citizen looks at you with a flat stare.  You can see he's wondering if you'll butt in line.
+  level: 9
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29232":
+  keywords: [citizen]
+  short: the Citizen
+  long: A citizen of Kerofk is here, going about his business.
+  description: >
+    This citizen really doesn't have time to fool around with adventurers; he has too much to do.
+  level: 9
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29233":
+  keywords: [militia, guard]
+  short: the Militia Man
+  long: A militia guard is here keeping the peace.
+  description: The militia guardsman looks very well trained, for a citizen.
+  level: 13
+  sex: male
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29234":
+  keywords: [Kervin]
+  short: Kervin
+  long: Kervin the wandering mage is well, ...wandering here.
+  description: >
+    Kervin is very odd looking....  He has a big unkempt shock of white hair that stick straight up and
+    wears an electric blue robe to hide the rest of his features.
+  level: 25
+  sex: male
+  alignment: 700
+  flags: [stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29235":
+  keywords: [gateguard]
+  short: the Gateguard
+  long: The gateguard is here, guarding the gate.
+  description: >
+    The guard guard looks at you and enunciates very clearly, 'Guard guard guard guard guard guard
+    guard guard guard.  ' (looks like he got the right job!  )
+  level: 15
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29236":
+  keywords: [bright, light]
+  short: the Bright Light
+  long: A bright shining light here nearly blinds you!
+  description: >
+    You try to look closer at the light and nearly burn your retinas clear off. That wasn't too bright
+    now, was it?
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29237":
+  keywords: [guardian, wisp]
+  short: the Guardian Wisp
+  long: Some guardian wisps here attack!
+  description: The wisp is made up of clammy, misty air, and a bad attitude.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29238":
+  keywords: [orb]
+  short: the Orb
+  long: The orb glows with a pure white light.
+  description: >
+    The orb is pure crystal and shines with a bright aura.  This is surely the object of your quest!
+  level: 28
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29239":
+  keywords: [liche, mouserider]
+  short: the Liche
+  long: The liche that was MouseRider curses you horribly!
+  description: >
+    This liche was once the troubled MouseRider.  Now he has finally lunged for power and achieved it,
+    making him immortal.  Will you be able to stop him?
+  level: 25
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29240":
+  keywords: [storm, demon]
+  short: the Storm Demon
+  long: The storm demons attack on the Liche's order!
+  description: >
+    The demons are spindly with great bats wings and glowing blue eyes.  They are twisted things not of
+    nature.  They attack!
+  level: 10
+  sex: neutral
+  alignment: -900
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29241":
+  keywords: [Tiersten, vampire]
+  short: Tiersten
+  long: Tiersten looks at you with angry eyes and bared fangs!
+  description: >
+    Tiersten, the patriarch of this odd, odd, family, turns out to be a vampire. And a demonologist to
+    boot!  He growls incoherently at you as he attacks!
+  level: 24
+  sex: male
+  alignment: -1000
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29242":
+  keywords: [Edimmu]
+  short: the Edimmu
+  long: A mist-like being stabs at you with a tendril!
+  description: There doesn't seem to be much to look at, besides the coiling mist attacking you!
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [invisible, detect_invis, hide]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29243":
+  keywords: [Sosivia]
+  short: Sosivia
+  long: Sosivia stands here, lost in daydreams.
+  description: >
+    Sosivia struggles to hold onto her artist's soul, in spite of her family. She is a beautiful woman
+    that you wish you could take away from all this.
+  level: 12
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aware]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29244":
+  keywords: [Celia]
+  short: Celia
+  long: Celia sneers at you...Sneer!  Sneer!
+  description: >
+    Celia is Talbot and Korino's sister, and Sosivia's mother.  She is the head of the household as far
+    as you can tell, and leeches onto the power with a death-grip.  What a horrible woman!
+  level: 16
+  sex: female
+  alignment: -600
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29245":
+  keywords: [Talbot]
+  short: Talbot
+  long: Talbot spars with his brother Korino here.
+  description: >
+    Talbot has a permanent sneer on his face.  He barely glances at you as he beats his brother's sword
+    back to take a vicious swipe...
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29246":
+  keywords: [Korino]
+  short: Korino
+  long: Korino spars with his brother Talbot here.
+  description: >
+    Korino looks at you with barely disguised contempt as he parries Talbot's blow and ripostes
+    around...
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29247":
+  keywords: [Fleecem, Bungle]
+  short: Bungle Fleecem
+  long: Bungle Fleecem, esquire, looks at you expectantly.
+  description: >
+    He smiles, leans back, and tries to look bored to cover that vulturous attitude.  He doesn't quite
+    succeed; he IS a lawyer, after all.
+  level: 14
+  sex: male
+  alignment: -600
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:292:mob:29248":
+  keywords: [digger, gravedigger]
+  short: the gravedigger
+  long: A gravedigger works away the night shift here.
+  description: >
+    He looks tired and dirty.  A glare out of the corner of his eye, and he dismisses you easily.  He
+    doesn't seem to care one whit about you.
+  level: 9
+  sex: male
+  alignment: 200
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29249":
+  keywords: [citizen]
+  short: the Citizen
+  long: A citizen of Kerofk is here, going about her business.
+  description: >
+    This citizen really doesn't have time to fool around with adventurers; she has far too much to do.
+  level: 9
+  sex: female
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29250":
+  keywords: [hellhounds, hounds, hell, hell-hounds]
+  short: a hellhound
+  long: A hellhound looks at you with hunger.
+  description: >
+    It's hide is a deep brownish-red hue, but its eyes are the most noticeable about this magnificent
+    beast.  Red within red eyes, with tiny pupils of black in the center.
+  level: 18
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, aggressive]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29251":
+  keywords: [goblin]
+  short: a goblin
+  long: A goblin launches into a frenzied attack!
+  description: You see the bloodlust in its eyes, and know there's no reasoning with this creature...
+  level: 10
+  sex: neutral
+  alignment: -600
+  flags: [sentinel, aggressive]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29252":
+  keywords: [Farmer]
+  short: the Farmer
+  long: The farmer sells her lackluster with all the excitement it warrants.
+  description: She looks wearied, but keeps hanging in there!
+  level: 18
+  sex: female
+  alignment: 200
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29253":
+  keywords: [Receptionist]
+  short: the Receptionist
+  long: A receptionist stands in front of you, waiting to help you.
+  description: She looks at you happily, and pushes a ledger at you.
+  level: 18
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:292:mob:29254":
+  keywords: [Bartender]
+  short: the Bartender
+  long: The Bartender pours drinks several at a time to keep up with the rush.
+  description: >
+    The Bartender looks harried as he tries to keep up with several different orders at the same time. 
+    Maybe you should bother him later...
+  level: 14
+  sex: male
+  alignment: 250
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

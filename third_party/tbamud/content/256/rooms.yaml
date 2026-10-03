@@ -1,0 +1,1581 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 256.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:256:room:25600":
+  name: Lord's Keep Zone Description Room by Kaan
+  description: >
+    *Lord's Keep *Written by Kaan for Dibrova This is the ancestral home of the Lord of Jareth, who has
+    governed the City of Freedom since the days when Jareth was but a vision in the first Lord's head. 
+    Since then, a new Lord has always ascended to the position which keeps Jareth profitable and free, in
+    Lord's Keep. This zone has a small quest written into it - the Lord's daughter, Penelope was
+    abducted by Mordecai (another zone available) and now the Lord weeps in mourning for his beloved daughter. 
+    Save the daughter from Mordecai and bring her back in one piece to her father, get a large pile of
+    gold.  There is some mid- to upper-level eq and mobs here, as well as some fun areas to explore.  This
+    zone is meant to connect to Jareth.
+  sector: inside
+  flags: [private]
+
+"tba:256:room:25601":
+  name: Cobbled Street
+  description: >
+    The street continues with parks and lush, well-kept grass on either side. To the north you see the
+    Lord's Keep, to the south the city awaits.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25663
+      look: The street continues.
+    south:
+      to: tba:257:room:25771
+
+"tba:256:room:25602":
+  name: Guard Tower
+  description: >
+    This small room serves as a break room for the Lord's Guards who patrol the upper ramparts of Lords
+    Keep.  A small, stone, spiral staircase leads up to the parapet from here, or you may leave through
+    the door to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25667
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:256:room:25690
+
+"tba:256:room:25603":
+  name: Guard Tower
+  description: >
+    This small room serves as a break room for the Lord's Guards who patrol the upper ramparts of the
+    Keep.  A steep, stone, spiral staircase leads to the parapet from here, or you may leave through the
+    door to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25667
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:256:room:25659
+
+"tba:256:room:25604":
+  name: The Armory
+  description: >
+    All weapons used by the Lord's Guards are made, stored, and maintained here. Racks of weapons and
+    armor line the walls in various states of repair.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25658
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [bed]
+    text: >
+      Ha!  Lucky, you were always lucky!  Under the pillow is a half-written letter, unaddressed.  The
+      bits of text that aren't smudged, burnt, and smeared tell tale of the smith/mage Gabadiel's masterwork:
+      a sword of unequalled power, and two swords that came before, discarded as 'Not quite what I was
+      working towards'.  Looking around, you notice a distinct lack of any swords.  You think you may have a
+      motive now...
+  - keywords: [tracks, dust]
+    text: Three sets of prints lead out where the back door used to stand.
+
+"tba:256:room:25605":
+  name: Guest Room
+  description: >
+    This beautifully furnished room features all the amenities.  A satin covered four poster feather
+    bed, paintings done in lighter hues, and a full length mirroe are just some of the luxuries.  A window
+    set into the west wall offers a view of most of Jareth.  Your only exit is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25622
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25606":
+  name: Dining Hall
+  description: >
+    This huge room can seat up to one hundred people in one sitting alone.  A huge table dominates most
+    of the room, benches running along two sides for seating.  Another table, also fairly large but
+    smaller than the main table, sits high on a dias perpendicular to the long table.  This second table is
+    most obviously the Lord's own dining table.  An enormous, ornate fireplace commands the eastern wall,
+    sufficient to heat the entire room and then some.  You may leave through the main entrance to the
+    north or through a set of swinging doors leading into the kitchen to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25641
+    west:
+      to: tba:256:room:25632
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25607":
+  name: Guest Room
+  description: >
+    This beautifully furnished room features all the amenities.  A satin covered four poster faethered
+    bed, delicate paintings of smiling, playing children and mountain streams, and a full length mirror
+    are just some of the luxuries offered.  A window in the west wall covered with silk drapes offers a
+    view of most of Jareth.  Your only exit is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25624
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25608":
+  name: Guest Room
+  description: >
+    This beautifully furnished room features all the amenities.  A satin covered four poster feather
+    bed, delicate hued paintings of flowers, sunsets, and wild animals, and a full length mirror are just
+    some of the luxuries this room boasts.  A window covered in silk drapes commands a view of most of
+    Jareth. Your only exit is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25625
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25609":
+  name: The Lord's Stables
+  description: >
+    The main purpose of these stables is to house all of the Lord's fine mounts used by the Lord's
+    Guard and by the Lord himself.  Spaces are provided for any visitor's steeds as well, and a stablehand is
+    on duty at all times.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25658
+
+"tba:256:room:25610":
+  name: Guest Room
+  description: >
+    This opulently furnished features all the amenities.  A double feathered bed, dark oak dresser, and
+    a water basin.  A window set into the western wall offers a view of the Alquandon River and the
+    northern reaches of Jareth.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25618
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25611":
+  name: Guest Room
+  description: >
+    This opulently furnished room features all the amenities.  Double feathered bed, dark oak dresser,
+    and a water basin for light washing.  A window set into the eastern wall offers a view of the
+    Alquandon River and the northern reaches of Jareth.
+  sector: hills
+  exits:
+    east:
+      to: tba:256:room:25617
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25612":
+  name: Bath Room
+  description: >
+    Upon entering this room, the first thing you notice is the overwhelming botanical fragrance filling
+    the air.  Lines of bathing vessels line both north and south walls.  A huge cauldron rests over a
+    fire in the fireplace, being constantly tended by the girls on hand.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25623
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25613":
+  name: Bath Room
+  description: >
+    This room features a double row of cast iron bathing vessels lining north and south walls.  A huge
+    fireplace set into the west wall constantly burns keeping an enormous kettle of water steaming hot. 
+    Have time for a bath?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25616
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25614":
+  name: Guest Room
+  description: >
+    This opulently furnished room offers all the amenities.  Double feathered bed, dark oak dresser,
+    and a water basin.  A window set into the western-most wall offers a great view of the Alquandon River
+    and some of the northern reaches of Jareth.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25615
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25615":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seems to run the length of the Keep.  Doors line
+    the west wall in both directions.  A window set into the east wall provides a view of a fabulous
+    garden.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25652
+    south:
+      to: tba:256:room:25616
+    west:
+      to: tba:256:room:25614
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25616":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seems to run the length of the Keep.  Doors line
+    the west wall in both directions.  A window set into the east wall provides the view of a fabulous
+    garden.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25615
+    south:
+      to: tba:256:room:25617
+    west:
+      to: tba:256:room:25613
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25617":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seeems to run the length of the Keep.  Doors line
+    the west wall in both directions.
+  sector: inside
+  exits:
+    north:
+      to: tba:256:room:25616
+    south:
+      to: tba:256:room:25618
+    west:
+      to: tba:256:room:25611
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25618":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which appears to run the length of the Keep.  Doors line
+    the western wall beginning here and running north as far as your eyes allow.  Another hallway
+    branches off to the east, and from the smells coming from that direction, the kitchen must be that way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25617
+    east:
+      to: tba:256:room:25633
+    south:
+      to: tba:256:room:25619
+    west:
+      to: tba:256:room:25610
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25619":
+  name: Hallway
+  description: >
+    You stand at the beginning of a north-south hallway, which seems to run the length of the Keep. 
+    Directly north of you, doors line the west wall, leading to what you assume would be apartments.  A
+    door to the south leads into the Grand Reception Hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25618
+    south:
+      to: tba:256:room:25620
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25620":
+  name: Grand Reception Hall
+  description: >
+    A continuance of the Grand Hall, this section continues to inspire feelings of strength and
+    goodness.  A dias sits at the far eastern end of the hall, used by the Lord to address new arrivals.  Doors
+    are available in the north, south, and east walls here, or you may leave to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25619
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:256:room:25631
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25621
+      look: A closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25658
+      look: More of the hall.
+
+"tba:256:room:25621":
+  name: Hallway
+  description: >
+    You stand at the beginning of a north-south running hall that seems to go the enitire length of the
+    Keep.  Just south of you, a row of doors line the western walls to the end of the hall.  A door to
+    the north allows passage back into the main section of the Keep.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25620
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25622
+
+"tba:256:room:25622":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seems to run the length of the Keep.  Doors line
+    the western wall the entire length of the hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25621
+    south:
+      to: tba:256:room:25623
+    west:
+      to: tba:256:room:25605
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25623":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seems to run the entire length of the Keep.  Doors
+    line the west wall the entire way.  A door set into the eastern wall allows entrance to the
+    courtyard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25622
+    east:
+      to: tba:256:room:25655
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25624
+    west:
+      to: tba:256:room:25612
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25624":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway that seems to run the entire length of the Keep.  Doors
+    line the wall to the west, while to the east you can view the courtyard through a window set into the
+    wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25623
+    south:
+      to: tba:256:room:25625
+    west:
+      to: tba:256:room:25607
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25625":
+  name: Hallway
+  description: >
+    You stand in a north-south running hallway which seems to run the entire length of the Keep.  Doors
+    line the west wall and a door to the east allows entrance to the courtyard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25624
+    east:
+      to: tba:256:room:25626
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25648
+    west:
+      to: tba:256:room:25608
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25626":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Trees dot the yard, all in full bloom, with a walk way made from red wood chips
+    showing the way through the trees. The path leads north, south and east, or you may enter the Keep to
+    the west.
+  sector: hills
+  exits:
+    north:
+      to: tba:256:room:25627
+    east:
+      to: tba:256:room:25646
+    south:
+      to: tba:256:room:25649
+    west:
+      to: tba:256:room:25625
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25627":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Beautiful trees dot the yard, all im full bloom, with a walk way made from red wood
+    chips showing you the way through the trees.
+  sector: hills
+  exits:
+    north:
+      to: tba:256:room:25655
+    east:
+      to: tba:256:room:25645
+    south:
+      to: tba:256:room:25626
+
+"tba:256:room:25628":
+  name: The Beginning of a Very Dark & Uncomfortable Passageway
+  description: >
+    You have entered a very cramped earthen passageway which is darker than darkest night.  You feel
+    something skitter by you feet and give a small shudder at the thought of what it might be.  The walls
+    seem to have been man made, dug out of hard clay, without supports.  You begin to feel a chill, and
+    even a bit damp, although the walls themselves are not wet or even clammy, just cold.  The tunnel heads
+    east into darkness or you may climb back out into the gazebo.
+  sector: inside
+  flags: [dark, indoors, tunnel]
+  exits:
+    east:
+      to: tba:256:room:25670
+    up:
+      to: tba:256:room:25650
+      door:
+        keywords: [trap, door]
+        kind: pickproof
+        reset: locked
+
+"tba:256:room:25629":
+  name: Balcony
+  description: >
+    You stand on the balcony overlooking not only the courtyard, but also much of the lands which
+    surround Jareth.  Most of what you see is forest, but some, to the southwest is beautiful rolling hills. 
+    Looking down on the courtyard, you see guards on break, sweethearts strolling hand in hand, and
+    common folk out enjoying the sunshine.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25630
+
+"tba:256:room:25630":
+  name: Lord's Dining Room
+  description: >
+    A small table with six chairs, one at each head, and two on each side, sits in this room.  The
+    south wall, mostly glass, offers a fabulous view of the courtyard and much of the land south and east of
+    the Keep's walls.  You can exit south onto the balcony, or leave to the east into the bedroom.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25642
+    south:
+      to: tba:256:room:25629
+
+"tba:256:room:25631":
+  name: Reception Waiting Room
+  description: >
+    This small lounge was made for the express purpose of allowing those entering the Lord's presence
+    to tidy themselves up a bit before presenting themselves to him.  A long mirror adorns the north wall,
+    a small basin filled with water stands next to it, and a dust brush sits on a shelf next to the
+    mirror.  Lounge chairs are resting along the south wall, although from the grooves worn in the wood from
+    centuries of nervous pacing, most people who enter this room don't use the chairs very often.  Doors
+    are to the east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25636
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25620
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25632":
+  name: Kitchen
+  description: >
+    A hustle and bustle of constant activity, this huge kitchen services all of the Lord's guests and
+    servants, and of course, the Lord himself.  Pots and pans hang everywhere overhead, fireplaces abound,
+    and servants scurry to and fro in a seemingly mad and mindless frenzy.  A long table off to the side
+    seats servants who are on their break, but currently there are none there.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25633
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:256:room:25606
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:256:room:25692
+
+"tba:256:room:25633":
+  name: Hallway
+  description: >
+    Not as well traveled as the hallway to your west, this short hall provides access to the Dining
+    Hall, the Library, and the Tea Room.  Doors lead north and south from here, and the hallway runs to the
+    east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25634
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:256:room:25641
+    south:
+      to: tba:256:room:25632
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25618
+
+"tba:256:room:25634":
+  name: The Tea Room
+  description: >
+    This room is used as an informal social room for any of the Lord's guests. Comfortable divans and
+    lounge chairs are scattered about the room, and a fireplace crackles warmly in the north wall.  Books
+    lie on end tables at easy arm's length and servants enter at intervals to ask if any refreshment is
+    desired.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25640
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25633
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25635":
+  name: Lord's Garden
+  description: >
+    The beautiful flora surrounding you makes you feel so glad, so peaceful, you wish that you could
+    stay in its embrace forever.  Such care is given to these rows of life, the keeper of this garden must
+    be almost fanactical in their attention.  The winding path conitinues north and east from here.
+  sector: field
+  exits:
+    north:
+      to: tba:256:room:25638
+    east:
+      to: tba:256:room:25639
+
+"tba:256:room:25636":
+  name: Lord's Reception
+  description: >
+    Fully expecting to see a grand throne upon a dias, you are surprised to find a comfortable chair
+    sitting before a servicable desk.  Several couches sit along the walls along with luxurious chairs.  A
+    fireplace crackles warmly in the eastern wall directly behind the Lord's desk.  A small door in the
+    south wall sits closed at present.  Pleasantly surprised by the simplicity of this office, you feel
+    that the Lord must be a kind and just man and deserves the priviledges his title offers.  A door to the
+    west allows exit.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25642
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:256:obj:25625
+        reset: locked
+    west:
+      to: tba:256:room:25631
+      look: A doorway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25637":
+  name: Lord's Garden
+  description: >
+    The center of this garden boasts a beautific statue of a woman dressed regally in gowns of state. 
+    It almost seems life-like as you gaze upon it, such attention to detail the craftsmen put into it. 
+    The statue sits in the center of a fountain upon a dias.  An inscription at the base reads; In loving
+    memory The stone path continues to wend it's way north, south, and west.
+  sector: field
+  exits:
+    north:
+      to: tba:256:room:25654
+    south:
+      to: tba:256:room:25639
+    west:
+      to: tba:256:room:25638
+
+"tba:256:room:25638":
+  name: Lord's Garden
+  description: >
+    The garden continues to awe and inspire you as you walk along it's well tended paths.  Flowers of
+    all shapes, size and color abound.  The stone path meanders east, south, and north from here.
+  sector: field
+  exits:
+    north:
+      to: tba:256:room:25653
+    east:
+      to: tba:256:room:25637
+    south:
+      to: tba:256:room:25635
+
+"tba:256:room:25639":
+  name: Lord's Gardens
+  description: >
+    This may very well be the most beautiful peace of land you ever have set foot upon.  Vibrant colors
+    surround you, lending you a feeling of serenity and bliss. Knowing that such wonders can exist in
+    nature lends you the realization that although at many times the world appears to be flawed, there is a
+    balance of perfection that gives those flaws their very reason for existance.  A winding stone path
+    wends it's way through the garden, heading north and west, and a door to your south allows entrance
+    back into the keep.
+  sector: field
+  exits:
+    north:
+      to: tba:256:room:25637
+    south:
+      to: tba:256:room:25640
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25635
+
+"tba:256:room:25640":
+  name: Library
+  description: >
+    Not as large as the library located in town, this library serves as more of a working library for
+    the Lord and his retainers.  Dark oak shelves line all walls and two long tables sit side by side in
+    the center of the room.  The north wall, mostly glass with a door set into the center, boasts a view
+    of the Lord's garden.  You may leave to the south through the main door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25639
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25641
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25634
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25641":
+  name: Hallway
+  description: >
+    The short hallway ends here, opening south into a spacious dining hall.  A door to the north leads
+    to the library, or you may go west into the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25640
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:256:room:25606
+    west:
+      to: tba:256:room:25633
+
+"tba:256:room:25642":
+  name: Lord's Bedroom
+  description: >
+    This room, austere almost to the point of being monkish, boasts only the necessities for sleeping. 
+    A bed, although large, sits in the center of the room looking as if its use is as minimal as its
+    style.  The only other furnishings in the room are a dresser, a small wardrobe, and, curiously, a
+    portrait delicately painted in soft hues of the Keep, sitting high upon Lord's Hill, proudly flying the
+    standard for Jareth.  A closed door blocks the entrance to the south and an archway leading into the
+    Lord's private dining room leads west, or you may exit the Lord's Suite to your north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25636
+      door:
+        keywords: [door]
+        kind: door
+        reset: locked
+    south:
+      to: tba:256:room:25643
+    west:
+      to: tba:256:room:25630
+
+"tba:256:room:25643":
+  name: Bathing Chambers
+  description: >
+    This private room is mostly one large pool of steaming water.  No fires burn here, so the water
+    must be either kept warm underneath the pool, or must be kept hot through magical means.  Whatever the
+    case, this hot tub looks more than inviting and if you have the guts, some casual bathing may be in
+    order.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25642
+
+"tba:256:room:25644":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Trees dot the yard, all in full bloom, with a walk way made from red wood chips
+    showing you the way through the trees to the west and south.
+  sector: hills
+  exits:
+    south:
+      to: tba:256:room:25645
+    west:
+      to: tba:256:room:25655
+
+"tba:256:room:25645":
+  name: Courtyard, at the pool
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  A small man made pool of clear blue water is here, stocked with imported golden
+    fish.  A walk way made from red wood chips allows passage through the trees to the north, west and south.
+  sector: hills
+  exits:
+    north:
+      to: tba:256:room:25644
+    south:
+      to: tba:256:room:25646
+    west:
+      to: tba:256:room:25627
+
+"tba:256:room:25646":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Trees dot the yard, all in full bloom, with a walk way made from red wood chips
+    showing you the way through the trees west, north, and south.
+  sector: hills
+  exits:
+    north:
+      to: tba:256:room:25645
+    south:
+      to: tba:256:room:25650
+    west:
+      to: tba:256:room:25626
+
+"tba:256:room:25647":
+  name: Guest Room
+  description: >
+    This beautifully furnished room features all the amenities.  Satin bedcovers, beautiful paintings
+    of angels and wildlife, and an armoir are just some of the luxuries.  A window draped in silk curtains
+    in the west wall allows a view of most of Jareth.  Your only exit is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25648
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25648":
+  name: Hallway
+  description: >
+    You stand at the end of a north-south running hallway.  Doors line the west wall, while a set of
+    doors in the east wall allow entrance to the courtyard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25625
+    east:
+      to: tba:256:room:25649
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25647
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25649":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place for fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Beautiful trees dot the yard, all in full bloom.  A trail made from wood chips
+    wends its way through the trees and around benches.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25626
+    east:
+      to: tba:256:room:25650
+    west:
+      to: tba:256:room:25648
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25650":
+  name: Gazebo
+  description: >
+    You have entered into an octagonal gazebo made completely of white painted wood.  A low bench runs
+    around the entire inside of the gazebo, looking very comfortable.  In the center of the gazebo is a
+    piece of wood made in the shape of an octagon with long planks of flooring running outward from it
+    like long spokes.  This looks as if it would be a good place to rest, if that is your inclination.  You
+    may leave back into the courtyard to the west or north.
+  sector: hills
+  exits:
+    north:
+      to: tba:256:room:25646
+    west:
+      to: tba:256:room:25649
+
+"tba:256:room:25651":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet which runs east to west here connecting all the guard towers.  This
+    narrow stone walkway also provides a means for defense in times of war.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25661
+      look: A normal, wooden front door to a normal looking home.  It is nothing to write home about.
+    west:
+      to: tba:256:room:25675
+
+"tba:256:room:25652":
+  name: Hallway
+  description: >
+    You stand at the northern end of a long hallway which runs north to south. Doors line the western
+    wall, leading to what you assume would be apartments. To you east, a window offers a great view of the
+    most fantastic garden you have ever seen.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25615
+    west:
+      to: tba:256:room:25657
+      look: There is a normal appearing door set in the western wall.
+      door:
+        keywords: [door, front]
+        kind: door
+        reset: closed
+
+"tba:256:room:25653":
+  name: Lord's Garden
+  description: >
+    The garden grows right to the Keep's outer walls and over.  Vines covered in beautiful flowers
+    wreath the wall, lending a timeless look to these already beautiful gardens.  The stone path continues
+    east and south from here.
+  sector: field
+  exits:
+    east:
+      to: tba:256:room:25654
+    south:
+      to: tba:256:room:25638
+
+"tba:256:room:25654":
+  name: Lord's Garden
+  description: >
+    The garden continues straight to the outer wall of the Keep here.  Looking up you can see the top
+    of the wall where the Lord's Guard patrols the parapet. The winding stone path winds west and south
+    here.
+  sector: field
+  exits:
+    south:
+      to: tba:256:room:25637
+    west:
+      to: tba:256:room:25653
+
+"tba:256:room:25655":
+  name: Courtyard
+  description: >
+    You stand in the Lord's Courtyard, a place of fun and merriment, open to all folk, be they Lord's
+    guest or servant.  Trees dot the yard, all in full bloom, with a walk way made from red wood chips
+    showing you the way through the trees to the south and east, or you may enter the Keep to the west.
+  sector: hills
+  exits:
+    east:
+      to: tba:256:room:25644
+    south:
+      to: tba:256:room:25627
+    west:
+      to: tba:256:room:25623
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:256:room:25656":
+  name: Stanneg Inn
+  description: >
+    This is a plainly decorated room, the main room of the Stanneg Inn.  A large arch to the west leads
+    to a common room where food and drink can be ordered, and a set of rickety wooden stairs lead up to
+    the rooms are.  A thread- bare rug lies in the middle of the floor, evidently well- loved by a cat or
+    two from the quantity of hair on it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25657
+
+"tba:256:room:25657":
+  name: Guest Room
+  description: >
+    This opulently furnished room offers all the amenities.  Double feathered bed, dark oak dresser,
+    water basin, and even a mirror.  A window on the western wall offers a view of the River Alquandon and
+    some of the northern reaches of Jareth.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25652
+      door:
+        keywords: [door, front]
+        kind: door
+        reset: closed
+
+"tba:256:room:25658":
+  name: Grand Reception Hall
+  description: >
+    The cathedral ceilings in this room give such an impression of majesty and power you feel both awed
+    and comforted.  You feel that this was most probably a very proud and happy place, although for the
+    life of you, you can't figure out what seems wrong now.  To your east the Grand Reception Hall
+    continues, to your north a stable is provided, south you see a wooden door bound in iron, and to your west
+    you may leave to the outside.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25609
+      look: The stablehand will take your horse to the north.
+    east:
+      to: tba:256:room:25620
+      look: More of this HUGE hall.
+    south:
+      to: tba:256:room:25604
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25667
+      look: The portcullis.
+
+"tba:256:room:25659":
+  name: North Drawbridge Guard Tower
+  description: >
+    This is one of six guard towers which ring the upper ramparts of Lord's Keep. A parapet runs
+    between each of the towers, encircling the Keep, and allowing for defense in times of war.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25660
+    down:
+      to: tba:256:room:25603
+
+"tba:256:room:25660":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet, which runs north to south here.  This narrow walkway connects all the
+    guard towers to one another and allows the Lord's Guard to defend their Lord's home.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25662
+    south:
+      to: tba:256:room:25659
+
+"tba:256:room:25661":
+  name: Northeast Guard Tower
+  description: >
+    You stand in the northeast guard tower.  A spectacular view of the forest can be seen through arrow
+    holes in the north and east walls.  The parapet continues here to the west and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25676
+    west:
+      to: tba:256:room:25651
+
+"tba:256:room:25662":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet, which runs north to south here.  This narrow walkway connects all the
+    guard towers to one another and provides a defendable position for the Lord's Guard in times of war.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25668
+    south:
+      to: tba:256:room:25660
+
+"tba:256:room:25663":
+  name: Cobbled Street
+  description: >
+    The street begins to widen slightly.  Flags from many of the noble houses begin at regular
+    intervals along either side of the street.  The grass is still well-kept here, but not as many people lounge
+    on it here as there were closer to the city.  Although not threatening in any way, the mood of this
+    street seems to get a bit gloomier with each step you take toward the keep.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25664
+      look: The street continues.
+    south:
+      to: tba:256:room:25601
+      look: The street continues.
+
+"tba:256:room:25664":
+  name: Cobbled Street
+  description: >
+    The street, wide enough now to fit five carriages side by side, continues north here toward the
+    keep.  Just north of here, you see that the street opens into a large court and turns to the east, where
+    it enters the majestic halls of Lord's Keep.  South of you the city awaits.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25665
+      look: The street opens into a wide court.
+    south:
+      to: tba:256:room:25663
+      look: The street continues.
+
+"tba:256:room:25665":
+  name: Lord's Court
+  description: >
+    This court is an opulant place, reserved for the use of formally welcoming visiting royalty.  Flags
+    from all royal and noble houses fly bravely here, welcoming all to the splendor and majesty that is
+    Jareth and Lord's Keep.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25666
+      look: The Keep looms close by.
+    south:
+      to: tba:256:room:25664
+      look: The street heads south towards town.
+
+"tba:256:room:25666":
+  name: On the Drawbridge
+  description: >
+    Standing in front of the keep, one cannot help but feel daunted to some degree.  Some of the
+    feeling is due to the sheer immensity of this castle, it's powerful presence, but you also can't help but
+    feel that something must be wrong here.  The guards standing at attention here are afraid to even look
+    in any direction but straight ahead and from inside the castle you hear no sounds of merriment or
+    laughter, as is usually the case in the entryway of the Lord's Keep.  The Lord's Court lies west of
+    you, while the twin guard towers flank your entry to the east into Lord's Keep.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25667
+      look: You may enter the Keep to the east.
+    west:
+      to: tba:256:room:25665
+      look: You see Lord's Court.
+
+"tba:256:room:25667":
+  name: Under the Portcullis
+  description: >
+    You stand in the entryway of the Keep.  On both the north and south walls, you see closed doorways
+    which presumably lead into the guard towers.  Above you, the spiked bottom of the portcullis peeks
+    out from its resting position, seeming almost threatening.  The Twin towers rising out of stone
+    foundations as big as a house themselves seem to leer at you from their arrowholes inlaid in the walls. You
+    can proceed into the Keep to the east or leave the Keep to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25603
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:256:room:25658
+      look: You may enter the reception hall.
+    south:
+      to: tba:256:room:25602
+      look: Closed door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:256:room:25666
+      look: You see the drawbridge.
+
+"tba:256:room:25668":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet, which runs north to south here.  This narrow walkway connects all the
+    guard towers at Lord's Keep.  It also provides a defndable position for the Lord's Guard in times of
+    war.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25669
+    south:
+      to: tba:256:room:25662
+
+"tba:256:room:25669":
+  name: Northwest Guard Tower
+  description: >
+    You stand inside the northwest guard tower.  Narrow slits provide the means to fire arrows from
+    this height at any would be aggressors in times of war. The parapet continues along to the east and
+    south from here.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25672
+    south:
+      to: tba:256:room:25668
+
+"tba:256:room:25670":
+  name: A Sloping Tunnel
+  description: >
+    The tunnels slopes up to the north deeper into the mountain.  A rather gusty breeze riffles your
+    clothing from ahead somewhere.  The claw marks in the stone floor continue up the passage, through the
+    darkness.
+  sector: inside
+  flags: [dark, indoors, no_track, private]
+  exits:
+    north:
+      to: tba:256:room:25673
+    west:
+      to: tba:256:room:25628
+
+"tba:256:room:25671":
+  name: A Sloping Tunnel
+  description: >
+    The tunnel continues its slope upwards, and the wind blows at you even stronger yet.  The claw
+    tracks in the stone stop abruptly here, where there seems to be a lot of unearthed dirt and stone around,
+    heaped upon the floor. You feel uneasy about this place.
+  sector: hills
+  flags: [dark, indoors, no_track, private]
+  exits:
+    south:
+      to: tba:256:room:25674
+  extras:
+  - keywords: [dirt, stone]
+    text: It has been dug from somewhere, but where?
+  - keywords: [claw, claws, track, tracks, mark, marks]
+    text: They stop very abruptly here, right where the piles of earth begin, it seems.
+  - keywords: [floor]
+    text: The floor up ahead looks...  Strange.  You don't think going ahead would be a good idea.
+
+"tba:256:room:25672":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet, which runs east to west here.  The parapet runs the entire perimeter of
+    Lord's Keep, connecting all the guard towers.  It also supplies a defendable position for the Lord's
+    Guard so that in times of war, they can protect their Lord and his home.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25675
+    west:
+      to: tba:256:room:25669
+
+"tba:256:room:25673":
+  name: A Sloping Tunnel
+  description: >
+    This tunnel slopes deep, down into the mountain's heart.  The air feels still and uncomfortably
+    warm, despite the closeness of the cave's entrance above you. There's a deep, musky odor in the air, and
+    the giant claw marks continue downwards.
+  sector: hills
+  flags: [dark, indoors, no_track, private]
+  exits:
+    north:
+      to: tba:256:room:25674
+    south:
+      to: tba:256:room:25670
+
+"tba:256:room:25674":
+  name: A Sloping Tunnel
+  description: >
+    A bright light greets your eyes from the north, in direct contrast to the darkness of the tunnel
+    overhead.  You break out in a sweat due to the overwhelming warmth of the air.  The musky odor has
+    grown quite intense, drowning out everything else in the air and making it hard to breathe. Something in
+    your gut begins squirming uncomfortably as you wonder what's ahead...
+  sector: hills
+  flags: [dark, indoors, no_track, private]
+  exits:
+    north:
+      to: tba:256:room:25671
+    south:
+      to: tba:256:room:25673
+
+"tba:256:room:25675":
+  name: Along the Parapet
+  description: >
+    You stand atop the parapet which runs east to west here.  This narrow walkway connects all the
+    guard towers and provides a means for defense in times of war.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25651
+    west:
+      to: tba:256:room:25672
+
+"tba:256:room:25676":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower and the southeast guard
+    tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25661
+    south:
+      to: tba:256:room:25677
+
+"tba:256:room:25677":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower to the southeast guard
+    tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25676
+    south:
+      to: tba:256:room:25678
+
+"tba:256:room:25678":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower to the southeast guard
+    tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25677
+    south:
+      to: tba:256:room:25679
+
+"tba:256:room:25679":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower to the south east guard
+    tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25678
+    south:
+      to: tba:256:room:25680
+
+"tba:256:room:25680":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower to the southeast guard
+    tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25679
+    south:
+      to: tba:256:room:25681
+
+"tba:256:room:25681":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the northeast guard tower and the southeast guard
+    tower.  The southeast tower is directly south of you.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25680
+    south:
+      to: tba:256:room:25682
+
+"tba:256:room:25682":
+  name: Southeast Guard Tower
+  description: >
+    This guard tower looks as if it may have seen some action in times past. Small chunks of stone are
+    missing around the arrow slits, and many nicks and chunks are missing from the walls themselves.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25681
+    west:
+      to: tba:256:room:25683
+
+"tba:256:room:25683":
+  name: Along the Parapet
+  description: >
+    The parpet runs east to west here, connecting the southeast guard tower to the southwest guard
+    tower.  The southeast tower is directly east of you.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25682
+    west:
+      to: tba:256:room:25684
+
+"tba:256:room:25684":
+  name: Along the Parapet
+  description: >
+    The parapet runs east to west here, connecting the southeastern guard tower to the southwestern
+    guard tower.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25683
+    west:
+      to: tba:256:room:25685
+
+"tba:256:room:25685":
+  name: Along the Parapet
+  description: >
+    The parapet runs east to west here, connecting the southeastern guard tower to the southwestern
+    guard tower.
+  sector: city
+  exits:
+    east:
+      to: tba:256:room:25684
+    west:
+      to: tba:256:room:25686
+
+"tba:256:room:25686":
+  name: Southwestern Guard Tower
+  description: >
+    This looks more like a break room than a guard tower.  A stack of old books are piled in one
+    corner, and the remains of someone's lunch sits in another. The parapet continues to the east and to the
+    north from here.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:256:room:25687
+    east:
+      to: tba:256:room:25685
+
+"tba:256:room:25687":
+  name: Along the Parapet
+  description: >
+    The parapet continues north to south here, connecting the southeastern guard tower to the southern
+    bridge guard tower.  The southeastern tower is directly south of you.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25688
+    south:
+      to: tba:256:room:25686
+
+"tba:256:room:25688":
+  name: Along the Parapet
+  description: >
+    The parapet continues north to south here, connecting the southeastern guard tower to the south
+    bridge guard tower.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25689
+    south:
+      to: tba:256:room:25687
+
+"tba:256:room:25689":
+  name: Along the Parapet
+  description: >
+    The parapet runs north to south here, connecting the southeastern guard tower to the south bridge
+    guard tower.  The south bridge guard tower is directly north of you.
+  sector: city
+  exits:
+    north:
+      to: tba:256:room:25690
+    south:
+      to: tba:256:room:25688
+
+"tba:256:room:25690":
+  name: South Drawbridge Guard Tower
+  description: >
+    You stand atop a vantage point looking down upon the entrance to the Keep. This is one of six
+    towers which ring the Keep to allow for defense in times of war.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:256:room:25689
+    down:
+      to: tba:256:room:25602
+
+"tba:256:room:25691":
+  name: Wine Cellar
+  description: >
+    This room, though as cob-webby and musty as is earthly possible, seems clean enough.  The racks are
+    dust free and the bottles are all tended.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25692
+
+"tba:256:room:25692":
+  name: Musty Dusty Corrider
+  description: This short corrider leads into two different rooms, one to the east and one to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:256:room:25693
+    west:
+      to: tba:256:room:25691
+    up:
+      to: tba:256:room:25632
+
+"tba:256:room:25693":
+  name: Root Cellar
+  description: >
+    All non-perishable foodstuffs for the Keep are kept in this room on shelves, in crates, and stacked
+    on pallets.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:256:room:25692

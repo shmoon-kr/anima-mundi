@@ -1,0 +1,391 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 289.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:289:obj:28900":
+  type: weapon
+  keywords: [Crossbow, cross, bow]
+  short: a crossbow
+  long: A huge crossbow is leaning against the wall here.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 5
+  extras:
+  - keywords: [Crossbow, cross, bow]
+    text: >
+      This weapon almost scares you.  Why, this thing could punch a hole right through you...  Ack!
+
+"tba:289:obj:28901":
+  type: weapon
+  keywords: [axe, sturdy]
+  short: a sturdy axe
+  long: A thick, well-crafted axe lies here, well-polished.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [axe, sturdy]
+    text: This axe is so shiny, you'd swear someone has licked it clean!
+
+"tba:289:obj:28902":
+  type: weapon
+  keywords: [Sword, bastard]
+  short: an immense bastard sword
+  long: An astoundingly big bastard sword stands here.
+  wear: [take, wield]
+  values:
+    damage: 2d15
+    attack: crush
+  weight: 10
+  cost: 750
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: ac
+    modifier: 10
+  extras:
+  - keywords: [Sword, bastard]
+    text: Wow!  It would take a HUGE person to wield this sword!
+
+"tba:289:obj:28903":
+  type: drinkcon
+  keywords: [water, rain, barrel, water]
+  short: a rain barrel
+  long: A rain barrel stands here.
+  wear: [take]
+  values:
+    capacity: 300
+    contains: 300
+    liquid: water
+    poisoned: false
+  weight: 305
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rain, barrel]
+    text: That's one big rain barrel!  The water looks cool and clear inside...
+
+"tba:289:obj:28904":
+  type: weapon
+  keywords: [slingshot, sling, shot]
+  short: a slingshot
+  long: A slingshot of wood has been discarded here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: pierce
+  weight: 2
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [slingshot, sling, shot]
+    text: A child's weapon, nothing more.
+
+"tba:289:obj:28905":
+  type: weapon
+  keywords: [dart]
+  short: a dart
+  long: A dart is stuck in the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d2
+    attack: pierce
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dart]
+    text: >
+      You're not actually considering wielding this, are you?  "The dragon cowers before your dart,
+      'Please do not hurt me!  '" Yeah, right.
+
+"tba:289:obj:28906":
+  type: weapon
+  keywords: [pike]
+  short: a pike
+  long: A nasty looking pike is lying on the ground.
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 20
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pike]
+    text: It's heavy, but not a bad weapon!
+
+"tba:289:obj:28907":
+  type: weapon
+  keywords: [knife, wicked]
+  short: a wicked knife
+  long: A wickedly curved knife sits here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d5
+    attack: pierce
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [knife, wicked]
+    text: This is a murderer's knife, pure and simple.
+
+"tba:289:obj:28908":
+  type: weapon
+  keywords: [staff, quarter, quarterstaff]
+  short: a quarterstaff
+  long: A metal-shod quarterstaff has been stuck in the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pound
+  weight: 12
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [staff, quarter, quarterstaff]
+    text: An oaken war staff.  A simple weapon that can be very deadly.
+
+"tba:289:obj:28909":
+  type: weapon
+  keywords: [Bevgul, weapon, wood, spike, spikes]
+  short: Bevgul
+  long: A strange weapon made of wood and spikes sits here.
+  wear: [take, wield]
+  values:
+    damage: 3d2
+    attack: crush
+  weight: 8
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [Bevgul, weapon, wood, spike, spikes]
+    text: >
+      It looks to be a piece of wood made to be strapped to the forearm covered with spikes and nails. 
+      Doesn't look like a friendly weapon at all!
+
+"tba:289:obj:28910":
+  type: armor
+  keywords: [scarf, silk]
+  short: a silk scarf
+  long: A silk scarf has been folded neatly here.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [scarf, silk]
+    text: Very nice...  A beautiful scarf.
+
+"tba:289:obj:28911":
+  type: armor
+  keywords: [scarf, silk]
+  short: a silk scarf
+  long: A silk scarf has been folded neatly here.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -1
+  extras:
+  - keywords: [scarf, silk]
+    text: Very nice...  A beautiful scarf.
+
+"tba:289:obj:28912":
+  type: container
+  keywords: [Pot, cooking]
+  short: a big pot
+  long: A big cooking pot sits here.
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pot]
+    text: That's one big cast-iron pot!
+
+"tba:289:obj:28913":
+  type: container
+  keywords: [Pan, frying]
+  short: a frying pan
+  long: A frying pan has been put aside here.
+  wear: [take]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Pan, frying]
+    text: There's some grease on the bottom.  Yuck!
+
+"tba:289:obj:28914":
+  type: food
+  keywords: [Plate, Jumbalaya]
+  short: a plate of jumbalaya
+  long: A plate of HOT jumbalaya gives off steam.
+  wear: [take, hold]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Plate, Jumbalaya]
+    text: This is a Dummy, please make me valid!!
+  - keywords: [shrimp, plate, jumbalaya]
+    text: Shrimp, rice, sausage, and lots and LOTS of cayenne pepper!  Whew!
+
+"tba:289:obj:28915":
+  type: food
+  keywords: [Plate, spaghetti]
+  short: a plate of spaghetti
+  long: A plate of spaghetti sits here.
+  wear: [take, hold]
+  values:
+    hours: 14
+    poisoned: false
+  weight: 3
+  cost: 18
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Plate, spaghetti]
+    text: Spaghetti with meatballs...  Looks good!
+
+"tba:289:obj:28916":
+  type: food
+  keywords: [Bowl, soup]
+  short: a bowl of soup
+  long: A bowl of soup is cooling here.
+  wear: [take, hold]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Bowl, soup]
+    text: Looks like garden vegetable soup.  Smells good too.
+
+"tba:289:obj:28917":
+  type: drinkcon
+  keywords: [beer, glass, beer]
+  short: a glass
+  long: A glass of beer sits forgotten here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: beer
+    poisoned: false
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Beer, glass]
+    text: A nice glass filled with 'Mr.  Beer' brand beer.
+
+"tba:289:obj:28918":
+  type: drinkcon
+  keywords: [ale, glass, ale]
+  short: a glass
+  long: A big glass of mead sits here, cool and frosty.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: ale
+    poisoned: false
+  weight: 2
+  cost: 8
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Mead, glass]
+    text: Looks good.  Looks cold.  You sure could use some cold and alcoholic right about now...
+
+"tba:289:obj:28919":
+  type: drinkcon
+  keywords: [whisky, shot, whiskey, whisky]
+  short: a shot
+  long: A shot of Whiskey is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Whiskey, shot]
+    text: Whew!  Looks like potent stuff!

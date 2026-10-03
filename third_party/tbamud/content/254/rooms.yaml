@@ -1,0 +1,791 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 254.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:254:room:25400":
+  name: Entering the Village
+  description: >
+    All at once the darkness and thick foliage give way to a large, grubby village.  Looking around,
+    you see that most of the inhabitants of this place must have little or no money.  Dogs with only three
+    legs, chickens clucking to and fro, all of it just seems so...  Well, poor and grubby.  You only have
+    a short time to register these facts, though, as you are suddenly surrounded by a group of heavily
+    armed men and taken to a holding cell.  Holding Cell You sit in a stinky, dirt floored holding cell,
+    with no idea why you have been put here. Obviously this village is under some sort of militaristic
+    control, and visitors are unwelcome.  The only thing to keep you occupied is the fact that the small
+    hole in the ground used for a toilet stinks so bad that you have to keep trying to hold your breath, and
+    every time you take in air you have to cover your mouth with your arm and breath that way or else
+    you'll gag.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25401
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:254:obj:25414
+        reset: locked
+  extras:
+  - keywords: [credits]
+    text:
+    - >
+      *Mordecai's Village *Written by Kaan for Dibrova Mordecai is a pagan worshipper of a God that does
+      not exist.  He possesses an extreme charisma, though, and has gathered together a large following
+      where he has established his own village, or more aptly put - cult. His main goal is money, so he has
+      stolen the Lord's daughter, Penelope (see Lord's Keep, also available for download) in order to ransom
+      her off. The entrance into this zone is made to be a trap - the original intent was to have a
+      spec_proc on a room that would teleport a player every few ticks into the Holding Cell, a message displayed
+      to the player that they were captured by Mordecai's guards.  In the cell is a hole that does not show
+      up in the room descrip, but is there and the key is there to the door. Midlevel mobs and eq, with a
+      bit of fun in the descrips.  Enjoy. * note: Some of the decsrips in this zone may not be to your
+      taste.
+    - You might find them vulgar. That said, fair warning.
+
+"tba:254:room:25401":
+  name: A Dirt Path
+  description: >
+    A worn dirt path leads east, north and south from here.  To the north and south, you can see more
+    holding cells, to the east you see a number of huts, tents, and outbuildings.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25403
+    east:
+      to: tba:254:room:25411
+    south:
+      to: tba:254:room:25402
+    west:
+      to: tba:254:room:25400
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25402":
+  name: A Dirt Path
+  description: >
+    This is the end of a path which leads to the camp prisoner's holding cells, one of which is
+    directly west of you, currently closed.  To the southwest, right next to the cell, is what appears to be an
+    outhouse.  To the northwest is another holding cell.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25401
+    south:
+      to: tba:254:room:25408
+    west:
+      to: tba:254:room:25405
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25403":
+  name: A Dirt Path
+  description: >
+    You stand at the end of a dirt path, or as Mordecai would have it, one of the 'roads' in the
+    village.  A crude bamboo holding cell is directly west of you, with an outhouse just north of it.  To the
+    south are more cells.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25409
+    south:
+      to: tba:254:room:25401
+    west:
+      to: tba:254:room:25404
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25404":
+  name: A Holding Cell
+  description: >
+    Much like your own, this cell offers no comfort whatsoever.  In fact, this cell is MUCH more
+    uncomfortable than yours was.  Sitting close enough for you to reach through the bars and touch it is an
+    outhouse.  Actually, all you know for sure is that it is a small square building that smells like
+    something out of a cheap 'B' horror movie.  Just the same, you assume it's an outhouse.  Another clue to
+    the small building's capacity is the tepid trail, a mini stream, of urine which runs downhill right
+    through the middle of this cell - EWWWWWW!
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25403
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25405":
+  name: A Holding Cell
+  description: >
+    This cell seems about the same as the others outside.  A small building, which looks as if it might
+    be an outhouse, lies to the south, wedged right up against the side of the cell.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25402
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25406":
+  name: An Outhouse
+  description: >
+    This small space smells worse than a huge stable holding four hundred head of cattle who haven't
+    been outside for three months.  This place smells BAD.  Two holes dug in opposing corners offer incense
+    to remember, your feet squish into the wet dirt floor, and although you consider yourself a
+    relatively strong person, you find your gorge rising, and your inability to suppress it only validates the
+    fact that this place REALLY STINKS.
+  sector: inside
+  exits:
+    east:
+      to: tba:254:room:25409
+
+"tba:254:room:25407":
+  name: An Outhouse
+  description: >
+    This outhouse, smelly by anyone's standards, but not that bad by outhouse standards, is a small 8x8
+    cubicle which allows relief to most of the village. Although it IS the public poop hole, it is
+    relatively kept up and, against your better judgement, you find yourself wanting to try it out - just for
+    the heck of it.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25408
+
+"tba:254:room:25408":
+  name: A Dirt Path
+  description: >
+    This path leads north to a row of holding cells or west into a building which looks to be an
+    outhouse.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25402
+    west:
+      to: tba:254:room:25407
+
+"tba:254:room:25409":
+  name: A Dirt Path
+  description: >
+    This path leads south to a row of holding cells or west into a building which smells SO bad, it
+    MUST be an outhouse.
+  sector: city
+  exits:
+    south:
+      to: tba:254:room:25403
+    west:
+      to: tba:254:room:25406
+
+"tba:254:room:25410":
+  name: A Dirt Path
+  description: >
+    This path leads T's off to the west, leading to a row of holding cells, to the east you may enter
+    the main section of the village, and directly north and south of you are long, low buildings which
+    look a great deal like barracks.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25412
+    east:
+      to: tba:254:room:25414
+    south:
+      to: tba:254:room:25413
+    west:
+      to: tba:254:room:25411
+
+"tba:254:room:25411":
+  name: A Dirt Path
+  description: >
+    This path leads east towards the main part of the village or west to a row of holding cells.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25410
+    west:
+      to: tba:254:room:25401
+
+"tba:254:room:25412":
+  name: Barracks
+  description: >
+    Long and low, this building houses all the single men and women who have chosen to fight for
+    Mordecai's cause.  Two rows of beds run the length of the walls, both east and west, all with a matching
+    trunk next to it.
+  sector: city
+  exits:
+    south:
+      to: tba:254:room:25410
+
+"tba:254:room:25413":
+  name: Barracks
+  description: >
+    This building houses all the single men and women who have chosen Mordecai as their savior and
+    leader.  Rows of beds line walls to either side, all complete with a foot locker next to each bed.
+  sector: inside
+  exits:
+    north:
+      to: tba:254:room:25410
+
+"tba:254:room:25414":
+  name: A Dirt Path
+  description: >
+    This path leads east to a crossing of paths (possibly the center of the village) and west toward
+    some low buildings and a row od holding cells.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25415
+    west:
+      to: tba:254:room:25410
+
+"tba:254:room:25415":
+  name: A Muddy Crossing
+  description: >
+    This section of trail has got to be the messiest, gookiest, nastiest crossing in the whole town. 
+    The mud here is up past you ankles, making travel difficult, and disgusting.  You catch a faint odor
+    breezing it's way from the north, and in looking in that direction, you see why.  To the north is a
+    barn, while to the south is a huge tent set up on a hill.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25416
+    east:
+      to: tba:254:room:25430
+    south:
+      to: tba:254:room:25423
+    west:
+      to: tba:254:room:25414
+
+"tba:254:room:25416":
+  name: A Muddy Trail
+  description: >
+    The trail does not get any better here, the mud is still deep as hell and to make matters worse, it
+    even is beginning to smell a bit.  A ways north of you is a hay barn, to the northeast and northwest
+    are chicken coops.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25417
+    south:
+      to: tba:254:room:25415
+
+"tba:254:room:25417":
+  name: A Muddier Trail
+  description: >
+    Damn this mud is deep!  To both the east and west you see chicken coops, both holding a few
+    chickens.  To the north is a hay barn, which seems to be stocked well.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25420
+    east:
+      to: tba:254:room:25419
+    south:
+      to: tba:254:room:25416
+    west:
+      to: tba:254:room:25418
+
+"tba:254:room:25418":
+  name: Chicken Coop
+  description: >
+    You stand just inside a chicken coop, ankle deep in (no pun intended) chicken shit.  Little
+    cluckers run around you pecking here and pecking there, generally being a nuisance.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25417
+
+"tba:254:room:25419":
+  name: Chicken Coop
+  description: >
+    You stand just inside a chicken coop, surrounded by a bunch of annoying chickens who seem to think
+    you are the guy that's bringing the food.  By the way, what's that on the bottom of your shoe?
+  sector: city
+  exits:
+    west:
+      to: tba:254:room:25417
+
+"tba:254:room:25420":
+  name: Hay Barn
+  description: >
+    This open air structure holds what appears to be the entire supply of hay for the village.  Bales
+    upon bales fill this tin roofed building, alomost to the rafters.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25421
+    south:
+      to: tba:254:room:25417
+
+"tba:254:room:25421":
+  name: Cow Barn
+  description: >
+    This has got to be the smelliest place in Dibrova!  Not even the pet shop in Jareth can compare to
+    this.  Stalls line the east wall, with a cow milling about in each one.  The floor is covered in
+    fecal matter, obviously from the cows in the stalls.  Watch your step!
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25422
+    south:
+      to: tba:254:room:25420
+
+"tba:254:room:25422":
+  name: Pasture
+  description: >
+    This small but lush and open plot of land provides food for the cows which graze here at this
+    time.  Fenced in, this pasture's only exit is south into the Stinky Barn.
+  sector: city
+  exits:
+    south:
+      to: tba:254:room:25421
+
+"tba:254:room:25423":
+  name: A Dirt Trail
+  description: >
+    This trail leads south to a huge tent set upon a hill, to the southeast you see another structure,
+    a more permanent looking place.  To the north the trail gets very muddy.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25415
+    south:
+      to: tba:254:room:25424
+
+"tba:254:room:25424":
+  name: A Dirt Trail
+  description: >
+    The trail continues it's way up the hill to the tent, but also branches off both to the east and
+    west here.  To the east you see a wooden building, not a lodging, but maybe some sort of storage
+    structure.  West the trail twists and turns, if it leads to anything, you cannot see what that might be.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25423
+    east:
+      to: tba:254:room:25426
+    south:
+      to: tba:254:room:25425
+    west:
+      to: tba:254:room:25427
+
+"tba:254:room:25425":
+  name: Food Tent
+  description: >
+    This is where the village comes to eat their meals, three times daily.  A raised chair at the head
+    of the long table looks down on all, this must obviously be Mordecai's seat of honor.  Currently,
+    there is no one here eating.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25424
+
+"tba:254:room:25426":
+  name: Food Storage and Preparation
+  description: >
+    This building houses all the foodstuffs for the village.  Rows of bushel baskets filled with dried
+    vegetables and grains line the walls, while skinned animals hang above them, collecting flies and who
+    knows what else.  An area near the rear of the building looks to be seignated as the prep area with
+    a hand pump for water and many different kinds of spices and seasonings on shelves.
+  sector: field
+  exits:
+    west:
+      to: tba:254:room:25424
+
+"tba:254:room:25427":
+  name: A Twisty Turning Trail
+  description: >
+    This trail heads through some trees to an unknown destination, but generally in an easterly
+    direction.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25424
+    west:
+      to: tba:254:room:25428
+
+"tba:254:room:25428":
+  name: A Twisty Turning Trail
+  description: >
+    The trail ends here, at a small stone building.  The entrance to the building is directly south of
+    you, but it doesn't appear as if you will be getting in any time soon, since the door is oak bound in
+    iron, and no apparent windows from where you stand.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25427
+    south:
+      to: tba:254:room:25429
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25429":
+  name: Weapon Cache
+  description: >
+    Various implements of destruction are stored here, just waiting for some lucky soul to come along
+    and abuse them.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:254:room:25428
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25430":
+  name: A Dirt Path
+  description: >
+    The trail continues east toward the center of the village.  You begin to see tents and huts the
+    farther east you go, these must be the permanent residences of the village.
+  sector: field
+  exits:
+    east:
+      to: tba:254:room:25431
+    west:
+      to: tba:254:room:25415
+
+"tba:254:room:25431":
+  name: A Dirt Trail
+  description: >
+    The trail heads east into the center of the village, to the north and south of you are tents, large
+    enough to hold a family or at a few people.
+  sector: field
+  exits:
+    east:
+      to: tba:254:room:25432
+    west:
+      to: tba:254:room:25430
+
+"tba:254:room:25432":
+  name: A Meeting of Two Trails
+  description: >
+    Here the two main trails in the village meet.  One of them heads west and the other runs north to
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25444
+    south:
+      to: tba:254:room:25441
+    west:
+      to: tba:254:room:25431
+
+"tba:254:room:25433":
+  name: Tent Dwelling
+  description: >
+    This tent, roughly 10x10, serves as the primary dwelling for one of the families under Mordecai's
+    'care'.  Four cots sit side by side along one wall and a leather chest sits in a corner, holding what
+    you assume would be all of their wordly belongings.
+  sector: inside
+  exits:
+    east:
+      to: tba:254:room:25441
+
+"tba:254:room:25434":
+  name: Tent Dwelling
+  description: >
+    This tent, roughly 10x10, serves as the primary dwelling for one of the families under Mordecai's
+    'care'.  Four cots sit side by side along one wall and a leather chest sits in a corner holding what
+    you assume would all of their worldy possessions.
+  sector: inside
+  exits:
+    west:
+      to: tba:254:room:25441
+
+"tba:254:room:25435":
+  name: Tent Dwelling
+  description: >
+    This tent, roughly 10x10, serves as the primary dwelling for one of the families under Mordecai's
+    'care'.  Four cots sit side by side along one wall and a leather chest sits in a corner holding what
+    you assume would be all of their worldly possessions.
+  sector: inside
+  exits:
+    west:
+      to: tba:254:room:25444
+
+"tba:254:room:25436":
+  name: Tent Dwelling
+  description: >
+    This tent, roughly 10x10, serves as the primary dwelling for one of the families under Mordecai's
+    'care'.  Four cots sit side by side along one wall, and a leather chest sits in a corner, holding what
+    you assume would be all of their worldly possessions.
+  sector: inside
+  exits:
+    east:
+      to: tba:254:room:25445
+
+"tba:254:room:25437":
+  name: Hut
+  description: >
+    Made of muddy claya and straw, this small hut serves as a permanent home to a family of four.  In
+    this cramped 8x8 area, four cots and a large chest all occupy what little living area there was.
+  sector: inside
+  exits:
+    west:
+      to: tba:254:room:25446
+
+"tba:254:room:25438":
+  name: Hut
+  description: >
+    Made of muddy clay and straw, this small hut serves as a permanent home to a family of four.  In
+    this cramped 8x8 area, four cots and a large chest all occupy what little living area there was.
+  sector: inside
+  exits:
+    west:
+      to: tba:254:room:25442
+
+"tba:254:room:25439":
+  name: Hut
+  description: >
+    Made of muddy clay and straw, this small hut serves as a permanent home to a family of four.  In
+    this cramped 8x8 area, four cots and a large chest all occupy what little living area there was.
+  sector: inside
+  exits:
+    east:
+      to: tba:254:room:25446
+
+"tba:254:room:25440":
+  name: Hut
+  description: >
+    Made of muddy clay and straw, this small hut serves as a permanent home to a family of four.  In
+    this cramped 8x8 area, four cots and a large chest all occupy what little living area there was.
+  sector: city
+  exits:
+    east:
+      to: tba:254:room:25444
+
+"tba:254:room:25441":
+  name: The Trail Out of Town
+  description: >
+    This trail leads south into the wilderness, leaving the village behind.  To the north the trail
+    leads into the main part of the village.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25432
+    east:
+      to: tba:254:room:25434
+    south:
+      to: tba:254:room:25442
+    west:
+      to: tba:254:room:25433
+
+"tba:254:room:25442":
+  name: The Trail Out of Town
+  description: >
+    This trail leads south into the wilderness, even now the way becomes a bit more choked with trees. 
+    To the north you see the main part of the village.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25441
+    east:
+      to: tba:254:room:25438
+    south:
+      to: tba:254:room:25443
+
+"tba:254:room:25443":
+  name: The Trail Out of Town
+  description: >
+    You are now at the outskirts of the village.  You may leave it to the south or go back into the
+    main section to the north.
+  sector: forest
+  exits:
+    north:
+      to: tba:254:room:25442
+
+"tba:254:room:25444":
+  name: A Dusty Trail
+  description: >
+    This trail north and south of you.  South it leads to the meeting of this trail and another running
+    west.  To the north there are some tents and huts and farther north, upon a hill, you see a few more
+    permanent looking structures.
+  sector: city
+  exits:
+    north:
+      to: tba:254:room:25445
+    east:
+      to: tba:254:room:25435
+    south:
+      to: tba:254:room:25432
+    west:
+      to: tba:254:room:25440
+
+"tba:254:room:25445":
+  name: A Dusty Trail
+  description: The trail leads north to south, huts and tents spaced out at intervals.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25446
+    south:
+      to: tba:254:room:25444
+    west:
+      to: tba:254:room:25436
+
+"tba:254:room:25446":
+  name: A Dusty Trail
+  description: >
+    The trail leads north and south from here.  North you see what appear the main buildings for this
+    village, possibly even Mordecai's place of dwelling. South of you are the many huts and tents which
+    serve as homes for Mordecai's people.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25447
+    east:
+      to: tba:254:room:25437
+    south:
+      to: tba:254:room:25445
+    west:
+      to: tba:254:room:25439
+
+"tba:254:room:25447":
+  name: A Dusty Trail
+  description: >
+    Here you stand at the top of a large sloping hill, which slopes downward to the east.  It appears
+    as if a temple or place of worship has been erected there, you may enter it to the east.  North of you
+    are the main buildings for Mordecai, south are the many huts and tents of the village people.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25448
+    east:
+      to: tba:254:room:25449
+    south:
+      to: tba:254:room:25446
+
+"tba:254:room:25448":
+  name: The End of the Road
+  description: >
+    Directly north of you looms Mordecai's home, a tall stone structure with a sloping peaked roof.  It
+    appears that he fears none of his people, for the door to his home is wide open.  To the east you
+    see another stone house, this one a bit smaller than Mordecai's, and west of you is yet another stone
+    house.
+  sector: field
+  exits:
+    north:
+      to: tba:254:room:25452
+    east:
+      to: tba:254:room:25450
+    south:
+      to: tba:254:room:25447
+    west:
+      to: tba:254:room:25451
+
+"tba:254:room:25449":
+  name: Outdoor Temple
+  description: >
+    This small basin, set in an almost tranquil setting, has been fashioned into a place of worship by
+    the people of the village.  Wooden benches serving as pughs have been set into side of the hill.  At
+    the bottom of the basin, a stage with a podium has been erected, obviously for Mordecai and his
+    sermons.
+  sector: forest
+  exits:
+    west:
+      to: tba:254:room:25447
+
+"tba:254:room:25450":
+  name: Lieutenant Caspan's Home
+  description: >
+    Lieutenant Caspan, Mordecai's most trusted advisor and soldier, has been granted this home in
+    recognition of his extreme loyalty, and he doesn't appear at all pleased to see that you have invaded his
+    sanctuary.
+  sector: city
+  exits:
+    west:
+      to: tba:254:room:25448
+
+"tba:254:room:25451":
+  name: The Wives
+  description: >
+    The interior of this home smells of both stale perfume and rotten fish. Mordecai keeps his
+    favorites for the month in this home, in apparent 'luxury', treating them well for the services they render. 
+    Heaps of stained bedding lie in disarray all over the floor.  Pillows, torn and in some places,
+    bloodstained, lie in heaped in different corners.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:254:room:25448
+
+"tba:254:room:25452":
+  name: Mordecai's Home
+  description: >
+    This is the home of the Great Mordecai?  One cot, one wash basin (dry and apparently unused for the
+    most part), and a wardrobe on the east wall are all that occupy this place.  One would think a man
+    of Mordecai's stature would have just a bit more in the way of luxuries.
+  sector: inside
+  exits:
+    east:
+      to: tba:254:room:25454
+      door:
+        keywords: [wardrobe]
+        kind: pickproof
+        reset: locked
+    south:
+      to: tba:254:room:25448
+
+"tba:254:room:25453":
+  name: Penelope's Cell
+  description: >
+    Ah, the fair Penelope, daughter of the Lord of Jareth.  Such a sight to behold, in all her beauty
+    and majesty, such a wondrous vision.  And so very well guarded!
+  sector: inside
+  exits:
+    south:
+      to: tba:254:room:25452
+
+"tba:254:room:25454":
+  name: Mordecai's Stash
+  description: >
+    You have finally figured out why Mordecai didn't have any good stuff in his home.  It was all
+    here.  A plush, velvet upholstered chair sits in the center of his wealth, obviously the place where
+    Mordecai enjoys a great deal of his time.
+  sector: inside
+  exits:
+    west:
+      to: tba:254:room:25452
+      door:
+        keywords: [wardrobe]
+        kind: pickproof
+        reset: locked
+
+"tba:254:room:25455":
+  name: Dark and Gloomy Tunnel
+  description: >
+    This is the end of the tunnel.  Above you, a faint light filters through cracks in a trap door.
+  sector: city
+  exits:
+    south:
+      to: tba:254:room:25456
+    up:
+      to: tba:254:room:25453
+
+"tba:254:room:25456":
+  name: A Dark and Gloomy Tunnel
+  description: >
+    The tunnel continues along it's dark and gloomy way heading in a direction only the maker of this
+    place would know.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:254:room:25455
+    south:
+      to: tba:254:room:25457
+
+"tba:254:room:25457":
+  name: A Dark and Gloomy Tunnel
+  description: Still dark.  Still Gloomy.  Still going.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:254:room:25456

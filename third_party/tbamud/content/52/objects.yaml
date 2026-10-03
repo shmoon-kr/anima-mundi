@@ -1,0 +1,710 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 52.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:52:obj:5200":
+  type: armor
+  keywords: [vest, ringmail]
+  short: a ringmail vest
+  long: A vest made of iron rings lies heaped on the floor.
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 50
+  cost: 800
+  rent: 40
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -1
+
+"tba:52:obj:5201":
+  type: armor
+  keywords: [helm, iron]
+  short: an iron helm
+  long: An iron helm has been left on the ground.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 10
+  cost: 500
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+
+"tba:52:obj:5202":
+  type: armor
+  keywords: [gauntlets, iron]
+  short: a pair of iron gauntlets
+  long: A pair of iron gauntlets rests heavily on the ground.
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 10
+  cost: 220
+  rent: 90
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: damroll
+    modifier: 1
+
+"tba:52:obj:5203":
+  type: armor
+  keywords: [sleeves, iron]
+  short: a pair of iron sleeves
+  long: A set of iron sleeves lies on the ground.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 10
+  cost: 245
+  rent: 50
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -4
+  - apply: damroll
+    modifier: 2
+
+"tba:52:obj:5204":
+  type: armor
+  keywords: [boots, iron]
+  short: a pair of iron boots
+  long: A pair of iron boots has been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 6
+  cost: 800
+  rent: 200
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+  - apply: dex
+    modifier: -2
+
+"tba:52:obj:5205":
+  type: armor
+  keywords: [greaves, iron]
+  short: a set of iron greaves
+  long: A set of iron greaves lie here unattended.
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 10
+  cost: 540
+  rent: 21
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: dex
+    modifier: -3
+
+"tba:52:obj:5206":
+  type: armor
+  keywords: [girth, iron]
+  short: an iron girth
+  long: A small iron girth lies at your feet.
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 6
+  cost: 420
+  rent: 60
+  level: 0
+
+"tba:52:obj:5207":
+  type: armor
+  keywords: [plate, breast, iron]
+  short: a battered iron breast plate
+  long: A battered iron breast plate lies here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 50
+  cost: 800
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -5
+
+"tba:52:obj:5208":
+  type: armor
+  keywords: [shield, iron]
+  short: a sturdy iron shield
+  long: A small, but sturdy, iron shield has been left here.
+  flags: [magic, no_drop]
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 5
+  cost: 500
+  rent: 1000
+  level: 0
+  affects:
+  - apply: save_breath
+    modifier: -2
+  - apply: save_spell
+    modifier: -2
+
+"tba:52:obj:5210":
+  type: potion
+  keywords: [potion, black]
+  short: a black potion
+  long: A jet black potion sits upright waiting to be taken.
+  flags: [invisible, magic]
+  wear: [take]
+  values:
+    raw: [16, 4, 36, 39]
+  weight: 5
+  cost: 600
+  rent: 100
+  level: 0
+
+"tba:52:obj:5211":
+  type: potion
+  keywords: [potion, orange]
+  short: an orange potion
+  long: A small orange potion lies here.
+  flags: [invisible, magic]
+  wear: [take]
+  values:
+    raw: [20, 44, -1, -1]
+  weight: 10
+  cost: 750
+  rent: 100
+  level: 0
+
+"tba:52:obj:5213":
+  type: staff
+  keywords: [staff, serpentine]
+  short: a green serpentine staff
+  long: A green serpentine staff has been left here.
+  flags: [invisible, magic]
+  wear: [take, hold]
+  values:
+    raw: [15, 2, 2, 23]
+  weight: 12
+  cost: 660
+  rent: 30
+  level: 0
+
+"tba:52:obj:5214":
+  type: light
+  keywords: [ball, quartz]
+  short: a smooth quartz ball
+  long: A smooth quartz ball lies here gleaming.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: 72
+  weight: 30
+  cost: 305
+  rent: 95
+  level: 0
+
+"tba:52:obj:5215":
+  type: scroll
+  keywords: [scroll, tattered]
+  short: a tattered scroll
+  long: A worn and tattered scroll has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [24, 24, 44, 4]
+  weight: 15
+  cost: 800
+  rent: 40
+  level: 0
+
+"tba:52:obj:5216":
+  type: scroll
+  keywords: [scroll, bound]
+  short: a bound scroll
+  long: A bound scroll of detection lies at your feet.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [15, 18, 19, 20]
+  weight: 15
+  cost: 420
+  rent: 100
+  level: 0
+
+"tba:52:obj:5217":
+  type: staff
+  keywords: [flute, silver]
+  short: a silver flute
+  long: A brilliant silver flute glimmers from beneath a rock.
+  flags: [invisible, magic]
+  wear: [take, hold]
+  values:
+    raw: [18, 2, 2, 7]
+  weight: 3
+  cost: 900
+  rent: 80
+  level: 0
+
+"tba:52:obj:5218":
+  type: armor
+  keywords: [talisman, demon]
+  short: a demon-faced talisman
+  long: A demon-faced talisman glares at you angrily.
+  flags: [glow, magic, no_drop]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 11
+  cost: 250
+  rent: 15
+  level: 0
+  affects:
+  - apply: str
+    modifier: -3
+  - apply: dex
+    modifier: -3
+
+"tba:52:obj:5219":
+  type: food
+  keywords: [venison, chunk]
+  short: a chunk of venison
+  long: A large chunk of venison sits here, ready to be eaten.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 20
+  cost: 100
+  rent: 20
+  level: 0
+
+"tba:52:obj:5220":
+  type: fountain
+  keywords: [fountain, blood, cracked]
+  short: a large cracked fountain
+  long: Undefined
+  wear: []
+  values:
+    capacity: 10
+    contains: 10
+    liquid: blood
+    poisoned: true
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, blood, cracked]
+    text: A pool of blood lies in the bottom of the fountain.
+
+"tba:52:obj:5221":
+  type: weapon
+  keywords: [sword, two-handed]
+  short: a two-handed sword
+  long: A nice two-handed sword hangs on a hook in the wall.
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 22
+  cost: 550
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: damroll
+    modifier: 4
+
+"tba:52:obj:5222":
+  type: armor
+  keywords: [robe, black, silk]
+  short: a black silk robe
+  long: A black silk robe lies heaped in one corner.
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 6
+  cost: 130
+  rent: 50
+  level: 0
+
+"tba:52:obj:5223":
+  type: armor
+  keywords: [cloak, green]
+  short: a dark green cloak
+  long: A beautiful dark green cloak has been dropped here by someone.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 12
+  cost: 450
+  rent: 40
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 8
+  - apply: ac
+    modifier: -5
+
+"tba:52:obj:5224":
+  type: key
+  keywords: [seal, ebony]
+  short: an engraved ebony seal
+  long: A small, engraved ebony seal is here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:52:obj:5225":
+  type: container
+  keywords: [desk, curved]
+  short: the desk
+  long: Undefined
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 13
+    key: tba:52:obj:5224
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:52:obj:5226":
+  type: key
+  keywords: [seal, ivory]
+  short: an engraved ivory seal
+  long: A small, engraved ivory seal lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:52:obj:5227":
+  type: container
+  keywords: [cabinet, glass]
+  short: the glass cabinet
+  long: Undefined
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 13
+    key: tba:52:obj:5226
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:52:obj:5228":
+  type: food
+  keywords: [arm, rotted]
+  short: a half-rotted arm
+  long: A half-rotted arm floats lazily past your feet.
+  wear: [take]
+  values:
+    hours: 50
+    poisoned: true
+  weight: 20
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:52:obj:5230":
+  type: treasure
+  keywords: [stone, pale, blue]
+  short: a pale blue stone
+  long: A pale blue stone sits here.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 60
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+
+"tba:52:obj:5231":
+  type: treasure
+  keywords: [stone, scarlet, blue]
+  short: a scarlet and blue stone
+  long: A pretty scarlet and blue stone has been dropped here.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 60
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:52:obj:5232":
+  type: treasure
+  keywords: [stone, blue, incandescent]
+  short: an incandescent blue stone
+  long: A small incandescent blue stone lies here.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 60
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:52:obj:5233":
+  type: treasure
+  keywords: [stone, red, deep]
+  short: a deep red stone
+  long: Someone has left a deep red stone here.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 60
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+
+"tba:52:obj:5234":
+  type: treasure
+  keywords: [stone, pink]
+  short: a pink stone
+  long: A tiny pink stone lies at your feet.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 60
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:52:obj:5235":
+  type: treasure
+  keywords: [stone, pearly, white]
+  short: a pearly white stone
+  long: A lovely, pearly white stone has been carelessly left here.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 870
+  rent: 60
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 1
+
+"tba:52:obj:5236":
+  type: treasure
+  keywords: [stone, lavender, pale]
+  short: a pale lavender stone
+  long: A beautiful pale lavender stone lies here.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 530
+  rent: 60
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+
+"tba:52:obj:5237":
+  type: treasure
+  keywords: [stone, lavender, green]
+  short: a lavender and green stone
+  long: A stunning lavender and green stone rests on the ground.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 470
+  rent: 60
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+
+"tba:52:obj:5238":
+  type: treasure
+  keywords: [stone, rose, dusty]
+  short: a dusty rose stone
+  long: A stone is here, sort of a dusty rose color and very pretty.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 980
+  rent: 60
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -1
+
+"tba:52:obj:5239":
+  type: treasure
+  keywords: [stone, gray, dull]
+  short: a dull gray stone
+  long: You can barely make out a dull gray stone on the ground.
+  flags: [no_donate, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 20
+  rent: 200
+  level: 0
+
+"tba:52:obj:5240":
+  type: treasure
+  keywords: [stone, purple, vibrant]
+  short: a vibrant purple stone
+  long: A stunningly vibrant purple stone attracts your attention.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -50
+
+"tba:52:obj:5241":
+  type: treasure
+  keywords: [stone, pink, green]
+  short: a pink and green stone
+  long: A bright pink and green stone has been left here.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 660
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -5
+
+"tba:52:obj:5242":
+  type: treasure
+  keywords: [stone, green, pale]
+  short: a pale green stone
+  long: A pale green stone lies here collecting dust.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 710
+  rent: 100
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -5
+
+"tba:52:obj:5243":
+  type: treasure
+  keywords: [stone, clear]
+  short: a clear stone
+  long: An odd clear stone lies at your feet.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 890
+  rent: 100
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+
+"tba:52:obj:5244":
+  type: treasure
+  keywords: [stone, iridescent]
+  short: an iridescent stone
+  long: A large iridescent stone has been left here.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 370
+  rent: 100
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -50
+
+"tba:52:obj:5250":
+  type: staff
+  keywords: [mandolin]
+  short: a mandolin
+  long: A mandolin lies against the wall.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [13, 3, 3, 15]
+  weight: 20
+  cost: 300
+  rent: 150
+  level: 0
+
+"tba:52:obj:5251":
+  type: staff
+  keywords: [harp, golden]
+  short: a golden harp
+  long: A battered golden harp has been tipped over.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [18, 1, 1, 6]
+  weight: 50
+  cost: 250
+  rent: 80
+  level: 0

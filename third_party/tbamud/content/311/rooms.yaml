@@ -1,0 +1,1626 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 311.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:311:room:31100":
+  name: Behind the Waterfall
+  description: >
+    The water cascades down just south of here, pouring into the reservoir used by the farmers of the
+    Ofingian farmlands.  A long, narrow tunnel heads straight west toward a very bright source of light,
+    one which is blinding to look upon without shading one's eyes.
+  sector: inside
+  flags: [indoors, soundproof, tunnel]
+  exits:
+    west:
+      to: tba:311:room:31101
+
+"tba:311:room:31101":
+  name: Through the Mountain
+  description: >
+    The weight of an entire mountain enfolds all about you, the immensity and sheer presence of such a
+    sizable force as a mountain forces itself into your awareness.  The way west leads toward the bright
+    light, an opening into another section of the world, cut off from the rest of the world by the
+    impassable mountain which you currently travel through.  Just east of here is the falling water of the
+    waterfall which runs down into the reservoir in the Ofingian farmlands.
+  sector: inside
+  flags: [indoors, soundproof, tunnel]
+  exits:
+    east:
+      to: tba:311:room:31100
+    west:
+      to: tba:311:room:31102
+
+"tba:311:room:31102":
+  name: Halfway Through the Mountain
+  description: >
+    Squinting against the light coming from the western opening in this tunnel, you begin to finally
+    get used to the dimness of the cavern combined with the glare from the light coming from the other
+    opening.  Scorch-marks riddle the walls of the tunnel, a thick, black, phospherous soot glazes the walls,
+    dwindling away to the east but getting quite thick closer toward the western exit.  Some sort of
+    fire was blasted into this tunnel - and more than once.
+  sector: inside
+  flags: [indoors, soundproof, tunnel]
+  exits:
+    east:
+      to: tba:311:room:31101
+    west:
+      to: tba:311:room:31103
+
+"tba:311:room:31103":
+  name: Just East of the Western Exit
+  description: >
+    The light blasting in from the opening just west of here is now not only bright, but warm as well -
+    almost painfully so.  Shielding your eyes from the bright rays does not help to give you any more of
+    a clear picture of what might lie beyond the exit of that blinding hole, it is much too bright.  The
+    way to the east is dim, yet for some reason exudes much less of a dangerous vibe than the way west.
+  sector: inside
+  flags: [indoors, soundproof, tunnel]
+  exits:
+    east:
+      to: tba:311:room:31102
+    west:
+      to: tba:311:room:31104
+
+"tba:311:room:31104":
+  name: The Northern Exit
+  description: >
+    There is absolutely no way to describe the feeling of coming to the opening of a cave to find
+    yourself standing well over five hundred feet up from any sort of solid ground.  The cave 'entrance' is
+    nothing more than a hole in a cliff face - a cliff which rises far above the green grasslands which it
+    borders the east side of, very far.  Unless you can fly, the only way you might have the chance at
+    getting down below into those grasslands is if you hitch a ride on a passing dragon - and that is just
+    not likely to happen.  Looking directly down from where you perch, you see a small (or is it small,
+    it could just appear that way from this height) fortress nestled quite close up to the cliff face.
+  sector: inside
+  flags: [indoors, soundproof, tunnel]
+  exits:
+    east:
+      to: tba:311:room:31103
+    west:
+      to: tba:311:room:31105
+
+"tba:311:room:31105":
+  name: High Along the Dragon's Teeth - In Midair
+  description: >
+    A very large and very foreboding cave entrance lies to the south, the blackened rock which borders
+    the entrance testament to what lives within.  This is the highest point that can be reached along the
+    cliff face, the only way to go from here is horizontal or down.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31106
+    down:
+      to: tba:311:room:31108
+
+"tba:311:room:31106":
+  name: High Along the Dragon's Teeth - In Midair
+  description: >
+    The entrance to a cave lies to the east.  It is most certainly very solid ground upon which to
+    tread, better than the hazardous way of travel which you currently employ, but the fact that the rock
+    entryway into the cave is scorched and melted and strewn about with rotted dragonscales is a definite
+    turn-off.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31105
+    east:
+      to: tba:311:room:31172
+    down:
+      to: tba:311:room:31109
+
+"tba:311:room:31107":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31108
+    down:
+      to: tba:311:room:31117
+
+"tba:311:room:31108":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31107
+    south:
+      to: tba:311:room:31109
+    up:
+      to: tba:311:room:31105
+    down:
+      to: tba:311:room:31118
+
+"tba:311:room:31109":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31108
+    south:
+      to: tba:311:room:31110
+    up:
+      to: tba:311:room:31106
+    down:
+      to: tba:311:room:31119
+
+"tba:311:room:31110":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.  To the south is the entrance to a cave opening in the cliff face.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31109
+    south:
+      to: tba:311:room:31111
+    down:
+      to: tba:311:room:31120
+
+"tba:311:room:31111":
+  name: The Upper Reaches of the Dragon's Teeth at a Cave Entrance
+  description: >
+    Spendor of the vista below is instantly forgotten as you come to the entrance to this awful place. 
+    A foul, foul stench billows forth in gusts from the interior to this cave, the walls and floor of
+    the rock itself layered in a thick, oozing black goo.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31110
+    east:
+      to: tba:311:room:31180
+    south:
+      to: tba:311:room:31112
+    down:
+      to: tba:311:room:31121
+
+"tba:311:room:31112":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.  To the north is the entrance to a cave opening in the cliff face.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31111
+    south:
+      to: tba:311:room:31113
+    down:
+      to: tba:311:room:31122
+
+"tba:311:room:31113":
+  name: The Upper Reaches of the Dragon's Teeth
+  description: >
+    This is close to the highest point that this cliff face spans, the plains below a very
+    well-organized place of sectioned farming areas and forests, the castles and keeps which dot the land mere
+    specks.  Far away to the west is the glistening water of an ocean or sea, one which is as blue and clear as
+    the sky above.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31112
+    up:
+      to: tba:311:room:31114
+    down:
+      to: tba:311:room:31123
+
+"tba:311:room:31114":
+  name: An Outcrop of Rock
+  description: >
+    A way up from here leads to what looks to be the perch and home of what could only be a dragon. 
+    Sooty refuse spills from the opening of a cave just above you, a solid stain of black runing down the
+    rock , dwindling into the cliff face below, soaking into the rock.
+  sector: inside
+  flags: [no_track]
+  exits:
+    up:
+      to: tba:311:room:31115
+    down:
+      to: tba:311:room:31113
+
+"tba:311:room:31115":
+  name: An Entrance Into an Enormous Cavern
+  description: >
+    This is by far the largest and most intimidating cave along the Dragon's Teeth.  That is not to say
+    that the rest of the caves which dot the cliffside are not fairly imposing and fearsome, but they
+    most certainly pale in comparison to the amazing size of this cave.  The entrance is at least fifty
+    feet in height and twice as wide, if not more.  A steady sound from within leads you to believe that
+    someone is probably home.
+  sector: inside
+  flags: [no_track]
+  exits:
+    east:
+      to: tba:311:room:31168
+    down:
+      to: tba:311:room:31114
+
+"tba:311:room:31116":
+  name: An Opening in the Cliff Face
+  description: >
+    A dark cave leads away into the recesses of the mountain, one that is more than probably the home
+    to a creature that is best left to itself.  A very warm and humid waft of air comes from the cave, a
+    thick, breathy surge of air which does nothing to make the place seem any more welcoming.
+  sector: inside
+  flags: [no_track]
+  exits:
+    east:
+      to: tba:311:room:31176
+    south:
+      to: tba:311:room:31117
+    down:
+      to: tba:311:room:31125
+
+"tba:311:room:31117":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The rock of the mountain is solid and unyielding, allowing for you to travel along its face but
+    offering no spots upon which to rest or get your bearings. Just north of here is the entrance into an
+    opening in the rock, but it does not look like the sort of place that you might be able to rest a spell.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31116
+    south:
+      to: tba:311:room:31118
+    up:
+      to: tba:311:room:31107
+    down:
+      to: tba:311:room:31126
+
+"tba:311:room:31118":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31117
+    south:
+      to: tba:311:room:31119
+    up:
+      to: tba:311:room:31108
+    down:
+      to: tba:311:room:31127
+
+"tba:311:room:31119":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31118
+    south:
+      to: tba:311:room:31120
+    up:
+      to: tba:311:room:31109
+    down:
+      to: tba:311:room:31128
+
+"tba:311:room:31120":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.  Just below you is a smaller cave, maybe the
+    entrance back into the land of mortals and low-level mob that doesn't hit so hard.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31119
+    south:
+      to: tba:311:room:31121
+    up:
+      to: tba:311:room:31110
+    down:
+      to: tba:311:room:31129
+
+"tba:311:room:31121":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31120
+    south:
+      to: tba:311:room:31122
+    up:
+      to: tba:311:room:31111
+    down:
+      to: tba:311:room:31130
+
+"tba:311:room:31122":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31121
+    south:
+      to: tba:311:room:31123
+    up:
+      to: tba:311:room:31112
+    down:
+      to: tba:311:room:31131
+
+"tba:311:room:31123":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31122
+    south:
+      to: tba:311:room:31124
+    up:
+      to: tba:311:room:31113
+    down:
+      to: tba:311:room:31132
+
+"tba:311:room:31124":
+  name: Along the Dragon's Teeth, Flying in Midair
+  description: >
+    The world appears very perfect and organized from this height - no signs of strife, war or trouble
+    can be seen from this height, nor can the ordinary sounds of the world going by.  It would be a very
+    peaceful place to be if you weren't flying hundreds of feet above the surface of the world snuggled
+    against a cliff face which is riddled with Dragon Caves.  Just below you is the entrance into what
+    might be the only clean-looking cave on the whole cliff face.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31123
+    down:
+      to: tba:311:room:31133
+
+"tba:311:room:31125":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31126
+    up:
+      to: tba:311:room:31116
+
+"tba:311:room:31126":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31125
+    south:
+      to: tba:311:room:31127
+    up:
+      to: tba:311:room:31117
+    down:
+      to: tba:311:room:31134
+
+"tba:311:room:31127":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31126
+    south:
+      to: tba:311:room:31128
+    up:
+      to: tba:311:room:31118
+    down:
+      to: tba:311:room:31135
+
+"tba:311:room:31128":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.  To the south is the entrance into a small cave.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31127
+    south:
+      to: tba:311:room:31129
+    up:
+      to: tba:311:room:31119
+    down:
+      to: tba:311:room:31136
+
+"tba:311:room:31129":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.  The safety of a narrow tunnel lies to the east, a solid
+    footing on solid rock that does not pose the danger of falling hundreds of feet to your death below.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31128
+    south:
+      to: tba:311:room:31130
+    up:
+      to: tba:311:room:31120
+    down:
+      to: tba:311:room:31137
+
+"tba:311:room:31130":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.  To the north is the entrance into a narrow cave.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31129
+    south:
+      to: tba:311:room:31131
+    up:
+      to: tba:311:room:31121
+    down:
+      to: tba:311:room:31138
+
+"tba:311:room:31131":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31130
+    south:
+      to: tba:311:room:31132
+    up:
+      to: tba:311:room:31122
+    down:
+      to: tba:311:room:31139
+
+"tba:311:room:31132":
+  name: In Midair, Skirting the Dragon's Teeth
+  description: >
+    The cliff face itself is far too sheer, too smooth to afford any sort of handholds or foot wedges. 
+    Flying through the air, moving yourself with not only your will but your hands as you pull yourself
+    along the cliff wall, you chance to look down and realize that its probably a good idea if the fly
+    spell you make use of is regularly maintained.  To the south is the entrance into a cave.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31131
+    south:
+      to: tba:311:room:31133
+    up:
+      to: tba:311:room:31123
+    down:
+      to: tba:311:room:31140
+
+"tba:311:room:31133":
+  name: At a Polished Cave Entrance
+  description: >
+    The entryway into this cave is not black and fire-ravaged as most of the other cave entrances on
+    the Teeth are, but clear of debris and clean.  A slow trickle of water runs from the interior of the
+    cave, a cold draft accompanying it.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31132
+    east:
+      to: tba:311:room:31184
+    up:
+      to: tba:311:room:31124
+
+"tba:311:room:31134":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long . To the south is the entryway into a blackened
+    cave.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31135
+    up:
+      to: tba:311:room:31126
+    down:
+      to: tba:311:room:31142
+
+"tba:311:room:31135":
+  name: Entryway Into a Dark Cave
+  description: >
+    The cave itself is extremely dark inside, not lights whatsoever shine from within.  The rock around
+    the edges of the entrance are black and melted from countless bouts of DragonFire being blasted
+    against it.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31134
+    east:
+      to: tba:311:room:31192
+    south:
+      to: tba:311:room:31136
+    up:
+      to: tba:311:room:31127
+    down:
+      to: tba:311:room:31143
+
+"tba:311:room:31136":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long .
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31135
+    south:
+      to: tba:311:room:31137
+    up:
+      to: tba:311:room:31128
+    down:
+      to: tba:311:room:31144
+
+"tba:311:room:31137":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long .
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31136
+    south:
+      to: tba:311:room:31138
+    up:
+      to: tba:311:room:31129
+    down:
+      to: tba:311:room:31145
+
+"tba:311:room:31138":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long .
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31137
+    south:
+      to: tba:311:room:31139
+    up:
+      to: tba:311:room:31130
+    down:
+      to: tba:311:room:31146
+
+"tba:311:room:31139":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long .
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31138
+    east:
+      to: tba:311:room:31188
+    south:
+      to: tba:311:room:31140
+    up:
+      to: tba:311:room:31131
+    down:
+      to: tba:311:room:31147
+
+"tba:311:room:31140":
+  name: Flying Along the Face of the Dragon's Teeth
+  description: >
+    The grassy plains below are still many hundreds of feet down from your current altitude, the
+    castles and keeps of the land still but small dots, their features undescernable.  It is a steady climb
+    down the cliff, one that would probably not take long .
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31139
+    up:
+      to: tba:311:room:31132
+    down:
+      to: tba:311:room:31148
+
+"tba:311:room:31141":
+  name: The Entry Into a Smaller Cave
+  description: >
+    The cave before you is by no means small, however it is smaller in size by far than the rest of the
+    caves which dot this cliffside.  The entryway is blackened and scorched from DragonFire and
+    extremely cluttered with old scales and sloughed skin.  The bones of old meals lie strewn about the entrance,
+    looking as they were attempted to be pushed out to fall onto the plains below, but the effort was
+    only half-attempted.
+  sector: inside
+  flags: [no_track]
+  exits:
+    east:
+      to: tba:311:room:31196
+    south:
+      to: tba:311:room:31142
+    down:
+      to: tba:311:room:31149
+
+"tba:311:room:31142":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.  Just north of here is
+    the entrance into one of the caves.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31141
+    south:
+      to: tba:311:room:31143
+    up:
+      to: tba:311:room:31134
+    down:
+      to: tba:311:room:31150
+
+"tba:311:room:31143":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31142
+    south:
+      to: tba:311:room:31144
+    up:
+      to: tba:311:room:31135
+    down:
+      to: tba:311:room:31151
+
+"tba:311:room:31144":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31143
+    south:
+      to: tba:311:room:31145
+    up:
+      to: tba:311:room:31136
+    down:
+      to: tba:311:room:31152
+
+"tba:311:room:31145":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31144
+    south:
+      to: tba:311:room:31146
+    up:
+      to: tba:311:room:31137
+    down:
+      to: tba:311:room:31153
+
+"tba:311:room:31146":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31145
+    south:
+      to: tba:311:room:31147
+    up:
+      to: tba:311:room:31138
+    down:
+      to: tba:311:room:31154
+
+"tba:311:room:31147":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31146
+    south:
+      to: tba:311:room:31148
+    up:
+      to: tba:311:room:31139
+    down:
+      to: tba:311:room:31155
+
+"tba:311:room:31148":
+  name: Flying the Teeth
+  description: >
+    The cliff's base lies still far below, a considerable drop for even a winged creature.  The cliff
+    is of the smoothest rock, as if carefully carved and sanded by an expert sculptor.  The entryways into
+    the caves which dot this cliff face are easily found, from any vantage point.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31147
+    up:
+      to: tba:311:room:31140
+    down:
+      to: tba:311:room:31156
+
+"tba:311:room:31149":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.  One of those very caves lies just above you.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31150
+    up:
+      to: tba:311:room:31141
+
+"tba:311:room:31150":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31149
+    south:
+      to: tba:311:room:31151
+    up:
+      to: tba:311:room:31142
+
+"tba:311:room:31151":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31150
+    south:
+      to: tba:311:room:31152
+    up:
+      to: tba:311:room:31143
+    down:
+      to: tba:311:room:31157
+
+"tba:311:room:31152":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31151
+    south:
+      to: tba:311:room:31153
+    up:
+      to: tba:311:room:31144
+    down:
+      to: tba:311:room:31158
+
+"tba:311:room:31153":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31152
+    south:
+      to: tba:311:room:31154
+    up:
+      to: tba:311:room:31145
+    down:
+      to: tba:311:room:31159
+
+"tba:311:room:31154":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31153
+    south:
+      to: tba:311:room:31155
+    up:
+      to: tba:311:room:31146
+    down:
+      to: tba:311:room:31160
+
+"tba:311:room:31155":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31154
+    south:
+      to: tba:311:room:31156
+    up:
+      to: tba:311:room:31147
+    down:
+      to: tba:311:room:31161
+
+"tba:311:room:31156":
+  name: In Midair Along the Cliff Face
+  description: >
+    The cliffs climb high above to heights which are dizzying.  There are cave entrances dotting the
+    cliffside at irregular intervals, nearly every one of them marked by a blackening of the rock around
+    their openings, a scorched, dirty look.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31155
+    up:
+      to: tba:311:room:31148
+    down:
+      to: tba:311:room:31162
+
+"tba:311:room:31157":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    south:
+      to: tba:311:room:31158
+    up:
+      to: tba:311:room:31151
+    down:
+      to: tba:311:room:31163
+
+"tba:311:room:31158":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    north:
+      to: tba:311:room:31157
+    south:
+      to: tba:311:room:31159
+    up:
+      to: tba:311:room:31152
+    down:
+      to: tba:311:room:31164
+
+"tba:311:room:31159":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    north:
+      to: tba:311:room:31158
+    south:
+      to: tba:311:room:31160
+    up:
+      to: tba:311:room:31153
+    down:
+      to: tba:311:room:31165
+
+"tba:311:room:31160":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    north:
+      to: tba:311:room:31159
+    south:
+      to: tba:311:room:31161
+    up:
+      to: tba:311:room:31154
+    down:
+      to: tba:311:room:31166
+
+"tba:311:room:31161":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    north:
+      to: tba:311:room:31160
+    south:
+      to: tba:311:room:31162
+    up:
+      to: tba:311:room:31155
+    down:
+      to: tba:311:room:31167
+
+"tba:311:room:31162":
+  name: Near Ground Level - in Midair
+  description: >
+    The details of what lies below are a bit more easily seen from this low height, the stone
+    fortification below is a walled keep.  It doesn't look very large, however it does appear to be constructed
+    for the purpose of defense. Defense against what?  Or who?
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    north:
+      to: tba:311:room:31161
+    up:
+      to: tba:311:room:31156
+
+"tba:311:room:31163":
+  name: Flying Just Above the Ground on the Cliff Face
+  description: >
+    There is only one area that looks any good at all to 'land' on the ground below, and it lies to the
+    south a short distance.  Everything other place below is strewn with waste from the dragons which
+    reside above, their old scales and the bones from meals long past lie in heaps upon the ground, not to
+    mention a sickly black oozing substance - almost like tar - which coats much of the refuse and the
+    ground.
+  sector: inside
+  flags: [no_track]
+  exits:
+    south:
+      to: tba:311:room:31164
+    up:
+      to: tba:311:room:31157
+
+"tba:311:room:31164":
+  name: Flying Just Above the Ground on the Cliff Face
+  description: >
+    There is only one area that looks any good at all to 'land' on the ground below, and it lies to the
+    south a short distance.  Everything other place below is strewn with waste from the dragons which
+    reside above, their old scales and the bones from meals long past lie in heaps upon the ground, not to
+    mention a sickly black oozing substance - almost like tar - which coats much of the refuse and the
+    ground.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31163
+    south:
+      to: tba:311:room:31165
+    up:
+      to: tba:311:room:31158
+
+"tba:311:room:31165":
+  name: In Midair Above a Guard Post
+  description: >
+    It seems that you are not the only one who might have occassion to explore this land, and it
+    appears that many who have come before you might have been less than friendly.  Of course, it could be that
+    the people below who the entry into their land might be the unfriendly ones.  Only one way to find
+    out...
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31164
+    south:
+      to: tba:311:room:31166
+    up:
+      to: tba:311:room:31159
+
+"tba:311:room:31166":
+  name: Flying Just Above the Ground on the Cliff Face
+  description: >
+    There is only one area that looks any good at all to 'land' on the ground below, and it lies to the
+    north a short distance.  Everything other place below is strewn with waste from the dragons which
+    reside above, their old scales and the bones from meals long past lie in heaps upon the ground, not to
+    mention a sickly black oozing substance - almost like tar - which coats much of the refuse and the
+    ground.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31165
+    south:
+      to: tba:311:room:31167
+    up:
+      to: tba:311:room:31160
+
+"tba:311:room:31167":
+  name: Flying Just Above the Ground on the Cliff Face
+  description: >
+    There is only one area that looks any good at all to 'land' on the ground below, and it lies to the
+    north a short distance.  Everything other place below is strewn with waste from the dragons which
+    reside above, their old scales and the bones from meals long past lie in heaps upon the ground, not to
+    mention a sickly black oozing substance - almost like tar - which coats much of the refuse and the
+    ground.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:311:room:31166
+    up:
+      to: tba:311:room:31161
+
+"tba:311:room:31168":
+  name: Entrance into a Black Cave
+  description: >
+    Everything instantly goes dark as you enter into this cave, even the glaring bright light of the
+    sun just to the west is immediately shut out.  Feeling along the walls, you find that the cave
+    continues westward, deeper into the hard rock of the mountain.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31169
+    west:
+      to: tba:311:room:31115
+
+"tba:311:room:31169":
+  name: In a Darkened Cave
+  description: >
+    Nothing can be seen, not the walls, nor the floor, nor you hand were you to hold it directly before
+    your eyes.  It can only be that the darkness of this place is magical in nature, a cloak of
+    obscurity maintained by the resident so that intruders might never have the upper hand.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31170
+    west:
+      to: tba:311:room:31168
+
+"tba:311:room:31170":
+  name: A Feeling of Immensity
+  description: >
+    Upon entering into this room, an immediate feeling of vast size seeps into your awareness.  You are
+    no longer in a long tunnel but in a vast room with a great amount of space.  The steady sound of
+    some sort of deep, heavy wind can be heard.  Or is that breathing?
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:311:room:31171
+    west:
+      to: tba:311:room:31169
+
+"tba:311:room:31171":
+  name: A Feeling of Immensity
+  description: >
+    Upon entering into this room, an immediate feeling of vast size seeps into your awareness.  You are
+    no longer in a long tunnel but in a vast room with a great amount of space.  The steady sound of
+    some sort of deep, heavy wind can be heard.  Or is that breathing?
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:311:room:31170
+
+"tba:311:room:31172":
+  name: Entrance to a Dragon's Cave
+  description: >
+    This can be nothing else than the home of a dragon.  The evidence is scattered all about your feet
+    in the form of thick dragonscales and the shattered bones of animals and people which fell prey to
+    the appetite of the monster within.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31173
+    west:
+      to: tba:311:room:31106
+
+"tba:311:room:31173":
+  name: A Hot, Humid Cave
+  description: >
+    The temperature inside this rough-hewn cavern is markedly higher in temperature than it is outside
+    in the fresh, bright air.  It is not dark, although the light which permeates this place is a
+    red-hued, onholy light which flickers and twists almost as if alive, like that of fire.  The passage runs
+    deeper into the mountain or ends just west of here in open air.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:311:room:31174
+    west:
+      to: tba:311:room:31172
+
+"tba:311:room:31174":
+  name: Lair of the Red Dragon
+  description: >
+    This huge room is the antechamber to the main room in which resides a very large, and very
+    mean-looking red dragon.  Its heaving flanks can be seen from this area of the cave, its deep, malevolent
+    black eyes fixed squarely on you, bearing down into your soul.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:311:room:31173
+    east:
+      to: tba:311:room:31175
+
+"tba:311:room:31175":
+  name: Lair of the Red Dragon
+  description: >
+    The walls of this emormous room glow in amber hues, a reflecting light that makes concentration
+    fairly difficult.  Most of the floor of the room is clear of any sort of debris, as the dragon which
+    makes his home here needs a large amount of space to stretch out and relax when he is slumbering.  All
+    along the edge of the floor lies strewn bits and pieces of old meals, bones, treasure and other
+    various objects.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:311:room:31174
+
+"tba:311:room:31176":
+  name: A Humid Cave Entrance
+  description: >
+    Standing within the conifines of this wide, arched cave entrance you feel an immediate change in
+    the quality of the air about you.  It has become thick, warm and heavy to breathe.  It almost seems as
+    if you might be able to see your breath, so thick it feels as it issues from your mouth.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31177
+    west:
+      to: tba:311:room:31116
+
+"tba:311:room:31177":
+  name: A Humid Cave
+  description: >
+    There is an almost pleasant, steady light pervading the inner depths of this cave, one that does
+    not really give off any uneasy or dangerous vibes.  The cavern slopes downward a bit before entering
+    into a very large room just east of here.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31178
+    west:
+      to: tba:311:room:31176
+
+"tba:311:room:31178":
+  name: Lair of the Blue Dragon
+  description: >
+    All of the glory and majesty that is a dragon is personified by this enormous room which is the
+    home of just such a creature.  The walls glow a strange, blue light which contrasts with the hot, thick
+    air which infests this place.  Heaps of all manner of odds and ends, valuable and otherwise, litter
+    the floors of the place.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:311:room:31179
+    west:
+      to: tba:311:room:31177
+
+"tba:311:room:31179":
+  name: Lair of the Blue Dragon
+  description: >
+    All of the glory and majesty that is a dragon is personified by this enormous room which is the
+    home of just such a creature.  The walls glow a strange, blue light which contrasts with the hot, thick
+    air which infests this place.  Heaps of all manner of odds and ends, valuable and otherwise, litter
+    the floors of the place.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:311:room:31178
+
+"tba:311:room:31180":
+  name: Cave Entrance
+  description: >
+    A terribly nasty odor envelopes you as you step foot into the entryway to this place.  A thick,
+    black goo covers the floor of the cave and sticks to your feet, making your footing treacherous to say
+    the least.  Darkness and death lay within - beware.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31181
+    west:
+      to: tba:311:room:31111
+
+"tba:311:room:31181":
+  name: Slimy Cave
+  description: >
+    The denizen of this large cave has to be the most distusting form of life that this world could
+    house.  The black goo which was only on the floor at the entryway now covers the walls and ceiling, as
+    if spattered and splashed by something very large - and the smell, the smell is indescribable.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31182
+    west:
+      to: tba:311:room:31180
+
+"tba:311:room:31182":
+  name: A Slimy Bend
+  description: >
+    The cave makes a sharp bend, opening into a an enormous room within which lies the lair of a green
+    dragon.  The oozing slime covers not only in a layer on the floor but covering everything in a thick,
+    three to four inch pool of the stuff.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:311:room:31183
+    west:
+      to: tba:311:room:31181
+
+"tba:311:room:31183":
+  name: Lair of the Green Dragon
+  description: >
+    The smell of this room is repulsive, a fetid, old, nasty reek that assaults your nostrils and holds
+    you hostage by its stench.  Your feet stick to the floor, mired down by a thick, black, gooey
+    substance which coats the entire cavern.  Heaps of junk, treasure, and bones lie scattered and jumbled,
+    covered in the goo all about the room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:311:room:31182
+
+"tba:311:room:31184":
+  name: Cold, Wet Cave Entrance
+  description: >
+    A steady trickle of clear water runs from the interior of the cave, running down in a rivulet out
+    the edge of the entrance and down the cliff face to the plains below.  Cold air blows from the depths
+    of the cave, a frigid, odd air that smacks of the unnatural.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31185
+    west:
+      to: tba:311:room:31133
+
+"tba:311:room:31185":
+  name: A Cold Cave
+  description: >
+    As you get deeper into the cave, the air gets colder and colder.  Every step take the temperature
+    down by at least ten degrees, making your face begin to numb.  Just ahead is a huge cavern room draped
+    in icicles and frost.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31186
+    west:
+      to: tba:311:room:31184
+
+"tba:311:room:31186":
+  name: The Frost Cavern
+  description: >
+    This can only be the lair of a white dragon, a very feared predator who's anger and evil is matched
+    only by a very select few of its cousins.  Frost coats the walls, iced over in many places to a
+    thick, white sheen.  Stalagtites are replaced by sharp spikes of ice which have dripped to form gigantic
+    icicles.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:311:room:31187
+    west:
+      to: tba:311:room:31185
+
+"tba:311:room:31187":
+  name: The Frost Cavern
+  description: >
+    This can only be the lair of a white dragon, a very feared predator who's anger and evil is matched
+    only by a very select few of its cousins.  Frost coats the walls, iced over in many places to a
+    thick, white sheen.  Stalagtites are replaced by sharp spikes of ice which have dripped to form gigantic
+    icicles.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:311:room:31186
+
+"tba:311:room:31188":
+  name: Entrance to a Glowing Cave
+  description: >
+    An odd glow comes from the inside of the cave, a strange light that seems both steady and fragile,
+    as it flickering but not really flickering.  The walls of the entrance are blackened and scorched,
+    but only at this front area.  Just a bit further in, the walls of the cave are smooth and clean.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31189
+    west:
+      to: tba:311:room:31139
+
+"tba:311:room:31189":
+  name: A Glowing Cave
+  description: >
+    A huge, gleaming cave lies only a few steps from here, its walls covered in glowing, clear shards
+    of crystal which are melted into the walls, embedded by the strong heat.  The exit to this place lies
+    just to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:311:room:31190
+    west:
+      to: tba:311:room:31188
+
+"tba:311:room:31190":
+  name: Lair of the Crystal Dragon
+  description: >
+    The glow from the walls makes your vision swim a bit before coming into focus, the glimmer and
+    gleam of so much clear crystal reflecting light from one wall to another.  The place is a wonder - the
+    dragon which resides here must have spent many years collecting the shards to make this place
+    completely enclosed in the glimmering glow of so much crystal.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:311:room:31191
+    west:
+      to: tba:311:room:31189
+
+"tba:311:room:31191":
+  name: Lair of the Crystal Dragon
+  description: >
+    The glow from the walls makes your vision swim a bit before coming into focus, the glimmer and
+    gleam of so much clear crystal reflecting light from one wall to another.  The place is a wonder - the
+    dragon which resides here must have spent many years collecting the shards to make this place
+    completely enclosed in the glimmering glow of so much crystal.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:311:room:31190
+
+"tba:311:room:31192":
+  name: Entrance to the Emerald Cave
+  description: >
+    A green glow comes from the innards of the cave before you, a powerful emanation of strength and
+    wealth.  All but the green glow is completely dark, the glow making the entire scene before you seem
+    surreal, otherwordly.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31193
+    west:
+      to: tba:311:room:31135
+
+"tba:311:room:31193":
+  name: In an Emerald Cave
+  description: >
+    A huge chamber lies just to the east, the source of the green glow which could be seen from outside
+    the cave.  All manner of treasure, mostly precious gems, lie scattered about in heaps all over the
+    floor of the room.  This is obviously the home of a dragon - best to be extremely cautious.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31194
+    west:
+      to: tba:311:room:31192
+
+"tba:311:room:31194":
+  name: The Emerald Lair
+  description: >
+    This is the home of a great Emerald Dragon, one of very few still exist anywhere in the world.  The
+    walls are aglow with a greenish light which comes mostly from the many emeralds which are embedded
+    in the rock, melted and scorched there by the dragon's killing breath.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:311:room:31195
+    west:
+      to: tba:311:room:31193
+
+"tba:311:room:31195":
+  name: The Emerald Lair
+  description: >
+    This is the home of a great Emerald Dragon, one of very few still exist anywhere in the world.  The
+    walls are aglow with a greenish light which comes mostly from the many emeralds which are embedded
+    in the rock, melted and scorched there by the dragon's killing breath.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:311:room:31194
+
+"tba:311:room:31196":
+  name: A Smaller Cave Entrance
+  description: >
+    Smaller.  Smaller meaning only twenty feet high and thirty feet wide.  Do not be fooled.  The
+    creature which resides within is no easy kill.  The scorch marks which riddle the walls of the cave all
+    the way through give testament to the fact the caution would be well advised.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31197
+    west:
+      to: tba:311:room:31141
+
+"tba:311:room:31197":
+  name: A Scorched Cave
+  description: >
+    The blast marks from the fires that seem to be a common theme with all of these caves on the
+    Dragon's Teeth seem to be much more pronounced in this cave, the scorchings running all the way back into
+    the large room which is just to the east of here.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:311:room:31198
+    west:
+      to: tba:311:room:31196
+
+"tba:311:room:31198":
+  name: Fire-Blasted Cavern
+  description: >
+    From all appearances, this huge room has been the site of many ferocious battles.  The walls are
+    scorched and covered in blackish soot, the floors a riddle of claws gouges and blood-stains.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:311:room:31199
+    west:
+      to: tba:311:room:31197
+
+"tba:311:room:31199":
+  name: Fire-Blasted Cavern
+  description: >
+    From all appearances, this huge room has been the site of many ferocious battles.  The walls are
+    scorched and covered in blackish soot, the floors a riddle of claws gouges and blood-stains.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:311:room:31198

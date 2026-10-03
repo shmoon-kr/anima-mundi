@@ -1,0 +1,358 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 281.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:281:obj:28100":
+  type: armor
+  keywords: [bracelet, tasseled, leather]
+  short: a tasseled leather bracelet
+  long: A tasseled bracelet is lying here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    armor: 2
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 5
+
+"tba:281:obj:28101":
+  type: other
+  keywords: [ring, red]
+  short: a fine, red ring
+  long: A red ring is lying here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:281:obj:28102":
+  type: armor
+  keywords: [pendant, stone, small]
+  short: a stone pendant
+  long: A small pendant is lying here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 8
+  - apply: save_para
+    modifier: -1
+
+"tba:281:obj:28103":
+  type: armor
+  keywords: [sleeves, dark, dwarven]
+  short: a pair of dark dwarven sleeves
+  long: A pair of dark sleeves is lying here.
+  flags: [magic]
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+
+"tba:281:obj:28104":
+  type: armor
+  keywords: [shoes, birch, bark, tiny]
+  short: a pair of birch bark shoes
+  long: A tiny pair of shoes is here.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 2
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:281:obj:28105":
+  type: weapon
+  keywords: [knife, red-handled, red]
+  short: a red-handled knife
+  long: A red-handled knife is lying here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:281:obj:28106":
+  type: armor
+  keywords: [jerkin, small, red, blue]
+  short: a red and blue jerkin
+  long: A small jerkin is lying here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 114
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 3
+  - apply: hit
+    modifier: 3
+  - apply: move
+    modifier: 3
+
+"tba:281:obj:28107":
+  type: armor
+  keywords: [belt, leather, brown]
+  short: a brown leather belt
+  long: A brown belt is lying here.
+  flags: [magic]
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 2
+  cost: 60
+  rent: 0
+  level: 0
+
+"tba:281:obj:28108":
+  type: other
+  keywords: [wooden, ring]
+  short: a wooden ring
+  long: A small loop of wood is lying here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 3
+
+"tba:281:obj:28109":
+  type: armor
+  keywords: [mittens, dark, green, small]
+  short: a pair of dark green mittens
+  long: A small pair of mittens is lying here.
+  flags: [magic]
+  wear: [take, hands]
+  values:
+    armor: 1
+  weight: 1
+  cost: 75
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:281:obj:28110":
+  type: other
+  keywords: [talon, runed]
+  short: a runed talon
+  long: A small talon is lying here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 40
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:281:obj:28111":
+  type: container
+  keywords: [rucksack, green, modest]
+  short: a green rucksack
+  long: A modest rucksack is lying here.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    capacity: 65
+    lock_flags: 1
+    corpse: false
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+
+"tba:281:obj:28112":
+  type: light
+  keywords: [lantern, carved, small, wood]
+  short: a carved lantern
+  long: A small lantern of wood is lying here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: 102
+  weight: 2
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:281:obj:28113":
+  type: armor
+  keywords: [hat, conical, wolf, muzzle]
+  short: a conical hat with a wolf-muzzle on it
+  long: A conical, peculiar hat is lying here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 1
+  cost: 60
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 3
+  - apply: hitroll
+    modifier: 1
+
+"tba:281:obj:28114":
+  type: armor
+  keywords: [leggings, woven, brown]
+  short: a pair of brown, woven leggings
+  long: A pair of brown leggings is lying here.
+  flags: [magic]
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 2
+  cost: 40
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:281:obj:28115":
+  type: drinkcon
+  keywords: [beer, tankard, beer]
+  short: a tankard
+  long: A tankard of beer is here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 8
+  cost: 12
+  rent: 0
+  level: 0
+
+"tba:281:obj:28116":
+  type: food
+  keywords: [soup, substantial, plate]
+  short: a substantial soup
+  long: A plate of soup is here.
+  wear: [take]
+  values:
+    hours: 30
+    poisoned: false
+  weight: 1
+  cost: 27
+  rent: 0
+  level: 0
+
+"tba:281:obj:28117":
+  type: food
+  keywords: [pastry, khanjar]
+  short: a pastry of Khanjar
+  long: A nice pastry is here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 0
+  level: 0
+
+"tba:281:obj:28120":
+  type: armor
+  keywords: [mask, green, leather]
+  short: a green leather mask
+  long: A green mask is lying here.
+  flags: [no_rent, no_donate]
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 1
+  cost: 80
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 10
+
+"tba:281:obj:28130":
+  type: key
+  keywords: [key, bronze]
+  short: a small bronze key
+  long: A small bronze key is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:281:obj:28131":
+  type: key
+  keywords: [key, iron]
+  short: a small iron key
+  long: A small iron key is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0

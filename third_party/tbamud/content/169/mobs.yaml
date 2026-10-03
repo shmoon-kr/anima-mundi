@@ -1,0 +1,288 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 169.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:169:mob:16900":
+  keywords: [gibberling, bloodthirsty]
+  short: a bloodthirsty gibberling
+  long: A bloodthirsty gibberling is here, grunting loudly.
+  description: >
+    This hunchbacked, vicious, monstrosity is spawn of the numerous reviled and feared race of
+    gibberlings.  The creature utters howls, shrieks, and insane chattering noises from it's grinning, canine
+    visage, which is encircled by a wild black mane, almost covering it's pointed ears.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: stab
+  abilities:
+    int: 5
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16901":
+  keywords: [cougar]
+  short: the cougar
+  long: A cougar is on the prowl here.
+  description: >
+    It is a muscular cougar with gleaming fangs, stealthily searching the area for fresh meat to fill
+    it's savage belly until the next kill.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [stay_zone, aggr_evil]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: maul
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16902":
+  keywords: [gibberling, shifty]
+  short: the shifty gibberling
+  long: A shifty gibberling is lingering here.
+  description: >
+    It looks unfinished.  An unusually quiet gibberling is chattering softly in the shadows, and you
+    can almost see a glint of unusually high intellect in the creatures' beady black eyes.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  abilities:
+    int: 15
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16903":
+  keywords: [gibberling, raider]
+  short: a gibberling raider
+  long: A gibberling raider is here, snarling like an animal.
+  description: >
+    This gibberling is obviously what you could call a gibberling soldier, if there is such a thing. 
+    It seems even more bloodthirsty and vicious than the average gibberling, not to mention larger in
+    girth.  The shrieking and clicking noises it continually makes, are enough to unnerve even the most
+    experienced warriors.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16904":
+  keywords: [gibberling, mutant]
+  short: the mutant gibberling
+  long: A mutant gibberling is going completely insane here!
+  description: >
+    The face of this four-armed gibberling, is completely disfigured and twisted into an even more
+    disgusting expression, than the usual horrific scowl of these vicious creatures.  Even the other
+    gibberlings seem to avoid contact with it.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  abilities:
+    int: 5
+    wis: 5
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16905":
+  keywords: [gibberling, king, chieftain]
+  short: the gibberling chieftain
+  long: The king of the gibberlings is here!
+  description: >
+    You see before you the most massive gibberling you have ever seen in your life, his canine features
+    are twisted into a permanent scowl of hate for all living creatures save his own kind, for which he
+    merely feels no emotion.  A white mane frames his terrible face, and each rasping breath he takes,
+    seems to drain some of your lifeforce, to replenish his own horrifying being.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  abilities:
+    str: 14
+    int: 6
+    wis: 7
+    dex: 8
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: standing
+
+"tba:169:mob:16906":
+  keywords: [female, gibberling]
+  short: a female gibberling
+  long: A female gibberling is running around, screeching!
+  description: >
+    You never stopped to think that there must be female gibberlings until you met one face to face. 
+    She is just as horrific as any of the other gibberlings, and of course completely insane, as she leaps
+    and pounces around you, baring her razor-sharp teeth!
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  abilities:
+    str: 10
+    wis: 5
+    dex: 7
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16907":
+  keywords: [fat, gibberling, butcher]
+  short: the gibberling butcher
+  long: A fat female gibberling is here, loudly burping and grunting.
+  description: >
+    You observe a disgusting, foul-smelling, obese gibberling, whose bulky frame is almost completely
+    covered in refuse, and scraps of half-eaten meat.  Her beady eyes gleam with a maniacal glint as she
+    consumes any and all edible materials in sight!
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: maul
+  abilities:
+    int: 3
+    wis: 3
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16908":
+  keywords: [gibberling, shaman]
+  short: the gibberling shaman
+  long: A gibberling shaman stands here.
+  description: >
+    The gibberling shaman is not only the gibberlings religious leader, but also a sinister
+    practitioner of dark rituals who loves nothing more than to drink the vital fluids of kills made in or near the
+    caves.  His glowing green eyes peer out, sunken deep into his dog-face, with a sadistic intelligence
+    found seldom among the savage hordes of gibberlings.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: blast
+  abilities:
+    wis: 15
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16909":
+  keywords: [small, marmot]
+  short: a small marmot
+  long: A small marmot is scurrying about.
+  description: >
+    It's a small, furry mammal found in the mountainous regions, and it appears to be in a playful mood.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  abilities:
+    int: 18
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:169:mob:16921":
+  keywords: [mutant, hulk, gibberling]
+  short: mutant hulk gibberling
+  long: A massive, two headed gibberling is growling at you!
+  description: >
+    The two-headed beast drooling and growling before you, is almost as massive as the gibberling king,
+    but much more savage.  He has apparently been confined to this dark chamber either as a punishment,
+    or because he is too crazed and bloodthirsty to dwell even among the general population of
+    gibberlings in the cave.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  abilities:
+    int: 3
+    wis: 4
+    dex: 4
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

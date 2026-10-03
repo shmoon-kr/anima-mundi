@@ -1,0 +1,1760 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 27.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:27:obj:2700":
+  type: weapon
+  keywords: [large, iron, pick]
+  short: a large iron pick
+  long: A large iron pick has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: stab
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [large, iron, pick]
+    text: >
+      This large pick looks incredibly strong and heavy.  Small gashes and scratches in the metal show
+      that it has been well used.
+
+"tba:27:obj:2701":
+  type: weapon
+  keywords: [blackened, axe, black, glistening]
+  short: a blackened axe
+  long: A glistening black axe is lying here.
+  flags: [glow, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 5
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [blackened, axe, black, glistening]
+    text: >
+      This incredibly sharp axe looks to be made of some normal metal which has then been blackened with
+      magic.  Only the handle appears naturally dark, carved out of glistening obsidian and inscribed with
+      evil runes.
+  - keywords: [evil, runes]
+    text: >
+      The runes are unreadable but unmistakably Khan-li in origin, testifying to the evil magic bestowed
+      upon this weapon.
+
+"tba:27:obj:2702":
+  type: fountain
+  keywords: [trickle, water]
+  short: a trickle of water
+  long: A trickle of water snakes its way slowly along the grooves in the floor.
+  flags: [magic]
+  wear: []
+  values:
+    capacity: 100
+    contains: 100
+    liquid: water
+    poisoned: false
+  weight: 105
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [trickle, water]
+    text: >
+      This trickle of water is slightly murky from particles of dust and rubble, but does not look
+      otherwise contaminated.
+
+"tba:27:obj:2703":
+  type: light
+  keywords: [phosphorescent, mushroom, fungi, fungus]
+  short: "@Ga phosphorescent mushroom@n"
+  long: "@GA phosphorescent mushroom@g grows here, glowing faintly.@n"
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 5
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [phosphorescent, mushroom, fungi, fungus]
+    text: >
+      Smooth and fragile to the touch, this tiny domed mushroom glows faintly all over, as though it has
+      tapped some internal source of light.
+
+"tba:27:obj:2704":
+  type: fountain
+  keywords: [dark, red, pool, liquid]
+  short: "@ra dark red pool@n"
+  long: "@rDark red rivulets of liquid form a pool here.@n"
+  wear: []
+  values:
+    capacity: 50
+    contains: 50
+    liquid: water
+    poisoned: true
+  weight: 55
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dark, red, pool, liquid]
+    text: >
+      This pool has the disturbing color of blood but appears to be water contaminated with rusty
+      particles of the mineral hematite from the surrounding rock.  This makes it gruesome to look at, and
+      probably very inadvisable to drink.
+
+"tba:27:obj:2705":
+  type: potion
+  keywords: [miniature, corked, bottle, fairy, tears]
+  short: a bottle of fairy tears
+  long: A miniature corked bottle lies here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [10, 48, 43, 35]
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [miniature, corked, bottle, fairy, tears]
+    text: >
+      This tiny glimmering bottle is of fairy make, fragile crystal reflecting the soft glow of the tears
+      within.  An equally tiny cork seals the bottle, set with a perfectly minute aquamarine gem.
+
+"tba:27:obj:2706":
+  type: other
+  keywords: [ragged, diary, book, "1"]
+  short: a ragged diary
+  long: A ragged book has been left here.
+  flags: [no_rent, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ragged, diary]
+    text:
+    - >
+      This dark leather book is almost falling apart, although there appears to be very little written
+      inside it. The word @gPRIVATE@n has been carefully carved into the cover.
+    - (type look 1, 2, or 3 to view pages)
+  - keywords: ["3"]
+    text:
+    - "@G @gEntry 3@n"
+    - >
+      Somehow I fear this may be my last entry.  I have been recruited, along with several others for a
+      secret task by the sorceress' evil bird.  What the task is I do not yet know, but I know that the
+      sorceress has a particular way of keeping her secrets, and it does not involve the survival of witnesses.
+  - keywords: ["2"]
+    text:
+    - "@G @gEntry 2@n"
+    - >
+      Someone came to help us today, he told me he knew how to destroy the sorceress once and for all.  I
+      thought he would be the one to succeed but he was killed by the toothy one.  Now the abominable
+      creature has holed itself into a cave from which there is no return... or so it is claimed.
+  - keywords: ["1"]
+    text:
+    - "@G @gEntry 1@n"
+    - >
+      I have lost all interest in keeping this diary.  Since the sorceress has taken over, life has not
+      been worth writing about.  I shall instead record anything I observe that may aid in her demise,
+      though it will mean my death should this book be found.
+
+"tba:27:obj:2707":
+  type: container
+  keywords: [carcass, stone]
+  short: the stone carcass of a sad-looking memlin
+  long: The stone carcass of a memlin is lying here.
+  wear: []
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stone, carcass]
+    text: >
+      This is the perfect form of a crumpled memlin corpse, one of the many diggers found throughout the
+      tunnels.  This creature has obviously met a most unnatural death, as the corpse has fossilized into
+      an eternal stone statue, an expression of surprise and horror frozen into its features.
+
+"tba:27:obj:2708":
+  type: worn
+  keywords: [goethite, shackle]
+  short: a Goethite shackle
+  long: A Goethite shackle lies here.
+  flags: [glow, magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 400
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [goethite, shackle]
+    text: >
+      This shackle has been twisted by some unnatural means out of goethite crystals.  Dark as night, it
+      glistens as though dripping with the black blood of the Khan'li themselves.  It appears to be
+      unlockable, except by a magic as strong as that which wrought it.
+
+"tba:27:obj:2709":
+  type: key
+  keywords: [bejewelled, crystal, key]
+  short: a bejewelled crystal key
+  long: A bejewelled crystal key is lying here.
+  flags: [no_rent, no_donate, magic, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bejewelled, crystal, key]
+    text: >
+      This sparkling key catches the light perfectly, giving it a rainbow hue.  A perfectly round red
+      beryll is set into the crystal, making it glow with magic.
+
+"tba:27:obj:2710":
+  type: food
+  keywords: [candystick]
+  short: a @rc@na@rn@nd@ry@ns@rt@ni@rc@nk
+  long: A @rc@na@rn@nd@ry@ns@rt@ni@rc@nk lies here
+  wear: [take]
+  values:
+    hours: 50
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2711":
+  type: armor
+  keywords: [dark, visored, helmet]
+  short: a dark visored helmet
+  long: A dark visored helmet is lying here.
+  flags: [magic, anti_good]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 6
+  cost: 200
+  rent: 0
+  level: 5
+  extras:
+  - keywords: [dark, visored, helmet]
+    text: >
+      This dark helmet glimmers various shades of blue and green when turned in the light.  The metal
+      visor looks as though it offers excellent protection though making it somewhat harder to see, at least
+      by any natural means.
+
+"tba:27:obj:2712":
+  type: armor
+  keywords: [irridescent, breastplate, plate]
+  short: an irridescent breastplate
+  long: An irridescent breastplate is lying here.
+  flags: [magic, anti_good]
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 6
+  cost: 200
+  rent: 0
+  level: 5
+  extras:
+  - keywords: [irridescent, breastplate, plate]
+    text: >
+      This breastplate is a deep inky black that shimmers irridescent green and blue at the slightest
+      movement.  As well as being extraordinarily beautiful, it looks as though it offers excellent defense.
+
+"tba:27:obj:2713":
+  type: armor
+  keywords: [ink, black, boots, ink-black]
+  short: a pair of ink-black boots
+  long: A pair of ink-black boots stand here.
+  flags: [magic, anti_good]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 6
+  cost: 200
+  rent: 0
+  level: 5
+  extras:
+  - keywords: [ink, black, boots, ink-black]
+    text: >
+      These thigh-high boots are plated and jointed at the knee, allowing for freedom of movement.  A
+      smooth glistening black they feel strangely cold, as though some evil magic chills them.
+
+"tba:27:obj:2714":
+  type: drinkcon
+  keywords: [water, leathery, pouch, water]
+  short: a leathery pouch
+  long: A leathery pouch is lying here.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: water
+    poisoned: false
+  weight: 15
+  cost: 50
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [leathery, water, pouch]
+    text: >
+      Apparently made for holding water, this tan-colored leather has been treated with some form of
+      sticky resin, making it relatively leak-proof.
+
+"tba:27:obj:2715":
+  type: fountain
+  keywords: [fountain, bubbling]
+  short: a bubbling fountain
+  long: A large round bench sits in the center of the room.
+  wear: []
+  values:
+    capacity: 50
+    contains: 50
+    liquid: clear_water
+    poisoned: false
+  weight: 55
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, bubbling]
+    text: >
+      Sculpted from glass and filled with smooth round pebbles, the water splashing lazily from this
+      fountain looks crystal clear.
+
+"tba:27:obj:2716":
+  type: other
+  keywords: [fragrant, flower]
+  short: a @Mfragrant flower@n
+  long: "@wA @Mfragrant flower@n blossoms here."
+  flags: [no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fragrant, flower]
+    text: >
+      Various shades of magenta and purple, this flower has a large golden stamen that fills the air with
+      a sweet perfume, making it a likely member of the tropical hibiscus family.
+
+"tba:27:obj:2718":
+  type: worn
+  keywords: [test, bracelet]
+  short: a test bracelet
+  long: An unfinished object is lying here.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2719":
+  type: potion
+  keywords: [griffin's, tears, clear, bottle]
+  short: a bottle of Griffin's Tears
+  long: A bottle of clear liquid lies here.
+  flags: [magic, anti_evil, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [12, 28, 28, 1]
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Griffin's, Tears, clear, liquid, small, bottle]
+    text: >
+      This small bottle is round with a cork tightly sealing it as if the liquid inside was very precious.
+
+"tba:27:obj:2720":
+  type: container
+  keywords: [floorboards, loose]
+  short: some loose floorboards
+  long: A mouldy puddle stagnates in the corner.
+  wear: []
+  values:
+    capacity: 50
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mouldy, puddle]
+    text: >
+      This looks like it may have once been water, but has turned into a greenish glob of undrinkable
+      slime from the influence of mould and various fungi.
+  - keywords: [loose, floorboards]
+    text: >
+      These floorboards look a little loose, as though they have been pried open and set carefully back
+      into place.
+
+"tba:27:obj:2721":
+  type: key
+  keywords: [white, bone, key]
+  short: a white bone key
+  long: A white key lies here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [white, bone, key]
+    text: >
+      This tiny white key has been carefully carved from a single curved bone, the notches are sharp
+      enough to cut and have been polished until gleaming.
+
+"tba:27:obj:2722":
+  type: fountain
+  keywords: [bubbling, hot, spring]
+  short: a bubbling hot spring
+  long: A bubbling hot spring flows here.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 104
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bubbling, hot, spring]
+    text: >
+      This spring flows lazily through the cavern, its heat evidenced by the wafting steam and bubbling
+      water.
+
+"tba:27:obj:2723":
+  type: treasure
+  keywords: [small, doll]
+  short: a small doll
+  long: A small doll lies crumpled on the ground.
+  flags: [no_rent, bless, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 3
+  extras:
+  - keywords: [small, doll]
+    text: >
+      This little doll is obviously hand-made from old rags and stuffing, carelessly sewn together.  The
+      eyes however, are made of some unknown material and are chillingly life-like.  Mostly in the closed
+      position, from time to time they open as if by accident.
+
+"tba:27:obj:2724":
+  type: weapon
+  keywords: [fiery, spine]
+  short: a @Rfiery spine@n
+  long: A @Rfiery spine@n lies here.
+  wear: [take, wield]
+  values:
+    damage: 3d9
+    attack: stab
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fiery, spine]
+    text: >
+      This long sharp spine seems to glisten slightly as though recently hewn from its animal owner. 
+      Blood red and hot to the touch, a wisp of smoke curls continually around it as though some inner fire
+      continually burns.
+
+"tba:27:obj:2725":
+  type: container
+  keywords: [skull, stone, massive, dragon]
+  short: the massive stone skull of a dragon
+  long: The massive stone skull of a dragon sits ominously on the altar.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [massive, stone, dragon, skull]
+    text: >
+      This enormous stone skull appears to have come from an actual dragon corpse. Apparently once made
+      of bone, it has long since petrified into smooth stone. Long jagged teeth frame the slightly open jaw,
+      and the two immense eye sockets are empty, filled with an unnatural darkness.
+
+"tba:27:obj:2726":
+  type: treasure
+  keywords: [broken, shard, glass]
+  short: a broken shard of glass
+  long: A broken shard of glass lies here.
+  flags: [magic, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [broken, shard, glass]
+    text: >
+      This glass appears to mirror something, dark swirling shapes lingering just beneath the flawless
+      surface.  Almost unnaturally black, it seems to whisper to you, invoking the urge to pick it up and
+      look closer.
+
+"tba:27:obj:2727":
+  type: treasure
+  keywords: [glowing, blue, shard, glass]
+  short: "@Ba glowing blue shard of glass@n"
+  long: "@BA glowing blue shard of glass@n lies here."
+  flags: [magic, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 30
+  extras:
+  - keywords: [glowing, blue, shard, glass]
+    text: >
+      Razor-sharp and glittering with uncanny beauty, this shard seems to reflect some aspect of you, as
+      indeed its mirror host once would have.  A delicate silver chain, fine as spider-silk supports the
+      jewel-like glass, silvery writing scrawled across the smooth surface, spelling the words: Healer, heal
+      thyself.
+
+"tba:27:obj:2728":
+  type: treasure
+  keywords: [glowing, red, shard, glass]
+  short: "@Ra glowing red shard of glass@n"
+  long: "@RA glowing red shard of glass@n lies here."
+  flags: [magic, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 30
+  extras:
+  - keywords: [glowing, red, shard, glass]
+    text: >
+      Razor-sharp and glittering with uncanny beauty, this shard seems to reflect some aspect of you, as
+      indeed its mirror host once would have.  A delicate silver chain, fine as spider-silk supports the
+      jewel-like glass, silvery writing scrawled across the smooth surface, spelling the words: Conqueror,
+      conquer thyself.
+
+"tba:27:obj:2729":
+  type: treasure
+  keywords: [glowing, green, shard, glass]
+  short: "@Ga glowing green shard of glass@n"
+  long: "@GA glowing green shard of glass@n lies here."
+  flags: [magic, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 30
+  extras:
+  - keywords: [glowing, green, shard, glass]
+    text: >
+      Razor-sharp and glittering with uncanny beauty, this shard seems to reflect some aspect of you, as
+      indeed its mirror host once would have.  A delicate silver chain, fine as spider-silk supports the
+      jewel-like glass, silvery writing scrawled across the smooth surface, spelling the words: Deceiver,
+      know thyself.
+
+"tba:27:obj:2730":
+  type: treasure
+  keywords: [glowing, purple, shard, glass]
+  short: "@Ma glowing purple shard of glass@n"
+  long: "@MA glowing purple shard of glass lies here.@n"
+  flags: [magic, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 30
+  extras:
+  - keywords: [glowing, purple, shard, glass]
+    text: >
+      Razor-sharp and glittering with uncanny beauty, this shard seems to reflect some aspect of you, as
+      indeed its mirror host once would have.  A delicate silver chain, fine as spider-silk supports the
+      jewel-like glass, silvery writing scrawled across the smooth surface, spelling the words: Seeker, seek
+      thyself.
+
+"tba:27:obj:2731":
+  type: container
+  keywords: [test, quiver]
+  short: a test quiver
+  long: A test quiver is lying here.
+  wear: [take]
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2732":
+  type: other
+  keywords: [test, bow]
+  short: a test bow
+  long: A test bow is lying here
+  wear: [take, wield]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2733":
+  type: free
+  keywords: [test, arrow]
+  short: a test arrow
+  long: A test arrow is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2734":
+  type: other
+  keywords: [little, bundle, white, flowers]
+  short: a little bundle of white flowers
+  long: A little bundle of white flowers has been placed here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [little, bundle, white, flowers]
+    text: >
+      These flowers have tiny star-shaped heads that seem an almost luminous white.  Delicate
+      silver-veined leaves and pale green stems extend beneath the fragile petals, held together with a single scarlet
+      ribbon.
+
+"tba:27:obj:2735":
+  type: other
+  keywords: [bright, circle]
+  short: "@Ca bright circle of light@n"
+  long: "@CA bright circle of light glows from the floor.@n"
+  flags: [magic]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bright, circle]
+    text: >
+      This glowing circle has clear magical properties, its surface shimmering as though it is not
+      entirely in one place.  In fact, it seems almost like it could function as some kind of portal.
+
+"tba:27:obj:2736":
+  type: drinkcon
+  keywords: [firebreather, bottle, vodka, firebreather]
+  short: a bottle of vodka
+  long: A bottle of vodka stands here.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: firebreather
+    poisoned: false
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2737":
+  type: undefined
+  keywords: [empty]
+  short: a buggy trigger
+  long: A buggy trigger is wreaking havoc here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2738":
+  type: light
+  keywords: [suspended, orb, glowing, water]
+  short: "@Ca suspended orb of glowing water@n"
+  long: "@CA suspended orb of glowing water@n"
+  flags: [no_rent, no_donate, magic, no_sell]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [suspended, orb, glowing, water]
+    text: >
+      This shimmering orb ripples with beautiful patterns of unnatural light that dance upon the surface
+      of the water.  Amazingly the fluid holds itself in a perfect sphere, hovering as though weightless in
+      the air.
+
+"tba:27:obj:2739":
+  type: trash
+  keywords: [broken, pick]
+  short: a broken pick
+  long: A broken pick lies discarded on the floor.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [broken, pick]
+    text: >
+      This pick seems newly built, though the iron head has already been shattered as though it has been
+      repeatedly struck against a material that will not yield.
+
+"tba:27:obj:2740":
+  type: trash
+  keywords: [single, black, feather]
+  short: a black feather
+  long: A single black feather lies on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [single, black, feather]
+    text: >
+      This large and beautiful feather is perfectly black, glistening slightly irridescent, streaks of
+      blue and green glinting in any light.  Soft as silk and almost as light as air, it probably once
+      belonged to a raven or crow.
+
+"tba:27:obj:2741":
+  type: container
+  keywords: [apron, stained, wrinkled]
+  short: a stained apron
+  long: A wrinkled apron lies here, covered with various stains.
+  wear: [take, waist]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [apron, stained, wrinkled]
+    text: >
+      This looks like your average kitchen apron, though rather ragged and well-used.  Several food
+      stains cover the otherwise white material, and the scent of peppers and spices wafts from the fabric.  A
+      large pocket hangs along the side, small crumbs falling through a hole in the bottom.
+
+"tba:27:obj:2742":
+  type: other
+  keywords: [swirling, tor, Tor]
+  short: a swirling Tor
+  long: A swirling Tor hovers here, distorting everything around it.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [swirling, tor, Tor]
+    text: >
+      This massive black sphere hovers effortlessly in mid-air, strange colors and patterns flickering
+      and dancing over its surface.  The atmosphere around it seems unnatural, distortions spreading
+      rhythmically out around it like ripples in the very fabric of space.  A low vibrating pulse can also be felt,
+      energy ebbing and flowing as if some invisible heart was beating.
+
+"tba:27:obj:2743":
+  type: weapon
+  keywords: [sacrificial, blade, cruel, silvery]
+  short: a sacrificial blade
+  long: A cruel silvery blade glistens here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 2
+  cost: 500
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [sacrificial, blade, cruel, silvery]
+    text: >
+      This long, curving blade is razor sharp and glistens silver in the light, though when examined
+      carefully the metal that forged it can be seen to be black. Elegant runes glow faintly red though to the
+      touch they are icy cold, chilling even the tightly wound strips of hide that bind the handle.
+
+"tba:27:obj:2744":
+  type: trash
+  keywords: [proud, metal, sculpture]
+  short: a proud metal sculpture
+  long: A proud metal sculpture stands unyieldingly in the center of the room.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [proud, metal, sculpture]
+    text: >
+      This beautifully forged abstract metal sculpture is seamless and flowing as if still liquid, only
+      it has cooled completely into an unmoldable image of interpretative art.  Stubbornly fixed in place,
+      the curving contours of the sculpture seem to contrast its complete refusal to bend under any pressure.
+
+"tba:27:obj:2745":
+  type: trash
+  keywords: [flickering, flame]
+  short: a flickering flame
+  long: A flickering flame hovers warily above the ground.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flickering, flame]
+    text: >
+      This large flame is the pure scarlet color of unpolluted fire, dancing and leaping almost
+      frantically it casts its surroundings in and out of shadow. Though nothing supports it and nothing appears to
+      be feeding it, it burns almost brighter than any natural flame ever could.
+
+"tba:27:obj:2746":
+  type: trash
+  keywords: [set, silver, balancing, scales]
+  short: a set of silver balancing scales
+  long: A set of silver scales tips continuously from one side to the other.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [set, silver, balancing, scales]
+    text: >
+      Expertly forged and polished until shimmering, these beautiful scales are an artistic expression of
+      justice and moderation.  Simple and unembellished, the flat silver plates alternately raise and
+      lower, invisible forces seeking to tip the balance, whilst Navi, the will of the Imari seeks constantly
+      to restore it.
+
+"tba:27:obj:2747":
+  type: worn
+  keywords: [long, simple, garment, piece, white, fabric]
+  short: a long simple garment
+  long: A long piece of white fabric lies crumpled here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [long, simple, garment, piece, white, fabric]
+    text: >
+      This simply sewn piece of flowing white cloth looks light to the touch and has an almost airy
+      floating quality to it.  Dull white, it is clean and orderly but otherwise unremarkable.
+
+"tba:27:obj:2748":
+  type: worn
+  keywords: [delicate, piece, white, gown, material]
+  short: a delicate white gown
+  long: A delicate piece of white material lies here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [delicate, piece, white, gown, material]
+    text: >
+      This fragile shimmering dress is made of fine silk, so delicate the slightest pull would tear it. 
+      Two jewelled straps hold the flowing material in place, the rest of it left to naturally cascade in
+      smooth, shining folds.
+
+"tba:27:obj:2749":
+  type: treasure
+  keywords: [tiny, opal, pendant, gold, chain]
+  short: a tiny opal pendant
+  long: A tiny opal lies here, attached to a fragile gold chain.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 3
+  extras:
+  - keywords: [tiny, opal, pendant, gold, chain]
+    text: >
+      A tiny fire opal lies embedded in a delicate circle of gold, its smooth white surface flecked with
+      brilliant shades of scarlet and crimson.  A slight glow seems to come from it as though some inner
+      source of light is shining through, a fragile gold chain trailing from the tip of its gold setting.
+
+"tba:27:obj:2750":
+  type: worn
+  keywords: [simple, gray, tunic]
+  short: a simple gray tunic
+  long: A gray tunic is lying here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [simple, gray, tunic]
+    text: >
+      This modest garment is a light slate gray in color, made of delicate, flexible material and sealed
+      down the front with tiny wooden buttons.
+
+"tba:27:obj:2751":
+  type: worn
+  keywords: [rope-like, cord, belt]
+  short: a rope-like cord
+  long: A rope-like cord is lying here.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [rope-like, cord, belt]
+    text: >
+      This long woven cord has been woven from a very rough and durable brown material, it seems it has
+      been designed to serve as a tool belt, able to bear the constant weight of heavy objects.
+
+"tba:27:obj:2752":
+  type: worn
+  keywords: [faded, brown, shirt]
+  short: a faded brown shirt
+  long: A faded brown shirt lies crumpled here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [faded, brown, shirt]
+    text: >
+      This short sleeved garment is made of very light and airy material that looks as though it were
+      once deep chocolate brown, now faded through use and time.
+
+"tba:27:obj:2753":
+  type: worn
+  keywords: [dusty, white, vest]
+  short: a dusty white vest
+  long: A dusty white vest lies forgotten here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [dusty, white, vest]
+    text: >
+      This simple, loose-fitting vest is made of comfortable breathable material, well-suited for hot
+      humid environments.  Apparently once a brilliant white, it has faded and grayed with dust.
+
+"tba:27:obj:2754":
+  type: worn
+  keywords: [worn, leather, pants]
+  short: some worn leather pants
+  long: A pair of worn leather pants lies discarded here.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [worn, leather, pants]
+    text: >
+      These durable pants have been made from some type of thin hide, well-made they have nonetheless
+      been used far beyond their time, leaving them ragged and worn through in places.
+
+"tba:27:obj:2755":
+  type: worn
+  keywords: [pair, tan, trousers]
+  short: a pair of tan trousers
+  long: A pair of tan trousers lie here gathering dust.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_petri
+    modifier: 2
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [pair, tan, trousers]
+    text: >
+      These light colored trousers are partially darkened by patches of dried mud and dust, obviously on
+      the verge of wearing through they are nonetheless very light and unrestrictive.
+
+"tba:27:obj:2756":
+  type: worn
+  keywords: [loose-fitting, breeches]
+  short: some loose-fitting breeches
+  long: Some loose-fitting breeches have been dumped here.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [loose-fitting, breeches]
+    text: >
+      These large breeches have been designed for maximum ease of movement, comfortable and light
+      material delicately sewn to hold in place without restricting.  Well-used and grimy, they are nonetheless
+      intact.
+
+"tba:27:obj:2757":
+  type: worn
+  keywords: [some, tattered, sandals]
+  short: some tattered sandals
+  long: Some tattered sandals lie here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [some, tattered, sandals]
+    text: >
+      These roughly stitched sandals seem to have been crudely thrown together from bits and pieces of
+      left over hide.  The thread is old and worn and the entire piece looks on the verge of falling apart.
+
+"tba:27:obj:2758":
+  type: worn
+  keywords: [plain, leather, shoes]
+  short: plain leather shoes
+  long: Some plain leather shoes have been dropped here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [plain, leather, shoes]
+    text: >
+      Dusty and ragged, these worn out shoes are reaching the end of their possible use.  Frayed
+      stitching is already beginning to unwind, and patches in the sole are threadbare.
+
+"tba:27:obj:2759":
+  type: worn
+  keywords: [frayed, belt]
+  short: a frayed belt
+  long: A frayed belt is lying here.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_petri
+    modifier: 2
+  extras:
+  - keywords: [frayed, belt]
+    text: >
+      This belt looks almost about to snap, pieces of unravelling thread sticking out here and there like
+      spines.  A simple wooden buckle fastens it together, layers of dust and grime covering the carved
+      patternwork.
+
+"tba:27:obj:2760":
+  type: worn
+  keywords: [threadbare, boots]
+  short: threadbare boots
+  long: Some threadbare boots lie discarded here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 5
+  extras:
+  - keywords: [threadbare, boots]
+    text: >
+      Made of rawhide and stitched tightly with black threads, there seems to be more clumped mud making
+      up this footwear than fabric.  Pieces of twine are carelessly tied around in various places, an
+      obvious attempt to hold them together for longer.
+
+"tba:27:obj:2761":
+  type: worn
+  keywords: [dirty, pieces, wound, cloth]
+  short: dirty pieces of wound cloth
+  long: Some dirty pieces of wound cloth lie here.
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [dirty, pieces, wound, cloth]
+    text: >
+      This long piece of filthy cloth has been wound into a sort of bandage, it looks as though it serves
+      to protect the palms from the chafing of heavy tools.
+
+"tba:27:obj:2762":
+  type: container
+  keywords: [crate, dusty, storage]
+  short: a dusty storage crate
+  long: A dusty storage crate stands against the wall.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [crate, dusty, storage]
+    text: >
+      This small wooden box looks like it once held tools although now there is not much to be seen
+      through the cracked pieces of wood but dust and the occasional spider.
+
+"tba:27:obj:2763":
+  type: worn
+  keywords: [blue, patchwork, dress]
+  short: a blue patchwork dress
+  long: A blue patchwork dress lies here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [blue, patchwork, dress]
+    text: >
+      This simple but pretty dress has been sewn together from patches of leftover material.  As such
+      there are many shades of blue, some floral, some patterned, and others plain, making the garment a
+      little unusual but still quite pleasing to look at.
+
+"tba:27:obj:2764":
+  type: worn
+  keywords: [peach, colored, dress]
+  short: a peach-colored dress
+  long: A peach-colored dress lies crumpled here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [peach, colored, dress]
+    text: >
+      This soft dress is a little faded, but still a pretty peach color, most of the delicate stitching
+      and fabric intact.  Mostly unremarkable, there is a slightly electric feel to it as though the weaver
+      infused some magical properties.
+
+"tba:27:obj:2765":
+  type: other
+  keywords: [silver-leafed, book, time]
+  short: the Book of Time
+  long: A silver-leafed book lies here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: ["3", three]
+    text:
+    - THIRD AGE - AGE OF REBIRTH
+    - This is an accounting of things future, the third age.
+    - >
+      With the canvas wiped clean and the hearts of the Cui weighed heavy with grief and regret, they
+      will invest their last energies in creating a new race. A form of life that embodies the whole scope of
+      the balance, having the ability to sway itself to dark or light as it pleases.
+    - >
+      The internal nature of these opposing forces means that the race will have to keep peace within
+      itself or suffer complete self-inflicted destruction. Thus, along with the power to choose, this life
+      will have the burning desire of its Cui makers to continue itself, to survive, to flourish and grow.
+    - >
+      With only one of the Cui remaining, this race is left almost entirely to its own devices, only a
+      few perceiving and heeding the whisperings of their sole remaining parent and the occasional Ve
+      offspring.
+    - Beyond this point no speaking creature can see.
+  - keywords: ["2", two]
+    text:
+    - SECOND AGE - AGE OF RECONCILIATION
+    - This is an accounting of things present, the second age.
+    - >
+      The Second Age began with the creating of a new race, a neutral race, intended to bridge the gap
+      between those of darkness and those of light. Peace-loving and friendly, it was hoped that this race
+      (the race of Memlins) would act as mediator, allowing interactions between all three races without the
+      clash and destruction of war.
+    - >
+      Unfortunately, although this intervention did stem the flow of blood, a new war began for
+      domination over memlin-kind, with the Khan'li seeking to enslave them and the Dynar seeking to convert them.
+      Caught in the middle, the dismayed call of memlin-kind for peace goes largely unheeded, and slowed but
+      not stopped the destruction continues its insidious spread.
+    - Here begins the accounting of things future, the prophecies of the Ve.
+    - >
+      The carnage will continue, memlin-kind being destroyed, Khan'li and Dynar once again preparing to
+      take up the battlefield. At this point, the now almost extinct Cui will make one last desperate effort
+      to create harmonius miru life. Coming together, they will cause a massive wave of destruction,
+      completely wiping out all of their own creation. With the blood-soaked ground cleansed and uninhabited the
+      third age will begin.
+  - keywords: ["1", one]
+    text:
+    - FIRST AGE - AGE OF SORROW
+    - This is an accounting of things past, the first age.
+    - >
+      The first efforts of the Cui in shaping their world resulted in the separating of Denuo  into two
+      major root forms - Khan'li, those of darkness, and Dynar, those of light, the intention being that the
+      interactions between the two would allow for motion of forces whilst keeping the balance relatively
+      stable.
+    - >
+      However, the Cui were not prepared for the outright carnage that resulted. Dynar and Khan'li both
+      working to slaughter the other and spilling oceans of blood, destroying many of their sub-races that
+      Cui had sacrificed themselves to create.
+    - >
+      Dismayed, the Cui sought to make peace between the two, realising that all they had worked for was
+      about to destroy itself. Finally, they sought to make a more drastic change...
+  - keywords: [silver-leafed, book, time]
+    text: >
+      This beautiful shimmering book is bound with leather and overlaid with fine silver leafing. 
+      Carefully scrawled letters glow vaguely phosphorescent on the cover, spelling out Book of Time.  There
+      appears to be three chapters (look 1, 2, or 3).
+
+"tba:27:obj:2766":
+  type: food
+  keywords: [strip, white, meat]
+  short: a strip of white meat
+  long: A strip of white meat has been left here to rot.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [strip, white, meat]
+    text: >
+      This long piece of white flesh is fresh and healthy-looking.  Apparently some sort of poultry, it
+      smells a bit like...  chicken?
+
+"tba:27:obj:2767":
+  type: food
+  keywords: [piece, salted, dried, meat]
+  short: a piece of salted, dried meat
+  long: A piece of salted, dried meat lies here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [piece, salted, dried, meat]
+    text: >
+      While this preserved piece of red meat does not look particularly delicious, it seems to be in good
+      condition and a good source of nourishment.
+
+"tba:27:obj:2768":
+  type: food
+  keywords: [pheasant, mushroom, meat, pie]
+  short: a pheasant and mushroom pie
+  long: A meat pie has been left here to spoil.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pheasant, mushroom, meat, pie]
+    text: >
+      This freshly baked pie is light and crispy on the outside, the delicious smell of gravy-soaked meat
+      and mushrooms steaming through the pastry shell.
+
+"tba:27:obj:2769":
+  type: food
+  keywords: [boiled, potato]
+  short: a boiled potato
+  long: A boiled potato lies here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boiled, potato]
+    text: >
+      This slightly mud-stained vegetable looks not long plucked from the ground. Recently boiled, it is
+      still somewhat warm to the touch.  A sprinkling of salt coats its light brown skin.
+
+"tba:27:obj:2770":
+  type: food
+  keywords: [fresh, carrot]
+  short: a fresh carrot
+  long: A fresh carrot lies here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fresh, carrot]
+    text: >
+      This fresh carrot has been recently pulled and rinsed off, a layer of sparkling water still
+      clinging to its bright orange surface.  Long green leaves dangle from one end, a stark contrast in color to
+      the rest of it.
+
+"tba:27:obj:2771":
+  type: food
+  keywords: [small, piece, meat]
+  short: a small piece of meat
+  long: A small piece of meat lies rotting here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [small, piece, meat]
+    text: >
+      This small piece of red meat is not the most appetizing in appearance, but is probably quite
+      nourishing nonetheless.
+
+"tba:27:obj:2772":
+  type: worn
+  keywords: [scarlet, fire, dress]
+  short: a scarlet dress of fire
+  long: A scarlet dress lies here, wreathed in flame.
+  flags: [no_donate, magic, no_sell]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [scarlet, fire, dress]
+    text: >
+      This blazing gown has been wrought by some powerful magic out of raging scarlet flame.  Shimmering
+      with intense heat and energy, the tongues of fire dance frantically through the magical fabric as
+      though seeking escape.  The delicate shoulder straps are made of glittering rubies linked with gold, the
+      gems glowing with firelight as the dress crackles and burns.
+
+"tba:27:obj:2773":
+  type: worn
+  keywords: [crystal, delicate, nymph, ring]
+  short: a crystal nymph ring
+  long: A delicate crystal ring lies here.
+  flags: [no_sell]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [crystal, delicate, nymph, ring]
+    text: >
+      This delicate ring is made of pure flowing crystal, carved into the tiny form of a naked ice nymph,
+      slender arms and legs curled around to grasp the wearer's finger.  Its tiny face has a tranquil
+      expression, two aquamarine gems glowing as eyes, softly illuminating the rest of her smoothly feminine
+      features.
+
+"tba:27:obj:2774":
+  type: note
+  keywords: [folded, note]
+  short: a folded note
+  long: A folded note lies dropped here.
+  action: |-
+    Ah, I have a small task for you faithful one.
+    
+    No doubt you know of the Dynar scum that came here to kill me. Well, as
+    expected he was of no match against my protector. Unfortunately, the
+    wretched creature had a powerful weapon with him, infused with Dynar
+    magic. It has utterly overcome my protector, poisoned him beyond the point
+    of return, and although he remains loyal to me I cannot have an item of such
+    power in the hands of one so corrupted.
+    
+    He no doubt knows this himself, for he has hidden himself away with the help
+    of those worthless memlins. They call him the toothy one, and I have finally
+    found the door to his hideout, although he has actually invoked some Dynar
+    magic to keep me out.
+    
+    In any case, if I cannot break in, I shall make certain he never gets out. This
+    is where your task comes in.
+    
+    Go into the heart of the mines, there in a niche to the east you will find a
+    group of memlins digging at the southern wall. This is where the hidden
+    ivorydoor lies, and no doubt they will have had no success at breaking
+    through.
+    
+    It is of no matter as I have acquired the key, which you should have received
+    along with this note. Your job now is simply to dispose of the memlins
+    involved however you see fit, and discover if in fact that wretched creature
+    is even still alive in that self-made tomb.
+    
+    That is all.
+  flags: [no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2775":
+  type: key
+  keywords: [glistening, obsidian, key]
+  short: a glistening obsidian key
+  long: A glistening obsidian key lies here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glistening, obsidian, key]
+    text: >
+      This dark magical key has been wrought from pure black obsidian, shimmering as though wet it has a
+      strangely hot surface, as though some invisible fire warmed it.
+
+"tba:27:obj:2776":
+  type: worn
+  keywords: [icy, mana, ring]
+  short: an icy mana ring
+  long: An icy ring lies here, glowing faintly.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 600
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [icy, mana, ring]
+    text: >
+      This cool glassy ring has been forged from a silvery metal and interwoven with blue crystal, the
+      two substances spiralling around each other in a never-ending circle, a symbol of the flowing of unseen
+      forces.  It looks as though it may impart some powerful magic unto the wearer if@c used@n.
+
+"tba:27:obj:2777":
+  type: staff
+  keywords: [Goethite, staff, flame, fire]
+  short: a Goethite staff alight with flame
+  long: A Goethite staff lies here, topped with flickering fire.
+  action: $n caresses the flame of $s staff, unleashing its full fury upon you.
+  flags: [no_rent, no_donate, magic, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [18, 20, 20, 26]
+  weight: 2
+  cost: 1
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [Goethite, staff, flame, fire]
+    text: >
+      This spiralling glossy staff has been carved and polished from pure Goethite crystal.  Black as
+      night and warm to the touch, its slender rod forms into an oval platform upon which a fire elemental
+      dances.  Blazing with fury and power, the tiny creature sparks with almost unnatural energy, its
+      frenzied movements sending wisps of smoke into the air.
+
+"tba:27:obj:2778":
+  type: other
+  keywords: [test, object]
+  short: test object to purge corpse
+  long: A test object lies here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2779":
+  type: staff
+  keywords: [Goethite, staff, flame, fire]
+  short: a Goethite staff alight with flame
+  long: A Goethite staff lies here, topped with flickering fire.
+  wear: [take]
+  values:
+    raw: [18, 5, 5, 26]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Goethite, staff, flame, fire]
+    text: >
+      This spiralling glossy staff has been carved and polished from pure Goethite crystal.  Black as
+      night and warm to the touch, its slender rod forms into an oval platform upon which a fire elemental
+      dances.  Blazing with fury and power, the tiny creature sparks with almost unnatural energy, its
+      frenzied movements sending wisps of smoke into the air.
+
+"tba:27:obj:2780":
+  type: undefined
+  keywords: [test, ash, arrow]
+  short: an ash arrow
+  long: An ash arrow is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2781":
+  type: undefined
+  keywords: [test, silver, arrow]
+  short: a silver arrow
+  long: A silver arrow is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2782":
+  type: undefined
+  keywords: [poison, arrow]
+  short: a poison arrow
+  long: A arrow lies here, tipped with poison.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:27:obj:2783":
+  type: food
+  keywords: [birthday, cake]
+  short: a birthday cake
+  long: A birthday cake stands here, flickering with candles.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [birthday, cake]
+    text: >
+      This birthday cake is Detta's, created on August 5th, to commemorate her last ever day of being 22
+      years old.  *breaks down and sobs about not being old*
+
+"tba:27:obj:2784":
+  type: undefined
+  keywords: [xxxspiderball, spider, ball]
+  short: a spider ball
+  long: A spider ball sits here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0

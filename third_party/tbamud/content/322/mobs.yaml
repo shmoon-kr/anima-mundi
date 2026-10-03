@@ -1,0 +1,239 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 322.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:322:mob:32200":
+  keywords: [worker, dock, strong]
+  short: a strong dock worker
+  long: A strong dock worker loads and unloads heavy crates.
+  description: He bulges from the tight short sleeves of his shirt, a tattoo peeking out from beneath.
+  level: 29
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32201":
+  keywords: [hauler, cargo, man]
+  short: a cargo hauler
+  long: A man who's sole job it is to lug crates lugs a crate past you.
+  description: >
+    The crate does appear to be at all light in weight, however this guy carries it along with both
+    arms as if it were nothing more than a trifle.
+  level: 30
+  sex: male
+  alignment: 100
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32202":
+  keywords: [representative, travel, woman]
+  short: the travel representative
+  long: A woman in a tight fitting body suit helps passengers on board their boats.
+  description: >
+    She gives you a quick look and decides that you are not one of her clients. She sniffs quietly and
+    turns away.
+  level: 30
+  sex: female
+  alignment: 200
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32203":
+  keywords: [sailor]
+  short: a sailor
+  long: A sailor pushes past you, intent on finding the nearest brothel.
+  description: >
+    The man still walks with that rolling gait that most sailors affect.  He will probably continue to
+    do so, unless he finds another profession,.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32204":
+  keywords: [boatman, man]
+  short: a boatman
+  long: A boatman tips his hat to you as he passes.
+  description: >
+    He appears to be a resident of these docks, as he is intent on making sure that his ship in good
+    condition.
+  level: 21
+  sex: male
+  alignment: 800
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32205":
+  keywords: [passenger]
+  short: a passenger
+  long: A passenger waits to board their ship.
+  description: They tap their feet impatiently, frequently glancing at the sky.
+  level: 22
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32206":
+  keywords: [fisherman, man]
+  short: a fisherman
+  long: A fisherman floats lazily in a small boat, trying to catch some dinner.
+  description: >
+    He stares glazy-eyed at the water, as if it has transfixed him.  He raises up his pole, bringing
+    the line and casting out again without blinking or looking up.  In the same motion, he raises a bottle
+    of whiskey to his lips with his free hand.  The whiskey is also swagged without blinking.
+  level: 23
+  sex: male
+  alignment: 100
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32207":
+  keywords: [dolphin]
+  short: a dolphin
+  long: A dolphin playfully splashes you with its tail.
+  description: >
+    It makes little squeak noises, twisting its body back and forth in its excitement in seeing you.
+  level: 24
+  sex: neutral
+  alignment: 900
+  flags: [stay_zone, no_charm, no_bash]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+    bare_hand_attack: thrash
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32208":
+  keywords: [seagull, gull]
+  short: a seagull
+  long: A seagull squawks past overhead, searching the water for dinner.
+  description: >
+    Best to watch above from now on, you never know when one of those pests might have to let a load go.
+  level: 20
+  sex: neutral
+  alignment: 100
+  flags: [stay_zone, no_bash, no_blind]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32209":
+  keywords: [ship, owner, wealthy]
+  short: a wealthy ship owner
+  long: A wealthy ship owner walks past, regarding you with disdain.
+  description: >
+    He must realize that you are not a part of the elite crowd that owns the vessels which dock here.
+  level: 25
+  sex: male
+  alignment: 100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:322:mob:32210":
+  keywords: [service, representative, customer]
+  short: a customer service representative
+  long: A customer service representative stands ready to attend to any passenger's needs.
+  description: >
+    He opens his mouth as if to say 'Can I help you?  ' and sees that you have no ticket or luggage. 
+    Assuming you are yet another vagrant from the dock area, he turns away in disgust.
+  level: 30
+  sex: male
+  alignment: 100
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

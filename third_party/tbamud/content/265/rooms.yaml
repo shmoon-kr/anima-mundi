@@ -1,0 +1,576 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 265.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:265:room:26500":
+  name: Steps Leading Down to the Sea
+  description: >
+    You are on a long flight of steps cut into a cliff face.  Just above you, the top of the steps
+    looms, while below you, the steps continue for what seems an eternity.
+  sector: inside
+  exits:
+    up:
+      to: tba:258:room:25874
+    down:
+      to: tba:265:room:26501
+  extras:
+  - keywords: [credits]
+    text:
+      preformatted: |2
+           *The Beach and Lighthouse - by Kaan for Dibrova
+        This zone is exactly what the title implies, nothing more to it than that.
+        There is a large lack of objs for this zone, it is suggested that some be
+        created for it, otherwise the zone would be quite bland.
+        Zone 265 is linked to the following zones:
+        258 Light Forest                   at 26500 (up   ) ---> 25874
+        255 Shipwreck                      at 26502 (east ) ---> 25531
+        255 Shipwreck                      at 26506 (down ) ---> 25507
+        282 Infernal Pit of Kerjim         at 26536 (north) ---> 28200
+
+"tba:265:room:26501":
+  name: Down the Cliff-Face
+  description: >
+    The steps continue down toward the sea, or up to the crest of the cliff, depending on the way
+    you're heading.  It looks as if there may be some sort of cave down from here.
+  sector: inside
+  exits:
+    up:
+      to: tba:265:room:26500
+    down:
+      to: tba:265:room:26502
+
+"tba:265:room:26502":
+  name: On the Cliff Face
+  description: >
+    The stairs continue, however you are much closer to the bottom than the top now.  There appears to
+    be an opening in the rock to your east.  Inside you can only see darkness, so it is possible that it
+    is simply a natural fissure, but then again, who knows?
+  sector: inside
+  exits:
+    east:
+      to: tba:255:room:25531
+    up:
+      to: tba:265:room:26501
+    down:
+      to: tba:265:room:26503
+
+"tba:265:room:26503":
+  name: On the Steps
+  description: >
+    Nearing the bottom, you really begin to get a good whiff of the clean sea air as a breeze ruffles
+    your clothing.  You begin to feel a bit better about your day - the sea can do that to a person.
+  sector: inside
+  exits:
+    up:
+      to: tba:265:room:26502
+    down:
+      to: tba:265:room:26504
+
+"tba:265:room:26504":
+  name: The Base of the Steps
+  description: >
+    You stand at the bottom of a set of steps cut into the face of the cliff here.  The beach runs
+    along east to west here as far as you can see.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26507
+    west:
+      to: tba:265:room:26505
+    up:
+      to: tba:265:room:26503
+
+"tba:265:room:26505":
+  name: Along the Beach
+  description: >
+    You stand on a beach which stretches east and west from here.  The waves, not very large at this
+    time, lap gently near your, making patterns in the fine sand. To the west you see a few rocks jutting
+    from the sand and sea.  East is flat beach to the horizon.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26504
+    west:
+      to: tba:265:room:26506
+
+"tba:265:room:26506":
+  name: Along the Beach
+  description: >
+    You stand on a beach which stretches east to west for as far as your eyes can see.  Jumbles of rock
+    and scree litter the way here, making it so you must watch your step.  You notice a bit of wood,
+    partially buried in the sand of the beach here.  West is more rocky beach, while east the way gets a bit
+    more flat.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26505
+    west:
+      to: tba:265:room:26511
+    down:
+      to: tba:255:room:25507
+      door:
+        keywords: [wood, piece]
+        kind: door
+        reset: closed
+
+"tba:265:room:26507":
+  name: Sandy Beach
+  description: >
+    You stand on a sandy beach which runs along the shore east to west.  To the east you can just
+    barely make out the rooftops of a large city which sits nestled in a cove on the shore of the ocean.  To
+    your west you see that the beach gets a bit rockier than where you currently stand.  A set of steps
+    lead up the cliff face just to the west of you.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26508
+    west:
+      to: tba:265:room:26504
+
+"tba:265:room:26508":
+  name: Sandy Beach
+  description: >
+    The beach continues it's way east toward what appears to be a large coastal town.  A large pier
+    juts out into the sea, ships dot the horizon as far out to sea as you can see from the city.  To your
+    west you may continue along the beach.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26509
+    west:
+      to: tba:265:room:26507
+
+"tba:265:room:26509":
+  name: Sandy Beach
+  description: >
+    The beach slopes upwards, slowly, gently toward the city to your east which sits on a huge
+    plateau.  You can now hear the sounds of a great many voices coming from that direction, however traffic
+    along this beach is at a bare minimum, which is to say not at all.  There must be another entrance into
+    the city somewhere.  To your west, the beach continues into the western horizon.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26510
+    west:
+      to: tba:265:room:26508
+
+"tba:265:room:26510":
+  name: The Base of the City
+  description: >
+    You stand at the edge of the sea shore staring at a huge rock formation which could be described
+    (sort of) as a plateau rising up out if the ocean floor and holding a massive walled city atop it.  To
+    the north is the cliff face you have been following, which happens to put an end to this path just a
+    little ways northeast from your current position.  West the path heads along the beach for quite a
+    long distance.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26536
+    west:
+      to: tba:265:room:26509
+
+"tba:265:room:26511":
+  name: Along a Rocky Beach
+  description: >
+    The way gets much too rocky here for you to continue along the water any further.  You do however,
+    notice a trail through the rocks which heads southwest.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26506
+      look: You see more of the beach.
+    west:
+      to: tba:265:room:26512
+
+"tba:265:room:26512":
+  name: Rocky Path
+  description: >
+    The path meanders it's way through the rocks on this littered beach.  In the distance, you can see
+    a lighthouse out at the end of a jetty, it's gentle light guiding sailors safely past this rocky area.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26511
+    south:
+      to: tba:265:room:26513
+
+"tba:265:room:26513":
+  name: Rocky Path
+  description: >
+    The path continues it's way in a southwesterly direction toward the lighthouse, or you may head
+    northeast toward a less cluttered-looking beach.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26512
+    west:
+      to: tba:265:room:26514
+
+"tba:265:room:26514":
+  name: Rocky Path
+  description: >
+    The path runs east to west over jumbled rock and fine beach sand.  Just to your west, you see a
+    jetty running out into the ocean, a lighthouse at it's end. To the east the path curves it's way along
+    the beach.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26513
+    west:
+      to: tba:265:room:26515
+
+"tba:265:room:26515":
+  name: Rocky Path at Takker's Jetty
+  description: >
+    The path continues east or west from you, depending which way you are heading.  A jetty runs out
+    into the sea to your south, a strong, bold lighthouse at it's end.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26514
+    south:
+      to: tba:265:room:26517
+    west:
+      to: tba:265:room:26516
+
+"tba:265:room:26516":
+  name: Rocky Path
+  description: >
+    The path, still rocky and hard to navigate, continues along to the east and west.  Directly east of
+    you begins a jetty which hosts a lighthouse at it's end. West seems only to host more rocks and
+    possibly a cave or two.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26515
+    west:
+      to: tba:265:room:26531
+
+"tba:265:room:26517":
+  name: Takker's Jetty
+  description: >
+    The jetty heads south into the sea ending at a lighthouse.  All along the way, fishermen try their
+    luck.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26515
+    south:
+      to: tba:265:room:26518
+
+"tba:265:room:26518":
+  name: Takker's Jetty
+  description: >
+    All along the jetty, men relax in the sun, sitting in comfortable niches in the rocks where they
+    can wile away their time telling tall tales about 'the ones that got away', discussing politics, or
+    every now and then, doing some fishing.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26517
+    south:
+      to: tba:265:room:26519
+
+"tba:265:room:26519":
+  name: Takker's Jetty at the Lighthouse
+  description: >
+    You stand at the entrance to the lighthouse, a solid oak door set back into the rounded wall.  To
+    your north, the jetty leads you back to dry land.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26518
+    south:
+      to: tba:265:room:26520
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:265:room:26520":
+  name: Entryway - Lighthouse
+  description: >
+    You stand in a small chamber just inside the front door of the lighthouse. Just south of these
+    cramped stucco walls is the main living room of the lighthouse.  You can hear and smell a crackling, warm
+    fire in the fireplace, a dog's contented panting, and the sound of a young lady's laughter from the
+    next room.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26519
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:265:room:26521
+
+"tba:265:room:26521":
+  name: Main Living Area - Lighthouse
+  description: >
+    This large room looks as if it has spent many happy times in the company of the Lighthouse Keeper
+    and his family.  The dinner table looks as if it always would have room for one more, the fire always
+    warm and comforting, and of course, Max would always be around to play catch or get his ears
+    scratched.  To the east, you see what looks to be one of the family's bedrooms, the same to the west.  Both
+    have doors, but both doors are wide open.  A spiral stairway leads up into the lighthouse top, where
+    the Keeper must spend a great deal of his time.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26520
+    east:
+      to: tba:265:room:26522
+      door:
+        keywords: [door]
+        kind: door
+        reset: open
+    west:
+      to: tba:265:room:26524
+      door:
+        keywords: [door, wood]
+        kind: door
+        reset: open
+    up:
+      to: tba:265:room:26523
+
+"tba:265:room:26522":
+  name: Lighthouse Keeper's Bedroom
+  description: >
+    A huge plush king size bed, four posted with satin drapes.  A mahoganey dresser with a matching
+    vanity desk and mirror.  This lighthouse keeper must be one heck of a guy!
+  sector: inside
+  exits:
+    west:
+      to: tba:265:room:26521
+    down:
+      to: tba:265:room:26525
+      door:
+        keywords: [secret, door]
+        kind: pickproof
+        key: tba:265:obj:26501
+        reset: locked
+
+"tba:265:room:26523":
+  name: Light Room
+  description: >
+    This small room is more or less just the roof top of the lighthouse which houses the light.  A
+    narrow walkway encircles the light, so that regular maintenance can be performed.  Some shelves on the
+    walls hold tools and oils which keep the machinery in fine tune so that no ships run afoul of the many
+    rocks in this part of the ocean.
+  sector: inside
+  exits:
+    down:
+      to: tba:265:room:26521
+
+"tba:265:room:26524":
+  name: Lighthouse Keeper's Daughter's Bedroom
+  description: >
+    What a cute little room!  Twin bed with a pink down comforter, a doll collection which even
+    impresses you, and many other assorted toys sit on shelves, all neatly stacked and color-coordinated.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26521
+
+"tba:265:room:26525":
+  name: On the Spiral Staircase
+  description: >
+    You have begun a descent down into the Lower Reaches of the Lighthouse.  You wonder why the
+    basement of this happy home would not only be called the 'Lower Reaches', but also capitalized for a moment
+    - and then you see what lies below you.  Looking almost like a medieval torture chamber, you see a
+    room all in stone, a deep cavernous hole in the center of it.  What looks to be am operating table is
+    set to one side with tables covered in instruments of dissection and bubbling vials close by.  Do you
+    really wish to descend into that room and visit with the 'good' Lighthouse Keeper?
+  sector: inside
+  exits:
+    up:
+      to: tba:265:room:26522
+      look: The spiral stair leads up to a trap door.
+      door:
+        keywords: [secret, door]
+        kind: pickproof
+        key: tba:265:obj:26501
+        reset: locked
+    down:
+      to: tba:265:room:26526
+
+"tba:265:room:26526":
+  name: Lighthouse Keeper's Operating Room
+  description: >
+    You see all and more of what you saw from the staircase.  Four cells lie in all cardinal
+    directions, each with a whimpering human subject in it!  Diagrams cover the walls, notes jotted on many of
+    them, all dealing with one goal in mind - the creation of the perfect sexual companion!  It seems the
+    'good Lighthouse Keeper' may be a bit more than everyone believes him to be...
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26527
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+    east:
+      to: tba:265:room:26528
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+    south:
+      to: tba:265:room:26529
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+    west:
+      to: tba:265:room:26530
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+    up:
+      to: tba:265:room:26525
+
+"tba:265:room:26527":
+  name: Keeper's Playroom
+  description: >
+    This small ten by ten room once was a simple like the others which connect to the Operating Room,
+    however because of the nature of the specimen which abides in this space, it has been spruced up just
+    a bit.  A huge bed dominates the ENTIRE room, pillows strewn everywhere with lace and frills and all.
+  sector: inside
+  exits:
+    south:
+      to: tba:265:room:26526
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+
+"tba:265:room:26528":
+  name: Cell
+  description: >
+    This bleak cell hosts only an uncomfortable looking cot and small hole in one corner for necessary
+    functions.
+  sector: inside
+  exits:
+    west:
+      to: tba:265:room:26526
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+
+"tba:265:room:26529":
+  name: Cell
+  description: >
+    This bleak cell hosts only an uncomfortable looking cot and small hole in one corner for necessary
+    functions.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26526
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+
+"tba:265:room:26530":
+  name: Cell
+  description: >
+    This bleak cell hosts only an uncomfortable looking cot and small hole in one corner for necessary
+    functions.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26526
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:265:obj:26502
+        reset: locked
+
+"tba:265:room:26531":
+  name: Rocky Path
+  description: The path continues along the beach, over rocks and scree.  Your options are east or west.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26516
+    west:
+      to: tba:265:room:26532
+
+"tba:265:room:26532":
+  name: Rocky Path
+  description: >
+    You stand on a rocky beach path near the mouth of a cave.  The entrance to the cave must be at
+    least thirty feet high and just as wide.  It doesn't look as if anything could live there, as the water
+    from the sea laps right inside the cave, but then, you never know.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26533
+    east:
+      to: tba:265:room:26531
+    west:
+      to: tba:265:room:26535
+
+"tba:265:room:26533":
+  name: Cave Entrance
+  description: >
+    You realize that if you wish to explore the confines of this cave, you will have to get wet.  As
+    you stand looking into the cold, wet, darkness of the cave, the idea of jumping into that water just
+    for the sake of exploring does seem a bit nutty.
+  sector: inside
+  exits:
+    north:
+      to: tba:265:room:26534
+    south:
+      to: tba:265:room:26532
+
+"tba:265:room:26534":
+  name: In the Kracken's Den
+  description: >
+    Something seems wrong here, very wrong.  Something makes the water move and not just in a small
+    spot, ALL of the water is moving from some kind of monstrous movement under the water.
+  sector: inside
+  exits:
+    south:
+      to: tba:265:room:26533
+
+"tba:265:room:26535":
+  name: End of the Rocky Path
+  description: >
+    You have come to the end of the rocky path you've been following along the sea.  South of you is
+    the open sea, west is a moss- covered rock face, and to the north the way is impassable.
+  sector: inside
+  exits:
+    east:
+      to: tba:265:room:26532
+
+"tba:265:room:26536":
+  name: End of the Path
+  description: >
+    The path can go no farther.  The cliff face runs directly into the sea from here, no longer leaving
+    the little bit of beach that you have been enjoying just west and south and here.  Strange that a
+    path would end so abruptly at a cliff without leading anywhere...  Oh well!
+  sector: inside
+  exits:
+    north:
+      to: tba:282:room:28200
+      door:
+        keywords: [cliff]
+        kind: door
+        reset: closed
+    south:
+      to: tba:265:room:26510
+  extras:
+  - keywords: [cliff]
+    text: >
+      You think you may see a faint outline of some sort of entryway in the cliff. Maybe if you tried
+      OPENing it...?

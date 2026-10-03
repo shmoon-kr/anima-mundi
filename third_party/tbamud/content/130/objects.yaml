@@ -1,0 +1,243 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 130.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:130:obj:13000":
+  type: trash
+  keywords: [tombstone]
+  short: an old tombstone
+  long: A home for moss and fungus to grow, a tombstone shows it's age.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:130:obj:13001":
+  type: armor
+  keywords: [crown, eagle, eyes]
+  short: an eagle eyed crown
+  long: You are watched by the clear brown eagle eyes that set atop this crown.
+  flags: [glow, magic]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 3
+  cost: 5000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [crown, eagle, eyes]
+    text: >
+      The sharp eyes that served this eagle so well, until the fateful day that a hunter caught the
+      eagle, now adorn this crown.  Where it not completely immpossible you would think the eyes follow you
+      around, as you move about the room.  The eyes sit atop a simple crown of a metal that looks like gold and
+      yet is almost as hard as steel.
+
+"tba:130:obj:13002":
+  type: weapon
+  keywords: [bow, detta, dettas]
+  short: Detta's Bow
+  long: Intricate lettering spelling the name Detta is carved on to the shaft of this bow.
+  flags: [hum, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d1
+    attack: bludgeon
+  weight: 8
+  cost: 666
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+
+"tba:130:obj:13003":
+  type: trash
+  keywords: [arrow, black]
+  short: a black arrow
+  long: A black shafted arrow awaits it's chance to bite.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:130:obj:13004":
+  type: trash
+  keywords: [arrow, red]
+  short: a red arrow
+  long: A red shafted arrow awaits it's chance to bite.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:130:obj:13005":
+  type: trash
+  keywords: [arrow, blue]
+  short: a blue arrow
+  long: A blue shafted arrow awaits it's chance to bite.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:130:obj:13006":
+  type: trash
+  keywords: [arrow, green]
+  short: a green arrow
+  long: A green shafted arrow awaits it's chance to bite.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:130:obj:13007":
+  type: worn
+  keywords: [recall, staff]
+  short: a recall staff
+  long: A simple staff with only a few knots to mar it's appearance quivers anxiously.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:130:obj:13008":
+  type: trash
+  keywords: [note]
+  short: a torn note
+  long: A fragment of a note blows in the breeze.
+  flags: [no_rent, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [note]
+    text: "The torn paper contains the following letter groups: \"nstructi\", \"Crown o\" and \"peek\""
+
+"tba:130:obj:13009":
+  type: other
+  keywords: [mist]
+  short: a swirling mist
+  long: The mists swirl before you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mist, swirling]
+    text: >
+      The mists swirl and eddy before your eyes, obscuring your vision.  However, they also look almost
+      thick enough to walk in to.  It almost has enough texture to be able to touch and feel it.  This mist
+      is different than the others somehow.
+
+"tba:130:obj:13010":
+  type: trash
+  keywords: [mist]
+  short: a swirling mist
+  long: The mists swirl before you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mist, swirling]
+    text: >
+      The mists swirl and eddy before your eyes, obscuring your vision.  However, they also look almost
+      thick enough to walk in to.  It almost has enough texture to be able to touch and feel it.  This mist
+      is different than the others somehow.
+
+"tba:130:obj:13011":
+  type: other
+  keywords: [light]
+  short: a ray of light
+  long: A ray of light penetrates the mist showing you the way out.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [light]
+    text: >
+      Somehow a single beam of light has managed to penetrate the eternal mist and shadows.  The ray of
+      light leads out and is the salvation from the emotional turmoil of this dreary place.
+
+"tba:130:obj:13012":
+  type: weapon
+  keywords: [mist, whip, tendril]
+  short: a tendril of the wispy mist
+  long: A tendril of the mist taken solid form awaits your touch.
+  flags: [anti_good, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: whip
+  weight: 1
+  cost: 2000
+  rent: 0
+  level: 15
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 4
+  extras:
+  - keywords: [mist, whip, tendril]
+    text: >
+      Reality faded from the mists leaving a single tendril of itself in a solid form.  The lack of
+      stability of the mists is offset by the firmness of this wisp.  A strong odor, almost that of old death,
+      comes off the wisp, tearing your nostrils, causing your eyes and sinuses to water.
+
+"tba:130:obj:13099":
+  type: other
+  keywords: [mist]
+  short: a swirling mist
+  long: A tendril of a mist swirls from the ground up.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mist, swirling, swirl]
+    text: >
+      This stray tendril of a mist seems to come from nowhere just as it seems to lead nowhere.  But
+      looks can be deceiving.  Something about the mist beckons and draws you toward it.  Draws you in to it. 
+      Something about it compels you to enter the mist and prove your worth and defend your right to remain
+      sane.

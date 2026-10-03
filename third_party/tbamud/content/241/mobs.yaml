@@ -1,0 +1,546 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 241.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:241:mob:24100":
+  keywords: [Lieutenant, Commander, Geordi, LaForge]
+  short: Geordi LaForge
+  long: Lieutenant Commander Geordi LaForge appears to be very busy.
+  description: >
+    Geordi is the Chief Engineer of the Enterprise.  He's blind, so he wears a special VISOR that lets
+    him see things.
+  level: 28
+  sex: male
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24101":
+  keywords: [Lieutenant, Commander, Data, Android]
+  short: Data
+  long: Lieutenant Commander Data is here, trying to be more human.
+  description: >
+    Data is the only android on the Enterprise, and the only android in all of Starfleet.  He possesses
+    super-human strength, and is extremely tough.
+  level: 29
+  sex: male
+  alignment: 350
+  flags: [aware, stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: crush
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24102":
+  keywords: [Lieutenant, Worf, Klingon]
+  short: Lieutenant Worf
+  long: Lieutenant Worf is here, patrolling and generally keeping everything secure.
+  description: >
+    Worf is the first Klingon to have joined Starfleet.  He's Chief of Security of the Enterprise, and
+    he's plenty strong.
+  level: 29
+  sex: male
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: pound
+  abilities:
+    str: 19
+    int: 17
+    wis: 17
+    dex: 17
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24103":
+  keywords: [Doctor, Beverly, Crusher]
+  short: Doctor Crusher
+  long: Lieutenant Beverly Crusher seemingly very serious, is looking for someone to heal.
+  description: >
+    Doctor Crusher is the Enterprise's Chief Medical Officer.  Wesley is her son.  Her husband was
+    killed years ago in an accident on another starship which was also commanded by Captain Picard.
+  level: 26
+  sex: female
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: slash
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24104":
+  keywords: [Counselor, Deanna, Troi]
+  short: Counselor Troi
+  long: Counselor Deanna Troi walks past with a knowing smile on her face.
+  description: >
+    Counselor Troi is the ship's main counselor.  She's half betazoid, which means that she can read
+    people's minds.
+  level: 27
+  sex: female
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: sting
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24105":
+  keywords: [Commander, William, Riker]
+  short: Commander Riker
+  long: Commander William Riker is here, looking for someone to impress.
+  description: >
+    Commander Riker is the Enterprise's first officer.  He's in charge of keeping the crew in line.
+  level: 29
+  sex: male
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: punch
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24106":
+  keywords: [Captain, Jean, Luc, Jean-Luc, Picard]
+  short: Captain Picard
+  long: Captain Jean-Luc Picard proudly stands here, thinking deeply.
+  description: >
+    Captain Picard is a very important man.  He's in charge of Starfleet's flagship, the Enterprise. 
+    He's very smart, and very wise.  Don't mess with him!
+  level: 30
+  sex: male
+  alignment: 350
+  flags: [aware, stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: maul
+  abilities:
+    str: 25
+    int: 25
+    wis: 25
+    dex: 25
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24107":
+  keywords: [Guinan]
+  short: Guinan
+  long: Guinan is here, tending the bar.
+  description: >
+    Guinan is a strange being.  She's lived for thousands of years and experienced many things, but now
+    she's decided to work on the Enterprise as a bartender.
+  level: 26
+  sex: female
+  alignment: 350
+  flags: [sentinel, stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: pierce
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24108":
+  keywords: [Chief, O'Brien, Transporter]
+  short: Chief O'Brien
+  long: Chief O'Brien is here, waiting to teleport you somewhere.
+  description: >
+    Chief O'Brien is the transporter chief on the Enterprise.  It's his job to make sure everyone
+    arrives (and leaves) in one piece, instead of trillions of atoms.
+  level: 28
+  sex: male
+  alignment: 350
+  flags: [sentinel, stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+    bare_hand_attack: pierce
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24109":
+  keywords: [Wesley, Crusher]
+  short: Wesley
+  long: Wesley Crusher is here, eagerly trying to earn your praise.
+  description: >
+    Wesley Crusher is not even an official officer, but he serves as an acting Ensign on the bridge. 
+    He got this position only because Captain Picard feels guilty about killing his father.
+  level: 26
+  sex: male
+  alignment: 350
+  flags: [stay_zone, wimpy, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: bite
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24110":
+  keywords: [Livingston, fish]
+  short: Livingston
+  long: Livingston the fish is here, swimming about in his tank.
+  description: >
+    Livingston is Captain Picard's pet fish.  He's some sort of exotic breed, and he's expensive to
+    FEED and keep alive.
+  level: 27
+  sex: male
+  alignment: 350
+  flags: [sentinel, stay_zone, memory, helper, no_charm]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: bite
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24111":
+  keywords: [spot, cat]
+  short: Spot
+  long: Spot, Data's pet cat, is sitting washing himself happily.
+  description: >
+    Spot is Data's orange colored cat.  Data is always trying to become more human, so he thinks that
+    having a pet might help him achieve his goal.
+  level: 27
+  sex: male
+  alignment: 350
+  flags: [sentinel, stay_zone, memory, helper, no_charm]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: bite
+  abilities:
+    str: 13
+    int: 13
+    wis: 13
+    dex: 13
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24112":
+  keywords: [ensign]
+  short: an ensign
+  long: A nervous looking ensign is standing here, waiting for orders.
+  description: >
+    These ensigns make up the backbone of the Enterprise.  They clean things, do jobs the higher ups
+    won't even consider doing, and get yelled at all the time.
+  level: 26
+  sex: male
+  alignment: 350
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: thrash
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24113":
+  keywords: [alexander, rozhenko]
+  short: alexander rozhenko
+  long: Alexander Rozhenko is here, practicing laughing hour.
+  description: >
+    Alexander Rozhenko is Worf's son.  His mother was half human and half Klingon, so Alexander is 3/4
+    Klingon.  He's quite small, but since he's a Klingon he's very strong.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, helper, no_charm, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: thrash
+  abilities:
+    str: 14
+    int: 14
+    wis: 14
+    dex: 14
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24114":
+  keywords: [slightly, dangerous, alien]
+  short: a slightly dangerous alien
+  long: Drooling everywhere is a slightly dangerous-looking alien.
+  description: >
+    This alien has brown and green scales, 4 limbs and 2 tentacles.  He has evil green eyes and rows of
+    sharp teeth protruding from his dog-like mouth.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 0
+  exp: 41000
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24115":
+  keywords: [very, dangerous, alien]
+  short: a very dangerous alien
+  long: Snarling with rage, a very dangerous-looking alien salivates.
+  description: >
+    This alien is completely red and is covered with hundreds of sharp horns that reach from the two at
+    the sides of his head, down his spine and to the tip of his devil-like tail.
+  level: 34
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24116":
+  keywords: [klingon, warrior]
+  short: a fearsome Klingon warrior
+  long: Practicing with his batleth, is a fearsome-looking Klingon warrior.
+  description: >
+    His face is a dark brown and his quite distinct, with it's protruding forehead scales and his
+    devious-looking eyes.  He is fully armored and appears to be quite skilled with his batleth.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24117":
+  keywords: [small, gray, mouse]
+  short: a small gray mouse
+  long: A small gray mouse carefully explores the office.
+  description: >
+    Her fur is a pale gray and her ears, tail and claws are a bright, clean pink. She peers around with
+    large black eyes and constantly twitches her nose.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24118":
+  keywords: [android, experimental, droid]
+  short: an experimental android
+  long: Half completed, an experimental android stands here, de-activated.
+  description:
+  - >
+    The android was never completed and therefore, has no gender.  It has 2 legs, a torso, a head and
+    an electronic mind, but lacks any arms.  It wears no clothes and only has a half-finished
+    skin-implant.  Because of this, the android looks splotched with a disease.  Where the skin failed to cover,
+    silvery mechanical parts and micro-chips can be seen.  It is currently de-activated but can be
+    re-activated by pressing a switch up behind it's left shoulder-blade.
+  - <press switch>
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:241:mob:24119":
+  keywords: [android, experimental, droid]
+  short: an experimental android
+  long: Half completed, an experimental android stands here, examining its surroundings.
+  description: >
+    It looks unfinished.  The android was never completed and therefore, has no gender.  It has 2 legs,
+    a torso, a head and an electronic mind, but lacks any arms.  It wears no clothes and only has a
+    half-finished skin-implant.  Because of this, the android looks splotched with a disease.  Where the skin
+    failed to cover, silvery mechanical parts and micro-chips can be seen.  It has been re-activated and
+    is ready to accept vocal command programming.
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,154 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 45.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:45:obj:4500":
+  type: scroll
+  keywords: [feather, red, phoenix]
+  short: the feather of a Phoenix
+  long: A red feather lies here.
+  wear: [take, head]
+  values:
+    raw: [30, 26, -1, -1]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+
+"tba:45:obj:4501":
+  type: armor
+  keywords: [robes, cloth, bundle]
+  short: some robes
+  long: A large bundle of cloth lies here.
+  flags: [anti_evil]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: mana
+    modifier: 25
+
+"tba:45:obj:4502":
+  type: armor
+  keywords: [sandals, shoes]
+  short: a pair of sandals
+  long: Some nice sandals sit here.
+  flags: [anti_evil, anti_mage, anti_thief, anti_warrior, no_sell]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:45:obj:4514":
+  type: money
+  keywords: [treasure, gold]
+  short: a small pile of gold
+  long: A pile of gold is stacked here.
+  wear: [take]
+  values:
+    coins: 500
+  weight: 20
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:45:obj:4517":
+  type: other
+  keywords: [chimera, statue]
+  short: a statue of a chimera
+  long: A small statue is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:45:obj:4518":
+  type: weapon
+  keywords: [phoenix, claw]
+  short: a phoenix claw
+  long: A large claw of the phoenix lies here.
+  flags: [anti_evil, anti_thief, anti_warrior, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: claw
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 5
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+
+"tba:45:obj:4520":
+  type: food
+  keywords: [celery, stalk]
+  short: a stalk of celery
+  long: Some celery stalks here.
+  wear: [take]
+  values:
+    hours: 48
+    poisoned: false
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:45:obj:4524":
+  type: food
+  keywords: [bunch, o, strawberries]
+  short: a bunch of strawberries
+  long: A bunch of strawberries lie here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:45:obj:4588":
+  type: light
+  keywords: [cloak, green, dark, arrow, broken]
+  short: a Cloak of the Broken Arrow
+  long: A dark green cloak lies here.
+  flags: [magic, anti_evil]
+  wear: [take, about]
+  values:
+    hours: 0
+  weight: 9
+  cost: 1000
+  rent: 0
+  level: 30
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: 1

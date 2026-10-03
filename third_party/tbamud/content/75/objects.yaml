@@ -1,0 +1,1022 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 75.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:75:obj:7500":
+  type: armor
+  keywords: [fur, strap, piece, hide]
+  short: a strip of fur hide
+  long: A long strip of hide is lying here.
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hide, fur, strap]
+    text: A long piece of hide covered in brown fur looks like it could be worn.
+
+"tba:75:obj:7501":
+  type: armor
+  keywords: [white, toga]
+  short: a white toga
+  long: A large white piece of cloth is lying here.
+  flags: [glow, magic]
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [white, toga, cloth]
+    text: The white cloth looks large enough to wrap completely around a giant.
+
+"tba:75:obj:7502":
+  type: armor
+  keywords: [leather, sandal]
+  short: a pair of sandals
+  long: A wellcrafted pair of leather sandals set here.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [leather, sandal]
+    text: Made from the finest of leather these sandals look very comfortable.
+
+"tba:75:obj:7503":
+  type: other
+  keywords: [gold, medallion, chain]
+  short: a golden medallion
+  long: A golden chain is lying here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 650
+  rent: 65
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 5
+  extras:
+  - keywords: [chain, medallion]
+    text: >
+      This large medallion has been created from pure gold.  On the front several large gems have been
+      set.  On the back a strange symbol familiar to the ones outside.
+
+"tba:75:obj:7504":
+  type: worn
+  keywords: [ring, diamond]
+  short: a diamond ring
+  long: A diamond ring is lying here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [diamond, ring]
+    text: >
+      This thick gold band contains an huge diamond.  The diamond has been cut into a perfect circle.
+
+"tba:75:obj:7505":
+  type: other
+  keywords: [golden, armband]
+  short: a golden armband
+  long: A golden armband is lying here.
+  flags: [magic]
+  wear: [take, arms]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 800
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [armband]
+    text: The golden armband is unusually cold.
+
+"tba:75:obj:7506":
+  type: wand
+  keywords: [wand, stick]
+  short: a long stick
+  long: A long stick is lying here twitching.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 6]
+  weight: 1
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [stick, wand]
+    text: The small stick is slightly twisted and looks freshly cut.
+
+"tba:75:obj:7507":
+  type: food
+  keywords: [banana]
+  short: a yellow banana
+  long: A yellow banana is lying here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 7
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [banana, fruit]
+    text: The banana is bright yellow, it appears to have been just picked.
+
+"tba:75:obj:7508":
+  type: food
+  keywords: [mango]
+  short: a ripe mango
+  long: A ripe mango is lying here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mango, fruit]
+    text: The mango looks plump and juicy.
+
+"tba:75:obj:7509":
+  type: food
+  keywords: [coconut, milk]
+  short: a coconut
+  long: A coconut of milk is lying here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 8
+  cost: 10
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [coconut, milk, fruit]
+    text: The top of the coconut has been cut off making it look like a cup of milk.
+
+"tba:75:obj:7510":
+  type: food
+  keywords: [pineapple]
+  short: a pineapple
+  long: A pineapple is lying here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 12
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [pineapple, fruit]
+    text: The pineapple has been cut and cleaned so that it is now easy to eat.
+
+"tba:75:obj:7511":
+  type: weapon
+  keywords: [sword, blade]
+  short: a large Zamba sword
+  long: A large sword from a Zamba warrior is lying here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 14
+  cost: 700
+  rent: 70
+  level: 0
+  extras:
+  - keywords: [sword, blade]
+    text: >
+      This Zamba sword has a long think blade.  The end of the hilt has been shaped into the image of a
+      panther.
+
+"tba:75:obj:7513":
+  type: food
+  keywords: [plate, fish]
+  short: a plate of fish
+  long: A plate of fish is lying here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [plate, fish]
+    text: The wooden plate is full of fish and bread.
+
+"tba:75:obj:7514":
+  type: container
+  keywords: [short, table]
+  short: a short table
+  long: A short table rests in the center of the room.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [short, table]
+    text: >
+      The short table is covered with food and dishes.  Some of the food is fresh but other things are
+      moldy and stink really bad.  A wooden plate of fish and bread looks fresh and tasty.
+
+"tba:75:obj:7515":
+  type: other
+  keywords: [doll, toy]
+  short: toy doll
+  long: A toy doll is lying here abandoned on the floor.
+  flags: [glow, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [doll, toy]
+    text: >
+      The toy doll is made of a brown cloth with a green dress.  Extra stitches where done to make the
+      dolls face.
+
+"tba:75:obj:7516":
+  type: container
+  keywords: [shelf]
+  short: a shelf
+  long: A tall shelf sets against the east wall.
+  wear: []
+  values:
+    capacity: 300
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shelf]
+    text: >
+      The shelf is made of many branches tied together that have been shaped and smoothed so that it was
+      sturdy and level.  It has been decorated with many odd things.  One part of the shelf has a sliding
+      door.
+
+"tba:75:obj:7517":
+  type: treasure
+  keywords: [statue, clay]
+  short: a small statue
+  long: A small statue made of clay is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 25
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [clay, statue]
+    text: >
+      The small statue is of a person with the head of a cat.  It is slightly smaller than a helmet and
+      made of red clay.  It almost looks alive from the superb quality and realistic workmanship of the
+      artist.  Small rubys have been set for its eyes and golden claws extend from the hands.
+
+"tba:75:obj:7518":
+  type: worn
+  keywords: [cog, shell]
+  short: a cog shell
+  long: A large cog shell is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cog, shell]
+    text: >
+      The large cog shell is rough on the outside and bright white.  On the inside it is smooth and
+      pink.  As you move it around in your hand the inside seems to glitter and change slightly.
+
+"tba:75:obj:7519":
+  type: light
+  keywords: [red, candle]
+  short: a red candle
+  long: A red candle is lying here.
+  wear: [take]
+  values:
+    hours: 4
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [red, candle]
+    text: >
+      Dark red wax forms this fat slightly used candle.  At the base of the candle is a holder made of
+      glass to catch the wax as it drips.
+
+"tba:75:obj:7520":
+  type: drinkcon
+  keywords: [tea, drink, glass, island, madness, cup, tea]
+  short: a glass of Island Madness
+  long: A glass of Island Madness has been left here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: tea
+    poisoned: false
+  weight: 8
+  cost: 50
+  rent: 1
+  level: 0
+
+"tba:75:obj:7521":
+  type: drinkcon
+  keywords: [wind, drink, glass, spirit, wine]
+  short: a glass of spirits full
+  long: A glass of spirits has been left here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: wine
+    poisoned: false
+  weight: 7
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:75:obj:7522":
+  type: drinkcon
+  keywords: [firebreather, coconut, cup, firebreather]
+  short: a coconut cup
+  long: A cup made from a coconut has been left here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: firebreather
+    poisoned: false
+  weight: 10
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cup, coconut]
+    text: Inside the coconut cup is a drink called island madness.
+
+"tba:75:obj:7523":
+  type: weapon
+  keywords: [tail, whip, iguana]
+  short: a green tail
+  long: A green tail is lying here twitching.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: thrash
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [tail, green, whip]
+    text: >
+      The green tail from an iquana is quite long and looks like it would make an excellent whip.
+
+"tba:75:obj:7524":
+  type: worn
+  keywords: [feather, anklet]
+  short: a feather anklet
+  long: A feather anklet is lying here.
+  flags: [magic]
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 75
+  rent: 7
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [feather, anklet]
+    text: Several colorful feathers have been joined together with a thick band of gold.
+
+"tba:75:obj:7525":
+  type: worn
+  keywords: [shark, tooth, necklace]
+  short: a shark tooth necklace
+  long: A shark tooth necklace is lying here.
+  flags: [magic, bless]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 110
+  rent: 11
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 12
+  extras:
+  - keywords: [shark, necklace, tooth]
+    text: >
+      This necklace is fashioned from the teeth of a large shark tied together with a leather strap.
+
+"tba:75:obj:7526":
+  type: container
+  keywords: [basket]
+  short: an empty basket
+  long: An empty basket is lying here.
+  wear: [take, head, hold]
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [basket]
+    text: This basket has been woven together by hand and can be carried in several ways.
+
+"tba:75:obj:7527":
+  type: weapon
+  keywords: [bow]
+  short: a small bow
+  long: A small bow and arrow is lying here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: blast
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [bow, arrow]
+    text: >
+      This small bow and arrow was crafted for young boys to train with.  It is light weight and easy to
+      handle.
+
+"tba:75:obj:7528":
+  type: container
+  keywords: [metal, box]
+  short: a metal box
+  long: A metal box rests on the floor.
+  wear: []
+  values:
+    capacity: 800
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [metal, box]
+    text: >
+      This metal box is made of fine silver but very tarnished with years of age. The lock is shattered
+      and is useless.  Its the size of a small personal chest.
+
+"tba:75:obj:7529":
+  type: other
+  keywords: [book, journal]
+  short: a large book
+  long: A heavy book is lying here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 550
+  rent: 55
+  level: 0
+  extras:
+  - keywords: [bookmarked, page, writing]
+    text: >
+      Today many of the merchants left to find a better location for their wares. I have decided to stay
+      here despite the evil gossip of black magic and human sacrifice.  I understand their leaving, so much
+      business came from the other towns I can't blame them for staying away when our own people fear the
+      rumors. I think in time everyone will grow use to going without some of the finer things from the
+      other towns and enjoy living apart from the other towns.  The common people have always had to make do. 
+      I think Zamba is better off without all the tourist and having to follow the laws of all the
+      surrounding town.  We are much better off being apart from outsiders.
+  - keywords: [book, journal]
+    text: >
+      The large book is quite heavy and made of leather.  On the front the embossed letters are too faded
+      to read.  But a bookmark page at the end of the book looks readable.
+
+"tba:75:obj:7530":
+  type: armor
+  keywords: [black, robe]
+  short: a black robe
+  long: A black robe is lying here.
+  flags: [glow, hum]
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [robe, black]
+    text: >
+      This black cloak is quite light for how thick it is.  Its wide hood drapes over your face.  The
+      collar is drawn closed with a gold medallion of a black panthers head.  The cloak is made from a rough
+      leather.
+
+"tba:75:obj:7531":
+  type: armor
+  keywords: [petal, shield, yellow]
+  short: a yellow petal
+  long: A yellow petal from the Zamba hook plant is lying here.
+  flags: [magic]
+  wear: [take, shield]
+  values:
+    armor: 1
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [shield, petal]
+    text: >
+      The shield is one of the petals of the Zamba Hook plant.  It is bright yellow and does not appear
+      to be wilting or turning.  It is easy to hold, light and strudy.
+
+"tba:75:obj:7532":
+  type: armor
+  keywords: [pearl, hair, comb]
+  short: a pearl hair comb
+  long: A pearl hair comb is lying here.
+  flags: [glow, magic, anti_evil, anti_neutral]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 300
+  rent: 30
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [pearl, hair, comb]
+    text: >
+      This wellcrafted hair comb is a combination of gold and pearls formed into a large butterfly.
+
+"tba:75:obj:7533":
+  type: worn
+  keywords: [ring]
+  short: a golden ring
+  long: A golden ring is lying here.
+  flags: [magic, bless, anti_evil]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 450
+  rent: 60
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -1
+  extras:
+  - keywords: [ring]
+    text: This golden ring is engraved with the seal of Empiress Kiona.
+
+"tba:75:obj:7534":
+  type: other
+  keywords: [ruby, bracer]
+  short: a ruby bracer
+  long: A ruby bracer is lying here.
+  flags: [anti_evil, anti_neutral]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 210
+  rent: 21
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [ruby, bracer]
+    text: This wide bracer is made of quality gold and has a oval rudy set in the center.
+
+"tba:75:obj:7535":
+  type: other
+  keywords: [emerald, bracer]
+  short: an emerald bracer
+  long: An emerald bracer is lying here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 125
+  rent: 13
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [emerald, bracer]
+    text: This wide bracer is made of quality gold and has a large emerald set in the center.
+
+"tba:75:obj:7536":
+  type: armor
+  keywords: [skull, helmet]
+  short: a skull helm
+  long: A skull helmet is lying here.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 3
+  cost: 321
+  rent: 35
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -3
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [skull, helm, helmet]
+    text: >
+      The skull appears to be from a large reptile.  It has been cleaned and fashioned into a fine helmet.
+
+"tba:75:obj:7537":
+  type: potion
+  keywords: [black, powder, vial]
+  short: a vial of black powder
+  long: A vial of black powder is lying here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [12, 16, -1, -1]
+  weight: 5
+  cost: 750
+  rent: 75
+  level: 0
+  extras:
+  - keywords: [vial, powder, black]
+    text: >
+      The clear container is full of a potion created from black powder that oozes within the vial.
+
+"tba:75:obj:7538":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A small torch is mounted to the wall.
+  wear: [take, hold]
+  values:
+    hours: 6
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:75:obj:7539":
+  type: armor
+  keywords: [breastplate, bone]
+  short: a bone breastplate
+  long: A bone breastplate made of human bones is lying here.
+  flags: [no_invis, magic, anti_good, anti_neutral]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 12
+  cost: 125
+  rent: 12
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -8
+  extras:
+  - keywords: [bone, breastplate, armor]
+    text: >
+      This breastplate has been created with a mixture of human bones and animal teeth fused together
+      with Titanium.
+
+"tba:75:obj:7540":
+  type: trash
+  keywords: [skeleton, bone]
+  short: a human skeleton
+  long: The skeleton remains of a human lie here.
+  flags: [no_drop]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [skeleton, human, bone]
+    text: >
+      The skeleton is setting in an upright position as if it just sat down to rest.  It is the remains
+      of a man dress in leather and armor, his equipment is very rusty and dented.  A broken sword hilt is
+      still held in his right hand.
+
+"tba:75:obj:7552":
+  type: container
+  keywords: [wooden, cabinet]
+  short: a  wall sized cabinet
+  long: A oak cabinet sets against the east wall.
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cabinet, oak]
+    text: >
+      The oak cabinet has several doors and fills the space of the east wall. The top of the cabinet
+      holds an engraved message which reads, "Please feel free to get comfortable.  You must remove your armor
+      and weapons here.  "
+
+"tba:75:obj:7558":
+  type: worn
+  keywords: [monocle, glass, eyewear]
+  short: a clear monocle
+  long: A monocle is lying here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 527
+  rent: 52
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [monocle]
+    text: >
+      The small monocle is made of a fine, clear glass with gold trim.  Its designed to be worn on one
+      eye and has a gold chain attached to clip to a side pocket.
+
+"tba:75:obj:7559":
+  type: fountain
+  keywords: [fountain, ice, sculpture]
+  short: a fountain
+  long: A fountain sets in the center of the room.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, ice, sculpture]
+    text: >
+      The fountain is made of white marble.  Inside the center of the fountain an ice sculpture of a
+      mermaid holding a vessel pouring cool water into the fountain.  The sculpture is cold and does not melt
+      despite the warmth of the room.
+
+"tba:75:obj:7562":
+  type: food
+  keywords: [wheel, cheese]
+  short: a wheel of cheese
+  long: A wheel of cheese is lying here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 4
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [wheel, cheese]
+    text: >
+      The heavy wheel of cheese is covered with a thick cloth.  The cheese is dark yellow and looks tasty.
+
+"tba:75:obj:7563":
+  type: drinkcon
+  keywords: [wine, barrel, wine]
+  short: a barrel
+  long: A barrel of wine sets here.
+  wear: [take]
+  values:
+    capacity: 25
+    contains: 25
+    liquid: wine
+    poisoned: false
+  weight: 30
+  cost: 87
+  rent: 9
+  level: 0
+  extras:
+  - keywords: [barrel, wine]
+    text: >
+      The barrel is large with the word wine wrote on top and a royal crest engraved in its side.
+
+"tba:75:obj:7567":
+  type: drinkcon
+  keywords: [blood, decanter, blood]
+  short: a tiny decanter
+  long: A tiny decanter is lying here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: blood
+    poisoned: true
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [decanter]
+    text: This tiny decanter contains a red liquid.
+
+"tba:75:obj:7570":
+  type: armor
+  keywords: [silver, boots]
+  short: a pair of silver boots
+  long: A set of silver boots is lying here.
+  flags: [glow, magic]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 3
+  cost: 90
+  rent: 9
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+  extras:
+  - keywords: [silver, boot]
+    text: >
+      The silver boots have been polished to a fine shine.  Engraved on the outside of each boot is the
+      image of a snarling panther.
+
+"tba:75:obj:7571":
+  type: key
+  keywords: [key, collar]
+  short: a collar
+  long: A large pet collar is lying here.
+  flags: [no_rent]
+  wear: [take, neck, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [collar]
+    text: A key dangles from the panthers collar.
+
+"tba:75:obj:7580":
+  type: worn
+  keywords: [pewter, wristband]
+  short: a pewter wristband
+  long: A pewter wristband is lying here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 243
+  rent: 25
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -4
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [wristband, pewter]
+    text: >
+      This wide piece of pewter has been shaped to wear around your wrist and lined with a soft piece of
+      fur.
+
+"tba:75:obj:7585":
+  type: worn
+  keywords: [seashell, necklace]
+  short: a seashell necklace
+  long: A necklace adorned with seashells is lying here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [seashell, necklace]
+    text: A beautiful seashell as been attached to a braided piece of leather.
+
+"tba:75:obj:7587":
+  type: light
+  keywords: [torch]
+  short: a wooden torch
+  long: A wooden torch is lying here.
+  wear: [take, hold]
+  values:
+    hours: 6
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [torch]
+    text: The torch is a thick piece of wood with a moist cloth wrapped around the top end.
+
+"tba:75:obj:7588":
+  type: container
+  keywords: [leather, bag]
+  short: a leather bag
+  long: A leather bag is lying here.
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [leather, bag]
+    text: The leather bag is quite large.
+
+"tba:75:obj:7590":
+  type: scroll
+  keywords: [scroll]
+  short: an old scroll
+  long: An old scroll is lying here.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    raw: [12, 42, -1, -1]
+  weight: 1
+  cost: 750
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [old, scroll]
+    text: >
+      You see a rolled up piece of paper faded and yellow from age.  The top of the parchment reads
+      return home.

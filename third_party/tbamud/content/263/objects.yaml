@@ -1,0 +1,350 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 263.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:263:obj:26300":
+  type: drinkcon
+  keywords: [water, pail, water]
+  short: a pail
+  long: A small metal pail is lying here on the floor.
+  wear: [take]
+  values:
+    capacity: 20
+    contains: 20
+    liquid: water
+    poisoned: false
+  weight: 20
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, pail, water]
+    text: Looks to be a very sturdy little pail.
+
+"tba:263:obj:26301":
+  type: container
+  keywords: [bag, patchwork]
+  short: a patchwork bag
+  long: A patchwork bag lies on the ground here.
+  wear: [take]
+  values:
+    capacity: 500
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bag, patchwork]
+    text: Looks like a bag which has seen a great many years.
+
+"tba:263:obj:26302":
+  type: armor
+  keywords: [boots, rubber]
+  short: a pair of rubber boots
+  long: A pair of rubber boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boots, rubber]
+    text: I would be VERY careful not to touch the bottoms of those.
+
+"tba:263:obj:26303":
+  type: armor
+  keywords: [jacket, cowhide]
+  short: a cowhide jacket
+  long: A cowhide jacket has been left here.
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [jacket, cowhide]
+    text: Looks VERY manly, strong, even.
+
+"tba:263:obj:26304":
+  type: armor
+  keywords: [hat, floppy, cloth]
+  short: a floppy cloth hat
+  long: A floppy cloth hat has been tossed on the ground here.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hat, floppy, cloth]
+    text: You have to wonder which side is the front with this raggety piece of cloth.
+
+"tba:263:obj:26305":
+  type: armor
+  keywords: [cloak, patchwork]
+  short: a patchwork cloak
+  long: A patchwork cloak lies here, discarded.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: hit
+    modifier: -10
+  extras:
+  - keywords: [cloak, patchwork]
+    text: Looks as if this cloak has been worn many a year, over many a road.
+
+"tba:263:obj:26306":
+  type: armor
+  keywords: [dress, flowered]
+  short: a flowered dress
+  long: A flowered dress has been tossed away in a corner.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 2
+  cost: 79
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [dress, flowered]
+    text: >
+      The dress is made from fine fabric and fits very tightly.  Real plain jane farmer's daughter type
+      clothing here.
+
+"tba:263:obj:26307":
+  type: other
+  keywords: [stool]
+  short: a stool
+  long: A milking stool sits here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: height
+    modifier: 5
+  extras:
+  - keywords: [stool]
+    text: Small, wood, and rickety - three legs, be careful.
+
+"tba:263:obj:26308":
+  type: other
+  keywords: [piano]
+  short: a piano
+  long: A piano sits in the middle of the floor, looking very lonely.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [piano]
+    text: Looks as if the keys haven't been touched in years.
+
+"tba:263:obj:26309":
+  type: weapon
+  keywords: [whip, horse]
+  short: a horse whip
+  long: A horse whip has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: whip
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [whip, horse]
+    text: It is made of brown leather.  Looks like a sex toy more than a horse whip!
+
+"tba:263:obj:26310":
+  type: other
+  keywords: [rope]
+  short: some rope
+  long: A pile of rope has been left here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:263:obj:26311":
+  type: armor
+  keywords: [boots, riding]
+  short: a pair of riding boots
+  long: A pair of riding boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [boots, riding]
+    text: Spurs and all, these are a FINE pair of boots.
+
+"tba:263:obj:26312":
+  type: armor
+  keywords: [hat, horseman]
+  short: a horseman's hat
+  long: A horseman's hat has been left here.
+  wear: [take, head]
+  values:
+    armor: 9
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hat, horseman]
+    text: Kind of makes you look like Indiana Jones.  Maybe even better than that.
+
+"tba:263:obj:26313":
+  type: armor
+  keywords: [straw, piece]
+  short: a piece of straw
+  long: A piece of straw has been left here.
+  wear: [take]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [straw, piece]
+    text: It's all chewed at one end, maybe you should wash it first...
+
+"tba:263:obj:26314":
+  type: armor
+  keywords: [pants, rawhide]
+  short: a pair of rawhide pants
+  long: A pair of rawhide pants have been left here.
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pants, rawhide]
+    text: They look really stiff and uncomfortable, but then it's better than being naked.
+
+"tba:263:obj:26315":
+  type: weapon
+  keywords: [scythe]
+  short: a scythe
+  long: A field scythe is laying on the floor.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: slash
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [scythe]
+    text: Not quite as cool as the Grim Reaper's, but cool just the same.
+
+"tba:263:obj:26316":
+  type: other
+  keywords: [stone, skipping]
+  short: a skipping stone
+  long: A round, flattened stone is here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [stone, skipping]
+    text: Looks like it would be a great candidate for a skipper.
+
+"tba:263:obj:26317":
+  type: other
+  keywords: [pole, fishing, bamboo]
+  short: a bamboo fishing pole
+  long: A bamboo fishing pole has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pole, fishing, bamboo]
+    text: A simple branch of bamboo with some string and a hook tied to it.
+
+"tba:263:obj:26318":
+  type: armor
+  keywords: [hat, straw]
+  short: a straw hat
+  long: A straw hat has been left here.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hat, straw]
+    text: Big huge brim, looks like it would DEFINITELY keep the sun out of your eyes.
+
+"tba:263:obj:26319":
+  type: armor
+  keywords: [boots, steel, toed, rubber]
+  short: some steel-toed boots
+  long: Some steel-toed, rubber boots are here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 2
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boots, steel, toed, rubber]
+    text: >
+      A shudder goes down your spine as you just think about being kicked by these heavy steel
+      montrosities.  They are made from rugged leather hide and the toes are capped with solid steel.  They look like
+      they could do some serious groin damage, if implemented properly.

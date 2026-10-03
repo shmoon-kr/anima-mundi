@@ -1,0 +1,739 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 285.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:285:room:28500":
+  name: Administration of Hell
+  description: >
+    This is the entrance to the Administration offices of Hell.  The secretary's desk sits quietly in
+    the middle of the room.  To the south is a metal door labeled, 'Authorized Personnel Only'.  To the
+    west is a large glass door. There is a stairway down on the opposite side of the room.  There is a sign
+    posted next to the stairs.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28690
+      look: You see a marble hall.
+    south:
+      to: tba:285:room:28510
+      look: You see a metal door.
+      door:
+        keywords: [door, metal]
+        kind: door
+        reset: closed
+    west:
+      to: tba:286:room:28699
+      look: You see a glass door.
+      door:
+        keywords: [door, glass]
+        kind: door
+        reset: closed
+    down:
+      to: tba:285:room:28509
+      look: You see a stairway down.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |
+        ****ATTENTION***
+        The Abyss is CLOSED for construction.
+        
+        We will open for your painful pleasures
+        soon....
+        
+        -Strahd-
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Descent to Hell Zone.
+        Originally written by Strahd
+        Zone 285 is linked to the following zones:
+        286 Descent to Hell II             at 28500 (north) ---> 28690
+        286 Descent to Hell II             at 28500 (west ) ---> 28699
+        286 Descent to Hell II             at 28502 (north) ---> 28692
+        286 Descent to Hell II             at 28506 (north) ---> 28696
+        286 Descent to Hell II             at 28508 (north) ---> 28698
+        286 Descent to Hell II             at 28541 (east ) ---> 28673
+        286 Descent to Hell II             at 28541 (south) ---> 28682
+        286 Descent to Hell II             at 28541 (west ) ---> 28672
+
+"tba:285:room:28501":
+  name: Halls of Judgement
+  description: >
+    You are standing in the Halls of Judgement.  There are many alcoves which contain different methods
+    of torture, each more grotesque than the one before it.  On the wall a plaque reads, 'If you are
+    here...You are Guilty...You have been judged...sound fair?  Too bad...'  The hall continues to the east.
+    The Courtroom is to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28502
+      look: You see the Halls of Judgement.
+    south:
+      to: tba:285:room:28511
+      look: You see the Court of Hell.
+
+"tba:285:room:28502":
+  name: Halls of Judgement
+  description: >
+    You are standing in the Halls of Judgement.  There are many alcoves which contain different methods
+    of torture, each more grotesque than the one before it.  The hall continues to the east and west. 
+    The hall of records is to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28692
+      look: You see the Hall of Records.
+    east:
+      to: tba:285:room:28503
+      look: You see the Halls of Judgement.
+    west:
+      to: tba:285:room:28501
+      look: You see the Halls of Judgement.
+
+"tba:285:room:28503":
+  name: Halls of Judgement
+  description: >
+    You are standing in the Halls of Judgement.  There are many alcoves which contain different methods
+    of torture, each more grotesque than the one before it.  The hall continues to the east and west. 
+    The Office of Complaints is to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28504
+      look: You see the Halls of Judgement.
+    south:
+      to: tba:285:room:28513
+      look: You see the Office of Complaints.
+    west:
+      to: tba:285:room:28502
+      look: You see the Halls of Judgement.
+
+"tba:285:room:28504":
+  name: Halls of Judgement
+  description: >
+    You are standing in the Halls of Judgement.  There are many alcoves which contain different methods
+    of torture, each more grotesque than the one before it.  The hall continues to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28505
+      look: You see the Halls of Judgement.
+    west:
+      to: tba:285:room:28503
+      look: You see the Halls of Judgement.
+
+"tba:285:room:28505":
+  name: Halls of Judgement
+  description: >
+    You are standing in the Halls of Judgement.  There are many alcoves which contain different methods
+    of torture, each more grotesque than the one before it.  The hall continues to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28506
+      look: You see the Halls of Judgement.
+    west:
+      to: tba:285:room:28504
+      look: You see the Halls of Judgement.
+
+"tba:285:room:28506":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  There are exits in all directions.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28696
+      look: You see a blackened hall.
+    east:
+      to: tba:285:room:28507
+      look: You see a blackened hall.
+    south:
+      to: tba:285:room:28516
+      look: You see the hallway of the Mall from Hell .
+    west:
+      to: tba:285:room:28505
+      look: You see the Halls of Judgement.
+
+"tba:285:room:28507":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  The hallway continues to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28508
+      look: You see a blackened hall.
+    west:
+      to: tba:285:room:28506
+      look: You see a blackened hall.
+
+"tba:285:room:28508":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  The hallway continues to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28698
+      look: You see a blackened hall.
+    west:
+      to: tba:285:room:28507
+      look: You see a blackened hall.
+
+"tba:285:room:28509":
+  name: Stairs to the Abyss
+  description: >
+    These dark stairs are made out of the bones of the damned.  They rattle softly as you tread upon
+    them as if to cry out in protest.  The air is filled with the wailing of lost souls and the blood
+    curdling screams of the punished.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    down:
+      to: tba:285:room:28518
+      look: You see the eternal darkness of the Abyss.
+
+"tba:285:room:28510":
+  name: Maintenance Walkway
+  description: >
+    This is a maintence accessway.  You walk on a metal catwalk hundreds of feet above the floor.  The
+    catwalk sways unsteadily as you walk on it.  The catwalk continues to the south.  To the north is a
+    steel door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28500
+      look: You see a steel door.
+      door:
+        keywords: [door, steel]
+        kind: door
+        reset: closed
+    south:
+      to: tba:285:room:28520
+      look: You see a maintenance walkway.
+
+"tba:285:room:28511":
+  name: Court Room
+  description: >
+    This is the Courts of Hell.  Here you are convicted, sentenced and punished. And no...you don't get
+    a trial.  You don't deserve one.  The courtroom is filled with spectators and jury members.  They
+    seem to have no real reason to be here since there isn't going to be a trial.  They jeer and boo you as
+    you stand in the middle of the courtroom.  To the north are the Halls of Judgement. Behind the
+    judge's bench is a wooden door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28501
+      look: You see the Halls of Judgement.
+    south:
+      to: tba:285:room:28521
+      look: You see a large wooden door.
+
+"tba:285:room:28512":
+  name: Lawyer's Office
+  description: >
+    As you look around you, you realize you've entered a lawyer's office.  Now you know you are in
+    Hell....  Everything in this office seems to be made of snakeskin.  This is the only lawyer's office in
+    hell, so if you don't like them you're out of luck.  But then again...if you are in hell...you must've
+    run out of luck a while ago.  To the east is the Office of Complaints.  To the south you see a
+    courtyard.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28513
+      look: You see the Office of Complaints.
+    south:
+      to: tba:285:room:28522
+      look: You see a courtyard.
+
+"tba:285:room:28513":
+  name: Office of Complaints
+  description: >
+    This is a relatively small office.  There is a large hole in the wall where a clerk usually sits
+    and takes complaints about hell.  As you peek behind the counter you see a large paper shredder and a
+    lot of shredded complaints.  A sign over the clerks desk reads, 'Hours: 12:00am - 12:01am'.  To the
+    west is a lawyer's office.  To the north you see the Halls of Judgement.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28503
+      look: You see the Halls of Judgement.
+    west:
+      to: tba:285:room:28512
+      look: You see a lawyer's office.
+
+"tba:285:room:28514":
+  name: Pawn Shop
+  description: >
+    You are standing in Hiramoto's Buy & Sell.  This poor bastard has been damned to hell to serve the
+    public for eternity.  He will buy almost anything you have, since business is slow.  Not many people
+    visit Hell.  The store is filled with worthless junk.  Piles of aluminum balls and bottle cap
+    collections fill the corners of the room.  Things of every description lie about the store.  To the east you
+    see the Mall from Hell.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28515
+      look: You see the Mall from Hell.
+
+"tba:285:room:28515":
+  name: Hallway of The Mall from Hell
+  description: >
+    This is definitely the Mall from Hell...there are no stores!  Only in Hell would they have a mall
+    with no stores.  To the east you see the Mall from Hell. To the west you see Hiramoto's Buy & Sell. 
+    The hall continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28516
+      look: You see the Mall from Hell.
+    south:
+      to: tba:285:room:28525
+      look: You see the Mall from Hell.
+    west:
+      to: tba:285:room:28514
+      look: You see Hiramoto's Buy & Sell.
+
+"tba:285:room:28516":
+  name: Hallway of The Mall from Hell
+  description: >
+    This is definitely the Mall from Hell...there are no stores!  Only in Hell would they have a mall
+    with no stores.  To the north you see a blackened hallway.  To the east you see the office of Big
+    Mouth.  The hallway continues to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28506
+      look: You see a blackened hall.
+    east:
+      to: tba:285:room:28517
+      look: You see the office of Big Mouth.
+    west:
+      to: tba:285:room:28515
+      look: You see the hallways of the Mall from Hell.
+
+"tba:285:room:28517":
+  name: The Office of Big Mouth
+  description: >
+    This is the office of Big Mouth, head demon of Hell's Administration.  The room is decorated
+    posters of naked women and autographed pictures of famous tortured souls.  Behind a large oaken desk sleeps
+    Big Mouth.  This mouth looks large enough to step into if it were open.  You wonder what this guy
+    eats...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:285:room:28516
+      look: You see the hallways of the Mall from Hell.
+    down:
+      to: tba:285:room:28526
+      look: You see Big Mouth's mouth.
+      door:
+        keywords: [mouth, big, mouth's]
+        kind: door
+
+"tba:285:room:28518":
+  name: Stairs to the Abyss
+  description: >
+    These dark stairs are made out of the bones of the damned.  They rattle softly as you tread upon
+    them as if to cry out in protest.  The air is filled with the wailing of lost souls and the blood
+    curdling screams of the punished.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    down:
+      to: tba:285:room:28527
+      look: You see the eternal darkness of the Abyss.
+
+"tba:285:room:28519":
+  name: Maintenance Walkway
+  description: >
+    This is a maintence accessway.  You walk on a metal catwalk hundreds of feet above the floor.  The
+    catwalk sways unsteadily as you walk on it.  The catwalk continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28520
+      look: You see a maintenance walkway.
+    south:
+      to: tba:285:room:28529
+      look: You see a maintenance walkway.
+
+"tba:285:room:28520":
+  name: Maintenance Walkway
+  description: >
+    This is a maintence accessway.  You walk on a metal catwalk hundreds of feet above the floor.  The
+    catwalk sways unsteadily as you walk on it.  The catwalk continues to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28510
+      look: You see a maintenance walkway.
+    west:
+      to: tba:285:room:28519
+      look: You see a maintenance walkway.
+
+"tba:285:room:28521":
+  name: Judge's Chambers
+  description: >
+    These are the private chambers of the High Judge of Hell.  He has a cushy job and his office
+    reflects that.  Golden torches light the walls with dancing blue and yellow flames.  The judge's black
+    crystal desk sparkles in the torchlight.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:285:room:28511
+      look: You see the Courtroom of Hell.
+
+"tba:285:room:28522":
+  name: Courtyard
+  description: >
+    This courtyard is barren and neglected.  Small weeds grow between the concrete slabs.  An old
+    defunct fountain sputters with a gray-brown ooze.  A lawyer's office is to the north.  The courtyard
+    continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28512
+      look: You see a lawyers office.
+    east:
+      to: tba:285:room:28523
+      look: You see a more of the courtyard.
+    south:
+      to: tba:285:room:28532
+      look: You see a more of the courtyard.
+
+"tba:285:room:28523":
+  name: Courtyard
+  description: >
+    This courtyard is barren and neglected.  Small weeds grow between the concrete slabs.  An old
+    defunct fountain sputters with a gray-brown ooze.  The courtyard continues to the west and south. 
+    Stanley's Magical Steeds is to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28524
+      look: You see Stanley's Magical Steeds store.
+    south:
+      to: tba:285:room:28533
+      look: You see a more of the courtyard.
+    west:
+      to: tba:285:room:28522
+      look: You see a more of the courtyard.
+
+"tba:285:room:28524":
+  name: Stanley's Magical Steeds
+  description: >
+    This is the shop of Stanly.  He used to be an old mage selling cursed trinkets at the town of
+    Solace.  He has recently set up shop in Hell selling magical figurines.  Each figurine is in the shape of
+    some sort of steed.  Some are recognizable and some are not.  Rumor has it that Stanley made a deal
+    with a devil...so I guess his lease is up in seven years...  A courtyard is to the west.  To the south
+    you see the Mall from Hell.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:285:room:28534
+      look: You see a hallway of the Mall from Hell.
+    west:
+      to: tba:285:room:28523
+      look: You see an abandon courtyard.
+
+"tba:285:room:28525":
+  name: Hallway of The Mall from Hell
+  description: >
+    This is definitely the Mall from Hell...there are no stores!  Only in Hell would they have a mall
+    with no stores.  The hallway continues to the north and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28515
+      look: You see a hall of the Mall from Hell.
+    east:
+      to: tba:285:room:28535
+      look: You see a hall of the Mall from Hell.
+
+"tba:285:room:28526":
+  name: Inside Big Mouth's Stomach
+  description: >
+    You are standing inside Big Mouth's stomach.  It is roomy in here.  Small animals and other odds
+    and ends lie about the stomach.  Is that a dragon you see?  Nah...couldn't be...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:285:room:28517
+      look: You see Big Mouth's throat.
+      door:
+        keywords: [mouth, big, mouth's, throat]
+        kind: door
+
+"tba:285:room:28527":
+  name: Stairs to the Abyss
+  description: >
+    These dark stairs are made out of the bones of the damned.  They rattle softly as you tread upon
+    them as if to cry out in protest.  The air is filled with the wailing of lost souls and the blood
+    curdling screams of the punished.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    down:
+      to: tba:285:room:28536
+      look: You see the eternal darkness of the Abyss.
+
+"tba:285:room:28528":
+  name: Reactor Control Room
+  description: >
+    This is the reactor control room of Hell.  From here the workers control the main reactor and power
+    supply for all of Hell and the abyss.  Workers stroll back and forth, from station to station,
+    monitoring the reactor core.  A large glass window looks out onto the reactor floor below.  There are some
+    stairs down to the reactor floor to the south.  There is a maintenance room to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28529
+      look: You see a maintenance room.
+    south:
+      to: tba:285:room:28538
+      look: You see stairs down to the reactor floor.
+
+"tba:285:room:28529":
+  name: Maintenance Room
+  description: >
+    You are standing in the primary maintenance room of Hell.  Tools of all shapes and sizes are neatly
+    hung on the walls, each with its own painted-on silhouette behind it.  To the west is the reactor
+    control room.  To the east is the break room.  To the north is a maintenance walkway.  To the south is
+    the secondary control room.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28519
+      look: You see a maintenance walkway.
+    east:
+      to: tba:285:room:28530
+      look: You see a break room.
+    south:
+      to: tba:285:room:28539
+      look: You see the secondary control room.
+    west:
+      to: tba:285:room:28528
+      look: You see the reactor control room.
+
+"tba:285:room:28530":
+  name: Break Room
+  description: >
+    This is the break room for the maintenance workers.  Tables are filled with donuts and coffee.  As
+    a cruel joke, the chief engineer has posted his guard dogs to guard the room so that no one can take
+    a break.  To the west is the primary maintenance room.  To the south is the chief engineer's office.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:285:room:28540
+      look: You see the chief engineer's office.
+    west:
+      to: tba:285:room:28529
+      look: You see the primary maintenance room.
+
+"tba:285:room:28531":
+  name: Hell's Kitchen
+  description: >
+    Welcome to Hell's kitchen, where everything is delicious...you just can't have any...  This is
+    where the many foods of the world of Farside are made. The chefs are usually very busy, but they always
+    have extra time to torture a guest...  To the east is a courtyard.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28532
+      look: You see an abandoned courtyard.
+
+"tba:285:room:28532":
+  name: Courtyard
+  description: >
+    This courtyard is barren and neglected.  Small weeds grow between the concrete slabs.  An old
+    defunct fountain sputters with a gray-brown ooze.  The courtyard continues to the north and east.  You see
+    a kitchen to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28522
+      look: You see more of the courtyard.
+    east:
+      to: tba:285:room:28533
+      look: You see more of the courtyard.
+    west:
+      to: tba:285:room:28531
+      look: You see a kitchen.
+
+"tba:285:room:28533":
+  name: Courtyard
+  description: >
+    This courtyard is barren and neglected.  Small weeds grow between the concrete slabs.  An old
+    defunct fountain sputters with a gray-brown ooze.  The courtyard continues to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28523
+      look: You see more of the courtyard.
+    west:
+      to: tba:285:room:28532
+      look: You see a more of the courtyard.
+
+"tba:285:room:28534":
+  name: Hallway of The Mall from Hell
+  description: >
+    This is definitely the Mall from Hell...there are no stores!  Only in Hell would they have a mall
+    with no stores.  The hallway continues to the east. Stanely's magic steeds are to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28524
+      look: You see Stanely's Magic Steeds.
+    east:
+      to: tba:285:room:28535
+      look: You see a hall of the Mall from Hell.
+
+"tba:285:room:28535":
+  name: Hallway of The Mall from Hell
+  description: >
+    This is definitely the Mall from Hell...there are no stores!  Only in Hell would they have a mall
+    with no stores.  The hallway continues to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28525
+      look: You see a hall of the Mall from Hell.
+    west:
+      to: tba:285:room:28534
+      look: You see a hall of the Mall from Hell.
+
+"tba:285:room:28536":
+  name: Stairs to the Abyss
+  description: >
+    These dark stairs are made out of the bones of the damned.  They rattle softly as you tread upon
+    them as if to cry out in protest.  The air is filled with the wailing of lost souls and the blood
+    curdling screams of the punished. You can't seem to find the Abyss...you seem to recall seeing a
+    sign...now what did it say again?...
+  sector: inside
+  flags: [dark, indoors]
+
+"tba:285:room:28537":
+  name: Inside the Reactor Core
+  description: >
+    You are standing on the inside of the reactor core.  Actually you seem to be floating in the plasma
+    energy of the reactor.  You can see the core chamber fall off into the distance as it seems to be
+    bottomless.  Nuclear particles and other strange things whiz by you at blinding speeds.  You see a
+    maintenance hatch to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28538
+      look: You see a maintenance hatch.
+      door:
+        keywords: [hatch, maintenance, reactor, core]
+        kind: door
+        reset: closed
+
+"tba:285:room:28538":
+  name: Reactor Room Floor
+  description: >
+    The room is taken up almost entirely by the enormous reactor core.  The core pulses rhythmically as
+    it generates the heat and power for the entire region of Hell.  Many workers in orange jumpsuits run
+    frantically around with geiger counters and plasma torches fixing breaches in the core.  You see a
+    reactor core maintenance hatch to the west.  A stairway to the control room is to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28528
+      look: You see the stairs to the control room.
+    west:
+      to: tba:285:room:28537
+      look: You see a reactor core maintence hatch.
+      door:
+        keywords: [hatch, maintenance, reactor, core]
+        kind: door
+        reset: closed
+
+"tba:285:room:28539":
+  name: Secondary Control Room
+  description: >
+    This is the secondary control room for the reactor core.  It is usually used in emergencies when
+    the primary control room is contaminated or damaged.  It isn't used very often since the primary
+    control room is in perfect working order.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28529
+      look: You see the primary maintenance room.
+
+"tba:285:room:28540":
+  name: Office of the Chief Engineer
+  description: >
+    This office belongs to the chief engineer of Hell.  Blueprints and pencils are scattered about the
+    room.  The air is heavy with the smell of ammonia and sweat.  A display of the reactor core is
+    mounted into the wall.  One wall is completely filled with monitors, each showing various status reports
+    for the reactor core.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28530
+      look: You see the break room.
+
+"tba:285:room:28541":
+  name: Ice Room
+  description: >
+    You are standing in a room of ice.  Icicles of every size hang from the ceiling.  Some shake with
+    every sound.  Your reflection off the ice walls seems to dance and wiggle as you move about.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28673
+      look: You see a room of ice.
+    south:
+      to: tba:286:room:28682
+      look: You see a room of ice.
+    west:
+      to: tba:286:room:28672
+      look: You see a room of ice.

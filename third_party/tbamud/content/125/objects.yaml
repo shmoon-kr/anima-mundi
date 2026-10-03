@@ -1,0 +1,314 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 125.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:125:obj:12500":
+  type: key
+  keywords: [hannah, key]
+  short: a key
+  long: A golden key to the gates of hannah is lying here
+  flags: [no_rent, no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:125:obj:12501":
+  type: weapon
+  keywords: [temple, sword]
+  short: an elite temple guard sword
+  long: A black temple guard's sword is here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d13
+    attack: slash
+  weight: 18
+  cost: 135
+  rent: 13
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+
+"tba:125:obj:12502":
+  type: wand
+  keywords: [moki, bird, feather]
+  short: a golden moki bird feather
+  long: A golden moki bird feather is here.
+  wear: [take, hold]
+  values:
+    raw: [12, 10, 10, -1]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:125:obj:12503":
+  type: food
+  keywords: [lamb, chop]
+  short: a lamb chop
+  long: A cooked lamb chop was left here, uneaten.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:125:obj:12504":
+  type: fountain
+  keywords: [granite, fountain]
+  short: a granite fountain
+  long: A fountain, carved from a single block of granite, bubbles merrily here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:125:obj:12505":
+  type: light
+  keywords: [golden, orb]
+  short: a golden orb
+  long: A golden orb is floating about here.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 60
+  rent: 6
+  level: 0
+
+"tba:125:obj:12507":
+  type: weapon
+  keywords: [amputating, saw]
+  short: an amputating saw
+  long: A saw used to amputate limbs is here covered in blood.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: bite
+  weight: 6
+  cost: 240
+  rent: 24
+  level: 0
+
+"tba:125:obj:12508":
+  type: food
+  keywords: [side, beef]
+  short: a side of beef
+  long: A side of beef hangs on a hook.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 15
+  cost: 20
+  rent: 5
+  level: 0
+
+"tba:125:obj:12509":
+  type: food
+  keywords: [pastry]
+  short: a small pastry
+  long: A small pastry lathered with butter is attracting flies.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 3
+  level: 0
+
+"tba:125:obj:12510":
+  type: food
+  keywords: [croissant]
+  short: a fluffly croissant
+  long: A fluffy croissant is collecting dust.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 14
+  rent: 4
+  level: 0
+
+"tba:125:obj:12511":
+  type: weapon
+  keywords: [thieves, dagger]
+  short: a thieves dagger
+  long: A dagger belonging to some thief tribes lay here.
+  wear: [take, wield]
+  values:
+    damage: 1d10
+    attack: stab
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:125:obj:12512":
+  type: weapon
+  keywords: [soldiers, lance]
+  short: a soldiers lance
+  long: A soldiers lance is propped up here.
+  wear: [take, wield]
+  values:
+    damage: 2d12
+    attack: blast
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:125:obj:12520":
+  type: wand
+  keywords: [moki, bird, feather]
+  short: a golden moki bird feather
+  long: A golden moki bird feather is here.
+  wear: [take, hold]
+  values:
+    raw: [12, 10, 10, -1]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:125:obj:12521":
+  type: trash
+  keywords: [moki, bird, feather]
+  short: a golden moki bird feather
+  long: A golden moki bird feather is here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:125:obj:12522":
+  type: trash
+  keywords: [moki, bird, feather]
+  short: a golden moki bird feather
+  long: A golden moki bird feather is here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:125:obj:12552":
+  type: key
+  keywords: [silver, key, hannah]
+  short: a silver key
+  long: A key of brilliant silver is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:125:obj:12562":
+  type: food
+  keywords: [bread, pound]
+  short: a pound of bread
+  long: A large pound of bread is here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 1
+  level: 0
+
+"tba:125:obj:12567":
+  type: food
+  keywords: [beef, cutlet]
+  short: a beef cutlet
+  long: A big beef cutlet is here, waiting to be eaten.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 2
+  cost: 200
+  rent: 20
+  level: 0
+
+"tba:125:obj:12568":
+  type: container
+  keywords: [Hannah, pack]
+  short: a pack
+  long: A pack with the seal of Hannah is here.
+  wear: [take]
+  values:
+    capacity: 80
+    lock_flags: 0
+    corpse: false
+  weight: 9
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:125:obj:12569":
+  type: other
+  keywords: [bandages]
+  short: some bloody bandages
+  long: A few strips of blooded cloth lies here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:125:obj:12570":
+  type: scroll
+  keywords: [recall, scroll]
+  short: a scroll of recall
+  long: A fine looking scroll lies on the grouns here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [12, 42, -1, -1]
+  weight: 1
+  cost: 150
+  rent: 14
+  level: 0
+
+"tba:125:obj:12599":
+  type: armor
+  keywords: [oaken, boots]
+  short: a pair of oaken boots
+  long: A pair of heavy oaken boots are here.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 12
+  cost: 60
+  rent: 6
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2

@@ -1,0 +1,142 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 345.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:345:mob:34500":
+  keywords: [groundskeeper, keeper]
+  short: the old grounds keeper
+  long: An old grounds keeper works here.
+  description: >
+    The man is hunched over from years of hard work. His skin hangs off his already skinny body. His
+    eyes shown with he light of madness. He wears denim overalls with a dirt stained white t-shirt.
+  level: 6
+  sex: male
+  alignment: -350
+  flags: [sentinel, stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 10d5+60
+    damage: 2d4+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 1000
+  position:
+    load: standing
+    default: standing
+
+"tba:345:mob:34501":
+  keywords: [ghost]
+  short: the ghost
+  long: A ghost floats here looking for its next victim.
+  description: >
+    Transparent and hard to see, the ghost seems must have been a patient at the nearby asylum. Already
+    insane in life, death has turned it into an unrelenting killer.
+  level: 7
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone, no_charm, no_sleep]
+  affects: [sense_life, no_track]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 10d7+70
+    damage: 2d5+1
+  gold: 100
+  exp: 3000
+  position:
+    load: standing
+    default: standing
+
+"tba:345:mob:34502":
+  keywords: [doctor, man, red]
+  short: the bloody doctor
+  long: A doctor with a bloody lab coat stands here.
+  description: >
+    The doctor is a tall lanky man. His face is stubbly and his hair unkempt. His eyes are sunken in to
+    his skull and shown with the madness that affected some many others in this place. Perhaps the most
+    startling aspect of him is his white lab coat that is now almost red wit the stains of blood.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory, no_summon]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: stab
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:345:mob:34503":
+  keywords: [mental, patient]
+  short: the mental patient
+  long: A mental patient shuffles along here.
+  description: >
+    The person before is dressed in a ragged hospital gown, dirty from being worn for so long. The skin
+    is a pale white from the lack of sun and the stench coming from him is horrendous at best. Unable to
+    figure out what he is doing, he is doomed to roam these halls forever. Even death is not a barrier
+    for his suffering.
+  level: 6
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy, no_charm]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:345:mob:34504":
+  keywords: [operation, victim]
+  short: the operation victim
+  long: The operation victim stands here.
+  description: >
+    This man is bleeding severely from an incision in his chest. While he is losing blood a fire burns
+    in his eyes. Having his mind completely shattered by the ordeal that he has just gone through, he
+    rages against anyone foolish enough to get in his way.
+  level: 9
+  sex: male
+  alignment: -750
+  flags: [aggressive, stay_zone, memory, no_charm]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:345:mob:34505":
+  keywords: [tortured, patient]
+  short: the tortured patient
+  long: A tortured patient stands here.
+  description: >
+    The person before has been so horribly disfigured by the 'treatments' at this facility that it is
+    no longer possible to tell if they are a man or a woman. It wears a tattered hospital gown and cowers
+    in fear at almost everything.
+  level: 6
+  sex: neutral
+  alignment: -350
+  flags: [stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing

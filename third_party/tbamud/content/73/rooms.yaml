@@ -1,0 +1,820 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 73.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:73:room:7300":
+  name: Cave Entrance
+  description: >
+    You are standing in the cave entrance.  It is very dark down here.  There is writing on the wall. 
+    There is an exit to the north.  A stairway leads up.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7301
+      look: To the north you can see a small tunnel.
+    up:
+      to: tba:71:room:7102
+      look: You can see the stairs going up into darkness.
+      door:
+        keywords: [door]
+        kind: pickproof
+  extras:
+  - keywords: [writing, wall]
+    text: The writing says 'BEWARE adventurer!  '
+
+"tba:73:room:7301":
+  name: Cave Tunnel
+  description: >
+    You are walking in a tunnel.  It is very cold.  You can feel the presence of a living thing...
+    SOMEWHERE.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7302
+      look: To the north you can see the tunnel continuing.
+    south:
+      to: tba:73:room:7300
+      look: To the south tunnel continuing.
+
+"tba:73:room:7302":
+  name: Cave Room
+  description: You are standing in a room.  It is much cooler now.  The walls are glowing.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:73:room:7303
+      look: To the east you see the tunnel going downwards.
+    south:
+      to: tba:73:room:7301
+      look: To the south you see a dark cave tunnel.
+    west:
+      to: tba:73:room:7321
+
+"tba:73:room:7303":
+  name: The Cave T-Cross
+  description: >
+    You are standing in a mudlike substance.  The smell here is awful, it is rotten.  To the west you
+    can see some light.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7304
+      look: To the east the tunnel still goes downwards.
+    south:
+      to: tba:73:room:7308
+    west:
+      to: tba:73:room:7302
+      look: You can see some light to the west.
+  extras:
+  - keywords: [worms]
+    text: The worms are purple.  They do not look edible.
+  - keywords: [mud]
+    text: When you examine the mud, you notice small worms crawling around.
+
+"tba:73:room:7304":
+  name: The Cave Turning-Point
+  description: >
+    The mud is getting deeper.  You are wondering, 'Would it be an idea to leave, before I disappear?' 
+    To the south you notice a flat round stone is blocking the way.  To the west you can see mud.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:73:room:7305
+      look: You can see an opening behind the stone.
+      door:
+        keywords: [stone, flat, round]
+        kind: door
+        reset: closed
+    west:
+      to: tba:73:room:7303
+  extras:
+  - keywords: [flat, round, stone]
+    text: >
+      The stone looks very uninteresting.  BUT as you are about to turn away, you see a strip of light
+      coming through a small hole.  Conclusion: The stone is moveable.
+
+"tba:73:room:7305":
+  name: The Secret Room
+  description: >
+    There is dust all over the place.  It looks like nobody has been here for ages.  In the middle of
+    the room you see a socket with a crystal globe. The globe glows with a pulsing light.  To the north
+    you see a stone door. To the south you see a gray block.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:73:room:7304
+      look: You see a round stone door.
+      door:
+        keywords: [door, round, stone]
+        kind: door
+        reset: closed
+    south:
+      to: tba:73:room:7306
+      look: You see a gray block.
+      door:
+        keywords: [block, gray]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [crystal, globe]
+    text: >
+      The crystal globe is glowing with a pulsing light.  It looks like there is smoke inside it.
+  - keywords: [socket]
+    text: The socket looks like the work of a dwarf.  It is VERY beautiful.
+
+"tba:73:room:7306":
+  name: The Mudhole
+  description: >
+    You are standing in a lot of mud.  The mud goes to your chest.  You feel the presence of something
+    IN the mud.  The only obvious exit is to the west.
+  sector: water_swim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7305
+      look: You can see nothing at all.
+      door:
+        keywords: [block, gray]
+        kind: door
+        reset: closed
+    west:
+      to: tba:73:room:7307
+
+"tba:73:room:7307":
+  name: A Tunnel
+  description: The mud goes to your knees.  Otherwise the tunnel looks very normal.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7308
+    east:
+      to: tba:73:room:7306
+      look: You can see a mudhole.
+    south:
+      to: tba:73:room:7309
+
+"tba:73:room:7308":
+  name: The Long Tunnel
+  description: >
+    Here there is almost no mud, as you stand at the top of a small rock.  Just beside you there are a
+    sign which says 'WARNING!  The worms are dangerous!'
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7303
+      look: You can see a lot of mud... Yuck!
+    south:
+      to: tba:73:room:7307
+      look: The tunnel goes a little downwards.
+
+"tba:73:room:7309":
+  name: The Hot Room
+  description: >
+    You are very surprised, as this room for a change are hot instead of cold.  To the north it goes
+    downwards into some mud.  There are also an exit to the west.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7307
+      look: You see a lot of mud.
+    west:
+      to: tba:73:room:7310
+      look: You see a entrance to a small room.
+
+"tba:73:room:7310":
+  name: The Small Room
+  description: >
+    As you look around you notice a small statue.  There are exits to the west and to the east.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7309
+      look: It is pitch dark out there.
+    west:
+      to: tba:73:room:7311
+      look: You see a VERY long hallway.
+  extras:
+  - keywords: [small, statue]
+    text: >
+      This is a statue of a imp, pointing to the west.  The imp looks like a man with horns and a tail.
+
+"tba:73:room:7311":
+  name: The Stalagmite Cave
+  description: >
+    You are standing in a stalagmite cave.  Water is dripping from the walls. It is very cold in here.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7314
+    east:
+      to: tba:73:room:7310
+      look: You see a long hallway, and some mud.
+    south:
+      to: tba:73:room:7312
+  extras:
+  - keywords: [stalagmite]
+    text: The stalagmites are very tall, and looks very beautiful.
+
+"tba:73:room:7312":
+  name: The Stalagmite Tunnel
+  description: >
+    You has entered a small tunnel.  Here it is quite dry.  Maybe it would be a good idea to rest here.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7311
+      look: You can see a small cave to the north.
+    west:
+      to: tba:73:room:7313
+
+"tba:73:room:7313":
+  name: The Spongy Room
+  description: You definitely do NOT like this area.  It is very dank, and most of the room is wet.
+  sector: forest
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:73:room:7312
+    west:
+      to: tba:73:room:7345
+
+"tba:73:room:7314":
+  name: The Stalagmite T-Cross
+  description: You are standing in a cross.  To the north you can see some light. Otherwise it is dark.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:73:room:7317
+      look: You see some light ahead.
+    east:
+      to: tba:73:room:7315
+    south:
+      to: tba:73:room:7311
+
+"tba:73:room:7315":
+  name: The Blind End Room
+  description: This room is obviously a blind end.  To the north you see a primitive picture.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7316
+      look: >
+        You see a primitive picture of some people dancing around a huge sun.  The sun is about 7 feet in
+        diameter, which shows the size of the picture.
+      door:
+        keywords: [sun]
+        kind: door
+        reset: closed
+    west:
+      to: tba:73:room:7314
+  extras:
+  - keywords: [primitive, picture]
+    text: >
+      You see some people dancing around a huge sun.  The sun is about 7 feet in diameter, which shows
+      the size of the picture.
+
+"tba:73:room:7316":
+  name: The Treasure Room
+  description: >
+    This room is richly ornamented.  The walls have been carved to show people dancing around a moon
+    which is drawn on the floor.  It looks very old, and it is very dusty.  To the south you see the back
+    side of a secret door.
+  sector: city
+  flags: [dark, indoors, private]
+  exits:
+    south:
+      to: tba:73:room:7315
+      look: You can see a picture with some people crawling around a huge moon.
+      door:
+        keywords: [moon, door]
+        kind: door
+        reset: closed
+
+"tba:73:room:7317":
+  name: The Square Lair
+  description: >
+    You are standing in the south-east part of the lair.  You can see a skeleton lying in the corner.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:73:room:7318
+      look: Another part of the lair.
+    south:
+      to: tba:73:room:7314
+    west:
+      to: tba:73:room:7320
+      look: Another part of the lair.
+  extras:
+  - keywords: [skeleton]
+    text: It looks like a adventurer who wasn't lucky.  You'd better watch out...
+
+"tba:73:room:7318":
+  name: The Square Lair
+  description: You are standing in the north-east part of the lair. You see a sign on the wall.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7321
+      look: You see a wooden door.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    south:
+      to: tba:73:room:7317
+      look: Another part of the lair.
+    west:
+      to: tba:73:room:7319
+      look: Another part of the lair.
+  extras:
+  - keywords: [sign, wall]
+    text:
+    - The sign says 'Gods of War I call you, my sword is by my side,
+    - I seek a light free from all false pride'
+    - Reyemle Grug...
+
+"tba:73:room:7319":
+  name: The Square Lair
+  description: >
+    You are standing in the north-west part of the lair.  Here there is another sign.  There is an exit
+    from the lair to the north.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7322
+      look: You see a small tunnel leading north.
+    east:
+      to: tba:73:room:7318
+      look: Another part of the lair.
+    south:
+      to: tba:73:room:7320
+      look: Another part of the lair.
+  extras:
+  - keywords: [sign]
+    text:
+    - The sign says 'I'm wandering around in a everlasting tale,
+    - seeking the light to regain my pride
+    - Corama...
+
+"tba:73:room:7320":
+  name: The Lair End
+  description: >
+    You can see a table in front of you.  It is very dusty.  Five skeletons are sitting around the
+    table.  Exits are north and east.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7319
+      look: The northern part of the lair.
+    east:
+      to: tba:73:room:7317
+      look: The eastern part of the lair.
+  extras:
+  - keywords: [dragon, statue]
+    text: >
+      It looks like a silver dragon.  It is nailed onto the table.  The dragon sits on a red dragon that
+      looks dead.  But the eyes of the red dragon are glowing, pulsating red.  You feel drained.
+  - keywords: [skeleton, skeletons]
+    text: They've obviously been killed somehow, but it doesn't look like it was by sword or club.
+  - keywords: [table]
+    text: On the table there is dust, in the center there is a small statue of a Dragon sleeping.
+
+"tba:73:room:7321":
+  name: The East Tunnel
+  description: >
+    You are standing in dark tunnel, the exits are east and west.  To the west you see a wooden door.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:73:room:7302
+      look: You can see a muddy tunnel.
+    west:
+      to: tba:73:room:7318
+      look: You can see a wooden door.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+
+"tba:73:room:7322":
+  name: The North Tunnel
+  description: You are standing in a dark tunnel, it leads upwards.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7323
+      look: The dark tunnel continues.
+    south:
+      to: tba:73:room:7319
+      look: You can see the lair.
+    west:
+      to: tba:73:room:7336
+      look: You can see a cave entrance.
+
+"tba:73:room:7323":
+  name: The L-Shaped Room
+  description: >
+    You are standing in deep darkness.  To the south there is a small exit. To the east you can see a
+    gaping hole.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7324
+    south:
+      to: tba:73:room:7322
+
+"tba:73:room:7324":
+  name: The Circular Hall
+  description: >
+    You are standing in round hall.  To the north, east and south you can see a stone head hanging on
+    the walls.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7324
+      look: You see a red dragon's head hanging on the wall.
+      door:
+        keywords: [head, red]
+        kind: pickproof
+        reset: locked
+    east:
+      to: tba:73:room:7325
+      look: You see a green dragon's head hanging on the wall.
+      door:
+        keywords: [head, green]
+        kind: door
+        reset: closed
+    south:
+      to: tba:73:room:7324
+      look: You see a blue dragon's head hanging on the wall.
+      door:
+        keywords: [head, blue]
+        kind: pickproof
+        reset: locked
+    west:
+      to: tba:73:room:7323
+      look: You see a room far away.
+  extras:
+  - keywords: [blue]
+    text: This looks like a good dragon.
+  - keywords: [red]
+    text: This looks like a neutral dragon.
+  - keywords: [green]
+    text: This looks like an evil dragon.
+  - keywords: [head, heads]
+    text: >
+      When you study the faces of the heads you see that they are faces of dragons. The face to the north
+      is red, the face to the east is green, and the face to the south is blue.
+
+"tba:73:room:7325":
+  name: A Dusty Tunnel
+  description: >
+    You are standing in dust.  This place has not been touched for a long time. Otherwise it is quite
+    boring here, looks like a place to rest!  To the west you see the outline of a door.  A tunnel leads
+    to the east.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:73:room:7326
+      look: You see a tunnel which leads downwards.  It is quite dark.
+    west:
+      to: tba:73:room:7324
+      look: You can see the outline of a door.  Just like in the description!
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:73:room:7326":
+  name: The Crossing
+  description: >
+    You are standing in a crossing of hallways.  You can leave this place in every direction, except up
+    and down.  In the dust you notice strange footprints.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7331
+    east:
+      to: tba:73:room:7330
+    south:
+      to: tba:73:room:7327
+    west:
+      to: tba:73:room:7325
+  extras:
+  - keywords: [footprints, foot]
+    text: You have never seen this kind of footprint before!
+
+"tba:73:room:7327":
+  name: The L-Shaped Room
+  description: >
+    You are standing in a L-shaped room.  You can hear noises from the long tunnel to the east.  You
+    feel very afraid! A sign is hanging on the wall.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7326
+    east:
+      to: tba:73:room:7328
+  extras:
+  - keywords: [sign]
+    text: "The sign says: DANGER!!"
+
+"tba:73:room:7328":
+  name: The Dragon's Lair
+  description: >
+    You can see burned walls, the floorstones are fiery red.  All kinds of bones are scattered all over
+    the floor.  On the walls you can see some burned shapes.  You smell burnt flesh.  Two creatures are
+    half melted into the floor.
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:73:room:7329
+      look: You can see a long tunnel.
+    west:
+      to: tba:73:room:7327
+      look: You can see nothing but darkness.
+
+"tba:73:room:7329":
+  name: The Burnt Room
+  description: >
+    You are in a room, which once has at one time been quite burnt.  There is writing on the wall.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:73:room:7328
+      look: You can see a red glow...
+    west:
+      to: tba:73:room:7330
+  extras:
+  - keywords: [writing]
+    text: "The writing says: DANGER"
+
+"tba:73:room:7330":
+  name: The Windy Tunnel
+  description: You are standing in a tunnel.  Above you, you can feel a breeze.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7329
+      look: It is too dark to tell.
+    west:
+      to: tba:73:room:7326
+  extras:
+  - keywords: [breeze]
+    text: The breeze comes from a hole above you.  NO way to get up there.
+
+"tba:73:room:7331":
+  name: The Glittering Room
+  description: >
+    This room is very bright.  On the walls you can see some silver.  Exits are west, east and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:73:room:7332
+    south:
+      to: tba:73:room:7326
+    west:
+      to: tba:73:room:7333
+  extras:
+  - keywords: [glitter, walls, silver]
+    text: The glittering silver looks like it is INSIDE the walls.
+
+"tba:73:room:7332":
+  name: The Secret Passageway
+  description: You have entered a tiny room.  There is only an exit to the west.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:73:room:7331
+      look: You can see a light to the west.
+
+"tba:73:room:7333":
+  name: The End Of Long Tunnel
+  description: >
+    You are at a end of a long tunnel.  Right in front of you, you can see a gray mass.  To the east
+    you can see a tremendously long tunnel, but you know that, you were just there.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7331
+      look: A long tunnel.  JUST like in the description!
+    west:
+      to: tba:73:room:7334
+      look: A gray mass is blocking the way.
+      door:
+        keywords: [mass, gray]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [gray, mass]
+    text: The mass is nothing but a mass, but it is quite suspicious!
+
+"tba:73:room:7334":
+  name: The Stair-Room
+  description: >
+    You are standing in a small room.  Drawings of faces in pain are on the walls.  You can feel that
+    darkness is ruling the place.  There is one exit: south.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:73:room:7335
+      look: Nothing but darkness...
+
+"tba:73:room:7335":
+  name: A Dark Tunnel
+  description: >
+    You are standing in a dark tunnel.  It continues to the north and to the south.  Bones are spread
+    on the floor.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7334
+    south:
+      to: tba:73:room:7336
+  extras:
+  - keywords: [bones, bone]
+    text: It looks like bones of a human.
+
+"tba:73:room:7336":
+  name: The Entrance To The Lair
+  description: >
+    The smell here is awful.  To the south you can see some smoke.  A tunnel leads north and east.
+  sector: field
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:73:room:7335
+    east:
+      to: tba:73:room:7322
+      look: A small cave is to the east.
+    south:
+      to: tba:73:room:7337
+      look: The only thing you can see is smoke.
+
+"tba:73:room:7337":
+  name: The North-Eastern Part Of The Basilisk's Cave
+  description: >
+    It is hard to see here because of the smoke.  To the north you can barely see a small tunnel. 
+    Other exits are to the south and to the west.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7336
+    south:
+      to: tba:73:room:7338
+    west:
+      to: tba:73:room:7339
+
+"tba:73:room:7338":
+  name: The South-Eastern Part Of The Basilisk's Cave
+  description: >
+    There is a very small hole in wall from which the smoke is coming from. Otherwise it is pitch
+    black.  Exits are north and west.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7337
+      look: You can see nothing but smoke.
+    west:
+      to: tba:73:room:7340
+      look: You can see nothing but smoke.
+  extras:
+  - keywords: [hole, small]
+    text: It seems to be a small hole, about one foot in diameter.
+
+"tba:73:room:7339":
+  name: The North-Western Part Of The Basilisk's Cave
+  description: >
+    You can see some hay spread on the floor.  The smell is awful here, and it makes you feel sick. 
+    This place where the Basilisk sleeps.  Watch out... maybe it is not far from here...
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:73:room:7337
+    south:
+      to: tba:73:room:7340
+  extras:
+  - keywords: [hay]
+    text: The hay is very dirty.  The smell of it makes you feel sick.
+
+"tba:73:room:7340":
+  name: The South-Western Part Of The Basilisk's Cave
+  description: You can see nothing but smoke.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7339
+    east:
+      to: tba:73:room:7338
+    south:
+      to: tba:73:room:7341
+
+"tba:73:room:7341":
+  name: The Small Cave
+  description: >
+    You are standing in small cave.  You can see some light at the end.  Exits are north and south.
+  sector: field
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:73:room:7340
+      look: You can see only smoke.
+    south:
+      to: tba:73:room:7342
+      look: You can see a blue glow.  And you feel a fresh breeze... ahhhh...
+
+"tba:73:room:7342":
+  name: The Northern End Of The Pool
+  description: >
+    You have wet feet, you are standing in water.  The water looks calm.  You can see that it is a big
+    lake.  Light seeps from the water.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:73:room:7341
+      look: You can see a small cave.
+    east:
+      to: tba:73:room:7343
+      look: You can see more water.
+    south:
+      to: tba:73:room:7344
+      look: You can see water.
+
+"tba:73:room:7343":
+  name: The Pool
+  description: You are swimming in water.  It is getting deep here.  It is also dark in this end.
+  sector: water_swim
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:73:room:7345
+      look: You can see some bubbles in the water.
+    west:
+      to: tba:73:room:7342
+      look: You see calm water.
+
+"tba:73:room:7344":
+  name: The South End Of The Pool
+  description: You standing in water up to your neck!  You can only see water.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:73:room:7342
+      look: You can see calm water.
+    east:
+      to: tba:73:room:7345
+      look: To dark to tell, but you can feel something nearby.
+
+"tba:73:room:7345":
+  name: The Pool
+  description: You are swimming in DARKNESS.  You feel something touching your right leg.
+  sector: water_swim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:73:room:7343
+      look: To dark to tell.
+    east:
+      to: tba:73:room:7313
+      look: You can feel a warm breeze.
+    west:
+      to: tba:73:room:7344

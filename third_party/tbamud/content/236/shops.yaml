@@ -1,0 +1,133 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 236.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:236:shop:23601":
+  keeper: tba:236:mob:23601
+  rooms: [tba:236:room:23604]
+  products:
+  - tba:236:obj:23601
+  profit:
+    buy: 1.6
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I sell what my master and I make. I don't want your petty items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:236:shop:23602":
+  keeper: tba:236:mob:23602
+  rooms: [tba:236:room:23605, tba:236:room:23604]
+  profit:
+    buy: 2.3
+    sell: 0.9
+  messages:
+    no_such_item: "%s My master doesn't make those."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't buy!"
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:236:shop:23603":
+  keeper: tba:236:mob:23603
+  rooms: [tba:236:room:23606]
+  profit:
+    buy: 3.7
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't buy !"
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:236:shop:23604":
+  keeper: tba:236:mob:23609
+  rooms: [tba:236:room:23612]
+  buys:
+  - type: treasure
+    keywords: "[^foil & gold|titanium|iron] & METAL"
+  profit:
+    buy: 4.0
+    sell: 0.7
+  messages:
+    no_such_item: "%s That is not one of the items I manufacture."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s Sorry - I can't use that for anything, can I ?"
+    shop_cannot_afford: "%s That's to much. I don't have that kind of gold."
+    you_cannot_afford: "%s Leave - before I slap you out of here."
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s If you give me that, I'll give you %d coins."
+  temper: 0
+  flags: 6
+  trade_with: 2
+  hours:
+  - open: 8
+    close: 20
+
+"tba:236:shop:23605":
+  keeper: tba:236:mob:23610
+  rooms: [tba:236:room:23615]
+  buys:
+  - type: treasure
+    keywords: "[gold|titanium|iron] & METAL"
+  profit:
+    buy: 4.0
+    sell: 0.8
+  messages:
+    no_such_item: "%s WHAT DID YOU SAY ?!?"
+    you_dont_have_it: "%s SORRY, DIDN'T HEAR YOU. CAN YOU REPEAT THAT ?"
+    does_not_buy: "%s HEY - YOU THINK I'M STUPID ?"
+    shop_cannot_afford: "%s HUH ?"
+    you_cannot_afford: "%s A WHAT ? I DIDN'T QUITE GET THAT..."
+    bought: "%s GIVE ME %d COINS AND ITS YOURS."
+    sold: "%s I'LL TAKE THAT - HERE'S %d COINS FOR YOU."
+  temper: 0
+  flags: 2
+  trade_with: 2
+  hours:
+  - open: 8
+    close: 20
+
+"tba:236:shop:23606":
+  keeper: tba:236:mob:23611
+  rooms: [tba:236:room:23616]
+  buys:
+  - type: other
+    keywords: rock
+  - type: treasure
+    keywords: ruby | emerald
+  - type: treasure
+    keywords: gold & foil
+  - type: other
+    keywords: stone | headstone
+  profit:
+    buy: 2.6
+    sell: 0.97
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 2
+  trade_with: 2

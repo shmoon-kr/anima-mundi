@@ -1,0 +1,138 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 319.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:319:obj:31900":
+  type: treasure
+  keywords: [tooth, shark]
+  short: a shark's tooth
+  long: A shark's tooth has been left here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:319:obj:31901":
+  type: armor
+  keywords: [shell, shield]
+  short: a deep green shell
+  long: A deep green shell lies here.
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 12
+  cost: 100
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: 25
+  - apply: str
+    modifier: -2
+
+"tba:319:obj:31902":
+  type: worn
+  keywords: [gill, sea, elf]
+  short: the gill of a sea elf
+  long: The severed gill of a sea elf  has been dropped here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:319:obj:31903":
+  type: treasure
+  keywords: [tusk, walrus]
+  short: the tusk of a walrus
+  long: The tusk of a walrus has been dropped here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 300
+  rent: 0
+  level: 1
+
+"tba:319:obj:31904":
+  type: worn
+  keywords: [whiskers, seal]
+  short: a seal's whiskers
+  long: A seal's whiskers have been cut off and left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 11
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: mana
+    modifier: 15
+
+"tba:319:obj:31905":
+  type: treasure
+  keywords: [conch, shell]
+  short: a beautiful conch shell
+  long: A beautiful conch shell has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 500
+  rent: 0
+  level: 1
+
+"tba:319:obj:31906":
+  type: armor
+  keywords: [bracelet, seashell]
+  short: a seashell bracelet
+  long: A beautiful seashell bracelet has been dropped here.
+  wear: [take, wrist]
+  values:
+    armor: 4
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 24
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:319:obj:31907":
+  type: other
+  keywords: [foam]
+  short: some foam
+  long: A bit of foam froths on the surface of the water.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:319:obj:31908":
+  type: food
+  keywords: [fish, dead]
+  short: a dead fish
+  long: A dead fish floats on the water.
+  wear: [take, hold]
+  values:
+    hours: 2
+    poisoned: true
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 1

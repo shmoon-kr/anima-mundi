@@ -1,0 +1,902 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 310.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:310:room:31000":
+  name: Aten's Zone Description Room
+  description:
+  - >
+    Graye Area Written March 1994 Graye consists of a forested area, a cliff to scale, a small wooded
+    area around a town, a small town, a small castle, some underground passageways, and a bunch of
+    mid-level mobs and eq.
+  - >
+    Enclosed is an area I wrote back in my mudding days; they are designed for circle code, but with
+    some modifications can probably be integrated into whatever kind of mud you're running.
+  - >
+    These areas are FREE- however, if you use them: 1. Feel free to make whatever modifications you
+    need, change mobs, objects, room descriptions etc.- but please make sure that signs and author
+    references are unmodified and readable by players. 2. Please send me an e-mail message if you do use them, I'd
+    just like to have some idea of where they end up (please include mud site)- my address is
+    wjp@hopper.unh.edu until Sept 1996 3. If you redistribute these areas, please make sure this README file goes
+    with them :)
+  - Bill Pelletier wjp@hopper.unh.edu Aten/Talisman of GenericMUD
+  sector: inside
+
+"tba:310:room:31001":
+  name: The attachment room
+  description: This room can be used to attach this area to da mud.
+  sector: inside
+
+"tba:310:room:31002":
+  name: The Great Field
+  description: >
+    You are standing in a great field of tall grass.  The smell of fresh dirt and sunlight surrounds
+    you.  The air is filled with the sound of chirping birds happily building their nests in the depths of
+    the knotted grass.  A wagon trail runs in an east-south direction.
+  sector: field
+  exits:
+    west:
+      to: tba:310:room:31003
+
+"tba:310:room:31003":
+  name: The Forest's Edge
+  description: >
+    The grassland fades to spotted scrub here, and finally merges into a great line of trees.  To the
+    far north a stormcloud hangs in the air ominously, but strangely enough it is still quite pleasant
+    out.  Crickets chirp merrily, and the sun's rays warm your skin.  The wagon trail leads eastwards back
+    into the grassland, and dissapears westwards into the forest.
+  sector: forest
+  exits:
+    east:
+      to: tba:310:room:31002
+    west:
+      to: tba:310:room:31004
+
+"tba:310:room:31004":
+  name: Entrance to the Forest of Graye
+  description: >
+    The trail passes into the shade here, and the temperature drops quite suddenly.  Great broad leaf
+    trees gather the descending sunlight, and cover the leaf-strewn forest floor with dappled sunlight. 
+    The wagon trail becomes much wider here, showing signs of recent heavy use.  The wagon trail runs from
+    west to east here, and it looks possible to venture into the forest to the north and south.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31006
+    east:
+      to: tba:310:room:31003
+    south:
+      to: tba:310:room:31007
+    west:
+      to: tba:310:room:31011
+
+"tba:310:room:31005":
+  name: The Forest of Graye
+  description: You in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    south:
+      to: tba:310:room:31006
+    west:
+      to: tba:310:room:31009
+
+"tba:310:room:31006":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31005
+    south:
+      to: tba:310:room:31004
+    west:
+      to: tba:310:room:31010
+
+"tba:310:room:31007":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31004
+    south:
+      to: tba:310:room:31008
+    west:
+      to: tba:310:room:31012
+
+"tba:310:room:31008":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31007
+    west:
+      to: tba:310:room:31013
+
+"tba:310:room:31009":
+  name: The Forest of Graye
+  description: >
+    You are in a hardwood forest, walking through noisy leaves.  There is a sheer cliff face to the
+    west, rising up above the forest.  There is a sign nailed neatly on the cliff wall.
+  sector: forest
+  exits:
+    east:
+      to: tba:310:room:31005
+    south:
+      to: tba:310:room:31010
+  extras:
+  - keywords: [cliff, sheer, face]
+    text: The face of the cliff seems impossible to scale.
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign reads:
+        ******************************
+        *                            *
+        *       The Graye Area       *
+        *         Written By:        *
+        *      Aten of GenericMUD    *
+        *         April 1994         *
+        *                            *
+        *                            *
+        *                            *
+        ******************************
+
+"tba:310:room:31010":
+  name: The Forest of Graye
+  description: >
+    You are in a hardwood forest, walking through noisy leaves.  There is a sheer cliff face to the
+    west, rising above the forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31009
+    east:
+      to: tba:310:room:31006
+    south:
+      to: tba:310:room:31011
+  extras:
+  - keywords: [cliff, sheer, face]
+    text: The face of the cliff seems impossible to scale.
+
+"tba:310:room:31011":
+  name: The Forest of Graye
+  description: >
+    You are in a hardwood forest, walking through noisy leaves.  The wagon trail ends abruptly here.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31010
+    east:
+      to: tba:310:room:31004
+    south:
+      to: tba:310:room:31012
+    west:
+      to: tba:310:room:31014
+
+"tba:310:room:31012":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31011
+    east:
+      to: tba:310:room:31007
+    south:
+      to: tba:310:room:31013
+    west:
+      to: tba:310:room:31015
+
+"tba:310:room:31013":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31012
+    east:
+      to: tba:310:room:31008
+
+"tba:310:room:31014":
+  name: The Forest of Graye
+  description: >
+    You are in a hardwood forest, walking through noisy leaves.  There is a sheer cliff face to the
+    north, rising above the forest.
+  sector: forest
+  exits:
+    east:
+      to: tba:310:room:31011
+    south:
+      to: tba:310:room:31015
+    west:
+      to: tba:310:room:31017
+  extras:
+  - keywords: [cliff, sheer, face]
+    text: The cliff face seems impossible to scale.
+
+"tba:310:room:31015":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31014
+    east:
+      to: tba:310:room:31012
+    south:
+      to: tba:310:room:31016
+    west:
+      to: tba:310:room:31018
+
+"tba:310:room:31016":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31015
+    east:
+      to: tba:310:room:31013
+    west:
+      to: tba:310:room:31019
+
+"tba:310:room:31017":
+  name: The Forest of Graye
+  description: >
+    You are in a hardwood forest, walking through noisy leaves.  There is a cliff face to the north.
+  sector: forest
+  exits:
+    east:
+      to: tba:310:room:31014
+    south:
+      to: tba:310:room:31018
+    up:
+      to: tba:310:room:31020
+  extras:
+  - keywords: [cliff, face]
+    text: >
+      It seems that if you put your toe right here, and your left hand over here, that you just might be
+      able to climb it.
+
+"tba:310:room:31018":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31017
+    east:
+      to: tba:310:room:31015
+    south:
+      to: tba:310:room:31019
+
+"tba:310:room:31019":
+  name: The Forest of Graye
+  description: You are in a hardwood forest, walking through noisy leaves.
+  sector: forest
+  exits:
+    north:
+      to: tba:310:room:31018
+    east:
+      to: tba:310:room:31016
+
+"tba:310:room:31020":
+  name: The Cliff Wall
+  description: >
+    You inch your way upwards, hand over hand, searching out more footholds. Sweat stings your eyes,
+    and your breathing becomes ragged.  You can still drop safely to the forest floor, or madly continue
+    upwards.
+  sector: mountains
+  exits:
+    up:
+      to: tba:310:room:31021
+    down:
+      to: tba:310:room:31017
+
+"tba:310:room:31021":
+  name: The Overhang
+  description: >
+    You progress upwards is stopped by what appears to be an overhang.  It would be a nice place to
+    stop an rest..  If you weren't underneath it.  You glance around for an alternate path..
+  sector: mountains
+  exits:
+    east:
+      to: tba:310:room:31022
+    down:
+      to: tba:310:room:31020
+
+"tba:310:room:31022":
+  name: Hanging By a Thread
+  description: >
+    As you reach for your next handhold, the rock comes loose and tumbles down, down, down to the
+    ground.  You barely manage to save yourself by clinging desperately to the rock face with your other
+    hand.  Returning back west is out of the question, but you might be able to pull yourself upwards onto a
+    very thin ledge.
+  sector: mountains
+  exits:
+    up:
+      to: tba:310:room:31023
+  extras:
+  - keywords: [ledge, thin]
+    text: The ledge is very narrow, perhaps two feet at it's widest part.
+
+"tba:310:room:31023":
+  name: The Thin Ledge
+  description: >
+    You are standing on a very thin ledge, just wide enough for your feet to stand on it widthwise. 
+    The ledge widens to the west and east.
+  sector: mountains
+  exits:
+    east:
+      to: tba:310:room:31025
+      look: The rocks look kinda unstable over there.
+    west:
+      to: tba:310:room:31024
+      look: The ledge widens considerably over there.
+    down:
+      to: tba:310:room:31025
+      look: I wouldn't try it...
+
+"tba:310:room:31024":
+  name: The Ledge
+  description: >
+    You find yourself on a very wide ledge.  You could stretch out here and take a nap if you wanted
+    too.  To the south you get a fantastic view of the entire forest.  There is perhaps another forty feet
+    to the top of the cliff, all of which appears to be an easy climb.
+  sector: mountains
+  exits:
+    east:
+      to: tba:310:room:31023
+    up:
+      to: tba:310:room:31026
+
+"tba:310:room:31025":
+  name: Oops.
+  description: >
+    "Aaarrrggg!  ", you scream as you plummet toward the earth.  The ground rushes up at you at a
+    dizzying pace, and you prepare for impact.  Suddenly, there is a flash of blinding light, and you feel
+    yourself floating in white light.  You notice a glint in Aten's eye.  "Your time has not yet come..  ",
+    he utters.
+  sector: inside
+
+"tba:310:room:31026":
+  name: Top of the Cliff
+  description: >
+    You reach the top of the cliff and struggle to your feet.  You spend several moments just turning
+    around, taking in all that you see.  To the south and east you see the forest sweeping outwards from
+    the cliff wall, and to the north you see a clearing surrounding a small town.
+  sector: field
+  exits:
+    north:
+      to: tba:310:room:31028
+    down:
+      to: tba:310:room:31024
+
+"tba:310:room:31027":
+  name: The Clearing
+  description: >
+    You are in a wide clearing between the city walls and the forest.  You see men atop the walls
+    pointing at you and gesturing frantically.
+  sector: field
+  exits:
+    north:
+      to: tba:310:room:31030
+    east:
+      to: tba:310:room:31028
+    west:
+      to: tba:310:room:31033
+      look: The forest looks VERY dark.
+
+"tba:310:room:31028":
+  name: The Clearing
+  description: >
+    You are in a wide clearing between the city walls and the forest.  You see men atop the walls
+    pointing at you and gesturing frantically.
+  sector: field
+  exits:
+    north:
+      to: tba:310:room:31031
+    east:
+      to: tba:310:room:31029
+    south:
+      to: tba:310:room:31026
+    west:
+      to: tba:310:room:31027
+
+"tba:310:room:31029":
+  name: The Clearing
+  description: >
+    You are in a wide clearing between the city walls and the forest.  You see men atop the walls
+    pointing at you and gesturing frantically.
+  sector: field
+  exits:
+    north:
+      to: tba:310:room:31032
+    east:
+      to: tba:310:room:31036
+    west:
+      to: tba:310:room:31028
+
+"tba:310:room:31030":
+  name: The Clearing
+  description: >
+    You are in a wide clearing between the city walls and the forest.  You see men atop the walls
+    pointing at you and gesturing frantically.
+  sector: field
+  exits:
+    south:
+      to: tba:310:room:31027
+    west:
+      to: tba:310:room:31034
+      look: The forest looks VERY dark.
+
+"tba:310:room:31031":
+  name: Entrance to the City of Graye
+  description: >
+    You are standing before the great gate of Graye.  Crimson plumed soldiers raise the portcullis and
+    urge you the enter quickly.
+  sector: field
+  exits:
+    north:
+      to: tba:310:room:31037
+      look: Looks like safety.
+
+"tba:310:room:31032":
+  name: The Clearing
+  description: >
+    You are in a wide clearing between the city walls and the forest.  You see men atop the walls
+    pointing at you and gesturing frantically.
+  sector: field
+  exits:
+    east:
+      to: tba:310:room:31035
+      look: The forest look VERY dark.
+    south:
+      to: tba:310:room:31029
+
+"tba:310:room:31033":
+  name: The Demon's Wood
+  description: >
+    You find yourself among the twisted, gnarled trunks of giant thorn trees. Mist covers the forest
+    floor and everything is completely silent.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31034
+    east:
+      to: tba:310:room:31027
+      look: Safety!
+
+"tba:310:room:31034":
+  name: The Demon's Wood
+  description: >
+    You find yourself among the twisted, gnarled trunks of giant thorn trees. Mist covers the forest
+    floor and everything is completely silent.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:310:room:31030
+      look: Safety!
+    south:
+      to: tba:310:room:31033
+
+"tba:310:room:31035":
+  name: The Demon's Wood
+  description: >
+    You find yourself among the twisted, gnarled trunks of giant thorn trees. Mist covers the forest
+    floor, and everything is completely silent.
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:310:room:31036
+    west:
+      to: tba:310:room:31032
+      look: Safety!
+
+"tba:310:room:31036":
+  name: The Demon's Wood
+  description: >
+    You find yourself among the twisted, gnarled trunks of giant thorn trees. Mist covers the forest
+    floor, and everything is completely silent.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31035
+    west:
+      to: tba:310:room:31029
+      look: Safety!
+
+"tba:310:room:31037":
+  name: The City Street
+  description: >
+    Simple houses line both sides of the street, and guards are posted at every junction.  There is a
+    castle to the north, and more streets to the east and west.  There is a large sign posted on a wall
+    here.
+  sector: city
+  exits:
+    north:
+      to: tba:310:room:31041
+      look: You see the castle.
+    east:
+      to: tba:310:room:31039
+    west:
+      to: tba:310:room:31038
+  extras:
+  - keywords: [sign, large]
+    text:
+    - "There is a sign posted here, it says:"
+    - >
+      ATTENTION CITIZENS OF GRAYE! Due to the demons beseiging our city, their night-time raids, and
+      their recent kidnapping of King Relnar, we ask all citizens to observe the 7 pm curfew!  Those out on the
+      streets after dark run the risk of being mistaken for the enemy and killed! signed, The Graye Guard
+
+"tba:310:room:31038":
+  name: The City Streets
+  description: >
+    Small houses line both sides of the street, and armed guards are posted at every junction.  You see
+    a small poster pasted to the wall here.
+  sector: city
+  exits:
+    east:
+      to: tba:310:room:31037
+  extras:
+  - keywords: [poster, small]
+    text: >
+      The poster reads: Great rewards will be given to anyone who can rescue the benevolent King Relnar.
+
+"tba:310:room:31039":
+  name: The City Streets
+  description: >
+    Small houses line both sides of the street, and armed guards are posted at every junction.
+  sector: city
+  exits:
+    west:
+      to: tba:310:room:31037
+
+"tba:310:room:31040":
+  name: Inside the Castle
+  description: >
+    Everything here is a mess.  Furniture has been overturned, paintings slashed, even the gold inlaid
+    tiles have been torn up.
+  sector: city
+  exits:
+    east:
+      to: tba:310:room:31041
+
+"tba:310:room:31041":
+  name: Entrance to Relnar's Castle
+  description: >
+    You stand before the ajar gate of the castle.  You here complete silence from inside.  City life
+    continues to bustle around you.
+  sector: city
+  exits:
+    north:
+      to: tba:310:room:31044
+    east:
+      to: tba:310:room:31042
+    south:
+      to: tba:310:room:31037
+    west:
+      to: tba:310:room:31040
+
+"tba:310:room:31042":
+  name: Inside the Castle
+  description: >
+    Everything here is a mess.  Furniture has been overturned, paintings slashed, even the gold inlaid
+    tiles have been torn up.
+  sector: inside
+  exits:
+    west:
+      to: tba:310:room:31041
+
+"tba:310:room:31043":
+  name: Relnar's Study
+  description: >
+    As soon as you enter this room, you feel it.  A magical aura of goodness fills this room, and
+    everything is in a neat and tidy condition.
+  sector: inside
+  exits:
+    east:
+      to: tba:310:room:31044
+    down:
+      to: tba:310:room:31059
+      look: You see some loose floorboards.
+      door:
+        keywords: [floorboards, secret]
+        kind: pickproof
+        key: tba:310:obj:31023
+        reset: locked
+
+"tba:310:room:31044":
+  name: The Throne Room
+  description: King Relnar's throne sits here, empty.  There are rooms to the east and west.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:310:room:31045
+    south:
+      to: tba:310:room:31041
+    west:
+      to: tba:310:room:31043
+    down:
+      to: tba:310:room:31046
+      look: Aha! a secret door!
+      door:
+        keywords: [secret]
+        kind: pickproof
+        key: tba:310:obj:31001
+        reset: locked
+
+"tba:310:room:31045":
+  name: Rymat's Chamber
+  description: >
+    You find yourself in a small undecorated chamber.  There is a bed, desk, and finely crafted
+    washbasin.
+  sector: inside
+  exits:
+    west:
+      to: tba:310:room:31044
+  extras:
+  - keywords: [bed]
+    text: It is a tidy, well made bed.
+  - keywords: [desk]
+    text: It is a bare desk, no drawers or anything.
+  - keywords: [basin, wash, washbasin]
+    text: It is a very nice washbasin.
+
+"tba:310:room:31046":
+  name: The Tunnel
+  description: >
+    The tunnel has a bare dirt floor, and its sides are of rough-hewn rock. Magical torches are set in
+    each side of the tunnel wall, providing light.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:310:room:31047
+    up:
+      to: tba:310:room:31044
+      look: Aha! a secret door!
+      door:
+        keywords: [secret]
+        kind: pickproof
+        key: tba:310:obj:31001
+        reset: locked
+  extras:
+  - keywords: [torch, torches, magical]
+    text: They provide light with a soft magical glow.
+
+"tba:310:room:31047":
+  name: The Tunnel
+  description: The tunnel begins to curve upwards.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:310:room:31048
+    south:
+      to: tba:310:room:31046
+
+"tba:310:room:31048":
+  name: Tunnel's End
+  description: >
+    You reach the end of the tunnel.  Just above you, sunlight peeks around the edge of a trapdoor.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:310:room:31047
+    up:
+      to: tba:310:room:31049
+      look: It is a trapdoor, cleverly hidden.
+      door:
+        keywords: [door, trap, trapdoor]
+        kind: pickproof
+        key: tba:310:obj:31002
+        reset: locked
+
+"tba:310:room:31049":
+  name: The Valley of Demons
+  description: >
+    You emerge from the tunnel, and take a look around you.  To the far south you can just barely see
+    one of the castle's towers over the trees.  To the north, the land sloped downward, and thick, gnarled
+    thorn trees prevent movement to the east or west.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:310:room:31050
+    down:
+      to: tba:310:room:31048
+      look: It is a trapdoor, cleverly hidden.
+      door:
+        keywords: [door, trap, trapdoor]
+        kind: pickproof
+        key: tba:310:obj:31002
+        reset: locked
+
+"tba:310:room:31050":
+  name: The Valley of Demons
+  description: >
+    You are heading deeper and deeper into a valley.  The walls climb up on either side of you, soon
+    becoming nearly vertical.  Your path is slowed by thick choking vegetation grabbing your boots.  The
+    path back to the south disappears in darkness, and your path continues to dip as you head to the north.
+  sector: hills
+  exits:
+    north:
+      to: tba:310:room:31051
+    south:
+      to: tba:310:room:31049
+
+"tba:310:room:31051":
+  name: The Valley Floor
+  description: >
+    You have reached the very bottom of the valley.  The hills climb steeply to the east and west.  A
+    sudden gust of wind brings you the smell of sulphur from the north.
+  sector: hills
+  exits:
+    north:
+      to: tba:310:room:31052
+    south:
+      to: tba:310:room:31050
+
+"tba:310:room:31052":
+  name: The Rift
+  description: >
+    A great yawning rift breaks the earth's surface here.  Tendrils of smoke waft their way upwards,
+    stinging your nose sharply.  You sense that a great evil is near.
+  sector: hills
+  exits:
+    south:
+      to: tba:310:room:31051
+    down:
+      to: tba:310:room:31053
+      look: You can't see much..climable though.
+
+"tba:310:room:31053":
+  name: Inside the Rift
+  description: >
+    There is a ledge here, and a tunnel which leads into the earth.  Far below you, lava churns and
+    bubbles.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31054
+    up:
+      to: tba:310:room:31058
+      look: I wouldn't try to climb that! What if you fell?!
+
+"tba:310:room:31054":
+  name: The Tunnel
+  description: >
+    The tunnel leads north and south, and to either side of you are great cells. Peeking in a smudged
+    window, you see human prisoners, many of them wearing the uniform of the Graye Guard.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31055
+    south:
+      to: tba:310:room:31053
+
+"tba:310:room:31055":
+  name: Irgon's Guard Room
+  description: >
+    You find yourself in a small guard room.  Chambers to the east and west house prisoners, and an
+    ebony door blocks the way north.  Instruments of torture line the walls, and blood is splattered
+    everywhere.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31056
+      look: An ebony door is there.
+      door:
+        keywords: [door, ebony]
+        kind: pickproof
+        key: tba:310:obj:31003
+        reset: locked
+    south:
+      to: tba:310:room:31054
+
+"tba:310:room:31056":
+  name: Scrytin's Chamber of Doom
+  description: >
+    This chamber is COVERED in blood.  The Arch-Demon Scrytin has made this foul place his abode. 
+    There is an Ivory door to the east.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:310:room:31057
+      look: There is an ivory door there.
+      door:
+        keywords: [ivory, door]
+        kind: pickproof
+        key: tba:310:obj:31004
+        reset: locked
+    south:
+      to: tba:310:room:31055
+      look: An ebony door is there.
+      door:
+        keywords: [door, ebony]
+        kind: pickproof
+        key: tba:310:obj:31003
+        reset: locked
+
+"tba:310:room:31057":
+  name: Relnar's Cell
+  description: You stumble into a tiny cell, lit by a single candle.
+  sector: inside
+  exits:
+    east:
+      to: tba:310:room:31043
+    west:
+      to: tba:310:room:31056
+      look: There is an ivory door there.
+      door:
+        keywords: [ivory, door]
+        kind: pickproof
+        key: tba:310:obj:31004
+        reset: locked
+
+"tba:310:room:31058":
+  name: The Lava
+  description:
+  - You slip..
+  - ".."
+  - ".."
+  - hot
+  - Hot
+  - HOT!!
+  sector: inside
+
+"tba:310:room:31059":
+  name: The secret passage
+  description: >
+    You step into the musty passage and let your eyes grow accustomed to the light.  Stone walls block
+    every direction save north.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:310:room:31060
+    up:
+      to: tba:310:room:31043
+
+"tba:310:room:31060":
+  name: The Catacombs
+  description: >
+    You walk along the passage, and notice the remains of all the previous kings of Graye are buried on
+    either side of you.  You can see in the room, but there is no discernable source of light.  The
+    passage continues on to the north and south.
+  sector: inside
+  exits:
+    north:
+      to: tba:310:room:31061
+    south:
+      to: tba:310:room:31059
+
+"tba:310:room:31061":
+  name: The Tomb of Graye
+  description: >
+    You enter a huge circular room.  A guilded gold coffin rests in the center atop at stone tablet. 
+    Treasure is piled high against all the walls.  You have found the final resting place of the paladin
+    knight Graye.
+  sector: inside
+  exits:
+    south:
+      to: tba:310:room:31060
+  extras:
+  - keywords: [coffin]
+    text: The coffin holds the remains of Graye.  His gift to you is not within it.
+  - keywords: [stone, tablet]
+    text: It is a giant stone tablet supporting the coffin of Graye.

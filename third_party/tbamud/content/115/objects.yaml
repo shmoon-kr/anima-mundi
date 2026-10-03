@@ -1,0 +1,383 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 115.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:115:obj:11500":
+  type: weapon
+  keywords: [goblin, shortsword]
+  short: a goblin shortsword
+  long: An odd length looking sword lays here, too long for a dagger and not really a sword.
+  flags: [anti_good, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11501":
+  type: armor
+  keywords: [chainmail]
+  short: copper pressed chainmail
+  long: A really flat chainmail made of copper lies on the ground.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 2
+  cost: 40
+  rent: 4
+  level: 0
+
+"tba:115:obj:11502":
+  type: weapon
+  keywords: [handaxe]
+  short: a stout handaxe
+  long: A handaxe of centaur craftsmanship lays here gleming in the sun.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: thrash
+  weight: 4
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:115:obj:11503":
+  type: weapon
+  keywords: [broad, sword]
+  short: a copper broad sword
+  long: A copper broad sword of centaur make is stuck to the ground.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: blast
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11504":
+  type: other
+  keywords: [tarnished, copper, bracelet]
+  short: a tarnished copper bracelet
+  long: A tarnished copper bracelet lies here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+
+"tba:115:obj:11505":
+  type: other
+  keywords: [horse, shoe]
+  short: a copper horse shoe
+  long: A roughly pressed copper horse shoe lays here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+  affects:
+  - apply: save_breath
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+
+"tba:115:obj:11506":
+  type: worn
+  keywords: [monk, robes]
+  short: some monk robes
+  long: A monk's robe is here crumbled on the ground, covered in blood
+  flags: [magic, anti_good]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 10
+  rent: 1
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: mana
+    modifier: -20
+
+"tba:115:obj:11507":
+  type: wand
+  keywords: [book]
+  short: a small gray book
+  long: A gray color leather bounded book lays here.
+  flags: [hum, no_rent, magic, anti_warrior]
+  wear: [take]
+  values:
+    raw: [12, 1, 1, 20]
+  weight: 3
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:115:obj:11508":
+  type: weapon
+  keywords: [intangible, kris]
+  short: an intangible kris
+  long: There is nothing here as a weapon.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 5
+  cost: 200
+  rent: 20
+  level: 0
+  affects:
+  - apply: mana
+    modifier: -35
+  - apply: damroll
+    modifier: 3
+
+"tba:115:obj:11509":
+  type: armor
+  keywords: [goblin, helmet]
+  short: a very ordinary goblin helmet
+  long: A goblin helmet lays here on the ground collecting water.
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11510":
+  type: armor
+  keywords: [goblin, shield]
+  short: a wooden goblin shield
+  long: A round piece of wood shaped out to be a shield lays here.
+  wear: [take, shield]
+  values:
+    armor: 3
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11511":
+  type: key
+  keywords: [key]
+  short: a key
+  long: It is an old rusty key.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, key]
+    text: There is a small area with the words western hall etched on it.
+
+"tba:115:obj:11512":
+  type: key
+  keywords: [small, key]
+  short: a small key
+  long: A key marked eastern room.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11513":
+  type: worn
+  keywords: [pewter, ring]
+  short: a pewter ring
+  long: A very small piece of rounded alloy glems in the sunlight.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 150
+  rent: 15
+  level: 0
+  affects:
+  - apply: str
+    modifier: -2
+  - apply: int
+    modifier: 1
+
+"tba:115:obj:11514":
+  type: key
+  keywords: [key]
+  short: this is a small golden key
+  long: This key looks very expensive and valuable.
+  flags: [glow, no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, key]
+    text: There are the words Northern Hall etched in this key.
+
+"tba:115:obj:11515":
+  type: weapon
+  keywords: [goblin, spear]
+  short: a goblin short spear
+  long: A short stick with a stone head on the end trys to pass as a spear is lying here.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:115:obj:11516":
+  type: armor
+  keywords: [copper, gauntlets]
+  short: some copper gauntlets
+  long: A badly finished pair of gauntlets lay here.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+
+"tba:115:obj:11517":
+  type: armor
+  keywords: [kicking, boots]
+  short: a pair of kicking boots
+  long: A small solid pair of kickers lay here.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:115:obj:11518":
+  type: worn
+  keywords: [little, bow, peeks, staff]
+  short: little bow peek's staff
+  long: A small shepard girl's stick lays here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 315
+  rent: 31
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: mana
+    modifier: 10
+
+"tba:115:obj:11519":
+  type: container
+  keywords: [intangible, backpack]
+  short: an intangible backpack
+  long: There is nothing here to hold anything at all.
+  wear: [take, about]
+  values:
+    capacity: 600
+    lock_flags: 0
+    corpse: false
+  weight: 10
+  cost: 500
+  rent: 100
+  level: 0
+
+"tba:115:obj:11520":
+  type: light
+  keywords: [intangible, light]
+  short: an intangible light
+  long: There is nothing here to light the way
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+
+"tba:115:obj:11521":
+  type: fountain
+  keywords: [barrel, monk, wine]
+  short: a barrel
+  long: A barrel filled with wine made by the monks of this monestary is here.
+  wear: []
+  values:
+    capacity: 100
+    contains: 100
+    liquid: wine
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:115:obj:11537":
+  type: fountain
+  keywords: [Small, stream]
+  short: a small stream lies here flowing from the north
+  long: A small stream lies here flowing from the north.
+  flags: [bless]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:115:obj:11547":
+  type: other
+  keywords: [sign]
+  short: a old wooden sign
+  long: A old wooden sign stands untouched here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - North - Holy Battlegrounds
+    - South - Monestary
+    - East  - Forest

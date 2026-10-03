@@ -1,0 +1,732 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 74.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:74:obj:7400":
+  type: other
+  keywords: [codex, stone, massive]
+  short: the stone codex
+  long: A massive stone codex rests in the center of the room.
+  flags: [no_donate]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [codex, stone, massive]
+    text: >
+      This massive codex was placed here by the Halfling God, Jojen.  A thin, spiralling script covers
+      its surface, telling the tale of the Graveyard above. The Graveyard is a place where newbie characters
+      are able to become used to the commands of the mud as well as gather a few pieces of equipment that
+      will help them survive the harsh reality of the world.  The mobiles in the Graveyard are of both evil
+      and good virtues, so the player may decide which to kill in the case of alignment- driven
+      roleplaying.  The zone itself is to look realistic within the fantasy realms and will not include any t-shirts,
+      beastly fidos, nor a Ring of Newbie Helping.  With luck and work, the Graveyard will be enjoyable to
+      play and beneficial to the new player as well without the use of cadets, training dummies, or
+      janitors.
+
+"tba:74:obj:7401":
+  type: other
+  keywords: [large, wooden, sign]
+  short: a large, wooden sign
+  long: A large wooden sign is mounted on a painted post near the path.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [large, wooden, sign]
+    text: >
+      The scrolling painted letters are written in common: Adventurers might find it interesting to know
+      that the use of all capital letters often means there is help to be had with that particular word. 
+      Please do not pick the flowers.
+
+"tba:74:obj:7402":
+  type: container
+  keywords: [hole]
+  short: a hole in the ground
+  long: A hole has been dug in the ground here.
+  flags: [no_donate]
+  wear: []
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:74:obj:7403":
+  type: food
+  keywords: [handful, edible, roots]
+  short: a handful of edible roots
+  long: A handful of edible roots juts up from the dirt.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 2
+  cost: 25
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [handful, edible, roots]
+    text: >
+      These roots are small and colored a tasty russet.  Aside from the dirt and bugs, they look quite
+      edible.
+
+"tba:74:obj:7404":
+  type: trash
+  keywords: [bunch, hyacinths, white]
+  short: a bunch of white hyacinths
+  long: Petals scattered, a bunch of hyacinths has been tossed to the ground here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 15
+  rent: 5
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [bunch, hyacinths, white, flowers]
+    text: >
+      Pure white and refreshing, the blossoms on these flowers drip gracefully from the long healthy
+      stems.  Some roots still cling to the flowers, apparently a reminder of the violent upheaval required to
+      pull them from the ground.
+
+"tba:74:obj:7405":
+  type: armor
+  keywords: [boots, sturdy]
+  short: a pair of sturdy leather boots
+  long: Someone has left a pair of boots lying around.
+  flags: [anti_thief]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 10
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [pair, leather, boots, sturdy]
+    text: >
+      Worked of good, sensible leather, these boots are well-made and should last a long time.  They are
+      a bit muddy from the previous owner and a spot of blood seems to have stained one heel.
+
+"tba:74:obj:7406":
+  type: weapon
+  keywords: [shovel, iron, battered]
+  short: an iron shovel
+  long: A battered iron shovel has been discarded here.
+  flags: [anti_good, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 3d2
+    attack: pound
+  weight: 5
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [shovel, iron, battered]
+    text: >
+      A little dented around the iron spade, the handle still seems to be in good condition.  Its pointed
+      end is still clumped with grave-dirt.
+
+"tba:74:obj:7407":
+  type: armor
+  keywords: [small, marble, tombstone]
+  short: a small, marble tombstone
+  long: A small, marble tombstone lies here, marking an unknown grave.
+  flags: [anti_good, anti_mage]
+  wear: [take, shield]
+  values:
+    armor: 3
+  weight: 10
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [small, round, tombstone, marble]
+    text: >
+      Small and round, this thin marble tombstone has a thick brass strap attached to one side,
+      apparently to hold flowers at the gravesite.  It almost looks as if it could be worn as a shield
+
+"tba:74:obj:7408":
+  type: armor
+  keywords: [patchwork, cloak, heap, cloth]
+  short: a patchwork cloak
+  long: A heap of cloth collects dust as it lies here.
+  flags: [magic, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 15
+  extras:
+  - keywords: [patchwork, cloak, heap, cloth]
+    text: >
+      This cloak is patched together from various unmatched bits of fabric of all types.  Silk and wool
+      are knit together to create this garish, but warm cloak.
+
+"tba:74:obj:7409":
+  type: drinkcon
+  keywords: [simple, earthenware, jug, water]
+  short: a simple earthenware jug
+  long: An earthenware jug lies on its side on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    contains: 5
+    liquid: clear_water
+    poisoned: false
+  weight: 5
+  cost: 75
+  rent: 7
+  level: 0
+  extras:
+  - keywords: [simple, earthenware, jug]
+    text: Red clay and completely unadorned, this jug looks functional and watertight.
+
+"tba:74:obj:7410":
+  type: worn
+  keywords: [black, pile, silk, gloves]
+  short: a pair of fine, black silk gloves
+  long: A small pile of black silk lies crumpled on the ground.
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [black, silk, gloves]
+    text: >
+      Dainty enough for a woman, but large enough for a man, these fine silk gloves are well-made and
+      traced with a delicate black lace.
+
+"tba:74:obj:7411":
+  type: worn
+  keywords: [long, black, silk, veil]
+  short: a long, black silk veil
+  long: A silk veil is tossed around in the breeze.
+  flags: [no_donate, magic, no_drop]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -1
+  extras:
+  - keywords: [long, black, silk, veil]
+    text: A length of fine black silk, thie veil appears to be the sort used by mourners.
+
+"tba:74:obj:7412":
+  type: container
+  keywords: [heavy, canvas, bag]
+  short: a heavy canvas bag
+  long: A heavy canvas bag has been tossed aside here.
+  wear: [take, body]
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [heavy, canvas, bag]
+    text: >
+      Constructed of heavy canvas, this bag is fairly large and comes with a large, overshoulder strap
+      for easy carrying.  Unfortunately, wearing it would require giving up any body armor.
+
+"tba:74:obj:7413":
+  type: light
+  keywords: [bright, copper, oil, lamp]
+  short: a bright, copper oil lamp
+  long: A bright, copper oil lamp lies here, burning merrily.
+  flags: [anti_evil]
+  wear: [take]
+  values:
+    hours: 10
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+  extras:
+  - keywords: [bright, copper, oil, lamp]
+    text: >
+      Made of a shoddy burnished copper, this lamp is functional, but unremarkable.  A small hoop handle
+      allows easy carrying.  Somehow, despite its poor quality, the lamp allows you to see far more than
+      you would have thought possible.
+
+"tba:74:obj:7414":
+  type: armor
+  keywords: [wide, ivory, bracelet]
+  short: a wide ivory bracelet
+  long: A wide, ivory bracelet is here, collecting dust.
+  flags: [hum]
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 2
+  cost: 50
+  rent: 5
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [wide, ivory, bracelet]
+    text: >
+      This wide bracelet is formed of delicately carved ivory and has yellowed considerably with age.  An
+      image carved in the ivory depicts a thorny pattern of roses.
+
+"tba:74:obj:7415":
+  type: key
+  keywords: [key, shiny, copper]
+  short: a shiny copper key
+  long: Something shiny has been left lying here.
+  flags: [no_rent]
+  wear: [take, waist, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [shiny, copper, key]
+    text: >
+      This key is small and made of soft copper.  Not widely used for tools as important as keys and
+      such, copper is delicate and should be handled carefully or it might bend or even break.
+
+"tba:74:obj:7416":
+  type: container
+  keywords: [pouch, belt, hide, worn, beltpouch]
+  short: a worn hide beltpouch
+  long: Someone's beltpouch was left here.
+  wear: [take, waist]
+  values:
+    capacity: 13
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 25
+  rent: 1
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [worn, wide, beltpouch, belt, pouch, hide]
+    text: >
+      Animal hide of some sort has been tanned and sewn together with thick strips of sinew to form this
+      beltpouch.  The small pouches hanging from the belt are trimmed with a coarse, black fur.  It is
+      hardly a market piece, but seems serviceable enough.
+
+"tba:74:obj:7417":
+  type: key
+  keywords: [square, stone, key]
+  short: a square stone key
+  long: An odd shaped stone is lying here.
+  flags: [no_rent]
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [square, stone, key]
+    text: >
+      This key is a very intricate piece of stonework.  A chip of granite has been chipped away to shape
+      a squat stone key.  Smoothed by age and use, this key is really quite extraordinary.
+
+"tba:74:obj:7418":
+  type: weapon
+  keywords: [long, knobby, ashwood, staff]
+  short: a long ashwood staff
+  long: A long, knobby staff lies here.
+  flags: [anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: pound
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [long, knobby, ashwood, staff]
+    text: This is a simple staff, roughly six feet in length and shaped of smooth ashwood.
+
+"tba:74:obj:7419":
+  type: worn
+  keywords: [platinum, circlet, ring, small]
+  short: a small platinum circlet
+  long: Nearly unnoticeable, a small ring glints in the dust.
+  flags: [magic, anti_evil]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 30
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [platinum, circlet, ring, small]
+    text: >
+      This small circlet of platinum is plain and unadorned, but made of a very rare metal.  The value
+      alone makes this item a treasure, but there is something more.  Just touching this ring, you can feel
+      your senses soar and heighten.
+
+"tba:74:obj:7420":
+  type: key
+  keywords: [slender, steel, key]
+  short: a slender, steel key
+  long: A slender bit of steel has been discarded here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 75
+  rent: 7
+  level: 0
+  extras:
+  - keywords: [slender, steel, key]
+    text: >
+      Hardly unusual, this is a simple steel key.  It is worn from use, but it otherwise quite
+      unremarkable.
+
+"tba:74:obj:7421":
+  type: armor
+  keywords: [sweeping, black, cape, pile, cloth]
+  short: a sweeping black cape
+  long: A pile of black cloth lies in the dirt.
+  flags: [anti_good]
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 3
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [sweeping, black, cape]
+    text: >
+      A cape of heavy cloth, this simple bit of finery is dyed a deep, shadowy black.  A rather unusual
+      bit of clothing in that it is without colorful thread or embroidery of any sort.
+
+"tba:74:obj:7422":
+  type: weapon
+  keywords: [sinuous, leather, whip]
+  short: a sinuous leather whip
+  long: There is a leather whip lying here, unclaimed.
+  flags: [hum, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: thrash
+  weight: 5
+  cost: 150
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [sinuous, leather, whip]
+    text: >
+      Not unlike the whip a horse driver would use, this is little more than a long, snaking leather whip
+      set in a bone handle.  It's length is an astounding eight feet from handle to tongue that would
+      require much skill to master.
+
+"tba:74:obj:7423":
+  type: armor
+  keywords: [charred, suit, mail]
+  short: a charred suit of mail
+  long: A charred mail suit was thrown aside here.
+  flags: [anti_good, anti_mage, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 20
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [charred, suit, mail]
+    text: >
+      Seared by fire and blackened with ash, this suit of mail hardly seems useable.  It stinks of
+      charred flesh and soot, but is actually still in a single piece and can be pulled over the head if careful.
+
+"tba:74:obj:7424":
+  type: armor
+  keywords: [pair, chain, blackened, sleeves]
+  short: a pair of blackened chain sleeves
+  long: Someone's chain sleeves lie here, badly burned.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 10
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 5
+  - apply: mana
+    modifier: -5
+  extras:
+  - keywords: [pair, chain, blackened, sleeves]
+    text: >
+      This pair of chainmail sleeves has suffered grievous damage in a fire.  The links are scorched
+      black and, in places, melded together by the heat that burned them.
+
+"tba:74:obj:7425":
+  type: armor
+  keywords: [pair, blackened, chain, leggings]
+  short: a pair of blackened chain leggings
+  long: A pair of blackened leggings lies here, smouldering.
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 10
+  cost: 275
+  rent: 27
+  level: 0
+  affects:
+  - apply: move
+    modifier: -5
+  - apply: hit
+    modifier: 5
+  extras:
+  - keywords: [pair, blackened, chain, leggings]
+    text: >
+      Chain links woven together to make these sleeves have been damaged in a fire.  Black streaks cover
+      the armor and the smell of charred flesh is heavily soaked into the blackened linen lining.
+
+"tba:74:obj:7426":
+  type: armor
+  keywords: [glowing, length, chain]
+  short: a glowing length of chain
+  long: A glowing length of chain was cast aside here.
+  flags: [glow]
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 8
+  cost: 350
+  rent: 35
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [glowing, length, chain]
+    text: >
+      About two feet in length, this thick iron chain glows vibrantly with an eerie greenish glow. 
+      Adjustable clasps on either end make this chain easy to wear on almost any part of the body.
+
+"tba:74:obj:7427":
+  type: potion
+  keywords: [bottle, fizzing, green, liquid, potion]
+  short: a fizzing green potion
+  long: A bottle of fizzing green liquid has been set here carefully.
+  flags: [no_rent, magic]
+  wear: [take]
+  values:
+    raw: [12, -1, -1, -1]
+  weight: 2
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [bottle, fizzing, green, liquid, potion]
+    text: >
+      A rotund glass bottle with a tall, narrow neck contains a substance of extremely dubious origins. 
+      A brilliant green, the fluid inside the bottle bubbles fiercely and without stop despite the
+      stoppered bottle top.
+
+"tba:74:obj:7428":
+  type: potion
+  keywords: [stone, vial, oil, potion]
+  short: a stone vial
+  long: A stone vial filled with a foul-smelling oil is here.
+  flags: [no_rent, magic]
+  wear: [take]
+  values:
+    raw: [12, 1, -1, -1]
+  weight: 5
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [stone, vial, oil, potion]
+    text: >
+      This squat, stone vial is filled with an awful smelling liquid that brings tears to the eyes.  The
+      vial is fairly original in design, there being few stone bottles used these days.
+
+"tba:74:obj:7429":
+  type: armor
+  keywords: [fine, bluesteel, steel, breastplate]
+  short: a fine bluesteel breastplate
+  long: A breastplate of blue steel lies here, glowing softly.
+  flags: [anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 10
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [fine, bluesteel, steel, blue, breastplate]
+    text: >
+      This breastplate is a gorgeous piece of work.  Crafted of fine bluesteel, an ore from deep in the
+      mountains, the armor is both functional and beautiful. Age may have caused some breakdown in the
+      metal, but it seems strong.
+
+"tba:74:obj:7430":
+  type: weapon
+  keywords: [steel, bluesteel, warhammer, hammer]
+  short: Lord Mycea's bluesteel warhammer
+  long: A wicked-looking warhammer has been left here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d2
+    attack: crush
+  weight: 15
+  cost: 900
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [blue, steel, bluesteel, warhammer, hammer]
+    text: >
+      A historic weapon, Lord Mycea's warhammer has a bluesteel head strapped to a three foot handle. 
+      The metal shines as it must have the day it was forged and a low hum emanates from the fabulous weapon.
+
+"tba:74:obj:7431":
+  type: other
+  keywords: [ancient, band, copper]
+  short: an ancient band of copper
+  long: A band of copper lies here.
+  flags: [magic, anti_evil]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [ancient, band, copper]
+    text: >
+      This copper band has deteriorated somewhat with age and is showing signs of mineral build up.  The
+      band is unadorned and undecorated, nothing more than a simple piece of jewelry worn on the wrist.
+
+"tba:74:obj:7432":
+  type: armor
+  keywords: [tiny, horned, half, helm, little]
+  short: a tiny, horned half-helm
+  long: Someone left their little helm here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 8
+  cost: 300
+  rent: 30
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [tiny, little, horned, half, helm]
+    text: >
+      This helm is truly more of a metal hat.  Built like a bascinet, it lacks the neck plate or nose
+      guard of a true helm.  Still, the small, curved horns could do well to protect against heavy, downward
+      swings.
+
+"tba:74:obj:7433":
+  type: container
+  keywords: [six, massive, locked, chests]
+  short: six massive locked chests
+  long: Six massive locked chests are scattered about here.
+  flags: [no_rent, no_donate]
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [six, massive, locked, chests]
+    text: >
+      These massive chests hold the various pieces of the halfling hero's original body.  Knowing that
+      the parts would simply reform again, the townsfolk locked them into these monstrous chests and sealed
+      them beneath locks both magical and mundane.  It would be wise not to tamper with them.
+
+"tba:74:obj:7435":
+  type: scroll
+  keywords: [lace, handkerchief, black]
+  short: a black lace handkerchief
+  long: A lace handkerchief blows around on the breeze.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [12, 35, -1, -1]
+  weight: 1
+  cost: 250
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [lace, black, handkerchief]
+    text: >
+      A square of lace about twelve inches across, this handkerchief is dyed black in respect for the
+      dead.  It is salty and stained with the tears of a mournful friend or family member to the deceased.

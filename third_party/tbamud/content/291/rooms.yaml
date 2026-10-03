@@ -1,0 +1,1446 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 291.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:291:room:29100":
+  name: The hill near the Black Forest
+  description: >
+    You stand on a hill overlooking a dense forest of old oak trees. A slight chilling breeze blows by
+    and you can't help but shudder as you look toward it In the middle of the forest, popping out over
+    the trees is the tall spire of the Citadel. The symbol of the triangled wheel on the tower's side is
+    there for all to see. A trail leads eastward down the hill towards the woods.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:291:room:29101
+  extras:
+  - keywords: [credits, info]
+    text: >
+      A zone built by Silverangel on Ironic Building MUD: ironic.betterbox.net port 1919 Contains a
+      forest, a tower, and a disco.
+
+"tba:291:room:29101":
+  name: Just Outside the Black Forest
+  description: >
+    A chilling wind blows by you from deep within the dark forest.  You stand near the outermost trees
+    on a rapidly dwindling trail that winds into the dark heart of the woods.  Your know your imagination
+    can only scratch the surface of the unholy terrors that lie within.  You have been warned.
+  sector: hills
+  exits:
+    east:
+      to: tba:291:room:29102
+    west:
+      to: tba:291:room:29100
+
+"tba:291:room:29102":
+  name: The outskirts of the Black Forest
+  description: >
+    Little light penetrates the dense foliage of the forest.  Almost no plant life occupies the hard,
+    rocky ground.  If you push much further into the doomed forest, you will be in all but total
+    darkness.  Every so often a haunting, diabolical laugh drifts to your ears.  It drives shivers down your
+    spine.  You can make out a trail to the south and east.  To the north there is a cabin. Or you could flee
+    the woods.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29103
+    east:
+      to: tba:291:room:29107
+    south:
+      to: tba:291:room:29104
+    west:
+      to: tba:291:room:29101
+
+"tba:291:room:29103":
+  name: A Deserted Cabin
+  description: >
+    You are in a cabin in the woods.  Time has not been kind to this structure. The logs that make up
+    it are starting to rot, and there are a few gaps in the walls.  Still, it does provide shelter from
+    the wind.  The floor is a rough, clumpy packed earth.  Whoever lived here has long since abandoned it. 
+    But if you take a closer look, you may find something useful.
+  sector: inside
+  exits:
+    south:
+      to: tba:291:room:29102
+
+"tba:291:room:29104":
+  name: The Black Forest
+  description: >
+    The trail you have followed has dwindled to a nothing.  Every so often you think you see some
+    movement out of the corner of the eye.  As you are looking around, a fresh bout of evil laughter comes to
+    your ear.  It echos off the trees, refusing to die.  You feel a bead of sweat form on the back of
+    your neck.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29102
+    south:
+      to: tba:291:room:29105
+
+"tba:291:room:29105":
+  name: The Black Forest
+  description: You are in the Black Forest.  Have a Nice Day.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29104
+    east:
+      to: tba:291:room:29110
+    south:
+      to: tba:291:room:29106
+
+"tba:291:room:29106":
+  name: Hopelessly Lost
+  description: >
+    You stumbled off the path now you are Hopelessly Lost!  But don't fret. There IS a way out, but can
+    you find it?
+  sector: inside
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:291:room:29120
+
+"tba:291:room:29107":
+  name: The great oak
+  description: >
+    This is the largest tree in the forest.  It stretches high overhead.  The gnarled limbs hang above
+    you like grasping hands waiting to strangle you The bark is rough and blood stained.  At the roots
+    lie a fallen hero.  His body well along in decomposition, but the cause of death is obvious.  This
+    foolish hero has been decapitated.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29108
+    east:
+      to: tba:291:room:29112
+    west:
+      to: tba:291:room:29102
+
+"tba:291:room:29108":
+  name: The dense woods
+  description: >
+    The trees get thicker as you push foreward.  You have to squeeze if you go much further.  Every so
+    often one of the trees carries an aged blood stain marring one of the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29109
+    south:
+      to: tba:291:room:29107
+    west:
+      to: tba:291:room:29106
+
+"tba:291:room:29109":
+  name: The dead end
+  description: >
+    You have discovered a portion of the outer wall of Ilian's Citadel.  The nearby trees prevent you
+    from exploring the wall.  It is an imposing mass of cold, smooth, black granite.  So near the vile
+    citadel, you know in your soul this is not a place you want to be caught dead at.
+  sector: forest
+  exits:
+    south:
+      to: tba:291:room:29108
+
+"tba:291:room:29110":
+  name: The Bridge
+  description: >
+    This rickety covered bridge spans a rather wide natural chasm in the forest floor.  It lit by two
+    rusty lantern hanging off pegs in the wall.  This place provides much protection from the icy winds
+    common to the Black Forest.  You do not know why, but at least here you can find some measure of
+    sanctuary from the evils of the woods.
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    east:
+      to: tba:291:room:29119
+    west:
+      to: tba:291:room:29105
+    down:
+      to: tba:291:room:29111
+
+"tba:291:room:29111":
+  name: Under the bridge
+  description: >
+    You are in a rocky ravine under the bridge.  Sparse vegitation manages to grow in small pockets of
+    soil interespersed about.  The loose nature of the gravely slopes makes for difficult going.  You can
+    surmise that this place would fill up rapidly in a heavy rain.  You just hope that dosen't happen
+    while you are here.
+  sector: mountains
+  exits:
+    south:
+      to: tba:291:room:29133
+    up:
+      to: tba:291:room:29110
+
+"tba:291:room:29112":
+  name: Deeper into the Black Forest
+  description: >
+    The deeper into the forest you press, the more you doubt the sanity of your choice.  But you know
+    that with great risks come great rewards.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:291:room:29115
+    south:
+      to: tba:291:room:29113
+    west:
+      to: tba:291:room:29107
+
+"tba:291:room:29113":
+  name: Ed's Disco Palace
+  description: >
+    What is this place doing here?  Lights flash.  People dance the night away. A spinning disco ball
+    hangs suspended from the ceiling spraying the insides with multicolored light.  The noise of the music
+    and chatter is all but deafening
+  sector: inside
+  flags: [no_mob, indoors, soundproof]
+  exits:
+    north:
+      to: tba:291:room:29112
+    south:
+      to: tba:291:room:29114
+
+"tba:291:room:29114":
+  name: The Dance floor
+  description: >
+    You now stand on the dance floor of Ed's Disco Palace.  The lights strobe and the dancers groove to
+    the music of the preforming Elvis Impersonators as they jive around a lovely selection of rabid
+    potted plants.
+  sector: inside
+  flags: [indoors, soundproof]
+  exits:
+    north:
+      to: tba:291:room:29113
+    south:
+      to: tba:291:room:29118
+    west:
+      to: tba:291:room:29144
+
+"tba:291:room:29115":
+  name: The Dark Heart of the woods
+  description: >
+    In the heart of the woods, things are strangely calm.  But it is the calm before the storm.  In the
+    soft earth you can clearly see hoofmarks of some horse.  Around the hoofmarks the earth is scorched
+    as if by a hot flame. Looking around there are the signs of a strugle.  Somebody placed his bets
+    against whatever made the hoofmarks, and lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29143
+    east:
+      to: tba:291:room:29116
+    west:
+      to: tba:291:room:29112
+
+"tba:291:room:29116":
+  name: Nearing a clearing
+  description: >
+    The trees thin out a bit as you can see a glade.  There is an unnerving quiet around the area.  You
+    look at the clearing you are standing near and you recognize it for what it is.  A killing field. 
+    Your boot crunches on the headless skeleton of some small woodland creature.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29106
+    east:
+      to: tba:291:room:29117
+    west:
+      to: tba:291:room:29115
+
+"tba:291:room:29117":
+  name: The Glade
+  description: >
+    You stand in a glade.  The grass comes up to your knee, although it has been trampled down in many
+    places where some unfortunate creature was hounded by something truly evil.  A fresh burst of icy
+    wind whips through the grass sending waves rolling through the glade.  Out of the chilled wind comes a
+    bout of the evil, maniacle, unholy cackles that cause your hair to stand on end.
+  sector: inside
+  exits:
+    north:
+      to: tba:291:room:29142
+    east:
+      to: tba:291:room:29127
+    south:
+      to: tba:291:room:29126
+    west:
+      to: tba:291:room:29116
+
+"tba:291:room:29118":
+  name: Boogie Time!
+  description: >
+    This is the small, open longue next to the dance floor.  People congregate to listen to the music. 
+    A few of the Elvis Impersonators have wandered over here as they boogie down.
+  sector: inside
+  flags: [soundproof]
+  exits:
+    north:
+      to: tba:291:room:29114
+
+"tba:291:room:29119":
+  name: the Stream
+  description: >
+    You walk alongside a small stream.  It silently sweeps away the dead leaves and other debris as it
+    continues on.  It is a pity that it won't likewise sweep away your nervousness and trepidation too. 
+    From here you can push on eastward or you can flee west to the safety of the bridge.  Your other
+    option is to follow the river to its end.
+  sector: forest
+  exits:
+    east:
+      to: tba:291:room:29126
+    south:
+      to: tba:291:room:29146
+    west:
+      to: tba:291:room:29110
+
+"tba:291:room:29120":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:291:room:29121
+    south:
+      to: tba:291:room:29123
+
+"tba:291:room:29121":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:291:room:29122
+    west:
+      to: tba:291:room:29124
+
+"tba:291:room:29122":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29121
+    west:
+      to: tba:291:room:29123
+
+"tba:291:room:29123":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29120
+    east:
+      to: tba:291:room:29122
+
+"tba:291:room:29124":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:291:room:29121
+    south:
+      to: tba:291:room:29125
+
+"tba:291:room:29125":
+  name: Hopelessly Lost
+  description: You are Hopelessly Lost!
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:291:room:29104
+
+"tba:291:room:29126":
+  name: In the shadow of the citadel
+  description: >
+    You turn up your collar to the subthermal gales.  That's when you see it. From here you can see,
+    not 200 yards ahead, the infernal structure that is the citadel.  You whisper a silent prayer of thanks
+    that there are still many trees to hide behind.  It is best if the residents of the place don't know
+    of your existance as long as possible.  It takes a major force of effort to tear your eyes off the
+    citadel, but you manage.  To the west lies a small stream.  To the north is a clearing, and south of
+    you is a trail that leads to a small keep in ruins.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29117
+    east:
+      to: tba:291:room:29129
+    south:
+      to: tba:291:room:29134
+    west:
+      to: tba:291:room:29119
+
+"tba:291:room:29127":
+  name: Up against the wall.
+  description: >
+    You have found a section of the outer wall.  The trees have been cut back making a path around part
+    of the keep belonging to the mistress of the Void Far to the south you can see what seems to be the
+    main gate.  To the north the wall disappears into the darkness of the Black Forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29130
+    south:
+      to: tba:291:room:29128
+    west:
+      to: tba:291:room:29117
+
+"tba:291:room:29128":
+  name: Up against the wall.
+  description: >
+    You have found a section of the outer wall.  The trees have been cut back making a path around part
+    of the keep belonging to the mistress of the Void Far to the south you can see what seems to be the
+    main gate.  To the north the wall disappears into the darkness of the Black Forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29127
+    south:
+      to: tba:291:room:29129
+    west:
+      to: tba:291:room:29106
+
+"tba:291:room:29129":
+  name: The Front Gate
+  description: >
+    You have reached the Gate of Ilian's Citadel.  The high black granite walls are smooth to the
+    touch.  The gate is a huge, cast iron affair, emblazoned with the symbol of the triangled wheel.  Only the
+    bravest of souls would consider entering this dreadful place.  There is a gate to the east.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29128
+    east:
+      to: tba:291:room:29150
+      look: The massive door stands here, defying you to enter.
+      door:
+        keywords: [gate, door, portcullis]
+        kind: door
+        reset: closed
+    west:
+      to: tba:291:room:29126
+
+"tba:291:room:29130":
+  name: Up against the wall.
+  description: >
+    You have found a section of the outer wall.  The trees have been cut back making a path around part
+    of the keep belonging to the mistress of the Void Far to the south you can see what seems to be the
+    main gate.  To the north the wall disappears into the darkness of the Black Forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29131
+    south:
+      to: tba:291:room:29127
+    west:
+      to: tba:291:room:29142
+
+"tba:291:room:29131":
+  name: Are you sure this is a good idea?
+  description: >
+    You have found a section of the outer wall.  The trees have been cut back making a path around part
+    of the keep belonging to the mistress of the Void Far to the south you can see what seems to be the
+    main gate.  To the north the wall disappears into the darkness of the Black Forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29132
+    south:
+      to: tba:291:room:29130
+
+"tba:291:room:29132":
+  name: Trapped like a rat!
+  description: >
+    You have walked along the wall and now are in a small walled alcove.  The crack of evil laughter
+    makes you jump in fright.  It came from right behind you!  You look around to see a headless rider on a
+    ferocious charger that breaths fire.  In one hand he holds the reigns to his nightmare in the other
+    he wields a black scimitar.  In a panic, you look around, but to your horror, you realize you are
+    boxed in.  The horseman rides closer, he swings his huge scimitar, trying to lope off your head.  You
+    manage to keep the blow from decapitating you, but he does connect with your head, sending you
+    sprawling. The horseman rides off cackling.
+  sector: inside
+  flags: [no_mob, soundproof]
+
+"tba:291:room:29133":
+  name: The rockey ravine
+  description: >
+    This is a rough crevace.  It might be a geologists paradice.  Samples of quartz, feldspar,
+    limestone, calcite, and other minerals in a stunning disarray.
+  sector: inside
+  exits:
+    north:
+      to: tba:291:room:29111
+
+"tba:291:room:29134":
+  name: On the Trail to the Ruins
+  description: >
+    You have stumbled onto a trail that the forest has yet to reclaim.  If you strain your eyesight you
+    can barely makeout the remains of a ruined keep.  The few remaining walls, once a gleeming white are
+    now a dull gray.  Evidently this keep was laid waste by the forces of the citadel.  Pity.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29126
+    east:
+      to: tba:291:room:29120
+    south:
+      to: tba:291:room:29135
+
+"tba:291:room:29135":
+  name: The Ruined Castle
+  description: >
+    Only a shattered shell reamins of what one was a bastion of good.  A few scattered bits of
+    shattered walls remain as testiment to what once was, now they are merely waiting for the forest to reclaim
+    them.  At least the ruins provide some measure of shelter from the incessent, madening wind.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29134
+    east:
+      to: tba:291:room:29137
+    south:
+      to: tba:291:room:29136
+    west:
+      to: tba:291:room:29145
+
+"tba:291:room:29136":
+  name: The Ruined Chapel
+  description: >
+    Once upon a time this was this keep's place of worship, but apparently the beings that this place
+    was consecrated to didn't chose to spare this place any more than the rest of the castle.  Didn't
+    chose to or weren't able to.  Maybe when Ilian's black citadel was erected, those protecting beings
+    withdrew their protection to flee to safety, or maybe they made their stand with the occupants of the
+    castle, and shared their fate.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29135
+    west:
+      to: tba:291:room:29138
+
+"tba:291:room:29137":
+  name: The Ruined Stables
+  description: >
+    Although the stables are in ruins, they still stand as a building, or at least half of a building. 
+    The western half is nothing more than a rotting pile of debris.  The eastern half is beinh
+    precariously held up by rotting wooden beams.  It does not look all that stable (No pun intended), but still
+    there is fresh hay on the floor.  Although you take note that some of it has been scorched by fire of
+    some sort.  There is still water in the trough.  All this leads you to believe that someone or
+    something still makes use of this place
+  sector: forest
+  exits:
+    west:
+      to: tba:291:room:29135
+
+"tba:291:room:29138":
+  name: The Ruined Great Hall
+  description: >
+    This used to be the great hall of the castle, now it is in no better condition than the rest of the
+    place.  The once highly polished marble floors are now cracked and covered with rubble that once was
+    the roof.  The west wall is nothing but a memory and a heap of crumbling stones.  The great stained
+    glass window set into the north wall, once the pride of the castle has been shattered into a million
+    shards of rainbow hued glass strewn over the ground. The east wall still seems soundly built, but you
+    have trepidations about the south wall It seems like it could come crashing down at any moment.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29145
+    east:
+      to: tba:291:room:29136
+    west:
+      to: tba:291:room:29139
+
+"tba:291:room:29139":
+  name: The Ruined Bell Tower
+  description: >
+    This was once a tall tower that housed a warning bell.  It was rung to alert the occupants to any
+    threat, but nowadays it is a different story.  The walls have fallen like the rest of the keep.  The
+    Gigantic bell that once rang its clarion call of alarum now is a shattered heap of twisted bronze that
+    sits amidst the rest of the rubble.
+  sector: inside
+  exits:
+    east:
+      to: tba:291:room:29138
+
+"tba:291:room:29140":
+  name: The Torture Chamber
+  description: >
+    Adjacent to the dungeon is the citadels torture chamber.  While the dungeon had a rudimental
+    assortment of torture devices, this room has the professional's assorment of excrutiation devices.  The
+    Iron Maiden, the Rack, the Wheel, thumbscrews, are all represented here along with such classics as red
+    hot pokers and the Chineese Water Torture.  Each device designed to inflict as much pain as possible.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29181
+
+"tba:291:room:29141":
+  name: The Antechamber
+  description: >
+    The antechamber serves as the outer gathering area for the alter of the tower's chaple.  Off to one
+    side are a row of pegs on which a few robs are hung.
+  sector: inside
+  exits:
+    up:
+      to: tba:291:room:29182
+
+"tba:291:room:29142":
+  name: The Black Forest
+  description: You are in the Black Forest.  Blah Blah Blah Blah
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29120
+    east:
+      to: tba:291:room:29130
+    south:
+      to: tba:291:room:29117
+    west:
+      to: tba:291:room:29143
+
+"tba:291:room:29143":
+  name: More of the black forest
+  description: >
+    The Black forest extends as far as the eye can see.  Granted that's not too far, given how dense
+    the forest is.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29148
+    east:
+      to: tba:291:room:29142
+    south:
+      to: tba:291:room:29115
+
+"tba:291:room:29144":
+  name: Disco Inferno!
+  description: >
+    This is the hot, hot dance floor that is the hub of Ed's Disco Palace.  If you want you can dance
+    the night away and disco till your feet are blistered or you can just kill everything in sight here.
+  sector: inside
+  exits:
+    east:
+      to: tba:291:room:29114
+
+"tba:291:room:29145":
+  name: The Ruined Castle Keep
+  description: >
+    Once upon a time this was the most secure area in good King Haggard's castle.  Now the forces of
+    the Citadel have defiled the marble court and sacked it.  It once famed secure walls now can barely
+    protect themselves from the ravages of the elements.
+  sector: inside
+  exits:
+    east:
+      to: tba:291:room:29135
+    south:
+      to: tba:291:room:29138
+
+"tba:291:room:29146":
+  name: The Murky Mire
+  description: >
+    The Stream leads to a nautral pond.  It is not a clear or pure pond, murky pond scum floats in a
+    fine skin over the surface.  This place approaces a swamp more than it does a pond.  This place is a
+    prime breeding ground for mosquitoes and other stinging insects that buzz about your face.
+  sector: forest
+  exits:
+    north:
+      to: tba:291:room:29119
+    south:
+      to: tba:291:room:29147
+
+"tba:291:room:29147":
+  name: Ivy Island
+  description: >
+    This is a small patch of ground that pokes up over the surface of the murky mire.  It is little
+    more than a patch of rock that is covered with poison ivy. There is little soil, but somehow the vines
+    mamage to find enough food to survive.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29146
+
+"tba:291:room:29148":
+  name: Still More of the forest
+  description: >
+    You know the drill.  Can you tell that I was running low on my creative inspiration when I made
+    this room?
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29149
+    south:
+      to: tba:291:room:29143
+
+"tba:291:room:29149":
+  name: Even more of the Black Forest
+  description: >
+    Does this accursed forest never end?  You press deeper and deeper into the seemingly endless cadre
+    of oak trees that stand as omnious guardians to this dark place.  Press much further and you do not
+    know if you will be able to find your way back.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29199
+    east:
+      to: tba:291:room:29120
+    south:
+      to: tba:291:room:29148
+
+"tba:291:room:29150":
+  name: The Citadel antechamber
+  description: >
+    This is a high vaulted room that serves an the entryway to the citadel. The dark granite wals seem
+    to absorb the light, yet strangely you can see rather easily.  Lining the walls are several statues
+    each one made of fine marble and totally identical.  Each one depticts the mistress of the citadel in
+    her rather imposing stance.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:291:room:29151
+    west:
+      to: tba:291:room:29129
+      look: The gate stands as a barrier to your egress.
+      door:
+        keywords: [door, gate, portcullis, doors]
+        kind: door
+        reset: closed
+
+"tba:291:room:29151":
+  name: Inside the Citadel
+  description: >
+    Your footsteps echo off the walls as you tread through the halls.  The outer shell of the citadel
+    stands as the maintainence and upkeeping fraction of this evil construct.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29152
+    east:
+      to: tba:291:room:29160
+    south:
+      to: tba:291:room:29155
+    west:
+      to: tba:291:room:29150
+
+"tba:291:room:29152":
+  name: The South end of the Hall of Mirrors
+  description: >
+    This is a long hall.  The walls have been covered with mirrors This gives the room the appearance
+    of being many times larger than it is.  Occasionally a torch is mounted in a setting in the wall.  You
+    can see the hall extending well to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29153
+    south:
+      to: tba:291:room:29151
+
+"tba:291:room:29153":
+  name: The North end of the Hall of Mirrors
+  description: >
+    This is a long hall.  The walls have been covered with mirrors This gives the room the appearance
+    of being many times larger than it is.  Occasionally a torch is mounted in a setting in the wall.  You
+    can see the hall extending to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29154
+    south:
+      to: tba:291:room:29152
+
+"tba:291:room:29154":
+  name: The Library
+  description: >
+    This chamber in the citadel is lines with rows upon rows of bookshelves. Most are thick
+    leatherbound tomes.  Most haven't been used in months, or years A fine layer of dust has setteled on most of
+    them.  The tiled floor, however is spotless.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:291:room:29156
+    south:
+      to: tba:291:room:29153
+
+"tba:291:room:29155":
+  name: The Master Armorer's Workshop
+  description: >
+    This room is where Durlak, The citadel's armorer, does his craft.  The room is unconfortably warm
+    from the forge.  The walls are lined with the castle's guardians, the DoomGuard.  Most of them are in
+    various stages of repair, to be worked on by Durlak.  Occasionally, one will walk into the room and
+    stand by the wall waiting repair.  Occasionally one of the others will become active and begin its
+    patrolling duties.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29151
+    east:
+      to: tba:291:room:29171
+
+"tba:291:room:29156":
+  name: In the Halls of the Citadel
+  description: >
+    The long vaulted hall extends in an east-west direction.  It serves to connect the Eastern complex
+    and the Western one.  Your footsteps echo off the walls, reverbing, rebounding, resounding, refusing
+    to die, as if they knew that to perish here is to risk eternal damnation.  Above you, supernatural
+    flames forever dance in crystal orbs that hang suspended from the ceiling by wrougt iron chains.  The
+    strange light these provide casts long shadows that envelop long tracts of hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:291:room:29157
+    west:
+      to: tba:291:room:29154
+
+"tba:291:room:29157":
+  name: In the Halls of the Citadel
+  description: >
+    The long vaulted hall extends in an east-west direction.  It serves to connect the Eastern complex
+    and the Western one.  Your footsteps echo off the walls, reverbing, rebounding, resounding, refusing
+    to die, as if they knew that to perish here is to risk eternal damnation.  Above you, supernatural
+    flames forever dance in crystal orbs that hang suspended from the ceiling by wrougt iron chains.  The
+    strange light these provide casts long shadows that envelop long tracts of hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29109
+    east:
+      to: tba:291:room:29158
+    west:
+      to: tba:291:room:29156
+
+"tba:291:room:29158":
+  name: The Gallery
+  description: >
+    This is the marble gallery.  A large square room filled with statues of every make and style. 
+    Abstract and Bas Releif and Lifelike scuplture all are represented here in the gallery.  The marbled
+    white walls almost seem to glow providing more than enough light to see by.  The statues seem to be
+    writhing in pain.  Each one captured in a snapshot in time, displaying its agony for all to see.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:291:room:29188
+    west:
+      to: tba:291:room:29157
+
+"tba:291:room:29159":
+  name: The Observing tower
+  description: >
+    This is a large cylencrical room, made out of a tan stone of some form.  A large bonefire burning
+    with an unnatural black flame burns in the middle of the room.  A staircase, built into the wall,
+    spirals upward towards the observation chamber.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29188
+    south:
+      to: tba:291:room:29174
+    up:
+      to: tba:291:room:29170
+
+"tba:291:room:29160":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:291:room:29164
+    west:
+      to: tba:291:room:29151
+
+"tba:291:room:29161":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29164
+    east:
+      to: tba:291:room:29162
+
+"tba:291:room:29162":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29165
+    east:
+      to: tba:291:room:29163
+    west:
+      to: tba:291:room:29161
+
+"tba:291:room:29163":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29166
+    west:
+      to: tba:291:room:29162
+
+"tba:291:room:29164":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29167
+    east:
+      to: tba:291:room:29165
+    south:
+      to: tba:291:room:29161
+    west:
+      to: tba:291:room:29160
+
+"tba:291:room:29165":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29168
+    south:
+      to: tba:291:room:29162
+    west:
+      to: tba:291:room:29164
+
+"tba:291:room:29166":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29169
+    east:
+      to: tba:291:room:29180
+      look: A large oaken door impedes your progress.
+    south:
+      to: tba:291:room:29163
+    west:
+      to: tba:291:room:29165
+
+"tba:291:room:29167":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:291:room:29168
+    south:
+      to: tba:291:room:29164
+
+"tba:291:room:29168":
+  name: The Room of 10,000 pillars
+  description: >
+    Standing before you are rows upon rows of evenly spaced marble columns. Arranged in a perfect
+    square matrix, the two foot thick pillars stretch upward, reaching higher and higher until they
+    dissappear, enveloped in the darkness high above where your light dares not reach.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:291:room:29169
+    south:
+      to: tba:291:room:29165
+    west:
+      to: tba:291:room:29167
+
+"tba:291:room:29169":
+  name: The Room of 10,000 pillars
+  description: You are in the Room of 10,000 pillars.  Have a nice day.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:291:room:29168
+    south:
+      to: tba:291:room:29166
+
+"tba:291:room:29170":
+  name: The Observing Chamber
+  description: >
+    This is the observation chamber on the top of the observing tower.  A large telescope if mounted
+    into the wall allowing a view to the outside.  The center of the room has a sturdy oaken table which is
+    has a modest collection of maps and charts.  A spiral starcase leads down the tower.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:291:room:29159
+
+"tba:291:room:29171":
+  name: In the Halls of the Citadel
+  description: >
+    The long vaulted hall extends in an east-west direction.  It serves to connect the Eastern complex
+    and the Western one.  Your footsteps echo off the walls, reverbing, rebounding, resounding, refusing
+    to die, as if they knew that to perish here is to risk eternal damnation.  Above you, supernatural
+    flames forever dance in crystal orbs that hang suspended from the ceiling by wrougt iron chains.  The
+    strange light these provide casts long shadows that envelop long tracts of hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:291:room:29172
+    west:
+      to: tba:291:room:29155
+
+"tba:291:room:29172":
+  name: In the Halls of the Citadel
+  description: >
+    The long vaulted hall extends in an east-west direction.  It serves to connect the Eastern complex
+    and the Western one.  Your footsteps echo off the walls, reverbing, rebounding, resounding, refusing
+    to die, as if they knew that to perish here is to risk eternal damnation.  Above you, supernatural
+    flames forever dance in crystal orbs that hang suspended from the ceiling by wrougt iron chains.  The
+    strange light these provide casts long shadows that envelop long tracts of hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:291:room:29173
+    west:
+      to: tba:291:room:29171
+
+"tba:291:room:29173":
+  name: The Clock Tower
+  description: >
+    You have entered the clock tower.  As you gaze upward you see a mass of intricate gears, cogs, and
+    other clockwork parts meshing and grinding above you.  The effect is almost hypnotic.  A staircase is
+    built into the wall allowing access to the intricate mechanisms above, if you dare to climb it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29174
+    west:
+      to: tba:291:room:29172
+    up:
+      to: tba:291:room:29175
+
+"tba:291:room:29174":
+  name: A Connecting Corridor
+  description: You are in the Citadel.  Have a nice day.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29159
+    south:
+      to: tba:291:room:29173
+
+"tba:291:room:29175":
+  name: In the Clock Tower
+  description: >
+    You stand in the lower portion of the inner working of the citadel's clock tower.  Gears mesh and
+    springs flex all around you.  You realize that with so much ambient motion it would be easy to ambush
+    you here.  There is a staircase down to the ground floor, to go upward any more you will have to
+    climb the gears.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:291:room:29176
+    down:
+      to: tba:291:room:29173
+
+"tba:291:room:29176":
+  name: Amongst the cogs.
+  description: >
+    You are playing a game of High Stakes Hop-Scotch, leaping from gear to gear, Hanging on a chain one
+    moment, climing on a gear the next.  You had better act quickly to make your next move before your
+    luck runs out.  One false step here could be disasterous.  Its a long way down, if you are lucky, if
+    not you stand to be a red stain between two gears.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29177
+    up:
+      to: tba:291:room:29178
+    down:
+      to: tba:291:room:29175
+
+"tba:291:room:29177":
+  name: Between the Gears
+  description: >
+    You hop to one a stationary gear to catch your breath.  The effect of all the movement in the
+    background is dizzying.  You momentairly loose track of your sense of balence.  A slip up that would prove
+    to be fatal.  Without warning the gear shudders to life and you fall.  You land between the teeth of
+    a moving cog and come to your senses just as it starts to move.  You barely escape a crunching death.
+  sector: inside
+  flags: [no_mob, indoors]
+
+"tba:291:room:29178":
+  name: The Top of the Clock Tower
+  description: >
+    You are above the bulk of the clockwork mechanisms.  On a small balcony you stand looking down. 
+    You can try to brave the trip down of you care to, or you can go out onto the clock face.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:291:room:29179
+    down:
+      to: tba:291:room:29176
+
+"tba:291:room:29179":
+  name: On the Clock Face
+  description: >
+    You stand on the central peg of the clock face that the hands rotate around. An icy wind whips by
+    that threatens to chill you to the soul.  You look around and can look out over the tops of the oaken
+    trees which extend to the horizon. On the other side of the citadel you can see the observation tower
+    extending only slightly higher they you are now.  And then you see the spire of the citadel which
+    extends high into the sky, casting its long shadow across the Black Forest.
+  sector: inside
+  exits:
+    east:
+      to: tba:291:room:29178
+
+"tba:291:room:29180":
+  name: The Ground Floor of the Spire
+  description: >
+    You are in the spire of the Citadel.  A Large room.  It is all but pitch black.  The only thing
+    that breaks the monotony is a starcase that extends both up and down
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:291:room:29166
+      door:
+        keywords: [door, double]
+        kind: pickproof
+        key: tba:291:obj:29117
+    up:
+      to: tba:291:room:29141
+    down:
+      to: tba:291:room:29181
+
+"tba:291:room:29181":
+  name: The Tower Dungeon
+  description: >
+    You have decended into the dank dungeon below the spire.  A strange green moss grown on the rough
+    hewn rock walls that illuminates the room with an eeire green glow.  There are a few holding cells
+    that line the far walls A row of manacles are affixed to the near wall to hold prisoners while they
+    await torture.  The middle of the room is taken up by several implements of pain. There is a vat for
+    boiling oil.  Several racks and countless hideous bladed instruments, old, diseased, and rusty with age.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:291:room:29140
+    up:
+      to: tba:291:room:29180
+
+"tba:291:room:29182":
+  name: The Infernal Altar
+  description: >
+    Partway up the tower is the chapel dedicated to the mistress of the tower and of the Void.  The
+    room is in a circular shape with an altar of some strange black material in the middle.  Unholy lights
+    burn with the power of the symmetry, casting an unnatrual sheen on the room.  The spiral staircase
+    that wraps around the room continues both up and down
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:291:room:29183
+    down:
+      to: tba:291:room:29141
+
+"tba:291:room:29183":
+  name: The Great Spiral Staircase
+  description: >
+    Just above the altar, the tower hollows itself out and you now stand in a giant chamber.  In the
+    middle of the hollowed column stands a pair of spiral staircases twisting and turning upon each other
+    in a doulbe helix.  There is no central pillar on which the staircases are supported.  You have to
+    marvel at the wonder of engineering this is.  But only the bravest souls will climb it because each step
+    you take brings you that much closer to...  Her.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:291:room:29184
+    down:
+      to: tba:291:room:29182
+
+"tba:291:room:29184":
+  name: The Great Spiral Staircase
+  description: >
+    You are about halfway up the Great Spiral Staircase.  The steps continue to spiral onward like two
+    intertwined slinkies made of a dark marble.  Your light grows noteably dimmer, as if the tower's very
+    darkness consumes the light as soon as it is produced.  Your legs plead with you to decend the
+    steps, rather than ascend.  For to go down is to go away from the terror at the top.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:291:room:29185
+    down:
+      to: tba:291:room:29183
+
+"tba:291:room:29185":
+  name: The Choice
+  description: >
+    Above the Great Spiral Staircase.  You enter a small mist-filled room.  It is has two exits to it,
+    and to go forth you have to make a fateful choice. Think carefully before you make your choice.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:291:room:29186
+    south:
+      to: tba:291:room:29187
+    down:
+      to: tba:291:room:29189
+
+"tba:291:room:29186":
+  name: Damned if You Do
+  description: You've made your choice, now live with it
+  sector: inside
+  flags: [indoors]
+
+"tba:291:room:29187":
+  name: Damned if You Don't
+  description: You've made your choice, now live with it
+  sector: inside
+  flags: [indoors]
+
+"tba:291:room:29188":
+  name: The Music Room
+  description: >
+    This is a sprawling room is filled with musical instruments.  The largest feature of the room is
+    the pipe organ.  It dominates over half of the room. The organ has five sets of organ keys which have
+    been polished to a high reflective sheen.  The brass pipes of the organ are likewise polished waiting
+    to be used.  In the background you can hear the echos of a phantasmal orquestra playing in some
+    forgotten and lost dimention, whose music somehow leaks through to where you now stand.
+  sector: inside
+  flags: [dark, indoors, soundproof]
+  exits:
+    north:
+      to: tba:291:room:29158
+    south:
+      to: tba:291:room:29159
+
+"tba:291:room:29189":
+  name: The Great Spiral Staircase
+  description: >
+    Congradulations.  You made the right choice.  You walked away.  Maybe you have a chance after all,
+    but if you had any sense at all you'd just keep on going back down.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:291:room:29190
+    down:
+      to: tba:291:room:29184
+
+"tba:291:room:29190":
+  name: At Death's Door
+  description: >
+    You were wise (Or luckey) enough to survive the Choice.  You have arrived at Death's Door.  The
+    Large, Iron double door stands as an obstacle to your passage.  Trying force the door would be futile. 
+    To progress any further you will need a key.  There is a door to the north
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:291:room:29191
+      look: Death's Door stands here to block you.
+      door:
+        keywords: [death, door]
+        kind: pickproof
+        key: tba:291:obj:29115
+        reset: locked
+    down:
+      to: tba:291:room:29189
+
+"tba:291:room:29191":
+  name: The Final Ascent
+  description: >
+    Just beyond Death's door is a narrow staircase.  The air is unusually damp and the walls are slick
+    with moss.  As you walk upwards your way is lit by candles that are lining both sides of the
+    starecase.  The air is thick with the humidity and the stench of evil.  It is still not to late to turn back.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:291:room:29190
+      look: Death's is here barring your progress
+      door:
+        keywords: [door, death]
+        kind: pickproof
+        key: tba:291:obj:29115
+    up:
+      to: tba:291:room:29192
+
+"tba:291:room:29192":
+  name: Beyond the point of no return
+  description: >
+    As the name implies, you are past the point of no return.  The only way out is through the mistress
+    of the void, Ilian.  Unless you want to take the easy way out and just die now.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    up:
+      to: tba:291:room:29193
+
+"tba:291:room:29193":
+  name: Near the Balcony
+  description: >
+    After leaving the point of no return behind.  You stand on a broad square dotted with pillars
+    supporting the final stories above you.  With nothing to stop it, the wind is a constant gale through this
+    wind tunnel.  Looking out the gray skies loom ominously foretelling of a coming storm.  You can step
+    out on to the balcony if you like, or you can climb the staircase in the middle to challenge the
+    mistress of this fortress.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:291:room:29194
+    up:
+      to: tba:291:room:29196
+    down:
+      to: tba:291:room:29192
+
+"tba:291:room:29194":
+  name: The High Balcony
+  description: >
+    You are on the high balcony on the spire.  It rests right above the huge symbol of on the walls of
+    the tower you say when you were first entering the woods.  Glancing around you see the clock tower
+    and the observing post far below you.  From here you can see the entire expanse of the black woods. 
+    From the western hills where you began this nightmare to the sea which lies FAR to the south.  The
+    balcony extends to the south a bit, but be careful There is no guardrail, and that first step is a doozy.
+  sector: city
+  exits:
+    south:
+      to: tba:291:room:29195
+    west:
+      to: tba:291:room:29193
+
+"tba:291:room:29195":
+  name: Look Before you Leap
+  description: >
+    You are on the edge of the balcony.  There is no guardrail here only a shear clifflike drop at the
+    edge.  An unexpected gust of wind nearly makes you loose your footing, but you manage to hang on.  As
+    nervous as you are, this place has an unusual serenity to it.
+  sector: city
+  exits:
+    north:
+      to: tba:291:room:29194
+
+"tba:291:room:29196":
+  name: The Guardian's Chamber
+  description: >
+    This room, near the top of the tower is draped in chains that completely hide the walls.  You feel
+    the unmitigated force of evil radiating from a door to the north.  This chamber is the guardpost for
+    Ilian's personal bodyguard and enforcer.  The Greatest and Most Powerful of all the Doomguard: The
+    Dark and Stormy Knight!
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:291:room:29197
+    down:
+      to: tba:291:room:29193
+
+"tba:291:room:29197":
+  name: Ilian's Throne Room
+  description: >
+    Well, you made it.  I'm not sure if this is a good thing or a bad thing, but after all the trials
+    and struggles, you are at the top of Ilian's citadel.  The room seems impossibly large, and the center
+    of it is dominated by a presence which radiates pure, unadulterated, unmitigated, unqualified,
+    unholy evil.  The mistress of the citadel, Ilian sits on her throne surrounded by a small horde of her
+    children, She looks at you as her mastery of the dark symmetry probes your mind to find out if you are
+    significant enough to be bothered with.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:291:room:29196
+    down:
+      to: tba:291:room:29198
+
+"tba:291:room:29198":
+  name: The Way Out
+  description: >
+    Fleeing quickly, you leave the throne room behind and make your way down a secret staircase
+  sector: inside
+  flags: [dark, no_mob]
+  exits:
+    down:
+      to: tba:291:room:29180
+
+"tba:291:room:29199":
+  name: Even more of the Black Forest
+  description: >
+    Does this accursed forest never end?  You press deeper and deeper into the seemingly endless cadre
+    of oak trees that stand as omnious guardians to this dark place.  Press much further and you do not
+    know if you will be able to find your way back.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:291:room:29149
+    east:
+      to: tba:291:room:29120
+    south:
+      to: tba:291:room:29149

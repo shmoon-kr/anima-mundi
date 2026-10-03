@@ -1,0 +1,300 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 6.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:6:obj:600":
+  type: treasure
+  keywords: [pebble]
+  short: a shiny pebble
+  long: A shiny pebble is lying in the sand.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shiny, pebble, rock]
+    text: >
+      The pebble is bright white.  It seems to sparkle in the light.  It's a rather beautiful stone.  One
+      you may want to hold on to.
+
+"tba:6:obj:601":
+  type: other
+  keywords: [seagull, feather]
+  short: a seagull feather
+  long: A seagull feather is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [seagull, bird, feather]
+    text: >
+      The feather is quite large.  It's bright white with some streaks of gray running through it.
+
+"tba:6:obj:602":
+  type: treasure
+  keywords: [pearl]
+  short: a pearl
+  long: A beautiful pearl was dropped here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pearl]
+    text: The beautiful pearl sparkles as you hold it up to the light.  It's in excellent shape.
+
+"tba:6:obj:606":
+  type: trash
+  keywords: [log]
+  short: a log
+  long: A large log is lying in the sand.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 70
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [log]
+    text: >
+      The log looks like it came from the bottom of a tree.  It's quite big around, and doesn't look like
+      it had been floating in the water for very long.
+
+"tba:6:obj:611":
+  type: trash
+  keywords: [twig]
+  short: a twig
+  long: There is a small twig on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 35
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [twig]
+    text: The twig is small and fragile looking.  It looks to be almost dead.
+
+"tba:6:obj:612":
+  type: treasure
+  keywords: [flower, red, rose]
+  short: a red rose
+  long: A beautiful red rose has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rose]
+    text: >
+      The rose has been cleared of all thorns, keeping you from harms way.  You sniff the flower and feel
+      a wondrous scent fill your nose.
+
+"tba:6:obj:617":
+  type: worn
+  keywords: [hat]
+  short: a hat
+  long: A straw hat is floating in the water.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [straw, hat]
+    text: >
+      The hat is in excellent condition.  It would serve well in keeping the sunlight out of your eyes.
+
+"tba:6:obj:620":
+  type: other
+  keywords: [dead, fish]
+  short: a dead fish
+  long: A dead fish is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dead, fish]
+    text: >
+      The eye sockets of the fish have rotted away, leaving nothing but blackness. There is a faint smell
+      coming from it.
+
+"tba:6:obj:622":
+  type: food
+  keywords: [coconut]
+  short: a coconut
+  long: A large coconut has fallen from one of the palm trees, and lies on the ground.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coconut]
+    text: >
+      This is the largest coconut you have ever set your eyes upon.  It could easily feed four people.
+
+"tba:6:obj:634":
+  type: armor
+  keywords: [marble, shield]
+  short: a marble shield
+  long: A marble shield lies here.
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 8
+  cost: 200
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [marble, shield]
+    text: >
+      The shield was hand crafted from white marble.  It's quite heavy, but would protect you well in
+      battle.
+
+"tba:6:obj:635":
+  type: food
+  keywords: [banana]
+  short: a banana
+  long: A yellow banana is ripening here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 3
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [banana]
+    text: The fruit is ripe and ready to be eaten.  It looks delicious!
+
+"tba:6:obj:636":
+  type: drinkcon
+  keywords: [ale, glass, ale]
+  short: a glass
+  long: A glass with a dark foamy liquid in it.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: ale
+    poisoned: false
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ale]
+    text: The brew is quite tasty!  It would go good with any meal.
+
+"tba:6:obj:637":
+  type: food
+  keywords: [lobster]
+  short: a red lobster
+  long: A red lobster looks good enough to eat.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 4
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [lobster]
+    text: The lobster is large and would easily fill your stomach.
+
+"tba:6:obj:638":
+  type: food
+  keywords: [clams]
+  short: some clams
+  long: Some clams have been gathered here.
+  wear: [take]
+  values:
+    hours: 0
+    poisoned: false
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [clams]
+    text: They look quite tasty!  You have heard that these are the best tasting clams around.
+
+"tba:6:obj:639":
+  type: food
+  keywords: [eels]
+  short: some eels
+  long: Some eels have been collected together.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [eels, eel]
+    text: The plate doesn't look very appetizing, but it would fill you up.
+
+"tba:6:obj:640":
+  type: food
+  keywords: [shrimp]
+  short: some shrimp
+  long: Some shrimp have been prepared for eating.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shrimp]
+    text: >
+      The creatures look delicious!  They were taken freshly from the sea and cooked especially for you!
+
+"tba:6:obj:641":
+  type: drinkcon
+  keywords: [milk, glass, milk]
+  short: a glass
+  long: A glass full of a white liquid lies here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: milk
+    poisoned: false
+  weight: 3
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [milk]
+    text: This is just an ordinary glass of milk.  It looks refreshing.

@@ -1,0 +1,80 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 4.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:4:shop:449":
+  keeper: tba:4:mob:449
+  rooms: [tba:4:room:449]
+  products:
+  - tba:4:obj:400
+  - tba:4:obj:401
+  - tba:4:obj:409
+  - tba:4:obj:410
+  profit:
+    buy: 1.4
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:4:shop:453":
+  keeper: tba:4:mob:453
+  rooms: [tba:4:room:453]
+  products:
+  - tba:4:obj:407
+  - tba:4:obj:416
+  - tba:4:obj:417
+  profit:
+    buy: 1.3
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 22
+
+"tba:4:shop:481":
+  keeper: tba:4:mob:481
+  rooms: [tba:4:room:481]
+  products:
+  - tba:4:obj:403
+  - tba:4:obj:418
+  - tba:4:obj:419
+  - tba:4:obj:420
+  buys:
+  - type: weapon
+  profit:
+    buy: 1.12
+    sell: 0.6
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 32
+  hours:
+  - open: 7
+    close: 12
+  - open: 13
+    close: 22

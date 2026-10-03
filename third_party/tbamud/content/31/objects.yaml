@@ -1,0 +1,328 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 31.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:31:obj:3100":
+  type: drinkcon
+  keywords: [cup, tea]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: tea
+    poisoned: false
+  weight: 13
+  cost: 5
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a small simple cup.
+
+"tba:31:obj:3101":
+  type: drinkcon
+  keywords: [cup, coffee]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: coffee
+    poisoned: false
+  weight: 13
+  cost: 7
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a small simple cup.
+
+"tba:31:obj:3102":
+  type: drinkcon
+  keywords: [cup, water]
+  short: a cup
+  long: A cup has been set here.
+  wear: [take]
+  values:
+    capacity: 12
+    contains: 12
+    liquid: clear_water
+    poisoned: false
+  weight: 17
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [cup]
+    text: It is a large simple cup.
+
+"tba:31:obj:3103":
+  type: drinkcon
+  keywords: [bottle, water]
+  short: a bottle
+  long: A bottle of Evian natural spring water is here.
+  wear: [take]
+  values:
+    capacity: 24
+    contains: 24
+    liquid: clear_water
+    poisoned: false
+  weight: 29
+  cost: 10
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [label]
+    text: >
+      You've been ripped off!  It says here at the bottom of the label, in really really small letters,
+      'Bottled in the Midgaard branch of Evian Inc.  This water is from the natural, mostly clean River of
+      Midgaard.  '
+  - keywords: [bottle]
+    text: It is a large, clean bottle.  There is a large label pasted on the side.
+
+"tba:31:obj:3104":
+  type: drinkcon
+  keywords: [canteen, water]
+  short: a canteen
+  long: A canteen has been set on the ground here.
+  wear: [take]
+  values:
+    capacity: 80
+    contains: 80
+    liquid: clear_water
+    poisoned: false
+  weight: 85
+  cost: 45
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [canteen]
+    text: It is a fairly big canteen.  Looks like it can hold a lot of liquid.
+
+"tba:31:obj:3105":
+  type: key
+  keywords: [key, iron]
+  short: an iron key
+  long: An iron key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [key, iron]
+    text: The iron key is not special.  In fact, it is quite boring.
+
+"tba:31:obj:3106":
+  type: key
+  keywords: [key, rusty]
+  short: a rusty key
+  long: A rusty key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [key, rusty]
+    text: The key is a fairly large rusty key.  You notice a lot of dirt it.
+
+"tba:31:obj:3107":
+  type: key
+  keywords: [key, wooden]
+  short: a wooden key
+  long: A wooden key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [key, wooden]
+    text: >
+      The wooden key is not special.  In fact it is just about the most boring key you've ever seen in
+      your life.
+
+"tba:31:obj:3108":
+  type: key
+  keywords: [key, brass]
+  short: a brass key
+  long: A brass key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [key, brass]
+    text: The brass key is small and looks like it fits a very complicated lock.
+
+"tba:31:obj:3109":
+  type: container
+  keywords: [desk, drawer]
+  short: the desk
+  long: A desk is set against the western wall.
+  wear: []
+  values:
+    capacity: 34
+    lock_flags: 15
+    key: tba:31:obj:3107
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [desk]
+    text: The desk looks very sparse, there is a drawer in the left side.
+  - keywords: [drawer]
+    text: You notice a keyhole in the drawer.
+
+"tba:31:obj:3110":
+  type: container
+  keywords: [safe]
+  short: the safe
+  long: A safe is placed in a dark corner of the room.
+  wear: []
+  values:
+    capacity: 34
+    lock_flags: 15
+    key: tba:31:obj:3108
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [safe]
+    text: The safe is very heavy and has a keyhole.
+
+"tba:31:obj:3111":
+  type: other
+  keywords: [bench]
+  short: the Bench
+  long: A white-painted wooden bench is standing here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bench]
+    text: >
+      It is a quite heavy but very comfortable bench.  It is placed with its front towards the river so
+      you can sit and watch the river and the houses on the other side.
+
+"tba:31:obj:3112":
+  type: key
+  keywords: [key, city]
+  short: the City Key
+  long: The very big City Key is lying here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 1000
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [key, city]
+    text: >
+      It is probably the biggest key you have seen in your life.  It is made from polished gold and has
+      various patterns on it along with the Midgaard Coat of Arms.
+
+"tba:31:obj:3113":
+  type: fountain
+  keywords: [fountain, water]
+  short: a fountain
+  long: A small white fountain is standing here, gurgling happily.
+  wear: []
+  values:
+    capacity: 999
+    contains: 999
+    liquid: clear_water
+    poisoned: false
+  weight: 999
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, water]
+    text: It is very nice.  Made from fine white marble.
+
+"tba:31:obj:3114":
+  type: money
+  keywords: [coins, gold]
+  short: a small pile of gold coins
+  long: A small pile of gold coins lies here.
+  wear: [take]
+  values:
+    coins: 37
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:31:obj:3115":
+  type: money
+  keywords: [gold, coins]
+  short: the gold
+  long: A lot of gold is here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:31:obj:3116":
+  type: light
+  keywords: [candlestick, candle, stick, pewter]
+  short: a candlestick
+  long: A pewter candlestick is standing here.
+  wear: [take, hold]
+  values:
+    hours: 24
+  weight: 5
+  cost: 150
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [candlestick]
+    text: >
+      It is a rather old-looking three-armed candlestick made from pewter.  Its candles are a yellowish
+      white color.
+
+"tba:31:obj:3117":
+  type: trash
+  keywords: [tree, elm]
+  short: an elm tree
+  long: An old elm tree grows here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [elm, tree]
+    text: The fresh young leaves of the elm tree wave gently in the wind.

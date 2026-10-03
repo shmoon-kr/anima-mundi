@@ -1,0 +1,750 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 27.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:27:mob:2700":
+  keywords: [memlin, sad, creature, small]
+  short: a sad-looking memlin
+  long: A small creature digs here with a sad look in its eyes.
+  description: >
+    This creature is one of the few left of the race of memlins.  Short and gangly, it looks well
+    suited to life in tunnels.  Its warty skin is the color of sand and stone and two large pointed ears
+    twitch at any sound.  Large yellow eyes seem to fill its face with an expression of despair and
+    helplessness.
+  level: 10
+  sex: neutral
+  alignment: 100
+  flags: [stay_zone]
+  affects: [infravision]
+  combat:
+    thac0: 19
+    armor: 6
+    hit_points: 112
+    damage: 1d2+2
+    bare_hand_attack: bludgeon
+  gold: 150
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2701":
+  keywords: [heavily-muscled, guard, memlin]
+  short: a heavily-muscled guard
+  long: A heavily-muscled guard stands here keeping an eye on the surroundings.
+  description: >
+    This fierce looking guard has the large amber eyes and pointed ears of his memlin kin, but appears
+    unnaturally muscled and strong.  His face is stern and grim as though he takes his duties seriously,
+    but his wide eyes betray a sense of concealed desperation.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware]
+  combat:
+    thac0: 19
+    armor: 4
+    hit_points: 3d2+165
+    damage: 3
+  gold: 225
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2702":
+  keywords: [small, squeaking, bat]
+  short: a small squeaking bat
+  long: A small squeaking bat dives in and out of the shadows.
+  description: >
+    Flitting about quickly, this bat hardly stays still long enough to be observed.  Its characteristic
+    black furred body and webbed wings are somewhat harmless looking until several sharp teeth glint in
+    the subdued light.
+  level: 10
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, helper, no_blind]
+  affects: [detect_invis, sense_life, infravision, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+500
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2703":
+  keywords: [weary, memlin]
+  short: a weary memlin
+  long: A weary memlin supervises the handing out of supplies.
+  description: >
+    His eyes are slightly glassed over and the natural creases of his face are even more deeply
+    furrowed into an almost constant frown.  Absent-mindedly shuffling various items into some resemblance of
+    order, he seems scarcely aware of anyone else's presence.
+  level: 34
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 15
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2704":
+  keywords: [tiny, wish]
+  short: a @Ctiny wish@n
+  long: A @Ctiny wish@y floats lazily through the air.@n
+  description: >
+    It looks almost like a small wisp of cotton, delicate white strands drifting out from a spherical
+    body as it floats in the air.  Almost more like a seedling than an animal, it is easy to forget it is
+    alive, until it hums gently and drifts deliberately closer.  This creature's mere presence seems to
+    freshen the air, as though it were somehow filtering and replenishing it.
+  level: 15
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  affects: [infravision]
+  combat:
+    thac0: 18
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2705":
+  keywords: [armored, guardian]
+  short: an armored guardian
+  long: An armored guardian stands here, blocking the gates to the north.
+  description: >
+    Tall and menacing, his body is completely covered with black iridescent armor that reveals none of
+    his natural form.  Even his eyes are masked by the metal visor over his face, though somehow he seems
+    to perceive his surroundings very well indeed.
+  level: 16
+  sex: male
+  alignment: -50
+  flags: [sentinel, aware, aggressive, helper, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 18
+    armor: 3
+    hit_points: 3d2+200
+    damage: 1d2+3
+    bare_hand_attack: slash
+  gold: 240
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2706":
+  keywords: [blind, child, small]
+  short: a blind child
+  long: A small child stands here.
+  description: >
+    This small memlin child seems to have even larger eyes than her adult-kin. Startlingly luminous and
+    brimming slightly with tears, they are almost like the amber eyes of a feline, only unsettlingly
+    vacant.  She seems confused at the workings of the world around her and draws shyly away on approach.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel, wimpy]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2707":
+  keywords: [colorful, pheasant]
+  short: a colorful pheasant
+  long: A colorful pheasant hides amongst the greenery.
+  description: >
+    This beautiful bird is well-fattened and covered with bright plumage that makes its efforts at
+    hiding almost laughable.  Its cherry-red face blends into a warm bespeckled brown that covers most of its
+    body, a brilliant patch of eggshell blue and light purple fanning out into its tail.
+  level: 8
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 0
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2708":
+  keywords: [keeper]
+  short: the Keeper of the Temple
+  long: The Keeper of the Temple stands here.
+  description: >
+    This memlin looks very wise as though the product of a lifetime of contemplation.  Tranquil yellow
+    eyes betray no hint of emotion or thought, and only the faint swishing of robes can be heard as he
+    moves about the room.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 15
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2709":
+  keywords: [fire, wrm]
+  short: a @Rfire wrm@n
+  long: A @Rfire wrm@y scuttles about here, filling the air with smoke.@n
+  description: >
+    This creature wanders about the place devouring anything it sees. Shuffling along on spines that
+    cover its entire body, its gigantic fiery mouth gives it the ability to consume even metals and piles
+    of rubble, making it useful for excavation sites.  Black smoke rises from the creature, the product of
+    its constant digestion.
+  level: 15
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 1
+    hit_points: 3d3+150
+    damage: 3d7+2
+    bare_hand_attack: blast
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2710":
+  keywords: [emaciated, memlin]
+  short: an emaciated memlin
+  long: An emaciated memlin lies dying here.
+  description: >
+    This pathetic looking creature could easily be mistaken for a decaying skeleton were it not for the
+    rasping sounds of breath that still escape his mouth.  A single black chain secures his ankle to the
+    wall, though he appears far beyond any chance for escape or survival.  Paper-thin skin hangs loosely
+    in folds about his skeletal body, the eerie rattling sound as he struggles for breath a sure sign of
+    his imminent death.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 19
+    armor: 5
+    hit_points: 0
+    damage: 1d2+1
+  gold: 0
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2711":
+  keywords: [strange, glassy, stalagmite, tentacle]
+  short: the glassy tentacle
+  long: "@gA strange glassy stalagmite protrudes from the floor.@n"
+  description: >
+    On closer inspection, this spike doesn't appear to be a stalagmite at all. In fact it seems almost
+    gelatinous, quivering slightly with every vibration and slowly waving as if by its own accord.  It
+    looks as though there is more to it than what can be seen protruding from the ice.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_summon, no_blind]
+  combat:
+    thac0: 17
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2712":
+  keywords: [newly, grown, wish]
+  short: a newly-grown @Cwish@n
+  long: A newly-grown @Cwish@y wobbles uncertainly in the air.@n
+  description: >
+    This little creature is still sticky from the sap of its parent vine. Disentangling its delicate
+    strands slowly, it seems to grow larger as the air currents from its siblings dry it off, making it
+    increasingly capable of navigating its way through the slight breeze.
+  level: 12
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2713":
+  keywords: [skeletal, creature, toothy]
+  short: a skeletal creature
+  long: A skeletal creature crouches within the circle of light.
+  description: >
+    The color of faded blue egg-shell, this creature makes a faint clacking sound when it moves as
+    though it is made entirely of bone...  or indeed egg-shell.  Squinting black eyes peer calculatingly out
+    from an elongated skull and a hideous toothy smile splits across its face at the sight of you.  Two
+    gigantic spider-like hands curl protectively around a glowing object in its lap.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2714":
+  keywords: [dying, memlin, partially-petrified, partially, petrified]
+  short: a partially-petrified memlin
+  long: A dying memlin leans against the wall, half turned to stone.
+  description: >
+    Shuddering slightly, this half-dead creature clutches at the wall for support as his skin seems
+    slowly to darken and crack.  His entire lower body has turned completely into stone, the petrification
+    creeping higher like a black spreading stain.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 0
+    damage: 1d2
+  gold: 120
+  exp: 100
+  position:
+    load: resting
+    default: resting
+
+"tba:27:mob:2715":
+  keywords: [smoking, fire, wrm]
+  short: a smoking @Rfire wrm@n
+  long: A @Rfire wrm@y is tethered here, billowing smoke around it.@n
+  description: >
+    Large sharp spines protrude from all over this strange creature, twitching slightly as
+    peristaltic-like contractions ripple through its body.  Large amounts of thick black smoke ooze from pores all
+    over its body as it devours the piles of rubble, ore and all with its massive fiery mouth, acting
+    almost as living waste disposal.
+  level: 15
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2716":
+  keywords: [dark, beady-eyed, rat]
+  short: a dark, beady-eyed rat
+  long: A dark, beady-eyed rat sniffs the air.
+  description: >
+    This mangy rodent must be well-fed to have grown so large.  Pink scaly feet and a long worm-like
+    tail are all of the creature that is not covered in coarse, matted dark fur.  Two predatory black eyes
+    scan the surroundings as the animal apparently continues its scavenges for anything edible.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [aware, aggressive, stay_zone, memory, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 19
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 0
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2717":
+  keywords: [iridescent, beetle, little]
+  short: a little iridescent beetle
+  long: A little iridescent beetle scurries along.
+  description: >
+    This little glistening beetle has two rather large pincers that protrude like horns from its head. 
+    Tiny legs move almost too quickly to be seen, as the creature scuttles nervously around, streaks of
+    blue and green glinting in its black armor.
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  affects: [infravision]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2718":
+  keywords: [jewelled, green, serpent]
+  short: a jewelled green serpent
+  long: A green serpent writhes along the floor, jewelled markings down its back.
+  description: >
+    This long, undulating snake weaves its way cautiously along, green shimmering scales glinting as it
+    moves.  A tiny blood-red tongue flickers in and out of its mouth like fire, highlighting the scarlet
+    diamond markings all down the length of its body.
+  level: 17
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2719":
+  keywords: [female, memlin]
+  short: a female memlin
+  long: A female memlin stands here, busily preparing food.
+  description: >
+    This memlin appears intently focused on her activities, large yellow eyes following the flurry-like
+    movements of her hands as she washes, slices, and kneads.  Traces of white powder and the scent of
+    herbs and spices linger on her clothes and skin.
+  level: 15
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2720":
+  keywords: [memlin, child]
+  short: a memlin child
+  long: A memlin child seems to daydream as he dangles his feet in the water.
+  description: >
+    Smaller and scrawnier than a full-grown memlin, this appears to be a child of about ten years old. 
+    His large eyes are far too big for his head, which is likewise out of proportion to his fragile
+    build.  Kicking his feet lazily, his expression is one of almost meditative calm.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2721":
+  keywords: [mighty, dragon, dragon-like, creature, Cui]
+  short: the mighty Cui
+  long: A mighty, dragon-like creature watches perceptively with glowing eyes.
+  description: >
+    This powerful creature is most similar in appearance and size to a dragon. Massive scale plating
+    cascades smoothly down its back and sides, reptilian skin polished and gleaming as it moves.  An
+    enormous tail waves slowly and pendulously from side to side, its clawed feet indenting the almost solid
+    ground.  Its most unusual feature is its large faintly glowing eyes, uncannily perceptive they seem to
+    peer through things rather than at them.  The eyes are of odd coloring too, one glowing bright ember
+    red and the other gleaming charcoal black.
+  level: 33
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2722":
+  keywords: [female, humanoid, Ve]
+  short: a female Ve
+  long: A female humanoid with scaly skin stands here, her eyes faintly glowing.
+  description: >
+    This young female is tall and well built, her lean body covered with pale soft scales that shimmer
+    gently in the light, barely noticeable they look more like tattooed patterns on human skin.  Long
+    fair hair cascades down her back, and her features are strikingly prominent yet still smoothly
+    feminine.  Her large blue eyes seem almost eerily perceptive, shimmering just a little to brightly to appear
+    normal, vivid splashes of green fading and dying as though some strange force pulses through them.
+  level: 33
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2723":
+  keywords: [Khan'li, khanli, warrior]
+  short: a Khan'li warrior
+  long: A Khan'li warrior stands proudly here.
+  description: >
+    This tall warrior is strong and muscular, his whole body covered in very fine smooth scale-like
+    skin that glistens iridescent black, almost shimmering and radiating intense heat.  His eyes are large
+    and dark, flickering slightly with red flashes as though a very fire dances within them.  Long clawed
+    hands hang at his sides and his black teeth are small and pointed.  Powerful and intimidating, he
+    gives an air of formidable confidence and proud fearlessness.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2724":
+  keywords: [Dynar, youth]
+  short: a Dynar youth
+  long: A Dynar youth wanders meditatively here.
+  description: >
+    This delicate, agile humanoid is slender and elongated in body and limb. His movements are
+    unusually fast although smooth and graceful and his pale skin glows like moonlight.  His soft, fair hair
+    seems almost to float through the air as he moves and his large violet eyes are almost childishly
+    innocent.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2725":
+  keywords: [little, memlin]
+  short: a little memlin
+  long: A little memlin blinks curiously around.
+  description: >
+    This small creature is slight and sinewy, his skin as tanned leather and slightly rough in
+    texture.  Large pointed ears stick up on either side of his head and his huge amber eyes fill half his face. 
+    Peaceful in expression, he looks eager to learn and explore, peering easily and perceptively about
+    in the shadows.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2726":
+  keywords: [Revealer, memlin]
+  short: the Revealer
+  long: The Revealer stands here, guarding the secrets of his people.
+  description: >
+    This aged memlin is shrunken and wrinkled with time, his large eyes faded in color as an ember
+    about to die.  His expression is firm and troubled, as though he has seen enough for many lifetimes.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2727":
+  keywords: [rabbit]
+  short: a rabbit
+  long: A rabbit grazes peacefully here.
+  description: >
+    This little animal is covered with soft brown fur, two long floppy ears dangling down either side
+    of its head.  Oblivious to everything, it chews happily on the abundant grass, constantly sniffing as
+    it hops about.
+  level: 8
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 0
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2728":
+  keywords: [young, memlin]
+  short: a young memlin
+  long: A young memlin stands eagerly here, as if waiting for something.
+  description: >
+    This bright-eyed memlin has an expression of almost excited wonder and curiosity on his face. 
+    Fidgeting constantly, he wrings his hands as he glances around at everything, flickers of emotion passing
+    over his face like wind-blown clouds.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2729":
+  keywords: [sorceress, Khan'li, khanli, powerful, underworld]
+  short: the Sorceress of the Underworld
+  long: A powerful Khan'li sorceress stands here, eyes blazing with anger.
+  description: >
+    This intimidating Khan'li woman radiates an immense aura of power and rage, her dark flowing hair
+    billows restlessly around her as though caught in some stormy force.  Her eyes are deep obsidian
+    black, shifting with Khan'li flickers of scarlet and the occasional flash of green, their expression one
+    of vicious calculating evil.  Cruel black teeth glint like coals amidst the fiery crimson of her lips,
+    so sharp and pointed as to appear almost feral, her smooth scaled skin as dark and glossy as slick
+    oil.
+  level: 25
+  sex: female
+  alignment: -1000
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+700
+    damage: 4d4+4
+  gold: 500
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:27:mob:2730":
+  keywords: [dark, crow]
+  short: a dark crow with gleaming green eyes
+  long: A dark crow perches here, its green eyes gleaming.
+  description: >
+    This jet-black crow is covered with sleek iridescent feathers, its formidable beak sharply curved,
+    obviously made for tearing flesh.  Two tiny gleaming eyes peer suspiciously about, the color of deep
+    emerald green.
+  level: 23
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 0
+  exp: 52900
+  position:
+    load: standing
+    default: standing

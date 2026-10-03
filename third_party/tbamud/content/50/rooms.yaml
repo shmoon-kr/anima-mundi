@@ -1,0 +1,1149 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 50.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:50:room:5000":
+  name: Great Eastern Desert Zone Description Room
+  description: You are in an unfinished room.
+  sector: inside
+
+"tba:50:room:5001":
+  name: A Long Tunnel
+  description: You encounter some rapids as you enter this tunnel cut out of the mountains by the river.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5002
+    west:
+      to: tba:32:room:3205
+      look: There appear to be some bars here, making passage to the west difficult.
+
+"tba:50:room:5002":
+  name: A Long Tunnel
+  description: The tunnel branches off north.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5008
+    east:
+      to: tba:50:room:5003
+    west:
+      to: tba:50:room:5001
+
+"tba:50:room:5003":
+  name: A Long Tunnel
+  description: The tunnel branches off south.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5004
+    south:
+      to: tba:50:room:5017
+    west:
+      to: tba:50:room:5002
+
+"tba:50:room:5004":
+  name: A Tunnel Intersection
+  description: The tunnel branches off to the north and south.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:56:room:5643
+    east:
+      to: tba:50:room:5005
+    south:
+      to: tba:50:room:5018
+    west:
+      to: tba:50:room:5003
+
+"tba:50:room:5005":
+  name: An Underground Lake
+  description: >
+    You are floating on a jet-black underground lake fed by dripping water and lime from above.  The
+    tunnel continues to the east and the river leads back west.  Leading upwards to the northwest is a
+    roughly hewn hallway.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:56:room:5671
+    east:
+      to: tba:50:room:5006
+    south:
+      to: tba:50:room:5023
+    west:
+      to: tba:50:room:5004
+
+"tba:50:room:5006":
+  name: A Long Narrow Tunnel
+  description: The tunnel rises sharply to the east.  Another narrow tunnel leads away to the north.
+  sector: mountains
+  flags: [dark, indoors, tunnel]
+  exits:
+    north:
+      to: tba:50:room:5016
+    east:
+      to: tba:50:room:5007
+    west:
+      to: tba:50:room:5005
+
+"tba:50:room:5007":
+  name: A Wide Tunnel
+  description: >
+    The tunnel continues east and west.  To the east the tunnel dives down into a bright light.  A
+    small passage way opens to the north.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5026
+    west:
+      to: tba:50:room:5006
+
+"tba:50:room:5008":
+  name: The Cave-In
+  description: You stand at the edge of a large pile of rubble created from the last rockslide.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:50:room:5002
+    down:
+      to: tba:50:room:5009
+      look: You can easily slide down the rocks without getting hurt.
+
+"tba:50:room:5009":
+  name: At The Foot Of The Rubble
+  description: >
+    You are at the bottom of a large pile of rubble.  A tunnel branches off to the north and east.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5010
+    east:
+      to: tba:50:room:5012
+    up:
+      to: tba:50:room:5008
+
+"tba:50:room:5010":
+  name: A Cave Entrance
+  description: >
+    You stand in the middle of a large and beautiful cave.  A path leads deeper into the darkness.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:50:room:5009
+    down:
+      to: tba:50:room:5011
+      look: You look down into the cave.  Bones are strewn about everywhere.
+
+"tba:50:room:5011":
+  name: A Giant Cave
+  description: >
+    This cavern overwhelms you.  The walls and ceiling seem miles away. Bones of previous adventurers
+    lie strewn on the cavern floor.  There is a passage that spirals downwards in the northeast corner of
+    the cavern.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:50:room:5010
+    down:
+      to: tba:51:room:5100
+      look: The passageway spirals down into the gloom.
+
+"tba:50:room:5012":
+  name: A Narrow Bend
+  description: The tunnel turns to the south and west.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:50:room:5013
+    west:
+      to: tba:50:room:5009
+
+"tba:50:room:5013":
+  name: A Large Cave
+  description: You are standing in a large cave.  Many furs are spread out on the floor.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5012
+    east:
+      to: tba:50:room:5014
+
+"tba:50:room:5014":
+  name: A Damp Hallway
+  description: The walls here are extremely damp, as well as the floor.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5015
+      look: You hear drops of water.
+    west:
+      to: tba:50:room:5013
+
+"tba:50:room:5015":
+  name: An Underground Pool
+  description: You are wading in a knee deep pool of lime-water.
+  sector: water_swim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5016
+    west:
+      to: tba:50:room:5014
+
+"tba:50:room:5016":
+  name: A Damp Hallway
+  description: >
+    The walls of the tunnel are extremely damp here.  The tunnel leads sharply upwards to the south as
+    it starts to get narrow.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:50:room:5006
+    west:
+      to: tba:50:room:5015
+      look: You hear drops of water.
+
+"tba:50:room:5017":
+  name: A Narrow Crawlway
+  description: >
+    This crawlway is just big enough for a human to crawl through or a halfling to walk through.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5003
+    east:
+      to: tba:50:room:5018
+    south:
+      to: tba:50:room:5019
+      look: You smell the fragrant odor of fungus.
+
+"tba:50:room:5018":
+  name: A Large Cavern
+  description: You have entered a very large cavern.  The rock formations would amaze almost any dwarf.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5004
+    west:
+      to: tba:50:room:5017
+
+"tba:50:room:5019":
+  name: A Fungus Patch
+  description: >
+    As you walk through the fungus patch, you are shot at by many millions of spores.  You can hardly
+    breathe.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5017
+    east:
+      to: tba:50:room:5020
+      look: The fragrant smell of fungus spores continues to the east.
+
+"tba:50:room:5020":
+  name: The Fungus Path
+  description: >
+    As you walk along the path, millions of spores are shot at you.  It is difficult to breathe.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:50:room:5021
+      look: A giant mushroom temple stands to the south.
+    west:
+      to: tba:50:room:5019
+      look: The fragrant smell of spores continues to the west.
+
+"tba:50:room:5021":
+  name: The Fungus Temple
+  description: >
+    You find yourself standing inside of a giant mushroom.  The inside is decorated in the fashion of a
+    temple.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5020
+    east:
+      to: tba:50:room:5022
+
+"tba:50:room:5022":
+  name: A Sloping Passage
+  description: You follow a path sloping down from the fungus temple.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5023
+    south:
+      to: tba:50:room:5021
+
+"tba:50:room:5023":
+  name: A Sloping Passage
+  description: You are on a path that gently slopes up from the underground pool.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:50:room:5005
+      look: You hear sounds of trickling water.
+    south:
+      to: tba:50:room:5022
+
+"tba:50:room:5024":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sand constantly shifting around you.  A pyramid lies to the
+    east and a snow-capped mountain range to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5030
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5034
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5025
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5025":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east and a snow-capped mountain range to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5024
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5031
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5026
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5026":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east and a snow-capped mountain range to the west.  The hole which you tumbled out of is too high
+    for you to reach.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5025
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5036
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5027
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5027":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east and a snow-capped mountain range to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5026
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5028
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5028":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-east and a snow-capped mountain range to the west.  You spy a narrow dirt trail leading away
+    to the west into the foothills.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5027
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5029
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:120:room:12068
+      look: >
+        A small dirt trail leads off to the west where it joins a large clay road some distance away.
+
+"tba:50:room:5029":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-east and a snow-capped mountain range to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5028
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5037
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5044
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5030":
+  name: A Small Oasis
+  description: >
+    You stand beside a small pool of crystal-blue water bathed in the shade of a few scarce palm
+    trees.  To the north you see a small encampment stopped for the day.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5056
+      look: >
+        You see three tents and some camels hitched to a stake.  Shadows moving across the tents suggest
+        activity.
+    east:
+      to: tba:50:room:5036
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5032
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5025
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5031":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5031
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5031
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5032
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5024
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5032":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5035
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5036
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5032
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5033":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5037
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5037
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5043
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5028
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5034":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south-east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5038
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5035
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5034
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5035
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5035":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    east, it looks enormous, even from this distance.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5039
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:53:room:5300
+      look: >
+        Even from here, you can sense a great evil residing within the pyramid protruding from the sand to
+        the east.
+    south:
+      to: tba:50:room:5032
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5034
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5036":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5035
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5041
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5032
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5030
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5037":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5048
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5042
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5038":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5046
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5045
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5040
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5034
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5039":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south.  The gates of a city lie a short distance off to the north.
+  sector: field
+  exits:
+    north:
+      to: tba:54:room:5411
+      look: Some city gates stand off to the north.
+    east:
+      to: tba:50:room:5039
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5048
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5039
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5040":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  You are standing near
+    a gigantic pyramid located a couple hundred meters west of you.  From here you can sense the great
+    evil which resides within the massive structure.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5036
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5049
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5041
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:53:room:5300
+      look: The pyramid can be seen across the sands to the west.
+
+"tba:50:room:5041":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5040
+      look: >
+        Even from here, you can sense a great evil residing within the pyramid protruding from the sand to
+        the north.
+    east:
+      to: tba:50:room:5048
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5041
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5037
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5042":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5049
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5055
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5043
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5041
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5043":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5042
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5055
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5044
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5033
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5044":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north and a ruined city to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5050
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5055
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5029
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:52:room:5200
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5045":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5045
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5052
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5045
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5038
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5046":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south-west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5038
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5047
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5047
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5039
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5047":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5046
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5051
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5053
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5040
+      look: >
+        Even from here, you can sense a great evil residing within the pyramid protruding from the sand to
+        the west.
+
+"tba:50:room:5048":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5039
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5048
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5053
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5041
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5049":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-west.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5053
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5054
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5050
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5042
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5050":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5300
+      look: Sand as far as the eye can see... and a pyramid in the distance.
+    east:
+      to: tba:50:room:5054
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5044
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5042
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5051":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south-west and a deep canyon to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5051
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5052
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5047
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5052":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    south-west and a deep canyon to the east.  Just below you can make out a tiny ledge.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5051
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5053
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5045
+      look: Sand as far as the eye can see.
+    down:
+      to: tba:50:room:5063
+
+"tba:50:room:5053":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    west and a deep canyon to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5052
+      look: Sand as far as the eye can see.
+    east:
+      to: tba:50:room:5062
+      look: A rickety rope bridge stretches across the canyon... it doesn't look too safe.
+    south:
+      to: tba:50:room:5054
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5049
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5054":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    west and a deep canyon to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5053
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5055
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5050
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5055":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  A pyramid lies to the
+    north-west and a deep canyon to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:50:room:5054
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5055
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5043
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5056":
+  name: A Nomad Camp
+  description: >
+    This small group of desert nomads has stopped for the day to rest and refresh themselves beside
+    this beautiful oasis.  Three tents and some camels make up the party.  From within two of the tents you
+    hear muffled voices, obviously surprised at your visit.
+  sector: field
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:50:room:5058
+      look: Some camels are tied up to a mass of stakes plugged into the ground.
+    east:
+      to: tba:50:room:5057
+      look: You see inside one of the tents a huddled mass of people, probably slaves.
+    south:
+      to: tba:50:room:5030
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5025
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5057":
+  name: Inside A Small Tent
+  description: >
+    This is a small and simple tent with few possessions in sight.  Lying here and there are
+    young-looking men and women, possibly slaves to the leader of this band.
+  sector: field
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:50:room:5056
+      look: You see the center of the nomad camp.
+
+"tba:50:room:5058":
+  name: Beside The Camels
+  description: >
+    Here stand about ten camels, all hitched to some stakes plugged into the ground.  To the east you
+    see a small tent while to the north you see a larger, fancier tent.
+  sector: field
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:50:room:5060
+      look: >
+        This tent seems to be the temporary abode of the nomad leader.  You make a mental note to visit it
+        before you leave.
+    east:
+      to: tba:50:room:5059
+      look: In this tent there are very large men, all carrying weapons.
+    south:
+      to: tba:50:room:5056
+      look: You see the center of the nomad camp.
+    west:
+      to: tba:50:room:5024
+      look: Sand as far as the eye can see.
+
+"tba:50:room:5059":
+  name: The Warriors' Tent
+  description: >
+    This tent has a few furnishings, but mainly it holds the band's protectors.  They all stare at you
+    coldly as you enter.
+  sector: field
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:50:room:5058
+      look: Outside you see some peaceful camels.
+
+"tba:50:room:5060":
+  name: The Main Tent
+  description: >
+    This tent is as lavishly decorated on the inside as it is on the outside.  A fancy carpet lies on
+    the sand and numerous baskets line the walls.
+  sector: field
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:50:room:5061
+    south:
+      to: tba:50:room:5058
+      look: You see some peaceful camels.
+
+"tba:50:room:5061":
+  name: The Main Tent
+  description: >
+    This is where the leader of this band of nomads resides.  He is definitely rich as you inspect the
+    tapestries, baskets, and a few paintings as well.
+  sector: field
+  flags: [indoors, no_track]
+  exits:
+    west:
+      to: tba:50:room:5060
+      look: You see the entrance to this tent.
+
+"tba:50:room:5062":
+  name: The Rickety Rope Bridge
+  description:
+  - >
+    You carefully begin to walk across the bridge, but suddenly the rope breaks and you fall...
+  - "... and fall"
+  - and fall
+  - and fall
+  - "... to your death on the rocks below."
+  sector: mountains
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:50:room:5053
+
+"tba:50:room:5063":
+  name: The Wind-Swept Ledge
+  description: >
+    Being very careful not to lose your balance, you look around and find that this canyon is about a
+    half a kilometer deep.  To the west is a dark cave leading under the desert sands and above you a rope
+    bridge spans the gap.
+  sector: mountains
+  exits:
+    west:
+      to: tba:50:room:5064
+    up:
+      to: tba:50:room:5052
+      look: The desert sands blow down in your face.
+
+"tba:50:room:5064":
+  name: The Cave Mouth
+  description: >
+    The air in here is MUCH cooler than outside.  From the west you hear strange sounds, but can see
+    nothing.  The cave slopes down into the darkness.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5063
+      look: Outside is lighter and very windy.
+    west:
+      to: tba:50:room:5065
+
+"tba:50:room:5065":
+  name: The Mysterious Lair
+  description: >
+    You have stumbled upon the home of something.  From the treasure haphazardly strewn about and the
+    rotting carcasses, you would guess that this is a dragon's lair.  As to what type, you can't really
+    say. The cave narrows out into a tunnel to the west.
+  sector: mountains
+  flags: [dark, indoors, no_track, no_magic]
+  exits:
+    east:
+      to: tba:50:room:5064
+    west:
+      to: tba:50:room:5066
+
+"tba:50:room:5066":
+  name: A Wide Tunnel
+  description: >
+    This tunnel seems to go on forever into the darkness.  You carefully feel your way along the walls.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5065
+    west:
+      to: tba:50:room:5067
+
+"tba:50:room:5067":
+  name: A Narrower Tunnel
+  description: >
+    The tunnel becomes very narrow and you fight to squeeze your way through. The floor seems to level
+    off a little.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5066
+    south:
+      to: tba:50:room:5068
+
+"tba:50:room:5068":
+  name: A Narrow Crack
+  description: This part of the tunnel is the hardest to move through as the walls move in to meet you.
+  sector: mountains
+  flags: [dark, indoors, tunnel]
+  exits:
+    north:
+      to: tba:50:room:5067
+    west:
+      to: tba:50:room:5069
+
+"tba:50:room:5069":
+  name: A Small Cavern
+  description: >
+    It is dark and damp and bats hang from the ceiling.  A narrow crack is in the east wall.  The floor
+    now slopes upwards.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5068
+    west:
+      to: tba:50:room:5070
+
+"tba:50:room:5070":
+  name: A Small Shaft
+  description: >
+    From within this shaft you can see a narrow hole in the roof just large enough for one person. 
+    Back east is the cavern.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:50:room:5069
+    up:
+      to: tba:50:room:5009

@@ -1,0 +1,561 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 233.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:233:obj:23300":
+  type: treasure
+  keywords: [dragontooth, necklace]
+  short: a dragontooth necklace
+  long: A dragontooth necklace is here.
+  flags: [glow]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 480
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: mana
+    modifier: 25
+  extras:
+  - keywords: [dragontooth, necklace]
+    text: >
+      The teeth from several dragons have been strung up on a rawhide necklace. This isn't worth much
+      value, but its been known to bring travelers like yourself good luck.
+
+"tba:233:obj:23301":
+  type: trash
+  keywords: [pile, sticks]
+  short: a pile of sticks
+  long: A pile of sticks is lying on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, sticks]
+    text: >
+      This is just a simple pile of sticks that was left here, most likely from a recent traveler.
+
+"tba:233:obj:23302":
+  type: note
+  keywords: [map]
+  short: a map of the dragon plains
+  long: A map with the words "Dragon Plains" written on the top.
+  action: |-
+    O
+        |
+    O-O-O-O-O-O-O-O-O-O-O-O
+      |   |               |
+      O   O               O
+          |               |
+          O-O             O
+                          |
+                      O-O-O
+                      |
+                    O-O
+                    |
+            O-O-O   O
+            |   |   |
+            O   O-O O
+            |     | |
+      O-O-O-O     O-O
+      |
+      O
+      |
+      O
+      |
+      O
+      |
+      O-O             O-O-O
+        |             |   |
+        O             O   O
+        |             |   |
+        O-O-O-O-O-O-O-O   O
+                  |       |
+                  O       O
+                  |       |
+        O-O-O-O-O-O       O
+        |                 |
+        O             O-O-O
+        |             |
+        O-O-O-O-O-O---O
+                |
+                O       O-O-O-O
+                |       |     |
+          O-O-O-O O     O     O
+          |       |     |     |
+          O-O-O---O-O   O     O
+                    |   |
+                    O-O-O
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:233:obj:23303":
+  type: other
+  keywords: [bird, feather]
+  short: a bird feather
+  long: A colorful bird feather has dropped on the ground before you.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bird, feather]
+    text: >
+      The feather is bright with colors ranging from blue to orange to green. You wonder what kind of a
+      bird it could have come from.
+
+"tba:233:obj:23306":
+  type: other
+  keywords: [weed, tumbleweed]
+  short: some tumbleweed
+  long: A large tumbleweed is blowing around in the wind.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tumbleweed, weed]
+    text: >
+      The tumbleweed consists of many dead twigs bunched together.  It's relativley weightless and could
+      easily be crushed.
+
+"tba:233:obj:23312":
+  type: other
+  keywords: [skull]
+  short: a skull
+  long: A fragile looking skull is sitting on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [skull]
+    text: >
+      The skull looks up at you with its empty eyes.  The skull is covered with blood stains, making you
+      feel sick to your stomach.
+
+"tba:233:obj:23316":
+  type: other
+  keywords: [large, rock]
+  short: a rock
+  long: A large rock is sitting here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [large, rock]
+    text: The rock is rather plain.  You notice a few small chips on the surface.
+
+"tba:233:obj:23320":
+  type: other
+  keywords: [pile, dust]
+  short: a pile of dust
+  long: There is a pile of dust at your feet.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Pile, dust]
+    text: This is just a simple pile of dust.  There is nothing special about it.
+
+"tba:233:obj:23321":
+  type: light
+  keywords: [broken, lantern]
+  short: a broken lantern
+  long: A broken lantern has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 10
+  weight: 3
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [broken, lantern]
+    text: >
+      The lantern appears to be out of gas.  The glass top has been shattered, leaving shards of glass
+      around the floor.
+
+"tba:233:obj:23324":
+  type: worn
+  keywords: [shirt]
+  short: a torn shirt
+  long: A torn shirt has been left here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torn, shirt]
+    text: >
+      The shirt has almost been ripped to shreads.  It might be possible to still wear it, but it
+      wouldn't give you much warmth or protection.
+
+"tba:233:obj:23329":
+  type: treasure
+  keywords: [ring]
+  short: an onyx ring
+  long: A beautiful onyx ring has been left here.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [onyx, ring]
+    text: >
+      The beautiful ring sparkles in the light of the day.  The ring holds no power, but could be worth
+      some value.  Although, you may want to hold onto it. You may never find another gem like it.
+
+"tba:233:obj:23331":
+  type: treasure
+  keywords: [stone]
+  short: a glass stone
+  long: A shimmering glass stone is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glass, stone]
+    text: >
+      As you look at the beautiful rock, you see a slight shade of blue coming from within it.  It
+      sparkles in the light, making you feel warmer.
+
+"tba:233:obj:23333":
+  type: light
+  keywords: [candle]
+  short: a candle
+  long: A small candle is lying on the floor in front of you.
+  wear: [take]
+  values:
+    hours: 0
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [candle]
+    text: >
+      As you look at the candle, you notice there isn't much left of it.  It could be lit and used as
+      light, but probably wouldn't stay lit for very long.
+
+"tba:233:obj:23335":
+  type: drinkcon
+  keywords: [water, canteen, water]
+  short: canteen
+  long: A canteen is here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: water
+    poisoned: false
+  weight: 15
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [canteen]
+    text: >
+      The canteen is rather simple looking.  The outside is made out of cat skin, giving it an odd
+      smell.  But hey, it works!
+
+"tba:233:obj:23336":
+  type: other
+  keywords: [rope]
+  short: 50' of rope
+  long: A coil of rope is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coil, rope]
+    text: >
+      There is 50' of rope here which could be used for climbing.  The rope appears to be in good shape.
+
+"tba:233:obj:23337":
+  type: light
+  keywords: [burnt, out, torch]
+  short: a burnt out torch
+  long: A burnt out torch has been left here.
+  wear: [take]
+  values:
+    hours: 2
+  weight: 3
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [burnt, out, torch]
+    text: >
+      The torch is in reasonably good shape.  You might still be able to get some light from it, but
+      don't expect it to last long.
+
+"tba:233:obj:23340":
+  type: weapon
+  keywords: [red, dagger]
+  short: a red dagger
+  long: A red dagger is here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d2
+    attack: slash
+  weight: 4
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [red, dagger]
+    text: >
+      This weapon is rather extravagant looking.  The handle is made from ivory. You see swirls of red
+      marble throughout it.  The blade shimmers in the light.
+
+"tba:233:obj:23341":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A torch is here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 10
+  weight: 2
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch]
+    text: The torch is simple looking.  There doesnt appear to be anything special about it.
+
+"tba:233:obj:23342":
+  type: weapon
+  keywords: [mace]
+  short: a mace
+  long: A mace is lying on the ground.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d2
+    attack: pierce
+  weight: 4
+  cost: 900
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mace]
+    text: >
+      The weapon is quite large in size.  You notice several large spikes coming out from the weapon.  It
+      could easily tear someone apart.
+
+"tba:233:obj:23345":
+  type: weapon
+  keywords: [dirk]
+  short: a dirk
+  long: A small dirk has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d3
+    attack: stab
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dirk]
+    text: >
+      As you look at the dirk, you notice how small it is.  However, it is quite sharp.  Be careful not
+      to cut yourself.
+
+"tba:233:obj:23356":
+  type: armor
+  keywords: [dragonmail, gloves]
+  short: a pair of dragonmail gloves
+  long: A pair of dragonmail gloves are here.
+  flags: [glow]
+  wear: [take, hands, hold]
+  values:
+    armor: 2
+  weight: 7
+  cost: 700
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dragonmail, gloves]
+    text: >
+      These fine gloves were hand made from the scales of a dragon.  They look like they would provide
+      excellent protection.
+
+"tba:233:obj:23362":
+  type: treasure
+  keywords: [toy, top]
+  short: a toy top
+  long: A toy top is here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [toy, top]
+    text: This is just a simple toy top from a child.  You could amuse yourself by playing with it.
+
+"tba:233:obj:23366":
+  type: container
+  keywords: [backpack]
+  short: a dragonscale backpack
+  long: A large dragonscale backpack has been left here.
+  wear: [take, body]
+  values:
+    capacity: 250
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 140
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dragonscale, backpack]
+    text: >
+      The pack is considerably large and could carry a lot.  It is green and very shiny as it catches in
+      the light.
+
+"tba:233:obj:23370":
+  type: other
+  keywords: [feather]
+  short: a feather
+  long: A feather is here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [feather]
+    text: This is a feather of a hawk.  There is nothing special about it.
+
+"tba:233:obj:23376":
+  type: armor
+  keywords: [boots]
+  short: a pair of dragonscale boots
+  long: A pair of dragonscale boots is here.
+  wear: [take, feet, hold]
+  values:
+    armor: 2
+  weight: 8
+  cost: 850
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dragonscale, boots, boot]
+    text: >
+      As you look at the boots, you notice they are in excellent condition.  They would fit you well, and
+      no doubt protect your feet from just about anything.
+
+"tba:233:obj:23380":
+  type: armor
+  keywords: [dragonscale, armor]
+  short: a suit of dragonscale armor
+  long: A suit of dragonscale armor is here.
+  flags: [hum]
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 10
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [dragonscale, armor]
+    text: >
+      The suit of armor is quite large, but would provide excellent protection against your enemies. 
+      It's made from the finest dragonscales, and is quite colorful.
+
+"tba:233:obj:23391":
+  type: armor
+  keywords: [dragonscale, warhelm]
+  short: a dragonscale warhelm
+  long: A dragonscale warhelm is here.
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 8
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dragonscale, warhelm]
+    text: This is a simple helmet, designed to protect your head in battle.
+
+"tba:233:obj:23398":
+  type: treasure
+  keywords: [ruby, gem]
+  short: a ruby gem
+  long: A ruby gem is lying on the ground before you.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ruby, gem]
+    text: >
+      The gem reflects off the sun, making a red rainbow in front of you.  You suddenly feel warmer.

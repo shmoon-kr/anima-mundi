@@ -1,0 +1,843 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 140.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:140:obj:14000":
+  type: armor
+  keywords: [wyvern, scale, armor]
+  short: some wyvern scale armor
+  long: Some tough blue tinged scale armor has been left here.
+  flags: [glow, magic, bless, anti_mage, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 5
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [wyvern, scale, armor]
+    text: >
+      This armor is made from the scales of a great wyvern.  The blue plates of scale armor overlap
+      providing protection from attacks.  The armor has been blessed by the high priest of the wyverns for the
+      Sentries guarding the Lord of the wyverns.
+
+"tba:140:obj:14001":
+  type: wand
+  keywords: [Red, dragon, orb, wyv]
+  short: a red dragon orb
+  long: A glowing red ball floats in the air here.
+  flags: [glow, magic, no_drop, anti_good, anti_neutral]
+  wear: [take, hold]
+  values:
+    raw: [30, 3, 1, 36]
+  weight: 4
+  cost: 600
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [red, dragon, orb]
+    text: >
+      This sphere of deep red scales has been endowed with the evil essence of a red dragon.  It glows
+      with an unholy light of pure evil.
+
+"tba:140:obj:14002":
+  type: weapon
+  keywords: [wyvern, claw, wyv]
+  short: a wyvern claw
+  long: A dull red claw has been dropped here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: claw
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [claw, wyvern]
+    text: >
+      This sturdy claw was once the weapon of a mighty wyvern.  It is scratched and nicked from countless
+      battles.
+
+"tba:140:obj:14003":
+  type: armor
+  keywords: [wyvern, foreclaw, wyv]
+  short: the foreclaw of a wyvern
+  long: The great foreclaw of a wyvern lies here.
+  wear: [take, hands, hold]
+  values:
+    armor: 6
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [foreclaw, wyvern]
+    text: >
+      This is the foreclaw of a great wyvern.  Its tough material and deadly pointed talons make it an
+      excellent weapon and parrying item.  What a beast it must have been that this came from.
+
+"tba:140:obj:14004":
+  type: armor
+  keywords: [crested, wyvern, helm, wyv]
+  short: a crested wyvern helm
+  long: A helm made of blue scales has been dropped here.
+  flags: [glow, magic, bless, anti_mage]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 5
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [crested, wyvern, helm]
+    text: >
+      This is the blue crested helm of a wyvern sentry.  The blue ridges of bone and scale that cover it
+      make it stronger than forged steel.  The helm has been blessed by the High priest of the wyverns.
+
+"tba:140:obj:14005":
+  type: weapon
+  keywords: [greater, wyvern, talon, wyv]
+  short: a greater wyvern talon
+  long: A huge talon rests here looking very dangerous.
+  flags: [hum, bless, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 6
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [greater, wyvern, talon]
+    text: >
+      This huge claw was once wielded in battle by the commander of all the wyvern defenders.  Its edges
+      have been filed down into wicked blades and the points are barbed.  It must have been quite painful
+      for the commander to have this done while he was still attached to the talon.
+
+"tba:140:obj:14006":
+  type: armor
+  keywords: [hind, claws, wyvern, wyv]
+  short: the hind claws of a wyvern
+  long: Someone has left a set of wyvern claws here.
+  flags: [glow, bless]
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 4
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [hind, claws, wyvern]
+    text: >
+      These were once the hind claws of a wyvern warrior.  Someone has set them into light leather boots
+      as a symbol of their victory over the beast.  Fully a foot long and deadly sharp, you better not step
+      on anyone's feet with these on.
+
+"tba:140:obj:14007":
+  type: armor
+  keywords: [claw, ring, wyv]
+  short: a claw ring
+  long: A ring made of an old claw has been dropped here.
+  flags: [glow, hum, invisible, magic, bless]
+  wear: [take, finger, hold]
+  values:
+    armor: 4
+  weight: 1
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: con
+    modifier: 1
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [claw, ring]
+    text: >
+      This ring was made from a very old claw by soaking it in water for 2 years and gradually shaping
+      it.  There is a feeling of magical energy that emanates from the ring.  In wyvern culture this ring
+      represents allegiance to the city lord, and service in his court.
+
+"tba:140:obj:14008":
+  type: boat
+  keywords: [wyvern, wings, wyv]
+  short: some wyvern wings
+  long: A huge set of wings float in the air here.
+  flags: [no_donate, invisible, no_drop]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 700
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: ac
+    modifier: -10
+  extras:
+  - keywords: [wyvern, wings]
+    text: >
+      These wings came from the mighty Lord of all the wyverns.  The oldest and strongest of all wyverns
+      he reached an age where he grew wings like his cousins the dragons.  Incredibly light and strong
+      these wings are 15 feet long from tip to tip.  They are transparent and very difficult to see.
+
+"tba:140:obj:14009":
+  type: armor
+  keywords: [royal, wyvern, shield, wyv]
+  short: a royal wyvern shield
+  long: A shield of red and blue scales lies here.
+  flags: [glow, magic, bless, anti_mage, anti_thief]
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 5
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [shield, royal, wyvern]
+    text: >
+      This shield is crafted of overlapping blue and red scales to provide maximum possible protection to
+      its owner.  Emblazoned upon the front is the symbol of the royal house of wyverns.
+
+"tba:140:obj:14010":
+  type: light
+  keywords: [red, wyvern, eyes, wyv]
+  short: a set of glowing red eyes
+  long: The glowing eyes of some great animal have been forgotten here.
+  flags: [glow, magic, no_drop, bless, anti_good, anti_cleric]
+  wear: [take, head, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: wis
+    modifier: 1
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [glowing, red, eyes, wyvern]
+    text: >
+      These were once the eyes of a mighty wyvern, now dead.  They still retain some of their previous
+      owner's magical energy.  They glow with a sinister red light.  The red orbs seem to watch you where
+      ever you go.
+
+"tba:140:obj:14011":
+  type: fountain
+  keywords: [fountain, red, blood, wyv]
+  short: a fountain flowing with blood
+  long: A fountain full of a red liquid is flowing here.
+  flags: [hum]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: blood
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, blood]
+    text: >
+      This fountain has been skillfully crafted of red and blue stone, the traditional colors of the
+      wyvern race.  Upon close inspection you realize that the liquid in it is blood.  The wyverns believe that
+      this is the blood of their ansesters, and so drinking of it gives them strength.  Never the less the
+      question is where is the blood coming from?
+
+"tba:140:obj:14012":
+  type: treasure
+  keywords: [statue, dragon, god]
+  short: a statue of the dragon God Ferret
+  long: A statue of the dragon God Ferret has been placed here.
+  flags: [glow, magic]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [statue, dragon, god, ferret]
+    text: >
+      This huge statue is made of pure amethyst.  It towers 30 feet into the air taller than any of the
+      buildings in the city.  The image of the amethyst dragon looks down on the mortals he created so many
+      years ago.  The citizens constructed this statue in honor of the God after they completed this city,
+      they believe he protects them, and sent the red dragon to defend the city.
+
+"tba:140:obj:14013":
+  type: treasure
+  keywords: [statue, god, elf]
+  short: a statue of the god Ilsensine
+  long: A statue of the god Ilsensine has been constructed here.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [statue, elf, god, ilsensine]
+    text: >
+      The citizens of the city have constructed a statue of the god Ilsensine here in hopes he will honor
+      and aid their students of magic.  The statue is only 6 feet tall but made entirely of pure emerald. 
+      The god is pictured dressed in robes, his head shaved and his hands raised in the act of calling
+      upon great magical forces.
+
+"tba:140:obj:14014":
+  type: treasure
+  keywords: [alter, gods, telemacos, balm, wyv]
+  short: an alter to the gods Balm and Telemacos
+  long: An alter to the gods Balm and Telemacos is here.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [alter, balm, telemacos]
+    text: >
+      This alter is made of polished gray marble.  The wyverns have constructed it in honor of the two
+      gods of neutrality who battle each other over the fait of all mortality.  The two dragon gods are
+      sculpted as facing each other preparing for combat.  Between them is a marble egg representing the lives
+      they battle over.
+
+"tba:140:obj:14015":
+  type: treasure
+  keywords: [willow, wyv, statue, goddess]
+  short: a statue of the goddess Willow
+  long: A statue of the Goddess Willow has been placed here.
+  flags: [hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [goddess, willow, statue]
+    text: >
+      This statue of the dragon goddess Willow is made entirely of sapphire and has been trimmed with
+      silver guild.  The temple priests placed her here to symbolize the separation of the duties of men and
+      women.  Her sudor Balm is for ever bound by his battle for the souls of mortals in the next room.  The
+      two may watch each other but are for ever apart.
+
+"tba:140:obj:14016":
+  type: scroll
+  keywords: [scroll, recall, wyv]
+  short: a scroll of recall
+  long: A scroll of recall has been dropped here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [30, 42, -1, -1]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:140:obj:14017":
+  type: scroll
+  keywords: [scroll, seeing, wyv]
+  short: a scroll of seeing
+  long: A magical scroll has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [30, 19, 44, 50]
+  weight: 1
+  cost: 800
+  rent: 0
+  level: 0
+
+"tba:140:obj:14018":
+  type: drinkcon
+  keywords: [water, cup, wyv, water]
+  short: a cup
+  long: A small cup is here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: clear_water
+    poisoned: true
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:140:obj:14019":
+  type: drinkcon
+  keywords: [water, Barrel, wyv, water]
+  short: a barrel
+  long: A large barrel has been dropped here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: clear_water
+    poisoned: false
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:140:obj:14020":
+  type: container
+  keywords: [ring, holding, wyv]
+  short: a ring of holding
+  long: An old ring of brass has been dropped here.
+  flags: [glow, magic, bless]
+  wear: [take, finger, hold]
+  values:
+    capacity: 200
+    lock_flags: 5
+    corpse: false
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:140:obj:14021":
+  type: light
+  keywords: [pine, torch, wyv]
+  short: a pine torch
+  long: Someone left you a perfectly good torch.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 24
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:140:obj:14022":
+  type: weapon
+  keywords: [wyvern, fang, wyv]
+  short: a wyvern fang
+  long: A sharp animal's fang is in the dirt here.
+  flags: [bless]
+  wear: [take, wield, hold]
+  values:
+    damage: 1d5
+    attack: pierce
+  weight: 3
+  cost: 110
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:140:obj:14023":
+  type: weapon
+  keywords: [wyvern, tail, wyv]
+  short: a wyvern tail
+  long: The tail of a wyvern is in the dust here.
+  flags: [bless]
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: thrash
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:140:obj:14024":
+  type: armor
+  keywords: [hide, helm, wyv]
+  short: a hide helm
+  long: A helm of tanned hide is here.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:140:obj:14025":
+  type: armor
+  keywords: [hide, cloak, wyv]
+  short: a hide cloak
+  long: A cloak of tough hide is here.
+  wear: [take, neck, about]
+  values:
+    armor: 4
+  weight: 15
+  cost: 400
+  rent: 0
+  level: 0
+
+"tba:140:obj:14026":
+  type: armor
+  keywords: [hide, bracer, wyv]
+  short: a hide bracer
+  long: A strip of thick hide is here.
+  wear: [take, arms, wrist]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 5
+
+"tba:140:obj:14027":
+  type: armor
+  keywords: [hide, armor, wyv]
+  short: a suit of hide armor
+  long: Someone has left you a suit of hide armor.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 8
+
+"tba:140:obj:14028":
+  type: armor
+  keywords: [hide, gauntlets, wyv]
+  short: some hide gauntlets
+  long: Some sturdy hide gauntlets are here.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 2
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:140:obj:14029":
+  type: armor
+  keywords: [hide, leggings, wyv]
+  short: some hide leggings
+  long: A set of hide leggings have been dropped here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:140:obj:14030":
+  type: armor
+  keywords: [hide, boots, wyv]
+  short: a pair of hide boots
+  long: Some heavy hide boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 4
+  cost: 170
+  rent: 0
+  level: 0
+
+"tba:140:obj:14031":
+  type: armor
+  keywords: [hide, shield, wyv]
+  short: a hide shield
+  long: A tough hide shield was dropped here.
+  wear: [take, shield]
+  values:
+    armor: 0
+  weight: 4
+  cost: 170
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 5
+
+"tba:140:obj:14032":
+  type: drinkcon
+  keywords: [ale, pint, wyv, ale]
+  short: a pint
+  long: A pint of thick dark stout is here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: dark_ale
+    poisoned: false
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:140:obj:14033":
+  type: drinkcon
+  keywords: [ale, keg, wyv, ale]
+  short: a large Keg
+  long: A large keg is standing here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: dark_ale
+    poisoned: false
+  weight: 20
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:140:obj:14034":
+  type: food
+  keywords: [steak, wyv]
+  short: a 16oz steak
+  long: A huge steak has been left on a plate here.
+  wear: [take]
+  values:
+    hours: 36
+    poisoned: false
+  weight: 1
+  cost: 90
+  rent: 0
+  level: 0
+
+"tba:140:obj:14035":
+  type: food
+  keywords: [huge, roast, wyv]
+  short: a huge roast
+  long: A huge slab of meat is on a spit here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:140:obj:14036":
+  type: scroll
+  keywords: [scroll, remove, curse, wyv]
+  short: a scroll of remove curse
+  long: A scroll of great power is here.
+  flags: [magic, bless]
+  wear: [take]
+  values:
+    raw: [30, 35, -1, -1]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:140:obj:14037":
+  type: potion
+  keywords: [potion, healing, wyv]
+  short: a potion of healing
+  long: A potion of great curative power lies here.
+  flags: [glow, magic, bless]
+  wear: [take]
+  values:
+    raw: [1, 16, -1, -1]
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:140:obj:14038":
+  type: wand
+  keywords: [wand, aid, wyv]
+  short: a wand of aid
+  long: A long thin wand lies here.
+  flags: [hum, magic, bless]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 1]
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:140:obj:14039":
+  type: staff
+  keywords: [staff, wounding, wyv]
+  short: a staff of wounding
+  long: A heavy black staff lies here in a corner.
+  flags: [glow, hum, magic, bless]
+  wear: [take, hold]
+  values:
+    raw: [30, 6, 6, 27]
+  weight: 2
+  cost: 600
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+
+"tba:140:obj:14040":
+  type: treasure
+  keywords: [god, springfire, statue, wyv]
+  short: a statue of the Air God Springfire
+  long: A statue of the God Springfire is here.
+  flags: [hum, invisible, magic, bless]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [god, springfire, air, statue]
+    text: >
+      This statue of the God Springfire is made of pure transparent crystal.  To the naked eye it is
+      completely invisible.  The warriors of the city paid a staggering amount of money to have the warrior
+      god's image immortalized in their guild.  They hope he will aid them in battle against their mortal
+      enemies the giants.
+
+"tba:140:obj:14041":
+  type: treasure
+  keywords: [statue, khelben, god, knight, wyv]
+  short: a statue of the mighty God Khelben
+  long: There is a statue of the God Khelben, Lord of The Elements here.
+  flags: [glow, magic, bless]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [knight, khelben, god, statue, lord, elements]
+    text: >
+      The knights of the city have placed this statue here to watch over their guild.  Above all other
+      gods they worship the mighty Khelben, who they believe founded the order of knighthood.  The statue
+      itself is 9 feet tall and made of pure platinum.  It is clad in the armor and symbols of the city's
+      royal line and the knights' personal colors.  The knights hope that the god will grant them their magic
+      in days to come and aid them when they enter battle.
+
+"tba:140:obj:14042":
+  type: treasure
+  keywords: [god, statue, thunder]
+  short: a statue of the Thunder God Rumble
+  long: A statue of the mighty God Rumble has been built here.
+  flags: [glow, hum, magic, bless]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [thunder, rumble, god, statue]
+    text: >
+      This statue was built by the city's guild of rogues and thieves. They have chosen the almighty
+      thunder god as their patron deity because of his former status as a thief, and because they believe that
+      in the final battle between order and chaos he will come down from the heavens and help them destroy
+      Balm and all his followers for ever.  The statue is carved from polished obsidian stone and has been
+      inlaid with streaks of silver lightning bolts.  The God is depicted, dressed in a gray robe with both
+      hands raised hurling his deadly thunder around him.
+
+"tba:140:obj:14043":
+  type: treasure
+  keywords: [sexykitty, magic, goddess, statue, wyv]
+  short: a statue of the goddess Sexykitty
+  long: A statue of the Goddess Sexykitty has been placed here.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [goddess, magic, sexykitty, statue]
+    text: >
+      This statue stands 8 feet tall and is made of polished silver.  From its pedistle, the image of
+      Sexykitty, the beautiful empress of magic, stands watching over this room.  The wyverns have chosen her
+      as their deity of charity and the poor because of her kindness and exceptional beauty.  They believe
+      that all who are in need can call upon her and if their need is strong enough she will come to aid
+      them in their time of trouble.
+
+"tba:140:obj:14044":
+  type: treasure
+  keywords: [Gnoff, god, statue, wyv]
+  short: a statue of the God Gnoff
+  long: A statue of the God Gnoff is here.
+  flags: [hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gnoff, god, statue]
+    text: >
+      This statue has been carved from pure topaz.  The bright yellow sculpture looks to be worth a small
+      fortune.  The wyverns worship Gnoff as their god of social activities and interaction.  They believe
+      he watches all marriages and gives his blessing to those which will endure.

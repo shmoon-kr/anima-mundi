@@ -1,0 +1,376 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 150.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:150:obj:15000":
+  type: weapon
+  keywords: [nothingness, universal]
+  short: Sapowox's Universal Nothingness
+  long: You are quite unable to perceive Sapowox's Universal Nothingness here.
+  flags: [hum, no_rent, magic]
+  wear: [take, wield]
+  values:
+    damage: 6d4
+    attack: sting
+  weight: 40
+  cost: 1
+  rent: 200
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [text, writing, inscription]
+    text: "It just says: ' (void *) ' Not very enlightening, is it?"
+  - keywords: [nothingness, universal]
+    text: >
+      You are not sure, but you do not seem not able to figure out what it isn't, because it doesn't much
+      resemble anything you haven't ever seen.  You feel a bit of mortal confusion, but you notice a small
+      inscription on it.
+
+"tba:150:obj:15001":
+  type: money
+  keywords: [gold, coins]
+  short: the gold
+  long: A lot of gold is here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:150:obj:15002":
+  type: other
+  keywords: [sceptre, royal, golden]
+  short: a golden sceptre
+  long: A golden Royal sceptre lies on the ground.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 150
+  rent: 30
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:150:obj:15003":
+  type: armor
+  keywords: [crown, golden]
+  short: a golden crown
+  long: A magnificently jewelled golden crown has been left here.
+  flags: [magic, anti_evil]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 40
+  cost: 120
+  rent: 10
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 30
+  - apply: int
+    modifier: 1
+
+"tba:150:obj:15004":
+  type: light
+  keywords: [apple, golden]
+  short: a golden apple
+  long: There is a golden apple here.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 5
+  cost: 800
+  rent: 40
+  level: 0
+
+"tba:150:obj:15005":
+  type: other
+  keywords: [telescope, scope]
+  short: a large telescope
+  long: There is a large telescope here, pointing at the sky.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [telescope, scope]
+    text:
+    - "A small sign says:"
+    - Made in Siberia.
+
+"tba:150:obj:15006":
+  type: weapon
+  keywords: [sword, training]
+  short: a training sword
+  long: A training sword with blunt edges is leaned against a wall.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: slash
+  weight: 7
+  cost: 300
+  rent: 5
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+
+"tba:150:obj:15007":
+  type: key
+  keywords: [key, huge]
+  short: a huge key
+  long: There is a huge, heavy-looking key on the floor here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:150:obj:15008":
+  type: weapon
+  keywords: [Verminator, sword]
+  short: Verminator
+  long: A strange looking sword is lying upon the ground here.
+  flags: [glow, no_donate, anti_good, anti_mage, anti_cleric, anti_thief, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 2
+  cost: 1
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [verminator, sword]
+    text: >
+      This strange sword seems to be made of black metal, an eerie green glow surrounds the blade.
+
+"tba:150:obj:15009":
+  type: key
+  keywords: [key, butlers, butler]
+  short: the Butler's key
+  long: The Butler's key is here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:150:obj:15010":
+  type: key
+  keywords: [key, small]
+  short: a small key
+  long: A small key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 100
+  level: 0
+
+"tba:150:obj:15011":
+  type: container
+  keywords: [chest, wooden]
+  short: a large wooden chest
+  long: A large wooden chest stands here in a corner.
+  wear: [take]
+  values:
+    capacity: 800
+    lock_flags: 13
+    key: tba:150:obj:15010
+    corpse: false
+  weight: 50
+  cost: 400
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [chest]
+    text: It is equipped with a small lock, that any self-respecting thief should be able to pick.
+
+"tba:150:obj:15012":
+  type: potion
+  keywords: [vial, large, potion, brown]
+  short: a large vial
+  long: A large vial has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [15, 15, -1, -1]
+  weight: 14
+  cost: 800
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [vial, large, brown, potion]
+    text: It is filled with a disgusting brown liquid.
+
+"tba:150:obj:15013":
+  type: other
+  keywords: [banner, royal]
+  short: a royal banner
+  long: The royal banner has been firmly planted in the ground here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flag]
+    text: On the flag is the symbol of King Welmar's house, the rampant stag.
+  - keywords: [banner, royal, standard]
+    text: It is large and very heavy.  On top of it flutters King Welmar's flag proudly.
+
+"tba:150:obj:15014":
+  type: key
+  keywords: [key]
+  short: a key
+  long: A key lies on the floor.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 13
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key]
+    text: It has a finely carved letter 'W' inscribed on it.
+
+"tba:150:obj:15015":
+  type: armor
+  keywords: [hauberk, mail, chain]
+  short: a guard's chain mail hauberk
+  long: A chain mail hauberk lies on the floor
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 50
+  cost: 200
+  rent: 50
+  level: 0
+
+"tba:150:obj:15016":
+  type: weapon
+  keywords: [broadsword, sword, large]
+  short: a large broadsword
+  long: There is a large broadsword lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 14
+  cost: 130
+  rent: 30
+  level: 0
+
+"tba:150:obj:15017":
+  type: key
+  keywords: [key, cell]
+  short: the cell key
+  long: A key lies on the floor.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, cell]
+    text: This appears to be the key for the cells of the castle.
+
+"tba:150:obj:15018":
+  type: trash
+  keywords: [carcass]
+  short: a carcass
+  long: There is a carcass lying in the middle of the floor of the building here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:150:obj:15019":
+  type: food
+  keywords: [lobster]
+  short: a delicious-looking lobster
+  long: A delicious-looking lobster is lying here, tempting your appetite.
+  wear: [take]
+  values:
+    hours: 7
+    poisoned: false
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:150:obj:15020":
+  type: food
+  keywords: [caviar]
+  short: some Russian caviar
+  long: There is some delicious-looking Russian caviar here, making your mouth water.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 250
+  rent: 20
+  level: 0
+
+"tba:150:obj:15021":
+  type: trash
+  keywords: [glow]
+  short: the glow from the west
+  long: There is a strange glow coming from the west.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glow]
+    text: >
+      The glow from the west appears to be quite strong, but it does not give enough light to see by
+      here, nor can you see the source of the glow.
+
+"tba:150:obj:15022":
+  type: trash
+  keywords: [wail, sound]
+  short: the wailing sound from the east
+  long: There is an eerie wailing sound coming from the house to the east.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

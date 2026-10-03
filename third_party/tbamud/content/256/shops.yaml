@@ -1,0 +1,51 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 256.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:256:shop:25601":
+  keeper: tba:256:mob:25610
+  rooms: [tba:256:room:25639]
+  products:
+  - tba:256:obj:25600
+  - tba:256:obj:25601
+  - tba:256:obj:25608
+  - tba:256:obj:25609
+  - tba:256:obj:25610
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s We didn't grow any of those this year."
+    you_dont_have_it: "%s You don't have that!"
+    does_not_buy: "%s I won't buy that!"
+    shop_cannot_afford: "%s I can't buy that!"
+    you_cannot_afford: "%s You can't buy that!"
+    bought: "%s Ok, %d coins please!"
+    sold: "%s Ok, %d coins please!"
+  temper: 2
+  flags: 2
+  trade_with: 0
+  hours:
+  - open: 8
+    close: 22
+
+"tba:256:shop:25602":
+  keeper: tba:256:mob:25612
+  rooms: [tba:256:room:25634]
+  products:
+  - tba:256:obj:25619
+  - tba:256:obj:25620
+  - tba:256:obj:25621
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s Could you repeat that please?"
+    you_dont_have_it: "%s I don't buy!"
+    does_not_buy: "%s I don't buy!"
+    shop_cannot_afford: "%s I don't buy!"
+    you_cannot_afford: "%s But you haven't the money!"
+    bought: "%s Ok, %d gold please."
+    sold: "%s Ok, %d gold please."
+  temper: 1
+  flags: 6
+  trade_with: 0

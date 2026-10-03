@@ -1,0 +1,276 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 96.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:96:mob:9601":
+  keywords: [bushy, animal, small, squirrel]
+  short: a small bushy-tailed animal
+  long: A small squirrel scampers about.
+  description: >
+    A little brown squirrel scampers about busily, searching for nuts.  Finding one, he grabs it and
+    begins cracking it, before noticing you.  He stands stock still and stares, waiting for you to make a
+    move.
+  level: 7
+  sex: neutral
+  alignment: 153
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9602":
+  keywords: [bird, sparrow]
+  short: a sparrow
+  long: A sparrow buzzes erratically about.
+  description: A small sparrow flies around randomly, collecting food and grass for it's nest.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9603":
+  keywords: [wizard, mad, insane]
+  short: the mad wizard
+  long: A mad wizard stands here, cackling at your presence.
+  description: >
+    Red lines criss-cross in the mad wizards eyes as he glances around the room. He dons a purple
+    cone-shaped hat on his head, and he is dressed in ragged blue robes.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: blast
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9612":
+  keywords: [mole]
+  short: the mole
+  long: A mole squints at you from the safety of its den.
+  description: >
+    A mole with velvety brown fur and cute squinty eyes peers at you.  He tugs his nose a few times,
+    then resumes staring at the sky.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:96:mob:9617":
+  keywords: [rabbit, lanky, white]
+  short: a rabbit
+  long: A lanky white rabbit hops around here.
+  description: >
+    Jumping around in a blind frenzy, the rabbit takes little heed in your appearance.  Standing about
+    a foot high, the lanky white speedster expertly bounds around you, eluding your grasp.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9618":
+  keywords: [fox, red, wily]
+  short: a red fox
+  long: A wily red fox sprints around here.
+  description: >
+    A wily red fox, almost 3 feet long, rushes around the path.  Spotting you, he stops momentarily and
+    stares at you, then continues his everlasting search for rabbits.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9626":
+  keywords: [demon, bear]
+  short: the bear
+  long: A demonic bear with blood-red eyes snarls at you.
+  description: >
+    A huge, 8 foot tall bear snarls menacingly.  His blood-red eyes seem to pulsate eerily, and it
+    raises a blunt claw, making ready to swipe at you.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9634":
+  keywords: [rat]
+  short: a rat
+  long: A black rat scurries about.
+  description: A small black rat, about a foot long, scurries about the floor.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9642":
+  keywords: [rat, queen]
+  short: the queen rat
+  long: The queen of all rats prepares for battle.
+  description: >
+    The queen of all rats, in all her hideousness.  Her jet black fur reflects no light, and this
+    monster is a full 3 foot long, maybe even longer.  Teeth working in a mad frenzy, it looks ready to kill.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9647":
+  keywords: [knight, old]
+  short: the old knight
+  long: An old knight is here, ready for a last battle.
+  description: >
+    An old knight is here, he must be at least 70.  As hard as it is to believe, he still finds the
+    strength to wield his sword and armor.  What a valiant man.
+  level: 10
+  sex: male
+  alignment: 569
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 18
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9651":
+  keywords: [gremlin, small]
+  short: a gremlin
+  long: A small hairy gremlin hops about recklessly.
+  description: >
+    A small gremlin, about 3 foot high and brandishing sharp claws bounces about. Although he looks
+    weak, appearances can be deceiving.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:96:mob:9654":
+  keywords: [king]
+  short: the king
+  long: The King is here, shining his sword of legend.
+  description: >
+    The King of Domiae seems young.  His face is youthful, with no gray hairs or wrinkles.  He has
+    sandy blond hair, but no beard.  His blue eyes seem to penetrate into one's very soul.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing

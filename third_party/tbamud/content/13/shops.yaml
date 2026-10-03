@@ -1,0 +1,31 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 13.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:13:shop:1300":
+  keeper: tba:13:mob:1303
+  rooms: [tba:13:room:1300]
+  products:
+  - tba:13:obj:1306
+  - tba:13:obj:1307
+  - tba:13:obj:1308
+  - tba:13:obj:1309
+  - tba:13:obj:1310
+  buys:
+  - type: note
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 24

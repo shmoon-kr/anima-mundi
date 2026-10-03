@@ -1,0 +1,309 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 78.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:78:obj:7801":
+  type: fountain
+  keywords: [fountain, water]
+  short: a fountain of water
+  long: A fountain flowing with cool, clear water is here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain]
+    text: >
+      Made of pure white marble, this fountain bubbles lazily providing cool, crystal clear water to
+      those of the village.
+
+"tba:78:obj:7802":
+  type: worn
+  keywords: [black, silk, dress]
+  short: a long black tight-fitting silk dress
+  long: A discarded black piece of silk lies here.
+  flags: [glow, no_rent, no_donate]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+
+"tba:78:obj:7803":
+  type: food
+  keywords: [blueberry, tart]
+  short: a yummy blueberry tart
+  long: A delectible pastry has been left here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:78:obj:7804":
+  type: food
+  keywords: [apple, pie]
+  short: a freshly baked apple pie
+  long: A pie has been dropped here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 40
+  rent: 5
+  level: 0
+
+"tba:78:obj:7805":
+  type: food
+  keywords: [slice, cake]
+  short: a slice of cake
+  long: A slice of cake has been dropped here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:78:obj:7806":
+  type: food
+  keywords: [muffin]
+  short: a hot muffin
+  long: A muffin has been tossed to the side here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 2
+  level: 0
+
+"tba:78:obj:7807":
+  type: food
+  keywords: [huge, chocolate, chip, cookie]
+  short: a huge chocolate chip cookie
+  long: A rather large circular object has been left here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 2
+  level: 0
+
+"tba:78:obj:7808":
+  type: drinkcon
+  keywords: [milk, glass, cold, milk]
+  short: a glass
+  long: A glass of white liquid has been dropped here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: milk
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:78:obj:7809":
+  type: container
+  keywords: [small, fuzzy, pouch]
+  short: a small fuzzy pouch
+  long: A small fuzzy pouch has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    lock_flags: 1
+    corpse: false
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:78:obj:7810":
+  type: container
+  keywords: [large, travelers, pack]
+  short: a large travelers pack
+  long: A lump of material lies here.
+  wear: [take, body]
+  values:
+    capacity: 45
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:78:obj:7811":
+  type: armor
+  keywords: [soft, tanned, leather, boots]
+  short: some soft tanned leather boots
+  long: A pair of boots have been tossed aside here.
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:78:obj:7812":
+  type: container
+  keywords: [leather, haversack]
+  short: a leather haversack
+  long: A crumpled piece of leather has been tossed here.
+  wear: [take]
+  values:
+    capacity: 65
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 60
+  rent: 7
+  level: 0
+
+"tba:78:obj:7814":
+  type: armor
+  keywords: [gray, leather, armor]
+  short: some gray leather armor
+  long: Some gray leather has been carelessly left here.
+  flags: [anti_cleric, anti_warrior]
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 12
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:78:obj:7815":
+  type: armor
+  keywords: [gray, leather, boots]
+  short: a pair of gray leather boots
+  long: Some gray boots lay on their sides here.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 4
+  cost: 95
+  rent: 10
+  level: 0
+  affects:
+  - apply: move
+    modifier: 10
+
+"tba:78:obj:7816":
+  type: weapon
+  keywords: [slender, dagger]
+  short: a slender dagger
+  long: A slender shiney dagger is half buried in the dirt here.
+  flags: [no_invis, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: pierce
+  weight: 3
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:78:obj:7817":
+  type: trash
+  keywords: [rainbow, stripped, pants]
+  short: a pair of rainbow stripped pants
+  long: Some colorful pants have been discarded here.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:78:obj:7818":
+  type: trash
+  keywords: [pink, polkadot, frock]
+  short: a pink polkadot frock
+  long: A colorful heap of cloth lies here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:78:obj:7819":
+  type: trash
+  keywords: [tri-cornered, hat]
+  short: a tri-cornered hat
+  long: A strange looking hat has been dropped here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+
+"tba:78:obj:7820":
+  type: weapon
+  keywords: [red, stripped, juggling, pin]
+  short: a red stripped juggling pin
+  long: A stripped object was tossed here carelessly.
+  flags: [no_rent, no_donate]
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pound
+  weight: 6
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:78:obj:7821":
+  type: weapon
+  keywords: [pitchfork]
+  short: a pitchfork
+  long: A pitchfork has been shoved into the ground here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: stab
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:78:obj:7822":
+  type: weapon
+  keywords: [spiked, club]
+  short: a spiked club
+  long: A spiked club has been left carelessly here.
+  wear: [take, wield]
+  values:
+    damage: 3d2
+    attack: bludgeon
+  weight: 6
+  cost: 150
+  rent: 15
+  level: 0

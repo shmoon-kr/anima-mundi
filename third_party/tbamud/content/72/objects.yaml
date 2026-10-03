@@ -1,0 +1,244 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 72.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:72:obj:7200":
+  type: weapon
+  keywords: [rod, devil]
+  short: the devil rod
+  long: The mysterious devil rod lies on the floor.
+  flags: [magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: slash
+  weight: 6
+  cost: 160
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: str
+    modifier: -1
+  extras:
+  - keywords: [devil, rod]
+    text: >
+      This is indeed a mysterious rod.  It is dark black at the base but has four very sharp purple
+      tentacles at the end.
+
+"tba:72:obj:7201":
+  type: weapon
+  keywords: [mace, large]
+  short: the large mace
+  long: A large mace lies here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pound
+  weight: 10
+  cost: 1000
+  rent: 400
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [large, mace]
+    text: >
+      The mace is pretty large with a weight of 10 lbs.  The head is actually four purple tentacles tied
+      together.
+
+"tba:72:obj:7202":
+  type: weapon
+  keywords: [mace, small]
+  short: the small mace
+  long: A small mace has been left here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pound
+  weight: 6
+  cost: 600
+  rent: 200
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [small, mace]
+    text: >
+      This weapon does look like it does a lot of damage, but then you never know. It consists of a black
+      handle and a purple head.
+
+"tba:72:obj:7203":
+  type: worn
+  keywords: [cloak, purple]
+  short: a purple cloak
+  long: A purple cloak lies on the floor.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 500
+  rent: 60
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  - apply: ac
+    modifier: -10
+  extras:
+  - keywords: [cloak, purple]
+    text: This is a very fine made cloak from an unknown material, in a nice purple color.
+
+"tba:72:obj:7204":
+  type: potion
+  keywords: [potion, blue, neon]
+  short: a neon blue potion
+  long: A neon blue potion stands on the floor.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [14, 6, 15, 16]
+  weight: 4
+  cost: 100
+  rent: 1000
+  level: 0
+  extras:
+  - keywords: [potion, blue]
+    text: In the flask is a transparent electric blue liquid.
+
+"tba:72:obj:7205":
+  type: key
+  keywords: [key, black]
+  short: a black key
+  long: A black key has been left on the floor.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [black, key]
+    text: This little key is made from a black metal of unknown origin.
+
+"tba:72:obj:7206":
+  type: armor
+  keywords: [skull, white]
+  short: a strange white skull
+  long: A strange white skull lies on the floor looking at you.
+  flags: [glow, hum, no_drop]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 30
+  cost: 1
+  rent: 250
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -4
+  extras:
+  - keywords: [white, skull]
+    text: The skull has two small horns in the forehead.  You notice some writing on the inside.
+  - keywords: [writing, text]
+    text: You read the number '666'.
+
+"tba:72:obj:7207":
+  type: armor
+  keywords: [gauntlets, muddy]
+  short: a pair of muddy gauntlets
+  long: A pair of muddy gauntlets have been thrown away here.
+  flags: [magic]
+  wear: [take, hands]
+  values:
+    armor: 6
+  weight: 10
+  cost: 600
+  rent: 150
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [muddy, gauntlets]
+    text: These gauntlets are muddy indeed, however they look very effective.
+
+"tba:72:obj:7208":
+  type: light
+  keywords: [stick, small]
+  short: a small stick
+  long: A small stick lies here.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 4
+  cost: 200
+  rent: 200
+  level: 0
+  extras:
+  - keywords: [small, stick]
+    text: >
+      The small stick does not look interesting at all.  But just as you are going to throw it away you
+      notice some small letters.
+  - keywords: [letters, letter]
+    text: "They read: Hold me"
+
+"tba:72:obj:7209":
+  type: armor
+  keywords: [boots, muddy]
+  short: a pair of muddy boots
+  long: A pair of muddy boots has been dropped here.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 10
+  cost: 75
+  rent: 500
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+  extras:
+  - keywords: [boots, muddy]
+    text: The boots are muddy and they look well worn, but also very comfortable.
+
+"tba:72:obj:7210":
+  type: money
+  keywords: [treasure, coins]
+  short: a huge treasure
+  long: There is a huge treasure here, looking very valuable.
+  wear: [take]
+  values:
+    coins: 652
+  weight: 5
+  cost: 652
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [treasure, coins]
+    text: This looks like a whole lot of coins.
+
+"tba:72:obj:7211":
+  type: weapon
+  keywords: [sword, short]
+  short: a short sword
+  long: A short sword is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: slash
+  weight: 4
+  cost: 100
+  rent: 300
+  level: 0
+  extras:
+  - keywords: [short, sword]
+    text: This is a very nice little weapon.

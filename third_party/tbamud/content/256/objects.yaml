@@ -1,0 +1,413 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 256.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:256:obj:25600":
+  type: food
+  keywords: [orange]
+  short: an orange
+  long: An orange lies on the ground here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [orange]
+    text: You wonder how it got here, seeing how oranges are non-migratory.
+
+"tba:256:obj:25601":
+  type: food
+  keywords: [bale, wheat]
+  short: a bale of wheat
+  long: There is a bale of wheat here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 50
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bale, wheat]
+    text: It doesn't look appetizing to you, but a horse might enjoy this...
+
+"tba:256:obj:25602":
+  type: weapon
+  keywords: [iron, flail]
+  short: an iron flail
+  long: An iron flail has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: bludgeon
+  weight: 5
+  cost: 25
+  rent: 0
+  level: 22
+  extras:
+  - keywords: [flail]
+    text: >
+      Made of wrought iron, with a mean looking spiked ball at the end, this flail looks like the perfect
+      companion for a guard.
+
+"tba:256:obj:25603":
+  type: treasure
+  keywords: [barrel, perfume]
+  short: a barrel of perfume
+  long: You can smell a barrel on the other side of the room from here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [barrel, perfume]
+    text:
+    - "Smells good...the label reads:"
+    - "\"Somewhere between GPA and MUD there lies..."
+    - OBSESSION"
+
+"tba:256:obj:25604":
+  type: treasure
+  keywords: [statue]
+  short: a statue
+  long: There is a statue of Aglandiir here, made of solid gold.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [statue]
+    text: He's a pretty striking chap, for a dragon.
+
+"tba:256:obj:25605":
+  type: weapon
+  keywords: [halberd]
+  short: a halberd
+  long: A runed halberd lies on the ground here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: slash
+  weight: 16
+  cost: 750
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [halberd]
+    text: >
+      The runes glow with a bright light, making you think that this might be a pretty decent weapon.
+
+"tba:256:obj:25606":
+  type: potion
+  keywords: [potion, protection, dun, vial]
+  short: a potion of protection
+  long: A vial of a dun fluid is here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [20, 36, 1, 3]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion, protection, dun, vial]
+    text: Looks thick, and brownish-gray (dun).  Ick!
+
+"tba:256:obj:25607":
+  type: armor
+  keywords: [headband]
+  short: a black headband
+  long: A black headband sits here, ready for your use.
+  flags: [glow]
+  wear: [head]
+  values:
+    armor: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:256:obj:25608":
+  type: food
+  keywords: [apple]
+  short: an apple
+  long: A scrawny red apple sits here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [apple]
+    text: It is not wormy...  Yet.
+
+"tba:256:obj:25609":
+  type: food
+  keywords: [bread, loaf]
+  short: a loaf of bread
+  long: A fresh loaf of bread lies here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bread, loaf]
+    text: Mmmm...  Rye!
+
+"tba:256:obj:25610":
+  type: food
+  keywords: [melon]
+  short: a melon
+  long: A melon sits here, discarded evidently.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [melon]
+    text: Wow!  Look at the size of that melon!
+
+"tba:256:obj:25611":
+  type: weapon
+  keywords: [knife]
+  short: a knife
+  long: A sturdily made butcher's knife rests here.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: stab
+  weight: 8
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:256:obj:25612":
+  type: weapon
+  keywords: [sword, long]
+  short: a long sword
+  long: A superb long sword sticks in the earth.
+  flags: [no_donate, anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 2d7
+    attack: slash
+  weight: 15
+  cost: 750
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [sword, long]
+    text: >
+      This sword is light, but the heft is perfectly balanced.  Such an incredible weapon can only have
+      be crafted by the legendary smith Gabadiel, and as such be worth a fortune!
+
+"tba:256:obj:25613":
+  type: weapon
+  keywords: [sword, short]
+  short: a short sword
+  long: A short sword lies here... a work of art!
+  flags: [glow, no_donate, bless, anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 10
+  cost: 821
+  rent: 0
+  level: 29
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [sword, short]
+    text: >
+      It brings tears to your eyes.  This must have been Gabadiel the smith's masterpiece; his final
+      work.  Simply invaluble.
+
+"tba:256:obj:25614":
+  type: weapon
+  keywords: [rolling, pin]
+  short: a rolling pin
+  long: A wooden rolling pin is lying here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: pound
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:256:obj:25615":
+  type: armor
+  keywords: [armor, plate, suit]
+  short: a suit of plate mail
+  long: A suit of plate mail lies here.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 50
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [armor, suit, plate, mail]
+    text: This armor was made especially for the Lord's Guard.
+
+"tba:256:obj:25616":
+  type: container
+  keywords: [cooler]
+  short: a cooler
+  long: A cooler rests here against one wall.
+  wear: [take]
+  values:
+    capacity: 200
+    lock_flags: 5
+    corpse: false
+  weight: 50
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cooler]
+    text: It must be magically maintained, to keep all the food cold.
+
+"tba:256:obj:25617":
+  type: armor
+  keywords: [lord's, Lord's, badge, office]
+  short: the Lord's badge of office
+  long: The Lord's badge of office lays on the ground here.
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 50
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: str
+    modifier: -2
+  - apply: hit
+    modifier: 20
+  extras:
+  - keywords: [badge, office]
+    text: >
+      This is the Lord's symbol of integrity and responsibility, the symbol of the people of Jareth.
+
+"tba:256:obj:25618":
+  type: armor
+  keywords: [helm]
+  short: a metal helm
+  long: A metal helm lies here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 6
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:256:obj:25619":
+  type: drinkcon
+  keywords: [wine, glass, wine]
+  short: a glass
+  long: A glass of wine sits forgotten here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: wine
+    poisoned: false
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glass]
+    text: This is a nice glass filled with the Lord's finest.
+
+"tba:256:obj:25620":
+  type: drinkcon
+  keywords: [tea, cup, tea]
+  short: a cup of tea
+  long: A cup of tea sits here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: tea
+    poisoned: false
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tea, cup]
+    text: Looks good.  Looks warm.  Doesn't matter; it still looks good.
+
+"tba:256:obj:25621":
+  type: food
+  keywords: [slice, pie]
+  short: a slice of pie
+  long: A slice of pie is sitting here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [slice, pie]
+    text: Whew!  Looks like some good food!
+
+"tba:256:obj:25625":
+  type: key
+  keywords: [key, gray, metal]
+  short: a gray key
+  long: A key made of a strange gray metal has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0

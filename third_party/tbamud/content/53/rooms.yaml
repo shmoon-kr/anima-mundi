@@ -1,0 +1,1246 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 53.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:53:room:5300":
+  name: The Great Eastern Desert
+  description: >
+    A vast desert stretches for miles, the sands constantly shifting around you.  Rising out of the
+    sand to the north you see a mighty pyramid.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5301
+      look: The sands of the desert continue onward towards the pyramid.
+    east:
+      to: tba:50:room:5040
+      look: Sand as far as the eye can see.
+    south:
+      to: tba:50:room:5050
+      look: Sand as far as the eye can see.
+    west:
+      to: tba:50:room:5035
+      look: Sand as far as the eye can see.
+  extras:
+  - keywords: [pyramid]
+    text: The massive pyramid rises out of the sand, a monument to long-dead pharaohs.
+
+"tba:53:room:5301":
+  name: At The Base Of The Pyramid
+  description: >
+    The mighty pyramid towers above you out of the hot desert sands, made from huge blocks of stone
+    that have been coated over with a rough sandy plaster-like substance.  The face of the pyramid is steep,
+    but you think you might be able to climb it.
+  sector: field
+  exits:
+    south:
+      to: tba:53:room:5300
+      look: Sand as far as the eye can see.
+    up:
+      to: tba:53:room:5302
+      look: The steep slope of the pyramid rises up before you.
+  extras:
+  - keywords: [pyramid]
+    text: You wonder how anyone could have built such a massive thing out in this heat.
+
+"tba:53:room:5302":
+  name: Climbing The Great Pyramid
+  description: >
+    Hot air rises off the sides of the pyramid, and the wind chokes you with a flurry of sand and
+    dust.  So far you have made it halfway up the side.  The walls of the pyramid are quite steep.
+  sector: mountains
+  exits:
+    north:
+      to: tba:53:room:5303
+      look: If you are daring you could try to skirt around to the northern side.
+    south:
+      to: tba:53:room:5304
+      look: If you are daring you could try to skirt around to the southern side.
+    up:
+      to: tba:53:room:5307
+      look: It looks too dangerous to try to climb any higher.
+    down:
+      to: tba:53:room:5301
+      look: Far below you are the burning sands of the desert.
+  extras:
+  - keywords: [pyramid]
+    text: You wonder how anyone could have built such a massive thing out in this heat.
+
+"tba:53:room:5303":
+  name: Climbing The Great Pyramid
+  description: >
+    Hot air rises off the sides of the pyramid, and the wind chokes you with a flurry of sand and
+    dust.  The walls of the pyramid are quite steep, and you are having trouble keeping from sliding down into
+    the sands below.
+  sector: mountains
+  exits:
+    east:
+      to: tba:53:room:5305
+      look: If you are daring you could try to skirt around to the eastern side.
+    west:
+      to: tba:53:room:5302
+      look: If you are daring you could try to skirt around to the western side.
+    up:
+      to: tba:53:room:5307
+      look: It looks too dangerous to try to climb any higher.
+    down:
+      to: tba:53:room:5307
+      look: This side of the pyramid has a dangerous drop before the sandy floor.
+  extras:
+  - keywords: [pyramid]
+    text: You wonder how anyone could have built such a massive thing out in this heat.
+
+"tba:53:room:5304":
+  name: Climbing The Great Pyramid
+  description: >
+    Hot air rises off the sides of the pyramid, and the wind chokes you with a flurry of sand and
+    dust.  The walls of the pyramid are quite steep, and you are having trouble keeping from sliding down into
+    the sands below.
+  sector: mountains
+  exits:
+    east:
+      to: tba:53:room:5305
+      look: If you are daring you could try to skirt around to the eastern side.
+    west:
+      to: tba:53:room:5302
+      look: If you are daring you could try to skirt around to the western side.
+    up:
+      to: tba:53:room:5307
+      look: It looks too dangerous to try to climb any higher.
+    down:
+      to: tba:53:room:5307
+      look: This side of the pyramid has a dangerous drop before the sandy floor.
+  extras:
+  - keywords: [pyramid]
+    text: You wonder how anyone could have built such a massive thing out in this heat.
+
+"tba:53:room:5305":
+  name: Climbing The Great Pyramid
+  description: >
+    Here on the eastern side of the pyramid there is a little more shelter from the heat and wind.  The
+    stone side is not nearly so slippery smooth from the ravages of time, and you think you may be able
+    to even reach the top from here.
+  sector: mountains
+  exits:
+    north:
+      to: tba:53:room:5303
+      look: If you are daring you could try to skirt around to the northern side.
+    south:
+      to: tba:53:room:5304
+      look: If you are daring you could try to skirt around to the southern side.
+    up:
+      to: tba:53:room:5306
+      look: You see the apex of the pyramid many yards above you.
+    down:
+      to: tba:53:room:5307
+      look: This side of the pyramid has a dangerous drop before the sandy floor.
+  extras:
+  - keywords: [pyramid]
+    text: You wonder how anyone could have built such a massive thing out in this heat.
+
+"tba:53:room:5306":
+  name: The Apex Of The Great Pyramid
+  description: >
+    Bathed in sweat, you have managed to reach the summit of the great pyramid.  The four sides of the
+    pyramid slope sharply down into the hot sands in all four cardinal directions. A plaque has been set
+    into the sandy stones beneath your feet.
+  sector: city
+  exits:
+    north:
+      to: tba:53:room:5307
+      look: >
+        The north side of the pyramid slopes down into the sands. It looks really dangerous.  I wouldn't go
+        that way.
+    east:
+      to: tba:53:room:5305
+      look: The east side of the pyramid slopes down into the sands.
+    south:
+      to: tba:53:room:5307
+      look: >
+        The south side of the pyramid slopes down into the sands. It looks really dangerous.  I wouldn't go
+        that way.
+    west:
+      to: tba:53:room:5307
+      look: >
+        The west side of the pyramid slopes down into the sands. It looks really dangerous.  I wouldn't go
+        that way.
+    down:
+      to: tba:53:room:5308
+      look: You see some sandy stones pressed closely together to form a hard surface.
+      door:
+        keywords: [stones]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [plaque]
+    text:
+    - "The plaque reads:"
+    - The Great Pyramid
+    - Created by the Andersen work crew.
+  - keywords: [stones]
+    text: >
+      As you look closer you can make out a crack in the center of the stones beneath your feet.  With
+      some effort you might be able to lift that section up and get inside!
+
+"tba:53:room:5307":
+  name: On The Dangerous Stones
+  description: >
+    Here the elements have carved away at the sides of the pyramid quite a bit.  You aren't so sure of
+    your footing anymore... Suddenly the wind picks up, and you lose your balance! You tumble down the
+    side of the pyramid, and fall to your death! SPLAT. Ouch.
+  sector: inside
+  flags: [no_mob, indoors]
+
+"tba:53:room:5308":
+  name: A Ladder
+  description: >
+    You are climbing an ancient ladder that leads down into the depths of the pyramid.  The air around
+    is thick with layers of dust and a strange musty smell.  Above you you see tiny beams of light coming
+    through the stones of the ceiling.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    up:
+      to: tba:53:room:5306
+      look: You see the sandy stones of the ceiling.
+      door:
+        keywords: [stones]
+        kind: door
+        reset: closed
+    down:
+      to: tba:53:room:5309
+      look: You see a small dusty chamber.
+  extras:
+  - keywords: [stones]
+    text: >
+      As you look closer you can make out a crack in the center of the stones above your head.  With some
+      effort you might be able to lift that section up and get outside!
+
+"tba:53:room:5309":
+  name: A Musty Chamber
+  description: >
+    You are standing in a dank, musty chamber just inside the pyramid. Footprints and other strange
+    marks are set into the dusty floor here. It would seem that some of the tenants of this monument are
+    still alive. Exits lead in all directions.   The door to the west is covered with inscriptions.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5312
+      look: You see a tiny crawlway raised about three feet off the ground.
+    east:
+      to: tba:53:room:5339
+      look: A dust-covered hallway leads off to the east.
+    south:
+      to: tba:53:room:5324
+      look: You see a small crack in the wall through which you might be able to slide.
+    west:
+      to: tba:53:room:5310
+      look: You see a large stone door, covered in sigils and hieroglyphs.
+      door:
+        keywords: [door, stone]
+        kind: door
+        reset: closed
+    up:
+      to: tba:53:room:5308
+      look: A small rickety ladder leads up.
+  extras:
+  - keywords: [sigils, hieroglyphs, inscriptions, writing]
+    text: >
+      You cannot understand the strange glyphs that cover the door, but most of them seem to depict
+      scenes of fire and massive creatures of apparently tremendous strength.  You have a feeling that the
+      glyphs are serving as a warning.
+  - keywords: [door, stone]
+    text: >
+      The stone door is covered in strange inscriptions and hieroglyphs that warn you not to proceed any
+      further.
+
+"tba:53:room:5310":
+  name: The Fire Pool
+  description: >
+    This room is dominated by a massive raised pool that is filled with not water but flames of intense
+    heat.  The multicolored flames lick out at you, searching for things to burn.  The pool proceeds to
+    the east into a small chamber.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:53:room:5309
+      look: You see a large stone door.
+      door:
+        keywords: [door, stone]
+        kind: door
+        reset: closed
+    west:
+      to: tba:53:room:5311
+      look: You see a small chamber filled with fire.
+
+"tba:53:room:5311":
+  name: The Chamber Of The Efreet
+  description: >
+    You make your way across the fire pool, and into a small stone chamber. Here the flames are nearly
+    as high as your head, singeing your face and evaporating your sweat instantaneously.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5310
+      look: The pool of fire ends to the east.
+
+"tba:53:room:5312":
+  name: A Tiny Crawlway
+  description: >
+    You have to go down onto your hands and knees to fit inside this tiny space.  The crawlway is thick
+    with sand and dust, and markings of the passage of other creatures.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5313
+      look: The crawlway continues to the north.
+    south:
+      to: tba:53:room:5309
+      look: The crawlway ends to the south in a musty chamber.
+    up:
+      to: tba:53:room:5337
+      look: A small hole above your head leads into a dank chamber.
+
+"tba:53:room:5313":
+  name: A Tiny Crawlway
+  description: >
+    You are on your hands and knees, inside a small crawlway that winds through the inside of the
+    pyramid.  The crawlway is thick with sand, dust, and markings of the passage of other creatures.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:53:room:5312
+      look: The crawlway continues to the south.
+    west:
+      to: tba:53:room:5314
+      look: The crawlway continues to the west.
+
+"tba:53:room:5314":
+  name: A Tiny Crawlway
+  description: >
+    You are on your hands and knees, inside a small crawlway that winds through the inside of the
+    pyramid.  The crawlway is thick with sand, dust, and markings of the passage of other creatures.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:53:room:5313
+      look: The crawlway continues to the east.
+    west:
+      to: tba:53:room:5315
+      look: The crawlway gets a little tighter to the west.
+
+"tba:53:room:5315":
+  name: A Tightening In The Crawlway
+  description: >
+    Here you are forced to slide on your belly through a particularly tight section of the crawlway, as
+    the stones of the pyramid close together about you.  Below you is a small, slippery-looking hole
+    that plummets into blackness.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:53:room:5314
+      look: The crawlway gets a little larger to the east.
+    south:
+      to: tba:53:room:5316
+      look: The crawlway continues to diminish in size to the south.
+    down:
+      to: tba:53:room:5317
+      look: The hole looks very slippery and very dark.
+
+"tba:53:room:5316":
+  name: The Crawlway's End
+  description: >
+    The crawlway shrinks away to nothing as the sandy stones of the pyramid close together into a space
+    through which only a snake could fit.   There is barely enough space to turn around and make your
+    way back through the tiny crawlway to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5315
+      look: The crawlway gets a little larger to the north.
+
+"tba:53:room:5317":
+  name: A Slippery Hole
+  description:
+  - >
+    The sides of this hole are slippery-smooth.  You lower yourself in, and proceed to move downward...
+    when suddenly you lose your purchase! @ You fall for what seems like an eternity, and smash into the
+    stones below... @ Under The Hole
+  - >
+    You are in a small chamber underneath the slippery hole, far below the pyramid now.   The floor is
+    strewn with bones.  To the south is a small rocky crevasse.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    south:
+      to: tba:53:room:5319
+      look: You see a rocky crevasse that proceeds deep under the pyramid.
+    up:
+      look: The hole looks far too slippery to climb back up.
+  extras:
+  - keywords: [bones]
+    text: >
+      The bones have whitened and cracked in the dry air, apparently the remains of adventurers, thieves,
+      and creatures that did not survive the fall.
+
+"tba:53:room:5318":
+  name: Under The Hole
+  description: >
+    You are in a small chamber underneath the slippery hole, far below the pyramid now.   The floor is
+    strewn with bones.  To the south is a small rocky crevasse.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:53:room:5319
+      look: You see a rocky crevasse that proceeds deep under the pyramid.
+    up:
+      look: The hole looks far too slippery to climb back up.
+  extras:
+  - keywords: [bones]
+    text: >
+      The bones have whitened and cracked in the dry air, apparently the remains of adventurers, thieves,
+      and creatures that did not survive the fall.
+
+"tba:53:room:5319":
+  name: A Rough Crevasse
+  description: >
+    You are now exploring deep within a strange rocky crevasse that plunges down into the rock on which
+    the pyramid was constructed.  To the south you see the flickering light of a fire, and the crevasse
+    proceeds downward.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5318
+      look: You see a small stone chamber littered with bones.
+    south:
+      to: tba:53:room:5320
+      look: You see the flickering light of a small fire.
+    down:
+      to: tba:53:room:5321
+      look: The crevasse continues downward into total darkness.
+  extras:
+  - keywords: [rough]
+    text: As you look through the rough terrain, your eyes catch a small glint of light!
+
+"tba:53:room:5320":
+  name: A Small Fire
+  description: >
+    Here a small fire burns in a nook in the rocks, providing some warmth and comforting light in the
+    cold, dark, dry air. Standing here is a strange-looking old man, who stares at you balefully.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5319
+      look: You see a massive crevasse that plunges into darkness.
+  extras:
+  - keywords: [man, old]
+    text: >
+      The old man looks like he has been trapped down here far too long, and has begun to lose his mind. 
+      He moves about slowly, cackling to himself.  He turns to you and shouts, 'nope measse!  Nope
+      measse!  ', then turns back and stares into the fire.  'What a strange person,' you think to yourself.
+
+"tba:53:room:5321":
+  name: Down The Crevasse
+  description: >
+    The crevasse proceeds downward into the dark depths of the earth. The air about you is now cold and
+    quite dry, and your light source gutters in a cool breeze that wafts up from below.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:53:room:5319
+      look: It is too dark for you to see any further along the crevasse.
+    down:
+      to: tba:53:room:5322
+      look: It is too dark for you to see any further along the crevasse.
+
+"tba:53:room:5322":
+  name: At The Crevasse's End
+  description: >
+    Here the crevasse comes to an abrupt end.  A chilling wind howls at your face from a black shape to
+    the south, but the light from your source is too dim to see exactly what it is.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:53:room:5323
+      look: You see a strange-looking black shape.
+      door:
+        keywords: [sesame]
+        kind: pickproof
+        key: tba:53:obj:5323
+        reset: locked
+    up:
+      to: tba:53:room:5321
+      look: It is too dark for you to see anything along the crevasse.
+  extras:
+  - keywords: [tiger, head, animal, sesame]
+    text: >
+      You are now certain that the wind is the cold breath of some unearthly giant animal, whose voice
+      rumbles lowly on the breeze, and whose massive jaws could easily swallow you whole.  You move closer
+      for a better look, when suddenly a pair of eyes flashes.  A cold voice echoes: 'SEEK YE THE DIAMOND... 
+      IN THE ROUGH...  ' ...  Then all is silent.
+  - keywords: [black, shape]
+    text: >
+      Wind howls about your ears like the roar of a tiger.  As your eyes adjust to the light the shape to
+      the south almost seems to take the form of a massive animal head.
+
+"tba:53:room:5323":
+  name: The Vault Of The Lamp
+  description: >
+    The jaws of the massive stone tiger part wide to reveal a great vault. An arched ceiling lies far
+    above your head... and all about you is a low guttural rumbling noise and a chill wind. Giant heaps of
+    ancient treasure, gold coins, and valuables surround you on all sides.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5322
+      look: Through the jaws of the tiger you see the blackness of the crevasse.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:53:obj:5323
+        reset: locked
+  extras:
+  - keywords: [treasure, gold, coins, valuables]
+    text: >
+      You reach for some of the tasty goodies, when you hear a loud rumbling sound and see a bright flash
+      of light...  Then the words: 'TAKE ONLY THE LAMP... TOUCH NOTHING ELSE.  ' ...  All is silent once
+      again.
+
+"tba:53:room:5324":
+  name: A Crack In The Wall
+  description: >
+    You exhale, and squeeze yourself into the narrow crack in the wall. Dust fills your eyes as you
+    disturb it, and chunks of mortar and stone mixed with a touch of sand fall on you as you scrape your way
+    through.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5309
+      look: You see a musty chamber.
+    south:
+      to: tba:53:room:5325
+      look: You see a tomb.
+
+"tba:53:room:5325":
+  name: A Looted Tomb
+  description: >
+    The floor of this small tomb is littered with the lids of smashed sarcophagi, bits of treasure
+    dropped by thieves and looters, and corpses pulled from their resting places.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5324
+      look: You see a small crack in the wall through which you might be able to slide.
+    east:
+      to: tba:53:room:5333
+      look: To the east is another tomb.
+    west:
+      to: tba:53:room:5326
+      look: To the west is another tomb.
+
+"tba:53:room:5326":
+  name: A Demolished Tomb
+  description: >
+    This tomb has been utterly destroyed by thieves and looters in search of the treasures of the
+    pharaohs.  Nothing of interest remains in this room, except a large stone coffin that leans against the
+    western wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5325
+      look: To the east is another tomb.
+    west:
+      to: tba:53:room:5327
+      look: You see a large stone coffin.
+      door:
+        keywords: [coffin, lid]
+        kind: pickproof
+        key: tba:53:obj:5312
+        reset: locked
+  extras:
+  - keywords: [man, garments, pharaoh]
+    text: >
+      As you look closer at the figure sculpted into the stone coffin you notice a small marking carved
+      into its chest.  It looks like a scarab or small beetle would fit into the small space, if properly
+      sized.  Hmmm.
+  - keywords: [coffin, lid]
+    text: >
+      The coffin is sculpted into the form of a man, standing several heads above you, and clad in the
+      garments of pharaohs.  It has apparently been untouched by the ravages of time and the activities of
+      looters.  Several markings on the side indicate spots where unsuccessful attempts were made to open the
+      coffin.  You can't see any way to open it.
+
+"tba:53:room:5327":
+  name: A Stairway
+  description: >
+    You stand now at the head of a stairway that goes down into darkness. The steps and walls are
+    smooth sandy stone, covered with a thick layer of dust.  Some inscriptions are carved into the wall here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:53:room:5326
+      look: You see the backside of the coffin lid, featureless stone.
+      door:
+        keywords: [coffin, lid]
+        kind: pickproof
+        reset: locked
+    down:
+      to: tba:53:room:5328
+      look: It is too dark to see down the stairway.
+  extras:
+  - keywords: [coffin, lid]
+    text: On this side the coffin lid is smooth featureless stone.
+  - keywords: [inscriptions]
+    text: "You blow dust away from the inscriptions to read: Beware the curse of the mummy."
+
+"tba:53:room:5328":
+  name: A Stairway
+  description: >
+    You are on a stairway that disappears into darkness in both directions. The smooth, uneven steps of
+    the stairway have not been travelled in what appears to be centuries.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:53:room:5327
+      look: It is too dark to see up the stairway.
+    down:
+      to: tba:53:room:5329
+      look: It is too dark to see down the stairway.
+
+"tba:53:room:5329":
+  name: A Stairway
+  description: >
+    You stand now at the base of the uneven stairway.  The walls, floor, and ceiling of this small
+    landing are covered with strange hieroglyphics.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:53:room:5330
+      look: You see a seam in the stone wall.
+      door:
+        keywords: [stone]
+        kind: door
+        reset: closed
+    up:
+      to: tba:53:room:5328
+      look: It is too dark to see up the stairway.
+  extras:
+  - keywords: [walls, floor, ceiling, hieroglyphics]
+    text: >
+      The hieroglyphics are covered with a thick layer of dust.  You clear the dust away with your hand,
+      and find that you cannot comprehend them.
+
+"tba:53:room:5330":
+  name: The Ancient Hall
+  description:
+  - >
+    Here the air is deathly still, motes of dust thickly obscuring your vision.  Several stone statues
+    line the walls of the hall, depicting the gods of an ancient society.  Strange glyphs and sigils
+    cover the walls, a peculiar pictorial form of written language that you don't understand.
+  - Some steps lead to a raised dais to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5329
+      look: You see a seam in the stone wall.
+      door:
+        keywords: [stone]
+        kind: door
+        reset: closed
+    south:
+      to: tba:53:room:5331
+      look: You see a small raised dais.
+  extras:
+  - keywords: [writings, glyphs, sigils, hieroglyphics, symbols]
+    text: You don't understand the meaning of these symbols.
+
+"tba:53:room:5331":
+  name: A Raised Dais
+  description: >
+    You are at the southern end of the ancient hall, the dust and darkness absorbing your light so that
+    you cannot see past the steps of the dais. A low pedestal rests here.  You see something written
+    into the face of it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5330
+      look: You cannot see past the steps of the dais.
+    down:
+      to: tba:53:room:5332
+      look: You see a seam in the stone floor.
+      door:
+        keywords: [tomb]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [pedestal, writings]
+    text: >
+      The writings are covered in sand and worn nearly away by the passage of time: 'I am Ramses the
+      Damned, once counselor and aide to the mightiest of pharaohs and queens of this land.  Much time has
+      passed since I last walked the earth. Disturb my rest at your peril.  '
+
+"tba:53:room:5332":
+  name: The Tomb Of Ramses
+  description: You stand in an empty tomb, a cubicle no more then ten feet to a side.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:53:room:5331
+      look: That leads back the way you came.
+      door:
+        keywords: [tomb]
+        kind: door
+        reset: closed
+
+"tba:53:room:5333":
+  name: A Ransacked Tomb
+  description: >
+    This tomb has been completely ransacked and destroyed by the actions of pyramid thieves and
+    looters.  The floor is littered with junk.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5334
+      look: To the east is a low-ceilinged tunnel.
+    west:
+      to: tba:53:room:5325
+      look: To the west is another tomb.
+
+"tba:53:room:5334":
+  name: A Tunnel
+  description: The low-ceilinged tunnel runs east-west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:53:room:5335
+      look: You cannot see into the darkness of the low tunnel.
+    west:
+      to: tba:53:room:5333
+      look: You see a tomb.
+
+"tba:53:room:5335":
+  name: A Fork In The Tunnel
+  description: >
+    Here the tunnel forks off through a gaping hole down in the southern wall, continuing onward to the
+    east and west as well.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:53:room:5336
+      look: You cannot see into the darkness of the low tunnel.
+    south:
+      look: The hole is low, at the floor of the southern wall.
+    west:
+      to: tba:53:room:5334
+      look: You cannot see into the darkness of the low tunnel.
+    down:
+      to: tba:53:room:5346
+      look: Through the hole you see rubble and sand.
+  extras:
+  - keywords: [hole]
+    text: The hole is low, at the floor of the southern wall.
+
+"tba:53:room:5336":
+  name: A Tunnel
+  description: >
+    The low-ceilinged tunnel makes a turn to the west and ends to the north as it spills out into a
+    dusty hallway.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:53:room:5342
+      look: The mouth of the tunnel is stone that has been torn away by looters.
+    west:
+      to: tba:53:room:5335
+      look: You cannot see into the darkness of the low tunnel.
+
+"tba:53:room:5337":
+  name: A Dank Chamber
+  description: >
+    This chamber has a dank, dusty, musty smell to it.  Small footprints in the dust betray the recent
+    passage of some sort of creatures.  A hole in the floor lies to the west and a stairway is to the
+    east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5338
+      look: You see a spiral stone stairway.
+    west:
+      to: tba:53:room:5312
+      look: You see only blackness through the hole in the floor.
+
+"tba:53:room:5338":
+  name: A Spiral Stairway
+  description: >
+    Some dusty, broken stone stairs here spiral slowly in a constricted space down towards a dusty
+    hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:53:room:5337
+      look: The stairs spiral up into a dank chamber.
+    down:
+      to: tba:53:room:5341
+      look: The stairs spiral down into a dusty hallway.
+
+"tba:53:room:5339":
+  name: A Dust-Covered Hallway
+  description: >
+    This hallway is covered with dust that has accumulated over the centuries that the pyramid has
+    stood.  Small markings and footprints in the dust betray the recent passage of others -- perhaps thieves?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5340
+      look: The hallway proceeds to the east towards a strange smell.
+    west:
+      to: tba:53:room:5309
+      look: The hallway proceeds towards the west towards a musty smell.
+
+"tba:53:room:5340":
+  name: A Smelly Chamber
+  description: >
+    This small chamber has a sickly putrescent smell to it, the smell of formaldehyde and other
+    ointments used to preserve the corpses of those who died ages ago.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5341
+      look: You see a dusty hallway.
+    west:
+      to: tba:53:room:5339
+      look: You a dusty hallway.
+
+"tba:53:room:5341":
+  name: A Dust-Covered Hallway
+  description: >
+    This hallway is covered with a thick, choking dust that rises up to obscure your light source and
+    sting your eyes.  Small marks and footprints in the dust betray the recent passage of others.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5342
+      look: The hallway turns to the north.
+    west:
+      to: tba:53:room:5340
+      look: You smell something peculiar over there.
+    up:
+      to: tba:53:room:5338
+      look: A tightly spiralling stone stairway leads up.
+
+"tba:53:room:5342":
+  name: A Turn In The Hallway
+  description: >
+    You are standing in an elbow turn in a dust-covered stone hallway, that dead ends to the north and
+    continues on to the west.  To the south the stones of the pyramid have been torn asunder by thieves,
+    making a low-ceilinged tunnel.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5343
+      look: The hallway ends to the north.
+    south:
+      to: tba:53:room:5336
+      look: The tunnel is dark.
+    west:
+      to: tba:53:room:5341
+      look: The dust-covered hallway continues to the west.
+
+"tba:53:room:5343":
+  name: A Dead End
+  description: >
+    The dust-covered hallway has come to an abrupt end at a stony, featureless wall.  Here and there
+    are signs of the recent passage of others in the dust.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:53:room:5342
+      look: The dusty hall continues to the south.
+    down:
+      to: tba:53:room:5344
+      look: The floor is quite dusty, and made of stone.  You see some cracks.
+      door:
+        keywords: [floor]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [cracks]
+    text: >
+      The cracks look like you might be able to pull away some pieces of the floor, perhaps even fit your
+      body through the space you make.
+
+"tba:53:room:5344":
+  name: The Tomb Entrance
+  description: >
+    You are in a small, dark chamber that has stood undisturbed for many years.  To the north stands a
+    massive stone tomb, which is covered in hieroglyphics and gold-lined carvings that mark it as the
+    final resting place of the mighty pharaohs of this land.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:53:room:5345
+      look: You see the tomb of the pharaohs.
+      door:
+        keywords: [tomb]
+        kind: door
+        reset: closed
+    up:
+      to: tba:53:room:5343
+      look: The stone ceiling has some cracks in it, through which a dim light streams.
+      door:
+        keywords: [ceiling]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [hieroglyphics, carvings]
+    text: >
+      The markings indicate that this tomb is indeed the tomb of the greatest pharaohs of the ancient
+      civilization that built this massive pyramid.
+  - keywords: [tomb]
+    text: >
+      The tomb looks like it has stood for many years, much like the pyramid which encloses it.  It is
+      covered in small hieroglyphics.
+
+"tba:53:room:5345":
+  name: The Tomb Of The Pharaohs
+  description: >
+    Great golden sarcophogai line the walls of this massive tomb.  It has withstood the passage of time
+    intact, untouched by the hands of thieves and looters.  The treasures taken by the pharaohs to their
+    graves still lie before your feet.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:53:room:5344
+      look: That way leads back out of the tomb.
+      door:
+        keywords: [tomb]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [treasures]
+    text: >
+      The treasures are dusty and fragile, but still seem quite valuable.  You decide not to take them
+      out of respect for the ancient dead.
+
+"tba:53:room:5346":
+  name: A Rubble-Strewn Hallway
+  description: >
+    This hallway formerly had a beautiful arch to the ceiling, now collapsed under the weight of the
+    slowly settling stones of the pyramid.  Now, a massive pile of rubble leads up into a hole high in the
+    northern portion of the hallway.  To the south, through the rubble and fallen stones you see a
+    sandstone crypt.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    south:
+      to: tba:53:room:5347
+      look: You see a sandstone crypt.
+    up:
+      to: tba:53:room:5335
+      look: From here you see only darkness.
+
+"tba:53:room:5347":
+  name: A Sandstone Crypt
+  description: >
+    This small crypt is lit by a hole in the wall to the south, through which sand pours from the
+    desert outside.  A hot wind blows in from the desert, drying your skin instantly.  To the east and north
+    the arched hallway continues.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5346
+      look: The arched hallway collapses into rubble shortly to the north.
+    east:
+      to: tba:53:room:5348
+      look: You see a beautifully arched hallway.
+    south:
+      to: tba:53:room:5353
+      look: You see a lot of sand.
+
+"tba:53:room:5348":
+  name: An Arched Hall
+  description: >
+    This hallway has a beautiful arch to it, formed painstakingly and exquisitely out of the sandy
+    stones of the pyramid.  The dust that covers most of the rest of the pyramid interior is not present
+    here, scoured away by the blowing of the desert winds that howl about your ears.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:53:room:5349
+      look: The arched hall proceeds to the east, making a sharp southward turn.
+    west:
+      to: tba:53:room:5347
+      look: The arched hall proceeds into a sandstone crypt.
+
+"tba:53:room:5349":
+  name: An Arched Hall
+  description: >
+    This hallway has a beautiful arch to it, formed painstakingly and exquisitely out of the sandy
+    stones of the pyramid.  To the east is a small, golden-colored crypt, and the hall proceeds to the south
+    and north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5348
+      look: The arched hall proceeds to the north, making a sharp westward turn.
+    east:
+      to: tba:53:room:5350
+      look: A small golden crypt lies to the east.
+    south:
+      to: tba:53:room:5351
+      look: The arched hall proceeds to the south.
+
+"tba:53:room:5350":
+  name: A Golden Crypt
+  description: >
+    You stand inside a small crypt with walls and ceiling made of golden bricks that obscure the large
+    sandy stones of the pyramid. Small rugs and tapestries are scattered about the floor here, and they
+    appear to have been used recently.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:53:room:5349
+      look: You see an arched hall.
+  extras:
+  - keywords: [bricks]
+    text: The small golden bricks are very smooth and also quite soft.
+  - keywords: [rug, rugs, tapestry, tapestries]
+    text: >
+      The rugs and tapestries are very fine and worn with age, their colors now faded.  They depict
+      scenes of life in an ancient desert city.
+
+"tba:53:room:5351":
+  name: An Arched Hall
+  description: >
+    This hallway has a beautiful arch to it, formed painstakingly and exquisitely out of the sandy
+    stones of the pyramid.  The arched hall proceeds to the north and ends to the south in a small vault.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5349
+      look: The arched hall continues to the north.
+    south:
+      to: tba:53:room:5352
+      look: You see a small vault from which a shining light issues.
+
+"tba:53:room:5352":
+  name: A Shining Vault
+  description: >
+    The stones of the pyramid here take on a strange, twinkling quality, almost seeming to shine with
+    an internal light.  As you look closer you see tiny glass-like glittery particles within the stones,
+    that reflect the light from your light source so perfectly that they seem to shine.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:53:room:5351
+      look: You see a hall with a beautifully arched ceiling.
+  extras:
+  - keywords: [particles, glass]
+    text: >
+      The glassy particles reflect and refract your light source in a myriad of dazzling colors that
+      dance across your eyes and make you giggle.
+
+"tba:53:room:5353":
+  name: A Massive Sand Dune
+  description: >
+    You stand now on a massive sand dune on the southern side of the pyramid.  At the foot of the sand
+    dune to the north you see a small hole where the stones of the pyramid have collapsed.  Not far to
+    the south is a massive roiling sandstorm; the wind from the storm howls and bites at your face even
+    here.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:53:room:5347
+      look: You see a small hole leading back into the pyramid.
+    south:
+      to: tba:53:room:5354
+      look: You see only a wall of whirling, blowing, dry sand.
+  extras:
+  - keywords: [sand, dune, sandstorm]
+    text: The sand is very white, and very sandy.  There sure is a lot of it.
+
+"tba:53:room:5354":
+  name: A Swirling Sandstorm
+  description: >
+    You are caught in the midst of a massive sandstorm.  Howling winds buffet you from all sides, and
+    the sand tears at your skin, blinding you and choking you.  You have lost all sense of direction.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5353
+      look: You see only a wall of whirling, blowing, dry sand.
+    east:
+      to: tba:53:room:5354
+      look: You see only a wall of whirling, blowing, dry sand.
+    south:
+      to: tba:53:room:5355
+      look: You see only a wall of whirling, blowing, dry sand.
+    west:
+      to: tba:53:room:5354
+      look: You see only a wall of whirling, blowing, dry sand.
+  extras:
+  - keywords: [sand]
+    text: >
+      Sand is about all you CAN see right now.  Unfortunately, it isn't very interesting sand, only
+      white, dry, and blowing all over the place.
+
+"tba:53:room:5355":
+  name: A Swirling Sandstorm
+  description: >
+    You are caught in the midst of a massive sandstorm.  Howling winds buffet you from all sides, and
+    the sand tears at your skin, blinding you and choking you.  You have lost all sense of direction.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5354
+      look: You see only a wall of whirling, blowing, dry sand.
+    east:
+      to: tba:53:room:5355
+      look: You see only a wall of whirling, blowing, dry sand.
+    south:
+      to: tba:53:room:5356
+      look: You see only a wall of whirling, blowing, dry sand.
+    west:
+      to: tba:53:room:5355
+      look: You see only a wall of whirling, blowing, dry sand.
+  extras:
+  - keywords: [sand]
+    text: >
+      Sand is about all you CAN see right now.  Unfortunately, it isn't very interesting sand, only
+      white, dry, and blowing all over the place.
+
+"tba:53:room:5356":
+  name: A Swirling Sandstorm
+  description: >
+    You are caught in the midst of a massive sandstorm.  Howling winds buffet you from all sides, and
+    the sand tears at your skin, blinding you and choking you.  You have lost all sense of direction.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5355
+      look: You see only a wall of whirling, blowing, dry sand.
+    east:
+      to: tba:53:room:5356
+      look: You see only a wall of whirling, blowing, dry sand.
+    south:
+      to: tba:53:room:5357
+      look: You see only a wall of whirling, blowing, dry sand.
+    west:
+      to: tba:53:room:5356
+      look: You see only a wall of whirling, blowing, dry sand.
+  extras:
+  - keywords: [sand]
+    text: >
+      Sand is about all you CAN see right now.  Unfortunately, it isn't very interesting sand, only
+      white, dry, and blowing all over the place.
+
+"tba:53:room:5357":
+  name: A Swirling Sandstorm
+  description: >
+    You are caught in the midst of a massive sandstorm.  Howling winds buffet you from all sides, and
+    the sand tears at your skin, blinding you and choking you.  You have lost all sense of direction.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5356
+      look: You see only a wall of whirling, blowing, dry sand.
+    east:
+      to: tba:53:room:5357
+      look: You see only a wall of whirling, blowing, dry sand.
+    south:
+      to: tba:53:room:5358
+      look: You see only a wall of whirling, blowing, dry sand.
+    west:
+      to: tba:53:room:5357
+      look: You see only a wall of whirling, blowing, dry sand.
+  extras:
+  - keywords: [sand]
+    text: >
+      Sand is about all you CAN see right now.  Unfortunately, it isn't very interesting sand, only
+      white, dry, and blowing all over the place.
+
+"tba:53:room:5358":
+  name: A Massive Sand Dune
+  description: >
+    Somehow you managed to make your way through the howling winds of the sandstorm, and clamber up on
+    this sand dune.  You can see the storm to the north of you, and presumably the pyramid is somewhere
+    beyond it.  Nothing but flat, featureless, open dunes of sand lie in every other direction.
+  sector: field
+  exits:
+    north:
+      to: tba:53:room:5357
+      look: You see only a wall of whirling, blowing, dry sand.
+    south:
+      to: tba:53:room:5359
+      look: >
+        On the southern side of the sand dune is a small hole in the sand. For some reason you seem unable
+        to get to it.
+      door:
+        keywords: [riddle]
+        kind: pickproof
+        key: tba:53:obj:5317
+        reset: locked
+  extras:
+  - keywords: [hieroglyphics, symbols]
+    text: >
+      Like most of the ancient hieroglyphics of this land, the symbols are totally incomprehensible to
+      you.  Perhaps the Sphinx has the answer to this ancient riddle.
+  - keywords: [riddle]
+    text: A vision forms before your eyes, in glowing hieroglyphic symbols.
+  - keywords: [sand, dune]
+    text: The sand is very white, and very sandy.  There sure is a lot of it.
+
+"tba:53:room:5359":
+  name: Through The Hole In The Sand
+  description: >
+    You squeeze through the small hole in the sand and land in a small white chamber.  Above you is a
+    small hole, reachable by climbing up the small sandy slope down which you slid.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    up:
+      to: tba:53:room:5358
+      look: You see a sand dune.

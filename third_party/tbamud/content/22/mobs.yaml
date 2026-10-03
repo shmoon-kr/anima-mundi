@@ -1,0 +1,708 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 22.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:22:mob:2200":
+  keywords: [zombie, guard]
+  short: a zombie guard
+  long: A decomposing guard is still standing watch here.
+  description: The flesh is falling off this guy, while green puss oozes from old wounds. He looks Dead!
+  level: 14
+  sex: neutral
+  alignment: -750
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2201":
+  keywords: [zombie, knight]
+  short: a zombie knight
+  long: A rotten knight in black armor is standing here.
+  description: >
+    A once noble knight in armor, it now looks like it spent a few weeks laying out in the sun and has
+    shriveled up.  His black armor sits loosely over the remains of this undead monsters body.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [scavenger, stay_zone, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: slash
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2202":
+  keywords: [zombie, servant]
+  short: a zombie servant
+  long: A zombie servants rotten head almost falls off as he bows before you.
+  description: This dead servant was brought back to life.  You wonder why!
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2203":
+  keywords: [zombie, maid]
+  short: a zombie maid
+  long: A zombie maid picks up after all the zombies.
+  description: >
+    She might have once been an attractive woman, but now she's just another soulless husk of a human
+    being.
+  level: 14
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2204":
+  keywords: [zombie, lord]
+  short: a zombie lord
+  long: A richly dressed zombie walks around with his nose stuck up in the air.
+  description: >
+    At one time he used to be dressed in the finest of finery.  You catch glimpses of gold trimming on
+    the old rotten clothing, hints of this mans greatness at one time.  The downfall of his empire seems
+    to weep in his sunken eyes.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: crush
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2205":
+  keywords: [zombie, lady]
+  short: a zombie lady
+  long: A smelly zombie brushes up against you seductively.
+  description: >
+    Dressed in clothes that were once very flattering, the decaying flesh and oozing green puss don't
+    do much to help this lady now.
+  level: 10
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2206":
+  keywords: [skeleton, bones]
+  short: a skeleton
+  long: A pile of human bones is lying here.
+  description: >
+    What you first think is just a pile of bones, you now realize that it is actually alive and looks
+    ready to attack.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2207":
+  keywords: [undead]
+  short: an undead corpse
+  long: An undead corpse walks past you.
+  description: This corpse just stood up and walked past you.  How unnerving.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2208":
+  keywords: [zombie, head, maid]
+  short: the head maid
+  long: A zombie head maid is supervising the cleaning of the tower.
+  description: >
+    She looks tough, all the other maids cower towards her.  She holds herself with an air of authority
+    that is expected to be respected and followed.
+  level: 18
+  sex: female
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2209":
+  keywords: [blistered, zombie]
+  short: a blistered zombie
+  long: A blistered zombie is smoldering from the heat.
+  description: >
+    The heat has caused this zombie to be covered in blisters.  Very little clothing remains, what does
+    is slowly smoldering into ash.
+  level: 14
+  sex: neutral
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2210":
+  keywords: [zombie]
+  short: a smoking zombie
+  long: A zombie stands here negligent to the heat.
+  description: >
+    This zombie is charred and smoke pours off his smoldering flesh.  The smell is none too appealing
+    and makes your eyes burn.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2211":
+  keywords: [zombie]
+  short: a flaming zombie
+  long: A zombie has caught on fire here.
+  description: >
+    Smoke and flames roll off this zombie causing the horrible stench of burnt hair and flesh to make
+    you gag.  It seems oblivious to the world.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2212":
+  keywords: [algae, monster]
+  short: an algae monster
+  long: An algae monster is trying to hide from you.
+  description: >
+    This monster is covered in algae.  It looks somewhat human in form, but it is impossible to tell
+    for sure.  It looks very hostile.  Claws and teeth protrude from the fungus covered beast.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, aware, aggressive, memory]
+  affects: [invisible, detect_invis, sense_life, hide]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2213":
+  keywords: [vampire]
+  short: a vampire
+  long: A vampire looks at you and grins evilly.
+  description: >
+    This vampire must be about 7 feet tall and looks really upset about you disturbing him.  He wears a
+    black cape that fails to conceal his broad shoulders.  He looks to be much more than just your
+    average vampire.
+  level: 18
+  sex: male
+  alignment: -750
+  flags: [sentinel, scavenger, aware, aggressive, no_charm, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, hide]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2214":
+  keywords: [damsel]
+  short: a damsel in distress
+  long: A damsel in distress sings so beautifully.
+  description: >
+    Such a beautiful voice, but such an ugly face.  She reminds you of those sirens you've heard of.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2215":
+  keywords: [prisoner]
+  short: a prisoner
+  long: A prisoner is standing here, looking hopeless.
+  description: The blank eyes seem to already have seen the future and the fate that will become of him.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2216":
+  keywords: [Inquisitor]
+  short: the inquisitor
+  long: An inquisitor is here, applying her trade to the prisoners.
+  description: >
+    She seems to enjoy her work a little too much.  She is dressed in tight black leather and various
+    tools of her trade hang about her.
+  level: 18
+  sex: female
+  alignment: -750
+  flags: [sentinel, aggr_good, memory]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2217":
+  keywords: [head, inquisitor]
+  short: the head inquisitor
+  long: The head inquisitor is supervising the interrogations.
+  description: >
+    She really seems to enjoy inflicting pain on others, she suddenly notices you and smiles
+    seductively.  Yet another prisoner in her eyes.
+  level: 18
+  sex: male
+  alignment: -750
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2218":
+  keywords: [animator, dead]
+  short: the animator of the dead
+  long: An animator of the dead is weaving an intricate spell.
+  description: >
+    Dressed completely in black, he hardly looks human.  He makes several intricate gestures while
+    mumbling incomprehensible words.  He suddenly notices you, and loses his concentration.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [sentinel, aggressive, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: blast
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2219":
+  keywords: [zombie]
+  short: a zombie
+  long: A zombie stumbles past you.
+  description: This guy has been dead for a long time.  The body is decomposed and ridden with maggots.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2220":
+  keywords: [zombie]
+  short: a moldy zombie
+  long: A zombie covered in mold is lying on the floor.
+  description: This zombie has been lying on the ground too long and has gotten moldy.
+  level: 14
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2221":
+  keywords: [wraith]
+  short: a wraith
+  long: A wraith floats past you.
+  description: >
+    This thing sends a chill down your spine as it slowly floats by, seeming to fade in and out of
+    existence, you can't tell if it's real or just your imagination.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone, aggr_good, memory]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: crush
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2222":
+  keywords: [shade]
+  short: a shade
+  long: A shade is slowly fading in and out of existence.
+  description: It looks unreal, and definitely undead.
+  level: 18
+  sex: female
+  alignment: -750
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: maul
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2223":
+  keywords: [zombie]
+  short: a frozen zombie
+  long: A zombie with icicles hanging on it shuffles by.
+  description: >
+    The cold has taken hold of this zombie and turned it into a popsicle.  It moves even slower than
+    normal.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: crush
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2224":
+  keywords: [zombie, king]
+  short: a zombie king
+  long: A zombie king orders you to leave at once.
+  description: >
+    Surprisingly, he looks like he would do well in a battle.  Years of rulership has left him with a
+    smug arrogance in which he expects everything and everyone to obey his every command.
+  level: 18
+  sex: male
+  alignment: -750
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: pierce
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2225":
+  keywords: [zombie, queen]
+  short: a zombie queen
+  long: A zombie queen sniffs in disdain at you.
+  description: Once beautiful, she is now just another one of the rotting undead.
+  level: 18
+  sex: female
+  alignment: 30
+  flags: [sentinel, aggressive, memory, helper, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2226":
+  keywords: [dungeon, guard]
+  short: a dungeon guard
+  long: A dungeon guard stands his watch vigilantly.
+  description: >
+    He stands with pride and honor, the perfect guard.  He wears a gray robe over his armor with two
+    crossed thunderbolts emblazoned on it.
+  level: 18
+  sex: female
+  alignment: 750
+  flags: [scavenger, stay_zone, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: crush
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2227":
+  keywords: [dungeon, sentry]
+  short: a dungeon sentry
+  long: This sentry is standing watch over a large locked door to the south.
+  description: >
+    She stands rigidly at attention.  Heels together, feet separated at a 45 degree angle, back
+    straight, closed hands against the seam of her trousers. She doesn't move an inch.
+  level: 14
+  sex: female
+  alignment: 750
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2228":
+  keywords: [master]
+  short: a dungeon master
+  long: The dungeon master is here protecting the cell to the south.
+  description: >
+    She looks tough and very serious, She carries a wicked sword with two crossed lightning bolts
+    engraved on the handle.
+  level: 18
+  sex: female
+  alignment: 750
+  flags: [sentinel, memory, no_charm, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: stab
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2229":
+  keywords: [princess]
+  short: a princess
+  long: The princess is sitting in a corner, cowering in fear.
+  description: >
+    Her face is streaked with dried tears, she looks like she has given up hope on life, will you save
+    her?
+  level: 14
+  sex: female
+  alignment: 750
+  flags: [sentinel, stay_zone, wimpy]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:22:mob:2230":
+  keywords: [lord, undead]
+  short: the Lord of the Undead
+  long: The Lord of the Undead ignores your pitiful existence.
+  description: >
+    The master of the tower, his only equal is the gods, that is if he ever escapes confinement from
+    his warded cell.
+  level: 18
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aware]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,110 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 306.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:306:obj:30600":
+  type: weapon
+  keywords: [spear, atomie]
+  short: an Atomie spear
+  long: An Atomie spear has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d2
+    attack: stab
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 3
+  affects:
+  - apply: hit
+    modifier: 5
+
+"tba:306:obj:30601":
+  type: scroll
+  keywords: [book, story, high, adventure]
+  short: a book with a tree bark cover
+  long: A story of high adventure has been dropped here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [1, 1, 20, 44]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:306:obj:30602":
+  type: armor
+  keywords: [boots, grig, leaping]
+  short: the Grig Boots of Leaping
+  long: The Grig Boots of Leaping have been dropped here.
+  flags: [hum]
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 2
+  affects:
+  - apply: move
+    modifier: 10
+
+"tba:306:obj:30603":
+  type: worn
+  keywords: [wings, grig]
+  short: a pair of Grig wings
+  long: A pair of Grig wings have been left here.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 111
+  rent: 0
+  level: 3
+
+"tba:306:obj:30604":
+  type: armor
+  keywords: [ring, small, glowing]
+  short: a small glowing ring
+  long: A small glowing ring has been left here.
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 1
+  affects:
+  - apply: hit
+    modifier: 10
+
+"tba:306:obj:30605":
+  type: container
+  keywords: [chest]
+  short: a small green chest
+  long: A small green chest is resting in the far corner.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    capacity: 1000
+    lock_flags: 5
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:306:obj:30606":
+  type: potion
+  keywords: [newbie, potion]
+  short: a newbie potion
+  long: A newbie potion has been left here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [1, 16, 3, 18]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1

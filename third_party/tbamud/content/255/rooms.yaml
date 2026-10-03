@@ -1,0 +1,429 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 255.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:255:room:25500":
+  name: Old Sailor's Home
+  description: >
+    You enter into a small cavern about ten by ten in diameter.  The flickering light you noticed
+    earlier comes from a campfire in the center of the floor. Crude furniture made from driftwood and rocks
+    lies strewn about, and some raggety clothing hangs on a peg of wood jammed into a crack in the stone
+    wall.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    west:
+      to: tba:255:room:25531
+  extras:
+  - keywords: [credits]
+    text:
+      preformatted: |2
+           *Shipwreck
+        *Written for Dibrova by Kaan
+        This is a subterranean ship stuck in cave-in with a bunch of aggro pirate
+        ghosts who are also invisible.  Some decent eq for the mid-level player as
+        well as some good experience.  Connects to Beach and Lighthouse area, also
+        available for download.
+        Zone 255 is linked to the following zones:
+        265 Beach & Lighthouse             at 25507 (up   ) ---> 26506
+        265 Beach & Lighthouse             at 25531 (west ) ---> 26502
+
+"tba:255:room:25501":
+  name: Skeleton Room
+  description: >
+    This room looks to have been used as a sort of holding cell for crew members who commited crimes or
+    for unwanted stowaways.  A pile of human bones sits in a corner, being the only thing in the room
+    except, of course, for the ever lingering stale smell of death.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:255:room:25514
+  extras:
+  - keywords: [bones, pile]
+    text: They look like any other pile of bones you've looked through.
+
+"tba:255:room:25507":
+  name: On a Rope Ladder
+  description: >
+    You begin climbing down the rope ladder.  Below you, there is a mist obscuring all except a foot or
+    so below you.  In fact, you can barely see your feet as they descend.  The air around seems to much
+    more damp than the air above, near the sea.  You can hear a creaking noise, a noise made up of many
+    different pitches, all blended into one, like a hundred grannies rocking in old chairs all at once.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    up:
+      to: tba:265:room:26506
+    down:
+      to: tba:255:room:25508
+
+"tba:255:room:25508":
+  name: Out of the Mists
+  description: >
+    As you descend farther down the ladder, the mists begin to part, and what you see below you takes
+    your breath away.  You find yourself in an immense cavern, the floor of which is all sea water. 
+    Floating on the sea floor of this cavern, directly below you, and from the looks of it, entombed here
+    forever, is a huge saling vessel.  The rope you are on drops you onto the crow's nest of the main mast of
+    this ship.  You see no movement on deck, not that you expected to, as it looks as if this ship has
+    been here for many decades, possibly even centuries.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    up:
+      to: tba:255:room:25507
+    down:
+      to: tba:255:room:25509
+
+"tba:255:room:25509":
+  name: Crow's Nest - Main Mast
+  description: >
+    You stand on a small round platform which encircles the top of the main mast. A set of small iron
+    rungs lead down the mast to the deck at midships.  Rigging surrounds you on all sides, but none of it
+    looks too stable.  The rope ladder ascends up through the mists.
+  sector: mountains
+  exits:
+    up:
+      to: tba:255:room:25508
+    down:
+      to: tba:255:room:25510
+
+"tba:255:room:25510":
+  name: Gangway - Midships
+  description: >
+    You stand in the center of this once-mighty vessel, gently rocking with the water beneath.  You can
+    hear no sound but that of the ship creaking beneath you, the crew that ran this proud ship must have
+    long since deserted it or died trying to get it out of this cavern.  The gangway runs north to south
+    the length of the ship.  The gunwales lies east and west of you.
+  sector: mountains
+  exits:
+    north:
+      to: tba:255:room:25511
+    east:
+      to: tba:255:room:25519
+    south:
+      to: tba:255:room:25515
+    west:
+      to: tba:255:room:25518
+    up:
+      to: tba:255:room:25509
+      look: You look up the rungs in the mast into a deep, inpenetrable mist.
+
+"tba:255:room:25511":
+  name: Gangway
+  description: >
+    Your footsteps echo hollowly on the old planking, giving you a sense of danger impending.  A hatch
+    in the floor here gives you access to the lower deck.
+  sector: mountains
+  exits:
+    north:
+      to: tba:255:room:25512
+    south:
+      to: tba:255:room:25510
+    down:
+      to: tba:255:room:25520
+  extras:
+  - keywords: [hatch]
+    text: The hatch has a handle set into it.  It does not appear to be locked.
+
+"tba:255:room:25512":
+  name: Gangway at Foremast
+  description: >
+    The foremast raises from the deck here, rotted rigging still attached to tattered sails.  The
+    ganway continues on north and south of you.
+  sector: inside
+  flags: [tunnel]
+  exits:
+    north:
+      to: tba:255:room:25513
+    south:
+      to: tba:255:room:25511
+
+"tba:255:room:25513":
+  name: Forecastle
+  description: >
+    You stand near the front most section of the ship, with the cavern wall staring you right in the
+    face.  You can now see how the ship got trapped in this cavern.  It looks as if at one time this was a
+    small cove with deep enough waters to harbor a ship.  The northern wall, now a tremendous pile of
+    rubble, must have come down, sealing the ship in.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    north:
+      to: tba:255:room:25514
+    south:
+      to: tba:255:room:25512
+
+"tba:255:room:25514":
+  name: Bow
+  description: >
+    You stand at the very front of the ship.  There is a small square hole leading down from here or
+    you may head south along the gangway.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    south:
+      to: tba:255:room:25513
+    down:
+      to: tba:255:room:25501
+
+"tba:255:room:25515":
+  name: Poopdeck
+  description: >
+    You stand on the poop deck, the main section of the upper deck, where most of the sailing must have
+    been done when this craft was seaworthy.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    north:
+      to: tba:255:room:25510
+    south:
+      to: tba:255:room:25516
+
+"tba:255:room:25516":
+  name: At the Wheel
+  description: >
+    Here the huge wheel of the ship still rests in place, not a scratch or nick on it.  A compass sits
+    in its stand here as well, also still in fine condition. You may head north along the gangway or
+    south to the stern.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    north:
+      to: tba:255:room:25515
+    south:
+      to: tba:255:room:25517
+
+"tba:255:room:25517":
+  name: Stern
+  description: >
+    You stand at the back of the ship, which butts up against the cavern wall. The floors here still
+    seem to be free of any litter or debris, strange for a ship that appears to have been stuck in one
+    place for so long.
+  sector: inside
+  flags: [indoors, tunnel]
+  exits:
+    north:
+      to: tba:255:room:25516
+
+"tba:255:room:25518":
+  name: Port Gunwale
+  description: The sides of the ship are roughly 3 ft in height.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:255:room:25510
+
+"tba:255:room:25519":
+  name: Starboard Gunwale
+  description: The sides of the ship are roughly 3 ft in height.
+  sector: inside
+  exits:
+    west:
+      to: tba:255:room:25510
+
+"tba:255:room:25520":
+  name: In a Corridor - Lower Deck
+  description: >
+    You stand in a small, cramped corridor which runs north to south.  You notice doors spaced at
+    intervals in front and behind you, but none next to you.  Doors stand closed at the end of the hall at
+    both ends.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25521
+    south:
+      to: tba:255:room:25523
+    up:
+      to: tba:255:room:25511
+
+"tba:255:room:25521":
+  name: In a Corridor - Lower Deck
+  description: >
+    The corridor ends just north of you at a door.  Doors flank you on both east and west sides.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25522
+    east:
+      to: tba:255:room:25529
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:255:room:25520
+    west:
+      to: tba:255:room:25530
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:255:room:25522":
+  name: North End of Corridor
+  description: >
+    You stand in front of a closed door at the north end of the corridor.  No markings or signs adorn
+    the door, so it could lead anywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25526
+      look: door
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:255:room:25521
+
+"tba:255:room:25523":
+  name: In a Corridor - Lower Deck
+  description: >
+    The corridor runs south and north from here, ending just south of you in a closed door.  Doors
+    flank either side of you, east and west, or you may go back north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25520
+    east:
+      to: tba:255:room:25528
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:255:room:25524
+    west:
+      to: tba:255:room:25527
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:255:room:25524":
+  name: South End of Corridor
+  description: >
+    You stand at the southern end of the corridor in front of a large oak door. You may go back north
+    or try the door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25523
+    south:
+      to: tba:255:room:25525
+      look: The door seems to be solid and sturdy, despite the effects of time and decay.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:255:room:25525":
+  name: Captain's Quarters
+  description: >
+    This is easily the biggest single room on the whole lower deck of the ship, not that that is saying
+    too much.  A large, quite comfortable looking bed rests against one wall, a desk, nailed to the
+    floor, sits at another end with a stool similarly attached to floor.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:255:room:25524
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:255:room:25526":
+  name: Bunk Room
+  description: >
+    This room is where the majority of the crew must have slept.  Bunks built into the walls of this
+    room make small alcoves for each sailor.  The cushions in each have long since rotted into decay, and
+    even the wood which fashioned these walls looks now so rotted as not to be able hold any one man's
+    weight.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:255:room:25522
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:255:room:25527":
+  name: Galley and Mess Room
+  description: >
+    All food for the ship was prepared and eaten in this room.  A small but servicable kitchen is set
+    up at one end of the room, while a long table which benches lining either side is set up at the other
+    side.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:255:room:25523
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:255:room:25528":
+  name: The Latrine
+  description: >
+    This room, although unused for who knows how long, still smells the same as it must have when in
+    operation.  A small, dirty basin sits in the center of the room, awaiting use, seeming almost to smile
+    at you, daring you to use it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:255:room:25523
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:255:room:25529":
+  name: Rowing Room - Starboard Side
+  description: >
+    This long room houses a set of rotted wooden benches, all deluxe with rotted oars to match.  What a
+    joy it must have been to be down here when there was no wind!
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:255:room:25521
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:255:room:25530":
+  name: Rowing Room - Port Side
+  description: >
+    This room houses a set of rotted wooden benches complete with rotted oars resting on each.  You can
+    smell the sweat still in the air from the men who must have worked their heart and soul to keep this
+    vessel moving in calm waters.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:255:room:25521
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:255:room:25531":
+  name: Cave Entrance
+  description: >
+    You stand at the entrance to a cave half way down the cliff face.  You see a flickering light
+    inside which could be a campfire, could be a lantern.  It also could be a cook fire - a cook fire to cook
+    you!
+  sector: mountains
+  flags: [tunnel]
+  exits:
+    east:
+      to: tba:255:room:25500
+    west:
+      to: tba:265:room:26502

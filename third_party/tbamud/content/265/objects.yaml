@@ -1,0 +1,53 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 265.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:265:obj:26500":
+  type: container
+  keywords: [desk]
+  short: a desk
+  long: There is a mahogney desk here, up against the east wall.
+  wear: []
+  values:
+    capacity: 2000
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [desk]
+    text: >
+      It looks as if any business the Lighthouse Keeper may need to do is done here, at this desk.  It
+      has a drawer in it and implements for writing.
+  - keywords: [drawer]
+    text: Looks like any other drawer you've seen before - knob and all.
+
+"tba:265:obj:26501":
+  type: key
+  keywords: [key, figure, eight]
+  short: a figure-eight key
+  long: A key in the shape of a figure-eight is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:265:obj:26502":
+  type: key
+  keywords: [key, cell]
+  short: a cell key
+  long: A cell key lies here in the dirt.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 650
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2

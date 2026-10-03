@@ -1,0 +1,102 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 9.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:9:mob:900
+  room: tba:9:room:915
+  limit: 3
+- mob: tba:9:mob:900
+  room: tba:9:room:915
+  limit: 3
+- mob: tba:9:mob:900
+  room: tba:9:room:915
+  limit: 3
+- mob: tba:9:mob:901
+  room: tba:9:room:916
+  limit: 2
+  equip:
+    hold:
+      object: tba:9:obj:901
+      limit: 15
+- mob: tba:9:mob:901
+  room: tba:9:room:916
+  limit: 2
+- mob: tba:9:mob:902
+  room: tba:9:room:917
+  limit: 1
+- mob: tba:9:mob:903
+  room: tba:9:room:918
+  limit: 1
+- mob: tba:9:mob:904
+  room: tba:9:room:919
+  limit: 1
+  equip:
+    hands:
+      object: tba:9:obj:903
+      limit: 10
+    hold:
+      object: tba:9:obj:902
+      limit: 25
+- mob: tba:9:mob:905
+  room: tba:9:room:920
+  limit: 1
+  equip:
+    wield:
+      object: tba:9:obj:905
+      limit: 10
+- mob: tba:9:mob:906
+  room: tba:9:room:920
+  limit: 1
+  equip:
+    wield:
+      object: tba:9:obj:907
+      limit: 5
+- mob: tba:9:mob:907
+  room: tba:9:room:921
+  limit: 1
+  equip:
+    shield:
+      object: tba:9:obj:901
+      limit: 8
+    hold:
+      object: tba:9:obj:900
+      limit: 1
+- object: tba:9:obj:904
+  room: tba:9:room:922
+  limit: 10
+- object: tba:9:obj:906
+  room: tba:9:room:922
+  limit: 1
+- mob: tba:9:mob:909
+  room: tba:9:room:908
+  limit: 2
+- mob: tba:9:mob:909
+  room: tba:9:room:908
+  limit: 2
+- mob: tba:9:mob:910
+  room: tba:9:room:909
+  limit: 2
+  equip:
+    wield:
+      object: tba:9:obj:908
+      limit: 30
+- mob: tba:9:mob:910
+  room: tba:9:room:909
+  limit: 2
+  equip:
+    wield:
+      object: tba:9:obj:908
+      limit: 30
+- mob: tba:9:mob:911
+  room: tba:9:room:910
+  limit: 3
+- mob: tba:9:mob:911
+  room: tba:9:room:910
+  limit: 3
+- object: tba:9:obj:909
+  room: tba:9:room:910
+  limit: 12
+removes:
+- room: tba:9:room:910
+  object: tba:9:obj:909

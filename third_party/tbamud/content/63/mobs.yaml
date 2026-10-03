@@ -1,0 +1,392 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 63.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:63:mob:6301":
+  keywords: [spider, young]
+  short: the young spider
+  long: The young spider is ballooning by you.
+  description: He looks freshly hatched and sprightly.  His young fangs are just growing in as of late.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6302":
+  keywords: [yevaud, dragon, usurper]
+  short: Yevaud
+  long: Yevaud, the Usurper of Midgaard is here, grinning evilly at you.
+  description: Old, scaly, but still with a lot of bite in him left.
+  level: 24
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aggr_good, aggr_neutral, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6303":
+  keywords: [spider, wolf]
+  short: the wolf spider
+  long: The wolf spider is here, licking its bloody fangs.
+  description: The wolf spider is hairy, very hairy.
+  level: 6
+  sex: female
+  alignment: -300
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6304":
+  keywords: [orc]
+  short: the orc
+  long: The orc is stuck in the web and he can't get out.
+  description: >
+    You notice an evil look in his eyes, but he seems quite drained of life, and all he can do is glare
+    at you while he's stuck in this web.
+  level: 2
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:63:mob:6305":
+  keywords: [wasp, queen]
+  short: the queen wasp
+  long: The queen wasp is here, thinking how tasty you look.
+  description: You notice a glazed look in her eyes.
+  level: 14
+  sex: female
+  alignment: -800
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6306":
+  keywords: [spider, drone]
+  short: the drone spider
+  long: A drone spider walks around doing its master's bidding.
+  description: An ordinary drone spider.
+  level: 6
+  sex: neutral
+  alignment: -200
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6307":
+  keywords: [spider, ethereal]
+  short: the ethereal spider
+  long: An ethereal spider strides here, traveling to different worlds.
+  description: >
+    She winks in and out of reality.  It looks like it'd be difficult to hit her without a magical
+    weapon.
+  level: 13
+  sex: female
+  alignment: 300
+  flags: [scavenger, stay_zone]
+  affects: [invisible, detect_align, sense_life, waterwalk, sneak]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6308":
+  keywords: [slave, human]
+  short: the slave
+  long: A human slave of Arachnos works here relentlessly.
+  description: >
+    The slave does not mind you, but will fight like a warrior if attacked.  He serves the spider
+    Empress, Arachnos, though whether it is by choice or because he was beguiled, you are not fully certain.
+  level: 11
+  sex: male
+  alignment: -50
+  flags: [scavenger, stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6309":
+  keywords: [quasit]
+  short: the quasit
+  long: A quasit blinks in and out, grinning at you.
+  description: >
+    Demoniac in nature, but more mischievous.  He twiddles his thumbs and creates a magical treasure!
+  level: 10
+  sex: male
+  alignment: -300
+  flags: [scavenger, stay_zone, wimpy]
+  affects: [invisible, detect_invis, sense_life, sneak]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6310":
+  keywords: [spider, bird]
+  short: the bird spider
+  long: The bird spider snaps its powerful jaws.
+  description: The Bird Spider has very powerful jaws.
+  level: 14
+  sex: female
+  alignment: -800
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6311":
+  keywords: [hermit]
+  short: the hermit
+  long: The hermit sits here and warns, 'Go back before it is too late!'
+  description: A dishevelled veteran warrior in disguise is what he is, but he means well.
+  level: 7
+  sex: male
+  alignment: 750
+  flags: [sentinel, scavenger, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6312":
+  keywords: [donjonkeeper, keeper]
+  short: the Donjonkeeper
+  long: The Donjonkeeper eyes you and wonders how pure your soul is.
+  description: >
+    He delves deeper into you as you stare at him.  Only those free of taint will be allowed to remain
+    here safely.
+  level: 25
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, aggr_evil, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6313":
+  keywords: [guardian]
+  short: the guardian
+  long: The guardian is obviously not doing his job.
+  description: He looks like a lazy bum who sleeps half the time.
+  level: 17
+  sex: male
+  alignment: 250
+  flags: [aggressive, stay_zone]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:63:mob:6314":
+  keywords: [arachnos, spider, empress]
+  short: Arachnos
+  long: Arachnos the Empress of Spiders welcomes you with an evil smile.
+  description: >
+    She is a very attractive spider with an ornate gown.  She tempts you into being one of her many
+    slaves.  She does not possess the venomous fangs of normal spiders, but then, as you realize, she does
+    not need them.
+  level: 26
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, aggr_good, memory, no_charm, no_summon, no_bash]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6315":
+  keywords: [ki-rin]
+  short: the Ki-Rin
+  long: The Ki-Rin smiles good-naturedly to you.
+  description: >
+    She is the last bastion of good in this realm.  Her mission is to someday free the slaves of the
+    Empress.  She has been trapped here for time eternal, and now the evil power of Arachnos feeds upon her
+    intense magical energies.  She will never give up here fight against evil, though, and will continue
+    her work in whatever manner presents itself.
+  level: 26
+  sex: female
+  alignment: 1000
+  flags: [sentinel, scavenger, aggr_evil, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6316":
+  keywords: [dragon, wyrmkin, young]
+  short: the young wyrmkin
+  long: A wyrmkin with no teeth plays here.
+  description: It is a rather small dragon, and you almost feel sad about killing it.
+  level: 9
+  sex: male
+  alignment: 50
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6317":
+  keywords: [dragon, wyrmkin, elder]
+  short: the elder wyrmkin
+  long: A wyrmkin that has grown a bit stares at you inquisitively.
+  description: >
+    A medium-sized dragon -- seems it hasn't killed anything yet by itself, though there is a first
+    time for everything...
+  level: 16
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:63:mob:6318":
+  keywords: [mahatma, thief]
+  short: Mahatma, the thief
+  long: Mahatma, that silly thief, is here, stealing everything.
+  description: This professional thief has constructed a trap to catch unwary travellers.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing

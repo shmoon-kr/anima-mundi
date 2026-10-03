@@ -1,0 +1,412 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 60.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:60:obj:6000":
+  type: weapon
+  keywords: [axe, lumber]
+  short: a lumber axe
+  long: A heavy lumber axe lies here.
+  flags: [no_donate]
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: slash
+  weight: 12
+  cost: 50
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [axe, lumber]
+    text: It is a heavy axe of the kind lumberjacks use to chop down trees.
+
+"tba:60:obj:6001":
+  type: armor
+  keywords: [shirt, checkered]
+  short: a checkered shirt
+  long: A checkered shirt lies here.
+  flags: [no_donate]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 2
+  cost: 20
+  rent: 8
+  level: 0
+  extras:
+  - keywords: [shirt, checkered]
+    text: It is an extra large, checkered shirt made from heavy cloth.
+
+"tba:60:obj:6002":
+  type: armor
+  keywords: [boots, leather]
+  short: a pair of worn leather boots
+  long: A pair of worn leather boots lies here.
+  flags: [no_donate]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 4
+  cost: 60
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [boots]
+    text: >
+      They are fashioned from rough leather that has been oiled frequently to make it stay waterproof. 
+      They look worn but quite functional.
+
+"tba:60:obj:6003":
+  type: container
+  keywords: [fireplace]
+  short: a fireplace
+  long: A fireplace made from stone is set against the east wall.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fireplace]
+    text: >
+      It is fashioned from stones of various sizes that have been stacked on top of each other and
+      fastened with mortar.  Its chimney is constructed likewise and leads the smoke out through the low cabin
+      ceiling.
+
+"tba:60:obj:6004":
+  type: light
+  keywords: [lantern, brass, hooded]
+  short: a hooded brass lantern
+  long: A hooded brass lantern has been left here.
+  wear: [take, hold]
+  values:
+    hours: 100
+  weight: 4
+  cost: 60
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [letters]
+    text: "The letters say: Use 'hold lantern' to activate."
+  - keywords: [lantern, brass, hooded]
+    text: >
+      It is a large and robust but somewhat battered oil lantern made from brass, and it is equipped with
+      a handle to make it handy and a hood to protect its flame.  Some letters have been scratched on its
+      bottom.
+
+"tba:60:obj:6005":
+  type: container
+  keywords: [chest, wooden]
+  short: a wooden chest
+  long: A wooden chest stands in the corner.
+  wear: [take]
+  values:
+    capacity: 100
+    lock_flags: 15
+    key: tba:60:obj:6006
+    corpse: false
+  weight: 20
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [chest, wooden]
+    text: >
+      It is a robust chest made from short, heavy planks that have been fastened together with tenons. 
+      It is equipped with a simple brass lock.
+
+"tba:60:obj:6006":
+  type: key
+  keywords: [key, brass]
+  short: a small brass key
+  long: A small brass key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, brass]
+    text: It is a small, simple brass key with no inscriptions or marks of any kind.
+
+"tba:60:obj:6007":
+  type: money
+  keywords: [coins, gold]
+  short: a heap of gold coins
+  long: Some gold coins lie piled up in a heap on the floor.
+  wear: [take]
+  values:
+    coins: 127
+  weight: 1
+  cost: 127
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coins, gold]
+    text: The coins seem to be gold.  They are obviously valuable.
+
+"tba:60:obj:6010":
+  type: food
+  keywords: [blackberries, berries]
+  short: some blackberries
+  long: Some blackberries grow on a bush nearby.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blackberries, berries]
+    text: They look very tasty indeed.
+
+"tba:60:obj:6011":
+  type: food
+  keywords: [mushroom]
+  short: a mushroom
+  long: A small mushroom grows nearby.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [mushroom]
+    text: It looks to be a tasty little thing.
+
+"tba:60:obj:6012":
+  type: other
+  keywords: [sign]
+  short: a large sign
+  long: A large sign mounted on a pole is standing by the roadside.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - It says :-
+    - Haon-Dor
+    - --------
+    - This is the Forest of Haon-Dor.  Enter at your own risk.
+  - keywords: [pole]
+    text: >
+      Not the most interesting pole in the world.  Better leave it here, though, as it holds the sign in
+      place.
+
+"tba:60:obj:6013":
+  type: drinkcon
+  keywords: [barrel, water]
+  short: a barrel
+  long: A water barrel has been left here.
+  wear: [take]
+  values:
+    capacity: 40
+    contains: 40
+    liquid: clear_water
+    poisoned: false
+  weight: 45
+  cost: 60
+  rent: 20
+  level: 0
+
+"tba:60:obj:6014":
+  type: fountain
+  keywords: [water, brook]
+  short: a small brook
+  long: A small brook trickles through the forest beside the path.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, brook]
+    text: The water looks clean and refreshing.
+
+"tba:60:obj:6015":
+  type: fountain
+  keywords: [water, lake]
+  short: the lake
+  long: .the lake
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:60:obj:6016":
+  type: weapon
+  keywords: [cudgel, oak, oaken, limb]
+  short: an oaken cudgel
+  long: A limb has fallen here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: pound
+  weight: 16
+  cost: 1
+  rent: 20
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [cudgel, oak, oaken, limb]
+    text: The cudgel looks quite sturdy, and would make a nice weapon.
+
+"tba:60:obj:6017":
+  type: container
+  keywords: [carcass, board]
+  short: the carcass of a boar
+  long: .A hidden carcass of a boar.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:60:obj:6018":
+  type: food
+  keywords: [slab, meat]
+  short: a large slab of meat
+  long: A large piece of freshly cut boar meat is on the ground here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 15
+  cost: 40
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [slab, meat]
+    text: It looks quite filling.
+
+"tba:60:obj:6019":
+  type: treasure
+  keywords: [tusks, pair]
+  short: a pair of boar tusks
+  long: A pair of large boar tusks have been dropped here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 60
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [tusks, pair]
+    text: They look like they might be worth something to a craftsman.
+
+"tba:60:obj:6020":
+  type: boat
+  keywords: [log, hollow, floating]
+  short: a hollow log
+  long: .A hidden hollow log.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 48
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [log]
+    text: It looks like it would probably float.
+
+"tba:60:obj:6021":
+  type: container
+  keywords: [nest, bird]
+  short: the bird's nest
+  long: .A hidden bird's nest.
+  wear: []
+  values:
+    capacity: 30
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:60:obj:6022":
+  type: food
+  keywords: [egg, blue, robin]
+  short: a blue robin's egg
+  long: A small bluish egg has been left here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [egg, blue, robin]
+    text: It is small, but food nonetheless.
+
+"tba:60:obj:6023":
+  type: food
+  keywords: [meat, rabbit]
+  short: a piece of rabbit meat
+  long: A large piece of rabbit meat.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 5
+  cost: 29
+  rent: 20
+  level: 0
+
+"tba:60:obj:6024":
+  type: food
+  keywords: [meat, deer, venison]
+  short: a piece of venison
+  long: A large piece of venison.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 10
+  cost: 80
+  rent: 20
+  level: 0

@@ -1,0 +1,85 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 65.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:65:shop:6503":
+  keeper: tba:65:mob:6503
+  rooms: [tba:65:room:6516]
+  products:
+  - tba:65:obj:6504
+  - tba:65:obj:6505
+  - tba:65:obj:6510
+  - tba:65:obj:6512
+  - tba:65:obj:6517
+  buys:
+  - type: armor
+  - type: weapon
+  profit:
+    buy: 1.9
+    sell: 0.3
+  messages:
+    no_such_item: "%s We don't have any in storage, sorry!"
+    you_dont_have_it: "%s Check your possessions, you don't have that."
+    does_not_buy: "%s I don't care for those types of goods."
+    shop_cannot_afford: "%s I can't afford something that great!"
+    you_cannot_afford: "%s You can't afford it, and don't ask a God for the money!"
+    bought: "%s That'll cost you %d coins, please."
+    sold: "%s You'll get %d coins for that."
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 28
+
+"tba:65:shop:6504":
+  keeper: tba:65:mob:6504
+  rooms: [tba:65:room:6535]
+  products:
+  - tba:65:obj:6518
+  - tba:65:obj:6519
+  - tba:65:obj:6520
+  - tba:65:obj:6521
+  - tba:65:obj:6522
+  - tba:65:obj:6523
+  buys:
+  - type: light
+  - type: container
+  - type: drinkcon
+  - type: food
+  profit:
+    buy: 1.9
+    sell: 0.2
+  messages:
+    no_such_item: "%s Haven't got that on storage!"
+    you_dont_have_it: "%s You don't seem to have that!"
+    does_not_buy: "%s I don't buy those types, try another shop."
+    shop_cannot_afford: "%s I cannot afford such a great treasure!"
+    you_cannot_afford: "%s You can't afford that!"
+    bought: "%s That'll be %d coins, please."
+    sold: "%s You'll get %d coins for that!"
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 6
+    close: 18
+  - open: 20
+    close: 28
+
+"tba:65:shop:6535":
+  keeper: tba:0:mob:1
+  rooms: []
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

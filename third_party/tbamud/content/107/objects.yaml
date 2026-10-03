@@ -1,0 +1,1003 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 107.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:107:obj:10700":
+  type: other
+  keywords: [tablet, message, iuel]
+  short: the Tablet of Ieul
+  long: A large tablet of Ieul hangs on the wall bearing messages for the common folk.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [iuel, message, board, tablet]
+    text: >
+      Ever since the sun has set upon the eastern skys, and fallen every day to a darken reign.  Parables
+      of Nox roam the land abound and beyond.  Strong and mighty warriors magicicians and those of lesser
+      known march the ground mortal fear to thread on.  But times grew short, the wars plagued the realms
+      and death had flexed it's wings.  Masses and mobs killings took place.  Sacrifices of blood and bone
+      soaked the grounds, making it moist and hungry for more.  The war of the immortals was at it's darkest
+      hour.  800 years later.  The wars ended, leaving only the fittest to survive.  These great legends
+      were loved and feared, their faces to be thought unworthy to look upon, by mere mortals. They were to
+      be Gods and Greater Gods.  Casting the rotting and part soiled remains of their victims into a pit
+      and burried it far away from the town that was built for the living.  Life soon begin to spawn by
+      itself.  Life as it seems cannot be stopped, and those that was once dead.  Are now known only to be
+      called commonly as the Undead.  In the land of Iuel this massgrave rejuvinates it's movements and sends
+      forth a great army of fearsome creatures. Wrecking havoc in the city around, with skills so great, and
+      magic so potent. The wars between the living and the dead, has now just begun.  A place to rest, away
+      from the living.  They mock me, but soon they will die.  Everyone has to die.
+
+"tba:107:obj:10701":
+  type: armor
+  keywords: [odylic, face, mask]
+  short: an odylic face mask
+  long: A face mask gathering the surrounding forces of nature lays here translucent.
+  flags: [invisible]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 4
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [odylic, face, mask]
+    text: The face mask is transparent, practically invisble and covers the entire head.
+
+"tba:107:obj:10702":
+  type: armor
+  keywords: [odylic, breastplate]
+  short: an odylic breastplate
+  long: An enchanted translucent breastplate lays here.
+  flags: [invisible]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 4
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [odylic, breastplate]
+    text: The breastplate is unbelievably light and made from a see through material.
+
+"tba:107:obj:10703":
+  type: armor
+  keywords: [odylic, sandals]
+  short: some odylic sandals
+  long: A pair of barely visible odylic sandals lay here collecting energy.
+  flags: [invisible]
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [odylic, sandals]
+    text: >
+      The sandals are made from a strange transparent material, they fit snuggly and offer good
+      protection and mobility.
+
+"tba:107:obj:10704":
+  type: other
+  keywords: [odylic, wristlock]
+  short: a broken odylic wristlock
+  long: Looks like someone has escaped an odylic wristlock, and just left it here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 310
+  rent: 31
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -10
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [odylic, wristlock]
+    text: >
+      These strange restraints can now be worn about the wrists, offering greater protection and even
+      empowering your limbs with a strange feeling of strength.
+
+"tba:107:obj:10705":
+  type: other
+  keywords: [odylic, ring]
+  short: an odylic ring
+  long: Small rings eluminating with odylic energy lays here nearly unseen.
+  flags: [invisible, magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 5
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [odylic, ring]
+    text: >
+      The transparaent ring glows with an unearthly light.  It emanates a feeling of power and lust to
+      help bring forth death.
+
+"tba:107:obj:10706":
+  type: armor
+  keywords: [odylic, shield]
+  short: an odylic shield
+  long: A large shield bursting with energy lays here.
+  flags: [invisible]
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 10
+  cost: 750
+  rent: 75
+  level: 0
+  extras:
+  - keywords: [shield, odylic]
+    text: >
+      The shield has a strange feeling of other worldly power and protection, it's light and see through
+      material is surprisingly durable.
+
+"tba:107:obj:10707":
+  type: other
+  keywords: [odylic, amulet]
+  short: an odylic amulet
+  long: An odylic amulet lays here collecting impurities.
+  flags: [invisible]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 470
+  rent: 47
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 15
+  - apply: hitroll
+    modifier: -1
+  extras:
+  - keywords: [odylic, amulet]
+    text: >
+      The powerful amulet brings forth a lust for battle and blood.  It's power invigorating and
+      empowering it's wearer.
+
+"tba:107:obj:10708":
+  type: armor
+  keywords: [odylic, greaves, leg, plates]
+  short: some odylic greaves
+  long: A pair of darken, battered odylic leg plates lay here.
+  flags: [invisible]
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 6
+  cost: 450
+  rent: 45
+  level: 0
+  extras:
+  - keywords: [odylic, greaves, leg, plates]
+    text: >
+      The odylic greaves though transparent have a dark presence that seems to be trapped within the
+      magical armor.
+
+"tba:107:obj:10709":
+  type: armor
+  keywords: [odylic, shoulder, plates]
+  short: some odylic shoulder plates
+  long: Some odylic should plates lay here.
+  flags: [invisible]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 5
+  cost: 375
+  rent: 37
+  level: 0
+  extras:
+  - keywords: [odylic, shoulder, plates]
+    text: >
+      The plates seem to magically mold into the desired shape of whom ever attempts to wear them.
+
+"tba:107:obj:10710":
+  type: armor
+  keywords: [vampire, cloak]
+  short: a red velvet vampire's cloak
+  long: A stunning cloak made from an erotic red velvet lays here wasted.
+  flags: [anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 3
+  weight: 6
+  cost: 350
+  rent: 35
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [vampire, cloak]
+    text: >
+      This blood red cloak is made from a thick velvet material that seems to flow around it's wearer.
+
+"tba:107:obj:10711":
+  type: armor
+  keywords: [odylic, gauntlets]
+  short: a pair of odylic gauntlets
+  long: Some odylic gauntlets lay here absorbing odylic energy.
+  flags: [invisible]
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 4
+  cost: 300
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [odylic, gauntlets]
+    text: >
+      The strange transparent material is very flexible and seems to form to the wearers hand when worn.
+
+"tba:107:obj:10712":
+  type: armor
+  keywords: [odylic, scabbard, slate, piece]
+  short: an odylic scabbard
+  long: A piece of odylic slate lays here.
+  flags: [invisible]
+  wear: [take, waist]
+  values:
+    armor: 3
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [odylic, piece, scabbard, slate]
+    text: The strange transparent material seems to have been the scabbard from a strange sword.
+
+"tba:107:obj:10713":
+  type: weapon
+  keywords: [long, bone]
+  short: a long bone
+  long: A really long bone, belonging to a incredibly huge creature lays here now.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pound
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [long, bone]
+    text: >
+      This strange bone has a feeling of power and anger about it.  It would make a great weapon for
+      bludgeoning someone to a pulp.
+
+"tba:107:obj:10714":
+  type: weapon
+  keywords: [spiked, handwrap]
+  short: a spiked handwrap
+  long: A handwrap with elugated spikes pertuding is here on the ground.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: claw
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [spiked, handwrap]
+    text: >
+      This handwrapping is inlayed with deadly spikes with which would do a number on someone if punched.
+
+"tba:107:obj:10715":
+  type: other
+  keywords: [broad, tempered, scimitar, fillet, knife]
+  short: a broad tempered scimitar
+  long: An enormously huge fillet knife is here, ready to fillet the world's largest tuna.
+  wear: [take, wield]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 16
+  cost: 800
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [broad, tempered, scimitar]
+    text: The blade is long and polished, making it a deadly weapon.
+
+"tba:107:obj:10716":
+  type: weapon
+  keywords: [dancing, fire, soul, weapon]
+  short: a dancing fire soul
+  long: A rough looking weapon is here burnt for all it's made for.
+  wear: [take, wield]
+  values:
+    damage: 1d25
+    attack: hit
+  weight: 4
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [dancing, fire, soul, weapon]
+    text: This abandoned soul has been transformed into a weapon, and now seems useless.
+
+"tba:107:obj:10717":
+  type: wand
+  keywords: [twig, spikey]
+  short: a spikey twig
+  long: A spikey twig lays on the ground waiting for you to step on.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 19]
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [spikey, twig]
+    text: This strange twig has a strange feeling to it.  It seems to fade in and out of existence.
+
+"tba:107:obj:10718":
+  type: wand
+  keywords: [water, soaked, branch, moss, wood, greeny]
+  short: a water soaked branch
+  long: A greeny moss covered piece of wood lays here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 18]
+  weight: 1
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [water, soaked, branch, moss, wood, greeny]
+    text: >
+      The branch seems to glow red and blue on each end seeming to detect some strange presence.
+
+"tba:107:obj:10719":
+  type: wand
+  keywords: [algae, green, blue, stick]
+  short: a blue and green algae covered stick
+  long: A green and blue stick covered in algae lays here on the ground.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 21]
+  weight: 1
+  cost: 550
+  rent: 55
+  level: 0
+  extras:
+  - keywords: [algae, green, blue, stick]
+    text: The stick seems rotten, and diseased, but it's magical qualities make it very apparent.
+
+"tba:107:obj:10720":
+  type: wand
+  keywords: [red, yellow, algae, stick]
+  short: a red and yellow algae covered stick
+  long: A red and yellow algae covered stick lays here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 39]
+  weight: 1
+  cost: 175
+  rent: 17
+  level: 0
+  extras:
+  - keywords: [red, yellow, algae, stick]
+    text: The stick is remarkably strong for it's size and condition.
+
+"tba:107:obj:10721":
+  type: wand
+  keywords: [blue, brown, algae, stick]
+  short: a blue and brown algae covered stick
+  long: A blue and brown algae covered stick lays here on the ground.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 42]
+  weight: 1
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [blue, brown, algae, stick]
+    text: This stick has a homey feeling to it.
+
+"tba:107:obj:10722":
+  type: wand
+  keywords: [brown, maroon, algae, stick]
+  short: a brown and maroon algae covered stick
+  long: A brown and marron algae covered stick lays here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 51]
+  weight: 1
+  cost: 180
+  rent: 18
+  level: 0
+  extras:
+  - keywords: [brown, maroon, algae, stick]
+    text: The stick smells faintly of the ocean and is extremely sodden.
+
+"tba:107:obj:10723":
+  type: wand
+  keywords: [slimy, green, moss, covered, twig]
+  short: a slimy green moss covered twig
+  long: A slimy green moss covered twig lays here on the ground.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, -1]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [slimy, green, moss, covered, twig]
+    text: The stick has a strange evil blessing emanating from within itself.
+
+"tba:107:obj:10724":
+  type: wand
+  keywords: [dead, olive, twig]
+  short: a dead olive twig
+  long: A twig taken from a dead olive tree lays here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 43]
+  weight: 1
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [dead, olive, twig]
+    text: This twig seemed to have once been ill and diseased but has now miraculously recovered.
+
+"tba:107:obj:10725":
+  type: wand
+  keywords: [rotting, white, bark]
+  short: a rotting white bark
+  long: A piece of bark ripped from a tree has been left here rotting.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, -1]
+  weight: 1
+  cost: 120
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [rotting, white, bark]
+    text: >
+      The bark seems to have aged beyond it's normal years.  As if it's life had been magically quickened.
+
+"tba:107:obj:10726":
+  type: wand
+  keywords: [water, damaged, tree, bark]
+  short: a water damaged tree bark
+  long: A tree bark soaked too long in water has been left here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 20]
+  weight: 1
+  cost: 750
+  rent: 75
+  level: 0
+  extras:
+  - keywords: [water, damaged, tree, bark]
+    text: The bark has the strange ability to detect forms of magic.
+
+"tba:107:obj:10727":
+  type: wand
+  keywords: [dried, deer, penis]
+  short: a dried up penis of a deer
+  long: A dried up animal's groin lays here smelling really bad.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 35]
+  weight: 1
+  cost: 600
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [dried, up, deer's, penis]
+    text: This disgusting extremity could make you drop or junk anything.
+
+"tba:107:obj:10728":
+  type: wand
+  keywords: [rhino, horn]
+  short: a freshly cut rhino's horn
+  long: A rhino's horn lays here on the ground.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 29]
+  weight: 1
+  cost: 160
+  rent: 16
+  level: 0
+  extras:
+  - keywords: [rhino, horn]
+    text: >
+      The horn is dull and worn from age.  It seems to fade in and out of existence, as if it was
+      partially invisible.
+
+"tba:107:obj:10729":
+  type: wand
+  keywords: [nun, nipple]
+  short: a nun's nipple
+  long: A very disgusting nipple has been ripped off some poor woman and sits here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, -1]
+  weight: 1
+  cost: 900
+  rent: 90
+  level: 0
+  extras:
+  - keywords: [nun's, nipple]
+    text: The nipple has a strange ability to rejuvenate it's user.
+
+"tba:107:obj:10730":
+  type: wand
+  keywords: [good, knight, testicle]
+  short: a good knight's testicle
+  long: A pair of very small testicles sits here.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 50]
+  weight: 1
+  cost: 120
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [good, knight, testicle]
+    text: >
+      The testicle is shriveled and extremely small.  After seeing this you believe you could see
+      anything.
+
+"tba:107:obj:10731":
+  type: wand
+  keywords: [mind, altering, smelling, bag]
+  short: a mind altering smelling bag
+  long: A bag sits here on the ground smelling very tempting.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, -1]
+  weight: 1
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [mind, altering, smelling, bag]
+    text: This strange bag has the ability to rejuvenate those who dwell in the mystical arts.
+
+"tba:107:obj:10732":
+  type: armor
+  keywords: [brass, visor]
+  short: a brass visor
+  long: A brass rim made from badly forged brass lays here.
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [brass, visor]
+    text: The brass visor is poorly made and in need of a good shining.
+
+"tba:107:obj:10733":
+  type: armor
+  keywords: [brass, chestplate]
+  short: a brass chestplate
+  long: A long slate of brass lays here covering a lot of other equipment.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 15
+  cost: 300
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [brass, chestplate]
+    text: >
+      The chestplate has been beaten and bloodied from use.  Not very appealing, but it would offer
+      minimal protection.
+
+"tba:107:obj:10734":
+  type: armor
+  keywords: [horn, scaled, sleeve]
+  short: a pair of horn scaled sleeves
+  long: A sleeve made from boiled and cut horn lays here.
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [horn, scaled, sleeves]
+    text: >
+      These sleeves are very unique, made from horns of an unidentifiable beast they are extremely
+      durable.
+
+"tba:107:obj:10735":
+  type: armor
+  keywords: [horn, scaled, leg, plates]
+  short: a horn scaled leg plate
+  long: A longish plate made from scaled horns lay here
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [orn, scaled, leg, plates]
+    text: These leg plates are made from durable horns, very strange and unique design.
+
+"tba:107:obj:10736":
+  type: armor
+  keywords: [brass, gauntlets]
+  short: a pair of brass gauntlets
+  long: A pair of gauntlets made from shining brass lays here.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [brass, gautlets]
+    text: >
+      A set of brass hammered gauntlets.  Very stiff and unflexible, they are not very well suited for
+      maneuverability, but they do offer good protection.
+
+"tba:107:obj:10737":
+  type: other
+  keywords: [brass, wrist, wrap]
+  short: a brass supported cloth wrist wrap
+  long: A piece of cloth with a brass bar in the middle lays here on the ground.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 40
+  rent: 4
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 3
+  extras:
+  - keywords: [brass, wrist, wrap]
+    text: >
+      The brass piece is completely wrapped in cloth.  Making a very stiff and supportive guard.
+
+"tba:107:obj:10738":
+  type: other
+  keywords: [brass, neck, piece]
+  short: a brass neck piece
+  long: A ring of brass lays here on the ground.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -1
+  - apply: mana
+    modifier: 5
+  extras:
+  - keywords: [brass, neck, piece]
+    text: The ring of brass has a small clasp that can be opened to place it around the neck.
+
+"tba:107:obj:10739":
+  type: other
+  keywords: [mossy, webbed, feet]
+  short: some mossy webbed feet
+  long: A pair of green covered slimy mossy feet lay here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 135
+  rent: 13
+  level: 0
+  extras:
+  - keywords: [mossy, webbed, feet]
+    text: >
+      This strange footwear is extremely awkward looking, but it may be useful over watery terrain.
+
+"tba:107:obj:10740":
+  type: armor
+  keywords: [black, wood, buckler]
+  short: a black wood buckler
+  long: A flat piece of black wood lays here.
+  wear: [take, shield]
+  values:
+    armor: 4
+  weight: 7
+  cost: 35
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [black, wood, buckler]
+    text: >
+      The black wood appears to have been hardened by flame.  The tempering has given it a smooth black
+      polish.
+
+"tba:107:obj:10741":
+  type: other
+  keywords: [phoenix, wings]
+  short: a pair of phoenix wings
+  long: A pair of red and gold wings is here half burried.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 350
+  rent: 35
+  level: 0
+  extras:
+  - keywords: [phoenix, wings]
+    text: These strange wings can be placed about your body.
+
+"tba:107:obj:10742":
+  type: other
+  keywords: [broadsword, Iuel]
+  short: a broadsword from Ieul
+  long: A broadsword made from an incredible weaponsmith lays here.
+  wear: [take, wield]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 525
+  rent: 52
+  level: 0
+  extras:
+  - keywords: [broadsword, Iuel]
+    text: The blade is finely honed and polished.  An excellent weapon for almost any battle.
+
+"tba:107:obj:10743":
+  type: weapon
+  keywords: [Ieulish, gray, sword]
+  short: a gray sword from Ieul
+  long: A medium sized sword made from a land far away sits here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 5
+  cost: 375
+  rent: 37
+  level: 0
+  extras:
+  - keywords: [Ieulish, gray, sword]
+    text: >
+      The sword is made from an unkown material.  It's gray shine like that of metal, but it is not metal.
+
+"tba:107:obj:10744":
+  type: weapon
+  keywords: [ieulish, battleaxe]
+  short: an ieulic battleaxe
+  long: A battleaxe from the land of Ieul is sits here humming.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 10d4
+    attack: slash
+  weight: 20
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [ieulish, battleaxe]
+    text: >
+      The axehead is two-headed, made from a strange gray material.  The head is mounted on an oaken
+      handle.
+
+"tba:107:obj:10745":
+  type: weapon
+  keywords: [iuelish, polearm]
+  short: an Iuelic polearm
+  long: A polearm from the land of Ieul stands against the wall.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: slash
+  weight: 9
+  cost: 675
+  rent: 67
+  level: 0
+  extras:
+  - keywords: [ieulish, polearm]
+    text: The polearm is about two spans in length equipped with a nasty looking blade on it's end.
+
+"tba:107:obj:10746":
+  type: weapon
+  keywords: [war, mallet, iuel]
+  short: a war mallet from Iuel
+  long: A large headed war mallet from the land of Iuel is here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: pound
+  weight: 15
+  cost: 112
+  rent: 11
+  level: 0
+  extras:
+  - keywords: [war, mallet, iuel]
+    text: >
+      The mallet is made from a strange gray material.  It's head large and blunt. The handle long and
+      thin.
+
+"tba:107:obj:10747":
+  type: weapon
+  keywords: [tiger, sabertooth, tooth]
+  short: a long sabertooth tiger's tooth
+  long: The tooth of a grand sabertooth now lays here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: bite
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [tiger, sabertooth, tooth]
+    text: >
+      The long tooth is over a hands length.  It's point very sharp, making it an excellent weapon.
+
+"tba:107:obj:10748":
+  type: weapon
+  keywords: [ieulic, spiked, ball, chain]
+  short: an Iuelic spiked ball and chain
+  long: A spiked ball connected to a long wooden handle lays here.
+  wear: [take, wield]
+  values:
+    damage: 6d3
+    attack: crush
+  weight: 10
+  cost: 750
+  rent: 75
+  level: 0
+  extras:
+  - keywords: [ieulic, spiked, ball, chain]
+    text: >
+      The spike ball is about the size of a human head.  Attach to a long chain with a small handle.
+
+"tba:107:obj:10749":
+  type: weapon
+  keywords: [weed, vine, iuel]
+  short: a weed vine from the wetlands of Iuel
+  long: A short rope made from vines lay here.
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: whip
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [weed, vine, iuel]
+    text: The vine has been weaved into a makeshift whip.
+
+"tba:107:obj:10750":
+  type: weapon
+  keywords: [odylic, spike, iuel]
+  short: an odylic spike from Iuel
+  long: A sharp very long spiked jets out from the ground here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [odylic, spike, iuel]
+    text: The spike is about an arms length long and sharpened to a fine point.
+
+"tba:107:obj:10751":
+  type: other
+  keywords: [vault, banks]
+  short: the bank vault
+  long: The bank vault lies open, waiting for someone to try to enter.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bank, vault]
+    text: >
+      The bank vault stands wide open.  All the coins and loot inside are fully visible and ripe for the
+      taking.  Except for a strange presence that you can feel but not see.  Many have tried to loot from
+      this bank, but the unseen spirits have caused them to always fail.  Only a fool attempts to steal from
+      the dead city of Iuel.
+
+"tba:107:obj:10752":
+  type: key
+  keywords: [rare, gem]
+  short: a sparkling rare gem
+  long: A gem, sparkling and rare in all favors is stuck in the ground
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:107:obj:10753":
+  type: key
+  keywords: [lower, gem]
+  short: a lower gem
+  long: A blackish gem with the weight of a dead corpse is stuck here in the ground
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:107:obj:10774":
+  type: key
+  keywords: [middle, gem]
+  short: a middle gem
+  long: A piece of mud like solid is stuck in the ground.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:107:obj:10775":
+  type: key
+  keywords: [level, gem]
+  short: a level gem
+  long: A long flat gem is here balancing itself one a small twig
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0

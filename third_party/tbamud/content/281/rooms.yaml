@@ -1,0 +1,1190 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 281.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:281:room:28100":
+  name: A paved path
+  description: >
+    You are standing at the edge of the city.  From here, a short, paved path leads toward the east. 
+    To the northeast is a large building, its yard lined by an old fence of stone.
+  sector: city
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:281:room:28101
+  extras:
+  - keywords: [credits, info]
+    text:
+    - >
+      This is a modest zone with about 65 rooms.  It is a little forest, maybe east of Midgaard.  The
+      area was originally written for low-level (say 1-10) players.
+    - -Methem (mputkone@@rieska.oulu.fi) Replace XXXX with a town name of your choosing.
+
+"tba:281:room:28101":
+  name: Before a small gate
+  description: >
+    The paving turns toward the north, where stands a wooden gate at the fence.  A sign has been
+    fastened on the gate, reading "Galeaufir's Tavern".  A brown path leads to the east, toward light forest.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28102
+      look: You see the yard of the tavern.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    east:
+      to: tba:281:room:28114
+      look: You see some forest.
+    west:
+      to: tba:281:room:28100
+
+"tba:281:room:28102":
+  name: The yard of the tavern
+  description: >
+    This is a large yard growing plenty of grass and a few high bushes here and there.  The paving
+    leads straight toward the tavern, but there is also a faint trail to the west.  This could be a place to
+    have fun, at least some voices of singing are heard from inside the building.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28106
+      look: You see the tavern.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    south:
+      to: tba:281:room:28101
+      look: You see the paved path behind the fence.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:281:room:28103
+      look: You see the yard.
+
+"tba:281:room:28103":
+  name: On the lawn
+  description: >
+    You step on the lawn.  An old, large tree lines the track, and its foliage covers the yard in
+    massive shadows.  The corner of the tavern is close to the west.
+  sector: city
+  exits:
+    east:
+      to: tba:281:room:28102
+      look: You see the yard before the tavern.
+
+"tba:281:room:28104":
+  name: By the side of the tavern
+  description: >
+    You are standing close to the western fence of the yard.  The city can be seen further to the west
+    - masses of people and clamour.  To the is a small, wooden, and cell-like building, obviously a
+    lavatory.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28105
+      look: You see a small, wooden building.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:281:room:28103
+      look: You see the yard.
+
+"tba:281:room:28105":
+  name: The lavatory
+  description: >
+    The lavatory is quite cramped and the smell around exactly what it uses to be in places like this. 
+    However the inside is very tidy, see- mingly taken care often.  Anyway, you are ready to leave now...
+  sector: inside
+  flags: [dark, no_mob, tunnel]
+  exits:
+    south:
+      to: tba:281:room:28104
+      look: You see the yard of the tavern.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+
+"tba:281:room:28106":
+  name: Inside the tavern
+  description:
+  - >
+    The walls here are paneled in some wood of various deep brown tints.  A large, wooden chandelier
+    lits the room, making it very ho- mely.  The furniture is dominated by a tall desk close to the north
+    wall.  Behind it there stands a large, impressive cupboard.  To the west is a high, arched doorway,
+    above which a huge bearhead has been fastened, welcoming the customers in.
+  - Broad stairs lead up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:281:room:28102
+      look: You see the yard of this tavern.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    west:
+      to: tba:281:room:28107
+      look: You see a smoky drawing-room.
+    up:
+      to: tba:281:room:28108
+      look: You see stairs leading upstairs.
+  extras:
+  - keywords: [cupboard, impressive]
+    text: >
+      The cupboard is of some lacquered wood and the handicraft appears excellent. The doubledoors of it
+      are covered in a big painted picture, presenting a march of an ancient fully equipped army.  There
+      are also two large handles of pronze, formed in interesting spiral.
+
+"tba:281:room:28107":
+  name: A smoky drawing-room
+  description:
+  - >
+    You have arrived at a large drawing-room where quite an amount of tobacco smoke hovers about,
+    forcing you to cough loudly.  Heavy chairs and tables can be seen all around.  The room is full of people,
+    youngsters and elders, riches and poors, all from the different social classes.
+  - >
+    There is a wide collection of various hunting weapons on the western wall.  The room is warmed up
+    by a massive fireplace.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:281:room:28106
+      look: You see the tavern.
+
+"tba:281:room:28108":
+  name: On the top floor
+  description: >
+    This north- and south-directed corridor is where the local guest rooms are located at.  The walls
+    are paneled in some fine wood, and there hang deep green tapestries with some white decorations on
+    them. Torches cast soft light into the space.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:281:room:28110
+      look: You see the corridor.
+    west:
+      to: tba:281:room:28109
+      look: A locked, oaken door...
+      door:
+        keywords: [door, oaken]
+        kind: pickproof
+        reset: locked
+    down:
+      to: tba:281:room:28106
+      look: You see the stairs leading down.
+
+"tba:281:room:28109":
+  name: A dusty room
+  description: >
+    The room has been furnished by a small elegant table, a strong bed, an old bookcase, and a chest of
+    drawers.  Somehow you feel that it won't be hired out so often, although it seems that no one has
+    been here in a few weeks.  But no doubt, there is someone's property around...
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:281:room:28108
+      door:
+        keywords: [door, oaken]
+        kind: pickproof
+        reset: locked
+
+"tba:281:room:28110":
+  name: On the top floor
+  description: >
+    You walk on the corridor.  A door to the west is ajar and you wonder if you heard some voices from
+    behind it...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:281:room:28112
+      look: You see the corridor.
+    south:
+      to: tba:281:room:28108
+      look: You see the corridor.
+    west:
+      to: tba:281:room:28111
+      look: You see a room in confusion..
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:281:obj:28130
+        reset: closed
+
+"tba:281:room:28111":
+  name: A Guest Room
+  description:
+  - >
+    The air in this room is musty, and it smells of hard liquor.  On the floor there lie a bundle of
+    creased clothes and a couple of muddy shoes.  As you step toward the window you notice that the floor
+    there is sticky and covered in thousands of tiny glass fragments all around.
+  - Obviously there has been a festival of some kind in the City at last night.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:281:room:28110
+      look: You see the corridor.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:281:obj:28130
+        reset: closed
+
+"tba:281:room:28112":
+  name: On the top floor
+  description:
+  - >
+    The corridor ends here, and you find yourself standing by a small window.  Vast fields and forest
+    are seen through it - everything looks peaceful out there, despite a few alarming rumors about the
+    Forces of Evil gathering their power again.
+  - To the west stands a wooden door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:281:room:28110
+      look: You see the corridor.
+    west:
+      to: tba:281:room:28113
+      look: You see a wooden door.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:281:obj:28131
+        reset: locked
+
+"tba:281:room:28113":
+  name: A tidy room
+  description: >
+    The room is in extremely good order.  Every particle of dust or dirt of any kind appear to be wiped
+    out.  Apparently there is a possible tenant coming soon.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:281:room:28112
+      look: You see the corridor.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:281:obj:28131
+        reset: locked
+
+"tba:281:room:28114":
+  name: At the forest edge
+  description:
+  - >
+    You are walking on a brownish path that leads towards a light forest to the east, and begins to
+    wriggle its way there.  A mild chirping can be heard from somewhere nearby.
+  - The city of XXXX is further away to the west.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28115
+      look: You see the forest.
+    west:
+      to: tba:281:room:28101
+      look: You see the paved path.
+
+"tba:281:room:28115":
+  name: A path
+  description: >
+    As the path finds its way through the forest it sometimes becomes very narrow, wriggling by the
+    side of some large stones.  Passing by a wagon of any kind would be impossible.  To the east grows dense
+    thicket.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28116
+      look: You see more forest.
+    east:
+      to: tba:281:room:28155
+      look: You see some bushes.
+    west:
+      to: tba:281:room:28114
+      look: You see the forest edge.
+
+"tba:281:room:28116":
+  name: A path
+  description: >
+    The path seems to descend toward the east where you can make out some sandy ground.  Also, from the
+    same direction was heard something that sounded peculiar talk...
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:281:room:28117
+      look: You see a small dell.
+    south:
+      to: tba:281:room:28115
+      look: You see the forest.
+
+"tba:281:room:28117":
+  name: A small dell
+  description: >
+    You descend onto a sandy dell where you notice some old marks of water, approximately flown here a
+    few months ago.  The path continues to the east, climbing over great roots.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28118
+      look: You see a small intersection of trails.
+    west:
+      to: tba:281:room:28116
+      look: You see the forest.
+
+"tba:281:room:28118":
+  name: An intersection of paths
+  description: >
+    You are standing at a small square from where trails lead north, west, and east.  Since the foliage
+    dominates your vision more or less, only the highest of Towers of Midgaard can be seen farther to
+    the west.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28119
+      look: You see a grassy path.
+    east:
+      to: tba:281:room:28131
+      look: You see a weak trail through the forest.
+    west:
+      to: tba:281:room:28117
+      look: You see the dell.
+
+"tba:281:room:28119":
+  name: A grassy path
+  description:
+  - >
+    A grassy but quite a wide path leads here.  According a few deep grooves that are yet visible on
+    it, this way was probably used much, a long time ago.
+  - Leaning against a grayish tree, there is a rottening, wooden sign.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28120
+      look: You see a hillside of some kind descending there.
+    south:
+      to: tba:281:room:28118
+      look: You see a small intersection of trails.
+  extras:
+  - keywords: [sign, wooden]
+    text:
+    - "This is about what you detect:"
+    - "%he ++n o- G%%d i l"
+    - 20* m _ e
+
+"tba:281:room:28120":
+  name: A low hillside
+  description: >
+    This is a low, bush-growing hillside.  The path appears to be leading toward what looks a small
+    marshland down there.  For some reason it does not look very fascinating.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:281:room:28119
+      look: You see the grassy path.
+    down:
+      to: tba:281:room:28121
+      look: You see a marshland.
+
+"tba:281:room:28121":
+  name: The marshland
+  description:
+  - >
+    As you reach the marshland, the clouds of insects catch you in their unpleasant embrace,
+    penetrating your very equipment.  You move on quickly, over the damp hummocks and over the small pools of black
+    disgusting water, to escape those tiny winged beasts.  Further away to the north seems to be an
+    another hillside, growing high trees.
+  - Remainders of a bridge-like structure still lie here, leading across the marsh.
+  sector: forest
+  exits:
+    north:
+      to: tba:281:room:28124
+      look: You see more marshland.
+    east:
+      to: tba:281:room:28122
+      look: You see some large hammocks.
+    up:
+      to: tba:281:room:28120
+      look: You see the low hillside.
+
+"tba:281:room:28122":
+  name: Stepping on some hammocks
+  description: >
+    The most sturdiest hammocks here resist your weight easily, and thus you are able to move on. 
+    Close to the east grows a large, somewhat peculiar bush that covers your vision quite totally.
+  sector: forest
+  exits:
+    west:
+      to: tba:281:room:28121
+      look: You see the marshland.
+    down:
+      to: tba:281:room:28123
+      look: You see something black.
+  extras:
+  - keywords: [bush, large, peculiar]
+    text: >
+      It appears old and grayish.  It looks as if there were something dark behind it...  Perhaps.
+
+"tba:281:room:28123":
+  name: A jet-black pond...
+  description: >
+    Suddenly you are fallen down into jet-black and very cold water. Bubbles raise to the surface and
+    at the same moment you feel a touch on your feet.  This feels ominous, as though there were something
+    housing the pool.
+  sector: water_swim
+  flags: [no_mob, no_magic]
+  exits:
+    up:
+      to: tba:281:room:28122
+      look: You see some hammocks ...*burb*.
+
+"tba:281:room:28124":
+  name: The marshland
+  description: >
+    You are walking at the northern part of the marshland.  Just to the north is an another hillside,
+    high and much more steeper than the one you just descended.  It grows some deep brown hay and tall
+    birches. A faint trail climbs on it.
+  sector: forest
+  exits:
+    south:
+      to: tba:281:room:28121
+      look: You see more marshland.
+    up:
+      to: tba:281:room:28125
+      look: You see a steep hillside.
+
+"tba:281:room:28125":
+  name: A steep hillside
+  description: >
+    You ascend the hillside, struggling between the trees and their twisted branches.  A figure of gray
+    building begins to discern slowly to the northwest.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28126
+      look: You see the yard of a decayed building.
+    down:
+      to: tba:281:room:28124
+      look: You see the marshland down there.
+
+"tba:281:room:28126":
+  name: Before a decayed building
+  description: >
+    You are standing at a grass-covered yard.  Just to the west lies what may have been an inn of some
+    kind years ago.  Now its roof and many of the other wooden parts are mostly gone, and the grayish
+    walls break off so badly that you somewhat wonder how the building still stands.  An open doorway gives
+    passage inside.  To the north lies an old pen.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28127
+      look: You see a rottening pen.
+    south:
+      to: tba:281:room:28125
+      look: You see the steep hillside.
+    west:
+      to: tba:281:room:28128
+      look: You see the decayed building.
+
+"tba:281:room:28127":
+  name: Inside an old pen
+  description: >
+    The muddy ground here is covered in wooden fragments and old junk, nothing of interest.  To the
+    north the forest gets thicker.
+  sector: city
+  exits:
+    south:
+      to: tba:281:room:28126
+      look: You see the yard of the building.
+
+"tba:281:room:28128":
+  name: An empty vestibule
+  description: >
+    You find yourself standing inside a dark vestibule, where the walls are covered in vast cobwebs and
+    some strange smears.  The wind blows in from the holes of the walls, almost sounding as if there
+    were a few small spirits howling their regret.  To the north is a door, blackened but still in
+    existence.  Rather dangerous looking stairs lead upwards.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28129
+      look: You see a chaotic room.
+      door:
+        keywords: [door, blackened]
+        kind: door
+        reset: closed
+    east:
+      to: tba:281:room:28126
+      look: You see the yard.
+    up:
+      to: tba:281:room:28130
+      look: You see stairs leading up.
+
+"tba:281:room:28129":
+  name: A chaotic room
+  description: >
+    The room is in chaotic order.  Parts of the upper floor have fallen down here, and the former
+    furniture is now more or less buried under them. At the corners there lie several rottening books,
+    bedraggled tapestries, and broken vessels.  Besides, the room appears partially burned.
+  sector: inside
+  exits:
+    south:
+      to: tba:281:room:28128
+      look: You see the vestibule.
+      door:
+        keywords: [door, blackened]
+        kind: door
+        reset: closed
+
+"tba:281:room:28130":
+  name: The top of the stairs
+  description: >
+    You are standing at the second floor of these ruins which seem to swing every time you take a
+    move.  There is no go to the north.  Once apparently so elegant passage has vanished, totally rottened,
+    and col- lapsed away.
+  sector: inside
+
+"tba:281:room:28131":
+  name: A weak trail
+  description: >
+    The forest appears thicker now.  Massive trees tower around, making you feel yourself tiny and
+    pitiful compared to those old giants.  The trail here is quite narrow.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:281:room:28132
+      look: You see more forest.
+    west:
+      to: tba:281:room:28118
+      look: You see an intersection of trails.
+
+"tba:281:room:28132":
+  name: A weak trail
+  description: >
+    You step forward.  To the north is a small square, and to the south there is a grove of somekind. 
+    The trail itself leads to the west and east.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28134
+      look: You see a square.
+    east:
+      to: tba:281:room:28133
+      look: You see more forest.
+    south:
+      to: tba:281:room:28151
+      look: You see a small grove.
+    west:
+      to: tba:281:room:28131
+      look: You see more forest.
+
+"tba:281:room:28133":
+  name: A weak trail
+  description: >
+    You have arrived at a bend.  From here the trail turns to the north, leading through the dark green
+    arch of the gigantic trees.  To the south lies a small grove.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28135
+      look: You see more forest.
+    south:
+      to: tba:281:room:28149
+      look: You see the grove.
+    west:
+      to: tba:281:room:28132
+      look: You see more forest.
+
+"tba:281:room:28134":
+  name: A square of mushrooms
+  description: >
+    You are standing at a small square, surrounded by tall trees.  Dozens of deep brown mushrooms grow
+    here, seemingly alluring the animals of the forest, for many of them appear munched.  The trail lies
+    to the southeast.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28135
+      look: You see more forest.
+    south:
+      to: tba:281:room:28132
+      look: You see more forest.
+
+"tba:281:room:28135":
+  name: A weak trail
+  description: >
+    You are walking on a narrow trail.  The trees are getting more apart slowly, and you hear birds
+    singing here and there.  Way farther to the north raises a tremendous, gray figure, the mountainside of
+    Great Aesarthwe.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28136
+      look: You see trees getting more apart.
+    south:
+      to: tba:281:room:28133
+      look: You see more forest.
+    west:
+      to: tba:281:room:28134
+      look: You see the square.
+
+"tba:281:room:28136":
+  name: A weak trail
+  description: >
+    The forest is clearly more lighter now, and you sense gentle sunshine on your cheeks.  The trail
+    leads north toward the mountain, and west, into the deeper forest.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28137
+      look: You see the forest becoming lighter.
+
+"tba:281:room:28137":
+  name: A lighter forest
+  description: >
+    You are approaching the edge of the forest from where a stony mountain- side begins to ascend, very
+    gentle at first.  Rippling of water can be heard from nearby.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28138
+      look: You see a small brook.
+    south:
+      to: tba:281:room:28136
+      look: You see the forest.
+
+"tba:281:room:28138":
+  name: A small brook
+  description: >
+    This small brook streams somewhere from the highest summits of the mountain.  Its water is clear
+    and very refreshive, and you can see the sunshine make it sparkle splendid at the upper course of the
+    brook where lies a picturesque waterfall.
+  sector: water_swim
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28139
+      look: You see the mountainside.
+    south:
+      to: tba:281:room:28137
+      look: You see the edge of the forest.
+
+"tba:281:room:28139":
+  name: Walking on stony soil
+  description: >
+    As you walk on, the mountainside begins to change much more steeper before you.  However it seems
+    that you can advance easily enough.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:281:room:28138
+      look: You see the brook.
+    up:
+      to: tba:281:room:28140
+      look: You see the mountainside.
+
+"tba:281:room:28140":
+  name: Climbing on the mountainside
+  description: >
+    You ascend a narrow split and arrive at a small plateau that continues both north and west.  Dark
+    fungus appears to grow profuse here.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28142
+      look: You see some large stones.
+    west:
+      to: tba:281:room:28141
+      look: Further away, you see a gigantic boulder.
+    up:
+      to: tba:281:room:28144
+      look: You see more mountainside.
+    down:
+      to: tba:281:room:28139
+      look: You see the lower parts of the mountainside.
+
+"tba:281:room:28141":
+  name: Before a gigantic boulder
+  description: >
+    Wedged in at the ancient times, the massive boulder projects here before you.  It is black all over
+    and partly of some glasslike material. Some remnants lie under it.  The plateau extends to the east.
+  sector: mountains
+  exits:
+    east:
+      to: tba:281:room:28140
+      look: You see the plateau.
+  extras:
+  - keywords: [remnants]
+    text: You see what mainly are small bones.
+
+"tba:281:room:28142":
+  name: At the midst of some edges
+  description: >
+    You are walking between some edges.  Since most of them seem to be quite sharp, it is wise to be
+    careful, this is not the day to get impaled.  To the north is what appears a brink.  Also, the
+    mountain- side above remains climbable.
+  sector: mountains
+  exits:
+    north:
+      to: tba:281:room:28143
+      look: You can walk there.
+    south:
+      to: tba:281:room:28140
+      look: You see more mountainside.
+
+"tba:281:room:28143":
+  name: The brink of a gorge
+  description: >
+    You are standing on the brink of a deep, deep gorge.  Its walls are very smooth and rush straight
+    down, where nothing but a jet-black empti- ness can be seen.
+  sector: mountains
+  exits:
+    south:
+      to: tba:281:room:28142
+      look: You see some edges.
+
+"tba:281:room:28144":
+  name: Higher up
+  description: >
+    Conducted by a gentle wind you climb the mountainside and reach some space to rest on.  Taking a
+    look at the sky you see a small eagle flying round the summit and vanishing into the canyons.  You can
+    still continue to the north but it seems difficult to ascend the hillside any higher...
+  sector: mountains
+  exits:
+    north:
+      to: tba:281:room:28145
+      look: You see more mountainside.
+    down:
+      to: tba:281:room:28140
+      look: You see more mountainside.
+
+"tba:281:room:28145":
+  name: On the mountainside
+  description: >
+    Climbing changes more and more difficult as you struggle on. It would take a long time to find a
+    reasonable way to climb forward. And if one existed it would still be very arduous at all events.
+  sector: mountains
+  exits:
+    south:
+      to: tba:281:room:28144
+      look: You see more mountainside.
+
+"tba:281:room:28146":
+  name: An Underground Dwelling
+  description:
+  - >
+    The space is a small, round chamber, lit by an extraordinary chan- delier made of the rhizome of a
+    tree standing above there.  All around lie small pieces of furniture, most of which you probably
+    could not use, for they are rather tiny.  However, they are skillfully constructed, revealing both the
+    artistic and practical abilities of whoever was the maker.  A thick, multicolorous carpet covers the
+    floor.
+  - To the west is a small, wooden door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:281:room:28147
+      look: You see a brownish chamberlike...
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+
+"tba:281:room:28147":
+  name: Under a brown dome
+  description: >
+    You are standing inside a brownish chamber, under some massive roots, from which various fibres
+    with soil still hang down.  There are small footprints on the ground.  While an improvised ladder leads
+    up, there is a small, wooden door the east.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:281:room:28146
+      look: You see a dwelling of some kind.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    up:
+      to: tba:281:room:28148
+      look: You see the hollow tree.
+
+"tba:281:room:28148":
+  name: Inside the hollow trunk
+  description: >
+    As you crawl through a small hole you notice that the huge tree is completely hollow, and enables
+    you to move about.  Some kind of ladder leads down from here.
+  sector: city
+  flags: [no_mob]
+  exits:
+    west:
+      to: tba:281:room:28149
+      look: You see the grove.
+    down:
+      to: tba:281:room:28147
+      look: You see a dark chamber..
+
+"tba:281:room:28149":
+  name: Before an ancient poplar
+  description: >
+    You are standing at a grove.  Just before you is a large poplar, which foliage spreads in every
+    direction like a gigantic green ball.  Its trunk is gnarled and carries the scars of hundreds of years. 
+    A small hole appears to penetrate into the pith of the tree.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28133
+      look: You see the forest.
+    east:
+      to: tba:281:room:28148
+      look: You see a hollow tree.
+    south:
+      to: tba:281:room:28150
+      look: You see a low hill.
+    west:
+      to: tba:281:room:28151
+      look: You see the grove.
+
+"tba:281:room:28150":
+  name: On the hill
+  description: >
+    You are standing on a low and barren hill.  There are several foot- prints on it.  There is a small
+    grove to the north.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28149
+      look: You see the grove.
+
+"tba:281:room:28151":
+  name: A small grove
+  description:
+  - >
+    You are standing at a peaceful grove, surrounded by those evergrowing trees and various flowers
+    which all look so beautiful, but also somewhat sad.
+  - >
+    There is a large ant hill, and as a contrast to the grove it nearly swarms life.  A faint track
+    leads to the north, and to the west there lies a ditch.
+  sector: city
+  exits:
+    north:
+      to: tba:281:room:28132
+      look: You see the forest.
+    east:
+      to: tba:281:room:28149
+      look: Further away, you see a large hollow tree.
+    west:
+      to: tba:281:room:28152
+      look: You see a small ditch.
+
+"tba:281:room:28152":
+  name: A grassy ditch
+  description: >
+    You are standing on a grassy bottom of the ditch, seemingly trampled. Low bushes grow around.  The
+    ditch leads west, while there is a grove to the east.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:281:room:28151
+      look: You see a small grove.
+    west:
+      to: tba:281:room:28153
+      look: You see the ditch.
+
+"tba:281:room:28153":
+  name: Walking in the ditch
+  description: >
+    You walk on the bottom of the ditch.  As the bushes vanish in the south you can see a grassy
+    hillside, on where a narrow path descends. The ditch leads west and east.
+  sector: forest
+  exits:
+    east:
+      to: tba:281:room:28152
+      look: You see the ditch.
+    south:
+      to: tba:281:room:28156
+      look: You see a top of the hillside.
+    west:
+      to: tba:281:room:28154
+      look: You see the ditch.
+
+"tba:281:room:28154":
+  name: A grassy ditch
+  description: >
+    You are standing on the bottom of a small and grassy ditch.  There is some thicket growing around. 
+    The ditch leads to the east.
+  sector: forest
+  exits:
+    north:
+      to: tba:281:room:28155
+      look: You see some bushes.
+    east:
+      to: tba:281:room:28153
+      look: You see the ditch.
+
+"tba:281:room:28155":
+  name: Through some bushes
+  description: >
+    You are struggling at a thicket, disturbed by several multicolorous spiders and gadflies.  Most of
+    these bushes are unusually tough, lashing your face with an unpleasant force.  There is a small ditch
+    to the south.
+  sector: forest
+  exits:
+    south:
+      to: tba:281:room:28154
+      look: You see a small ditch.
+    west:
+      to: tba:281:room:28115
+      look: You see the forest edge nearby.
+
+"tba:281:room:28156":
+  name: The brink of the grassy hillside
+  description: >
+    You are standing on the brink of the grassy hillside that begins to descend gently.  Below there
+    lies what appears very dense forest. To the north is a ditch.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28153
+      look: You see the ditch.
+    down:
+      to: tba:281:room:28157
+      look: You see the hillside.
+
+"tba:281:room:28157":
+  name: Descending the hillside
+  description: >
+    You start climbing down a small worn-out path on the hillside.  Despite the fresh footprints all
+    around, the way doesn't appear very busy.
+  sector: hills
+  exits:
+    up:
+      to: tba:281:room:28156
+      look: You see the top of the hillside.
+    down:
+      to: tba:281:room:28158
+      look: You see the bottom of the hillside.
+
+"tba:281:room:28158":
+  name: On a gray trunk
+  description: >
+    Reaching the foot of the hillside you notice a large grayish trunk, penetrating into the forest as
+    if it were a straight bridge.  You begin to walk on it.
+  sector: city
+  exits:
+    east:
+      to: tba:281:room:28159
+      look: You see the trunk leading there.
+    up:
+      to: tba:281:room:28157
+      look: You see the hillside.
+
+"tba:281:room:28159":
+  name: Walking on the trunk
+  description:
+  - >
+    You move forward, keeping your balance quite easily since the trunk is so broad.  It seems that
+    many smaller trees remained under when this giant overturned years ago.
+  - Now, there lies the rhizome.  The roots appear to give passage to the south.
+  sector: city
+  exits:
+    south:
+      to: tba:281:room:28160
+      look: You see a narrow path.
+    west:
+      to: tba:281:room:28158
+      look: You see the trunk.
+
+"tba:281:room:28160":
+  name: A narrow path
+  description: >
+    You step on a narrow path, engraved deep in the ground.  Several stones make your walking quite
+    difficult, and you are worried about your feet.  The foliages form a green and inpenetrable "wall"
+    around the path which seems to descend to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28159
+      look: You see the trunk.
+    east:
+      to: tba:281:room:28161
+      look: You see the path leading under some roots.
+
+"tba:281:room:28161":
+  name: Under some massive roots
+  description: >
+    Here the path goes very deep in the ground, almost as if it were an ancient trench.  Tremendous,
+    gnarled roots from some brown and black arches above.  The path leads both to the west and east.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28162
+      look: You see a small meadow.
+    west:
+      to: tba:281:room:28160
+      look: You see the path.
+
+"tba:281:room:28162":
+  name: A small meadow
+  description: >
+    You arrive at a small meadow that grows tall yellowish hay, swaying slowly in the wind.  The path
+    leads towards the north, where you make out some high osiers.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28163
+      look: You see the osiers.
+    west:
+      to: tba:281:room:28161
+      look: You see the path leading under the roots.
+
+"tba:281:room:28163":
+  name: On a trail through high osiers
+  description: >
+    Despite the thickness of these bushes you still detect the path and walk on it easily.  Now your
+    trip begins to wind downwards, from where you can hear some voices.
+  sector: forest
+  exits:
+    south:
+      to: tba:281:room:28162
+      look: You see the small meadow.
+    down:
+      to: tba:281:room:28164
+      look: You see a crater.
+
+"tba:281:room:28164":
+  name: An ancient crater
+  description: >
+    You find yourself standing at a vast and deep pit, obviously an ancient crater with a diameter of
+    30 metres, at least.  The bottom is covered in brownish grass and there are several rough boulders
+    around, most of them black.  Also you notice that the crater is full of small folk, everyone directing
+    towards a structure of some kind further away to the east.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:281:room:28165
+      look: You see the crater.
+    up:
+      to: tba:281:room:28163
+      look: You see the osiers.
+
+"tba:281:room:28165":
+  name: At the crater
+  description: >
+    With the brownies you start approaching the structure as well. It looks like a wooden dais, on
+    where a couple of beings are sitting, deep in their discussion.  Behind them there stands what could be a
+    totem or a statue of some kind.  Yet you do not know what this all is about, but no doubt this place
+    must be of great importance and sanctity for these people.
+  sector: field
+  exits:
+    east:
+      to: tba:281:room:28166
+      look: You see the crater.
+    south:
+      to: tba:281:room:28167
+      look: You see the crater.
+    west:
+      to: tba:281:room:28164
+      look: You see the crater.
+
+"tba:281:room:28166":
+  name: Before the wooden steps
+  description: >
+    Just before you lie firm, wooden steps, ascending onto the dias. Simple, but elegant symbols have
+    been encarved on them.
+  sector: field
+  exits:
+    west:
+      to: tba:281:room:28165
+      look: You see the crater.
+    up:
+      to: tba:281:room:28168
+      look: You see a wooden plateau.
+
+"tba:281:room:28167":
+  name: Before the wooden steps
+  description: >
+    Just before you lie firm, wooden steps, ascending onto the dias. Simple, but elegant symbols have
+    been encarved on them.
+  sector: field
+  exits:
+    north:
+      to: tba:281:room:28165
+      look: You see the crater.
+    up:
+      to: tba:281:room:28168
+      look: You see a wooden plateau.
+
+"tba:281:room:28168":
+  name: The Ceremony Plateau
+  description:
+  - >
+    The dais has been grinded very smooth.  Four green pictures cover its surface, representing fine
+    trees.  Each picture points to the sepa- rate cardinal direction.  In the middle of the dais stands a
+    tall, wooden statue, resembling an impressive woman, clad in clothes made of large leaves and garments.
+  - The brownies assemble to the foot of the dais and you feel the atmosphere running high.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:281:room:28169
+      look: You see the steps down.
+    west:
+      to: tba:281:room:28170
+      look: You see the steps down.
+  extras:
+  - keywords: [statue, woman]
+    text: >
+      The statue is of light wood and appears very skillfully carved.  The woman it presents has a tall
+      lenght of straight hair almost reaching her legs.  Worn on her head is a crown made of the most
+      beautiful flowers, barely found in every forest.  Couple of small birds are sitting on her shoulders,
+      seemingly listening earnestly.  This must be the Queen of the forest herself.
+
+"tba:281:room:28169":
+  name: Descending the steps
+  description: You start descending from the dais.
+  sector: city
+  exits:
+    south:
+      to: tba:281:room:28168
+      look: You see the plateau.
+    down:
+      to: tba:281:room:28166
+      look: You see the crater.
+
+"tba:281:room:28170":
+  name: Descending the steps
+  description: You start descending from the dais.
+  sector: city
+  exits:
+    east:
+      to: tba:281:room:28168
+      look: You see the plateau.
+    down:
+      to: tba:281:room:28167
+      look: You see the crater.

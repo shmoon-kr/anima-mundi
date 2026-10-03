@@ -1,0 +1,32 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 201.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:201:shop:20100":
+  keeper: tba:201:mob:20105
+  rooms: [tba:201:room:20150]
+  products:
+  - tba:201:obj:20117
+  - tba:201:obj:20118
+  - tba:201:obj:20119
+  - tba:201:obj:20197
+  - tba:201:obj:20115
+  buys:
+  - type: treasure
+    keywords: cushion
+  profit:
+    buy: 1.0
+    sell: 0.2
+  messages:
+    no_such_item: "%s I don't sell that!"
+    you_dont_have_it: "%s I can't buy something which you haven't got!"
+    does_not_buy: "%s I don't need that stuff."
+    shop_cannot_afford: "%s I seem to have... ran out of money."
+    you_cannot_afford: "%s You must have forgotten to bring enough money with you."
+    bought: "%s That will cost you %d coins."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 2
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 19

@@ -1,0 +1,505 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 12.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:12:obj:1200":
+  type: other
+  keywords: [email, list, staff]
+  short: a list of the staff's emails
+  long: A list of the staff's emails has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [list, email, staff]
+    text: "@RHELP CONTACT@n for the most recent listing or:"
+
+"tba:12:obj:1201":
+  type: other
+  keywords: [pamphlet, trigedit]
+  short: a pamphlet advertising the wonderful world of triggers
+  long: A small pamphlet advertising the wonderful world of Trigedit.
+  wear: [take, wield]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pamphlet, trigedit]
+    text: >
+      Are you looking to pour in life into your mobs?  To enliven your rooms?  Or just make your objects
+      special?  Well then, come and read to your hearts content through the trigedit tutorial hallway
+      starting in room 13.  It will describe what trigedit is, what it can do, and of course, how to make them. 
+      Dont forget, for optimal results, Use the pages in conjuction with TSTAT.  Have fun with the power
+      of (minor)coding!
+
+"tba:12:obj:1202":
+  type: scroll
+  keywords: [scroll]
+  short: a scroll
+  long: A scroll.
+  wear: [take]
+  values:
+    raw: [1, 31, -1, -1]
+  weight: 1
+  cost: 7
+  rent: 0
+  level: 0
+
+"tba:12:obj:1203":
+  type: light
+  keywords: [color, test, object]
+  short: a color test object
+  long: This is a @Rred@n test object
+  wear: [take]
+  values:
+    hours: 23
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1204":
+  type: wand
+  keywords: [wand]
+  short: the wand
+  long: A test wand
+  wear: [take]
+  values:
+    raw: [1, 1, 1, 31]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1205":
+  type: staff
+  keywords: [staff]
+  short: staff
+  long: Staff
+  wear: [take]
+  values:
+    raw: [1, 3, 3, 31]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1207":
+  type: note
+  keywords: [neon, sign]
+  short: a neon sign
+  long: A neon sign is here blinking an important message!
+  action: |-
+    The sign is lighted and surrounded in brillant, flashing, multi-color bulbs.
+    The sign itself has a message written on it using the stick on Velcro(tm)
+    letters.
+    
+       Please be aware that the God Hall has changed, and all operations are
+    available using the new zone, (343) Offices are also posted at this new
+    location.  Look at fountain for the Directory and Map (34306) to
+    assist you if this applies.
+    
+    Whiteknight, The Just Cleric
+    Billeting Officer, Zone(s) 343/346
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1209":
+  type: furniture
+  keywords: [squishy, armchair, chair]
+  short: a squishy armchair
+  long: A large squishy armchair sits in front of the fireplace.
+  wear: []
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chair, armchair, squishy]
+    text: >
+      This chair has large red leather cushions, on the seat and back.  Strange patterens are sewn into
+      the seat and back.  The arms are made of the same material as the rest of the chair, and they seem to
+      be stuffed to a point where they look to be almost exploding.
+
+"tba:12:obj:1210":
+  type: armor
+  keywords: [Straight, Jacket]
+  short: a straight jacket
+  long: You can't see it...it isn't here.
+  wear: [take, body]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1211":
+  type: note
+  keywords: [neon, sign]
+  short: a @Rn@Ge@Yo@Wn @Bs@Ci@Mg@Rn@n
+  long: "@WA @Rn@Ge@Yo@Wn @Bs@Ci@Mg@Rn@W has been placed here, and is POINTING to the message board!@n"
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1212":
+  type: other
+  keywords: [game, console]
+  short: a game console
+  long: A game console sits in one corner of the room.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [game, console]
+    text:
+    - "To start a game type: go To move around type: go <up | down | left | right>"
+    - >
+      You must collect the prizes and avoid the animal to obtain maximum points. Each prize is worth 500
+      * game_level in experience.
+
+"tba:12:obj:1218":
+  type: fountain
+  keywords: [spring, fountain, water, well]
+  short: a spring well
+  long: A mountain spring bubbles up fresh water here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spring, fountain, water]
+    text: Bubbles up fresh spring water that can quench your thirst
+
+"tba:12:obj:1221":
+  type: worn
+  keywords: [near-transparent, small, garmet]
+  short: the near-transparent, small garmet
+  long: A pile of sheer silk is here, almost transparent.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [near-transparent, small, garmet, silk, sheer, transparent]
+    text: >
+      The tiny silk dress is cut so thin it is almost transparent, and it doesn't look as thought it
+      would cover much.
+
+"tba:12:obj:1226":
+  type: trash
+  keywords: [boards, builder's, bulletin, gen_boards]
+  short: a builder's bulletin board
+  long: A builder's bulletin board is floating here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1227":
+  type: trash
+  keywords: [staff, bulletin, boards, gen_boards]
+  short: a staff bulletin board
+  long: A staff only board is floating here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1228":
+  type: trash
+  keywords: [advertising, bulletin, boards, gen_boards]
+  short: an advertising bulletin board
+  long: An advertising board is hovering here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1229":
+  type: furniture
+  keywords: [Couch]
+  short: Smaug's Couch
+  long: Smaug's Couch is standing here.
+  wear: []
+  values:
+    raw: [6, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [smaug, couch]
+    text: >
+      Smaug's glamourous couch :-P.  It is made from a soft medal, only found deep in the dungeons of
+      hell.  The coushons on the couch are the finest of all couschons, the arms of the couch are made from a
+      ferret's pelt.  The legs are in the shape of dragons, and are also made from dragon's skin.
+
+"tba:12:obj:1230":
+  type: scroll
+  keywords: [test, scroll]
+  short: a torn scroll
+  long: It looks like a half finished spell
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 51, -1, -1]
+  weight: 1
+  cost: 250
+  rent: 10
+  level: 0
+
+"tba:12:obj:1231":
+  type: container
+  keywords: [test, object]
+  short: the test object
+  long: A test object.
+  wear: [take]
+  values:
+    capacity: 1
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1233":
+  type: weapon
+  keywords: [weapon, level, "34"]
+  short: a level 34 weapon
+  long: A level 34 weapon is used to test level restrictions.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d2
+    attack: hit
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 34
+
+"tba:12:obj:1266":
+  type: staff
+  keywords: [Black, Staff, of, Immortality]
+  short: the black staff of immortality
+  long: A Gigantic Black Staff rests here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [1, 10, 10, 23]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 30
+  extras:
+  - keywords: [staff, black]
+    text: A Huge staff sits here eminating a tremendous power.
+
+"tba:12:obj:1269":
+  type: weapon
+  keywords: [switch]
+  short: a switch from a willow tree
+  long: A magical switch from a willow tree has carelessly been discarded here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 10d5
+    attack: whip
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [switch, willow]
+    text: It's a stick.  It's magical.  It also hurts when you beat people with it.
+
+"tba:12:obj:1275":
+  type: worn
+  keywords: [uniform]
+  short: a Builder Academy uniform
+  long: A Builder Academy uniform has been left here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1290":
+  type: fountain
+  keywords: [fountain, poisoned]
+  short: poisoned fountain
+  long: A poisoned fountain is here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: true
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1291":
+  type: fountain
+  keywords: [fountain, unpoisoned]
+  short: an unpoisoned fountain
+  long: An unpoisoned fountain is here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1292":
+  type: other
+  keywords: [american, flag]
+  short: an American flag
+  long: >-
+    An American flag waves proudly in the wind, marking wishes for the safe return of Rumble from the
+    foreign lands.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flag, american]
+    text: >
+      The proud stars and stripes are set strongly against the blue background of the morning sky.
+      Someone has raised the flag in hopes that our dear friend, Rumble, returns from his service in Iraq. May
+      his courage and strength keep him safe, and let the great banner of our great nation always watch over
+      him. Return home my friend.
+
+"tba:12:obj:1295":
+  type: armor
+  keywords: [notebook, notes, book]
+  short: Elaseth's notebook
+  long: "@nA book entitled \"@YElaseth's Notes: A Madwoman's Account@n\" lies here."
+  wear: [take, hold]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:12:obj:1296":
+  type: other
+  keywords: [lamp, hanukah]
+  short: a hanukah lamp
+  long: A Hanukah lamp lies here on the floor, all eight candles lit up.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1297":
+  type: container
+  keywords: [Desk]
+  short: Large desk
+  long: A large blackened desk
+  wear: []
+  values:
+    capacity: 20000
+    lock_flags: 3
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:12:obj:1298":
+  type: other
+  keywords: [firework, new, year, piece]
+  short: a piece of fireworks
+  long: A piece of fireworks is planted in a champagne bottle.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [firework, new, year, piece]
+    text: This large rocket is about to go up!  Strange colors will fill the sky!
+  - keywords: [bottle, champagne]
+    text: >
+      The bottle is filled partially with water so it doesn't tilt over.  Someone has obviously drunk the
+      champagne first.
+
+"tba:12:obj:1299":
+  type: other
+  keywords: [christmas, tree]
+  short: a christmas tree
+  long: A festive christmas tree is covered in various ornaments and lights.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tree, christmas]
+    text: >
+      The Christmas Tree is nicely decorated, there is a Huge shining star at the top.  And colorful
+      lights are hanging from all its branches.

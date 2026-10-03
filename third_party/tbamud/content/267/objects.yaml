@@ -1,0 +1,765 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 267.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:267:obj:26700":
+  type: armor
+  keywords: [dress, pink, taffeta]
+  short: a pretty pink taffeta dress
+  long: A pretty pink taffeta dress lies crumpled on the ground.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dress, pink, taffeta]
+    text: It's a beautifuly tailored pink dress.  You would look quite nice in it.
+
+"tba:267:obj:26701":
+  type: armor
+  keywords: [dress, blue, silk]
+  short: a pretty blue silk dress
+  long: A pretty blue silk dress is getting wrinkled and dirty lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dress, blue, silk]
+    text: It's a beautifully tailored silk dress.  You would look smashing in it.
+
+"tba:267:obj:26702":
+  type: armor
+  keywords: [dress, white, cotton]
+  short: a pretty pristine white cotton dress
+  long: A pretty white cotton dress has been tossed to the ground.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dress, white, cotton]
+    text: It's a lovely cotton dress.  You would look quite the woman in it.
+
+"tba:267:obj:26703":
+  type: armor
+  keywords: [dress, beige, burlap]
+  short: an ugly beige burlap dress
+  long: An ugly beige burlap dress looks very like a sack of potatoes on the ground.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dress, beige, burlap]
+    text: Eyugh.  Gross.  You don't actually want to wear _this_, do you?
+
+"tba:267:obj:26704":
+  type: armor
+  keywords: [dress, swirling, beautiful, multi-colored]
+  short: a beautiful swirling multi-colored dress
+  long: A beautiful, swirling, multi-colored dress is getting soiled on the ground.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 5
+  cost: 700
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -2
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [dress, swirling, beautiful, multi-colored]
+    text: >
+      The dress is made from many different colors, and just seems to flow more than rest.  You would
+      look more beautiful than you ever have in this luscious garb.
+
+"tba:267:obj:26705":
+  type: staff
+  keywords: [talisman, demon-faced, demon, faced, charming]
+  short: a demon-faced talisman
+  long: A talisman with the face of a demon on it has been thrown to the ground.
+  flags: [glow, no_invis, anti_good, anti_neutral, anti_thief]
+  wear: [take, neck, hold]
+  values:
+    raw: [30, 3, 3, 7]
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [talisman, demon-faced, demon, faced, charming]
+    text: >
+      It has a picture of a disgustingly ugly daemon on it.  It looks quite evil, but it also looks very
+      powerful.  You can feel the magic flowing from it to your hand.  You're torn on whether to use it or
+      not.
+
+"tba:267:obj:26706":
+  type: armor
+  keywords: [robe, leisure]
+  short: a robe of leisure
+  long: A robe of leisure is on the ground.
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 5
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: con
+    modifier: -3
+  extras:
+  - keywords: [robe, leisure]
+    text: Oh, my, you could just sink right into this robe.  It looks so very *comfortable.  *
+
+"tba:267:obj:26707":
+  type: treasure
+  keywords: [rattle, tar]
+  short: a tar rattle
+  long: A tar rattle just insists on your getting it.
+  flags: [no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -3
+  - apply: age
+    modifier: -5
+  extras:
+  - keywords: [rattle, tar]
+    text: Awww...  Look at it!  You just wnat to pick it right up and rattle it.
+
+"tba:267:obj:26708":
+  type: scroll
+  keywords: [scroll, fear]
+  short: a screaming scroll
+  long: A scroll with the description of a man screaming at the top of his lungs has been left here.
+  flags: [magic, anti_cleric]
+  wear: [take, hold]
+  values:
+    raw: [20, 30, 30, 30]
+  weight: 15
+  cost: 400
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [scroll, fear]
+    text: It looks pretty frightening.
+
+"tba:267:obj:26709":
+  type: armor
+  keywords: [crown, spikes]
+  short: a Crown of Spikes
+  long: A crown with very sharp spikes has been very carelessly left here to rust.
+  flags: [no_invis, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 20
+  cost: 750
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: con
+    modifier: -1
+  extras:
+  - keywords: [crown, spikes]
+    text: >
+      The hat itself is rather disconcerting.  Huge, very sharp, razorlike spikes protrude from the top;
+      it's pa268ed with cloth at the bottom, so it looks like it might be worth with relative comfort--but
+      it sure looks sinister.
+
+"tba:267:obj:26710":
+  type: armor
+  keywords: [robe, fear]
+  short: a black, bloodstained robe
+  long: A black, bloodstained robe is crumpled on the floor.
+  flags: [no_invis, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 20
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: wis
+    modifier: -3
+  extras:
+  - keywords: [robe, fear, black, blood, stained, bloodstained]
+    text: >
+      This strange robe seems to absorb the light around it.  It's stained with the blood of many men.
+
+"tba:267:obj:26711":
+  type: free2
+  keywords: [ball, chain]
+  short: a ball and chain
+  long: A ball and chain lies on the ground.
+  flags: [no_rent, invisible, magic, anti_neutral, anti_cleric, anti_thief]
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -3
+  - apply: move
+    modifier: -50
+  extras:
+  - keywords: [ball, chain]
+    text: >
+      It's a huge steel bowling ball--looks to way several hundred kilograms--with a long chain extended
+      to one legiron...
+
+"tba:267:obj:26712":
+  type: free2
+  keywords: [manacles, handcuffs]
+  short: some manacles
+  long: Some manacles are on the ground.
+  flags: [no_rent, invisible, magic, anti_neutral, anti_cleric, anti_thief]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -3
+  - apply: weight
+    modifier: 50
+
+"tba:267:obj:26713":
+  type: key
+  keywords: [key, cell, cellkey]
+  short: a cellkey
+  long: A cellkey has been hung on the wall.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:267:obj:26714":
+  type: weapon
+  keywords: [knife, butcher]
+  short: a huge butcher knife
+  long: A huge butcher knife has been left on the ground.
+  flags: [glow, hum, no_invis, anti_good, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 2d9
+    attack: slash
+  weight: 26
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [knife, butcher]
+    text: >
+      It looks quite effective as a knife.  It's very sharp and has just the right amount of blood from
+      previous kills.
+
+"tba:267:obj:26715":
+  type: armor
+  keywords: [armbands, pitch, black]
+  short: a pair of pitch black armbands
+  long: A pair of pitch black armbands has been thrown to the ground.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 10
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [armbands, pitch, plack]
+    text: >
+      These armbands are made from the same kind of stone the outer area of the High Path in Vice Island
+      are.  They are probably imported from the same place.
+
+"tba:267:obj:26716":
+  type: armor
+  keywords: [leggings, pitch, black]
+  short: a pair of pitch black leggings
+  long: A pair of pitch black leggings lie on the ground.
+  flags: [glow, magic, anti_good, anti_neutral, anti_cleric]
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -10
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [leggings, pitch, black]
+    text: >
+      The leggings are made from the same kind of stone the outer area of the High Path in Vice Island
+      are. They are probably imported from the same place.
+
+"tba:267:obj:26717":
+  type: armor
+  keywords: [boots, pitch, black]
+  short: a pair of pitch black boots
+  long: A pair of pitch black boots lie on the ground.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 15
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [boots, pitch, black]
+    text: >
+      The boots are made from the same kind of stone the outer area of the High Path in Vice Island are.
+      They are probably imported from the same place.
+
+"tba:267:obj:26718":
+  type: armor
+  keywords: [gloves, pitch, black]
+  short: a pair of pitch black gloves
+  long: A pair of pitch black gloves are on the ground.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [gloves, pitch, black]
+    text: >
+      The gloves are made from the same kind of stone the outer area of the High Path in Vice Island are.
+      They are probably imported from the same place.
+
+"tba:267:obj:26719":
+  type: weapon
+  keywords: [blade, terror]
+  short: the terror-blade
+  long: The Blade of Terror has been thrown to the ground.
+  flags: [glow, no_invis, anti_good, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [blade, pitch, black, terror]
+    text: >
+      The blade is made from the same kind of stone the outer area of the High Path in Vice Island are.
+      They are probably imported from the same place.
+
+"tba:267:obj:26720":
+  type: armor
+  keywords: [armor, pitch, black, plate]
+  short: a pitch-black plate armor
+  long: A pitch black plate armor has been carelessly left behind.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [armor, pitch, black, plate]
+    text: >
+      The armor is made from the same kind of stone the outer area of the High Path in Vice Island are.
+      They are probably imported from the same place.
+
+"tba:267:obj:26721":
+  type: armor
+  keywords: [headdress, terror]
+  short: the Headdress of Terror
+  long: The Headdress of Terror has been dropped here.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 9
+  weight: 30
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -3
+  - apply: move
+    modifier: 20
+  extras:
+  - keywords: [hea268ress, terror]
+    text: >
+      This hea268ress is made from the same metal as the Temple of Terror is made from.  Perhaps they
+      came from the same blacksmith.
+
+"tba:267:obj:26722":
+  type: treasure
+  keywords: [ring, pitch, black]
+  short: a ring of pitch-black metal
+  long: A ring of pitch-black metal is half-sticking out of the floor.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [ring, pitch, black]
+    text: >
+      The ring is made from the same kind of stone the outer area of the High Path in Vice Island are.
+      They are probably imported from the same place.
+
+"tba:267:obj:26723":
+  type: armor
+  keywords: [cloak, darkness]
+  short: a cloak of the purest black
+  long: A cloak of darkness is in a heap on the ground.
+  flags: [hum, magic, anti_good, anti_neutral, anti_cleric, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: -1
+  - apply: mana
+    modifier: 5
+  extras:
+  - keywords: [cloak, darkness]
+    text: >
+      The material the cloak is made from just seems to suck the light right in. You can still see around
+      you, but things just look dimmer.  It's rally o268.
+
+"tba:267:obj:26724":
+  type: armor
+  keywords: [armor, scale, iridescent]
+  short: an irridescent scale armor
+  long: An armor made out of the irridescent scales of a dragon is on the floor.
+  flags: [hum, no_donate, no_invis, invisible, anti_good, anti_neutral, anti_warrior]
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 25
+  cost: 900
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+
+"tba:267:obj:26725":
+  type: weapon
+  keywords: [whip, cat, o', nine, tails]
+  short: a cat o' nine tails
+  long: A cat o' nine tails is on the ground here.
+  flags: [hum, no_donate, magic, no_drop, bless, anti_good, anti_evil, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: whip
+  weight: 20
+  cost: 920
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:267:obj:26726":
+  type: treasure
+  keywords: [spectacles, rimmed, 4-eyes, four-eyes, four, eyes]
+  short: a pair of wire-rimmed spectacles
+  long: A pair of wire-rimmed spectacles is about to get crushed if it is left on the ground.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:267:obj:26727":
+  type: key
+  keywords: [key, strangely, shaped]
+  short: a strangely shaped key
+  long: A strangely shaped key is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26728":
+  type: key
+  keywords: [key, black, pitch]
+  short: a pitch-black key
+  long: A pitch-black key is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26729":
+  type: key
+  keywords: [key, glass]
+  short: a transparent glass key
+  long: A transparent glass key lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26730":
+  type: key
+  keywords: [key, stone]
+  short: a stone key
+  long: A stone key lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26731":
+  type: key
+  keywords: [key, redwood]
+  short: a redwood key
+  long: A redwood key lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26732":
+  type: key
+  keywords: [key, iron, dull]
+  short: a dull iron key
+  long: A dull iron key lies on the ground. *yawn*
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26733":
+  type: key
+  keywords: [key, tiny]
+  short: a tiny key
+  long: You almost miss a tiny key on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26734":
+  type: key
+  keywords: [key, burning]
+  short: a red-hot key
+  long: A red-hot key glows brightly on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:267:obj:26735":
+  type: potion
+  keywords: [potion, red, glowing]
+  short: a glowing red potion
+  long: A glowing red potion bubbles in a canister on the ground.
+  wear: [take, hold]
+  values:
+    raw: [15, 2, 17, 33]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 30
+  extras:
+  - keywords: [potion, red, glowing]
+    text: >
+      It looks rather strange.  Somehow you get the feeling it might not be a good idea to quaff this one.
+
+"tba:267:obj:26736":
+  type: potion
+  keywords: [potion, blue, shining]
+  short: a shining blue potion
+  long: A shining blue potion is in a canister on the ground.
+  wear: [take, hold]
+  values:
+    raw: [20, 18, 18, 18]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion, blue, shining]
+    text: It looks informative.
+
+"tba:267:obj:26737":
+  type: potion
+  keywords: [potion, green]
+  short: a green potion
+  long: A green potion is in a canister on the ground.
+  wear: [take, hold]
+  values:
+    raw: [15, 29, 29, 29]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion, green]
+    text: It has a sign on it that reads, "drink me.  "
+
+"tba:267:obj:26738":
+  type: potion
+  keywords: [purple, potion]
+  short: a purple potion of giant strength
+  long: A purple potion of giant strength.
+  wear: [take, hold]
+  values:
+    raw: [30, 39, 39, 39]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion, purple]
+    text: A thin label says, "use this to wield heavy weapons.  "
+
+"tba:267:obj:26739":
+  type: armor
+  keywords: [cloak, wisdom]
+  short: a cloak of wisdom
+  long: A green cloak of wisdom is in a heap on the ground.
+  flags: [glow, magic, no_drop, anti_good, anti_neutral]
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 30
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [cloak, wisdom]
+    text: It's of a silvery metal, and practically eminates magic.
+
+"tba:267:obj:26740":
+  type: armor
+  keywords: [cloak, forgetfulness]
+  short: a cloak of forgetfulness
+  long: A hazel cloak of forgetfulness is in a big heap on the ground.
+  flags: [glow, magic, no_drop, anti_good, anti_neutral]
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -5
+  - apply: age
+    modifier: -10
+  extras:
+  - keywords: [cloak, forgetfulness]
+    text: It's of a strange hazel material, and doesn't look particularly helpful.

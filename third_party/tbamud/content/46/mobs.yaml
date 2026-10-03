@@ -1,0 +1,140 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 46.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:46:mob:4600":
+  keywords: [green, ant, worker]
+  short: a green worker ant
+  long: A green worker ant toils away mindlessly for its queen.
+  description: >
+    The green worker ant is the powerhouse behind this anthill.  It slaves away almost constantly,
+    digging new tunnels, gathering food, and even protecting the hill from other bugs.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:46:mob:4601":
+  keywords: [red, soldier, ant]
+  short: a red soldier ant
+  long: A red soldier ant is invading the anthill.
+  description: >
+    Sent by the red queen to seek and destroy for progression and expansion of the red ant colony. 
+    This red soldier ant has been sent here to eliminate the existing residents.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: sting
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:46:mob:4616":
+  keywords: [green, soldier, ant]
+  short: a green soldier ant
+  long: A green soldier ant is protecting the anthill.
+  description: >
+    The green soldier ant was born and raised to protect the queen and the entire anthill.  They do no
+    work, but will sacrifice themselves for the queen.
+  level: 3
+  sex: neutral
+  alignment: 3
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: pierce
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:46:mob:4632":
+  keywords: [huge, green, soldier, ant]
+  short: a huge green soldier ant
+  long: A huge green soldier ant stands here ready to die protecting the Queen.
+  description: >
+    This special soldier ant has been given the sole responsibility of protecting the queen from
+    attack.  It is by far one of the largest ants in the entire anthill.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:46:mob:4633":
+  keywords: [green, queen, ant]
+  short: the green queen ant
+  long: The green queen ant is ensuring the survival of the species.
+  description: >
+    She has no purpose other than to lead the anthill, and breed.  She is huge and it doesn't look like
+    she could ever fit through any of the tunnels.  She guards over her newborn larvae.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:46:mob:4699":
+  keywords: [dominant, male, ant, green]
+  short: a green dominant male ant
+  long: A large green dominant male ant skitters about, making sure the workers tend their jobs.
+  description: >
+    This large dominant male green ant is second only to the queen.  Its purpose is to ensure
+    everything gets done and the queen keeps pumping out cute little larvae.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

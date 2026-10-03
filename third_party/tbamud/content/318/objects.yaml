@@ -1,0 +1,498 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 318.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:318:obj:31800":
+  type: armor
+  keywords: [shirt, sailors, white, black]
+  short: a white and black striped sailor's shirt
+  long: A white and black striped sailor's shirt has been left here.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 20
+  extras:
+  - keywords: [shirt, sailors, white, black]
+    text: >
+      The stains which riddle this shirt are enough to make any land-lubber not want to even touch it.
+
+"tba:318:obj:31801":
+  type: armor
+  keywords: [stubble]
+  short: some prickly chin stubble
+  long: Some prickly chin stubble is lying in a heap on the floor.
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [stubble]
+    text: Yuck.
+
+"tba:318:obj:31802":
+  type: money
+  keywords: [fistful, money]
+  short: a fistful of money
+  long: A fistful of money is laying here on the ground.
+  wear: [take]
+  values:
+    coins: 50
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [fistful, money]
+    text: What the hell are you looking at it for?  Take it!
+
+"tba:318:obj:31803":
+  type: armor
+  keywords: [sash, black]
+  short: a black sash
+  long: A pile of crumpled black silk is on the ground.
+  flags: [anti_good]
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 15
+  extras:
+  - keywords: [sash, black]
+    text: This sash, the mark of a member of the Dead Boys, radiates evil intent.
+
+"tba:318:obj:31804":
+  type: weapon
+  keywords: [knuckles, spiked]
+  short: a set of spiked knuckles
+  long: A set of spiked knuckles have been left here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: maul
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  extras:
+  - keywords: [knuckles, spiked]
+    text: The deadly looking spikes glisten as the light catches them.
+
+"tba:318:obj:31805":
+  type: armor
+  keywords: [sash, red]
+  short: a red sash
+  long: A red sash has been left on the floor.
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 20
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [sash, red]
+    text: >
+      This sash, the opposing color to the Dead Boy's black sash, marks the wearer as a member of the
+      Bloody Scythe.
+
+"tba:318:obj:31806":
+  type: weapon
+  keywords: [wicked, scythe]
+  short: a wicked looking scythe
+  long: A wicked looking scythe lies on the ground.
+  flags: [anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  extras:
+  - keywords: [wicked, scythe]
+    text: This weapon, although unwieldy, is the token weapon of the Bloody Scythe gang.
+
+"tba:318:obj:31807":
+  type: weapon
+  keywords: [rusted, knife]
+  short: a rusted knife
+  long: A rusted knife has been left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: stab
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [rusted, knife]
+    text: It is chipped in many places, worn down to almost a flat edge where it should be sharp.
+
+"tba:318:obj:31808":
+  type: weapon
+  keywords: [blade, marcko's, dagger]
+  short: Marcko's Blade
+  long: A black knife has been left here.
+  flags: [glow, no_donate, anti_good, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d8
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 28
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [blade, marcko's, dagger]
+    text: >
+      Made by an old veteran assassin from the Far Reaches just for Marcko, this blade is said to have
+      special powers.
+
+"tba:318:obj:31809":
+  type: worn
+  keywords: [ring, opal, black]
+  short: a black opal ring
+  long: A black opal ring has been dropped here.
+  flags: [anti_good, anti_neutral]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 28
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: dex
+    modifier: -1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [ring, opal, black]
+    text: The thing seems to radiate evil and bad intent.
+
+"tba:318:obj:31810":
+  type: armor
+  keywords: [boots, razor, tipped]
+  short: a pair of razor tipped boots
+  long: A pair of boots have been left here.
+  flags: [hum, anti_good]
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 19
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: 1
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [boots, razor, tipped]
+    text: >
+      Looks like these boots were meant for someone who likes to surprise their opponent, from the way
+      the blade shoots out the toe.
+
+"tba:318:obj:31811":
+  type: weapon
+  keywords: [hammer]
+  short: a hammer
+  long: A hammer has been left here on the ground.
+  flags: [anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: pound
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 22
+  extras:
+  - keywords: [hammer]
+    text: Long wooden handle, strong metal head.  A hammer.
+
+"tba:318:obj:31812":
+  type: container
+  keywords: [belt, tool, carpenter's]
+  short: a carpenter's tool belt
+  long: A carpenter's tool belt has been dropped here.
+  wear: [take, waist]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 22
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [belt, tool, caprenter's]
+    text: It has many pouches and loops where one can safely place items for storage.
+
+"tba:318:obj:31813":
+  type: other
+  keywords: [cigar, stogie, fat]
+  short: a fat cigar
+  long: A fat cigar is on the floor, just begging to be smoked.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: -2
+  - apply: weight
+    modifier: 20
+  extras:
+  - keywords: [cigar, stogie, fat]
+    text: >
+      The business end of the thing looks a bit wet and chewed, but other than that it seems perfectly
+      good.
+
+"tba:318:obj:31814":
+  type: armor
+  keywords: [beer, gut, foreman]
+  short: the foreman's beer gut
+  long: The foreman's beer gut is lumped in the corner.
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 25
+  affects:
+  - apply: weight
+    modifier: 10
+  - apply: move
+    modifier: -20
+  extras:
+  - keywords: [beer, gut, foreman]
+    text: You are actually considering wearing this nasty thing?
+
+"tba:318:obj:31815":
+  type: armor
+  keywords: [sweat, coat, thin]
+  short: a thin coat of sweat
+  long: A thin coat of sweat is glooped on the floor.
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: con
+    modifier: 1
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [sweat, coat, thin]
+    text: You give it a cursory sniff.  Yep, it's sweat, all right.
+
+"tba:318:obj:31816":
+  type: other
+  keywords: [board, clip, clipboard]
+  short: a clipboard
+  long: A clipboard is lying face down on the floor.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [board, clip, clipboard]
+    text: It currently holds no papers of any kind, mus tnot be much harbor traffic at this time.
+
+"tba:318:obj:31817":
+  type: worn
+  keywords: [locket, anchor]
+  short: an anchor shaped locket
+  long: A necklace of some sort is lying on the ground.
+  flags: [hum]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 21
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: con
+    modifier: 1
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [locket, anchor]
+    text:
+    - You turn it over and read the inscription
+    - To my lovely daughter, May the waves of fate always turn the tide in your favor.
+
+"tba:318:obj:31818":
+  type: weapon
+  keywords: [dirk, shiny]
+  short: a shiny dirk
+  long: A shiny dirk has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [dirk, shiny]
+    text: Boy, it sure is a shiny little bugger.
+
+"tba:318:obj:31819":
+  type: armor
+  keywords: [britches, pair, green]
+  short: a pair of green britches
+  long: A green pair of britches are crumpled on the floor here.
+  wear: [take, legs]
+  values:
+    armor: 0
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 11
+  affects:
+  - apply: cha
+    modifier: -2
+  - apply: age
+    modifier: -5
+  extras:
+  - keywords: [britches, pair, green]
+    text: >
+      They look like they definitely could be in the 'flood' classification.  Wear them at your own
+      risk...  My guess is even the non-aggro mobs will attack you with these on!
+
+"tba:318:obj:31820":
+  type: armor
+  keywords: [hat, cap'n]
+  short: the Cap'n's hat
+  long: A sailor's hat is lying here.
+  flags: [hum]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [hat, cap'n]
+    text: >
+      This thing emminates a strong aura of bad whiskey, bad women, and bad personality.  Use it at your
+      own risk.
+
+"tba:318:obj:31821":
+  type: armor
+  keywords: [sleeves, dolphin, skin]
+  short: some dolphin skin sleeves
+  long: A wad of some sort of animal's skin is on the ground.
+  wear: [take, arms]
+  values:
+    armor: 6
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 23
+  affects:
+  - apply: hit
+    modifier: 25
+  extras:
+  - keywords: [sleeves, dolphin, skin]
+    text: They look as if they would stretch right over your arms for a snug fit.
+
+"tba:318:obj:31822":
+  type: armor
+  keywords: [arm, tie]
+  short: a black leather arm tie
+  long: A thin piece of black leather is here.
+  wear: [take, arms]
+  values:
+    armor: 1
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [arm, tie]
+    text: It is about 9 inches long, frayed at both ends.
+
+"tba:318:obj:31823":
+  type: weapon
+  keywords: [whip, backhand]
+  short: a backhand whip
+  long: A small whip has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: whip
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 2
+  extras:
+  - keywords: [whip, backhand]
+    text: Just the perfect fit in the palm of your hand.

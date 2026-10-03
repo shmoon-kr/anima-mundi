@@ -1,0 +1,57 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 25.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:25:shop:2505":
+  keeper: tba:25:mob:2505
+  rooms: [tba:25:room:2518]
+  products:
+  - tba:25:obj:2504
+  - tba:25:obj:2545
+  - tba:25:obj:2546
+  - tba:30:obj:3010
+  - tba:31:obj:3100
+  - tba:31:obj:3101
+  buys:
+  - type: food
+  - type: drinkcon
+  profit:
+    buy: 2.1
+    sell: 0.5
+  messages:
+    no_such_item: "%s Haven't got that in storage, try LIST!"
+    you_dont_have_it: "%s You can't sell what you don't HAVE!"
+    does_not_buy: "%s Sorry, I'm not a fence."
+    shop_cannot_afford: "%s I'd love to buy it, I just can't spare the coinage"
+    you_cannot_afford: "%s Bah, come back when you can pay!"
+    bought: "%s That'll be %d coins -- thank you."
+    sold: "%s I'll give ya %d coins for that!"
+  temper: 0
+  flags: 6
+  trade_with: 112
+
+"tba:25:shop:2506":
+  keeper: tba:25:mob:2506
+  rooms: [tba:25:room:2519]
+  products:
+  - tba:30:obj:3050
+  - tba:30:obj:3051
+  - tba:30:obj:3053
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: potion
+  profit:
+    buy: 2.5
+    sell: 0.3
+  messages:
+    no_such_item: "%s Say again?"
+    you_dont_have_it: "%s You don't have that, try INVENTORY!"
+    does_not_buy: "%s What do I look like, a fence?"
+    shop_cannot_afford: "%s Sorry, I just can't afford such a costly item."
+    you_cannot_afford: "%s You can't afford it!"
+    bought: "%s You're getting a bargain for that at only %d!"
+    sold: "%s I guess I could give ya %d for that."
+  temper: 0
+  flags: 6
+  trade_with: 112

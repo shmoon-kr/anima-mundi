@@ -1,0 +1,583 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 57.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:57:room:5700":
+  name: Entrance to the Zodiac
+  description:
+    preformatted: |2
+         Welcome Everyone, this is my first zone.
+      Builder      : Gatia
+      Zone         : 57 Zodiac
+      Began        : 2001
+      Player Level : 10-14
+      Rooms        : 37
+      Mobs         : 15
+      Objects      : 7
+      Shops        : 1
+      Triggers     : 5
+      Theme        :
+      Plot         : This zone features the signs of the zodiac plus a few other
+                     little things.
+      Links        :
+  sector: inside
+  flags: [private]
+
+"tba:57:room:5701":
+  name: Gemini's Hideaway
+  description: >
+    This appears to be a room belonging to the starsign Gemini (the twins) each possession has a
+    double, probably so they each have their own things.  One of the twins doesn't seem to be here right now. 
+    The tracks continue through here and so does the tail mark even though they are faint and hard to see.
+  sector: inside
+  flags: [indoors, soundproof]
+  exits:
+    east:
+      to: tba:57:room:5702
+      door:
+        keywords: [Iron, door]
+        kind: door
+    south:
+      to: tba:57:room:5708
+      door:
+        keywords: [Wooden, door]
+        kind: door
+  extras:
+  - keywords: [tracks]
+    text: >
+      The tracks are hard to read on this polished floor and would probably be unreadable if not for the
+      traces of blood.
+
+"tba:57:room:5702":
+  name: Pisces Lagoon
+  description: >
+    A pool of acid lies in the middle of the floor here, ripples are being formed by something that is
+    gliding below the surface, wait, TWO THINGS!!! This is starting to get a little scary, you had better
+    move on...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:57:room:5711
+    west:
+      to: tba:57:room:5701
+      door:
+        keywords: [Iron, door]
+        kind: door
+
+"tba:57:room:5703":
+  name: Chamber of Aquarius
+  description: >
+    A Large Fountain is the main point of focus for this room, it is the sort of thing people see in
+    museums.  Looking closely there is a partially hidden stairwell leading up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:57:room:5711
+    up:
+      to: tba:57:room:5704
+      door:
+        keywords: [Wood, door]
+        kind: door
+
+"tba:57:room:5704":
+  name: Leo's Den
+  description: >
+    This room STINKS!  It looks as if it has never been cleaned in its life. The stench of rotting meat
+    greets your nostrils, escape seems like your only option at this point in time.  There are exits
+    going down and east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:57:room:5705
+    down:
+      to: tba:57:room:5703
+
+"tba:57:room:5705":
+  name: Taurus's Pen
+  description: >
+    This is the stable of Taurus.  He is an aggresive star sign and should not be messed with.  The
+    tracks that were on the floor earlier start here again, covered in faeces.  Whatever walked through here
+    must be regretting it now because its feet must really reek...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:57:room:5706
+      look: Nothing.
+      door:
+        keywords: [Crystal, door]
+        kind: door
+    west:
+      to: tba:57:room:5704
+
+"tba:57:room:5706":
+  name: Aries Shearing Shed
+  description: >
+    This shed belongs to Aries the Ram.  Fleece lies all over the floor and the smell of faeces
+    eminates from a large bucket in the corner.  The ground slopes away sharply to the east, it looks like it
+    falls away altogether.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:57:room:5705
+      door:
+        keywords: [Crystal, door]
+        kind: door
+    east:
+      to: tba:57:room:5707
+      look: It doesn't look as if you should go that way...
+    south:
+      to: tba:57:room:5710
+    west:
+      to: tba:57:room:5709
+
+"tba:57:room:5707":
+  name: Abyss of Death
+  description:
+  - "@n F A L"
+  - L
+  - I
+  - "N"
+  - G D O W
+  - N Too bad, you seem to have fallen into a never ending abyss.
+  sector: inside
+  flags: [no_mob]
+
+"tba:57:room:5708":
+  name: The Bloodstained Hallway
+  description: >
+    Like the entrance, this hallway has blood covering just about every part of it. The animal tracks
+    continue through here, they have three claws, two of which are to the front and one to the rear. A
+    long mark has been etched into the roof.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:57:room:5701
+  extras:
+  - keywords: [mark]
+    text: This appears to be a long tail mark scraped into the roof.
+
+"tba:57:room:5709":
+  name: Ursa's Den
+  description: >
+    This is the room of Ursa Major, it is a typical bear cave except stuff has been piled neatly into a
+    corner.  There is a door leading into a room out back, it is really dark in there and there are
+    strange noises eminating from inside. It sounds like a kind of grunting noise, could it be the Bear?
+  sector: inside
+  flags: [indoors, house]
+  exits:
+    east:
+      to: tba:57:room:5706
+    west:
+      to: tba:57:room:5712
+
+"tba:57:room:5710":
+  name: Sagittarius' Temple of Weapons
+  description: >
+    This Temple has weapons lining the walls, possibly every weapon available. Near the far end of this
+    horrific place stands an altar, and on that altar is enscribed an archer.  It looks to have the
+    lowerbody of a horse and the torso of a man.  With sudden realisation you see that is a Centaur!  These
+    creatures are rarely seen in the wild because they favor seclusion.  The most famous of these would
+    definitely be Sagittarius the 9th sign of the zodiac.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:57:room:5706
+    east:
+      to: tba:57:room:5713
+    west:
+      to: tba:57:room:5714
+
+"tba:57:room:5711":
+  name: Yet Another Hallway
+  description: >
+    This is another hallway, the tracks that were on the floor earlier are faint but still readable. 
+    Following the tracks is a small trail of blood, or what looks like blood.  It's a bit darker than most
+    blood you've seen as it has more black in it.  Could this be a trap?
+  sector: inside
+  exits:
+    north:
+      to: tba:57:room:5702
+    south:
+      to: tba:57:room:5703
+      look: This door is made out of wood, the carvings resemble those of the last two wooden doors.
+      door:
+        keywords: [Ornate, wooden, door]
+        kind: pickproof
+
+"tba:57:room:5712":
+  name: Cancer's Hole
+  description: >
+    This is the hole of Cancer.  Cancer is the 4th sign of the Zodiac and is a very aggressive
+    carnivore.  She is represented by a crab and her pincers are extremely deadly, so deadly they could cut a
+    persons head off by merely running them along a persons neck.  Be warned, this is a place of death.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:57:room:5709
+
+"tba:57:room:5713":
+  name: ZodiaShop
+  description: >
+    This is where you may buy the items of the Zodiac.  The shopkeeper is a stubbornn fellow and rather
+    fat, he is usually seen with his head on the counter drooling over Starsigns like Virgo and the
+    female Gemini twin.  Most classify him as weird.
+  sector: inside
+  exits:
+    west:
+      to: tba:57:room:5710
+
+"tba:57:room:5714":
+  name: Virgos' Bedroom
+  description: >
+    This bedroom is lavishly furnished.  Almost everything is blue and gold but there are also hints of
+    red and orange.  All the metal work is made with copper.  There is a large double bed in one corner,
+    it looks to be made out of solid oak, there is also a table and chairs.  The roof is covered with a
+    star chart, certain parts are glowing dimly.  The most brightly shining sign on the chart appears to
+    be Scorpio.  How very strange.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:57:room:5710
+    south:
+      to: tba:57:room:5715
+
+"tba:57:room:5715":
+  name: The Muddy Tunnel
+  description: >
+    This is a pigsty compared to the cleanliness of the last room.  Mud and muck squelches underfoot,
+    it reeks worse than Leos' room, and that is something to be said.  There is a faint glimmer of light
+    at the end of the tunnel.  Exits face north and south towards the light.
+  sector: inside
+  exits:
+    north:
+      to: tba:57:room:5714
+    south:
+      to: tba:57:room:5716
+
+"tba:57:room:5716":
+  name: Nearing the end of the muddy hall
+  description: >
+    The southern end of this hallway is lighter than the rest, probably because of the light coming
+    from the portal in front of you.  The portal has the color of blood, deep red.  Looking through it seems
+    to go on forever although there is a bright green spot in the distance.
+  sector: inside
+  exits:
+    north:
+      to: tba:57:room:5715
+    south:
+      to: tba:57:room:5717
+
+"tba:57:room:5717":
+  name: Entering the Ethereal Void
+  description: >
+    The color red fills your vision, except for way off to the south (is it south??  ) where the speck
+    of green seen from outside this place has grown to the size of a fingernail.  Sounds of the ocean
+    fill what otherwise would be silence.  This place is kind of spooky but peaceful.
+  sector: inside
+  exits:
+    north:
+      to: tba:57:room:5716
+    south:
+      to: tba:57:room:5718
+
+"tba:57:room:5718":
+  name: Floating in the Ethereal Void
+  description: >
+    The green speck from before is the size of a doorway now, this portal seems to stretch the limits
+    of space and time.  Red fills the eyes and a chilly wind has started to blow through the doorway. 
+    Through the door there looks to be a mountain valley, and by the sounds of it there is a herd of goats
+    as well.
+  sector: inside
+  exits:
+    north:
+      to: tba:57:room:5717
+    south:
+      to: tba:57:room:5719
+
+"tba:57:room:5719":
+  name: Exit from the Portal
+  description: >
+    Upon exiting from the red portal a mountain pass comes into view.  The bleating from the goats
+    echoes through here and makes a terrible din.  In the distance there is a faint gold colored sparkle,
+    maybe two.  Large hills, possibly small mountains stretch up to the east and west and they have snow
+    covered peaks.  There are exits north back into the portal and south into the pass.
+  sector: mountains
+  flags: [peaceful]
+  exits:
+    north:
+      to: tba:57:room:5718
+    south:
+      to: tba:57:room:5720
+
+"tba:57:room:5720":
+  name: In the Pass
+  description: >
+    This pass serves as defense for the valley beyond.  If anything evil decides to come through the
+    portal the goat herd raise the alarm and an impenetrable mist descends upon the valley thwarting any
+    attempt to lay siege to it.
+  sector: mountains
+  exits:
+    north:
+      to: tba:57:room:5719
+    south:
+      to: tba:57:room:5721
+
+"tba:57:room:5721":
+  name: Entrance to the valley
+  description: >
+    Lush green grass covers the ground of this valley.  There are goats scattered across the pastures
+    nibbling here and there, bleating and headbutting each other.  At the far end stands Capricorn, on his
+    head is what you saw before, golden horns.  There are a few trees dotted throughout the valley and
+    goats are standing under them sleeping and just lazing about.  Rivers criss-cross the valley and at
+    the far end is a waterfall.  Exits lead back into the pass and down into the valley.
+  sector: hills
+  exits:
+    north:
+      to: tba:57:room:5720
+    south:
+      to: tba:57:room:5722
+
+"tba:57:room:5722":
+  name: In the valley of Capricorn
+  description: >
+    A large valley stretches before the eye.  The grass is deep and springy and the smell of fresh
+    mountain air greets thy nostrils.  There are large mountains surrounding this valley and young goats are
+    climbing around on the foot of the large one near the far end.  These goats are drinking from the
+    pool of water at the bottom of the waterfall.  Exits lead east and west toward groups of goats and and
+    west, further into the valley.  Of course there is also and exit back into the pass.
+  sector: field
+  exits:
+    north:
+      to: tba:57:room:5721
+    east:
+      to: tba:57:room:5727
+    west:
+      to: tba:57:room:5723
+
+"tba:57:room:5723":
+  name: Ascending the Hill of Capricorn
+  description: >
+    The soft springy grass gives way to a path here, at the top sits Capricorn the 10th sign of the
+    zodiac.  Bones litter the ground around him, most are skulls and spines.  Those strange tracks from
+    before are here and they are more discernable.  What could they mean?
+  sector: hills
+  exits:
+    east:
+      to: tba:57:room:5722
+    up:
+      to: tba:57:room:5724
+  extras:
+  - keywords: [bones]
+    text: These bones are mostly crushed and powdered but most of them look human...
+  - keywords: [tracks]
+    text: These tracks are insect like and very large.  Whatever made these must be huge.
+
+"tba:57:room:5724":
+  name: Capricorns' Hill
+  description: >
+    Here sits Capricorn, one of the signs of the zodiac.  Huge stone slabs form a couch where the lord
+    of the goats rests, and thick moss cushions his head. The air is fetid with the smell of the dead.
+  sector: hills
+  exits:
+    north:
+      to: tba:57:room:5725
+    down:
+      to: tba:57:room:5723
+
+"tba:57:room:5725":
+  name: Descending towards the Waterfall
+  description: >
+    Just to the north is a massive waterfall.  From the looks of it, it falls about 300 feet!  Behind
+    the lower part of of it there seems to be a cave.  A faint glow can be seen inside.  Whatever could it
+    be?
+  sector: hills
+  flags: [peaceful]
+  exits:
+    north:
+      to: tba:57:room:5726
+    south:
+      to: tba:57:room:5724
+
+"tba:57:room:5726":
+  name: Outside the Cave
+  description: >
+    Through the curtain of water there is a faint glow, it looks to take the shape of a pair of
+    scales.  Could it be Libra?  There is a walkway through here and the ground falls away on both sides.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:57:room:5728
+    south:
+      to: tba:57:room:5725
+  extras:
+  - keywords: [glow]
+    text: The glow takes the form of a pair of scales.  Maybe it's Libra.
+
+"tba:57:room:5727":
+  name: Under an Oak Tree
+  description: >
+    Under this tree is a small grouping of goats.  They look to be males from all their headbutting and
+    grunting.  This tree is very large and stripes that have been scored into the tree form a ladder. 
+    Tree sap oozes down the ladder and it has a sweet smell.  Little red eyes can be seen up the ladder.
+  sector: field
+  exits:
+    west:
+      to: tba:57:room:5722
+    up:
+      to: tba:57:room:5731
+      look: The sap is dribbling down the trunk forming a pool at the base of the tree.
+  extras:
+  - keywords: [eyes]
+    text: The eyes are small and beady, they look evil.
+  - keywords: [ladder]
+    text: Sap oozes down this ladder forming a sticky covering.
+
+"tba:57:room:5728":
+  name: The Cave
+  description: >
+    This cave is large and spacious.  At the far end stands a glowing set of scales.  They dont seem to
+    move or even be alive, the tracks continue through here and into a hole at the back of the cave. 
+    The hole is very large and dirty, bones surround the entrance.  Where do they go?
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:57:room:5729
+    south:
+      to: tba:57:room:5726
+
+"tba:57:room:5729":
+  name: The Dark Tunnel
+  description: >
+    This tunnel is short but dark.  At the far end it opens up into an extremely large room.  In the
+    center a fire burns and the tracks stop at the far end in front of a large throne.  Shadows caused by
+    the fire dance across the tunnels walls making eerie shapes.  Your adventure looks to be almost
+    finished.
+  sector: inside
+  flags: [dark, indoors, tunnel]
+  exits:
+    north:
+      to: tba:57:room:5730
+    south:
+      to: tba:57:room:5728
+
+"tba:57:room:5730":
+  name: Scorpio's Throneroom
+  description: >
+    This is the throneroom of the self proclaimed leader of the zodiac, The tracks throughout this area
+    were his!  He stands here clicking his claws in anticipation of his next meal which is squirming
+    behind his throne.  It's Virgo!  That sleazy freak has zodianapped her!  It's time someone taught him a
+    lesson.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:57:room:5729
+
+"tba:57:room:5731":
+  name: On the oaken ladder
+  description: >
+    This ladder is covered in tree sap, you are almost adhered to the trunk. There are noises coming
+    from the top of the tree, slight but still noticable.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:57:room:5732
+      look: >
+        The sap is runnier above here, probably because its fresher. There's only one way to find out, and
+        that's to go up.
+    down:
+      to: tba:57:room:5727
+      look: >
+        The sap has formed a puddle at the base of the trunk. Some of the goats come over and take a taste.
+  extras:
+  - keywords: [sap]
+    text: Sticky, yucky sap dribbles down the tree trunk giving of a beautiful smell.
+
+"tba:57:room:5732":
+  name: Halfway up the Tree
+  description: >
+    The sap seems to get less sticky here, maybe because its fresher than the sap below.  It gives off
+    a sweet smell that makes a person want to taste it. The noises are more audible here and those ever
+    staring red eyes look menacing.
+  sector: hills
+  exits:
+    up:
+      to: tba:57:room:5733
+    down:
+      to: tba:57:room:5731
+      look: >
+        The sap has formed a bigger puddle now. The goats that were tasting the substance are now running
+        towards the waterfall to get a drink.
+  extras:
+  - keywords: [sap]
+    text: The sap is less sticky than the stuff below, maybe because it's fresher...
+
+"tba:57:room:5733":
+  name: Near the top of the Tree
+  description: >
+    The red eyes have disappeared up into the boughs of the tree.  The noises are now very loud and
+    mournful.  Maybe somethings hurt!  Whatever it is, it doesnt sound too good.  Could the thing with red
+    eyes be the one moaning?  Or is it something else?
+  sector: hills
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:57:room:5734
+      look: An feeling of oppression coming from above.
+    down:
+      to: tba:57:room:5732
+
+"tba:57:room:5734":
+  name: At the top of the tree
+  description: >
+    A pool of blood is slowly forming in a hollow to the right and the stench of death is thick in the
+    air.  This place appears to be the home of a Tree Nymph. It is plain to see that the owner of this
+    place was a female because of all the portraits of male Nymphs on one of the branches that obviously
+    serves as a mantlepiece.
+  sector: inside
+  flags: [no_magic]
+  exits:
+    down:
+      to: tba:57:room:5733
+  extras:
+  - keywords: [blood]
+    text: A pool of bluey gray blood has collected in the corner.
+  - keywords: [pool]
+    text: A pool of bluey gray blood has collected in the corner.
+
+"tba:57:room:5735":
+  name: A Bloodied Room
+  description: >
+    This room is covered in blood.  It has dried all over the walls and drips from the roof.  A
+    skeleton is hanging on a sign that stands next to the door.
+  sector: inside
+  flags: [no_mob, private]
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           +--------------------+
+           |                    |
+           |       ENTRY        |
+           |        IS          |
+           |     PROHIBITED     |
+           |                    |
+           +--------------------+
+
+"tba:57:room:5799":
+  name: The Portal Room
+  description: >
+    This room is to serve the perpose of teleportation, but to find the portal you'll have to look.
+  sector: inside

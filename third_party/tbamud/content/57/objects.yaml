@@ -1,0 +1,137 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 57.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:57:obj:5700":
+  type: light
+  keywords: [starstone]
+  short: the starstone
+  long: The Starstone lies here on the ground collecting dust.
+  flags: [glow, hum, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 600
+  rent: 1
+  level: 0
+  affects:
+  - apply: move
+    modifier: 20
+  - apply: age
+    modifier: 3
+
+"tba:57:obj:5703":
+  type: fountain
+  keywords: [fountain, aquarius]
+  short: the fountain of Aquarius
+  long: The Fountain of Aquarius is bubbling merrily here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: true
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:57:obj:5708":
+  type: weapon
+  keywords: [Rune, Saber]
+  short: the rune saber
+  long: The Rune Saber lies here.
+  flags: [glow, hum, magic]
+  wear: [take, wield]
+  values:
+    damage: 4d8
+    attack: slash
+  weight: 8
+  cost: 200
+  rent: 250
+  level: 0
+  affects:
+  - apply: int
+    modifier: -2
+  extras:
+  - keywords: [rune]
+    text: >
+      These runes appear to be ancient.  Whatever race created this sword was probably evil due to the
+      gruesome detail in the pictures etched into it.
+  - keywords: [pictures]
+    text: >
+      The pictures are of people being killed by the wielder of this sword.  Some are being impaled and
+      others decapitated.
+
+"tba:57:obj:5728":
+  type: fountain
+  keywords: [Libra, water]
+  short: Libra
+  long: Libra, the scales lies here. Water has built up on the weighing pans creating a place to drink.
+  flags: [glow]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:57:obj:5730":
+  type: weapon
+  keywords: [Rune, Blade]
+  short: a rune blade
+  long: A Rune Blade lies here.
+  flags: [glow, hum, magic]
+  wear: [take, wield]
+  values:
+    damage: 4d2
+    attack: slash
+  weight: 7
+  cost: 280
+  rent: 28
+  level: 0
+  affects:
+  - apply: int
+    modifier: -2
+
+"tba:57:obj:5734":
+  type: trash
+  keywords: [carcass, tree, nymph]
+  short: the carcass of the tree nymph
+  long: The carcass of the tree nymph lies here bleeding profusely.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [carcass, tree, nymph]
+    text: The corpse is of a recently deceased tree nymph.
+
+"tba:57:obj:5798":
+  type: armor
+  keywords: [Scorpion, Platemail]
+  short: the scorpion platemail
+  long: A suit of Scorpion Platemail lies here.
+  flags: [glow, hum, magic, anti_mage]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 10
+  cost: 250
+  rent: 30
+  level: 0
+  affects:
+  - apply: move
+    modifier: -15
+  - apply: ac
+    modifier: -5
+  - apply: hit
+    modifier: -10

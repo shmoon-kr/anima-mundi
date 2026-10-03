@@ -1,0 +1,1254 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 283.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:283:room:28300":
+  name: Up a Twisting Path
+  description: >
+    This is a small, rocky path which looks to be heading up the mountain.  The mountain stands high
+    above you, and you have no knowledge of what lies at the end of the path.  It is a very stormy night,
+    with rain pouring down and lightning striking in the distance.  Thunder claps and booms as you head up
+    the path hoping for a place to stay until the storm passes over.
+  sector: mountains
+  flags: [no_mob, no_track, no_magic]
+  exits:
+    east:
+      to: tba:283:room:28301
+      look: You don't feel like looking, you just want to get out of this rain!!
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Haunted House
+        **********************************
+        This is a zone of a haunted house.  I would first just like to say that I would
+        like everybody to download this. This was the first successful zone done
+        offline by me. I really liked doing this zone even though it was hard work.
+        
+        This zone was created for high level players or for groups of players. It's an
+        evil-aligned zone totally. It's a small zone, but hey, what can I say. It's a
+        house type zone. I tried to make it as large as I could. It's a hard zone, but
+        in return for being hard it has great objects and good mobs to fight. It has no
+        special spec procs or no spells used other than the ones that come with circle.
+        I did that so that no one would have to waste their time changing it back,
+        because I know that most people hate doing that:). There are two good places to
+        connect this zone to your mud.  The use of both spots is suggested.
+        
+        Total...Rooms: 62    Objects: 34     Mobiles: 23
+        
+        If you have any questions, comments, typos, or anything else I will be glad to
+        hear from you. You can reach me at: Maddog@@prolog.net
+        Thank you and enjoy my zone:)           Matt
+
+"tba:283:room:28301":
+  name: Farther Up the Mountain
+  description: >
+    This path is getting muddier than ever!  You are now running through mud puddles, and places where
+    the path is practically gone.  By now all of your clothes are soaked, and most of your legs are all
+    muddy.  Ewwwwwwwwwwww!!  If you don't get somewhere soon, you're going to catch a cold!
+  sector: mountains
+  flags: [no_track, no_magic]
+  exits:
+    west:
+      to: tba:283:room:28300
+      look: >
+        You're soaked with muddy water, and are caught in a HUGE thunderstorm. Do you really feel like
+        looking back?
+    up:
+      to: tba:283:room:28302
+      look: You really don't feel like looking.
+
+"tba:283:room:28302":
+  name: At the Top of the Mountain
+  description: >
+    Finally you are standing high above the ground, on top of the dreaded mountain in the pouring
+    rain.  Up ahead looks to be an old house, and by now, you don't care what kind of shelter you seek.  You
+    begin sprinting to the front door, exhausted from traveling up the long path, and soaked with mud.
+    Suddenly, lightning strikes only a few feet away from where you were. Unprepared, you almost fall to the
+    mud.  Now you are running as fast as one can go.
+  sector: mountains
+  flags: [no_track, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28303
+      look: A house is north, waiting for you to get inside...
+    down:
+      to: tba:283:room:28301
+      look: Get to the house, don't bother to look back!!
+
+"tba:283:room:28303":
+  name: At the Front Door
+  description: >
+    You are now standing at the front door, trying to make up your mind as to open the door, or not. 
+    This house looks to be centuries old, as the porch that you walk on is creaking with every step, and
+    the shudders and the walls look chipped, and just bent out of shape.  Well, going inside would be
+    better than staying out here in the rain all night, wouldn't it?
+  sector: city
+  flags: [no_track, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28304
+      look: The front door is north.
+      door:
+        keywords: [old, rotten, wooden, door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:283:room:28302
+      look: The path leads back down the mountain.
+
+"tba:283:room:28304":
+  name: Inside The Dark and Creepy House
+  description: >
+    You are inside of the very dark and damp old house, which is frightening you very much now.  Noises
+    appear from nowhere, and small shadows lurk on the walls.  Rodent problem, maybe.  Every so often
+    lightning strikes and lights up the house for a split second, and then the thunder booms loudly.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28321
+      look: Nothing special north...
+    east:
+      to: tba:283:room:28305
+      look: A hallway leads east...
+    south:
+      to: tba:283:room:28303
+      look: It's too dark to see anything.
+      door:
+        keywords: [old, rotten, wooden, door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:283:room:28322
+      look: You see nothing special...
+
+"tba:283:room:28305":
+  name: The Beginning of a Hallway
+  description: >
+    This area is beginning to grow smaller, and smaller, until finally the ceiling is right above your
+    head.  This is a small tunnel-like hallway leading east to somewhere.  It is very dark in here, and
+    if you look back you can barely catch a glimpse of the quick flashes of light flickering through the
+    windows.  The hallway leads farther east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:283:room:28306
+      look: The hallway continues east through darkness.
+    west:
+      to: tba:283:room:28304
+      look: It's too dark to see anything in here...
+
+"tba:283:room:28306":
+  name: In the Eastern Hallway
+  description: >
+    You are walking east through a very dark hallway, heading to a place that you cannot see because
+    it's totally black inside here.  If you would look back now, you can't even see the flashes of
+    lightning.  Up ahead to the east you are now beginning to make out something...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:283:room:28307
+      look: You cannot make out the thing that is east.
+    west:
+      to: tba:283:room:28305
+      look: The hallway goes back west.
+
+"tba:283:room:28307":
+  name: The Top of the Basement Stairs
+  description: >
+    You are now at the top of the basement stairs, which can now be made out perfectly even though you
+    stand in darkness.  Every little detail can be seen strangely.  You're not sure that if you go down
+    you would be entering a nightmare.  Be brave, and go find out!
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:283:room:28306
+      look: The hallway goes back west.
+    down:
+      to: tba:283:room:28308
+      look: The stairs lead down into the darkness.
+
+"tba:283:room:28308":
+  name: The Basement of the House
+  description: >
+    You are in the icky basement of this darkened house, with little things crawling around and rubbing
+    against your ankles.  You should have a light to come down here, you know.  It is very damp down
+    here, and also very cool. Well you could chicken out and go back upstairs, or face your fears and
+    explore down here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28309
+      look: A tunnel is north, along with a small shining light.
+    up:
+      to: tba:283:room:28307
+      look: The stairs lead upwards.
+
+"tba:283:room:28309":
+  name: A Small Tunnel
+  description: >
+    You are walking in the tunnel that strangely turns and heads west, with a torch burning on the
+    wall.  The torch is bright enough to just be able to see the tunnel, and what you see amazes you.  The
+    tunnel is rounded at the top, with dirt as the ground.  Bugs and other living things crawl all around
+    inside of the tunnel, bothering you to the point where you're going crazy.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:283:room:28308
+      look: Nothing special back that way...
+    west:
+      to: tba:283:room:28310
+      look: The tunnel heads to the west now...
+
+"tba:283:room:28310":
+  name: At the End of the Tunnel
+  description: >
+    You are at the end of the tunnel, inside a now lit up room.  The dim light comes from torches on
+    either side of you, and from up ahead on both sides.  Up ahead looks to be a dungeon-type place.  Kind
+    of spooky, don't you think?
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:283:room:28309
+      look: The tunnel goes farther east until it turns and heads south.
+    west:
+      to: tba:283:room:28311
+      look: East leads you into the dungeon.
+
+"tba:283:room:28311":
+  name: Into the Dungeon
+  description: >
+    This is getting very weird now.  You are inside of a small dungeon, located in the basement of an
+    old spooky house.  Wait a minute...  That kind of goes together.  Anyway, there are cells to the north
+    and south, with a torch on both sides of you, making the dungeon light up, like someone, or
+    something, has been around recently...
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:283:room:28312
+      look: A cell is to the north.
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+    east:
+      to: tba:283:room:28310
+      look: The tunnel that brought you here is east.
+    south:
+      to: tba:283:room:28313
+      look: A cell is to the south.
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+    west:
+      to: tba:283:room:28314
+      look: Another part of the dungeon is west.
+
+"tba:283:room:28312":
+  name: A Cell
+  description: >
+    This is one of the cells of the dungeon in the basement of the old, creepy house.  There is blood
+    on the walls, and on the floor lies a pool of blood. Bones are hanging on the walls and on the floor,
+    with blood constantly dripping off of the ones hanging.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:283:room:28311
+      look: Nothing special there...
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+
+"tba:283:room:28313":
+  name: A Cell
+  description: >
+    This is one of the cells of the dungeon inside the basement of the old, spooky house.  There are
+    bloodstains everywhere, and pools of blood lie on the floor.  Bones hang off the walls, and lay in
+    piles on the floor, with blood smeared all over them and blood is even dripping off of the hanging
+    skeletons.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:283:room:28311
+      look: You see nothing special...
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+
+"tba:283:room:28314":
+  name: The Dungeon
+  description: >
+    You are inside of the dungeon in the basement of the house.  Blood marks can be found almost
+    everywhere, as torches light up the rooms from their spot on the walls.  Sometimes shadows can be seen on
+    the walls, making this a very frightening place.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:283:room:28315
+      look: You see a cell to the north.
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+    east:
+      to: tba:283:room:28311
+      look: The dungeon is to the east.
+    south:
+      to: tba:283:room:28316
+      look: A cell can be seen south of you.
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+    west:
+      to: tba:283:room:28317
+      look: Nothing special over there...
+
+"tba:283:room:28315":
+  name: Another Cell
+  description: >
+    You are inside of another cell, nothing different from anything you've seen so far.  Blood drenches
+    the cell, and the bones stand out so much you could have seen them from the tunnel.  Oh well, better
+    get out of here anyway.  No sense in staying here your whole life.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:283:room:28314
+      look: Nothing special back there...
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+
+"tba:283:room:28316":
+  name: A Bloody Cell
+  description: >
+    This cell is bloodier than ever!  Blood drenches the walls, and there is blood all over the floor,
+    making you slip and lose your balance.  Lucky you didn't fall in that mess!  Yuck!  Red bones lie in
+    a corner, their color changed as an effect to the blood.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:283:room:28314
+      look: You see nothing special north...
+      door:
+        keywords: [cell, bars]
+        kind: door
+        key: tba:283:obj:28302
+        reset: locked
+
+"tba:283:room:28317":
+  name: The Entrance to the Death Chambers
+  description: >
+    You are now in a room which leads you to three other rooms.  They don't look to be the most
+    happenin' places either.  A skull lies in front of you with a rat crawling inside of it.  A small sign
+    sticks up from the ground here.
+  sector: inside
+  flags: [indoors, soundproof, no_track, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28318
+      look: You don't want to look at what's north. Take the sign's warning.
+    east:
+      to: tba:283:room:28314
+      look: The dungeon is east.
+    south:
+      to: tba:283:room:28319
+      look: You don't want to go south, believe me.
+    west:
+      to: tba:283:room:28320
+      look: To the west looks to be a large chair with a dark figure sitting in it...
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           *****************North = The Slow-Death Room************
+        ********************South = Quick-Death*******************
+        ********************West = The Dungeon Ruler's Lair**********
+        *******BE WARNED: UNPREPARED INTRUDERS WILL DIE*******
+
+"tba:283:room:28318":
+  name: The Slow-Death Room
+  description: >
+    All of a sudden, you walk into a room with no torches or any light source, and are surrounded in
+    darkness.  You turn only to realize that the exit has disappeared behind you.  You are trapped inside
+    this room now.  This room must be used to kill prisoners slowly, as you see a pair of evil-looking
+    yellow eyes staring at you...
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    north:
+      to: tba:283:room:28329
+      look: Nothing special there...
+      door:
+        keywords: [secret, escape]
+        kind: pickproof
+        key: tba:283:obj:28303
+        reset: locked
+
+"tba:283:room:28319":
+  name: Stepping into the Pit
+  description: Not realizing what you've just done, you step off of the ground, and plunge into a pit.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+
+"tba:283:room:28320":
+  name: The Lair of the Dungeon Ruler
+  description: >
+    This is the room of the dungeon ruler.  He is covered with shadows as he sits in his huge chair
+    watching your every move and tapping his unbelievably long claws.  His red eyes seem to penetrate yours,
+    telling you to leave this moment...
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    east:
+      to: tba:283:room:28317
+      look: Don't look, just get out of here, and FAST!
+    west:
+      to: tba:283:room:28345
+      look: A golden weapon attracts your eye over there.
+      door:
+        keywords: [golden, gates]
+        kind: pickproof
+        key: tba:283:obj:28307
+        reset: locked
+
+"tba:283:room:28321":
+  name: Near the Deck
+  description: >
+    You are now near the back deck, which looks to be battered and banged up from time.  Lightning
+    still flashes outside of the house, as you can barely see anything except for when the light flashes in. 
+    To the east looks to be a bookshelf with a door near it, and north is the deck.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:283:room:28325
+      look: The deck is north.
+      door:
+        keywords: [door, back]
+        kind: door
+        reset: closed
+    east:
+      to: tba:283:room:28332
+      look: A bookshelf lines the wall east.
+    south:
+      to: tba:283:room:28304
+      look: The front door looks to be south.
+    west:
+      to: tba:283:room:28323
+      look: In the far corner you can just make out a set of stairs.
+
+"tba:283:room:28322":
+  name: The Southwestern Corner
+  description: >
+    This room is nothing new compared to all of the rooms you've seen here before.  The furniture has
+    white clothes hanging over them, making them look hidden.  You can barely see anything, but the
+    flashes of lightning sure do help with the total darkness in here.  Rain hits the windows and is constantly
+    making a sound, which gets a little annoying after a while.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28323
+      look: Nothing special is there...
+    east:
+      to: tba:283:room:28304
+      look: The front door is east.
+
+"tba:283:room:28323":
+  name: A Room in the House
+  description: >
+    This is just a plain old room in this awful house, which doesn't attract much of your attention. 
+    There are sheets draped over the furniture in this room, just like all of the rooms.  To the west you
+    can just make out a staircase leading up, and to the east the back door is seen.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:283:room:28321
+      look: The back door is east.
+    south:
+      to: tba:283:room:28322
+      look: The southwestern corner of the house is south.
+    west:
+      to: tba:283:room:28324
+      look: The stairs are to your west.
+
+"tba:283:room:28324":
+  name: The Second Floor Stairs
+  description: >
+    Here are the stairs leading you to the next scary floor of this house.  The stairs are an accident
+    waiting to happen.  They look so old and so unsteady, that even a mouse might break them.  The wood
+    used for them is chipped and in some spots cut, but this is the only way to the next floor.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:283:room:28323
+      look: Nothing very special over there...
+    up:
+      to: tba:283:room:28335
+      look: The stairs lead up to the second floor.
+
+"tba:283:room:28325":
+  name: The Back Deck
+  description: >
+    This is the back deck of the house.  It starts to make creaking sounds as you walk on it, and then
+    it starts to get louder.  The stairs lead down to the ground.  When you look over the side you can
+    see a path, and then in the distance a small outhouse.
+  sector: city
+  flags: [dark, no_mob, no_track]
+  exits:
+    south:
+      to: tba:283:room:28321
+      look: You can go back inside if you wish.
+      door:
+        keywords: [door, back]
+        kind: door
+        reset: closed
+    down:
+      to: tba:283:room:28326
+      look: The ground is down the stairs.
+
+"tba:283:room:28326":
+  name: Back on the Ground
+  description: >
+    You are on the ground now, as a small path forms at your feet and heads north to the outhouse.  A
+    path leads east from here too, which doesn't look to be going anywhere.  The lightning is still
+    striking, and therefore the thunder is still hurting your ears.
+  sector: field
+  flags: [dark, no_mob, no_track]
+  exits:
+    north:
+      to: tba:283:room:28327
+      look: A path leads to the outhouse.
+    west:
+      to: tba:283:room:28329
+      look: A path leads to nothing you can see.
+    up:
+      to: tba:283:room:28325
+      look: The deck is up the stairs.
+
+"tba:283:room:28327":
+  name: The Path to the Outhouse
+  description: >
+    This is the path to the outhouse, which you can obviously smell by now.  It really stinks.  The
+    path is getting you all muddy again, as the rain pours down harder than before.  The outhouse is north
+    and another path breaks off this one and heads east.
+  sector: field
+  flags: [dark, no_mob, no_track]
+  exits:
+    north:
+      to: tba:283:room:28328
+      look: The outhouse is north.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:283:room:28330
+      look: A path leads east.
+    south:
+      to: tba:283:room:28326
+      look: The stairs leading up to the deck are that way.
+    west:
+      to: tba:283:room:28360
+      look: A well is west.
+
+"tba:283:room:28328":
+  name: The Outhouse
+  description: >
+    This outhouse really stinks!  Why did you come in here anyway?  You should have just went into the
+    spooky old house.  The smell is beginning to get to you now.  Get out of here before you faint!
+  sector: inside
+  flags: [dark, indoors, peaceful, soundproof, no_track, no_magic, private]
+  exits:
+    south:
+      to: tba:283:room:28327
+      look: The path that brought you inside here is south.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28329":
+  name: Outside the Secret
+  description: >
+    You have now exited the secret exit which has taken you outside of the dreaded house.  You can
+    barely see anything, with all of this rain distracting your eyes.  It is very dark outside, and lightning
+    flashes nearby.  Thunder shortly follows, making a very loud "BOOM".  To the east is where the
+    stairs lead up to the back deck.
+  sector: field
+  flags: [dark, no_mob, no_track]
+  exits:
+    east:
+      to: tba:283:room:28326
+      look: The bottom of the stairs is east.
+    south:
+      to: tba:283:room:28318
+      look: The secret exit is south.
+      door:
+        keywords: [secret, escape]
+        kind: pickproof
+        key: tba:283:obj:28303
+        reset: locked
+    down:
+      to: tba:283:room:28361
+      look: A storm cellar is down small, cement stairs.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28330":
+  name: The Path East
+  description: >
+    This is a path leading right through a field.  The path is covered with mud, making you wish you
+    had stayed home tonight.  A gigantic thunderstorm is still in this area and it's raining pretty hard
+    now.  Suddenly, lightning strikes a tree, which makes a loud noise before falling to the ground with a
+    loud "THUD".
+  sector: field
+  flags: [dark, no_track]
+  exits:
+    east:
+      to: tba:283:room:28331
+      look: You can go back east if you want to...
+    west:
+      to: tba:283:room:28327
+      look: Another path is to the west.
+
+"tba:283:room:28331":
+  name: A Path Through the Forest
+  description: >
+    You are on a path leading through a forest on a dark and very stormy night. Winds blow around
+    leaves and other small objects, as lightning and thunder do their work.  Rain pours down on you, getting
+    you all wet and very cold.
+  sector: field
+  flags: [dark, no_mob, no_track]
+  exits:
+    west:
+      to: tba:283:room:28330
+      look: The path goes east some more.
+
+"tba:283:room:28332":
+  name: At the Bookshelf
+  description: >
+    You are now in a room with a bookshelf at the northern wall.  The bookshelf contains very old
+    books, which look to be ruined from the affects of time. There is a door to the east, which is probably a
+    closet.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28334
+      look: The bookshelf takes up the whole northern wall.
+      door:
+        keywords: [bookshelf]
+        kind: door
+        reset: closed
+    east:
+      to: tba:283:room:28333
+      look: There is a closet to the east.
+      door:
+        keywords: [closet, door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:283:room:28321
+      look: The back door is to the west.
+
+"tba:283:room:28333":
+  name: A Closet
+  description: >
+    This is a closet of the old house, which has a few pieces of clothing hanging in it, with nothing
+    else there.  It is very dark inside here, making it a very frightening place to be in.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    west:
+      to: tba:283:room:28332
+      look: Nothing special over there.
+      door:
+        keywords: [closet, door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28334":
+  name: A Secret Room
+  description: >
+    This must be a secret room!  You pushed back the bookshelf, and it revealed this room.  There is
+    nothing in here actually, except for a pile of coins in the corner which will be nice in their new
+    home: your pocket.  Everything else is just plain.
+  sector: inside
+  flags: [dark, no_mob, indoors, peaceful, soundproof, no_track, no_magic, private]
+  exits:
+    south:
+      to: tba:283:room:28332
+      look: You see nothing special...
+      door:
+        keywords: [bookshelf]
+        kind: door
+        reset: closed
+
+"tba:283:room:28335":
+  name: The Second Floor
+  description: >
+    You are now standing at the top of the stairs that brought you up here. You're sure glad to be off
+    of those stairs, you could have broken through them at any moment.  It's not much different then
+    downstairs up here, very dark, with flashes of light sometimes showing through the few small windows.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:283:room:28336
+      look: You see a hallway leading east.
+    down:
+      to: tba:283:room:28324
+      look: The first floor is beneath you.
+
+"tba:283:room:28336":
+  name: The Hallway
+  description: >
+    You are walking down a hallway heading east.  The hallway leads a little more to the east until it
+    stops with a door to the north and east, and another hallway south.  There are no windows at all in
+    this passageway, making it very dark and scary.  The stairs are to the west.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:283:room:28337
+      look: Nothing special over there...
+    west:
+      to: tba:283:room:28335
+      look: The stairs are to the west.
+
+"tba:283:room:28337":
+  name: Before the Porch
+  description: >
+    You are now before a porch, which is north of you through the glass doors. The glass looks to be
+    scratched, and the porch is very tiny.  There is a closet to the east through another door, and a dark
+    hallway heads south of here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28355
+      look: There is a porch to the north.
+      door:
+        keywords: [glass, doors]
+        kind: door
+        reset: closed
+    east:
+      to: tba:283:room:28338
+      look: There is a closet east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:283:room:28339
+      look: There is a hallway taking you south.
+    west:
+      to: tba:283:room:28336
+      look: There is a hallway taking you back to the stairs.
+
+"tba:283:room:28338":
+  name: The Closet
+  description: >
+    You are in a closet which is very dark, but as you light your light, you can see that it is bare
+    except for a huge pile of clothes and other things laying in the corner.  Oh well, what did you expect?
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    west:
+      to: tba:283:room:28337
+      look: The stairs can be seen farther down the hallway. Much more interesting than in here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:283:room:28357
+      look: You see nothing special...
+      door:
+        keywords: [secret, special, clothes, junk]
+        kind: pickproof
+        key: tba:283:obj:28305
+        reset: locked
+
+"tba:283:room:28339":
+  name: The Southern Hallway
+  description: >
+    This is a hallway on the second floor heading south.  It is very dark inside here, just like
+    everywhere else you've been.  There are doors on either side of you, probably rooms.  The hallway continues
+    south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28337
+      look: The porch can be seen through the glass doors.
+    east:
+      to: tba:283:room:28341
+      look: There is a room to your east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:283:room:28342
+      look: The hallway goes south some more.
+    west:
+      to: tba:283:room:28340
+      look: There is a room to your west.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28340":
+  name: A Plain Old Room
+  description: >
+    You have now entered a room of this house, which doesn't have too much inside of it.  The walls are
+    without decorations, and there is some furniture and a large bed near the walls.  Some of the things
+    are even covered in spider webs.  Looks like no one has been around here for ages.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:283:room:28339
+      look: The hallway is through the doorway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28341":
+  name: A Room in the House
+  description: >
+    You are in another room of the old house where there really isn't anything. A small bed lies in the
+    corner near a large window, and a clock hangs on the wall, busted from time.  Flashes of light shine
+    through the window for a half second and then stop.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:283:room:28339
+      look: The hallway is to the west.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28342":
+  name: More of the Hallway
+  description: >
+    You are walking down more of the hallway, trying to decide which room to enter.  The rooms are on
+    your west and east as before, and the doors to them are shut except for the one on your east.  The
+    hallway goes farther south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28339
+      look: The hallway goes north.
+    east:
+      to: tba:283:room:28343
+      look: You see a room to the east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: open
+    south:
+      to: tba:283:room:28346
+      look: The hallway goes south.
+    west:
+      to: tba:283:room:28344
+      look: You see a room to the west.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28343":
+  name: A Room in the House
+  description: >
+    The floor boards creak and groan as you pass over them.  The room is covered in dust and cobwebs. 
+    The walls are stained and rotting.  The ceiling and floor look ready to collapse.  The creaking and
+    groaning seems to be escalating towards snapping and cracking.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:283:room:28342
+      look: The hallway is west.
+      door:
+        keywords: [door]
+        kind: door
+        reset: open
+
+"tba:283:room:28344":
+  name: A Room
+  description: >
+    As you walk into the room you can sense the evil.  It is totally dark inside here, and you can just
+    see with the light you have.  There is a bed laying turned over in the corner, and boxes have been
+    thrown in another.  The walls are scratched up like some animal went through here.  A sword sticks
+    into the wall nearest you.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:283:room:28342
+      look: You see the hallway east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28345":
+  name: The Room of the Golden Lance
+  description: >
+    You are in a room with a golden lance sticking up in the middle of it.  The weapon looks rather
+    nice, and would do you greatly.  Pick it up and get out of here fast.
+  sector: inside
+  flags: [dark, indoors, peaceful, soundproof, no_track, no_magic, tunnel]
+  exits:
+    east:
+      to: tba:283:room:28320
+      look: The dungeon ruler is east of you.
+      door:
+        keywords: [golden, gates]
+        kind: pickproof
+        key: tba:283:obj:28307
+        reset: locked
+
+"tba:283:room:28346":
+  name: Nearing the End of the Hall
+  description: >
+    You are now walking through this hallway, nearing the end of it which is now south of you a little
+    bit.  There are no doors anywhere in this part of the hallway, but the ones north look pretty
+    interesting.  South is the end of the hallway.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28342
+      look: The hallway continues north.
+    south:
+      to: tba:283:room:28347
+      look: The hallway ends south.
+
+"tba:283:room:28347":
+  name: The End of the Hallway
+  description: >
+    This is the end of the hallway of the second floor.  The rooms are back to the north if you feel
+    like exploring them again, and a closet lies to the south with a small door closed.  More stairs are to
+    the east, climbing way up to the attic.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:283:room:28346
+      look: The hallway goes back north.
+    east:
+      to: tba:283:room:28348
+      look: Stairs go up.
+    west:
+      to: tba:283:room:28356
+      look: There is another closet to the west.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28348":
+  name: Stairs to the Attic
+  description: >
+    You are now looking at small, narrow stairs made of rotten old wood leading up.  They look very
+    unstable, like they would break at any moment.  Other than that this room is bare.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:283:room:28358
+      look: The stairs are in the eastern part of this room.
+      door:
+        keywords: [stairs]
+        kind: door
+        reset: closed
+    west:
+      to: tba:283:room:28347
+      look: A closet can be seen to the west.
+    up:
+      to: tba:283:room:28349
+      look: Stairs lead up to the attic
+
+"tba:283:room:28349":
+  name: Inside the Attic
+  description: >
+    You are inside of the attic on the third floor of the house.  You REALLY wouldn't like to find out
+    how old and unstable the wooden boards are up this high.  The attic has lots of old junk in it,
+    mostly covered in old white sheets, some of them torn.  Spider webs drape the corners of the rooms and
+    hang over some of the stuff laying around.
+  sector: inside
+  flags: [dark, indoors, no_track, no_magic, private]
+  exits:
+    west:
+      to: tba:283:room:28350
+      look: There is a wall over there.
+      door:
+        keywords: [wall]
+        kind: door
+        reset: closed
+    down:
+      to: tba:283:room:28348
+      look: Old stairs lead back down.
+
+"tba:283:room:28350":
+  name: On the Roof
+  description: >
+    You are now on the roof of the old house.  The attic must have had a secret passage leading out
+    here.  The night is still very stormy, as you try to walk as carefully as you can without fatally
+    falling off.  That might hurt a little, don't you agree?
+  sector: city
+  flags: [dark, no_track, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28351
+      look: You can travel north on this roof.
+    east:
+      to: tba:283:room:28349
+      look: The attic is east.
+      door:
+        keywords: [wall]
+        kind: door
+        reset: closed
+
+"tba:283:room:28351":
+  name: Walking the Roof
+  description: >
+    This is another part of the roof of the house.  The wind makes you feel like you are going to be
+    picked up and thrown into the ground at any moment, so you try to move slowly and steadily.  Carefully
+    you make your way around a section of the roof that is unfinished, and try to head north.
+  sector: city
+  flags: [no_track, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28352
+      look: The roof goes north more.
+    south:
+      to: tba:283:room:28350
+      look: The roof goes south some more.
+
+"tba:283:room:28352":
+  name: The Roof
+  description: >
+    You are on a part of the roof with a rope ladder hanging down from it towards the ground.  The
+    ground looks so far away, but you'll do anything to escape from this nightmare.  The roof ends by the
+    looks of it...  North of here.  The rain is making it very slippery up here, as you can barely walk
+    without slipping a little.
+  sector: city
+  flags: [dark, no_magic]
+  exits:
+    north:
+      to: tba:283:room:28353
+      look: The roof heads north a bit.
+    south:
+      to: tba:283:room:28351
+      look: The roof goes back south.
+    down:
+      to: tba:283:room:28359
+      look: The ladder swings and sways with the wind.
+
+"tba:283:room:28353":
+  name: The End of the Roof
+  description: >
+    You are now at the end of the roof, or what once was the roof.  The shingles here have been washed
+    away from the rain, making it look bare.  It's beginning to get very slipper up here.  By the looks
+    of it, there seems to be nowhere to go from here.  A small chimney is directly east of you.
+  sector: city
+  flags: [dark, no_track]
+  exits:
+    south:
+      to: tba:283:room:28352
+      look: The roof extends south.
+    west:
+      to: tba:283:room:28354
+      look: There is a small chimney to your west.
+
+"tba:283:room:28354":
+  name: At the Top of the Chimney
+  description: >
+    This is the top of a chimney that you're at now.  The chimney seems to be big enough for one to fit
+    in it.  It is made of big red bricks which are also chipped.  All over.  No smoke is coming up, so
+    why not check out where it leads?
+  sector: city
+  flags: [dark, no_track, no_magic, tunnel]
+  exits:
+    east:
+      to: tba:283:room:28353
+      look: The roof is over there.
+    down:
+      to: tba:283:room:28322
+      look: The chimney is too dark to see where it leads.
+
+"tba:283:room:28355":
+  name: The Second Floor Balcony
+  description: >
+    This is the second floor porch.  The rain beats down hard against the house and the ground, as the
+    lightning flashes and the thunder booms.  The porch is made of wood just like everything else in this
+    dumb old house.  There is a small railing lining the outside of the balcony, so people don't fall
+    off.
+  sector: city
+  flags: [dark, no_mob, no_track, no_magic, private]
+  exits:
+    south:
+      to: tba:283:room:28337
+      look: Nothing special back there...
+      door:
+        keywords: [glass, doors]
+        kind: door
+        reset: closed
+
+"tba:283:room:28356":
+  name: The Closet
+  description: >
+    You are now in a closet of this mysterious house.  There is barely anything in here that you can
+    see, it's very dark inside here.  A few pieces of clothing and that is about it.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    east:
+      to: tba:283:room:28347
+      look: It's too dark in here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28357":
+  name: The Secret Den of the Owner
+  description: >
+    This is the secret den of the owner of this house.  An old woman sits here watching your every
+    move.  Blood marks paint the wall along with deep scratches.  The old woman looks to be very old, as in
+    centuries!  You try to smile, but she stands up and releases venom from her huge fangs!  Get out of
+    here and fast!!
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    up:
+      to: tba:283:room:28362
+      look: Nothing special...
+      door:
+        keywords: [vent]
+        kind: pickproof
+        key: tba:283:obj:28327
+        reset: locked
+
+"tba:283:room:28358":
+  name: Behind the Stairs
+  description: >
+    You are strangely behind the stairs to the attic.  This room is bare.  It's completely empty.  No
+    prizes or rewards or anything.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic, private]
+  exits:
+    west:
+      to: tba:283:room:28348
+      look: Nothing special there...
+      door:
+        keywords: [stairs]
+        kind: door
+        reset: closed
+
+"tba:283:room:28359":
+  name: Oops!
+  description: >
+    You are climbing down the ladder to the ground when all of a sudden a large gust of wind comes
+    along and hits you hard.  Unprepared, you lose your grip on the very wet ropes, and fly head first into
+    the ground below you.  OUCH!!!!!
+  sector: city
+  flags: [dark, no_mob, soundproof, no_track, no_magic, private]
+  exits:
+    up:
+      to: tba:283:room:28352
+      look: You see nothing special...
+
+"tba:283:room:28360":
+  name: At the Well
+  description: >
+    You are now standing at a well in the back yard of the house.  The thunderstorm still rocks on as
+    you examine the well.
+  sector: field
+  flags: [dark, no_track, private]
+  exits:
+    east:
+      to: tba:283:room:28327
+      look: Nothing special there...
+
+"tba:283:room:28361":
+  name: The Storm Cellar
+  description: >
+    You are inside of the small storm cellar below the ground.  It looks like it would hold up to a
+    huge storm.  In fact, it is.  Right now.  Boxes of small foods and drinks are in the one corner, along
+    with a bench in another.
+  sector: inside
+  flags: [dark, indoors, peaceful, soundproof, no_track, no_magic, private]
+  exits:
+    up:
+      to: tba:283:room:28329
+      look: The ground is up.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:283:room:28362":
+  name: In a Very Dark Room
+  description: >
+    You stand in a very minute and dim-lit room.  Above you is a small ladder used to get you through
+    the trapdoor and down to where you are right now. There is a small, strange vent in the corner of the
+    room, where sounds and strange shadows pop out of.  This is a very spooky place...
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, private]
+  exits:
+    up:
+      to: tba:283:room:28338
+      look: The closet is up from here. Get out NOW!!!
+      door:
+        keywords: [secret, special, junk, clothes]
+        kind: pickproof
+        key: tba:283:obj:28305
+        reset: locked
+    down:
+      to: tba:283:room:28357
+      look: Nothing special...
+      door:
+        keywords: [vent]
+        kind: pickproof
+        key: tba:283:obj:28327
+        reset: locked

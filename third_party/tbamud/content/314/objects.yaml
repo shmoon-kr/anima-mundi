@@ -1,0 +1,482 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 314.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:314:obj:31400":
+  type: fountain
+  keywords: [fountain, old, stone]
+  short: the old cracked fountain
+  long: An old cracked fountain sits stagnant in the center of the court.
+  flags: [magic]
+  wear: []
+  values:
+    capacity: 80
+    contains: 50
+    liquid: slime_mold_juice
+    poisoned: true
+  weight: 55
+  cost: 0
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [statue]
+    text: >
+      The man appears very proud, very noble and very learned.  His stained head is held high, his
+      unseeing eyes fixed onto brighter futures and promise of great things.
+
+"tba:314:obj:31401":
+  type: other
+  keywords: [glass, pieces]
+  short: some broken pieces of glass
+  long: Some broken pieces of glass lie scattered about on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:314:obj:31402":
+  type: other
+  keywords: [tattered, cloth, piece]
+  short: a rotted piece of cloth
+  long: A rotted piece of cloth has gotten caught on a tall weed and flutters in the breeze.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:314:obj:31403":
+  type: fountain
+  keywords: [blood, still, pool, floor, gazebo]
+  short: the dark blood
+  long: The floor of this gazebo is covered in a thick layer of blood.
+  wear: []
+  values:
+    capacity: 2000
+    contains: 2000
+    liquid: blood
+    poisoned: true
+  weight: 2005
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:314:obj:31404":
+  type: other
+  keywords: [altar, dark, stained]
+  short: a dark, blood-stained altar
+  long: A dark, blood-stained altar is set in the center of the floor, awaiting its next victim.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [altar]
+    text: >
+      It appears that the altar is nothing more than a loose piece of stone from the courtyard floor or
+      maybe one of the nearby buildings.  However, with the black cloth that is draped over top of it and
+      the layers of blood stains upon it, it appears ghastly and otherwordly.
+
+"tba:314:obj:31405":
+  type: container
+  keywords: [bookshelf, shelf, old]
+  short: an old bookshelf
+  long: An old bookshelf clings precariously to the wall, nearly falling from the crumbling ruin.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:314:obj:31406":
+  type: scroll
+  keywords: [book, blood, stained]
+  short: a blood-stained book
+  long: A blood-stained book rests comfortably here.
+  flags: [hum, magic]
+  wear: [take, hold]
+  values:
+    raw: [25, 33, 4, 17]
+  weight: 11
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:314:obj:31407":
+  type: other
+  keywords: [body, dead, child]
+  short: a child's dead body
+  long: A small child's body lies against the north wall, its chest a gaping empty hole.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:314:obj:31408":
+  type: other
+  keywords: [barrel, burning]
+  short: a burning barrel
+  long: A barrel holds assorted trash within, all ablaze in fire.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:314:obj:31409":
+  type: other
+  keywords: [fresh, cadaver]
+  short: a fresh corpse
+  long: A fresh cadaver lies steaming in the cortyard.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [corpse]
+    text: >
+      It looks as if it might have been alive just minutes ago.  The blood which wells over its chest is
+      still warm, still flowing - undried.  Its chest is torn open, split in two.  From the amount blood
+      and innards splayed over the corpse's chest, it appears the heart was taken.
+
+"tba:314:obj:31410":
+  type: other
+  keywords: [decayed, carcass]
+  short: a decayed corpse
+  long: A mostly decayed carcass is hanging from the wall, its chest a large gaping hole.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:314:obj:31411":
+  type: weapon
+  keywords: [blade, shining, curved]
+  short: a shining curved blade
+  long: An evil-looking dagger with a curved blade has been left here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 6d6
+    attack: pierce
+  weight: 9
+  cost: 300
+  rent: 0
+  level: 22
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: damroll
+    modifier: 3
+
+"tba:314:obj:31412":
+  type: armor
+  keywords: [robe, soiled]
+  short: a soiled and bloodstained robe
+  long: A soiled and bloodstained robe has been discarded.
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:314:obj:31413":
+  type: armor
+  keywords: [ring, enchantment]
+  short: the Ring of Enchantment
+  long: A dark colored ring has been dropped here.
+  wear: [take, finger]
+  values:
+    armor: 3
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 26
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: mana
+    modifier: 30
+
+"tba:314:obj:31414":
+  type: armor
+  keywords: [jerkin, grubby]
+  short: a grubby jerkin
+  long: A grubby jerkin has been tossed aside.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:314:obj:31415":
+  type: worn
+  keywords: [blood, innocent]
+  short: the blood of an innocent
+  long: A smear of blood is on the ground.
+  wear: [take, arms]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 24
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 3
+
+"tba:314:obj:31416":
+  type: armor
+  keywords: [shredded, leather, armor]
+  short: some badly shredded leather armor
+  long: Some shreds of leather armor has been left here.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 9
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:314:obj:31417":
+  type: worn
+  keywords: [coating, vomit]
+  short: a coating of vomit
+  long: A small pile of what looks to be vomit is lying on the ground.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 1
+  affects:
+  - apply: cha
+    modifier: -3
+
+"tba:314:obj:31418":
+  type: armor
+  keywords: [soiled, tattered, dress]
+  short: a soiled tattered dress
+  long: A very dirty piece of clothing has been discarded here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:314:obj:31419":
+  type: other
+  keywords: [raggedy, blanket]
+  short: a raggedy blanket
+  long: A raggedy blanket is strecthed out on the floor.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 15
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:314:obj:31420":
+  type: worn
+  keywords: [welts, bruises, smattering]
+  short: a smattering of welts and bruises
+  long: Someone's pain and misery has been left here for the taking.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1
+  affects:
+  - apply: hit
+    modifier: -30
+
+"tba:314:obj:31421":
+  type: worn
+  keywords: [horrid, scar]
+  short: a horrid scar
+  long: A horrid scar has been left here.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 21
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: hitroll
+    modifier: 2
+
+"tba:314:obj:31422":
+  type: weapon
+  keywords: [black, leather, whip]
+  short: a black leather whip
+  long: A black leather whip has been left here.
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: whip
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 23
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: str
+    modifier: 1
+
+"tba:314:obj:31423":
+  type: other
+  keywords: [word, God]
+  short: the Word of God
+  long: A crumpled note has been thrown down on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 30
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 3
+  extras:
+  - keywords: [word]
+    text: >
+      This note, originally given to Gunter by X'Raantra reads but one word.  That word is: Sacrifice
+
+"tba:314:obj:31424":
+  type: weapon
+  keywords: [inlaid, black, sword]
+  short: an inlaid black sword
+  long: An inlaid black sword lies here forgotten.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 19
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:314:obj:31425":
+  type: armor
+  keywords: [helm, black]
+  short: a blackened helm
+  long: A blackened helm has been left here.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 17
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:314:obj:31426":
+  type: armor
+  keywords: [black, cape]
+  short: a black cape
+  long: A black cape has been left here.
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 18
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:314:obj:31427":
+  type: potion
+  keywords: [vial, blood]
+  short: a vial of blood
+  long: A vial of blood has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [10, 7, 39, 22]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:314:obj:31428":
+  type: armor
+  keywords: [dark, red, blood, ring]
+  short: a dark red blood ring
+  long: A dark red blood ring has been left here.
+  wear: [take, finger]
+  values:
+    armor: 3
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 23
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:314:obj:31429":
+  type: container
+  keywords: [traveler's, pack]
+  short: a traveler's pack
+  long: A traveler's pack has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 12
+  cost: 16
+  rent: 0
+  level: 30

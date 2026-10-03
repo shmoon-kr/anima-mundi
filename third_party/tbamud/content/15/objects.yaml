@@ -1,0 +1,300 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 15.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:15:obj:1501":
+  type: other
+  keywords: [scroll, parchment]
+  short: the Scroll of the Messenger
+  long: You see a solid and silver-lined scroll resting on the ground.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 500
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+  - apply: damroll
+    modifier: -1
+  extras:
+  - keywords: [scroll, parchment]
+    text: >
+      It seems to be some sort of spell designed to transport its user across vast distances, but how to
+      make use of it is impossible to tell.
+
+"tba:15:obj:1502":
+  type: weapon
+  keywords: [sword, blazing]
+  short: a blazing sword
+  long: You are startled by the sight of a sword that glows as you approach it.
+  flags: [glow, hum, magic, anti_evil, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 10
+  cost: 500
+  rent: 90
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -5
+  extras:
+  - keywords: [sword, blazing]
+    text: >
+      The edge of the blade is lined with writing, religious verse apparently, in a fine, silver-laced
+      and flowing script.
+
+"tba:15:obj:1503":
+  type: armor
+  keywords: [protector, faithful, shield]
+  short: the Protector of the Faithful
+  long: A weighty looking shield has been abandoned by one unworthy to hold it.
+  flags: [anti_evil, anti_cleric]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 20
+  cost: 500
+  rent: 150
+  level: 0
+  extras:
+  - keywords: [protector, faithful, shield]
+    text: >
+      It evades your attempts to focus on it, deflecting your gaze as it deflects the weapons that will
+      try to kill you.
+
+"tba:15:obj:1504":
+  type: other
+  keywords: [armband, band, faded]
+  short: a faded armband
+  long: A ragged and faded looking piece of cloth has been left here, forgotten.
+  flags: [anti_good]
+  wear: [take, arms]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 15
+  rent: 50
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: con
+    modifier: -1
+  extras:
+  - keywords: [armband, faded, band]
+    text: >
+      It has some sort of militia insignia on it, perhaps an indication of a rank or award in some
+      military order unknown to you.
+
+"tba:15:obj:1505":
+  type: weapon
+  keywords: [scimitar, jeweled]
+  short: a jeweled scimitar
+  long: A stunning curved blade glistens on the ground.
+  flags: [glow, anti_evil, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 7d1
+    attack: slash
+  weight: 5
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [scimitar, jeweled]
+    text: >
+      The entire rim and edge of the scimitar's handle is bedecked in a gorgeous array of stones and
+      precious metals.
+
+"tba:15:obj:1506":
+  type: light
+  keywords: [ember, charred]
+  short: a charred ember
+  long: You glance briefly at a smouldering ember that rests at your feet.
+  flags: [glow, anti_good, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 5
+  rent: 25
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [ember, charred]
+    text: It glares back at you, almost angrily.
+
+"tba:15:obj:1507":
+  type: light
+  keywords: [ethereal, flame]
+  short: an ethereal flame
+  long: The entire room is aglow from the flame at your feet.
+  flags: [glow, anti_good, anti_evil, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 5
+  rent: 25
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 8
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [ethereal, flame]
+    text: Even being near it fills you with a peaceful and comforted feeling.
+
+"tba:15:obj:1508":
+  type: key
+  keywords: [key, gates]
+  short: the Key to the Gates
+  long: You have found at last the Key to the Gates of eternity.
+  flags: [glow, bless, anti_evil, anti_neutral]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 50
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [key, gates]
+    text: There are no gates.  They are inside of you.
+
+"tba:15:obj:1509":
+  type: trash
+  keywords: [history, burnt, book]
+  short: a burnt history
+  long: You have found a burnt book, some forgotten history lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 500
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [history, burnt, book]
+    text: >
+      So this is the jester's joke.  All of our works have turned to dust, and will end in nothing.  It
+      is for this that he laughs.
+
+"tba:15:obj:1510":
+  type: light
+  keywords: [surah, book]
+  short: a surah of the book
+  long: You notice a thin parchment, with flowing script and rich decorative trim.
+  flags: [no_donate, anti_evil, anti_neutral, anti_mage, anti_cleric]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 500
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [surah, book]
+    text: >
+      Al-Kafirun Say: "Oh ye that reject the Faith, I do not worship what you worship, nor do you worship
+      what I worship.  To you be your Way, and to me mine. "
+
+"tba:15:obj:1511":
+  type: armor
+  keywords: [forge, unity]
+  short: the Forge of Unity
+  long: It is surely the best of men who has left these gloves to aid you.
+  flags: [bless, anti_evil, anti_neutral, anti_mage, anti_cleric]
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 5
+  cost: 120
+  rent: 40
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 10
+
+"tba:15:obj:1512":
+  type: worn
+  keywords: [ankh]
+  short: an Ankh
+  long: You see a beautiful pendant of ancient and noble craftsmanship.
+  flags: [glow, anti_neutral]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 500
+  rent: 200
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: mana
+    modifier: 5
+  extras:
+  - keywords: [ankh]
+    text: >
+      It is an even earlier version of the old Christian cross, an oval loop above the crossed arms of
+      white gold.
+
+"tba:15:obj:1513":
+  type: worn
+  keywords: [amulet, ra]
+  short: the Amulet of Ra
+  long: You have found a beautiful gleaming disc with a golden image of the sun god.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 750
+  rent: 150
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 2
+
+"tba:15:obj:1514":
+  type: light
+  keywords: [image, azathoth, graven]
+  short: a graven image of Azathoth
+  long: You frown in disgust at the hideous icon of a false god that you have found.
+  flags: [anti_good, anti_neutral, no_sell]
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 2
+  cost: 1000
+  rent: 500
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2

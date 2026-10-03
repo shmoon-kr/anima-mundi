@@ -1,0 +1,93 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 44.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:44:mob:4401
+  room: tba:44:room:4402
+  limit: 11
+- mob: tba:44:mob:4401
+  room: tba:44:room:4402
+  limit: 11
+  equip:
+    wield:
+      object: tba:44:obj:4403
+      limit: 100
+- mob: tba:44:mob:4401
+  room: tba:44:room:4403
+  limit: 11
+- mob: tba:44:mob:4401
+  room: tba:44:room:4404
+  limit: 11
+  equip:
+    wield:
+      object: tba:44:obj:4403
+      limit: 100
+- mob: tba:44:mob:4401
+  room: tba:44:room:4405
+  limit: 11
+- mob: tba:44:mob:4401
+  room: tba:44:room:4408
+  limit: 11
+  equip:
+    wield:
+      object: tba:44:obj:4403
+      limit: 100
+- mob: tba:44:mob:4402
+  room: tba:44:room:4407
+  limit: 2
+- mob: tba:44:mob:4403
+  room: tba:44:room:4407
+  limit: 1
+- mob: tba:44:mob:4404
+  room: tba:44:room:4406
+  limit: 1
+  equip:
+    wield:
+      object: tba:44:obj:4402
+      limit: 20
+    body:
+      object: tba:44:obj:4408
+      limit: 20
+- mob: tba:44:mob:4405
+  room: tba:44:room:4406
+  limit: 1
+  equip:
+    wield:
+      object: tba:44:obj:4402
+      limit: 20
+    body:
+      object: tba:44:obj:4408
+      limit: 20
+- mob: tba:44:mob:4406
+  room: tba:44:room:4411
+  limit: 1
+  equip:
+    wield:
+      object: tba:44:obj:4401
+      limit: 5
+    body:
+      object: tba:44:obj:4407
+      limit: 100
+    neck_1:
+      object: tba:44:obj:4409
+      limit: 10
+    hold:
+      object: tba:44:obj:4410
+      limit: 10
+      contents:
+      - object: tba:44:obj:4411
+        limit: 10
+- mob: tba:44:mob:4407
+  room: tba:44:room:4413
+  limit: 1
+  equip:
+    wield:
+      object: tba:44:obj:4404
+      limit: 5
+    about:
+      object: tba:44:obj:4405
+      limit: 5
+    hold:
+      object: tba:44:obj:4406
+      limit: 5

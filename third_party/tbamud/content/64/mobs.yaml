@@ -1,0 +1,158 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 64.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:64:mob:6400":
+  keywords: [goat, mountain]
+  short: the mountain goat
+  long: A mountain goat nibbles at a piece of grass here.
+  description: >
+    This goat is acclimated to the rugged terrain of the mountains.  It looks at you and shies away a
+    little.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6401":
+  keywords: [demon, decay]
+  short: the Demon of Decay
+  long: A cloaked and clawed demon of decay comes at you viciously!
+  description: >
+    This demon has pure malevolence for anything living.  Oops!  You're living! I guess that means you!
+  level: 12
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6402":
+  keywords: [book, monster, guardian]
+  short: the Book Monster
+  long: A mound of books rise up into a human shape and tries to hit you!
+  description: Ironically enough, the book-monster's head is War and Peace.  Hmm.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6403":
+  keywords: [bad, feeling]
+  short: a Bad Feeling
+  long: A bad feeling chokes your throat.
+  description: It resembles a lot of other bad feelings you've had, but a lot more tangible...  Magic?
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6404":
+  keywords: [nightmare]
+  short: Your Worst Nightmare
+  long: Your worst nightmare coalesces in front of you and attacks!
+  description: >
+    It looks like you deepest, darkest fears personified.  Wait a minute!  It IS your deepest, darkest
+    fears personified!
+  level: 19
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6405":
+  keywords: [guardian]
+  short: the Guardian
+  long: A guardian guards the door.  It looks at you and attacks!
+  description: "The guardian guards the door.  That's about all its brain can handle: guarding."
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: maul
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:64:mob:6406":
+  keywords: [small, god]
+  short: a small God
+  long: A small god entrapped by the wizard looks at you with an insane expression.
+  description: >
+    Four hundred years of imprisonment doesn't do much for one's disposition. It looks ready and able
+    to take out vengeance on anyone silly enough to enter the pentagram that contains its power.
+  level: 19
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_summon]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing

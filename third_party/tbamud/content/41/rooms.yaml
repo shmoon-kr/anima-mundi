@@ -1,0 +1,480 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 41.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:41:room:4100":
+  name: The Tunnel
+  description: >
+    As you continue along this tunnel which heads deeper and deeper into the earth, you notice that the
+    tunnel must be a lot steeper than you previously expected as there is a small rivulet of water
+    gushing down the one side of the tunnel.  The tunnel appears to extend straight to the east for quite some
+    distance.
+  sector: forest
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:41:room:4101
+    west:
+      to: tba:40:room:4052
+
+"tba:41:room:4101":
+  name: The Long Tunnel
+  description: >
+    The tunnel seems to be slightly sloped here as it continues in its east-west direction.  The tunnel
+    walls are far apart, almost allowing for four people to travel abreast with ease.  The walls do not
+    seem to be very damp, but there is a small rivulet running along the northern wall of the tunnel.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4102
+    west:
+      to: tba:41:room:4100
+
+"tba:41:room:4102":
+  name: The Long Tunnel
+  description: >
+    As you travel along this long tunnel, you begin to wonder just how long it is.  The walls are
+    fairly far apart, but you can see that they begin to close in rather rapidly to the east.  In fact, the
+    manner in which they come together almost reminds you of a funnel.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4103
+    west:
+      to: tba:41:room:4101
+
+"tba:41:room:4103":
+  name: The Long Tunnel
+  description: >
+    You are standing in a long east-west tunnel.  It is not all that wide at this point, perhaps wide
+    enough for two people to stand side by side without impeding each other.  Off to the west it appears
+    that the tunnel opens up some more while to the east it dives further down into the earth, and you can
+    see a small hole about two feet in diameter about waist height in the southern wall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4104
+    south:
+      to: tba:41:room:4106
+    west:
+      to: tba:41:room:4102
+
+"tba:41:room:4104":
+  name: The Long Tunnel
+  description: >
+    You find yourself in a small bulbous cavern ending.  The somewhat circular 'room' is about thirty
+    feet in diameter and you can see one exit from it; a tunnel leading sharply upwards from the western
+    wall. The walls of this cavern are quite indistinct and you cannot see any moss or dampness on them
+    whatsoever.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:41:room:4103
+
+"tba:41:room:4105":
+  name: The Golden Cave
+  description: >
+    You are standing in what appears to be the north-east corner of this large cavern.  The cave is lit
+    by the eerie, soft, golden light which looks to be emanating from the walls themselves.  The cave
+    itself is enormous, extending quite a distance to the west and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:41:room:4108
+    west:
+      to: tba:41:room:4106
+  extras:
+  - keywords: [light, gold, golden]
+    text: It looks good, but as you look closely you notice that it has no value.
+
+"tba:41:room:4106":
+  name: The Golden Cave
+  description: >
+    You are standing in what appears to be the north-west corner of this large cavern.  The cave is lit
+    by the eerie, soft, golden light which looks to be emanating from the walls themselves.  The cave
+    itself is enormous, extending quite a distance to the east and south. There is a hole in the northern
+    wall, about two feet in diameter. All that can be seen through the hole is darkness.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4103
+    east:
+      to: tba:41:room:4105
+    south:
+      to: tba:41:room:4109
+  extras:
+  - keywords: [light, gold, golden]
+    text: It looks good, but as you look closely you notice that it has no value.
+
+"tba:41:room:4107":
+  name: The Passage
+  description: >
+    You are standing at the elbow turn of a small passageway.  It turns quite sharply to the south and
+    west.  To the south, it appears that the passage continues, but to the west you can see what almost
+    appears to be a golden light.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:41:room:4113
+    west:
+      to: tba:41:room:4108
+
+"tba:41:room:4108":
+  name: The Golden Cave
+  description: >
+    You are standing in what appears to be the south-east corner of this large cavern.  The cave is lit
+    by the eerie, soft, golden light which looks to be emanating from the walls themselves.  The cave
+    itself is enormous, extending quite a distance to the west and north. A crack in the wall to the east
+    appears to lead into a passageway of sorts.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4105
+    east:
+      to: tba:41:room:4107
+    west:
+      to: tba:41:room:4109
+  extras:
+  - keywords: [light, gold, golden]
+    text: It looks good, but as you look closely you notice that it has no value.
+
+"tba:41:room:4109":
+  name: The Golden Cave
+  description: >
+    You are standing in what appears to be the middle of the western wall of this large cavern.  The
+    cave is lit by the eerie, soft, golden light which looks to be emanating from the walls themselves. 
+    The cave itself is enormous, extending quite a distance to the east, south, and north.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4106
+    east:
+      to: tba:41:room:4108
+    south:
+      to: tba:41:room:4114
+  extras:
+  - keywords: [light, gold, golden]
+    text: It looks good, but as you look closely you notice that it has no value.
+
+"tba:41:room:4110":
+  name: The Hole
+  description:
+  - >
+    You find yourself standing in a small alcove as the tunnel comes to a somewhat sudden end.  Looking
+    about you suddenly notice a rather big hole in the floor of the tunnel.  In fact, it seems that
+    another step forward and you would have fallen into it.
+  - >
+    The tunnel itself leads to the west, and looking down into the hole in the floor reveals little
+    beyond the fact that it seems to be very deep and very dark.  There is a very strange smell emanating
+    from the hole, it almost smells like something down there is rotting.
+  sector: forest
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:41:room:4111
+    down:
+      look: >
+        Before you head down, you drop a rock to see how deep the hole is... After about five minutes, it
+        still hasn't hit bottom.  Thus, for reasons of sanity, you decide not to go this way.
+  extras:
+  - keywords: [hole, floor]
+    text: >
+      Before you head down, you drop a rock to see how deep the hole is...  After about five minutes, it
+      still hasn't hit bottom.  Thus, for reasons of sanity, you decide not to go this way.
+
+"tba:41:room:4111":
+  name: The Tunnel
+  description: >
+    The walls of this small tunnel are almost completely covered in a strange orange moss that flakes
+    off to the touch.  The tunnel leads in an east-west direction and the air within is very damp and very
+    stagnant.  There is no detectable breeze at all but a strange smell emanates from the east.  There
+    is a small, almost unnoticed hole in the southern wall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4110
+    south:
+      to: tba:41:room:4126
+      look: The hole looks very small.  You will probably have to crawl through it.
+    west:
+      to: tba:41:room:4112
+  extras:
+  - keywords: [moss, walls, wall]
+    text: >
+      The moss on the walls is orange.  When you touch it, it feels very scrubby and flakes off to the
+      touch leaving a slight orange tinge on your fingertips.
+
+"tba:41:room:4112":
+  name: The Tunnel
+  description: >
+    The tunnel in which you currently stand is fairly wide (very wide relative to almost all the other
+    tunnels around here it seems) and yet the air is quite damp.  The walls have a thin coating of
+    moisture upon them which looks and feels somewhat oiley.  The tunnel leads in an east-west direction.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4111
+    west:
+      to: tba:41:room:4113
+  extras:
+  - keywords: [wall, walls, moisture, coat, coating]
+    text: >
+      The coating of moisture on the walls has strange little patterns of color weaving through it,
+      almost as if someone had spilled oil on a horizontal water surface.
+
+"tba:41:room:4113":
+  name: The Passage
+  description: >
+    This north-south passageway looks to be a natural creation, except that the walls looks to have
+    been roughly hewn in order to smooth them a somewhat to make passage easier.  The walls still meander as
+    the passage makes its way deeper into the bowels of the earth.  A bizarre shadow in the eastern wall
+    leads you to suspect that a small passage meets the tunnel there.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:41:room:4107
+    east:
+      to: tba:41:room:4112
+    south:
+      to: tba:41:room:4116
+
+"tba:41:room:4114":
+  name: The Golden Cave
+  description: >
+    You are standing in what appears to be the south-west corner of this large cavern.  The cave is lit
+    by the eerie, soft, golden light which looks to be emanating from the walls themselves.  The cave
+    itself is enormous, extending quite a distance to the north and a strange shadow formation seems to
+    indicate a passage entrance to the west.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4109
+    west:
+      to: tba:41:room:4115
+  extras:
+  - keywords: [light, gold, golden]
+    text: It looks good, but as you look closely you notice that it has no value.
+
+"tba:41:room:4115":
+  name: The Dark Passage
+  description: >
+    You find yourself in a small passage ending.  It is quite dark in here. As you look about the damp
+    walls, you notice that the passageway almost appears to curve upwards towards the ceiling.  Looking
+    up, you notice that there is a small hole, just large enough to pass through.  Looking closely at the
+    curved part of the wall, it appears that someone (or something) has carved small handholds into the
+    wall to ease passage upwards.  The tunnel itself leads off to the east.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4114
+    up:
+      to: tba:40:room:4021
+
+"tba:41:room:4116":
+  name: The Passage
+  description: >
+    You find yourself in quite an ordinary passageway which leads north and south.  It looks to be wide
+    enough for two people to walk side by side with plenty of room.  The passage appears to be almost
+    rectangular in form.  Far off to the south you can see the pinpoint of a light.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:41:room:4113
+    south:
+      to: tba:41:room:4120
+  extras:
+  - keywords: [light]
+    text: Well, you can't see where it comes from...
+
+"tba:41:room:4117":
+  name: The Secret Tunnel
+  description: >
+    You are currently standing in a narrow passageway that does not seem to have been heavily visited
+    at any time.  It leads northwards towards a lit room and south towards what appears to be a chamber.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:41:room:4114
+    south:
+      to: tba:41:room:4122
+
+"tba:41:room:4118":
+  name: The Cave
+  description:
+  - >
+    This rather large cave is surprisingly very well lit.  There are about twenty torches spread about
+    the room set in sconces which hang several feet above your head.  The dancing shadows created by the
+    flickering flames catch your eyes for a few minutes and threaten to hold you entranced.
+  - >
+    Looking about the cave, it appears to continue to the west and south.  In the north wall a strange
+    vertical crack looks as if it may lead somewhere.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4126
+      look: It looks like quite the tight fit.
+    south:
+      to: tba:41:room:4123
+    west:
+      to: tba:41:room:4119
+
+"tba:41:room:4119":
+  name: The Cave
+  description:
+  - >
+    This rather large cave is surprisingly very well lit.  There are about twenty torches spread about
+    the room set in sconces which hang several feet above your head.  The dancing shadows created by the
+    flickering flames catch your eyes for a few minutes and threaten to hold you entranced.
+  - Looking about the cave, it appears to continue to the east and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:41:room:4118
+    south:
+      to: tba:41:room:4124
+    west:
+      to: tba:41:room:4121
+      look: The rock wall to the west looks odd for some strange reason.
+      door:
+        keywords: [wall, rock]
+        kind: door
+        reset: closed
+
+"tba:41:room:4120":
+  name: The Passage
+  description: >
+    You stand in a fairly normal passage, slightly wider than is necessary for one person, but not
+    quite wide enough for two.  The ceiling dips here rather surprisingly, or wait, is that because the floor
+    climbs upwards toward it?  The tunnel seems to narrow slightly more as you look to the south, and
+    widens up somewhat as you look northward.  The light to the south continues to flicker.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:41:room:4116
+    south:
+      to: tba:41:room:4125
+  extras:
+  - keywords: [light]
+    text: It nearly is enough to light the passage.
+
+"tba:41:room:4121":
+  name: The Secret Tunnel
+  description: >
+    You stand in a very unnatural hallway, about ten feet across and about ten or twelve feet up.  The
+    passageway funnels down towards the west where it leads to a doorway that looks to be about five feet
+    across.  The east end of the tunnel comes to a sudden end at a very smooth rock wall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:41:room:4119
+      look: The rock wall to the east looks like it might be able to be moved.
+      door:
+        keywords: [wall, rock]
+        kind: door
+        reset: closed
+    west:
+      to: tba:41:room:4122
+  extras:
+  - keywords: [wall, rock]
+    text: The rock wall to the east looks like it might be able to be moved.
+
+"tba:41:room:4122":
+  name: The Secret Chamber
+  description: >
+    You stand in a small chamber that you never would have thought could exist.  This small, almost
+    perfectly round cave does not appear to be a natural formation at all, since the walls are far too
+    smooth and the doorways to the north and east are both almost exactly five feet wide and eleven feet tall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:41:room:4117
+    east:
+      to: tba:41:room:4121
+
+"tba:41:room:4123":
+  name: The Cave
+  description:
+  - >
+    This rather large cave is surprisingly very well lit.  There are about twenty torches spread about
+    the room set in sconces which hang several feet above your head.  The dancing shadows created by the
+    flickering flames catch your eyes for a few minutes and threaten to hold you entranced.
+  - Looking about the cave, it appears to continue to the west and north.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4118
+    west:
+      to: tba:41:room:4124
+
+"tba:41:room:4124":
+  name: The Cave
+  description:
+  - >
+    This rather large cave is surprisingly very well lit.  There are about twenty torches spread about
+    the room set in sconces which hang several feet above your head.  The dancing shadows created by the
+    flickering flames catch your eyes for a few minutes and threaten to hold you entranced.
+  - >
+    Looking about the cave, it appears to continue to the east and north.  There is a passageway
+    leading out of the western wall of the cave which looks to turn northwards.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4119
+    east:
+      to: tba:41:room:4123
+    west:
+      to: tba:41:room:4125
+
+"tba:41:room:4125":
+  name: The Passage
+  description: >
+    You are at the end of a narrow passage which leads away from here to the north.  The southern wall
+    is bare and almost seems to dance with the shadows created by the flickering light emanating from the
+    cave to the east.
+  sector: forest
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:41:room:4120
+    east:
+      to: tba:41:room:4124
+
+"tba:41:room:4126":
+  name: The Crawlway
+  description: >
+    You are in a very narrow crawlway.  To back out of it, you would have to move carefully in order to
+    not catch anything on the jutting rocks of the ceiling and walls.  The diameter of the crawlway is
+    about two feet, and is a rather tight squeeze.  You'd better hope that there aren't any worms or
+    similar creatures down this way since it might be difficult to defend yourself in here.
+  sector: mountains
+  flags: [dark, no_mob, indoors, soundproof, no_track, tunnel, private]
+  exits:
+    north:
+      to: tba:41:room:4111
+      look: You can see a small hole marking the north exit of the crawlway.
+    south:
+      to: tba:41:room:4118
+      look: You can see the light emanating from the southern exit of the crawlway.

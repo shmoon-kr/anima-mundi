@@ -1,0 +1,1362 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 39.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:39:obj:3900":
+  type: key
+  keywords: [Rusty, Key]
+  short: a rusty key
+  long: A rusty key is here, getting rustier by the minute.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, rusty]
+    text: >
+      A rusty key is here.  It has a fish engraved upon it, and looks like it might fit on a keyring.
+
+"tba:39:obj:3901":
+  type: key
+  keywords: [Shining, Silver, Key]
+  short: a shining silver key
+  long: A shining silver key is here, glinting merrily.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silver, key, shining]
+    text: A silver key is here, engraved with a heron - the ensignia of the highest house of Haven.
+
+"tba:39:obj:3902":
+  type: key
+  keywords: [large, key]
+  short: a large key
+  long: A large key is lying here, as big as your hand.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3903":
+  type: container
+  keywords: [sea, chest]
+  short: sea chest
+  long: A heavy sea chest is here, against the wall.
+  wear: []
+  values:
+    capacity: 400
+    lock_flags: 15
+    key: tba:39:obj:3945
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3904":
+  type: trash
+  keywords: [twinkling, ruby]
+  short: a twinkling ruby
+  long: A ruby is lying here, twinkling suggestively.
+  flags: [no_drop]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -5
+
+"tba:39:obj:3905":
+  type: treasure
+  keywords: [twinkling, ruby]
+  short: a twinkling ruby
+  long: A ruby is lying here, twinkling suggestively.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:39:obj:3906":
+  type: light
+  keywords: [candle]
+  short: a low-burning candle
+  long: A candle is here, sputtering almost to the point of going out.
+  wear: [take, hold]
+  values:
+    hours: 3
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:39:obj:3907":
+  type: other
+  keywords: [banks, hidden]
+  short: the bank
+  long: >-
+    .This is a hidden object. The long description can only be seen with holylight. If you see this as
+    a mortal please report the bug.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3908":
+  type: other
+  keywords: [padded, couch]
+  short: a padded couch
+  long: A padded couch is lying here, looking shabby.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3909":
+  type: armor
+  keywords: [silver, ring]
+  short: the silver ring
+  long: A silver hoop of metal is here in the dust.
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3910":
+  type: armor
+  keywords: [black, leather, boots]
+  short: a pair of black leather boots
+  long: A pair of worn, black leather boots is lying here on the ground.
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:39:obj:3911":
+  type: armor
+  keywords: [silver, helm]
+  short: a silver helm
+  long: A sparkling helm of silver is here on the ground.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 10
+  cost: 300
+  rent: 30
+  level: 0
+
+"tba:39:obj:3912":
+  type: wand
+  keywords: [wooden, spoon]
+  short: a wooden spoon
+  long: A wooden spoon is here, looking very mundane.
+  wear: [take, hold]
+  values:
+    raw: [12, 12, 12, 12]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:39:obj:3913":
+  type: worn
+  keywords: [demonic, idol]
+  short: a demonic idol
+  long: A demonic idol is here, crudely made.
+  flags: [magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: str
+    modifier: -5
+
+"tba:39:obj:3915":
+  type: worn
+  keywords: [stag, carving]
+  short: a stag carving
+  long: A small carving of a stag is here, so masterfully done it looks almost alive.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+
+"tba:39:obj:3916":
+  type: other
+  keywords: [chair]
+  short: a chair
+  long: A wooden chair is here, ready to be sat upon.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3917":
+  type: trash
+  keywords: [diamond, brooch]
+  short: a diamond brooch
+  long: A brooch is here, sparkling with diamonds.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [diamond]
+    text: Hey...  These diamonds look rather fake...
+
+"tba:39:obj:3918":
+  type: light
+  keywords: [pixie-eye, emerald]
+  short: a pixie-eye emerald
+  long: An emerald about the size of a pixie's eye is here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 20
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 6
+
+"tba:39:obj:3919":
+  type: worn
+  keywords: [bejeweled, bracelet]
+  short: the bejeweled bracelet
+  long: A bracelet is lying here, sparkling with jewels.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 40
+  rent: 4
+  level: 0
+  affects:
+  - apply: move
+    modifier: 20
+
+"tba:39:obj:3920":
+  type: food
+  keywords: [fish]
+  short: a fish
+  long: A fish is lying here, smelling fishy.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3921":
+  type: drinkcon
+  keywords: [brown, bottle, beer]
+  short: a brown bottle
+  long: Its a brown bottle.  It might even have beer in it.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 8
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:39:obj:3922":
+  type: drinkcon
+  keywords: [pitcher, water]
+  short: a pitcher
+  long: A pitcher has been placed here carefully, full of clear water.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 5
+    liquid: water
+    poisoned: false
+  weight: 5
+  cost: 75
+  rent: 7
+  level: 0
+
+"tba:39:obj:3924":
+  type: weapon
+  keywords: [twisted, staff]
+  short: a twisted staff
+  long: A twisted quarterstaff is here, looking rather harmless.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pound
+  weight: 8
+  cost: 40
+  rent: 4
+  level: 0
+
+"tba:39:obj:3925":
+  type: weapon
+  keywords: [barbed, spear]
+  short: a barbed spear
+  long: A dangerous barbed spear is here, looking nasty.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 10
+  cost: 200
+  rent: 20
+  level: 0
+
+"tba:39:obj:3926":
+  type: weapon
+  keywords: [awl, pike]
+  short: an awl pike
+  long: An awl pike is here, taking up much space.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 15
+  cost: 750
+  rent: 75
+  level: 0
+
+"tba:39:obj:3927":
+  type: weapon
+  keywords: [jeweled, dagger]
+  short: a jeweled dagger
+  long: A dagger is lying here, its jewels sparkling merrily.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: stab
+  weight: 4
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:39:obj:3928":
+  type: weapon
+  keywords: [curving, dagger]
+  short: a wickedly curving dagger
+  long: A dagger lies here on the ground, its curve looking particularly wicked.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: sting
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:39:obj:3929":
+  type: weapon
+  keywords: [chain]
+  short: a length of chain
+  long: A lenght of chain is lying on the ground, gleaming.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: whip
+  weight: 7
+  cost: 350
+  rent: 35
+  level: 0
+
+"tba:39:obj:3930":
+  type: weapon
+  keywords: [large, flail]
+  short: a large flail
+  long: A large flail is lying here, looking abandoned.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: thrash
+  weight: 20
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:39:obj:3931":
+  type: other
+  keywords: [bench]
+  short: a bench
+  long: A bench has been provided for weary travelers to rest upon.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3932":
+  type: potion
+  keywords: [aquamarine, chalice]
+  short: an aquamarine chalice
+  long: An aquamarien chalice has been abandoned here.
+  wear: [take]
+  values:
+    raw: [12, -1, -1, -1]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:39:obj:3933":
+  type: potion
+  keywords: [purple, decanter]
+  short: a purple decanter
+  long: A purple decanter is here.
+  wear: [take]
+  values:
+    raw: [12, 43, -1, -1]
+  weight: 2
+  cost: 800
+  rent: 0
+  level: 0
+
+"tba:39:obj:3934":
+  type: potion
+  keywords: [glowing, apple]
+  short: a glowing apple
+  long: A glowing red apple is here.
+  wear: [take]
+  values:
+    raw: [12, 3, -1, -1]
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+
+"tba:39:obj:3935":
+  type: potion
+  keywords: [yellow, jar]
+  short: a yellow jar
+  long: A yellow jar is here, humming with power.
+  flags: [hum]
+  wear: [take]
+  values:
+    raw: [12, 19, -1, -1]
+  weight: 2
+  cost: 400
+  rent: 0
+  level: 0
+
+"tba:39:obj:3936":
+  type: potion
+  keywords: [rose, shaped, vial]
+  short: a rose-shaped vial
+  long: A rose-shaped vial is lying here, glowing slightly.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [12, 36, -1, -1]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:39:obj:3937":
+  type: potion
+  keywords: [green, vial]
+  short: the green vial
+  long: A green vial is here, glowing slightly.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [12, 29, -1, -1]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:39:obj:3938":
+  type: other
+  keywords: [wooden, toy]
+  short: a wooden toy
+  long: A wooden child's toy is lying here, forgotten.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3939":
+  type: other
+  keywords: [market, stall]
+  short: a market stall
+  long: A market stall is here, the vendors inside yelling for customers.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3940":
+  type: other
+  keywords: [dining, table]
+  short: a dining table
+  long: A dining table is setting in the middle of the floor here, heaped with food.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3941":
+  type: other
+  keywords: [big, soft, pillow]
+  short: a big, soft pillow
+  long: A big pillow is here, looking very soft and inviting.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3942":
+  type: other
+  keywords: [mat]
+  short: a mat
+  long: A mat is lying on the floor here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3943":
+  type: food
+  keywords: [bread]
+  short: a freshly baked bread
+  long: A loaf of freshly baked bread is here.  It looks yummy.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3944":
+  type: other
+  keywords: [bed]
+  short: Degruziel's bed
+  long: The magnificent bed of Degruziel lies here on the center of the floor.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:39:obj:3945":
+  type: key
+  keywords: [key]
+  short: the small key
+  long: A small key has been left lying here.  Maybe someone has lost it.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3946":
+  type: armor
+  keywords: [chainmail, coif]
+  short: a chainmail coif
+  long: A small pile of chainmail lies here on the ground.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:39:obj:3947":
+  type: wand
+  keywords: [lute]
+  short: a lute
+  long: A lute is lying here, abandoned by its owner.
+  wear: [take, hold]
+  values:
+    raw: [12, 15, 15, 32]
+  weight: 10
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:39:obj:3948":
+  type: weapon
+  keywords: [steel, longsword]
+  short: a steel longsword
+  long: A steel longsword is here on the ground, neglected.
+  wear: [take, wield]
+  values:
+    damage: 1d9
+    attack: slash
+  weight: 10
+  cost: 750
+  rent: 75
+  level: 0
+
+"tba:39:obj:3949":
+  type: worn
+  keywords: [old, leather, dog, collar]
+  short: an old leather dog's collar
+  long: Some dog somewhere has lost it's old collar.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:39:obj:3950":
+  type: armor
+  keywords: [rat, tail]
+  short: a rat's tail
+  long: A long, dirty rat's tail is here on the ground.  What pollution.
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:39:obj:3951":
+  type: drinkcon
+  keywords: [silver, pitcher, wine]
+  short: a silver pitcher
+  long: A silver pitcher is on the ground here.
+  wear: [take, hold]
+  values:
+    capacity: 7
+    contains: 3
+    liquid: wine
+    poisoned: false
+  weight: 10
+  cost: 300
+  rent: 30
+  level: 0
+
+"tba:39:obj:3952":
+  type: armor
+  keywords: [serving, platter]
+  short: a silver serving platter
+  long: A large platter made of silver and with an odd handle is on the ground here.
+  wear: [take, shield]
+  values:
+    armor: 7
+  weight: 7
+  cost: 210
+  rent: 21
+  level: 0
+
+"tba:39:obj:3953":
+  type: armor
+  keywords: [tri-cornered, hat]
+  short: the tri-cornered hat
+  long: A hat with three corners is lying here.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 7
+  cost: 35
+  rent: 3
+  level: 0
+
+"tba:39:obj:3954":
+  type: armor
+  keywords: [shimmering, silvery, dress]
+  short: a shimmering silvery dress
+  long: A pile of shimmering material is lying here.  Perhaps it might be a dress.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 6
+  cost: 6
+  rent: 0
+  level: 0
+
+"tba:39:obj:3955":
+  type: armor
+  keywords: [rich, cape]
+  short: a rich cape
+  long: A rich cape made of silver thread is here, looking expensive.
+  flags: [magic, bless, anti_evil, anti_neutral]
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 20
+  cost: 20
+  rent: 2
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: wis
+    modifier: 2
+
+"tba:39:obj:3956":
+  type: armor
+  keywords: [banded, steel, leg, guard]
+  short: the banded steel leg guards
+  long: A pair of banded steel leg guards are sitting here, looking rather new.
+  wear: [take, legs]
+  values:
+    armor: 8
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:39:obj:3957":
+  type: armor
+  keywords: [banded, steel, bracer]
+  short: a banded steel bracer
+  long: A piece of banded steel is just lying here.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 2
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:39:obj:3958":
+  type: weapon
+  keywords: [steel, shortsword]
+  short: a steel shortsword
+  long: A steel shortsword is on the ground here.  Pity.  It might rust.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: slash
+  weight: 6
+  cost: 450
+  rent: 45
+  level: 0
+
+"tba:39:obj:3959":
+  type: armor
+  keywords: [black, silk, skirt]
+  short: a black silk skirt
+  long: Somebody has left a skirt here.
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 5
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:39:obj:3960":
+  type: worn
+  keywords: [moustache]
+  short: a fake moustache
+  long: A small, fuzzy thing is on the ground here.  What the... It looks like a fake moustache.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3961":
+  type: weapon
+  keywords: [peg, leg]
+  short: a false peg leg
+  long: A false peg leg is here, lying in the open.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: bludgeon
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:39:obj:3962":
+  type: drinkcon
+  keywords: [rusty, cup, water]
+  short: a rusty cup
+  long: A rusty cup is lying here, collecting rainwater.
+  wear: [take, hold]
+  values:
+    capacity: 5
+    contains: 3
+    liquid: water
+    poisoned: true
+  weight: 8
+  cost: 160
+  rent: 16
+  level: 0
+
+"tba:39:obj:3963":
+  type: weapon
+  keywords: [curving, sword]
+  short: a short, curving sword
+  long: A short, curving sword is lying here glimmering.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: slash
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:39:obj:3964":
+  type: weapon
+  keywords: [curving, dagger]
+  short: a curving dagger
+  long: A strange curved dagger is here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: stab
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:39:obj:3965":
+  type: armor
+  keywords: [black, silk, pants]
+  short: a pair of black silk pants
+  long: Someone has lost their pants.... hmm....
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+
+"tba:39:obj:3966":
+  type: armor
+  keywords: [black, silk, shirt]
+  short: a black silk shirt
+  long: A black silk shirt is lying here, neglected.
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+
+"tba:39:obj:3967":
+  type: worn
+  keywords: [rags]
+  short: some rags
+  long: A pile of smelly rags is here, stinking.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 4
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+
+"tba:39:obj:3968":
+  type: container
+  keywords: [purse]
+  short: a purse
+  long: A woman must have dropped her purse here...
+  wear: [take, neck, hold]
+  values:
+    capacity: 10
+    lock_flags: 1
+    corpse: false
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:39:obj:3969":
+  type: armor
+  keywords: [red, dress]
+  short: an expensive red dress
+  long: A pile of red material lies abandoned here, looking vaguely like a dress.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 8
+  cost: 8
+  rent: 0
+  level: 0
+
+"tba:39:obj:3970":
+  type: weapon
+  keywords: [cutlass]
+  short: a sharp cutlass
+  long: A cutlass is here, gleaming sharply.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: sting
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:39:obj:3971":
+  type: armor
+  keywords: [net]
+  short: a rope net
+  long: A tangled rope net is lying here.
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 20
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:39:obj:3972":
+  type: food
+  keywords: [herring]
+  short: a raw herring
+  long: A raw fish is here... it might just be a herring.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3973":
+  type: weapon
+  keywords: [broken, bottle]
+  short: a broken bottle
+  long: A half-shattered broken bottle has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: stab
+  weight: 1
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:39:obj:3974":
+  type: drinkcon
+  keywords: [wine, glass, wine]
+  short: a wine glass
+  long: A wine glass lies here, discarded.
+  wear: [take, hold]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: wine
+    poisoned: false
+  weight: 7
+  cost: 105
+  rent: 10
+  level: 0
+
+"tba:39:obj:3975":
+  type: worn
+  keywords: [patched, dress]
+  short: a patched dress
+  long: A shabby dress is here, sewn with colorful patches.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 7
+  rent: 0
+  level: 0
+
+"tba:39:obj:3976":
+  type: drinkcon
+  keywords: [ale, flagon, ale]
+  short: a flagon of ale
+  long: A flagon of ale lying is here, forgotten.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: ale
+    poisoned: false
+  weight: 8
+  cost: 40
+  rent: 4
+  level: 0
+
+"tba:39:obj:3977":
+  type: container
+  keywords: [handcart]
+  short: a wooden handcart
+  long: A wooden handcart is lying here, tipped on its side.
+  wear: [take, hold]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 20
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3978":
+  type: worn
+  keywords: [silver, bracelet]
+  short: a silver bracelet
+  long: A ring of silver metal is here, waiting to be worn on a wrist.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:39:obj:3979":
+  type: worn
+  keywords: [transparent, veil]
+  short: a small, nearly transparent veil
+  long: A small pile of sheer material is here, looking like a veil.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3980":
+  type: armor
+  keywords: [wool, skirty]
+  short: a long wool skirt
+  long: A pile of wool is here, vaguely looking like a skirt.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+
+"tba:39:obj:3981":
+  type: worn
+  keywords: [black, leather, mask]
+  short: a black leather mask
+  long: A black leather mask lies here, ready to conceal someone's face.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:39:obj:3982":
+  type: weapon
+  keywords: [barbed, whip]
+  short: a cruel-looking barbed whip
+  long: A barbed whip is here, looking malicious.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: sting
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:39:obj:3983":
+  type: trash
+  keywords: [wooden, spoon]
+  short: a wooden spoon
+  long: A wooden spoon is lying here, looking abandoned.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:39:obj:3984":
+  type: armor
+  keywords: [sparkling, chainmail]
+  short: the sparkling chainmail
+  long: A pile of chain links is here, sparkling in the light.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 30
+  cost: 400
+  rent: 150
+  level: 0
+
+"tba:39:obj:3985":
+  type: armor
+  keywords: [black, bandana]
+  short: a black bandana
+  long: A strip of black cloth is on the ground here.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:39:obj:3986":
+  type: weapon
+  keywords: [bullwhip]
+  short: a bullwhip
+  long: A bullwhip is here, looking menacing.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: whip
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:39:obj:3987":
+  type: container
+  keywords: [saddlebag]
+  short: a saddlebag
+  long: A saddlebag is lying here, abandoned.
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 15
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:39:obj:3993":
+  type: weapon
+  keywords: [sparkling, mace]
+  short: a sparkling silver mace
+  long: A sparkling silver, but heavy-looking, mace is lying here unattended
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: crush
+  weight: 50
+  cost: 375
+  rent: 375
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: wis
+    modifier: -1
+  extras:
+  - keywords: [sparkling, mace]
+    text: >
+      This mace looks pretty fancy, but if used right it might be able to inflict some damage...
+
+"tba:39:obj:3994":
+  type: weapon
+  keywords: [merchant's, sword]
+  short: a merchant's sword
+  long: A shimmering sword is lying here.
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 15
+  cost: 900
+  rent: 112
+  level: 0
+  extras:
+  - keywords: [merchant's, sword]
+    text: >
+      The sword is well-crafted and also looks expensive.  It has the mark of a master swordsman on the
+      side.
+
+"tba:39:obj:3995":
+  type: weapon
+  keywords: [commoner's, sword]
+  short: a commoner's sword
+  long: An unusually common looking sword is here, gleaming slightly.
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 12
+  cost: 240
+  rent: 24
+  level: 0
+  extras:
+  - keywords: [commoner's, sword]
+    text: >
+      The sword looks like the generic sword, except for the blue silk wrapped around the hilt signifying
+      loyalty to the diety of the sea.
+
+"tba:39:obj:3996":
+  type: armor
+  keywords: [bracer]
+  short: a black leather bracer
+  long: A black leather bracer is lying here, looking special.
+  flags: [glow, magic]
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [bracer]
+    text: The bracer is made of top-quality black leather and seems to glow a bit.
+
+"tba:39:obj:3997":
+  type: armor
+  keywords: [guard, vest]
+  short: a well-made leather vest
+  long: A pile of black leather is lying here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 15
+  cost: 150
+  rent: 15
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [guard, vest, leather]
+    text: >
+      The vest, judging by the make and material, was crafted by hand and made well.  It is of black
+      leather and looks comfortable.
+
+"tba:39:obj:3998":
+  type: weapon
+  keywords: [whittling, knife]
+  short: a sharp whittling knife
+  long: A whittling knife is lying here.  It looks sharp.
+  flags: [bless]
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: sting
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [whittling, knife]
+    text: This whittling knife looks as though it has been used a lot, but it is still very sharp.
+
+"tba:39:obj:3999":
+  type: weapon
+  keywords: [gullmarked, sword]
+  short: a gull-marked sword
+  long: A sword with a stylized gull engraved onto the hilt is here, looking special.
+  wear: [take, wield]
+  values:
+    damage: 1d9
+    attack: slash
+  weight: 20
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [gull]
+    text: >
+      The stylized gull form on the sword is the special mark of Haven's best trained, their elite
+      guardsmen.  Not many in the realm can boast their skill with their swords.

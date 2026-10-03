@@ -1,0 +1,25 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 57.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:57:shop:5713":
+  keeper: tba:57:mob:5713
+  rooms: [tba:57:room:5713]
+  products:
+  - tba:57:obj:5700
+  - tba:57:obj:5708
+  - tba:57:obj:5798
+  - tba:57:obj:5730
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Feck off, i don't have that!"
+    you_dont_have_it: "%s You don't have that feckin' item."
+    does_not_buy: "%s Feck off, I don't trade in such pieces of crap!"
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You're too feckin' poor!"
+    bought: "%s That'll be %d coins, now feck off!"
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

@@ -1,0 +1,137 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 312.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:312:obj:31200":
+  type: other
+  keywords: [crude, sign]
+  short: a crude sign
+  long: A sign made from jungle bark has been erected by the side of the path.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - BEWARE
+    - Death and pestilence lies to the
+    - north. The eternal fire burns away
+    - the sins of those who have passed
+    - away. Damnation, the caretaker of
+    - the flame, resides in its heat.
+    - Beware the foul corruption therein.
+
+"tba:312:obj:31201":
+  type: fountain
+  keywords: [water, pond, water]
+  short: the clear water of the pond
+  long: The clear water of the pond ripples past.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:312:obj:31202":
+  type: fountain
+  keywords: [pool, tepid, water]
+  short: a pool of tepid water
+  long: A pool of tepid water lies underfoot.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: true
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:312:obj:31203":
+  type: armor
+  keywords: [beaten, gold, cross]
+  short: a beaten gold cross
+  long: A beaten gold cross with a leather strap lies on the ground.
+  flags: [glow]
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 4
+  cost: 500
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: -2
+
+"tba:312:obj:31204":
+  type: armor
+  keywords: [plain, wool, cloak]
+  short: a plain cloak of wool
+  long: A plain cloak of wool lies on the ground.
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 25
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: con
+    modifier: 2
+  - apply: int
+    modifier: -2
+
+"tba:312:obj:31205":
+  type: scroll
+  keywords: [prayer, book]
+  short: a prayer book
+  long: A prayer book has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [30, 3, -1, -1]
+  weight: 6
+  cost: 50
+  rent: 0
+  level: 25
+  affects:
+  - apply: hit
+    modifier: 25
+  - apply: hitroll
+    modifier: 2
+
+"tba:312:obj:31206":
+  type: weapon
+  keywords: [willow, switch]
+  short: a willow switch
+  long: A willow switch has been left here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 6d5
+    attack: sting
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2

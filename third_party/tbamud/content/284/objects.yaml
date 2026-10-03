@@ -1,0 +1,761 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 284.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:284:obj:28400":
+  type: light
+  keywords: [candelabra]
+  short: a candelabra
+  long: A candelabra is sitting here, emitting a soft glow.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 5
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+
+"tba:284:obj:28401":
+  type: weapon
+  keywords: [pillow]
+  short: a pillow
+  long: A pillow adorned with mirrors sits here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d1
+    attack: crush
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28402":
+  type: weapon
+  keywords: [bardiche]
+  short: a bardiche
+  long: A bardiche leans against the wall, casting a long shadow.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: slash
+  weight: 14
+  cost: 950
+  rent: 0
+  level: 0
+
+"tba:284:obj:28403":
+  type: key
+  keywords: [fly, key]
+  short: a dead fly
+  long: A dead fly lies on its back with its legs twitching.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, hold]
+  values:
+    raw: [9900, 2, 7, 3]
+  weight: 1
+  cost: 950
+  rent: 0
+  level: 0
+
+"tba:284:obj:28404":
+  type: container
+  keywords: [heart, box]
+  short: a heart shaped box
+  long: A heart shaped box made of pink crepe paper sits here.
+  wear: [take, hold]
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 950
+  rent: 0
+  level: 0
+
+"tba:284:obj:28405":
+  type: weapon
+  keywords: [corkscrew]
+  short: the Corkscrew of the GODS
+  long: A corkscrew lies here, a cork still in it.
+  flags: [glow, hum, magic, no_drop]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28407":
+  type: other
+  keywords: [ghenna, blood]
+  short: some blood
+  long: A large pool of blood sits here with flies buzzing about it.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:284:obj:28408":
+  type: other
+  keywords: [ghenna, hand]
+  short: a rotting hand
+  long: A half decayed hand sits here (Gross!).
+  flags: [no_invis, no_drop, anti_mage, anti_cleric]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28409":
+  type: potion
+  keywords: [dead, fly]
+  short: a dead fly
+  long: A dead fly lays on its back with its legs twitching slightly.
+  wear: [take]
+  values:
+    raw: [22, 17, 33, 33]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28410":
+  type: armor
+  keywords: [ghenna, cinch]
+  short: a genie's cinch
+  long: There is a gold roped cinch laying here.
+  flags: [glow, hum, magic]
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28411":
+  type: weapon
+  keywords: [spear]
+  short: a spear
+  long: A wooden spear, with a crudely fashioned stone tip, sits here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 8
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:284:obj:28412":
+  type: armor
+  keywords: [gorgimera, wings]
+  short: a pair of dragon's wings
+  long: A mass of black leather sits here.
+  flags: [glow, hum, magic]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 10
+  cost: 952
+  rent: 0
+  level: 0
+
+"tba:284:obj:28413":
+  type: light
+  keywords: [jaw, bone, jawbone]
+  short: the jawbone of Lord Suzerain
+  long: A human jawbone is laying here, biting the dirt.
+  flags: [magic, anti_cleric]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:284:obj:28414":
+  type: armor
+  keywords: [hide, impermeable, carapace]
+  short: an impermeable carapace
+  long: A leathery, red scaled hide sits here in a heap.
+  flags: [glow, anti_neutral, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 7
+  cost: 600
+  rent: 0
+  level: 0
+
+"tba:284:obj:28415":
+  type: armor
+  keywords: [bone, scrimshaw, cameo]
+  short: a scrimshaw cameo
+  long: |-
+    A piece of carved bone attached to a leather strap sits half buried in
+    the dirt.
+  flags: [invisible]
+  wear: [take, neck, hold]
+  values:
+    armor: 1
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28416":
+  type: key
+  keywords: [skeleton, ring]
+  short: a skeleton ring
+  long: A small ring of a human skeleton sits here.
+  flags: [anti_mage, no_sell]
+  wear: [take, finger, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28417":
+  type: armor
+  keywords: [loop, viscera, ring]
+  short: a ring made of viscera
+  long: A small loop of entwined viscera lays here.
+  flags: [invisible, magic]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28418":
+  type: weapon
+  keywords: [ghenna, dragon, claw]
+  short: a dragon's claw
+  long: The severed claw of a maroon colored beast squirms in the dirth here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 7d4
+    attack: slash
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:284:obj:28419":
+  type: container
+  keywords: [oriental, rug]
+  short: an oriental rug
+  long: An oriental rug lays here, its fringes blowing in the breeze.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 12
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rug]
+    text: Looks like your typical rug...  *shrug*
+
+"tba:284:obj:28420":
+  type: armor
+  keywords: [snake, crown]
+  short: a crown of woven snakes
+  long: A swirling mass of snakes is writhing here.
+  flags: [glow, no_drop, anti_good]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 7
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28421":
+  type: armor
+  keywords: [roygbv]
+  short: a prizmatic bracelet
+  long: Something lies here, shimmering in spectral colors.
+  flags: [magic]
+  wear: [take, wrist, hold]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 1
+
+"tba:284:obj:28422":
+  type: armor
+  keywords: [ghenna, baggy, purple, pants]
+  short: baggy purple pants
+  long: A pile of purple silk hovers above the ground here.
+  flags: [glow, hum, magic]
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 15
+  - apply: dex
+    modifier: 1
+
+"tba:284:obj:28423":
+  type: weapon
+  keywords: ["n", nosferatu]
+  short: the sword of Nosferatu
+  long: A small sword with a zigzag blade lies here.
+  flags: [no_invis, invisible, magic]
+  wear: [take, wield]
+  values:
+    damage: 8d3
+    attack: pierce
+  weight: 10
+  cost: 690
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [nosferatu, sword]
+    text: >
+      It vibrates with a hidden power of ultimate evil.  With this weapon in your grasp you feel most
+      invincible.  But beware, lest Nosferatu should come calling for his precious.
+
+"tba:284:obj:28424":
+  type: armor
+  keywords: [razor, boots]
+  short: Some razor tipped boots
+  long: A pair of shit-kickers sits here.
+  flags: [hum]
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 5
+  cost: 800
+  rent: 0
+  level: 0
+
+"tba:284:obj:28425":
+  type: armor
+  keywords: [chrome, leggings]
+  short: chrome leggings
+  long: Some slick, shiny chrome glints in the sunlight.
+  flags: [glow]
+  wear: [take, legs]
+  values:
+    armor: 8
+  weight: 9
+  cost: 120
+  rent: 0
+  level: 0
+
+"tba:284:obj:28426":
+  type: armor
+  keywords: [chrome, sleeves]
+  short: chrome sleeves
+  long: Some slick, shiny chrome glints in the sunlight.
+  flags: [glow]
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:284:obj:28427":
+  type: armor
+  keywords: [chrome, shield]
+  short: a chrome shield
+  long: Some slick, shiny chrome lies glinting in the sunlight.
+  flags: [glow, magic]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:284:obj:28428":
+  type: container
+  keywords: [vermillion, cloak]
+  short: a vermillion cloak
+  long: A pile of bright red fabric sits here.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:284:obj:28429":
+  type: armor
+  keywords: [chrome, gauntlets]
+  short: chrome gauntlets
+  long: Some slick, shiny chrome glints in the sunlight.
+  flags: [glow, magic]
+  wear: [take, hands]
+  values:
+    armor: 6
+  weight: 4
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:284:obj:28430":
+  type: armor
+  keywords: [chrome, helm]
+  short: a chrome helm
+  long: Some slick, shiny chrome glints in the sunlight.
+  flags: [glow, magic]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:284:obj:28431":
+  type: container
+  keywords: [ghenna, footlocker]
+  short: the footlocker
+  long: A bound footlocker of black leather sits against the wall.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    capacity: 300
+    lock_flags: 5
+    key: tba:0:obj:1
+    corpse: false
+  weight: 50
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:284:obj:28432":
+  type: wand
+  keywords: [ghenna, wyrm, book]
+  short: the book of the Wyrm
+  long: A book made from human skin sits here.
+  flags: [glow, hum, magic, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [29, 5, 5, 26]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 30
+
+"tba:284:obj:28433":
+  type: weapon
+  keywords: [Whip, leather, cat]
+  short: a cat 'o nine tails
+  long: A flimsy black leather whip lies here.
+  flags: [hum, magic, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 1d15
+    attack: whip
+  weight: 4
+  cost: 950
+  rent: 0
+  level: 0
+
+"tba:284:obj:28434":
+  type: armor
+  keywords: [Ghenna, black, leather, bra]
+  short: a black leather push-up bra
+  long: A scrap of black leather is vibrating here.
+  flags: [hum, magic, no_drop]
+  wear: [take, body, hold]
+  values:
+    armor: 4
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28435":
+  type: armor
+  keywords: [Ghenna, spiked, heels]
+  short: Spiked heels
+  long: A pair of do-me pumps is sitting here.
+  flags: [hum, no_drop]
+  wear: [take, feet]
+  values:
+    armor: -1
+  weight: 2
+  cost: 125
+  rent: 0
+  level: 0
+
+"tba:284:obj:28458":
+  type: armor
+  keywords: [Ghenna, leather, thong]
+  short: a black leather thong
+  long: A thin strip of black leather is wedged into a crack in the dirt.
+  flags: [hum, magic, no_drop]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:284:obj:28464":
+  type: weapon
+  keywords: [Ghenna, hatpin]
+  short: a hatpin
+  long: A hatpin has been left here.
+  flags: [glow, hum, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28465":
+  type: key
+  keywords: [Shoe, key]
+  short: a shoe
+  long: A child's shoe is sitting here, none the worse for wear.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, hold]
+  values:
+    raw: [9965, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:284:obj:28466":
+  type: armor
+  keywords: [Ghenna, fake, voodoo, totem]
+  short: a voodoo totem
+  long: A voodoo totem sits here, grinning at you.
+  flags: [glow, hum, no_drop, anti_cleric]
+  wear: [take, hold]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:284:obj:28477":
+  type: other
+  keywords: [ghenna, sign, warning]
+  short: the sign
+  long: A sign sits here flashing a WARNING at you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           /^^^^^^^^^^^^^^^^^^^^^^^^^^^^\
+           ------------------------------
+          ||                            ||
+          || If you are below level 30, ||
+          || and you are alone, perhaps ||
+          || you should reconsider this ||
+          || area.                      ||
+          ||____________________________||
+         /================================\
+
+"tba:284:obj:28481":
+  type: armor
+  keywords: [mithril, belt]
+  short: a mithril belt
+  long: A belt of durable metal lies here.
+  wear: [take, waist]
+  values:
+    armor: 7
+  weight: 5
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+
+"tba:284:obj:28486":
+  type: armor
+  keywords: [ghenna, tunic]
+  short: a translucent tunic
+  long: Some celophane-like substance is laying here.
+  flags: [no_invis]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 5
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: -1
+
+"tba:284:obj:28487":
+  type: weapon
+  keywords: [ghenna, light, bow]
+  short: a light mahogany bow
+  long: A thin bow hewn from mahogany lies here.
+  flags: [glow, invisible, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: pierce
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:284:obj:28495":
+  type: armor
+  keywords: [ghenna, platinum, ring]
+  short: a platinum ring
+  long: A large ring made from precious metal is sitting here, evading the dirt.
+  flags: [glow, invisible]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:284:obj:28496":
+  type: armor
+  keywords: [ghenna, gelatinous, skin]
+  short: gelatinous skin
+  long: A pile of jello undulates here.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 5
+  cost: 900
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -1
+  - apply: save_breath
+    modifier: -2
+  extras:
+  - keywords: [gelatinous, skin]
+    text: Hell, it looks like a pile of red gelatin...  Pretty gross.
+
+"tba:284:obj:28497":
+  type: armor
+  keywords: [ghenna, gelatinous, leggings]
+  short: gelatinous leggings
+  long: A pile of jello undulates here.
+  flags: [hum, magic]
+  wear: [take, legs]
+  values:
+    armor: 8
+  weight: 5
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: con
+    modifier: 2
+  - apply: int
+    modifier: -3
+  extras:
+  - keywords: [gelatinous, leggings]
+    text: Looks like slimy red gelatin...  Pretty gross.
+
+"tba:284:obj:28498":
+  type: container
+  keywords: [ghenna, skull]
+  short: a skull
+  long: A human skull sits here.
+  wear: [take, hold]
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 50
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+
+"tba:284:obj:28499":
+  type: other
+  keywords: [ghenna, voodoo, totem]
+  short: a voodoo totem
+  long: A voodoo totem sits here, grinning at you.
+  flags: [hum, no_invis, invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+  - apply: damroll
+    modifier: 5

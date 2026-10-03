@@ -1,0 +1,242 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 271.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:271:shop:27100":
+  keeper: tba:271:mob:27148
+  rooms: [tba:271:room:27142]
+  products:
+  - tba:271:obj:27178
+  - tba:271:obj:27177
+  - tba:271:obj:27176
+  - tba:271:obj:27175
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s Don't got none, don't want none!"
+    you_dont_have_it: "%s You don't seem to have one of those."
+    does_not_buy: "%s I don't want anything of yours."
+    shop_cannot_afford: "%s Too rich for my blood!"
+    you_cannot_afford: "%s You're too stinking poor to afford it."
+    bought: "%s That'll be %d coins and your firstborn child please!"
+    sold: "%s I don't buy."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27111":
+  keeper: tba:271:mob:27123
+  rooms: [tba:272:room:27281]
+  products:
+  - tba:272:obj:27207
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s I don't sell any of those!"
+    you_dont_have_it: "%s Nothing is refundable, have a nice day."
+    does_not_buy: "%s Nothing is refundable, have a nice day."
+    shop_cannot_afford: "%s Nothing is refundable, have a nice day."
+    you_cannot_afford: "%s Go buy something you can afford."
+    bought: "%s That comes to %d coins. Now get lost! Heheh."
+    sold: "%s I don't buy."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27112":
+  keeper: tba:271:mob:27130
+  rooms: [tba:271:room:27112]
+  products:
+  - tba:272:obj:27209
+  - tba:272:obj:27224
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  profit:
+    buy: 1.2
+    sell: 0.1
+  messages:
+    no_such_item: "%s I offer no such thing! Try list."
+    you_dont_have_it: "%s You lack the item in question."
+    does_not_buy: "%s I buy the tools of magicians only."
+    shop_cannot_afford: "%s The price of this is beyond my means."
+    you_cannot_afford: "%s You can't afford to purchase this!"
+    bought: "%s %d coins, thank you."
+    sold: "%s You'll have %d coins for that."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27121":
+  keeper: tba:271:mob:27121
+  rooms: [tba:271:room:27121]
+  products:
+  - tba:271:obj:27123
+  - tba:271:obj:27121
+  - tba:271:obj:27120
+  - tba:271:obj:27119
+  - tba:271:obj:27118
+  - tba:271:obj:27117
+  - tba:271:obj:27116
+  - tba:271:obj:27115
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s I never palmed that thing, try list."
+    you_dont_have_it: "%s That seems to be absent from your belongings."
+    does_not_buy: "%s I don't buy, I accept charity. Fork it over!"
+    shop_cannot_afford: "%s How about if I just steal it instead?"
+    you_cannot_afford: "%s You beggar! You can't afford that."
+    bought: "%s Here ye go, pal. That'll be %d coins."
+    sold: "%s I don't buy."
+  temper: 2
+  flags: 7
+  trade_with: 1
+
+"tba:271:shop:27122":
+  keeper: tba:271:mob:27127
+  rooms: [tba:272:room:27234]
+  products:
+  - tba:271:obj:27193
+  - tba:271:obj:27192
+  - tba:271:obj:27191
+  - tba:271:obj:27180
+  buys:
+  - type: other
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s I don't carry that."
+    you_dont_have_it: "%s Even if you had one of those, I doubt I would want it."
+    does_not_buy: "%s I don't need to buy those - I'm a witch! Muaha!"
+    shop_cannot_afford: "%s I'd buy it, but I just fed my dragon and am broke!"
+    you_cannot_afford: "%s You'll need more gold than that!"
+    bought: "%s Good choice, my pretty! %d coins please."
+    sold: "%s Ahh! Just the thing I needed. Have %d coins."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27146":
+  keeper: tba:271:mob:27133
+  rooms: [tba:271:room:27146]
+  products:
+  - tba:271:obj:27142
+  - tba:271:obj:27141
+  - tba:271:obj:27140
+  - tba:271:obj:27139
+  buys:
+  - type: weapon
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s I do not forge that weapon, try list."
+    you_dont_have_it: "%s You seem fresh out of those."
+    does_not_buy: "%s My art is purely offensive. Try somewhere else."
+    shop_cannot_afford: "%s Ah! I haven't seen the like of that in years! I cannot afford it."
+    you_cannot_afford: "%s You haven't the means to pay for this."
+    bought: "%s A fine selection for %d coins."
+    sold: "%s Here you are, %d coins. Now be off."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27147":
+  keeper: tba:271:mob:27132
+  rooms: [tba:271:room:27147]
+  products:
+  - tba:271:obj:27167
+  - tba:271:obj:27166
+  - tba:271:obj:27165
+  - tba:271:obj:27164
+  - tba:271:obj:27163
+  buys:
+  - type: armor
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s I don't carry that."
+    you_dont_have_it: "%s Hm. Smoke another one and check your inventory."
+    does_not_buy: "%s I'm not interested in such things."
+    shop_cannot_afford: "%s The price for that is outrageous! Away with you."
+    you_cannot_afford: "%s That seems to be out of your price range."
+    bought: "%s That comes to %d coins. Enjoy."
+    sold: "%s I'll give you %d coins for that."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27148":
+  keeper: tba:271:mob:27120
+  rooms: [tba:271:room:27148]
+  products:
+  - tba:271:obj:27129
+  - tba:271:obj:27128
+  - tba:271:obj:27127
+  - tba:271:obj:27126
+  - tba:271:obj:27124
+  - tba:271:obj:27125
+  - tba:271:obj:27122
+  profit:
+    buy: 1.2
+    sell: 0.4
+  messages:
+    no_such_item: "%s You'll have to make that yourself, never heard of it."
+    you_dont_have_it: "%s You don't seem to have one."
+    does_not_buy: "%s Be on your way loafer, I don't buy."
+    shop_cannot_afford: "%s Not for those prices."
+    you_cannot_afford: "%s You can't afford my hearty drink and meals!"
+    bought: "%s A solid %d coins down on the bar, friend."
+    sold: "%s I don't buy."
+  temper: 2
+  flags: 5
+  trade_with: 0
+
+"tba:271:shop:27150":
+  keeper: tba:271:mob:27131
+  rooms: [tba:271:room:27150]
+  products:
+  - tba:271:obj:27133
+  - tba:272:obj:27217
+  profit:
+    buy: 1.2
+    sell: 0.5
+  messages:
+    no_such_item: "%s None of those here! Try list."
+    you_dont_have_it: "%s I don't buy!"
+    does_not_buy: "%s I'd rather eat half-cooked chihuahua for a month than buy that."
+    shop_cannot_afford: "%s I don't buy."
+    you_cannot_afford: "%s You cannot afford this."
+    bought: "%s The bill is %d coins."
+    sold: "%s I don't buy."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:271:shop:27153":
+  keeper: tba:271:mob:27128
+  rooms: [tba:271:room:27153]
+  products:
+  - tba:271:obj:27132
+  - tba:271:obj:27131
+  - tba:271:obj:27130
+  profit:
+    buy: 1.2
+    sell: 0.2
+  messages:
+    no_such_item: "%s Yo! Um, we don't sell that."
+    you_dont_have_it: "%s We don't buy, and you have none. I see a problem there."
+    does_not_buy: "%s I don't want for anything. Be on your way, peddler."
+    shop_cannot_afford: "%s Not buying none, nope."
+    you_cannot_afford: "%s You haven't enough gold for it."
+    bought: "%s That'll be %d coins."
+    sold: "%s I'm not interested."
+  temper: 2
+  flags: 2
+  trade_with: 0

@@ -1,0 +1,685 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 240.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:240:mob:24000":
+  keywords: [minotaur]
+  short: the minotaur
+  long: A huge minotaur stands here, keeping the peace.
+  description: >
+    He is a massive, humanoid beast with the body of a man and the head of a bull.  His legs are also
+    hoofed and shaped as that of a bull's.  This is a very strong creature, and should not be taken
+    lightly.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [stay_zone, helper, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24001":
+  keywords: [minotaur, sentry]
+  short: the sentry
+  long: A minotaur sentry is here guarding the gates.
+  description: >
+    This half-man half-bull sentry is here to guard the gates and give warning of any possible attack. 
+    It looks like he alone could withstand a small army. He stands at least 8 feet tall and must be over
+    300 pounds.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone, memory, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24002":
+  keywords: [minotaur, warrior]
+  short: the warrior
+  long: A minotaur warrior carrying a deadly war-axe.
+  description: >
+    This minotaur is suited for battle.  You notice a sinking feeling in your stomach the second you
+    saw him.  You are more than intimidated by this war machine.  The minotaur carries himself with pride
+    and confidence.
+  level: 9
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24003":
+  keywords: [minotaur, woman]
+  short: the minotaur woman
+  long: A female minotaur is sharpening her husbands weapons.
+  description: >
+    Although the woman minotuar are usually only expected to raise the family it is sometimes heard of
+    that they will become warriors.  This is usually not acceptable and they must leave the city.  Except
+    in the case of widows without any children.
+  level: 9
+  sex: female
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 90
+  exp: 8100
+  position:
+    load: sitting
+    default: standing
+
+"tba:240:mob:24004":
+  keywords: [minotaur, man]
+  short: the minotaur
+  long: A large minotaur pushes you out of its way.
+  description: >
+    This rude minotaur seems to be in his prime.  He holds himself with confidence and ignores you
+    outright.  It seems like he thinks you are not even worthy of notice.  Maybe you could teach him
+    differently, or maybe not.
+  level: 9
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24005":
+  keywords: [minotaur, child]
+  short: the minotaur child
+  long: A minotaur child is playing here.
+  description: >
+    This little brat is dangerous.  He seems to be pretending that he is fighting some imaginary foe. 
+    He is running around pretending to impale his foe with his miniature set of horns.  Those horns look
+    awfully sharp.
+  level: 7
+  sex: male
+  alignment: 300
+  flags: [stay_zone, wimpy, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24006":
+  keywords: [young, minotaur]
+  short: the young minotaur
+  long: A young, vibrant minotaur stomps past without a worry in the world.
+  description: >
+    This minotaur looks to be in its adolescent years.  It is almost full grown, about seven feet tall
+    and looks to be busy.  Probably running some errand or doing some task.
+  level: 7
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24007":
+  keywords: [old, minotaur]
+  short: the old minotaur
+  long: An old minotaur is here rambling on about past battles and adventures.
+  description: >
+    This ancient minotaur is just a shadow of the former warrior he must have been.  Scars riddle his
+    body, you almost dismiss him as not being a threat when you catch a glimpse of his eyes.  Those eyes
+    have seen and experienced more than you ever will in your lifetime.
+  level: 7
+  sex: male
+  alignment: 200
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24008":
+  keywords: [healer, minotaur]
+  short: the minotaur healer
+  long: A minotaur healer is making house calls to the sick and wounded.
+  description: >
+    The healers are used during war to aid those who have fallen to the enemy. It is a rather simple
+    job.  Either the victim can get up and continue fighting or the healer will finish them off.
+  level: 9
+  sex: female
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24009":
+  keywords: [vorn]
+  short: Vorn
+  long: Vorn stands here conducting his business.
+  description: >
+    This is the minotaur solely responsible for the wealth of the city.  He conducts all business
+    matters and has managed to build this city into what it is today.  He looks deceiving.
+  level: 10
+  sex: male
+  alignment: -1000
+  flags: [sentinel, stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24010":
+  keywords: [zarn, minotaur, master, grand]
+  short: Zarn
+  long: Zarn, the Grand Master is busy ruling the city.
+  description: >
+    He is in charge of day to day operations of the city.  He is supposed to be the supreme ruler of
+    the city.  But many advise him, including the war master who to most is the true ruler of the city.
+  level: 9
+  sex: male
+  alignment: 300
+  flags: [sentinel, stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24011":
+  keywords: [master, minotaur, war]
+  short: the War Master
+  long: The War Master is planning for battle.
+  description: >
+    This grizzled old minotaur is not only the best and strongest warrior in the city, but also the
+    undefeated champion of the arena.  He has more scars than wrinkles.  Most of his fur has turned gray. 
+    He looks like he knows what you are thinking.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [sentinel, stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24012":
+  keywords: [advisor, minotaur]
+  short: the minotaur advisor
+  long: The advisor to the grand master is doing some research here.
+  description: >
+    The advisor's job is to make sure the grand master does not make any mistakes.  He is responsible
+    for more than the grand master himself, but he gets no credit.
+  level: 9
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24013":
+  keywords: [minotaur, interrogator]
+  short: the interrogator
+  long: A large minotaur hides in the corner, waiting for its next victim.
+  description: >
+    This minotaur has an evil grin and seems to enjoy his work of inflicting pain on others.  You
+    wonder which is more important to him, inflicting the pain or getting the information out of his subjects.
+  level: 8
+  sex: male
+  alignment: -1000
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24014":
+  keywords: [minotaur, master]
+  short: the weapons master
+  long: A large minotaur wielding a wicked looking pole arm struts by.
+  description: >
+    This battle veteran wield his polearm with a familiarity that's scary.  You wonder if he sleeps
+    with it.  He has a 1000 yard gaze that is even more frightening.  He must have seen many battles.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [sentinel, stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24015":
+  keywords: [trainer, minotaur]
+  short: the trainer
+  long: A large minotaur stands beside a rack of training weapons and armor.
+  description: >
+    This veteran is responsible for training all minotaurs able to fight to do exactly that.  He has
+    had years of training and even more practice at the real thing during the wars against the centaurs.
+  level: 8
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24016":
+  keywords: [loremaster, minotaur]
+  short: the loremaster
+  long: A grizzled, old minotaur rests here, throughout the realm he is known as the loremaster.
+  description: >
+    Perhaps the most famous minotaur to ever live.  This minotaur's age is unknown.  He has outlived
+    his friends by decades.  No one alive knows when he was born, and he will not tell anyone his real
+    age.  He remains a mystery to many.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24017":
+  keywords: [priest, minotaur]
+  short: the priest
+  long: A priest blesses all who worship Vardis.
+  description: >
+    The minotaurs worship only one god.  Vardis, the god of war.  This priest is responsible for the
+    upkeep of the sole place of worship in the city.  He often goes into battle to bless all those who
+    fight for their god.
+  level: 8
+  sex: female
+  alignment: 300
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24018":
+  keywords: [merchant, minotaur]
+  short: the merchant
+  long: A wealthy minotaur with a pouch full of gold walks past you.
+  description: >
+    This and many other minotaurs work for Vorn in keeping the trading and supply routes open between
+    the cities.  They have all accumulated great wealth from their adventures and most of them live the
+    life of the rich.
+  level: 8
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24019":
+  keywords: [noble, minotaur]
+  short: the noble
+  long: A minotaur with its nose stuck up in the air almost walks into you.
+  description: >
+    This arrogant minotaur has lived the better life.  It has never gone through the hardships of
+    battle, or the typical training given to most warriors. Instead she has learned how to live off from
+    others.  You pity her.
+  level: 9
+  sex: female
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24020":
+  keywords: [tradesman, minotaur]
+  short: the tradesman
+  long: A minotaur tradesman is busy calculating profits.
+  description: >
+    He looks intelligent.  But he has never experienced the training for battle. He has lived his life
+    eating from the silver spoon.  Some think they can avoid war by separating themselves from those who
+    fight.  They are so wrong.
+  level: 9
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24021":
+  keywords: [guildsman, minotaur]
+  short: the guildsman
+  long: A minotaur guildsman is waiting for someone to train.
+  description: >
+    It is fighters like this guildsman that pass down the knowledge and experience they have received
+    over generations and in numerous battles that make the minotaur one of the fiercest fighters in the
+    realm.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24022":
+  keywords: [lady, minotaur]
+  short: the lady
+  long: A lady minotaur gazes at you with total admiration, of your gold.
+  description: >
+    If someone could ever consider a minotaur beautiful, you pity them.  This beastly lady is
+    intimidating and just the thought of.....  Frightens you.
+  level: 7
+  sex: female
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24023":
+  keywords: [scribe, minotaur]
+  short: the scribe
+  long: A small minotaur is here writing something down.
+  description: >
+    This educated minotaur has been hired by Vorn to take care of the paperwork in running the estate. 
+    It's hard to believe a minotaur could look like a geek, but this one does.
+  level: 7
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24024":
+  keywords: [butcher, minotaur]
+  short: the butcher
+  long: A minotaur is carrying some meat to the market.
+  description: >
+    This minotaur has blood smeared all face and hands.  He must be the butcher for the city.  He is
+    caring a few slabs of bloody meat slung over each shoulder.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24025":
+  keywords: [woman, minotaur]
+  short: the woman
+  long: A young female minotaur is running some errand.
+  description: >
+    How anyone could consider a minotaur is beyond you.  You can not help but to remember the story
+    about the young man who ran away with a beautiful minotaur once.  It sickens you.
+  level: 8
+  sex: female
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24026":
+  keywords: [woman, minotaur]
+  short: the old woman
+  long: An old female minotaur is rambling about how beautiful she used to be.
+  description: >
+    This old wrinkled hag has more stretch marks and sags than your waterskin. If she was beautiful
+    once it must not have been in this century.
+  level: 7
+  sex: female
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24027":
+  keywords: [Trang]
+  short: Trang
+  long: Trang, the minotaur armorer is hammering something, he ignores you.
+  description: >
+    This burly minotaur is very scary looking.  He has huge arms and a scarred face and body from the
+    heat of the furnaces.  He looks disagreeable.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24028":
+  keywords: [targ]
+  short: Targ
+  long: Targ, the supplies shop owner scowls at you.
+  description: >
+    He has been running this shop for years and knows everyone in the city.  He makes you feel very
+    uncomfortable.  Minotaurs typically don't like the other races and Targ is no exception.
+  level: 10
+  sex: male
+  alignment: 100
+  flags: [sentinel, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:240:mob:24029":
+  keywords: [garge]
+  short: Garge
+  long: Garge, looks at you and immediately begins to ignore you.
+  description: >
+    He deals in those hard to find items that are desired by everyone.  But he is very picky about who
+    he sells to.  Don't get on his bad side or he will never deal with you.
+  level: 10
+  sex: male
+  alignment: 100
+  flags: [sentinel, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing

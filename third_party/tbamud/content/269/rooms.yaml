@@ -1,0 +1,980 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 269.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:269:room:26900":
+  name: The Beginning Of The Southern Desert
+  description: >
+    This path marks the beginning of the long road to the southern part of the world.  There are
+    several rumors as to where it leads, but no one knows for sure.  Looking south, you gaze into a panorama of
+    a rocky, cactus-dotted land, shimmering in the heat of the day.
+  sector: field
+  exits:
+    south:
+      to: tba:269:room:26901
+      look: A huge cactus-dotted desert spreads out before you.
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Southern Desert by  Ian Smith/Freak, Dark Master of Thieves
+        Builder      : Freak
+        Zone         : 269 Souther Desert
+        Began        : 12/30/95
+        Player Level : 17-20
+        Rooms        : 68
+        Mobiles      : 13
+        Objects      : 10
+        Triggers     : 1
+        Links        : 00, 24, 15
+
+"tba:269:room:26901":
+  name: The Beginning Of The Southern Desert
+  description: >
+    Scrub brush and cacti of many sorts are beginning to appear, you are thankful that they do not grow
+    on the path. To the south, you see a desert, teeming with desert life.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26900
+    south:
+      to: tba:269:room:26902
+      look: The heat makes the desert to the south shimmer.
+
+"tba:269:room:26902":
+  name: The Southern Desert
+  description: >
+    Heat waves make the world shimmer, as you trod through what feels like an oven. Plants of all sorts
+    cling to the dry ground here, barely surviving the dry heat. The only sound is the low whisper of
+    hot wind, and the small rustling of rodents fleeing from your presence.
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26901
+    south:
+      to: tba:269:room:26903
+      look: Far to the south you can barely make out a large rock of some sort.
+
+"tba:269:room:26903":
+  name: Near A Large Mesa
+  description: >
+    To the south you can barely see a huge, low, mesa, sitting solidly as it has been from the
+    beginning of time. Looking northward brings no rewards, it just hurts your eyes.
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26902
+    south:
+      to: tba:269:room:26904
+      look: There is a mesa near to the south.
+
+"tba:269:room:26904":
+  name: A Fork In The Path
+  description: >
+    The small footpath you have been following splits here; one part leading off to the east where it
+    disappears into the sagebrush. To the south the path continues, getting more and more overgrown as it
+    goes.  Near to the south the northern edge of the large mesa looms up, a black wall against the sky.
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26903
+      look: The path lead off to the north.
+    east:
+      to: tba:269:room:26905
+      look: The path forks off to the east, where it disappears into the brush.
+    south:
+      to: tba:269:room:26908
+      look: A large mesa looms up in the south.
+
+"tba:269:room:26905":
+  name: A Choked Footpath
+  description: >
+    The footpath here leads east and west, nearly choked in parts with sagebrush anc cacti. Up ahead
+    you see...can it be true? is that a Taco Bell you see?
+  sector: inside
+  exits:
+    south:
+      to: tba:269:room:26906
+      look: You see a shimmering image to the east.
+    west:
+      to: tba:269:room:26904
+      look: A fork in the path lies to the west.
+
+"tba:269:room:26906":
+  name: The Mirage
+  description: >
+    Nearly delirious from the heat and thirst, you totter up to the front steps of the Taco Bell.  (or
+    is it Taco Hell?  ) Stumbling through the weeds, you suddenly realize that this is all some deadly
+    trick of the desert.  The mirage quivers, and disappears before your bloodshot eyes.  The path here
+    leads east and west.
+  sector: inside
+  exits:
+    south:
+      to: tba:269:room:26907
+      look: The path look like it disappears to the east.
+    west:
+      to: tba:269:room:26905
+      look: You have no desire to see the cacti to the west.
+
+"tba:269:room:26907":
+  name: A Curve In The Path
+  description: >
+    The small path you have been carefully following turns to the south, and runs off to the west.  The
+    sage here now begins to irritate you, as it is spreading little burrs under your clothing. You are
+    now hoping that soon one of the oasis you see will be real.
+  sector: inside
+  exits:
+    south:
+      to: tba:269:room:26909
+      look: You rub your eyes and try to make out the split in the path to the south.
+    west:
+      to: tba:269:room:26906
+      look: The west doesn't seem as glorious as it does in all those old movies.
+
+"tba:269:room:26908":
+  name: The Large Mesa
+  description: >
+    To the south a great, impassable rock wall looms high above you. It seems to sneer at you, puny
+    compared to its enormous size. a small footpath leads north from here.
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26904
+    south:
+      look: The side of the mesa is impossible to climb.
+
+"tba:269:room:26909":
+  name: Another Split In The Path
+  description: >
+    The path splits here, one part leading off to the east and the other continuing to the south.
+    Scanning the horizon, you see nothing but dry, dull, weeds, and the occasional stately Saguaro cactus. 
+    You wonder how the world got to be so darn ugly.
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26906
+      look: A boring path leads northwards, perhaps to some famous land.
+    east:
+      to: tba:269:room:26910
+      look: A path leads off into desert mountains.
+    south:
+      to: tba:269:room:26912
+      look: Your eyes hurt, due to the continuous desert scene.
+
+"tba:269:room:26910":
+  name: Lonely Desert Mountains
+  description: >
+    Here you stand in the foothills of the mountains to the east. The vegetation dies around you, as
+    the insects sing their lonesome song.
+  sector: inside
+  exits:
+    east:
+      to: tba:269:room:26911
+      look: To the east the mountains begin to rise, as your spirits fall.
+    west:
+      to: tba:269:room:26909
+      look: To the west you see a dreary little fork in the weed-choked path.
+
+"tba:269:room:26911":
+  name: The Desert Mountains
+  description:
+  - >
+    Here the ground has risen up, forcing you to exert yourself harder. Those precious movement points
+    slip away as you trod over the now rocky road. Stray critters scamper about, praying to their critter
+    gods that you will quickly leave the area.
+  - The road here curves to the south.
+  sector: mountains
+  exits:
+    south:
+      to: tba:269:room:26913
+      look: You see more of the mountainous road.
+    west:
+      to: tba:269:room:26910
+      look: The rocky path leads west.
+
+"tba:269:room:26912":
+  name: The Desert Foothills
+  description:
+  - >
+    Here the desert forbids your life to get any easier, and you are forced to exert yourself to travel
+    uphill.  Cursing mother nature, you ignore your thirst and plod onward.
+  - To the south the mountains rise up out of the earth like an ill specter.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26909
+      look: To the north you look down onto flatter ground.
+    south:
+      to: tba:269:room:26915
+      look: You are displeased with the thought of travelling uphill.
+
+"tba:269:room:26913":
+  name: A Fork In The Rocky Road
+  description: >
+    Here you really have to be careful as you travel. The number of rocks and dust particles in the
+    path seems to rise with the number of steps you take.  A trail leads off to the east, and the path
+    continues south.
+  sector: mountains
+  exits:
+    north:
+      to: tba:269:room:26911
+      look: You see a dangerous road, almost unfit for travel.
+    east:
+      to: tba:269:room:26914
+      look: You see an overgrown trail, complete with fallen rocks.
+    south:
+      to: tba:269:room:26916
+      look: To the south the road leads through the mountains.
+
+"tba:269:room:26914":
+  name: The Disappearing Path
+  description: >
+    Here you stop, and gaze of into the panoramic view to the east. The path here has ceased to exist,
+    due to the severe drop down to the rest of the desert far below you. Off in the distance you see a
+    huge landmark, that looks strikingly similar to an enormous crater.
+  sector: mountains
+  exits:
+    east:
+      look: You gaze upon the Southern desert.
+    west:
+      to: tba:269:room:26913
+      look: You look back to the desert mountains.
+
+"tba:269:room:26915":
+  name: The Desert Mountains
+  description: You grow weary as you trod through these dry mountains.
+  sector: mountains
+  exits:
+    north:
+      to: tba:269:room:26912
+    south:
+      to: tba:269:room:26917
+      look: You see a bend up ahead.
+
+"tba:269:room:26916":
+  name: The Foothills
+  description: >
+    With the worst of the mountains to the north, the trail here becomes easier. Far off to the east
+    you think you see blue. to the south the dusty road continues.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26913
+      look: The road leads north into the Southern Desert.
+    south:
+      to: tba:269:room:26919
+      look: The road to the south ends in a 'T'.
+
+"tba:269:room:26917":
+  name: A Bend In The Fading Road
+  description: >
+    Here the road bends, on end leads north and the other leads east. You are surrounded by sage brush,
+    and heat. You can barely make out a path to the south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26915
+      look: The path leads north into the heart of the desert mountains.
+    east:
+      to: tba:269:room:26918
+      look: The path leads east, where it turns into a road.
+
+"tba:269:room:26918":
+  name: A Dusty Road
+  description: Here the land is harsh and hot, reminding you of your 4th-grade teacher.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26919
+      look: You see a 'T' in the road to the east.
+    west:
+      to: tba:269:room:26917
+      look: The road fades into a path to the west.
+
+"tba:269:room:26919":
+  name: A Dusty 'T' Intersection
+  description: >
+    The dusty road here splits to the east and to the west. The desert continues to the south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26916
+      look: The road leads north into the desert.
+    west:
+      to: tba:269:room:26918
+      look: Off to the west you see more desert.
+
+"tba:269:room:26920":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, a rugged terrain reminding you of the moon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26921
+    south:
+      to: tba:269:room:26926
+
+"tba:269:room:26921":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon. You can
+    barely see mountains on the east horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26922
+    west:
+      to: tba:269:room:26920
+
+"tba:269:room:26922":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  You can
+    barely see mountains on the east horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26923
+    west:
+      to: tba:269:room:26921
+
+"tba:269:room:26923":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  The
+    mountains to the east are snow-capped, and rocky.
+  sector: hills
+  exits:
+    east:
+      to: tba:269:room:26924
+      look: You see mountains to the east.
+    west:
+      to: tba:269:room:26922
+      look: You see the Southern desert to the west.
+
+"tba:269:room:26924":
+  name: The Southern Desert
+  description: The desert stretches out in every direction but east.
+  sector: hills
+  exits:
+    west:
+      to: tba:269:room:26923
+      look: The Southern desert stretches out to the western horizon.
+
+"tba:269:room:26925":
+  name: An Overgrown Trail
+  description: You are walking down a trail, overgrown with cactus and other dry plants.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26917
+      look: You see a more-travelled path to the north.
+    south:
+      to: tba:269:room:26927
+      look: You see more desert to the south.
+
+"tba:269:room:26926":
+  name: Way Out In The Southern Desert
+  description: >
+    Here the air is as dry as your step-mother's humor. (Thank God she's not here to watch you mud.)
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26920
+    south:
+      to: tba:269:room:26930
+
+"tba:269:room:26927":
+  name: An Overgrown Trail
+  description: >
+    You are walking down a trail, overgrown with cactus and other dry plants. A path leads east from
+    here, off into the distance.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26925
+    east:
+      to: tba:269:room:26928
+      look: A small footpath runs east.
+    south:
+      to: tba:269:room:26931
+
+"tba:269:room:26928":
+  name: A Faded Footpath
+  description: >
+    The heat is wearing on you, as you stumble along here. The trail leads south, east, and west with
+    no obvious intent or purpose.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26929
+    south:
+      to: tba:269:room:26938
+    west:
+      to: tba:269:room:26927
+
+"tba:269:room:26929":
+  name: Way Out In The Desert
+  description: >
+    You have travelled out so far now that you have almost forgotten what water looks and tastes like.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26930
+    south:
+      to: tba:269:room:26939
+    west:
+      to: tba:269:room:26928
+
+"tba:269:room:26930":
+  name: Way Out In The Desert
+  description: You are nowhere near where everyone else wants to be. How do you feel about that?
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26926
+      look: You see the trail here leads north.
+    west:
+      to: tba:269:room:26929
+
+"tba:269:room:26931":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  Far off
+    to the south-west you can barely see a mesa, sitting on the horizon.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26927
+    south:
+      to: tba:269:room:26937
+
+"tba:269:room:26932":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  Off to
+    the south you can see a mesa, rising up from the horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26933
+    south:
+      to: tba:269:room:26940
+      look: A rocky mesa lies to the south.
+
+"tba:269:room:26933":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  Off to
+    the south-west you can see a mesa, sitting on the horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26934
+    west:
+      to: tba:269:room:26932
+
+"tba:269:room:26934":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  A way off
+    to the south-west you can just see a mesa, sitting on the horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26935
+    west:
+      to: tba:269:room:26933
+
+"tba:269:room:26935":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  Quite a
+    way off to the south-west you can just see a mesa, sitting on the horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26936
+    west:
+      to: tba:269:room:26934
+
+"tba:269:room:26936":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  Far off
+    to the south-west you can barely see a mesa, sitting on the horizon.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26937
+    west:
+      to: tba:269:room:26935
+
+"tba:269:room:26937":
+  name: Way Out In The Southern Desert
+  description: The desert stretches out in every direction.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26931
+      look: You see more desert to the north.
+    east:
+      to: tba:269:room:26938
+      look: The trail wanders off to the east.
+    south:
+      look: You see more desert to the south.
+    west:
+      to: tba:269:room:26936
+      look: The trail wanders of into the west.
+
+"tba:269:room:26938":
+  name: Way Out In The Southern Desert
+  description: The desert stretches out in every direction.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26928
+      look: You see more desert to the north.
+    east:
+      to: tba:269:room:26939
+    west:
+      to: tba:269:room:26937
+
+"tba:269:room:26939":
+  name: Way Out In The Southern Desert
+  description: The desert stretches out in every direction.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26929
+      look: You see more desert to the north.
+    south:
+      to: tba:269:room:26941
+    west:
+      to: tba:269:room:26938
+
+"tba:269:room:26940":
+  name: Near A Rocky Mesa
+  description: >
+    The desert stretches out in every direction, a rugged terrain reminding you of the moon.  To the
+    south the mesa looms nearer, you think you can hear strange singing blowing in the wind.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26932
+    south:
+      to: tba:269:room:26942
+      look: The mesa to the south ominously begins to blot out the sky.
+
+"tba:269:room:26941":
+  name: Way Out In The Southern Desert
+  description: The desert stretches out in every direction.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26939
+      look: You see more desert to the north.
+    south:
+      to: tba:269:room:26943
+      look: The trail continues to the south, through the desert weeds.
+
+"tba:269:room:26942":
+  name: North Of A Rocky Mesa
+  description:
+  - >
+    Here the going becomes more rugged, as outcroppings of rock jut up through the desert floor.
+  - The mesa to the south seems ominously silent...
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26940
+      look: To the north you see the desert.
+    south:
+      to: tba:269:room:26946
+      look: You begin to fear the mesa to the south...
+
+"tba:269:room:26943":
+  name: Way Out In The Southern Desert
+  description: The desert stretches out in every direction.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26941
+      look: You see more desert to the north.
+    east:
+      to: tba:269:room:26944
+      look: You might be able to walk east through the brush...
+    south:
+      to: tba:269:room:26947
+
+"tba:269:room:26944":
+  name: In The Brush
+  description: You are completely surrounded by tumbleweeds now, and the world is deathly silent.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26944
+      look: You see more brush to the north.
+    east:
+      to: tba:269:room:26945
+      look: You see more brush to the east.
+    south:
+      to: tba:269:room:26944
+      look: You see more brush to the south.
+    west:
+      to: tba:269:room:26950
+      look: You see more brush to the west.
+
+"tba:269:room:26945":
+  name: In The Brush
+  description: >
+    Here you decide not to go any further, due to the increasing number of brambles getting caught in
+    your clothes.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26944
+      look: You see more brush to the north.
+    east:
+      to: tba:269:room:26944
+      look: You see more brush to the east.
+    south:
+      to: tba:269:room:26944
+      look: You see more brush to the south.
+    west:
+      to: tba:269:room:26944
+      look: You see more brush to the west.
+
+"tba:269:room:26946":
+  name: The Mesa
+  description: >
+    You have finally reached the mesa. The rocky formation reached up to about the height of 200 feet,
+    there is no way you could ever climb it. Directly to the south you spot a small hole.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26942
+    south:
+      to: tba:269:room:26966
+      look: You see a small hole, partially covered by a big rock.
+      door:
+        keywords: [rock, boulder, stone]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [rock, boulder, stone]
+    text: It looks as if it is movable...
+
+"tba:269:room:26947":
+  name: The Southern Desert
+  description: This is the largest desert you have ever seen...
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26943
+    south:
+      to: tba:269:room:26949
+
+"tba:269:room:26948":
+  name: The Southern Desert
+  description: The path has disappeared completely, leaving you free to choose any direction at all.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26948
+      look: This is the largest desert you have ever seen...
+    east:
+      to: tba:269:room:26949
+      look: This is the largest desert you have ever seen...
+    south:
+      to: tba:269:room:26948
+      look: This is the largest desert you have ever seen...
+    west:
+      to: tba:269:room:26948
+      look: This is the largest desert you have ever seen...
+
+"tba:269:room:26949":
+  name: The Southern Desert
+  description: >
+    The small trail you have been painstakingly following leads to the north and south, and a smaller
+    trail wanders to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26947
+    west:
+      to: tba:269:room:26948
+
+"tba:269:room:26950":
+  name: The Southern Desert
+  description: >
+    The small trail you have been painstakingly following leads to the north and south, with no end in
+    sight.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26949
+    south:
+      to: tba:269:room:26952
+
+"tba:269:room:26951":
+  name: Cactus Land
+  description: >
+    You wander between large cacti and jagged rocks, trying to stay away from all the pricks. The trail
+    leads east and south from here.
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26952
+      look: You see a desert path, deserted.
+    south:
+      to: tba:269:room:26953
+      look: the path leads south.
+
+"tba:269:room:26952":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, and a faint trail runs off to the west.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26950
+    south:
+      to: tba:269:room:26955
+    west:
+      to: tba:269:room:26951
+      look: A small trail goes west from here.
+
+"tba:269:room:26953":
+  name: A Cactus-Infested Area
+  description: >
+    You wander between large cacti and jagged rocks, trying to stay away from all the pricks. The trail
+    leads north and south from here.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26951
+    south:
+      to: tba:269:room:26954
+
+"tba:269:room:26954":
+  name: A Cactus-Infested Area
+  description: >
+    You wander between large cacti and jagged rocks, trying to stay away from all those darn pricks.
+    The trail leads north and east from here.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26953
+    east:
+      to: tba:269:room:26954
+
+"tba:269:room:26955":
+  name: The Southern Desert
+  description: >
+    The desert stretches out in every direction, and a faint trail runs off to the west. The main path
+    leads north and south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26952
+    east:
+      to: tba:269:room:26956
+      look: You can go east from here.
+    south:
+      to: tba:269:room:26958
+    west:
+      to: tba:269:room:26954
+      look: A small trail goes west from here.
+
+"tba:269:room:26956":
+  name: In The Brush
+  description: >
+    The sage brush and tumbleweeds here press in all around you, making it a bit hard to walk.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26944
+    east:
+      to: tba:269:room:26957
+    south:
+      to: tba:269:room:26944
+    west:
+      to: tba:269:room:26955
+      look: The 'main' path lies west.
+
+"tba:269:room:26957":
+  name: In The Brush
+  description: >
+    The sage brush and tumbleweeds here press in all around you, making it a bit hard to walk.
+  sector: hills
+  exits:
+    north:
+      to: tba:269:room:26957
+    east:
+      to: tba:269:room:26957
+    south:
+      to: tba:269:room:26957
+    west:
+      to: tba:269:room:26956
+
+"tba:269:room:26958":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, and the main path leads north and south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26955
+    south:
+      to: tba:269:room:26959
+
+"tba:269:room:26959":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, and the main path leads north and south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26958
+    south:
+      to: tba:269:room:26960
+
+"tba:269:room:26960":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, and the main path leads north and south.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26959
+    south:
+      to: tba:269:room:26961
+
+"tba:269:room:26961":
+  name: The Southern Desert
+  description: The desert stretches out in every direction, and the main path leads north and east.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26960
+    east:
+      to: tba:269:room:26962
+      look: The path disappears to the east.
+
+"tba:269:room:26962":
+  name: A Brush-Filled Trail
+  description: >
+    The desert stretches out in every direction, and the main path leads east; westward it begins to
+    diminish....
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26963
+      look: You can't see far into the silent brush to the east...
+    west:
+      to: tba:269:room:26961
+
+"tba:269:room:26963":
+  name: A Brush-Filled Trail
+  description: The desert stretches out in every direction, and you can no longer make out a path.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26963
+      look: You see the desert...
+    east:
+      to: tba:269:room:26964
+      look: You see the desert...
+    south:
+      to: tba:269:room:26963
+      look: You see the desert...
+    west:
+      to: tba:269:room:26962
+      look: You see the desert...
+
+"tba:269:room:26964":
+  name: A Clearer Trail
+  description: >
+    The trail here is clearing a little, you carefully notice broken twigs and brush-marks on the
+    desert floor.
+  sector: field
+  exits:
+    north:
+      to: tba:269:room:26963
+      look: You see the desert...
+    east:
+      to: tba:269:room:26965
+      look: A small clearing lies to the east.
+    south:
+      to: tba:269:room:26963
+      look: You see the desert...
+    west:
+      to: tba:269:room:26963
+      look: You see more brush to the west.
+
+"tba:269:room:26965":
+  name: A Small Clearing
+  description:
+  - >
+    You have arrived at what seems to be the uttermost southern point of the Earth.  to the east there
+    is what seems to you to be a large Indian-style dwelling of some sort, made of a dark quartz-like
+    stone. About half way up it you can see the outlines of a sealed door.
+  - Looking about, you wonder why you begin to hear noises...
+  sector: field
+  exits:
+    east:
+      to: tba:269:room:26967
+      look: You see the front end of a stone wigwam of some sort.
+      door:
+        keywords: [door, stone]
+        kind: pickproof
+        key: tba:269:obj:26967
+        reset: locked
+    west:
+      to: tba:269:room:26964
+      look: You see Brush to the west.
+  extras:
+  - keywords: [door, stone]
+    text: >
+      There is a slight depression in the stone dwelling to your east, making a circle that seems to be
+      the only entrance to it.
+
+"tba:269:room:26966":
+  name: A Small Cave
+  description: >
+    As your eyes begin to adjust, you can make out scattered bits of bone and broken pottery strewn
+    across the floor. To one corner you see the remains of what looks like a campfire. Feeling
+    claustrophobic, you suddenly feel the urge to leave!
+  sector: inside
+  exits:
+    north:
+      to: tba:269:room:26946
+      look: You  see a small opening.
+      door:
+        keywords: [boulder, rock, stone]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [rock, boulder, stone]
+    text: It looks as if it is movable...
+
+"tba:269:room:26967":
+  name: Inside A Small Stone Dwelling
+  description: >
+    It is very dark in here, and you shiver despite the heat of the desert outside.  A circle of stones
+    lies in the dust, looking magical in placement. the walls around you are covered with paintings of
+    what could be identified as scenes from the beginning of the world.
+  sector: inside
+  exits:
+    west:
+      to: tba:269:room:26965
+      look: You see a door to your west.
+      door:
+        keywords: [door, stone]
+        kind: pickproof
+        key: tba:269:obj:26967
+        reset: locked
+  extras:
+  - keywords: [wall, painting, paintings, walls]
+    text: The paintings you see are very beautiful, and magic seems to emanate from them.
+  - keywords: [door, stone]
+    text: >
+      There is a slight depression in the stone dwelling to your east, making a circle that seems to be
+      the only entrance to it.

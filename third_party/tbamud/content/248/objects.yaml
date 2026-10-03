@@ -1,0 +1,378 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 248.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:248:obj:24800":
+  type: weapon
+  keywords: [sword, diamond, edge, edged, long]
+  short: a diamond-edged sword
+  long: A long sharp-edged sword is stuck half into a stone.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 6d5
+    attack: bite
+  weight: 15
+  cost: 1000
+  rent: 1000
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  extras:
+  - keywords: [diamond, edge, edged, sword, long]
+    text: >
+      This is a long slim sword with diamond edges on its silver blade.  On the silver blade are some
+      writings in a long forgotten language.  The diamond edges of the blade are as sharp as razors and hard
+      as dimonds.
+  - keywords: [writings]
+    text: >
+      You can't make out anything of it, sorry.  Maybe you should ask a sage or a wizard for help in this
+      matter...
+
+"tba:248:obj:24801":
+  type: weapon
+  keywords: [longsword, fine, sword]
+  short: a fine Longsword
+  long: A shiny longsword is lying on the ground.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 8
+  cost: 600
+  rent: 200
+  level: 0
+
+"tba:248:obj:24802":
+  type: armor
+  keywords: [armor, elven, chain, chainmail]
+  short: an Elven chainmail
+  long: A nice looking chainmail is lying on the ground here.
+  flags: [anti_evil]
+  wear: [take, body, hold]
+  values:
+    armor: 6
+  weight: 15
+  cost: 800
+  rent: 80
+  level: 0
+
+"tba:248:obj:24803":
+  type: armor
+  keywords: [mithril, elven, armor, chain]
+  short: a Mithril chainmail
+  long: A white chainmail is lying on the ground.
+  flags: [anti_evil]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 15
+  cost: 1000
+  rent: 85
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: mana
+    modifier: 10
+
+"tba:248:obj:24804":
+  type: weapon
+  keywords: [mithril, sword, twohanded]
+  short: a Two-handed Mithril Sword
+  long: A large sword is stuck into the ground.
+  flags: [glow, magic, bless, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: slash
+  weight: 18
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+
+"tba:248:obj:24805":
+  type: other
+  keywords: [scope, telescope, large]
+  short: a large telescope
+  long: A large telescope is fastened on a tree.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:248:obj:24806":
+  type: weapon
+  keywords: [bow, hunting, elven]
+  short: an Elven hunting bow
+  long: A wooden bow has been left here lying on the ground.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 1
+  cost: 1000
+  rent: 330
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:248:obj:24807":
+  type: armor
+  keywords: [cap, coif, chain, elven]
+  short: an Elven Chaincoif
+  long: A chainmail coif has been left here on the ground.
+  flags: [anti_evil]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 20
+  cost: 400
+  rent: 20
+  level: 0
+
+"tba:248:obj:24808":
+  type: armor
+  keywords: [leggings, chain, elven]
+  short: a pair of Elven Chain leggings
+  long: Some chain leggings has been left here unguarded.
+  flags: [glow, hum, anti_evil]
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 25
+  cost: 750
+  rent: 84
+  level: 0
+
+"tba:248:obj:24809":
+  type: potion
+  keywords: [green, leafgreen, potion]
+  short: a Leaf-green potion
+  long: A green potion is standing on the ground.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [30, 25, 28, 15]
+  weight: 1
+  cost: 900
+  rent: 50
+  level: 0
+
+"tba:248:obj:24810":
+  type: staff
+  keywords: [oak, branch, staff]
+  short: an oak branch staff
+  long: A long, gray branch rests heavily on the ground.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [30, 15, 5, 42]
+  weight: 2
+  cost: 500
+  rent: 20
+  level: 0
+
+"tba:248:obj:24811":
+  type: potion
+  keywords: [potion, ocean, blue]
+  short: an Ocean-blue potion
+  long: An ocean-blue potion is resting on the ground.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [30, 3, 1, 36]
+  weight: 2
+  cost: 900
+  rent: 50
+  level: 0
+
+"tba:248:obj:24812":
+  type: wand
+  keywords: [flute, mithril]
+  short: a Mithril flute
+  long: A glittring flute has carelessly been dropped here.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [26, 4, 4, 34]
+  weight: 2
+  cost: 1000
+  rent: 40
+  level: 0
+
+"tba:248:obj:24813":
+  type: container
+  keywords: [bag, green, small]
+  short: a small green bag
+  long: A green bag has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 18
+  rent: 6
+  level: 0
+
+"tba:248:obj:24814":
+  type: container
+  keywords: [sack, green, large]
+  short: a large green sack
+  long: A green sack has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 25
+  rent: 10
+  level: 0
+
+"tba:248:obj:24815":
+  type: note
+  keywords: [papyrus, paper]
+  short: a papyrus note
+  long: A papyrus roll is lying on the ground.
+  flags: [anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 15
+  rent: 1
+  level: 0
+
+"tba:248:obj:24816":
+  type: pen
+  keywords: [swan, quill, feather, pen, white]
+  short: a swan-feather quill
+  long: A small white feather is flying around in mid-air.
+  flags: [anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:248:obj:24817":
+  type: light
+  keywords: [small, jar, glass, worm]
+  short: a small glass jar with a glowing worm in it
+  long: A small glass jar has been left on the ground.
+  flags: [anti_evil]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 100
+  rent: 3
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [small, jar, glass]
+    text: >
+      You see a small perfectly made glass jar.  In the jar you can see a small worm glowing brightly.
+  - keywords: [worm, glowing]
+    text: The worm looks friendly...  :-)
+
+"tba:248:obj:24818":
+  type: drinkcon
+  keywords: [milk, skin, milk]
+  short: a homemade milk skin
+  long: A nice looking skin, with white traces of milk on it, has been left here.
+  flags: [anti_evil]
+  wear: [take]
+  values:
+    capacity: 20
+    contains: 20
+    liquid: milk
+    poisoned: false
+  weight: 25
+  cost: 333
+  rent: 10
+  level: 0
+
+"tba:248:obj:24819":
+  type: food
+  keywords: [rabbit, meat, rosted]
+  short: a nicely rosted rabbit
+  long: A very good smelling rosted rabbit has been left on the ground.
+  wear: [take, hold]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 3
+  cost: 25
+  rent: 2
+  level: 0
+
+"tba:248:obj:24820":
+  type: food
+  keywords: [bisquet, elven]
+  short: a fine elven bisquet
+  long: A small bisquet lies on the ground.
+  wear: [take, hold]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 1
+  level: 0
+
+"tba:248:obj:24821":
+  type: armor
+  keywords: [cape, wool, woolen]
+  short: a warm woolen cape
+  long: Someone has left something wooly on the ground.
+  wear: [take, neck, about]
+  values:
+    armor: 9
+  weight: 10
+  cost: 1000
+  rent: 200
+  level: 0
+
+"tba:248:obj:24822":
+  type: armor
+  keywords: [ring, fire, opal]
+  short: a small fire-opal ring
+  long: A small glowing ring has been left on the ground.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    armor: 10
+  weight: 10
+  cost: 950
+  rent: 100
+  level: 0
+  affects:
+  - apply: age
+    modifier: 10
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [ring, fire, opal]
+    text: >
+      A small red opal is set into the platinum ring, the opal glows with a faint red light that pulses
+      whith your heart beet.

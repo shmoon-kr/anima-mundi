@@ -1,0 +1,1180 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 234.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:234:room:23400":
+  name: Newbie School
+  description: >
+    Welcome.  We hope you have a lot of fun here.  Please go down to start your training.  When you
+    have finished the school, you can go down, and fight in the combat arena.  Good Luck!
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    down:
+      to: tba:234:room:23401
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Builder   : Radiax
+        Zone         : 234 Newbie School
+        Began        : 1998
+        Player Level : 1-4
+        Rooms        : 73
+        Mobs         : 12
+        Objects      : 36
+        Shops        : 2
+        Triggers     : 3
+        Theme        :
+        Plot         :
+        Links        : 00, 72u
+        Map          : 30
+
+"tba:234:room:23401":
+  name: Newbie School
+  description: >
+    Following these halls will lead you to rooms that will teach you some of the basics commands that
+    will be very useful for your journeys here in the realm of Time Warp.  Please continue East.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23402
+    up:
+      to: tba:234:room:23400
+
+"tba:234:room:23402":
+  name: Newbie School
+  description: >
+    Typing @RLOOK@n either in small case, upper case, or mixed will allow you to see the Room name and
+    Room Description also any players or Monsters or items. You also can just type @RL@n to view the
+    room.  Please continue North or South to read more on commands.  After you are done, continue East.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23403
+    east:
+      to: tba:234:room:23405
+    south:
+      to: tba:234:room:23404
+    west:
+      to: tba:234:room:23401
+
+"tba:234:room:23403":
+  name: Newbie School
+  description: >
+    Typing @R AUTOEXIT @n will toggle your exits so when you enter a new room or type Look, you can see
+    the available exits.  Closed Doors or Gates will not display an exit, until you open them.  Read the
+    room descriptions for hints in finding hidden exits.  There is a curtain on the north wall swaying
+    slightly as if air is flowing in from somewhere.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23470
+      door:
+        keywords: [curtain, curtains]
+        kind: door
+        reset: closed
+    south:
+      to: tba:234:room:23402
+  extras:
+  - keywords: [curtain]
+    text: A beautiful set of curtains is blocking your view to the north.
+
+"tba:234:room:23404":
+  name: Newbie School
+  description: >
+    @R Color Complete @n will allow you to see colors displayed throughout the game, and can help you
+    easily identify certain things like, boards, atms, mobs, corpses, you bleeding...  Etc etc.  You can
+    also talk in different colors and make your title colorful.  Type @RHELP ANSI@n @nto view how to do
+    this, and to get a list of the colors.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23402
+
+"tba:234:room:23405":
+  name: Newbie School
+  description: >
+    To see who is currently playing in Time Warp type @R WHO.  @n This will give you a display of both
+    the Visible immortals and Mortals.  It will also tell you the class and race of a player and if they
+    belong to a guild or clan.  It will also let you know if a player is currently away from their PC. 
+    Typing @R AFK @n will toggle this Display.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23406
+    west:
+      to: tba:234:room:23402
+
+"tba:234:room:23406":
+  name: Newbie School
+  description: >
+    @RCommands @nwill bring up a list of available commands that you can use. This will show game
+    commands, typing @RSocials @nwill show you actions that you can use.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23407
+    east:
+      to: tba:234:room:23409
+    south:
+      to: tba:234:room:23408
+    west:
+      to: tba:234:room:23405
+
+"tba:234:room:23407":
+  name: Newbie School
+  description: >
+    AUTO's.  @RAutoSac @nwill allow you to sacarifice corpses of mobs that you defeat.  @RAutoLoot
+    @ngives you the ability to take all the items from a corpse of a mob you defeat (this will work before
+    the autosac).  @RAutogold @ntakes only the gold from the defeated mobs.  Autoloot overrides autogold,
+    so you will still take items.  @RAutosplit @nwill split your gold from a defeated mob and disperse it
+    to all the people within your group.  All these commands are toggles, so you can turn them on or off
+    at will.  Type @RTOGGLE @nto see all the available toggles that you can turn on or off.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:234:room:23406
+
+"tba:234:room:23408":
+  name: Newbie School
+  description: >
+    @RWimpy @nis a safety command that lets you flee from combat if you go below the set wimpy.  For
+    example if you type wimpy 10 you will flee from combat if you fall below 10 hitpoints.  Flee is not
+    guaranteed.  You can fail from fleeing, but it will continue to flee if possible.  Make sure you keep an
+    eye on your hitpoints.  A scroll of Recall will save you if you feel your wimpy won't.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23406
+
+"tba:234:room:23409":
+  name: Newbie School
+  description: >
+    You can regain hitpoints, mana points, and movement points by @RSleeping @nand @Rresting.  @n
+    Sleeping is exactly as it states, you fall asleep, you can still check your stats and listen to Gossips,
+    group talks, view the Who list and simple commands.  Resting allows you to sit down, you can listen to
+    talk, as well as all other channels that you belong to.  You can also do more commands that sleeping
+    will not allow you to do, but some commands require you to be standing.  Resting does not heal
+    hitpoints as fast as sleeping, but will restore movement points just as fast.  Being Drunk and sleeping
+    increases the Rate of Mana point rejuvenation.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    west:
+      to: tba:234:room:23406
+    down:
+      to: tba:234:room:23410
+
+"tba:234:room:23410":
+  name: Newbie School
+  description: >
+    @RScan @nlets you see what Mobs are in the following rooms.  It will only show you mobs in rooms
+    within two paces of the room you are in.  It will not show you mobs in a room with a closed door.  Scan
+    will also let you see if a Player is within 2 spaces of you.  Scan will not work around corners, it
+    only works in a straight line.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    west:
+      to: tba:234:room:23411
+    up:
+      to: tba:234:room:23409
+
+"tba:234:room:23411":
+  name: Newbie School
+  description: >
+    @RWhere@n will display all players that are currently in your zone.  It will not tell you where
+    they are, just that they are within the same zone as you.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23412
+    east:
+      to: tba:234:room:23410
+    south:
+      to: tba:234:room:23413
+    west:
+      to: tba:234:room:23414
+
+"tba:234:room:23412":
+  name: Newbie School
+  description: >
+    To equip and unequip items the following commands will be needed.  @RWear @nputs armor on the
+    appropriate body part.  @RHold @nlets you hold onto a light, as well as some weapons.  @RWield @nequips
+    your main weapon.  Shields will be considered a wearable.  To unequip items just @RRemove @nthe item
+    you want, use specific names such as remove sword.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:234:room:23411
+
+"tba:234:room:23413":
+  name: Newbie School
+  description: >
+    Spells, for all those magic users and clerics.  To cast spells you need to use the @RCast @ncommand
+    followed by apostrophes.  For example to cast a Heal spell, type cast 'heal' or cast 'heal' joeschmo
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23411
+
+"tba:234:room:23414":
+  name: Newbie School
+  description: >
+    To do actions that are not available on the socials list, you can use the @REmote @ncommand.  For
+    example emote hops about happily.  Will display yourname hops about happily to everyone in the same
+    room as you.  @RGemote @nwill allow you to send socials to the entire game.  For example Gemote smiles,
+    displays Gossip yourname smiles happily, to the entire mud.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23411
+    west:
+      to: tba:234:room:23415
+
+"tba:234:room:23415":
+  name: Newbie School
+  description: >
+    In some instances you may need to know what time of day it is.  For example buying items from a
+    store that has only day time hours, and/or gates that lock at nightfall, and unlock at sunrise.  To view
+    the time and date, type @RTime@n.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23416
+    east:
+      to: tba:234:room:23414
+    south:
+      to: tba:234:room:23417
+    west:
+      to: tba:234:room:23418
+
+"tba:234:room:23416":
+  name: Newbie School
+  description: >
+    You can send any items you do not want to a specified place, known as a donation room.  Please
+    @RDonate @n any unwanted items.  The short name for this is @RDon@n.  Not all items will make it to the
+    donation room so don't use it for a storage place.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:234:room:23415
+
+"tba:234:room:23417":
+  name: Newbie School
+  description: >
+    We have enabled @RAuctions @non this mud.  You can auction any item you have in your inventory. 
+    This will send a message to all players stating what item and price you are auctioning off.  This
+    auctioneer will give three chances for someone to bid on the item.  Then the auction will be complete.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23415
+
+"tba:234:room:23418":
+  name: Newbie School
+  description: >
+    There are @RBoards @nlocated throughout the mud.  The major board is located very close to the
+    center of town.  Please view the boards daily.  This will contain important information, code changes
+    that will effect you, or maybe upcoming quests.  Another feature for you to view is the @RMOTD@n.  You
+    can type MOTD or can view it when you log onto the game.  This part is automatic, but you can view it
+    at any time.  If you have any problems Please type @RBUG@n and your message so we may correct the
+    problem.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23415
+    west:
+      to: tba:234:room:23419
+
+"tba:234:room:23419":
+  name: Newbie School
+  description: >
+    Before engaging in combat, you should check to see if you are able to handle the Mob.  The
+    @RConsider@n command will let you know how well matched you are to the mob.  Typing @RCon@n mobname will
+    display this info.  You can consider another player, especially if you are not in town and you are
+    wondering if you can take on another player.  Pkilling is not allowed in Town or in the newbie school/zone
+    area.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23420
+    east:
+      to: tba:234:room:23418
+
+"tba:234:room:23420":
+  name: Newbie School
+  description: >
+    There may be times you need help to kill a main mob, or even a group of mobs.  If you ask other
+    players to join you, you can go around in your own group.  To follow someone, type @RFollow Playername@n
+    or you can type @RFol Playername@n.  If you enable Autoassist, you will automatically fight when
+    your partner fights.  However this won't work if a spell is cast first.  To view the stats of your
+    party, type @RGroup@n this will display level, hit/mana/movement points.  To talk to your party so noone
+    else can hear you, type @RGT@n.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23421
+    south:
+      to: tba:234:room:23419
+
+"tba:234:room:23421":
+  name: Newbie School
+  description: >
+    @REQ@n lets you see what you have equipped.  To see what you have in your Inventory type @Rinv@n. 
+    This will be useful if you want to sell some items. The @RScore@n allows you to check your stats, ac,
+    class, money, time you have spent in the game and also what you are affected by, such as a strength,
+    bless, armor spell.  The short cut for this is @RSC@n.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23424
+    east:
+      to: tba:234:room:23422
+    south:
+      to: tba:234:room:23420
+    west:
+      to: tba:234:room:23423
+
+"tba:234:room:23422":
+  name: Newbie School
+  description: >
+    You will find a guild somewhere in town, that will have a guildmaster.  If you find the guildmaster
+    that supports your class, you will find that he can train you.  To see how you can be trained, type
+    @RPractice@n.  This will give you a list of skills and/or spells that you can learn.  This will also
+    tell you how many practice points you have.  Train as much as you can until you cannot train anymore
+    for that Skill/spell, this will make your fail rate decrease. You gain Practice Points when you
+    level, but you may not gain skills/spells each level.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    west:
+      to: tba:234:room:23421
+
+"tba:234:room:23423":
+  name: Newbie Shop
+  description: >
+    Welcome to the minimart.  To see what the merchant has for sale type @RList@n.  To buy an item type
+    @RBuy #1@n.  Or you can use the Item name, if there is multiple items with the same name, use the #
+    method.  To buy multiple items such as 5 rations of food, you would type @RBuy 5 #2@n.  To sell items
+    in your inventory just type @RSell item@n.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23421
+
+"tba:234:room:23424":
+  name: Newbie School
+  description: >
+    In town you will stumble across the Postmaster.  The postmaster will allow you to send mail to
+    players that are part of this mud.  It will send it to the player if that player is in the game or not. 
+    When that players joins the mud, they will receive a personal announcement that they have mail.  To
+    send a message, go to the postmaster and type @RMail recipient@n.  If I wanted to send mail to Rumble,
+    I would type @RMail Rumble@n.  Just type your massage in, and then on a new line type /s to save and
+    send the mail.  To receive mail, go to the postmaster and type @RReceive mail@n.  Sending mail will
+    cost you 150 gold.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:234:room:23425
+    south:
+      to: tba:234:room:23421
+
+"tba:234:room:23425":
+  name: Newbie School
+  description: >
+    The last stage of School.  WOO HOO, wait, one more thing to do yet.  Time to put your knowledge to
+    the test.  To the east and west are some practice mobs for you test your skills and commands.  Going
+    down will send you down into the Newbie zone, which was designed for you to hone your skills and make
+    your way to the next experience level.  Good Luck!
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23426
+    south:
+      to: tba:234:room:23424
+    west:
+      to: tba:234:room:23427
+    down:
+      to: tba:234:room:23428
+
+"tba:234:room:23426":
+  name: The Fight
+  description: >
+    Here are some simple mobs for you to fight and to learn your basic skills. They should not be
+    difficult.  But, be sure to set your wimpy and be ready to flee.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:234:room:23425
+
+"tba:234:room:23427":
+  name: The Fight
+  description: >
+    A few pathetic mobs are here to practice on.  Be sure to consider all mobs before attacking them. 
+    This way you will know how likely it is you will win or flee.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23425
+
+"tba:234:room:23428":
+  name: Arena
+  description: >
+    Welcome to the combat zone.  Here you will find critters roaming around, looking forward to a good
+    fight.  Remember to CON the mobs..  Some mobs may be a bit too tough for you.  Fighting in here until
+    you are level 5 is recommended, however you can roam around anytime you like.  Be careful though,
+    because outside of this zone, some mobs will attack you!
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23430
+    south:
+      to: tba:234:room:23440
+    west:
+      to: tba:234:room:23429
+    up:
+      to: tba:234:room:23425
+
+"tba:234:room:23429":
+  name: Arena
+  description: >
+    Here is a fountain that you can fill up your Goatskin.  The water is crystal clear, but the
+    surrounding walls are very musky.  The fountain looks clean and safe to drink from.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23428
+    south:
+      to: tba:234:room:23441
+
+"tba:234:room:23430":
+  name: Arena
+  description: >
+    The smell of death is all around you.  You can hear tiny pitter patter of footsteps to the east,
+    west and south.  You could be mistaken, but you think you see little red eyes watching you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23431
+    south:
+      to: tba:234:room:23439
+    west:
+      to: tba:234:room:23428
+  extras:
+  - keywords: [eyes]
+    text: >
+      When you lean over to try to see the eyes, you hear something scurry off, and tiny squeek of
+      laughter.
+
+"tba:234:room:23431":
+  name: Arena
+  description: >
+    Little footprints head in all directions.  A small mouse hole is in the base of the northern wall. 
+    The sounds of little footsteps echo throughout the arena.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23432
+    south:
+      to: tba:234:room:23438
+    west:
+      to: tba:234:room:23430
+
+"tba:234:room:23432":
+  name: Arena
+  description: >
+    The stench here seems to be of a different origin...  As if it was human instead of creature.  Did
+    someone you know, not make it far enough?  They probably didn't use the CON command!
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23433
+    south:
+      to: tba:234:room:23437
+    west:
+      to: tba:234:room:23431
+
+"tba:234:room:23433":
+  name: Arena
+  description: >
+    A loud wailing can be heard to the distant south.  It sounds almost like an animal crying.  The
+    arena continues in all directions except to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:234:room:23434
+    south:
+      to: tba:234:room:23436
+    west:
+      to: tba:234:room:23432
+
+"tba:234:room:23434":
+  name: Arena
+  description: >
+    This room has a peaceful feeling.  You feel as though you can rest here without anything bothering
+    you.  You feel refreshed in this room.  Safe rooms are a blessing to troubled adventurers.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    south:
+      to: tba:234:room:23435
+    west:
+      to: tba:234:room:23433
+
+"tba:234:room:23435":
+  name: Arena
+  description: >
+    The sounds of battle echo through out the hall.  The air is thin within this arena, maybe it gives
+    the creatures an advantage in combat???  A knocked over sign is lying here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23434
+    south:
+      to: tba:234:room:23448
+    west:
+      to: tba:234:room:23436
+  extras:
+  - keywords: [sign]
+    text: >
+      Be courteous to other players.  If there is a player in a room and there are mobs.  Do not attack
+      the mobs, unless you ask the player, or the player is asleep.  Offenders will be punished.
+
+"tba:234:room:23436":
+  name: Arena
+  description: >
+    This room seems to be darker than the rest of the arena.  You can make out little red eyes
+    following your every movement.  They seem to stay just far enough away to hide themselves from view.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:234:room:23433
+    east:
+      to: tba:234:room:23435
+    south:
+      to: tba:234:room:23447
+    west:
+      to: tba:234:room:23437
+
+"tba:234:room:23437":
+  name: Arena
+  description: >
+    Everything echo's in this room, the clanging of swords, ring through your head..  The clanging of
+    armor is continuous.  Not a good place to be if you have a headache.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23432
+    east:
+      to: tba:234:room:23436
+    south:
+      to: tba:234:room:23446
+    west:
+      to: tba:234:room:23438
+
+"tba:234:room:23438":
+  name: Arena
+  description: >
+    The ground here seems to be really soft.  A closer examination, suggests that there are creatures
+    that live underground.  The holes are too small for you to enter.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23431
+    east:
+      to: tba:234:room:23437
+    south:
+      to: tba:234:room:23445
+    west:
+      to: tba:234:room:23439
+
+"tba:234:room:23439":
+  name: Arena
+  description: >
+    This is an odd room, it has a tree growing in the center.  This is the only tree in the arena, and
+    it looks to be in good health.  How can this be so?
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23430
+    east:
+      to: tba:234:room:23438
+    south:
+      to: tba:234:room:23444
+    west:
+      to: tba:234:room:23440
+  extras:
+  - keywords: [tree]
+    text: This Tree is magical.  The fallen leaves off of this tree provides some nourishment.
+
+"tba:234:room:23440":
+  name: Arena
+  description: >
+    This is a typical room in the arena.  It is clear of everything except the occasional wandering
+    mob.  The air has a stench of death and blood is splattered everywhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23428
+    east:
+      to: tba:234:room:23439
+    south:
+      to: tba:234:room:23443
+    west:
+      to: tba:234:room:23441
+
+"tba:234:room:23441":
+  name: Arena
+  description: >
+    The wall here has something scratched into it.  You also see a small stone sticking out of the
+    wall, the rest of the wall is smooth.  To the north you notice a fountain.  Nothing else of interest is
+    here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23429
+    east:
+      to: tba:234:room:23440
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:234:room:23442
+  extras:
+  - keywords: [wall, scratched, stone]
+    text: The little stone screams, Push the button.
+
+"tba:234:room:23442":
+  name: Arena
+  description: >
+    The ground seems a bit grainy here.  It is like wet sand.  Wet from blood. How would the inside of
+    an Arena get sand in it?  This is obviously not a normal area.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23441
+    east:
+      to: tba:234:room:23443
+    south:
+      to: tba:234:room:23455
+
+"tba:234:room:23443":
+  name: Arena
+  description: >
+    A grainy wet sand sticks to everything.  It is a dark, almost red, brown from the blood that is
+    pooled about the room.  The amount of death involved has left a lingering smell.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23440
+    east:
+      to: tba:234:room:23444
+    south:
+      to: tba:234:room:23454
+    west:
+      to: tba:234:room:23442
+
+"tba:234:room:23444":
+  name: Arena
+  description: >
+    The temperature in this room seems to have increased.  There is no cool wind at all.  You can hear
+    the hissing of mobs all around you.  Their beady eyes are all that is visible as they circle in the
+    darkness.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23439
+    east:
+      to: tba:234:room:23445
+    south:
+      to: tba:234:room:23453
+    west:
+      to: tba:234:room:23443
+
+"tba:234:room:23445":
+  name: Arena
+  description: >
+    The sand sticks to the bottom of your feet and smells metallic.  The sand is scattered and piled in
+    various ways as if people have struggled in a fight here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23438
+    east:
+      to: tba:234:room:23446
+    south:
+      to: tba:234:room:23452
+    west:
+      to: tba:234:room:23444
+
+"tba:234:room:23446":
+  name: Arena
+  description: >
+    The sand covers a few dismembered body parts.  A few bleached white bones stick out a odd angles as
+    if someone was trying to create a design.  They seem to have failed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23437
+    east:
+      to: tba:234:room:23447
+    south:
+      to: tba:234:room:23451
+    west:
+      to: tba:234:room:23445
+
+"tba:234:room:23447":
+  name: Arena
+  description: >
+    The ground here is sandy, but very firm.  You can hear the sound of water to the south west.  The
+    sand seems to give way to a more solid rock floor that slopes up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23436
+    east:
+      to: tba:234:room:23448
+    south:
+      to: tba:234:room:23450
+    west:
+      to: tba:234:room:23446
+
+"tba:234:room:23448":
+  name: Arena
+  description: >
+    The musky smell seems to be very light in this section of the arena.  The whole atmosphere seems to
+    have changed.  The wall here seems to be in better shape than the rest of the Arena.  How odd.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23435
+    south:
+      to: tba:234:room:23449
+    west:
+      to: tba:234:room:23447
+
+"tba:234:room:23449":
+  name: Inside Lake
+  description: >
+    You enter some shallow water.  You barely splash around as you move.  The water level barely covers
+    the bottom of your feet.  You can see some ripples forming in the southwest.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23448
+    south:
+      to: tba:234:room:23462
+    west:
+      to: tba:234:room:23450
+
+"tba:234:room:23450":
+  name: Inside Lake
+  description: >
+    You sink knee deep into water.  This will make it hard for you to flee rapidly.  There are some
+    wakes coming from the south.  You wonder if you disturbed something.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23447
+    east:
+      to: tba:234:room:23449
+    south:
+      to: tba:234:room:23461
+    west:
+      to: tba:234:room:23451
+
+"tba:234:room:23451":
+  name: Inside Lake
+  description: >
+    The water in this lake seems oddly warm.  It is almost as if............. The color of this
+    @Ylake@n is undeterminable.  However, you do notice a small wake coming from the south east.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23446
+    east:
+      to: tba:234:room:23450
+    south:
+      to: tba:234:room:23460
+    west:
+      to: tba:234:room:23452
+
+"tba:234:room:23452":
+  name: Indoor Lake
+  description: >
+    You splash into some water.  It seems as if there is a lake within this arena.  How did this Lake
+    get here?  It must have been made by someone or something.  This is definitely not natural.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23445
+    east:
+      to: tba:234:room:23451
+    south:
+      to: tba:234:room:23459
+    west:
+      to: tba:234:room:23453
+
+"tba:234:room:23453":
+  name: Arena
+  description: >
+    You seem to be on a bank of a cavern lake.  The path here is somewhat narrow.  You almost have to
+    walk sideways.  Looking down the cliff you can see little nests.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23444
+    east:
+      to: tba:234:room:23452
+    south:
+      to: tba:234:room:23458
+    west:
+      to: tba:234:room:23454
+  extras:
+  - keywords: [nest]
+    text: >
+      These nests are snug in the dirt.  Trying to remove them seems impossible. This looks like a
+      breeding ground.
+
+"tba:234:room:23454":
+  name: Arena
+  description: >
+    The terrain here is rocky and a tad bit sandy.  To the east there is a large rigged boulder which
+    almost blocks your way.  The rock is slick from water and blood.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23443
+    east:
+      to: tba:234:room:23453
+    south:
+      to: tba:234:room:23457
+    west:
+      to: tba:234:room:23455
+
+"tba:234:room:23455":
+  name: Arena
+  description: >
+    There is nothing here but sand and some bones.  You cannot make out what type of creature they come
+    from.  It could be human, a really short and deformed one.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23442
+    east:
+      to: tba:234:room:23454
+    south:
+      to: tba:234:room:23456
+
+"tba:234:room:23456":
+  name: Arena
+  description: >
+    Crunch, Crunch, Crunch.  You cannot take a step without stepping on some bones.  The bones break
+    every time you step on them.  Some of these bones seem to have been here for a very long time.  Some of
+    them are beneath the large rocks that occupy this space also.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23455
+    east:
+      to: tba:234:room:23457
+    south:
+      to: tba:234:room:23469
+
+"tba:234:room:23457":
+  name: Arena
+  description: >
+    The beach and the rocks merge together here.  You can see that the rocks form a breaking point for
+    the water.  During a high tide, the water seems to come up to this point.  Hopefully you won't be in
+    the middle of combat when it rises.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23454
+    east:
+      to: tba:234:room:23458
+    south:
+      to: tba:234:room:23468
+    west:
+      to: tba:234:room:23456
+
+"tba:234:room:23458":
+  name: Arena
+  description: >
+    The path here leads north and gets very narrow.  There is water coming from the east.  The bank
+    here is very travel worn, you can't make out a single set of tracks.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23453
+    east:
+      to: tba:234:room:23459
+    south:
+      to: tba:234:room:23467
+    west:
+      to: tba:234:room:23457
+
+"tba:234:room:23459":
+  name: Indoor Lake
+  description: >
+    You sink down in the water to your chest.  It is a little bit difficult to move here.  Fighting
+    here would be a bad mistake.  The current of the water is coming from the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23452
+    east:
+      to: tba:234:room:23460
+    south:
+      to: tba:234:room:23466
+    west:
+      to: tba:234:room:23458
+
+"tba:234:room:23460":
+  name: Inside Lake
+  description: >
+    The waters current is coming from the east.  It is almost as if something is trying to force the
+    water in every direction you walk.  You can hear a faint splash coming from the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23451
+    east:
+      to: tba:234:room:23461
+    south:
+      to: tba:234:room:23465
+    west:
+      to: tba:234:room:23459
+
+"tba:234:room:23461":
+  name: The Source
+  description: >
+    You see ripples generating here in the center of this lake.  This leads you to believe that there
+    must be something alive in here.  You hear an odd noise.
+  sector: water_noswim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23450
+    east:
+      to: tba:234:room:23462
+    south:
+      to: tba:234:room:23464
+    west:
+      to: tba:234:room:23460
+
+"tba:234:room:23462":
+  name: In the Lake
+  description: >
+    You fall waist deep into the water.  You can feel a small current trying to push you to the east. 
+    A rock wall to the east is worn smooth from years of erosion.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23449
+    south:
+      to: tba:234:room:23463
+    west:
+      to: tba:234:room:23461
+
+"tba:234:room:23463":
+  name: Arena
+  description: >
+    You sink down into water that is about 6 feet deep.  You have a wall to your east and south.  You
+    could swear that something moved passed your leg.  You can see green moss floating all around you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23462
+    west:
+      to: tba:234:room:23464
+
+"tba:234:room:23464":
+  name: Arena
+  description: >
+    This room is about half sand and half water.  There seems to be quite a lot of ripples coming from
+    the north.  It is a lot for an indoor lake.  If you concentrate close enough, you could swear the
+    ground is moving.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23461
+    east:
+      to: tba:234:room:23463
+    west:
+      to: tba:234:room:23465
+
+"tba:234:room:23465":
+  name: Arena
+  description: >
+    There seems to be a lot of grass growing here.  The water comes right up to the grass, but does not
+    seem to drown the grass.  The grass however has been trampled on, many of times.  This is a good
+    sign that something lives around here.  You see a large rope dangling from the ceiling.  It looks strong
+    enough to support you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23460
+    east:
+      to: tba:234:room:23464
+    west:
+      to: tba:234:room:23466
+    up:
+      to: tba:234:room:23472
+
+"tba:234:room:23466":
+  name: Arena
+  description: >
+    You wade up to your ankles in water.  The inside lake seems to get its source from the south.  A
+    small trickle of water seems to come from underneath the wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23459
+    east:
+      to: tba:234:room:23465
+    west:
+      to: tba:234:room:23467
+
+"tba:234:room:23467":
+  name: Arena
+  description: >
+    A trail here leads right into the wall.  How strange, there is no way to go through the wall.  It
+    is as if someone forgot to finish building in here. None the less, this room has 3 other exits and is
+    big enough to be in combat.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23458
+    east:
+      to: tba:234:room:23466
+    west:
+      to: tba:234:room:23468
+
+"tba:234:room:23468":
+  name: Arena
+  description: >
+    The rock here is very flat, smooth and shiny.  It seems to be made from a fine polished marble. 
+    Something here catches the light and reflects back at you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23457
+    east:
+      to: tba:234:room:23467
+    west:
+      to: tba:234:room:23469
+
+"tba:234:room:23469":
+  name: Arena
+  description: >
+    A pool of blood fills the center of the room.  The scent of death is in the air.  Hopefully you can
+    overcome the sensation and fight your way to victory and fame.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:234:room:23456
+    east:
+      to: tba:234:room:23468
+
+"tba:234:room:23470":
+  name: A Hidden Room
+  description: >
+    Congratulations, you have found the Hidden room.  Always be on the look out for key phrases or
+    words that may be further explored.  Please continue back to the main Hallway.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:234:room:23403
+      door:
+        keywords: [curtain, curtains]
+        kind: door
+
+"tba:234:room:23471":
+  name: A Hidden Store
+  description: >
+    You enter a small, cluttered room which is filled with shelves of boots and pants.  There are
+    various types of items ranging from leather to plate mail.
+  sector: inside
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:234:room:23441
+
+"tba:234:room:23472":
+  name: A Small Room
+  description: >
+    The room ends abruptly with no way out except back down into the arena. High overhead, out of
+    reach, a trapdoor to leads to freedom out of this newbie training nightmare.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    down:
+      to: tba:234:room:23465

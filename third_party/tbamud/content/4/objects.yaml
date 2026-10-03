@@ -1,0 +1,423 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 4.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:4:obj:400":
+  type: armor
+  keywords: [gloves]
+  short: rabbit skin gloves
+  long: A pair of rabbit skin gloves.
+  wear: [take, hands, hold]
+  values:
+    armor: 2
+  weight: 6
+  cost: 250
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [rabbit, skin, gloves, glove]
+    text: >
+      The gloves are very furry.  They are made from the skin and fur of a recently killed rabbit.  You
+      think these would keep your hands safe as well as warm.
+
+"tba:4:obj:401":
+  type: armor
+  keywords: [boots]
+  short: rabbit skin boots
+  long: A pair of rabbit skin boots.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 8
+  cost: 400
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [rabbit, skin, boots, boot]
+    text: >
+      The boots are very well made, and look like they would protect you well. The outside is covered in
+      soft fur to keep your warm.  The inside is made from the skin of the rabbit.
+
+"tba:4:obj:402":
+  type: other
+  keywords: [shrub]
+  short: a small shrub
+  long: A small shrub is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [small, shrub, plant]
+    text: >
+      The plant is about knee high and in full bloom.  Many colorful flowers dangle from it, giving off a
+      sweet scent.
+
+"tba:4:obj:403":
+  type: weapon
+  keywords: [whip]
+  short: rawhide whip
+  long: A rawhide whip
+  flags: [hum]
+  wear: [take, wield, hold]
+  values:
+    damage: 2d3
+    attack: whip
+  weight: 7
+  cost: 300
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [rawhide, whip]
+    text: >
+      The weapon looks rather strong and would defend you well in battle.  The whip is nine feet long
+      with a very skinny end.  You could cut someone badly with this weapon.
+
+"tba:4:obj:406":
+  type: other
+  keywords: [tree, stump]
+  short: tree stump
+  long: There is a tree stump here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Tree, Stump]
+    text: >
+      This is just an ordinary tree stump.  By the looks of it, it's been here for quite some time.
+
+"tba:4:obj:407":
+  type: other
+  keywords: [teddybear]
+  short: a teddybear
+  long: A teddybear was abandoned here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 450
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [teddybear]
+    text: >
+      The bear is rather cute looking.  There seems to be a small glow within his eyes, maybe this bear
+      is magical.
+
+"tba:4:obj:409":
+  type: armor
+  keywords: [armor]
+  short: wooden armor
+  long: A suit of wooden armor
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 11
+  cost: 300
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [Wooden, armor]
+    text: >
+      The armor is quite solid, giving you the best protection available.  A person would easily be able
+      to move around wearing this.
+
+"tba:4:obj:410":
+  type: armor
+  keywords: [warhelm, helmet]
+  short: wooden warhelm
+  long: A wooden warhelm
+  wear: [take]
+  values:
+    armor: 3
+  weight: 8
+  cost: 550
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [wooden, wood, warhelm, helmet]
+    text: >
+      The helmet is quite solid and would protect you quite well in battle.  You notice a few small chips
+      in the wood, most likely from a past battle.
+
+"tba:4:obj:411":
+  type: treasure
+  keywords: [pebble, rock]
+  short: Onyx pebble
+  long: An onyx pebble is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [onyx, pebble, rock]
+    text: >
+      The black pebble shines as you look at it.  You feel that it must contain some kind of power.
+
+"tba:4:obj:415":
+  type: other
+  keywords: [tree]
+  short: a large tree is here.
+  long: A large tree is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tree]
+    text: The tree is quite large.  It towers over you, shading you from the sunlight.
+
+"tba:4:obj:416":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A large torch.
+  wear: [take, hold]
+  values:
+    hours: 24
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch]
+    text: Your basic torch, nothing very remarkeable about it.
+
+"tba:4:obj:417":
+  type: container
+  keywords: [backpack]
+  short: a backpack
+  long: A backpack is here.
+  wear: [take, hold]
+  values:
+    capacity: 40
+    lock_flags: 5
+    corpse: false
+  weight: 5
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [backpack]
+    text: A hefty backpack that can carry more than a bag.
+
+"tba:4:obj:418":
+  type: weapon
+  keywords: [dagger]
+  short: a dagger
+  long: A dagger with a long thin blade is here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dagger]
+    text: A simple dagger used by thieves and hoodlums to relieve the unwary of their money.
+
+"tba:4:obj:419":
+  type: weapon
+  keywords: [mace]
+  short: a mace
+  long: A mace is here.
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: bludgeon
+  weight: 6
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mace]
+    text: This mace is made of a heavy polished metal with small spikes on the end. Look deadly
+
+"tba:4:obj:420":
+  type: weapon
+  keywords: [dirk, knife]
+  short: a dirk
+  long: A long, single-edged knife lies here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+
+"tba:4:obj:427":
+  type: other
+  keywords: [plant]
+  short: colorful plant
+  long: A colorful plant is growing here.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [colorful, plant]
+    text: >
+      The plant is the most beautiful plant you have ever set your eyes on.  It has petals like silk and
+      gives off the most wondrous scent.
+
+"tba:4:obj:433":
+  type: other
+  keywords: [egg]
+  short: bird egg
+  long: A bird egg is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bird, egg]
+    text: The egg is speckled with shades of blue.  It's in excellent condition.
+
+"tba:4:obj:447":
+  type: food
+  keywords: [apple]
+  short: apple
+  long: An apple
+  wear: [take, hold]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 3
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [apple]
+    text: The red apples shines in the light, making it look more delicious.
+
+"tba:4:obj:450":
+  type: treasure
+  keywords: [rock]
+  short: magical rock
+  long: A magical rock
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [magical, rock]
+    text: >
+      The rocks seems to hold some sort of magic.  You feel the power running through your hands.
+
+"tba:4:obj:483":
+  type: other
+  keywords: [painting]
+  short: painting
+  long: A beautiful painting is hanging on the wall.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [painting]
+    text: >
+      Color flowers fills your eyes as they stretch off the canvas of the painting.  The picture gives
+      the room a cheerful feeling.
+
+"tba:4:obj:484":
+  type: fountain
+  keywords: [stream, water]
+  short: a stream of water
+  long: A stream of water babbles as it rushes past.
+  wear: []
+  values:
+    capacity: -1
+    contains: -1
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stream, water]
+    text: This clear water looks refreshing and safe to drink.
+
+"tba:4:obj:485":
+  type: fountain
+  keywords: [pool, murky, water]
+  short: a pool of murky water
+  long: A pool of murky water stagnates slowly.
+  wear: []
+  values:
+    capacity: -1
+    contains: -1
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pool, murky, water]
+    text: >
+      This water looks as though it has been stewing for a long time, a slight greenish film coating its
+      surface, though it is probably still safe to drink.
+
+"tba:4:obj:486":
+  type: fountain
+  keywords: [stone, well]
+  short: a stone well
+  long: A stone well stands here.
+  wear: []
+  values:
+    capacity: -1
+    contains: -1
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stone, well]
+    text: >
+      This basic stone well appears reasonably well maintained, a simple wooden bucket allowing water to
+      be drawn from it.

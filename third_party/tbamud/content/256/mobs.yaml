@@ -1,0 +1,316 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 256.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:256:mob:25600":
+  keywords: [maid]
+  short: the maid
+  long: A maid walks around, looking for something to clean.
+  description: She wears a black dress with a white apron.  She looks as if she knows her job well.
+  level: 7
+  sex: female
+  alignment: 500
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:256:mob:25601":
+  keywords: [firetender, fire, tender]
+  short: the firetender
+  long: A firetender is here keeping the water warm for you.
+  description: >
+    This young servant has probably only reached his ninth or tenth year, and is probably working to
+    help support his family.  What a great little fella.
+  level: 8
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25602":
+  keywords: [firetender]
+  short: the firetender
+  long: A young female firetender is here keeping the water warm for guests' baths.
+  description: >
+    This young lady has probably only reached her ninth or tenth year.  She is probably working so that
+    her poverty stricken family can eat this season.
+  level: 6
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:256:mob:25603":
+  keywords: [servant]
+  short: the Lord's servant
+  long: One of the Lord's servants bustles by looking very busy.
+  description: >
+    The servant turns to you and says, "Shhh...  The Lord does not tolerate dawdling service, at least
+    not since the lady Penelope was taken by Mordecai. "
+  level: 10
+  sex: male
+  alignment: 250
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25604":
+  keywords: [lord's, lord's, guest]
+  short: the Lord's guest
+  long: One of the Lord's guests stands here importantly.
+  description: >
+    Dressed in finery, with many frills and trills, this man could very well pass for a transvestite.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [stay_zone, helper, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25605":
+  keywords: [cook]
+  short: a cook
+  long: One of the Lord's cooks stands here preparing for the next meal.
+  description: Dressed all in white, this woman seems covered head to toe in flour.
+  level: 10
+  sex: female
+  alignment: 350
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25606":
+  keywords: [child, kid]
+  short: the child
+  long: An annoying little kid runs past you, nearly knocking you over.
+  description: Dressed all in finery, this is obviously one the children of one the Lord's guests.
+  level: 2
+  sex: male
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25607":
+  keywords: [lord]
+  short: the Lord
+  long: Here you find the Lord of the Keep, weeping silently, knees drawn up against his chin.
+  description: >
+    The Lord, a strong and proud looking man, can not seem to stay lucid long enough to speak to you.
+  level: 29
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25608":
+  keywords: [guard]
+  short: the Lord's Guard
+  long: A member of Lord's Guard stands here, ready to fight for his Lord.
+  description: This man, showing no expression at all, could easily be made of stone.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, helper]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25609":
+  keywords: [commander, guard]
+  short: the Commander
+  long: The Commander of the Lord's Guard stands here at attention.
+  description: A truly noble man, this person's only desire in life is to protect his Lord.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [sentinel, helper]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25610":
+  keywords: [gardener]
+  short: the gardener
+  long: A gardener smiles up at you as you enter.
+  description: >
+    He looks to be a kind and gentle man, one who has devoted much of his life to nature and Mother
+    Earth.
+  level: 18
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:256:mob:25611":
+  keywords: [stable, hand, stablehand]
+  short: the stablehand
+  long: A stablehand waits patiently for your mount.
+  description: Although a young lad, he still seems very competent.
+  level: 11
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25612":
+  keywords: [waiter]
+  short: a waiter
+  long: A waiter stands nearby, waiting to serve.
+  description: >
+    Hans waits, stolidly and politely, as if he has not a care in the world but to get you a drink or
+    snack.
+  level: 23
+  sex: male
+  alignment: 600
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25613":
+  keywords: [blacksmith]
+  short: a blacksmith
+  long: A blacksmith works here, intent on his anvil.
+  description: He looks as if he could pound that metal for hours and not even break a sweat.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:256:mob:25650":
+  keywords: [sneaky, servant]
+  short: the sneaky servant'
+  long: A servant sneaks by you, head down, seeming to want to be un-noticed.
+  description: This guy MUST be some kind of rat or informer, he just looks so, well, guilty.
+  level: 15
+  sex: male
+  alignment: -100
+  flags: [aware, stay_zone, wimpy]
+  affects: [sneak, hide]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing

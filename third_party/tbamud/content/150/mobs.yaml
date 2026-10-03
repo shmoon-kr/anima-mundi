@@ -1,0 +1,730 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 150.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:150:mob:15000":
+  keywords: [gwydion, guard, royal]
+  short: Gwydion
+  long: Gwydion the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Gwydion wears the chain mail required of them as uniform.  He seems
+    very well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15001":
+  keywords: [king, welmar]
+  short: King Welmar
+  long: The wise King Welmar sits here in his throne.
+  description: >
+    In his later middle-age, with his beard starting to gray, King Welmar is still very powerfully
+    built, and wouldn't take kindly to an attack.  Despite that, you know he is well-loved throughout the
+    land, and has a reputation as a wise and just ruler.
+  level: 33
+  sex: male
+  alignment: 1000
+  flags: [spec, sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: sitting
+    default: standing
+
+"tba:150:mob:15002":
+  keywords: [ghost, horrible]
+  short: the horrible ghost
+  long: You hear a frightening wail, and see a horrible ghost approaching.
+  description: The ghost is almost translucent, and looks really SCARY!
+  level: 15
+  sex: neutral
+  alignment: -700
+  flags: [sentinel, scavenger, aware, aggressive, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15003":
+  keywords: [jim, guard, royal]
+  short: Jim
+  long: Jim the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Jim wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15004":
+  keywords: [brian, guard, royal]
+  short: Brian
+  long: Brian the Royal Guard is here, training with the Master.
+  description: >
+    As all members of the Guard, Brian wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15005":
+  keywords: [mick, guard, royal]
+  short: Mick
+  long: Mick the Royal Guard is here, training with the Master.
+  description: >
+    As all members of the Guard, Mick wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15006":
+  keywords: [matt, guard, royal]
+  short: Matt
+  long: Matt the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Matt wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15007":
+  keywords: [jochem, guard, royal]
+  short: Jochem
+  long: Jochem the Royal Guard sits here, off duty.
+  description: >
+    As all members of the Guard, Jochem wears the chain mail required of them as uniform.  He seems
+    very well trained, and moves like a fighter who has seen more than one battle, and longs to see the next!
+  level: 13
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:150:mob:15008":
+  keywords: [anne, guard, royal]
+  short: Anne
+  long: Anne the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Anne wears the chain mail required of them as uniform.  She seems very
+    well trained, and moves like a fighter who has seen more than one battle, and longs to see the next!
+  level: 13
+  sex: female
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15009":
+  keywords: [andrew, guard, royal]
+  short: Andrew
+  long: Andrew the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Andrew wears the chain mail required of them as uniform.  He seems
+    very well trained, and moves like a fighter who has seen more than one battle, and longs to see the next!
+  level: 13
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15010":
+  keywords: [bertram, bert, guard, royal]
+  short: Bertram
+  long: Bertram the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Bertram wears the chain mail required of them as uniform.  He seems
+    very well trained, and carries his scars with pride.  This guy seems tough...
+  level: 15
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15011":
+  keywords: [jeanette, guard, royal]
+  short: Jeanette
+  long: Jeanette the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Jeanette wears the chain mail required of them as uniform.  She seems
+    very well trained, and carries her scars with pride. This girl could be nasty if she wanted to...
+  level: 15
+  sex: female
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15012":
+  keywords: [peter, captain, guard, royal]
+  short: Peter, the Captain of the Royal Guard
+  long: Peter, the Captain of the Royal Guard, walks around inspecting.
+  description: >
+    As all members of the Guard, Peter wears the chain mail required of them as uniform.  Even though
+    all the other guards seem well trained, you realize none of them would stand a chance against this man
+    in a fight.  He stands at least two meters tall, but still moves with an almost feline grace.  He
+    actually radiates strength and confidence, and you have to fight a sudden urge to come to attention as
+    you see him.
+  level: 19
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15013":
+  keywords: [master, trainingmaster]
+  short: the Training Master
+  long: The Training Master is here, supervising.
+  description: >
+    Aged, but experienced, the Training Master is skilled in the use of virtually every weapon type
+    invented by Man.
+  level: 18
+  sex: male
+  alignment: 950
+  flags: [spec, sentinel, stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15014":
+  keywords: [herald, royal]
+  short: the Royal Herald
+  long: The Royal Herald is standing here.
+  description: >
+    This is a young, powerfully built man, whose primary function is to make Royal Announcements.
+  level: 18
+  sex: male
+  alignment: 800
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15015":
+  keywords: [ergan, murderer]
+  short: Ergan the Murderer
+  long: Slumped in a corner you see Ergan, aka the Murderer of Townsbridge.
+  description: >
+    You remember a time almost a decade ago, when the news of the day was how this man had slaughtered
+    the entire population of the little village of Townsbridge.  He was imprisoned, and here he is - a
+    shadow of the undoubtedly great warrior he once was, but still to be reckoned with.
+  level: 13
+  sex: male
+  alignment: -1000
+  flags: [scavenger, aware, aggressive, stay_zone, wimpy, no_charm, no_summon]
+  affects: [no_track, sneak]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:150:mob:15016":
+  keywords: [butler, james]
+  short: James the Butler
+  long: James the Butler is standing here, looking pompous.
+  description: "The typical perfect butler: upper middle age, a bit bald and with an impressive belly."
+  level: 8
+  sex: male
+  alignment: 500
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15017":
+  keywords: [woman, cleaning]
+  short: the Cleaning Woman
+  long: There is a Cleaning Woman here, trying not be noticed.
+  description: Although she has a menial job, she seems to like it.
+  level: 1
+  sex: female
+  alignment: 800
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15018":
+  keywords: [cockroach, roach]
+  short: the cockroach
+  long: A large cockroach is crawling by the wall.
+  description: Very large indeed, and they say cockroaches are hard to kill...
+  level: 4
+  sex: neutral
+  alignment: -250
+  flags: [aware, stay_zone, no_bash, no_blind]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15019":
+  keywords: [astrologer]
+  short: the Astrologer
+  long: The Astrologer is sitting here, studying a book.
+  description: >
+    He is old and white-haired, with a long beard.  As you see him, you can almost believe the rumors
+    about stars deciding Fate, and that astrology is capable of seeing the future.
+  level: 23
+  sex: male
+  alignment: 900
+  flags: [spec, sentinel, aware, memory, no_charm, no_summon]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:150:mob:15020":
+  keywords: [tim, guard, lifeguard]
+  short: Tim, the King's Lifeguard
+  long: Tim, the King's Lifeguard, is standing here.
+  description: >
+    This guy looks just like his twin, Tom.  There seems to be no doubt that he is completely prepared
+    to give his life for the King, if necessary.
+  level: 17
+  sex: male
+  alignment: 900
+  flags: [spec, sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15021":
+  keywords: [tom, guard, lifeguard]
+  short: Tom, the King's Lifeguard
+  long: Tom, the King's Lifeguard, is standing here.
+  description: >
+    This guy looks just like his twin, Tim.  There seems to be no doubt that he is completely prepared
+    to give his life for the King, if necessary.
+  level: 17
+  sex: male
+  alignment: 900
+  flags: [spec, sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15022":
+  keywords: [chef, cook]
+  short: the Chef
+  long: The Chef is here, shouting orders to the other cooks.
+  description: >
+    It seems he has been tasting his own food a bit too enthusiastically.  He is, in other words, a bit
+    fat.
+  level: 19
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, wimpy, memory, no_charm, no_summon]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15023":
+  keywords: [cook]
+  short: the cook
+  long: There is a cook here, making himself busy with a pot.
+  description: A junior cook, eager to do the Chef's bidding.
+  level: 4
+  sex: male
+  alignment: 300
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15024":
+  keywords: [david, man, guard]
+  short: David
+  long: David, a big, mean-looking man, stands here, guarding the door.
+  description: >
+    He really is big, and you get the feeling he wouldn't take kindly to an attempt to get past him.
+  level: 19
+  sex: male
+  alignment: 250
+  flags: [spec, sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15025":
+  keywords: [dick, man, guard]
+  short: Dick
+  long: Dick, a big, mean-looking man, stands here, guarding the door.
+  description: >
+    He really is big, and you get the feeling he wouldn't take kindly to an attempt to get past him.
+  level: 19
+  sex: male
+  alignment: 250
+  flags: [spec, sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15026":
+  keywords: [jerry, guard, royal]
+  short: Jerry
+  long: Jerry the Royal Guard is here off duty, playing dice.
+  description: >
+    As all members of the Guard, Jerry wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: resting
+    default: resting
+
+"tba:150:mob:15027":
+  keywords: [michael, guard, royal]
+  short: Michael
+  long: Michael the Royal Guard is here off duty, playing dice.
+  description: >
+    As all members of the Guard, Michael wears the chain mail required of them as uniform.  He seems
+    very well trained, and moves like an experienced fighter.
+  level: 11
+  sex: male
+  alignment: 800
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: resting
+    default: resting
+
+"tba:150:mob:15028":
+  keywords: [hans, guard, royal]
+  short: Hans
+  long: Hans the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Hans wears the chain mail required of them as uniform.  He seems very
+    well trained, and moves like a fighter who has seen more than one battle, and longs to see the next!
+  level: 13
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15029":
+  keywords: [boris, guard, royal]
+  short: Boris
+  long: Boris the Royal Guard is here on duty.
+  description: >
+    As all members of the Guard, Boris wears the chain mail required of them as uniform.  He seems very
+    well trained, and carries his scars with pride.  This guy seems tough...
+  level: 15
+  sex: male
+  alignment: 900
+  flags: [spec, stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15030":
+  keywords: [zombie, villager]
+  short: the zombie
+  long: A zombie is shambling over some corpses here, moving quite silently.
+  description: >
+    It is entirely possible that this zombie was once one of the villagers of Townsbridge who has been
+    brought to an undead life by a fuelling desire for revenge.
+  level: 11
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, no_charm, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15031":
+  keywords: [skeleton, villager]
+  short: the skeleton
+  long: A skeleton is moving about with a loud clatter here, climbing over corpses.
+  description: >
+    It is entirely possible that this skeleton was once one of the villagers of Townsbridge who has
+    been brought to an undead life by a fuelling desire for revenge.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, no_charm, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:150:mob:15032":
+  keywords: [pit, fiend, demon]
+  short: the pit fiend
+  long: A large demon surrounded by flames rises out of the dark pool.
+  description: >
+    It is a horrifying thing, this demonic creature from the depths of the Abyss. It glares down at you
+    through blood-red eyes, and bares its huge white fangs and its razor-sharp talons.
+  level: 33
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: sitting
+    default: standing

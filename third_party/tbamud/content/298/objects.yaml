@@ -1,0 +1,371 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 298.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:298:obj:29801":
+  type: weapon
+  keywords: [sword, lag]
+  short: a shiny lag sword
+  long: A shiny lag sword is lying here waiting to be possessed.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: slash
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:298:obj:29802":
+  type: armor
+  keywords: [rubber, body, suit]
+  short: a bright rubber body suit
+  long: A bright rubber body suit is lying here looking for a body to hug.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:298:obj:29803":
+  type: armor
+  keywords: [rubber, mask]
+  short: a rubber mask
+  long: A rubber mask is hoping a loose head will wander by.
+  flags: [glow, magic]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:298:obj:29804":
+  type: armor
+  keywords: [nipple, clamps]
+  short: a set of nipple clamps
+  long: A set of nipple clamps are lying here hoping to excite you.
+  flags: [glow, magic]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: wis
+    modifier: 1
+
+"tba:298:obj:29805":
+  type: armor
+  keywords: [ring, branding, lag]
+  short: a lag branding ring
+  long: A lag branding ring is lying in the dust here.
+  flags: [invisible, magic]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:298:obj:29806":
+  type: weapon
+  keywords: [dagger, lag]
+  short: a shiny lag dagger
+  long: A shiny lag dagger is lying here looking for a back to stab.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:298:obj:29807":
+  type: armor
+  keywords: [collar, slave]
+  short: a pet lag slave collar
+  long: Someone's pet lag has escaped and left his collar here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: ac
+    modifier: -1
+
+"tba:298:obj:29808":
+  type: key
+  keywords: [key, lag]
+  short: a wee little key
+  long: A key with the lag crest on it is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:298:obj:29809":
+  type: light
+  keywords: [light, dildo]
+  short: a brightly glowing dildo
+  long: A glowing dildo wants to brighten your day.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    hours: -1
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -1
+
+"tba:298:obj:29810":
+  type: armor
+  keywords: [horny, horns]
+  short: the horny horns of the Great Lag Monster
+  long: The horny horns of the great Lag Monster lie here.
+  flags: [anti_cleric]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+
+"tba:298:obj:29811":
+  type: worn
+  keywords: [hide, skin]
+  short: the Cum Soaked hide of the Great Lag Monster
+  long: The Cum Soaked hide of the Great Lag Monster is lying here.
+  flags: [anti_cleric]
+  wear: [take, body, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: hit
+    modifier: 15
+
+"tba:298:obj:29812":
+  type: armor
+  keywords: [leggings, lag]
+  short: some sexy lag leggings
+  long: A pair of sexy looking leggings are here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:298:obj:29813":
+  type: armor
+  keywords: [sleeves, lag]
+  short: some sexy lag sleeves
+  long: A set of sexy sleeves is here.
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:298:obj:29814":
+  type: weapon
+  keywords: [oil, lag]
+  short: a glowing hot jar of oil
+  long: A finely crafted Jar of Hot Dripping Oil waits for a worthy slave.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:298:obj:29815":
+  type: armor
+  keywords: [armor, gateguard]
+  short: Some Gate Guard Armor
+  long: A pile of black armor is here.
+  flags: [anti_good]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 13
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:298:obj:29816":
+  type: weapon
+  keywords: [sword, gateguard]
+  short: a Gate Guard's Sword
+  long: The sword of a Gate Guard lies here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:298:obj:29817":
+  type: armor
+  keywords: [armor, royalty, guard]
+  short: Some Royalty Guard Armor
+  long: Some armor made from the remains of a Royalty Guard lies heaped on the floor.
+  flags: [glow, anti_good]
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 30
+  cost: 700
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 2
+  - apply: con
+    modifier: 1
+
+"tba:298:obj:29818":
+  type: weapon
+  keywords: [lance, knight]
+  short: the Knight's Lance
+  long: The Lance of the Knight lies here, waiting to rust.
+  flags: [hum, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: crush
+  weight: 18
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: save_breath
+    modifier: 2
+
+"tba:298:obj:29819":
+  type: staff
+  keywords: [staff, dungeon]
+  short: the Staff of the Dungeon Master
+  long: The Dungeon Master's Staff is lying here.
+  flags: [glow, magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [20, 5, 5, 16]
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 20
+
+"tba:298:obj:29820":
+  type: armor
+  keywords: [crown, queen]
+  short: the Queen's Crown
+  long: The Queen's Crown lies here, looking neglected.
+  flags: [hum, magic, anti_good]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 4
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:298:obj:29821":
+  type: treasure
+  keywords: [sceptre, king]
+  short: the King's Sceptre
+  long: The King's Sceptre lies here, collecting dust.
+  flags: [hum, invisible, magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 850
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:298:obj:29822":
+  type: key
+  keywords: [key, golden, heavy]
+  short: a golden key
+  long: A heavy golden key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [900, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

@@ -1,0 +1,817 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 236.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:236:obj:23600":
+  type: note
+  keywords: [map, aldin]
+  short: a map of Aldin
+  long: A map of Aldin and the Dwarven Trade Route.
+  action: |-
+    O             O        |
+          |             |        O
+          O             O        |
+          |             |        O
+    O-O-O-O-O-O-O O-O O-O        |
+      |   |     |   |   |      O-^
+    O-O-O O O-O-O-O-O-O-O      |
+      |   | |   | | | | |      O
+      O-O O O O-O O O O O      |
+            |     |     |      O-O
+            O-O-O-O---O-O        |
+            | | | |   | |        O
+            O v O O-O O O        |
+            |   |       |        O       O
+            O---O-O-O---O        |       |
+                  |              O       O
+            O     O-O            |       |
+            |     |              O       O
+          O-O-O-O-O-O            |       |
+            |     |              O-O-O-O-O-O
+          O-O-O   O                    |
+            |                          O
+            O                          |
+    O                                  O
+    |                                  |
+    O-O                                O
+    | |                                |
+    O O-O                              O
+    | |                                |
+    v O                                O
+    |                                  |
+    O                                  O
+    |                                  |
+    ^                                  O
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:236:obj:23601":
+  type: other
+  keywords: [headstone, head, stone]
+  short: a headstone
+  long: A headstone has been set in the ground here.
+  flags: [no_invis]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [headstone, head, stone]
+    text:
+      preformatted: |2
+           Your everyday typical headstone, made from black granite, and engraved with
+         _____________
+        |             \
+        |    R I P    |
+        |             |
+        |             |
+        |             |
+        |             |
+        |             |
+        |_____________|
+        Obviously there's plenty of room for your name on it.
+        It's also extremely heavy...
+
+"tba:236:obj:23602":
+  type: worn
+  keywords: [onyx, necklace]
+  short: an onyx necklace
+  long: Someone has left a small onyx necklace here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 205
+  rent: 20
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [onyx, necklace]
+    text: >
+      The necklace has been made with small stones of onyx, all connected by a thin silver chain.  You
+      think it would fit you just perfectly.  A small rune has been scribed on one of the pieces.  It looks
+      like a 'W'
+
+"tba:236:obj:23603":
+  type: worn
+  keywords: [ankh, bloodstone]
+  short: a bloodstone ankh
+  long: A 2" ankh made from bloodstone has been dropped here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 700
+  rent: 70
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [ankh, bloodstone]
+    text: It looks a bit like this 0 -+- | | and it's made from bloodstone.
+
+"tba:236:obj:23604":
+  type: worn
+  keywords: [amethyst, pendant]
+  short: an amethyst pendant
+  long: A pendant made from amethyst is here on the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 480
+  rent: 48
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [amethyst, pendant]
+    text: It's very good craftmanship.  Obviously dwarven manufacture.
+
+"tba:236:obj:23605":
+  type: weapon
+  keywords: [axe, dwarven]
+  short: a dwarven axe
+  long: An axe, obviously of dwarven manufacture, has been left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: slash
+  weight: 24
+  cost: 210
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [axe, dwarven]
+    text: A nicely made battle axe, with the rune 'T' engraved on the haft.
+
+"tba:236:obj:23606":
+  type: weapon
+  keywords: [short, sword, shortsword, dwarven]
+  short: a dwarven shortsword
+  long: A short sword with a broad blade has been left here.
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 8
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [short, sword, shortsword, dwarven]
+    text: >
+      This sword is typical dwarven manufacture.  The forge in the mountain has produced planty of these
+      small wonders to start a full-scale war.  This particular blade bears a small 'T' rune, near the
+      handle.
+
+"tba:236:obj:23607":
+  type: weapon
+  keywords: [dagger, dwarven]
+  short: a dwarven dagger
+  long: A large dagger, almost resembling a small sword, is here.
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 1
+  cost: 75
+  rent: 7
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [dagger, dwarven]
+    text: >
+      A standard dwarven dagger, made in the forges of the dwarven mountain.  It has a small 'T' rune
+      engraved near the handle.
+
+"tba:236:obj:23608":
+  type: armor
+  keywords: [plate, mail, platemail, dwarven]
+  short: a dwarven platemail
+  long: A platemail, obviously of crafted by dwarves, has been left here.
+  flags: [anti_thief]
+  wear: [take, body, about]
+  values:
+    armor: 6
+  weight: 7
+  cost: 950
+  rent: 95
+  level: 0
+  extras:
+  - keywords: [plate, mail, platemail, dwarven]
+    text: A fine platemail, marked with an 'R' rune on the backside.
+
+"tba:236:obj:23609":
+  type: armor
+  keywords: [ring, mail, ringmail, dwarven]
+  short: a dwarven ringmail
+  long: A ringmail has been thrown in a heap here.
+  flags: [anti_thief]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 2
+  cost: 1000
+  rent: 120
+  level: 0
+  extras:
+  - keywords: [ring, mail, ringmail, dwarven]
+    text: >
+      A mail shirt, made from small interlocking rings, it has taken quite some time to make.  On the
+      inside of the collar is a small 'R' rune.
+
+"tba:236:obj:23610":
+  type: armor
+  keywords: [bracers, steel, dwarven]
+  short: some steel bracers
+  long: Some bracers made of the finest steel are here.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 2
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [bracers, steel, dwarven]
+    text: >
+      Some fine steel bracers, all polished and shiny.  On the inside, near the elbows, a small 'R' rune
+      has been set.
+
+"tba:236:obj:23611":
+  type: armor
+  keywords: [gloves, dwarven]
+  short: a pair of dwarven gloves
+  long: Some gloves have been thrown here.
+  flags: [magic, anti_mage, anti_thief]
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 1
+  cost: 210
+  rent: 21
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [gloves, dwarven]
+    text: >
+      A fine set of gloves.  They appear to be made from buckskin at first, but a closer examination
+      reveals in inner glove made from small rings of the highly praised dwarven metal, mithril.  This makes
+      the glove very strong, and such gloves are known to be enchanted.
+
+"tba:236:obj:23612":
+  type: treasure
+  keywords: [iron, ore]
+  short: a lump of ore
+  long: Some iron ore has been piled up here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [iron, ore]
+    text: A pretty much nondescript pile of rustred ore, ready to be refined.
+
+"tba:236:obj:23613":
+  type: treasure
+  keywords: [ore, gold]
+  short: a lump of ore
+  long: Some gold ore has been piled up here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 820
+  rent: 82
+  level: 0
+  extras:
+  - keywords: [ore, gold]
+    text: A pretty nondescript pile of gold-streaked ore.
+
+"tba:236:obj:23614":
+  type: treasure
+  keywords: [ore, titanium]
+  short: a lump of ore
+  long: Some titanium ore has been piled up here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 800
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [ore, titanium]
+    text: A pretty nondescript pile of titanium-gray ore.
+
+"tba:236:obj:23615":
+  type: treasure
+  keywords: [rod, iron]
+  short: an iron rod
+  long: A small rod, made from iron, is here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [rod, iron]
+    text: A small rod, made for comfotably moving small amounts of metal.  In this case iron.
+
+"tba:236:obj:23616":
+  type: treasure
+  keywords: [rod, gold]
+  short: a golden rod
+  long: A small rod, made of gold, is here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 800
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [rod, gold]
+    text: A small rod, made for comfotably moving small amounts of metal.  In this case gold.
+
+"tba:236:obj:23617":
+  type: treasure
+  keywords: [rod, titanium]
+  short: a titanium rod
+  long: A small rod, made of titanium, is here.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [rod, titanium]
+    text: A small rod, made for comfotably moving small amounts of metal.  In this case titanium.
+
+"tba:236:obj:23618":
+  type: treasure
+  keywords: [bar, iron]
+  short: an iron bar
+  long: An iron bar is here on the ground - it looks quite heavy.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 600
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [bar, iron]
+    text: A bar some two by two by ten inches, pure iron.
+
+"tba:236:obj:23619":
+  type: treasure
+  keywords: [bar, gold]
+  short: a gold bar
+  long: A gold bar is here on the ground - it looks quite heavy, but also valuable.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 900
+  rent: 90
+  level: 0
+  extras:
+  - keywords: [bar, gold]
+    text: A bar some two by two by ten inches, pure gold.
+
+"tba:236:obj:23620":
+  type: treasure
+  keywords: [bar, titanium]
+  short: a titanium bar
+  long: A titanium bar is here on the ground - it looks heavy, but also very valuable.
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:236:obj:23621":
+  type: treasure
+  keywords: [gold, foil]
+  short: some gold foil
+  long: Some gold foil is here. You might pick it up - but be gentle with it.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [gold, foil]
+    text: >
+      Some very thin sheets of gold foil, ready to use on the armors in the smithy.  You have to handle
+      them really gently, since they are so thin they break if you touch them the wrong way.
+
+"tba:236:obj:23622":
+  type: other
+  keywords: [rock]
+  short: a rock
+  long: A piece of rock has fallen down here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [rock]
+    text: A small rock, about the size of your underarm.
+
+"tba:236:obj:23623":
+  type: other
+  keywords: [rock, large]
+  short: a large rock
+  long: A large rock has dropped to the ground here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [rock, large]
+    text: A large rock, about the size of your head.
+
+"tba:236:obj:23624":
+  type: treasure
+  keywords: [ruby]
+  short: a small ruby
+  long: Someone have lost a ruby here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 450
+  rent: 45
+  level: 0
+  extras:
+  - keywords: [ruby]
+    text: A small, bloodred, ruby.
+
+"tba:236:obj:23625":
+  type: treasure
+  keywords: [emerald]
+  short: a small emerald
+  long: A little emerald is lying here on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 372
+  rent: 37
+  level: 0
+  extras:
+  - keywords: [emerald]
+    text: A little green spot of light in a dark world.
+
+"tba:236:obj:23626":
+  type: key
+  keywords: [key, mine, dwarven]
+  short: the mine key
+  long: A small key has been tossed to the ground here.
+  flags: [no_rent, no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:236:obj:23627":
+  type: fountain
+  keywords: [well, basin, spring]
+  short: the well
+  long: Water runs from the spring into a basin, making a nice well for people to drink from.
+  flags: [bless]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:236:obj:23628":
+  type: container
+  keywords: [bed, dwarven, small]
+  short: a small dwarven bed
+  long: A bed, just the right size for a dwarf, has been set in one corner here.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bed, dwarven, small]
+    text: >
+      The bed is made from wood, has four corners, and is about 5 feet long.  You think it would suit
+      almost any of the dwarves you've met.
+
+"tba:236:obj:23629":
+  type: container
+  keywords: [chest, dwarven]
+  short: a reinforced chest
+  long: A chest, heavily reinforced with iron bands, has been put here.
+  flags: [magic]
+  wear: []
+  values:
+    capacity: 300
+    lock_flags: 15
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chest, dwarven]
+    text: >
+      A large chest, with several broad and heavy iron bands going around both the top and the sides, and
+      a large padlock on the front, stands here.  From the padlock a blue glitter periodically reoccurs,
+      so you are in no doubt the lock is magical.
+
+"tba:236:obj:23630":
+  type: key
+  keywords: [key, dwarven]
+  short: a small key
+  long: A small key has been thrown here.
+  flags: [no_rent, no_donate, magic]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:236:obj:23631":
+  type: armor
+  keywords: [parade, chain, chainmail, mail, dwarven]
+  short: a parade chainmail
+  long: A beautiful dwarven chainmail with a gold hammer emblem has been laid here..
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 5
+  cost: 1000
+  rent: 10
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  - apply: con
+    modifier: 1
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [parade, chain, chainmail, mail, dwarven]
+    text: >
+      An extremely beautiful chainmail, it encompasses everything you expect from a dwarven armor.  It's
+      comparatively light, strong and yet seemingly made only for parades.  On every little ring you can
+      see the 'R' rune, made by Ralf - Armorsmith of the dwarves.
+
+"tba:236:obj:23632":
+  type: container
+  keywords: [bed, large, dwarven]
+  short: a large bed
+  long: A large four-poster bed, almost your size, has been set in the corner here.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bed, large, dwarven]
+    text: >
+      A bed of almost mansize, it's obviously made for the dwarf inhabitant to have plenty of space.
+
+"tba:236:obj:23634":
+  type: key
+  keywords: [key, silver]
+  short: a small silver key
+  long: A small key, made from silver, has been thrown here.
+  flags: [no_rent, no_donate]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:236:obj:23635":
+  type: armor
+  keywords: [plate, silver, dwarven]
+  short: a silver breastplate
+  long: A silver breastplate, made for a stout dwarf, has been droppped here.
+  flags: [glow, magic, anti_mage, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 15
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [plate, silver, dwarven]
+    text: >
+      An extremely nice breastplate it is obviously made for the dwarf of some stature.  You think you
+      might just be able to squeeze in, and you feel very lucky to have found such a beatyful piece of art. 
+      A Rune 'R' has been etched under the left armhole.
+
+"tba:236:obj:23636":
+  type: weapon
+  keywords: [axe, dwarven, two]
+  short: a two-handed dwarven axe
+  long: A very large axe of dwarven manufacture has been thrown here.
+  flags: [magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: slash
+  weight: 18
+  cost: 510
+  rent: 51
+  level: 0
+
+"tba:236:obj:23637":
+  type: weapon
+  keywords: [hammer, dwarven]
+  short: a dwarven hammer
+  long: A hammer, ready for pounding on armor, worn or not, is here.
+  flags: [anti_mage, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 2d10
+    attack: pound
+  weight: 6
+  cost: 550
+  rent: 55
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [hammer, dwarven]
+    text: >
+      A large hammer for dwarven standards, the head of this weapon can also be used in the everyday life
+      of the working dwarf
+
+"tba:236:obj:23638":
+  type: treasure
+  keywords: [pile, titanium, pieces, ore]
+  short: a pile of titanium ore
+  long: A large pile of very fine pieces of titanium ore is attached to a bell here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [pile, titanium, pieces, ore]
+    text: >
+      A very large amount of titanium-rich ore.  A small bell has been attached to it, and you're quite
+      sure you wouldn't be able to get more than a handful of them before the bell goes off.
+
+"tba:236:obj:23639":
+  type: treasure
+  keywords: [pile, titanium, pieces, ore]
+  short: a pile of titanium ore
+  long: A large pile of very fine pieces of titanium ore is here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [pile, titanium, pieces, ore]
+    text: >
+      A very large amount of titanium-rich ore.  A small bell has fallen to the ground in front of it.
+
+"tba:236:obj:23640":
+  type: weapon
+  keywords: [mining, pick, dwarf]
+  short: a dwarven mining pick
+  long: A small mining pick has been left here, gathering dust.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: thrash
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [mining, pick, dwarf]
+    text: A mining pick, made for someone not quite as tall as you.
+
+"tba:236:obj:23641":
+  type: armor
+  keywords: [helm, mining, dwarven]
+  short: a dwarven mining helmet
+  long: An old helmet with an almost extinguished light is here.
+  flags: [glow, magic, anti_mage]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 1
+  cost: 600
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [helm, mining, dwarven]
+    text: >
+      A small helmet worn by the dwarves in the mine, so they can see in the total darkness downthere.  A
+      small candle sits in a housing on the brim.
+
+"tba:236:obj:23642":
+  type: key
+  keywords: [key, dwarven, city]
+  short: a heavy iron key
+  long: A key made from heavy iron is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0

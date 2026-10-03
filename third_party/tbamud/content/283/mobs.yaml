@@ -1,0 +1,614 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 283.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:283:mob:28300":
+  keywords: [ruler, dungeon]
+  short: the dungeon ruler
+  long: The dungeon ruler sits here in his chair.
+  description: This guy looks mean!  You had better run while you still have time!
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon, no_sleep]
+  affects: [invisible, detect_align, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: slash
+  abilities:
+    str: 17
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28301":
+  keywords: [old, woman, housekeeper, owner]
+  short: an old woman
+  long: An old woman sits here waiting to attack you, the intruder.
+  description: >
+    She looks really nasty.  You don't want to find out how the deep scratches and blood marks got on
+    those walls....  Or do you?
+  level: 29
+  sex: female
+  alignment: -700
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon, no_sleep]
+  affects: [invisible, detect_align, detect_invis, sense_life, curse, no_track]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: bite
+  abilities:
+    str: 9
+    int: 18
+    wis: 18
+    dex: 5
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28302":
+  keywords: [wandering, ghoul]
+  short: a wandering ghoul
+  long: A spooky ghost is floating in mid-air here.
+  description: >
+    His eyes glow yellow, and then you practically feel them penetrate yours. He reveals long,
+    razor-sharp, 6 inch long claws and then takes a swipe at you!
+  level: 28
+  sex: neutral
+  alignment: -800
+  flags: [scavenger, stay_zone, memory, no_charm, no_summon, no_sleep]
+  affects: [invisible, detect_invis, no_track, sneak]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+    bare_hand_attack: claw
+  abilities:
+    str: 20
+    int: 3
+    wis: 7
+    dex: 18
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28303":
+  keywords: [darkness, dark]
+  short: darkness
+  long: Darkness reigns over the entire room.
+  description: >
+    It is a huge shadowy figure with no eyes or anything.  Just total darkness. How weird.  But when he
+    hits you, it will HURT!!
+  level: 27
+  sex: neutral
+  alignment: -300
+  flags: [sentinel, scavenger, memory, helper, no_charm, no_summon, no_sleep]
+  affects: [invisible, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: sting
+  abilities:
+    str: 25
+    dex: 10
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28304":
+  keywords: [spider, harmless]
+  short: a harmless spider
+  long: A harmless spider sits in his web here.
+  description: This spider couldn't be dangerous....  But could it?
+  level: 20
+  sex: male
+  alignment: -10
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon]
+  affects: [invisible, detect_invis, no_track]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  abilities:
+    str: 18
+    dex: 15
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28305":
+  keywords: [mad, dragon]
+  short: the mad dragon
+  long: A dragon is here waiting for you to move closer...
+  description: >
+    This thing doesn't like you.  It breaths fire out of its nostrils, and then comes in for the kill. 
+    If I were you, I'd get out of here and fast!
+  level: 30
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [invisible, detect_align, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: bite
+  abilities:
+    str: 18
+    str_add: 18
+    int: 18
+    wis: 18
+    dex: 18
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28306":
+  keywords: [box]
+  short: a box
+  long: A small box lays in the corner, torn somehow.
+  description: It's a plain old box with nothing inside of it but dust.
+  level: 21
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [invisible, detect_invis, curse, no_track]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  abilities:
+    int: 3
+    wis: 4
+    dex: 17
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28307":
+  keywords: [rock]
+  short: a rock
+  long: A rock lays on the ground here.
+  description: It's just a plain old rock.
+  level: 21
+  sex: neutral
+  alignment: -30
+  flags: [sentinel, aware, wimpy, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, curse, no_track, hide]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28308":
+  keywords: [spider, little]
+  short: a little spider
+  long: A little spider sits here.
+  description: It's a cute little spider.
+  level: 23
+  sex: neutral
+  alignment: -4
+  flags: [scavenger, stay_zone, wimpy, memory, helper, no_charm, no_summon]
+  affects: [detect_invis, curse, no_track, sneak]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28309":
+  keywords: [headless, ghost]
+  short: a headless ghost
+  long: A ghost is here, carrying his head with him.
+  description: >
+    His head was somehow cut off and now he must carry it wherever he goes. It's is a very bloody
+    picture.  Sick.  Actually, it makes you want to puke.
+  level: 26
+  sex: neutral
+  alignment: -50
+  flags: [sentinel, scavenger, aware, wimpy, no_charm, no_summon, no_sleep]
+  affects: [invisible, detect_invis, curse, no_track, sneak]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: sting
+  abilities:
+    str: 17
+    dex: 18
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28310":
+  keywords: [bat, large]
+  short: a large bat
+  long: A large bat flies around up here.
+  description: It's a bat!  Eeeeek!  Run!!
+  level: 23
+  sex: neutral
+  alignment: -50
+  flags: [scavenger, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep]
+  affects: [blind, detect_invis, sense_life, curse, no_track, hide]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    str: 7
+    dex: 13
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28311":
+  keywords: [little, bat]
+  short: a little bat
+  long: A bat is flying around.
+  description: It's a bat!  Eeeeek!!!  Run!!!!
+  level: 22
+  sex: neutral
+  alignment: -20
+  flags: [scavenger, stay_zone, wimpy, helper, no_charm, no_summon, no_sleep]
+  affects: [blind, detect_invis, sense_life, curse, no_track, sneak]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    str: 6
+    dex: 8
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28312":
+  keywords: [rat]
+  short: a rat
+  long: A rat crawls around in a skull here.
+  description: >
+    This little guy is having loads of fun playing inside of a skull on the ground here.  It sits in
+    the eye-hole and starts watching you now...
+  level: 21
+  sex: neutral
+  alignment: -98
+  flags: [sentinel, scavenger, wimpy, memory, helper, no_charm, no_summon, no_sleep]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    str: 10
+    dex: 4
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28313":
+  keywords: [rat, wandering]
+  short: a wandering rat
+  long: A rat is wandering around the entire area looking lost.
+  description: >
+    This little guy looks so cute....  Don't let the looks fool you, though. Be on your guard at every
+    moment.
+  level: 20
+  sex: neutral
+  alignment: -200
+  flags: [scavenger, stay_zone, wimpy, memory, helper, no_charm, no_summon]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    dex: 14
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28314":
+  keywords: [roach]
+  short: a roach
+  long: A roach crawls around here.
+  description: It's a bug!  Squash it!
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy, memory, helper, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: resting
+
+"tba:283:mob:28315":
+  keywords: [beetle]
+  short: a beetle
+  long: A beetle crawls around here.
+  description: Yuck!  A beetle!  How sick!
+  level: 20
+  sex: neutral
+  alignment: 1
+  flags: [stay_zone, wimpy, memory, helper, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: sitting
+
+"tba:283:mob:28316":
+  keywords: [insane, prisoner]
+  short: an insane prisoner
+  long: Someone is acting like an idiot.
+  description: "It's simple: he's LUNEY!!"
+  level: 24
+  sex: male
+  alignment: 20
+  flags: [scavenger, stay_zone, memory, no_charm, no_summon]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+    bare_hand_attack: crush
+  abilities:
+    str: 14
+    dex: 10
+  gold: 240
+  exp: 57600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:283:mob:28317":
+  keywords: [evil, prisoner]
+  short: the evil prisoner
+  long: A very evil prisoner stands here plotting his revenge.
+  description: >
+    This guy is really evil.  He walks around with a file trying to get out of this dungeon.  It looks
+    like he's been in here for years!
+  level: 25
+  sex: male
+  alignment: -320
+  flags: [sentinel, scavenger, memory, helper, no_charm, no_summon, no_sleep]
+  affects: [detect_invis, curse]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: maul
+  abilities:
+    str: 18
+    int: 16
+    dex: 18
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28318":
+  keywords: [sad, prisoner]
+  short: a sad prisoner
+  long: Someone who looks very sad is here.
+  description: >
+    All he does is weep all day long.  He does not belong here.  He cries and balls, and then starts
+    screaming of how he's here for no reason.
+  level: 24
+  sex: male
+  alignment: 278
+  flags: [sentinel, no_charm, no_summon]
+  affects: [curse]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  abilities:
+    str: 4
+    dex: 7
+  gold: 240
+  exp: 57600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:283:mob:28319":
+  keywords: [slave]
+  short: a slave
+  long: A slave sits here working for his master.
+  description: >
+    This is really sad.  He gets whipped and whipped by the dungeon ruler, who makes him work all day
+    long for nothing.  He has marks all over his body from a whip.
+  level: 23
+  sex: male
+  alignment: 180
+  flags: [sentinel, scavenger, memory, helper, no_charm, no_summon]
+  affects: [blind, curse]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  abilities:
+    dex: 6
+  gold: 230
+  exp: 52900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:283:mob:28320":
+  keywords: [wizard, lost]
+  short: a lost wizard
+  long: A wizard is wandering around here.
+  description: >
+    This guy is bout half of your size and carries around a magic wand.  He keeps mumbling to himself,
+    and he probably is very lost.
+  level: 27
+  sex: male
+  alignment: -60
+  flags: [aware, stay_zone, memory, helper, no_charm, no_summon]
+  affects: [invisible, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: pound
+  abilities:
+    str: 17
+    dex: 8
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28321":
+  keywords: [boogie, monster]
+  short: the boogie monster
+  long: A monster from your nightmares stands here.
+  description: It's the boogie monster!  Run and hide under your bed!
+  level: 25
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep]
+  affects: [no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: crush
+  abilities:
+    str: 15
+    int: 8
+    wis: 3
+    dex: 18
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28322":
+  keywords: [crow, dark]
+  short: a dark crow
+  long: A crow stands here.
+  description: There's nothing really special about this bird.
+  level: 25
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon]
+  affects: [invisible, detect_invis, curse, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 6
+    dex: 3
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:283:mob:28323":
+  keywords: [stone, wall]
+  short: a stone wall
+  long: The walls are strangely made of stone...
+  description: It's just a wall made of hard stone...
+  level: 30
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_align, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: crush
+  abilities:
+    str: 25
+    str_add: 100
+    int: 4
+    wis: 3
+    dex: 16
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

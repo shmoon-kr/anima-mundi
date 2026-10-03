@@ -1,0 +1,395 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 169.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:169:obj:16901":
+  type: trash
+  keywords: [intricate, gold, ring]
+  short: an intricate gold ring
+  long: An intricate gold ring is lying here, sinking into the dirt.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 400
+  rent: 40
+  level: 0
+
+"tba:169:obj:16902":
+  type: weapon
+  keywords: [gibberling, shortsword]
+  short: a bluish shortsword
+  long: A bluish shortsword is lying here.
+  wear: [take, wield]
+  values:
+    damage: 0d1
+    attack: hit
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gibberling, shortsword]
+    text: >
+      You see a crudely constructed shortsword, made exclusively for dismembering and disemboweling foes,
+      with little regard to artistic detail.  The metal has a dark, blue and purple hue, and the blade
+      itself has many irregularities and grooves.
+
+"tba:169:obj:16903":
+  type: other
+  keywords: [small, carcass]
+  short: a small carcass
+  long: A corpse is decaying here on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [small, carcass]
+    text: >
+      You look closely and realize this stinking mass of flesh is actually the rotting corpse of a once
+      proud dwarven warrior, killed in battle with a group of assailants.  The body has been impaled,
+      dismembered and left to rot, only after being partially devoured!
+
+"tba:169:obj:16904":
+  type: trash
+  keywords: [brittle, twig]
+  short: a brittle twig
+  long: A small twig litters the ground here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [brittle, twig, stick, branch]
+    text: A small twig litters the ground here. It's just a small, useless, dry twig.
+
+"tba:169:obj:16905":
+  type: weapon
+  keywords: [butcher, knife]
+  short: a butcher knife
+  long: A wicked looking butcher knife is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: slash
+  weight: 3
+  cost: 90
+  rent: 9
+  level: 0
+  extras:
+  - keywords: [knife]
+    text: >
+      It's an extra large, chipped butcher knife that looks like it has chopped much more than it's share
+      of flesh and bone.
+
+"tba:169:obj:16906":
+  type: food
+  keywords: [slab, of, meat]
+  short: a slab of mystery meat
+  long: A shapeless mass of meat has been thrown here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [meat]
+    text: >
+      It is the meat of some poor animal ripped into large chunks.  You can't even begin to guess what
+      type of meat this is, you only know that it is extremely bloody.
+
+"tba:169:obj:16907":
+  type: wand
+  keywords: [gibberling, shaman's, wand]
+  short: a gibberling wand of power
+  long: A bejeweled, gnarled, stick is lying here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    raw: [12, 5, 5, -1]
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [gibberling, shaman's, wand]
+    text: >
+      It's a long, gnarled staff encrusted with jewels around one end and a large, blood red stone rests
+      at the end.
+
+"tba:169:obj:16908":
+  type: food
+  keywords: [berries]
+  short: some wild berries
+  long: Some wild berries are lying on the ground.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [berries]
+    text: You see a small bunch of fresh wild berries gathered in the mountains.
+
+"tba:169:obj:16909":
+  type: drinkcon
+  keywords: [keg, of, dark, ale]
+  short: a keg of dark ale
+  long: A large wooden keg is here.
+  wear: [take]
+  values:
+    capacity: 35
+    contains: 20
+    liquid: dark_ale
+    poisoned: false
+  weight: 25
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [keg]
+    text: >
+      You observe a large, iron banded, wooden keg of gibberling workmanship, which beckons you to taste
+      its contents.
+
+"tba:169:obj:16910":
+  type: armor
+  keywords: [hide, trousers]
+  short: a pair of hide trousers
+  long: Some hide trousers have been thrown on the ground here.
+  wear: [take, legs]
+  values:
+    armor: 0
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [hide, trousers]
+    text: >
+      You see a ruggedly constructed pair of comfortable hide pants, apparently worn previously in a few
+      battles, judging from the dried blood stains.
+
+"tba:169:obj:16911":
+  type: other
+  keywords: [pine, tree]
+  short: a pine tree
+  long: A tall pine tree is growing here along the trail.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [carvings, inscription, patch, scratch]
+    text: >
+      The inscription is a strange series of symbols written in the language of the gibberlings.  As you
+      strain your eyes to try and decipher the meaning, the words begin to glow, and a voice inside your
+      head speaks a message: The bearer of the tomahawk of terror has forged the fate of my tribe, if i could
+      repay him, I would gouge out his eyes!  Thryln'k
+  - keywords: [tree, pine]
+    text: >
+      It is a massive pine tree, apparently very old, judging by the mass and grayish-brown coloring of
+      the bark.  This variety of pine is typically found in wooded areas such as this, near mountainous
+      regions.  You look closely, and notice there appears to be some kind of writing, scratched into a small
+      barkless patch near the base of the tree.
+
+"tba:169:obj:16912":
+  type: other
+  keywords: [rotting, animal, carcass]
+  short: a rotting animal carcass
+  long: An animal carcass is rotting in the dirt.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rotting, animal, carcass]
+    text: >
+      It is the mangled, half-eaten carcass, of some poor, hapless creature, torn apart and left in the
+      dirt.  Maggots are greedily feasting on what remains of the animals' flesh, while the fur, heavily
+      caked with dried blood, sticks to the bones.
+
+"tba:169:obj:16913":
+  type: armor
+  keywords: [brass, skullcap]
+  short: a brass skullcap
+  long: A shiny brass skullcap is on the ground here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [brass, skullcap]
+    text: >
+      You see a shiny brass skullcap with spikes arranged in a cirle around the crown, and the royal seal
+      of the gibberling chieftain on the right temple.
+
+"tba:169:obj:16914":
+  type: armor
+  keywords: [tough, leather, trousers]
+  short: some tough leather trousers
+  long: Some tough leather trousers have been tossed here.
+  flags: [glow]
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [leather, tough, trousers]
+    text: >
+      You see a thick pair of leather pants, made of 4 different kinds of leather sewn together with the
+      sinew of a dragon.
+
+"tba:169:obj:16915":
+  type: weapon
+  keywords: [gibberling, imperial, sword]
+  short: a gibberling imperial sword
+  long: A great bluish imperial sword lies here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 12
+  cost: 545
+  rent: 55
+  level: 0
+  extras:
+  - keywords: [sword, imperial]
+    text: >
+      It is a very large battlesword bearing many magical symbols, and apparently forged by gibberling
+      smiths, judging by the rare bluish hue of the alloy.
+
+"tba:169:obj:16916":
+  type: trash
+  keywords: [dead, elf]
+  short: a dead elf
+  long: A dead elf is shackled to the north wall.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dead, elf, body]
+    text: >
+      You see the rotting corpse of an unfortunate elf adventurer, still chained to the wall, though he
+      appears to be long dead.
+
+"tba:169:obj:16917":
+  type: container
+  keywords: [gibberling, shelf]
+  short: a stone shelf
+  long: A stone shelf has been dug into the wall.
+  wear: []
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stone, shelf, shelves]
+    text: >
+      Crude shelves of a primitive sort have been dug into the walls here, however only one holds
+      anything of use, the one on the west wall, which also is conveniently the one closet to the ground.
+
+"tba:169:obj:16918":
+  type: drinkcon
+  keywords: [water, clay, bowl, water]
+  short: a clay bowl
+  long: A hand-made bowl or pot is laying in the dirt.
+  wear: [take]
+  values:
+    capacity: 4
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+
+"tba:169:obj:16919":
+  type: potion
+  keywords: [gib, potion]
+  short: a gib potion
+  long: A gibberling potion is lying here.
+  wear: [take]
+  values:
+    raw: [12, 28, -1, -1]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion]
+    text: >
+      It's a small, painted, clay bottle of gibberling energy tonic, the only gibberling medicine known
+      to exist!
+
+"tba:169:obj:16920":
+  type: money
+  keywords: [small, fortune]
+  short: a small fortune
+  long: A small fortune is lying here, sparkling!
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fortune]
+    text: You see a pile of coins.
+
+"tba:169:obj:16921":
+  type: drinkcon
+  keywords: [bottle, whiskey, whisky]
+  short: a large green bottle of whiskey
+  long: A large green bottle of whiskey has been left here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: whisky
+    poisoned: true
+  weight: 15
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bottle, whisky, whiskey]
+    text: >
+      The bottle is large and green!  The label on the side says, 'XXX'.  Only the most hardcore drinkers
+      would even dare drink this!

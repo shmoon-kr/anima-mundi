@@ -1,0 +1,497 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 5.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:5:obj:500":
+  type: other
+  keywords: [dandelion]
+  short: a dandelion
+  long: A dandelion is growing here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dandelion, flower]
+    text: >
+      The flower is yellow and as bright as the sun.  The stem is a pale green that blends in with the
+      grass.
+
+"tba:5:obj:501":
+  type: food
+  keywords: [apple, red]
+  short: a red apple
+  long: A red apple lays on the ground.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [red, apple]
+    text: A ripe red apple looks good enough to eat.
+
+"tba:5:obj:502":
+  type: food
+  keywords: [cheese]
+  short: a wedge of cheese
+  long: A wedge of cheese is molding here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 2
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wedge, cheese]
+    text: The wedge looks quite tasty.  You can smell a delicious aroma coming from it.
+
+"tba:5:obj:503":
+  type: other
+  keywords: [boulder]
+  short: a boulder
+  long: A large boulder is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boulder, rock]
+    text: The boulder is huge!  It would take at least five men of your size to move it.
+
+"tba:5:obj:504":
+  type: fountain
+  keywords: [little, spring, water]
+  short: a little spring
+  long: A little spring babbles here.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [little, spring, water]
+    text: >
+      Clear water trickles lazily along, murmuring as it traces rivulets in the soil.  It looks
+      temptingly fresh and thirst-quenching.
+
+"tba:5:obj:505":
+  type: food
+  keywords: [pile, corn]
+  short: a pile of cracked corn
+  long: A small pile of cracked corn is here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, crack, cracked, corn]
+    text: >
+      The corn is everywhere!  The animals must not have eaten their breakfast today.  You can hear the
+      corn crunching under your feet.
+
+"tba:5:obj:506":
+  type: weapon
+  keywords: [small, sword]
+  short: a small sword
+  long: A small sword of little value was abandoned here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: stab
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [small, sword]
+    text: The sword is poorly crafted and worn with age.
+
+"tba:5:obj:507":
+  type: treasure
+  keywords: [gem]
+  short: a sapphire gem
+  long: A sapphire gem was left here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sapphire, gem]
+    text: >
+      The blue gem sparkles in the light.  It's a pretty little thing.  You may want to hold onto it for
+      good luck.
+
+"tba:5:obj:508":
+  type: weapon
+  keywords: [hunters, knife]
+  short: a hunters knife
+  long: A hunters knife was left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d2
+    attack: slash
+  weight: 4
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hunter, hunters, knife]
+    text: >
+      The knife is large with a rigid blade.  The handle is made from ivory and is quite heavy in your
+      hand.
+
+"tba:5:obj:509":
+  type: fountain
+  keywords: [puddle, water]
+  short: a puddle of water
+  long: A puddle of water stagnates here.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [puddle, water]
+    text: >
+      This slightly muddy puddle of water looks drinkable if not the most appealing.  Tinted with dirt
+      and covered with a slight film, the water looks as if it has been sitting here a while.
+
+"tba:5:obj:510":
+  type: fountain
+  keywords: [water, trough]
+  short: a water trough
+  long: A water trough stands here.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, trough]
+    text: >
+      This long metal trough is full of fresh, if slightly murky water.  It doesn't look the most
+      delicious, but is probably perfectly effective at quenching thirst.
+
+"tba:5:obj:511":
+  type: container
+  keywords: [tree, leafy, apple]
+  short: a leafy apple tree
+  long: A leafy apple tree grows here.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tree, leafy, apple]
+    text: >
+      This large leafy tree rustles slightly as it waves in the breeze, strong branches made for holding
+      an abundance of fat round apples.
+
+"tba:5:obj:512":
+  type: food
+  keywords: [brown, egg]
+  short: a brown egg
+  long: A brown egg lies here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [brown, egg]
+    text: >
+      This smooth tan-colored egg is nice and firm, the crisp brown shell shiny and perfectly oval
+      shaped, a few white feathery tufts still clinging to it.
+
+"tba:5:obj:513":
+  type: container
+  keywords: [swaying, stalk, green, cornstalk]
+  short: a green cornstalk
+  long: A green cornstalk is swaying gently in the breezes.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cornstalk, swaying, green]
+    text: >
+      This tall leafy stalk looks very strong, its firm but bendable structure allowing it to remain
+      upright even though it is pummeled by the weather.
+
+"tba:5:obj:514":
+  type: food
+  keywords: [cob, corn]
+  short: a cob of corn
+  long: A cob of corn lies here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cob, corn]
+    text: >
+      This cone shaped cob is covered with plump pieces of juicy yellow corn, fresh green leaves still
+      protruding from the base and partially covering it, tufts of grassy hair sticking wildly out of the top.
+
+"tba:5:obj:517":
+  type: other
+  keywords: [paint, can]
+  short: an empty paint can
+  long: An empty paint can has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 80
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [empty, paint, can]
+    text: The can did at one time contain red paint.  It must have been used on the barn.
+
+"tba:5:obj:520":
+  type: weapon
+  keywords: [pitchfork]
+  short: a pitchfork
+  long: A pitchfork was left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d2
+    attack: stab
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pitchfork]
+    text: >
+      The fork looks fairly new.  The prongs on the end are very shiny and sharp. They could easily
+      pierce someone.
+
+"tba:5:obj:521":
+  type: food
+  keywords: [potato]
+  short: a potato
+  long: A potato has been left here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 3
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potato]
+    text: >
+      This is just an ordinary looking potato.  You might want to wipe off the dirt before you eat it.
+
+"tba:5:obj:526":
+  type: other
+  keywords: [sewing, needle]
+  short: a sewing needle
+  long: A sewing needle was left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sewing, needle]
+    text: >
+      The needle is quite large!  It must be a quilting needle.  Be careful not to prick yourself.
+
+"tba:5:obj:527":
+  type: other
+  keywords: [muddy, footprints]
+  short: some muddy footprints
+  long: Some muddy footprints have been tracked in from outside.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [muddy, footprints]
+    text: The footprints are fresh and quite large.  Most likely made by the farmer.
+
+"tba:5:obj:536":
+  type: weapon
+  keywords: [rake]
+  short: a rake
+  long: A rake was left here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: slash
+  weight: 5
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rake]
+    text: >
+      The rake appears to be in good condition.  There is some dirt stuck to its tines, but could be
+      easily washed away.
+
+"tba:5:obj:537":
+  type: food
+  keywords: [jerky]
+  short: a piece of jerky
+  long: A piece of jerky was left here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [jerky]
+    text: The piece is rather small and probably won't fill you up for very long.
+
+"tba:5:obj:566":
+  type: other
+  keywords: [lucky, horseshoe]
+  short: a lucky horseshoe
+  long: A lucky horseshoe was left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [horseshoe]
+    text: It's a rusty old thing, but might be worth some money.
+
+"tba:5:obj:578":
+  type: other
+  keywords: [hay]
+  short: a bale of hay
+  long: A bale of hay is sitting here.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bale, hay]
+    text: The bale is rather large.  It must be used for the chickens beds.
+
+"tba:5:obj:584":
+  type: other
+  keywords: [fireplace]
+  short: a fireplace
+  long: A stone fireplace is here, hosting a warm crackling fire.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fireplace]
+    text: >
+      The fireplace is rather old looking, but gets the job done.  There are a few small pots hanging
+      from the front of it.  They are probably used for cooking.
+
+"tba:5:obj:585":
+  type: food
+  keywords: [bowl, stew]
+  short: a bowl of stew
+  long: A bowl of stew was left here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 125
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, stew]
+    text: >
+      The stew smells delicious!  It consists of freshly cut carrots, onions, celery and rabbit meat.
+
+"tba:5:obj:588":
+  type: fountain
+  keywords: [well]
+  short: a well
+  long: An enormous marble well stands before you.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [well]
+    text: >
+      The well sparkles in the sunlight, giving off a magical glow.  As you look down into the darkness
+      of the well, you begin to wonder what could be lurking down there.

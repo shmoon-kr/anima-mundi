@@ -1,0 +1,30 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 281.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:281:shop:28100":
+  keeper: tba:281:mob:28104
+  rooms: [tba:281:room:28106]
+  products:
+  - tba:281:obj:28115
+  - tba:281:obj:28116
+  - tba:281:obj:28117
+  buys:
+  - type: drinkcon
+  - type: food
+  profit:
+    buy: 1.15
+    sell: 0.8
+  messages:
+    no_such_item: "%s Ummm, I don't have such things here."
+    you_dont_have_it: "%s Hmm, do you have such a thing?"
+    does_not_buy: "%s Unfortunately I don't buy those."
+    shop_cannot_afford: "%s Hah, that's way too expensive for me."
+    you_cannot_afford: "%s Mmm, you need some more gold to buy this, fellow."
+    bought: "%s Okay, %d gold coins.  Thanks."
+    sold: "%s Okay, I'll give you %d gold coins for it."
+  temper: 2
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 8
+    close: 24

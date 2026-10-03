@@ -1,0 +1,898 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 75.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:75:mob:7500":
+  keywords: [doe, animal]
+  short: a small doe
+  long: A small doe stands here grazing.
+  description: >
+    The small doe is brown with tiny white spots on its back.  A piece of hide hangs from an old wound
+    on its side.
+  level: 14
+  sex: female
+  alignment: 1000
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 12
+    int: 9
+    wis: 9
+    dex: 18
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7505":
+  keywords: [boar, pig]
+  short: a wild boar
+  long: A wild boar stands here.
+  description: >
+    A wild boar has been trapped here.  It is short and round with large tusks protruding from its
+    mouth.  As it shifts its head around looking for the way out its eyes shine red.
+  level: 14
+  sex: neutral
+  alignment: -200
+  flags: [sentinel, scavenger, aware]
+  affects: [detect_invis, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7508":
+  keywords: [giant, fruit, bat]
+  short: the giant fruit bat
+  long: A giant fruit bat hangs here sleeping.
+  description: >
+    A giant fruit bat is hanging here in an upside down position from a large tree.  Its black wings
+    are wrapped around its body like a cozy blanket.
+  level: 18
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, no_charm]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: slash
+  abilities:
+    int: 8
+    wis: 8
+    dex: 14
+  gold: 180
+  exp: 32400
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:75:mob:7511":
+  keywords: [man, guard, warrior, zamba]
+  short: a warrior
+  long: A Zamba warrior stands here alert.
+  description: >
+    The large warrior stands here guarding the gate.  He is well tanned with long, black hair and cold,
+    piercing eyes.  His clothing is strange, around his head is a leather strap with many colorful
+    feathers attached, he wears thick gold bands around the upper part of both his arms and has a white cloth
+    tied around his waist.
+  level: 14
+  sex: male
+  alignment: 100
+  flags: [sentinel, aware, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  abilities:
+    str: 14
+    int: 10
+    dex: 12
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7512":
+  keywords: [black, kitten, cat]
+  short: a black kitten
+  long: A black kitten is lying here sleeping.
+  description: A black kitten looks like a cute, fuzzy ball.
+  level: 14
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:75:mob:7514":
+  keywords: [large, fat, man]
+  short: an old fat man
+  long: A large man is sitting here eating.
+  description: >
+    The large man has dirty white hair and food smudges on his faces and hands. He has a large brown
+    cloth wrapped around his waist.  His skin is sweaty and oily, he smells horrible.
+  level: 14
+  sex: male
+  alignment: 300
+  flags: [sentinel, scavenger, helper]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    dex: 8
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:75:mob:7515":
+  keywords: [girl, child]
+  short: a young girl
+  long: A young girl sits here playing.
+  description: >
+    A young girl sits here playing with her doll.  Her hair is long and black, she had big brown eyes
+    and a very dark tan.  She wears a yellow dress tied around the neck and waist.
+  level: 14
+  sex: female
+  alignment: 500
+  flags: [sentinel, stay_zone]
+  affects: [detect_align, protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  abilities:
+    str: 8
+    int: 10
+    dex: 20
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7518":
+  keywords: [woman]
+  short: a short woman
+  long: A short woman stands here.
+  description: >
+    The short woman is standing here catching her breath as she fans herself. She is barefoot and wears
+    only a white dress tied at one shoulder.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [stay_zone, wimpy, memory]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 13
+    dex: 15
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7519":
+  keywords: [native, boy]
+  short: a native boy
+  long: A native boy stands here.
+  description: >
+    The native boy is dressed in a small cloth wrapped around his waist.  He carries a small bow and
+    arrow as he searches around looking for something to aim at for target practice.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [aware, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [sneak]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7522":
+  keywords: [barkeeper, woman]
+  short: the barkeeper
+  long: The barkeeper is standing here.
+  description: >
+    You see a large woman standing behind the bar wearing a flowery dress.  She smiles at you revealing
+    several gaps where she is missing teeth.
+  level: 30
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7523":
+  keywords: [green, lizard, reptile, iguana]
+  short: a green lizard
+  long: A green lizard rests here in the warm sand.
+  description: >
+    An iguana around six feet long is resting here.  Its skin is leathery and bright green, strange
+    thorn looking scales run from the top of its head down to its tail.  The tail is extremely long and is
+    probably more than half the length of this strange reptile.
+  level: 14
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, stay_zone, memory, no_bash]
+  affects: [invisible]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: whip
+  abilities:
+    str: 8
+    int: 7
+    wis: 7
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7524":
+  keywords: [woman, native]
+  short: a native woman
+  long: A native woman sits here.
+  description: >
+    A native woman sits here preparing food for the tribe.  She is wearing a brightly colored dress. 
+    Her black hair is held back with a pearl hair piece.
+  level: 14
+  sex: female
+  alignment: 1000
+  flags: [sentinel, memory]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: standing
+
+"tba:75:mob:7525":
+  keywords: [man, fisherman]
+  short: a fisherman
+  long: A native fisherman is standing here working.
+  description: >
+    The fisherman looks at you sharply as he gathers together his fishing net. He has a dark tan and is
+    quite muscular.  His clothing is a simple cloth wrapped around his waist.
+  level: 14
+  sex: male
+  alignment: -200
+  flags: [sentinel, aware, memory, no_summon, no_bash]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 14
+    wis: 12
+    dex: 14
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:75:mob:7526":
+  keywords: [monkey, creature]
+  short: an angry monkey
+  long: An angry monkey stands here challenging you.
+  description: >
+    The large monkey stands on its bottom two feet that look just like its hands. It stands slightly
+    bent over a little over six feet in height.  It glares its sharp teeth at you.
+  level: 14
+  sex: neutral
+  alignment: -300
+  flags: [sentinel, helper]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  abilities:
+    str: 10
+    int: 6
+    wis: 6
+    dex: 14
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7528":
+  keywords: [plant, vine, crona]
+  short: a vine
+  long: A thick vine is blocking the path.
+  description: >
+    A vine of the Crona plant entangles everything.  The Crona has a think, dark green base with small
+    yellow leaves.
+  level: 14
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, scavenger, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  abilities:
+    str: 15
+    int: 9
+    wis: 9
+    dex: 9
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7530":
+  keywords: [man, robe, figure, priest]
+  short: a robed figure
+  long: A robed figure hiding at the edge of the jungle.
+  description: >
+    A man stands here dressed in dark robes hiding his appearance.  From what you can see he is tall
+    and thin.  The large hood of the robe drapes over his eyes only leaving his long white beard visible.
+  level: 14
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggr_evil, aggr_good, aggr_neutral]
+  affects: [sneak]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 12
+    int: 15
+    wis: 15
+    dex: 13
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7531":
+  keywords: [plant, flower, yellow, hook, zamba]
+  short: a yellow flower
+  long: A Zamba hook plant is rooted here.
+  description: >
+    You see a beautiful flower gracefully standing in a little clearing to itself.  It is quite tall
+    with a broad flower and long, slim leaves.  The light that glows onto this lovely flower enhancing its
+    beauty is actually glowing from within the flower.
+  level: 14
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, scavenger, memory, no_summon]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  abilities:
+    str: 15
+    dex: 12
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7535":
+  keywords: [rat]
+  short: a rat
+  long: A large rat scurries here.
+  description: >
+    The large rat scurries around looking for food.  Its red beady eyes stare about the room as it
+    sniffs the air.  As it lifts its head you can see it has very long front teeth on both the top and bottom
+    of its mouth.
+  level: 14
+  sex: neutral
+  alignment: -1000
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7539":
+  keywords: [man, witch, doctor]
+  short: a witch doctor
+  long: The witch doctor is hovering in the pentagram.
+  description: >
+    An old man dressed in armor made of bones and teeth is inside the pentagram. He is softly chanting
+    strange incantations.  He sways his arms around tossing black powder into a large pewter bowl set in
+    the center of the pentagram.
+  level: 18
+  sex: male
+  alignment: -1000
+  flags: [sentinel, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: blast
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 13
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7545":
+  keywords: [bird, falcon, colossal]
+  short: a colossal falcon
+  long: A colossal falcon is perched on the edge of the cliff.
+  description: >
+    The falcon stretches out its wings and screeches.  Its wing span is at least ten feet.  Its talons
+    look large enough to grasp large cows making the perfect size dinner.
+  level: 14
+  sex: neutral
+  alignment: 400
+  flags: [sentinel, scavenger, aware, memory, no_summon]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  abilities:
+    str: 15
+    wis: 10
+    dex: 16
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7552":
+  keywords: [a, chubby, man]
+  short: a chubby man
+  long: A chubby man stands here.
+  description: >
+    The chubby man looks at you and smiles.  He is wearing many expensive pieces of jewelry, and unlike
+    the natives he is well dressed.  Something about him doesn't look quite right.
+  level: 14
+  sex: male
+  alignment: -400
+  flags: [scavenger, aware, stay_zone, no_charm, no_summon]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  abilities:
+    dex: 20
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7558":
+  keywords: [man, gentleman, nobleman]
+  short: the nobleman
+  long: A nobleman stands here.
+  description: >
+    The nobleman looks wise and intellectual.  His cloths look similar to ancient gentleman attire but
+    new.  His hair is short and black with a touch of gray at the temples.
+  level: 14
+  sex: male
+  alignment: -300
+  flags: [sentinel, memory, no_summon]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 15
+    int: 19
+    wis: 19
+    dex: 15
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7559":
+  keywords: [woman, girl, lady]
+  short: a refined lady
+  long: A refined lady stands here gracefully.
+  description: >
+    She stands with a grace of elegance.  Her hair pulled back and held with pearls and strands of
+    gold.  She wears a long, flowing, white gown.
+  level: 14
+  sex: female
+  alignment: 500
+  flags: [sentinel, aware, aggr_evil, no_summon]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  abilities:
+    str: 10
+    int: 13
+    wis: 14
+    dex: 15
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7561":
+  keywords: [cook, woman, lady]
+  short: a cook
+  long: A  cook is here preparing a dish for a banquet.
+  description: >
+    The cook is a young woman dressed in white cloths with a small apron around her.  Her black hair is
+    pulled back and covered with a large scarf.
+  level: 14
+  sex: female
+  alignment: 500
+  flags: [sentinel, aware, memory]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7567":
+  keywords: [voodoo, doll]
+  short: a voodoo doll
+  long: A cloth doll is lying here.
+  description: The cloth doll looks tortured from needles poked into its eyes.
+  level: 14
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggr_good, no_summon]
+  affects: [invisible, sneak, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: resting
+    default: resting
+
+"tba:75:mob:7570":
+  keywords: [man, guard]
+  short: the guard
+  long: The guard stands here in front of the door.
+  description: The guard is wearing silver armor.  He stares at you watching you closely.
+  level: 14
+  sex: male
+  alignment: 200
+  flags: [sentinel, aware, memory, helper, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  abilities:
+    str: 15
+    int: 12
+    wis: 12
+    dex: 10
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7571":
+  keywords: [black, panther]
+  short: a black panther
+  long: A black panther crouches down ready to strike!
+  description: >
+    The panther is well muscular, it looks very strong and dangerous.  Bright green eyes shine out from
+    under is sleek, black fur.
+  level: 14
+  sex: female
+  alignment: 400
+  flags: [sentinel, aware, aggressive, helper, no_charm, no_summon]
+  affects: [invisible, sneak, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  abilities:
+    str: 12
+    dex: 14
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7572":
+  keywords: [girl, servant]
+  short: a servant girl
+  long: A young servant girl stands here waiting.
+  description: >
+    The young girl is pretty in a plain way.  She is dressed all in white with a cloth tied around her
+    head to hold back her long black hair.
+  level: 14
+  sex: female
+  alignment: 200
+  flags: [sentinel, helper, no_summon, no_sleep, no_bash]
+  affects: [invisible, protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7573":
+  keywords: [kiona, woman, empress]
+  short: the Empress Kiona
+  long: The Empress Kiona sits here, leaning over a huge bath.
+  description: >
+    She gracefully leans over the tub getting ready for her bath.  She wears a long robe about her but
+    has removed everything else except some gold jewelry and a elegant hair comb holding her black hair
+    up.
+  level: 18
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, protect_evil, no_track]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  abilities:
+    int: 9
+    wis: 9
+    dex: 9
+  gold: 180
+  exp: 32400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:75:mob:7583":
+  keywords: [sea, turtle, reptile]
+  short: a sea turtle
+  long: A sea turtle is standing here.
+  description: >
+    The sea turtle is around 6 feet around and has a light green shell.  As it sits here in the sand it
+    uses its back legs to dig into the sand.
+  level: 14
+  sex: neutral
+  alignment: 500
+  flags: [sentinel, helper]
+  affects: [waterwalk]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7585":
+  keywords: [native, woman, girl]
+  short: a young native woman
+  long: A young native woman is playing at the waters edge.
+  description: >
+    The beautiful girl is soaking wet.  She stops for a moment, smiles at you, then continues running
+    in and out of the water.
+  level: 14
+  sex: female
+  alignment: 100
+  flags: [sentinel, aware]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7588":
+  keywords: [old, man]
+  short: the old man
+  long: An old man is standing here.
+  description: The old man peers over his glasses at you.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7589":
+  keywords: [young, man]
+  short: the young man
+  long: The young man is standing here selling fruit.
+  description: The young man smiles at you and holds a basket of fruit toward you to look at.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7590":
+  keywords: [old, man, mage]
+  short: a feeble old man
+  long: A feeble old man stands here leaning on his staff.
+  description: >
+    The old man stands here slightly been over using a tall staff for support. He wears a long blue
+    robe with gold embroidery.  He has thin, long, white, hair growing from the top of his head to the
+    bottom of his chin.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 12
+    int: 18
+    wis: 14
+    dex: 8
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:75:mob:7592":
+  keywords: [gray, wolf]
+  short: a gray wolf
+  long: A gray wolf hunts here.
+  description: >
+    The gray wolf stands as tall as a horse.  The thick fur around its neck and back is standing up as
+    it looks around.  Foam drips from the corner of its mouth as it bares its teeth.
+  level: 14
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, scavenger, memory]
+  affects: [detect_invis, sneak, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  abilities:
+    str: 13
+    int: 10
+    wis: 10
+    dex: 13
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

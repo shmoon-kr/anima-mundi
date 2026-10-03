@@ -1,0 +1,221 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 52.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:52:mob:5200":
+  keywords: [beholder]
+  short: the mighty beholder
+  long: You meet a beholder's deadly gaze!
+  description: >
+    It has a large central eye that projects an anti-magic ray and ten eye-stalks atop the round body
+    which can do anything from charm you to disintegrate you. Beholders are not known for their
+    personality.
+  level: 25
+  sex: neutral
+  alignment: -870
+  flags: [sentinel, aggressive, memory, no_charm, no_summon, no_bash]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5201":
+  keywords: [lamia, beast]
+  short: the lamia
+  long: A strange lamia stands here waiting for her next meal.
+  description: >
+    This is a creature with the upper torso of a beautiful woman, but the lower body of a four-legged
+    beast.  She licks her lips as she looks at you greedily.
+  level: 12
+  sex: female
+  alignment: -1000
+  flags: [scavenger, stay_zone, aggr_good]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5202":
+  keywords: [mimic, chest]
+  short: the mimic
+  long: A strong chest lies in one corner of the room.
+  description: A strong, wooden chest bound with iron straps and a heavy padlock on the front.
+  level: 11
+  sex: neutral
+  alignment: 10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5203":
+  keywords: [mimic, boulder, skeleton, skeletons]
+  short: the mimic
+  long: Two skeletons lie crushed under a large boulder.
+  description: >
+    This large boulder seems to have been dropped here at some point, since there aren't any boulders
+    native to this area.  The two skeletons beneath it are simply that, bones...  No rags or anything else
+    appears to be attached to them.
+  level: 14
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5204":
+  keywords: [mimic, floor]
+  short: the mimic
+  long: The stone floor of this house has been ripped apart.
+  description: What a mess, you wonder to yourself what could have caused this rampant destruction.
+  level: 11
+  sex: neutral
+  alignment: -140
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5205":
+  keywords: [mimic, pottery, shards]
+  short: the mimic
+  long: Some broken shards of pottery lie strewn about the floor.
+  description: >
+    The pottery shards appear to have been part of a large vase at one point, probably before the city
+    fell.
+  level: 11
+  sex: neutral
+  alignment: 200
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5206":
+  keywords: [mimic, planks, wooden]
+  short: the mimic
+  long: A few wooden planks lie stacked on a low shelf.
+  description: >
+    The fact that these planks still rest on this shelf leads you to believe that someone has been here
+    before you...
+  level: 11
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5207":
+  keywords: [lizard, horned]
+  short: the horned lizard
+  long: A small horned lizard flicks his tongue and slithers away.
+  description: A cute little lizard -- that is, if you like reptiles!
+  level: 3
+  sex: neutral
+  alignment: 300
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5208":
+  keywords: [golem, stone]
+  short: the stone golem
+  long: In the corner you see a large, stone golem faithfully standing watch.
+  description: >
+    It is a big chunk of rock that has been magically formed into a giant stone creature.  He stands
+    here still guarding the city.
+  level: 25
+  sex: neutral
+  alignment: 800
+  flags: [sentinel, aggr_evil, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:52:mob:5209":
+  keywords: [lamia, beast]
+  short: the lamia
+  long: A strange lamia stands here waiting for her next meal.
+  description: >
+    This is a creature with the upper torso of a beautiful woman, but the lower body of a four-legged
+    beast.  She licks her lips as she looks at you greedily.
+  level: 9
+  sex: female
+  alignment: -500
+  flags: [sentinel, aggressive, stay_zone]
+  affects: [sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing

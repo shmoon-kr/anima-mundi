@@ -1,0 +1,194 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 90.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:90:mob:9000":
+  keywords: [fox, desert]
+  short: the desert fox
+  long: A desert fox watches you carefully, trying to keep a safe distance away.
+  description: >
+    This sly fox has learned to live in this wasteland and survive off it's meager wildlife.  His tan
+    coat blends with the sand around him, making him almost impossible to follow as he never stays out in
+    the open for long.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9001":
+  keywords: [spider]
+  short: the spider
+  long: A small brown and black spider is hiding in the sand.
+  description: >
+    You've heard stories about these small, but deadly, spiders.  They wait for a victim to walk over
+    them and then they attack.  Poisoning their prey with their deadly venom.  It's been rumored that
+    these spiders can even take down full grown camels.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9002":
+  keywords: [camel]
+  short: the camel
+  long: A camel spits at you!
+  description: >
+    These beasts of burden are one of the foulest creatures in the realm.  They reek and have a bad
+    habit of spitting on people.  This four legged animal not only resembles but also acts like a mule.  But
+    they are invaluable to someone trying to cross the desert.  They have been known to go months
+    without water.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9003":
+  keywords: [coyote]
+  short: the coyote
+  long: A coyote slinks away as you approach.
+  description: >
+    This scavenger lives off the misfortune of those attempting to cross the deserts.  They are known
+    for their intelligence and cunning fighting skills. They sometimes wander in packs and have been known
+    to attack travellers.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9004":
+  keywords: [scorpion]
+  short: the scorpion
+  long: A huge scorpion raises its tail and prepares to strike.
+  description: >
+    These deadly desert dwellers are more poisonous than even the spiders found in these parts.  They
+    are very quick and can attack even when unprovoked.  Many a traveller has been killed simply by almost
+    stepping on one.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: sting
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9005":
+  keywords: [hyeena]
+  short: the hyeena
+  long: A hyeena cackles insanely as you pass.
+  description: >
+    These small dog like creatures are known for their tempers and hunting in packs to take down large
+    animals.  They have an impressive set of sharp small teeth.  They are rarely found alone and always
+    rely on strength in numbers.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9006":
+  keywords: [guildsman, ranger, man]
+  short: the ranger guildsman
+  long: An old man stands here leaning on an expertly crafted bow.
+  description: >
+    He stands with a casualness that radiates enough confidence to make you think twice before
+    approaching.  But then you look at his face and realize he means no one any harm.  He is just here to train
+    those seeking to learn the ways of the Ranger.
+  level: 7
+  sex: male
+  alignment: 1000
+  flags: [sentinel, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:90:mob:9007":
+  keywords: [guard, ranger, man]
+  short: the ranger guard
+  long: A tall man stands here, casually stringing a bow.
+  description: >
+    You wonder why this man is just standing out here in the middle of no where. He seems in no hurry
+    and you almost wonder if he is guarding something.  He is in his middle years and has several scars
+    from what must have been some horrendous battles.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

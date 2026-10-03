@@ -1,0 +1,416 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 33.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:33:obj:3300":
+  type: food
+  keywords: [orange]
+  short: an orange
+  long: An orange lies on the ground here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 8
+  level: 0
+  extras:
+  - keywords: [orange]
+    text: You wonder how it got here, seeing how oranges are non-migratory.
+
+"tba:33:obj:3301":
+  type: food
+  keywords: [bale, wheat]
+  short: a bale of wheat
+  long: There is a bale of wheat here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 50
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [bale, wheat]
+    text: It doesn't look appetizing to you, but a horse might enjoy this...
+
+"tba:33:obj:3302":
+  type: treasure
+  keywords: [zither]
+  short: a big zither
+  long: A HUGE zither made of gold rests in the corner
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 40
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [zither]
+    text: Someone truly huge with big fingers might be able to play this.  You can't.
+
+"tba:33:obj:3303":
+  type: treasure
+  keywords: [barrel, perfume]
+  short: a barrel of perfume
+  long: You can smell a barrel on the other side of the room from here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [barrel, perfume]
+    text: "Smells good...  The label reads: \"Somewhere between GPA and MUD there lies... OBSESSION\""
+
+"tba:33:obj:3304":
+  type: treasure
+  keywords: [statue]
+  short: a statue
+  long: There is a statue of Aglandiir here, made of solid gold.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 900
+  rent: 90
+  level: 0
+  extras:
+  - keywords: [statue]
+    text: He's a pretty striking chap, for a dragon.
+
+"tba:33:obj:3305":
+  type: weapon
+  keywords: [halberd]
+  short: a halberd
+  long: A runed halberd lies on the ground here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d12
+    attack: slash
+  weight: 16
+  cost: 1000
+  rent: 300
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [halberd]
+    text: >
+      The runes glow with a bright light, making you think that this might be a pretty decent weapon.
+
+"tba:33:obj:3306":
+  type: potion
+  keywords: [potion, protection, dun, vial]
+  short: a potion of protection
+  long: A vial of a dun fluid is here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [20, 36, 1, 3]
+  weight: 1
+  cost: 1000
+  rent: 200
+  level: 0
+  extras:
+  - keywords: [potion, protection, dun, vial]
+    text: Looks thick, and brownish-gray (dun).  Ick!
+
+"tba:33:obj:3307":
+  type: treasure
+  keywords: [crown]
+  short: a dragon's crown
+  long: Aglandiir's crown sits here, radiating a shield.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [crown]
+    text: >
+      The shield repulses you, making you wonder how you're going to get your hands on this huge, valuble
+      chunk of gold...
+
+"tba:33:obj:3308":
+  type: food
+  keywords: [apple]
+  short: an apple
+  long: A scrawny red apple sits here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [apple]
+    text: It is not wormy...  Yet.
+
+"tba:33:obj:3309":
+  type: food
+  keywords: [bread, loaf]
+  short: a loaf of bread
+  long: A fresh loaf of bread lies here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [bread, loaf]
+    text: Mmmm...  Rye!
+
+"tba:33:obj:3310":
+  type: food
+  keywords: [melon]
+  short: a melon
+  long: A melon sits here, discarded evidently.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 3
+  cost: 8
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [melon]
+    text: Wow!  Look at the size of that melon!
+
+"tba:33:obj:3311":
+  type: weapon
+  keywords: [knife]
+  short: a knife
+  long: An exquisitely crafted knife rests here.
+  flags: [no_donate, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 3d5
+    attack: pierce
+  weight: 8
+  cost: 1000
+  rent: 200
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [knife]
+    text: >
+      The craftsmanship...  It takes your breath away!  This knife...  It had to have been forged by the
+      legendary smith Gabadiel.  It must be worth a fortune!
+
+"tba:33:obj:3312":
+  type: weapon
+  keywords: [sword, long]
+  short: a long sword
+  long: A superb long sword sticks in the earth.
+  flags: [no_donate, anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 2d7
+    attack: slash
+  weight: 15
+  cost: 750
+  rent: 150
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [sword, long]
+    text: >
+      This sword is light, but the heft is perfectly balanced.  Such an incredible weapon can only have
+      be crafted by the legendary smith Gabadiel, and as such be worth a fortune!
+
+"tba:33:obj:3313":
+  type: weapon
+  keywords: [sword, short]
+  short: a short sword
+  long: A short sword lies here... a work of art!
+  flags: [glow, no_donate, bless, anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 10
+  cost: 100
+  rent: 30
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [sword, short]
+    text: >
+      It brings tears to your eyes.  This must have been Gabadiel the smith's masterpiece; his final
+      work.  Simply invaluble.
+
+"tba:33:obj:3314":
+  type: trash
+  keywords: [cadaver]
+  short: a dismembered and burnt cadaver
+  long: A dismembered and burnt cadaver lies on the ground here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cadaver]
+    text: It is still smouldering a little; the culprits can't be far off!
+
+"tba:33:obj:3315":
+  type: weapon
+  keywords: [scimitar]
+  short: a scimitar
+  long: A scimitar as long as your arm lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [scimitar]
+    text: This weapon really isn't of too high a quality.
+
+"tba:33:obj:3316":
+  type: container
+  keywords: [crate]
+  short: a crate
+  long: A crate is stacked here.
+  wear: [take, hold]
+  values:
+    capacity: 200
+    lock_flags: 5
+    corpse: false
+  weight: 50
+  cost: 100
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [crate]
+    text: It's a standard wooden crate.
+
+"tba:33:obj:3317":
+  type: weapon
+  keywords: [bow, hunting]
+  short: a hunting bow
+  long: A hunting bow lies here, unwanted
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: pierce
+  weight: 6
+  cost: 400
+  rent: 40
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [bow, hunting]
+    text: >
+      This is the type of weapon you would use to bag some deer or rabbits, but not the type you'd take
+      into battle...
+
+"tba:33:obj:3318":
+  type: armor
+  keywords: [vest, leather]
+  short: a leather vest
+  long: A nice leather vest lies here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 6
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [vest, leather]
+    text: The seams are delicately sewn with a enruned thread...
+
+"tba:33:obj:3319":
+  type: drinkcon
+  keywords: [glass, beer]
+  short: a glass
+  long: A glass of beer sits forgotten here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: beer
+    poisoned: false
+  weight: 2
+  cost: 5
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [glass]
+    text: >
+      This is a nice glass filled with homebrew.  There doesn't seem to be too much stuff floating in it.
+
+"tba:33:obj:3320":
+  type: drinkcon
+  keywords: [glass, mead, ale]
+  short: a glass
+  long: A big glass of mead sits here, cool and frosty.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: ale
+    poisoned: false
+  weight: 2
+  cost: 8
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [glass, mead]
+    text: Looks good.  Looks warm.  Doesn't matter; it still looks good.
+
+"tba:33:obj:3321":
+  type: drinkcon
+  keywords: [shot, whisky]
+  short: a shot
+  long: A shot of whisky is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [shot]
+    text: Whew!  Looks like potent stuff!

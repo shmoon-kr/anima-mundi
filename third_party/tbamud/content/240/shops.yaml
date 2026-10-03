@@ -1,0 +1,95 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 240.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:240:shop:24000":
+  keeper: tba:240:mob:24027
+  rooms: [tba:240:room:24012]
+  products:
+  - tba:240:obj:24005
+  - tba:240:obj:24008
+  - tba:240:obj:24010
+  - tba:240:obj:24014
+  - tba:240:obj:24022
+  - tba:240:obj:24018
+  buys:
+  - type: container
+    keywords: purse
+  - type: weapon
+    keywords: axe
+  - type: armor
+    keywords: loincloth
+  - type: weapon
+    keywords: hatchet
+  - type: armor
+    keywords: brass
+  profit:
+    buy: 9.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s You seeing things boy?"
+    you_dont_have_it: "%s You stupid or what?"
+    does_not_buy: "%s I don't want that."
+    shop_cannot_afford: "%s I'm broke, come back later."
+    you_cannot_afford: "%s You seeing things boy?"
+    bought: "%s That's %d, now go away"
+    sold: "%s Here's %d, now go home!"
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:240:shop:24001":
+  keeper: tba:240:mob:24028
+  rooms: [tba:240:room:24031]
+  products:
+  - tba:240:obj:24011
+  - tba:240:obj:24012
+  - tba:240:obj:24013
+  - tba:240:obj:24019
+  - tba:240:obj:24020
+  - tba:240:obj:24021
+  - tba:240:obj:24025
+  buys:
+  - type: food
+    keywords: meat
+  - type: food
+    keywords: fish
+  - type: light
+    keywords: lantern
+  - type: container
+    keywords: pouch
+  - type: container
+    keywords: purse
+  - type: armor
+    keywords: cape
+  profit:
+    buy: 5.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s I'm out of that."
+    you_dont_have_it: "%s Look again you idiot"
+    does_not_buy: "%s I don't want that."
+    shop_cannot_afford: "%s I'm broke"
+    you_cannot_afford: "%s How do you plan on paying for that?"
+    bought: "%s That's %d!"
+    sold: "%s Here's %d coins!"
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:240:shop:24002":
+  keeper: tba:240:mob:24029
+  rooms: [tba:240:room:24029]
+  profit:
+    buy: 20.0
+    sell: 0.2
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 7

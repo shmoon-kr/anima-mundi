@@ -1,0 +1,180 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 35.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:35:mob:3500":
+  keywords: [wyvern]
+  short: the wyvern
+  long: A monstrous wyvern slowly circles just above your head.
+  description: >
+    This huge winged creature looks really menacing as it circles only inches above your head, flapping
+    its wings and squawking very loudly.
+  level: 8
+  sex: neutral
+  alignment: -700
+  flags: [sentinel, stay_zone, aggr_good, no_bash]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:35:mob:3501":
+  keywords: [goblin, mountain]
+  short: the goblin
+  long: A mountain goblin is wandering around mumbling to himself...
+  description: >
+    You see before you a small and twisted creature with knotted muscles and disgustingly green skin. 
+    Doesn't look like the type you'd invite to dinner.
+  level: 4
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:35:mob:3502":
+  keywords: [goblin, lieutenant]
+  short: the goblin lieutenant
+  long: A goblin lieutenant stands here, attempting to get his men in order.
+  description: >
+    The goblin lieutenant is rather angry, and looking for one of his men to beat up upon, but maybe
+    you will do just fine...
+  level: 7
+  sex: male
+  alignment: -600
+  flags: [stay_zone, aggr_good, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:35:mob:3503":
+  keywords: [goblin, leader]
+  short: the goblin leader
+  long: The goblin leader surveys the room.
+  description: >
+    The leader doesn't look too happy that you have found him here.  He grabs for his shortsword and
+    lunges for your neck.
+  level: 9
+  sex: male
+  alignment: -900
+  flags: [sentinel, scavenger, aggr_good, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:35:mob:3504":
+  keywords: [boy, small]
+  short: the small boy
+  long: A small boy sits here, licking his wounds.
+  description: >
+    The poor boy has numerous cuts and scratches, but appears to be all right. He is apparently the
+    only survivor of the ambush.
+  level: 4
+  sex: male
+  alignment: 500
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: resting
+    default: resting
+
+"tba:35:mob:3505":
+  keywords: [innkeeper]
+  short: the Innkeeper
+  long: The Innkeeper stands here, cleaning glasses.
+  description: >
+    The Innkeeper now spends most of his days waiting for customers, while the nights are spent
+    watching out for goblins.  His inn is no longer the happy place that is used to be in days past.
+  level: 10
+  sex: male
+  alignment: 400
+  flags: [sentinel, stay_zone, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:35:mob:3506":
+  keywords: [bard]
+  short: the bard
+  long: A sullen bard is here, drinking away his problems.
+  description: >
+    You can smell the alcohol on his breath from across the room.  This poor bard has been sitting here
+    quite a while, drinking himself into oblivion.
+  level: 8
+  sex: male
+  alignment: 600
+  flags: [sentinel, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:35:mob:3507":
+  keywords: [horseman, dark]
+  short: the dark horseman
+  long: A dark horseman is here, mounted on his black steed.
+  description: The man is obviously an outlaw, and has no qualms about slashing you into little bits.
+  level: 8
+  sex: male
+  alignment: -900
+  flags: [stay_zone, wimpy, helper]
+  affects: [no_track, sneak]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing

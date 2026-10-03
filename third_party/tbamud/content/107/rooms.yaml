@@ -1,0 +1,1467 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 107.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:107:room:10700":
+  name: Zone Description for the City of Iuel
+  description:
+    preformatted: |2
+         Builders  : Rumble Santa
+      Zone         : 107 Realms of Iuel
+      Began        : 1999
+      Player Level : 3-26
+      Rooms        : 90
+      Mobs         : 20
+      Objects      : 56
+      Shops        : 2
+      Triggers     : 1
+      Theme        : The zone is the town ship for the undead. Totally against the
+                     living.
+      Notes        : It could be converted into a starting town if we want. It is not
+                     quite good enough for that right now, but close. Almost
+                     everything here is !LIVING.
+      Links        : 08n
+      
+      Zone: 107 was linked to the following zones:
+      101 The South Road                 at 10740 (east ) --->  10131
+  sector: inside
+  flags: [indoors, private]
+
+"tba:107:room:10701":
+  name: Central Taking
+  description: >
+    Surrounded by a humid abundance the room seems to spin around in circles cornering every angle as a
+    fat retraction.  Probably the only dry area around the lands, this clearing seems to be the only
+    place a tired rack of bones or a blood drenched undead could probably call close to home.  Dust
+    particles float around the air in a weird sort of lingering cloud.  Sounds of mourning, creaking and shaking
+    can be heard from as far as the eyes can see.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    north:
+      to: tba:107:room:10702
+    east:
+      to: tba:107:room:10716
+    south:
+      to: tba:107:room:10709
+    west:
+      to: tba:107:room:10731
+    down:
+      to: tba:107:room:10717
+
+"tba:107:room:10702":
+  name: Badlands
+  description: >
+    Moving onto highgrounds the swamp waters start to dry beneath your feet. Circles of small puddles
+    gather water into your footwear, making them gushy and uncomfortable.  In the Badlands the skys above
+    paint a gray ceiling that never changes through weather.  The surroundings show nothing but broken
+    wood and moss, eminating a foul smell that gathers into your nostrils and greens your thoughts into
+    what may lay ahead of this damned place.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:107:room:10703
+    south:
+      to: tba:107:room:10701
+
+"tba:107:room:10703":
+  name: Badlands
+  description: >
+    The monotonous sky and surroundings depress even the most lifeless of souls. This is the undeads
+    own personal hell that they may call their own.  The fetid water and dead or decaying plantlife is
+    sobering and a good example of the frailty of life.  The undead rule this world whether the living
+    realize it or not.  An old building in as bad a condition as the rest of the swamp looms overhead in the
+    branches of a large tree.  A set of stairs lead up to an dark empty doorway.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:107:room:10708
+    east:
+      to: tba:107:room:10704
+    south:
+      to: tba:107:room:10702
+    west:
+      to: tba:107:room:10706
+    up:
+      to: tba:107:room:10732
+
+"tba:107:room:10704":
+  name: Badlands
+  description: >
+    The murky waters of the swamp recede slightly as you climb onto higher ground.  Several stakes and
+    crosses have been nailed in a circle, displaying the remains of the few living who tried to enter
+    this deadly abyss.  To the west a large tree cradles a small building in its limbs.  The loud clank and
+    shriek of metal being shaped can be heard within.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:107:room:10705
+    west:
+      to: tba:107:room:10703
+
+"tba:107:room:10705":
+  name: Badlands
+  description: >
+    The howl of wind passing through the hollow dead limbs of the trees is the only sound that can be
+    heard.  Though the wind blows fervently, the clouds above do not change.  The land is barren and
+    lifeless.  Pools of water and muck appear untouched and undisturbed.  Nothing living dares pass this way.
+  sector: inside
+  flags: [dark, no_mob]
+  exits:
+    south:
+      to: tba:107:room:10721
+    west:
+      to: tba:107:room:10704
+
+"tba:107:room:10706":
+  name: Badlands
+  description: >
+    The murky waters of the swamp rise to just below your knees.  The smell is overpowering, emanating
+    from the dead plantlife and even a few bodies that float past.  The sky above remains unchanged and
+    unmoving, as if frozen in time.  These swamps are the home to those who have foresworn life.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:107:room:10703
+    west:
+      to: tba:107:room:10707
+
+"tba:107:room:10707":
+  name: Badlands
+  description: >
+    The gray ceiling of clouds above stays motionless, as stagnant as the fetid waters through which
+    you trod.  A cave can be seen leading into the bowels of the badlands.  The trees and plantlife
+    surrounding it and you are dead and on the last stages of decomposition, like everything else in this place
+    of damnation.
+  sector: inside
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:107:room:10706
+    down:
+      to: tba:107:room:10728
+
+"tba:107:room:10708":
+  name: Badlands
+  description: >
+    A circle of dead trees encloses three quarters of this room, leaving the only exit to the south.  A
+    large board has been erected on the northern wall. Messages are written on scattered parchments
+    about the room, some in blood, some in even less pleasing bodily fluids.  This is the meeting room of the
+    undead where they may plot and scheme their corruption and consumption of the living world.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:107:room:10703
+
+"tba:107:room:10709":
+  name: Wetlands
+  description: >
+    The stone remains of a ruined city are slowly being consumed by the rot and decay of the swamp.  A
+    few small stone buildings can be seen struggling to remain above the murky waters.  To the north an
+    entire building looks almost untouched by the surrounding swamp.
+  sector: water_swim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:107:room:10701
+    south:
+      to: tba:107:room:10710
+
+"tba:107:room:10710":
+  name: Wetlands
+  description: >
+    As windy hazes blow against the thick serenity of the atmosphere, sharp piercing screeches can be
+    heard somewhere in the vicinity.  As water levels rise along the dead branches, the continuing need
+    for life around this region has diminished to an absolute null.  Dead bodies of those once loved, float
+    on the surface waters of the wetlands getting trapped in between the dead and rotting overgrowned
+    weedgrass.  A strange stairway of the thick fog looks solid enough to walk on.  It rises high above you
+    into a low hanging cloud of white vapor.
+  sector: water_swim
+  exits:
+    north:
+      to: tba:107:room:10709
+    east:
+      to: tba:107:room:10712
+    south:
+      to: tba:107:room:10711
+    west:
+      to: tba:107:room:10714
+    up:
+      to: tba:107:room:10733
+
+"tba:107:room:10711":
+  name: Wetlands
+  description: >
+    Slabs of smooth stone jut up out of the swamp, encircling and enclosing everything within, except
+    for a small gap in the stones to the north and south. The walls of rock are the only remains of an
+    unkown civilization that has been buried and forgotten in the realm of the undead.  To the south you can
+    see a faint trail that looks drier than the surrounding area.
+  sector: water_swim
+  exits:
+    north:
+      to: tba:107:room:10710
+    south:
+      to: tba:107:room:10740
+
+"tba:107:room:10712":
+  name: Wetlands
+  description: >
+    The muddy water and muck relentlessly tries to pull you down with each step you take.  The sucking
+    sound of your footsteps is broken only by a shrill ceaseless scream in the distance.  The clouds
+    overhead are motionless.  They look superficial, the only movement is that of a thin layer of fog rising
+    off the murky water.
+  sector: water_swim
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:107:room:10713
+    west:
+      to: tba:107:room:10710
+
+"tba:107:room:10713":
+  name: Wetlands
+  description: >
+    The swamp gives way here to even deeper waters.  A curtain of fog rises off the warm water into the
+    cooler air, reducing visibility and attenuating any sound.  The waters are an unhealthy shade of
+    black and gray.  Making it impossible to judge the depth or see what lies underneath.  A few ripples in
+    the water are the only sign of life in this hell hole.
+  sector: water_swim
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:107:room:10723
+    west:
+      to: tba:107:room:10712
+
+"tba:107:room:10714":
+  name: Wetlands
+  description: >
+    Dead trees covered in a black moss rise out of the swamp like skeltal fingers trying to claw their
+    way out of their swampy graves.  Large pools dark water reflect the strange unchanging sky above. 
+    Small trailers of fog rise off the warm water and dissipate into the cool, still air.
+  sector: water_swim
+  exits:
+    east:
+      to: tba:107:room:10710
+    west:
+      to: tba:107:room:10715
+
+"tba:107:room:10715":
+  name: Wetlands
+  description: >
+    The lack of life and movement makes the dead swamp look more like a painting than reality.  Filthy
+    water, dead trees, rotting debris floating motoinless in the still waters.  A large sinkhole has
+    collapsed here.  Revealing a dark cavern below.
+  sector: water_swim
+  exits:
+    east:
+      to: tba:107:room:10714
+    down:
+      to: tba:107:room:10730
+
+"tba:107:room:10716":
+  name: Stone Ruins
+  description: >
+    The remains of a once impressive stone structure lies collapsed all about. Fluted columns of marble
+    and granite stand naked with no roof to cover them. A once marvelous cobblestone road has been
+    desecrated and broken by years of neglect.  The remnants of a few small buildings still remain.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:107:room:10718
+    west:
+      to: tba:107:room:10701
+
+"tba:107:room:10717":
+  name: Cave-in Tundra
+  description: >
+    The remains of a stone staircase lead up into an ancient stone structure. The walls, ceilings and
+    floor changes from stone slabs constructed centuries ago to bare cavern walls of strange colors.  A
+    thin film of ice covers everything as a frozen breeze from the east keeps everything frozen.  Nothing
+    living is in evidence.
+  sector: inside
+  exits:
+    west:
+      to: tba:107:room:10724
+    up:
+      to: tba:107:room:10701
+    down:
+      to: tba:107:room:10741
+
+"tba:107:room:10718":
+  name: Stone Ruins
+  description: >
+    A massive structure with steps leading up to the summit towers over the rest of the ruins.  It is
+    still in good repair and even looks slightly used.  All around the encroaching swampland is beginning
+    to reclaim this fallen city.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10720
+    east:
+      to: tba:107:room:10719
+    south:
+      to: tba:107:room:10722
+    west:
+      to: tba:107:room:10716
+    up:
+      to: tba:107:room:10734
+
+"tba:107:room:10719":
+  name: Stone Ruins
+  description: >
+    A large, almost pyramid-like, structure to the east blocks out the remains of the remainder of this
+    once beautiful city.  A few other buildings remain, ready to collapse at any time.  To the north and
+    south are two such buildings. Neither have doors since the wood has rotted away decades ago, the
+    only remains are the stony skeletal walls and roof.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10736
+    east:
+      to: tba:107:room:10738
+    south:
+      to: tba:107:room:10737
+    west:
+      to: tba:107:room:10718
+
+"tba:107:room:10720":
+  name: Swampy Flats
+  description: >
+    The wail of a lost soul pierces the stagnant air.  The shriek echoes off the dead tree stumps and
+    seems to come from several directions.  The presence of so many undead have sucked the life out this
+    land.  Nothing living moves.  From within these realms comes the source of the undead, and no one has
+    yet to discover what or where it is.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10721
+    south:
+      to: tba:107:room:10718
+
+"tba:107:room:10721":
+  name: Swampy Flats
+  description: >
+    Painting a dark protrait of black across the surrounding skys, the muddy, swampy grounds below you
+    seem to blend directly into the ebony views as it hits towards a pseudo horizon that never seems to
+    get brighter no matter the distance closer.  Broken root arms bend and twist around each other in a
+    static dance that lasts forever.  The opaque grounds below cover stories of great wars and treason
+    burried into the ground.  Leaving behind nothing but a legend and scattered armors collected by merchants
+    and sold to far away realms.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10705
+    south:
+      to: tba:107:room:10720
+
+"tba:107:room:10722":
+  name: Swampy Flats
+  description: >
+    The swampy slime that used to be water reeks of refuse and decay.  Various unidentifiable objects
+    float on or near the surface of the black liquid.  The footing is unsure and treacherous, dangerous to
+    anyone afraid of drowning, but nothing more than a nuisance for those that call this place home. 
+    The land of the undead is no place for the living.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:107:room:10718
+    south:
+      to: tba:107:room:10723
+
+"tba:107:room:10723":
+  name: Swampy Flats
+  description: >
+    Large bubbles rise and break through the filmy surface of the swamp, emitting rank gasses from
+    decaying matter.  Sinkholes threaten to swallow the few remaining dead trees and trespassers that remain
+    in the area.  The silence is broken only by an occasional shriek or moan from deep within the
+    wastelands.
+  sector: water_swim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:107:room:10722
+    south:
+      to: tba:107:room:10713
+
+"tba:107:room:10724":
+  name: Cave-in Tundra
+  description: >
+    The cavern walls seem painted in strains of different colors from red to violet.  All colors of the
+    spectrum fill the room and give it a strange feeling of being in motion.  The occasional tremor
+    causes dust and small rocks to shake loose from the ceiling and walls.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10717
+    west:
+      to: tba:107:room:10725
+
+"tba:107:room:10725":
+  name: Cave-in Tundra
+  description: >
+    Down in the tundra, the sounds of never ceasing boulders and large rocks crashing down, a
+    descending faced cave-in wall in which you are standing now. The colors of these rocks are as vibrant as they
+    are large.  Yellow, brown and red and all different strains of concentration, running up and down, as
+    if painted formations.  The ground below always trembling giving off an uneasy feeling of being
+    swallowed deeper into this tundra.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10727
+    east:
+      to: tba:107:room:10724
+    south:
+      to: tba:107:room:10729
+    west:
+      to: tba:107:room:10726
+    down:
+      to: tba:107:room:10735
+
+"tba:107:room:10726":
+  name: Cave-in Tundra
+  description: >
+    The rocky walls form a natural dead end in this lifeless cavern.  The floor consists of small rocks
+    of every color making travel precarious at best.  The walls are striated with strange colors and
+    shapes, almost as if painted.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10725
+
+"tba:107:room:10727":
+  name: Cave-in Tundra
+  description: >
+    The remains of a recent collapse has opened even more of the cavern. Stones of random size and
+    color cover the floor.  Nothing can live in this frozen rocky grave.  No moss or lichen is visible on any
+    of the rocks.  The wind howls through the empty cavern like a mother mourning for the loss of her
+    children.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10728
+    south:
+      to: tba:107:room:10725
+
+"tba:107:room:10728":
+  name: Cave-in Tundra
+  description: >
+    A chill wind from the south blows bits of ice and dirt around the cavern. Stalagtites hang from the
+    ceiling, looking like large icicles.  From the cavern floor rises stalagmites reach up towards their
+    twins.  A few connecting, forming natural pillars to support this underground cavern.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10727
+    up:
+      to: tba:107:room:10707
+
+"tba:107:room:10729":
+  name: Cave-in Tundra
+  description: >
+    Stalagmites and stalagtites make travel and visibility difficult.  The path through the cavern
+    weaves around natures pillars.  Piles of rocks are arranged in strange patterns, their colors looking
+    artificial.  A strange presence seems to fill the cavern.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10725
+    south:
+      to: tba:107:room:10730
+
+"tba:107:room:10730":
+  name: Cave-in Tundra
+  description: >
+    The remains of a recent collapse fills the cavern.  Small puddles of swamp water have begun to
+    crystallize into ice.  Rotten roots from dead trees hang down at the edge of the collapse, making an easy
+    climb out.  A chill wind from the north flows up and out of the cavern.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:107:room:10729
+    up:
+      to: tba:107:room:10715
+
+"tba:107:room:10731":
+  name: Writing Iuel
+  description: >
+    The best furnished room in this lands the wooden and silver finishing of the boards walls and
+    everything inside this room, tells tales of the greatness this crypt use to possess.  A bright fire burns
+    on the furnance in the shorter corner of the room, warming the chilled bone and every fiber or
+    muscles that will twitch in gratefulness.
+  sector: inside
+  flags: [dark, no_mob, indoors, peaceful]
+  exits:
+    east:
+      to: tba:107:room:10701
+
+"tba:107:room:10732":
+  name: Central Armory and Weaponary
+  description: >
+    Racks and racks and racks of standing, lying, hanging and weapons and armor still in the middle of
+    making are scattered everywhere in this room.  A large odylic anvil gathers the attention of
+    everything magnetic in steel and rust and draws it to the owner of this shop.
+  sector: inside
+  flags: [no_mob, peaceful]
+  exits:
+    down:
+      to: tba:107:room:10703
+
+"tba:107:room:10733":
+  name: Cauldron Skyways
+  description: >
+    Scents of sweet, sour and bitter herbs complicate your senses.  It is a mixture of all that you
+    have ever smelt before and a few new aromas that you are curious about . In the middle of this room sits
+    a large copper cauldron with two large rings and some engravings on the side of it.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    down:
+      to: tba:107:room:10710
+
+"tba:107:room:10734":
+  name: Wisdom Revise
+  description: >
+    Upon entering the room unseen hits and blows force you to the ground, followed by emptines...  All
+    that come to the spectre of Iuel to learn must first forget what they already know.
+  sector: inside
+  flags: [dark, no_mob, indoors, peaceful]
+  exits:
+    down:
+      to: tba:107:room:10718
+
+"tba:107:room:10735":
+  name: Drugstore
+  description: >
+    Cupboards made from uneven lengths of branches line the wall behind the counter, bottles of
+    medication and strange foul looking conjures sit on the shelves of these cupboards.  A strange awkward
+    feeling as movement in this room is restricted to a limit.  The pale light in the room coming from a
+    lighten lamp coveres the shadow of a translucent being.
+  sector: inside
+  flags: [dark, no_mob, peaceful]
+  exits:
+    up:
+      to: tba:107:room:10725
+
+"tba:107:room:10736":
+  name: The Post Office of Iuel
+  description: >
+    The dusty remains of this building have been turned into a post office to allow communication
+    between the various factions of the undead who which to conspire the overthrow of all pitiful living
+    creatures in the realm.  A large shelf divided into small boxes filled with names seems to be the extent
+    of the postmans ability to sort and deliver mail.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:107:room:10719
+
+"tba:107:room:10737":
+  name: The Bank of Iuel
+  description: >
+    A large vault stands open, rusted permanently that way by the looks.  A fortune in coins and other
+    treasures lies within.  But no one is stupid enough to try and steal from this bank.  The walls are
+    crumbling into dust, debris from the ceiling lies about the floor, making an excellent skylight
+    through which you can see the gray unmoving clouds above.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10719
+
+"tba:107:room:10738":
+  name: Pet Shop of Iuel
+  description: >
+    This strange room is starkly out of place and in remarkably good condition. Cages line all the
+    walls filled with animals.  A small boy tends to them with love and devotion.  The smell is what could be
+    expected, a mix of urine, fesces, and animals.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:107:room:10719
+
+"tba:107:room:10739":
+  name: PETSHOP STOREROOM
+  description: >
+    Make two rooms and some pets.  The rooms MUST be sequential.  If the first room is 315 then the
+    second must be 316.  The second room is known as the storeroom.  All that is required in the storeroom
+    is to load one of each mob you wish to be a pet.  This room can not have any exits and will never be
+    used by mortals.  Although a pet shopkeeper is not required it is recommended.  After all of this is
+    done ask your coder to implement the petshop.  It will not work until the code is changed and the MUD
+    is rebooted.  The cost of pets is 300 times their level.
+  sector: inside
+  flags: [private, godroom]
+
+"tba:107:room:10740":
+  name: Entrance to Iuel
+  description: >
+    The hill slopes downwards into what appears to be an old and abandoned city of stone.  It is
+    starkly out of place with plains and field surrounding it. The city appears to be sinking into the
+    swamplands it rests upon.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10711
+
+"tba:107:room:10741":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: underwater
+  flags: [dark, no_mob, soundproof, no_track, tunnel]
+  exits:
+    east:
+      to: tba:107:room:10745
+    up:
+      to: tba:107:room:10717
+    down:
+      to: tba:107:room:10742
+
+"tba:107:room:10742":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10770
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10775
+        reset: locked
+    up:
+      to: tba:107:room:10741
+    down:
+      to: tba:107:room:10743
+
+"tba:107:room:10743":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    west:
+      to: tba:107:room:10761
+    up:
+      to: tba:107:room:10742
+    down:
+      to: tba:107:room:10744
+
+"tba:107:room:10744":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10755
+    south:
+      to: tba:107:room:10764
+    up:
+      to: tba:107:room:10743
+    down:
+      to: tba:107:room:10771
+
+"tba:107:room:10745":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10747
+    east:
+      to: tba:107:room:10746
+    west:
+      to: tba:107:room:10741
+
+"tba:107:room:10746":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10760
+    west:
+      to: tba:107:room:10745
+
+"tba:107:room:10747":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10748
+    south:
+      to: tba:107:room:10745
+
+"tba:107:room:10748":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10747
+    down:
+      to: tba:107:room:10749
+
+"tba:107:room:10749":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10748
+    down:
+      to: tba:107:room:10750
+
+"tba:107:room:10750":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    west:
+      to: tba:107:room:10782
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10774
+        reset: locked
+    up:
+      to: tba:107:room:10749
+    down:
+      to: tba:107:room:10751
+
+"tba:107:room:10751":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10750
+    down:
+      to: tba:107:room:10752
+
+"tba:107:room:10752":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10777
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10753
+        reset: locked
+    south:
+      to: tba:107:room:10753
+    up:
+      to: tba:107:room:10751
+
+"tba:107:room:10753":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10752
+    south:
+      to: tba:107:room:10754
+
+"tba:107:room:10754":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10753
+    east:
+      to: tba:107:room:10756
+    west:
+      to: tba:107:room:10755
+
+"tba:107:room:10755":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10754
+    west:
+      to: tba:107:room:10744
+
+"tba:107:room:10756":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10774
+      look: Thick vines drapping down from the overcast blocks the way to a narrow passage
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10752
+        reset: locked
+    south:
+      to: tba:107:room:10757
+    west:
+      to: tba:107:room:10754
+
+"tba:107:room:10757":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10756
+    up:
+      to: tba:107:room:10758
+
+"tba:107:room:10758":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10759
+    down:
+      to: tba:107:room:10757
+
+"tba:107:room:10759":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10760
+    down:
+      to: tba:107:room:10758
+
+"tba:107:room:10760":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10746
+    down:
+      to: tba:107:room:10759
+
+"tba:107:room:10761":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10762
+    east:
+      to: tba:107:room:10743
+    south:
+      to: tba:107:room:10763
+
+"tba:107:room:10762":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10761
+
+"tba:107:room:10763":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10761
+
+"tba:107:room:10764":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10744
+    south:
+      to: tba:107:room:10765
+
+"tba:107:room:10765":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10764
+    up:
+      to: tba:107:room:10766
+
+"tba:107:room:10766":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10767
+    down:
+      to: tba:107:room:10765
+
+"tba:107:room:10767":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10768
+    down:
+      to: tba:107:room:10766
+
+"tba:107:room:10768":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10767
+    up:
+      to: tba:107:room:10769
+
+"tba:107:room:10769":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10770
+    down:
+      to: tba:107:room:10768
+
+"tba:107:room:10770":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10742
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10775
+        reset: locked
+    south:
+      to: tba:107:room:10789
+    down:
+      to: tba:107:room:10769
+
+"tba:107:room:10771":
+  name: Sink Holes
+  description: >
+    Wet compost that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10772
+    up:
+      to: tba:107:room:10744
+    down:
+      to: tba:107:room:10773
+
+"tba:107:room:10772":
+  name: Submerge Under
+  description: >
+    A hard rock bottom stops of the movementive drips coming from the higher wetlands.  Creeping vines
+    flourish and seemingly thriving on the liquid compose that Iuel has managed to gather in it's
+    gruesome arms.  A smooth bowl carved from the fluid's weight takes center stage gathering more foul smelling
+    liquid, attracting the strangest insects.  Amplified sounds of dripping fluid can be heard from all
+    over.
+  sector: inside
+  exits:
+    west:
+      to: tba:107:room:10771
+
+"tba:107:room:10773":
+  name: Body Count
+  description: >
+    The soft earth gives under your feet and you are sucked down into he sink hole.  Dirt and rocks
+    quickly fill in over your head.  The weight and lack of oxygen are slowly killing you.
+  sector: inside
+  flags: [no_mob]
+
+"tba:107:room:10774":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10775
+      door:
+        keywords: [door]
+        kind: pickproof
+    east:
+      to: tba:107:room:10773
+      door:
+        keywords: [mudwall]
+        kind: door
+        reset: closed
+    west:
+      to: tba:107:room:10756
+      look: The thick vines block the passage out
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10752
+
+"tba:107:room:10775":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10776
+    south:
+      to: tba:107:room:10774
+
+"tba:107:room:10776":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10775
+    west:
+      to: tba:107:room:10777
+
+"tba:107:room:10777":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10776
+    south:
+      to: tba:107:room:10752
+      door:
+        keywords: [vines]
+        kind: door
+        key: tba:107:obj:10753
+        reset: locked
+    up:
+      to: tba:107:room:10778
+
+"tba:107:room:10778":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    west:
+      to: tba:107:room:10779
+    up:
+      to: tba:107:room:10773
+    down:
+      to: tba:107:room:10777
+
+"tba:107:room:10779":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10773
+    east:
+      to: tba:107:room:10778
+    south:
+      to: tba:107:room:10780
+
+"tba:107:room:10780":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10779
+    west:
+      to: tba:107:room:10781
+
+"tba:107:room:10781":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10780
+    up:
+      to: tba:107:room:10782
+
+"tba:107:room:10782":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    east:
+      to: tba:107:room:10750
+      door:
+        keywords: [vines]
+        kind: door
+        reset: locked
+    south:
+      to: tba:107:room:10783
+    down:
+      to: tba:107:room:10781
+
+"tba:107:room:10783":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10782
+    down:
+      to: tba:107:room:10784
+
+"tba:107:room:10784":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10785
+    up:
+      to: tba:107:room:10783
+
+"tba:107:room:10785":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10784
+    south:
+      to: tba:107:room:10773
+    up:
+      to: tba:107:room:10786
+
+"tba:107:room:10786":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    up:
+      to: tba:107:room:10787
+    down:
+      to: tba:107:room:10785
+
+"tba:107:room:10787":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    south:
+      to: tba:107:room:10788
+    down:
+      to: tba:107:room:10786
+
+"tba:107:room:10788":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10787
+    east:
+      to: tba:107:room:10789
+
+"tba:107:room:10789":
+  name: Sink Holes
+  description: >
+    Wet compose that has accumilated over the turning years has created a huge sink hole in this
+    region.  It's running branches journey downwards and sideways.  The smell of rotting leaves and old timber
+    fertalized with the gnash of blood and flesh, spilt and cutt off from fallen fighters leaves this
+    place a terrible adventuring spot.  Soft walls of this sink hole crumbles slowly expanding it's diameter
+    century over century.  Absolutely no light penetrates into this cavern trapping humid coldness in
+    the air and a nerve racking silence.
+  sector: inside
+  exits:
+    north:
+      to: tba:107:room:10770
+    west:
+      to: tba:107:room:10788

@@ -1,0 +1,1107 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 316.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:316:room:31600":
+  name: Entering the Guild Area
+  description: >
+    As you enter the Guild Area, you notice an immediate change from the street just east of you.  The
+    air seems charged with magic and friction.  It makes your palms want to sweat, makes your pulse
+    race.  All the hubbub and noise from the city has been swallowed up by the tall gray walled buildings
+    which now surround you.  You may continue west into the guild area or head east back into the business
+    district.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:315:room:31510
+    west:
+      to: tba:316:room:31601
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Kaan
+           Zone 316 is linked to the following zones:
+        315 McGintey Business District     at 31600 (east ) ---> 31510
+        315 McGintey Business District     at 31666 (east ) ---> 31565
+
+"tba:316:room:31601":
+  name: Guild Area
+  description: >
+    North Street continues to run west into the Guild Area, the strange feeling of power and vitality
+    washing over you strong as ever.  A huge stone edifice rises to your south, one which must be at least
+    four stories in height.  To the east, the street heads toward the business district.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31600
+    west:
+      to: tba:316:room:31602
+
+"tba:316:room:31602":
+  name: Guild Area
+  description: >
+    North Street head backs west, curving south almost immediately.  To the north and south are the
+    walls of buildings whose purpose is unknown.  You may head toward the business district to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31601
+    west:
+      to: tba:316:room:31603
+
+"tba:316:room:31603":
+  name: Dead End to North Street
+  description: >
+    North Street ends here, however two alleys run off to the north and south. To the north, the alley
+    seems a bit small, the way a bit tight.  To the south, the alley is almost the same width as North
+    Street.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31604
+    east:
+      to: tba:316:room:31602
+    south:
+      to: tba:316:room:31612
+
+"tba:316:room:31604":
+  name: Mage Area
+  description: >
+    You have entered into the Mage's Area, where the air itself crackles with arcane energies, the
+    forces of good and evil magic strongly at work here.  You may continue further into the Mage Area or go
+    south, leaving it.  To the east and west are low stone buildings, no signs of any sort proclaiming
+    their function.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31608
+    east:
+      to: tba:316:room:31605
+    south:
+      to: tba:316:room:31603
+    west:
+      to: tba:316:room:31606
+
+"tba:316:room:31605":
+  name: Potions
+  description: >
+    These potions are those made by mages for mages.  Some will help to aid the common user, one who
+    may not be a mage, but be warned, some have some very harmful side affects.
+  sector: inside
+  exits:
+    west:
+      to: tba:316:room:31604
+
+"tba:316:room:31606":
+  name: Scrolls
+  description: >
+    These powerful scrolls help to manipulate the forces of magic which a mage commands.  The withered
+    old man who stands here tending shop looks with a disdainful eye upon you, as if you could never
+    reach his standards.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31604
+
+"tba:316:room:31607":
+  name: Mage Weapons
+  description: >
+    The weapons for sale in this shop are made exclusively for mages by mages. These weapons will not
+    be of any use to any other class.  Rows of weapons lay neatly stacked along the walls and on shelves. 
+    The exit is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31608
+
+"tba:316:room:31608":
+  name: End of the Alley
+  description: >
+    The alley ends here, the only direction you may go is south.  The closed doors of low stone
+    buildings lay to the east, west, and north however what lies inside those buildings is a mystery.  One thing
+    is for sure, they certainly do not look inviting.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:316:room:31610
+    east:
+      to: tba:316:room:31609
+    south:
+      to: tba:316:room:31604
+    west:
+      to: tba:316:room:31607
+
+"tba:316:room:31609":
+  name: Mage Board Room
+  description: >
+    Any messages between mages can be left here on the board and will received at any mage guild
+    throughout the land.  The guild for the mages lies directly east of here or you may leave to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31611
+    west:
+      to: tba:316:room:31608
+
+"tba:316:room:31610":
+  name: Robes and Armor
+  description: >
+    This is where a mage may buy armor specifically tailored for him or her. The walls are lined with
+    racks from which robes and leather armor hang.  You may exit to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:316:room:31608
+
+"tba:316:room:31611":
+  name: Mage Guild
+  description: >
+    Here one may practice any spells that may need practicing or train skills to perfection.  The
+    guildmaster is always free to lend a helpinh hang that just may lift you to the next level.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:316:room:31609
+
+"tba:316:room:31612":
+  name: West Alley
+  description: >
+    The alley heads north and south from here into the depths of the guild area. The feeling of power
+    and strength still eminates all around you, lightening your step just a bit.  A very tight little
+    alley heads west from here, almost unnoticable to the naked eye.  Gray stone buildings match the gray
+    stone street you walk upon, all in contrast to the wonderful feeling of power all around you.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31603
+    south:
+      to: tba:316:room:31613
+    west:
+      to: tba:316:room:31620
+
+"tba:316:room:31613":
+  name: West Alley
+  description: >
+    The alley runs north and south from here, hemmed in by buildings on either side.  The hush that
+    seems characteristic of this place only makes the feeling of power that much more mysterious and
+    exciting.  You almost find yourself holding your breath, afraid to look in any passer-by's eye, afraid you
+    may laugh aloud.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31612
+    south:
+      to: tba:316:room:31614
+
+"tba:316:room:31614":
+  name: West Alley
+  description: >
+    The alley still runs north and south, however there is a small dirt path leading between two stone
+    buildings west from here.  The hushed reverence all around makes this whole section of town seem
+    mysterious and thrilling, almost as if you should be thanking someone for their allowing you to be here.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31613
+    south:
+      to: tba:316:room:31667
+    west:
+      to: tba:316:room:31615
+
+"tba:316:room:31615":
+  name: Dirt Alley
+  description: >
+    The stone of the street is left behind as you begin your way west along this path.  Just west of
+    here, the buildings drop away and the path heads toward what looks to be the edge of the plateau, for
+    all you can see ahead is wide open air.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31614
+    west:
+      to: tba:316:room:31616
+
+"tba:316:room:31616":
+  name: Dirt Path
+  description: >
+    The dull gray buildings are gone now, replaced with a grassy field of wild flowers and trees. 
+    Butterflies flit about you, and the smell is that of the open sea.  Just west of here, the trail leads to
+    a beautiful grove, while east leads back into the dark grayness of the Guild Area.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31615
+    west:
+      to: tba:316:room:31617
+
+"tba:316:room:31617":
+  name: Ranger's Grove
+  description: >
+    This beautiful park, tended by rangers as a place for other rangers to relax and enjoy, perches
+    directly on the edge of the plateau which McGintey Cove rests upon.  Looking west, all you can see is
+    the beautiful shoreline following the curve of the Cove which the town is nestled in.  To the south is
+    a large tree with a board of some sort affixed to it, and to the east leads the way back into the
+    main Guild Area.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31616
+    south:
+      to: tba:316:room:31618
+
+"tba:316:room:31618":
+  name: The Old Oak
+  description: >
+    You stand before a huge oak tree which holds the board for the Guild of Rangers in McGintey Cove. 
+    This tree looks as if it may be as old as the world you stand upon, so huge and impressive is it's
+    girth and height.  Why, a single one of it's branches in the upper reaches is easily as big as your
+    waist and then some!
+  sector: inside
+  flags: [peaceful]
+  exits:
+    north:
+      to: tba:316:room:31617
+    south:
+      to: tba:316:room:31619
+
+"tba:316:room:31619":
+  name: Ranger Guild Room
+  description: >
+    More of a park than a Guild, this small plot of well tended land serves as the training and
+    advancement center for the Ranger Guild in McGintey Cove. Instructors work with trainees all around you,
+    teaching various skills and techniques.
+  sector: inside
+  flags: [peaceful]
+  exits:
+    north:
+      to: tba:316:room:31618
+
+"tba:316:room:31620":
+  name: Back Street
+  description: >
+    The way through this 'street' - actually more of an alley - is quite narrow, grimy, and dark.  East
+    from here you can see a faint trickle of light and another road.  To the west it only gets darker,
+    looking quite unappealing.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:316:room:31612
+    west:
+      to: tba:316:room:31621
+
+"tba:316:room:31621":
+  name: Back Street
+  description: >
+    The alley ends here, seeming to lead nowhere except back the way you came. As you scan the walls
+    surrounding you, you can't help but feel as if maybe someone is watching your every move, however it is
+    too dark for you to be sure.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:316:room:31623
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:316:room:31620
+    south:
+      to: tba:316:room:31622
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:316:room:31625
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:316:room:31622":
+  name: Thieven Weaponsmith
+  description: >
+    This is a pathetically small workroom - dimly lit, grimy as hell, and reeking of beer.  A small,
+    wiry man works here with a sanding stone and a small bladed knife of which you've never before seen the
+    like.  At first the you think the man doesn't notice you standing here in his little hole, but after
+    a short time he glances up and asks in a quiet, deadly voice if there is anything you need.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31621
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:316:room:31623":
+  name: Board Room
+  description: >
+    It looks more like a band of street punks got to this room, rather than a group of professional
+    thieves.  What passes for the board is the western wall which is made of brick and covered in scrawlings
+    from the many thieves who frequent this guild.  The guild and training area is directly north of you.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:316:room:31624
+    south:
+      to: tba:316:room:31621
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:316:room:31624":
+  name: Thieve's Guild
+  description: >
+    This room, set in the back room of looks to have been a small warehouse at one time, is the resting
+    and training place of the Thieves in McGintey Cove. Cots are thrown haphazardly in all corners of
+    this room.  Obviously, many of the thieves in McGintey Cove cannot afford their own homes and bunk here
+    instead. Better watch your wallet, some sneaky associate of yours just may decide to try some
+    'practice training' on it.
+  sector: inside
+  exits:
+    south:
+      to: tba:316:room:31623
+
+"tba:316:room:31625":
+  name: Darkened Room
+  description: >
+    This small, darkened room gives you the foreboding feeling that you are surrounded by enemies.  As
+    you get deeper into the room, you feel the fabric of someone's sleeve brush you.  Whirling around and
+    grabbing the sleeve, you realize it is an empty jacket hanging on a hook.  Feeling your way around
+    the room, you find that there are wearables hanging all around.  A low voice rumbles out of the
+    darkness.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31621
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:316:room:31626":
+  name: Warrior Way
+  description: >
+    This wide promenade, so named for the guild area it traverses, looks to be a well used street.  To
+    the north is a very loud, very bawdy tavern.  A sign out front proclaims it 'The Broken Spleen'.  To
+    the south is a huge building which looks to be off-limits, except to particular clientele.  Two well
+    muscled guardsmen stand on either side of the door leading into the building, arms crossed.  To the
+    east the road continues, leading the way to a HUGE building, one who's girth you can only imagine,
+    being that you can only see a fraction of it from between the buildings you currently stand between. 
+    West is the way out of the Warrior Guild's area into the West Alley.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31629
+    east:
+      to: tba:316:room:31637
+    south:
+      to: tba:316:room:31627
+    west:
+      to: tba:316:room:31667
+
+"tba:316:room:31627":
+  name: Lounge and Board Room
+  description: >
+    This large antechamber serves as a resting, meditation, stretching out, and board room for the
+    Warrior Guild in McGintey Cove.  Very atypical of this class, the men and women who congregate here seem
+    almost nervous as they stretch out or concentrate on whatever skills they will be attempting to learn
+    in the arena which is the Warrior's Guild in this town.  Just south of you is the guild room, north
+    is the exit to the outside.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:316:room:31626
+    south:
+      to: tba:316:room:31628
+
+"tba:316:room:31628":
+  name: Warrior's Guild - Arena
+  description: >
+    This huge arena turned practice and advancement station is rumored to be the best and most thorough
+    training guild for Warriors in Dibrova.  The numbers of trainers to the number of trainees is almost
+    double, a rarity for most guilds. You may exit to the north when you have finished.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:316:room:31627
+
+"tba:316:room:31629":
+  name: The Broken Spleen
+  description: >
+    Your first thought as you enter into this building is that if ever it has been cleaned, it wasn't
+    anytime during this last year.  Your second thought is that you had best duck, as a chair goes flying
+    past your head, just inches from your right ear!  This flying chair is, of course, accompanied by
+    drunken laughter and calls of 'Newbie!  ' and 'Incoming!  '.  This chair throwing must be a ritual here
+    at the Broken Spleen.  How quaint.  The exit is just south of you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:316:room:31626
+
+"tba:316:room:31630":
+  name: The Warrior's Boutique
+  description: >
+    This little store sells an assortment of deadly implements used by the warrior class to wreak havoc
+    amongst their many enemies.  The exit lies to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31632
+
+"tba:316:room:31631":
+  name: The Sword Store
+  description: >
+    The many different types of swords sold here vary depending on the stature and level of warrior
+    wielding them.  Many of the swords sold here may not be used by inferior leveled warriors, however the
+    only way to find out which sword applies to which level is to buy one .
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:316:room:31632
+
+"tba:316:room:31632":
+  name: Warrior Way
+  description: >
+    The road ends here in a small court which allows access to two small stone buildings, one west and
+    one north of you.  The mammoth wall of the Gladiator Pit runs along on your east, the clashes,
+    clangs, and cries coming faintly to your ears from within.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31631
+    south:
+      to: tba:316:room:31633
+    west:
+      to: tba:316:room:31630
+
+"tba:316:room:31633":
+  name: Warrior Way
+  description: >
+    The road runs north to a small court surrounded by stone buildings.  To the south the road heads
+    into an intersection in front of the main entrance to the enormous Gladiator Pit.  To the east and west
+    you are hemmed in by the gray stone walls of buildings owned by the Warrior Guild.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31632
+    south:
+      to: tba:316:room:31637
+
+"tba:316:room:31634":
+  name: Spectator Balcony
+  description: >
+    From this vantage point you can see the entire Pit spread out below you. Every punch, every kick,
+    every stab and pierce can be seen from this point.  A sign hangs on the wall, explaining the rules for
+    placing wagers on the fights which ensue below.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:316:room:31636
+
+"tba:316:room:31635":
+  name: Gladiator Pit - Center
+  description: >
+    You stand at the center of a huge dirt floored arena.  All around you are rows and rows of
+    screaming spectators, seated in the bleachers which climb the upward slope of the arena wall.  You may move
+    in any cardinal direction in attempt to find and vanquish your opponent.
+  sector: inside
+  flags: [no_track]
+  exits:
+    west:
+      to: tba:316:room:31636
+
+"tba:316:room:31636":
+  name: The Pit
+  description: >
+    In this room, one may pay to enter into mortal combat with another combatant of equal stature. 
+    Screams from spectators and cries of pain from the combatants accompanied by the clash of steel reaches
+    your ears from the arena, which lies directly east from here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31635
+    west:
+      to: tba:316:room:31637
+    up:
+      to: tba:316:room:31634
+
+"tba:316:room:31637":
+  name: Warrior Way
+  description: >
+    The road comes to a wide intersection here, heading north and south, and of course west back toward
+    the entrance to this guild.  In front of you is the arched entrance to a huge arena, one whose
+    rounded walls tower above you a good five or six stories.  From inside you hear the catcalls and screams
+    from all who watch the fights, and also the clanging and clashing of steel from all those who battle.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31633
+    east:
+      to: tba:316:room:31636
+    south:
+      to: tba:316:room:31638
+    west:
+      to: tba:316:room:31626
+
+"tba:316:room:31638":
+  name: Warrior Way
+  description: >
+    The road runs south toward a small court where two low stone buildings stand to the west and
+    south.  To the north the road heads into the main intersection of Warrior Way where one may enter into the
+    gladiator pit if desired.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31637
+    south:
+      to: tba:316:room:31639
+
+"tba:316:room:31639":
+  name: Warrior Way
+  description: >
+    The road heads farther south, ending in a small court.  To the north is the way leading to the main
+    intersection of Warrior Way.  On your east is the huge rounded wall of the Gladiator Pit, it's
+    enormous bulk still amazing to you, even though you stand beside it.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31638
+    south:
+      to: tba:316:room:31641
+
+"tba:316:room:31640":
+  name: Shield 'n' Helms
+  description: >
+    This small shop sells exactly what it proclaims to sell, helms and shields. The goods may be
+    browsed at your leisure.  A permanet employee of the Guild always stands at attention to help with your
+    purchase.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31641
+
+"tba:316:room:31641":
+  name: Warrior Way
+  description: >
+    This small court is home to two small stone buildings, one west and one south of here.  The road
+    heads north from here, running along the west wall of the gladiator pit toward it's entrance.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31639
+    south:
+      to: tba:316:room:31642
+    west:
+      to: tba:316:room:31640
+
+"tba:316:room:31642":
+  name: Body Armor
+  description: >
+    Racks of armor, both full bodied and upper torso are scattered all through the shop.  A permanent
+    member of the warrior guild is here to serve you as your needs demand.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:316:room:31641
+
+"tba:316:room:31643":
+  name: West Alley
+  description: >
+    This dark, dripping alleyway leads south toward the many guilds housed in this district.  To the
+    north lies much of the same, with a section heading off east into the warrior guild.  To the west is
+    the entrance to the Paladin's Guild, a strong sense of power and devotion radiating from its entrance.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31667
+    south:
+      to: tba:316:room:31644
+    west:
+      to: tba:316:room:31662
+
+"tba:316:room:31644":
+  name: West Alley
+  description: >
+    The alley heads north and south, the cold, dark gray walls of stone buildings surrounding you on
+    every side.  Just south of you lies an offshoot of the main alleyway which heads west into the cleric's
+    guild.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31643
+    south:
+      to: tba:316:room:31645
+
+"tba:316:room:31645":
+  name: West Alley
+  description: >
+    The alley still runs north and south from here, the whole looking quite dreary and dismal.  To the
+    west is a small cobbled path leading into the cleric's guild.  That path looks as if it may be the
+    only part of this district that is not only maintained, but cheerful as well.  The cobblestones which
+    line the path are scrubbed almost white, the walls of the buildings white stucco. You feel that even
+    someone who is not a cleric may be drawn to this part of the district just to escape the gray monotony
+    everywhere else.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31644
+    south:
+      to: tba:316:room:31655
+    west:
+      to: tba:316:room:31646
+
+"tba:316:room:31646":
+  name: The God's Path
+  description: >
+    The white cobblestones beneath your feet glisten brightly as you walk past. Obviously the clerics
+    who belong to this guild take great pride in their place here in McGintey Cove.  Just north of you is
+    a large marble temple with huge oaken double doors in front.  This temple must be the main guild
+    housing for this guild.  The path heads west into more of the cleric's area or east out into the West
+    Alley.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31647
+    east:
+      to: tba:316:room:31645
+    west:
+      to: tba:316:room:31649
+
+"tba:316:room:31647":
+  name: Sitting Room
+  description: >
+    This large, ornate room is laden with plush couches, comfortable easy chairs and food free for the
+    taking.  To the north is the entrance to the main practice and meditation area, south is the exit out
+    to the God's Path.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:316:room:31648
+    south:
+      to: tba:316:room:31646
+
+"tba:316:room:31648":
+  name: Meditation and Advancement
+  description: >
+    A large altar rests near the far northern wall of this temple.  Small pads of cloth line the
+    eastern wall where many of your class pray and meditate, searching for advancement and enlightenment.  You
+    may exit to the south.
+  sector: inside
+  exits:
+    south:
+      to: tba:316:room:31647
+
+"tba:316:room:31649":
+  name: The God's Path
+  description: >
+    With the temple wall still to the north of you, the path heads west into a broad court surrounded
+    by white stucco buildings.  Directly south of you is another such building, the entranceway wide open
+    and inviting.  To the east the path heads out past the temple entrance into the West Alley.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31646
+    south:
+      to: tba:316:room:31654
+    west:
+      to: tba:316:room:31650
+
+"tba:316:room:31650":
+  name: The God's Court
+  description: >
+    This large allows entrance to any of three white stucco buildings which lie north, south, and west
+    of you.  You may exit to the east toward the temple and West Alley.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31651
+    east:
+      to: tba:316:room:31649
+    south:
+      to: tba:316:room:31653
+    west:
+      to: tba:316:room:31652
+
+"tba:316:room:31651":
+  name: Robes
+  description: >
+    This quiet room has a small wooden desk sitting at the north end, a monk from the guild seated
+    serenely behind it.  On the east and west walls are lines of robes hung in an extremely orderly fashion.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:316:room:31650
+
+"tba:316:room:31652":
+  name: Holy Relics
+  description: >
+    Small wooden stands spread throughout the room hold trinkets, baubles, and wearables, all for
+    sale.  A monk from the guild wanders about the room, helping those in need of assistance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31650
+
+"tba:316:room:31653":
+  name: Books of the Gods
+  description: >
+    Small wooden bookshelves line the east, west, and south walls of this room, all spotlessly clean
+    and filled with books of all shapes and sizes.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31650
+
+"tba:316:room:31654":
+  name: Holy Weapons
+  description: >
+    Although physical battle is not condoned by the guild, it is realized that in this day and age
+    every man or woman must need defend themselves at some time or another.  Hence this small shop dedicated
+    to those weapons deemed fit to be wield by a cleric in Dibrova.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:316:room:31649
+
+"tba:316:room:31655":
+  name: West Alley
+  description: >
+    The alley heads north deep into the guild area for McGintey Cove, the gray walls of guild-owned
+    buildings surrounding the way ahead.  To the south is the intersection of the Alley and South St, the
+    road leading east into the business district of McGintey Cove.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31645
+    south:
+      to: tba:316:room:31656
+
+"tba:316:room:31656":
+  name: South Street
+  description: >
+    You stand at the intersection of West Alley and South Street.  To the north is the dark, gray
+    walled alley which heads deep into the guild area.  East, the way gets a bit lighter as it heads it's way
+    back toward the main business district of McGintey Cove.  To the south the alley heads into a
+    shadowed section, one which must be the Assassin's Guild area.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31655
+    east:
+      to: tba:316:room:31664
+    south:
+      to: tba:316:room:31657
+
+"tba:316:room:31657":
+  name: West Alley
+  description: >
+    Although still technically in the West Alley, you are in the area of town owned by the
+    Deathknight's guild.  Good advice would be to watch your step around these deadly beings.  To the west is a tall,
+    slender door leading into the main guild room, where deathknights practice to advance themselves. 
+    To the east is a door leading into a very small building, one which gives you a decidedly uneasy
+    feeling.  South is the end of West Alley and north leads the way out of the Deathknight's Guild.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31656
+    south:
+      to: tba:316:room:31661
+    west:
+      to: tba:316:room:31658
+
+"tba:316:room:31658":
+  name: Deathknight's Board Room
+  description: >
+    This small, dark room affords a few low divines for the reclining comfort of those who wish to
+    relax in the comfort of their guild.  Glass display cases hold an array of weapons along the walls, many
+    of which considered antique by today's standards of assassination.  To the west is the entrance to
+    the training and advancement room.  East leads out to West Alley.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31657
+    west:
+      to: tba:316:room:31659
+
+"tba:316:room:31659":
+  name: Guild Room
+  description: You are all alone in a completely darkened room...  Or so you think.
+  sector: inside
+  flags: [dark, indoors, peaceful]
+  exits:
+    east:
+      to: tba:316:room:31658
+
+"tba:316:room:31660":
+  name: Dark Wearables
+  description: >
+    All manner of clothing, cloakwear, and hoods are for sale in this shop.  All wearables sold here
+    are to aid the deathknight in his/her profession.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:316:room:31661
+
+"tba:316:room:31661":
+  name: South Dead End to West Alley
+  description: >
+    This seems to be the end of the way.  Doors lead off to the east, west, and south.  The alley heads
+    north.  Watch your step.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31657
+    south:
+      to: tba:316:room:31663
+    west:
+      to: tba:316:room:31660
+
+"tba:316:room:31662":
+  name: Paladin Row
+  description: >
+    The whole area strikes you as clean and well-organized as soon as you enter. With all the gray
+    building and their lack of color out in the main guild area, this place is a stark contrast indeed.  The
+    alley continues west, with a door to the north leading into a small tavern.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31643
+    west:
+      to: tba:316:room:31668
+
+"tba:316:room:31663":
+  name: Weapons of Choice
+  description: >
+    All weapons sold here are made specifically for the lethal and many times secretive killing arts. 
+    Browse and be merry, but remember, they are not cheap for a reason!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:316:room:31661
+
+"tba:316:room:31664":
+  name: South Street
+  description: >
+    The street, now completely enclosed on the north and south side by gray stone walls of guild
+    buildings, leads west to an intersection of some sort, or east out into the main business district of
+    McGintey Cove.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31665
+    west:
+      to: tba:316:room:31656
+
+"tba:316:room:31665":
+  name: South Street
+  description: >
+    The street heads west into the darkened guild area of McGintey, where it seems the very air around
+    it carckles with mystical energy and magic.  To the east is the main business district of McGintey
+    Cove.  A small, unobtrusive alley leads south from here.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31666
+    south:
+      to: tba:316:room:31674
+    west:
+      to: tba:316:room:31664
+
+"tba:316:room:31666":
+  name: South Street
+  description: >
+    The high traffic business area to the east seems almost a memory only as you enter into this
+    entirely different section of town.  The wide open expanse that was typical of the bazaar and the main
+    streets of town are replaced by tight streets with stone walled buildings to either side.
+  sector: inside
+  exits:
+    east:
+      to: tba:315:room:31565
+    west:
+      to: tba:316:room:31665
+
+"tba:316:room:31667":
+  name: West Alley
+  description: >
+    The alley continues to run north and south from here, the gray, dismal walls surrounding it
+    unending.  To the east is a wide stretch of cobbled street that looks a bit more well travelled than any any
+    of the previous offshoots from this alley.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31614
+    east:
+      to: tba:316:room:31626
+    south:
+      to: tba:316:room:31643
+
+"tba:316:room:31668":
+  name: Paladin Row
+  description: >
+    Nothing.  The alley ends just west of here at the entrance to the Guild itself.  It appears that a
+    small area in front of the guild has been set up as a resting spot for paladins who wish to rest
+    their feet after a day of saving innocent women and children.
+  sector: inside
+  exits:
+    east:
+      to: tba:316:room:31662
+    west:
+      to: tba:316:room:31669
+
+"tba:316:room:31669":
+  name: Paladin Court
+  description: >
+    This comfortable cobblestoned court hosts a small array of comfortable chairs and low tables, all
+    for resting and relaxing upon before heading back out into the wilds of Dibrova.  To the west is the
+    entrance to the Guild, south is a weapon shop and north is an armor shop.  Both shops are maintained
+    by the Guild and specialize in Paladin equipment.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:316:room:31672
+    east:
+      to: tba:316:room:31668
+    south:
+      to: tba:316:room:31673
+    west:
+      to: tba:316:room:31670
+
+"tba:316:room:31670":
+  name: Paladin Board Room
+  description: >
+    This is a small hallway leading into the main Audience Hall for the Paladin's Guild where the
+    Master grants level gain by virtue of experience in the field. A bulleltin board has been posted on the
+    south wall, a small writing implement attached so that anyone who wishes to may post a message to their
+    fellow clannies.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:316:room:31669
+    west:
+      to: tba:316:room:31671
+
+"tba:316:room:31671":
+  name: Paladin Guild Hall
+  description: >
+    This hall is what is considered to be the oldest structure existing on the rock that is McGintey
+    Cove today.  It is said that upon this very spot, Amos McGintey erected his temporary hideout when
+    hiding from the Ionian Knights who plagued the seas back in his day.  Now this ancient has been converted
+    into a place of respect and devotion where Paladins may increase their level if so desired.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:316:room:31670
+
+"tba:316:room:31672":
+  name: Paladin Outfitters
+  description: >
+    Cloaks and armor, boots and gauntlets all are arrayed in this clean and bright room.  The colors of
+    the wearables are all vibrant and catching to the eye, signifying the pride of the Paladin and what
+    the class stands for in a world ridden with evil and pestilence.
+  sector: inside
+  exits:
+    south:
+      to: tba:316:room:31669
+
+"tba:316:room:31673":
+  name: Weapons of Honor
+  description: >
+    This wide open area serves as both a smithy for the Guild and a shop where class members may
+    purchase the fine weapons produced here.  Paladins, being a very meticulous and demanding class, prefer to
+    make and enchant their own weapons rather than import weapons from the dwarven craftsmen or magus
+    weavers. Browse these fine weapons, but remember - they are not cheap.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31669
+
+"tba:316:room:31674":
+  name: A Quiet Back Street
+  description: >
+    The sounds of the bazaar, the hustle and bustle of all the city-goers all seems to get swallowed up
+    by the walls of this alley.  You feel a bit of peace, your body begins to relax a bit as you begin
+    down this alley.  You can see that it ends just south of here at a small door.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31665
+    south:
+      to: tba:316:room:31675
+
+"tba:316:room:31675":
+  name: End of a Quiet Back Street
+  description: >
+    You stand before a small door, a very unmentionable place if not for the man standing just to side
+    of it - as if guarding it.  Strange that all sounds of the city have completely vanished now, though
+    you know that you have no travelled that far from the main section.
+  sector: inside
+  exits:
+    north:
+      to: tba:316:room:31674
+    south:
+      to: tba:316:room:31676
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:316:room:31676":
+  name: Monk Board Room
+  description: >
+    You would almost think that this place were abandoned, so quiet of an air persists here.  However,
+    looking south you see the main room and the Guidlmaster tutoring his disciples.  The Board for your
+    clan is mounted here - any messages you wish to pass along can be passed via this board.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:316:room:31675
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:316:room:31677
+
+"tba:316:room:31677":
+  name: Monk Guild Room
+  description: >
+    There is absolutely nothing at all in this room save for the man who will advance you to your next
+    level if you are deemed worthy.  The exit lies to the north.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:316:room:31676

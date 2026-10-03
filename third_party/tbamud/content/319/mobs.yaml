@@ -1,0 +1,324 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 319.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:319:mob:31900":
+  keywords: [zombie, sea, sailor, dead]
+  short: a sea zombie
+  long: A sea zombie rises from the sea with a blast of water and attacks!
+  description: >
+    This long dead soul of a sea captain deigned to forsake the chance to Pass Through to the next
+    life, instead wreaking his vengeance on all those who cross the place where he himself perished.
+  level: 20
+  sex: male
+  alignment: -700
+  flags: [sentinel, aggressive, memory, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31901":
+  keywords: [squid, giant]
+  short: a giant squid
+  long: A giant squid moves through the water at a lightning pace.
+  description: >
+    It looks very slimy to the touch and extremely mean.  Watch that it does not decide to make a meal
+    of you.
+  level: 21
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31902":
+  keywords: [dragon, turtle]
+  short: a dragon turtle
+  long: An enormous dragon turtle glides across the surface of the sea, searching for food.
+  description: >
+    It does not move very fast, in fact it still has not seemed to notice that you are here, but it is
+    larger than a killer whale.  And stronger.
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31903":
+  keywords: [pelican]
+  short: a pelican
+  long: A pelican glides over the surface of the water, skimming for food.
+  description: Its enormous beak dips in and out of the water in constant search for a morsel to eat.
+  level: 23
+  sex: neutral
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31904":
+  keywords: [whale, killer]
+  short: a killer whale
+  long: A killer whale skims just under the surface of the water.
+  description: >
+    The teeth are the visible part of this animal, even when its mouth is closed - could it just be
+    your imagination?!?
+  level: 24
+  sex: neutral
+  alignment: 200
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+    bare_hand_attack: maul
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31905":
+  keywords: [great, white, shark]
+  short: a great white shark
+  long: A curved fin is visible swimming very near to you.
+  description: >
+    Is this something that you really feel you'd like to investigate?  If it IS a shark, it is probably
+    best left alone.
+  level: 25
+  sex: neutral
+  alignment: 300
+  flags: [stay_zone, no_charm, no_bash, no_blind]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31906":
+  keywords: [sea, elf]
+  short: a sea elf
+  long: The head of a sea elf pokes out of the water nearby.
+  description: The elf gives you a smile and a laugh and then dives for the depths of the sea.
+  level: 26
+  sex: female
+  alignment: 400
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31907":
+  keywords: [crab, red]
+  short: a bright red crab
+  long: A small red crab bobs at the top of the water.
+  description: >
+    Its two little whiskers bounce wetly above its bulbous eyes.  It almost seems like it might be
+    looking at you, even smiling...
+  level: 27
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31908":
+  keywords: [jellyfish, fish, mass, gooey]
+  short: a jellyfish
+  long: A gooey mass of greenish yuck is floating on the surface.
+  description: That damn stuff is alive!  Its a jellyfish!
+  level: 28
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+    bare_hand_attack: sting
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31909":
+  keywords: [walrus]
+  short: a walrus
+  long: The dark colored head of a walrus is all that is visible from here.
+  description: >
+    It almost looks goofy with its big buck-toothed tusks and the whiskers.  It sees you and gives a
+    bark.
+  level: 29
+  sex: neutral
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31910":
+  keywords: [seal]
+  short: a seal
+  long: A seal gracefully leaps the waves as it happily plays on the surface.
+  description: It barks and claps it fins as plays, noisily voicing its delight.
+  level: 30
+  sex: neutral
+  alignment: 700
+  flags: [stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: bludgeon
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31911":
+  keywords: [merman]
+  short: a merman
+  long: A merman gives a gasp as he realizes you've spotted him and dives under.
+  description: All that is left of where he was is a small ripple on the surface of the sea.
+  level: 31
+  sex: male
+  alignment: 700
+  flags: [sentinel, stay_zone, wimpy]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31912":
+  keywords: [mermaid, maid]
+  short: a mermaid
+  long: A mermaid's eyes get very wide and afraid as she spots you.
+  description: She immediately ducks under the water, only a small ripple left of where she was.
+  level: 32
+  sex: female
+  alignment: 800
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31913":
+  keywords: [elemental, water]
+  short: a water elemental
+  long: A water elemental swirls in with a rush of water and wind.
+  description: It is in constant motion, churning and swirling with force and fury.
+  level: 33
+  sex: neutral
+  alignment: 700
+  flags: [sentinel, memory, no_charm, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:319:mob:31914":
+  keywords: [demon, sea]
+  short: a sea demon
+  long: A sea demon snarls in fury as you enter into its domain.
+  description: >
+    Sea demons are extremely protective of their area, almost as if they felt that they owned their
+    section of the seas.  Indeed, many seafarers might not argue that.
+  level: 34
+  sex: neutral
+  alignment: 900
+  flags: [sentinel, aware, aggr_good, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+    bare_hand_attack: blast
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing

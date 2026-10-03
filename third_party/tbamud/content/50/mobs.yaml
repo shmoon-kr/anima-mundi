@@ -1,0 +1,361 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 50.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:50:mob:5000":
+  keywords: [dervish, raggedy]
+  short: the dervish
+  long: A raggedy dervish walks on aimlessly.
+  description: Dressed in loose fitting rags, this man looks like he could use some rest.
+  level: 5
+  sex: male
+  alignment: 900
+  flags: [scavenger, stay_zone, wimpy]
+  affects: [sneak, hide]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5001":
+  keywords: [dervish, large]
+  short: the dervish
+  long: A large dervish watches for signs of trouble.
+  description: Dressed in loose fitting rags, this man looks like he could use LOTS of rest.
+  level: 8
+  sex: male
+  alignment: 650
+  flags: [aggressive, stay_zone]
+  affects: [sneak, hide]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5002":
+  keywords: [snake, coral]
+  short: the coral snake
+  long: A brightly colored snake slithers along the sands.
+  description: This relatively harmless snake has bright alternating bands of red, yellow and black.
+  level: 4
+  sex: neutral
+  alignment: -10
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5003":
+  keywords: [scorpion, small]
+  short: the small scorpion
+  long: A small, red scorpion scuttles away at your approach.
+  description: The little tail is mighty dangerous for such a small creature.
+  level: 3
+  sex: neutral
+  alignment: -50
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5004":
+  keywords: [worm, giant, purple]
+  short: the sand worm
+  long: A giant, purple sand worm thrusts up out of the sand and attacks!
+  description: He's big, mean, and purple.  Watch out!
+  level: 21
+  sex: neutral
+  alignment: -300
+  flags: [sentinel, aware, aggressive, memory, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5005":
+  keywords: [dragon, brass]
+  short: the brass dragon
+  long: A very large brass dragon steps out of the darkness and says 'Hello.'
+  description: Then adds to it, 'Prepare to die, have a nice day!  '
+  level: 20
+  sex: female
+  alignment: 950
+  flags: [sentinel, aware, no_bash]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5006":
+  keywords: [nomad, leader]
+  short: the nomad leader
+  long: The nomad leader sits silently in prayer.
+  description: >
+    He is clad in silk robes lined with gold thread.  At his side is a large, engraved cutlass.  He has
+    an especially haughty air about him.
+  level: 14
+  sex: male
+  alignment: 950
+  flags: [sentinel, wimpy, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:50:mob:5007":
+  keywords: [nomad, commander]
+  short: the nomad commander
+  long: The nomad commander stands here staring at you suspiciously.
+  description: >
+    This is the nomad leader's second in command.  His clothes are richly woven of silk and gold
+    thread.  A nasty cutlass hangs at his side.
+  level: 12
+  sex: male
+  alignment: 900
+  flags: [sentinel, wimpy, memory]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5008":
+  keywords: [nomad, warrior]
+  short: the nomad warrior
+  long: A proud nomad warrior stands here.
+  description: This warrior is dressed in typical nomad clothing and looks quite mean.
+  level: 10
+  sex: male
+  alignment: 700
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5009":
+  keywords: [slave, young]
+  short: the slave
+  long: A young slave sits here staring at you with pleading eyes.
+  description: She looks quite thin and weak.
+  level: 3
+  sex: female
+  alignment: 1000
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: resting
+    default: resting
+
+"tba:50:mob:5010":
+  keywords: [dracolich, lich]
+  short: the dracolich
+  long: A pile of bones rises up to form a skeletal dracolich.
+  description: >
+    The dracolich is now only bone with pieces of flesh hanging from it. Obviously it no longer fears
+    death.
+  level: 24
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_summon, no_sleep, no_bash]
+  affects: [invisible, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5011":
+  keywords: [drider]
+  short: the drider
+  long: The drider looks at you viciously while it draws its sword.
+  description: This half-spider, half-drow creature is a formidable opponent.
+  level: 8
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5012":
+  keywords: [duergar, dark, dwarf]
+  short: the dark dwarf
+  long: A duergar is here mining precious stones with his pick.
+  description: The duergar could probably crush your head as easily as he does those rocks.
+  level: 5
+  sex: male
+  alignment: -850
+  flags: [aggressive, stay_zone]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5013":
+  keywords: [myconoid]
+  short: the myconoid
+  long: A myconoid lumbers along peacefully.
+  description: The myconoid looks something like a giant mushroom (and probably has the same effect).
+  level: 6
+  sex: male
+  alignment: 850
+  flags: [stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5014":
+  keywords: [myconoid, shaman]
+  short: the myconoid shaman
+  long: A rather large myconoid stands here chanting in a strange tongue.
+  description: The shaman shoots spores into the air.
+  level: 14
+  sex: male
+  alignment: 950
+  flags: [scavenger, stay_zone, aggr_evil, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5015":
+  keywords: [dustdigger, oasis]
+  short: the dustdigger
+  long: A small oasis invites you to dive in.
+  description: >
+    Looking a little closer at this oasis, you begin to wonder why it seems to be moving about...
+  level: 7
+  sex: neutral
+  alignment: -200
+  flags: [sentinel, scavenger, aggressive, no_bash, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:50:mob:5017":
+  keywords: [camel]
+  short: the camel
+  long: A very dangerous creature, a camel, snorts at you.
+  description: >
+    It is advisable not to mess with this creature.  After all, you have heard many a horror story
+    about experiences with camels.  Bad experiences.
+  level: 5
+  sex: neutral
+  alignment: -351
+  flags: [sentinel, aggressive, no_bash]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing

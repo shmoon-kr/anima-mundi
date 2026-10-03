@@ -1,0 +1,393 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 248.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:248:room:24800":
+  name: Gbetz's Zone Description Room
+  description:
+    preformatted: |2
+         The Elven Woods by Gbetz
+      This is a new area, complete with shops, an elven forest, a reception area, and
+      guilds... It can be used in place of the major town or as another one.
+      Please enjoy,
+      Gbetz@gargamel.asms.state.k12.al.us
+      Builder      : Gbetz
+      Zone         : 248 Elven Woods
+      Began        :
+      Player Level : 15-17
+      Rooms        : 29
+      Mobs         : 10
+      Objects      : 23
+      Shops        : 5
+      Links        : 01s
+  sector: inside
+  flags: [private]
+
+"tba:248:room:24801":
+  name: Entrance to the Elven Forest
+  description: >
+    Trees tower above you blocking the majority of light with their expanse canopies.  A large steel
+    reinforced wooden gate is set into a wall of wood logs just to the north.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24802
+
+"tba:248:room:24802":
+  name: Guarded Path Through the Forest
+  description: >
+    The path runs straight through the forest from south to north.  You feel yourself observed by
+    someone.  To the east you see a wooden door in a large tree, and to the west you see a rope hanging down
+    from a tree.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24807
+    east:
+      to: tba:248:room:24803
+    south:
+      to: tba:248:room:24801
+    up:
+      to: tba:248:room:24806
+
+"tba:248:room:24803":
+  name: A Guard Room
+  description: >
+    In the north-east corner of this dimly lit room stands a large round stone table.  To the east and
+    west you can see doors.  The sound of footseps can be heard in the distance.
+  sector: forest
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:248:room:24804
+    west:
+      to: tba:248:room:24802
+
+"tba:248:room:24804":
+  name: A Guard Chief's Bedroom
+  description: >
+    This room is apparently the chief of the elven guards bedroom.  Decorations and awards line the
+    walls.  In a corner stands a large bed and there is a door to the west.
+  sector: forest
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:248:room:24803
+
+"tba:248:room:24805":
+  name: A Cellar
+  description: >
+    The damp earthen cellar is relatively cool.  Shelves line all the walls. Filled, almost to the
+    point of collapse, with various dried foods and storage containers.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:248:room:24803
+
+"tba:248:room:24806":
+  name: On the Platform
+  description: >
+    You are standing on a wooden platform above the beginning of the elven forest.  From here, above
+    the tree tops, the town of Thewston is visible in the distance.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    down:
+      to: tba:248:room:24802
+
+"tba:248:room:24807":
+  name: A Guarded Path Through the Forest
+  description: >
+    The path runs straight through the forest from south to north.  The forest is in good condition and
+    looks well kept.  No dead branches or brush is visible between the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24808
+    south:
+      to: tba:248:room:24802
+
+"tba:248:room:24808":
+  name: A Path Crossing
+  description: >
+    The path splits up into four here, one in every direction.  In the middle of the crossing stands a
+    gigantic stone obelisk with some runes engraved into it.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24809
+    south:
+      to: tba:248:room:24807
+  extras:
+  - keywords: [runes, obelisk, stone]
+    text: >
+      If you had been an old elven sage you might have known what the runes told, but you are not, so
+      this means nothing to you....
+
+"tba:248:room:24809":
+  name: A Fine Path Through the Elven Forest
+  description: >
+    On both sides of this path is doors.  Over the eastern door is a sign telling you this must be the
+    weapon shop, and over the western door is a similar sign telling you it's the armory.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24812
+    east:
+      to: tba:248:room:24810
+    south:
+      to: tba:248:room:24808
+    west:
+      to: tba:248:room:24811
+
+"tba:248:room:24810":
+  name: The Elven Armory
+  description: >
+    On the walls of this large room are fine elven armors hanging.  A few other odds and ends lay about
+    that are required for the bending and pounding of the armor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:248:room:24809
+
+"tba:248:room:24811":
+  name: The Elven Weaponry
+  description: >
+    On the counter and upon the walls hang fine weapons of elven quality.  In the back you can hear the
+    roar of the furnace and the pumping of the billows.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:248:room:24809
+
+"tba:248:room:24812":
+  name: A Fine Path Through the Elven Forest
+  description: >
+    On both sides of this path are doors.  Over the eastern door is a sign telling you this must be the
+    magic shop of the elven village, and over the western door is a similar sign telling you it's
+    Quintors fine shop.  To the north the path continues.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24815
+    east:
+      to: tba:248:room:24814
+    south:
+      to: tba:248:room:24809
+    west:
+      to: tba:248:room:24813
+
+"tba:248:room:24813":
+  name: Quintor's Fine Shop
+  description: >
+    In this fine room you can see all kinds of equipment.  Everything from bags to torches can bee seen
+    on the shelves.  The items are of a fair quality and reasonably priced.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:248:room:24812
+
+"tba:248:room:24814":
+  name: The Elven Magic Shop
+  description: >
+    As you enter this store you feel a sensation in your stomach.  There is something wrong here or is
+    it just the powers of all magic in here?  All around this room you see objects of different shapes
+    and sizes.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:248:room:24812
+
+"tba:248:room:24815":
+  name: The End of the Path
+  description: >
+    On both sides of this path are doors.  Over the eastern door is a sign telling you this must be the
+    tavern of the village, and to the north you see a large house, about two stores high.
+  sector: forest
+  exits:
+    north:
+      to: tba:248:room:24817
+    east:
+      to: tba:248:room:24816
+    south:
+      to: tba:248:room:24812
+
+"tba:248:room:24816":
+  name: The Tavern of Hope
+  description: >
+    You are standing in the bar of the Tavern.  The bar is set against the northern wall, old elven
+    writings, carvings and symbols cover its top.  A fireplace is built into the eastern wall, and through
+    the door in the western wall you se the fine path.  This place really makes you feel at home.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:248:room:24815
+    up:
+      to: tba:248:room:24890
+
+"tba:248:room:24817":
+  name: Inside a Fine House
+  description: >
+    A large staircase leads into a foyer in front of the house.  At the top of the stairs two doors
+    lead to the east or west into the house.  The house is well kept.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:248:room:24819
+    south:
+      to: tba:248:room:24815
+    west:
+      to: tba:248:room:24818
+    up:
+      to: tba:248:room:24820
+
+"tba:248:room:24818":
+  name: A Guard Room
+  description: >
+    A table with chairs scattered about fills the center of the room.  Along the walls are several sets
+    of beds.  Items are scattered about the table and the room is a mess.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:248:room:24817
+
+"tba:248:room:24819":
+  name: The Trophy Room of the Elven King
+  description: >
+    The walls are covered in trophies, tapestries, paintings, and other various gifts the King has
+    acquired during his long life.  All are exquisitely made and in good taste.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:248:room:24817
+
+"tba:248:room:24820":
+  name: The Grand Stairway
+  description: >
+    The stairs are wooden with a carpet running down the center.  The carpet is plush, almost like a
+    moss which its color resembles.  The house seems to be another extension of the forest.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:248:room:24821
+    down:
+      to: tba:248:room:24817
+
+"tba:248:room:24821":
+  name: The Upper Floor of the House
+  description: >
+    The corridor is lined on both sides by doors.  Everything is made of wood. From the floor to the
+    ceiling it is all well polished.  Small wooden stands break are scattered about the hall holding
+    various flowers in vases.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:248:room:24823
+    east:
+      to: tba:248:room:24822
+    south:
+      to: tba:248:room:24824
+    down:
+      to: tba:248:room:24820
+
+"tba:248:room:24822":
+  name: The Corridor
+  description: >
+    You are standing in a corridor with wooden floor and ceiling.  Door are placed in the north and
+    south walls.  Further to the east the corridor ends at a window overlooking the forest.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:248:room:24826
+    east:
+      to: tba:248:room:24825
+    south:
+      to: tba:248:room:24827
+    west:
+      to: tba:248:room:24821
+
+"tba:248:room:24823":
+  name: The Library
+  description: >
+    Book shelves line the walls of this room.  In the center of the room is a large desk and some
+    chairs.  The shelves are filled with books bound in leather and scrolls stacked high.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:248:room:24821
+
+"tba:248:room:24824":
+  name: The Living Room
+  description: >
+    A set of large padded chairs face a roaring fireplace that fills the room with its radiant heat. 
+    The wooden logs in the fire crack and sputter as the flames consume them.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:248:room:24821
+
+"tba:248:room:24825":
+  name: Falling
+  description: >
+    That was a mistake.  You are not a bird.  You fall to the ground and splat! Like a bug on a
+    windshield.  Ask a wizard to get a spatula.  Perhaps your remains will soften the fall for the next victim.
+  sector: inside
+  flags: [no_mob, private]
+
+"tba:248:room:24826":
+  name: The Guards Bedroom
+  description: >
+    This looks like an ordinary bed room with about twenty beds in it.  There are no other exits than
+    the one to the south.  The beds look uncomfortable and unkept.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:248:room:24822
+
+"tba:248:room:24827":
+  name: The Training Room
+  description: >
+    The middle of the room is filled with a rack of training equipment. Everything from padding to
+    wooden weapons.  The floor is wooden with sawdust to help clean up any accidents.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:248:room:24822
+
+"tba:248:room:24890":
+  name: The Reception of the Tavern of Hope
+  description: >
+    A staircase leads down to the entrance hall.  A conspicous sign hangs over the counter.  All the
+    noise and excitement seems to be coming from the entrance hall.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    down:
+      to: tba:248:room:24816
+      look: You see the Tavern of Hope.
+  extras:
+  - keywords: [sign]
+    text:
+    - "Rooms are expensive but good!  You may:"
+    - Offer - get an offer on a room - Time is in real life days.
+    - Rent  - Rent a room (saves your stuff, and quits the game),
+    - minimum charge is one day.
+    - MY WAY OR THE HIGHWAY
+    - PAY YOUR RENT!
+    - WE WON'T THINK TWICE BEFORE KICKING YOU OUT.

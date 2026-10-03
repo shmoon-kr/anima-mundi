@@ -1,0 +1,129 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 39.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:39:shop:3900":
+  keeper: tba:39:mob:3917
+  rooms: [tba:39:room:3900, tba:39:room:3901, tba:39:room:3902, tba:39:room:3903, tba:39:room:3904, tba:39:room:3905, tba:39:room:3906, tba:39:room:3907, tba:39:room:3908, tba:39:room:3909, tba:39:room:3910, tba:39:room:3911, tba:39:room:3912, tba:39:room:3913, tba:39:room:3914, tba:39:room:3915, tba:39:room:3916, tba:39:room:3917, tba:39:room:3918, tba:39:room:3919, tba:39:room:3920, tba:39:room:3921, tba:39:room:3922, tba:39:room:3923, tba:39:room:3924, tba:39:room:3925, tba:39:room:3926, tba:39:room:3927, tba:39:room:3928, tba:39:room:3929, tba:39:room:3930, tba:39:room:3931, tba:39:room:3932, tba:39:room:3933, tba:39:room:3934, tba:39:room:3935, tba:39:room:3936, tba:39:room:3937, tba:39:room:3938, tba:39:room:3939, tba:39:room:3940, tba:39:room:3941, tba:39:room:3942, tba:39:room:3944, tba:39:room:3943, tba:39:room:3945, tba:39:room:3946, tba:39:room:3947, tba:39:room:3948, tba:39:room:3949, tba:39:room:3950, tba:39:room:3951, tba:39:room:3952, tba:39:room:3953, tba:39:room:3954, tba:39:room:3955, tba:39:room:3956, tba:39:room:3957, tba:39:room:3958, tba:39:room:3959, tba:39:room:3960, tba:39:room:3961, tba:39:room:3962, tba:39:room:3963, tba:39:room:3964, tba:39:room:3965, tba:39:room:3966, tba:39:room:3967, tba:39:room:3968, tba:39:room:3969, tba:39:room:3970, tba:39:room:3971, tba:39:room:3972, tba:39:room:3973, tba:39:room:3974, tba:39:room:3975, tba:39:room:3976, tba:39:room:3977, tba:39:room:3978, tba:39:room:3979, tba:39:room:3980, tba:39:room:3981, tba:39:room:3982, tba:39:room:3983, tba:39:room:3984, tba:39:room:3985, tba:39:room:3986, tba:39:room:3987, tba:39:room:3988, tba:39:room:3989, tba:39:room:3990, tba:39:room:3991, tba:39:room:3992, tba:39:room:3993, tba:39:room:3994, tba:39:room:3995, tba:39:room:3996, tba:39:room:3997, tba:39:room:3998, tba:39:room:3999]
+  products:
+  - tba:39:obj:3952
+  - tba:39:obj:3951
+  - tba:39:obj:3983
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s I don't have me none o' dat!"
+    you_dont_have_it: "%s You don't got none o' dat!"
+    does_not_buy: "%s I don't have no uses for dat stuff."
+    shop_cannot_afford: "%s I can't buy dat!  You think me be made o' money?"
+    you_cannot_afford: "%s You ain't got dat sort o' money?  You think me be stupid?"
+    bought: "%s Gimme %d moneys!"
+    sold: "%s I give you %d moneys for dat."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:39:shop:3901":
+  keeper: tba:39:mob:3971
+  rooms: [tba:39:room:3940]
+  products:
+  - tba:39:obj:3921
+  - tba:39:obj:3922
+  profit:
+    buy: 2.0
+    sell: 0.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:39:shop:3902":
+  keeper: tba:39:mob:3955
+  rooms: [tba:39:room:3957]
+  products:
+  - tba:39:obj:3999
+  - tba:39:obj:3925
+  - tba:39:obj:3926
+  - tba:39:obj:3928
+  - tba:39:obj:3929
+  - tba:39:obj:3930
+  - tba:39:obj:3994
+  - tba:39:obj:3995
+  - tba:39:obj:3927
+  buys:
+  - type: weapon
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s Get your cheap self out of my shop."
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:39:shop:3903":
+  keeper: tba:39:mob:3973
+  rooms: [tba:39:room:3972]
+  products:
+  - tba:39:obj:3946
+  - tba:39:obj:3965
+  - tba:39:obj:3957
+  - tba:39:obj:3984
+  - tba:39:obj:3956
+  buys:
+  - type: armor
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:39:shop:3904":
+  keeper: tba:39:mob:3956
+  rooms: [tba:39:room:3966]
+  products:
+  - tba:39:obj:3932
+  - tba:39:obj:3933
+  - tba:39:obj:3934
+  - tba:39:obj:3935
+  - tba:39:obj:3936
+  - tba:39:obj:3937
+  buys:
+  - type: wand
+  - type: potion
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

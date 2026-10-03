@@ -1,0 +1,1723 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 1.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:1:room:100":
+  name: Temple of Sanctum
+  description: >
+    This large room appears to be inside a massive temple dedicated to the gods of Sanctus.  The
+    ceiling is supported by fluted columns and a main spiral stairwell that leads both up and down.  Small
+    rooms adjoin this chamber in all four cardinal directions.  It is here mortals come to stay informed and
+    discuss their adventures.
+  sector: inside
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    north:
+      to: tba:1:room:113
+    east:
+      to: tba:1:room:117
+    south:
+      to: tba:1:room:120
+    west:
+      to: tba:1:room:116
+    up:
+      to: tba:1:room:101
+    down:
+      to: tba:2:room:251
+  extras:
+  - keywords: [info, credits]
+    text:
+      preformatted: |2
+           Builder   : Rumble
+        Zone         : 1 Sanctus
+        Related Zones: 2 Sanctus II, 3 Sanctus III
+        Began        : 2000
+        Player Level : 1-34
+        Rooms        : 100
+        Mobs         : 100
+        Objects      : 76
+        Shops        : 6
+        Triggers     : 33
+        Theme        : A mortal starting town.
+        Plot         : Fabric of time torn, world going to hell. Sanctus one of the few
+                       safe havens remaining.
+        Notes        : None
+        Zone 1 is linked to the following zones:
+          2 Sanctus II                     at   100 (down ) --->   251
+          3 Sanctus III                    at   101 (south) --->   365
+          2 Sanctus II                     at   111 (down ) --->   207
+          2 Sanctus II                     at   112 (down ) --->   213
+          2 Sanctus II                     at   114 (down ) --->   243
+          2 Sanctus II                     at   115 (down ) --->   248
+          2 Sanctus II                     at   118 (down ) --->   254
+          2 Sanctus II                     at   119 (down ) --->   259
+          2 Sanctus II                     at   121 (down ) --->   289
+          2 Sanctus II                     at   122 (down ) --->   295
+          3 Sanctus III                    at   128 (down ) --->   340
+          3 Sanctus III                    at   129 (down ) --->   341
+          3 Sanctus III                    at   132 (down ) --->   345
+          3 Sanctus III                    at   133 (down ) --->   346
+          3 Sanctus III                    at   139 (down ) --->   362
+          2 Sanctus II                     at   189 (south) --->   200
+          2 Sanctus II                     at   194 (south) --->   201
+          2 Sanctus II                     at   195 (south) --->   202
+          2 Sanctus II                     at   196 (south) --->   203
+          2 Sanctus II                     at   197 (south) --->   204
+          2 Sanctus II                     at   198 (south) --->   205
+          2 Sanctus II                     at   199 (south) --->   206
+
+"tba:1:room:101":
+  name: The Temple of the Gods
+  description: >
+    This seems to be the highest point in the kingdom of Sanctus.  It is from here that the worshipers
+    of the gods come to pay tribute to those who have saved them from the chaos and destruction beyond
+    the sanctuary of the city walls. Large windows reach from the floor to the ceiling, giving an excellent
+    view of the city and countryside beyond.  An altar stands in the middle of the room with a statue on
+    each side.
+  sector: inside
+  flags: [peaceful]
+  exits:
+    south:
+      to: tba:3:room:365
+    down:
+      to: tba:1:room:100
+  extras:
+  - keywords: [statue]
+    text: >
+      As you examine the statues more closely you realize they must resemble the two gods responsible for
+      the creation and ongoing protection of Sanctus, Ferret and Rumble.  They both radiate a strength and
+      power that resembles the solid white marble they were crafted from.
+  - keywords: [altar]
+    text: >
+      The altar is made from black granite and has been carved into a small basin with a high back. 
+      Almost as if it was meant to be some sort of seat. Inscriptions in some foreign tongue are written on
+      every square inch of the altar.  You wonder what they must say and who could have written it.
+
+"tba:1:room:102":
+  name: Inner Sanctum
+  description: >
+    This appears to be the highest room in the tower of Sanctum where only those devoted to the guild
+    of Clerics are allowed to practice their skills and spells to become masters of their discipline.  The
+    walls are covered in a white see- through cloth giving one the impression of being inside of a tent
+    rather than in a room.  The room glows brightly, though one cannot tell from what source.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    down:
+      to: tba:1:room:128
+
+"tba:1:room:103":
+  name: High Council Meeting Room
+  description: >
+    This is the meeting room for the guild of clerics.  All orders and affairs are resolved in this
+    room by the High Council of Clerics.  They are responsible for the health of all the citizens of Sanctus
+    and are obligated to aid anyone who is in need.  A large rectangular table with thirteen chairs
+    surrounding it fills the center of the room.  A large pane window overhead admits a glowing aura that
+    fills the room with serenity.
+  sector: city
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:1:room:129
+  extras:
+  - keywords: [table]
+    text: >
+      A large sturdy oak table with two sturdy silver candelabras placed in the center.  The twelve
+      chairs on the sides are used by the councillors while the head chair, which is garnished in silver, is
+      only used by the High Councilman.
+
+"tba:1:room:104":
+  name: Inner Void
+  description: >
+    This room is exempt from all normal laws of reality.  It appears to have entered the realm of magic
+    where the laws of science no longer exist.  The void of this place is created within the traveler's
+    mind and is the perfect place to practice mystical arts.  For those who have trained hard enough they
+    shall receive assistance in their pursuit of knowledge and power.  Others will find peace in this
+    void and never be able to return.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    down:
+      to: tba:1:room:132
+  extras:
+  - keywords: [void]
+    text: How can you look at something that does not even exist.
+
+"tba:1:room:105":
+  name: Rean's Zone Description Room
+  description: >
+    Those who have achieved the power and fame to be considered a Magi rule the Mages Quarter of
+    Sanctus.  They are responsible for the upkeep of the magical barrier that protects the city from the chaos
+    of the outside world.  They may also be called upon to protect the city in case of an attack.  The
+    Magi are the most revered of all the classes as they are the most powerful.  But that power has a
+    price.  Only five Magi have survived.  Five decorative cushions are placed in a circle in the middle of
+    the room.
+  sector: city
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:1:room:133
+  extras:
+  - keywords: [cushions]
+    text: >
+      Each cushion is of a different color.  Red, Blue, Green, Black, Yellow. You notice two other
+      cushions lined against the wall before a small altar. They are Gray and Purple.  Those colors symbolize the
+      stages in the raising of a Magi.  Few every achieve that honor.  None have for the Order of the
+      Purple or Gray Robe.
+
+"tba:1:room:106":
+  name: Above the Northern Gate
+  description: >
+    In between the Thieves and Warriors Quarter the Northern Gate is the main defensive hold in case of
+    an attack.  At this distance one can just barely make out the shimmering dome that was created by
+    the gods and is now sustained by the Magi.  The dome curves along the walls of the city and can not be
+    seen for more than a few feet in any direction.  It flickers as if a mirage, only visible when
+    glanced at from one side.  Stone stairs lead down into the city wall.
+  sector: city
+  exits:
+    down:
+      to: tba:1:room:140
+  extras:
+  - keywords: [dome, barrier, shimmering]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:107":
+  name: Training Room
+  description: >
+    Pads of cloth line the walls and floor softening warriors falls as they are thrown about by their
+    trainers.  This is where fighters come to hone their battling skills.  Racks of weapons line two of
+    the four walls.  The room is filled with a smoky haze from four brass lanterns suspended from the
+    ceiling. The room smells of sweat and blood.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    down:
+      to: tba:1:room:141
+
+"tba:1:room:108":
+  name: War Room
+  description: >
+    A large hearthstone fireplace blazes in one wall.  Maps, charts and other strategic planning tools
+    are placed on a large glass table with a map of the realm encased within.  This is where the War
+    Master plans how to protect the city in case of an attack.  The room is a mess with maps piled high and
+    scattered haphazardly wherever there is room.  This is where the defense of the city is run from.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:1:room:142
+  extras:
+  - keywords: [map]
+    text: >
+      The map is a geographic representation of Sanctus.  Not even really a map, more of a scaled model. 
+      The walls and buildings of the city are raised higher than the rest of the map to give it a third
+      dimension.  Small soldiers are scattered around the top of the table to help the War Master place his
+      men.
+  - keywords: [table]
+    text: >
+      The table is made out of cherry.  It is worn from years of use.  The glass top allows for an
+      excellent view of the map protected within.
+
+"tba:1:room:109":
+  name: Thieves Retreat
+  description: >
+    All the curtains are pulled tight, the shades drawn low.  A feeling of mystery and secrecy blankets
+    the room.  Dim lights cause a dancing of shadows that plays tricks on the eyes.  A few of the
+    shadows may actually be people, hidden easily in the darkness Those who have chosen the discipline of
+    thievery can learn invaluable skills here to further their training and wealth.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    down:
+      to: tba:1:room:150
+
+"tba:1:room:110":
+  name: Scheming Room
+  description: >
+    The masters of the underground gather here to devise their plans for the running of Sanctus.  Their
+    abilities in deception allowed them to take over the internal affairs of the city.  They control the
+    trade and finances of the city. Many disagree with this concept but none can disagree with the
+    results. Thieves are masters when it comes to politics.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:1:room:151
+
+"tba:1:room:111":
+  name: Northwest Corner of the Inner Wall
+  description: >
+    To the north can be heard the clang and crash of the smithies in the Warriors Quarter.  To the west
+    the barracks and the gate to the outside are visible. The Temple of Sanctus rises above to the
+    southeast, its single spire reaching up into the sky higher than any other building in the realm.  A stone
+    stairwell leads down to the inner city.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:207
+
+"tba:1:room:112":
+  name: Northeast Corner of the Inner Wall
+  description: >
+    The city to the north is covered in shadows and gloom, the Thieves Quarter. To the east one can see
+    the gate and a long warehouse.  The Temple of Sanctus rises above to the southwest.  A light breeze
+    brings a bit of refreshment and a strange smell.  Few people know, or want to know, what lies beyond
+    the city walls and the safety of the dome.  A stone stairwell leads down to the inner city.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:213
+
+"tba:1:room:113":
+  name: Quest Room
+  description: >
+    In times of need citizens come here to seek the help of brave adventurers to recover stolen items,
+    or seek revenge on people who have wronged them.  This small room is decorated with paintings of
+    famous quests and the exulted hereos that have become common names throughout the realm.  It is said that
+    completing a quest is a prerequisite towards immortality.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:100
+  extras:
+  - keywords: [paintings, heroes]
+    text: >
+      These masterpieces were painted by the famous L'Haspi.  They depict battles of various heroes.  One
+      shows monsters of umimaginable horror rending human bodies with their fangs, tusks, and jaws. 
+      Another displays a gallant warrior in shining golden armor waving a bejewled sword high over his head,
+      roaring a challenge to some unseen beast within a nearby cave.  All are supposedly true tales, but most
+      have been forgotten with the passing of time.
+
+"tba:1:room:114":
+  name: Above the Western Gate
+  description: >
+    Atop the battlements over the western gate one can see the luminescent glow of the dome that
+    protects the city.  The occasional rattling of armor can be heard, as the sentinels grow weary from their
+    standing their posts hour after hour.  The city to the east looks tranquil and safe.  It is not
+    possible to see much to the west past the shimmering dome.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:243
+  extras:
+  - keywords: [shimmering, dome, luminescent]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:115":
+  name: Above the Inner Wall
+  description: >
+    The battlements on top of the inner wall are the last defense in case of an invasion.  All citizens
+    are required to move within the inner city and prepare to fight.  The city has never fallen to this
+    day.  To the north one can see the barracks, to the south the Hall of Clerics.  A stone stairwell
+    leads down to the inner city.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:248
+
+"tba:1:room:116":
+  name: Travelling Room
+  description: >
+    This used to be a travelling room.  Entire sections of the floor are now embedded in the ceiling
+    and it is even possible to see to the outside through a hole in one wall.  This is what happens when a
+    portal becomes unstable.  It is certainly a grim reminder to flee the second it seems a portal may be
+    falling apart.  The charred silhouette of what once must have been a man is blasted into one of the
+    walls.
+  sector: inside
+  flags: [peaceful]
+  exits:
+    east:
+      to: tba:1:room:100
+  extras:
+  - keywords: [man, silhouette]
+    text: >
+      The distinct outline of a human body that must have taken the brunt of the blast when the portal
+      imploded.  You wonder what or who it might have been. You can still see pieces of cloth and bone buried
+      deeply into the wall inside the shadow of the unlucky man.
+  - keywords: [hole]
+    text: >
+      You can look out over the inner wall to the western side of Sanctus.  The smell of charred human
+      remains and smoldering plaster makes your eyes water so it is difficult to see much else through the
+      tiny hole.
+
+"tba:1:room:117":
+  name: Travelling Room
+  description: >
+    This room stands empty as it is being prepared for a portal summoning.  The walls are glistening
+    white plaster with a vaulted ceiling.  Powerful mages are said to be able to create portals through
+    their arcane arts, though many die in the process.  The skill is as of yet unmastered.  It is rumored
+    that the evil Drakkar has achieved this mastery, but none have ever witnessed it.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    west:
+      to: tba:1:room:100
+
+"tba:1:room:118":
+  name: Above the Inner Wall
+  description: >
+    On top of the battlements one has access to a good view of the eastern side of the city.  To the
+    north can be seen the Thieves Warehouse, to the south the Mansion of the Magi.  The Temple of Sanctus
+    rises from the center of the city to the west.  All looks well from this perspective.  It is not
+    possible to see beyond the city walls.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:254
+
+"tba:1:room:119":
+  name: Above the Eastern Gate
+  description: >
+    The radiant dome of energy protecting the city curves high above.  The powerful magic prickles like
+    electricity in the air.  The Magi are responsible for keeping the dome up.  But two of the seven
+    have already died.  The War Master is planning for the worst, and preparing the army for battle.  The
+    guards stir restlessly below.  A stone stairwell leads down to the gate.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:259
+  extras:
+  - keywords: [dome, radiant, shimmering]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:120":
+  name: Travelling Room
+  description: >
+    A few of the higher mages of Sanctus have been able to control the gateways that have opened
+    between realms.  One of these controlled portals is kept in this room.  It is a one way ticket to the realm
+    of Midgaard.  The portals are still erratic and uncontrollable so anyone who uses them does so at
+    their own risk.  The flickering of the portal casts eerie shadows along the white walls. This must be
+    the only room in the temple that has an uneasy feeling about it.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:1:room:100
+
+"tba:1:room:121":
+  name: Southwestern Corner of the Inner Wall
+  description: >
+    Through the clouds one catch a glimpse of the shimmering dome.  A good omen. To the west one can
+    see the Hall of Clerics.  To the south the Tower of the High Council of Clerics glows pristinely
+    white.  The town seems peaceful and untroubled by the turmoils outside the walls.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:289
+  extras:
+  - keywords: [dome, shimmering]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:122":
+  name: Southeastern Corner of the Inner Wall
+  description: >
+    A glimpse of shimmering light high above in the clouds reminds one of the protecting dome that
+    ensures oner safety.  To the south the black stone of the Tower of the Magi glistens serenely.  To the
+    east you can see the Mansion of the Magi in all its extravagance.
+  sector: city
+  exits:
+    down:
+      to: tba:2:room:295
+  extras:
+  - keywords: [dome, shimmering]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:123":
+  name: Closet
+  description: >
+    Clean white linen is stacked neatly on shelves with pristine white towels, cloths, bandages,
+    slings, and other items used in the art of healing. Apprentices rush in and out grabbing what they need to
+    aid the wounded.  Robes of fine wool hang on pegs in the back of the closet.  They look like the same
+    robes the apprentices wear.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:128
+
+"tba:1:room:124":
+  name: High Councillors Chambers
+  description: >
+    The room is barren of luxuries that most people enjoy in a home.  The floor, ceiling, and walls are
+    all bright white and almost painful to look at.  A bed, table, desk, and a small personal shrine are
+    the only furniture in the room. Even the highest priest is not allowed the luxuries that they
+    deserve.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:129
+  extras:
+  - keywords: [table, desk, chair]
+    text: >
+      The table, desk, and chair are made from solid oak of the highest quality. A thin goose down
+      mattress and pillow are the only comfortable looking items in the room.  The desk is bare and all the
+      drawers are empty.  It is as if no one even lives here.
+  - keywords: [shrine]
+    text: >
+      A beutiful shrine.  It has two white marble figures facing each other with a painting of the city
+      below them.  The two figures seem to be looking down at the city with looks of worry and
+      hopelessness.  An unlit candle and mirror lay on the floor beside the small shrine.
+
+"tba:1:room:125":
+  name: Plane of the Magi
+  description: >
+    Here, one finds themselves in a place of non-existence.  The walls recede from vision until all
+    that is visible is a bleak grayness.  Nothing can any longer be discerned in three dimensions.  The
+    floor, ceiling, and sky all are the same bleak gray color.  It is here the Magi come to test their
+    mystical arts.  It is not a good place to get lost in.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:125
+    east:
+      to: tba:1:room:126
+    south:
+      to: tba:1:room:132
+    west:
+      to: tba:1:room:125
+    up:
+      to: tba:1:room:125
+    down:
+      to: tba:1:room:125
+
+"tba:1:room:126":
+  name: Plane of the Magi
+  description: >
+    Any fragments of the familiar world have vanished.  All around stretches vague mists of grayness. 
+    In every direction no distance or any distinguishable landmark can be discerned.  A person could
+    easily get lost in this nothingness. It is this nothingness that helps the Magi hone their abilities
+    before unleashing them into the real world.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:126
+    east:
+      to: tba:1:room:126
+    south:
+      to: tba:1:room:133
+    west:
+      to: tba:1:room:125
+    up:
+      to: tba:1:room:126
+    down:
+      to: tba:1:room:126
+
+"tba:1:room:127":
+  name: Healer's Room
+  description: >
+    This room has been created by the High Council of Clerics to give aid to novices who receive injury
+    in their adventures.  For the more experienced adventurers aid can be sought, but for a price. 
+    Apprentices gowned in white robes bring water and fresh bandages to the experienced healers who aid the
+    wounded.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:1:room:128
+
+"tba:1:room:128":
+  name: Tower of Sanctum
+  description: >
+    It is within these walls that the High Council meets and decides on how they can best serve the
+    gods and Sanctus to improve the safety of the realm and eventually restore order to the world that
+    Drakkar had so horribly imbalanced. With time the High Council believes they can restore order.  With the
+    help of the gods this may be possible.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:123
+    east:
+      to: tba:1:room:129
+    south:
+      to: tba:1:room:135
+    west:
+      to: tba:1:room:127
+    up:
+      to: tba:1:room:102
+    down:
+      to: tba:3:room:340
+
+"tba:1:room:129":
+  name: Tower of Sanctum
+  description: >
+    This tower was one of the first to be constructed after the temple was completed.  It was made from
+    a combination of magic and manpower.  The white alabaster stone is said to still have some magical
+    residue that benefits those who come here to seek aid.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:124
+    east:
+      to: tba:1:room:130
+    south:
+      to: tba:1:room:136
+    west:
+      to: tba:1:room:128
+    up:
+      to: tba:1:room:103
+    down:
+      to: tba:3:room:341
+
+"tba:1:room:130":
+  name: Bunk Room
+  description: >
+    Racks, three tiers high line all three walls of this cramped room.  It seems this is where the sick
+    and wounded are put up for the night.  Even the apprentices sometimes stay here when they are too
+    tired to go home after a hard days work.  The room is empty now, the healers must have done their jobs
+    well.
+  sector: city
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:1:room:129
+
+"tba:1:room:131":
+  name: Home of the Magi
+  description: >
+    Since the creation of the dome to protect the city a Magi has been required to stay within the
+    towers.  The five Magi share this duty and are responsible for the safety of the Orb of Sanctum.  The Orb
+    is what was given to the Magi by the gods to sustain the protective dome.  As long as the orb is
+    safely in place and a Magi is present to sustain it the dome will remain.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:1:room:132
+
+"tba:1:room:132":
+  name: Tower of the Magi
+  description: >
+    Within the halls of this tower lies the Orb of Sanctum.  It is the responsibility of all to ensure
+    its safety.  Without the orb the dome would collapse and chaos would rule.  The Magi have been given
+    the honor of it placed within these halls.  The orb is rumored to have been created by the Gods
+    Rumble and Ferret.  But, no one knows for sure.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:125
+    east:
+      to: tba:1:room:133
+    south:
+      to: tba:1:room:137
+    west:
+      to: tba:1:room:131
+    up:
+      to: tba:1:room:104
+    down:
+      to: tba:3:room:345
+
+"tba:1:room:133":
+  name: Tower of the Magi
+  description: >
+    The Magi come here to ensure the safety of the Orb of Sanctum.  The power of the Orb is one of
+    balance.  An oft overlooked power.  Balance is what is required for the world to exist.  The Orb is the
+    last balance left in the realm.  If it were to be taken all hope would be lost.  Without it the city
+    would quickly be overrun by Drakkar and his followers.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:126
+    east:
+      to: tba:1:room:134
+    south:
+      to: tba:1:room:138
+    west:
+      to: tba:1:room:132
+    up:
+      to: tba:1:room:105
+    down:
+      to: tba:3:room:346
+
+"tba:1:room:134":
+  name: Orb of Sanctum
+  description: >
+    It is here that the Orb has been placed to ensure its protection.  The entire room is made of black
+    stone that seems to absorb all light.  A huge pedestal sits in the center of the room surrounded by
+    statues of every Magi to ever live.  It is up to them to protect the Orb from any who wish to steal
+    or cause harm to it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:1:room:133
+
+"tba:1:room:135":
+  name: Healers Chambers
+  description: >
+    A stark white room that is glaringly white.  A simple bed, desk, and chair are the only
+    inhabitants.  All of them are made out of wood and are polished to a glossy shine.  A single window looks out
+    over the Southern Gate.  To live a life as a Cleric is to life a life without desire and need.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:128
+  extras:
+  - keywords: [window]
+    text: >
+      Overlooking the western gate you can see the shimmering protective dome. You hope it lasts, peace
+      and tranquility is a good thing.
+  - keywords: [chair]
+    text: >
+      It's just your standard wooden chair.  Uncomfortable and only real usefulness would be as firewood.
+  - keywords: [desk]
+    text: >
+      The desk is made of sturdy pine with a heavy coating of wax that was probably applied by the
+      apprentices.  A small quill and pad of paper are centered on the top of the desk.  The desk has three
+      drawers.  All of them are empty.
+  - keywords: [bed]
+    text: >
+      The bed is made of a sturdy pine.  A thin mattress covered in a white sheet with a down pillow
+      overlaying it.  The mattress is too thin to hold anything of value.
+
+"tba:1:room:136":
+  name: Kitchen
+  description: >
+    At first glance this room seems to be made just to prepare food for the towers occupants, but on
+    second glance one can see that a few of the cooks are actually clerics and they are working over
+    cauldrons of liquids that could not possibly be food.  At least it does not smell like food.  This must be
+    where they make their healing elixirs, salves, and potions.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:129
+
+"tba:1:room:137":
+  name: Supply Room
+  description: >
+    Shelves full of various ingredients required for the casting of arcane spells line all three
+    walls.  Everything from potions to pills and everything in between.  Some of the jars contain strange
+    beasts soaking in a strange liquid.  The smell of dust and strange herbs permeates the room.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:132
+
+"tba:1:room:138":
+  name: Room of the Magi
+  description: >
+    This is a meeting room of the higher level mages who are seeking to become a Magi.  It is here they
+    must prove themselves both physically and mentally. Most never make it.  The Magi of the Purple and
+    Gray robes has never been achieved.  The actual testing to be a Magi remains a mystery as only the
+    Magi themselves have witnessed it.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:133
+
+"tba:1:room:139":
+  name: Above the Southern Gate
+  description: >
+    The dome of protection glows brightly here since it is closest to the Orb of Sanctum.  To the north
+    the Temple of Sanctus can be seen towering above the Tower of the High Council and the Tower of the
+    Magi.  All three structures are impressive works of architecture and magic combined.  To the south
+    the dome rises high into the air, blocking all view to the chaotic world beyond.
+  sector: city
+  exits:
+    down:
+      to: tba:3:room:362
+  extras:
+  - keywords: [dome, protection]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:140":
+  name: Northern Gate of Sanctus
+  description: >
+    Steel reinforced gates large enough to pass two wagons abreast are being guarded diligently.  These
+    gates are normally locked at night to ensure the safety of the city.  Only the east and west gates
+    remain open all day.  The luminescent dome encompassing the city can be seen just to the north.
+  sector: city
+  exits:
+    south:
+      to: tba:1:room:146
+    up:
+      to: tba:1:room:106
+  extras:
+  - keywords: [dome, luminescent]
+    text: >
+      Created by Rumble and Ferret, the dome holds back the magical chaos that was created by Drakkar. 
+      The dome is used to keep balance within the city limits and allows everyone to exist in peace.  Those
+      brave enough to venture beyond the dome do so at their own risk.  Beyond the dome the scale of
+      balance has collapsed and the laws of science and nature are in disorder.
+
+"tba:1:room:141":
+  name: Entrance to the Warriors Guild
+  description: >
+    It is here the Warriors of Sanctus come to improve their training in the art of warfare.  Not only
+    does this include brute force and the taking up of arms, but also the cunning art of tactics that can
+    decide the outcome of any battle. A stairwell in the back of the room leads to the training room
+    upstairs.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:154
+    up:
+      to: tba:1:room:107
+
+"tba:1:room:142":
+  name: Hannibal's Bar
+  description: >
+    The room is filled with a haze of thick cigar smoke and the stench of unrefined liquor.  A
+    noticeable blanket of dust and filth covers every inch of this local tavern.  Excessive drinking is looked
+    down upon by all in Sanctus, but the occasional drink never hurt anyone.  Unless they were stupid
+    enough to go walking through the Thieves Quarter after a few too many.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:142
+    south:
+      to: tba:1:room:155
+    up:
+      to: tba:1:room:108
+
+"tba:1:room:143":
+  name: Letzgo Inn
+  description: >
+    The only inn in Sanctus.  The Letzgo Inn appeals to those who need to take a break or maybe just
+    get away from home for a few days to receive one of the many "treatments" available by the fine staff. 
+    The sole proprietor goes by the name of Orlok and has been known to be rough, even deadly, to any
+    customers that treat his "employees" unfairly.  The inn appears to be well kept.  Further to the north
+    one can see a winding staircase and a plethra of adjoining rooms.  It seems the owners have
+    temporarily closed due to renovations.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:156
+
+"tba:1:room:144":
+  name: Shiro's Weaponry
+  description: >
+    This large wood building is filled with rack upon rack of weapons lining every wall, the floor, and
+    even some suspended from the ceiling.  The sound of someone honing a fine blade can be heard in the
+    background.  Some of the finest weapons in the realm are made right here under the supervision of
+    Shiro, the master wesponsmith.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:157
+
+"tba:1:room:145":
+  name: Sarge's Smithy
+  description: >
+    The Smithy used to be run by the Warriors Guild for protection of the city. But when Sarge retired
+    from his service in the guild they let him keep the smithy that he created as a retirement gift.  Of
+    course the fact that they had no one that could replace him and do his quality of work was the real
+    reason. But, Sarge would never complain.  He has spent his life hammering metal into weapons of mass
+    destruction or armor of superior quality.  It is rumored that has never been given a task that he
+    could not complete.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:158
+
+"tba:1:room:146":
+  name: The Northern Road
+  description: >
+    The Northern Gate of Sanctus and the impressive wall surrounding it looms above to the north.  The
+    dull sound of hammering comes from the building to your west and no sound escapes the building to the
+    east.  The North Way splits the city of Sanctus into two Quarters.  The thieves quarter in the east
+    and the Warriors Quarter to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:140
+    south:
+      to: tba:1:room:159
+
+"tba:1:room:147":
+  name: Logan's Pawn
+  description: >
+    Various useless items line the walls of this cluttered and disorganized shop.  Once in a while this
+    store is rumored to have great deals on rare equipment.  It is often normal to purchase clothing
+    with small tears and blood stains in the small of their backs, but no one ever asks questions given the
+    excellent prices.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:160
+
+"tba:1:room:148":
+  name: The Rustic
+  description: >
+    The only restaurant in Sanctus.  The Rustic serves up decent meals to anyone that can afford them. 
+    The prices are fair and the service is excellent.  The place is rather deserted and only a few
+    customers are chatting idly in the back.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:161
+
+"tba:1:room:149":
+  name: The Leather Shop
+  description: >
+    The smell of tanning hides from the back of the shop is very unpleasant. The assortment of leather
+    goods is very extensive and they are well made. Anyone needing some armor but does not want to give
+    up a lot of movement and flexibility need only come here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:162
+
+"tba:1:room:150":
+  name: Thieves Retreat
+  description: >
+    This gloomy bar has an uneasy feeling about it.  Travelers pausing here should be careful as this
+    bar is frequented by the less honorable class in Sanctus.  Very few people drink here since as soon
+    anyone inebriated is likely to be relieved of any gold they may be carrying.  The bar seems to sell a
+    lot more than just drinks as large shelves are filled with various items and equipment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:163
+    up:
+      to: tba:1:room:109
+
+"tba:1:room:151":
+  name: Entrance to the Thieves Guild
+  description: >
+    A thief stands in the back in front of a stairwell.  Obviously making sure no one goes by without
+    his permission.  The room is shabby with little furniture. Just a table and a few wooden chairs.  A
+    few expensive tapestries look out of place hanging on the walls.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:164
+    up:
+      to: tba:1:room:110
+
+"tba:1:room:152":
+  name: The Warriors Barracks
+  description: >
+    This is where the army of Sanctus keeps the barracks for those who wish to lead a life of service
+    to protect the city.  They are all over worked and under paid.  But they serve their terms with
+    pride.  You stand in the northwest corner of the barracks.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:1:room:153
+    south:
+      to: tba:1:room:167
+
+"tba:1:room:153":
+  name: The Warriors Barracks
+  description: >
+    You are in the entrance of the barracks of the army of Sanctus.  This is where the army bases it's
+    operations from.  Everything they need is located within this building.  Adjoining rooms are to the
+    west and south.  The warriors avenue is just to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:1:room:154
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:1:room:168
+    west:
+      to: tba:1:room:152
+
+"tba:1:room:154":
+  name: The Warriors Quarter
+  description: >
+    This junction lies in the northwest corner of the city.  The warriors guild is just to the north
+    and the army barracks are in the building to the west. Various stores lie further along Warriors Avenue
+    to the east.  There is a fair amount of people, mostly soldiers, going about their daily lives.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:141
+    east:
+      to: tba:1:room:155
+    south:
+      to: tba:1:room:169
+    west:
+      to: tba:1:room:153
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:155":
+  name: Warriors Avenue
+  description: >
+    A loud ruckus to the north must be the local bar where soldiers go to relieve themselves of their
+    worries.  The cobblestone street is clean and well maintained.  The buildings all around are made of
+    wood and some are several stories tall.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:142
+    east:
+      to: tba:1:room:156
+    south:
+      to: tba:1:room:170
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:154
+
+"tba:1:room:156":
+  name: Warriors Avenue
+  description: >
+    The towns only inn towers to the north.  It is one of the biggest structures in Sanctus, excluding
+    of course the temple.  Many travellers go there to relax and unwind.  Several small houses are to the
+    south along this road while the northern half seems to consist mostly of shops.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:143
+    east:
+      to: tba:1:room:157
+    south:
+      to: tba:1:room:171
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:155
+
+"tba:1:room:157":
+  name: Warriors Avenue
+  description: >
+    Several soldiers rush past in a hurry to make their watch in time.  The sound of someone working a
+    grindstone can be heard to the north, most likely the weaponsmith.  A small house to the south is
+    shadowed by the tower of Sanctus in the middle of the city.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:144
+    east:
+      to: tba:1:room:158
+    south:
+      to: tba:1:room:172
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:156
+
+"tba:1:room:158":
+  name: Warriors Avenue
+  description: >
+    The clang and clash of metal being worked to the north could only be the towns Smithy.  The street
+    continues east and west with a small house to the south.  Townspeople walk the streets going about
+    their business.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:145
+    east:
+      to: tba:1:room:159
+    south:
+      to: tba:1:room:173
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:157
+
+"tba:1:room:159":
+  name: The Northern Intersection
+  description: >
+    To the west one can hear the hammering of the smithy and the grinding of a wetstone in the Warriors
+    Quarter.  To the east the Thieves Quarter is covered in shadows and mystery.  Not a single sound
+    escapes from that section of the city. This intersection stands upon the North Way which runs from the
+    North Gate down to the Temple of Sanctus.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:146
+    east:
+      to: tba:1:room:160
+    south:
+      to: tba:1:room:174
+    west:
+      to: tba:1:room:158
+
+"tba:1:room:160":
+  name: Thieves Avenue
+  description: >
+    This appears to be the beginning of the thieves quarter where the less honorable class has formed a
+    base of operations.  The thieves of the city are responsible for the economic policies of the city
+    and do a very good job.  Of course they are so worried about keeping one another from stealing from
+    the city that they don't dare do it themselves.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:147
+    east:
+      to: tba:1:room:161
+    south:
+      to: tba:1:room:175
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:159
+
+"tba:1:room:161":
+  name: Thieves Avenue
+  description: >
+    A few cloaked figures glide past with a skill and dexterity that are clearly reminding of the need
+    to hold onto gold very tightly while in this quarter of the city.  The thieves may run the cities
+    finances fairly, but they could care less about a single adventurer.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:148
+    east:
+      to: tba:1:room:162
+    south:
+      to: tba:1:room:176
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:160
+
+"tba:1:room:162":
+  name: Thieves Avenue
+  description: >
+    A strange smell comes from the north, the unforgettable smell of tanning hides.  Must be the towns
+    leather shop.  Tall buildings to the south must be the houses of the locals.  Probably shouldn't go
+    wandering around, this place is full of thieves as it is and it would be easy to be mistaken for one.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:149
+    east:
+      to: tba:1:room:163
+    south:
+      to: tba:1:room:177
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:161
+
+"tba:1:room:163":
+  name: Thieves Avenue
+  description: >
+    The smell of booze and smoke filters through an open door to the north.  The local bar for the
+    thieves.  The town used to have only one bar until the warriors and thieves got into a huge braul and
+    ended up burning the place to the ground.  A few citizens walk past staring at each other curiously.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:150
+    east:
+      to: tba:1:room:164
+    south:
+      to: tba:1:room:178
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:1:room:162
+
+"tba:1:room:164":
+  name: Thieves Quarter
+  description: >
+    The guild of thieves lies just to the north while a huge warehouse rises above you to the east. 
+    Thieves Avenue makes a turn here to the south or west. This area is now in the northeastern corner of
+    the city, in the heart of the Thieves Quarter.  A traveler would be wise to watch their purse
+    carefully.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:151
+    east:
+      to: tba:1:room:165
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:1:room:179
+    west:
+      to: tba:1:room:163
+
+"tba:1:room:165":
+  name: The Thieves' Warehouse
+  description: >
+    You work your way through boxes and crates of supplies.  Small corridors lead between them, making
+    a small maze within the building.  Looks very easy to get disoreientated and lost.  This is where the
+    city keeps the majority of it's supplies.  Kind of an oxymoron that the thieves of the city handle
+    the finances.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:1:room:166
+    south:
+      to: tba:1:room:180
+    west:
+      to: tba:1:room:164
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:166":
+  name: A Storage Room
+  description: >
+    Wooden crates and boxes are neatly stacked into columns standing about twice your height with rows
+    in between that barely allow you to walk through.  Hard to believe anyone could find their way out of
+    this place, let alone know where to find anything.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:1:room:181
+    west:
+      to: tba:1:room:165
+
+"tba:1:room:167":
+  name: The Warriors Hallway
+  description: >
+    An elaborate hallway decorated with paintings of various victorious battles the city has fought
+    in.  Sanctus has never fallen.  Various weapons and suits of armor are all bolted to the floor and
+    walls.  A small doorway leads into the bunk room to the east.  The hall continues north and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:152
+    east:
+      to: tba:1:room:168
+    south:
+      to: tba:1:room:182
+
+"tba:1:room:168":
+  name: The Bunk Room
+  description: >
+    You find yourself walking between bunks where the majority of the army sleeps.  Some people are
+    already in their racks since a watch must be stood twenty four hours a day.  You here someone grumbling
+    in their sleep about how they always get stuck with the midwatch.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:153
+    south:
+      to: tba:1:room:183
+    west:
+      to: tba:1:room:167
+
+"tba:1:room:169":
+  name: Warriors Avenue
+  description: >
+    The Barracks rise above the west and a small cozy home is to the east.  A well-travelled road
+    continues north and south.  This appears to be the Warriors Quarter where the army of Sanctus bases it's
+    operations.  Several recruits rush past on assignment.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:154
+    south:
+      to: tba:1:room:184
+
+"tba:1:room:170":
+  name: A Fine Home
+  description: >
+    A fine home of Sanctus.  The smell of baking bread and the sounds of a roaring fire.  The house is
+    cluttered with the usual things that makes a house look lived in.  You could be happy spending the
+    rest of your life living in a house like this.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:155
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:171":
+  name: A Beggars Home
+  description: >
+    The filth in this house is disgusting, an overflowing chamber pot almost sends you immediately back
+    out the door.  This room should not even be considered a home.  You can barely even stand up the
+    ceiling is so low and cracks in the walls let you see outside.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:156
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:172":
+  name: An Extravagant Home
+  description: >
+    This house looks out of place considering it's neighbors.  The pine walls are polished to a shine
+    and the floor is made out of some strange type of cement.  Cushioned chairs surround a table set for
+    dinner with expensive dishes and silverware.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:157
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:173":
+  name: A Poor Home
+  description: >
+    The house is made from rooten timber and the floor is just bare dirt.  A baking oven and a few
+    piles of straw are the only things in the room.  This must be the poorest house in the entire city, how
+    could anyone live like this.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:158
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:174":
+  name: The Northern Road
+  description: >
+    This road passes between houses occupied by the local citizens.  The wide Northern Road is packed
+    solid from years of traffic from people, wagons, and horses.  A small amount of dust is kicked up by
+    every footstep.  Directly to the south one can see the Temple.  A small stone bridge arches over a
+    small stream to the north.  There is something unusual about the bridge.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:159
+    south:
+      to: tba:1:room:189
+
+"tba:1:room:175":
+  name: An Extravagant Home
+  description: >
+    One of the more successful thieves of the quarter must live here.  Rugs cover the entire floor.  A
+    candelabra sits in the middle of a polished oak table.  A four post bed can be seen in the back of
+    the house.  Nothing like living the good life.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:160
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:176":
+  name: A Cramped Home
+  description: >
+    A large table that could sit a family of about seven fills the majority of this house.  Small
+    mattresses lay on the floor in the back of the room.  Not much hope for privacy in this house.  A few
+    dolls are having a tea party in one corner.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:161
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:177":
+  name: A Small Home
+  description: >
+    You walk right in as if it was your own house.  Don't worry about trespassing, I'm sure no one will
+    mind.  The house is very compact.  The kitchen and bedrooms are not separated by any walls.  This
+    must be a house for the poor.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:162
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:178":
+  name: A Clean House
+  description: >
+    Everything is dusted, shined, waxed, and polished.  This home is spotless. Well maintained it
+    seems.  Not everyone is rich enough to afford a housekeeper, but these folks must be.  You can hear a baby
+    crying, sounds hungry.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:163
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:1:room:179":
+  name: Thieves Avenue
+  description: >
+    The tall warehouse holding the supplies and emergency stores of the city is to the west.  The
+    entrance looks to be a ways further north in the heart of the Thieve's Quarter.  South can be seen another
+    intersection and the northest corner of the inner wall.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:164
+    south:
+      to: tba:1:room:194
+
+"tba:1:room:180":
+  name: The Thieves Warehouse
+  description: >
+    A pathway has been opened here to allow for small carts and wagons to pass. You can hear a few
+    workers in the distance pushing the large crates over the dusty floor.  A large box and tackle swings
+    back and forth on a strange pulley system above you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:165
+    south:
+      to: tba:1:room:195
+
+"tba:1:room:181":
+  name: A Storage Room
+  description: >
+    The rows of crates and boxes continue to the north and south.  Everything is nailed shut, some even
+    wrapped in chains and padlocked.  Enough stores to last the city for a year must be packed away in
+    this place.  Everything is surpringly clean and well maintained.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:166
+    south:
+      to: tba:1:room:196
+
+"tba:1:room:182":
+  name: The Warriors Hallway
+  description: >
+    The hallway end abruptly at a set of double doors to the south.  You can hear people talking behind
+    the doors, but cannot discern what they are saying. The army of Sanctus is very well disciplined and
+    your presence may not be exactly appreciated.  They do not take kindly to strangers.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:167
+    east:
+      to: tba:1:room:183
+    south:
+      to: tba:1:room:197
+
+"tba:1:room:183":
+  name: The Bunk Room
+  description: >
+    The sound of snoring comes from a few of the dozen or so racks crammed together in this confined
+    room.  The racks are stacked four high with only a foot or two of space for someone to sit up.  The
+    mattresses are only about an inch thick and look very uncomfortable.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:168
+    south:
+      to: tba:1:room:198
+    west:
+      to: tba:1:room:182
+
+"tba:1:room:184":
+  name: The Northwest Intersection
+  description: >
+    This junction lies at an intersection of Warriors Avenue and Warriors Alley. The alley crosses the
+    city east to west behind the homes of the local citizens. The alley is very narrow and dark as the
+    inner city wall follows it on the southern side.  Warriors Avenue continues north and south.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:169
+    east:
+      to: tba:1:room:185
+    south:
+      to: tba:1:room:199
+
+"tba:1:room:185":
+  name: Warriors Alley
+  description: >
+    This cramped alley leads past dark flickering shadows.  A few piles of garbage are waiting to be
+    cleaned up by the street sweeper.  An alley cat hisses and then bolts as it senses some trespasser on
+    its territory.  This alley does not look safe and one might wonder whether or not they could encounter
+    some lurking thugs.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:186
+    west:
+      to: tba:1:room:184
+
+"tba:1:room:186":
+  name: Warriors Alley
+  description: >
+    The inner city wall rises above to the south.  The sound of footsteps and the rattling of armor can
+    be heard from the guards patrolling the top of the wall. The alley is even darker here and a person
+    could easily hide in the shadows.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:187
+    west:
+      to: tba:1:room:185
+
+"tba:1:room:187":
+  name: Warriors Alley
+  description: >
+    A line of houses block the way to the north.  They seem to have back doors but all are bolted,
+    locked, or nailed shut.  This is definitely not the most friendly section of the city.  An alley cat
+    bolts past as a large pile of garbage almost collapses on it.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:188
+    west:
+      to: tba:1:room:186
+
+"tba:1:room:188":
+  name: Warriors Alley
+  description: >
+    The alley is a little brighter here as it lies next to the Northern Road. The sound of creaking
+    wagons and the pound of horse hooves on the dirt road become trapped between the inner city wall and the
+    houses within the alley making strange echoing sounds that are very distracting.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:189
+    west:
+      to: tba:1:room:187
+
+"tba:1:room:189":
+  name: The Northern Road
+  description: >
+    This road continues on with few other travelers visible.  The streets seem to be surprisingly empty
+    for some reason.  Shadowy alleys can be noticed to the east and west along the inner city wall.  To
+    the south is the Northern Gate to the inner city.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:174
+    east:
+      to: tba:1:room:190
+    south:
+      to: tba:2:room:200
+    west:
+      to: tba:1:room:188
+
+"tba:1:room:190":
+  name: Thieves Alley
+  description: >
+    The alley is cluttered with debris, maybe the street sweeper doesn't even bother cleaning this
+    place up.  The sound of a fight can be heard further to the east within the alley.  This is definitely
+    the most dangerous section of Sanctus.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:191
+    west:
+      to: tba:1:room:189
+
+"tba:1:room:191":
+  name: Thieves Alley
+  description: >
+    The sounds of someone fighting suddenly grow louder, then stop.  Seems like that dispute was
+    settled one way or the other.  The inner city wall to the south keeps the alley eternally in shadows, no
+    matter the time of day or night. Houses to the north have their back doors shut and locked.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:192
+    west:
+      to: tba:1:room:190
+
+"tba:1:room:192":
+  name: Thieves Alley
+  description: >
+    A pool of blood lies in the center of the alley, a trail of blood leads to a garbage pile a few
+    feet away.  A mangy mutt trots slowly past and starts licking up the pool of blood.  A traveler here
+    should keep moving unless they wanted to draw attention to themselves.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:193
+    west:
+      to: tba:1:room:191
+
+"tba:1:room:193":
+  name: Thieves Alley
+  description: >
+    The inner city wall to the south towers high into the air, blocking out most of the light.  The
+    wall looks to be made from stone blocks and some sort of filler.  Its not possible to tell how thick it
+    is, but judging from the height one could guess at least half as wide as it is tall.
+  sector: city
+  exits:
+    east:
+      to: tba:1:room:194
+    west:
+      to: tba:1:room:192
+
+"tba:1:room:194":
+  name: The Northeast Intersection
+  description: >
+    The Thieves Avenue comes to an intersection with a shady alley to the west. This intersection is at
+    the northeast corner of the inner city wall.  On top of the wall one can see some type of post where
+    the guards watch for any trouble. A large building to the east must be some sort of warehouse.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:179
+    south:
+      to: tba:2:room:201
+    west:
+      to: tba:1:room:193
+
+"tba:1:room:195":
+  name: Wagon Bay
+  description: >
+    Huge double doors have been built into the western wall of the warehouse. They are closed, barred,
+    and locked with a padlock the size of your head.  No one gets in or out without that key.  An aisle
+    to load and unload wagons runs to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:180
+    east:
+      to: tba:1:room:196
+    south:
+      to: tba:2:room:202
+
+"tba:1:room:196":
+  name: Wagon Bay
+  description: >
+    A path is opened up between the crates here for wagons to load and unload. The floor has turned to
+    packed dirt and traces of horse manure leave an unpleasant smell. Three wagons fill the center of the
+    room. All look empty. A clump of mushrooms grows in the middle of the manure. They look ripe for
+    picking.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:181
+    south:
+      to: tba:2:room:203
+    west:
+      to: tba:1:room:195
+  extras:
+  - keywords: [mushrooms]
+    text: The mushrooms appear not to be poisonous and are relatively clean. They look edible.
+
+"tba:1:room:197":
+  name: A Work Room
+  description: >
+    This building is cluttered together in no apparent order, wherever there is room they simply use
+    it.  This hallway has been converted into a small room for the upkeep of armor and weapons.  A
+    grindstone is in one corner.  In another baskets of arrows are being sorted.  A recruit is polishing some
+    armor and a large sack of equipment looks like it is ready to be taken to the Smithy.
+  sector: inside
+  exits:
+    north:
+      to: tba:1:room:182
+    east:
+      to: tba:1:room:198
+    south:
+      to: tba:2:room:204
+
+"tba:1:room:198":
+  name: The Mess Hall
+  description: >
+    A dozen tables fill the room.  All bare except for a few people eating before they go on their next
+    watch.  The food does not look very appetizing, but it serves it's purpose.  The army has had
+    financial problems since it's inception.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:1:room:183
+    south:
+      to: tba:2:room:205
+    west:
+      to: tba:1:room:197
+
+"tba:1:room:199":
+  name: Warriors Avenue
+  description: >
+    In the distance one can hear some sergeant screaming at his recruits in a booming voice that echoes
+    off the buildings and walls around.  The clank of armor and weapons is all about as guards change
+    watches and work on their equipment.
+  sector: city
+  exits:
+    north:
+      to: tba:1:room:184
+    south:
+      to: tba:2:room:206

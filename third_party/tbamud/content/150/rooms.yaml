@@ -1,0 +1,1578 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 150.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:150:room:15000":
+  name: The King's Road
+  description:
+  - >
+    You stand at the beginning of the actual King's Road.  The road is wide enough for several horses
+    to ride along side by side with room to spare. The stones which make up the road have been put into
+    place with such skill that the road seems to be perfectly smooth and perfectly straight.
+  - >
+    You spot a small trail leading to the south through the undergrowth which surrounds the road at
+    this point. A traveller passes by and waves cheerfully at you.
+  sector: city
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:150:room:15001
+      look: The King's Road continues in a straight line to the east towards a grand castle.
+    south:
+      to: tba:150:room:15061
+      look: A small overgrown trail leads through the undergrowth to the south.
+    west:
+      to: tba:35:room:3502
+      look: The King's Road thins out a bit into a lane just to the west.
+  extras:
+  - keywords: [traveller]
+    text: >
+      The traveller smiles cheerfully and calls 'hello' when you greet him, but continues on his way. 
+      The traveller is in excellent condition.
+
+"tba:150:room:15001":
+  name: The King's Road
+  description: >
+    You stand in the center of the great King's Road.  The road is very well built, and goes in a
+    straight line due east-west.
+  sector: city
+  exits:
+    east:
+      to: tba:150:room:15002
+      look: The King's Road continues in a straight line to the east.
+    west:
+      to: tba:150:room:15000
+      look: You see that the King's Road continues westwards towards a large city.
+
+"tba:150:room:15002":
+  name: The King's Road
+  description: >
+    You stand on the King's Road, which leads east and west.  The skill of the builders is apparent,
+    since it is impossible to notice any turn or irregularity in the road.
+  sector: city
+  exits:
+    east:
+      to: tba:150:room:15003
+      look: You see a castle in the far east.
+    west:
+      to: tba:150:room:15001
+      look: The King's Road continues in a straight line to the west.
+
+"tba:150:room:15003":
+  name: On The King's Road Outside A Castle
+  description: >
+    You are standing on the King's Road.  Before you is a large Castle, evidently built not so much for
+    strength as for beauty. It is not totally without defenses, though, for it is surrounded by a deep
+    moat, and its windows are just narrow slits for archers to shoot through.  To the north there is a
+    drawbridge across the moat.
+  sector: city
+  exits:
+    north:
+      to: tba:150:room:15004
+      look: You see the drawbridge.
+    west:
+      to: tba:150:room:15002
+      look: The King's Road continues in a straight line to the west.
+
+"tba:150:room:15004":
+  name: On The Drawbridge
+  description: >
+    You have arrived at the drawbridge leading into the Castle.  Before you is a huge, double-doored
+    gate.  It seems very strong.  You see some whirls in the moat.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:150:room:15007
+      look: >
+        The gate has huge, but intricately carved hinges.  As the Castle itself, it seems designed not only
+        for strength, but also for beauty.
+      door:
+        keywords: [gate, door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:150:room:15003
+      look: You see the King's Road.
+  extras:
+  - keywords: [whirls, whirl, moat]
+    text: You can't see much, but it seems that something beneath the surface is creating them.
+
+"tba:150:room:15005":
+  name: The Kitchen
+  description: >
+    You are in the Kitchen.  Lots of helpers hurry to do the Chief Cook's bidding, and there is a
+    wonderful smell that makes you feel very hungry. All around the room, there are shelves with different
+    kinds of cooking gear stacked on them.  There is an exit to the north, and one to the east; both leading
+    to small passages.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15010
+      look: You see a small, dimly lit passage.
+    east:
+      to: tba:150:room:15006
+      look: You see a small, dimly lit passage.
+
+"tba:150:room:15006":
+  name: A Small Passage
+  description: >
+    You are standing in a small passage, that is clearly intended mostly for the servants of the
+    Castle.  It is only dimly lit and quite narrow. The passage leads west, and to the east there is a small
+    door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15007
+      look: The door is small and uninteresting.
+      door:
+        keywords: [door, small]
+        kind: door
+        reset: closed
+    west:
+      to: tba:150:room:15005
+      look: You hear clanging of pots, and smell cooking meat.
+
+"tba:150:room:15007":
+  name: The Entrance Hall
+  description: >
+    You are standing in the impressive Entrance Hall of the Castle. To the north is an exit into the
+    Great Hall.  There is also an exit east, and a small door to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15012
+      look: You see the King's Great Hall.
+    east:
+      to: tba:150:room:15008
+      look: There seems to be a small guard room to the east.
+    south:
+      to: tba:150:room:15004
+      look: To the south, there is a gate, that leads to the Drawbridge.
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:150:room:15006
+      look: The door is small and uninteresting.
+      door:
+        keywords: [door, small]
+        kind: door
+        reset: closed
+
+"tba:150:room:15008":
+  name: The Guard Room
+  description: >
+    You are in a small room, evidently meant for guards currently not on duty.  There is only one exit,
+    back to the entrance hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:150:room:15007
+      look: You see the Castle Entrance.
+
+"tba:150:room:15009":
+  name: Under The Tower
+  description: >
+    You are below one the three mighty towers of the Castle.  There are no guards here, and you sense
+    that this part of the Castle is largely unused.  There are stairs going up to the tower, and there is
+    also an exit to the north.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:150:room:15014
+      look: You see a small, dimly lit passage.
+    up:
+      to: tba:150:room:15034
+      look: The stairs are old, but in good repair. They lead up into the tower.
+  extras:
+  - keywords: [stairs]
+    text: The stairs are old, but in good repair.  They lead up into the tower.
+
+"tba:150:room:15010":
+  name: The Small Passage
+  description: >
+    You are standing in a small passage, that is clearly intended mainly for the servants of the
+    Castle.  The passage leads north and south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15015
+      look: You see a small, dimly lit passage.
+    south:
+      to: tba:150:room:15005
+      look: You hear the clanging of pots, and smell cooking meat.
+
+"tba:150:room:15011":
+  name: The Great Hall
+  description: >
+    You are standing in the south-west end of the Great Hall. It is truly vast; the roof is so high
+    above your head, that it seems no closer than the clouds outside.  The roof is beautifully painted, by
+    someone who must have been a true master.  The hall is very large, and could easily seat several
+    hundred people at a banquet.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15016
+      look: You see the King's Great Hall.
+    east:
+      to: tba:150:room:15012
+      look: You see the King's Great Hall.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful evil Wizard Tharoecon.
+
+"tba:150:room:15012":
+  name: The Great Hall
+  description: >
+    You are standing in the southern end of the Great Hall.  It is truly vast; the roof is so high
+    above your head, that it seems no closer than the clouds outside.  The roof is beautifully painted, by
+    someone who must have been a true master.  The hall is very large, and could easily seat several
+    hundred people at a banquet.  To your north, you see King Welmar's great throne, and to the south is the
+    Castle Entrance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15017
+      look: You see the part of the Great Hall where the throne is.
+    east:
+      to: tba:150:room:15013
+      look: You see the King's Great Hall.
+    south:
+      to: tba:150:room:15007
+      look: You see the Castle Entrance.
+    west:
+      to: tba:150:room:15011
+      look: You see the King's Great Hall.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful evil Wizard Tharoecon.
+
+"tba:150:room:15013":
+  name: The Great Hall
+  description: >
+    You are standing in the south-east end of the Great Hall.  It is truly vast; the roof is so high
+    above your head, that it seems no closer than the clouds outside.  The roof is beautifully painted, by
+    someone who must have been a true master.  The hall is very large, and could easily seat several
+    hundred people at a banquet.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15018
+      look: You see the King's Great Hall.
+    west:
+      to: tba:150:room:15012
+      look: You see the King's Great Hall.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful, evil Wizard Tharoecon.
+
+"tba:150:room:15014":
+  name: A Passage
+  description: >
+    You are standing in a passage, that leads north and south.  To the south it leads towards one of
+    towers.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15019
+      look: You see the small passage continue.
+    south:
+      to: tba:150:room:15009
+
+"tba:150:room:15015":
+  name: The Passage
+  description: >
+    You are in a passage, that leads north and south. To the east there is an exit to the Great Hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15020
+      look: You see the passage continue.
+    east:
+      to: tba:150:room:15016
+      look: You see the King's Great Hall.
+    south:
+      to: tba:150:room:15010
+      look: You see the passage continue.
+
+"tba:150:room:15016":
+  name: The Great Hall
+  description: >
+    You are standing in the north-west end of the Great Hall.  It is truly vast; the roof is so high
+    above your head, that it seems no closer than the clouds outside.  The roof is beautifully painted, by
+    someone who must have been a true master.  The hall is very large, and could easily seat several
+    hundred people at a banquet.  To your east, you see King Welmar's great throne, and to the west there is
+    an exit to a passage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15017
+      look: You see the part of the Great Hall where the throne is.
+    south:
+      to: tba:150:room:15011
+      look: You see the King's Great Hall.
+    west:
+      to: tba:150:room:15015
+      look: You see a passage.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful evil Wizard Tharoecon.
+
+"tba:150:room:15017":
+  name: By The Throne In The Great Hall
+  description: >
+    You are standing by the King's huge ivory throne.  The throne is, to an even greater degree than
+    the Hall itself, a masterpiece.  It is intricately and beautifully carved, and it seems to be made out
+    of a single block of ivory, though you shiver at the thought of meeting the animal that died to yield
+    a piece of that size.  The Hall continues to the east, west and south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15018
+      look: You see the King's Great Hall.
+    south:
+      to: tba:150:room:15012
+      look: You see the King's Great Hall.
+    west:
+      to: tba:150:room:15016
+      look: You see the King's Great Hall.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful evil Wizard Tharoecon.
+  - keywords: [throne, ivory]
+    text: It is large and very beautiful.  The carvings are mainly of animals and magic beasts.
+
+"tba:150:room:15018":
+  name: The Great Hall
+  description: >
+    You are standing in the north-east end of the Great Hall.  It is truly vast; the roof is so high
+    above your head, that it seems no closer than the clouds outside.  The roof is beautifully painted, by
+    someone who must have been a true master.  The hall is very large, and could easily seat several
+    hundred people at a banquet.  To your west, you see King Welmar's great throne, and to the east there is
+    an exit to a small passage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15019
+      look: You see a passage.
+    south:
+      to: tba:150:room:15013
+      look: You see the King's Great Hall.
+    west:
+      to: tba:150:room:15017
+      look: You see the part of the Great Hall where the throne is.
+  extras:
+  - keywords: [roof, paintings, paint]
+    text: >
+      The paintings on the roof depict the great heroes and gods.  One of the gods is fairly
+      heavy-bellied and incredibly hairy, with a massive beard.  Also among them are the great enemies and wrongdoers,
+      such as the evil Goddess Yochlol and the powerful evil Wizard Tharoecon.
+
+"tba:150:room:15019":
+  name: The Small Passage
+  description: >
+    You are standing in a small passage, that leads north and south. To the west, there is an exit into
+    the Great Hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15024
+      look: The passage continues to the north.
+    south:
+      to: tba:150:room:15014
+      look: The passage continues to the south.
+    west:
+      to: tba:150:room:15018
+      look: To the west you see the Great Hall.
+
+"tba:150:room:15020":
+  name: The Passage
+  description: You are standing in a north-south leading passage.  There is a door to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15025
+      look: The passage leads to a staircase.
+    east:
+      to: tba:150:room:15021
+      look: The door is quite small and unobtrusive.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:150:room:15015
+      look: The passage continues to the south.
+
+"tba:150:room:15021":
+  name: The Servants' Corridor
+  description: >
+    You are standing in a corridor, that stretches further to the east. There are doors to the north
+    and west.  The corridor itself is mainly used by servants, and lacks some of the beauty of the rest of
+    the castle.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15026
+      look: There is a door there!
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:150:room:15022
+      look: The corridor seems to come to its end a bit further east.
+    west:
+      to: tba:150:room:15020
+      look: The door to the west is made out of wood.
+      door:
+        keywords: [door, wood]
+        kind: door
+        reset: closed
+
+"tba:150:room:15022":
+  name: The End Of The Servants' Corridor
+  description: The corridor leads only west from here, but there is a door to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15027
+      look: The door leads to a room intended for the butler.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:150:obj:15009
+        reset: locked
+    west:
+      to: tba:150:room:15021
+      look: You see the corridor continue.
+
+"tba:150:room:15023":
+  name: The Training Room
+  description: >
+    This is the Training Room of the men of the Castle guard.  It is very large, with weapons standing
+    in racks by all the walls.  Most of the weapons seem to be intended for training only, with blunt
+    edges and the like, but there are some that might be useful for real fighting.  There is a door to the
+    north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15028
+      look: The door is large and heavy.
+      door:
+        keywords: [door, large, heavy]
+        kind: door
+        reset: closed
+    east:
+      to: tba:150:room:15024
+      look: You see a small passage.
+
+"tba:150:room:15024":
+  name: The Small Passage
+  description: >
+    You are standing in a small passage leading north and south.  There is also an exit to the west,
+    from which grunts, cheers and heavy blows can be heard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15029
+      look: The passage leads north to some stairs.
+    south:
+      to: tba:150:room:15019
+      look: You see the passage continuing.
+    west:
+      to: tba:150:room:15023
+      look: You see the Training Room.
+
+"tba:150:room:15025":
+  name: The Stair Room
+  description: >
+    You are standing below a great staircase, that leads up to the second floor of the Castle.  The
+    stairs are made of marble, and there are pillars carved in the likenesses of trees with little animals
+    running up and down the trunks.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15020
+      look: You see the passage.
+    up:
+      to: tba:150:room:15049
+      look: The stairs lead up to the second floor.
+  extras:
+  - keywords: [stairs, stair]
+    text: >
+      Made out of marble, and as all the rest of the Castle made primarily for beauty and with great
+      skill.
+  - keywords: [pillar, pillars, tree, trees]
+    text: Very nice.  Squirrels and little birds all over.
+
+"tba:150:room:15026":
+  name: The Servants' Quarters
+  description: >
+    You are standing in a large room, that seems to house many of the servants.  The room is full of
+    comfortable-looking beds.  There is also a large chest, probably containing some of the servants'
+    belongings.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15021
+      look: The door is made out of wood.
+      door:
+        keywords: [door, wood]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [bed]
+    text: The beds all look comfortable, despite the fact that this is just the servants' place.
+
+"tba:150:room:15027":
+  name: The Butler's Quarters
+  description: >
+    You see at once that this must be the butler's room, for it lies in the servants' wing, and still
+    it is large and comfortable; almost luxurious, in fact.  There is a large bed and a drawer in the
+    room. The only exit is via the door to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15022
+      look: You see the corridor.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:150:obj:15009
+        reset: locked
+  extras:
+  - keywords: [bed]
+    text: Looks very comfortable indeed.
+
+"tba:150:room:15028":
+  name: The Guards' Barracks
+  description: >
+    You are standing in a very large room with bunks all over.  It is obvious, that this is where the
+    guards off duty spend most of their time, drinking and gambling or, probably, mostly sleeping.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15023
+      look: The door is large and heavy.
+      door:
+        keywords: [door, large, heavy]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [bunk, bunks]
+    text: They look a bit hard, but you could sleep in them.
+
+"tba:150:room:15029":
+  name: The Stairs
+  description: >
+    You are standing by a staircase leading down.  As you look down, you notice that for the first time
+    since you entered the castle, things are not aesthetically made.  Instead it looks more functional
+    and prison-like.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15024
+      look: You see the small passage.
+    down:
+      to: tba:150:room:15055
+      look: The stairs down lead into darkness.
+  extras:
+  - keywords: [stairs, stair, staircase]
+    text: >
+      They seem to be made of granite, and stretch down into a more dimly lit area than where you come
+      from.
+
+"tba:150:room:15030":
+  name: At A Bend In The Corridor
+  description: You are standing at a place where the corridor bends from east to north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15035
+      look: You see the corridor continue.
+    east:
+      to: tba:150:room:15031
+      look: You see the corridor continue.
+
+"tba:150:room:15031":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    It leads east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15032
+      look: You see the corridor continue.
+    west:
+      to: tba:150:room:15030
+      look: You see the corridor continue.
+
+"tba:150:room:15032":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    It leads east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15033
+      look: You see the corridor continue.
+    west:
+      to: tba:150:room:15031
+      look: You see the corridor continue.
+
+"tba:150:room:15033":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    The corridor continues west, and to the north you see the luxurious guest wing.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15038
+      look: You see the guest wing.
+    west:
+      to: tba:150:room:15032
+      look: You see the corridor continue.
+
+"tba:150:room:15034":
+  name: In The South-East Tower
+  description: This part of the tower is fairly uninteresting, but it leads further upwards...
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:150:room:15052
+      look: The room at the top of the tower seems darkish for some reason.
+    down:
+      to: tba:150:room:15009
+      look: You see the stairs at the bottom of the tower.
+
+"tba:150:room:15035":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    It leads north and south.  There is also an exit to the east here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15040
+      look: You see the corridor continue.
+    east:
+      to: tba:150:room:15036
+      look: You see a small room.
+    south:
+      to: tba:150:room:15030
+      look: You see the corridor continue.
+
+"tba:150:room:15036":
+  name: By The Treasure Room
+  description: >
+    You are standing by a great iron door.  The door is very large, and seems very solid indeed.  There
+    is a sign posted by it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15037
+      look: You see a large steel door.
+      door:
+        keywords: [door, steel, large]
+        kind: pickproof
+        key: tba:150:obj:15007
+        reset: locked
+    west:
+      to: tba:150:room:15035
+      look: You see the corridor.
+  extras:
+  - keywords: [sign]
+    text:
+    - TREASURE ROOM
+    - >
+      Authorized personnel only - all others keep out. ANY trespassing will be SEVERELY punished!!
+
+"tba:150:room:15037":
+  name: The Great Treasury
+  description: >
+    As you enter this room, you are astonished by the riches that are stowed away here; not so much in
+    gold, but paintings, tapestries, skillful carvings and sculptures all over the vast room.  You
+    realize, however, that most of these things are too well known to be sold anywhere, without branding
+    yourself as a thief, and condemning yourself to instant death at the hands of the Royal Guard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:150:room:15036
+      look: You see a large steel door.
+      door:
+        keywords: [door, large, steel]
+        kind: pickproof
+        key: tba:150:obj:15007
+        reset: locked
+  extras:
+  - keywords: [painting, paintings, carving, carvings, sculptures, tapestries]
+    text: >
+      It seems they are stored here temporarily to enable changing of the decoration in the Castle on a
+      regular basis.
+
+"tba:150:room:15038":
+  name: The Guest Wing
+  description: >
+    You have arrived at the part of the Castle where prominent guests are housed.  To the east there is
+    a large, ornamented door, and a somewhat smaller one leads north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15043
+      look: The door seems to lead to a guest room.
+      door:
+        keywords: [door, small]
+        kind: door
+        reset: closed
+    east:
+      to: tba:150:room:15039
+      look: You see the guest suite behind the ornamented door.
+      door:
+        keywords: [door, ornament, ornamented]
+        kind: door
+        reset: closed
+    south:
+      to: tba:150:room:15033
+      look: You see the corridor.
+
+"tba:150:room:15039":
+  name: The Guest Suite
+  description: >
+    This must be where only the most highly regarded guests stay, since it is luxurious beyond your
+    wildest imagination.  This is only the living room of the suite, but it is huge and tastefully
+    decorated.  All the furniture is not only beautiful, but also made for comfort.  To the north, there is an
+    exit to the bedroom, and there is a door to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15044
+      look: You see the bedroom.
+    west:
+      to: tba:150:room:15038
+      look: Behind the door you see the entrance to the Guest Wing.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:150:room:15040":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    It leads north and south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15045
+      look: You see the corridor continue.
+    south:
+      to: tba:150:room:15035
+      look: You see the corridor continue.
+
+"tba:150:room:15041":
+  name: The Ball Room
+  description: >
+    You are standing in the great Ball Room.  It is a truly large room, with a stage for an orchestra
+    in the south-east end.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15046
+      look: You see the Ball Room.
+    east:
+      to: tba:150:room:15042
+      look: To the east you see the stage.
+
+"tba:150:room:15042":
+  name: By The Stage
+  description: >
+    Before you you see the stage.  It is large enough for some 40 musicians to play on at the same
+    time.  The Ball Room continues to the west and north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15047
+      look: You see the Ball Room.
+    west:
+      to: tba:150:room:15041
+      look: You see the Ball Room.
+
+"tba:150:room:15043":
+  name: A Guest Room
+  description: >
+    You are standing in a large room.  Although it is comfortable enough, you can tell it is not meant
+    for any of the most illustrious guests, since it lacks that extreme luxury found elsewhere in the
+    Castle.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15038
+      look: Behind the door, you see the entrance to the Guest Wing.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:150:room:15044":
+  name: The Bedroom
+  description: >
+    This room is dominated by the huge four-poster bed, that stands against the northern wall.  The
+    room is large and cosy, and the bed virtually begs you to lie down in it and sleep.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15039
+      look: You see the living room of the suite.
+  extras:
+  - keywords: [bed]
+    text: Large, comfortable, bolstered...  Invites you to sleep in it.
+
+"tba:150:room:15045":
+  name: The Corridor
+  description: >
+    You are standing in a long corridor, decorated with tapestries depicting old times and old heroes. 
+    It leads north and south.  There is an exit to the east, that leads to a large room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15049
+      look: You see the corridor continue.
+    east:
+      to: tba:150:room:15046
+      look: You see the Ball Room.
+    south:
+      to: tba:150:room:15040
+      look: You see the corridor continue.
+
+"tba:150:room:15046":
+  name: The Ball Room
+  description: >
+    You are standing in the great Ball Room.  It is a truly large room, with a stage for an orchestra
+    in the south-east end.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15047
+      look: You see the Ball Room.
+    south:
+      to: tba:150:room:15041
+      look: You see the Ball Room.
+    west:
+      to: tba:150:room:15045
+      look: You see the corridor.
+
+"tba:150:room:15047":
+  name: The Ball Room
+  description: >
+    You are standing in the great Ball Room.  It is a truly large room, with a stage for an orchestra
+    in the south-east end.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15048
+      look: To the east, you can enter a tower.
+    south:
+      to: tba:150:room:15042
+      look: To the south you see the stage.
+    west:
+      to: tba:150:room:15046
+      look: You see the Ball Room.
+
+"tba:150:room:15048":
+  name: In The Tower
+  description: >
+    You are standing in the north-eastern of the three great watch- towers of the Castle.  To the west,
+    you can enter the Ball Room and there are stairs leading up into the Tower.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:150:room:15047
+      look: You see the Ball Room.
+    up:
+      to: tba:150:room:15054
+      look: The stairs lead a long way up to the top of the Tower.
+  extras:
+  - keywords: [stairs]
+    text: The stairs are made out of granite, and seem solid enough.
+
+"tba:150:room:15049":
+  name: The Grand Staircase
+  description: >
+    You are standing on a great staircase, that leads up and down.  To the east, there is a large oak
+    door, and a corridor leads south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15050
+      look: The door is large and made out of oak.
+      door:
+        keywords: [door, oak, large]
+        kind: door
+        key: tba:150:obj:15014
+        reset: locked
+    south:
+      to: tba:150:room:15045
+      look: You see the corridor.
+    up:
+      to: tba:150:room:15053
+      look: The stairs continue up to the top of the tower.
+    down:
+      to: tba:150:room:15025
+      look: The stairs lead down to the first floor of the Castle.
+  extras:
+  - keywords: [stairs]
+    text: >
+      The stairs are made of marble, and there are pillars carved in the likenesses of trees with little
+      animals running up and down the trunks.
+
+"tba:150:room:15050":
+  name: The Cosy Room
+  description: >
+    You have entered a large, cosy living room.  There is a fireplace with a fire burning, and a few
+    comfortable chairs around a little table.  There is a door to the west, and also an exit to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15051
+      look: You see a large bedroom.
+    west:
+      to: tba:150:room:15049
+      look: The door is large, and made out of oak.
+      door:
+        keywords: [door, large, oak]
+        kind: door
+        key: tba:150:obj:15014
+        reset: locked
+  extras:
+  - keywords: [fire, fireplace]
+    text: The fire is built out of logs, and seems to be able to burn for quite a while longer.
+  - keywords: [table]
+    text: The table is made of mahogany, and elegant in a cosy way(!  )
+  - keywords: [chairs]
+    text: The chairs are arranged around the fireplace.
+
+"tba:150:room:15051":
+  name: King Welmar's Bedroom
+  description: >
+    This is a large room, with a wonderful view.  To one side of the room, stands a large four-poster
+    bed.  All around the room there are massive bookshelves, filled with all kinds of books.  The titles
+    include works such as: 'A Treatise on the History of Midgaard and surrounding areas', 'Magic - A
+    Beginner's Introduction' and many others.  There is an exit to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:150:room:15050
+      look: There is a large and cosy room to the west.
+  extras:
+  - keywords: [books, book, shelf, shelves, bookshelf, bookshelves]
+    text: >
+      Most of the books seem worn, as if thoroughly studied.  The King evidently is interested in keeping
+      himself educated.
+  - keywords: [bed]
+    text: Seems nice enough to sleep in, though you would never dare to, since it is a Royal Bed!
+  - keywords: [history, midgaard]
+    text: A dry tome, filled with boring knowledge.
+  - keywords: [magic]
+    text: >
+      Beginner?  This book goes beyond most of what YOU know about magic anyway. But then, there are
+      levels of magical knowledge, it seems.
+
+"tba:150:room:15052":
+  name: Up In The Tower
+  description: >
+    After a long climb, you finally reach the top of the tower.  This room is small, and the only light
+    source is a flickering candle, on a cluttered table, in the middle of the room.  The only obvious
+    exit is back down the stairs.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:150:room:15034
+      look: The stairs go down the tower.
+  extras:
+  - keywords: [table]
+    text: On the table are various objects, all very strange-looking.
+  - keywords: [candle]
+    text: Small, uninteresting...  A candle that is as normal as can be.
+
+"tba:150:room:15053":
+  name: The Top Of The Tower
+  description: >
+    You have arrived at the top of the tower.  This tower is pretty uninteresting, and seems made
+    purely for reasons of defense and guarding.  The windows are slits for bowmen, very narrow on the outward
+    side and broad inwards to allow a wide shooting angle. The only evident exit is down the stairs again.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:150:room:15049
+      look: The stairs go down to the second floor.
+  extras:
+  - keywords: [window, slit]
+    text: As you look out the windows, you are granted a view of the countryside.
+
+"tba:150:room:15054":
+  name: The Top Of The Tower
+  description: >
+    This is the highest of all the towers, and is obviously used for lookout purposes.  The view is
+    splendid in all four directions.  All around you, the rich countryside spreads out to the horizon.  To
+    the north and east you see a vast mountain range, and far to the west a beautiful lake.  A bit closer,
+    the town of Midgaard lies at the end of the King's Road.  The only exit you can see is down again.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      look: >
+        To the north, the tall White Mountains have their highest peaks. The mountaintops disappear in the
+        white clouds, far above the plains.  The sight of those high, far mountains fills you with a desire
+        to scale them, to see the world from that vantage.
+    east:
+      look: >
+        In the east you see an arm of the dominating mountain range on this continent, the White
+        Mountains.  Though not as high as those in the north, the sight of those mountains fills you with awe.
+    south:
+      look: To the south, rolling hills stretch away, as far as you can see.
+    west:
+      look: >
+        As you look west, you see a river flowing through all of Midgaard and continuing beyond it towards
+        a great lake.  Still further away, you can glimpse something silvery that has to be the Sea.
+    down:
+      to: tba:150:room:15048
+      look: You see the stairs going back down to the second floor.
+
+"tba:150:room:15055":
+  name: The Bottom Of The Stairs
+  description:
+  - >
+    The stairs lead down to a damp part of the castle, you can hear water dripping somewhere around
+    you.  The area is lit by a single torch flickering in the room which this staircase is built off of.
+  - The stairs lead upwards and they open up onto a fairly small room to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15056
+      look: A small room opens up to the east.
+    up:
+      to: tba:150:room:15029
+      look: The stairs lead upwards out of this dank, dark place.
+
+"tba:150:room:15056":
+  name: The Guard Room
+  description:
+  - >
+    You are at a loss to explain why someone would want to spend all day down here.  The only
+    explanation that seems even remotely logical to you is that there must be an important prisoner kept in one of
+    the cells through the south door.
+  - >
+    The decorations of the room are sparse, merely a table, a chair, and a deck of cards.  A stairwell
+    has been built into the western wall and it leads upwards.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:150:room:15057
+      look: >
+        Through the peep hole at the top of the small wooden door you can see that there is a small
+        corridor leading past several cells.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:150:obj:15017
+        reset: locked
+    west:
+      to: tba:150:room:15055
+      look: A small stairwell built into the western wall of the room leads upwards.
+  extras:
+  - keywords: [table, cards, deck]
+    text: >
+      There is a deck of cards on the table in a small pile.  There is one card lying on the floor
+      however.
+  - keywords: [card, floor]
+    text: >
+      The card on the floor seems to be the Ace of Spades...  A bad card to find indeed.  What could be
+      the bad luck brought about by this discovery?
+
+"tba:150:room:15057":
+  name: The Prison
+  description:
+  - >
+    This small passage is about thirty feet long and is well lit by the torches on each wall.  The
+    torches have been locked inside small metal cages to ensure that they are not removed.  The strangest
+    thing about the torches however, is the manner in which they burn, they have what appears to be a
+    constant flame in that it does not flicker whatsoever, and does not give off any smoke.  Perhaps they have
+    been magicked to burn forever...
+  - >
+    There are three cells along this passage way, one on each side of the corridor right near the north
+    end and one isolated at the south end of the corridor with a small metal plaque located over the
+    door in the keystone of the archway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15056
+      look: A small wooden door blocks the way out of the prison.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        key: tba:150:obj:15017
+        reset: locked
+    east:
+      to: tba:150:room:15060
+      look: A cell door is set into the eastern wall.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+    south:
+      to: tba:150:room:15059
+      look: >
+        The cell door to the south has been double padlocked and there is a plaque placed in the keystone
+        above the door.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+    west:
+      to: tba:150:room:15058
+      look: A cell door is set into the western wall.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+  extras:
+  - keywords: [plaque, keystone]
+    text: >
+      The plaque in the keystone is engraved with four simple words: Ergan, Murderer of Townsbridge
+
+"tba:150:room:15058":
+  name: A Cell
+  description: >
+    This cell is in a shambles.  There is a small hole in the western wall where something has broken
+    through the stones into the cell.  There is a cell door in the eastern wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15057
+      look: The cell door to the east leads back to the prison hallway.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+  extras:
+  - keywords: [hole]
+    text: The hole is much too small for you to clamber through.
+
+"tba:150:room:15059":
+  name: Ergan's Cell
+  description: >
+    This large cell is almost like a living quarters with a cot in one corner serving as a bed, a small
+    table built out of the wall in another corner.  There is even a rug in the center of the floor to
+    keep some warmth.  It seems that the prisoner kept here is treated quite well, almost too well for a
+    murderer of an entire town...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:150:room:15057
+      look: The cell door to the north leads back to the prison hallway.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+
+"tba:150:room:15060":
+  name: A Cell
+  description: >
+    This small cell is damp and dark and looks like noone and nothing has lived in it for quite some
+    time.  A small cell door is located in the west wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:150:room:15057
+      look: The cell door to the west leads back to the prison hallway.
+      door:
+        keywords: [door, cell]
+        kind: pickproof
+        key: tba:150:obj:15017
+        reset: locked
+
+"tba:150:room:15061":
+  name: An Overgrown Trail
+  description:
+  - >
+    Moving off of the King's Road, you find yourself on a small fading trail which appears to have been
+    so little used that it has almost completely grown over with vegitation from the woods here.  Sounds
+    of the forest can be heard all round and you feel a peaceful feeling come over you as you realize
+    that mankind has not passed this way for some time.
+  - The faded trail appears to lead north and south.
+  sector: hills
+  exits:
+    north:
+      to: tba:150:room:15000
+      look: The travel upon the King's Road can be heard off to the north.
+    south:
+      to: tba:150:room:15062
+      look: The trail continues southwards.
+
+"tba:150:room:15062":
+  name: An Overgrown Trail
+  description:
+  - >
+    Continuing through the heavy undergrowth, you find yourself in the middle of the forest.  The
+    sounds of the forest can be heard all round and you feel a peaceful feeling come over you as you realize
+    that mankind has not passed this way for some time.
+  - >
+    The fading trail you are on appears to have been so little used that it has almost completely grown
+    over with vegitation from the woods here.
+  - The faded trail appears to lead north and east.
+  sector: hills
+  exits:
+    north:
+      to: tba:150:room:15061
+      look: The trail continues northwards.
+    east:
+      to: tba:150:room:15063
+      look: The trail appears to continue to the east.
+
+"tba:150:room:15063":
+  name: An Overgrown Trail
+  description:
+  - >
+    Continuing through the heavy undergrowth, you find yourself in the middle of the forest.  The
+    sounds of the forest can be heard all round and you feel a peaceful feeling come over you as you realize
+    that mankind has not passed this way for some time.
+  - >
+    The fading trail you are on appears to have been so little used that it has almost completely grown
+    over with vegitation from the woods here.
+  - >
+    The faded trail appears to lead west and south.  To the south a strange eerie silence seems to hang
+    in the air, almost blocking out all the sounds that you can hear from the north and east.
+  sector: hills
+  exits:
+    south:
+      to: tba:150:room:15064
+      look: >
+        The undergrowth begins to open up to the south and you can see what appears to be a small village
+        to the south.  It is very quiet, almost too quiet.
+    west:
+      to: tba:150:room:15062
+      look: The overgrown trail continues to the northwest.
+
+"tba:150:room:15064":
+  name: A Dirt Road
+  description: >
+    As you leave the forest to the north, you find yourself at what appears to be the beginning of a
+    dirt road and a small village.  Upon first laying eyes on this place you realize that there is
+    something funny about this settlement... there is no sound other that the whistling wind here.  You would
+    have expected to hear people going about their regular business, but the village is silent.  You cannot
+    see any movement around the village either.  It is almost as still and silent as the woods to the
+    north. There is a small sign lying by the side of the road here.
+  sector: field
+  exits:
+    north:
+      to: tba:150:room:15063
+      look: An trail leads into the heavy undergrowth to the north.
+    south:
+      to: tba:150:room:15065
+      look: The dirt road continues through the village to the south.
+    west:
+      to: tba:150:room:15068
+      look: A house stands a short distance off the west side of the road, its door hanging ajar.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           /----------------------------------\
+           |     Welcome to the hamlet of     |
+           |           Townsbridge            |
+           |                                  |
+           |                                  |
+           |     Population:  276             |
+           |                                  |
+           \----------------------------------/
+           The number 276 has been scratched out and replaced with the
+        number 0.
+
+"tba:150:room:15065":
+  name: A Small Intersection
+  description:
+  - >
+    Continuing along the dirt road, you find yourself at a place where a small path splits away from
+    the main road and leads off to the west. The woods around the village seem to be pressing inwards
+    towards you as if the village hides a secret which they do not want to be spread about.
+  - There is another house standing on the east side of the road.
+  sector: field
+  exits:
+    north:
+      to: tba:150:room:15064
+      look: The dirt road continues to the north.
+    east:
+      to: tba:150:room:15069
+      look: You can hear a wailing sound coming from the house to the east.
+    south:
+      to: tba:150:room:15066
+      look: The dirt road continues towards the south where a horrible smell permeates the air.
+    west:
+      to: tba:150:room:15072
+      look: A small, dark trail leads off into the woods to the west.
+
+"tba:150:room:15066":
+  name: A Dirt Road
+  description:
+  - >
+    This section of the dirt road is quiet, but there is an awful stench in the air.  It brings to mind
+    rotting corpses and raw sewage.  The woods contiue to press closely about you, and almost totally
+    surround the small building to the west with a thatched roof.  There is a blackened shell of a building
+    to the east with a small sign hanging out front from a black and charred chain.
+  - The dirt road continues north and south.
+  sector: field
+  exits:
+    north:
+      to: tba:150:room:15065
+      look: The small dirt road continues towards the north.
+    east:
+      to: tba:150:room:15071
+      look: >
+        The building to the east is merely a shell of what it once probably was.  The walls are blackened
+        as if they had been exposed to fire at some point in the past...
+    south:
+      to: tba:150:room:15067
+      look: >
+        The stench from the south is almost overpowering now... it seems that the source wouldn't be too
+        far from here.
+    west:
+      to: tba:150:room:15070
+      look: >
+        A small quiet cottage stands on the west side of the road, apparently untouched by the desecration
+        and destruction that appears to have hit this small village.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign is covered with soot and the wood is quite charred, but you can
+        still make out the following letters:
+                T   TO  SB  DGE   NER L    RE
+
+"tba:150:room:15067":
+  name: A Large Pit
+  description:
+  - >
+    The dirt road ends at the edge of a large pit here and you now realize where the awful smell was
+    coming from.  This pit appears to be a mass grave for the citizens of the village.  There are bones and
+    corpses lying all over the place.  A lot of the corpses look too recent to be from the Townsbridge
+    murders of almost a decade ago, but the village seems to have been empty for almost that long.
+  - The dirt road leads away from the carnage to the north.
+  sector: field
+  exits:
+    north:
+      to: tba:150:room:15066
+      look: Just near the north edge of the pit a small and narrow trail leads away.
+
+"tba:150:room:15068":
+  name: A House
+  description:
+  - >
+    This house is a wreck, furniture has been strewn all about the room, and it looks like a tornado
+    landed right in the middle of the room.  The destruction that has taken place in this room is almost
+    beyond belief.  The oddest part of it all though, is how it all seems so recent, since there are no
+    cobwebs, and there is no dust on anything.
+  - The dirt road can be seen to the east through the doorway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15064
+      look: You can see the dirt road through the doorway to the east.
+
+"tba:150:room:15069":
+  name: A House
+  description:
+  - >
+    This darkened room is barely lit by the outdoor light, but what you can see of it gives you the
+    creeps.  There are cobwebs dangling from everything, a thick layer of dust begins to rise up at your
+    passage, and a strange howl comes from somewhere around you.  The furniture in this house is old and of
+    a type that hasn't been seen around these lands for some time.  If it was in better shape, you might
+    be able to sell it as antique.
+  - The meager light of the road shines through the doorway to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:150:room:15065
+      look: You can see the dirt road through the doorway to the west.
+
+"tba:150:room:15070":
+  name: A Small Cottage
+  description:
+  - >
+    This cottage looks to have been left in exactly the same shape as it was in quite some time ago. 
+    It looks as if the residents left one day and haven't returned home yet.  Oddly enough, the furniture
+    is dust free and the food on the table still looks fresh.  This house is really strange, perhaps it
+    wuld be in your best interests to leave as soon as humanly possible.
+  - The road is back through the open doorway to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15066
+      look: You can see the dirt road through the doorway to the east.
+
+"tba:150:room:15071":
+  name: The Burned Shop
+  description:
+  - >
+    As you enter this small building, you notice that that blackened walls are due to a fire that
+    seemed to burn here unattended for quite some time.  There is almost nothing left of the roof that would
+    have once covered this building, and the north and east walls have been burnt to almost half the
+    height of the other two walls.  There are some burnt goods around on the ground and the remains of a
+    counter near what is left of the north wall seems to indicate that this was once a shop.
+  - The road lies to the west through the blackened wall.
+  sector: field
+  exits:
+    west:
+      to: tba:150:room:15066
+      look: You can see the dirt road to the west.
+
+"tba:150:room:15072":
+  name: A Dark Path
+  description:
+  - >
+    As you move away form the open air into the darkness of the path and the sinister looking woods
+    around you, you get a feeling of awe and something almost akin to horror.  The wood around is completely
+    silent, not even the rustling of leaves or the cracking of branches breaks the silence.  The final
+    thing you notice is that the darkness all around you seems to be almost contrived, and doesn't seem
+    natural for this kind of vegitation.
+  - The path continues west and you can see light to the east.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:150:room:15065
+      look: The path continues towards a small intersection with a dirt road.
+    west:
+      to: tba:150:room:15073
+      look: The path continues through the darkness.
+
+"tba:150:room:15073":
+  name: A Dark Path
+  description:
+  - >
+    This narrow path leads through the overhanging trees in the unnatural darkness.  It seems almost as
+    if the trees are crowding in on you here, as if they didn't want to feel your presence.  The wood is
+    almost totally silent and you wonder silently to yourself why this could be.
+  - The path appears to continue east and west.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:150:room:15072
+      look: The path continues through the darkness.
+    west:
+      to: tba:150:room:15074
+      look: >
+        The glow from the west appears to be quite strong, but it does not give enough light to see by
+        here, nor can you see the source of the glow.
+
+"tba:150:room:15074":
+  name: The Circle Of Stones
+  description:
+  - >
+    You are at the edge of a circle of seven large monolith-like stones. Each stone towers over your
+    head and appears to be at least double your height.  The stones are made of a dark black material,
+    almost black in color.
+  - >
+    In the center of the ring of stones, you can see a black circular mirror-like disk on the ground. 
+    The surface is highly reflective and almost appears to be rippling.  The trees surrounding the circle
+    tower far above your heads blocking out the sky.
+  - >
+    A strange glow seems to be emanating from each stone, almost green in color.  This glow provides
+    enough light for you to see with even though the sky above has been blotted out.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:150:room:15073
+      look: A narrow path leads away into the darkness.
+    up:
+      look: You cannot see the sky above since the trees around the stone ring block it out entirely.
+  extras:
+  - keywords: [stones, glow, stone, ring, circle]
+    text: >
+      Each stone is at least fifteen feet tall, maybe more, and the dark material glows with a greenish
+      aura providing more than enough light for you to see by.

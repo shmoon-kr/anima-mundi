@@ -1,0 +1,533 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 326.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:326:obj:32600":
+  type: trash
+  keywords: [paint, face]
+  short: some green face paint
+  long: A smudge of face paint has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+  extras:
+  - keywords: [paint, face]
+    text: >
+      The color of green that this paint is would lend to camoflaging you were you in the forest.
+
+"tba:326:obj:32601":
+  type: armor
+  keywords: [ankle, boots, issue, black]
+  short: a pair of black issue boots
+  long: A pair of black issue boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 16
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:326:obj:32602":
+  type: armor
+  keywords: [pants, black, issue]
+  short: a pair of black issue pants
+  long: A pair of black issue pants have been left here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 19
+  affects:
+  - apply: hit
+    modifier: 10
+
+"tba:326:obj:32603":
+  type: armor
+  keywords: [tunic, issue, gray]
+  short: a gray issue tunic
+  long: A gray issue tunic has been left here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 16
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:326:obj:32604":
+  type: worn
+  keywords: [cloak, issue, blue]
+  short: a blue issue cloak
+  long: A blue issue cloak has been left here.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 10
+  rent: 0
+  level: 15
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:326:obj:32605":
+  type: worn
+  keywords: [cloak, issue, blue]
+  short: a blue issue cloak with red edging
+  long: A blue issue cloak with red edging has been left here.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 18
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: -2
+
+"tba:326:obj:32606":
+  type: weapon
+  keywords: [pike]
+  short: a pike
+  long: Someone dropped a long pike here.
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 7
+  cost: 7
+  rent: 0
+  level: 17
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:326:obj:32607":
+  type: other
+  keywords: [baton, short, mean]
+  short: a short, mean, black baton
+  long: A black baton has been dropped here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 29
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:326:obj:32608":
+  type: worn
+  keywords: [braid, ponytail]
+  short: a long ponytail braid
+  long: A long ponytail braid has been shorn and left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 28
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: str
+    modifier: -2
+
+"tba:326:obj:32609":
+  type: drinkcon
+  keywords: [water, canteen, army, water]
+  short: an Eastern Army issue canteen
+  long: An Eastern Army issue canteen has been left here.
+  wear: [take]
+  values:
+    capacity: 25
+    contains: 25
+    liquid: water
+    poisoned: false
+  weight: 30
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:326:obj:32610":
+  type: weapon
+  keywords: [whip, horse]
+  short: a horse whip
+  long: A horse whip has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: whip
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 16
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:326:obj:32611":
+  type: other
+  keywords: [rock]
+  short: a large rock
+  long: A large rock was placed here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rock]
+    text: If you tried really hard I bet you could crall under it.
+
+"tba:326:obj:32612":
+  type: weapon
+  keywords: [sword, long, horseman's]
+  short: a long horseman's sword
+  long: A long horseman's sword has been left here.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:326:obj:32613":
+  type: armor
+  keywords: [armor, splint, mail, issue]
+  short: some Eastern Army issue splint mail armor
+  long: Some Eastern Army issue splint mail armor has been left here.
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 11
+  cost: 10
+  rent: 0
+  level: 10
+
+"tba:326:obj:32614":
+  type: weapon
+  keywords: [sword, issue, army]
+  short: an Eastern Army issue sword
+  long: An Eastern Army issue sword has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: slash
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 12
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:326:obj:32615":
+  type: armor
+  keywords: [helm, visored]
+  short: a visored helm
+  long: A visored helm has been left here.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 10
+
+"tba:326:obj:32616":
+  type: weapon
+  keywords: [crossbow]
+  short: a sturdy crossbow
+  long: A sturdy crossbow has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: sting
+  weight: 14
+  cost: 10
+  rent: 0
+  level: 28
+  affects:
+  - apply: wis
+    modifier: 3
+
+"tba:326:obj:32617":
+  type: weapon
+  keywords: [longbow]
+  short: a green longbow
+  long: A green longbow has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d8
+    attack: sting
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 26
+
+"tba:326:obj:32618":
+  type: weapon
+  keywords: [bow, short]
+  short: a shortbow
+  long: A shortbow has been dropped here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d7
+    attack: sting
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 21
+
+"tba:326:obj:32619":
+  type: armor
+  keywords: [jacket, camo]
+  short: a camo jacket
+  long: A camo jacket blands in with its surroundings here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 7
+  cost: 7
+  rent: 0
+  level: 23
+
+"tba:326:obj:32620":
+  type: armor
+  keywords: [pants, camo]
+  short: some camo pants
+  long: Some camo pants have been left here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:326:obj:32621":
+  type: other
+  keywords: [telescope, collapsible]
+  short: a collapsing telescope
+  long: A small, handheld collapsing telescope has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 15
+
+"tba:326:obj:32622":
+  type: worn
+  keywords: [hood, camo]
+  short: a camo hood
+  long: A camo hood has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 22
+  affects:
+  - apply: hit
+    modifier: 20
+
+"tba:326:obj:32623":
+  type: armor
+  keywords: [gloves, marksman's]
+  short: a pair of marksman's gloves
+  long: A pair of marksman's gloves have been left here.
+  flags: [hum]
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 23
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:326:obj:32624":
+  type: weapon
+  keywords: [knife, bowie]
+  short: a bowie knife
+  long: A bowie knife has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d5
+    attack: pierce
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 14
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:326:obj:32625":
+  type: container
+  keywords: [quiver]
+  short: a quiver
+  long: A quiver has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 350
+    lock_flags: 0
+    corpse: false
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:326:obj:32626":
+  type: weapon
+  keywords: [axe, woodman's]
+  short: a woodsman's axe
+  long: A woodsman's axe has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: bludgeon
+  weight: 13
+  cost: 10
+  rent: 0
+  level: 12
+
+"tba:326:obj:32627":
+  type: armor
+  keywords: [pants, leather]
+  short: a pair of strong leather pants
+  long: A pair of strong leather pants have been left here.
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 4
+  cost: 450
+  rent: 0
+  level: 1
+
+"tba:326:obj:32628":
+  type: worn
+  keywords: [headband, band, thick, cloth]
+  short: a thick cloth headband
+  long: A thick cloth headband has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:326:obj:32629":
+  type: other
+  keywords: [whistle, shiny]
+  short: a shiny whistle
+  long: A shiny whistle has been left here by someone.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 26
+  affects:
+  - apply: height
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:326:obj:32630":
+  type: armor
+  keywords: [leggings, officers, chainmail]
+  short: a set of officer's chainmail leggings
+  long: A set of officer's chainmail leggings have been left here.
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 11
+  cost: 10
+  rent: 0
+  level: 23
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 15
+
+"tba:326:obj:32631":
+  type: armor
+  keywords: [belt, leather, thick]
+  short: a thick leather belt
+  long: A thick leather belt has been dropped here.
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 4
+  cost: 120
+  rent: 0
+  level: 15
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:326:obj:32632":
+  type: worn
+  keywords: [ring, thumb, glowing, tear, drop]
+  short: a glowing teardrop thumbring
+  long: A glowing teardrop thumbring has been left here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 400
+  rent: 0
+  level: 24
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: con
+    modifier: 2

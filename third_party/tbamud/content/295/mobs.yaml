@@ -1,0 +1,264 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 295.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:295:mob:29500":
+  keywords: [lion]
+  short: a really fierce looking lion
+  long: A nasty looking lion stands here!
+  description: >
+    All teeth and fur, it could rip you apart in a few seconds!  Just hope it is not really hungry!
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [aware, aggressive, stay_zone, memory]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29501":
+  keywords: [guard, native]
+  short: a gate guard
+  long: A gate guard stands here.
+  description: >
+    Dressed in animal furs, and smelling like he has not washed in a month, you can tell that you have
+    stumbled on a rather uncivilized person!
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29502":
+  keywords: [cannibal]
+  short: a cannibal
+  long: A cannibal stands here looking hungry!
+  description: >
+    Looks a little like the guards that were on the gate, but with one difference.  This guy has bits
+    of meat and blood all over him.  Guess where it came from!
+  level: 15
+  sex: male
+  alignment: -100
+  flags: [sentinel, aggressive, memory, helper]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: pierce
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29503":
+  keywords: [cannibal]
+  short: a happy cannibal
+  long: A happy cannibal stands here.
+  description: >
+    This cannibal is real happy because he has just got the last bit of meat from a sweet young girl
+    who stumbled into the camp!
+  level: 15
+  sex: male
+  alignment: -200
+  flags: [sentinel, aggressive, memory]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29504":
+  keywords: [meal, woman]
+  short: a woman
+  long: The next meal cowers on the floor.
+  description: >
+    She looks like she has been in here for days just waiting to be eaten!  You could put her out of
+    her misery!
+  level: 5
+  sex: female
+  alignment: 0
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29505":
+  keywords: [woman, cannibal]
+  short: a cannibal woman
+  long: A cannibal woman looks at you lustfully!
+  description: >
+    Eeew!  How gross!  You can see little insects running all over her body. She looks worse than the
+    male cannibal's do, and that is saying something!
+  level: 11
+  sex: female
+  alignment: 0
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29506":
+  keywords: [chief, cannibal]
+  short: the cannibal chief
+  long: The cannibal chief looks very annoyed at your intrusion!
+  description: >
+    This guy looks really mean!  Maybe you have walked in on the middle of a meal.  Just hope that you
+    don't end up as the next course!
+  level: 20
+  sex: male
+  alignment: -300
+  flags: [sentinel, aggressive, memory, helper]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29507":
+  keywords: [snake]
+  short: a tree snake
+  long: A greater climbing tree snake slithers here!
+  description: This snake looks mean, no doubt about it.  Watch out for the fangs!
+  level: 15
+  sex: neutral
+  alignment: -50
+  flags: [sentinel, aggressive, memory, helper]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29508":
+  keywords: [monkey, small]
+  short: a small monkey
+  long: A small monkey plays with himself!
+  description: Awwww how cute!  It's scratching it balls!  KILL IT!!!!!
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: pound
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29509":
+  keywords: [ape]
+  short: a large ape
+  long: A large ape stands here.
+  description: Hairy, smell, and not nice to look at.  Maybe you should leave it alone?
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, no_charm, no_sleep]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29510":
+  keywords: [a, female, ape]
+  short: a female ape
+  long: A female ape jumps about wildly!
+  description: She looks the same as the large apes really.  Smelly dirty, and horrible.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, wimpy]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:295:mob:29511":
+  keywords: [ape, chief]
+  short: the ape chief
+  long: The ape chief looks at you and roars!!
+  description: Like the other apes, but bigger, meaner, and a whole lot smellier!
+  level: 20
+  sex: male
+  alignment: -20
+  flags: [sentinel, aware, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

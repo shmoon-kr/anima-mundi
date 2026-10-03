@@ -1,0 +1,1016 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 211.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:211:room:21100":
+  name: Parna's Tarot Zone Description Room
+  description:
+  - >
+    This area is trying to recreate the Tarot zone I built for Smaug.  The purpose is to have a way of
+    Tarot fortune-telling online.  It has been repeated twice to allow different people to have their
+    futures told at the same time. It's a specialized sort of area that, in my experience, most people will
+    stay away from, some people will visit occasionally and a few people may visit constantly.  There is,
+    of course, no way of telling what the ratio will be on any given mud.
+  - >
+    If you have diagonal exits, please remove the corner rooms and use the diagonal exits instead.
+  - >
+    There are a lot of triggers to try to keep people from blocking the zone. Please adjust these to
+    your own mud.
+  - >
+    The food and drink in room 21102 are self replicating.  For each bokolyi or glass taken, another
+    one appears.  If you don't like this, just take them out. This is mainly for zone testers so they won't
+    starve or dehydrate while they're reading the cards but it's a convenience to low-levels with no
+    money, too.
+  - >
+    I think it should be attached to the main town.  Since Midgaard is the recall town here, room 3121
+    heading north into 22001 seems like a reasonable spot with perhaps an addition of the mention of a
+    house to the north.
+  - November 25, 2013 for tbamud.com - Parnassus
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21101
+      look: This way to Tarot!
+
+"tba:211:room:21101":
+  name: Outside a small building
+  description: >
+    A tidy-looking three-story building made of red brick waits invitingly for customers.  The yard is
+    a peaceful square space with a neat picket fence protecting the green lawn from the street while not
+    blocking the view of the house.  Bright flowerbeds snuggle against the foot of the fence.  A bright
+    brass sign is placed near the door.
+  sector: inside
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:211:room:21102
+      look: The door is rounded on the top instead of the usual rectangle.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [fence, picket]
+    text: >
+      It's a normal-looking, pointed-slat fence covered with fresh white paint. The entrance is an open,
+      oval trellis, covered with red roses.
+  - keywords: [yard]
+    text: The yard is neatly manicured, looking like a bright green carpet.
+  - keywords: [door]
+    text: The door is rounded on the top instead of the usual rectangle.
+  - keywords: [flowers, flowerbeds]
+    text: Beautiful bright flowers in all colors, but mostly reds, decorate well-kept flowerbeds.
+  - keywords: [sign, brass, bright]
+    text:
+      preformatted: |2
+           @w
+        @w       Sibyl, Esmerelda and Jaelle
+        @w
+        @w              Tarot Readings
+        @n
+
+"tba:211:room:21102":
+  name: A Room For Waiting
+  description: >
+    @R @n@n A receptionist dressed in brightly colored clothes sits at a desk, dispensing information
+    and appointments.  The room is lined with seats.  Low tables are covered with magazines and newspapers
+    for the entertainment of those waiting.  A few paintings decorate the walls.  Doors lead in all
+    directions.  @R @n Refreshments are available for the comfort of the clients.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21110
+      look: Sibyl's Office
+      door:
+        keywords: [door]
+        kind: door
+        reset: locked
+    east:
+      to: tba:211:room:21150
+      look: Jaelle's Office
+      door:
+        keywords: [door]
+        kind: door
+        reset: locked
+    south:
+      to: tba:211:room:21101
+      look: This way out.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:211:room:21130
+      look: Esmerelda's Office
+      door:
+        keywords: [door]
+        kind: door
+        reset: locked
+  extras:
+  - keywords: [paintings]
+    text: >
+      These are the sort of pictures with a young woman standing, looking pensively at a forest, field or
+      ocean.  She wears a long dress that blows in the wind. Her long hair, covered with a floppy hat,
+      blows around also.
+  - keywords: [seats]
+    text: >
+      These seats look very comfortable for a waiting room.  There are nicely padded armchairs and
+      couches, upholstered in a tasteful flowered motif.
+  - keywords: [newspapers]
+    text: >
+      There are a few copies of today's editions of various papers, including the Sanctus Times and the
+      daily Sanctus.  There's even a copy of your favorite hometown paper.
+  - keywords: [magazines]
+    text: >
+      Except for the copies of Tarot World Magazine, these mostly the same magazines that you'd find in a
+      doctor's office waiting room.  There are issues Reader's Digest, Sports Illustrated, Entertainment
+      Weekly and a few other familiar names.  Are Time and Fortune here because they're popular or are they
+      some sort of joke?
+
+"tba:211:room:21103":
+  name: A Brightly-Lit Corridor
+  description: >
+    This is a bright white hallway with large representations of the cards you've seen in the previous
+    rooms placed at neat intervals to provide color.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    down:
+      to: tba:211:room:21102
+      look: This way out.  The door you came in by seems to have disappeared.
+  extras:
+  - keywords: [representations, cards, pictures]
+    text: >
+      If you didn't look before but wanted to see the cards now:
+      http://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+
+"tba:211:room:21110":
+  name: Sibyl's office
+  description: >
+    Sibyl sits behind a large table, running a deck of cards through her hands. A large plaque is on
+    the wall behind her and bright pictures cover the other walls.  On closer look, the pictures seem to be
+    large representations of some of the cards in her hands.  She starts to lay the cards out in a
+    design of a circle and a line.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      look: The door is closed and can't be opened.
+    up:
+      to: tba:211:room:21111
+      door:
+        keywords: [door, stairs, up]
+        kind: pickproof
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Sibyl uses the Rider-Waite tarot deck in the Keltic Cross layout.  If you would like to see the
+      cards that have been dealt to you, representations can be found at:
+      http://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+
+"tba:211:room:21111":
+  name: This card covers
+  description: >
+    This card is placed straight up and represents the question and the general atmosphere that
+    surrounds it.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    up:
+      to: tba:211:room:21112
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21112":
+  name: This card crosses
+  description: >
+    This card is placed sideways on top of the first card.  It usually shows the forces opposing the
+    question or a different choice that may be available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north: {}
+    south:
+      to: tba:211:room:21113
+      door:
+        keywords: [door]
+        kind: door
+    down:
+      to: tba:211:room:21111
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21113":
+  name: This card is below
+  description: >
+    This card is placed below the crossed cards.  It shows the basis of the question, things in the
+    past which were leading to the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21112
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    west:
+      to: tba:211:room:21121
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21114":
+  name: This card is behind
+  description: >
+    This card is placed to the left of the crossed cards.  It shows an influence that was in the past
+    but is now gone or going.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21122
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21121
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21115":
+  name: This card is above
+  description: This card is placed above the crossed cards.  It shows a future influence or possibility.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    east:
+      to: tba:211:room:21123
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21122
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21116":
+  name: This card is before
+  description: >
+    This card is placed to the right of the crossed cards.  It shows a future influence or
+    possibility.  It may show a different pathway available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21123
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    south:
+      to: tba:211:room:21124
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21117":
+  name: This card shows fears
+  description: >
+    Four cards are placed in a straight line to the right of the circle.  This is the bottom card.  Any
+    question has good points and bad points.  This card shows the fears the questioner has about the
+    question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21118
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21124
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21118":
+  name: This card shows opinions
+  description: >
+    This card is placed above the previous card.  It shows the opinions of people close to the
+    questioner, regarding the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21119
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21117
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21119":
+  name: This card shows hopes
+  description: >
+    This card is placed above the previous card.  It shows what the questioner hopes from the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21120
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21118
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21120":
+  name: This card shows the outcome
+  description: >
+    This card will be modified by the cards which came before and shows a possible outcome of the
+    question.  All the cards must be interpreted and considered as suggestions, not as definite lines to the
+    future, since the future is yet to be written.  Think well before you make any decisions.  Once you go
+    down, all cards will be cleared.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north: {}
+    south:
+      to: tba:211:room:21119
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    down:
+      to: tba:211:room:21103
+      door:
+        keywords: [stair]
+        kind: door
+
+"tba:211:room:21121":
+  name: South-West Corner
+  description: Please go North to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21114
+      door:
+        keywords: [door]
+        kind: door
+    east:
+      to: tba:211:room:21113
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21122":
+  name: North-West Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:211:room:21115
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21114
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21123":
+  name: North-East Corner
+  description: Please go South to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:211:room:21116
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21115
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21124":
+  name: South-East Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21116
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    east:
+      to: tba:211:room:21117
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21125":
+  name: Sibyl's Private Room
+  description: >
+    This is where Sibyl comes to rest and relax when she just needs to get away from the stress of
+    telling fortunes to anybody who asks.  However, sometimes a stray card ends up here.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+
+"tba:211:room:21130":
+  name: Esmerelda's office
+  description: >
+    Esmerelda sits behind a large table, running a deck of cards through her hands.  A large plaque is
+    on the wall behind her and bright pictures cover the other walls.  On closer look, the pictures seem
+    to be large representations of some of the cards in her hands.  She starts to lay the cards out in a
+    design of a circle and a line.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      look: The door is closed and can't be opened.
+    up:
+      to: tba:211:room:21131
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Esmerelda uses the Rider-Waite tarot deck in the Keltic Cross layout.  If you would like to see the
+      cards that have been dealt to you, representations can be found at:
+      http://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+
+"tba:211:room:21131":
+  name: This card covers
+  description: >
+    This card is placed straight up and represents the question and the general atmosphere that
+    surrounds it.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    up:
+      to: tba:211:room:21132
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21132":
+  name: This card crosses
+  description: >
+    This card is placed sideways on top of the first card.  It usually shows the forces opposing the
+    question or a different choice that may be available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      to: tba:211:room:21133
+      door:
+        keywords: [door]
+        kind: door
+    down:
+      to: tba:211:room:21131
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21133":
+  name: This card is below
+  description: >
+    This card is placed below the crossed cards.  It shows the basis of the question, things in the
+    past which were leading to the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21132
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    west:
+      to: tba:211:room:21141
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21134":
+  name: This card is behind
+  description: >
+    This card is placed to the left of the crossed cards.  It shows an influence that was in the past
+    but is now gone or going.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21142
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21141
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21135":
+  name: This card is above
+  description: This card is placed above the crossed cards.  It shows a future influence or possibility.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    east:
+      to: tba:211:room:21143
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21142
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21136":
+  name: This card is before
+  description: >
+    This card is placed to the right of the crossed cards.  It shows a future influence or
+    possibility.  It may show a different pathway available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21143
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    south:
+      to: tba:211:room:21144
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21137":
+  name: This card shows fears
+  description: >
+    Four cards are placed in a straight line to the right of the circle.  This is the bottom card.  Any
+    question has good points and bad points.  This card shows the fears the questioner has about the
+    question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21138
+      door:
+        keywords: [door]
+        kind: door
+    east: {}
+    west:
+      to: tba:211:room:21144
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21138":
+  name: This card shows opinions
+  description: >
+    This card is placed above the previous card.  It shows the opinions of people close to the
+    questioner, regarding the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21139
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21137
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21139":
+  name: This card shows hopes
+  description: >
+    This card is placed above the previous card.  It shows what the questioner hopes from the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21140
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21138
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21140":
+  name: This card shows the outcome
+  description: >
+    This card will be modified by the cards which came before and shows a possible outcome of the
+    question.  All the cards must be interpreted and considered as suggestions, not as definite lines to the
+    future, since the future is yet to be written.  Think well before you make any decisions.  Once you go
+    down, all cards will be cleared.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      to: tba:211:room:21139
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    down:
+      to: tba:211:room:21103
+      door:
+        keywords: [stair]
+        kind: door
+
+"tba:211:room:21141":
+  name: South-West Corner
+  description: Please go North to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21134
+      door:
+        keywords: [door]
+        kind: door
+    east:
+      to: tba:211:room:21133
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21142":
+  name: North-West Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:211:room:21135
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21134
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21143":
+  name: North-East Corner
+  description: Please go South to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:211:room:21136
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21135
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21144":
+  name: South-East Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21136
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    east:
+      to: tba:211:room:21137
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21145":
+  name: Esmerelda's Private Room
+  description: >
+    This is where Esmerelda comes to rest and relax when she just needs to get away from the stress of
+    telling fortunes to anybody who asks.  However, sometimes a stray card ends up here.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+
+"tba:211:room:21150":
+  name: Jaelle's office
+  description: >
+    Jaelle sits behind a large table, running a deck of cards through her hands. A large plaque is on
+    the wall behind her and bright pictures cover the other walls.  On closer look, the pictures seem to
+    be large representations of some of the cards in her hands.  She starts to lay the cards out in a
+    design of a circle and a line.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      look: The door is closed and can't be opened.
+    up:
+      to: tba:211:room:21151
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Jaelle uses the Rider-Waite tarot deck in the Keltic Cross layout.  If you would like to see the
+      cards that have been dealt to you, representations can be found at:
+      http://en.wikipedia.org/wiki/Rider-Waite_tarot_deck
+
+"tba:211:room:21151":
+  name: This card covers
+  description: >
+    This card is placed straight up and represents the question and the general atmosphere that
+    surrounds it.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    up:
+      to: tba:211:room:21152
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21152":
+  name: This card crosses
+  description: >
+    This card is placed sideways on top of the first card.  It usually shows the forces opposing the
+    question or a different choice that may be available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      to: tba:211:room:21153
+      door:
+        keywords: [door]
+        kind: door
+    down:
+      to: tba:211:room:21151
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21153":
+  name: This card is below
+  description: >
+    This card is placed below the crossed cards.  It shows the basis of the question, things in the
+    past which were leading to the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21152
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    west:
+      to: tba:211:room:21161
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21154":
+  name: This card is behind
+  description: >
+    This card is placed to the left of the crossed cards.  It shows an influence that was in the past
+    but is now gone or going.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21162
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21161
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21155":
+  name: This card is above
+  description: This card is placed above the crossed cards.  It shows a future influence or possibility.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    east:
+      to: tba:211:room:21163
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21162
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21156":
+  name: This card is before
+  description: >
+    This card is placed to the right of the crossed cards.  It shows a future influence or
+    possibility.  It may show a different pathway available.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21163
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    south:
+      to: tba:211:room:21164
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21157":
+  name: This card shows fears
+  description: >
+    Four cards are placed in a straight line to the right of the circle.  This is the bottom card.  Any
+    question has good points and bad points.  This card shows the fears the questioner has about the
+    question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21158
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21164
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21158":
+  name: This card shows opinions
+  description: >
+    This card is placed above the previous card.  It shows the opinions of people close to the
+    questioner, regarding the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21159
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21157
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21159":
+  name: This card shows hopes
+  description: >
+    This card is placed above the previous card.  It shows what the questioner hopes from the question.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    north:
+      to: tba:211:room:21160
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21158
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21160":
+  name: This card shows the outcome
+  description: >
+    This card will be modified by the cards which came before and shows a possible outcome of the
+    question.  All the cards must be interpreted and considered as suggestions, not as definite lines to the
+    future, since the future is yet to be written.  Think well before you make any decisions.  Once you go
+    down, all cards will be cleared.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+  exits:
+    south:
+      to: tba:211:room:21159
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    down:
+      to: tba:211:room:21103
+      door:
+        keywords: [stair]
+        kind: door
+
+"tba:211:room:21161":
+  name: South-West Corner
+  description: Please go North to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21154
+      door:
+        keywords: [door]
+        kind: door
+    east:
+      to: tba:211:room:21153
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21162":
+  name: North-West Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:211:room:21155
+      door:
+        keywords: [door]
+        kind: door
+    south:
+      to: tba:211:room:21154
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21163":
+  name: North-East Corner
+  description: Please go South to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:211:room:21156
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:211:room:21155
+      door:
+        keywords: [door, backdoor]
+        kind: door
+
+"tba:211:room:21164":
+  name: South-East Corner
+  description: Please go East to continue your reading.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:211:room:21156
+      door:
+        keywords: [door, backdoor]
+        kind: door
+    east:
+      to: tba:211:room:21157
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:211:room:21165":
+  name: Jaelle's Private Room
+  description: >
+    This is where Jaelle comes to rest and relax when she just needs to get away from the stress of
+    telling fortunes to anybody who asks.  However, sometimes a stray card ends up here.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, no_magic]
+
+"tba:211:room:21199":
+  name: Purge Room
+  description:
+  - This room is for safely purging things.
+  - BEWARE!
+  - Trespassers may be PURGED!
+  sector: inside

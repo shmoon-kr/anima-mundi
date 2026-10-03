@@ -1,0 +1,435 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 60.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:60:mob:6000":
+  keywords: [john, lumberjack]
+  short: John the Lumberjack
+  long: John the Lumberjack is here, looking for some trees to chop down.
+  description: >
+    He is six feet tall and looks quite strong, muscles bulging under his heavy, checkered shirt.  His
+    features are worn with hard work and his expression is one of a peaceful man leading a simple life.
+  level: 5
+  sex: male
+  alignment: 370
+  flags: [scavenger, stay_zone, memory, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6001":
+  keywords: [rabbit, small]
+  short: the rabbit
+  long: A small rabbit is foraging in the bushes here.
+  description: It is a small, furry creature with long ears and big feet.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6002":
+  keywords: [bear, brown]
+  short: the brown bear
+  long: A big, brown, angry-looking bear is here.
+  description: >
+    The bear is a big, brown, furry animal with very large claws and very sharp teeth.  It doesn't
+    resemble those cute little dolls from toy shops at all.
+  level: 8
+  sex: neutral
+  alignment: -50
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: sleeping
+    default: standing
+
+"tba:60:mob:6003":
+  keywords: [rabbit, ferocious]
+  short: the ferocious rabbit
+  long: A ferocious rabbit is here, glaring hungrily at you.
+  description: >
+    This small, furry creature with long ears and big feet has been attacked by the dreaded rabbit
+    rabies, a horrible disease that turns helpless and innocent rabbits into ferocious and bloodthirsty
+    monsters.
+  level: 3
+  sex: neutral
+  alignment: -150
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sleeping
+    default: standing
+
+"tba:60:mob:6004":
+  keywords: [deer, fallow]
+  short: the fallow deer
+  long: A fallow deer is grazing peacefully here.
+  description: >
+    She is a graceful creature on long, slender legs, and with large, brown eyes looking back at you
+    with an air of watchful interest.
+  level: 2
+  sex: female
+  alignment: 350
+  flags: [stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6005":
+  keywords: [fox, brown]
+  short: the brown fox
+  long: A brown fox is stalking rabbits through the underbrush here.
+  description: It is a large fox with beautiful, red-brown fur and a long, thick bushy tail.
+  level: 2
+  sex: neutral
+  alignment: -50
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6006":
+  keywords: [bird, large]
+  short: the bird
+  long: A large bird with a broken wing has been cornered here.
+  description: The bird isn't going to live much longer, by the looks of it.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6007":
+  keywords: [bobcat, cat]
+  short: the bobcat
+  long: A medium sized bobcat is stalking a bird here.
+  description: >
+    The bobcat has sharp claws and teeth, and will probably eat you instead of the bird if you give it
+    the chance.
+  level: 5
+  sex: neutral
+  alignment: -150
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6008":
+  keywords: [sparrow]
+  short: the sparrow
+  long: A sparrow is flapping around by the ground.
+  description: The sparrow looks like it is enjoying life.
+  level: 1
+  sex: neutral
+  alignment: 200
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6009":
+  keywords: [robin]
+  short: the robin
+  long: A robin is hopping around looking for bugs to eat.
+  description: The robin looks quite intent on finding a bug or worm to eat.
+  level: 1
+  sex: neutral
+  alignment: 200
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6010":
+  keywords: [squirrel]
+  short: the squirrel
+  long: A squirrel is here seeking refuge in its nest.
+  description: >
+    It peers out of its nest at you anxiously, seeming to plead silently with you to leave it alone.
+  level: 1
+  sex: neutral
+  alignment: 200
+  flags: [sentinel]
+  affects: [sneak, hide]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6011":
+  keywords: [badger]
+  short: the sleepy badger
+  long: A furry brown badger is curled up under a log here.
+  description: >
+    The badger is slowly awakening and peering up at you from its burrow.  You know that it won't be
+    moving this slow for long.  Its sharp claws and teeth catch your attention when you consider killing it.
+  level: 4
+  sex: neutral
+  alignment: 50
+  flags: [sentinel]
+  affects: [hide]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6012":
+  keywords: [gray, squirrel]
+  short: the gray squirrel
+  long: A gray squirrel with a bushy tail is foraging for nuts here.
+  description: >
+    This happy creature seems to pay you no heed as it goes about its search for nuts among the leaves
+    and twigs on the ground here.
+  level: 2
+  sex: neutral
+  alignment: 150
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6013":
+  keywords: [chipmunk]
+  short: the small chipmunk
+  long: A small brown-red chipmunk dashes from tree to tree here.
+  description: >
+    The absolute zenith of hyperactivity, this small rodent seems to never tire of running up, down,
+    and around the trees in this area.  If you could ever catch it, you imagine it would make an easy meal.
+  level: 1
+  sex: neutral
+  alignment: 170
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6014":
+  keywords: [crow, black, bird]
+  short: the large black crow
+  long: A large black bird flits about here, picking at bits of carrion.
+  description: The bird eyes you warily, but continues with its meal.
+  level: 2
+  sex: neutral
+  alignment: -20
+  flags: [sentinel, scavenger, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6015":
+  keywords: [grotesque, vulture]
+  short: the grotesque vulture
+  long: A grotesque vulture covered in blood and gore is here feeding madly.
+  description: >
+    It sickens you to even look at this foul bird.  Bits of dried gore stick to its beak, and
+    unidentifiable organs hang from its talons and feathers.  It sees you and attacks, protecting its horrible
+    feast!
+  level: 6
+  sex: neutral
+  alignment: -700
+  flags: [sentinel, scavenger, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6016":
+  keywords: [buck, deer]
+  short: the young buck
+  long: A young 5-point buck is drinking from the lake here.
+  description: >
+    This young male deer is drinking from the edge of the lake and watching you warily.  His antlers
+    are not full size yet, and will no doubt be quite impressive in a few years.
+  level: 4
+  sex: male
+  alignment: 350
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6017":
+  keywords: [fish]
+  short: the fish
+  long: A fish is swimming about here.
+  description: The fish looks about the right size for a meal.
+  level: 1
+  sex: neutral
+  alignment: 100
+  flags: [sentinel]
+  affects: [waterwalk]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6018":
+  keywords: [duckling]
+  short: the duckling
+  long: A duckling is swimming around in the pond.
+  description: The duckling is adorable, it looks most of all like a tiny furball.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:60:mob:6019":
+  keywords: [duck]
+  short: the duck
+  long: A duck is here, quacking happily.
+  description: The duck is quite fat.  It looks like it is enjoying life.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing

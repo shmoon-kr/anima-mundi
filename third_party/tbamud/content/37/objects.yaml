@@ -1,0 +1,202 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 37.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:37:obj:3700":
+  type: money
+  keywords: [glitter, pile]
+  short: a pile of glitter
+  long: A pile of glittering objects has been gathered here.
+  wear: [take]
+  values:
+    coins: 10
+  weight: 2
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, glitter]
+    text: >
+      The king rat seem to like shining objects.  This pile is filed with small pieces of glass, broken
+      mirrors, nice pebbles and the occasional lost gold piece.
+
+"tba:37:obj:3701":
+  type: food
+  keywords: [trout, fillet]
+  short: a trout fillet
+  long: A trout fillet has been left here. wonder who wasn't hungry..
+  flags: [no_rent]
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+
+"tba:37:obj:3702":
+  type: food
+  keywords: [fish, fillet]
+  short: a fish fillet
+  long: The fillet of some strange fish is here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+
+"tba:37:obj:3703":
+  type: treasure
+  keywords: [pearl]
+  short: a pearl
+  long: A large shining pearl has been left here.
+  flags: [glow, no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:37:obj:3704":
+  type: container
+  keywords: [chest]
+  short: an ironbound chest
+  long: A chest is here, protecting whatever is hidden in it.
+  wear: []
+  values:
+    capacity: 400
+    lock_flags: 13
+    key: tba:37:obj:3710
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [iron, ironbound, chest]
+    text: >
+      The chest has been bound by iron, to prevent it from being forced open. Lucky for you the lock is a
+      simple one.
+
+"tba:37:obj:3705":
+  type: armor
+  keywords: [chain, chainmail, mail]
+  short: a fine looking chainmail
+  long: A very nice chainmail has been thrown on the ground here.
+  flags: [magic, anti_mage]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 8
+  cost: 850
+  rent: 150
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+  - apply: str
+    modifier: 3
+  extras:
+  - keywords: [chain, mail, chainmail]
+    text: >
+      The chains connected in this chainmail is of a fine quality, making a very nice and very sturdy
+      chainmail suit.
+
+"tba:37:obj:3706":
+  type: weapon
+  keywords: [dagger, long]
+  short: a long dagger
+  long: A long dagger, ready for action is here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 210
+  rent: 23
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:37:obj:3707":
+  type: boat
+  keywords: [boat]
+  short: a fishing boat
+  long: A small fishing boat has been moored here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 32
+  cost: 160
+  rent: 16
+  level: 0
+  extras:
+  - keywords: [boat]
+    text: >
+      The boat is made from a very light sort of wood, making it extremely easy to carry around.
+
+"tba:37:obj:3708":
+  type: trash
+  keywords: [fungus]
+  short: a piece of fungus
+  long: Fungus is hanging from the ceiling.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [fungus]
+    text: Green fungus growing on spiderwebs - YUCK!
+
+"tba:37:obj:3709":
+  type: container
+  keywords: [desk]
+  short: an old desk
+  long: An old desk is here, covered in guano.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [desk]
+    text: >
+      An old desk, heavy with age - and guano - has been left here by the constructors of the sewers.  If
+      there was anything of interest on it earlier, it has been covered in several tons of guano from the
+      bats on the ceiling above.
+
+"tba:37:obj:3710":
+  type: key
+  keywords: [key]
+  short: a dirty key
+  long: An extremely dirty key is lying here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [key]
+    text: >
+      An old and very dirty key.  It looks as you'd imagine a padlock key looks, when not in the
+      padlock.  And of course dirty from the surrounding muck.

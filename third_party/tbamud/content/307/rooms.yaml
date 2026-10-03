@@ -1,0 +1,1424 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 307.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:307:room:30700":
+  name: Wide Road Through the Foothills
+  description: >
+    A very well-used roadway leads west into the foothills.  It has been recently cleared and looks to
+    be a fairly safe direction to take.  To the east lies the path back toward the main road near
+    Midgaard and Jareth.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30763
+    south:
+      to: tba:307:room:30751
+    west:
+      to: tba:307:room:30701
+  extras:
+  - keywords: [credits, info]
+    text: >
+      Castle * Written by Kaan for Dibrova Levels: 20 - 25 84 rooms 19 mobs 23 objs Connector Zone(s):
+      The Light Forest This was a zone I had to sort of build off the cuff. It was when we started getting a
+      larger influx of new players and needed this part- icular level range of eq. I slapped it together in
+      less than a day and had it ready for play immediately. All things considered, its not a bad zone for
+      what it was created for. Links: 80n
+
+"tba:307:room:30701":
+  name: Wide Road Through the Foothills
+  description: >
+    The road continues on through the foothills to the east and the west.  On either side of the road
+    are the rolling hills of the area, their grassy slopes broken only once in a while by trees and
+    bushes.  It is truly a beautiful area of the world here in the foothills of Jareth.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30762
+    east:
+      to: tba:307:room:30700
+    south:
+      to: tba:307:room:30750
+    west:
+      to: tba:307:room:30781
+
+"tba:307:room:30702":
+  name: At the Castle Entry
+  description: >
+    The castle door lies west from you, the way in flanked by huge, proud banners of the Lord and Lady
+    of this place.  Looking off to the east, you can see why this place might be a nice visit for some of
+    the more affluent members of society - the rolling hills and the lush scenery give a very serene,
+    peaceful feeling.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30759
+    east:
+      to: tba:307:room:30782
+    south:
+      to: tba:307:room:30747
+    west:
+      to: tba:307:room:30703
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30703":
+  name: Foyer
+  description: >
+    This small, enclosed area holds the many coats and overboots of the guests here in the Castle. 
+    Doors leading into the interior of the castle lie on the north, south and west sides.  The door on the
+    east sides does, of course, lead to the outdoors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30704
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:307:room:30702
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30707
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30710
+
+"tba:307:room:30704":
+  name: Short Hallway
+  description: >
+    This is hardly even big enough to be called a hallway in itself, however hallway it is.  A door
+    lies on the south wall, another such door lies to the north only a short distance away.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30705
+    south:
+      to: tba:307:room:30703
+
+"tba:307:room:30705":
+  name: Short Hallway
+  description: >
+    This is hardly even big enough to be called a hallway in itself, however hallway it is.  A door
+    lies on the north wall, another such door lies to the south only a short distance away.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30706
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30704
+
+"tba:307:room:30706":
+  name: The Lord's State Room
+  description: >
+    As if the Lord of this manse would ever truly need a state room and truly - as if this could even
+    fall under the category of a state room in any capacity. Either way, it is the Lord's retreat from his
+    Lady and from all of the guests when he feels the need and he does feel the need often.  The fact
+    that there is a small bed in the far corner means nothing at all...  Does it?
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:307:room:30705
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30714
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30707":
+  name: Short Hallway
+  description: >
+    This is hardly even big enough to be called a hallway in itself, however hallway it is.  A door
+    lies on the north wall, another such door lies to the south only a short distance away.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30703
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30708
+
+"tba:307:room:30708":
+  name: Short Hallway
+  description: >
+    This is hardly even big enough to be called a hallway in itself, however hallway it is.  A door
+    lies on the south wall, another such door lies to the north only a short distance away.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30707
+    south:
+      to: tba:307:room:30709
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30709":
+  name: The Lord and Lady's Bedchamber
+  description: >
+    The first, and most odd, thing that strikes you upon entry into this room is that there is not one
+    but two beds set apart from each other.  They are both quite comfortable seeming, but not anywhere
+    near each other in the room. Possibly the Lord and his Lady do not enjoy each other's company as much
+    as they show in public?
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30708
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30722
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30710":
+  name: The Main Hall
+  description: >
+    The ceiling of this enormous chamber rises high into the upper reaches of the castle, its domed
+    roof at least a good hundred feet above your head.  To the north is the grand ballroom, a room used on
+    an almost nightly basis where the Lord and Lady entertain their guests.  To the south is the kitchen. 
+    A door lies in the west wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30713
+    east:
+      to: tba:307:room:30703
+    south:
+      to: tba:307:room:30719
+    west:
+      to: tba:307:room:30711
+
+"tba:307:room:30711":
+  name: The Main Hall
+  description: >
+    The ceiling of this enormous chamber rises high into the upper reaches of the castle, its domed
+    roof at least a good hundred feet above your head.  To the north is the grand ballroom, a room used on
+    an almost nightly basis where the Lord and Lady entertain their guests.  To the south is a storage
+    area where all of the dry foodstuffs are kept.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30712
+    east:
+      to: tba:307:room:30710
+    west:
+      to: tba:307:room:30726
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30712":
+  name: The Grand Ballroom
+  description: >
+    This wide open chamber is permanently festooned with all manner of decorations and party favors. 
+    An attendant is always on hand, as is a musician for any who might wish to make merry - no matter what
+    the time of day or night. The main hall lies to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30713
+    south:
+      to: tba:307:room:30711
+
+"tba:307:room:30713":
+  name: The Grand Ballroom
+  description: >
+    This wide open chamber is permanently festooned with all manner of decorations and party favors. 
+    An attendant is always on hand, as is a musician for any who might wish to make merry - no matter what
+    the time of day or night. The main hall lies to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:307:room:30710
+    west:
+      to: tba:307:room:30712
+
+"tba:307:room:30714":
+  name: Back Hall
+  description: >
+    This hall does not appear to be used very often, nor does it appear to be very well maintained by
+    the staff of the castle.  Possibly this small, narrow passage is held a secret by the Lord himself?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30706
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30715
+
+"tba:307:room:30715":
+  name: Back Hall
+  description: >
+    This hall does not appear to be used very often, nor does it appear to be very well maintained by
+    the staff of the castle.  Possibly this small, narrow passage is held a secret by the Lord himself?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30714
+    west:
+      to: tba:307:room:30716
+
+"tba:307:room:30716":
+  name: Back Hall
+  description: >
+    This hall does not appear to be used very often, nor does it appear to be very well maintained by
+    the staff of the castle.  Possibly this small, narrow passage is held a secret by the Lord himself? 
+    It ends here without notice, small doors etched into the walls on the south and north side, both
+    looking as if they havent been opened in years.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30717
+    east:
+      to: tba:307:room:30715
+
+"tba:307:room:30717":
+  name: The Back Exit
+  description: >
+    The Lord - that sneaky bugger - has a nice in and out way for the ladies in waiting to come and
+    visit him any time he pleases.  Must be that his State Room sees a bit more action than it appears - and
+    that would explain the bed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:307:room:30716
+
+"tba:307:room:30718":
+  name: Storage
+  description: >
+    All of the castle's dry goods are stored in this room, included the enormous amounts of alchohol
+    that it takes to keep the continuous party going that the Lord and Lady perpetrate year round.  Through
+    a door on the east wall is the kitchen.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30719
+
+"tba:307:room:30719":
+  name: Kitchen
+  description: >
+    The cooks of the castle labor daily, round the clock, to keep good eats on the tables in the grand
+    ballroom and here in the kitchen itself.  It is not uncommon for a stray guest to come shuffling on,
+    half sleeping and drunk to grab something from the counter or out of the stove.  The cooks don't mind
+    - that's what they are here for.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30710
+    south:
+      to: tba:307:room:30783
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30718
+
+"tba:307:room:30720":
+  name: Southern Hallway
+  description: >
+    This is the wide hallway that connects the Lord and Lady's Bedchamber to the Main Hall - it is a
+    side passage used by the two as a getaway when they feel exhausted from the day's merry making and need
+    some peace and quiet.  The hall runs east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30721
+    west:
+      to: tba:307:room:30723
+
+"tba:307:room:30721":
+  name: Southern Hallway
+  description: >
+    This is the wide hallway that connects the Lord and Lady's Bedchamber to the Main Hall - it is a
+    side passage used by the two as a getaway when they feel exhausted from the day's merry making and need
+    some peace and quiet.  The hall runs east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30722
+    west:
+      to: tba:307:room:30720
+
+"tba:307:room:30722":
+  name: Southern Hallway
+  description: >
+    This is the wide hallway that connects the Lord and Lady's Bedchamber to the Main Hall - it is a
+    side passage used by the two as a getaway when they feel exhausted from the day's merry making and need
+    some peace and quiet.  The hall runs west, the door to the Lord and Lady's bedchamber lies to the
+    east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30709
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30721
+
+"tba:307:room:30723":
+  name: A Bend in the Hallway
+  description: >
+    The hallway bends to the north and the east, the way north leading toward the entry into the main
+    hall and the way east leading toward the Lord and Lady's bedchamber.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30724
+    east:
+      to: tba:307:room:30720
+
+"tba:307:room:30724":
+  name: Western Hallway
+  description: >
+    This short hallway is used by the Lord and Lady to escape to their bedchamber when the night has
+    grown long and they need their rest.  The hallway runs north and south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30725
+    south:
+      to: tba:307:room:30723
+
+"tba:307:room:30725":
+  name: Western Hallway
+  description: >
+    This short hallway is used by the Lord and Lady to escape to their bedchamber when the night has
+    grown long and they need their rest.  The hallway runs south, a door lies in the north wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30726
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30724
+
+"tba:307:room:30726":
+  name: The Base of the Stairwell
+  description: >
+    Steps lead upward into the guestroom area where all of the bedrooms for any visitors are located. 
+    To the east is the entryway into the main hall and through a door on the south wall can be had the
+    hallway leading toward the Lord and Lady's bedchamber.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30711
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30725
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:307:room:30732
+
+"tba:307:room:30727":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:307:room:30730
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30728":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30729
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30729":
+  name: Northern End of the Hall
+  description: >
+    The hallway ends at a door, presumably to one of the guest suites which riddle this upper level. 
+    There is a door on the east wall, the hallway heads off to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30728
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30730
+
+"tba:307:room:30730":
+  name: Upper Hallway
+  description: >
+    A door lies in the north wall, leading into one of the many guest rooms on this upper level of the
+    castle.  The hallway runs south for quite some distance past a number of doors on either side, all of
+    which enter into guest rooms.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30727
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:307:room:30729
+    south:
+      to: tba:307:room:30731
+
+"tba:307:room:30731":
+  name: Upper Hallway
+  description: >
+    The hallway runs north and south past a number of doors both on the east and west sides.  This
+    upper area is set aside exclusively for the use of the guests of the Lord and Lady, the rooms all lush
+    and well appointed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30730
+    east:
+      to: tba:307:room:30742
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30732
+    west:
+      to: tba:307:room:30743
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30732":
+  name: Upper Hallway
+  description: >
+    The hallway runs north and south past a number of doors both on the east and west sides.  This
+    upper area is set aside exclusively for the use of the guests of the Lord and Lady, the rooms all lush
+    and well appointed.  A sets stairs lead downward onto the main floor of the castle.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30731
+    east:
+      to: tba:307:room:30741
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30733
+    west:
+      to: tba:307:room:30744
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:307:room:30726
+
+"tba:307:room:30733":
+  name: Upper Hallway
+  description: >
+    The hallway runs north and south past a number of doors both on the east and west sides.  This
+    upper area is set aside exclusively for the use of the guests of the Lord and Lady, the rooms all lush
+    and well appointed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30732
+    east:
+      to: tba:307:room:30740
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30734
+    west:
+      to: tba:307:room:30745
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30734":
+  name: Upper Hallway
+  description: >
+    The hallway runs north and south past a number of doors both on the east and west sides.  This
+    upper area is set aside exclusively for the use of the guests of the Lord and Lady, the rooms all lush
+    and well appointed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30733
+    east:
+      to: tba:307:room:30739
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:307:room:30735
+    west:
+      to: tba:307:room:30746
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30735":
+  name: Upper Hallway
+  description: >
+    A door lies in the south wall, leading into one of the many guest rooms on this upper level of the
+    castle.  The hallway runs north for quite some distance past a number of doors on either side, all of
+    which enter into guest rooms.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30734
+    east:
+      to: tba:307:room:30736
+    south:
+      to: tba:307:room:30738
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30736":
+  name: Southern End of the Hall
+  description: >
+    The hallway ends at a door, presumably to one of the guest suites which riddle this upper level. 
+    There is a door on the east wall, the hallway heads off to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30737
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:307:room:30735
+
+"tba:307:room:30737":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30736
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30738":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30735
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30739":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30734
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30740":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30733
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30741":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30732
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30742":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:307:room:30731
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30743":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30731
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30744":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:307:room:30732
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30745":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30733
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30746":
+  name: Guest Room
+  description: >
+    The rooms for the guests are done lavishly and in tones that are obviously meant to sooth and
+    relax.  This entire castle is more of a retreat than a private home for the Lord and Lady.  The door to
+    the hallway lies to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:307:room:30734
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:307:room:30747":
+  name: Along the Castle Wall
+  description: >
+    The wall of the caste runs along your west side, the uneven masonry of the bricks evident from this
+    close.  To the east and south lie the wide open foothills which the castle sits in the dead center
+    of, a beautiful vision of nature.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30702
+    east:
+      to: tba:307:room:30748
+    south:
+      to: tba:307:room:30752
+
+"tba:307:room:30748":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30782
+    east:
+      to: tba:307:room:30749
+    south:
+      to: tba:307:room:30754
+    west:
+      to: tba:307:room:30747
+
+"tba:307:room:30749":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30781
+    east:
+      to: tba:307:room:30750
+    south:
+      to: tba:307:room:30755
+    west:
+      to: tba:307:room:30748
+
+"tba:307:room:30750":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30701
+    east:
+      to: tba:307:room:30751
+    south:
+      to: tba:307:room:30758
+    west:
+      to: tba:307:room:30749
+
+"tba:307:room:30751":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30700
+    west:
+      to: tba:307:room:30750
+
+"tba:307:room:30752":
+  name: Along the Castle Wall
+  description: >
+    The wall of the caste runs along your west side, the uneven masonry of the bricks evident from this
+    close.  To the east and south lie the wide open foothills which the castle sits in the dead center
+    of, a beautiful vision of nature.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30747
+    east:
+      to: tba:307:room:30754
+    south:
+      to: tba:307:room:30753
+
+"tba:307:room:30753":
+  name: Along the Castle Wall
+  description: >
+    You have reached the southern end of the castle wall, where it makes a corner and heads north and
+    west.  All about you lies the splendor of the foothills which surround this castle and Jareth, a
+    beautiful piece of land, full of greenery.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30752
+    east:
+      to: tba:307:room:30756
+
+"tba:307:room:30754":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30748
+    east:
+      to: tba:307:room:30755
+    south:
+      to: tba:307:room:30756
+    west:
+      to: tba:307:room:30752
+
+"tba:307:room:30755":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30749
+    east:
+      to: tba:307:room:30758
+    south:
+      to: tba:307:room:30757
+    west:
+      to: tba:307:room:30754
+
+"tba:307:room:30756":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30754
+    east:
+      to: tba:307:room:30757
+    west:
+      to: tba:307:room:30753
+
+"tba:307:room:30757":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30755
+    west:
+      to: tba:307:room:30756
+
+"tba:307:room:30758":
+  name: The Rolling Foothills
+  description: >
+    All around lie the rolling green hills of this area.  It is hard to see very far in any direction
+    due to the fact that there are a great many hills that obscure vision, but what you can see is
+    beautiful.
+  sector: inside
+  exits:
+    north:
+      to: tba:307:room:30750
+    west:
+      to: tba:307:room:30755
+
+"tba:307:room:30759":
+  name: A Side Path
+  description: >
+    This path leads north along the castle walls to the stables where all guests keep their steeds.  To
+    the south is the entryway into the castle and in all other directions lies the splendor of the
+    rolling foothills that surround this place.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30764
+    east:
+      to: tba:307:room:30760
+    south:
+      to: tba:307:room:30702
+
+"tba:307:room:30760":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30765
+    east:
+      to: tba:307:room:30761
+    south:
+      to: tba:307:room:30782
+    west:
+      to: tba:307:room:30759
+
+"tba:307:room:30761":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30766
+    east:
+      to: tba:307:room:30762
+    south:
+      to: tba:307:room:30781
+    west:
+      to: tba:307:room:30760
+
+"tba:307:room:30762":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30767
+    east:
+      to: tba:307:room:30763
+    south:
+      to: tba:307:room:30701
+    west:
+      to: tba:307:room:30761
+
+"tba:307:room:30763":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:307:room:30700
+    west:
+      to: tba:307:room:30762
+
+"tba:307:room:30764":
+  name: A Side Path
+  description: >
+    The path runs along the castle wall toward the stables and a barn.  Out to the east lies the
+    rolling green foothills of this lush area, a wonderfully beautiful place of almost surreal perfection.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30770
+    east:
+      to: tba:307:room:30765
+    south:
+      to: tba:307:room:30759
+
+"tba:307:room:30765":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30769
+    east:
+      to: tba:307:room:30766
+    south:
+      to: tba:307:room:30760
+    west:
+      to: tba:307:room:30764
+
+"tba:307:room:30766":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30768
+    east:
+      to: tba:307:room:30767
+    south:
+      to: tba:307:room:30761
+    west:
+      to: tba:307:room:30765
+
+"tba:307:room:30767":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:307:room:30762
+    west:
+      to: tba:307:room:30766
+
+"tba:307:room:30768":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30776
+    south:
+      to: tba:307:room:30766
+    west:
+      to: tba:307:room:30769
+
+"tba:307:room:30769":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30775
+    east:
+      to: tba:307:room:30768
+    south:
+      to: tba:307:room:30765
+    west:
+      to: tba:307:room:30770
+
+"tba:307:room:30770":
+  name: A Side Path
+  description: >
+    The path runs along the castle wall toward the stables and a barn.  Out to the east lies the
+    rolling green foothills of this lush area, a wonderfully beautiful place of almost surreal perfection.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30771
+    east:
+      to: tba:307:room:30769
+    south:
+      to: tba:307:room:30764
+
+"tba:307:room:30771":
+  name: A Side Path
+  description: >
+    The path ends here, as well as the castle wall.  On the north side of the path lies a barn, mostly
+    used for the storage of hay and grain to feed the animals of the guests.  On the west side is the
+    stable where the animals are kept.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30772
+    east:
+      to: tba:307:room:30775
+    south:
+      to: tba:307:room:30770
+    west:
+      to: tba:307:room:30774
+
+"tba:307:room:30772":
+  name: Barn
+  description: >
+    It looks as if some of the more raggedy types are given housing out here in the hay barn - and on a
+    regular basis - while their more affluent masters stay within the castle.  There is an enormous
+    amount of hay and grain stacked neatly about the place, some of it made into comfortable beds.
+  sector: inside
+  flags: [indoors, bfs_mark]
+  exits:
+    south:
+      to: tba:307:room:30771
+
+"tba:307:room:30773":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:307:room:30779
+
+"tba:307:room:30774":
+  name: Stable
+  description: >
+    All of the guests steeds are kept and tended to in this small but very manageable structure.  The
+    exit to the place lies to the east.
+  sector: inside
+  flags: [indoors, bfs_mark]
+  exits:
+    east:
+      to: tba:307:room:30771
+
+"tba:307:room:30775":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30777
+    east:
+      to: tba:307:room:30776
+    south:
+      to: tba:307:room:30769
+    west:
+      to: tba:307:room:30771
+
+"tba:307:room:30776":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30778
+    south:
+      to: tba:307:room:30768
+    west:
+      to: tba:307:room:30775
+
+"tba:307:room:30777":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30779
+    east:
+      to: tba:307:room:30778
+    south:
+      to: tba:307:room:30775
+
+"tba:307:room:30778":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30780
+    south:
+      to: tba:307:room:30776
+    west:
+      to: tba:307:room:30777
+
+"tba:307:room:30779":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:307:room:30780
+    south:
+      to: tba:307:room:30777
+    west:
+      to: tba:307:room:30773
+
+"tba:307:room:30780":
+  name: Rolling Foothills
+  description: >
+    All about you lies the green, verdant land of the foothills.  It is hard to see very far in any
+    direction due to the way the land swells and drops, but in any direction it looks beautiful.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:307:room:30778
+    west:
+      to: tba:307:room:30779
+
+"tba:307:room:30781":
+  name: Wide Road Through the Foothills
+  description: >
+    The road continues on through the foothills to the east and the west.  On either side of the road
+    are the rolling hills of the area, their grassy slopes broken only once in a while by trees and
+    bushes.  Off to the west, the pennants of a castle can be seen poking above the hill lines which block your
+    sight. Obviously, someone owns these lands upon which you travel and lives just west of here.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30761
+    east:
+      to: tba:307:room:30701
+    south:
+      to: tba:307:room:30749
+    west:
+      to: tba:307:room:30782
+
+"tba:307:room:30782":
+  name: Wide Road Through the Foothills
+  description: >
+    You come round a slight curve in the roadway and get your first solid glimpse of the castle which
+    lies only a short span away.  It is a well-kept place, one which appears to be frequented by many as
+    the hedges are all neatly trimmed and the banners which fly from the tall masts on the ramparts and
+    which hang from either side of the grand entry are fresh and clean.  The roadway runs east and west.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:307:room:30760
+    east:
+      to: tba:307:room:30781
+    south:
+      to: tba:307:room:30748
+    west:
+      to: tba:307:room:30702
+
+"tba:307:room:30783":
+  name: Cold Storage
+  description: >
+    The costs involved in maintaining this room is really quite amazing.  Every single day, a man
+    drives his cart out to the frozen sea at the fringes of the land where the minotaurs rule and brings back
+    with him huge, solid chunks of ice which are kept here in this sealed room where all perishable items
+    are kept.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:307:room:30719
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed

@@ -1,0 +1,761 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 72.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:72:room:7200":
+  name: The Treasury
+  description: >
+    You are in a small but well equipped treasury.  You can see some writing on the wall.  The ceiling
+    has a funny glow, which enables you to see.  You can get back into the inner lair through the stone
+    door which is east.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:72:room:7201
+      look: You look back through the opening into the inner lair.
+      door:
+        keywords: [door, stone]
+        kind: pickproof
+        key: tba:72:obj:7205
+        reset: locked
+  extras:
+  - keywords: [door, stone]
+    text: This is a heavy black stone door it looks very solid.
+  - keywords: [writing]
+    text: You read the number '666'.
+
+"tba:72:room:7201":
+  name: The Inner Lair
+  description: >
+    You are in a octagonal room with smooth purple stone walls.  The floor is made from black stone. 
+    In the western wall you see a large black stone door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:72:room:7202
+      look: You look back through the door into the lair.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    west:
+      to: tba:72:room:7200
+      look: You see the treasury.
+      door:
+        keywords: [door, stone]
+        kind: pickproof
+        key: tba:72:obj:7205
+        reset: locked
+
+"tba:72:room:7202":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.  To the north is a wooden door.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:72:room:7201
+      look: You can see the inner lair.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:72:room:7205
+      look: You see another part of the lair.
+    south:
+      to: tba:72:room:7203
+      look: You see another part of the lair.
+  extras:
+  - keywords: [skull, skulls, bones, decay]
+    text: >
+      On all the skulls you notice that there is a three inch hole in the forehead. All the bones are
+      broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7203":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:72:room:7202
+      look: You see another part of the lair.
+    east:
+      to: tba:72:room:7206
+      look: You see another part of the lair.
+    south:
+      to: tba:72:room:7204
+      look: You see another part of the lair.
+  extras:
+  - keywords: [skull, skulls, bones, decay]
+    text: >
+      On all the skulls you notice that there is a three inch hole in the forehead. All the bones are
+      broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7204":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:72:room:7203
+      look: You see another part of the lair.
+    east:
+      to: tba:72:room:7207
+      look: You see another part of the lair.
+    south:
+      to: tba:72:room:7208
+      look: You see the lair entrance.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [skull, skulls, bones, decay]
+    text: >
+      On all the skulls you notice that there is a three inch hole in the forehead. All the bones are
+      broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7205":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:72:room:7206
+      look: You see another part of the lair.
+    west:
+      to: tba:72:room:7202
+      look: You see another part of the lair.
+  extras:
+  - keywords: [skull, skulls, bones, decay]
+    text: >
+      On all the skulls you notice that there is a three inch hole in the forehead. All the bones are
+      broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7206":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:72:room:7205
+      look: You see another part of the lair.
+    south:
+      to: tba:72:room:7207
+      look: You see another part of the lair.
+    west:
+      to: tba:72:room:7203
+      look: You see another part of the lair.
+  extras:
+  - keywords: [bones, decay]
+    text: All the bones are broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7207":
+  name: The Lair
+  description: >
+    On the floor you see a lot of human decay, like bones and skulls.  You also see a lot of slime.  On
+    the wall is a torch sitting in its sconce.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:72:room:7206
+      look: You see another part of the lair.
+    west:
+      to: tba:72:room:7204
+      look: You see another part of the lair.
+      door:
+        keywords: [door]
+        kind: door
+  extras:
+  - keywords: [skull, skulls, bones, decay]
+    text: >
+      On all the skulls you notice that there is a three inch hole in the forehead. All the bones are
+      broken and old.
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+  - keywords: [torch, sconce]
+    text: The torch is bolted to the sconce and the sconce to the wall.
+
+"tba:72:room:7208":
+  name: The Lair Entrance
+  description: >
+    You are in a dry part of the sewer.  To the north is a wooden door, you can see some slime at the
+    lower part of the door.  You also see some skulls and some broken bones.
+  sector: field
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:72:room:7204
+      look: You can see the lair.
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:72:room:7209
+      look: You see a crawlway.
+  extras:
+  - keywords: [slime]
+    text: The slime is slimy and uninteresting.
+
+"tba:72:room:7209":
+  name: The Crawlway
+  description: You are in a narrow crawlway.  It is rather boring here.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7210
+      look: You see a four-way junction.
+    west:
+      to: tba:72:room:7208
+      look: You see the entrance to a lair.
+
+"tba:72:room:7210":
+  name: The Four-Way Junction
+  description: >
+    You are in a sewer junction.  To the north is a small hole, to the west is a narrow crawlway and to
+    the east and south the sewer continues.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7211
+      look: You can see a small cave-like room.
+    east:
+      to: tba:72:room:7212
+      look: You can see a sewer drain.
+    south:
+      to: tba:72:room:7215
+      look: You can see a sewer drain.
+    west:
+      to: tba:72:room:7209
+      look: You can see a narrow crawlway.
+
+"tba:72:room:7211":
+  name: The Small Cave
+  description: You are in a collapsed sewer drain, which now is more like a small cave.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:72:room:7210
+      look: You look back into the four-way junction.
+
+"tba:72:room:7212":
+  name: The Sewer Drain
+  description: You are in a dry sewer drain which bends to the north.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7213
+      look: You can see the drain continuing north.
+    west:
+      to: tba:72:room:7210
+      look: You can see the four-way junction.
+
+"tba:72:room:7213":
+  name: The Sewer Drain
+  description: You are in a dry sewer drain which bends to the east.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7214
+      look: You can see the drain continuing east.
+    south:
+      to: tba:72:room:7212
+      look: You can see the drain continuing south.
+
+"tba:72:room:7214":
+  name: The End Of The Drain
+  description: >
+    You are at the end of the drain around you the sewer has collapsed, the only exit is west.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:72:room:7213
+      look: You see the sewer drain.
+
+"tba:72:room:7215":
+  name: The Half-Wet Drain
+  description: >
+    You are in a sewer drain where the floor is covered with water.  To the north it looks more dry,
+    south however the drain runs down into some water.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7210
+      look: To the north lies a dry four-way junction.
+    south:
+      to: tba:72:room:7216
+      look: To the south you see a sewer drain filled with water.
+  extras:
+  - keywords: [water]
+    text: The water is dirty but it looks like you would be able to swim in it.
+
+"tba:72:room:7216":
+  name: Under Water In The Sewer
+  description: >
+    You are swimming in some dirty water and are holding your breath.  You'd better continue onwards
+    before you drown.  It is a good thing that you can hold your light above the water-level.
+  sector: water_swim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7215
+      look: It is hard to see, but it looks like the drain runs slightly upwards.
+    south:
+      to: tba:72:room:7217
+      look: It is hard to see, but it looks like the drain runs a little bit upwards.
+
+"tba:72:room:7217":
+  name: The Half-Dry Drain
+  description: >
+    You are in a half-dry sewer drain.  To the north the drain runs a little bit downwards into some
+    water to the east you can see a small hole.  To the west you see another drain.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7216
+      look: You see the drain running down into some water.
+    east:
+      to: tba:72:room:7218
+      look: Through the hole you can just make out a very small room.
+    west:
+      to: tba:72:room:7219
+      look: You see a drain running to the west.
+  extras:
+  - keywords: [water]
+    text: The water is dirty but it looks like you would be able to swim in it.
+  - keywords: [hole]
+    text: Through the hole you can just make out a very small room.
+
+"tba:72:room:7218":
+  name: The Very Small Room
+  description: You are in a very small room, it is pretty uninteresting.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:72:room:7217
+      look: Through the little hole you can see a half-dry drain.
+
+"tba:72:room:7219":
+  name: A Dry Sewer Drain
+  description: You are in a dry but dirty sewer drain.  The drain continues east and south.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7217
+      look: You see a half-dry drain.
+    south:
+      to: tba:72:room:7220
+      look: You see another boring sewer drain.
+
+"tba:72:room:7220":
+  name: A Boring Drain
+  description: You are in yet another sewer drain.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7219
+      look: You see a sewer drain continuing to the north.
+    east:
+      to: tba:72:room:7221
+      look: You can see another drain to the east.
+
+"tba:72:room:7221":
+  name: The Sewer Drain
+  description: You are in a sewer drain, there is nothing special in here, except for a loud echo.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7222
+      look: You can see another sewer drain.
+    west:
+      to: tba:72:room:7220
+      look: You can make out a sewer drain to the west.
+    up:
+      to: tba:71:room:7129
+      look: You can see a sewer line.
+
+"tba:72:room:7222":
+  name: The Sewer Drain
+  description: You are in a drain, with some slimy water on the floor.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7223
+      look: You see a sewer bend.
+    west:
+      to: tba:72:room:7221
+      look: You see a sewer drain.
+  extras:
+  - keywords: [slimy, water]
+    text: The water floats to the east from here.
+
+"tba:72:room:7223":
+  name: The Sewer Bend
+  description: You find yourself in an ordinary sewer bend, which bends from west to north.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7224
+      look: You see a sewer drain.
+    west:
+      to: tba:72:room:7222
+      look: You see a sewer drain.
+
+"tba:72:room:7224":
+  name: The Sewer Junction
+  description: >
+    You stand in a junction of three sewer drains.  You see some odd scratches on the pipe wall, as if
+    from a gigantic rat.  North and south the sewer continues as usual, but west it looks a little
+    strange.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7225
+      look: You see nothing but a sewer drain.
+    south:
+      to: tba:72:room:7223
+      look: You see nothing but a sewer drain.
+    west:
+      to: tba:72:room:7229
+      look: You see a strange sewer pipe.
+
+"tba:72:room:7225":
+  name: The Sewer
+  description: >
+    You are in a sewer, where the slimy water runs down through a tiny hole. You see some odd scratches
+    on the pipe wall, as from a gigantic rat.  There is a sewer drain south.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:72:room:7224
+      look: You see a sewer drain.
+
+"tba:72:room:7229":
+  name: The Strange Sewer
+  description: >
+    You are in a very strange sewer indeed, there are some odd scratches on the pipe wall, as from a
+    gigantic rat.  And you can see a lot of organic decay like bones from animals AND humans.  West the
+    drain runs slightly upwards.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7224
+      look: You see a sewer junction.
+    west:
+      to: tba:72:room:7230
+      look: You see a slimy sewer drain.
+
+"tba:72:room:7230":
+  name: The Damp Sewer
+  description: >
+    You are in a sewer drain with a funny damp substance on the floor, in the substance you see a lot
+    of decay.  You see some odd scratches on the wall, as if from a gigantic rat.  Both to the east and
+    west the pipe seems to run down.
+  sector: forest
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:72:room:7229
+      look: You see a sewer.
+    west:
+      to: tba:72:room:7231
+      look: You see a sewer.
+
+"tba:72:room:7231":
+  name: The Strange Sewer
+  description: >
+    You are in an ordinary sewer except for a lot of scratches on the sewer wall, and a lot of debris
+    on the floor.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7230
+      look: You see a sewer.
+    west:
+      to: tba:72:room:7232
+      look: You see another sewer.
+  extras:
+  - keywords: [debris]
+    text: You see a lot of organic decay on the floor.
+
+"tba:72:room:7232":
+  name: The Sewer
+  description: >
+    You are in a sewer with more scratches on the walls.  And of course a whole lot of decay.  The
+    drain runs east and north.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7233
+      look: You see yet another sewer line.
+    east:
+      to: tba:72:room:7231
+      look: You see a sewer pipe.
+
+"tba:72:room:7233":
+  name: The Sewer Drain
+  description: >
+    You stand in a sewer drain, you are able to see some kind of cave-like room.  You see some odd
+    scratches on the drain wall, as if from a gigantic rat.  The sewer leads south.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:72:room:7234
+      look: You see a cave-like room.
+    south:
+      to: tba:72:room:7232
+      look: You see a sewer.
+
+"tba:72:room:7234":
+  name: The Rat's Lair
+  description: >
+    You are in a little cave.  You are able to see quite a lot of debris on the floor.  There is a
+    sewer drain west of here.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:72:room:7233
+      look: You see the sewer system that way.
+
+"tba:72:room:7279":
+  name: The Wall Of The Abyss
+  description: >
+    You hang onto some steps leading down into utter darkness.  There is an exit leading up as well,
+    though you'll have to open the tiny rock again to do so.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:71:room:7111
+      door:
+        keywords: [rock]
+        kind: door
+    down:
+      to: tba:72:room:7299
+
+"tba:72:room:7280":
+  name: The Entrance
+  description: >
+    You are in a very dark room.  You notice that some faces are staring at you from inside the walls. 
+    In the middle of the room there is a small altar. To the north there is a small round door.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:72:room:7281
+      look: A beam of red light seeps through a hole in the door.
+      door:
+        keywords: [door, small, round]
+        kind: door
+        reset: closed
+    up:
+      to: tba:71:room:7116
+      door:
+        keywords: [altar, secret]
+        kind: door
+  extras:
+  - keywords: [altar]
+    text: >
+      This altar is very special.  Faces appear to be smiling from it.  There is a triangle engraved in
+      the top of it.
+  - keywords: [triangle]
+    text: >
+      The triangle is filled with small symbols.  They seem to be a language you have never seen before.
+
+"tba:72:room:7281":
+  name: The Corridor
+  description: >
+    The corridor is glowing oppressively in a red hue.  You can hear wailing through an open black hole
+    to the east.  To the south there is a round door.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:72:room:7282
+      look: >
+        The hole seems more black than the night.  It is appears to be "eating" the red light around it.
+    south:
+      to: tba:72:room:7280
+      door:
+        keywords: [door, small, round]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [small, round, door]
+    text: The door is completely round without a keyhole.
+  - keywords: [red, light]
+    text: The red light glows from the walls.
+  - keywords: [walls]
+    text: The walls look alive.
+
+"tba:72:room:7282":
+  name: The Realm Of Lost Souls
+  description: >
+    You are standing in nothing.  All around you there are stars. Sometimes a shadow flies closely by
+    you, wailing very loudly.  To the north there is a small bright hole.  To the west there is a small
+    red hole.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:72:room:7283
+      look: You look into a very bright hole.
+    west:
+      to: tba:72:room:7281
+      look: You look into a red hole.
+  extras:
+  - keywords: [shadow]
+    text: The shadow looks like a man in great pain.
+
+"tba:72:room:7283":
+  name: The T-Crossing
+  description: >
+    You are in a small hallway.  There are doors to the east and to the west.  To the south there are a
+    black hole.  There is writing in the wall.  Wails can be heard from the south.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:72:room:7286
+      look: It is too dark to tell.
+    south:
+      to: tba:72:room:7282
+      look: A black hole in the wall.
+    west:
+      to: tba:72:room:7284
+      look: You can see a big fire to the west.  It looks like a unhealthy place to enter!
+  extras:
+  - keywords: [writing]
+    text: >
+      The writing says 'The one to the east, belongs to the beast.  To the west you will surely END your
+      quest!  '.
+
+"tba:72:room:7284":
+  name: The Firedeath
+  description: >
+    This room is very hot.  There are flames surrounding you.  You can see no exits at all!  Skeletons
+    are lying all over the floor.
+  sector: city
+  flags: [no_mob, indoors]
+  extras:
+  - keywords: [writing, wall]
+    text: >
+      The writing says 'A prayer to the GODS will not be heard, though the only exit is death...  Mother,
+      I love you'.
+
+"tba:72:room:7285":
+  name: The Torture Room
+  description: >
+    You are standing in a middle of a square room.  Along the walls skeletons are hanging in rusty
+    chains.  In the middle of the room there is a big metal box, covered with dust.  To the south you can
+    just make out a small exit.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:72:room:7286
+      look: It is too dark to tell.
+      door:
+        keywords: [door, iron]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [skeletons]
+    text: >
+      When you look at the skeletons, you can see that they once had been in great pain.  They are
+      hanging in their arms, and some of them were killed with a sharp instrument.
+  - keywords: [big, metal, box]
+    text: >
+      The metal box is covered with dust.  You notice that it was once filled with coal, as you see some
+      small pieces of it.
+
+"tba:72:room:7286":
+  name: The Hell Yard
+  description: >
+    You are standing in a lot of mud.  A disgusting smell surrounds the place, and makes you feel
+    sick.  Small flames sometimes shoot up from the hot mud.  To the west there is a small door.  To the north
+    you can see an iron door.
+  sector: mountains
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:72:room:7285
+      look: It is too dark to tell.
+      door:
+        keywords: [door, iron]
+        kind: door
+        reset: closed
+    west:
+      to: tba:72:room:7283
+      look: It is too dark to tell.
+
+"tba:72:room:7299":
+  name: On The Walls Of The Abyss
+  description: >
+    You are clutching the steps on the wall so that you don't fall to the ground down below.  You
+    cannot see anymore handholds below you and thus this stops your journey down, as the only exit is up.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:72:room:7279

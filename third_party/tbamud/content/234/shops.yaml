@@ -1,0 +1,61 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 234.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:234:shop:23400":
+  keeper: tba:234:mob:23400
+  rooms: [tba:234:room:23423]
+  products:
+  - tba:234:obj:23400
+  - tba:234:obj:23401
+  - tba:234:obj:23402
+  - tba:234:obj:23405
+  - tba:234:obj:23406
+  - tba:234:obj:23407
+  - tba:234:obj:23408
+  - tba:234:obj:23409
+  buys:
+  - type: container
+  - type: food
+  profit:
+    buy: 3.0
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:234:shop:23401":
+  keeper: tba:234:mob:23410
+  rooms: [tba:234:room:23471]
+  products:
+  - tba:234:obj:23422
+  - tba:234:obj:23423
+  - tba:234:obj:23424
+  - tba:234:obj:23425
+  - tba:234:obj:23426
+  - tba:234:obj:23427
+  - tba:234:obj:23428
+  - tba:234:obj:23429
+  buys:
+  - type: worn
+  profit:
+    buy: 4.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

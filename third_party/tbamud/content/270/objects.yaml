@@ -1,0 +1,225 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 270.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:270:obj:27000":
+  type: weapon
+  keywords: [stone, club]
+  short: a large stone club
+  long: A large stone club lies here.
+  flags: [anti_good, anti_mage, anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: crush
+  weight: 17
+  cost: 500
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: dex
+    modifier: -1
+
+"tba:270:obj:27001":
+  type: armor
+  keywords: [trollhelm, helm]
+  short: a trollhelm
+  long: A huge trollhelm lies here.
+  flags: [anti_good, anti_neutral, anti_mage]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 30
+  affects:
+  - apply: str
+    modifier: 1
+
+"tba:270:obj:27002":
+  type: weapon
+  keywords: [ice, club]
+  short: an ice club
+  long: A large ice club lies here.
+  flags: [anti_good, anti_mage, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: crush
+  weight: 18
+  cost: 200
+  rent: 0
+  level: 30
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:270:obj:27003":
+  type: armor
+  keywords: [robe, white]
+  short: the robe of the ice wizard
+  long: A white robe lies on the ground.
+  flags: [glow, magic, anti_good, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 1
+  cost: 120
+  rent: 0
+  level: 30
+  affects:
+  - apply: mana
+    modifier: 30
+  - apply: hitroll
+    modifier: 3
+
+"tba:270:obj:27004":
+  type: armor
+  keywords: [cloak, stormbringer]
+  short: the cloak of the stormbringer
+  long: A dull cloak lies here.
+  flags: [glow, magic, anti_good, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 6
+  weight: 1
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 30
+
+"tba:270:obj:27005":
+  type: armor
+  keywords: [sleeves, iron]
+  short: a pair of iron sleeves
+  long: A pair of iron sleeves lies on the ground.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 10
+  cost: 245
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: -4
+  - apply: damroll
+    modifier: 5
+
+"tba:270:obj:27006":
+  type: treasure
+  keywords: [cube, ice, translucent]
+  short: a translucent ice cube
+  long: Someone has left a translucent ice cube here.
+  flags: [magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: hit
+    modifier: -15
+
+"tba:270:obj:27007":
+  type: treasure
+  keywords: [cube, white, ice]
+  short: a white ice cube
+  long: Someone has left a white ice cube here.
+  flags: [magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: str
+    modifier: 1
+
+"tba:270:obj:27008":
+  type: treasure
+  keywords: [cube, white, ice]
+  short: a white ice cube
+  long: Someone has left a white ice cube here.
+  flags: [magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -20
+  - apply: age
+    modifier: 10
+
+"tba:270:obj:27009":
+  type: treasure
+  keywords: [cube, white, ice]
+  short: a white ice cube
+  long: Someone has left a white ice cube here.
+  flags: [magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: damroll
+    modifier: -1
+
+"tba:270:obj:27010":
+  type: treasure
+  keywords: [cube, pearly, blue, ice]
+  short: a pearly blue ice cube
+  long: Someone has left a pearly blue ice cube here.
+  flags: [magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 550
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 10
+  - apply: damroll
+    modifier: -1
+
+"tba:270:obj:27011":
+  type: treasure
+  keywords: [golden, crystal]
+  short: a golden crystal
+  long: A golden crystal lies here.
+  flags: [glow, magic, anti_good, anti_neutral, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 30
+  affects:
+  - apply: int
+    modifier: 3
+  - apply: wis
+    modifier: 2

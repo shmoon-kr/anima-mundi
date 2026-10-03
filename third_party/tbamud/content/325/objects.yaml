@@ -1,0 +1,1078 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 325.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:325:obj:32500":
+  type: other
+  keywords: [madame, zayla, wagon]
+  short: Madame Zayla's wagon
+  long: Madame Zayla's Wagon rests here in the middle of the woods.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32501":
+  type: other
+  keywords: [small, round, table]
+  short: a small round table
+  long: A small round wooden table sits in the center of the wagon.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32502":
+  type: treasure
+  keywords: [crystal, ball, madame, zayla's]
+  short: Madame Zayla's crystal ball
+  long: Madame Zayla's crystal ball glows upon the table.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:325:obj:32503":
+  type: fountain
+  keywords: [trickling, brook]
+  short: a trickling brook
+  long: The brook trickles by, clear and clean.
+  wear: []
+  values:
+    capacity: 2000
+    contains: 2000
+    liquid: clear_water
+    poisoned: false
+  weight: 2005
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32504":
+  type: other
+  keywords: [small, platform, stage]
+  short: a small platform stage
+  long: A small platform stage has been erected for the actors.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32505":
+  type: other
+  keywords: [line, children]
+  short: a line of children
+  long: A line of children run past you from the face painter's booth.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32506":
+  type: food
+  keywords: [hot, pie, covered]
+  short: a small hot pie
+  long: A small hot pie has been dropped on the ground.
+  wear: [take]
+  values:
+    hours: 9
+    poisoned: false
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:325:obj:32507":
+  type: other
+  keywords: [picnic, table]
+  short: a long wood picnic table
+  long: Long wooden picnic tables are scattered about.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [table]
+    text: >
+      The tables are about eight feet in length, made from some wood that has aged beyond recognition. 
+      The tables are still serviceable, though barely.
+
+"tba:325:obj:32508":
+  type: container
+  keywords: [grill, black, iron]
+  short: a black iron grill
+  long: A black iron grill steams with heat.
+  wear: []
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32509":
+  type: drinkcon
+  keywords: [water, keg, wooden, water]
+  short: a wooden keg
+  long: A wooden keg stands on stilts next to the grill.
+  wear: []
+  values:
+    capacity: 0
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32510":
+  type: other
+  keywords: [puppet, castle]
+  short: a wooden puppet castle
+  long: A wooden puppet castle painted to look like stone is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:325:obj:32511":
+  type: other
+  keywords: [set, colored, balls]
+  short: a set of colored balls
+  long: Don't slip! A set of colored balls have been left on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:325:obj:32512":
+  type: other
+  keywords: [lute, simple, wooden]
+  short: a simple wooden lute
+  long: A simple wooden lute has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 25
+  rent: 0
+  level: 11
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:325:obj:32513":
+  type: other
+  keywords: [homemade, lyre]
+  short: a homemade lyre
+  long: A nice, homemade lyre has been dicarded here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 1
+
+"tba:325:obj:32514":
+  type: potion
+  keywords: [love, tonic]
+  short: a jar of love tonic
+  long: A jar of love tonic is glowing on the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [1, 7, 18, 22]
+  weight: 1
+  cost: 165
+  rent: 0
+  level: 1
+
+"tba:325:obj:32515":
+  type: potion
+  keywords: [tonic, super, smarts, jar]
+  short: a jar of super brain-power
+  long: A jar of super brain-power tonic has been left here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [1, 3, 20, 21]
+  weight: 2
+  cost: 231
+  rent: 0
+  level: 1
+
+"tba:325:obj:32516":
+  type: potion
+  keywords: [youth, tonic]
+  short: a youth tonic
+  long: An odd looking jar of tonic has been dropped here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [1, 43, -1, -1]
+  weight: 2
+  cost: 189
+  rent: 0
+  level: 1
+
+"tba:325:obj:32517":
+  type: scroll
+  keywords: [great, tome, adventures]
+  short: the Great Tome of Adventures
+  long: A large tome rests face down on the ground.
+  wear: [take, hold]
+  values:
+    raw: [10, -1, -1, -1]
+  weight: 19
+  cost: 200
+  rent: 0
+  level: 1
+
+"tba:325:obj:32518":
+  type: worn
+  keywords: [tether, monkey, throat, small]
+  short: a small throat tether
+  long: A small throat tether has been thrown to the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 11
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:325:obj:32519":
+  type: other
+  keywords: [tiny, symbols]
+  short: a set of tiny symbols
+  long: A set of tiny symbols lie left on the ground.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: hit
+    modifier: 15
+
+"tba:325:obj:32520":
+  type: scroll
+  keywords: [fortune, your, told]
+  short: a glowing fortune
+  long: A glowing fortune lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [25, 3, -1, -1]
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 1
+
+"tba:325:obj:32521":
+  type: armor
+  keywords: [moth, eaten, robes]
+  short: a set of moth-eaten robes
+  long: A set of moth-eaten robes lies left for trash here.
+  flags: [hum]
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 6
+  cost: 27
+  rent: 0
+  level: 21
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: age
+    modifier: 2
+
+"tba:325:obj:32522":
+  type: other
+  keywords: [deck, tarot, cards]
+  short: a deck of tarot cards
+  long: A deck of tarot cards have been left here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 23
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+
+"tba:325:obj:32523":
+  type: armor
+  keywords: [gypsy, dancer's, silks]
+  short: some gypsy dancer's silks
+  long: Some gypsy dancer's silks have been removed and left here.
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 1
+  cost: 80
+  rent: 0
+  level: 13
+
+"tba:325:obj:32524":
+  type: other
+  keywords: [tambourine]
+  short: a tambourine
+  long: A tambourine lies twinklling in the light.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:325:obj:32525":
+  type: food
+  keywords: [slab, mutton, jerky]
+  short: a slab of mutton jerky
+  long: A slab of mutton jerky has been dropped here.
+  wear: [take]
+  values:
+    hours: 7
+    poisoned: false
+  weight: 1
+  cost: 6
+  rent: 0
+  level: 0
+
+"tba:325:obj:32526":
+  type: container
+  keywords: [purse, snatching]
+  short: the purse of snatching
+  long: An odd-looking black purse has been dropped here.
+  wear: [take, waist]
+  values:
+    capacity: 650
+    lock_flags: 1
+    corpse: false
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 10
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:325:obj:32527":
+  type: food
+  keywords: [alfalfa, sprouts]
+  short: some alfalfa sprouts
+  long: Some alfalfa sprouts lie tossed to the ground.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 3
+  rent: 0
+  level: 0
+
+"tba:325:obj:32528":
+  type: food
+  keywords: [fresh, fruit]
+  short: some fresh fruits
+  long: Some fresh fruits have been dropped to the ground.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 2
+  cost: 7
+  rent: 0
+  level: 0
+
+"tba:325:obj:32529":
+  type: armor
+  keywords: [travel, worn, cape]
+  short: a travel-worn cape
+  long: A travel-worn cape lies crunkled on the ground.
+  wear: [take, about]
+  values:
+    armor: 3
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 22
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: 15
+
+"tba:325:obj:32530":
+  type: armor
+  keywords: [severed, claw, jamuurin, lion]
+  short: the severed claw of a jamuurin lion
+  long: A claw attached to a leather strap has been left here.
+  wear: [take, hold]
+  values:
+    armor: 2
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 11
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:325:obj:32531":
+  type: armor
+  keywords: [pair, traveling, shoes]
+  short: a pair of traveling shoes
+  long: A pair of traveling shoes lie on the ground, dusty from the road.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 4
+  cost: 45
+  rent: 0
+  level: 13
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:325:obj:32532":
+  type: armor
+  keywords: [emblem, song, "true", necklace, chain]
+  short: the Emblem of True Song
+  long: An odd-shaped piece lies on the ground, attached to a chain.
+  wear: [take, neck]
+  values:
+    armor: 2
+  weight: 4
+  cost: 400
+  rent: 0
+  level: 15
+  affects:
+  - apply: cha
+    modifier: 2
+
+"tba:325:obj:32533":
+  type: other
+  keywords: [bamboo, reed]
+  short: a bamboo reed
+  long: A bamboo reed lies on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 40
+  rent: 0
+  level: 13
+  affects:
+  - apply: cha
+    modifier: 2
+
+"tba:325:obj:32534":
+  type: worn
+  keywords: [silk, scarf]
+  short: a silk scarf
+  long: A silk scarf lies rumpled on the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 2
+  rent: 0
+  level: 11
+  affects:
+  - apply: save_rod
+    modifier: -2
+
+"tba:325:obj:32535":
+  type: other
+  keywords: [lute, finely, carved, decorated]
+  short: a finely carved lute
+  long: A finely carved lute made from glossy wood lies here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 400
+  rent: 0
+  level: 17
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:325:obj:32536":
+  type: worn
+  keywords: [fake, cat's, tail]
+  short: a fake cat's tail
+  long: A costume cat's tail has been dropped to the ground.
+  wear: [take, waist, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 7
+  rent: 0
+  level: 10
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: cha
+    modifier: 1
+
+"tba:325:obj:32537":
+  type: worn
+  keywords: [cat, whiskers]
+  short: some cat's whiskers
+  long: Some cat's whiskers have been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 8
+  rent: 0
+  level: 13
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:325:obj:32538":
+  type: armor
+  keywords: [soft, gypsy, boots]
+  short: a pair of soft gypsy boots
+  long: A pair of soft gypsy boots lie unused on the ground.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 5
+  cost: 18
+  rent: 0
+  level: 14
+  affects:
+  - apply: move
+    modifier: 25
+
+"tba:325:obj:32539":
+  type: armor
+  keywords: [mushroom, suit]
+  short: a mushroom suit
+  long: A mushroom suit lies in a heap.
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 11
+  cost: 40
+  rent: 0
+  level: 1
+
+"tba:325:obj:32540":
+  type: trash
+  keywords: [clean, laundry, pile]
+  short: a pile of clean laundry
+  long: A pile of clean laundry lies on the riverbank.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:325:obj:32541":
+  type: weapon
+  keywords: [wooden, mallet]
+  short: a wooden mallet
+  long: A wooden mallet has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: pound
+  weight: 5
+  cost: 5
+  rent: 0
+  level: 11
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:325:obj:32542":
+  type: armor
+  keywords: [pair, baggy, pants]
+  short: a pair of baggy pants
+  long: A pair of baggy pants has been tossed to the ground.
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 6
+  cost: 14
+  rent: 0
+  level: 10
+  affects:
+  - apply: dex
+    modifier: 1
+
+"tba:325:obj:32543":
+  type: weapon
+  keywords: [shoeing, hammer]
+  short: a shoeing hammer
+  long: Someone dropped a shoeing hammer here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pound
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 1
+
+"tba:325:obj:32544":
+  type: worn
+  keywords: [mime, face, paint]
+  short: some mime face paint
+  long: Some mime face paint has been smudged onto the floor.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 7
+  rent: 0
+  level: 12
+  affects:
+  - apply: cha
+    modifier: 2
+
+"tba:325:obj:32545":
+  type: container
+  keywords: [painter's, pallet]
+  short: a painter's pallet
+  long: A painter's many-colored pallet full of colorful paint is here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    capacity: 250
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 25
+  rent: 0
+  level: 20
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: dex
+    modifier: 2
+
+"tba:325:obj:32546":
+  type: armor
+  keywords: [finely, crafted, shoes]
+  short: a pair of finely-crafted shoes
+  long: A pair of finely-crafted shoes have been neatly placed here.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 4
+  cost: 35
+  rent: 0
+  level: 26
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 3
+
+"tba:325:obj:32547":
+  type: other
+  keywords: [dainty, kerchief]
+  short: a dainty kerchief
+  long: A dainty kerchief lies on the ground.
+  flags: [anti_thief]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 11
+  affects:
+  - apply: cha
+    modifier: 1
+
+"tba:325:obj:32548":
+  type: armor
+  keywords: [shining, ring]
+  short: a shining ring
+  long: A shining ring lies on the ground.
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 12
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:325:obj:32549":
+  type: weapon
+  keywords: [hawk, dagger]
+  short: a hawk dagger
+  long: A sharp-looking hawk dagger has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 4d5
+    attack: pierce
+  weight: 5
+  cost: 150
+  rent: 0
+  level: 22
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: 1
+
+"tba:325:obj:32550":
+  type: armor
+  keywords: [elven, boots]
+  short: a pair of well-worn elven boots
+  long: A pair of well-worn elven boots lie on the ground.
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 8
+  cost: 135
+  rent: 0
+  level: 19
+  affects:
+  - apply: move
+    modifier: 25
+
+"tba:325:obj:32551":
+  type: armor
+  keywords: [simple, home, spun, dress]
+  short: a simple home-spun dress
+  long: A simple home-spun dress has been left behind by someone.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 6
+  cost: 5
+  rent: 0
+  level: 1
+
+"tba:325:obj:32552":
+  type: armor
+  keywords: [silly-looking, jokers, cap, bells]
+  short: a silly-looking joker's cap
+  long: A silly-looking joker's cap with bells at the ends lies here.
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 15
+  affects:
+  - apply: cha
+    modifier: 2
+
+"tba:325:obj:32553":
+  type: worn
+  keywords: [stilts]
+  short: a set of stilts
+  long: A set of stilts has been dropped here.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+  affects:
+  - apply: height
+    modifier: 3
+
+"tba:325:obj:32554":
+  type: worn
+  keywords: [gypsy, ring]
+  short: a gypsy ring
+  long: A gypsy ring has been left here.
+  flags: [anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 45
+  rent: 0
+  level: 28
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: con
+    modifier: 1
+  - apply: str
+    modifier: -1
+
+"tba:325:obj:32555":
+  type: armor
+  keywords: [gypsy, thumb, ring]
+  short: a gypsy thumb ring
+  long: A gypsy thumb ring lies in the dirt.
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 2
+  cost: 170
+  rent: 0
+  level: 29
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: cha
+    modifier: 2
+
+"tba:325:obj:32556":
+  type: weapon
+  keywords: [curved, broadsword, sword]
+  short: a curved broadsword
+  long: A curved broadsword has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d2
+    attack: slash
+  weight: 11
+  cost: 75
+  rent: 0
+  level: 7
+
+"tba:325:obj:32557":
+  type: armor
+  keywords: [silver, tunic]
+  short: a silver tunic
+  long: A silver tunic lies on the ground.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:325:obj:32558":
+  type: armor
+  keywords: [red, tunic]
+  short: a red tunic
+  long: A red tunic has been left here.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:325:obj:32559":
+  type: trash
+  keywords: [lamp, renkaza]
+  short: the Lamp of Renkaza
+  long: A tiny brass oil lamp has been left here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 203
+  rent: 0
+  level: 1
+
+"tba:325:obj:32560":
+  type: trash
+  keywords: [horn, manticonn]
+  short: the Horn of Manticonn
+  long: An ood-looking horn has been dropped here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 14
+  cost: 164
+  rent: 0
+  level: 1
+
+"tba:325:obj:32561":
+  type: trash
+  keywords: [arvida, banner]
+  short: Arvida's Banner
+  long: A lenght of old cloth has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 189
+  rent: 0
+  level: 1
+
+"tba:325:obj:32562":
+  type: armor
+  keywords: [length, silk]
+  short: a length of silk
+  long: A length of silk has been dropped here.
+  wear: [take, hold]
+  values:
+    armor: 1
+  weight: 3
+  cost: 101
+  rent: 0
+  level: 1
+
+"tba:325:obj:32563":
+  type: armor
+  keywords: [silk, wrap]
+  short: a silk wrap
+  long: A beautiful silk wrap has been left here.
+  wear: [take, hold]
+  values:
+    armor: 1
+  weight: 2
+  cost: 87
+  rent: 0
+  level: 1
+
+"tba:325:obj:32564":
+  type: armor
+  keywords: [silk, belt]
+  short: a silk belt
+  long: A silk belt lies on the ground.
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 3
+  cost: 69
+  rent: 0
+  level: 1
+
+"tba:325:obj:32565":
+  type: worn
+  keywords: [hand, crafted, ring]
+  short: a hand crafted ring
+  long: A hand crafted ring has been left here.
+  wear: [take, finger, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 156
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -3
+
+"tba:325:obj:32566":
+  type: worn
+  keywords: [rope, woven, necklace]
+  short: a hand-woven rope necklace
+  long: A small rope necklace lies on the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 67
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:325:obj:32567":
+  type: armor
+  keywords: [pewter, thumb, ring]
+  short: a pewter thumb ring
+  long: A pewter thumb ring lies left behind.
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 2
+  cost: 132
+  rent: 0
+  level: 1
+
+"tba:325:obj:32568":
+  type: trash
+  keywords: [finger, puppet, small, man]
+  short: a small finger puppet of a man
+  long: A small finger puppet of a man has been left here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:325:obj:32569":
+  type: trash
+  keywords: [finger, puppet, small, woman]
+  short: a small woman finger-puppet
+  long: A small woman finger-puppet has been dropped on the ground here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:325:obj:32570":
+  type: drinkcon
+  keywords: [ale, mug, ale]
+  short: a mug
+  long: An ale mug has been left here.
+  wear: [take]
+  values:
+    capacity: 6
+    contains: 6
+    liquid: dark_ale
+    poisoned: false
+  weight: 11
+  cost: 7
+  rent: 0
+  level: 0

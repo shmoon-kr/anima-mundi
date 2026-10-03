@@ -1,0 +1,1160 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 235.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:235:room:23500":
+  name: Mine Entrance
+  description: >
+    You step into the entrance of the mine.  Everything around you is dusty and smells of mildew.  Some
+    large boulders line the entrance, making you crawl over them.  The inside of the mine looks dark and
+    dangerous.
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23501
+  extras:
+  - keywords: [info, credits]
+    text:
+      preformatted: |2
+           Builder   :
+        Zone         : 235 Dwarven Mines
+        Began        : 1998
+        Player Level : 10-14
+        Rooms        : 90
+        Mobs         : 12
+        Objects      : 12
+        Shops        : 0
+        Triggers     : 2
+        Theme        :
+        Plot         :
+        Links        : 00, 99
+        Map          : 01
+
+"tba:235:room:23501":
+  name: Dwarven Mines
+  description: >
+    As you enter the mine, you notice several dwarves hard at work.  They look at you with narrow eyes
+    as you walk past them.  The dust in here is extremely thick, making it difficult for you to breathe.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23500
+    west:
+      to: tba:235:room:23502
+
+"tba:235:room:23502":
+  name: Dwarven Mines
+  description: >
+    The dust seems to go get thicker here as it threatens to choke the life out of you.  You stumble
+    over a large boulder, almost falling flat on your face!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23501
+    south:
+      to: tba:235:room:23503
+    west:
+      to: tba:235:room:23504
+
+"tba:235:room:23503":
+  name: Cove
+  description: >
+    You find yourself standing in a small cove.  It's quite dusty here, but the air is much more
+    breatheable.  Someone could easily hide in here and perhaps never be found.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23502
+
+"tba:235:room:23504":
+  name: Dwarven Mines
+  description: >
+    The air seems a lot lighter as you walk deeper into the cold mines.  You reach out and feel the
+    walls at your sides.  They are cold and damp, but where could the water be coming from?
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23502
+    west:
+      to: tba:235:room:23505
+
+"tba:235:room:23505":
+  name: Dwarven Mines
+  description: >
+    The air seems a lot lighter as you walk deeper into the cold mines.  You reach out and feel the
+    walls at your sides.  They are cold and damp, but where could the water be coming from?
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23504
+    west:
+      to: tba:235:room:23506
+
+"tba:235:room:23506":
+  name: Dwarven Mines
+  description: >
+    The temperature seems to drop quite a few degrees as you get deeper into the mine.  You can hear
+    some water dripping onto the ground before you.  It's most likely leaking from the roof.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23507
+    east:
+      to: tba:235:room:23505
+
+"tba:235:room:23507":
+  name: Dwarven Mines
+  description: >
+    You feel your feet sink into a small puddle, but it doesn't feel like water. It's much to thick. 
+    As you look more closely, you see that you have stepped into a puddle of blood!  How gross!
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23506
+    west:
+      to: tba:235:room:23508
+
+"tba:235:room:23508":
+  name: Dwarven Mines
+  description: >
+    As you step out of the gooey puddle, you continue making your way through the mines.  As you look
+    to your left you can see small streaks of gold running through the rocks.  If someone tried chipping
+    out the gold, they would most likely cause an avalanche.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23507
+    west:
+      to: tba:235:room:23509
+
+"tba:235:room:23509":
+  name: Dwarven Mines
+  description: >
+    The mine seems to expand here, allowing more travelers to pass through. There are several small
+    pebbles lying about the ground.  Be careful not to trip over one!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23508
+    south:
+      to: tba:235:room:23510
+
+"tba:235:room:23510":
+  name: Dwarven Mines
+  description: >
+    You feel your feet suddenly get drenched as you step into a small stream. What a funny place to
+    have a stream!  How could it have gotten here?  Maybe the mine workers built it so they can drink from
+    it.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23509
+    south:
+      to: tba:235:room:23511
+
+"tba:235:room:23511":
+  name: Stream
+  description: >
+    The stream gets a little deeper here, causing the water to rise to your ankles.  You feel a chill
+    rush through your entire body, then continue on your way.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23510
+    west:
+      to: tba:235:room:23512
+
+"tba:235:room:23512":
+  name: Stream
+  description: >
+    The stream comes to an end here, leaving you on dry ground.  As you look at the end of the stream,
+    you notice that it disappears into the wall.  How could that be?  It couldn't have just vanished into
+    the stones!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23511
+    south:
+      to: tba:235:room:23513
+
+"tba:235:room:23513":
+  name: Dwarven Mines
+  description: >
+    The mine seems to bend here, heading off towards the south.  Huge chunks of rock are lying on the
+    ground.  Probably left there from some of the workers. How messy these little people are!
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23512
+    south:
+      to: tba:235:room:23514
+
+"tba:235:room:23514":
+  name: Dwarven Mines
+  description: >
+    You begin feeling alone as you get deeper into the mines.  Everything around you is terribly
+    quiet.  Maybe too quiet.  You suddenly get the feeling like you're being watched.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23513
+    east:
+      to: tba:235:room:23515
+
+"tba:235:room:23515":
+  name: Dwarven Mines
+  description: >
+    The light seems to get more scarce here, perhaps a torch would help you see better.  You can hear a
+    soft clicking noise in the distance.  What could it be?
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23516
+    west:
+      to: tba:235:room:23514
+
+"tba:235:room:23516":
+  name: Dwarven Mines
+  description: >
+    The smell and haze of coal engulfs your senses, almost making you choke and stinging your eyes. 
+    The air is very thick and dirty, almost black.  But how could the air be black?
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23518
+    south:
+      to: tba:235:room:23517
+    west:
+      to: tba:235:room:23515
+
+"tba:235:room:23517":
+  name: Dwarven Mines
+  description: >
+    Chicken!  You took the easy way out.  You'd better hope your friends don't find out or else you may
+    never live it down.  Flee and run away, yet live another day.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23516
+    south:
+      to: tba:235:room:23533
+
+"tba:235:room:23518":
+  name: Dark Tunnel
+  description: >
+    You have stepped into what appears to be a tunnel.  There is no light here. The only way a person
+    would be able to see to get through this jungle would be with a torch or some other light source.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:235:room:23519
+    west:
+      to: tba:235:room:23516
+
+"tba:235:room:23519":
+  name: Dark Tunnel
+  description: >
+    Several large boulders cover the ground.  As you look closely, you can see a smashed skeleton.  The
+    dwarf must have gotten killed during an avalanche. Don't let the same thing happen to you.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:235:room:23520
+    west:
+      to: tba:235:room:23518
+
+"tba:235:room:23520":
+  name: Dark Tunnel
+  description: >
+    As you continue making your way through the dirty little tunnel, you notice several smears of blood
+    on the walls.  Most likely from past adventurers that were not lucky enough to survive.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:235:room:23521
+    west:
+      to: tba:235:room:23519
+
+"tba:235:room:23521":
+  name: Dark Tunnel
+  description: >
+    You can see the end of the tunnel just up ahead to the east.  You suddenly feel relieved.  You made
+    it through alive!  That's something to be very proud of.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:235:room:23522
+    west:
+      to: tba:235:room:23520
+
+"tba:235:room:23522":
+  name: Dark Tunnel
+  description: >
+    You're standing at the end of the tunnel.  The mine takes a turn here heading towards the south. 
+    The conditions ahead look much more promising. Perhaps you will have an easier journey now.  But then
+    again, maybe not.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:235:room:23523
+    west:
+      to: tba:235:room:23521
+
+"tba:235:room:23523":
+  name: Dwarven Mines
+  description: >
+    The mine is actually quite clean here.  The smell could be better, but it's not the worst you have
+    smelled, so why complain?  To the north you can see a dark tunnel.  Perhaps you should stay away from
+    it.  It's only for the bravest of souls.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23522
+    east:
+      to: tba:235:room:23524
+    south:
+      to: tba:235:room:23525
+
+"tba:235:room:23524":
+  name: Dead End
+  description: >
+    Oops!  You have ran into a dead end!  If you had been looking before you moved ahead you never
+    would have ended up here!  If you don't start paying closer attention to where you're going, you won't be
+    likely to survive.
+  sector: inside
+  exits:
+    west:
+      to: tba:235:room:23523
+
+"tba:235:room:23525":
+  name: Dwarven Mines
+  description: >
+    The rocks from the ceiling begin to crumble and fall all around you.  You feel some dust and small
+    pebbles hit your head and a few larger rocks crash down around you.  You'd better get out of here!
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23523
+    west:
+      to: tba:235:room:23526
+
+"tba:235:room:23526":
+  name: Dwarven Mines
+  description: >
+    Run!  Huge boulders are falling all around you.  If you stick around, you're sure to be killed. 
+    The dust and debris is starting to grow thick.  Waiting around could be fatal.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23525
+    south:
+      to: tba:235:room:23527
+
+"tba:235:room:23527":
+  name: Dwarven Mines
+  description: >
+    Whew!  That was a close call.  One more minute in that rock slide and you would be dead meat.  The
+    path ahead of you seems pretty clear.  Theres a few sticks lying on the ground.  What would sticks be
+    doing in a mine?
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23526
+    west:
+      to: tba:235:room:23528
+
+"tba:235:room:23528":
+  name: Dwarven Mines
+  description: >
+    As you continue walking, you feel the temperature begin to slowly rise. Little beads of sweat form
+    on your forehead, making you wish you had a cool cloth.  The air around you is getting harder to
+    breathe, most likely do to the increase in the temperature.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23527
+    south:
+      to: tba:235:room:23529
+    west:
+      to: tba:235:room:23530
+
+"tba:235:room:23529":
+  name: Dwarven Mines
+  description: >
+    You begin panting heavily as you continue making your way through the mines. How could anyone
+    survive in these temperatures?  The rock walls that surround you are bone dry.  You notice that a few of
+    them are giving off steam.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23528
+    south:
+      to: tba:235:room:23534
+
+"tba:235:room:23530":
+  name: Dwarven Mines
+  description: >
+    You start to get the feeling that you have been walking through these dirty mines forever. 
+    Everything is begining to look the same.  All the rocks have the same formation and seem to be moving
+    towards you.  Is this really happening or is it a mirage?
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23528
+    west:
+      to: tba:235:room:23531
+
+"tba:235:room:23531":
+  name: Dwarven Mines
+  description: >
+    There is a torch here, hanging from the wall.  It gives off just enough light to let you see where
+    the walls are.  The mine continues to the east and west.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23530
+    west:
+      to: tba:235:room:23532
+
+"tba:235:room:23532":
+  name: Dwarven Mines
+  description: >
+    The mine curves here, heading off towards the north.  The ground at your feet is very rough.  A
+    person could easily fall and get hurt if they weren't watching where they were going.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23533
+    east:
+      to: tba:235:room:23531
+
+"tba:235:room:23533":
+  name: Dwarven Mines
+  description: >
+    Darkness is ahead of you.  As you look at the walls surrounding you, you notice your shadow dancing
+    on the rocks.  You look much larger and tougher this way.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23517
+    south:
+      to: tba:235:room:23532
+
+"tba:235:room:23534":
+  name: Narrow Path
+  description: >
+    You have come to a narrow path burried deep within the mines.  The path is only big enough for one
+    person to go through at a time.  If you dare enter, you'd better be prepared.
+  sector: inside
+  flags: [tunnel]
+  exits:
+    north:
+      to: tba:235:room:23529
+    east:
+      to: tba:235:room:23535
+
+"tba:235:room:23535":
+  name: Narrow Path
+  description: >
+    A sense of dread creeps over you as you step deeper onto the path.  Some loose pebbles wiggle
+    around under your feet, threatening to trip you.  Be careful not to fall!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23536
+    west:
+      to: tba:235:room:23534
+
+"tba:235:room:23536":
+  name: Narrow Path
+  description: >
+    The rocks at your sides have moved closer together, making it almost impossible for you to get
+    through.  There is a small opening you could force yourself through if you're feeling lucky.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23537
+    south:
+      to: tba:235:room:23538
+    west:
+      to: tba:235:room:23535
+
+"tba:235:room:23537":
+  name: Dusty Room
+  description: >
+    Your body pushes through the narrow opening and falls on the floor in a large dusty room.  There is
+    no way out of here, except to turn around and go back through the narrow hole.
+  sector: inside
+  exits:
+    west:
+      to: tba:235:room:23536
+
+"tba:235:room:23538":
+  name: Narrow Path
+  description: >
+    The path curves here, bending around some large boulders.  Some of the boulders have been split in
+    half, others have large chip marks from where other adventurers have tried to break them up.  Maybe
+    that isn't such a good idea.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23536
+    south:
+      to: tba:235:room:23539
+
+"tba:235:room:23539":
+  name: Narrow Path
+  description: >
+    The path comes to an abrupt end here.  To the west you can see a large pile of boulders which you
+    will have to either climb over, or turn around and go back.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23538
+    west:
+      to: tba:235:room:23540
+
+"tba:235:room:23540":
+  name: Boulder Heap
+  description: >
+    You begin making your way up the enormous pile.  Will there even be a way out past this pile? 
+    Guess you'll have to take that chance and find out the hard way.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23539
+    west:
+      to: tba:235:room:23541
+
+"tba:235:room:23541":
+  name: Boulder Heap
+  description: >
+    The large rocks shift under your weight.  Be careful!  The last thing this mine needs is another
+    corpse.  The entire cave seems to be close to collapse.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23540
+    west:
+      to: tba:235:room:23542
+
+"tba:235:room:23542":
+  name: Boulder Heap
+  description: >
+    The boulders seem to be getting smaller, but less sturdy.  Don't look down or you might lose your
+    balance and fall.  The fall does not look survivable.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23543
+    east:
+      to: tba:235:room:23541
+    west:
+      to: tba:235:room:23561
+
+"tba:235:room:23543":
+  name: Boulder Heap
+  description: >
+    You find yourself standing at the top of the heap, looking down into the mines.  You feel like
+    you're playing king of the mountain.  Just like you did when you were a child.  There is a narrow
+    passageway to the west.  Maybe you can squeeze through it.
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23542
+    west:
+      to: tba:235:room:23544
+
+"tba:235:room:23544":
+  name: Narrow Passageway
+  description: >
+    You have come to a small passageway.  It doesn't look like you could fit through here, but you
+    could try.  Maybe with enough squeezing you could slide through.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23545
+    east:
+      to: tba:235:room:23543
+
+"tba:235:room:23545":
+  name: Narrow Passageway
+  description: >
+    You begin forcing yourself through the hole.  Rocks are scratching at your sides, and dust is
+    falling into your hair and eyes.  Is this really worth all this trouble?
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23544
+    west:
+      to: tba:235:room:23546
+
+"tba:235:room:23546":
+  name: Dwarven Mines
+  description: >
+    Your body falls out from the passageway and lands on the floor with a loud *THUD*.  Your sides ache
+    from the scratches you encountered.  You made it through though, maybe thats a good thing.  But then
+    again, it could mean trouble.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23545
+    west:
+      to: tba:235:room:23547
+
+"tba:235:room:23547":
+  name: Dwarven Mines
+  description: >
+    As you continue making your way through the mines, you begin hearing the sound of rushing water
+    coming from the west.  The air seems moist and fresh with a cool breeze.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23546
+    south:
+      to: tba:235:room:23558
+    west:
+      to: tba:235:room:23548
+
+"tba:235:room:23548":
+  name: Top of the Waterfall
+  description: >
+    Your feet get drenched as you step into what looks like the begining of a waterfall.  But it's not
+    just any waterfall.  This one looks like a huge slide. Someone could ride on it, but where does it
+    lead?  It seems to be heading towards the north.  You'd bett
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23547
+    down:
+      to: tba:235:room:23549
+
+"tba:235:room:23549":
+  name: Waterfall Slide
+  description: >
+    The current of the water starts pulling you down the large slide.  You notice some small lights
+    attatched to the ceiling, allowing you to see water gushing past you at a tremendous speed.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23550
+    up:
+      to: tba:235:room:23548
+
+"tba:235:room:23550":
+  name: Waterfall Slide
+  description: >
+    A light spray of mist hits your face as you continue traveling down the waterfall.  The temperature
+    seems to be dropping, causing the water to become colder.  Maybe this ride wasn't such a good idea
+    after all.
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23549
+    down:
+      to: tba:235:room:23551
+
+"tba:235:room:23551":
+  name: Waterfall Slide
+  description: >
+    There is a sharp bend here.  You feel your drenched body suddenly get jerked towards the west.  You
+    feel your rear end starting to get sore from the rocky bottom of the waterfall.
+  sector: inside
+  exits:
+    west:
+      to: tba:235:room:23552
+    up:
+      to: tba:235:room:23550
+
+"tba:235:room:23552":
+  name: Drop Off
+  description: >
+    AHHHHH!!!  You feel your helpless body falling through the air, passing large rocks that have been
+    against the walls for some time.  You look down and see the end is near.  There is a large pile of
+    rocks just below!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23551
+    down:
+      to: tba:235:room:23553
+
+"tba:235:room:23553":
+  name: Pile of Illusions
+  description: >
+    The rocks below you seem to fade away and show the waterfall once again. You feel your heart
+    pounding heavily in your chest.  That was too close for comfort!
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23554
+    up:
+      to: tba:235:room:23552
+
+"tba:235:room:23554":
+  name: Watefall Slide
+  description: >
+    The end of the waterfall is near.  You can see an exit to the south. You're clothes begin drying
+    off, leaving you feeling cold and just about dead. Maybe next time you should take the whimps way out.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23553
+    south:
+      to: tba:235:room:23555
+
+"tba:235:room:23555":
+  name: Exit from the Waterfall
+  description: >
+    As you get to the end of the waterfall, you look back at the death trap and thank your lucky stars
+    that you're still alive.  The mines seem to continue to the south from here.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23554
+    south:
+      to: tba:235:room:23556
+
+"tba:235:room:23556":
+  name: Dwarven Mines
+  description: >
+    You begin walking away from the waterfall, looking at your surroundings ahead of you.  The mines
+    continue to the east.  Just up ahead you can see a small intersection.  Which path will you choose?
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23555
+    east:
+      to: tba:235:room:23557
+
+"tba:235:room:23557":
+  name: Dwarven Mines
+  description: >
+    Everything around you seems to quiet down, making you feel like you're all alone in these dusty
+    mines.  The walls are in bad need of repair.  If they don't get fixed soon they might collapse and kill
+    someone, maybe you!
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23558
+    west:
+      to: tba:235:room:23556
+
+"tba:235:room:23558":
+  name: Intersection
+  description: >
+    You're standing in the middle of a small intersection.  The ground at your feet is slick and very
+    worn.  To the northwest you can see a waterfall, what a beautiful sight!  What is south from here is
+    uncertain.  Guess you will have to explore and find out.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23547
+    west:
+      to: tba:235:room:23557
+    down:
+      to: tba:235:room:23559
+
+"tba:235:room:23559":
+  name: Dwarven Mines
+  description: >
+    You skip down a few stairs and walk deeper into the mines.  The dust here is awful!  It's so thick
+    you can barely breathe.  A thin layer of dust is covering the walls and floor.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23560
+    up:
+      to: tba:235:room:23558
+
+"tba:235:room:23560":
+  name: Hole in the Floor
+  description: >
+    There is a large hole in the floor here.  You could easily climb down into it.  You notice a ladder
+    suspended from the floor.  Apparently you aren't the only one who's thought of making that trip. 
+    The mines continue to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23561
+    west:
+      to: tba:235:room:23559
+    down:
+      to: tba:235:room:23563
+
+"tba:235:room:23561":
+  name: Dwarven Mines
+  description: >
+    You sneak down the side of the boulder heap.  Make sure no one sees you. You see an enormous hole
+    in the ground to the west.  Maybe you could hide in there.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23542
+    west:
+      to: tba:235:room:23560
+
+"tba:235:room:23562":
+  name: Cove
+  description: >
+    You find yourself standing in a small abandoned cove.  There isn't much here to look at, just a few
+    stray cobwebs dangling from the dirty walls.  You notice a few scattered pebbles lying about the
+    floor.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23564
+
+"tba:235:room:23563":
+  name: Hole in the Floor
+  description: >
+    You begin climbing down through the floor.  Darkness surrounds you, making you feel alone.  The
+    ladder you're holding onto is made from rope and some old rotted boards.  It could easily break, so be
+    careful!
+  sector: inside
+  exits:
+    up:
+      to: tba:235:room:23560
+    down:
+      to: tba:235:room:23564
+
+"tba:235:room:23564":
+  name: Hole in the Floor
+  description: >
+    The ladder comes to a sudden end.  You are forced to jump the rest of the way down.  As you land on
+    the ground, you feel a shooting pain rush up your legs.  The dust that was looming in the air seems
+    to have vanished.  Don't complain.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23565
+    south:
+      to: tba:235:room:23584
+    west:
+      to: tba:235:room:23571
+    up:
+      to: tba:235:room:23563
+
+"tba:235:room:23565":
+  name: Tunnel
+  description: >
+    You're walking through a narrow tunnel.  In the distance to the east you can hear the shouts of
+    several dwarves training for battle.  You must be close to the battlefield.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23566
+    west:
+      to: tba:235:room:23564
+
+"tba:235:room:23566":
+  name: Tunnel
+  description: >
+    You find yourself standing in a small intersection.  To the east you can see the dwarven
+    battlefield.  Blood stains the tunnel ahead.  To your south you can see more of the mines.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23569
+    south:
+      to: tba:235:room:23567
+    west:
+      to: tba:235:room:23565
+
+"tba:235:room:23567":
+  name: Dwarven Mines
+  description: >
+    As you continue walking through the mines, you can hear the shouts of dwarven soilders preparing
+    for battle.  To the north is a small intersection. The mines continue to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23566
+
+"tba:235:room:23568":
+  name: Dwarven Battlefield
+  description: >
+    As you step out onto the battlefield, you look around at everything around you.  This must be just
+    a practice battlefield.  You notice that the floor is made from concrete and it's heavily stained
+    with blood.  There are several torches hanging from the wall, illuminating the room with a soft glow. 
+    The soilders barracks are to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23569
+    south:
+      to: tba:235:room:23585
+
+"tba:235:room:23569":
+  name: Battlefield Gates
+  description: >
+    A set of large brass gates stands before you.  The gates reach up to the ceiling, and are perhaps
+    the best part of the mines.  By far the most beautiful.  By the looks of it, the gate has never been
+    closed.  You can hear men shouting and grunting inside.  There is an aide room to the east.  The
+    battlefield is to the south.  Enter with care.
+  sector: inside
+  flags: [no_magic]
+  exits:
+    east:
+      to: tba:235:room:23570
+    south:
+      to: tba:235:room:23568
+    west:
+      to: tba:235:room:23566
+
+"tba:235:room:23570":
+  name: Aide Room
+  description: >
+    This is where the dwarven soilders come for aide when they are hurt in battle.  There is a long
+    shelf up against the southern wall piles high with bandages and splints.  There is a faint odor of blood
+    in here.  It almost makes you gag.
+  sector: inside
+  exits:
+    west:
+      to: tba:235:room:23569
+
+"tba:235:room:23571":
+  name: Tunnel
+  description: >
+    You're standing in a narrow tunnel thats running east and west.  To the west you spot a house made
+    out of the stones from the mines.  The workers must live in there.  The house looks like a cave and
+    has no windows.  How could anyone live in a place like that
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23564
+    west:
+      to: tba:235:room:23572
+
+"tba:235:room:23572":
+  name: Stone House
+  description: >
+    You're standing in the entrance to the house.  The door that was once here has rotted away and was
+    never replaced.  You don't feel very safe here.  There are numerous torches nestled into the stone
+    walls.  Some of them have burned out and need to be relit.  T
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23571
+    west:
+      to: tba:235:room:23573
+
+"tba:235:room:23573":
+  name: Stairwell
+  description: >
+    A small stone stairwell stands before you, covered in dust.  You notice some fresh footprints on
+    the steps.  Doesn't anyone clean in here?  The stairs look fairly sturdy, but are extrememly uneven. 
+    Someone could easily fall and break their neck.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23572
+
+"tba:235:room:23583":
+  name: Enormous Hole
+  description: >
+    There is an emormous hole before you.  It's not very deep, but you would most likely get hurt if
+    you attempted to walk through it.  The mines continue to the north, west, and south.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23584
+    south:
+      to: tba:235:room:23597
+
+"tba:235:room:23584":
+  name: Dwarven Mines
+  description: >
+    You begin to feel very lost.  The only sounds you hear are those of your own footsteps.  To the
+    south is a large hole.  The mines continue to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23564
+    south:
+      to: tba:235:room:23583
+
+"tba:235:room:23585":
+  name: Barracks
+  description: >
+    You're standing in the soilders barracks.  Several bunks line the walls. There is a thin layer of
+    dust on the floor.  All the bunks are made, but you wonder when this room was last swept.  The
+    training room is to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23568
+    south:
+      to: tba:235:room:23586
+
+"tba:235:room:23586":
+  name: Soilders Training Room
+  description: >
+    This room is quite large.  It would have to be to hold all of the soilders. There are numerous
+    torches dangling from the stone walls, lighting the room. There is a small passageway to the south. 
+    Where could it lead?
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23585
+    east:
+      to: tba:235:room:23587
+    south:
+      to: tba:235:room:23596
+
+"tba:235:room:23587":
+  name: Battlefield Entrance
+  description: >
+    You're standing in the doorway leading out onto the dwarven battlefield. You see numerous soldiers
+    fighting and training.  There are small pools of blood on the ground.  You suddenly feel sick to your
+    stomach.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23588
+    west:
+      to: tba:235:room:23586
+
+"tba:235:room:23588":
+  name: Battlefield
+  description: >
+    As you step out into the battlefield, you notice everyone turn and look at you.  Perhaps coming
+    here was a bad idea.  Now you might not make it back out alive.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23589
+    south:
+      to: tba:235:room:23587
+
+"tba:235:room:23589":
+  name: Battlefield
+  description: >
+    You're standing in the middle of the battlefield, looking around at everything around you.  The
+    ground at your feet is solid, but it's not concrete anymore.  It looks like dirt heavily stained with
+    blood.  How gross!
+  sector: inside
+  exits:
+    south:
+      to: tba:235:room:23590
+    west:
+      to: tba:235:room:23588
+
+"tba:235:room:23590":
+  name: Battlefield
+  description: >
+    You have come to the end of the battlefield.  You feel a bit relieved knowing that you made it out
+    alive.  There is a small path to the south.  It looks like it's leading towards the end of the mines.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23589
+    south:
+      to: tba:235:room:23591
+
+"tba:235:room:23591":
+  name: Marble Path
+  description: >
+    As your feet step down on to the marble path, everything around you gets quiet.  The only sound you
+    hear is the sound of your footsteps crunching along on the path.  The path continues to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23590
+    south:
+      to: tba:235:room:23592
+
+"tba:235:room:23592":
+  name: Marble Path
+  description: >
+    You begin to feel like you're walking on a chess board.  The marble at your feet is white and
+    swirled with shades of gray.  Some are so dark they look black.  The swirls almost hypnotize you.  The
+    path continues to the north and west.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23591
+    west:
+      to: tba:235:room:23594
+
+"tba:235:room:23594":
+  name: Marble Path
+  description: >
+    As you continue walking along the path, you begin remembering past adventures you've had.  You
+    realize how lucky you are to be alive.  You can see the exit to the mines to the west.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23592
+    west:
+      to: tba:235:room:23595
+
+"tba:235:room:23595":
+  name: Marble Path
+  description: >
+    There is a small intersection here.  To the north there is a small passageway.  Where could it
+    lead?  To the west is the exit out of the mines. Which path will you choose?
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23596
+    east:
+      to: tba:235:room:23594
+    west:
+      to: tba:235:room:23598
+
+"tba:235:room:23596":
+  name: Passageway
+  description: >
+    As you step into the small passageway, you notice there are paths leading in all sorts of
+    directions.  To the southwest you can see the ending of the mines. To the southeast is the dwarven
+    battlefield.  The shouts of the soilders fill your ears.  To the south is a tunnel leading out of the mines.
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23586
+    south:
+      to: tba:235:room:23595
+    west:
+      to: tba:235:room:23597
+
+"tba:235:room:23597":
+  name: Dwarven Mines
+  description: >
+    You come to an abrupt hault.  There is an enormous hole in the floor to the north.  You will have
+    to jump over it.  You see a small passageway to the east. Where could it lead?
+  sector: inside
+  exits:
+    north:
+      to: tba:235:room:23583
+    east:
+      to: tba:235:room:23596
+
+"tba:235:room:23598":
+  name: Stairwell
+  description: >
+    You have come to the end of the marble path and find yourself standing at the bottom of a wooden
+    stairwell.  Half of the wood looks rotted and should have fallen apart years ago.  Be careful!  The
+    exit is just up ahead to the west.
+  sector: inside
+  exits:
+    east:
+      to: tba:235:room:23595
+    up:
+      to: tba:235:room:23599
+
+"tba:235:room:23599":
+  name: Exit out of the Mines
+  description: >
+    You're standing at the back of the mines in a narrow doorway.  The air here is rather musty
+    smelling.  The smell just about makes you gag.  You notice some burned out torches hanging from the wall. 
+    They are covered in dust.  They must not have been used in a while.
+  sector: inside
+  exits:
+    down:
+      to: tba:235:room:23598

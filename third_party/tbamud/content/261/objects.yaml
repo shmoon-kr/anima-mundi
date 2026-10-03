@@ -1,0 +1,409 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 261.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:261:obj:26100":
+  type: other
+  keywords: [painting, portrait, picture]
+  short: a painting
+  long: A painting in bright, eye-catching colors hangs here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [painting, picture, portrait]
+    text: >
+      One particulary gruesome piece done in a backdrop of flames catches your eye. Must be the face
+      floating in the center of it, mouth open wide in a scream of pain, huge yellow teeth dripping blood.
+
+"tba:261:obj:26101":
+  type: fountain
+  keywords: [water, pool, water]
+  short: the glistening pool of water
+  long: A glistening pool of water shines here in the mountain sun.
+  wear: []
+  values:
+    capacity: 1500
+    contains: 1500
+    liquid: clear_water
+    poisoned: false
+  weight: 1505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pool, water]
+    text: Almost looks inviting enough to make you want to jump in!
+
+"tba:261:obj:26102":
+  type: armor
+  keywords: [black, dress]
+  short: a black maid's dress
+  long: A black maid's dress lies crumpled on the floor here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+
+"tba:261:obj:26103":
+  type: treasure
+  keywords: [jade, jewel]
+  short: a piece of jade
+  long: A small jewel gleams here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:261:obj:26104":
+  type: armor
+  keywords: [smock, white]
+  short: a white maid's smock
+  long: A maid's white smock is tossed carelessly in a corner.
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 10
+  cost: 123
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sculpture]
+    text: >
+      It is of a beautiful woman, straining beneath a heavy weight.  She looks tired, with chiseled tears
+      staining her cheeks.  It makes you sad.
+
+"tba:261:obj:26105":
+  type: drinkcon
+  keywords: [blood, shower, blood]
+  short: a bloody shower
+  long: A shower stall runs, spraying blood from its nozzle into its basin.
+  wear: []
+  values:
+    capacity: 10
+    contains: 10
+    liquid: blood
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:261:obj:26106":
+  type: armor
+  keywords: [amulet]
+  short: an amulet
+  long: An amulet was hidden here.
+  flags: [invisible]
+  wear: [take, neck]
+  values:
+    armor: 6
+  weight: 3
+  cost: 854
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: dex
+    modifier: -2
+
+"tba:261:obj:26107":
+  type: drinkcon
+  keywords: [beer, bottle, light, beer]
+  short: a bottle
+  long: A bottle sits here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26108":
+  type: drinkcon
+  keywords: [beer, bottle, dark, beer]
+  short: a dark bottle
+  long: A dark bottle of beer sits here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: ale
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26109":
+  type: drinkcon
+  keywords: [wine, fine, bottle, wine]
+  short: a bottle
+  long: There is a bottle of fine wine here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: wine
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26110":
+  type: drinkcon
+  keywords: [ale, mug, ale]
+  short: a mug
+  long: A mug of foamy ale is here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: dark_ale
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26111":
+  type: drinkcon
+  keywords: [whisky, shot, whiskey, whisky]
+  short: a shot
+  long: There is a small shot glass here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26112":
+  type: drinkcon
+  keywords: [firebreather, hot, stuff, bottle, flaming, firebreather]
+  short: a Flaming Bottle
+  long: A bottle of Hot Stuff has been left here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: firebreather
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26113":
+  type: drinkcon
+  keywords: [local, speciality, marty's, malt, local]
+  short: a mug (Marty's Own Malt)
+  long: A mug of Marty's Own Malt has been left here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: local_speciality
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26114":
+  type: drinkcon
+  keywords: [coffee, cup, coffee]
+  short: a coffee cup
+  long: There is a cup of coffee here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: coffee
+    poisoned: false
+  weight: 8
+  cost: 9
+  rent: 0
+  level: 0
+
+"tba:261:obj:26115":
+  type: drinkcon
+  keywords: [tea, cup, tea]
+  short: a cup
+  long: There is a cup of tea here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: tea
+    poisoned: false
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26116":
+  type: armor
+  keywords: [shirt, white]
+  short: a white shirt
+  long: A white servant's shirt has been left here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26117":
+  type: armor
+  keywords: [slacks, black]
+  short: some black slacks
+  long: A pait of black servant's slacks lay on the ground here.
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26118":
+  type: armor
+  keywords: [overcoat, black]
+  short: a black overcoat
+  long: There is a black overcoat here.
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coat, overcoat]
+    text: This looks almost to be a formal dinner jacket.
+
+"tba:261:obj:26119":
+  type: weapon
+  keywords: [knife, whittlin']
+  short: a whittlin' knife
+  long: A whittlin' knife is on the ground here.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: stab
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26120":
+  type: worn
+  keywords: [wood, whittled]
+  short: some whittled wood
+  long: A piece of whittled wood lays on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 5
+  - apply: wis
+    modifier: 2
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [food]
+    text: It is just random and assorted food.  Don't ask questions.  It is only a game.
+
+"tba:261:obj:26121":
+  type: weapon
+  keywords: [needles, knitting]
+  short: some knitting needles
+  long: Some knitting needles lie here, forgotten.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: thrash
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26122":
+  type: worn
+  keywords: [secret, medallion, Inna]
+  short: Inna's secret
+  long: Inna's secret lies on the floor here.
+  flags: [hum, magic]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: int
+    modifier: 2
+  - apply: str
+    modifier: -1
+  extras:
+  - keywords: [secret, medallion]
+    text: It is a small medallion carved in a strange shape that really has no definition.
+
+"tba:261:obj:26123":
+  type: worn
+  keywords: [glasses, diamond, chip]
+  short: a pair of diamond chip glasses
+  long: A pair of diamond chip glasses lay on the ground.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:261:obj:26124":
+  type: other
+  keywords: [painting, portrait, picture, purgepic]
+  short: a painting
+  long: A painting of flames hangs on the wall.  Something seems to be missing.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [painting, picture, portrait]
+    text: There seems to be a large empty space in the center of the painting.

@@ -1,0 +1,42 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 239.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:239:shop:23900":
+  keeper: tba:239:mob:23918
+  rooms: [tba:239:room:23900]
+  products:
+  - tba:239:obj:23902
+  - tba:239:obj:23900
+  - tba:239:obj:23901
+  - tba:239:obj:23903
+  - tba:239:obj:23904
+  - tba:239:obj:23910
+  - tba:239:obj:23911
+  - tba:239:obj:23912
+  - tba:239:obj:23913
+  buys:
+  - type: weapon
+  - type: armor
+  - type: container
+  - type: food
+  - type: drinkcon
+  - type: worn
+  - type: wand
+  - type: staff
+  profit:
+    buy: 1.5
+    sell: 0.6
+  messages:
+    no_such_item: "%s I can't find any of that, perhaps you would want something else?"
+    you_dont_have_it: "%s You don't have one of them, wanna buy one?"
+    does_not_buy: "%s I'm sorry but I don't buy that, no shelf space."
+    shop_cannot_afford: "%s I'm sorry but I can't afford that, business has been really bad."
+    you_cannot_afford: "%s You are too poor, would you like some of my money?"
+    bought: "%s That'll be %d coins, would you like me to wrap that up for you?"
+    sold: "%s I'll give you %d coins for that and one of my best smiles."
+  temper: 0
+  flags: 4
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 23

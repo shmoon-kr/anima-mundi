@@ -1,0 +1,116 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 101.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:101:mob:10112
+  room: tba:101:room:10121
+  limit: 1
+- mob: tba:101:mob:10111
+  room: tba:101:room:10119
+  limit: 1
+- mob: tba:101:mob:10110
+  room: tba:101:room:10117
+  limit: 1
+- mob: tba:101:mob:10109
+  room: tba:101:room:10115
+  limit: 1
+- mob: tba:101:mob:10108
+  room: tba:101:room:10113
+  limit: 1
+  equip:
+    wrist_right:
+      object: tba:101:obj:10116
+      limit: 99
+- mob: tba:101:mob:10107
+  room: tba:101:room:10111
+  limit: 1
+  equip:
+    waist:
+      object: tba:101:obj:10115
+      limit: 99
+    hold:
+      object: tba:101:obj:10114
+      limit: 99
+    arms:
+      object: tba:101:obj:10113
+      limit: 99
+- mob: tba:101:mob:10106
+  room: tba:101:room:10109
+  limit: 2
+  equip:
+    hands:
+      object: tba:101:obj:10112
+      limit: 99
+    feet:
+      object: tba:101:obj:10111
+      limit: 99
+    legs:
+      object: tba:101:obj:10110
+      limit: 99
+    head:
+      object: tba:101:obj:10109
+      limit: 99
+- object: tba:101:obj:10101
+  room: tba:101:room:10107
+  limit: 1
+  contents:
+  - object: tba:101:obj:10103
+    limit: 99
+- mob: tba:101:mob:10105
+  room: tba:101:room:10105
+  limit: 2
+  equip:
+    wield:
+      object: tba:101:obj:10108
+      limit: 99
+  carry:
+  - object: tba:101:obj:10102
+    limit: 99
+- mob: tba:101:mob:10105
+  room: tba:101:room:10127
+  limit: 2
+  equip:
+    wield:
+      object: tba:101:obj:10108
+      limit: 99
+  carry:
+  - object: tba:101:obj:10102
+    limit: 99
+- mob: tba:101:mob:10104
+  room: tba:101:room:10129
+  limit: 1
+  carry:
+  - object: tba:101:obj:10107
+    limit: 99
+- mob: tba:101:mob:10103
+  room: tba:101:room:10133
+  limit: 1
+- mob: tba:101:mob:10102
+  room: tba:101:room:10135
+  limit: 2
+- mob: tba:101:mob:10102
+  room: tba:101:room:10103
+  limit: 2
+- mob: tba:101:mob:10101
+  room: tba:101:room:10137
+  limit: 1
+  carry:
+  - object: tba:101:obj:10106
+    limit: 99
+- mob: tba:101:mob:10100
+  room: tba:101:room:10101
+  limit: 1
+  equip:
+    about:
+      object: tba:101:obj:10105
+      limit: 99
+    hold:
+      object: tba:101:obj:10104
+      limit: 99
+- object: tba:101:obj:10100
+  room: tba:101:room:10108
+  limit: 1
+removes:
+- room: tba:101:room:10108
+  object: tba:101:obj:10100

@@ -1,0 +1,1517 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 19.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:19:obj:1900":
+  type: weapon
+  keywords: [spider's, fang]
+  short: a spider's fang
+  long: A spider's fang glistens here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: stab
+  weight: 3
+  cost: 300
+  rent: 3
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [spider's, fang]
+    text: >
+      This long, wickedly curving pincer is that of a giant spider.  Jet-black and smooth to the touch,
+      it feels slightly wet and glistens as though freshly hewn. The tip is intensely sharp and tiny spikes
+      of hair barb their way down the length, making this fang extraordinarily painful to remove once
+      embedded.
+
+"tba:19:obj:1901":
+  type: food
+  keywords: [straggling, weed]
+  short: a straggling weed
+  long: A straggling weed grows miserably here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [straggling, weed]
+    text: >
+      This dark green weed has a strong smell of salt about it, similar to seaweed. Although it is limp
+      and unappealing to the eye, it appears it is not impossible to eat.
+
+"tba:19:obj:1902":
+  type: fountain
+  keywords: [murky, pool, water]
+  short: a murky pool of water
+  long: A murky pool of water stagnates slowly.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: water
+    poisoned: false
+  weight: 104
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [murky, pool, water]
+    text: >
+      This muddy pool of water looks safe to drink despite the unappealing particles of algae and rotting
+      matter that discolor it.
+
+"tba:19:obj:1903":
+  type: weapon
+  keywords: [rusted, dagger]
+  short: a rusted dagger
+  long: A rusted dagger protrudes from the ground.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: stab
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rusted, dagger]
+    text: >
+      This ancient dagger is still somewhat sharp despite the blood-like patches of rust that stain the
+      metal.  Light and easily concealed, only the tiny black symbol of a spider distinguishes this blade as
+      at all unusual.
+
+"tba:19:obj:1904":
+  type: food
+  keywords: [cricket, legs]
+  short: a pair of cricket legs
+  long: A pair of cricket legs lie here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cricket, legs]
+    text: >
+      These small green legs are incredibly unappetising to look at, though they are probably very high
+      in protein and a great source of energy!  Not to mention, the little critters have outstanding ability
+      to survive local predatory toxins.
+
+"tba:19:obj:1905":
+  type: light
+  keywords: [primitive, fire, torch]
+  short: a primitive fire torch
+  long: A primitive fire torch has been set here.
+  wear: [take, hold]
+  values:
+    hours: 15
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [primitive, fire, torch]
+    text: >
+      The handle of this torch is made of a very tough dark wood, coated with a thin layer of some sticky
+      wax.  In the cup-like holder is stuffed dried mosses and bracken, soaked with a strong smelling
+      resin.
+
+"tba:19:obj:1906":
+  type: key
+  keywords: [sharply, chiselled, key]
+  short: a sharply chiselled key
+  long: A sharply chiselled key has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sharply, chiselled, key]
+    text: >
+      This little key has been carved from some sort of stiff reed.  The end and notches have not been
+      smoothed, left almost deliberately spiked.  A frayed bit of twine has been tied loosely around it,
+      enabling it to be worn as a necklace.
+
+"tba:19:obj:1907":
+  type: worn
+  keywords: [stained, bone, necklace, bones]
+  short: "@ya stained bone necklace@n"
+  long: "@yA necklace of stained bones@g is lying here."
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [stained, bone, necklace, bones]
+    text: >
+      This appears to be a simple bit of muddy twine, carefully knotted around several large sharp
+      bones.  What type and from what sort of creature the bones originate is hard to tell, but the rust-colored
+      stains are unmistakeable.
+
+"tba:19:obj:1908":
+  type: other
+  keywords: [dark, leathery, egg]
+  short: a dark leathery egg
+  long: A dark leathery egg lies here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dark, leathery, egg]
+    text: >
+      This large round egg is so tough and leathery that it is probably not edible. The hide covering it
+      however is incredibly strong and could potentially be used for making armor.
+
+"tba:19:obj:1909":
+  type: armor
+  keywords: [Fallorain's, Plate, fallorains, fallorain's, plate, ancient, beautiful, breastplate]
+  short: Fallorain's Plate
+  long: An ancient but beautiful breastplate lies forgotten here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 2
+  cost: 500
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [Fallorain's, Plate, fallorains, fallorain's, plate, ancient, beautiful, breastplate]
+    text: >
+      Perfectly worked tan leather binds the metal pieces of this plate together. Heavy but thin it is
+      made to cover all of the main vital areas such as the chest, abdomen and groin.  The metal, although
+      old is uncannily beautiful and glitters as though infused with some magic.
+
+"tba:19:obj:1910":
+  type: container
+  keywords: [skeleton, rotting, old]
+  short: an old rotting skeleton
+  long: An old rotting skeleton floats forlornly in the water.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [skeleton, rotting, old]
+    text: >
+      This rotting corpse is so old that nothing is left but bones.  Many of the marks and notches
+      chipped into the bone indicate that this was a warrior who died in battle.  Stripped of almost everything,
+      it seems that only rags and the weeds still cling to this forgotten carcass.
+
+"tba:19:obj:1911":
+  type: treasure
+  keywords: [tiny, silver, tag, chain]
+  short: a silver tag
+  long: A tiny tag on a silver chain sparkles here.
+  flags: [bless]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 800
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [tiny, silver, tag, chain]
+    text: >
+      A somewhat crudely forged silver chain supports this little metal tag.  On one side the words
+      @DCALIMSHAN'S 12TH CAVALRY BRIGADE@n are engraved, and on the other the tiny sentence @D'Come back to
+      me'@n has been scrawled.
+
+"tba:19:obj:1912":
+  type: weapon
+  keywords: [great, trident, forked, weapon, large]
+  short: a great trident
+  long: A large forked weapon lies abandoned.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: stab
+  weight: 2
+  cost: 200
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [great, trident, forked, weapon, large]
+    text: >
+      This large trident is tipped at the ends with three terrifyingly sharp spikes.  Several dark smears
+      down the length of each unyielding point testify to the deadliness of the weapon.
+
+"tba:19:obj:1913":
+  type: weapon
+  keywords: [warrior's, longsword, shiny, blade, sword]
+  short: a warrior's longsword
+  long: A long shiny blade lies here.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: slash
+  weight: 2
+  cost: 200
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [warrior's, longsword, shiny, blade, sword]
+    text: >
+      This long glistening piece of metal looks ancient though well kept.  A few notches have been
+      scratched into the blade where it seems rust stains used to be, but it is incredibly sharp and
+      well-balanced.
+
+"tba:19:obj:1914":
+  type: weapon
+  keywords: [spiked, mace]
+  short: a spiked mace
+  long: A spiked mace has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: pound
+  weight: 2
+  cost: 300
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [spiked, mace]
+    text: >
+      This heavy pole of metal has a large sphere welded at one end, making it perfect for crushing enemy
+      skulls.  If that weren't deadly enough, it is also covered in several intimidating metal spikes
+      almost six inches long.
+
+"tba:19:obj:1915":
+  type: armor
+  keywords: [old, wooden, shield]
+  short: an old wooden shield
+  long: An old wooden shield lies forgotten here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 2
+  cost: 100
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [old, wooden, shield]
+    text: >
+      This shield looks very primitive, roughly hewn from some half rotting tree and fastened crudely
+      onto leather straps, making it easy to wear if not the most attractive.
+
+"tba:19:obj:1916":
+  type: armor
+  keywords: [metal, wall, shield]
+  short: a metal wall shield
+  long: A metal wall shield glistens brightly here.
+  wear: [take, shield]
+  values:
+    armor: 9
+  weight: 4
+  cost: 600
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [metal, wall, shield]
+    text: >
+      This large shield is big enough to provide defense for the entire torso and legs of a warrior. 
+      Glistening brightly, it has a strange green tint as though at one time it were covered with algae.
+
+"tba:19:obj:1917":
+  type: food
+  keywords: [smoked, meat]
+  short: some smoked meat
+  long: Some smoked meat is here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [some, smoked, meat]
+    text: >
+      This is a large slab of red meat, roughly hewn from the carcass of some creature.  Partially cooked
+      and dried, smoke stains discolor it slightly.
+
+"tba:19:obj:1918":
+  type: other
+  keywords: [massive, statue, frog, god]
+  short: the massive statue of a frog god
+  long: The massive statue of a frog god has been erected here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [massive, statue, frog, god]
+    text: >
+      This enormous statue is an amphibious creature, much like a frog but with unusually distorted
+      features.  A crown of bones sits upon its head, and in each extended webbed hand it holds some humanoid
+      skull.
+
+"tba:19:obj:1919":
+  type: money
+  keywords: [several, scattered, coins]
+  short: several scattered coins
+  long: Several scattered coins glint temptingly on the ground.
+  wear: [take]
+  values:
+    coins: 147
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [several, scattered, coins]
+    text: >
+      These coins all appear to be of current value, though most are encrusted with algae and varying
+      forms of swamp slime.
+
+"tba:19:obj:1920":
+  type: other
+  keywords: [large, webbed, cocoon]
+  short: a large webbed cocoon
+  long: A large webbed cocoon lies here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [large, webbed, cocoon]
+    text: >
+      This large cocoon is slightly sticky to the touch.  Wound tightly with spider's thread it seems far
+      too durable to be cut open, though the glistening strands likely would not withstand the heat of
+      fire.  It seems the only way to release the contents would be to burn it.
+
+"tba:19:obj:1921":
+  type: worn
+  keywords: [crimson-stained, crimson, stained, robe]
+  short: a crimson-stained robe
+  long: A robe lies crumpled here, flecked with red.
+  flags: [anti_good, anti_neutral]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 2
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [crimson-stained, crimson, stained, robe]
+    text: >
+      This intricately woven robe is made of extraordinarily fine white silk. Long flowing sleeves are
+      hemmed with a single gold thread, and a large hood trails down the back.  In perfect condition, the
+      only thing that marrs the beauty of this garment is the various spatterings of blood that darken it,
+      spreading through the fabric and tinting it crimson red.
+
+"tba:19:obj:1922":
+  type: food
+  keywords: [small, piece, meat]
+  short: a small piece of meat
+  long: A small piece of meat has been left to spoil.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [small, piece, meat]
+    text: >
+      This small piece of whitish meat is most likely the flesh of a large bird judging by the wispy bits
+      of feather that cling to it.  Although not the most appetising in appearance or smell, it looks
+      nourishing nonetheless.
+
+"tba:19:obj:1923":
+  type: armor
+  keywords: [smooth, piece, velvety, leather, cloak, blanket, hide]
+  short: "@ma smooth velvety piece of hide@n"
+  long: "@mA piece of smooth velvety leather lies forgotten here.@n"
+  flags: [anti_good]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 1
+  cost: 400
+  rent: 2
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [smooth, piece, velvety, leather, cloak, blanket, hide]
+    text: >
+      This large piece of exceptionally beautiful leather is velvety to the touch and a pleasing dark
+      maroon color that shimmers strangely in any light.  While the fabric is easily workable into some form
+      of clothing, it functions just as efficiently as a blanket or wraparound cloak.  The slight unnatural
+      chill to its surface indicates an inherent ability to ward off magic.
+
+"tba:19:obj:1924":
+  type: worn
+  keywords: [glistening, woven, long, silk, cord]
+  short: "@Wa glistening silk cord@n"
+  long: "@WA long cord of woven silk lies glistening here.@n"
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 2
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [glistening, woven, long, silk, cord]
+    text: >
+      This delicate cord has been woven from the water spider's fine silk, particularly useful for
+      retaining air bubbles, this potential belt aids agility and movement within water, making it functional as
+      well as beautiful.
+
+"tba:19:obj:1925":
+  type: worn
+  keywords: [dark, shimmering, retina]
+  short: "@Da dark shimmering retina@n"
+  long: "@DThe dark retina of an orb spider lies here.@n"
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dark, shimmering, retina]
+    text: >
+      This wetly glistening piece of organic tissue is the large retina from one of the notoriously
+      perceptive orb spiders.  The magical and inherent properties of this flesh are rumored to enhance vision
+      when applied carefully to the eye.
+
+"tba:19:obj:1926":
+  type: food
+  keywords: [chunk, rich, cheese]
+  short: a chunk of rich cheese
+  long: A chunk of rich cheese gives off a powerful aroma.
+  wear: [take]
+  values:
+    hours: 14
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chunk, rich, cheese]
+    text: >
+      This appears to be a very expensive, and judging by the smell, very aged chunk of cheese. 
+      Obviously the food kept by someone with luxurious tastes.
+
+"tba:19:obj:1927":
+  type: food
+  keywords: [juicy, cluster, red, grapes]
+  short: a cluster of juicy red grapes
+  long: A cluster of juicy red grapes has been placed here.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [juicy, cluster, red, grapes]
+    text: >
+      These lush red grapes are perfectly plump and juicy, practically glistening with sweet fresh
+      nectar.  Clustered on a newly hewn green vine, these are nothing less than the finest specimen of fruit.
+
+"tba:19:obj:1928":
+  type: container
+  keywords: [candleholder, dark, holder]
+  short: a dark candleholder
+  long: A dark candleholder stands elegantly here.
+  wear: []
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [candleholder, dark, holder]
+    text: >
+      This long slick candleholder has been forged by some unnatural means out of dark crystalline
+      metal.  Designed to hold only one candle, it seems an overly elaborate design for serving such a menial
+      purpose.
+
+"tba:19:obj:1929":
+  type: other
+  keywords: [long, black, candle, xcandlex]
+  short: a long black candle
+  long: A single black candle stands here.
+  flags: [no_rent, no_donate, no_invis, magic, anti_good, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [long, black, candle, xcandlex]
+    text: >
+      Although it looks ordinary, there is a strange aura around this candle, and an unnatural chill that
+      is the unmistakeable influence of evil magic.
+
+"tba:19:obj:1932":
+  type: worn
+  keywords: [ragged, loincloth, filthy, pile, fabric, cloth]
+  short: a ragged loincloth
+  long: A filthy pile of ragged fabric lies here.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ragged, loincloth, filthy, pile, fabric, cloth]
+    text: >
+      This dingy, stained piece of cloth is almost falling apart it looks so old and used.  Two long
+      pieces of cord hold the more substantially intact piece together, but it is barely big enough to cover
+      even the smallest of essentials.
+
+"tba:19:obj:1933":
+  type: other
+  keywords: [large, webbed, cocoon]
+  short: a large webbed cocoon
+  long: A large webbed cocoon lies here
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [large, webbed, cocoon]
+    text: >
+      This large coccoon is slightly sticky to the touch.  Wound tightly with spider's thread it seems
+      far too durable to be cut open, though the glistening strands likely would not withstand the heat of
+      fire.  It seems the only way to release the contents would be to burn it.
+
+"tba:19:obj:1934":
+  type: drinkcon
+  keywords: [water, webbing, spider, gland, water]
+  short: the webbing gland of a spider
+  long: The webbing gland of a spider is here.
+  wear: [take]
+  values:
+    capacity: 30
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [webbing, spider, gland]
+    text: >
+      This large, elastic gland was originally used by its spider host to contain the secretions that
+      would solidfy into webbing.  Although the creature has apparantly no more use for it, this gland is
+      nonetheless as efficient as ever at containing any liquids with minimal leaking.
+
+"tba:19:obj:1935":
+  type: weapon
+  keywords: [venommace, mace, large, deadly]
+  short: Venommace
+  long: A large and deadly mace glints on the ground.
+  flags: [magic, anti_good, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 7d4
+    attack: crush
+  weight: 3
+  cost: 500
+  rent: 3
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [venommace, mace, large, deadly]
+    text: >
+      This massive weapon has been made from a pale white metal that glows vaguely red.  Tiny barbed
+      spikes cover the entire spherical head, tinted black with what may be poison or simply dried blood. 
+      Delicate etchings spiral all the way around the handle, glowing a brighter crimson and giving the
+      appearance of tiny red spiders crawling around the weapon.
+
+"tba:19:obj:1936":
+  type: armor
+  keywords: [blood-red, shield, blood, red]
+  short: a blood-red shield
+  long: A shield glints red, like a puddle of blood on the ground.
+  flags: [magic, anti_good]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 3
+  cost: 500
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [blood-red, shield, blood, red]
+    text: >
+      This beautiful semi-transparant shield is made of sparkling red beryll, gilded around the edges
+      with magically runed platinum that glows lightly.  A fine chain runs along the inside, delicate but
+      strong enough to use as a handle for holding the shield to the wearer's arm.
+
+"tba:19:obj:1937":
+  type: armor
+  keywords: [silvery-webbed, leather, pants, black, silver, webbed]
+  short: silvery-webbed leather pants
+  long: A dark pair of leather pants lie here, webbed with silver.
+  flags: [anti_good]
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 2
+  cost: 400
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, leather, pants, black, silver, webbed]
+    text: >
+      These slightly stretchy leather pants are glossy black, the many strategic rips looking almost more
+      deliberate than the after-marks of battle.  Fine silvery spider thread webs the garment, glistening
+      strikingly against the dark hide and making it glitter.
+
+"tba:19:obj:1938":
+  type: armor
+  keywords: [delicate, chain, mail, chainmail, shirt]
+  short: a delicate chainmail shirt
+  long: A glittering piece of fine chainmail has been left here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 3
+  cost: 400
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [delicate, chain, mail, chainmail, shirt]
+    text: >
+      Tiny sparkling chain rings have been so finely linked together that this armor looks almost more
+      like silver shimmering fabric.  Light but incredibly strong, a strange glow pulses softly through the
+      metal, giving it an eerie appearance that is particularly striking in the dark.
+
+"tba:19:obj:1939":
+  type: armor
+  keywords: [black, spider, gloves, dark, pair, leathery]
+  short: black spider gloves
+  long: A dark pair of leathery gloves lie here.
+  flags: [magic, anti_good]
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 1
+  cost: 200
+  rent: 1
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [black, spider, gloves, dark, pair, leathery]
+    text: >
+      This black piece of leathery material is shaped like a spider, legs splayed so that one extends and
+      caps over each finger, two wrap around the wrist, and one extends up the center of the forearm.  The
+      end of each is tipped with a metal claw, making this potentially lethal as well as protective.  In
+      the center of the dark hide, a blood-red hourglass symbol blazes, the signature of the black widow.
+
+"tba:19:obj:1940":
+  type: worn
+  keywords: [sheer, gown, heap, shadowy, shimmering, dark, fabric]
+  short: a sheer shadowy gown
+  long: A heap of shimmering dark fabric lies here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 600
+  rent: 4
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [sheer, gown, heap, shadowy, shimmering, dark, fabric]
+    text: >
+      Dark and unnatural, this strange shimmering fabric is icy cold to the touch as if it lingers in
+      another realm.  Elegantly beautiful, it has been fashioned to fit female curves perfectly, its
+      semi-transparant look designed to be subtly revealing, shrouding much of the wearer's form within the alluring
+      and imaginative realm of shadows.
+
+"tba:19:obj:1941":
+  type: light
+  keywords: [long, burning, black, candle, drowcandle]
+  short: a burning black candle
+  long: A burning black candle lies here.
+  wear: []
+  values:
+    hours: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [long, burning, black, candle, drowcandle]
+    text: >
+      Although it looks ordinary, there is a strange aura around this candle, and an unnatural chill that
+      is the unmistakeable influence of evil magic.
+
+"tba:19:obj:1942":
+  type: treasure
+  keywords: [Eilistraee, Eilistraee's, Pendant, silver, chain, necklace]
+  short: Eilistraee's Pendant
+  long: A delicate silver necklace glitters here.
+  flags: [magic, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 1
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [Eilistraee, Eilistraee's, Pendant, silver, chain, necklace]
+    text: >
+      Fragile and shimmering like starlight, this curvacious teardrop pendant is a symbol of feminine
+      beauty and sadness.  Perfectly smooth, only a tiny glowing name has been engraved into the back -
+      @CEilistraee@n.
+
+"tba:19:obj:1943":
+  type: container
+  keywords: [cabinet, mahogany]
+  short: a mahogany cabinet
+  long: A mahogany cabinet is fixed to the eastern wall.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 13
+    key: tba:19:obj:1944
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cabinet, mahogany]
+    text: >
+      Smooth dark wood has been expertly carved to form this elaborately etched cabinet.  Forms of
+      various spiders cover the entire surface, swirling and blending into each other so that from a distance it
+      looks like a random pattern. A tiny silver keyhole glistens in the door, bordered with several
+      sparkling onyx stones.
+
+"tba:19:obj:1944":
+  type: key
+  keywords: [key, dark, little, carved, wood]
+  short: a key carved from dark wood
+  long: A little dark key lies here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, dark, little, carved, wood]
+    text: >
+      This smoothly polished key has been carved from rich mahogany wood and coated with a fine layer of
+      sealant wax.  The unmistakeable shape of a spider forms the handle, two tiny onyx stones set into the
+      wood where its eyes should be.
+
+"tba:19:obj:1945":
+  type: other
+  keywords: [silvery-webbed, silver, red, vial]
+  short: a silvery-webbed @Rred vial@n
+  long: "@RA silvery-webbed red vial lies here.@n"
+  flags: [magic, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, silver, red, vial]
+    text: >
+      This delicate crystal vial is filled with a sparkling red potion.  A silvery cork in the shape of
+      spider seals it, sleek metallic legs clasping the transparant neck.
+
+"tba:19:obj:1946":
+  type: other
+  keywords: [silvery-webbed, silver, blue, vial]
+  short: a silvery-webbed @Bblue vial@n
+  long: "@BA silvery-webbed blue vial lies here.@n"
+  flags: [magic, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, silver, blue, vial]
+    text: >
+      This delicate crystal vial is filled with a sparkling blue potion.  A silvery cork in the shape of
+      spider seals it, sleek metallic legs clasping the transparant neck.
+
+"tba:19:obj:1947":
+  type: other
+  keywords: [silvery-webbed, silver, green, vial]
+  short: a silvery-webbed @Ggreen vial@n
+  long: "@GA silvery-webbed green vial lies here.@n"
+  flags: [magic, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, silver, green, vial]
+    text: >
+      This delicate crystal vial is filled with a sparkling green potion.  A silvery cork in the shape of
+      spider seals it, sleek metallic legs clasping the transparant neck.
+
+"tba:19:obj:1948":
+  type: container
+  keywords: [contraption, large, mysterious, metal, machine]
+  short: a large and mysterious metal contraption
+  long: A large and mysterious metal contraption hums noisily.
+  flags: [magic]
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [contraption, large, mysterious, metal, machine]
+    text:
+      preformatted: |2
+           This large machine makes a considerable noise as its unseen insides whir and
+        click continuously away.  The only noteworthy external parts are a large metal
+        tray that looks as though it opens and closes, releasing its contents to the
+        inner parts of the machine, also a large nozzle with a shelf placed
+        strategically beneath it.  A control board with three colored buttons is fixed
+        to the front of the machine.  The red button is inscribed with the word - press,
+        the blue button with switch, and green with turn.
+        
+                    @R _______       @B  ________       @G  ______@n
+                  @R  |       |   @B    |        |    @G   |      |@n
+                  @R  | @nPRESS@R |   @B    | @nSWITCH@B |      @G | @nTURN@G |@n
+                   @R |_______|     @B  |________|    @G   |______|@n
+
+"tba:19:obj:1949":
+  type: drinkcon
+  keywords: [water, silvery-webbed, clear, silver, empty, vial, water]
+  short: a silvery-webbed empty vial
+  long: A silvery-webbed clear vial is lying here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    capacity: 20
+    contains: 0
+    liquid: blood
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, clear, silver, empty, vial]
+    text: >
+      This delicate crystal vial has obviously been made to hold some magical substance, judging by its
+      powerful aura.  A silvery cork in the shape of spider seals it, sleek metallic legs clasping the
+      transparant neck.
+
+"tba:19:obj:1950":
+  type: other
+  keywords: [long, sticky, flesh, albino, frog's, tongue]
+  short: a long, sticky bit of flesh
+  long: A long, sticky bit of flesh is lying here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [long, sticky, flesh, albino, frog's, tongue]
+    text: >
+      This long strip of flesh looks to be the sickly pink tongue of an albino frog.  This creature is
+      increasingly rare, due to high demand for various parts of its anatomy, most of which are rumored to
+      have powerful magical properties.
+
+"tba:19:obj:1951":
+  type: other
+  keywords: [sealed, beaker, dark, blood]
+  short: a sealed beaker of dark blood
+  long: A sealed beaker of dark blood stands here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sealed, beaker, dark, blood]
+    text: >
+      Almost black in color, this glass beaker holds the blood of a creature that is clearly not human. 
+      A strange chill creeps through the container, and a slightly shimmering aura betrays the inherent
+      magic of this substance.
+
+"tba:19:obj:1952":
+  type: other
+  keywords: [silvery-webbed, silver, black, vial]
+  short: a silvery-webbed @Dblack vial@n
+  long: "@DA silvery-webbed black vial lies here.@n"
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silvery-webbed, silver, black, vial]
+    text: >
+      This delicate crystal vial is filled with an ominous black potion.  A silvery cork in the shape of
+      spider seals it, sleek metallic legs clasping the transparant neck.
+
+"tba:19:obj:1953":
+  type: note
+  keywords: [old, leather, book, ruby]
+  short: a leather book inset with a ruby
+  long: An old leather book gathers dust here.
+  action: |-
+    Having spent considerable time studying the inhabitants of the place they
+    call the Spider Swamp and the powerful magicks they possess, I have
+    decided to preserve my findings in writing. Each of these volumes is
+    dedicated to Tyrel the Machine-Maker, who was a brilliant colleague and
+    great friend. Alas, both he and his devices are lost to the Drow lord who
+    rules this place, and so the method of creating these potions is no more.
+    Nonetheless, I lay it out here for any who would continue these studies.
+    
+       A powerful potion of strength was our first discovery, a deep red potion,
+    the color of rich wine. When quaffed, it produced immediate physical
+    effects, muscle ability enhanced and body defenses strengthened.
+    
+       As a base for all our testings, we used the nightblood of the driders, black
+    viscous fluid that burns the eyes unless contained in special beakers. Then,
+    for this particular solution we added an arachnoid fang, from a striped spider
+    it was. Finally, one of the eggs from the lizard man tribe. All of these
+    ingredients were gained with great peril, and once mixed together in Tyrel's
+    machine, produced a solution so potent that we were forced to create special
+    magical vials to hold it. The effects, though temporary, are nonetheless
+    astounding.
+    
+       These findings are the work of myself - Artemis, of gnome-kind, and Tyrel,
+    a man and machine-maker. Use them wisely.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:19:obj:1954":
+  type: note
+  keywords: [old, leather, book, sapphire]
+  short: a leather book inset with a sapphire
+  long: An old leather book gathers dust here.
+  action: |-
+    Having spent considerable time studying the inhabitants of the place they
+    call the Spider Swamp and the powerful magicks they possess, I have
+    decided to preserve my findings in writing. Each of these volumes is
+    dedicated to Tyrel the Machine-Maker, who was a brilliant colleague and
+    great friend. Alas, both he and his devices are lost to the Drow lord who
+    rules this place, and so the method of creating these potions is no more.
+    Nonetheless, I lay it out here for any who would continue these studies.
+    
+       A powerful potion of magic was our second discovery, a deep blue potion,
+    the color of a clear sky. When quaffed, it produced immediate magical
+    effects, enhanced mental ability and casting endurance.
+    
+       As a base for all our testings, we used the nightblood of the driders, black
+    viscous fluid that burns the eyes unless contained in special beakers. Then,
+    for this particular solution we added an arachnoid gland, from the spider that squirts. Finally, a tongue from the local species of white frog. All of these
+    ingredients were gained with great peril, and once mixed together in Tyrel's
+    machine, produced a solution so potent that we were forced to create special
+    magical vials to hold it. The effects, though temporary, are nonetheless
+    astounding.
+    
+       These findings are the work of myself - Artemis, of gnome-kind, and Tyrel,
+    a man and machine-maker. Use them wisely.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:19:obj:1955":
+  type: note
+  keywords: [old, leather, book, emerald]
+  short: a leather book inset with an emerald
+  long: An old leather book gathers dust here.
+  action: |-
+    Having spent considerable time studying the inhabitants of the place they
+    call the Spider Swamp and the powerful magicks they possess, I have
+    decided to preserve my findings in writing. Each of these volumes is
+    dedicated to Tyrel the Machine-Maker, who was a brilliant colleague and
+    great friend. Alas, both he and his devices are lost to the Drow lord who
+    rules this place, and so the method of creating these potions is no more.
+    Nonetheless, I lay it out here for any who would continue these studies.
+    
+       A powerful potion of agility was our third discovery, a bright green potion,
+    the color of fresh grass. When quaffed, it produced immediate changes to
+    speed and agility, improving endurance in travel.
+    
+       As a base for all our testings, we used the nightblood of the driders, black
+    viscous fluid that burns the eyes unless contained in special beakers. Then,
+    for this particular solution we added an arachnoid fur, from a spider that was
+    purple in color. Finally, one of the salty plant growths that flourish here.
+    All these ingredients were gained with great peril, and once mixed together in
+    Tyrel's machine, produced a solution so potent that we were forced to create
+    special magic vials to hold it. The effects, though temporary, are nonetheless
+    astounding.
+    
+       These findings are the work of myself - Artemis, of gnome-kind, and Tyrel,
+    a man and machine-maker. Use them wisely.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:19:obj:1956":
+  type: food
+  keywords: [swamp, vine]
+  short: a swamp vine
+  long: A swamp vine splays across the ground like an open hand.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [swamp, vine]
+    text: >
+      This limp plant has the dark green color of spinach, its lethargic trailing limbs splaying out in
+      all directions in a desperate hunt for richer soil.  All that is nourishing in the swamp has been
+      condensed into this sickly pile of stems and leaves.
+
+"tba:19:obj:1957":
+  type: weapon
+  keywords: [something, remember]
+  short: something to remember
+  long: Something to remember is left here.
+  wear: [take]
+  values:
+    damage: 0d0
+    attack: hit
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [something, to, remember]
+    text: Oh yeah, you won't forget this!
+
+"tba:19:obj:1958":
+  type: worn
+  keywords: [crumpled, heap, gloosy, black, animal, fur]
+  short: a glossy black animal fur
+  long: A crumpled heap of glossy black fur lies here.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [crumpled, heap, gloosy, black, animal, fur]
+    text: >
+      This long section of beautiful shimmering fur must have once adorned a very elegant creature
+      indeed, perhaps a black panther judging by the smooth glossy appearance of the fur and incredibly soft dark
+      texture of its leathery interior. Cut into a simple shape and crudely hemmed, it has been fashioned
+      into a sort of robe, though the poor quality of the stitching somewhat marrs the incredible beauty of
+      the fur itself.
+
+"tba:19:obj:1959":
+  type: trash
+  keywords: [humanoid, skull]
+  short: a humanoid skull
+  long: A humanoid skull lies decaying here.
+  flags: [no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [humanoid, skull]
+    text: >
+      This yellowing piece of old, hardy bone is still intact, the gruesome features of a humanoid face
+      still visible although empty eye sockets glare where eyes once were, and rows of jagged teeth are
+      openly exposed, seeming almost absurdly to be grinning.
+
+"tba:19:obj:1960":
+  type: armor
+  keywords: [white, chainmail, arm, wrappings, armor]
+  short: white chainmail arm wrappings
+  long: A little pile of white chainmail armor lies here.
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 2
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [white, chainmail, arm, wrappings, armor]
+    text: >
+      Tiny circles of strange metal are perfectly linked to form a glistening piece of armor that glows
+      vaguely in moonlight.  There is no padding nor real shape to this armor, made simply to attach at the
+      shoulders and hang protectively around the arms.
+
+"tba:19:obj:1961":
+  type: armor
+  keywords: [beautiful, silvery, helmet, sleek, helm]
+  short: a sleek silvery helm
+  long: A beautiful silvery helmet lies here.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 2
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [beautiful, silvery, helmet, sleek, helm]
+    text: >
+      This elegantly forged helm is made from one solid piece of white metal that looks almost to
+      beautiful to be used in armor, though it is more than hardy enough to withstand even the heaviest of blows. 
+      Two long grasping pieces curve around the jaw, holding the piece in place without the need for
+      straps.
+
+"tba:19:obj:1962":
+  type: armor
+  keywords: [scaley, black, leather, boots]
+  short: scaley black leather boots
+  long: Some scaley black leather boots lie here.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 40
+  extras:
+  - keywords: [scaley, black, leather, boots]
+    text: >
+      These roughly stitched boots have been sewn using the black scaley hide of some reptile.  Glossy
+      and shimmering, each dark scale is hard yet pliable, making these an excellent set of boots for intense
+      travelling or fighting.
+
+"tba:19:obj:1963":
+  type: other
+  keywords: [fireworks]
+  short: a colorful firework
+  long: A colorful firework is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fireworks]
+    text: >
+      This colorfully wrapped firework has a long dangling fuse, just begging for you to LIGHT it.
+
+"tba:19:obj:1964":
+  type: worn
+  keywords: [irridescent, webbed, ring]
+  short: an irridescent webbed ring
+  long: A tiny ring glints delicate shades of green and blue.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [irridescent, webbed, ring]
+    text: >
+      Incredibly delicate, this beautiful ring looks to have been woven by master spider weavers, the
+      fragile sparkling threads treated with some magic to solidify and glisten with unnatural color.  Shades
+      of blue and green shimmer along the elegantly curving surfaces, purple and silver adding a darker hue
+      when the light catches a certain way.
+
+"tba:19:obj:1965":
+  type: worn
+  keywords: [tiny, bikini, top]
+  short: a tiny bikini top
+  long: A tiny bikini top lies crumpled here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tiny, bikini, top]
+    text: >
+      This top basically consists of pieces of pink silk string fastened together. The amount of fabric
+      isn't even enough to use as a handkerchief, so one can only imagine how efficient this top is at
+      covering anything!
+
+"tba:19:obj:1966":
+  type: worn
+  keywords: [skimpy, thong, miniscule, piece, fabric]
+  short: a skimpy thong
+  long: A miniscule piece of fabric lies on the ground.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [skimpy, thong, miniscule, piece, fabric]
+    text: >
+      No, it isn't a piece of pink dental floss, although one could easily mistake it for that.  This is
+      in fact, a very skimpy thong, although one wonders if it would be easier just to go naked!
+
+"tba:19:obj:1967":
+  type: worn
+  keywords: [bright, red, lipstick, print]
+  short: a bright red lipstick print
+  long: A bright red lipstick print is smeared here.
+  wear: [neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bright, red, lipstick, print]
+    text: >
+      This bright red smear is in the vague shape of a luscious pair of lips. Somebody got kissed!
+
+"tba:19:obj:1968":
+  type: worn
+  keywords: [pair, high, stilettos]
+  short: a pair of high stilettos
+  long: A pair of stilettos lie abandoned here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pair, high, stilettos]
+    text: >
+      These strappy stilettos have a good six inch heel on them.  Not only does this look incredibly
+      uncomfortable, they'd probably make a deadly weapon! Still...  They're very sexy.
+
+"tba:19:obj:1969":
+  type: worn
+  keywords: [thick, cloud, manly, scent]
+  short: a thick cloud of manly scent
+  long: A thick cloud of manly scent hovers here.
+  wear: [about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [thick, cloud, manly, scent]
+    text: >
+      This rich, somewhat pungent odour is obviously that of a man's.  Think sweaty sports socks and
+      bellybutton fluff.  Tantalising!
+
+"tba:19:obj:1970":
+  type: other
+  keywords: [romantic, red, rose]
+  short: a romantic red rose
+  long: A romantic red rose lies forgotten here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [red, rose]
+    text: >
+      This deep red rose would be quite a romantic flower if it weren't for the strange, pungent aroma
+      around it.
+
+"tba:19:obj:1971":
+  type: worn
+  keywords: [big, slobbery, kiss]
+  short: a big slobbery kiss
+  long: A big slobbery kiss has been smeared on the ground.
+  wear: [neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [big, slobbery, kiss]
+    text: This is the erotic saliva smear of the biggest, wettest, slobbery kiss you can imagine.
+
+"tba:19:obj:1972":
+  type: undefined
+  keywords: [summer, tree, xxtree]
+  short: a summer tree
+  long: A summer tree stands here, lush and green.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:19:obj:1973":
+  type: undefined
+  keywords: [fall, tree, xxtree]
+  short: a fall tree
+  long: A fall tree stands here, colored red and gold.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:19:obj:1974":
+  type: undefined
+  keywords: [winter, tree, xxtree]
+  short: a winter tree
+  long: A winter tree is here, bare and hung with ice.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:19:obj:1975":
+  type: undefined
+  keywords: [spring, tree, xxtree]
+  short: a spring tree
+  long: A spring tree is here, budding into bloom.
+  wear: [arms]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

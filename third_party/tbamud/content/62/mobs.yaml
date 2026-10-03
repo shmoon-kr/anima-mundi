@@ -1,0 +1,295 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 62.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:62:mob:6200":
+  keywords: [deer]
+  short: the deer
+  long: A deer looks at you with fear in its eyes.
+  description: That is one nice looking deer!
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6201":
+  keywords: [rabbit]
+  short: the rabbit
+  long: A small rabbit nibbles at a leaf here.
+  description: It is a small, furry rodent with big ears.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6202":
+  keywords: [squirrel]
+  short: the squirrel
+  long: A squirrel spots you and runs around a tree!
+  description: It is a small, brown squirrel.  Kind of like a fuzzy high-tension spring.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6203":
+  keywords: [orc, hunter]
+  short: the orc hunter
+  long: An orc hunter looks at you with hateful eyes.
+  description: >
+    He looks angry, desperate, and maybe a little sick.  His green skin is definitely mottled, and he
+    seems to limp a little bit...
+  level: 7
+  sex: male
+  alignment: -350
+  flags: [aggressive, stay_zone, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6204":
+  keywords: [orc, chief]
+  short: the orc chief
+  long: An orc chief growls at you!
+  description: >
+    He wears a crown of oak leaves to show he is a leader.  He carries a club to show he is a warrior. 
+    You wonder how good he is at both.
+  level: 10
+  sex: male
+  alignment: -600
+  flags: [sentinel, aggressive, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6205":
+  keywords: [orc, woman]
+  short: the orc woman
+  long: An orc woman stands here, frightened of you.
+  description: As you stare her down, she raises her hands slowly, as if to say, 'Don't kill me'.
+  level: 5
+  sex: female
+  alignment: -50
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6206":
+  keywords: [orc, child]
+  short: the orc child
+  long: An orc child frantically searches for her mother.
+  description: She is raggedy, and seems to be covered with sores.
+  level: 3
+  sex: female
+  alignment: 50
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6207":
+  keywords: [orc, woman]
+  short: the orc woman
+  long: A pregnant orc woman tries to stand to flee from you.
+  description: She is too far gone to move very quickly.  You could kill her easily.
+  level: 5
+  sex: female
+  alignment: -50
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:62:mob:6208":
+  keywords: [orc, mutant, mutated]
+  short: the mutant orc
+  long: A mutant orc lies here, barely alive.
+  description: Its body has been twisted beyond all hope.  It is dying, and nothing will stop that.
+  level: 6
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: resting
+    default: resting
+
+"tba:62:mob:6209":
+  keywords: [orc, mutant, mutated]
+  short: the mutant orc
+  long: A horribly mutated orc stands here, gibbering.
+  description: >
+    It doesn't even appear to have registered your arrival...  It is just talking to itself.  Its body
+    is a twisted wreck of orc, man, beast, and what-not.
+  level: 6
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6210":
+  keywords: [wizard, elf, elven, Elstar]
+  short: Elstar
+  long: An elven wizard is here.  He looks angry.
+  description: >
+    He looks at you archly as he wonders why you have invaded his domain.  No matter...  It shouldn't
+    be too hard for him to destroy you, no?
+  level: 15
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6211":
+  keywords: [child, elf, elven, apprentice]
+  short: the elven child
+  long: An elven child casts his fishing pole into the river.
+  description: He looks young and innocent.  You wonder what he is doing here.
+  level: 3
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6212":
+  keywords: [mutant, thing]
+  short: the mutant thing
+  long: A mutant... thing rushes at you!
+  description: >
+    It might've been an orc, once.  Now it is a living terror, pushing everything out of its way to get
+    at you.
+  level: 12
+  sex: neutral
+  alignment: -800
+  flags: [aggressive, stay_zone, memory]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:62:mob:6213":
+  keywords: [mutant, thing]
+  short: the mutant thing
+  long: A mutant... thing tries to get you, but cannot move into range!
+  description: >
+    It might have been an orc, once.  Now it is a living terror, pushing everything out of its way to
+    get at you.
+  level: 12
+  sex: neutral
+  alignment: -800
+  flags: [sentinel, memory]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing

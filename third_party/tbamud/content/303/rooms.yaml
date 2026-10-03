@@ -1,0 +1,686 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 303.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:303:room:30300":
+  name: Dorm Room
+  description: >
+    This dorm room seems to be unoccupied at the moment.  The same furniture is in this room as any
+    other dorm room, a desk, bed, and exit...  This time to the south.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:302:room:30299
+      look: The hallway lies to the south.
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           See zone description room for Campus.
+        Zone 303 is linked to the following zones:
+        302 Campus                         at 30300 (south) ---> 30299
+        302 Campus                         at 30301 (west ) ---> 30299
+        302 Campus                         at 30302 (north) ---> 30296
+        302 Campus                         at 30312 (down ) ---> 30295
+        301 Campus                         at 30320 (west ) ---> 30130
+        301 Campus                         at 30324 (east ) ---> 30130
+        301 Campus                         at 30325 (north) ---> 30130
+        
+           (Mobs Stay_Zone flags have all been disabled to allow free access between
+        301, 302 and 303.  Please ensure that any entrances into the area are flagged
+        nomob to keep them in.  -  Parna for TBAMud.)
+
+"tba:303:room:30301":
+  name: The Animal Cage
+  description: >
+    This room certainly does not resemble a regular dorm room, as it has been completely renovated and
+    then altered and then renovated again.  It now contains bars hanging from the ceiling and where the
+    desk should be, according to the layout of every other room you have seen here at least, stands a
+    large water bottle structure similar to the ones used in modern day hamster and gerbil cages.  The only
+    exit is to the west.  Just as you finish looking around, your eye spots a SEP.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30299
+      look: Thank Bob, the hallway is still to the west of here.
+  extras:
+  - keywords: [bars, bar, ceiling]
+    text: >
+      The bars hanging from the ceiling look quite sturdy and it looks like you could swing on them
+      rather easily...  If you were coordinated that is.
+  - keywords: [sep]
+    text: >
+      This is Someone Else's Problem.  The only way that you are able to spot it is by jumping around and
+      looking like an idiot as you try and avert your eyes so that it can be seen.  Unfortunately, seeing
+      it doesn't help.  It looks like some sort of Italian Bistro...  Rather strange actually.
+
+"tba:303:room:30302":
+  name: Hallway
+  description: >
+    This hallway grinds to a halt here.  The main reason it halts is because there is a room to the
+    south and a door to the east.  The hallway grinds to a start when you move northwards though.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30296
+      look: >
+        The hallway starts here and runs northwards.  You'd better catch it before it gets away.  *Groan*
+    east:
+      to: tba:303:room:30306
+      look: There is a door blocking you view of the stairs behind it.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30142
+        reset: locked
+    south:
+      to: tba:303:room:30303
+      look: >
+        There is a small dorm room to your south.  The martian standing on your shoulder looks to his south
+        and sees a very nice blank wall in front of it.
+  extras:
+  - keywords: [martian]
+    text: >
+      It's just a joke, you are supposed to smile at the obscure gag hidden in it. It's almost like
+      saying the Elephants Ride Porcupines!
+  - keywords: [erp!, erp]
+    text: Get it...  Elephants Ride Porcupines!  ...  ERP!
+
+"tba:303:room:30303":
+  name: Smithville
+  description: >
+    This room is a replica of Smithville.  In a really, really small form that is.  You didn't think we
+    could get the entire town in one room do you?  Think about it...  You'd try to buy something from
+    one shopkeeper and the other four would say that they don't have that item.  The logistics just don't
+    work on these magnitudes, with more rooms maybe, but definitely not one room.  There is an exit to the
+    north.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30302
+      look: This leads back to the hallway out of this stupidity.
+  extras:
+  - keywords: [smithville, town]
+    text: >
+      The town is rather accurately portrayed here...  Wait are those really people moving down there?
+
+"tba:303:room:30304":
+  name: Ledge
+  description: >
+    This ledge looks rather precarious.  You do get a nice view of the roof below you though...  About
+    60 feet below you that is.  If you go north, you can escape back to the real world (the balcony at
+    least, just type exit to see where you end up if you go down).
+  sector: hills
+  exits:
+    north:
+      to: tba:303:room:30311
+      look: >
+        The salvation of the balcony is directly to the north.  All it needs is for you to press N and then
+        RETURN.
+    down:
+      to: tba:303:room:30305
+      look: You have to type EXIT to see what is this way, no cheating allowed.
+  extras:
+  - keywords: [roof]
+    text: >
+      It sure is a long way down...  Look at the neat things on it though, you can almost reach one... 
+      Wait...  EEEEK!!!  You almost let go and fell down to .... Type EXIT to see what you almost fell to.
+
+"tba:303:room:30305":
+  name: A Really Bad, Evil, And Nasty Deathtrap
+  description: The name says it all, doesn't it?
+  sector: inside
+  flags: [no_mob, indoors]
+  extras:
+  - keywords: [deathtrap]
+    text: >
+      It's designed to kill, so if you are reading this, either you have avoided it somehow or you are an
+      immortal or something.
+
+"tba:303:room:30306":
+  name: Really Narrow Stairwell, Part I
+  description: This stairwell is just wide enough for one person at a time.  A door lies to the west.
+  sector: mountains
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:303:room:30302
+      look: This is blocked by a door.  Unless you opened it already, which is pretty likely.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30142
+        reset: locked
+    up:
+      to: tba:303:room:30307
+      look: >
+        The really narrow stairs lead up.  They are so narrow, that you have no idea what you are headed
+        into.
+
+"tba:303:room:30307":
+  name: Really Narrow Stairwell, Part II
+  description: The Stairwell's Revenge.  Now there is an exit to the west and one down.
+  sector: mountains
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:303:room:30308
+      look: This leads to a nice entrance hall.
+    down:
+      to: tba:303:room:30306
+      look: This leads down.
+  extras:
+  - keywords: [stairwell]
+    text: The Stairwells' Revenge...  Montezuma's Revenge.
+
+"tba:303:room:30308":
+  name: Entry Hall
+  description: >
+    This hall is so muddy, you can instantly tell that it is the equivalent of a mudroom.  That is, you
+    remove the mud from your footwear here.  The hall continues to the west into a nice, clean room and
+    to the east to a stairwell.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:303:room:30307
+      look: The dreaded stairwell is here.
+    west:
+      to: tba:303:room:30309
+      look: The room to the west seems to be a living room.
+  extras:
+  - keywords: [mudroom]
+    text: Bad pun, Eh?
+
+"tba:303:room:30309":
+  name: Living Room
+  description: >
+    This room seems to be the hub of this apartment which must below to whoever is roaming the
+    apartment...  Have you seen it yet?  There is opulent furniture furnishing the room, such as a rocking chair,
+    a coffee table, and a couch. All of the furnishings are decorated in a somewhat flowery style.  You
+    can leave this room by going east to the entrance hall or south to the bedroom.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:303:room:30308
+      look: The entrance hall is directly to the east.
+    south:
+      to: tba:303:room:30310
+      look: The bedroom is to the south.
+  extras:
+  - keywords: [coffee, table]
+    text: >
+      As you look at the coffee table, you notice a copy of the really rude Madonna book...  No wait,
+      that was just censored by the Builders.  We are allowing none of that smut here.  You are disgusted by
+      the flowery pattern on the table.
+  - keywords: [couch, rocking, chair]
+    text: >
+      The flowery pattern makes you recoil in disgust, but other than that it seems to be a normal piece
+      of furniture.
+
+"tba:303:room:30310":
+  name: Bedroom
+  description: >
+    This is the place you've been waiting for.  The bedroom.  There are standard bedroom furnishings
+    here, a bed (obviously), a night-table, and a dresser. There are exits to the north and to the balcony
+    to the east.
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30309
+      look: The living room is to the north.
+    east:
+      to: tba:303:room:30311
+      look: The balcony is to the east.
+  extras:
+  - keywords: [bed]
+    text: You feel sleepy as you look towards this, maybe ...  Nope, none of those thoughts here!
+  - keywords: [night-table]
+    text: >
+      The night-table is like any ordinary night-table, one drawer and a big open space underneath.  The
+      thing that makes it different is that the drawer is empty and the top and empty space are just that. 
+      Empty.
+  - keywords: [dresser]
+    text: Too bad none of the clothes in here fit you at all.
+
+"tba:303:room:30311":
+  name: Balcony
+  description: >
+    From this balcony you can see a marvellous countryside.  Cows, horses, cats, dogs, frgos, and pigs
+    fill the countryside.  Unfortunately, the countryside does not resemble the real countryside, so you
+    aren't sure what you are seeing exactly.  Must be an illusion.  Anyways, there is an exit back to the
+    bedroom in the west wall.
+  sector: field
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:303:room:30304
+      look: This leads to a thin ledge.
+    west:
+      to: tba:303:room:30310
+      look: This leads back to a bedroom.
+  extras:
+  - keywords: [cows, horses, pigs, pig, cow, horse]
+    text: These are normal farm animals.  You aren't quite sure what farm they are on though.
+  - keywords: [dogs, cats, cat, dog]
+    text: >
+      These seem to be ordinary domesticated animals.  Again, you aren't sure why they are where they are.
+  - keywords: [frgos]
+    text: >
+      No, this isn't a spelling mistake!  It's just a neat little creature that you have never seen
+      before and will probably never see again after this.  After all, this is an illusion, or something, isn't
+      it?
+
+"tba:303:room:30312":
+  name: Hallway Junction
+  description: >
+    This hallway leads north and south and there is a stairwell in the east wall.  There is a sign on
+    the wall.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30313
+      look: The hallway continues north.
+    south:
+      to: tba:303:room:30319
+      look: There is a room to the south.
+    down:
+      to: tba:302:room:30295
+      look: The stairwell leads down to the lobby.
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign states:"
+    - The Campus Party is Here!!
+    - Vote for the Campus Party,
+    - Supporting our Beliefs!!!
+
+"tba:303:room:30313":
+  name: Hallway
+  description: The hallway turns west-south here and there is an opening to the north.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30314
+      look: There is a room to the north.
+    south:
+      to: tba:303:room:30312
+      look: The hallway continues south.
+    west:
+      to: tba:303:room:30315
+      look: The hallway continues west.
+
+"tba:303:room:30314":
+  name: The V.P.'s Room
+  description: >
+    This is the room of the Vice President of Leonard Hall.  The walls are liberally plastered with
+    pictures of boats and snow.  On the north side of the room, you can see a large collection of CDs and
+    Cassettes...  Exam time must be coming up soon.  On the east wall sits a large computer with lots of
+    neat accessories.  The only exit is to the south.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:303:room:30313
+      look: The hallway leads away from here to the south.
+  extras:
+  - keywords: [computer, accessories]
+    text: This is so large and incomprehensible that you simply do not understand it.
+  - keywords: [cds, cd, cassettes, cassette]
+    text: >
+      There is a large variety of music represented here...  Everything from african tribal music to the
+      latest from Neil Young.
+  - keywords: [pictures, snow, boats, walls]
+    text: >
+      The pictures cover the walls completely and you find it difficult to see any of the wall whatsoever
+      between the pictures of snowscapes that you don't recognize and boats that you would love to own.
+
+"tba:303:room:30315":
+  name: Hallway
+  description: >
+    This hallway leads east and has an opening to the north and one to the west and one to the south.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30316
+      look: Bubbles seem to be coming from the northern entrance.
+    east:
+      to: tba:303:room:30313
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30318
+      look: There is a room to the south.
+    west:
+      to: tba:303:room:30317
+      look: There is also a room to the west.
+
+"tba:303:room:30316":
+  name: Bubble Land
+  description: >
+    This room (if it can be called that) is filled with large, pink bubbles. There is only one exit... 
+    To the south (you think).  With all the bubbles you can't see anything else in the room.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:303:room:30315
+      look: You think the hallway lies to the south.
+  extras:
+  - keywords: [bubbles, bubble]
+    text: >
+      All you can see in this room are large, pink bubbles.  As you reach out to touch one *pop* ... 
+      Well maybe not.
+
+"tba:303:room:30317":
+  name: C.S.E.
+  description: >
+    This is the headquarters of the Campus Stock Exchange.  You can tell just by looking around since
+    the room is lavishly decorated with stock certificates and the fact that other than that the room is
+    completely empty of furniture, but wait, that pizza box in the corner seems to be acting as a table of
+    sorts with all the newspapers supporting it.  There is an exit to the east.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:303:room:30315
+      look: The hallway extends to the east.
+  extras:
+  - keywords: [stock, certificates]
+    text: >
+      They all seem to be immensely valuable but with your awful luck, you can't seem to pry any of them
+      from the walls.
+  - keywords: [furniture]
+    text: >
+      There isn't any furniture, unless you plan on marketing that mouldy pizza box as the table of the
+      future.
+  - keywords: [pizza, box]
+    text: It's about 3 weeks old and seems to be growing mould....  Yech.
+  - keywords: [news, newspapers]
+    text: It's only the business sections, and they are old.  Type NEWS for a more updated edition.
+
+"tba:303:room:30318":
+  name: Lennon's Shrine
+  description: >
+    This room is a shrine to the immortalized John Lennon (well, immortalized in this room at least). 
+    There are posters of John all over the walls as well as a few of the other Beatles...  Wait you don't
+    see any of Paul...  Strange. There is only one exit, the one to the north.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30315
+      look: The hallway is directly to your north.
+  extras:
+  - keywords: [posters, john, lennon, beatles]
+    text: >
+      The majority of the posters in this room deal with John Lennon but there are a few of Ringo and
+      George also.
+  - keywords: [paul]
+    text: Wait...  There's one of Paul...  See it?  The one with all the darts stuck in it.
+
+"tba:303:room:30319":
+  name: Common Room
+  description: >
+    This is the common room of the floor.  It is decorated the way every common room in a residence is
+    decorated, with a fridge, stove and of course a TV. Unfortunately, there does not seem to be any
+    couches or chairs in the room. There is an exit to the north and a door on the east wall with no doorknob.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30312
+      look: The hallway leads to the north.
+    east:
+      look: The door seems to be permanently closed and there does not seem to be a way through.
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+  extras:
+  - keywords: [door]
+    text: The door seems to be permanently closed and there does not seem to be a way through.
+  - keywords: [fridge, stove, tv]
+    text: >
+      These are all the regular appliances you would expect to find in a room of this magnitude.
+  - keywords: [chair, chairs, couch, couches]
+    text: You don't see any such thing.  Read the description.
+
+"tba:303:room:30320":
+  name: Hallway
+  description: >
+    The hallway curves around slightly so that you can't quite see what is to the west and east.  The
+    sound of snoring denotes a lecture hall to the south.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:303:room:30321
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30326
+      look: An opening to the south brings you to Lecture hall "B".
+    west:
+      to: tba:301:room:30130
+      look: The hallway continues west.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30321":
+  name: Hallway
+  description: >
+    The hallway curves around slightly so that you can't quite see what is to the west and east.  The
+    sound of snoring denotes a lecture hall to the south.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:303:room:30322
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30327
+      look: An opening to the south brings you to Lecture hall "A".
+    west:
+      to: tba:303:room:30320
+      look: The hallway continues west.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30322":
+  name: Hallway
+  description: >
+    The hallway curves around slightly so that you can't quite see what is to the west and east.  There
+    is an extraneous exit to the north.
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30325
+      look: To the north you see... the center of the building?
+    east:
+      to: tba:303:room:30323
+      look: The hallway continues east.
+    west:
+      to: tba:303:room:30321
+      look: The hallway continues west.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30323":
+  name: Hallway
+  description: >
+    The hallway curves around slightly so that you can't quite see what is to the est and east.  The
+    sound of snoring denotes a lecture hall to the south.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:303:room:30324
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30328
+      look: An opening to the south brings you to Lecture hall "D".
+    west:
+      to: tba:303:room:30322
+      look: The hallway continues west.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30324":
+  name: Hallway
+  description: >
+    The hallway curves around slightly so that you can't quite see what is to the west and east.  The
+    sound of snoring denotes a lecture hall to the south.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30130
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30329
+      look: An opening to the south brings you to Lecture hall "C".
+    west:
+      to: tba:303:room:30323
+      look: The hallway continues west.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30325":
+  name: An Odd Circular Room
+  description: >
+    A small circular room sits in the center of the building.  There are exits to the north and south.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30130
+      look: The entrance can been seen to the north.
+    south:
+      to: tba:303:room:30322
+      look: Another hallway can be seen to the south.
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+
+"tba:303:room:30326":
+  name: Lecture Hall "B"
+  description: >
+    The lecture hall is comprised of almost two dozen rows of uncomfortable seats with small tables
+    bolted to them.  As soon as you enter the room, you get a very sleepy feeling...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30320
+      look: Well, it's the hallway you entered from... Or is it?
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+  - keywords: [letter, number, lettering, numbering, order]
+    text: You aren't too sure that there is an order to the lettering scheme.
+
+"tba:303:room:30327":
+  name: Lecture Hall "A"
+  description: >
+    The lecture hall is comprised of almost two dozen rows of uncomfortable seats with small tables
+    bolted to them.  As soon as you enter the room, you get a very sleepy feeling...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30321
+      look: Well, it's the hallway you entered from... Or is it?
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+  - keywords: [letter, number, lettering, numbering, order]
+    text: You aren't too sure that there is an order to the lettering scheme.
+
+"tba:303:room:30328":
+  name: Lecture Hall "D"
+  description: >
+    The lecture hall is comprised of almost two dozen rows of uncomfortable seats with small tables
+    bolted to them.  As soon as you enter the room, you get a very sleepy feeling...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30323
+      look: Well, it's the hallway you entered from... Or is it?
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+  - keywords: [letter, number, lettering, numbering, order]
+    text: You aren't too sure that there is an order to the lettering scheme.
+
+"tba:303:room:30329":
+  name: Lecture Hall "C"
+  description: >
+    The lecture hall is comprised of almost two dozen rows of uncomfortable seats with small tables
+    bolted to them.  As soon as you enter the room, you get a very sleepy feeling...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:303:room:30324
+      look: Well, it's the hallway you entered from... Or is it?
+  extras:
+  - keywords: [round, circle, circular, curves, curve]
+    text: Yes, it's round.
+  - keywords: [letter, number, lettering, numbering, order]
+    text: You aren't too sure that there is an order to the lettering scheme.
+
+"tba:303:room:30330":
+  name: Hallway
+  description: >
+    This hallway leads through the darkness...  There seems to be some sort of conveyer belt under your
+    feet, and you can see glinting objects ahead, and the way back east seems to have disappeared.  The
+    pictures on the walls make you feel extremely comfortable.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      look: There isn't an exit in this direction, so don't even bother trying to go this way.
+    west:
+      to: tba:303:room:30331
+      look: The hallway continues to the west.
+  extras:
+  - keywords: [wall, walls, pictures, picture]
+    text: >
+      The pictures on the wall make up a large mural depicting Mediterranean scenery and make you feel
+      extraordinarily comfortable.
+
+"tba:303:room:30331":
+  name: Abattoir
+  description: >
+    The walls of this room are covered with rotating knives and seem to be heavily soundproofed.  There
+    are chutes evenly spaced along the floor where it meets the wall, and there are several suction
+    devices designed to suck your mangled flesh away....  Wait a minute....  This must be a Death Trap... 
+    And so it is!  But, the system seems to work well, as the rotating knives cut you up into tiny little
+    pieces of flesh and your blood drains down the chutes, and the suction devices casually suck what's
+    left of your mangled flesh away....
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:303:room:30330
+      look: Why even look...it won't halt the mangling?
+  extras:
+  - keywords: [monty, python]
+    text: >
+      This section of the area was designed in accordance with Monty Python guidelines in mind...  Thanx
+      to Monty Python for their infamous "Architect's Sketch".

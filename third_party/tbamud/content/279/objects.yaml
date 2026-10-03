@@ -1,0 +1,947 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 279.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:279:obj:27900":
+  type: armor
+  keywords: [red, cape, Cardinal's, cloak]
+  short: a Cardinal's red cloak
+  long: A red cloak is lying here.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 5
+  cost: 175
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: mana
+    modifier: 10
+
+"tba:279:obj:27902":
+  type: worn
+  keywords: [brown, boots]
+  short: a pair of brown boots
+  long: A pair of brown boots are lying here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: move
+    modifier: 20
+  - apply: dex
+    modifier: 1
+
+"tba:279:obj:27905":
+  type: drinkcon
+  keywords: [water, vase, wood, water]
+  short: a wood vase
+  long: A wood, and old vase has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    capacity: 12
+    contains: 12
+    liquid: clear_water
+    poisoned: false
+  weight: 12
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, vase]
+    text: >
+      This is a very old vase, inside is clear water wich you can drink, it says that you can drink from
+      it 12 times, after that you would need to fill it from a fountain.
+
+"tba:279:obj:27907":
+  type: drinkcon
+  keywords: [water, plate, silver, water]
+  short: a silver plate
+  long: A silver plate is stuck to the wall.
+  flags: [glow, bless, anti_evil]
+  wear: []
+  values:
+    capacity: 10
+    contains: 10
+    liquid: salt_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, plate]
+    text: This plate is filled with blessed water.
+
+"tba:279:obj:27908":
+  type: worn
+  keywords: [sweater]
+  short: a cool sweater
+  long: A sweater is lying here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+
+"tba:279:obj:27911":
+  type: light
+  keywords: [bible]
+  short: a Bible
+  long: A bible has been left here.
+  flags: [glow, anti_mage, anti_thief]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 5
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: str
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:279:obj:27915":
+  type: boat
+  keywords: [slab]
+  short: a wood slab
+  long: A wood slab has been left here.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 28
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: move
+    modifier: -20
+  - apply: damroll
+    modifier: -1
+
+"tba:279:obj:27921":
+  type: container
+  keywords: [tithe, basket]
+  short: a tithe basket
+  long: A basket has been left here.
+  flags: [bless]
+  wear: [take, hold]
+  values:
+    capacity: 150
+    lock_flags: 1
+    corpse: false
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:279:obj:27924":
+  type: armor
+  keywords: [ring, Cardinal, Cardinal's, ruby]
+  short: Cardinal's ruby ring
+  long: A ruby ring has been left here.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 2
+  cost: 440
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: mana
+    modifier: 5
+  - apply: ac
+    modifier: -5
+
+"tba:279:obj:27925":
+  type: worn
+  keywords: [pants, dirty]
+  short: a pair of dirty pants
+  long: A pair of dirty pants has been left here.
+  flags: [anti_evil]
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: int
+    modifier: -1
+
+"tba:279:obj:27926":
+  type: armor
+  keywords: [green, shirt]
+  short: a green shirt
+  long: A green piece of cloth is lying here.
+  wear: [take, body]
+  values:
+    armor: 0
+  weight: 4
+  cost: 125
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -9
+  - apply: dex
+    modifier: 1
+  - apply: cha
+    modifier: 1
+
+"tba:279:obj:27930":
+  type: worn
+  keywords: [sacred, sandals]
+  short: a pair of sacred sandals
+  long: A pair of sandals are lying here.
+  flags: [glow]
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: move
+    modifier: 20
+  - apply: hitroll
+    modifier: 2
+
+"tba:279:obj:27933":
+  type: armor
+  keywords: [stone, shield]
+  short: a stone shield
+  long: A stone shield has been left here.
+  flags: [hum, no_drop]
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: hitroll
+    modifier: -1
+  - apply: damroll
+    modifier: 2
+
+"tba:279:obj:27934":
+  type: armor
+  keywords: [stone, sleeves]
+  short: a pair of stone sleeves
+  long: A pair of stone sleeves are lying here.
+  flags: [hum, no_drop]
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 12
+  cost: 275
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: move
+    modifier: -20
+  - apply: damroll
+    modifier: 2
+
+"tba:279:obj:27936":
+  type: armor
+  keywords: [stone, leggings]
+  short: a pair of stone leggings
+  long: A pair of leggings made out of stone are lying here.
+  flags: [hum, no_donate, no_drop]
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 15
+  cost: 257
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -1
+  - apply: move
+    modifier: -20
+  - apply: damroll
+    modifier: 2
+
+"tba:279:obj:27937":
+  type: weapon
+  keywords: [silver, sword]
+  short: a silver sword
+  long: A shiny sword is lying here.
+  flags: [no_rent, anti_evil, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 6d6
+    attack: hit
+  weight: 5
+  cost: 825
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:279:obj:27938":
+  type: worn
+  keywords: [rosary]
+  short: a rosary
+  long: A chain has been left here.
+  flags: [glow, anti_thief]
+  wear: [take, neck, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 853
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:279:obj:27941":
+  type: worn
+  keywords: [collar, dog]
+  short: a bright dog collar
+  long: A bright collar has been left here.
+  flags: [hum]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: damroll
+    modifier: 1
+  - apply: age
+    modifier: 1
+
+"tba:279:obj:27942":
+  type: fountain
+  keywords: [Lyon, fountain]
+  short: a fountain
+  long: A gray stone fountain babbles here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: wine
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, fountain]
+    text: Is not just a fountain, it is an ornament of the city.
+
+"tba:279:obj:27943":
+  type: scroll
+  keywords: [magic, potion]
+  short: a magic potion
+  long: A magic potion has been left here
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [30, 3, 43, 3]
+  weight: 2
+  cost: 562
+  rent: 0
+  level: 0
+
+"tba:279:obj:27945":
+  type: light
+  keywords: [lamp, copper]
+  short: a copper lamp
+  long: A copper lamp has been left here.
+  flags: [glow, no_donate, no_drop, anti_cleric]
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 6
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: -5
+  - apply: ac
+    modifier: -5
+  - apply: int
+    modifier: 1
+
+"tba:279:obj:27947":
+  type: other
+  keywords: [flowers]
+  short: a bunch of flowers
+  long: Some flowers have been left here.
+  flags: [no_rent, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+
+"tba:279:obj:27949":
+  type: weapon
+  keywords: [bloody, doagger]
+  short: a bloody dagger
+  long: A dagger stained with blood has been left here.
+  flags: [no_donate, anti_good, anti_cleric, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d12
+    attack: hit
+  weight: 7
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: int
+    modifier: 1
+  - apply: mana
+    modifier: 25
+
+"tba:279:obj:27951":
+  type: weapon
+  keywords: [hermit, mace]
+  short: a hermit mace
+  long: A hermit mace has been left here.
+  flags: [anti_good, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: thrash
+  weight: 8
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:279:obj:27955":
+  type: key
+  keywords: [magical, key]
+  short: a magical key
+  long: A magical key has been left here.
+  flags: [no_rent, invisible]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:279:obj:27957":
+  type: armor
+  keywords: [magic, belt]
+  short: a magic belt
+  long: A magic belt is lying here.
+  flags: [glow, anti_thief, anti_warrior]
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 10
+  cost: 120
+  rent: 0
+  level: 20
+  affects:
+  - apply: save_spell
+    modifier: -2
+  - apply: mana
+    modifier: 25
+
+"tba:279:obj:27965":
+  type: other
+  keywords: [statue]
+  short: a statue of Louis XIV
+  long: A bronze statue of Louis XIV is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, statue]
+    text: This statue was made in honor of the king Louis XIV.
+
+"tba:279:obj:27966":
+  type: worn
+  keywords: [dress, white]
+  short: a white dress
+  long: A white dress is lying here.
+  flags: [glow]
+  wear: [take, body, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [look, dress]
+    text: It is a beautifull dress, you cant imagine yourself using it.
+
+"tba:279:obj:27967":
+  type: worn
+  keywords: [hood]
+  short: a black hood
+  long: A black hood is lying here.
+  flags: [anti_good, anti_cleric, anti_warrior]
+  wear: [take, head, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: cha
+    modifier: -1
+  - apply: age
+    modifier: 1
+
+"tba:279:obj:27968":
+  type: key
+  keywords: [bronze, key]
+  short: a bronze key
+  long: A bronze key is lying here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, key]
+    text: This key is the one that open the principal door of the Musketeers H.  Q.
+
+"tba:279:obj:27969":
+  type: other
+  keywords: [guillotine]
+  short: a guillotine
+  long: A blody guillotine is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [guillotine]
+    text: This guillotine was built to punish the revolutioners.
+
+"tba:279:obj:27971":
+  type: food
+  keywords: [French, cake]
+  short: a French cake
+  long: A French cake has been left here it looks delicius.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:279:obj:27972":
+  type: worn
+  keywords: [Musketeer, hat]
+  short: a Musketeer hat
+  long: A brown hat has been left here.
+  flags: [anti_evil, anti_cleric]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 25
+
+"tba:279:obj:27977":
+  type: weapon
+  keywords: [rapier]
+  short: a golden rapier
+  long: A sword has been left here.
+  flags: [invisible, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: dex
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+
+"tba:279:obj:27978":
+  type: weapon
+  keywords: [foil]
+  short: a foil
+  long: A sword is lying here.
+  flags: [glow, anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: int
+    modifier: 1
+  - apply: mana
+    modifier: 25
+
+"tba:279:obj:27979":
+  type: worn
+  keywords: [brown, gloves]
+  short: a pair of brown gloves
+  long: A pair of brown gloves has been left here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:279:obj:27985":
+  type: food
+  keywords: [baggete]
+  short: a baggete
+  long: A peace of bread has been left here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 3
+  cost: 58
+  rent: 0
+  level: 0
+
+"tba:279:obj:27987":
+  type: worn
+  keywords: [horseshoes]
+  short: a set of horseshoes
+  long: A set of horseshoes has been left here.
+  flags: [no_rent]
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: ac
+    modifier: -5
+  - apply: move
+    modifier: 25
+  extras:
+  - keywords: [look, horseshoes]
+    text: >
+      This object can only be use by a horse sorry if you liked them but, you cant take them with you.
+
+"tba:279:obj:27988":
+  type: staff
+  keywords: [magic, staff]
+  short: a magic staff
+  long: A staff has been left here.
+  flags: [magic, bless]
+  wear: [take, hold]
+  values:
+    raw: [30, 5, 5, 3]
+  weight: 1
+  cost: 180
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, staff]
+    text: >
+      This is a magical an powerful staff that blesses all the persons that are around you players or
+      mobs.  When you buy it you can used 5 times.
+
+"tba:279:obj:27990":
+  type: key
+  keywords: [key, oxided]
+  short: an oxided key
+  long: An oxided key has been left here.
+  flags: [hum, no_rent, no_donate, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, key]
+    text: >
+      This is a key of a cell, what ever muste be in that cell you should live it there it must be a very
+      dangerous thief or revolutioner.
+
+"tba:279:obj:27991":
+  type: other
+  keywords: [cadaver]
+  short: a cadaver
+  long: The cadaver of a man is lying here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, corpse]
+    text: This is the corpse of the man that once had the iron mask on his head.
+
+"tba:279:obj:27992":
+  type: key
+  keywords: [key, platinum]
+  short: a platinum key
+  long: A platinum key is lying here.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [look, key]
+    text: >
+      This is not an ordinary key, this key can open a secret passage that leads to the royal hall, where
+      you can find the king.
+
+"tba:279:obj:27993":
+  type: worn
+  keywords: [crown, royal]
+  short: a royal crown
+  long: A royal crown has been left here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -5
+  - apply: str
+    modifier: -3
+
+"tba:279:obj:27994":
+  type: worn
+  keywords: [mask, iron]
+  short: an iron mask
+  long: An iron mask is lying here.
+  flags: [hum]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 180
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -5
+  - apply: str
+    modifier: -1
+
+"tba:279:obj:27995":
+  type: armor
+  keywords: [cape, Musketeer]
+  short: a Musketeer cape
+  long: A Musketeer cape is lying here.
+  flags: [no_invis, anti_evil, anti_cleric]
+  wear: [take, body, about]
+  values:
+    armor: 0
+  weight: 4
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: hit
+    modifier: 10
+  - apply: dex
+    modifier: 1
+
+"tba:279:obj:27996":
+  type: worn
+  keywords: [pearl, necklace]
+  short: a pearl necklace
+  long: A necklace has been left here.
+  flags: [anti_good, anti_evil]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: move
+    modifier: 10
+  - apply: mana
+    modifier: 10
+
+"tba:279:obj:27997":
+  type: worn
+  keywords: [spiritual, gloves]
+  short: a pair of spiritual gloves
+  long: A pair of gloves have been left here.
+  flags: [glow, invisible, anti_thief, anti_warrior]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: age
+    modifier: 3
+
+"tba:279:obj:27998":
+  type: armor
+  keywords: [iron, chain]
+  short: an iron chain
+  long: A chain has been left here
+  wear: [take, neck, body, hands, about, waist, wrist]
+  values:
+    armor: 0
+  weight: 16
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: ac
+    modifier: -5
+
+"tba:279:obj:27999":
+  type: worn
+  keywords: [dark, mask]
+  short: a dark mask
+  long: A dark mask is lying here.
+  flags: [hum, anti_mage, anti_cleric]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -5
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 10

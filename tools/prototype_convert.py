@@ -100,7 +100,7 @@ def prose(text):
             cur.append(l.strip())
     if cur:
         paras.append(" ".join(cur))
-    return Prose("\n".join(paras))      # one line per paragraph: one blank line in the file
+    return Prose("\n".join(paras))      # paragraphs joined by "\n" in memory; a list of them in the file
 
 
 def dice(text):
@@ -167,7 +167,7 @@ while i < len(ls):
             kw, i = tilde(ls, i)
             info, key, to = (int(x) for x in ls[i].split()[:3])
             i += 1
-            ex = {"to": ref(to)}
+            ex = {"to": ref(to)} if to > 0 else {}
             if look.strip():
                 ex["look"] = prose(look)
             if info:
@@ -207,12 +207,16 @@ while i < len(ls):
     gold, exp = ls[i + 2].split()
     pos = ls[i + 3].split()
     i += 4
-    extra = {}
+    espec = {}
     if f[-1] == "E":
         while i < len(ls) and ls[i].strip() != "E":
             k, _, val = ls[i].partition(":")
-            extra[re.sub(r"(?<!^)(?=[A-Z])", "_", k.strip()).lower()] = int(val) if val.strip().lstrip("-").isdigit() else val.strip()
+            if val.strip().lstrip("-").isdigit():
+                espec[k.strip()] = int(val)
             i += 1
+    ABIL = {"Str": "str", "StrAdd": "str_add", "Int": "int", "Wis": "wis", "Dex": "dex", "Con": "con", "Cha": "cha"}
+    SAVE = {"SavingPara": "para", "SavingRod": "rod", "SavingPetri": "petri", "SavingBreath": "breath",
+            "SavingSpell": "spell"}
     mob = {"keywords": kw.split(), "short": short.strip(), "long": long_.strip(), "description": prose(desc),
            "level": int(lvl), "sex": SEXES[int(pos[2])], "alignment": int(f[-2])}
     fl = flags(f[0], MOB_BITS)
@@ -222,8 +226,14 @@ while i < len(ls):
     if af:
         mob["affects"] = af
     mob["combat"] = {"thac0": int(thac0), "armor": int(ac), "hit_points": dice(hp), "damage": dice(dam)}
-    if extra:
-        mob["combat"].update(extra)
+    if "BareHandAttack" in espec and 0 <= espec["BareHandAttack"] < len(ATTACKS):
+        mob["combat"]["bare_hand_attack"] = ATTACKS[espec["BareHandAttack"]]
+    abil = {v: espec[k] for k, v in ABIL.items() if k in espec}
+    if abil:
+        mob["abilities"] = abil
+    saves = {v: espec[k] for k, v in SAVE.items() if k in espec}
+    if saves:
+        mob["saves"] = saves
     mob["gold"], mob["exp"] = int(gold), int(exp)
     mob["position"] = {"load": POSITIONS[int(pos[0])], "default": POSITIONS[int(pos[1])]}
     mobs[ref(v, "mob")] = mob
@@ -306,7 +316,8 @@ zone = {"id": f"tba:{ZONE}", "name": z["name"], "builders": z["builders"],
 zone = {k: x for k, x in zone.items() if x not in (None, [])}
 
 spawns, doors, removes = [], [], []
-last_mob = last_obj = None
+last_mob = None
+latest = {}                             # P puts into "the copy of <container> most recently loaded" (building.txt)
 for line in z["lines"]:
     f = line.split()
     if not f or f[0] not in "MOGEPDR":
@@ -318,20 +329,26 @@ for line in z["lines"]:
         spawns.append(last_mob)
         last_obj = None
     elif cmd == "O":
-        last_obj = {"object": ref(args[1], "obj"), "room": ref(args[3]), "limit": args[2]}
+        last_obj = {"object": ref(args[1], "obj"), "room": ref(args[3]), "limit": args[2]} if args[3] > 0 else \
+            {"object": ref(args[1], "obj"), "limit": args[2]}
         spawns.append(last_obj)
+        latest[args[1]] = last_obj
     elif cmd == "E" and last_mob is not None:
         item = {"object": ref(args[1], "obj"), "limit": args[2]}
         if not cond:
             item["even_if_mob_not_loaded"] = True
         last_mob.setdefault("equip", {})[EQUIP_POS[args[3]]] = item
+        latest[args[1]] = item
     elif cmd == "G" and last_mob is not None:
         item = {"object": ref(args[1], "obj"), "limit": args[2]}
         if not cond:
             item["even_if_mob_not_loaded"] = True
         last_mob.setdefault("carry", []).append(item)
-    elif cmd == "P" and last_obj is not None:
-        last_obj.setdefault("contents", []).append({"object": ref(args[1], "obj"), "limit": args[2]})
+        latest[args[1]] = item
+    elif cmd == "P" and args[3] in latest:
+        item = {"object": ref(args[1], "obj"), "limit": args[2]}
+        latest[args[3]].setdefault("contents", []).append(item)
+        latest[args[1]] = item
     elif cmd == "D":
         doors.append({"room": ref(args[1]), "exit": DIRS[args[2]], "state": DOOR_STATE[args[3]]})
     elif cmd == "R":
@@ -359,13 +376,21 @@ def text_repr(d, s):
 
 
 def prose_repr(d, s):
-    if len(s) <= 90 and "\n" not in s:
-        return d.represent_scalar("tag:yaml.org,2002:str", str(s))
-    return d.represent_scalar("tag:yaml.org,2002:str", str(s), style=">")
+    """One paragraph: a folded block. Several: a list of folded blocks, one per paragraph (explicit breaks)."""
+    def para(t):
+        if len(t) <= 90:
+            return d.represent_scalar("tag:yaml.org,2002:str", t)
+        return d.represent_scalar("tag:yaml.org,2002:str", t, style=">")
+    if "\n" in s:
+        return yaml.SequenceNode("tag:yaml.org,2002:seq", [para(t) for t in str(s).split("\n")], flow_style=False)
+    return para(str(s))
 
 
 def pre_repr(d, s):
-    return d.represent_scalar("tag:yaml.org,2002:str", str(s), style="|")
+    """Verbatim text keeps an explicit marker so it survives loading: {preformatted: |...}."""
+    node = d.represent_scalar("tag:yaml.org,2002:str", str(s), style="|")
+    key = d.represent_scalar("tag:yaml.org,2002:str", "preformatted")
+    return yaml.MappingNode("tag:yaml.org,2002:map", [(key, node)])
 
 
 def list_repr(d, xs):
@@ -389,7 +414,7 @@ def dump(path, data, header):
 H = "# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone {z}.\n"
 LEGEND = {
  "zone.yaml": "# reset.every_minutes: minutes between resets; reset.when: never | when_empty (no players in the zone) | always\n",
- "rooms.yaml": ("# Entries by ID, in vnum order. Prose is folded (>): wrapped here, one paragraph per blank line, the\n"
+ "rooms.yaml": ("# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the\n"
                 "# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door\n"
                 "# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).\n"),
  "mobs.yaml": ("# keywords: words to name it in commands; short: in sentences (\"the pit beast\"); long: its line in a room.\n"

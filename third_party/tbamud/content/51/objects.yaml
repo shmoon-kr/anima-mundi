@@ -1,0 +1,323 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 51.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:51:obj:5100":
+  type: weapon
+  keywords: [longsword, commoner]
+  short: a commoner's longsword
+  long: A commoner's longsword made of adamantite has been left here.
+  flags: [anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 12
+  cost: 1000
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:51:obj:5101":
+  type: weapon
+  keywords: [longsword, noble]
+  short: a noble's longsword
+  long: A drow noble's longsword, made of adamantite, lies here.
+  flags: [anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 12
+  cost: 150
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:51:obj:5102":
+  type: weapon
+  keywords: [whip, snake, twoheaded]
+  short: a two-headed snake whip
+  long: A whip with two snakes heads lies here.
+  flags: [glow, hum]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 12
+  cost: 175
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:51:obj:5103":
+  type: weapon
+  keywords: [whip, snake, threeheaded]
+  short: a three-headed snake whip
+  long: A whip with three snake heads has been left here.
+  flags: [glow, hum]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: slash
+  weight: 12
+  cost: 500
+  rent: 23
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:51:obj:5104":
+  type: weapon
+  keywords: [whip, snake, fourheaded]
+  short: a four-headed snake whip
+  long: A whip with four snake heads has been carelessly left here.
+  flags: [glow, hum]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 12
+  cost: 102
+  rent: 40
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:51:obj:5105":
+  type: weapon
+  keywords: [longsword, black]
+  short: a black longsword
+  long: A black longsword has been carelessly left here.
+  flags: [glow, magic, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 12
+  cost: 102
+  rent: 40
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:51:obj:5106":
+  type: weapon
+  keywords: [whip, snake, fiveheaded]
+  short: a five-headed snake whip
+  long: A whip with 5 snake heads has been carelessly dropped here.
+  flags: [glow, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 12
+  cost: 120
+  rent: 45
+  level: 0
+  affects:
+  - apply: str
+    modifier: -2
+  - apply: int
+    modifier: -2
+
+"tba:51:obj:5107":
+  type: weapon
+  keywords: [whip, snake, sixheaded]
+  short: a six-headed snake whip
+  long: A whip with six snake heads has been dropped here very carelessly.
+  flags: [glow, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 12
+  cost: 150
+  rent: 80
+  level: 0
+  affects:
+  - apply: str
+    modifier: -3
+  - apply: int
+    modifier: -3
+
+"tba:51:obj:5108":
+  type: armor
+  keywords: [bracers, iron]
+  short: a pair of bracers
+  long: A pair of iron bracers has been dropped here.
+  flags: [glow, magic]
+  wear: [take, arms]
+  values:
+    armor: 8
+  weight: 3
+  cost: 200
+  rent: 10
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+
+"tba:51:obj:5109":
+  type: worn
+  keywords: [gauntlets]
+  short: a pair of gauntlets
+  long: A pair of gauntlets is lying on the ground.
+  flags: [glow]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1000
+  rent: 30
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+
+"tba:51:obj:5110":
+  type: wand
+  keywords: [wand, blue, silver]
+  short: a silvery blue wand
+  long: A silvery blue wand has been dropped in the dirt.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [10, 3, 3, 30]
+  weight: 1
+  cost: 400
+  rent: 30
+  level: 0
+
+"tba:51:obj:5111":
+  type: armor
+  keywords: [helmet, small]
+  short: a small helmet
+  long: A small helmet lies up against a rock.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 5
+  cost: 600
+  rent: 30
+  level: 0
+  affects:
+  - apply: int
+    modifier: 3
+
+"tba:51:obj:5112":
+  type: worn
+  keywords: [ring, ruby]
+  short: a small ruby ring
+  long: A small ruby ring lies in the dirt.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 80
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 25
+
+"tba:51:obj:5113":
+  type: weapon
+  keywords: [dagger, sacrificial, spider]
+  short: a spider shaped dagger
+  long: A dagger with spider leg shaped blades lies on the ground.
+  flags: [magic, anti_good, anti_mage, anti_cleric, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 8
+  cost: 120
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+
+"tba:51:obj:5114":
+  type: armor
+  keywords: [hat, green]
+  short: a small bright green hat
+  long: A small bright green hat lies in the dirt.
+  flags: [no_drop]
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 1
+  cost: 200
+  rent: 60
+  level: 0
+  affects:
+  - apply: age
+    modifier: -10
+  - apply: ac
+    modifier: -2
+
+"tba:51:obj:5115":
+  type: key
+  keywords: [key, adamantite]
+  short: an adamantite key
+  long: A key made of a strange metal is lying here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:51:obj:5116":
+  type: money
+  keywords: [gold, treasure, coins]
+  short: a pile of golden coins
+  long: A large pile of golden coins is lying here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:51:obj:5121":
+  type: undefined
+  keywords: [unfinished, object]
+  short: an unfinished object
+  long: An unfinished object is lying here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

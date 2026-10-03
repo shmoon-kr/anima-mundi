@@ -1,0 +1,229 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 31.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:31:mob:3100":
+  keywords: [maid]
+  short: the Maid
+  long: The Maid is waiting for your order.
+  description: >
+    She is very beautiful with golden hair, and deep blue eyes.  A good reason for coming here more
+    often, you think to yourself.
+  level: 33
+  sex: female
+  alignment: 1000
+  flags: [spec, sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3101":
+  keywords: [sexton]
+  short: the Sexton
+  long: A Sexton is sitting here, drinking hot tea.
+  description: The Sexton looks like he is relaxing after another grave-digging job.
+  level: 3
+  sex: male
+  alignment: 800
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:31:mob:3102":
+  keywords: [chief, guard]
+  short: the Chief Guard
+  long: The Chief Guard is looking very upset.
+  description: A very angry chief.
+  level: 17
+  sex: male
+  alignment: 800
+  flags: [sentinel, scavenger, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3103":
+  keywords: [cityguard, guard]
+  short: the upset cityguard
+  long: A cityguard stands here, looking very upset.
+  description: A big, strong, angry guard.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, aggressive]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3104":
+  keywords: [secretary]
+  short: the Secretary
+  long: A secretary is sitting at the desk, typing away on the typewriter.
+  description: >
+    She looks very busy.  The Secretary says 'Sorry, but the Mayor is extremely busy today.  ' The
+    Secretary says 'Please sit down and have a seat in the meantime.  '
+  level: 12
+  sex: female
+  alignment: 900
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3105":
+  keywords: [mayor]
+  short: the Mayor
+  long: The Mayor is sitting in his huge chair, snoring loudly.
+  description: He is a stocky, middle-aged man with thin, gray hair.
+  level: 24
+  sex: male
+  alignment: 1000
+  flags: [spec, sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:31:mob:3106":
+  keywords: [crier]
+  short: the Town Crier
+  long: The Town Crier is here, weeping quietly.
+  description: He is very good at his job - completely dissolved in tears.
+  level: 1
+  sex: male
+  alignment: 900
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3120":
+  keywords: [swan]
+  short: the swan
+  long: A swan is swimming around in the pond.
+  description: The white swan is very elegant.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3121":
+  keywords: [duckling]
+  short: the duckling
+  long: A duckling is swimming around in the pond.
+  description: The duckling is adorable, it looks most of all like a tiny furball.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3122":
+  keywords: [sparrow]
+  short: the sparrow
+  long: A sparrow is flapping around on the ground.
+  description: The sparrow looks like it is enjoying life.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:31:mob:3123":
+  keywords: [duck]
+  short: the duck
+  long: A duck is here, quacking happily.
+  description: The duck is quite fat.  It looks like it is enjoying life.
+  level: 1
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing

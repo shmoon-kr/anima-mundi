@@ -1,0 +1,1749 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 0.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:0:obj:1":
+  type: armor
+  keywords: [wings]
+  short: a pair of wings
+  long: A pair of wings is sitting here.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:0:obj:2":
+  type: trash
+  keywords: [fire, ball, fireball]
+  short: a fireball
+  long: A fireball lies here burning.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:0:obj:3":
+  type: trash
+  keywords: [ruby, red, slippers]
+  short: a pair of ruby slippers
+  long: A pair of ruby slippers lies here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:0:obj:4":
+  type: other
+  keywords: [emails, listing]
+  short: an email listing of the gods
+  long: The email listing of the gods is pinned against the wall.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 30
+  extras:
+  - keywords: [emails, listing]
+    text: HELP CONTACT
+
+"tba:0:obj:5":
+  type: food
+  keywords: [foraged, berries]
+  short: some foraged berries
+  long: A few discolored berries that someone foraged.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [berries, foraged]
+    text: >
+      These blue, red, and even green berries look edible.  Though you do wonder about all those stories
+      of poisonous berries out in the woods.  These don't smell bitter, so they must be fine.
+
+"tba:0:obj:6":
+  type: food
+  keywords: [greens, forage]
+  short: some foraged greens
+  long: Someone has foraged some greens to eat, but just left them here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [foraged, greens]
+    text: >
+      An assortment of leaves and grasses that look rather bland.  But if you had to a person could
+      survive off this meager cuisine.  After all, how do you think all these animals live out here.
+
+"tba:0:obj:7":
+  type: food
+  keywords: [foraged, roots]
+  short: some foraged roots
+  long: A pile of roots that someone collected for dinner.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [roots, foraged]
+    text: >
+      Tubular roots of varying sizes and colors.  They look very edible.  Some of them are known to even
+      taste good!  You recognize on of a purplish hue that is extremely sweet and is actually considered a
+      delicacy in some parts.
+
+"tba:0:obj:8":
+  type: food
+  keywords: [foraged, bark]
+  short: some foraged bark
+  long: A pile of bark is stacked neatly in front of you.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 3
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [foraged, bark]
+    text: >
+      Now this is gross!  It must be desperate times when you have to turn to eating tree bark.  This
+      stuff is still green luckily so it has some moisture to it.  But you really aren't going to eat this are
+      you?
+
+"tba:0:obj:9":
+  type: food
+  keywords: [foraged, nuts]
+  short: some foraged nuts
+  long: Half a dozen nuts are lined up perfectly on the ground.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [nuts, foraged]
+    text: >
+      A variety of nuts that are very hard to come by.  Various animals hoard these in their lairs, so if
+      you are lucky enough to come across some then you can just go nutty!
+
+"tba:0:obj:10":
+  type: food
+  keywords: [waybread, bread]
+  short: a waybread
+  long: Some waybread has been put here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [waybread, bread]
+    text: >
+      The waybread is the traditional feed of elves when travelling, they call it lembas.  It is said to
+      refresh the weary traveler greatly.
+
+"tba:0:obj:11":
+  type: fountain
+  keywords: [water, spring, water]
+  short: the spring
+  long: Fresh water is bubbling up from a spring.
+  wear: []
+  values:
+    capacity: 100
+    contains: 100
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:12":
+  type: weapon
+  keywords: [staff, sanctum]
+  short: the Staff of Sanctum
+  long: The Staff of Sanctum stands here waiting to be taken up by those who are worthy.
+  wear: [take, wield, hold]
+  values:
+    damage: 10d5
+    attack: pound
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 30
+
+"tba:0:obj:13":
+  type: other
+  keywords: [Ferret's, black, book]
+  short: the little black book
+  long: A little black book is sitting here calling your name.
+  flags: [hum, magic, bless]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [book]
+    text:
+    - Upon these pages are players that have upset Ferret and will not receive help!
+    - Demigod Saint Angel Phoenix Alexander &w(Maybe you!)&y
+
+"tba:0:obj:14":
+  type: food
+  keywords: [pile, stool, steaming]
+  short: a steaming pile of stool
+  long: A steaming pile of stool has recently been deposited here.
+  wear: [take]
+  values:
+    hours: 0
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:0:obj:15":
+  type: other
+  keywords: [quest_token_zone_1, token]
+  short: a quest token
+  long: A quest token needs to be returned to the questmaster.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [quest, token]
+    text: >
+      It is a plain gold coin with the symbol of Sanctus engraved on both sides. This token should be
+      taken back to the questmaster to receive a reward.
+
+"tba:0:obj:16":
+  type: other
+  keywords: [quest, timer]
+  short: a quest timer
+  long: A small quest timer is ticking away.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [quest, timer]
+    text: >
+      This small device looks like an antique gold pocket watch.  One small hand counts down the 10
+      minutes a questor has to complete their quest.
+
+"tba:0:obj:17":
+  type: other
+  keywords: [quest, mobile, head]
+  short: the head of the quest mob
+  long: The head of a quest mob needs to be taken back to the questmaster.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [head, quest, mob]
+    text: >
+      This quest item is proof that you have hunted down and killed the quest mob. It needs to be
+      returned to the questmaster within 10 minutes.
+
+"tba:0:obj:20":
+  type: other
+  keywords: [portal, gate, gateway]
+  short: a shimmering portal
+  long: A shimmering portal hovers here forming a gateway to another place and time.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:21":
+  type: weapon
+  keywords: [sword, quest, War's, Blood]
+  short: War's Blood
+  long: The sword of kings awaits a hero to wield it.
+  flags: [glow, hum, no_donate, magic, bless, anti_mage, anti_cleric, anti_thief, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: slash
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  - apply: str
+    modifier: 3
+  extras:
+  - keywords: [sword, quest, war's, blood]
+    text: >
+      The blade of this beautiful weapon is inlaid with tiny wavelets.  The guard extends far out from
+      the basket hilt, guarding the wielder from all attacks. Engraved across the blade are these words. 
+      "Seek not death.  Seek not triumph. Seek wisdom, honor, and truth.  For I wield the spirit of my
+      wielder, and blood of heroes never dies."  These words are written in golden runes across the polished steel
+      of the blade.  War's blood is given only to those warriors meant for greatness.  Remember, the sword
+      wields the spirit of its master.
+
+"tba:0:obj:22":
+  type: weapon
+  keywords: [Shadow, Stealer, dagger, quest]
+  short: shadow stealer
+  long: A piece of deepest midnight calls to you here.
+  flags: [hum, no_donate, magic, anti_mage, anti_cleric, anti_warrior, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: pierce
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: move
+    modifier: 50
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [shadow, stealer, dagger, quest]
+    text: >
+      This long, thin dagger is made of the blackest metal you have ever seen.  It seems to devour all
+      the light in its vicinity, making it appear as if it were a part of the very night.  As you look at the
+      blade and hilt, you can make out an inscription which travels from the point of the weapon to its
+      ornately engraved pommel.  "Whosoever would let blood for love, whosoever would make war upon death,
+      whosoever would give their life to love, make war with my darkness." Wield this fabled blade of lost
+      love, and become one with the shadows.
+
+"tba:0:obj:23":
+  type: weapon
+  keywords: [staff, spellfire, quest]
+  short: the staff of spellfire
+  long: A burning staff of magical power floats in the air under its own power.
+  flags: [glow, hum, no_donate, invisible, magic, bless, anti_cleric, anti_thief, anti_warrior, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: pound
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: int
+    modifier: 3
+  - apply: mana
+    modifier: 50
+  extras:
+  - keywords: [staff, spellfire, quest]
+    text: >
+      Wrought of the pure weave, bound by mortal spells, wielded by only the highest of sorcerers, this
+      staff is a burning rod of pure magic.  The white flame that gives it substance flickers and flares as
+      you watch, threatening to break its magical wards and devour its surroundings.  As you hold this
+      weapon, these words are burned into your mind.  "From the flash to the flame, my light shall guide the
+      wizardry with wisdom.  From the beginning to the end, there will I be; to weave the one force eternal."
+
+"tba:0:obj:24":
+  type: weapon
+  keywords: [mace, quest, divine, blessing]
+  short: the mace of divine blessing
+  long: A gift from the gods is here seeking a worthy mortal.
+  flags: [glow, hum, no_donate, magic, bless, anti_mage, anti_thief, anti_warrior, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: pound
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: int
+    modifier: 3
+  - apply: mana
+    modifier: 50
+  extras:
+  - keywords: [mace, quest, divine, blessing]
+    text: >
+      This heavy iron mace hums with suppressed power.  Its surface is engraved with thousands of tiny
+      runes of all the deities that have ever been and ever will be.  Written across the flanges of the head
+      are these words, "Let faith be the beginning.  Let the body be its instrument.  Let divinity flow
+      through the wielder of my force.  Believe and be blessed."
+
+"tba:0:obj:25":
+  type: weapon
+  keywords: [silver, bow, quest]
+  short: the silver bow of the light
+  long: A mighty force for good seeks a champion of the light.
+  flags: [glow, hum, no_donate, magic, bless, anti_evil, anti_neutral, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: stab
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: mana
+    modifier: 50
+  - apply: hit
+    modifier: 50
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [silver, bow, quest, light]
+    text: >
+      Resplendent as the sun, this bow of pure silver seems to exude purity and goodness.  The bow itself
+      is a shaft of pure silver, inscribed with sunbursts and lightning bolts.  Its string is a thread of
+      purest white light that shimmers as you look at it.  No arrow is needed for this mighty weapon.  Its
+      wielder need never carry a quiver.  If you listen closely, you can hear the weapon humming with its
+      own energy.  If you listen long enough you might hear these words in its song.  "Let light banish
+      darkness.  Let Hope banish fear.  I am the herald of the end.  Where I strike, only light remains."
+
+"tba:0:obj:26":
+  type: weapon
+  keywords: [spear, balance, quest]
+  short: the spear of balance
+  long: The greatest symbol of balance seeks the hearts of evil and good alike.
+  flags: [glow, hum, no_donate, magic, anti_good, anti_evil, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: pierce
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: mana
+    modifier: 50
+  - apply: hit
+    modifier: 50
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [spear, quest, balance]
+    text: >
+      The Lance of heroes.  The spear of mortal man.  The shaft of this legendary pike is carved from the
+      wood of the tree of life.  Though separated from the tree that gave it life, the wood is a living,
+      thinking entity.  Full 6 feet in length, the shaft's wood is smooth and unbroken by any scratch or
+      mark.  The head of the spear is a huge dragon's fang, rumored to be from the mouth of the god Balm
+      himself.  Etched in runes across the head of the spear are these words. "Find gray where only black and
+      white were before.  Seek truth where others seek good and evil.  Bring justice through the scales of
+      balance.  Then may you wield the truth that is my gift."
+
+"tba:0:obj:27":
+  type: weapon
+  keywords: [axe, quest, doomslaying]
+  short: the axe of doomslaying
+  long: The axe meant to end all that is good in the realms floats here seeking a head to remove.
+  flags: [hum, no_donate, magic, anti_good, anti_neutral, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: slash
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [axe, doomslaying, quest]
+    text: >
+      Darkest midnight, purest evil, death embodied.  This weapon is the end of all that is good.  Made
+      only of shadows and the taint that is the most obscene corruption, the head of this axe is jagged and
+      spiked.  The blade is balanced by a wicked spike giving this ancient weapon the look of a warped
+      headsman's axe. No light seems to reach it, no living thing seeks its touch.  Tendrils of sickly smoke
+      rise from the blade tainting your thoughts and the very air around you. It calls you, it draws you. 
+      "Wield me, worship me, watch me take the blood of the pure.  Become one with my taint.  Feel the
+      foulness fermenting your soul. Accept evil, accept the shadow.  Wield me and become death.  Become
+      immortal."
+
+"tba:0:obj:28":
+  type: worn
+  keywords: [cap, quickling, quest]
+  short: the cap of quickling
+  long: A small cap of the faerie folk seeks the grasp of a true quickling.
+  flags: [no_donate, invisible, magic, no_sell]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: move
+    modifier: 50
+  - apply: dex
+    modifier: 3
+  - apply: ac
+    modifier: -10
+  extras:
+  - keywords: [cap, quickling, quest]
+    text: >
+      This small green cap is made of a fine velvet lined with silk.  Its material seems to conform to
+      your touch, as if trying to accommodate itself to your grasp.  Its only distinctive feature is a
+      emerald studded silver stickpin jutting jauntily out of the front of the cap.  A peace of silk ribbon forms
+      a band around the inside of the brim.  These words have been embroidered into the cap's material. 
+      "The world is a wonder.  A wonder to wander.  To wander the wonderful world.  That is the life of a
+      sprite.  Come, my brothers, for much is lost that we may find.  Come, my sisters, for many are lost
+      that we may love. Happiness is a laugh away.  Live and laugh and love; that is joy."
+
+"tba:0:obj:29":
+  type: armor
+  keywords: [armbands, midnight, sun, land, quest]
+  short: the armbands of the land of the midnight sun
+  long: The symbol of trollish heroes awaits the next leader of the tribes.
+  flags: [hum, no_donate, magic, bless, no_sell]
+  wear: [take, arms]
+  values:
+    armor: 10
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hit
+    modifier: 50
+  - apply: con
+    modifier: 3
+  extras:
+  - keywords: [armbands, land, midnight, sun, quest]
+    text: >
+      These huge bands of red metal are scratched and marked from years of battle and blood.  Crude
+      markings cover their surface, chronicling the history of the trollish race in gory detail.  Marked in
+      magical runes on the inside of each band are these words.  "Breaking bones, bringing blood, battering
+      battle, bless me brothers, My eyes see red, my claws drip scarlet, and my soul is crimsoned with the
+      blood of the hunt.  We will triumph, for there is no cure for death."
+
+"tba:0:obj:30":
+  type: light
+  keywords: [star, man, quest]
+  short: the star of man
+  long: The light of humanity guides you onward here.
+  flags: [glow, hum, no_donate, magic, no_sell]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: mana
+    modifier: 50
+  - apply: hit
+    modifier: 50
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [star, man, quest]
+    text: >
+      This beautiful gem was mined from the center of the mountain from which the stone of Sanctus's
+      walls is constructed.  It pulses with the glow of true magic. Carved by the finest craftsman, enchanted
+      by the most powerful wielders of the magical arts, this stone was made for the greatest of the human
+      race.  Look into its depths, and see all the souls of mortal man.  It has no peer, no equal, and has
+      yet to be classified by dwarven miners or gnomish scholars.  The human who holds it holds the light of
+      all humanity in their grasp.
+
+"tba:0:obj:31":
+  type: armor
+  keywords: [shield, quest, wyrmguard]
+  short: WyrmGuard
+  long: The protection of dragon-kind seeks the next hero of the wryms.
+  flags: [glow, hum, no_donate, magic, no_sell]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: int
+    modifier: 3
+  - apply: mana
+    modifier: 50
+  extras:
+  - keywords: [shield, quest, wyrmguard]
+    text: >
+      Torn from Balm's breast, this scale has been shaped into a shield of unrivaled strength and
+      beauty.  Its diamond shape expands and shapes itself to protect any dragon who bears it, from the youngest
+      of hatchlings, to the most ancient of wyrms.  The shield shimmers and wavers with all the colors of
+      the rainbow.  In its shimmering depths can be seen all the colors of every dragon that has ever come to
+      pass.  Magical runes circle the shield's rim.  "Come wind, come fire.  Come Thunder, come rain.  My
+      bearer need never fear.  Come giants to duel.  My roar of triumph will be the last you ever hear."
+
+"tba:0:obj:32":
+  type: armor
+  keywords: [heartguard, armor, quest]
+  short: HeartGuard
+  long: The pride of the dwarven race lies here unused.
+  flags: [hum, no_donate, magic, bless, no_sell]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  - apply: hit
+    modifier: 50
+  extras:
+  - keywords: [heartguard, armor, quest]
+    text: >
+      This armor has been forged from the purest iron that can be found in mortal realms.  Its surface
+      has been polished time and time again till it gleams with dark perfection.  The finest dwarven smiths
+      have placed all their knowledge in its making.  The most hallowed dwarven priests have gifted this
+      armor with their blessing.  It has no peer, no equal.  Inscribed on the armor's breastplate are these
+      words: "To march to the clang of the hammer.  To be cooled by the whistling wind of the whirling axe. 
+      Come foe, come fool; Break yourself on the rock of the dwarf.  Eternal wealth awaits, and we will not
+      be denied."
+
+"tba:0:obj:33":
+  type: worn
+  keywords: [scholar's, guide, jeweler's, loop, quest]
+  short: Scholar's Guide
+  long: The Guide to all Gnomish knowledge hums here quietly.
+  flags: [glow, hum, no_donate, magic, no_sell]
+  wear: [take, neck, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 3
+  - apply: mana
+    modifier: 50
+  - apply: wis
+    modifier: 3
+  extras:
+  - keywords: [scholar's, guide, jeweler's, loop, quest]
+    text: >
+      You are looking at what could quite possibly be one of the most beautiful peaces of artistry ever
+      made.  This finely crafted jeweler's loop is suspended from a chain of golden links.  The loop itself
+      is a perfectly made combination of ground glass, perfectly crafted silver, and precision gnomish
+      workmanship. It is so simple as to be elegant.  A tiny plaque hangs from the chain that suspends the
+      loop.  "To you who would sacrifice for life, join me.  To you who would become a slave to wonder, hold
+      me.  To you who seek riches through learning, I am yours."
+
+"tba:0:obj:34":
+  type: armor
+  keywords: [boots, strider, quest]
+  short: the boots of the strider
+  long: The companions to the wanderlust sit here waiting for travel.
+  flags: [hum, no_donate, magic, no_sell]
+  wear: [take, feet]
+  values:
+    armor: 10
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: move
+    modifier: 50
+  - apply: con
+    modifier: 3
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [boots, strider, quest]
+    text: >
+      These fine boots have been made from the hides of monsters and beasts the world over.  They are
+      unadorned black suede leather, with a thick sole and steel toe.  The stitching that holds them together
+      is so fine as to be invisible.  As you look at them, words enter your mind.  "Trip over mountain.
+      Stride over sea.  Travel across desert.  Run between the forest trees.  Be bold, be brave.  Be
+      unfettered.  Let us run the world over.  You and me."
+
+"tba:0:obj:35":
+  type: weapon
+  keywords: [battleaxe, dragonbane, quest, axe]
+  short: the Battleaxe of Dragonbane
+  long: The bane of all wyrmkin seeks the heart of a dragon.
+  flags: [glow, hum, no_donate, magic, bless, no_sell]
+  wear: [take, wield, hold]
+  values:
+    damage: 10d9
+    attack: slash
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 50
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: 5
+  extras:
+  - keywords: [battleaxe, dragonbane, quest]
+    text: >
+      There is no greater weapon in mortal hands.  This is an instrument of death. The two-headed axe was
+      meant for the hands of a giant.  The shaft and hilt of this mighty blade are formed from a gray
+      stone that can never be chipped or broken.  The head of the weapon is formed from two massive pieces of
+      obsidian, shaped like diamonds, side by side.  However this vicious object has but one purpose. 
+      Etched into the two heads of the axe are these words.  "Slash, slice, swerve and swipe.  Dodge, duck, down
+      and up.  I draw the blood of the weak. Thunder marks my strike.  Lightning shines when I am drawn. 
+      I am the storm to end all.  I am the dragonbane."
+
+"tba:0:obj:36":
+  type: armor
+  keywords: [cloak, Elven, court, quest]
+  short: the cloak of the elven court
+  long: A heavy cloak of brown and green is here for the next elven king.
+  flags: [no_donate, magic, no_sell]
+  wear: [take, neck, about]
+  values:
+    armor: 10
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: int
+    modifier: 3
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [cloak, elven, court, quest]
+    text: >
+      A heavy, richly embroidered, cloak of green and brown.  Its color changes as you move, blending in
+      with the world around you.  A simple wooden clasp holds it together at the neck.  It would be like
+      any other nobleman's traveling cloak were it not for one thing.  Laced with thread so fine it almost
+      isn't there, the symbol of the Elven court is sewn over the breast of the cloak.  This is the garment
+      of the Elven court.  Its bearers are the pride of their race.  Only 6 heroes have ever been worthy to
+      wear such a mark of honor.
+
+"tba:0:obj:37":
+  type: worn
+  keywords: [Gloves, kindred, quest]
+  short: Gloves of the Kindred
+  long: Some fine gloves sit hear itching to grab something.
+  flags: [no_donate, magic, no_sell]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 50
+  - apply: move
+    modifier: 50
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [gloves, kindred, quest]
+    text: >
+      A set of lithe leather riding gloves.  The leather is so thin as to almost not be there.  The palm
+      and fingertip of each glove are padded with a lining of cloth to protect the wearer's hand against
+      harm.  Looking at these tiny gloves you wonder what keeps them from just tearing at the slightest
+      pressure.
+
+"tba:0:obj:38":
+  type: staff
+  keywords: [gem, sanctum]
+  short: a gem of sanctum
+  long: One of the lost treasures of Sanctum is here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 26]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gem, sanctum]
+    text: This is one of the treasures from the hoards of the city of Sanctum.
+
+"tba:0:obj:39":
+  type: staff
+  keywords: [staff, curative]
+  short: a curative staff
+  long: A staff used by the healers of Sanctum is here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 43]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [curative, staff]
+    text: This beautiful staff is used by the healers of sanctum.
+
+"tba:0:obj:40":
+  type: staff
+  keywords: [runestone, sanctum, church]
+  short: a runestone of Sanctum
+  long: A runestone of the church of Sanctum has been left here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 36]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [runestone, Sanctum, church]
+    text: This is one of the runestones used by the priests of Sanctum in their duties.
+
+"tba:0:obj:41":
+  type: staff
+  keywords: [Bell, sanctum, freedom]
+  short: the bell of Sanctum's freedom
+  long: The symbol of Sanctum's freedom waits to be returned to its city.
+  action: Nothing.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 39]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bell, sanctum's, freedom]
+    text: This is the bell that represents the freedom of the city of Sanctum.
+
+"tba:0:obj:42":
+  type: staff
+  keywords: [hammer, Sanctum]
+  short: the hammer of Sanctum
+  long: The hammer used to ring Sanctum's mighty bell is here.
+  flags: [glow, hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 3]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hammer, Sanctum]
+    text: This is the hammer used to ring the bell of freedom in the church of Sanctum.
+
+"tba:0:obj:43":
+  type: armor
+  keywords: [Guards, Eternal, Flame, quest]
+  short: Guards of the Eternal Flame
+  long: The spirit of Wyvern Rulers seeks a new Guardian of the flames.
+  flags: [glow, no_donate, invisible, magic, no_sell]
+  wear: [take, legs]
+  values:
+    armor: 10
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 30
+  affects:
+  - apply: cha
+    modifier: 3
+  - apply: hit
+    modifier: 50
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [guards, eternal, flame, quest]
+    text: >
+      Guardians of history, heroes of legend, Ancients of elder years.  These are the Guards worn by
+      those chosen to rule all of Drake kind.  The material that forms them glows and smokes like living
+      flame.  However, it is cool to the touch, forming an impenetrable barrier against all attacks.  These
+      leggings seem to shimmer before your very eyes, fact or fiction, they look as though they could vanish at
+      any turn.  Looking deep into the fire that is their strength you see these words in yellow and red
+      flame.  "Drawn from the depths.  Delivered from death.  Directed by Divinity.  I am the truth.  The
+      light.  The guardian of hope and the future.  Find comfort in my flames.  Find strength in my touch. For
+      with me lies all that is to come."
+
+"tba:0:obj:44":
+  type: other
+  keywords: [questpoint, setter, immortal, device]
+  short: a questpoint setter
+  long: An immortal device to set questpoints.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 34
+
+"tba:0:obj:46":
+  type: other
+  keywords: [key, gateguard]
+  short: the gateguard key
+  long: The gateguards key was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:0:obj:47":
+  type: other
+  keywords: [magic, eight, ball, eightball]
+  short: the magic eight ball
+  long: A mysterious looking magic eight ball holds the answer.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [magic, eight, ball]
+    text: Simply "shake eightball" to have all of your questions answered.
+
+"tba:0:obj:48":
+  type: other
+  keywords: [bed, comfy]
+  short: a comfy bed
+  long: A comfy bed is begging you to take a nap.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [comfy, bed]
+    text: This bed is beckoning you to lie down and get some much needed sleep. Just "sleep bed"
+
+"tba:0:obj:49":
+  type: other
+  keywords: [quarter, coin]
+  short: a quarter
+  long: A typical U.S. quarter that appears to be perfect for flipping.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coin, quarter]
+    text: >
+      This quarter is perfect for deciding those difficult boolean questions you may have. Just "flip
+      quarter"
+
+"tba:0:obj:50":
+  type: light
+  keywords: [generic, light]
+  short: a generic light
+  long: A generic light is lying here.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, light]
+    text: Since this light is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:51":
+  type: armor
+  keywords: [generic, ring, rfinger]
+  short: a generic ring
+  long: A generic ring is lying here.
+  wear: [take, finger, hold]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, ring, right]
+    text: Since this ring is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:52":
+  type: armor
+  keywords: [generic, ring, lfinger]
+  short: a generic ring
+  long: A generic ring is lying here.
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, ring, left]
+    text: Since this ring is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:53":
+  type: armor
+  keywords: [generic, neck1, necklace]
+  short: a generic necklace
+  long: A generic necklace is lying here.
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, neck1, necklace]
+    text: >
+      Since this necklace is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:54":
+  type: armor
+  keywords: [generic, neck2, necklace]
+  short: a generic necklace
+  long: A generic necklace is lying here.
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, neck2, necklace]
+    text: >
+      Since this necklace is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:55":
+  type: armor
+  keywords: [generic, body, armor]
+  short: a set of generic body armor
+  long: A set of generic body armor is lying here.
+  wear: [take, body]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, body, armor]
+    text: >
+      Since this body armor is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:56":
+  type: armor
+  keywords: [generic, helm]
+  short: a generic helm
+  long: A generic helm is lying here.
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, helm]
+    text: Since this helm is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:57":
+  type: armor
+  keywords: [generic, leggings]
+  short: a pair of generic leggings
+  long: A pair of generic leggings are lying here.
+  wear: [take, legs]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, leggings]
+    text: >
+      Since this pair of leggings is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:58":
+  type: armor
+  keywords: [generic, boots]
+  short: a pair of generic boots
+  long: A pair of generic boots are lying here.
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, boots]
+    text: >
+      Since the pair of boots are completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:59":
+  type: armor
+  keywords: [generic, gloves]
+  short: a pair of generic gloves
+  long: A pair of generic gloves are lying here.
+  wear: [take, hands]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, gloves]
+    text: >
+      Since the pair of gloves are completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:60":
+  type: armor
+  keywords: [generic, sleeves]
+  short: a pair of generic sleeves
+  long: A pair of generic sleeves are lying here.
+  wear: [take, arms]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, sleeves]
+    text: >
+      Since the pair of sleeves are completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:61":
+  type: armor
+  keywords: [generic, shield]
+  short: a generic shield
+  long: A generic shield is lying here.
+  wear: [take, shield]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, shield]
+    text: Since the shield is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:62":
+  type: armor
+  keywords: [generic, cape]
+  short: a generic cape
+  long: A generic cape is lying here.
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, cape]
+    text: Since the cape is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:63":
+  type: armor
+  keywords: [generic, belt]
+  short: a generic belt
+  long: A generic belt is lying here.
+  wear: [take, waist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, belt]
+    text: Since the belt is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:64":
+  type: armor
+  keywords: [generic, wristguard]
+  short: a generic wristguard
+  long: A generic wristguard is lying here.
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, wristguard]
+    text: >
+      Since the wristguard is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:65":
+  type: armor
+  keywords: [generic, wristguard]
+  short: a generic wristguard
+  long: A generic wristguard is lying here.
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, wristguard]
+    text: >
+      Since the wristguard is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:66":
+  type: weapon
+  keywords: [generic, weapon]
+  short: a generic weapon
+  long: A generic weapon is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: hit
+  weight: 1
+  cost: 2
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, weapon]
+    text: Since this weapon is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:67":
+  type: armor
+  keywords: [generic, staff]
+  short: a generic staff
+  long: A generic staff is lying here.
+  wear: [take, hold]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [generic, staff]
+    text: Since this staff is completely generic there are no distinctive features worth noticing.
+
+"tba:0:obj:68":
+  type: key
+  keywords: [commissars, key]
+  short: the Commissar's key
+  long: A large key painted red and hanging on a metal ring was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [commissars, key]
+    text: >
+      This old fashioned skeleton key has been painted a bright red and is all alone on an over-sized
+      metal key ring.
+
+"tba:0:obj:69":
+  type: other
+  keywords: [wooden, signopened]
+  short: a wooden sign
+  long: A simple wooden sign hanging from a shop to the North states, "OPEN."
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, sign]
+    text: The wooden sign says OPEN in big bright letters.
+
+"tba:0:obj:70":
+  type: other
+  keywords: [wooden, signclosed]
+  short: a wooden sign
+  long: A simple wooden sign hanging from a shop to the North states, "CLOSED."
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, sign]
+    text: The wooden sign says CLOSED in big bright letters.
+
+"tba:0:obj:71":
+  type: worn
+  keywords: [chinese, finger, trap, fingertrap, cardboard, tube]
+  short: a chinese finger trap
+  long: A strange and colorful tube was left here. It is made from cardboard intricately woven together.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -5
+  - apply: str
+    modifier: -5
+  - apply: int
+    modifier: -5
+  extras:
+  - keywords: [chinese, finger, trap, fingertrap, cardboard, tube]
+    text: >
+      It consists of at least a dozen different colors of cardboard woven together into a tube.  The
+      holes on each end are just about the right size to stick a finger in.
+
+"tba:0:obj:80":
+  type: other
+  keywords: [paintball, gun, red]
+  short: a red paintball gun
+  long: A red paintball gun was abandoned here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:0:obj:81":
+  type: other
+  keywords: [paintball, gun, blue]
+  short: a blue paintball gun
+  long: A blue paintball gun was abandoned here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:0:obj:82":
+  type: other
+  keywords: [teleporter]
+  short: the teleporter
+  long: A strange device labeled "teleporter" was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [teleporter]
+    text:
+      preformatted: |2
+           This teleporter is used to transfer players between zones.  Accessible zones
+        are listed under HELP ZONES by being CAPITALIZED.  For example to teleport to:
+          74 Newbie GRAVEyard                   -- Jojen                       3- 5
+        type: teleport grave
+           The teleporter may also be used to recall back to Midgaard at any time.
+        
+        Uncapitalized zones are linked through a capitalized zone.
+
+"tba:0:obj:83":
+  type: other
+  keywords: [slip, paper, tapcode, code]
+  short: a slip of paper
+  long: A small slip of paper has something written on it.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [slip, paper, tapcode, code]
+    text: >
+      Below is a tap code we use to communicate through the walls by tapping 2 numbers. TAPS| 1 | 2 |  3 
+      | 4 | 5 | 1   | A | B |C/K| D | E | The first designates the horizontal row and the 2nd 2   | F | G
+      |  H  | I | J | designates the vertical row. The letter W, for 3   | L | M |  N  | O | P |  example,
+      would be 5-2. The letter H would be 2-3. 4   | Q | R |  S  | T | U | The letter "c" works double duty
+      as a c or k. 5   | V | W |  X  | Y | Z |
+
+"tba:0:obj:84":
+  type: container
+  keywords: [drain, shower, hidden]
+  short: the shower drain
+  long: .a hidden object!
+  wear: []
+  values:
+    capacity: 5
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shower, drain]
+    text: >
+      The metal drain is covered with years of hair and grime. Several screws holding the drain in place
+      seem to be missing.
+
+"tba:0:obj:85":
+  type: other
+  keywords: [pick, iron]
+  short: a small pick
+  long: A small piece of metal wire has been sharpened into a pick.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pick, iron]
+    text: >
+      This small piece of wire has been filed or sanded into a sharp point and resembles some time of
+      lock picking device.
+
+"tba:0:obj:86":
+  type: other
+  keywords: [shackles, pair]
+  short: a pair of shackles
+  long: A pair of shackles have been left here open.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 2
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -5
+  extras:
+  - keywords: [shackles, pair]
+    text: >
+      These iron shackles are heavy with a chain of about 20 links connecting the two ankle braces.
+
+"tba:0:obj:87":
+  type: furniture
+  keywords: [throne, chair, bayonets]
+  short: a throne of bayonets
+  long: A throne of sharp bayonets looks like the last place you would want to sit.
+  wear: []
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [throne, chair, bayonets]
+    text: >
+      The chair is made completely out of bayonets with the sharpest points in the most inconvenient of
+      spots.  A plaque on the bottom reads: "You can build a throne of bayonets, but you can't sit on it for
+      long."
+
+"tba:0:obj:88":
+  type: other
+  keywords: [idleout, timer, stayalive, bracelet]
+  short: a stayalive bracelet
+  long: A bright orange plastic bracelet was left here.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [idleout, timer, stayalive, bracelet]
+    text: >
+      The bracelet is made of a garish orange plastic with the letters STAYALIVE carved into the outer
+      band. It is rumored that this bracelet will keep people from going linkdead.
+
+"tba:0:obj:89":
+  type: other
+  keywords: [iron, shackles]
+  short: a pair of iron shackles
+  long: A pair of shackles are securely fastened around both of your ankles.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [iron, shackles, pair]
+    text: >
+      The shackles are locked closed about your ankles with the link chain looped through a steel ring
+      cemented into the floor.
+
+"tba:0:obj:90":
+  type: food
+  keywords: [ice, cream, "99", flake]
+  short: an ice cream
+  long: An ice cream has been dropped here.
+  wear: [take, hold]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 4
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ice, cream, "99", flake]
+    text: >
+      Known as the 99, it is an ice cream cornet with a stick of chocolate rammed in. First sold in 1922
+      at the ice cream shop at 99 the High Street, Portobello, Scotland.
+
+"tba:0:obj:91":
+  type: food
+  keywords: [full, english, breakfast, fatty, food]
+  short: an English Breakfast
+  long: A full English Breakfast is being served here in all its fatty glory.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 4
+  cost: 8
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [full, english, breakfast, fatty, food]
+    text: >
+      'Heaven on a plate' or the quickest route to a heart attack. Eggs, bacon, sausages, baked beans,
+      hashed browns, mushrooms, tomatoes, black pudding and fried bread. Available variants include the
+      so-called Jewish Breakfast, served with turkey ham and beef sausages, or the vegetarian breakfast, served
+      with quorn sausages.
+
+"tba:0:obj:92":
+  type: drinkcon
+  keywords: [tea, mug, cup, nice, tea]
+  short: a nice mug
+  long: A nice mug of tea has been left here.
+  flags: [bless]
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: tea
+    poisoned: false
+  weight: 7
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mug, cup, tea, nice]
+    text: >
+      A nice mug of fair trade tea, all you need now is a nice piece of cake. From its home in China to
+      the break times of Britain, Tea is the drink of Asian Emperors and European Monarchs, as well as
+      sweatshop workers in the east and IT workers in the west.
+
+"tba:0:obj:93":
+  type: trash
+  keywords: [board]
+  short: the warriors board
+  long: The warriors board has been posted here to allow fellow fighters to communicate.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:94":
+  type: trash
+  keywords: [clerics, board]
+  short: the clerics board
+  long: A bulletin board for clerics to keep in touch with each other.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:95":
+  type: trash
+  keywords: [thieves, board]
+  short: the thieves board
+  long: A board for thieves to relate their current plots and schemes is hidden here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:96":
+  type: trash
+  keywords: [mages, board]
+  short: the mages board
+  long: A board for mages to post to others in their class is glowing brightly here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:0:obj:97":
+  type: drinkcon
+  keywords: [coffee, cup, mug, coffee]
+  short: a cup
+  long: A coffee cup has been left here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: coffee
+    poisoned: false
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cup, coffee, mug]
+    text: >
+      A coffee cup, it is marked with the letters 'TBA'. Coffee originated from the Kaffa region in
+      Ethiopia, and while long drunk in the Arab world, it did not enter Europe until the British East India
+      Company began to import the product in the 16th Century. The first coffee house in Europe was founded in
+      Oxford during 1650, and by 1670 there was already a coffee house in the Massachusetts Bay Colony.
+
+"tba:0:obj:98":
+  type: other
+  keywords: [board, sign, notice, writing]
+  short: a sign
+  long: "@gA small @Gsign@g hangs on the wall.@n"
+  flags: [no_donate, no_sell]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [board, sign, notice, writing]
+    text: >
+      Please keep discussions within the room as much as possible, so that people can build with clear
+      screens.
+
+"tba:0:obj:99":
+  type: weapon
+  keywords: [scythe, death]
+  short: the Scythe of Death
+  long: The Scythe of Death rests heavily on the ground.
+  flags: [anti_good, anti_evil, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d10
+    attack: bludgeon
+  weight: 40
+  cost: 1000
+  rent: 0
+  level: 20
+  extras:
+  - keywords: [scythe, death]
+    text: >
+      It is a very heavy scythe.  The gray handle is made from hard wood and the long iron blade is
+      completely smooth from countless years of use.  It feels cold to the touch.

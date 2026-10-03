@@ -1,0 +1,296 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 36.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:36:obj:3600":
+  type: armor
+  keywords: [armor, black, pawn]
+  short: some Black Pawn Armor
+  long: A pile of black armor is here.
+  flags: [anti_good]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 13
+  cost: 300
+  rent: 1
+  level: 0
+
+"tba:36:obj:3601":
+  type: armor
+  keywords: [armor, white, pawn]
+  short: some White Pawn Armor
+  long: A pile of white armor is here.
+  flags: [anti_evil]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 13
+  cost: 300
+  rent: 1
+  level: 0
+
+"tba:36:obj:3602":
+  type: weapon
+  keywords: [sword, black, pawn]
+  short: a Black Pawn's Sword
+  long: The sword of a Black Pawn lies here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 10
+  cost: 100
+  rent: 1
+  level: 0
+
+"tba:36:obj:3603":
+  type: weapon
+  keywords: [sword, white, pawn]
+  short: a White Pawn's Sword
+  long: The sword of a White Pawn lies here.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 10
+  cost: 100
+  rent: 1
+  level: 0
+
+"tba:36:obj:3604":
+  type: armor
+  keywords: [armor, black, rook]
+  short: some Black Rook Armor
+  long: Some armor made from the remains of a black rook lies heaped on the floor.
+  flags: [glow, anti_good]
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 50
+  cost: 170
+  rent: 5
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 2
+  - apply: con
+    modifier: 1
+
+"tba:36:obj:3605":
+  type: armor
+  keywords: [armor, white, rook]
+  short: some White Rook Armor
+  long: Some armor made from the remains of a white rook lies heaped on the floor.
+  flags: [glow, magic, anti_evil]
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 50
+  cost: 170
+  rent: 5
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 2
+  - apply: con
+    modifier: 1
+
+"tba:36:obj:3606":
+  type: weapon
+  keywords: [lance, black, knight]
+  short: the Lance of the Black Knight
+  long: The Lance of the Black Knight lies here, waiting to rust.
+  flags: [hum, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: crush
+  weight: 18
+  cost: 100
+  rent: 3
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: save_breath
+    modifier: 2
+
+"tba:36:obj:3607":
+  type: weapon
+  keywords: [lance, white, knight]
+  short: the Lance of the White Knight
+  long: The Lance of the White Knight lies here, waiting to rust.
+  flags: [hum, magic, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: crush
+  weight: 18
+  cost: 100
+  rent: 3
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: save_breath
+    modifier: 2
+
+"tba:36:obj:3608":
+  type: staff
+  keywords: [staff, black, bishop]
+  short: the Staff of the Black Bishop
+  long: The Black Bishop's Staff is lying here.
+  flags: [glow, magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [20, 5, 5, 36]
+  weight: 3
+  cost: 200
+  rent: 6
+  level: 0
+
+"tba:36:obj:3609":
+  type: staff
+  keywords: [staff, white, bishop]
+  short: the Staff of the White Bishop
+  long: The White Bishop's Staff is lying here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [20, 5, 5, 36]
+  weight: 3
+  cost: 200
+  rent: 6
+  level: 0
+
+"tba:36:obj:3610":
+  type: armor
+  keywords: [crown, black, queen]
+  short: the Crown of the Black Queen
+  long: The Crown of the Black Queen lies here, looking neglected.
+  flags: [hum, magic, anti_good]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 4
+  cost: 300
+  rent: 5
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:36:obj:3611":
+  type: armor
+  keywords: [crown, white, queen]
+  short: the Crown of the White Queen
+  long: The Crown of the White Queen lies here, looking neglected.
+  flags: [hum, magic, anti_evil]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 4
+  cost: 300
+  rent: 5
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:36:obj:3612":
+  type: treasure
+  keywords: [sceptre, black, king]
+  short: the Black King's Sceptre
+  long: The Sceptre of the Black King lies here, collecting dust.
+  flags: [hum, invisible, magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 850
+  rent: 1
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:36:obj:3613":
+  type: treasure
+  keywords: [sceptre, white, king]
+  short: the White King's Sceptre
+  long: The Sceptre of the White King lies here, collecting dust.
+  flags: [hum, invisible, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 850
+  rent: 10
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+
+"tba:36:obj:3614":
+  type: key
+  keywords: [key, black, treasury]
+  short: the Key to the Black Treasury
+  long: There is a sinister black key lying here.
+  flags: [no_rent, no_donate, invisible, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [3614, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 300
+  level: 0
+
+"tba:36:obj:3615":
+  type: key
+  keywords: [key, white, treasury]
+  short: the Key to the White Treasury
+  long: There is a bright white key lying here.
+  flags: [no_rent, no_donate, invisible, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [3615, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 300
+  level: 0
+
+"tba:36:obj:3616":
+  type: money
+  keywords: [coins, gold, black, royal, treasure]
+  short: the Black Royal Treasure
+  long: There are a LOT of coins here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:36:obj:3617":
+  type: money
+  keywords: [coins, gold, white, royal, treasure]
+  short: the White Royal Treasure
+  long: There are a LOT of coins here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0

@@ -1,0 +1,681 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 270.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:270:room:27000":
+  name: AsA's Zone Description Room
+  description:
+    preformatted: |2
+         I hereby present the wasteland area, availiable to those concerned.  I have,
+      deliberately, written short long_descriptions.  Because I consider them more
+      useful that way, since most DIKU's are not inclined towards questing.
+         Builder      : AsA
+         Zone         : 270 Wasteland
+         Player Level : 12-15
+         Rooms        : 58
+         Mobiles      : 13
+         Objects      : 12
+         Links        :
+  sector: inside
+
+"tba:270:room:27001":
+  name: The Foothills
+  description: You stand in the foothills surrounding the Icy-Mountain.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27002
+    south:
+      to: tba:270:room:27007
+
+"tba:270:room:27002":
+  name: The Foothills
+  description: >
+    You stand in the foothills of the Icy-Mountain.  The mountain rises high towards the sky
+    immediately south of here.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27003
+    west:
+      to: tba:270:room:27001
+
+"tba:270:room:27003":
+  name: The Foothills
+  description: >
+    You stand in the foothills of the Icy-Mountain.  The mountain rises high towards the sky
+    immediately south of here.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27004
+    west:
+      to: tba:270:room:27002
+
+"tba:270:room:27004":
+  name: The Foothills
+  description: >
+    You stand in the foothills of the Icy-Mountain.  The mountain rises high towards the sky
+    immediately south and west of here.
+  sector: hills
+  exits:
+    south:
+      to: tba:270:room:27013
+    west:
+      to: tba:270:room:27003
+
+"tba:270:room:27005":
+  name: The Icy-Mountain
+  description: The mountain trail ends here just beneath the top.
+  sector: mountains
+  exits:
+    south:
+      to: tba:270:room:27011
+
+"tba:270:room:27006":
+  name: The Ice Cave
+  description: >
+    You are inside the ice cave.  Some droppings, not too nice looking nor smelling, have been spilled
+    in the center of the cave. Your basic knowlege of ichtyology tells you that this excrement does not
+    relate to the elusive Otopharynx lithobates, but to something completely different.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:270:room:27012
+
+"tba:270:room:27007":
+  name: The Foothills
+  description: >
+    You stand in the foothills of the Icy-Mountain.  The mountain rises high towards the sky
+    immediately east of here.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27001
+    south:
+      to: tba:270:room:27017
+
+"tba:270:room:27008":
+  name: The Icy Mountain
+  description: You are at a dead-end in the mountain.
+  sector: mountains
+  exits:
+    south:
+      to: tba:270:room:27014
+
+"tba:270:room:27009":
+  name: The Icy Mountain
+  description: You are at a dead-end in the mountain.
+  sector: mountains
+  exits:
+    east:
+      to: tba:270:room:27010
+
+"tba:270:room:27010":
+  name: The Icy Mountain
+  description: You are on a trail winding along the mountainside.
+  sector: mountains
+  exits:
+    east:
+      to: tba:270:room:27011
+    west:
+      to: tba:270:room:27009
+    down:
+      to: tba:270:room:27016
+
+"tba:270:room:27011":
+  name: The Icy Mountain
+  description: You are on a trail, still leading along the mountainside.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27005
+    east:
+      to: tba:270:room:27012
+    west:
+      to: tba:270:room:27010
+
+"tba:270:room:27012":
+  name: The Icy Mountain
+  description: >
+    You are on a trail in the mountain.  North of here is a cavern, which might lead to a cave.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27006
+    west:
+      to: tba:270:room:27011
+
+"tba:270:room:27013":
+  name: The Foothills
+  description: >
+    You are in the foothills surrounding the Icy-mountain, which rises towards the sky just west of you.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27004
+    south:
+      to: tba:270:room:27023
+
+"tba:270:room:27014":
+  name: The Icy Mountain
+  description: You are on a trail running along the mountainside.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27008
+    east:
+      to: tba:270:room:27015
+    south:
+      to: tba:270:room:27018
+
+"tba:270:room:27015":
+  name: The Icy Mountain
+  description: >
+    You are on a trail in the mountain.  The trail leads west and south.  To your east is a crack in
+    the mountain wall.
+  sector: mountains
+  exits:
+    east:
+      to: tba:270:room:27016
+    south:
+      to: tba:270:room:27019
+    west:
+      to: tba:270:room:27014
+
+"tba:270:room:27016":
+  name: The Icy Mountain
+  description: You are on a trail somewhere in this neverending mountain.
+  sector: mountains
+  exits:
+    south:
+      to: tba:270:room:27020
+    up:
+      to: tba:270:room:27010
+
+"tba:270:room:27017":
+  name: The Foothills
+  description: >
+    You are in the foothills surrounding the Icy-mountain.  There is a mountain trail leading up along
+    the side of the mountain east of you.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27007
+    east:
+      to: tba:270:room:27018
+    south:
+      to: tba:270:room:27024
+
+"tba:270:room:27018":
+  name: The Icy Mountain
+  description: You are on a mountain trail leading up along the moutainside.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27014
+    south:
+      to: tba:270:room:27025
+    west:
+      to: tba:270:room:27017
+
+"tba:270:room:27019":
+  name: The Icy Mountain
+  description: You are on a mountain trail leading up along the side of the mountain.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27015
+    east:
+      to: tba:270:room:27020
+    south:
+      to: tba:270:room:27026
+
+"tba:270:room:27020":
+  name: The Icy Mountain
+  description: You are on a trail in the mountain.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27016
+    east:
+      to: tba:270:room:27021
+    west:
+      to: tba:270:room:27019
+
+"tba:270:room:27021":
+  name: The Icy Mountain
+  description: You are on a trail in the mountain.
+  sector: mountains
+  exits:
+    south:
+      to: tba:270:room:27028
+    west:
+      to: tba:270:room:27020
+
+"tba:270:room:27022":
+  name: The Icy Mountain
+  description: You are on a trail in the mountain.
+  sector: mountains
+  exits:
+    south:
+      to: tba:270:room:27030
+    west:
+      to: tba:270:room:27021
+
+"tba:270:room:27023":
+  name: The Foothills
+  description: You are in the foothills east of the Icy-mountain.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27013
+    south:
+      to: tba:270:room:27037
+
+"tba:270:room:27024":
+  name: The Foothills
+  description: You are in the foothills.  There is a mountain rising to your easthand side.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27017
+    east:
+      to: tba:270:room:27025
+
+"tba:270:room:27025":
+  name: The Foothills
+  description: >
+    You are in the foothills surrounding the Icy-mountain.  There is a trail leading up the montain
+    north of here.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27018
+    east:
+      to: tba:270:room:27026
+    south:
+      to: tba:270:room:27031
+    west:
+      to: tba:270:room:27024
+
+"tba:270:room:27026":
+  name: The Foothills
+  description: >
+    You are in the foothills surrounding the Icy-mountain.  There is a path leading up along the
+    mountainside north of you.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27019
+    east:
+      to: tba:270:room:27027
+    west:
+      to: tba:270:room:27025
+
+"tba:270:room:27027":
+  name: The Foothills
+  description: You are in the foothills surrounding the Icy-mountain.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27028
+    west:
+      to: tba:270:room:27026
+
+"tba:270:room:27028":
+  name: The Foothills
+  description: You are in the foothills surrounding the Icy-mountain.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27029
+    south:
+      to: tba:270:room:27034
+    west:
+      to: tba:270:room:27027
+
+"tba:270:room:27029":
+  name: The Foothills
+  description: You are in the foothills surrounding the Icy-mountain.
+  sector: hills
+  exits:
+    south:
+      to: tba:270:room:27035
+    west:
+      to: tba:270:room:27028
+
+"tba:270:room:27030":
+  name: The Icy Mountain
+  description: You are on a trail winding along the mountainside.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27022
+    south:
+      to: tba:270:room:27036
+
+"tba:270:room:27031":
+  name: The Wasteland Hills
+  description: >
+    You are in some completely wasted, tiresome, boring and totally ugly hills.  There are some
+    droppings left here.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27025
+    east:
+      to: tba:270:room:27032
+    south:
+      to: tba:270:room:27038
+  extras:
+  - keywords: [droppings]
+    text: Looks pretty messy.
+
+"tba:270:room:27032":
+  name: The Wasteland Hills
+  description: >
+    You are on a path leading through the wasted hills.  To the north you barely make out the contours
+    of a pointy mountain and its foothills.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27033
+    south:
+      to: tba:270:room:27039
+
+"tba:270:room:27033":
+  name: The Wasteland Hills
+  description: >
+    You are on a path in the hills.  Apart from down to the south there is nothing but brown, dull and
+    wasted hills surrounding you.
+  sector: hills
+  exits:
+    east:
+      to: tba:270:room:27034
+    west:
+      to: tba:270:room:27032
+    down:
+      to: tba:270:room:27040
+
+"tba:270:room:27034":
+  name: The Wasteland Hills
+  description: >
+    You are on a path leading through the brown and wasted hills.  North of here you can barely make
+    out the shape of a pointy mountain with some rather large foothills just in front of it.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27028
+    west:
+      to: tba:270:room:27033
+    down:
+      to: tba:270:room:27041
+
+"tba:270:room:27035":
+  name: The Foothills
+  description: You are in the foothills surrounding the mountainside.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27029
+    south:
+      to: tba:270:room:27042
+    west:
+      to: tba:270:room:27034
+
+"tba:270:room:27036":
+  name: The Icy Mountain
+  description: >
+    You are on a trail leading up the moutain.  There is some loose crabble lying on the ground.
+  sector: mountains
+  exits:
+    north:
+      to: tba:270:room:27030
+    south:
+      to: tba:270:room:27043
+  extras:
+  - keywords: [crabble]
+    text: Yes it is just lying there of absolutely no use at all.
+
+"tba:270:room:27037":
+  name: The Foothills
+  description: >
+    You are in the foothills surrounding the mountain.  A large claymore is lying on the ground here.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27023
+    south:
+      to: tba:270:room:27044
+  extras:
+  - keywords: [claymore]
+    text: The more you look at it the more it vanishes, to your desperate grief.
+
+"tba:270:room:27038":
+  name: The Wasteland Hills
+  description: You are surrounded by smooth hills right in the middle of absolute nowhere.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27031
+    east:
+      to: tba:270:room:27039
+
+"tba:270:room:27039":
+  name: The Wasteland hills
+  description: >
+    You are on a little path leaing through the smooth, brown hills of complete waste.  Right beneath
+    you is some wasteland fields.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27032
+    west:
+      to: tba:270:room:27038
+    down:
+      to: tba:270:room:27045
+
+"tba:270:room:27040":
+  name: The Wasteland Fields
+  description: You are on the wast, wasted fields in the middle of nowhere.
+  sector: field
+  exits:
+    east:
+      to: tba:270:room:27041
+    up:
+      to: tba:270:room:27033
+
+"tba:270:room:27041":
+  name: The Wasteland Fields
+  description: >
+    You are on the vast, wasted fields in the middle of nowhere. Above you is quite clearly some hills.
+  sector: field
+  exits:
+    south:
+      to: tba:270:room:27046
+    west:
+      to: tba:270:room:27040
+    up:
+      to: tba:270:room:27034
+      look: You see some utterly ugly and wasted hills.
+
+"tba:270:room:27042":
+  name: The Foothills
+  description: You are in the foothills.  Where else?
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27035
+    east:
+      to: tba:270:room:27043
+
+"tba:270:room:27043":
+  name: The Foothills
+  description: >
+    You are in the foothills.  North of here a small path is finding its way up along the Icy-mountain.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27036
+    east:
+      to: tba:270:room:27044
+    west:
+      to: tba:270:room:27042
+
+"tba:270:room:27044":
+  name: The Foothills
+  description: You are in the foothills surrounding the large pointy Icy-mountain.
+  sector: hills
+  exits:
+    north:
+      to: tba:270:room:27037
+    west:
+      to: tba:270:room:27043
+
+"tba:270:room:27045":
+  name: The Wasteland Fields
+  description: You are in the brown, tiresome fields.
+  sector: field
+  exits:
+    south:
+      to: tba:270:room:27048
+    up:
+      to: tba:270:room:27039
+
+"tba:270:room:27046":
+  name: The Wasteland Fields
+  description: You are surrounded by fields!!!
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27041
+    east:
+      to: tba:270:room:27047
+    south:
+      to: tba:270:room:27050
+
+"tba:270:room:27047":
+  name: The Wasteland Fields
+  description: You are on a large field which do not seem to have an end to it.
+  sector: field
+  exits:
+    south:
+      to: tba:270:room:27051
+    west:
+      to: tba:270:room:27046
+
+"tba:270:room:27048":
+  name: The Wasteland Fields
+  description: You are on a large field.  Is there possibly an end to it??
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27045
+    east:
+      to: tba:270:room:27049
+
+"tba:270:room:27049":
+  name: The Wasteland Fields
+  description: You are on a large field, which as you clearly can tell is nothing but waste.
+  sector: field
+  exits:
+    east:
+      to: tba:270:room:27050
+    west:
+      to: tba:270:room:27048
+
+"tba:270:room:27050":
+  name: The Wasteland Fields
+  description: >
+    You are on a humongous, almost corroded field.  There is a little stalk of wheat growing here.
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27046
+    east:
+      to: tba:270:room:27051
+    west:
+      to: tba:270:room:27049
+  extras:
+  - keywords: [wheat, stalk]
+    text: Looks lonely doesn't it.
+
+"tba:270:room:27051":
+  name: The Wasteland fields
+  description: You are on a vast field and it sure is vast.
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27047
+    east:
+      to: tba:270:room:27052
+    west:
+      to: tba:270:room:27050
+
+"tba:270:room:27052":
+  name: The Wasteland Fields
+  description: You are in the fields to your utter dissatisfaction.
+  sector: field
+  exits:
+    south:
+      to: tba:270:room:27053
+    west:
+      to: tba:270:room:27051
+
+"tba:270:room:27053":
+  name: The Wasteland Fields
+  description: You are in some fields.  They do not look fertile at all.
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27052
+    east:
+      to: tba:270:room:27054
+
+"tba:270:room:27054":
+  name: The Wasteland Fields
+  description: You are in waste which happens to have the form of fields.
+  sector: field
+  exits:
+    south:
+      to: tba:270:room:27057
+    west:
+      to: tba:270:room:27053
+
+"tba:270:room:27055":
+  name: The Wasteland Fields
+  description: You are in the middle of a large, brown field, not nice looking, but it just isn't.
+  sector: field
+  exits:
+    east:
+      to: tba:270:room:27056
+
+"tba:270:room:27056":
+  name: The Wasteland Fields
+  description: >
+    You are on a large, windy field.  Everything around you is laid in complete waste.  Only some
+    aufwuchs on a stone seem to be able to exist here.
+  sector: field
+  exits:
+    east:
+      to: tba:270:room:27057
+    west:
+      to: tba:270:room:27055
+  extras:
+  - keywords: [aufwuchs]
+    text: They look green and slimy.
+
+"tba:270:room:27057":
+  name: Close To The Wasteland Fields
+  description: >
+    You are on a field.  The wind is smoothly sweeping across the ground with the sound of a soft
+    howl.  The vegetation seem to have lost the battle to some greater force as it gradually disappears
+    towards the east.
+  sector: field
+  exits:
+    north:
+      to: tba:270:room:27054
+    west:
+      to: tba:270:room:27056

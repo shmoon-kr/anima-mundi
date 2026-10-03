@@ -1,0 +1,316 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 37.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:37:mob:3700":
+  keywords: [rat, big]
+  short: the big rat
+  long: A large rat is scurrying about here, squeaking as you approach.
+  description: >
+    As you look closer you see flecks of blood on the teeth of the rat.  It's so obvious because the
+    rat is just about ready to sink those teeth into your warm human flesh.
+  level: 3
+  sex: neutral
+  alignment: -150
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3701":
+  keywords: [rat, big]
+  short: the big rat
+  long: A large rat is here, searching for food.
+  description: This rat doesn't look very menacing, but if you press it hard it'll certainly fight back.
+  level: 3
+  sex: neutral
+  alignment: 100
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3702":
+  keywords: [rat, protector, guard]
+  short: the protector rat
+  long: A huge rat is here, growling as you get nearer. Careful - it bites!
+  description: >
+    This battle-scarred rat is not going anywhere.  You, however are going to go right into its belly,
+    after it's killed you.  Better get out of here.
+  level: 3
+  sex: neutral
+  alignment: -350
+  flags: [sentinel, aggressive, stay_zone, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3703":
+  keywords: [rat, king]
+  short: the king rat
+  long: A gigantic rat is here standing on top of a pile of glittering stones.
+  description: >
+    The King rat is so large, magic is the only possible explanation.  There has long been rumors about
+    the magic-users using sewer animals in their experiments. This is the final proof.  As you study the
+    rat closer you notice what looks like a small gleam of intelligence in its eyes.
+  level: 7
+  sex: neutral
+  alignment: -350
+  flags: [sentinel, scavenger, stay_zone, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: resting
+    default: resting
+
+"tba:37:mob:3704":
+  keywords: [bat, small]
+  short: the bat
+  long: A bat is hanging from the ceiling here.
+  description: A small bat, getting a good days sleep.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive, stay_zone, wimpy, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:37:mob:3705":
+  keywords: [bat, small]
+  short: the bat
+  long: A bat is here, flying quickly about.
+  description: A small bat, getting ready to go out of the cave, to get something to eat.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone, wimpy, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3706":
+  keywords: [bat, giant]
+  short: the giant bat
+  long: A huge bat is here, considering you for meal.
+  description: >
+    This giant bat makes you shiver.  Even if it just flies around you, it still gives you the creeps.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone, wimpy, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3707":
+  keywords: [bat, vampire]
+  short: the vampire bat
+  long: A huge bat is here. You see fresh blood on its face.
+  description: This giant bat makes you shiver.  You realize that soon your blood will be tasted too.
+  level: 3
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, aggressive, stay_zone, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3708":
+  keywords: [trout, fish]
+  short: the trout
+  long: A trout is swimming happily about here.
+  description: >
+    The underground lake must be connected to the outside rivers.  This fish looks healthy and fresh.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_sleep, no_bash]
+  affects: [waterwalk, no_track, sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3709":
+  keywords: [blind, fish]
+  short: the blind fish
+  long: A blind fish is here, all white.
+  description: >
+    Having spent it's entire life in this cave, the fish has never used its eyes. Your torch' presence
+    has made it blind.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_sleep, no_bash]
+  affects: [blind, waterwalk, no_track, sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3710":
+  keywords: [oyster, fish]
+  short: the giant oyster
+  long: A giant oyster sits on the bottom here.
+  description: >
+    You come very close to the oyster, but suddenly it snaps shut, preventing you from seeing inside.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [waterwalk]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:37:mob:3711":
+  keywords: [rabbit]
+  short: a small rabbit
+  long: A small rabbit is nibbling on some grass here.
+  description: >
+    You've seen them before..  And hunted them down like rats, when you were a kid..  They're small,
+    furry and generate extreme amounts of small black pearls wherever they go...
+  level: 3
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3712":
+  keywords: [cat]
+  short: a small cat
+  long: A small gray and black striped cat is waiting for a bird to catch..
+  description: >
+    It's extremely nice and sweet.  If you reach out your hand to caress it, it only bites and
+    scratches so HALF your fingers are missing afterwards..
+  level: 3
+  sex: neutral
+  alignment: -50
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:37:mob:3713":
+  keywords: [fox]
+  short: the fox
+  long: A small fox is here, prowling.
+  description: A red, not so large canine, with pointy ears and nose - and teeth, for that matter..
+  level: 3
+  sex: neutral
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing

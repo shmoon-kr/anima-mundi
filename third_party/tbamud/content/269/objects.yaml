@@ -1,0 +1,209 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 269.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:269:obj:26900":
+  type: weapon
+  keywords: [stone, chipped, rock]
+  short: a chipped rock
+  long: A chipped rock is lying here, half-hidden in the weeds.
+  flags: [no_invis]
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: hit
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:269:obj:26901":
+  type: food
+  keywords: [weed, plant, grass]
+  short: a strange weed
+  long: A strange, dry weed attempts to grow out of the dust.
+  flags: [anti_good, no_sell]
+  wear: [take, hold]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -1
+  - apply: move
+    modifier: -30
+
+"tba:269:obj:26902":
+  type: weapon
+  keywords: [hatchet, tomahawk]
+  short: a chipped tomahawk
+  long: A strange little axe is here, abandoned on the ground.
+  flags: [hum, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: thrash
+  weight: 5
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 2
+
+"tba:269:obj:26903":
+  type: weapon
+  keywords: [spear, vicious]
+  short: a vicious spear
+  long: A vicious spear is struck into the earth here, daring you to take it.
+  flags: [hum, invisible, anti_good, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: pierce
+  weight: 10
+  cost: 700
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -2
+
+"tba:269:obj:26904":
+  type: weapon
+  keywords: [dagger, black, quartz]
+  short: a black quartz dagger
+  long: A black dagger exists here, hovering about seven inches off the ground.
+  flags: [glow, hum, no_donate, invisible, magic, bless, anti_mage, anti_cleric, anti_warrior, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: pierce
+  weight: 5
+  cost: 645
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [dagger, stone, quartz]
+    text: >
+      This is the oldest of all daggers, and by far the best.  Ancient enscriptions are scratched into
+      its quartz-like surface, and the entire dagger seems to become part of your arm.
+
+"tba:269:obj:26905":
+  type: armor
+  keywords: [bone, breastplate, plate]
+  short: a bone breastplate
+  long: An Indian bone breastplate is here.
+  flags: [hum, no_donate, no_invis, magic, anti_good]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 9
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bone, plate, breastplate]
+    text: It seems to be lightweight, but effective armor.
+
+"tba:269:obj:26906":
+  type: armor
+  keywords: [leather, headband, band]
+  short: a leather headband
+  long: A leather headband is here, it is your destiny to wear it.
+  flags: [hum, no_invis, magic, anti_good]
+  wear: [take, head, wrist]
+  values:
+    armor: 4
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: ac
+    modifier: 2
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [leather, band, headband]
+    text: You see that it is a well-made headband, with an eagle's feather sewn into it.
+
+"tba:269:obj:26907":
+  type: armor
+  keywords: [necklace, quartz, beaded, beads]
+  short: a quartz-bead necklace
+  long: A necklace is here, made of shining stones.
+  flags: [glow, magic, anti_warrior]
+  wear: [take, neck, wrist]
+  values:
+    armor: 3
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 10
+  - apply: hit
+    modifier: 5
+  extras:
+  - keywords: [beaded, necklace, beads, quartz]
+    text: >
+      This necklace has been carefully crafted without tools, out of the purest black quartz you have
+      ever seen.
+
+"tba:269:obj:26908":
+  type: weapon
+  keywords: [thorn, cactus]
+  short: a cactus thorn
+  long: A cactus thorn lies here, almost under your feet.
+  flags: [no_invis]
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: sting
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [thorn, cactus]
+    text: This little thorn has come from the largest brand of cactus known to man.
+
+"tba:269:obj:26967":
+  type: key
+  keywords: [feather, red, key]
+  short: a red feather
+  long: A red feather is lying here.
+  flags: [no_rent, no_invis]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [feather, red, key]
+    text: It is red, but not like any red you have ever seen.

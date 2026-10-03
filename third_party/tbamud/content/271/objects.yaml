@@ -1,0 +1,1867 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 271.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:271:obj:27100":
+  type: worn
+  keywords: [noose, death]
+  short: a noose
+  long: A bit of sinister-looking coiled rope is lying here.
+  flags: [no_drop]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 30
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -50
+  extras:
+  - keywords: [noose]
+    text: Its a thick rope coiled into a fatal knot.  Feeling like suicide today?
+
+"tba:271:obj:27101":
+  type: light
+  keywords: [kaleidoscope, light]
+  short: a kaleidoscope
+  long: A kaleidoscope is lying here.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 60
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [kaleidoscope]
+    text: >
+      It's a tiny thing, and brightly colored.  While showing you a fantasy swirl of colors away from
+      Mirror|rorriM Mud, here it shows you the real world.
+
+"tba:271:obj:27102":
+  type: armor
+  keywords: [tunic, gold]
+  short: a frayed golden tunic
+  long: A frayed golden tunic lies crumpled here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tunic, gold]
+    text: >
+      It's thin and frayed at more than just the seams.  Since you have been wearing this your whole life
+      before entering your discipline, it may be time for an improvement.
+
+"tba:271:obj:27103":
+  type: worn
+  keywords: [black, leggings, pants]
+  short: a pair of black leggings
+  long: A pair of black leggings has been left here.
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 340
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  extras:
+  - keywords: [leggings, black]
+    text: They are pitch black and merely a thin covering.
+
+"tba:271:obj:27104":
+  type: worn
+  keywords: [boots, leather]
+  short: old leather boots
+  long: A pair of old leather boots are here.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 270
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  extras:
+  - keywords: [boots, leather]
+    text: They are close to wearing holes at the toes and the heels.
+
+"tba:271:obj:27105":
+  type: weapon
+  keywords: [dagger, black]
+  short: a small black dagger
+  long: A tiny black dagger has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dagger, black]
+    text: >
+      This tiny dagger serves well for around town and the neighboring village. The blade, however, is
+      small and dull.
+
+"tba:271:obj:27106":
+  type: weapon
+  keywords: [staff, gnarled]
+  short: a gnarled staff
+  long: A thin gnarled staff has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pound
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [staff, gnarled]
+    text: >
+      The staff is carved from holly wood, and serves well for around town and the neighboring village. 
+      You might want to consider a stronger weapon as time goes by, however.
+
+"tba:271:obj:27107":
+  type: weapon
+  keywords: [mace, iron]
+  short: an iron mace
+  long: An iron mace is lying here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: bludgeon
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mace, iron]
+    text: >
+      It is wrought from strong iron, but small and slightly rusty.  It serves well for around town and
+      the neighboring village, but as time goes by you might want to consider trying something heavier.
+
+"tba:271:obj:27108":
+  type: weapon
+  keywords: [sword, short]
+  short: a short sword
+  long: A short sword is lying on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: slash
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, short]
+    text: The blade is dull, but it serves well for around town and the neighboring village.
+
+"tba:271:obj:27109":
+  type: light
+  keywords: [candelabra, candle]
+  short: a candelabra
+  long: A candelabra glows dimly with a golden light.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [candelabra, candle]
+    text: >
+      Thirty tiny black candles shine with a golden glow.  At the base is an engraving of one circle
+      partially obscured by another.
+
+"tba:271:obj:27110":
+  type: fountain
+  keywords: [water, fountain, marble, black, water]
+  short: a black marble fountain
+  long: A black marble fountain flows with a clear water.
+  wear: []
+  values:
+    capacity: 100
+    contains: 100
+    liquid: water
+    poisoned: false
+  weight: 105
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, marble, black]
+    text: >
+      The circular fountain is carved from black marble from the mines below the town.  The water inside
+      looks sweet to drink.
+
+"tba:271:obj:27111":
+  type: weapon
+  keywords: [axe, severance]
+  short: the axe of severance
+  long: A bloody axe has been left here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: hit
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -1
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [axe, severance]
+    text: >
+      This massive weapon takes much of your strength to carry.  It would like to kill again, for the
+      blood of the last victim has just dried on the blade.
+
+"tba:271:obj:27112":
+  type: other
+  keywords: [gold, vault, pile, atm]
+  short: a huge pile of gold
+  long: A huge pile of gold is guarded by a magical force.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gold, vault, pile]
+    text: >
+      This is the treasury of Sundhaven.  It is, of course, guarded by a magical protective shield
+      against greedy intruders.
+
+"tba:271:obj:27113":
+  type: food
+  keywords: [quesadilla, food]
+  short: a quesadilla
+  long: A quesadilla is here, hot and steaming.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 21
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [quesadilla]
+    text: It looks deliciously hot and spicy, a Maynards specialty!
+
+"tba:271:obj:27114":
+  type: container
+  keywords: [coffee, brewer, drink, coffee]
+  short: a coffee brewer
+  long: A coffee brewer purcolates in the corner of the room.
+  wear: []
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [brewer, coffee]
+    text: >
+      The smells of brewing coffee coming from this rouse you from any numb- mindedness and cause your
+      mouth to water.
+
+"tba:271:obj:27115":
+  type: worn
+  keywords: [rose, gold, black]
+  short: a golden rose with black leaves and stem
+  long: A golden rose with leaves and stem of black is growing here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rose, golden]
+    text: A dark stem crowned with golden petals, it smells of warm summer winds.
+
+"tba:271:obj:27116":
+  type: drinkcon
+  keywords: [coffee, iced, cappuccino, drink, coffee]
+  short: an iced cappuccino
+  long: A foamy iced cappuccino is sitting here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: coffee
+    poisoned: false
+  weight: 8
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [iced, cappuccino]
+    text: >
+      A clear glass is filled with ice, espresso, steamed milk and milk foam.  It looks irresistable.
+
+"tba:271:obj:27117":
+  type: drinkcon
+  keywords: [coffee, irish, cream, latte, drink, coffee]
+  short: an irish cream latte
+  long: A hot latte is sitting here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: coffee
+    poisoned: false
+  weight: 10
+  cost: 18
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [irish, cream, latte]
+    text: >
+      It's a tall glass of high-caffeine espresso, steamed milk, milk foam, and irish cream.  Mmmm!
+
+"tba:271:obj:27118":
+  type: drinkcon
+  keywords: [coffee, black, cup, drink, coffee]
+  short: a black cup
+  long: A black cup of coffee rests here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: coffee
+    poisoned: false
+  weight: 8
+  cost: 7
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coffee, cup]
+    text: Who doesn't need one of these now and then?  How about very often?
+
+"tba:271:obj:27119":
+  type: drinkcon
+  keywords: [tea, cup, drink, hot, tea]
+  short: a hot cup
+  long: A cup of hot tea is resting here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: tea
+    poisoned: false
+  weight: 8
+  cost: 11
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tea, cup]
+    text: >
+      It comes in a slightly ornamented porceline cup, and looks to be brewed mostly of chamomile.
+
+"tba:271:obj:27120":
+  type: drinkcon
+  keywords: [ale, rogue, brew, ale]
+  short: a rogue's brew
+  long: The mascot brew of the assassins guild is resting here.
+  wear: [take]
+  values:
+    capacity: 7
+    contains: 7
+    liquid: dark_ale
+    poisoned: false
+  weight: 12
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rogue, brew]
+    text: It comes in a tall pewter flask engraved with a black naga.
+
+"tba:271:obj:27121":
+  type: drinkcon
+  keywords: [local, speciality, black, adder, drink, local]
+  short: the black adder special
+  long: A black metal flask is sitting here.
+  flags: [hum]
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: local_speciality
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [special, black, adder]
+    text: >
+      A black metal flask engraved with a coiled snake and filled with dark ale that looks very inviting.
+
+"tba:271:obj:27122":
+  type: drinkcon
+  keywords: [whisky, shot, drink, whisky]
+  short: a shot
+  long: A shot of whisky emits an alluring scent from the ground.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [whisky, shot]
+    text: The scent stings your nose pleasantly.
+
+"tba:271:obj:27123":
+  type: food
+  keywords: [victim, sandwich, food]
+  short: a victim sandwich
+  long: The specialty sandwich of the Nightbreak Cafe is sitting here.
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [victim, sandwich]
+    text: >
+      What does the assassins guild do with all those corpses left over from a day's work?  Well, now you
+      know.
+
+"tba:271:obj:27124":
+  type: drinkcon
+  keywords: [firebreather, mug, flames, drink, firebreather]
+  short: a black mug filled with leaping flames
+  long: A large black mug rimming with flames sits here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: firebreather
+    poisoned: false
+  weight: 15
+  cost: 66
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mug, fire, firebreather, flames]
+    text: >
+      You see a wide, black mug filled with liquid of a fiery color.  The side is engraved with a roaring
+      dragon.
+
+"tba:271:obj:27125":
+  type: drinkcon
+  keywords: [beer, mug, cold, drink, beer]
+  short: a cold mug
+  long: The air is condensing on a cold mug of beer.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 8
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mug, beer, cold]
+    text: It's a cold pewter mug, dented from being banged on tables repeatedly.
+
+"tba:271:obj:27126":
+  type: drinkcon
+  keywords: [wine, keg, wine]
+  short: a keg of wine
+  long: A keg of wine rests on the floor.
+  wear: [take]
+  values:
+    capacity: 200
+    contains: 200
+    liquid: wine
+    poisoned: false
+  weight: 205
+  cost: 205
+  rent: 0
+  level: 0
+
+"tba:271:obj:27127":
+  type: drinkcon
+  keywords: [wine, flask, leather, drink, red, wine]
+  short: a leather flask
+  long: A flask of red wine has been dropped here.
+  wear: [take]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: wine
+    poisoned: false
+  weight: 9
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wine, flask]
+    text: The flask is gray and filled, or once filled, perhaps, with red wine.
+
+"tba:271:obj:27128":
+  type: food
+  keywords: [roast, rabbit, food]
+  short: a rabbit roast
+  long: A tasty-looking roast is lying here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 2
+  cost: 14
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [roast, rabbit]
+    text: Its a savory garlic rabbit roast.
+
+"tba:271:obj:27129":
+  type: food
+  keywords: [stew, dragon, pot, food]
+  short: a pot of dragon stew
+  long: A pot of delicious stew is steaming away.
+  wear: [take]
+  values:
+    hours: 40
+    poisoned: false
+  weight: 8
+  cost: 55
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stew, dragon, pot]
+    text: >
+      You see a small black cauldron of steaming meat stew.  The few scales remaining tell you this was
+      once a breathing dragon.  Despite its grisly appearance, it smells delicious.
+
+"tba:271:obj:27130":
+  type: food
+  keywords: [bread, rye, food]
+  short: a rye bread
+  long: A bread baked from rye is sitting here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 2
+  cost: 11
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bread, rye]
+    text: Its a round bread dotted with black rye.  It smells good to eat.
+
+"tba:271:obj:27131":
+  type: food
+  keywords: [cake, saffron, food]
+  short: a cake baked from wild saffron
+  long: A cake baked from wild saffron is resting at your feet.
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cake, saffron]
+    text: You see a round tan-colored cake, still hot from the oven.
+
+"tba:271:obj:27132":
+  type: food
+  keywords: [pastry, blackberry, food]
+  short: a blackberry pastry
+  long: A sticky black pastry is sitting here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pastry, blackberry]
+    text: Its sticky with sugar and looks delicious.  Hobbit specialty.
+
+"tba:271:obj:27133":
+  type: food
+  keywords: [dish, pad, tai, food]
+  short: a dish of pad tai
+  long: A spicy dish of Thai food is sitting here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dish, pad, tai]
+    text: >
+      The plate is hot to the touch, and the mixture of noodles and vegetables look spicy and delicious.
+
+"tba:271:obj:27134":
+  type: container
+  keywords: [sack, leather, deer]
+  short: a sack of deer leather
+  long: A strapped leather sack has been left here.
+  wear: [take]
+  values:
+    capacity: 70
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  extras:
+  - keywords: [sack, deer, leather]
+    text: The hardy deer leather sack has straps to allow slinging over the shoulder.
+
+"tba:271:obj:27135":
+  type: light
+  keywords: [torch, light]
+  short: a torch
+  long: A torch is lying on the ground.
+  wear: [take, hold]
+  values:
+    hours: 25
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch, light]
+    text: Its a short, wooden torch.  It's um, flammable.
+
+"tba:271:obj:27136":
+  type: pen
+  keywords: [quill, black, pen]
+  short: a black feather quill
+  long: A black inky feather is lying nearby.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 13
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [quill, black, feather]
+    text: A slender dark feather rises from an ink pen.
+
+"tba:271:obj:27137":
+  type: note
+  keywords: [paper]
+  short: a piece of paper
+  long: A piece of paper is fluttering in the wind.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 12
+  rent: 0
+  level: 0
+
+"tba:271:obj:27138":
+  type: light
+  keywords: [lamp, copper, light]
+  short: a copper lamp
+  long: A lamp glints copper in the faint light.
+  wear: [take, hold]
+  values:
+    hours: 60
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [lamp, copper]
+    text: It's a small, dented lamp, forged from copper.
+
+"tba:271:obj:27139":
+  type: weapon
+  keywords: [sword, quartz]
+  short: a sword of quartz hilt
+  long: A sword with a pale quartz hilt has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: slash
+  weight: 8
+  cost: 550
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [sword, quartz]
+    text: You see a long, slender-tapered sword with a carved hilt of white quartz.
+
+"tba:271:obj:27140":
+  type: weapon
+  keywords: [dagger, crescent, mithril]
+  short: a mithril dagger
+  long: A dagger with a blade curved like a crescent is lying here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pierce
+  weight: 3
+  cost: 535
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [dagger, crescent, mithril]
+    text: It's a silver-colored dagger, with a crescent-like blade.
+
+"tba:271:obj:27141":
+  type: weapon
+  keywords: [mace, fire]
+  short: a fire-headed mace
+  long: Still hot from the forge, a mace burns a black space on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: bludgeon
+  weight: 5
+  cost: 545
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [mace, fire]
+    text: >
+      The barbed head of the mace is still hot from the forge, and crafted to look like the rising spikes
+      of flames.
+
+"tba:271:obj:27142":
+  type: weapon
+  keywords: [staff, rock, crystal]
+  short: a rock crystal staff
+  long: A staff crowned with a cloudy crystal is lying here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: crush
+  weight: 4
+  cost: 540
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [staff, rock, crystal]
+    text: A slender staff, carved from ash and embedded with a cloudy crystal at the head.
+
+"tba:271:obj:27143":
+  type: armor
+  keywords: [shield, black, sandstone]
+  short: a black sandstone shield
+  long: A dark sandstone plate is lying here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 6
+  cost: 400
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shield, black, sandstone]
+    text: >
+      Molded from local black cliff sandstone and laquered with a special varnish for strength, this
+      makes a sturdy shield.
+
+"tba:271:obj:27144":
+  type: armor
+  keywords: [tunic, golden, guard]
+  short: a guard's golden tunic
+  long: A tunic of dark gold is crumpled here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 158
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tunic, golden]
+    text: The guard's tunic is made of a sturdy, canvas-like material.
+
+"tba:271:obj:27145":
+  type: armor
+  keywords: [boots, black]
+  short: sturdy black boots
+  long: A pair of sturdy black boots lie scattered on the ground.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boots, black]
+    text: >
+      They are made from heavy black leather, and make a small clump-clump sound when walking in them.
+
+"tba:271:obj:27146":
+  type: weapon
+  keywords: [sword, broadsword, silver]
+  short: a silver broadsword
+  long: A silver, straight-edge sword has been left here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 10
+  cost: 770
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, broadsword, silver]
+    text: >
+      You see a silver sword with a straight, tapering blade, forged by the town magicians from the cliff
+      metal and winds for the guards that defend the city.
+
+"tba:271:obj:27147":
+  type: trash
+  keywords: [marbles, set]
+  short: a set of marbles
+  long: Red, purple and black marbles are set up in a circular game.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 14
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [marbles, set]
+    text: >
+      Twenty-two marbles of red, purple and black comprise a set used commonly for games such as 'Lick
+      the dragon', 'Addiction' and 'Dodge the imp', popular among human youths.  Set on the ground, the
+      rolling marbles become slippery.
+
+"tba:271:obj:27148":
+  type: treasure
+  keywords: [chess, board, set, glass]
+  short: a glass chessboard
+  long: A black and rose glass chessboard is set up in mid-game.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chess, board, glass]
+    text: >
+      The board and pieces are carved from black and light rose glass.  It's hard to say who is winning,
+      but the sacrifices are high.
+
+"tba:271:obj:27149":
+  type: worn
+  keywords: [ribbon, velvet]
+  short: a velvet ribbon
+  long: A dark velvet ribbon is coiled here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [ribbon, velvet]
+    text: >
+      It's a ribbon of soft dark velvet of finest quality..  Whoever's this is is probably a rich
+      merchant's daughter or the like.
+
+"tba:271:obj:27150":
+  type: weapon
+  keywords: [dagger, shattered]
+  short: a shattered dagger
+  long: Something that used to be a dagger has been abandoned here.
+  wear: [take, wield]
+  values:
+    damage: 1d1
+    attack: pierce
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dagger, shattered]
+    text: >
+      Some poor fool tried to fight something ten times his strength, and was lucky to get out with his
+      life.  You see his dagger didn't make it.  The thin blade is shattered to splinters.
+
+"tba:271:obj:27151":
+  type: trash
+  keywords: [curse, luck, ill]
+  short: a curse of ill luck
+  long: You sense something unlucky about this room.
+  flags: [no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -5
+  - apply: wis
+    modifier: -3
+  extras:
+  - keywords: [curse, ill, luck]
+    text: You think you can see a curse?  You sense its evil presence all around you.
+
+"tba:271:obj:27152":
+  type: trash
+  keywords: [gallows, platform, death]
+  short: the gallows platform
+  long: The gallows platform rises ominously before you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gallows, platform]
+    text: >
+      A sturdy wooden platform rises above the black sand road, with plenty of room around it for
+      spectators.  On it are two means to death, the shackles for beheading and the oak planking holding the noose
+      for hanging.  The entire surface is bespeckled with dried blood.
+
+"tba:271:obj:27153":
+  type: fountain
+  keywords: [fountain, cracked, drink]
+  short: a cracked stone fountain
+  long: A cracked stone fountain holds a supply of mossy-green water.
+  wear: []
+  values:
+    capacity: -1
+    contains: -1
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, cracked, stone]
+    text: >
+      The circular fountain was etched from stone eons ago, and is worn and cracked from the weather. 
+      Thick moss grows along its inside walls, reflecting its poor maintanance.
+
+"tba:271:obj:27154":
+  type: trash
+  keywords: [altar, amber]
+  short: an altar carved from amber
+  long: An altar of dark amber stands here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [altar, amber]
+    text: >
+      The altar is waist-high, with a stand of black oak and a top of dark amber. There is a single black
+      candle burning in a silver holder resting on it.
+
+"tba:271:obj:27155":
+  type: weapon
+  keywords: [cleaver, meat]
+  short: a meat cleaver
+  long: A large meat cleaver is stuck in the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: thrash
+  weight: 5
+  cost: 115
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cleaver, meat]
+    text: It is wide and sharp, the blade's edge stained a dark red.
+
+"tba:271:obj:27156":
+  type: treasure
+  keywords: [amber, stone, gem]
+  short: an amber stone
+  long: An amber stone glints dully in the light.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [amber, gem]
+    text: You see a hunk of amber stone in excellent condition, and possibly worth a little gold.
+
+"tba:271:obj:27157":
+  type: treasure
+  keywords: [amethyst, violet, gem]
+  short: an amethyst
+  long: An amethyst of pure violet glints from the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 832
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [amethyst, violet, gem]
+    text: It's a beautiful amethyst in excellent condition, and possibly worth some gold.
+
+"tba:271:obj:27158":
+  type: treasure
+  keywords: [diamond, gem]
+  short: a diamond
+  long: A small diamond twinkles from the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [diamond, gem]
+    text: You see a tiny diamond in excellent condition, and likely worth some gold.
+
+"tba:271:obj:27159":
+  type: treasure
+  keywords: [sunstone, golden, gem]
+  short: a sunstone
+  long: A golden sunstone shines with a celestial glow.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sunstone, gem]
+    text: >
+      The golden sunstone is very pretty to look at, but is probably worth more than the hand that
+      carries it.
+
+"tba:271:obj:27160":
+  type: treasure
+  keywords: [necklace, tiger, eye, eyes]
+  short: a necklace of tiger eyes
+  long: A gold and brown necklace lies on the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 700
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [necklace, tiger, eyes]
+    text: >
+      Small but delightful to the eye.  Golden and brown bands shimmer from the stones as the necklace is
+      turned in the light.
+
+"tba:271:obj:27161":
+  type: treasure
+  keywords: [ring, agate, black]
+  short: a black agate ring
+  long: A black agate ring lies half-buried on the ground.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  extras:
+  - keywords: [agate, black, ring]
+    text: The agate is an opaque black and set in a ring of silver.
+
+"tba:271:obj:27162":
+  type: treasure
+  keywords: [shard, obsidian, gem]
+  short: a shard of snowflake obsidian
+  long: A black, white-flecked shard is lying here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  extras:
+  - keywords: [shard, obsidian]
+    text: It's a pointed shard of obsidian flecked with white cloud-like patterns.
+
+"tba:271:obj:27163":
+  type: armor
+  keywords: [suit, chain, mail]
+  short: a suit of chain mail
+  long: A heap of chain mail is lying here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 10
+  cost: 900
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [suit, chain, mail]
+    text: The silvery chain mail looks sturdy and close-fitting.
+
+"tba:271:obj:27164":
+  type: armor
+  keywords: [helm, bright]
+  short: a bright helm
+  long: A bright helm has been left nearby.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 8
+  cost: 780
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [helm, bright]
+    text: >
+      The helm is small and brightly silver-colored.  Fitting snugly on the head, it impairs your hearing
+      slightly, but the protection seems a worthwhile sacrifice.
+
+"tba:271:obj:27165":
+  type: armor
+  keywords: [bracers, silver]
+  short: silver bracers
+  long: A pair of silver bracers is here.
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 7
+  cost: 845
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bracers, silver]
+    text: They extend from elbow to wrist, and are forged from bright silver.
+
+"tba:271:obj:27166":
+  type: armor
+  keywords: [boots, sharp]
+  short: a pair of sharp-toed boots
+  long: A pair of boots with razor-sharp toes is sitting here.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 6
+  cost: 950
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [boots, sharp]
+    text: >
+      The knee-height black boots are fashioned with a razor-sharp point at each toe, delivering a more
+      wicked kick, and kind of a nice tapdance, in fact.
+
+"tba:271:obj:27167":
+  type: armor
+  keywords: [shield, scale]
+  short: a scale shield
+  long: A shield of the scales of an unknown creature is lying here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 10
+  cost: 110
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [shield, scale]
+    text: >
+      It's a large, thin shield fashioned of the scales of an old creature you don't recognize.  You
+      wonder if the maker did.
+
+"tba:271:obj:27168":
+  type: drinkcon
+  keywords: [water, skin, waterskin, water]
+  short: a waterskin
+  long: A waterskin has been left here.
+  wear: [take]
+  values:
+    capacity: 17
+    contains: 17
+    liquid: water
+    poisoned: false
+  weight: 22
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, skin, waterskin]
+    text: >
+      It seems to be stiched together from some kind of small animal hide, probably something
+      plentiful..  Mouse?  Rat?  Mole?  The water looks safe, however.
+
+"tba:271:obj:27169":
+  type: trash
+  keywords: [chair, lounger, black]
+  short: a black lounger
+  long: A black lounger chair looks very relaxing.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chair, lounger, black]
+    text: >
+      The black naga-hide chair eases back by the use of a lever on the side, and looks luxuriously
+      comfortable.  Perfect for hanging out on, waiting for the bounty hunters to give up.  (Theoretically.  )
+
+"tba:271:obj:27170":
+  type: trash
+  keywords: [magazine, rogue, book, bartending]
+  short: the Rogue's book of bartending
+  long: A magazine is lying open on the floor.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [magazine, rogue, book, bartending]
+    text: >
+      You flip through it.  It appears to contain various recipes for poisons.. From minor irritations to
+      fatal, soul-stealing tinctures....  Yet, most of the scrawlings are spattered with blood and blurred
+      with time.  Only in Exile would these components be useful - you are doubtful you could find such
+      ingrediants here.
+
+"tba:271:obj:27171":
+  type: weapon
+  keywords: [sword, gilded, fencing]
+  short: a gilded fencing sword
+  long: A beautiful gilded sword lies at your feet.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 4d2
+    attack: slash
+  weight: 7
+  cost: 850
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [sword, gilded, fencing]
+    text: >
+      The silvery sword is slender and light, suitable for fencing manuevers.  The hilt is gilded with
+      the purest gold from the treasury of nobility.
+
+"tba:271:obj:27172":
+  type: container
+  keywords: [scabbard, silver]
+  short: a silver scabbard
+  long: A scabbard of bright silver lies on the ground.
+  wear: [take, waist]
+  values:
+    capacity: 13
+    lock_flags: 0
+    corpse: false
+  weight: 6
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [scabbard, silver]
+    text: >
+      It is crafted to fit a long, slender type of sword, perhaps a foil.  The edges are faintly gilded
+      in gold, and one side engraved with the seal of a noble house.
+
+"tba:271:obj:27173":
+  type: weapon
+  keywords: [sword, stone]
+  short: a stone-hilted sword
+  long: A short sword with a hilt of finished stone has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: slash
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, stone]
+    text: >
+      It is rather crudely made, it must be acknowledged.  The use of stone in weaponry has fallen out of
+      fashion, since the weight allows only the clumsier manuevers.
+
+"tba:271:obj:27174":
+  type: trash
+  keywords: [notice, sign, disclaimer]
+  short: the cartographer's disclaimer
+  long: A notice is posted on the wall.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [notice, sign, disclaimer]
+    text: A neat type in black stencil gives the warning, "No Guaranteed Satisfaction. "
+
+"tba:271:obj:27175":
+  type: food
+  keywords: [mutton, leg, meat, food]
+  short: a leg of mutton
+  long: A leg of mutton is lying here.
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 4
+  cost: 120
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mutton, leg]
+    text: The meat is thick and juicy, still red with the blood of the beast.
+
+"tba:271:obj:27176":
+  type: food
+  keywords: [heart, boar, food]
+  short: a wild boar heart
+  long: A heart is lying in a pool of blood.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 3
+  cost: 172
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [heart, boar]
+    text: >
+      A human delicacy.  And well worth its reputation for inspiring courage... Or at least gall.
+
+"tba:271:obj:27177":
+  type: food
+  keywords: [wings, bowl, dragon, food]
+  short: a bowl of little dragon wings
+  long: A bowl of tasty dragon wings is resting here.
+  flags: [invisible]
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 5
+  cost: 122
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wings, dragon, bowl]
+    text: >
+      Cruelly harvested from the backs of young dragons, the leathery wings are tasty, and diaphanous as
+      strands of silk or rain.
+
+"tba:271:obj:27178":
+  type: food
+  keywords: [sandwich, troll, grilled, food]
+  short: a grilled troll sandwich
+  long: A hot sandwich with a putrid odor is here.
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 2
+  cost: 110
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sandwich, troll, grilled]
+    text: >
+      Fingers and ribs grilled to a saucy roast poke out from between two slices of coarse rye bread.
+
+"tba:271:obj:27179":
+  type: key
+  keywords: [key, black, gold, sundhaven]
+  short: a black and gold key
+  long: A key fashioned of black and gold metal is lying in the dust.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, black, gold]
+    text: >
+      On the handle the words are engraved, "City of the Cliffs, gates freed, No trust guaranteed"
+
+"tba:271:obj:27180":
+  type: other
+  keywords: [doll, voodoo, hex]
+  short: a voodoo doll
+  long: A corn straw doll is lying in the dust.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [voodoo, doll]
+    text: >
+      The small corn husk doll is stitched with irregular, uneven lines, giving it an eerie appearance. 
+      A shiver runs through you as you realize it is slightly warm to the touch.
+
+"tba:271:obj:27181":
+  type: trash
+  keywords: [lock, hair, red, mercy]
+  short: a lock of someone's hair
+  long: A lock of red hair is lying coiled on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [lock, hair, red]
+    text: A long lock of straight red hair is coiled round your fingers.
+
+"tba:271:obj:27182":
+  type: weapon
+  keywords: [sword, black, watch]
+  short: a sword of the Black Watch
+  long: A beautiful black sword emblazoned with a triskelion lies here.
+  flags: [invisible, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: slash
+  weight: 10
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, black, watch]
+    text: >
+      The sword is beautifully crafted in order to serve the elite members of the Black Watch of
+      Sundhaven, charged with the work of keeping the town clean from ill-meaning rogues and killers.
+
+"tba:271:obj:27183":
+  type: weapon
+  keywords: [blade, iron]
+  short: an iron blade
+  long: A short iron blade has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: sting
+  weight: 6
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blade, iron]
+    text: >
+      The hilt of the short iron blade is still warm from the hand of the elite guardsman to whom it once
+      belonged.
+
+"tba:271:obj:27184":
+  type: armor
+  keywords: [plate, steel, black]
+  short: a plate of black steel
+  long: A black breast plate is lying face up.
+  flags: [anti_thief]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 10
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, black, steel]
+    text: The breast plate seems to be forged from some sort of black iron, and is quite sturdy.
+
+"tba:271:obj:27185":
+  type: armor
+  keywords: [cloak, gold, black]
+  short: a handsome black and gold cloak
+  long: A handsome black and gold cloak is folded on the ground.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 5
+  cost: 660
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [cloak, black, gold]
+    text: The flowing knee length cloak is fashioned from wool and chased in gold corded thread.
+
+"tba:271:obj:27186":
+  type: drinkcon
+  keywords: [whisky, scotch, glass, whisky]
+  short: a glass
+  long: A tall glass of scotch is sitting nearby.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glass, scotch]
+    text:
+      preformatted: |2
+           _______
+           |     |-
+           |.....| \        The warrior's drink of choice.
+           |     | /
+           |     |-                Okay, one of them.
+           -------
+          It appears the Lord of the Watch favored this one very much,
+        since it is empty.
+
+"tba:271:obj:27187":
+  type: armor
+  keywords: [skirt, gypsy, red]
+  short: a colorful gypsy skirt
+  long: A patchwork of red and purple lies on the ground.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 3
+  cost: 53
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [skirt, gypsy, red]
+    text: The patched skirt is a sturdy cross-stitching of bright red and violet.
+
+"tba:271:obj:27188":
+  type: armor
+  keywords: [blouse, shirt, red, blood]
+  short: a blood red blouse
+  long: A dark red blouse is crumpled here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 40
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blouse, red, blood]
+    text: >
+      The gypsy blouse is of a rugged muslin fabric, rough and somewhat dirty, but in decent shape.
+
+"tba:271:obj:27189":
+  type: armor
+  keywords: [violin, old]
+  short: an old violin
+  long: An old violin has been tossed in the dust.
+  wear: [take, hold]
+  values:
+    armor: 2
+  weight: 4
+  cost: 220
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [violin, old]
+    text: >
+      The instrument seems to have seen some rough times.  The gypsies range far and wide...  However, it
+      still holds together enough to play a tune, even block a blow or two.
+
+"tba:271:obj:27190":
+  type: food
+  keywords: [mushroom, white, food, pc]
+  short: a white spotted mushroom
+  long: A mushroom with white spots is growing in the water.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mushroom, white]
+    text: The mushroom is short with a wide, pale-spotted umbrella.  It emits a toxic fume.
+
+"tba:271:obj:27191":
+  type: other
+  keywords: [blossom, flower, hibiscus, red, pc]
+  short: a red hibiscus blossom
+  long: A lovely red hibiscus flower is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 120
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blossom, flower, hibiscus, red]
+    text: >
+      The large wine-red flower emits a delightful smell, and is rumored to be excellent for tea, and
+      some other more toxic uses.
+
+"tba:271:obj:27192":
+  type: other
+  keywords: [eye, toad]
+  short: an eye of toad
+  long: A small slimy eye stares up at you from the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [eye, toad]
+    text: >
+      All life has left the eye that stares blankly into space.  However, toad's eyes are rumored to be
+      excellent in the manufacture of toxic substances.
+
+"tba:271:obj:27193":
+  type: container
+  keywords: [mortar, pestle, pc]
+  short: a mortar and pestle
+  long: A mortar and pestle of black marble sits here.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pestle, mortar]
+    text: >
+      A bowl-shaped mortar carved from black marble holds a small blunt pestle. It looks like the perfect
+      container to mash up something toxic in.
+
+"tba:271:obj:27194":
+  type: armor
+  keywords: [tunic, red, dusty]
+  short: a dusty red tunic
+  long: A dusty pile of red canvas is here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 5
+  cost: 70
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tunic, red, dusty]
+    text: The tunic is frayed and layered with the dust of the road from many leagues of travel.
+
+"tba:271:obj:27195":
+  type: container
+  keywords: [tray, goodies]
+  short: a tray of goodies
+  long: A tray of goodies sits invitingly on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 200
+    lock_flags: 0
+    corpse: false
+  weight: 30
+  cost: 120
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tray, goodies]
+    text: >
+      A thin, worn cloth of blue drapes over a polished wooden tray.  Though covered with the dust of
+      winding roads, several goods of exotic make are lain out that appeal.
+
+"tba:271:obj:27196":
+  type: container
+  keywords: [pipe, wooden]
+  short: a wooden pipe
+  long: An old wooden pipe sits in the dust.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 35
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pipe, wooden]
+    text: The pipe is cracked with age and filled with tobacco half-smoked into charcoal.
+
+"tba:271:obj:27197":
+  type: light
+  keywords: [candle, candlestick, black, light]
+  short: a black candle
+  long: A black candlestick glows with a dim light.
+  wear: [take, hold]
+  values:
+    hours: 30
+  weight: 1
+  cost: 40
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [candle, candlestick, black, light]
+    text: A slim dark taper rises from a circular brass holder.
+
+"tba:271:obj:27198":
+  type: light
+  keywords: [incense, stick, light]
+  short: a stick of incense
+  long: A plume of smoke drifts from an incense stick in the room.
+  wear: [take, hold]
+  values:
+    hours: 20
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stick, incense]
+    text: >
+      A small glowing ember shows atop a stick of a grainy substance.  It smells of some strong herbs
+      grown beyond the lands you have known.
+
+"tba:271:obj:27199":
+  type: food
+  keywords: [honey, jar, food]
+  short: a jar of honey
+  long: Flies are buzzing round a honey jar on the ground.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 3
+  cost: 220
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [honey, jar]
+    text: >
+      The small, blue and brown ornamented jar is cracked slightly and dripping with a sticky golden
+      substance.

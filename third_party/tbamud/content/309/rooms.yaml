@@ -1,0 +1,1452 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 309.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:309:room:30900":
+  name: Guard Post
+  description: >
+    The wooden barrier that bars progress south along the road to Westlawn's is not formidable enough
+    to truly keep people off Westlawn's property.  Indeed - were it not for the guards which are stationed
+    here, one could easily ride off the road and go around.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30901
+  extras:
+  - keywords: [credits]
+    text: >
+      Keep of Baron Westlawn by Kaan for Dibrova Level: 25-30 90 rooms 42 mobs 40 objs Connector zones:
+      The King's Highway This is one of eight main baronies that lie within the open plains area that the
+      King's Highway runs through. The main exports of this Baron's land are beer and horses. He is a warrior
+      baron to the core, his soldiers finely tuned and he himself a fine warrior who could drink any man
+      under the table.
+
+"tba:309:room:30901":
+  name: Road Through Westlawn's Fields
+  description: >
+    Tall, waving crops line both sides of the road, the main export of this area being grain, since it
+    is so easy to grow.  Westlawn is a known brawler and tactician, farming is not exactly his strong
+    point - the running part of his estate that he leaves to be tended by his servants.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30900
+    south:
+      to: tba:309:room:30902
+
+"tba:309:room:30902":
+  name: Road Through Westlawn's Fields
+  description: >
+    The road runs through the center of Westlawn's property which is mainly used for the growing of
+    grains and barley.  Not only are these two crops easy to grow for a man who knows next to nothing about
+    farming, but they are essential to two parts of Baron Westlawn's life that he does know quite a lot
+    about - horses and drinking.  The King's Highway lies north of here, the way into Westlawn's estate
+    lies south.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30901
+    south:
+      to: tba:309:room:30903
+
+"tba:309:room:30903":
+  name: Road Through Westlawn's Fields
+  description: >
+    Just to the south lies the area of Westlawn's property which he has given over to the servants he
+    employs which work his fields.  They are the common folk of the area, the people who scratch a bare
+    living from the coffers of the Baron, but are not in any way mistreated and of course may leave of
+    their own volition at any time.  To the north is the main highway.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30902
+    south:
+      to: tba:309:room:30904
+
+"tba:309:room:30904":
+  name: A Muddy, Rutted Section of the Road
+  description: >
+    The homes of the many common folk who live here on Westlawn's estate lie to the west, their shoddy
+    hovels and crude huts looking dirty and ill-kept.  The road also takes a turn for the worse at this
+    point, the evidence of much traffic and little upkeep obvious due to the many potholes and ruts in
+    it.  The road travels north and south.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30903
+    south:
+      to: tba:309:room:30905
+    west:
+      to: tba:309:room:30917
+
+"tba:309:room:30905":
+  name: Rutted Roadway
+  description: >
+    The road continues north and south, the ruts of wagons and horse hooves making it very bumpy and
+    hard to travel.  The road is also perpetually wet from the slops and waste of the folk who live in the
+    area on the west side of the road.  The road runs south toward a large barn or north toward the
+    highway.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30904
+    south:
+      to: tba:309:room:30906
+    west:
+      to: tba:309:room:30918
+
+"tba:309:room:30906":
+  name: Muddy Roadway
+  description: >
+    The mud from the yards of the huts and shacks which lie west of here has spilled out into the
+    roadway, making it very soft and hard to travel upon.  It does not appear that any effort is taken in the
+    upkeep of the road or the hovels which lie to the west.  The road continues north and south.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30905
+    south:
+      to: tba:309:room:30907
+    west:
+      to: tba:309:room:30919
+
+"tba:309:room:30907":
+  name: Worn Roadway
+  description: >
+    The road continues past the homes of the less fortunate in this area, the hovels and shacks of the
+    poor folk who work dawn until dusk to keep the crops plentiful.  To the south is a large red barn, is
+    paint flaking away, the walls partially askew from poor craftsmanship.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30906
+    south:
+      to: tba:309:room:30908
+    west:
+      to: tba:309:room:30920
+
+"tba:309:room:30908":
+  name: Worn Roadway
+  description: >
+    It seems that you stand in the middle of 'town'.  On the east side of the road is a shoddy
+    building, its walls made from scrap wood, the windows paneless and barely square by any means.  Continuous
+    sound comes from the inside of the building, though, suggesting it to be an inn or tavern for the
+    locals.  On the west side are more of the homes of the commoners and to the south the road bends to the
+    east.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30907
+    east:
+      to: tba:309:room:30916
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30909
+    west:
+      to: tba:309:room:30921
+
+"tba:309:room:30909":
+  name: Muddy Bend
+  description: >
+    The road bends to the east around the inn to the northeast and the barn to the south.  Entrance
+    into the barn lies just to the south, the large front door slightly crooked on its slider.  To the west
+    is a fenced in pasture where a few sickly-looking cows wander about.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30908
+    east:
+      to: tba:309:room:30910
+    south:
+      to: tba:309:room:30927
+
+"tba:309:room:30910":
+  name: Twisting Road
+  description: >
+    The road angles west and south through the Baron's estate, the keep now visible to the southeast. 
+    To the west is the place of the common folk, where they live and work.  There is a rackety wooden
+    door in the wall of the inn on the north side of the road.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30916
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30911
+    west:
+      to: tba:309:room:30909
+
+"tba:309:room:30911":
+  name: Twisting Road
+  description: >
+    The road twists and turns through the land which is owned by Baron Westlawn. Exits lie to the north
+    and east.  To the east, the road runs over a bridge which spans a small river.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30910
+    east:
+      to: tba:309:room:30912
+
+"tba:309:room:30912":
+  name: Rickety Bridge
+  description: >
+    The bridge which crosses the water below is certainly wide enough to accomodate heavy traffic, but
+    whether or not it could hold the heavy traffic which might cross over it is another story.  It groans
+    and creaks with your crossing, slightly shaking as you move about on it.  The road bends to the
+    south and west.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30913
+    west:
+      to: tba:309:room:30911
+
+"tba:309:room:30913":
+  name: Muddy Road Before the Keep
+  description: >
+    The keep of Baron Westlawn lies to the east, a crudely imposing structure which does not appear to
+    be in any sort of disrepair but is certainly not pleasing to the eye.  It is one of those great
+    examples of function over form. To the north is a bridge and the road which leads back to the main highway.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30912
+    east:
+      to: tba:309:room:30914
+
+"tba:309:room:30914":
+  name: Before the Keep
+  description: >
+    The tall, wood-timbered walls which surround the keep look extremely strong and rough.  The entire
+    feel to this place is one of raw strength, of bold valor. Quite fitting for the home of the warrior
+    Baron.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:309:room:30915
+    west:
+      to: tba:309:room:30913
+
+"tba:309:room:30915":
+  name: Inner Yard
+  description: >
+    People move and bustle all about this place in a general buzz of activity. Westlawn must not be
+    much of a fan of lazy or slow movers because no one looks as if they are taking their time, but walking
+    about with a steady stride, with purpose.  This inner yard is completely walled in, the only doors
+    are the one which lies just to the west, the exit, and one other which is built into the eastern wall a
+    short distance away.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30931
+    east:
+      to: tba:309:room:30933
+    south:
+      to: tba:309:room:30934
+    west:
+      to: tba:309:room:30914
+
+"tba:309:room:30916":
+  name: The Fireside Inn
+  description: >
+    This is one of the most nasty smelling inns you ever have had occasion to visit.  There is a layer
+    of grime, mud and grease on the floor which makes footing relatively dangerous and a coating of dirt
+    on every table.  A bar lies on the east wall, behind which a man in a grubby smock serves drinks and
+    food.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:309:room:30910
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:309:room:30908
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30917":
+  name: Mud Yard
+  description: >
+    The entire row of homes which lie here and to the south are fronted by a muddy, sludged-out yard
+    where the children can play.  Most of the time for these folk is spent harvesting or doing the general
+    labor of the fields, however there are some days when Westlawn declares a free day and then the fun
+    begins.  This small area - this place of mud and grime - is where that fun is had.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30904
+    south:
+      to: tba:309:room:30918
+    west:
+      to: tba:309:room:30922
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30918":
+  name: Mud Yard
+  description: >
+    The entire row of homes which lie here and to the south are fronted by a muddy, sludged-out yard
+    where the children can play.  Most of the time for these folk is spent harvesting or doing the general
+    labor of the fields, however there are some days when Westlawn declares a free day and then the fun
+    begins.  This small area - this place of mud and grime - is where that fun is had.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30917
+    east:
+      to: tba:309:room:30905
+    south:
+      to: tba:309:room:30919
+    west:
+      to: tba:309:room:30923
+
+"tba:309:room:30919":
+  name: Mud Yard
+  description: >
+    The entire row of homes which lie here and to the south are fronted by a muddy, sludged-out yard
+    where the children can play.  Most of the time for these folk is spent harvesting or doing the general
+    labor of the fields, however there are some days when Westlawn declares a free day and then the fun
+    begins.  This small area - this place of mud and grime - is where that fun is had.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30918
+    east:
+      to: tba:309:room:30906
+    south:
+      to: tba:309:room:30920
+    west:
+      to: tba:309:room:30924
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30920":
+  name: Mud Yard
+  description: >
+    The entire row of homes which lie here and to the south are fronted by a muddy, sludged-out yard
+    where the children can play.  Most of the time for these folk is spent harvesting or doing the general
+    labor of the fields, however there are some days when Westlawn declares a free day and then the fun
+    begins.  This small area - this place of mud and grime - is where that fun is had.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30919
+    east:
+      to: tba:309:room:30907
+    south:
+      to: tba:309:room:30921
+    west:
+      to: tba:309:room:30925
+
+"tba:309:room:30921":
+  name: Mud Yard
+  description: >
+    The entire row of homes which lie here and to the south are fronted by a muddy, sludged-out yard
+    where the children can play.  Most of the time for these folk is spent harvesting or doing the general
+    labor of the fields, however there are some days when Westlawn declares a free day and then the fun
+    begins.  This small area - this place of mud and grime - is where that fun is had.  A fenced-in area
+    to the south is where the cows are kept.  They provide the milk not only for the keep, but for these
+    folk as well.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30920
+    east:
+      to: tba:309:room:30908
+    west:
+      to: tba:309:room:30926
+
+"tba:309:room:30922":
+  name: Hovel
+  description: >
+    This small, one room home holds all that a family might own within.  The floors are of wood
+    planking, rough hewn and full of potential splinters and covered in the mud that gets tracked in from the
+    yard outside.  A small table is pushed against the far wall, rows of low cots line the floors along the
+    opposite wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30917
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30923":
+  name: Hut
+  description: >
+    The walls of this crude shelter are made from the leftovers of the crops which are grown about the
+    area.  There is not much in the way of woodlands, as most the wooded areas have been cut down to
+    provide more room for growing crops for the Barons.  Gaps in the walls and ceiling make it only slightly
+    better than being outside - a steady breeze flows through.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30918
+
+"tba:309:room:30924":
+  name: Shack
+  description: >
+    This small wooden home is actually considered to be of high standards for this area.  The walls are
+    all quite solid and without gaps, the flooring is smooth and covered in wood.  There are even
+    sections where private areas can be had by the people who live here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30919
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30925":
+  name: Canvas and Straw Hut
+  description: >
+    This is almost more of tepee than a hut at all, but it does serve its purpose quite well.  The
+    walls are all covered in thick canvas which holds out against wind and rain and provides adequate cover
+    for privacy.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30920
+
+"tba:309:room:30926":
+  name: Hovel
+  description: >
+    This is the home of all the men of the area with no families who have no other place to go.  There
+    are no beds, just open floor space.  The only piece of furniture in the room is a low table which may
+    be used by sitting on the floor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30921
+
+"tba:309:room:30927":
+  name: Barn
+  description: >
+    The musty smell of the place assaults your nostrils immediately upon entry, the old, open smell of
+    a barn so distinct as to be a scent all its own. Harnesses and tools for harvesting lie about the
+    place, all in surprising order. The main exit lies to the north, a wide set of double doors open to the
+    west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30909
+    west:
+      to: tba:309:room:30928
+
+"tba:309:room:30928":
+  name: Hay Barn
+  description: >
+    Piles of tight bales lie in neat stacks all about this section of the barn. A door leads east into
+    the main section of the barn, another leading north out into the cow pasture.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:309:room:30929
+    east:
+      to: tba:309:room:30927
+
+"tba:309:room:30929":
+  name: Cow Pasture
+  description: >
+    This is a small area where the few cows that are used specifically for milking are kept.  It would
+    be a good idea to watch your step here, as there are quite a few small greenish-brown piles laying
+    about.  To the east of this pasture is the roadway, a fence blocking the way onto the road and to the
+    north is the common folks' area where their homes and muddy yards lay.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30928
+    west:
+      to: tba:309:room:30930
+
+"tba:309:room:30930":
+  name: Cow Pasture
+  description: >
+    This is a small area where the few cows that are used specifically for milking are kept.  It would
+    be a good idea to watch your step here, as there are quite a few small greenish-brown piles laying
+    about.  To the east of this pasture is the roadway, a fence blocking the way onto the road and to the
+    north is the common folks' area where their homes and muddy yards lay.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30929
+
+"tba:309:room:30931":
+  name: Inner Yard
+  description: >
+    All manner of activities go on in this main outer section of the keep. Children play in the
+    relative safety of the walls of the keep, men and women go about their business and the higher nobles of the
+    area talk business amongst themselves in what they feel is a sort of seclusion in the southeast
+    corner.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30932
+    south:
+      to: tba:309:room:30915
+
+"tba:309:room:30932":
+  name: Inner Yard
+  description: >
+    All manner of activities go on in this main outer section of the keep, the place where most of
+    those who live within these walls come to stretch out or take a break.  Most of the comings and goings
+    within the keep require travel through this section, so traffic is usually quite brisk.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30936
+    south:
+      to: tba:309:room:30933
+    west:
+      to: tba:309:room:30931
+
+"tba:309:room:30933":
+  name: Inner Yard
+  description: >
+    The Baron's people hustle about you, doing their daily tasks or enjoying some spare time in the
+    outdoors.  Exits from the yard lie directly east and directly west from where you stand.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30932
+    east:
+      to: tba:309:room:30937
+    south:
+      to: tba:309:room:30935
+    west:
+      to: tba:309:room:30915
+
+"tba:309:room:30934":
+  name: Inner Yard
+  description: >
+    The rough wooden outer wall of the keep runs along the west side of the courtyard and meets with a
+    very solid and well-constructed wall of stone and mortar on the south side.  There is no door in the
+    wall, but it is obvious that beyond that mortar wall lies the innards of the keep.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30915
+    east:
+      to: tba:309:room:30935
+
+"tba:309:room:30935":
+  name: Inner Yard
+  description: >
+    The entire inner yard is surrounded by the walls of the keep, a protective barrier against
+    marauders and the possibility that another baron might try to attack Westlawn to gain control of his land and
+    holdings.  This yard is where all the people who live on Westlawn's land come in times of strife or
+    bad weather, to stay together in number and relative safety.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30933
+    east:
+      to: tba:309:room:30938
+    west:
+      to: tba:309:room:30934
+
+"tba:309:room:30936":
+  name: Inner Yard
+  description: >
+    The entire inner yard is surrounded by the walls of the keep, a protective barrier against
+    marauders and the possibility that another baron might try to attack Westlawn to gain control of his land and
+    holdings.  This yard is where all the people who live on Westlawn's land come in times of strife or
+    bad weather, to stay together in number and relative safety.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30937
+    west:
+      to: tba:309:room:30932
+
+"tba:309:room:30937":
+  name: Inner Yard
+  description: >
+    A set of double doors lead east into the main section of the keep, the only doors which allow
+    access as far you can see from looking around at the walls of this yard.  The exit to the keep lies
+    directly west, a short walk across the yard from you.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30936
+    east:
+      to: tba:309:room:30939
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30938
+    west:
+      to: tba:309:room:30933
+
+"tba:309:room:30938":
+  name: Inner Yard
+  description: >
+    This is the southeastern corner of the yard, where most of major business deals are made by the
+    local nobles of the area.  It is said that any word uttered within the confines of the inner keep can be
+    and are heard by Westlawn, so most of the bargains which are made are done outdoors in this very
+    area.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30937
+    west:
+      to: tba:309:room:30935
+
+"tba:309:room:30939":
+  name: Wide Hallway
+  description: >
+    The hallway is a high, arched affair made from stone and mortar.  It rises at least fifteen feet at
+    its highest point, twelve at the lowest along the walls. The floor is dented and gouged from the
+    tread of many hooves upon it - it seems that the Baron has no qualms about leading his fine steeds
+    through this section of his home.  The hall meets with another hall just to the east, the courtyard lies
+    to the west through a set of heavy double doors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30940
+    west:
+      to: tba:309:room:30937
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30940":
+  name: The Main Hall
+  description: >
+    This is a wide, clean area of the keep which runs north to south through the largest section of the
+    keep.  A door lies to the east, leading into the Baron's stable area.  A hall lies to the west
+    leading toward the courtyard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30941
+    east:
+      to: tba:309:room:30954
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30942
+    west:
+      to: tba:309:room:30939
+
+"tba:309:room:30941":
+  name: The Main Hall
+  description: >
+    The hall runs north to south past doors in the center and in the north and south ends.  At either
+    end of the hall, it curves westward, out of sight.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30944
+    south:
+      to: tba:309:room:30940
+
+"tba:309:room:30942":
+  name: The Main Hall
+  description: >
+    The hall runs north to south past doors in the center and in the north and south ends.  At either
+    end of the hall, it curves westward, out of sight.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30940
+    south:
+      to: tba:309:room:30943
+
+"tba:309:room:30943":
+  name: South End of the Main Hall
+  description: >
+    There are thick wooden doors set into the east and south walls, doors bound by lengths of iron
+    which look as strong as any piece of rough iron.  On the western wall is another wooden door, hoever it
+    does not appear to hold behind it anything of true worth, as it is not as thick and strong-looking as
+    the other two doors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30942
+    east:
+      to: tba:309:room:30953
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:309:room:30950
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:309:room:30955
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30944":
+  name: Entrance into the Dining Hall
+  description: >
+    Just west of here is the start of an enormous feastng hall, or more aptly what would be called a
+    mess hall in this place.  A thick, wooden table runs the entire length of the hall, one which could
+    easily seat a score and a half of men at dinner and then some.  There are nightly feasts here at this
+    table, feasts that everyone in the keep is invited to and usually attend.  Much revelry, singing and
+    baudy jokes are told throughout the evenings - a favorite past time of the Baron's.  On the east wall
+    is the door into the kitchen, where wonderful smells emanate all day long - there is always something
+    cooking in this place.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30949
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30941
+    west:
+      to: tba:309:room:30945
+    up:
+      to: tba:309:room:30963
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30945":
+  name: Hall of Feasting
+  description: >
+    A thick, wooden table runs the entire length of the hall, one which could easily seat a score and a
+    half of men at dinner and then some.  There are nightly feasts here at this table, feasts that
+    everyone in the keep is invited to and usually attend.  Much revelry, singing and baudy jokes are told
+    throughout the evenings - a favorite past time of the Baron's.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30944
+    west:
+      to: tba:309:room:30946
+
+"tba:309:room:30946":
+  name: Hall of Feasting
+  description: >
+    A thick, wooden table runs the entire length of the hall, one which could easily seat a score and a
+    half of men at dinner and then some.  There are nightly feasts here at this table, feasts that
+    everyone in the keep is invited to and usually attend.  Much revelry, singing and baudy jokes are told
+    throughout the evenings - a favorite past time of the Baron's.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30945
+    west:
+      to: tba:309:room:30947
+
+"tba:309:room:30947":
+  name: Hall of Feasting
+  description: >
+    A thick, wooden table runs the entire length of the hall, one which could easily seat a score and a
+    half of men at dinner and then some.  There are nightly feasts here at this table, feasts that
+    everyone in the keep is invited to and usually attend.  Much revelry, singing and baudy jokes are told
+    throughout the evenings - a favorite past time of the Baron's.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30946
+    west:
+      to: tba:309:room:30948
+
+"tba:309:room:30948":
+  name: The Head of the Table
+  description: >
+    This is the Baron's spot at the table.  He had it purposely designed that he could make a grand
+    entrance to his seat of honor on a nightly basis, walking slowly and deliberately past all who would
+    dine at his table.  His chair is, of course, slightly raised from the rest of the chairs at the table -
+    not that he needs the height.  Rumor has it, the baron is close to seven feet in height.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30947
+
+"tba:309:room:30949":
+  name: The Kitchen
+  description: >
+    This huge room is in a perpetual state of panic, what with the known appetite of Baron Westlawn and
+    all.  There are three separate brick ovens which are always lit and running, always cooking
+    something at all times - even in the dead of night.  Cooks run here and there, constantly making sure that
+    nothing burns and nothing spoils.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:309:room:30944
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30950":
+  name: Soldier's Barracks
+  description: >
+    All of the single men who are part of the Baron's barbaric fighting force are given quarters in
+    this large room.  There are bunks lined in straight, perfect rows, all of them clean and crisp.  The
+    baron always makes it a point to stop into this room at least once a day so that he might make sure that
+    no soldier of his lives like a pig.  There are severe penalties for slovenly behavior.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30943
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:309:room:30951
+
+"tba:309:room:30951":
+  name: Soldier's Barracks
+  description: >
+    All of the single men who are part of the Baron's barbaric fighting force are given quarters in
+    this large room.  There are bunks lined in straight, perfect rows, all of them clean and crisp.  The
+    baron always makes it a point to stop into this room at least once a day so that he might make sure that
+    no soldier of his lives like a pig.  There are severe penalties for slovenly behavior.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30950
+    west:
+      to: tba:309:room:30952
+
+"tba:309:room:30952":
+  name: Soldier's Barracks
+  description: >
+    All of the single men who are part of the Baron's barbaric fighting force are given quarters in
+    this large room.  There are bunks lined in straight, perfect rows, all of them clean and crisp.  The
+    baron always makes it a point to stop into this room at least once a day so that he might make sure that
+    no soldier of his lives like a pig.  There are severe penalties for slovenly behavior.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30951
+
+"tba:309:room:30953":
+  name: Arms Cache and Smithy
+  description: >
+    Donld works tirelessly, day after day making sure that all existing weapons and armor are kept in
+    perfect condition.  On top of that chore, he crafts all metal-work within the keep, shoes horses and
+    new weapons for the Baron to test out.  Donld is not Westlawn's right-hand man but he is damn near
+    close.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:309:room:30943
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30954":
+  name: Outer Antechamber
+  description: >
+    Strange that guards would be posted here, already within the keep and at a place which a person
+    must already have made through all others in the keep. The general's horses are a matter of pride for
+    him, such strong pride that he guards them jealously from intruders.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30969
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:309:room:30940
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30955":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:309:room:30956
+    west:
+      to: tba:309:room:30960
+    up:
+      to: tba:309:room:30943
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30956":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:309:room:30955
+    west:
+      to: tba:309:room:30957
+
+"tba:309:room:30957":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:309:room:30960
+    east:
+      to: tba:309:room:30956
+    west:
+      to: tba:309:room:30958
+
+"tba:309:room:30958":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:309:room:30959
+    east:
+      to: tba:309:room:30957
+
+"tba:309:room:30959":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:309:room:30960
+    south:
+      to: tba:309:room:30958
+
+"tba:309:room:30960":
+  name: Cellar
+  description: >
+    All manner of dry storage is kept deep within the lower reaches of the Baron's keep.  The ground
+    down here is damp and earthy, the smell of the entire place musty and raw.  There is not much light
+    except that which you may have brought with you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:309:room:30955
+    south:
+      to: tba:309:room:30957
+    west:
+      to: tba:309:room:30959
+
+"tba:309:room:30961":
+  name: Watch Post on the Battlements
+  description: >
+    A spot for a sentry to view the land of the Baron has been made upon these upper rampartes, a great
+    line of visibility in every direction.  A large gong has been placed here to be sounded during times
+    when enemies are spotted.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30962
+
+"tba:309:room:30962":
+  name: On the Battlements
+  description: >
+    You stand atop the thick wooden wall of the keep, high above the ground.  A guard post lies just
+    west of here, the battelments allow access to the east and west.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30963
+    west:
+      to: tba:309:room:30961
+
+"tba:309:room:30963":
+  name: On the Battlements
+  description: >
+    Paths along the top of the wall of the keep lie to the west and south from here.  They are really
+    nothing more than narrow wooden planking hammered down on top of the thick timbers which are the walls
+    of the keep.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30964
+    west:
+      to: tba:309:room:30962
+    down:
+      to: tba:309:room:30944
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30964":
+  name: On the Battlements
+  description: >
+    The path along the top of the wall of the keep lies to the north and south from here.  They are
+    really nothing more than narrow wooden planking hammered down on top of the thick timbers which are the
+    walls of the keep.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30963
+    south:
+      to: tba:309:room:30965
+
+"tba:309:room:30965":
+  name: On the Battlements
+  description: >
+    The path along the top of the wall of the keep lies to the north and south from here.  They are
+    really nothing more than narrow wooden planking hammered down on top of the thick timbers which are the
+    walls of the keep.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30964
+    south:
+      to: tba:309:room:30966
+
+"tba:309:room:30966":
+  name: On the Battlements
+  description: >
+    Paths along the top of the wall of the keep lie to the west and north from here.  They are really
+    nothing more than narrow wooden planking hammered down on top of the thick timbers which are the walls
+    of the keep.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30965
+    west:
+      to: tba:309:room:30967
+
+"tba:309:room:30967":
+  name: On the Battlements
+  description: >
+    Just to the west is a guard's post where there is always someone on duty. To the east is the long
+    wooden walkway which spans the upper level of the keep.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30966
+    west:
+      to: tba:309:room:30968
+
+"tba:309:room:30968":
+  name: At a Guard Post on the Battlements
+  description: >
+    This is nothing more than a cleared space of about four foot by four foot which affords a generous
+    view of the lands in every direction.  A huge gong has been hung on the south wall of the place, to
+    be rung in times of danger so that the population of the keep may know to mobilize.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30967
+
+"tba:309:room:30969":
+  name: Training Fields
+  description: >
+    This area is used as a dual-purpose spot where the soldiers of the Baron's army are trained in the
+    arts of battle and as a place where the legendary steeds raised by the Baron are trained and tamed. 
+    The entire place is ringed by a clean white-painted fence, stables lie on the north and south sides
+    of the field, another field lies to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30970
+    east:
+      to: tba:309:room:30974
+    south:
+      to: tba:309:room:30975
+    west:
+      to: tba:309:room:30954
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30970":
+  name: Training Fields
+  description: >
+    This area is used as a dual-purpose spot where the soldiers of the Baron's army are trained in the
+    arts of battle and as a place where the legendary steeds raised by the Baron are trained and tamed. 
+    To the north is the entrance into one of the Baron's stables, the field lies wide open to the east
+    and south.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30984
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:309:room:30971
+    south:
+      to: tba:309:room:30969
+
+"tba:309:room:30971":
+  name: Training Fields
+  description: >
+    This area is used as a dual-purpose spot where the soldiers of the Baron's army are trained in the
+    arts of battle and as a place where the legendary steeds raised by the Baron are trained and tamed. 
+    A stable lies to the north of you, the entrance a bit to the west.  To the far east is another field
+    where more horses can be seen grazing and idling.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30972
+    south:
+      to: tba:309:room:30974
+    west:
+      to: tba:309:room:30970
+
+"tba:309:room:30972":
+  name: Training Fields
+  description: >
+    This is the training field for the troops and mounts of the army that Westlawn commands.  The fence
+    which rings this place runs along north to south on your east side, another smaller fenced in area
+    over there.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30973
+    west:
+      to: tba:309:room:30971
+
+"tba:309:room:30973":
+  name: Training Fields
+  description: >
+    At this east end of the training field, the fence block the way east.  A gate allows entry east
+    into a larger, more open field that appears less used - or at least less trampled.  The keep entrance
+    lies straight west.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30972
+    east:
+      to: tba:309:room:30980
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:309:room:30977
+    west:
+      to: tba:309:room:30974
+
+"tba:309:room:30974":
+  name: Training Fields
+  description: >
+    You stand in the center of a fair-sized field used for the training of Westlawn's many steeds and
+    the men who ride them.  The ground is quite trampled and free of grass for the most part, only patches
+    of green can be seen here.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30971
+    east:
+      to: tba:309:room:30973
+    south:
+      to: tba:309:room:30976
+    west:
+      to: tba:309:room:30969
+
+"tba:309:room:30975":
+  name: Training Fields
+  description: >
+    You stand in a fair-sized field used for the training of Westlawn's many steeds and the men who
+    ride them.  The ground is quite trampled and free of grass for the most part, only patches of green can
+    be seen here.  The door to one of Westlawn's stables lies to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30969
+    east:
+      to: tba:309:room:30976
+    south:
+      to: tba:309:room:30987
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30976":
+  name: Training Fields
+  description: >
+    You stand in a fair-sized field used for the training of Westlawn's many steeds and the men who
+    ride them.  The ground is quite trampled and free of grass for the most part, only patches of green can
+    be seen here.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30974
+    east:
+      to: tba:309:room:30977
+    west:
+      to: tba:309:room:30975
+
+"tba:309:room:30977":
+  name: Training Fields
+  description: >
+    You stand in a fair-sized field used for the training of Westlawn's many steeds and the men who
+    ride them.  The ground is quite trampled and free of grass for the most part, only patches of green can
+    be seen here.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30973
+    west:
+      to: tba:309:room:30976
+
+"tba:309:room:30978":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.  Beyond those fields are the tall, dark
+    trees of the Kailaani Forest - the place from where they say no man ever returns.
+  sector: inside
+  exits:
+    east:
+      to: tba:309:room:30979
+    south:
+      to: tba:309:room:30980
+
+"tba:309:room:30979":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.
+  sector: inside
+  exits:
+    south:
+      to: tba:309:room:30981
+    west:
+      to: tba:309:room:30978
+
+"tba:309:room:30980":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.  Beyond those fields are the tall, dark
+    trees of the Kailaani Forest - the place from where they say no man ever returns.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30978
+    east:
+      to: tba:309:room:30981
+    south:
+      to: tba:309:room:30982
+    west:
+      to: tba:309:room:30973
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30981":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30979
+    south:
+      to: tba:309:room:30983
+    west:
+      to: tba:309:room:30980
+
+"tba:309:room:30982":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.  Beyond those fields are the tall, dark
+    trees of the Kailaani Forest - the place from where they say no man ever returns.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30980
+    east:
+      to: tba:309:room:30983
+
+"tba:309:room:30983":
+  name: Outpasture
+  description: >
+    Most of Westlawn's steeds are kept here for the length of their stay on his estates.  It is a vast
+    field, lush with thick grass, and well-tended by Westlawn's servants so that the steeds never run
+    short on food.  The keep lies to the west, through another field.  To the east is the long, open fields
+    which Westlawn farms to keep his estate financially sound.
+  sector: inside
+  exits:
+    north:
+      to: tba:309:room:30981
+    west:
+      to: tba:309:room:30982
+
+"tba:309:room:30984":
+  name: North Stables
+  description: >
+    The most valuable steeds are kept here, the ones which have been trained, broken and are ready for
+    either battle or market.  The Baron keeps all of his steeds in perfect health, all of them ready to
+    be either sold to highest bidder or rode into battle at a moment's notice.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30985
+    south:
+      to: tba:309:room:30970
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:309:room:30985":
+  name: North Stables
+  description: >
+    Stalls line the walls on both the north and south walls, horses tethered within.  Sacks of grain
+    and brushes for combing lie on the ground in neat piles just outside the doors - all of which are used
+    daily.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30986
+    west:
+      to: tba:309:room:30984
+
+"tba:309:room:30986":
+  name: North Stables
+  description: >
+    Stalls line the walls on both the north and south walls, horses tethered within.  Sacks of grain
+    and brushes for combing lie on the ground in neat piles just outside the doors - all of which are used
+    daily.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:309:room:30985
+
+"tba:309:room:30987":
+  name: South Stables
+  description: >
+    This is the stables where the more difficult steeds are kept until broken. The steeds which are
+    kept in this stable are considered to be of the finest quality, but have the worst attitude of the
+    steeds that Westlawn owns, and so are separated from the general population.  The noise in here is
+    tremendous, as are the steeds which stand proudly behind the stall doors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:309:room:30975
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:309:room:30988
+
+"tba:309:room:30988":
+  name: South Stables
+  description: >
+    This is the stables where the more difficult steeds are kept until broken. The steeds which are
+    kept in this stable are considered to be of the finest quality, but have the worst attitude of the
+    steeds that Westlawn owns, and so are separated from the general population.  The noise in here is
+    tremendous, as are the steeds which stand proudly behind the stall doors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:309:room:30989
+    west:
+      to: tba:309:room:30987
+
+"tba:309:room:30989":
+  name: South Stables
+  description: >
+    This is the stables where the more difficult steeds are kept until broken. The steeds which are
+    kept in this stable are considered to be of the finest quality, but have the worst attitude of the
+    steeds that Westlawn owns, and so are separated from the general population.  The noise in here is
+    tremendous, as are the steeds which stand proudly behind the stall doors.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:309:room:30988

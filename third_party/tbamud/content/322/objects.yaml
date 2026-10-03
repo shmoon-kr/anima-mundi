@@ -1,0 +1,312 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 322.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:322:obj:32200":
+  type: other
+  keywords: [crate]
+  short: a crate
+  long: A wooden crate has been dropped here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:322:obj:32201":
+  type: other
+  keywords: [rope, thick]
+  short: a length of thick rope
+  long: A length of thick rope hangs down from the docks.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:322:obj:32202":
+  type: other
+  keywords: [hawser]
+  short: a hawser
+  long: A long hawser keeps a boat tied here securely.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:322:obj:32203":
+  type: armor
+  keywords: [suit, body, tight]
+  short: a tight fitting body suit
+  long: Someone left a suit of clothing here.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32204":
+  type: container
+  keywords: [suitcase, case]
+  short: a large suitcase
+  long: A large suitcase has been left here.
+  wear: [take]
+  values:
+    capacity: 250
+    lock_flags: 1
+    corpse: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32205":
+  type: worn
+  keywords: [ring, thumb, opal]
+  short: a bright opal thumb ring
+  long: Someone dropped some jewelry here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 15
+
+"tba:322:obj:32206":
+  type: other
+  keywords: [crate]
+  short: a large wooden crate
+  long: A large wooden crate lies on the dock, waiting to be loaded.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:322:obj:32207":
+  type: food
+  keywords: [sea, algae]
+  short: a clump of sea algae
+  long: A formless clump of sea algae floats on the water's surface.
+  wear: [take, hold]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:322:obj:32208":
+  type: other
+  keywords: [buoy]
+  short: a bouy
+  long: A red and white bouy floats here, anchored to the bottom by a chain.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:322:obj:32209":
+  type: boat
+  keywords: [boat, fishing]
+  short: a small fishing boat
+  long: A small fishing boat has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 22
+  cost: 500
+  rent: 0
+  level: 1
+
+"tba:322:obj:32210":
+  type: other
+  keywords: [flotsam]
+  short: a lump of flotsam
+  long: A lump of flotsam bobs on the surface of the water.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:322:obj:32211":
+  type: other
+  keywords: [jetsam]
+  short: a floating clump of jetsam
+  long: A clump of formless jetsam floats by.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:322:obj:32212":
+  type: other
+  keywords: [pole, fishing]
+  short: a fishing pole
+  long: A fishing pole has been carelessly left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32213":
+  type: worn
+  keywords: [tattoo]
+  short: a tough-looking tattoo
+  long: There is a tough-looking tattoo is lying on the ground here.
+  wear: [take, neck, legs, arms]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:322:obj:32214":
+  type: armor
+  keywords: [hat, wide, straw]
+  short: a wide straw hat
+  long: A wide straw hat has been left here.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32215":
+  type: armor
+  keywords: [boots, thick, sailor]
+  short: a pair of thick sailor's boots
+  long: A pair of thick sailor's boots lie in a grungy heap.
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 8
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32216":
+  type: armor
+  keywords: [shirt, tight, sleeveless]
+  short: a tight, sleeveless workman's shirt
+  long: A small black shirt without sleeves has been left here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32217":
+  type: armor
+  keywords: [shirt, blue]
+  short: a blue shirt
+  long: A blue shirt has been left here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32218":
+  type: armor
+  keywords: [slacks, pair, white]
+  short: a pair of white slacks
+  long: A pair of white slacks have been left here.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32219":
+  type: armor
+  keywords: [undergarments, garments]
+  short: a pair of clean undergarments
+  long: A pair of clean undergarments have been left here.
+  wear: [take, legs, hold]
+  values:
+    armor: 2
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32220":
+  type: armor
+  keywords: [socks, pair]
+  short: a pair of green socks
+  long: A pair of cool green socks have been left here.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32221":
+  type: drinkcon
+  keywords: [whisky, whiskey, pint, whisky]
+  short: a pint of whiskey
+  long: A pint of whiskey has been left here.
+  wear: [take]
+  values:
+    capacity: 6
+    contains: 6
+    liquid: whisky
+    poisoned: false
+  weight: 11
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:322:obj:32222":
+  type: other
+  keywords: [rigging]
+  short: a rigging line
+  long: A rigging line hangs down from the docks into the water.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

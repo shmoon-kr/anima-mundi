@@ -1,0 +1,355 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 237.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:237:obj:23700":
+  type: weapon
+  keywords: [axe, dwarven]
+  short: a dwarven axe
+  long: An axe, obviously of dwarven manufacture, has been left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 12
+  cost: 600
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [axe, dwarven]
+    text: A nicely made battle axe, with the rune 'T' engraved on the haft.
+
+"tba:237:obj:23701":
+  type: weapon
+  keywords: [short, sword, shortsword, dwarven]
+  short: a dwarven shortsword
+  long: A short sword with a broad blade has been left here.
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pierce
+  weight: 8
+  cost: 700
+  rent: 70
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [short, sword, shortsword, dwarven]
+    text: >
+      This sword is typical dwarven manufacture.  The forge in the mountain has produced planty of these
+      small wonders to start a full-scale war.  This particular blade bears a small 'T' rune, near the
+      handle.
+
+"tba:237:obj:23702":
+  type: weapon
+  keywords: [dagger, dwarven]
+  short: a dwarven dagger
+  long: A large dagger, almost resembling a small sword, is here.
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 1
+  cost: 175
+  rent: 17
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:237:obj:23703":
+  type: weapon
+  keywords: [pick, dwarven]
+  short: a dwarven pick
+  long: A small pick has been left here, gathering dust.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: thrash
+  weight: 4
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [pick, dwarven]
+    text: A pick, made for someone not quite as tall as you.
+
+"tba:237:obj:23704":
+  type: weapon
+  keywords: [hammer, dwarven]
+  short: a dwarven hammer
+  long: A hammer, ready for pounding on armor, worn or not, is here.
+  flags: [anti_mage, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: pound
+  weight: 6
+  cost: 300
+  rent: 30
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [hammer, dwarven]
+    text: >
+      A large hammer for dwarven standards, the head of this weapon can also be used in the everyday life
+      of the working dwarf
+
+"tba:237:obj:23705":
+  type: armor
+  keywords: [studded, leather, dwarven]
+  short: a studded leather armor
+  long: A dwarven made studded leather armor has been thrown in a pile here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 6
+  cost: 160
+  rent: 6
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+
+"tba:237:obj:23706":
+  type: armor
+  keywords: [ring, mail, ringmail, dwarven]
+  short: a dwarven ringmail
+  long: A ringmail has been thrown in a heap here.
+  flags: [anti_thief]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 2
+  cost: 750
+  rent: 75
+  level: 0
+
+"tba:237:obj:23707":
+  type: armor
+  keywords: [chain, chainmail, dwarven]
+  short: a dwarven chainmail
+  long: A chainmail is here, abandoned.
+  flags: [anti_mage, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 3
+  cost: 850
+  rent: 85
+  level: 0
+
+"tba:237:obj:23708":
+  type: armor
+  keywords: [shield, dwarven, kite]
+  short: a dwarven shield
+  long: A shield, bearing the insignia of the dwarves, has been left here.
+  flags: [anti_thief]
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [shield, dwarven, kite]
+    text: >
+      A hammer and an axe crossed over 3 rocks is the insignia of the dwarves. This must be a dwarven
+      shield.
+
+"tba:237:obj:23709":
+  type: armor
+  keywords: [buckler, dwarven, shield]
+  short: a dwarven buckler
+  long: A small round shield has been thrown here.
+  wear: [take, shield]
+  values:
+    armor: 2
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [buckler, dwarven, shield]
+    text: >
+      A small round 'target' shield, it offers little protection when fighting. But anything is better
+      than nothing...
+
+"tba:237:obj:23710":
+  type: armor
+  keywords: [gauntlets, plate, dwarven]
+  short: some plate gauntlets
+  long: Some plate gauntlets, with the dwarven insignia on them, are here.
+  flags: [magic, anti_thief]
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 1
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [gauntlets, plate, dwarven, insignia]
+    text: >
+      A hammer and an axe crossed over 3 rocks is the insignia of the dwarves. This must be dwarven
+      gauntlets.
+
+"tba:237:obj:23711":
+  type: armor
+  keywords: [chain, sleeves]
+  short: a set of chain sleeves
+  long: Some chain mail sleeves has been abandoned here.
+  flags: [anti_thief]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:237:obj:23712":
+  type: armor
+  keywords: [chain, leggings]
+  short: a set of chain leggings
+  long: Some chain mail leggings are here on the ground.
+  flags: [anti_thief]
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:237:obj:23713":
+  type: worn
+  keywords: [overalls, dwarven, dwarf]
+  short: some overalls
+  long: A pair of workers overalls lie here in an uneven pile.
+  flags: [magic]
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 2
+  rent: 1
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+
+"tba:237:obj:23714":
+  type: armor
+  keywords: [helmet, plate, dwarven]
+  short: a dwarven plate helmet
+  long: A helmet bearing the dwarven insignia has been thrown here.
+  flags: [anti_thief]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [helmet, plate, dwarven]
+    text: >
+      A hammer and an axe crossed over 3 rocks is the insignia of the dwarves. This must be a dwarven
+      helmet.
+
+"tba:237:obj:23715":
+  type: container
+  keywords: [purse, traders, leather]
+  short: a large leather purse
+  long: A large leather purse with the dwarven insignia has been thrown here.
+  flags: [no_invis]
+  wear: [take]
+  values:
+    capacity: 30
+    lock_flags: 5
+    corpse: false
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [purse, traders, leather]
+    text: >
+      A hammer and an axe crossed over 3 rocks is the insignia of the dwarves. This must be the traders
+      purse.
+
+"tba:237:obj:23716":
+  type: money
+  keywords: [pile, coins]
+  short: quite a large amount of coins
+  long: Quite a large amount of coins is lying here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:237:obj:23717":
+  type: other
+  keywords: [looking, glass, dwarven]
+  short: a looking glass
+  long: A copper tube about 3' long has been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 220
+  rent: 22
+  level: 0
+  extras:
+  - keywords: [looking, glass, dwarven]
+    text: >
+      In either end of the tube a small piece of glass is inserted.  When you look through it, you see
+      much clearer, even in half-darkness.
+
+"tba:237:obj:23718":
+  type: armor
+  keywords: [skullcap, cap, iron]
+  short: an iron skullcap
+  long: A skullcap, made from iron, has been thrown here.
+  flags: [anti_mage]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:237:obj:23719":
+  type: armor
+  keywords: [boots, leather]
+  short: some soft leather boots
+  long: Some rather soft leather boots have been left behind.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 220
+  rent: 22
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1

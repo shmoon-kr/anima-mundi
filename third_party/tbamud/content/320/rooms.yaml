@@ -1,0 +1,1600 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 320.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:320:room:32000":
+  name: Calm Waters
+  description: >
+    The waters of the sea are very still here, so still that they bring a feeling of peace and
+    comfort.  They are not the dead calm that always is associated with dread in a sailor's heart but a slowly
+    moving roll that promises a good day at sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32021
+    east:
+      to: tba:320:room:32095
+    south:
+      to: tba:320:room:32099
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Kaan
+           Zone 320 is linked to the following zones:
+        319 Yllythad Sea                   at 32046 (east ) ---> 31901
+        319 Yllythad Sea                   at 32047 (east ) ---> 31906
+        319 Yllythad Sea                   at 32048 (east ) ---> 31911
+        319 Yllythad Sea                   at 32049 (east ) ---> 31916
+        319 Yllythad Sea                   at 32050 (east ) ---> 31921
+        319 Yllythad Sea                   at 32055 (east ) ---> 31900
+        319 Yllythad Sea                   at 32060 (east ) ---> 31999
+        319 Yllythad Sea                   at 32065 (east ) ---> 31998
+        319 Yllythad Sea                   at 32070 (east ) ---> 31997
+        321 Yllythad Sea III               at 32071 (south) ---> 32101
+        321 Yllythad Sea III               at 32072 (south) ---> 32102
+        321 Yllythad Sea III               at 32073 (south) ---> 32103
+        321 Yllythad Sea III               at 32074 (south) ---> 32104
+        319 Yllythad Sea                   at 32075 (east ) ---> 31996
+        321 Yllythad Sea III               at 32075 (south) ---> 32105
+
+"tba:320:room:32001":
+  name: At the Shoreline
+  description: >
+    The calm sooth mind and body, lending a feeling of peace and comfort to any traveler who passes. 
+    The waves roll gently by, the ocean seeming harmless and worry-free.  A rock littered shore lies to
+    the north, so jumbled and covered in rock as to be unpassable.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32002
+    south:
+      to: tba:320:room:32006
+
+"tba:320:room:32002":
+  name: At the Shoreline
+  description: >
+    The water is a gently rolling calm here that seems to go on forever.  The sky and the water match
+    almost exactly, so blue the water and so clear the sky.  A rock littered shore lies to the north, so
+    jumbled and covered in rock as to be unpassable.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32003
+    south:
+      to: tba:320:room:32007
+    west:
+      to: tba:320:room:32001
+
+"tba:320:room:32003":
+  name: At the Shoreline
+  description: >
+    The water has grown tumultous and rough here, the waves not high but frequent.  Water splashes into
+    the air as the small waves spalsh into each other.  A rock littered shore lies to the north, so
+    jumbled and covered in rock as to be unpassable.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32004
+    south:
+      to: tba:320:room:32008
+    west:
+      to: tba:320:room:32002
+
+"tba:320:room:32004":
+  name: At the Shoreline
+  description: >
+    The wind has picked up a bit and has caused the sea to begin to churn a bit, the water bobbing and
+    jumping rapidly.  Every now and again a small fish can be seen jumping up from the wake, searching
+    for food on the surface.  A rock littered shore lies to the north, so jumbled and covered in rock as to
+    be unpassable.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32005
+    south:
+      to: tba:320:room:32009
+    west:
+      to: tba:320:room:32003
+
+"tba:320:room:32005":
+  name: At the Shoreline
+  description: >
+    The sea has turned to calm that is almost unsettling.  Any sailor would bow their head and say a
+    quick prayer to the Sea God at this time to pray for a wind of some sort.  Looking in all directions,
+    the sea is still and quiet.  A rocky shore is to the north, its boulder riddled area too cluttered to
+    be passed along.  A long jetty lies to the east running south into the ocean, a tall lighthouse at
+    its end.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32026
+    south:
+      to: tba:320:room:32010
+    west:
+      to: tba:320:room:32004
+
+"tba:320:room:32006":
+  name: Placid Waters
+  description: >
+    The waters of the sea do not seem to move at all, not even with the usual gentle up and down sway
+    that all seas have.  Looking to the horizon, the waters seem to go on forever.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32001
+    east:
+      to: tba:320:room:32007
+    south:
+      to: tba:320:room:32011
+
+"tba:320:room:32007":
+  name: Placid Waters
+  description: >
+    There is no current and no winds.  The waters stand still and unmoving here with no sign of change
+    coming any time soon.  These are the types of waters that sailors have nightmares about.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32002
+    east:
+      to: tba:320:room:32008
+    south:
+      to: tba:320:room:32012
+    west:
+      to: tba:320:room:32006
+
+"tba:320:room:32008":
+  name: A Swift Wind
+  description: >
+    A good, steady wind blows from the east, making sea travel swift and easy in this area.  The sea's
+    currents move with the direction of the winds, at least on the surface and help to lend direction to
+    the traveler.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32003
+    east:
+      to: tba:320:room:32009
+    south:
+      to: tba:320:room:32013
+    west:
+      to: tba:320:room:32007
+
+"tba:320:room:32009":
+  name: A Swift Wind
+  description: >
+    A solid wind blows up from the east, carrying with it the tang and fresh scent of the sea and all
+    it's creatures.  There are little to no clouds anywhere in the sky, the world seeming limitless from
+    this perspective.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32004
+    east:
+      to: tba:320:room:32010
+    south:
+      to: tba:320:room:32014
+    west:
+      to: tba:320:room:32008
+
+"tba:320:room:32010":
+  name: A Strong Current
+  description: >
+    This area of the sea is carried along by a strong undercurrent which moves the water in its own
+    direction, regardless of the wind or weather topside.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32005
+    east:
+      to: tba:320:room:32027
+    south:
+      to: tba:320:room:32015
+    west:
+      to: tba:320:room:32009
+
+"tba:320:room:32011":
+  name: Among the Tradewinds
+  description: >
+    These constant winds are what ensures that commercial boating types can move their cargo from one
+    continent to another.  The wind blows from the west without cessation.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32006
+    east:
+      to: tba:320:room:32012
+    south:
+      to: tba:320:room:32016
+
+"tba:320:room:32012":
+  name: Wild, Foaming Crests
+  description: >
+    The water has become rough and choppy, the crests of the waves rising with froth and foam.  The sky
+    above is getting a bit darker than what most would be comfortable with.  Best to get a move on.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32007
+    east:
+      to: tba:320:room:32013
+    south:
+      to: tba:320:room:32017
+    west:
+      to: tba:320:room:32011
+
+"tba:320:room:32013":
+  name: Among the Tradewinds
+  description: >
+    A strong wind blows out of the east carrying along the sea and all things upon it.  The waters move
+    along at a steady, ryhtmic pace.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32008
+    east:
+      to: tba:320:room:32014
+    south:
+      to: tba:320:room:32018
+    west:
+      to: tba:320:room:32012
+
+"tba:320:room:32014":
+  name: Among the Tradewinds
+  description: >
+    The constant wind that blows out of the east pushes the sea along at a steady pace, along with all
+    that is upon it.  The tang and swill of the sea assails from the wind blowing so constant, giving the
+    day a fresh, new feeling.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32009
+    east:
+      to: tba:320:room:32015
+    south:
+      to: tba:320:room:32019
+    west:
+      to: tba:320:room:32013
+
+"tba:320:room:32015":
+  name: Wild, Foaming Crests
+  description: >
+    The water rises and falls with such force that it seems the world must be shaking on its
+    foundations.  The water splashes and crashes against itself, foam and froth all over the surface of the sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32010
+    east:
+      to: tba:320:room:32028
+    south:
+      to: tba:320:room:32020
+    west:
+      to: tba:320:room:32014
+
+"tba:320:room:32016":
+  name: Wild, Foaming Crests
+  description: >
+    Waves crash and slam against each other in a constant swirl of motion, spray and foam spitting high
+    into the air.  The sky has darkened, looking just a bit stormy.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32011
+    east:
+      to: tba:320:room:32017
+    south:
+      to: tba:320:room:32021
+
+"tba:320:room:32017":
+  name: In the Fog
+  description: >
+    A dense fog has rolled in, making it hard to see for any distance. Everything seems to have gotten
+    very quiet, making it almost surreal in this area.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32012
+    east:
+      to: tba:320:room:32018
+    south:
+      to: tba:320:room:32022
+    west:
+      to: tba:320:room:32016
+
+"tba:320:room:32018":
+  name: In the Fog
+  description: >
+    A thick fog has rolled in over the ocean's surface, obscuring what lies ahead and making it almost
+    impossible to see more than a few feet ahead.  Things seems to have gotten just a little too quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32013
+    east:
+      to: tba:320:room:32019
+    south:
+      to: tba:320:room:32023
+    west:
+      to: tba:320:room:32017
+
+"tba:320:room:32019":
+  name: A Drizzling Rain
+  description: >
+    The rain comes down in steady sheets of tiny raindrops.  It does not appear that there will be any
+    thunder or lightning any time soon, just a steady dismal downpour.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32014
+    east:
+      to: tba:320:room:32020
+    south:
+      to: tba:320:room:32024
+    west:
+      to: tba:320:room:32018
+
+"tba:320:room:32020":
+  name: A Gentle Breeze
+  description: >
+    A calming, fresh breeze blows in bring the fresh scent of the open sea and the tang of salt with
+    it.  The sea appears to be cooperating with travel, only gentle swells at this point.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32015
+    east:
+      to: tba:320:room:32029
+    south:
+      to: tba:320:room:32025
+    west:
+      to: tba:320:room:32019
+
+"tba:320:room:32021":
+  name: Among Fifteen Foot Waves
+  description: >
+    A blinding storm has erupted across the seas, causing the water to jump from casual swells to the
+    fifteen foot walls which are now completely surrounding this area.  Rain lashes down, stinging the sea
+    with its driving force.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32016
+    east:
+      to: tba:320:room:32022
+    south:
+      to: tba:320:room:32000
+
+"tba:320:room:32022":
+  name: Among Fifteen Foot Waves
+  description: >
+    Waves crush down in giant walls in every direction, the winds howls unceasingly as the rain is
+    driven harder and harder against the sea's surface.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32017
+    east:
+      to: tba:320:room:32023
+    south:
+      to: tba:320:room:32095
+    west:
+      to: tba:320:room:32021
+
+"tba:320:room:32023":
+  name: A Drizzling Rain
+  description: >
+    The rain falls in a steady drizzle that soaks to the bone, but does not cause any harm.  The wind
+    has all but died out, making the rain all the final and somber.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32018
+    east:
+      to: tba:320:room:32024
+    south:
+      to: tba:320:room:32090
+    west:
+      to: tba:320:room:32022
+
+"tba:320:room:32024":
+  name: A Gentle Breeze
+  description: >
+    The fresh breeze that blows past is a calm, gentle one that can only be called dreamy.  A sailor in
+    these winds would gladly lie on the deck of his ship with his tankard of grog beside and happily
+    think of the whores he has known, never once having the desire or need to get up and work.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32019
+    east:
+      to: tba:320:room:32025
+    south:
+      to: tba:320:room:32085
+    west:
+      to: tba:320:room:32023
+
+"tba:320:room:32025":
+  name: Upon the Mighty Sea
+  description: >
+    All around is the wide open expanse of the sea, its mighty presence so strong, so overwhelming as
+    to be staggering.  From horizon to horizon, only blue sky and a deeper blue can be seen.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32020
+    east:
+      to: tba:320:room:32030
+    south:
+      to: tba:320:room:32080
+    west:
+      to: tba:320:room:32024
+
+"tba:320:room:32026":
+  name: West of the Jetty
+  description: >
+    A long rock jetty with a lighhouse at its end runs out into the sea.  It appears that climbing the
+    rocks to the jetty's walkway might be hazardous to one's health, so another way up must be found. 
+    The shore lies just north of here, but that too is covered in rock and scree and appears unclimbable.
+  sector: inside
+  exits:
+    south:
+      to: tba:320:room:32027
+    west:
+      to: tba:320:room:32005
+
+"tba:320:room:32027":
+  name: West of the Jetty
+  description: >
+    A long rock jetty with a lighhouse at its end runs out into the sea.  It appears that climbing the
+    rocks to the jetty's walkway might be hazardous to one's health, so another way up must be found.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32026
+    south:
+      to: tba:320:room:32028
+    west:
+      to: tba:320:room:32010
+
+"tba:320:room:32028":
+  name: West of the Jetty
+  description: >
+    A long rock jetty with a lighhouse at its end runs out into the sea.  It appears that climbing the
+    rocks to the jetty's walkway might be hazardous to one's health, so another way up must be found.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32027
+    south:
+      to: tba:320:room:32029
+    west:
+      to: tba:320:room:32015
+
+"tba:320:room:32029":
+  name: West of the Jetty
+  description: >
+    A long rock jetty with a lighhouse at its end runs out into the sea.  It appears that climbing the
+    rocks to the jetty's walkway might be hazardous to one's health, so another way up must be found.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32028
+    south:
+      to: tba:320:room:32030
+    west:
+      to: tba:320:room:32020
+
+"tba:320:room:32030":
+  name: South of the Jetty
+  description: >
+    A tall lighthouse stands at the end of a rock jetty which juts out into the sea.  The rocks which
+    form the jetty look exceptionally large and sharp - sharp enough, in fact, that they do not warrant an
+    attempt at climbing.  It seems that another way to the lighthouse will have to be found.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32029
+    east:
+      to: tba:320:room:32035
+    south:
+      to: tba:320:room:32051
+    west:
+      to: tba:320:room:32025
+
+"tba:320:room:32031":
+  name: Near the Jetty
+  description: >
+    A long jetty made of jumbled rock pokes out into the sea, a lighthouse perched at its end. 
+    Fisherman sit along the sides of the jetty, hoping to catch a little luck and maybe some dinner along with
+    it.  There does not appear any way to get west onto the jetty's walkway from the sea.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32036
+    south:
+      to: tba:320:room:32032
+
+"tba:320:room:32032":
+  name: East of the Jetty
+  description: >
+    A long jetty made of jumbled rock pokes out into the sea, a lighthouse perched at its end. 
+    Fisherman sit along the sides of the jetty, hoping to catch a little luck and maybe some dinner along with
+    it.  There does not appear any way to get west onto the jetty's walkway from the sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32031
+    east:
+      to: tba:320:room:32037
+    south:
+      to: tba:320:room:32033
+
+"tba:320:room:32033":
+  name: East of the Jetty
+  description: >
+    A tumbled rock jetty lies to the west, a small home and lighthouse perched at the end.  The water
+    swirls and splashes at the rocks, their sharp ends cutting into the water.  It does not appear safe to
+    attempt climbing those rocks to the lighthouse.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32032
+    east:
+      to: tba:320:room:32038
+    south:
+      to: tba:320:room:32034
+
+"tba:320:room:32034":
+  name: East of the Jetty's End
+  description: >
+    A tumbled rock jetty lies to the west, a small home and lighthouse perched at the end.  The water
+    swirls and splashes at the rocks, their sharp ends cutting into the water.  It does not appear safe to
+    attempt climbing those rocks to the lighthouse.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32033
+    east:
+      to: tba:320:room:32039
+    south:
+      to: tba:320:room:32035
+
+"tba:320:room:32035":
+  name: A Swift Wind
+  description: >
+    A solid wind blows up from the east, carrying with it the tang and fresh scent of the sea and all
+    it's creatures.  There are little to no clouds anywhere in the sky, the world seeming limitless from
+    this perspective.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32034
+    east:
+      to: tba:320:room:32040
+    south:
+      to: tba:320:room:32052
+    west:
+      to: tba:320:room:32030
+
+"tba:320:room:32036":
+  name: A Strong Current
+  description: >
+    This area of the sea is carried along by a strong undercurrent which moves the water in its own
+    direction, regardless of the wind or weather topside.  The beach area to the north has begun to get
+    covered in rocks, making it unsafe to attempt travel onto land.  It looks a bit more safe to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32041
+    south:
+      to: tba:320:room:32037
+    west:
+      to: tba:320:room:32031
+
+"tba:320:room:32037":
+  name: Among the Tradewinds
+  description: >
+    These constant winds are what ensures that commercial boating types can move their cargo from one
+    continent to another.  The wind blows from the west without cessation.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32036
+    east:
+      to: tba:320:room:32042
+    south:
+      to: tba:320:room:32038
+    west:
+      to: tba:320:room:32032
+
+"tba:320:room:32038":
+  name: Wild, Foaming Crests
+  description: >
+    The water has become rough and choppy, the crests of the waves rising with froth and foam.  The sky
+    above is getting a bit darker than what most would be comfortable with.  Best to get a move on.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32037
+    east:
+      to: tba:320:room:32043
+    south:
+      to: tba:320:room:32039
+    west:
+      to: tba:320:room:32033
+
+"tba:320:room:32039":
+  name: Among the Tradewinds
+  description: >
+    A strong wind blows out of the east carrying along the sea and all things upon it.  The waters move
+    along at a steady, ryhtmic pace.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32038
+    east:
+      to: tba:320:room:32044
+    south:
+      to: tba:320:room:32040
+    west:
+      to: tba:320:room:32034
+
+"tba:320:room:32040":
+  name: Among the Tradewinds
+  description: >
+    The constant wind that blows out of the east pushes the sea along at a steady pace, along with all
+    that is upon it.  The tang and swill of the sea assails from the wind blowing so constant, giving the
+    day a fresh, new feeling.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32039
+    east:
+      to: tba:320:room:32045
+    south:
+      to: tba:320:room:32053
+    west:
+      to: tba:320:room:32035
+
+"tba:320:room:32041":
+  name: Wild, Foaming Crests
+  description: >
+    The water rises and falls with such force that it seems the world must be shaking on its
+    foundations.  The water splashes and crashes against itself, foam and froth all over the surface of the sea.  A
+    sandy beach lies just to the north, running along the length of a steep cliff face.
+  sector: inside
+  exits:
+    east:
+      to: tba:320:room:32046
+    south:
+      to: tba:320:room:32042
+    west:
+      to: tba:320:room:32036
+
+"tba:320:room:32042":
+  name: Wild, Foaming Crests
+  description: >
+    Waves crash and slam against each other in a constant swirl of motion, spray and foam spitting high
+    into the air.  The sky has darkened, looking just a bit stormy.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32041
+    east:
+      to: tba:320:room:32047
+    south:
+      to: tba:320:room:32043
+    west:
+      to: tba:320:room:32037
+
+"tba:320:room:32043":
+  name: In the Fog
+  description: >
+    A dense fog has rolled in, making it hard to see for any distance. Everything seems to have gotten
+    very quiet, making it almost surreal in this area.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32042
+    east:
+      to: tba:320:room:32048
+    south:
+      to: tba:320:room:32044
+    west:
+      to: tba:320:room:32038
+
+"tba:320:room:32044":
+  name: In the Fog
+  description: >
+    A thick fog has rolled in over the ocean's surface, obscuring what lies ahead and making it almost
+    impossible to see more than a few feet ahead.  Things seems to have gotten just a little too quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32043
+    east:
+      to: tba:320:room:32049
+    south:
+      to: tba:320:room:32045
+    west:
+      to: tba:320:room:32039
+
+"tba:320:room:32045":
+  name: A Drizzling Rain
+  description: >
+    The rain comes down in steady sheets of tiny raindrops.  It does not appear that there will be any
+    thunder or lightning any time soon, just a steady dismal downpour.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32044
+    east:
+      to: tba:320:room:32051
+    south:
+      to: tba:320:room:32054
+    west:
+      to: tba:320:room:32040
+
+"tba:320:room:32046":
+  name: A Gentle Breeze
+  description: >
+    A calming, fresh breeze blows in bring the fresh scent of the open sea and the tang of salt with
+    it.  The sea appears to be cooperating with travel, only gentle swells at this point.  A sandy beach
+    lies just to the north, running along the length of a steep cliff face.
+  sector: inside
+  exits:
+    east:
+      to: tba:319:room:31901
+    south:
+      to: tba:320:room:32047
+    west:
+      to: tba:320:room:32041
+
+"tba:320:room:32047":
+  name: Among Fifteen Foot Waves
+  description: >
+    A blinding storm has erupted across the seas, causing the water to jump from casual swells to the
+    fifteen foot walls which are now completely surrounding this area.  Rain lashes down, stinging the sea
+    with its driving force.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32046
+    east:
+      to: tba:319:room:31906
+    south:
+      to: tba:320:room:32048
+    west:
+      to: tba:320:room:32042
+
+"tba:320:room:32048":
+  name: Among Fifteen Foot Waves
+  description: >
+    Waves crush down in giant walls in every direction, the winds howls unceasingly as the rain is
+    driven harder and harder against the sea's surface.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32047
+    east:
+      to: tba:319:room:31911
+    south:
+      to: tba:320:room:32049
+    west:
+      to: tba:320:room:32043
+
+"tba:320:room:32049":
+  name: A Drizzling Rain
+  description: >
+    The rain falls in a steady drizzle that soaks to the bone, but does not cause any harm.  The wind
+    has all but died out, making the rain all the final and somber.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32048
+    east:
+      to: tba:319:room:31916
+    south:
+      to: tba:320:room:32050
+    west:
+      to: tba:320:room:32044
+
+"tba:320:room:32050":
+  name: A Gentle Breeze
+  description: >
+    The fresh breeze that blows past is a calm, gentle one that can only be called dreamy.  A sailor in
+    these winds would gladly lie on the deck of his ship with his tankard of grog beside and happily
+    think of the whores he has known, never once having the desire or need to get up and work.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32049
+    east:
+      to: tba:319:room:31921
+    south:
+      to: tba:320:room:32055
+    west:
+      to: tba:320:room:32045
+
+"tba:320:room:32051":
+  name: Upon the Mighty Sea
+  description: >
+    All around is the wide open expanse of the sea, its mighty presence so strong, so overwhelming as
+    to be staggering.  From horizon to horizon, only blue sky and a deeper blue can be seen.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32030
+    east:
+      to: tba:320:room:32052
+    south:
+      to: tba:320:room:32056
+    west:
+      to: tba:320:room:32080
+
+"tba:320:room:32052":
+  name: Calm Waters
+  description: >
+    The waters of the sea are very still here, so still that they bring a feeling of peace and
+    comfort.  They are not the dead calm that always is associated with dread in a sailor's heart but a slowly
+    moving roll that promises a good day at sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32035
+    east:
+      to: tba:320:room:32053
+    south:
+      to: tba:320:room:32057
+    west:
+      to: tba:320:room:32051
+
+"tba:320:room:32053":
+  name: Calm Waters
+  description: >
+    The calm sooth mind and body, lending a feeling of peace and comfort to any traveler who passes. 
+    The waves roll gently by, the ocean seeming harmless and worry-free.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32040
+    east:
+      to: tba:320:room:32054
+    south:
+      to: tba:320:room:32058
+    west:
+      to: tba:320:room:32052
+
+"tba:320:room:32054":
+  name: Calm Waters
+  description: >
+    The water is a gently rolling calm here that seems to go on forever.  The sky and the water match
+    almost exactly, so blue the water and so clear the sky.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32045
+    east:
+      to: tba:320:room:32055
+    south:
+      to: tba:320:room:32059
+    west:
+      to: tba:320:room:32053
+
+"tba:320:room:32055":
+  name: A Choppy Section of the Sea
+  description: >
+    The water has grown tumultous and rough here, the waves not high but frequent.  Water splashes into
+    the air as the small waves spalsh into each other.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32051
+    east:
+      to: tba:319:room:31900
+    south:
+      to: tba:320:room:32060
+    west:
+      to: tba:320:room:32054
+
+"tba:320:room:32056":
+  name: A Choppy Section of the Sea
+  description: >
+    The wind has picked up a bit and has caused the sea to begin to churn a bit, the water bobbing and
+    jumping rapidly.  Every now and again a small fish can be seen jumping up from the wake, searching
+    for food on the surface.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32051
+    east:
+      to: tba:320:room:32057
+    south:
+      to: tba:320:room:32061
+    west:
+      to: tba:320:room:32079
+
+"tba:320:room:32057":
+  name: Placid Waters
+  description: >
+    The sea has turned to calm that is almost unsettling.  Any sailor would bow their head and say a
+    quick prayer to the Sea God at this time to pray for a wind of some sort.  Looking in all directions,
+    the sea is still and quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32052
+    east:
+      to: tba:320:room:32058
+    south:
+      to: tba:320:room:32062
+    west:
+      to: tba:320:room:32056
+
+"tba:320:room:32058":
+  name: Placid Waters
+  description: >
+    The waters of the sea do not seem to move at all, not even with the usual gentle up and down sway
+    that all seas have.  Looking to the horizon, the waters seem to go on forever.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32053
+    east:
+      to: tba:320:room:32059
+    south:
+      to: tba:320:room:32063
+    west:
+      to: tba:320:room:32057
+
+"tba:320:room:32059":
+  name: Placid Waters
+  description: >
+    There is no current and no winds.  The waters stand still and unmoving here with no sign of change
+    coming any time soon.  These are the types of waters that sailors have nightmares about.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32054
+    east:
+      to: tba:320:room:32060
+    south:
+      to: tba:320:room:32064
+    west:
+      to: tba:320:room:32058
+
+"tba:320:room:32060":
+  name: A Swift Wind
+  description: >
+    A good, steady wind blows from the east, making sea travel swift and easy in this area.  The sea's
+    currents move with the direction of the winds, at least on the surface and help to lend direction to
+    the traveler.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32055
+    east:
+      to: tba:319:room:31999
+    south:
+      to: tba:320:room:32065
+    west:
+      to: tba:320:room:32059
+
+"tba:320:room:32061":
+  name: A Swift Wind
+  description: >
+    A solid wind blows up from the east, carrying with it the tang and fresh scent of the sea and all
+    it's creatures.  There are little to no clouds anywhere in the sky, the world seeming limitless from
+    this perspective.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32056
+    east:
+      to: tba:320:room:32062
+    south:
+      to: tba:320:room:32066
+    west:
+      to: tba:320:room:32078
+
+"tba:320:room:32062":
+  name: A Strong Current
+  description: >
+    This area of the sea is carried along by a strong undercurrent which moves the water in its own
+    direction, regardless of the wind or weather topside.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32057
+    east:
+      to: tba:320:room:32063
+    south:
+      to: tba:320:room:32067
+    west:
+      to: tba:320:room:32061
+
+"tba:320:room:32063":
+  name: Among the Tradewinds
+  description: >
+    These constant winds are what ensures that commercial boating types can move their cargo from one
+    continent to another.  The wind blows from the west without cessation.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32058
+    east:
+      to: tba:320:room:32064
+    south:
+      to: tba:320:room:32068
+    west:
+      to: tba:320:room:32062
+
+"tba:320:room:32064":
+  name: Wild, Foaming Crests
+  description: >
+    The water has become rough and choppy, the crests of the waves rising with froth and foam.  The sky
+    above is getting a bit darker than what most would be comfortable with.  Best to get a move on.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32059
+    east:
+      to: tba:320:room:32065
+    south:
+      to: tba:320:room:32069
+    west:
+      to: tba:320:room:32063
+
+"tba:320:room:32065":
+  name: Among the Tradewinds
+  description: >
+    A strong wind blows out of the east carrying along the sea and all things upon it.  The waters move
+    along at a steady, ryhtmic pace.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32060
+    east:
+      to: tba:319:room:31998
+    south:
+      to: tba:320:room:32070
+    west:
+      to: tba:320:room:32064
+
+"tba:320:room:32066":
+  name: Among the Tradewinds
+  description: >
+    The constant wind that blows out of the east pushes the sea along at a steady pace, along with all
+    that is upon it.  The tang and swill of the sea assails from the wind blowing so constant, giving the
+    day a fresh, new feeling.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32061
+    east:
+      to: tba:320:room:32067
+    south:
+      to: tba:320:room:32071
+    west:
+      to: tba:320:room:32077
+
+"tba:320:room:32067":
+  name: Wild, Foaming Crests
+  description: >
+    The water rises and falls with such force that it seems the world must be shaking on its
+    foundations.  The water splashes and crashes against itself, foam and froth all over the surface of the sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32062
+    east:
+      to: tba:320:room:32068
+    south:
+      to: tba:320:room:32072
+    west:
+      to: tba:320:room:32066
+
+"tba:320:room:32068":
+  name: Wild, Foaming Crests
+  description: >
+    Waves crash and slam against each other in a constant swirl of motion, spray and foam spitting high
+    into the air.  The sky has darkened, looking just a bit stormy.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32063
+    east:
+      to: tba:320:room:32069
+    south:
+      to: tba:320:room:32073
+    west:
+      to: tba:320:room:32067
+
+"tba:320:room:32069":
+  name: In the Fog
+  description: >
+    A dense fog has rolled in, making it hard to see for any distance. Everything seems to have gotten
+    very quiet, making it almost surreal in this area.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32064
+    east:
+      to: tba:320:room:32070
+    south:
+      to: tba:320:room:32074
+    west:
+      to: tba:320:room:32068
+
+"tba:320:room:32070":
+  name: In the Fog
+  description: >
+    A thick fog has rolled in over the ocean's surface, obscuring what lies ahead and making it almost
+    impossible to see more than a few feet ahead.  Things seems to have gotten just a little too quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32065
+    east:
+      to: tba:319:room:31997
+    south:
+      to: tba:320:room:32075
+    west:
+      to: tba:320:room:32069
+
+"tba:320:room:32071":
+  name: A Drizzling Rain
+  description: >
+    The rain comes down in steady sheets of tiny raindrops.  It does not appear that there will be any
+    thunder or lightning any time soon, just a steady dismal downpour.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32066
+    east:
+      to: tba:320:room:32072
+    south:
+      to: tba:321:room:32101
+    west:
+      to: tba:320:room:32076
+
+"tba:320:room:32072":
+  name: A Gentle Breeze
+  description: >
+    A calming, fresh breeze blows in bring the fresh scent of the open sea and the tang of salt with
+    it.  The sea appears to be cooperating with travel, only gentle swells at this point.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32067
+    east:
+      to: tba:320:room:32073
+    south:
+      to: tba:321:room:32102
+    west:
+      to: tba:320:room:32071
+
+"tba:320:room:32073":
+  name: Among Fifteen Foot Waves
+  description: >
+    A blinding storm has erupted across the seas, causing the water to jump from casual swells to the
+    fifteen foot walls which are now completely surrounding this area.  Rain lashes down, stinging the sea
+    with its driving force.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32068
+    east:
+      to: tba:320:room:32074
+    south:
+      to: tba:321:room:32103
+    west:
+      to: tba:320:room:32072
+
+"tba:320:room:32074":
+  name: Among Fifteen Foot Waves
+  description: >
+    Waves crush down in giant walls in every direction, the winds howls unceasingly as the rain is
+    driven harder and harder against the sea's surface.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32069
+    east:
+      to: tba:320:room:32075
+    south:
+      to: tba:321:room:32104
+    west:
+      to: tba:320:room:32073
+
+"tba:320:room:32075":
+  name: A Drizzling Rain
+  description: >
+    The rain falls in a steady drizzle that soaks to the bone, but does not cause any harm.  The wind
+    has all but died out, making the rain all the final and somber.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32070
+    east:
+      to: tba:319:room:31996
+    south:
+      to: tba:321:room:32105
+    west:
+      to: tba:320:room:32074
+
+"tba:320:room:32076":
+  name: A Gentle Breeze
+  description: >
+    The fresh breeze that blows past is a calm, gentle one that can only be called dreamy.  A sailor in
+    these winds would gladly lie on the deck of his ship with his tankard of grog beside and happily
+    think of the whores he has known, never once having the desire or need to get up and work.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32077
+    east:
+      to: tba:320:room:32071
+    west:
+      to: tba:320:room:32081
+
+"tba:320:room:32077":
+  name: Upon the Mighty Sea
+  description: >
+    All around is the wide open expanse of the sea, its mighty presence so strong, so overwhelming as
+    to be staggering.  From horizon to horizon, only blue sky and a deeper blue can be seen.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32078
+    east:
+      to: tba:320:room:32066
+    south:
+      to: tba:320:room:32076
+    west:
+      to: tba:320:room:32082
+
+"tba:320:room:32078":
+  name: Calm Waters
+  description: >
+    The waters of the sea are very still here, so still that they bring a feeling of peace and
+    comfort.  They are not the dead calm that always is associated with dread in a sailor's heart but a slowly
+    moving roll that promises a good day at sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32079
+    east:
+      to: tba:320:room:32061
+    south:
+      to: tba:320:room:32077
+    west:
+      to: tba:320:room:32083
+
+"tba:320:room:32079":
+  name: Calm Waters
+  description: >
+    The calm sooth mind and body, lending a feeling of peace and comfort to any traveler who passes. 
+    The waves roll gently by, the ocean seeming harmless and worry-free.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32080
+    east:
+      to: tba:320:room:32056
+    south:
+      to: tba:320:room:32078
+    west:
+      to: tba:320:room:32084
+
+"tba:320:room:32080":
+  name: Calm Waters
+  description: >
+    The water is a gently rolling calm here that seems to go on forever.  The sky and the water match
+    almost exactly, so blue the water and so clear the sky.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32025
+    east:
+      to: tba:320:room:32051
+    south:
+      to: tba:320:room:32079
+    west:
+      to: tba:320:room:32085
+
+"tba:320:room:32081":
+  name: A Choppy Section of the Sea
+  description: >
+    The water has grown tumultous and rough here, the waves not high but frequent.  Water splashes into
+    the air as the small waves spalsh into each other.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32082
+    east:
+      to: tba:320:room:32076
+    west:
+      to: tba:320:room:32086
+
+"tba:320:room:32082":
+  name: A Choppy Section of the Sea
+  description: >
+    The wind has picked up a bit and has caused the sea to begin to churn a bit, the water bobbing and
+    jumping rapidly.  Every now and again a small fish can be seen jumping up from the wake, searching
+    for food on the surface.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32083
+    east:
+      to: tba:320:room:32077
+    south:
+      to: tba:320:room:32081
+    west:
+      to: tba:320:room:32087
+
+"tba:320:room:32083":
+  name: Placid Waters
+  description: >
+    The sea has turned to calm that is almost unsettling.  Any sailor would bow their head and say a
+    quick prayer to the Sea God at this time to pray for a wind of some sort.  Looking in all directions,
+    the sea is still and quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32084
+    east:
+      to: tba:320:room:32078
+    south:
+      to: tba:320:room:32082
+    west:
+      to: tba:320:room:32088
+
+"tba:320:room:32084":
+  name: Placid Waters
+  description: >
+    The waters of the sea do not seem to move at all, not even with the usual gentle up and down sway
+    that all seas have.  Looking to the horizon, the waters seem to go on forever.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32085
+    east:
+      to: tba:320:room:32079
+    south:
+      to: tba:320:room:32083
+    west:
+      to: tba:320:room:32089
+
+"tba:320:room:32085":
+  name: Placid Waters
+  description: >
+    There is no current and no winds.  The waters stand still and unmoving here with no sign of change
+    coming any time soon.  These are the types of waters that sailors have nightmares about.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32024
+    east:
+      to: tba:320:room:32080
+    south:
+      to: tba:320:room:32084
+    west:
+      to: tba:320:room:32090
+
+"tba:320:room:32086":
+  name: A Swift Wind
+  description: >
+    A good, steady wind blows from the east, making sea travel swift and easy in this area.  The sea's
+    currents move with the direction of the winds, at least on the surface and help to lend direction to
+    the traveler.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32087
+    east:
+      to: tba:320:room:32081
+    west:
+      to: tba:320:room:32091
+
+"tba:320:room:32087":
+  name: A Swift Wind
+  description: >
+    A solid wind blows up from the east, carrying with it the tang and fresh scent of the sea and all
+    it's creatures.  There are little to no clouds anywhere in the sky, the world seeming limitless from
+    this perspective.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32088
+    east:
+      to: tba:320:room:32082
+    south:
+      to: tba:320:room:32086
+    west:
+      to: tba:320:room:32092
+
+"tba:320:room:32088":
+  name: A Strong Current
+  description: >
+    This area of the sea is carried along by a strong undercurrent which moves the water in its own
+    direction, regardless of the wind or weather topside.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32089
+    east:
+      to: tba:320:room:32083
+    south:
+      to: tba:320:room:32088
+    west:
+      to: tba:320:room:32093
+
+"tba:320:room:32089":
+  name: Among the Tradewinds
+  description: >
+    These constant winds are what ensures that commercial boating types can move their cargo from one
+    continent to another.  The wind blows from the west without cessation.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32090
+    east:
+      to: tba:320:room:32084
+    south:
+      to: tba:320:room:32088
+    west:
+      to: tba:320:room:32094
+
+"tba:320:room:32090":
+  name: Wild, Foaming Crests
+  description: >
+    The water has become rough and choppy, the crests of the waves rising with froth and foam.  The sky
+    above is getting a bit darker than what most would be comfortable with.  Best to get a move on.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32023
+    east:
+      to: tba:320:room:32085
+    south:
+      to: tba:320:room:32089
+    west:
+      to: tba:320:room:32095
+
+"tba:320:room:32091":
+  name: Among the Tradewinds
+  description: >
+    A strong wind blows out of the east carrying along the sea and all things upon it.  The waters move
+    along at a steady, ryhtmic pace.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32092
+    east:
+      to: tba:320:room:32086
+    west:
+      to: tba:320:room:32096
+
+"tba:320:room:32092":
+  name: Among the Tradewinds
+  description: >
+    The constant wind that blows out of the east pushes the sea along at a steady pace, along with all
+    that is upon it.  The tang and swill of the sea assails from the wind blowing so constant, giving the
+    day a fresh, new feeling.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32093
+    east:
+      to: tba:320:room:32087
+    south:
+      to: tba:320:room:32091
+    west:
+      to: tba:320:room:32097
+
+"tba:320:room:32093":
+  name: Wild, Foaming Crests
+  description: >
+    The water rises and falls with such force that it seems the world must be shaking on its
+    foundations.  The water splashes and crashes against itself, foam and froth all over the surface of the sea.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32094
+    east:
+      to: tba:320:room:32088
+    south:
+      to: tba:320:room:32092
+    west:
+      to: tba:320:room:32098
+
+"tba:320:room:32094":
+  name: Wild, Foaming Crests
+  description: >
+    Waves crash and slam against each other in a constant swirl of motion, spray and foam spitting high
+    into the air.  The sky has darkened, looking just a bit stormy.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32095
+    east:
+      to: tba:320:room:32089
+    south:
+      to: tba:320:room:32093
+    west:
+      to: tba:320:room:32099
+
+"tba:320:room:32095":
+  name: In the Fog
+  description: >
+    A dense fog has rolled in, making it hard to see for any distance. Everything seems to have gotten
+    very quiet, making it almost surreal in this area.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32022
+    east:
+      to: tba:320:room:32090
+    south:
+      to: tba:320:room:32094
+    west:
+      to: tba:320:room:32000
+
+"tba:320:room:32096":
+  name: In the Fog
+  description: >
+    A thick fog has rolled in over the ocean's surface, obscuring what lies ahead and making it almost
+    impossible to see more than a few feet ahead.  Things seems to have gotten just a little too quiet.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32097
+    east:
+      to: tba:320:room:32091
+
+"tba:320:room:32097":
+  name: A Drizzling Rain
+  description: >
+    The rain comes down in steady sheets of tiny raindrops.  It does not appear that there will be any
+    thunder or lightning any time soon, just a steady dismal downpour.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32098
+    east:
+      to: tba:320:room:32092
+    south:
+      to: tba:320:room:32096
+
+"tba:320:room:32098":
+  name: A Gentle Breeze
+  description: >
+    A calming, fresh breeze blows in bring the fresh scent of the open sea and the tang of salt with
+    it.  The sea appears to be cooperating with travel, only gentle swells at this point.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32099
+    east:
+      to: tba:320:room:32093
+    south:
+      to: tba:320:room:32097
+
+"tba:320:room:32099":
+  name: Among Fifteen Foot Waves
+  description: >
+    A blinding storm has erupted across the seas, causing the water to jump from casual swells to the
+    fifteen foot walls which are now completely surrounding this area.  Rain lashes down, stinging the sea
+    with its driving force.
+  sector: inside
+  exits:
+    north:
+      to: tba:320:room:32000
+    east:
+      to: tba:320:room:32094
+    south:
+      to: tba:320:room:32098

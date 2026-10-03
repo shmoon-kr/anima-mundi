@@ -1,0 +1,21 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 71.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:71:obj:7190":
+  type: worn
+  keywords: [ring, silver]
+  short: a glinting silver ring
+  long: A lovely silver ring has been left here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 10, 0]
+  weight: 9
+  cost: 160
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: hitroll
+    modifier: 2

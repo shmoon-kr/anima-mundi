@@ -1,0 +1,84 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 258.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:258:mob:25800":
+  keywords: [man, vagabond, roaming]
+  short: the roaming vagabond
+  long: A man dressed in dusty clothes gives you a smile and a wave as he walks by.
+  description: The glint in his eye as he watches you pass doesn't make you feel all that comfortable.
+  level: 20
+  sex: male
+  alignment: -100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:258:mob:25801":
+  keywords: [messenger, man]
+  short: the messenger
+  long: A man wearing a blue and gray uniform reading 'XXXX POSTAL SERVICE' runs by.
+  description: >
+    You barely get a look as this man keeps on going toward the next town, just doing his job.
+  level: 20
+  sex: male
+  alignment: -250
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:258:mob:25802":
+  keywords: [rabbit]
+  short: a rabbit
+  long: A small, white rabbit hops by you, making it's way into the woods.
+  description: Cute little guy - but he IS in your way.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:258:mob:25803":
+  keywords: [hiker]
+  short: a hiker
+  long: A hiker trudges by, loaded down with his backpack.
+  description: This man looks as if he could walk you into the ground and then some.
+  level: 20
+  sex: male
+  alignment: 500
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

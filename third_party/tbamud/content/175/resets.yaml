@@ -1,0 +1,113 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 175.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:175:mob:17512
+  room: tba:175:room:17524
+  limit: 2
+- mob: tba:175:mob:17512
+  room: tba:175:room:17524
+  limit: 2
+- mob: tba:175:mob:17511
+  room: tba:175:room:17524
+  limit: 1
+  equip:
+    hold:
+      object: tba:175:obj:17513
+      limit: 100
+    wrist_right:
+      object: tba:175:obj:17514
+      limit: 100
+    wield:
+      object: tba:175:obj:17515
+      limit: 99
+- mob: tba:175:mob:17508
+  room: tba:175:room:17513
+  limit: 1
+  equip:
+    wield:
+      object: tba:175:obj:17512
+      limit: 100
+- mob: tba:175:mob:17507
+  room: tba:175:room:17513
+  limit: 1
+  equip:
+    wield:
+      object: tba:175:obj:17511
+      limit: 100
+- mob: tba:175:mob:17503
+  room: tba:175:room:17508
+  limit: 2
+- mob: tba:175:mob:17502
+  room: tba:175:room:17507
+  limit: 3
+  equip:
+    wield:
+      object: tba:175:obj:17505
+      limit: 50
+- mob: tba:175:mob:17501
+  room: tba:175:room:17506
+  limit: 5
+- mob: tba:175:mob:17510
+  room: tba:175:room:17522
+  limit: 1
+- mob: tba:175:mob:17509
+  room: tba:175:room:17518
+  limit: 1
+- mob: tba:175:mob:17505
+  room: tba:175:room:17511
+  limit: 3
+- mob: tba:175:mob:17505
+  room: tba:175:room:17511
+  limit: 3
+- mob: tba:175:mob:17506
+  room: tba:175:room:17511
+  limit: 1
+  equip:
+    wrist_left:
+      object: tba:175:obj:17509
+      limit: 100
+    hold:
+      object: tba:175:obj:17510
+      limit: 50
+- mob: tba:175:mob:17505
+  room: tba:175:room:17510
+  limit: 3
+- mob: tba:175:mob:17500
+  room: tba:175:room:17502
+  limit: 1
+  carry:
+  - object: tba:175:obj:17500
+    limit: 10
+  - object: tba:175:obj:17506
+    limit: 100
+  - object: tba:175:obj:17501
+    limit: 10
+  - object: tba:175:obj:17502
+    limit: 10
+- mob: tba:175:mob:17504
+  room: tba:175:room:17509
+  limit: 1
+- object: tba:175:obj:17504
+  room: tba:175:room:17504
+  limit: 10
+- object: tba:175:obj:17503
+  room: tba:175:room:17505
+  limit: 1
+doors:
+- room: tba:175:room:17521
+  exit: down
+  state: locked
+- room: tba:175:room:17520
+  exit: up
+  state: locked
+- room: tba:175:room:17519
+  exit: down
+  state: locked
+- room: tba:175:room:17517
+  exit: up
+  state: locked
+removes:
+- room: tba:175:room:17504
+  object: tba:175:obj:17504

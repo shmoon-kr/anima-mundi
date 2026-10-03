@@ -1,0 +1,69 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 6.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:6:shop:634":
+  keeper: tba:6:mob:634
+  rooms: [tba:6:room:634]
+  products:
+  - tba:6:obj:635
+  - tba:6:obj:636
+  - tba:6:obj:637
+  - tba:6:obj:638
+  - tba:6:obj:639
+  - tba:6:obj:640
+  - tba:6:obj:641
+  profit:
+    buy: 1.25
+    sell: 0.75
+  messages:
+    no_such_item: "%s Sorry, I don't serve that."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s This is not a homeless shelter, you've got to pay."
+    bought: "%s Let me see, with my 25 percent tip, that comes to %d coins please."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 22
+
+"tba:6:shop:635":
+  keeper: tba:6:mob:635
+  rooms: [tba:6:room:635]
+  products:
+  - tba:6:obj:600
+  - tba:6:obj:602
+  - tba:6:obj:617
+  - tba:6:obj:634
+  buys:
+  - type: light
+  - type: staff
+  - type: weapon
+  - type: treasure
+  - type: armor
+  - type: potion
+  - type: worn
+  - type: container
+  - type: food
+  - type: drinkcon
+  - type: pen
+  profit:
+    buy: 2.0
+    sell: 0.2
+  messages:
+    no_such_item: "%s oh you know what would be a little better?"
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s This is not a homeless shelter, you've got to pay."
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 22

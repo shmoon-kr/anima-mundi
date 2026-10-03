@@ -1,0 +1,152 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 252.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:252:mob:25200":
+  keywords: [bat]
+  short: a huge black bat
+  long: A huge black bat hovers before you.
+  description: >
+    It doesn't seem to want to attack, it simply seems to be watching you, almost with intelligent eyes.
+  level: 20
+  sex: neutral
+  alignment: -200
+  flags: [scavenger, stay_zone, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25201":
+  keywords: [gypsy, zigeuner]
+  short: the Zigeuner Gypsy
+  long: A Zigeuner Gypsy seems shocked by your presence here.
+  description: Walking head down, mumbling to himself, you are the last thing this guy expected.
+  level: 30
+  sex: male
+  alignment: -300
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25202":
+  keywords: [gypsy, cigano]
+  short: the Cigano Gypsy
+  long: A Cigano Gypsy spots you and turns away at a quick pace.
+  description: He seems to be on his way to take care of something.
+  level: 23
+  sex: male
+  alignment: -300
+  flags: [stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25203":
+  keywords: [gypsy, tsigani]
+  short: a Tsigani Gypsy
+  long: A Tsigani Gypsy comes running at you, weapon drawn!
+  description: Of all the different gypsies in the castle, you had to find the one with a deathwish...
+  level: 20
+  sex: male
+  alignment: -300
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: slash
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25204":
+  keywords: [vampire, greater]
+  short: a Greater Vampire
+  long: A Greater Vampire flings himself on you in a frenzy of Bloodlust!
+  description: You really don't have the time to stop and check this guy out, he is attacking you!
+  level: 30
+  sex: male
+  alignment: -700
+  flags: [aware, stay_zone, aggr_good, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: bite
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25205":
+  keywords: [vampire, lesser]
+  short: a Lesser Vampire
+  long: A Lesser Vampire attacks with a power that only a vampire could possess.
+  description: Watch the teeth - something you were supposed to remember about the teeth.
+  level: 30
+  sex: male
+  alignment: -800
+  flags: [aware, stay_zone, aggr_good, helper, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: claw
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:252:mob:25206":
+  keywords: [Lord, vampire]
+  short: the Vampire Lord
+  long: A huge, terrifying man-like thing is about to bite your neck.
+  description: He moves so fast, it is hard to tell anything about him at all.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, stay_zone, aggr_good, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: bite
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

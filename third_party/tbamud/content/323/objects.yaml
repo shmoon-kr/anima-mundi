@@ -1,0 +1,737 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 323.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:323:obj:32300":
+  type: armor
+  keywords: [obsidian, gauntlets]
+  short: a pair of obsidian gauntlets
+  long: A pair of obsidian gauntlets have been left here.
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 11
+  cost: 100
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: str
+    modifier: 2
+
+"tba:323:obj:32301":
+  type: armor
+  keywords: [obsidian, girth]
+  short: an obsidian girth
+  long: An obsidian girth has been left here.
+  wear: [take, waist]
+  values:
+    armor: 6
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:323:obj:32302":
+  type: worn
+  keywords: [blackstone, amulet]
+  short: the Blackstone Amulet
+  long: A shining black amulet has been dropped here.
+  flags: [invisible]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: damroll
+    modifier: 3
+  - apply: str
+    modifier: 3
+
+"tba:323:obj:32303":
+  type: staff
+  keywords: [blackfire, staff]
+  short: the BlackFire Staff
+  long: A staff glowing with a black fire has been abandoned here.
+  wear: [take, hold]
+  values:
+    raw: [30, 3, 3, 26]
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 27
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: move
+    modifier: 15
+
+"tba:323:obj:32304":
+  type: armor
+  keywords: [black, leggings]
+  short: a pair of black leggings
+  long: A pair of black leggings have been left here.
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 28
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 2
+
+"tba:323:obj:32305":
+  type: trash
+  keywords: [mucus, aboleth]
+  short: a bit of aboleth mucus
+  long: A slimy pile of mucus lies on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:323:obj:32306":
+  type: trash
+  keywords: [pile, gray, slime]
+  short: a pile of gray slime
+  long: A pile of gray slime lies disgustingly on the floor.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:323:obj:32307":
+  type: money
+  keywords: [aboleth's, treasure]
+  short: the aboleth's treasure
+  long: The aboleth's treasure gleams brightly.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:323:obj:32308":
+  type: food
+  keywords: [small, pile, guano]
+  short: a small pile of guano
+  long: A small pile of guano is on the floor of the cave.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:323:obj:32309":
+  type: other
+  keywords: [eyestalk, tentacle]
+  short: an eyestalk tentacle
+  long: An eyestalk tentacle lies severed on the ground.
+  flags: [hum]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: ac
+    modifier: -3
+
+"tba:323:obj:32310":
+  type: armor
+  keywords: [bugbear, hide]
+  short: a bugbear hide
+  long: A bugbear hide lies stinking in a heap.
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:323:obj:32311":
+  type: weapon
+  keywords: [shining, mace]
+  short: a shining mace
+  long: A shining mace polished to a high sheen has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: bludgeon
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 27
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:323:obj:32312":
+  type: weapon
+  keywords: [chrome, hammer]
+  short: a chrome hammer
+  long: A chrome hammer has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: pound
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 29
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: 2
+
+"tba:323:obj:32313":
+  type: weapon
+  keywords: [jeweled, spear]
+  short: a jeweled spear
+  long: A jeweled spear has been abandoned here.
+  wear: [take, wield, hold]
+  values:
+    damage: 4d6
+    attack: sting
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 28
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:323:obj:32314":
+  type: money
+  keywords: [pile, slippery, shifting, coins]
+  short: a pile of slippery shifting coins
+  long: A pile of slippery shifting coins lies here in the center of the floor.
+  wear: [take]
+  values:
+    coins: 200
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32315":
+  type: other
+  keywords: [tentacle, deepspawn]
+  short: a tentacle of the DeepSpawn
+  long: A tentacle of the DeepSpawn has been left here.
+  flags: [anti_good, anti_thief, anti_warrior]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:323:obj:32316":
+  type: armor
+  keywords: [maroon, dragon, scale]
+  short: a maroon dragon scale
+  long: A maroon dragon scale has been left here.
+  wear: [take, about]
+  values:
+    armor: 9
+  weight: 13
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: age
+    modifier: 4
+  - apply: int
+    modifier: 2
+  - apply: damroll
+    modifier: 3
+
+"tba:323:obj:32317":
+  type: other
+  keywords: [deep, gem]
+  short: the Deep Gem
+  long: The Deep Gem has been dropped here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 26
+  affects:
+  - apply: int
+    modifier: 3
+  - apply: save_para
+    modifier: -2
+  - apply: wis
+    modifier: 3
+
+"tba:323:obj:32318":
+  type: weapon
+  keywords: [dragon's, claw]
+  short: a dragon's claw
+  long: A dragon's claw has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 5d6
+    attack: claw
+  weight: 11
+  cost: 1000
+  rent: 0
+  level: 28
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:323:obj:32319":
+  type: worn
+  keywords: [jaws, feyr, teeth]
+  short: the jaws of a Feyr
+  long: A terrible set of fanged teeth have been left here.
+  flags: [anti_good]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: con
+    modifier: 2
+
+"tba:323:obj:32320":
+  type: other
+  keywords: [nightmare, feyr]
+  short: the nightmares of a feyr
+  long: An awful nightmare has been left on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 1
+  affects:
+  - apply: cha
+    modifier: -3
+
+"tba:323:obj:32321":
+  type: armor
+  keywords: [gargoyle's, horn]
+  short: the horn of a gargoyle
+  long: A severed horn has been left here.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 25
+
+"tba:323:obj:32322":
+  type: armor
+  keywords: [gray, wings, of, flight]
+  short: the gray wings of flight
+  long: A pair of leathery, gray wings have been left here.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 14
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:323:obj:32323":
+  type: armor
+  keywords: [suit, stone, skin]
+  short: a suit of stone skin
+  long: A suit of stone skin lies on the floor.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 15
+  cost: 10
+  rent: 0
+  level: 22
+  affects:
+  - apply: dex
+    modifier: -2
+  - apply: move
+    modifier: -20
+  - apply: damroll
+    modifier: 3
+
+"tba:323:obj:32324":
+  type: trash
+  keywords: [festering, wart]
+  short: a festering wart
+  long: A festering wart has been lopped off a margoyle's nose.
+  wear: [take, finger, body, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32325":
+  type: weapon
+  keywords: [short, gibberling, sword]
+  short: a short gibberling sword
+  long: A short gibberling sword lies in the dirt.
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: slash
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 26
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:323:obj:32326":
+  type: armor
+  keywords: [cloth, eyeshade]
+  short: a cloth eyeshade
+  long: A filthy cloth eyeshade has been left here.
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 24
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:323:obj:32327":
+  type: armor
+  keywords: [cloven, hoof]
+  short: a cloven hoof
+  long: A cloven hoof has been sperated from its leg.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 22
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+
+"tba:323:obj:32328":
+  type: armor
+  keywords: [metal, scale, hide]
+  short: a metal scale hide
+  long: A huge metal scale hide has been left here.
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 14
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: 2
+
+"tba:323:obj:32329":
+  type: potion
+  keywords: [blood, gorgon, capilary]
+  short: the blood of a gorgon
+  long: A small capilary full of the blood of a gorgon has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [30, 33, 36, 4]
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:323:obj:32330":
+  type: weapon
+  keywords: [enormous, battle, axe]
+  short: an enormous battle axe
+  long: An enormous battle axe has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: maul
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32331":
+  type: armor
+  keywords: [grimlock's, helm]
+  short: the Grimlock's Helm
+  long: An odd-shaped helm has been left here.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 24
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hitroll
+    modifier: 3
+
+"tba:323:obj:32332":
+  type: weapon
+  keywords: [hideous, hook, hand]
+  short: a hideous hook hand
+  long: A hideous-looking hook hand has been left on the floor.
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: claw
+  weight: 5
+  cost: 560
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: int
+    modifier: 2
+
+"tba:323:obj:32333":
+  type: armor
+  keywords: [tough, exoskeleton]
+  short: a tough exoskeleton
+  long: A tough exoskeleton lies on the ground.
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 14
+  cost: 100
+  rent: 0
+  level: 27
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 2
+  - apply: save_rod
+    modifier: -2
+
+"tba:323:obj:32334":
+  type: armor
+  keywords: [moldy, topknot]
+  short: a moldy topknot
+  long: A moldy topknot lies severed from some poor sod's head.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 22
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: int
+    modifier: 2
+
+"tba:323:obj:32335":
+  type: weapon
+  keywords: [poisoned, spore, blade]
+  short: a spore blade
+  long: A strange blade made of some sort of fungus lies here.
+  wear: [take, wield]
+  values:
+    damage: 4d7
+    attack: pierce
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 20
+
+"tba:323:obj:32336":
+  type: other
+  keywords: [russet, mold]
+  short: a lump of russet mold
+  long: A lump of russet mold lies on the floor.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:323:obj:32337":
+  type: other
+  keywords: [budding, spore]
+  short: a budding spore
+  long: A budding spore grows from one corner of the room.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:323:obj:32338":
+  type: fountain
+  keywords: [water, cascade, fall, water]
+  short: a cascade of water
+  long: A cascade of water runs down the south wall into a crack in the floor.
+  wear: []
+  values:
+    capacity: 1000
+    contains: 1000
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:323:obj:32339":
+  type: light
+  keywords: [sconced, torch]
+  short: a sconced torch
+  long: A sconced torch glows brightly on the wall.
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32340":
+  type: container
+  keywords: [stewpot]
+  short: a stewpot
+  long: A stewpot full of foul-smelling meat rests over a small fire.
+  wear: [take]
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32341":
+  type: light
+  keywords: [torch, ornate, sconce]
+  short: a torch in an ornate black sconce
+  long: A torch glows from an ornate black sconce.
+  wear: [take, hold]
+  values:
+    hours: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:323:obj:32342":
+  type: other
+  keywords: [black, rock, throne]
+  short: a carved black rock throne
+  long: A carved black rock throne rests against the east wall.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:323:obj:32343":
+  type: food
+  keywords: [gibberling, leg]
+  short: a gibberling leg
+  long: A gibberling leg has been left here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: true
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:323:obj:32344":
+  type: food
+  keywords: [eye, bat]
+  short: the eye of a bat
+  long: The eye of a bat has been dropped on the floor.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: true
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 1

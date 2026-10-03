@@ -1,0 +1,157 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 61.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:61:obj:6121
+  room: tba:61:room:6130
+  limit: 1
+- mob: tba:61:mob:6115
+  room: tba:61:room:6100
+  limit: 1
+  equip:
+    finger_right:
+      object: tba:61:obj:6114
+      limit: 1
+- mob: tba:61:mob:6100
+  room: tba:61:room:6116
+  limit: 2
+- mob: tba:61:mob:6100
+  room: tba:61:room:6116
+  limit: 2
+- mob: tba:61:mob:6101
+  room: tba:61:room:6127
+  limit: 2
+- mob: tba:61:mob:6101
+  room: tba:61:room:6127
+  limit: 2
+- mob: tba:61:mob:6102
+  room: tba:61:room:6108
+  limit: 4
+- mob: tba:61:mob:6102
+  room: tba:61:room:6108
+  limit: 4
+- mob: tba:61:mob:6102
+  room: tba:61:room:6104
+  limit: 4
+- mob: tba:61:mob:6102
+  room: tba:61:room:6104
+  limit: 4
+- mob: tba:61:mob:6103
+  room: tba:61:room:6112
+  limit: 4
+- mob: tba:61:mob:6103
+  room: tba:61:room:6112
+  limit: 4
+- mob: tba:61:mob:6103
+  room: tba:61:room:6118
+  limit: 4
+- mob: tba:61:mob:6103
+  room: tba:61:room:6118
+  limit: 4
+- mob: tba:61:mob:6110
+  room: tba:61:room:6120
+  limit: 4
+- mob: tba:61:mob:6110
+  room: tba:61:room:6123
+  limit: 4
+- mob: tba:61:mob:6111
+  room: tba:61:room:6109
+  limit: 4
+- mob: tba:61:mob:6111
+  room: tba:61:room:6105
+  limit: 4
+- mob: tba:61:mob:6112
+  room: tba:61:room:6143
+  limit: 1
+  carry:
+  - object: tba:61:obj:6108
+    limit: 10
+  - object: tba:61:obj:6110
+    limit: 10
+  - object: tba:61:obj:6112
+    limit: 1
+- object: tba:61:obj:6111
+  room: tba:61:room:6143
+  limit: 10
+- mob: tba:61:mob:6113
+  room: tba:61:room:6133
+  limit: 3
+- mob: tba:61:mob:6113
+  room: tba:61:room:6133
+  limit: 3
+- mob: tba:61:mob:6113
+  room: tba:61:room:6133
+  limit: 3
+- mob: tba:61:mob:6114
+  room: tba:61:room:6134
+  limit: 1
+  carry:
+  - object: tba:61:obj:6108
+    limit: 10
+  - object: tba:61:obj:6109
+    limit: 3
+  - object: tba:61:obj:6113
+    limit: 2
+- mob: tba:61:mob:6116
+  room: tba:61:room:6155
+  limit: 1
+  equip:
+    wield:
+      object: tba:61:obj:6115
+      limit: 1
+  carry:
+  - object: tba:30:obj:3055
+    limit: 3
+- mob: tba:61:mob:6117
+  room: tba:61:room:6134
+  limit: 1
+  equip:
+    body:
+      object: tba:61:obj:6116
+      limit: 1
+    legs:
+      object: tba:61:obj:6117
+      limit: 1
+    about:
+      object: tba:61:obj:6118
+      limit: 1
+    waist:
+      object: tba:61:obj:6119
+      limit: 1
+    wield:
+      object: tba:61:obj:6120
+      limit: 1
+- object: tba:61:obj:6102
+  room: tba:61:room:6103
+  limit: 1
+- object: tba:61:obj:6103
+  room: tba:61:room:6113
+  limit: 1
+- object: tba:61:obj:6104
+  room: tba:61:room:6125
+  limit: 1
+- object: tba:61:obj:6105
+  room: tba:61:room:6105
+  limit: 1
+- object: tba:61:obj:6106
+  room: tba:61:room:6104
+  limit: 4
+- object: tba:61:obj:6106
+  room: tba:61:room:6111
+  limit: 4
+- object: tba:61:obj:6106
+  room: tba:61:room:6122
+  limit: 4
+- object: tba:61:obj:6107
+  room: tba:61:room:6119
+  limit: 4
+removes:
+- room: tba:61:room:6104
+  object: tba:61:obj:6106
+- room: tba:61:room:6111
+  object: tba:61:obj:6106
+- room: tba:61:room:6122
+  object: tba:61:obj:6106
+- room: tba:61:room:6119
+  object: tba:61:obj:6107

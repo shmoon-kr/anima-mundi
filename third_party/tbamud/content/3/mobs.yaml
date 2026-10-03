@@ -1,0 +1,67 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 3.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:3:mob:300":
+  keywords: [chemist, camille]
+  short: Camille the chemist
+  long: Camille the chemist stands over a cauldron mixing ingredients.
+  description: >
+    Camille wears a thick brown robe that covers most of her features. Only her hands and head stick
+    out of her robe. Stains and burns cover her body and clothing. She works diligently over her cauldron.
+    Camille has been known to concoct many different potions and is most famous for her liquid fire.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:3:mob:301":
+  keywords: [naked, magi]
+  short: the naked magi
+  long: A magi sits against a wall wearing nothing but a towel.
+  description: >
+    Sweat gleams on her supple skin.  Her black hair is wet and frames a round face with slanted blue
+    eyes.  She is striking in her beauty and grace.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  affects: [sense_life, infravision]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:3:mob:302":
+  keywords: [mob, unfinished]
+  short: the unfinished mob
+  long: An unfinished mob stands here.
+  description: It looks unfinished.
+  level: 1
+  sex: neutral
+  alignment: 0
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing

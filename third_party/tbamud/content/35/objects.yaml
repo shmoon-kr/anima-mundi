@@ -1,0 +1,155 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 35.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:35:obj:3500":
+  type: weapon
+  keywords: [sword, small]
+  short: a small sword
+  long: A small sword lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pierce
+  weight: 3
+  cost: 60
+  rent: 10
+  level: 0
+
+"tba:35:obj:3501":
+  type: weapon
+  keywords: [sword, long]
+  short: a fine long sword
+  long: A long sword has been left here.
+  flags: [glow, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d9
+    attack: slash
+  weight: 8
+  cost: 600
+  rent: 10
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:35:obj:3502":
+  type: weapon
+  keywords: [club, wooden]
+  short: a wooden club
+  long: A simple looking wooden club is here.
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: pound
+  weight: 3
+  cost: 12
+  rent: 10
+  level: 0
+
+"tba:35:obj:3503":
+  type: armor
+  keywords: [jacket, studded, leather]
+  short: a studded leather jacket
+  long: A studded leather jacket is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 20
+  cost: 500
+  rent: 10
+  level: 0
+
+"tba:35:obj:3504":
+  type: weapon
+  keywords: [spear, small]
+  short: a small spear
+  long: A small spear lies here.
+  flags: [anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 5d1
+    attack: pierce
+  weight: 15
+  cost: 500
+  rent: 120
+  level: 0
+
+"tba:35:obj:3505":
+  type: container
+  keywords: [corpse, mutilated]
+  short: a mutilated corpse
+  long: A mutilated corpse has been left on the ground here.
+  wear: []
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [corpse, mutilated]
+    text: Looks to be an aftermath of whatever caused this carnage.
+
+"tba:35:obj:3506":
+  type: container
+  keywords: [mutilated, carcass]
+  short: a mutilated carcass
+  long: A mutilated carcass has been left on the ground here.
+  wear: []
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [carcass, mutilated]
+    text: Looks to be an aftermath of whatever caused this carnage.
+
+"tba:35:obj:3507":
+  type: weapon
+  keywords: [dagger, ornate]
+  short: an ornate dagger
+  long: A beautiful looking dagger is stuck in the ground.
+  flags: [no_donate, invisible, magic, no_drop, anti_evil, anti_mage, anti_cleric, anti_warrior, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 4
+  cost: 1000
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: -3
+  extras:
+  - keywords: [dagger, ornate]
+    text: >
+      The hilt of this dagger looks to be two intertwined snakes.  At the end of it, there is a small red
+      ruby.
+
+"tba:35:obj:3508":
+  type: armor
+  keywords: [gyroscope, toy]
+  short: the gyroscope
+  long: A small toy is spinning about on the ground here.
+  flags: [hum]
+  wear: [take, finger, hold]
+  values:
+    armor: 5
+  weight: 1
+  cost: 25
+  rent: 600
+  level: 0
+  extras:
+  - keywords: [gyroscope, toy]
+    text: >
+      As the gyroscope spins around and around you find yourself almost hypnotized by its movement.

@@ -1,0 +1,164 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 11.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:11:mob:1100":
+  keywords: [wraith]
+  short: a mournful wraith
+  long: A mournful wraith hovers in and out of existence.
+  description: >
+    Faceless and featureless, the only that can be seen about this entity is the vague outline of a
+    humanoid figure.  Glowing faintly, it nonetheless appears the darkest thing in the room.
+  level: 33
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_bash, no_blind]
+  affects: [invisible, hide]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+100
+    damage: 5d5+5
+  gold: 0
+  exp: 0
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1101":
+  keywords: [trigger, mob, xxmobxx]
+  short: a mob for making triggers work
+  long: A mob stands here, waiting to help out some triggers.
+  description: >
+    There is no actual description as this is a trigger mob.  I only typed this in because I didn't
+    like seeing the error messages in zcheck la de la la de la la de la
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1102":
+  keywords: [gigantic, ice, dragon]
+  short: "@Ca gigantic ice dragon@n"
+  long: "@CA gigantic ice dragon@c stands guard over the castle.@n"
+  description: >
+    Huge and intimidating, this dragon is covered in massive armor-plated scales, shimmering all
+    different hues of crystal and ice.  Large scaly limbs stand firmly against the ground, tipped with
+    razor-sharp claws and encrusted with snow as if the dragon has almost become part of the architecture.  His
+    steely eyes are bright but cold, glimmering with a strange blue fire.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: claw
+  gold: 500
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1103":
+  keywords: [pale, queen]
+  short: "@Ca pale queen@n"
+  long: "@CA pale queen@c gazes forlornly towards the east.@n"
+  description: >
+    Her smooth, delicate features were probably naturally pale, but now her skin is tinged with an
+    eerie blue hue.  Her sorrowful eyes linger on the eastern side of the room as if she were longing for
+    some place she can no longer reach.  Her dress merges with the floor in a flowing train of ice, rooting
+    her to the spot for all eternity.
+  level: 28
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1104":
+  keywords: [white-haired, king]
+  short: "@Ca white-haired king@c"
+  long: "@CA white-haired king@c gazes thoughtfully toward the west.@n"
+  description: >
+    Old and sorrowful in appearance, this man's thick white hair is part his own and part crystals of
+    snow.  His face is haggard and morose, his eyes filled with a silent longing as he gazes toward the
+    western part of the room.  The lower part of his body has turned almost completely into ice, rendering
+    him a statue in his own abode.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1105":
+  keywords: [icy, princess]
+  short: "@Can icy princess@n"
+  long: "@CAn icy princess@c stands frozen to the spot.@n"
+  description: >
+    This young girl has smooth white skin like moon-cream, silver blonde hair tumbling down her back,
+    glittering with snow crystals.  Her eyes are large and sorrowful, a deep azure blue paled and
+    sparkling with a misty glaze of ice.  A fine sheen of frozen droplets covers her gown, studding it with
+    crystals as if bejewelled.
+  level: 25
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:11:mob:1199":
+  keywords: [tester, card, player, dealer]
+  short: a tester dealer
+  long: A tester dealer stands here.
+  description: It looks unfinished.
+  level: 0
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 10
+    hit_points: 1
+    damage: 1
+  gold: 0
+  exp: 0
+  position:
+    load: standing
+    default: standing

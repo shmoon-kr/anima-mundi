@@ -1,0 +1,284 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 313.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:313:mob:31300":
+  keywords: [goblin, raider]
+  short: a goblin raider
+  long: A goblin raider runs crouched-over through the fields, looking for people to kill.
+  description: >
+    It runs with its arms almost dragging on the ground through the fields, its nose twitching as it
+    sniffs for prey.
+  level: 9
+  sex: male
+  alignment: -700
+  flags: [stay_zone, aggr_good]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31301":
+  keywords: [goblin, torch]
+  short: a torch-bearing goblin
+  long: A goblin walks through the smoke and ash carrying a torch.
+  description: He looks right and then left - he must be searching for something to burn.
+  level: 8
+  sex: male
+  alignment: -600
+  flags: [stay_zone, aggr_good]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31302":
+  keywords: [goblin, gnawing]
+  short: a leg-gnawing goblin
+  long: A goblin sits cross-legged on the ground gnawing on a human leg.
+  description: Blood and muscle tissue drip down its face, its pointed noise dripping with goo and gore.
+  level: 10
+  sex: male
+  alignment: -900
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:313:mob:31303":
+  keywords: [goblin, commander]
+  short: the goblin commander
+  long: A goblin commander grunts and screams his troops into organization.
+  description: >
+    His green warted skin stretches tight over his squinted eyes, he sniffs the wind every now and
+    again for signs of human flesh.
+  level: 14
+  sex: male
+  alignment: -1000
+  flags: [stay_zone, aggr_good]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31304":
+  keywords: [goblin, scout]
+  short: a goblin scout
+  long: A goblin scout walks cautiously past, sniffing and searching.
+  description: >
+    A goblin scout here could mean only one thing - there are more in the area. Best to keep a close
+    eye out.
+  level: 12
+  sex: male
+  alignment: -600
+  flags: [scavenger, aware, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31305":
+  keywords: [goblin, looter]
+  short: a goblin looter
+  long: A goblin searches through the wreckage of the fields for scraps.
+  description: >
+    It rummages through the blackened dirt, looking for any valuables that might have been overlooked
+    by the troops when they came through.
+  level: 11
+  sex: male
+  alignment: -700
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31306":
+  keywords: [goblin, hordesman]
+  short: a goblin hordesman
+  long: A goblin hordesman tromps confidently along, looking for a fight.
+  description: >
+    Its weapon is constantly held at ready while it scans the smoke and ruin for any signs of life.
+  level: 10
+  sex: male
+  alignment: -600
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31307":
+  keywords: [commander, lord's, retinue]
+  short: the Commander of the Lord's Retinue
+  long: The Commander of the Lord's Retinue leads a weary gaggle of men through the desolation.
+  description: >
+    His face is covered in black dirt and ash, his once-fine armor dented and dirty.  By the look in
+    his black-rimmed eyes, he is a man at the end of his rope.
+  level: 15
+  sex: male
+  alignment: 900
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31308":
+  keywords: [member, Lord's, Retinue, soldier, guard]
+  short: a member of the Lord's Retinue
+  long: A member of the Lord's Retinue strides wearily past.
+  description: >
+    He appears to have lost much of his hope in eliminating the threat of the goblins in this region. 
+    The the constant raids and the lack of sleep has made him less than the highly-trained soldier that
+    he was when he arrived here some months back.
+  level: 12
+  sex: male
+  alignment: 800
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31309":
+  keywords: [sobbing, soldier, retinue]
+  short: a sobbing soldier
+  long: A soldier is curled into a ball, knees clutched, sobbing into the black dirt.
+  description: >
+    He does not acknowledge your presence nor does he stop his sobbing.  He seems to have lost his
+    mind, reduced to a whimpering infant.
+  level: 10
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31310":
+  keywords: [jon, boggins, farmer]
+  short: Jon Boggins
+  long: Jon Boggins strides through his fields, a heavy pitchfork held at ready.
+  description: >
+    Jon has lost not only his son the Horde, but has lost his wife and daughter as well.  He is a man
+    with no ties and no love of life - that is what makes him so dangerous.
+  level: 14
+  sex: male
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31311":
+  keywords: [desperate, farmer]
+  short: a desperate farmer
+  long: A desperate farmer crouches in this barricade, eyes wide with fear.
+  description: >
+    The poor man has lost his livelihood, but he will BE DAMNED if he will lose his land as well to the
+    very creatures who destroyed it.  He will die before he gives this small stand up to the enemy.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:313:mob:31312":
+  keywords: [angry, farmwife]
+  short: an angry farmwife
+  long: An angry farmwife squats beside her husband, lending him her strength and support.
+  description: >
+    Against her husband's numerous requests, she has stayed here in their last ditch stand to make an
+    effort at saving their home.
+  level: 8
+  sex: female
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing

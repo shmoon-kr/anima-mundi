@@ -1,0 +1,466 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 324.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:324:mob:32400":
+  keywords: [cow]
+  short: a cow
+  long: A fat cow stand here chewing her cud.
+  description: >
+    She may not be the most hygienic animal, but she sure has a good load of fat meat on her!  And look
+    at them tits!
+  level: 15
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_bash]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32401":
+  keywords: [bull]
+  short: the mean bull
+  long: A mean bull stamps it feet and snorts at you.
+  description: >
+    Papa always said make sure you never get behind an angry bull.  Also said never get in front of
+    one.  So where does that leave?
+  level: 17
+  sex: male
+  alignment: -200
+  flags: [sentinel, aggressive, no_charm, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32402":
+  keywords: [horse, war]
+  short: a war horse
+  long: A proud war horse tosses its head whinnies.
+  description: >
+    This large animal is trained to hate every human except the one who rides him.  Beware his kicking
+    hooves!
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive, no_charm, no_sleep, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32403":
+  keywords: [horse, work]
+  short: a sturdy work horse
+  long: A sturdy work horse grazes the tall grass.
+  description: It takes almost no notice of you, just continues on with it's lunch.
+  level: 13
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_sleep]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32404":
+  keywords: [forge, master, smith]
+  short: the Forgemaster
+  long: The Forgemaster stands near the fire directing his workers in their labors.
+  description: >
+    He is quite large with tree-trunk arms.  He is definitely not someone to trifle with even on one of
+    his bad days.
+  level: 21
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32405":
+  keywords: [smithy, sweating]
+  short: the sweating smithy
+  long: A sweating smithy soldier pumps the coals with a bellows.
+  description: The sweat drips from his bare back as makes sure that the fire does not get low.
+  level: 18
+  sex: male
+  alignment: 200
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32406":
+  keywords: [smithy, soldier, sweating]
+  short: the smithy
+  long: A smithy pounds away at a piece of metal, shaping it into a usable piece.
+  description: His muscles bulge and the hammer rings.  This guy could do commercials.
+  level: 19
+  sex: male
+  alignment: 350
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32407":
+  keywords: [tanner, soldier]
+  short: a tanner
+  long: A soldier works diligently at tanning hides.
+  description: He wipes his sweating brow and gives a smile.  At least he seems to enjoy his work a bit.
+  level: 18
+  sex: male
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32408":
+  keywords: [soldier, sweating, grunting]
+  short: the sweating soldier
+  long: A soldier grunts as he lifts a bale of hay up onto the stack.
+  description: >
+    He is sweating from most every pore in his body - it does not appear that he is enjoying his labors.
+  level: 16
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32409":
+  keywords: [soldier, brander]
+  short: a brander
+  long: A soldier is here branding the cattle and the horses of the Eastern Army.
+  description: He stands with a sly grin on his face, as if he might enjoy his work just a bit too much.
+  level: 19
+  sex: male
+  alignment: -100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32410":
+  keywords: [soldier, rustler]
+  short: a rustler
+  long: A soldier rustles a cow into a prone position so that the brander might place his mark.
+  description: He looks strong enough to wrestle an ox - indeed he often does.
+  level: 20
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32411":
+  keywords: [soldier, footman]
+  short: a footman
+  long: A footman trudges wearily back toward the barracks tents.
+  description: His job is done for the day and he is quite glad of it!
+  level: 17
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32412":
+  keywords: [soldier, general, tso]
+  short: General Tso
+  long: General Tso walks among his troops, a look of disapproval fixed upon his face.
+  description: >
+    Tso appears the type that would never be satisfied no matter what the length a soldier might go to
+    to obtain his approval.
+  level: 25
+  sex: male
+  alignment: 200
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32413":
+  keywords: [soldier, patrolman]
+  short: a patrolman
+  long: A patrolman walks his rounds, watching for signs of invasion.
+  description: He does not appear all that concerned about invaders as he drearily walks his rounds.
+  level: 21
+  sex: male
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32414":
+  keywords: [soldier, scout]
+  short: an army scout
+  long: An army scout walks lithely through the camp.
+  description: He moves with a sinuous grace that speaks well of his abilities in the forest.
+  level: 23
+  sex: male
+  alignment: 700
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32415":
+  keywords: [surgeon, soldier]
+  short: the surgeon
+  long: The camp surgeon is here tending to the wounded.
+  description: He is a very energetic young man, fully trained by the Eastern Army's best surgeons.
+  level: 17
+  sex: male
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32416":
+  keywords: [medic, soldier]
+  short: the medic
+  long: A medic bustles along self-importantly.
+  description: >
+    He gives you a look and sees that you don't appear hurt.  He then pointedly ignores you and
+    continues on.
+  level: 14
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32417":
+  keywords: [marksman, soldier]
+  short: the marksman
+  long: A marksman keeps a keen eye out for trouble.
+  description: >
+    He looks a bit startled at your intrusion, but quickly recovers seeing that you are not the enemy
+    and goes back to watching out the peepholes.
+  level: 22
+  sex: male
+  alignment: 400
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32418":
+  keywords: [soldier, wounded]
+  short: a wounded soldier
+  long: A wounded soldier limps past.
+  description: He gives you a curt nod and then continues on his way.
+  level: 13
+  sex: male
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32419":
+  keywords: [officer, soldier, cavalry]
+  short: a cavalry officer
+  long: An off-duty cavalry officer walks past.
+  description: >
+    He has that odd gait that suggests that more of his time is spent in the saddle than on his feet.
+  level: 23
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32420":
+  keywords: [soldier]
+  short: the water boy
+  long: A young soldier is here filling his water pails to carry them up to the mess tent.
+  description: >
+    He grumbles under his breath as he works, feeling that his position in the Army's ranks are very
+    unfair.
+  level: 12
+  sex: male
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:324:mob:32421":
+  keywords: [soldier, squatting]
+  short: the squatting soldier
+  long: A soldier looks up in shock as you enter into this small and private area with him.
+  description: >
+    He clutches to the sides of the seat, wondering just what sort of person would intrude on one in
+    such a place!
+  level: 16
+  sex: male
+  alignment: 800
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing

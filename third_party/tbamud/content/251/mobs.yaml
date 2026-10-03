@@ -1,0 +1,372 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 251.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:251:mob:25100":
+  keywords: [chimpanzee, chimp]
+  short: the chimpanzee
+  long: A chimpanzee is standing here.
+  description: This intelligent chimpanzee is one of the many inhabitants of Ape Village.
+  level: 18
+  sex: female
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25101":
+  keywords: [chimpanzee, chimp]
+  short: the chimpanzee
+  long: A chimpanzee is standing here.
+  description: This intelligent chimpanzee is one of the many inhabitants of Ape Village.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25102":
+  keywords: [orangutan, orang]
+  short: the Orangutan
+  long: A regal looking Orangutan is standing here.
+  description: The Orangutans are the rulers of the Ape Village, and they are the most intelligent.
+  level: 19
+  sex: male
+  alignment: -350
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25103":
+  keywords: [gorilla, soldier]
+  short: the savage gorilla soldier
+  long: A savage Gorilla soldier is here, looking for something to kill.
+  description: >
+    The Gorilla Soldiers make up the army and police forces of Ape Village. Don't mess with them!
+  level: 20
+  sex: male
+  alignment: -500
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: blast
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25104":
+  keywords: [gorilla, hunter]
+  short: the gorilla hunter
+  long: A Gorilla Hunter is here, looking for something to kill.
+  description: >
+    The Gorilla Hunters hunt down humans for sport.  They also round up humans for the ape scientists
+    to use in experiments.
+  level: 21
+  sex: male
+  alignment: -500
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: blast
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25105":
+  keywords: [ape, child, kid]
+  short: the ape child
+  long: A small Ape Child is standing here.
+  description: Ape children are stupid and weak.  Perfect for killing!
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25106":
+  keywords: [wild, human]
+  short: the wild human
+  long: A wild human is here, eyeing you nervously.
+  description: These wild humans are crazy.  They can't speak or write, and they are hunted by the apes.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25107":
+  keywords: [caged, human]
+  short: the caged human
+  long: A caged human is here, eyeing you nervously.
+  description: >
+    These wild humans are crazy.  They can't speak or write, and they are hunted by apes.  Captivity
+    has made these humans weaker than the wild ones.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25108":
+  keywords: [ursus, gorilla, captain]
+  short: Ursus, the gorilla captain
+  long: Ursus, the Gorilla Captain, is glaring at you.
+  description: >
+    Ursus is the captain of the Gorilla Soldiers.  He's very mean and very strong.  Picking a fight
+    with him would surely result in death!
+  level: 22
+  sex: male
+  alignment: -500
+  flags: [stay_zone, memory, no_charm, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: crush
+  abilities:
+    str: 17
+    int: 17
+    wis: 17
+    dex: 17
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25109":
+  keywords: [dr., doctor, zaius]
+  short: Dr. Zaius
+  long: Dr. Zaius, the ruler of Ape Village, is standing here.
+  description: >
+    Dr.  Zaius knows the truth behind Ape Village.  He knows that apes were once dominated by man, but
+    he doesn't like to share information.
+  level: 21
+  sex: male
+  alignment: -200
+  flags: [stay_zone, wimpy, no_charm]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: pound
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25110":
+  keywords: [cornelius, chimpanzee]
+  short: Cornelius
+  long: Cornelius the chimpanzee is standing here.
+  description: Cornelius is an archeologist.  He is sympathetic towards humans, unlike the other apes.
+  level: 20
+  sex: male
+  alignment: 200
+  flags: [stay_zone, no_charm]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: pound
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25111":
+  keywords: [zira, chimpanzee]
+  short: Zira
+  long: Zira the chimpanzee is standing here.
+  description: >
+    Zira is a psychologist.  She works with the humans and tries to make them speak.  Although she
+    doesn't know it, she performs evil operations with Dr. Zaius.
+  level: 19
+  sex: female
+  alignment: 200
+  flags: [sentinel, no_charm]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: claw
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25112":
+  keywords: [rock]
+  short: the rock
+  long: A large rock is resting here.
+  description: >
+    These rocks have been mutated by radiation from the nuclear wars of the past.  For some reason,
+    they have developed an intelligence and are able to move around.  Beware!
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25113":
+  keywords: [keeper]
+  short: the keeper
+  long: The Keeper is here, watching out onto the ocean.
+  description: >
+    The Keeper guards the Statue of Liberty.  He certainly doesn't want any hairy apes touching one of
+    mankind's last relics.  He's an avid steroid user, so he's pretty tough.
+  level: 22
+  sex: male
+  alignment: -600
+  flags: [sentinel, scavenger, memory, no_sleep]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: maul
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:251:mob:25114":
+  keywords: [ape, shopkeeper]
+  short: the ape shopkeeper
+  long: An ape shopkeeper is here, staring at you.
+  description: This ape likes to buy and sell stuff.  He has a very short temper.
+  level: 22
+  sex: male
+  alignment: -300
+  flags: [sentinel, memory, no_charm, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,73 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 243.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:243:shop:24300":
+  keeper: tba:243:mob:24308
+  rooms: [tba:243:room:24392]
+  products:
+  - tba:243:obj:24306
+  buys:
+  - type: weapon
+  profit:
+    buy: 2.0
+    sell: 0.4
+  messages:
+    no_such_item: "%s I only sell ski passes wink!"
+    you_dont_have_it: "%s I don't buy stuff!"
+    does_not_buy: "%s I don't buy stuff!"
+    shop_cannot_afford: "%s I don't buy stuff!"
+    you_cannot_afford: "%s Hey man, get some more cash!"
+    bought: "%s That'll be %d bucks dude."
+    sold: "%s I don't buy stuff!"
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:243:shop:24301":
+  keeper: tba:243:mob:24306
+  rooms: [tba:243:room:24399]
+  products:
+  - tba:243:obj:24302
+  - tba:243:obj:24303
+  - tba:243:obj:24305
+  buys:
+  - type: undefined
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s What you see is what I've got!"
+    you_dont_have_it: "%s I don't buy stuff!"
+    does_not_buy: "%s I don't buy stuff!"
+    shop_cannot_afford: "%s I don't buy stuff!"
+    you_cannot_afford: "%s Sorry, but you can't afford it!"
+    bought: "%s That'll be %d bucks dude."
+    sold: "%s I don't buy stuff!"
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:243:shop:24302":
+  keeper: tba:243:mob:24305
+  rooms: [tba:243:room:24361]
+  products:
+  - tba:243:obj:24307
+  - tba:243:obj:24308
+  - tba:243:obj:24309
+  - tba:243:obj:24310
+  buys:
+  - type: undefined
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, but I don't have any!"
+    you_dont_have_it: "%s Used food? No thanks!"
+    does_not_buy: "%s Used food? No thanks!"
+    shop_cannot_afford: "%s Used food? No thanks!"
+    you_cannot_afford: "%s Sorry, but you can't afford it!"
+    bought: "%s That shall be %d dollars."
+    sold: "%s Used food? No thanks!"
+  temper: 0
+  flags: 6
+  trade_with: 0

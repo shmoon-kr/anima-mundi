@@ -1,0 +1,313 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 40.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:40:mob:4000":
+  keywords: [snake, large]
+  short: the snake
+  long: A large dreadful snake is at your feet, hissing at you.
+  description: >
+    This heavy-bodied snake is about 5 feet long.  It is gray with black crossbands that are
+    chevron-shaped.  These rattlesnakes are generally passive if not disturbed or pestered in some way.  When a
+    rattlesnake is encountered, the safest reaction is to back away -- it will not try to attack you if you
+    leave it alone.
+  level: 11
+  sex: neutral
+  alignment: -200
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4001":
+  keywords: [snake, green]
+  short: the green snake
+  long: A small green snake is here, and it doesn't look too friendly...
+  description: >
+    It looks harmless.  It appears to be a slender garter snake.  It is about 2 feet long and starts
+    slithering away as you approach.
+  level: 7
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4002":
+  keywords: [centipede]
+  short: the centipede
+  long: A small centipede is here, making its way across the floor.
+  description: It looks completely harmless.
+  level: 3
+  sex: neutral
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4003":
+  keywords: [kobold]
+  short: the kobold
+  long: An ugly kobold is here, searching for dinner.
+  description: It looks ugly.
+  level: 4
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4004":
+  keywords: [orc]
+  short: the orc
+  long: The orc walks around, looking for someone to kill.
+  description: You notice an evil look in its eyes...
+  level: 5
+  sex: neutral
+  alignment: -400
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4005":
+  keywords: [orc, large]
+  short: the orc
+  long: A large orc is here, looking really mean.
+  description: He looks dreadful.
+  level: 7
+  sex: male
+  alignment: -500
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4050":
+  keywords: [warrior]
+  short: the warrior
+  long: A tall warrior is here.  He has more scars than anyone you have ever seen.
+  description: He seems to be a strong, brainless fighter.
+  level: 12
+  sex: male
+  alignment: -300
+  flags: [sentinel, scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4051":
+  keywords: [warrior]
+  short: the warrior
+  long: A tall warrior is here.
+  description: He seems to know his way with weapons.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4052":
+  keywords: [hobgoblin]
+  short: the hobgoblin
+  long: A small hobgoblin stands here.
+  description: The hobgoblin looks quite lost.
+  level: 6
+  sex: male
+  alignment: -300
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4053":
+  keywords: [snake]
+  short: the snake
+  long: A brown snake watches you.
+  description: >
+    The snake looks quite mean.  It stretches about 4 feet long.  The color pattern is variable, but
+    the back is drab brown.  The snake stands its ground and hisses at you.
+  level: 10
+  sex: neutral
+  alignment: -600
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4054":
+  keywords: [centipede]
+  short: the centipede
+  long: A white centipede is here.
+  description: The centipede doesn't really seem to notice you.
+  level: 5
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4055":
+  keywords: [hobgoblin]
+  short: the hobgoblin
+  long: A large hobgoblin is here.
+  description: The hobgoblin looks quite dangerous.
+  level: 10
+  sex: male
+  alignment: -500
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4056":
+  keywords: [orc]
+  short: the orc
+  long: An orc is here, looking for something (or perhaps someone?) to eat.
+  description: Well, he doesn't seem to be friendly.
+  level: 8
+  sex: male
+  alignment: -800
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4057":
+  keywords: [lion, mountain]
+  short: the mountain lion
+  long: A mountain lion is here, growling at you viciously.
+  description: The lion looks very nasty with huge claws and big teeth.
+  level: 5
+  sex: male
+  alignment: -100
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:40:mob:4058":
+  keywords: [giant, hill]
+  short: the hill giant
+  long: A hill giant is here, tossing some rocks around.
+  description: >
+    The hill giant looks like he's about 9 feet tall.  By his actions you quickly come to the
+    conclusion that he isn't very intelligent.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,274 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 17.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:17:obj:1700":
+  type: weapon
+  keywords: [dagger]
+  short: a squire's dagger
+  long: An old worn dagger is lying here.
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 3
+  cost: 160
+  rent: 16
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [dagger, squires]
+    text: This small dagger has an ivory handle and polished silver blade.
+
+"tba:17:obj:1701":
+  type: weapon
+  keywords: [lance]
+  short: a lance
+  long: A 10 foot long pole is sunk into the ground here.
+  flags: [magic, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 8d3
+    attack: stab
+  weight: 15
+  cost: 75
+  rent: 7
+  level: 0
+  extras:
+  - keywords: [lance]
+    text: >
+      The knight's lance is well made of a sturdy steel.  Its weight is cumbersome, but its powerful once
+      in motion.
+
+"tba:17:obj:1702":
+  type: weapon
+  keywords: [excalibur, sword]
+  short: Excalibur
+  long: A beautiful dragon hilted sword lies here!
+  flags: [glow, magic, anti_evil, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: slash
+  weight: 20
+  cost: 540
+  rent: 540
+  level: 0
+  extras:
+  - keywords: [sword, excalibur]
+    text: >
+      You run your fingers over the blue green steel of Excalibur and feel a tingling sensation.  Your
+      vision blurs until all you see is a blinding white light.  A warm sensation fills your limbs, and a
+      sense of relaxed comfort permeates you.  A deep fatherlike voice says "Now that Arthur is dead, it is up
+      to you to right what he wrought.  Seek out and destroy Mordred and Morgan Le Fey.  They are
+      destroying Camelot."  The voice and the light gradually fades leaving you with only a lingering warm feeling.
+
+"tba:17:obj:1703":
+  type: other
+  keywords: [scabbard]
+  short: Excalibur's scabbard
+  long: A beautiful golden scabbard lies here!
+  flags: [glow, magic, anti_evil]
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 540
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: hit
+    modifier: 15
+  extras:
+  - keywords: [scabbard]
+    text: >
+      This elegant scabbard, covered in runes and jewels, was made for the fabled sword Excalibur.
+
+"tba:17:obj:1704":
+  type: armor
+  keywords: [suit, plate, armor]
+  short: the plate armor
+  long: A suit of full plate armor gleams on the ground.
+  flags: [anti_evil, anti_mage, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 20
+  cost: 700
+  rent: 150
+  level: 0
+  extras:
+  - keywords: [suit, plate, armor]
+    text: >
+      This large suit looks encumbering, but very protective.  The tarnished steel is black from neglect,
+      but is still in fair condition.
+
+"tba:17:obj:1705":
+  type: armor
+  keywords: [spurs]
+  short: Lamoraks spurs
+  long: A set of silver spurs lies here.
+  flags: [anti_evil]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [spurs]
+    text: >
+      These fancy spurs were meant for riding stubborn steeds.  The sharp thorny metal wheels look
+      extremely painful.
+
+"tba:17:obj:1706":
+  type: staff
+  keywords: [staff]
+  short: Merlin's staff
+  long: A staff of two intertwined vines lies here in a circle of power!
+  flags: [invisible, magic, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [12, 3, 3, 30]
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [staff]
+    text: >
+      The staff hums strangely and small sparks occasionally flicker off both ends.  It appears to have
+      been magically charged.
+
+"tba:17:obj:1707":
+  type: armor
+  keywords: [gauntlets]
+  short: the gauntlets
+  long: A glowing pair of burnished chain mesh gauntlets lies here.
+  flags: [magic, anti_evil]
+  wear: [take, hands]
+  values:
+    armor: 6
+  weight: 3
+  cost: 650
+  rent: 65
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [gauntlets]
+    text: They appear to be in excellent condition, though just beginning to rust.
+
+"tba:17:obj:1709":
+  type: armor
+  keywords: [silken, favor]
+  short: a silken favor
+  long: A silken favor is here. Maybe it belongs to your lady?
+  flags: [magic, no_drop]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [silken, favor]
+    text: >
+      The transparent material is extremely fine and well made.  It smells faintly of perfume and is
+      stained slightly pink from dye.
+
+"tba:17:obj:1710":
+  type: other
+  keywords: [emerald, necklace]
+  short: an emerald necklace
+  long: An exquisite emerald necklace with intricate gold settings has been left here!
+  flags: [magic, anti_evil]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 400
+  rent: 120
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [emerald, necklace]
+    text: The necklace is made from fine green jewels captured in workings of silver and gold.
+
+"tba:17:obj:1711":
+  type: weapon
+  keywords: [bastard, sword]
+  short: a bastard sword
+  long: A bastard sword was left here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 9
+  cost: 450
+  rent: 45
+  level: 0
+  extras:
+  - keywords: [bastard, sword]
+    text: >
+      This brutal sword was made cheaply.  Its weight makes it cumbersome.  The tarnished metal and
+      coiled handle are in poor condition.
+
+"tba:17:obj:1712":
+  type: wand
+  keywords: [wand, rod]
+  short: a wand
+  long: A marble rod with a white hot tip is smouldering here.
+  flags: [anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 7]
+  weight: 2
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [wand, rod]
+    text: >
+      This white rod of marble seems to be smouldering on one end by some hidden internal force.
+
+"tba:17:obj:1718":
+  type: drinkcon
+  keywords: [wine, flask, wine]
+  short: the wine
+  long: A flask of nice, cold Pinot Noir wine is here, just waiting to be tasted.
+  wear: [take]
+  values:
+    capacity: 15
+    contains: 15
+    liquid: wine
+    poisoned: false
+  weight: 15
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wine, flask]
+    text: A cheap wine flask made from clay.  The smell of fermented grapes is almost overpowering.

@@ -1,0 +1,66 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 27.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:27:shop:2707":
+  keeper: tba:27:mob:2703
+  rooms: [tba:27:room:2707]
+  products:
+  - tba:27:obj:2700
+  - tba:27:obj:2703
+  - tba:27:obj:2714
+  - tba:27:obj:2767
+  - tba:27:obj:2750
+  - tba:27:obj:2751
+  - tba:27:obj:2752
+  - tba:27:obj:2753
+  - tba:27:obj:2754
+  - tba:27:obj:2755
+  - tba:27:obj:2756
+  - tba:27:obj:2757
+  - tba:27:obj:2758
+  - tba:27:obj:2759
+  - tba:27:obj:2760
+  - tba:27:obj:2761
+  - tba:27:obj:2747
+  - tba:27:obj:2741
+  - tba:27:obj:2763
+  - tba:27:obj:2764
+  buys:
+  - type: container
+  - type: light
+  - type: weapon
+  - type: treasure
+  - type: potion
+  - type: other
+  - type: furniture
+  - type: free
+  - type: treasure
+  - type: armor
+  - type: potion
+  - type: worn
+  - type: other
+  - type: trash
+  - type: free2
+  - type: container
+  - type: note
+  - type: drinkcon
+  - type: key
+  - type: food
+  - type: money
+  - type: pen
+  - type: boat
+  - type: fountain
+  profit:
+    buy: 1.5
+    sell: 0.8
+  messages:
+    no_such_item: "%s We don't have any of that here."
+    you_dont_have_it: "%s You know, its easier to sell something if you actually have it."
+    does_not_buy: "%s Sorry, thats of no use to me."
+    shop_cannot_afford: "%s I'm afraid I don't have the money right now."
+    you_cannot_afford: "%s You need to save a little more for that."
+    bought: "%s You can have that for %d coins."
+    sold: "%s I can afford %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

@@ -1,0 +1,1376 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 54.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:54:obj:5400":
+  type: key
+  keywords: [palace, key]
+  short: the palace key of New Thalos
+  long: A large key bearing the crest of New Thalos lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:54:obj:5401":
+  type: key
+  keywords: [city, key]
+  short: the Key to the City of New Thalos
+  long: The heavy city key lies here in the dust
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:54:obj:5402":
+  type: fountain
+  keywords: [fountain, water]
+  short: the large central fountain
+  long: The large central fountain domintating the central square rests here.
+  flags: [no_rent, no_invis]
+  wear: []
+  values:
+    capacity: 9999
+    contains: 9999
+    liquid: water
+    poisoned: false
+  weight: 9999
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:54:obj:5403":
+  type: weapon
+  keywords: [morningstar, morning, star]
+  short: a morningstar
+  long: A small spiked metal ball connected to a rod by links of chain lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: crush
+  weight: 5
+  cost: 800
+  rent: 50
+  level: 0
+
+"tba:54:obj:5404":
+  type: weapon
+  keywords: [awl-pike]
+  short: an awl-pike
+  long: An awl pike lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d12
+    attack: bludgeon
+  weight: 3
+  cost: 210
+  rent: 10
+  level: 0
+
+"tba:54:obj:5405":
+  type: weapon
+  keywords: [bardiche]
+  short: a bardiche
+  long: A bardiche lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 4
+  cost: 190
+  rent: 11
+  level: 0
+
+"tba:54:obj:5406":
+  type: weapon
+  keywords: [corbin, bec]
+  short: a bec de corbin
+  long: A bec de corbin lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 3
+  cost: 540
+  rent: 50
+  level: 0
+
+"tba:54:obj:5407":
+  type: weapon
+  keywords: [guisarme, bill]
+  short: a bill-guisarme
+  long: A bill-guisarme lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d10
+    attack: slash
+  weight: 3
+  cost: 130
+  rent: 50
+  level: 0
+
+"tba:54:obj:5408":
+  type: weapon
+  keywords: [fauchard]
+  short: a fauchard
+  long: A fauchard lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: sting
+  weight: 3
+  cost: 125
+  rent: 20
+  level: 0
+
+"tba:54:obj:5409":
+  type: weapon
+  keywords: [glaive]
+  short: a glaive
+  long: A glaive lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d10
+    attack: bludgeon
+  weight: 3
+  cost: 187
+  rent: 20
+  level: 0
+
+"tba:54:obj:5410":
+  type: weapon
+  keywords: [guisarme]
+  short: a guisarme
+  long: A guisarme lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: bite
+  weight: 4
+  cost: 195
+  rent: 20
+  level: 0
+
+"tba:54:obj:5411":
+  type: weapon
+  keywords: [sickle]
+  short: a sickle
+  long: A sickle lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 1
+  cost: 500
+  rent: 10
+  level: 0
+
+"tba:54:obj:5412":
+  type: weapon
+  keywords: [sword, bastard, two-handed]
+  short: a two-handed bastard sword
+  long: A two handed bastard sword lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 18
+  cost: 625
+  rent: 10
+  level: 0
+
+"tba:54:obj:5413":
+  type: weapon
+  keywords: [scimitar]
+  short: a scimitar
+  long: A scimitar lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d9
+    attack: slash
+  weight: 10
+  cost: 120
+  rent: 15
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+
+"tba:54:obj:5414":
+  type: weapon
+  keywords: [rapier]
+  short: a rapier
+  long: A rapier lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 10
+  cost: 310
+  rent: 10
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:54:obj:5415":
+  type: armor
+  keywords: [suit, mail, banded]
+  short: a suit of banded mail
+  long: A suit of banded mail lies here.
+  flags: [glow, magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 25
+  cost: 340
+  rent: 80
+  level: 0
+
+"tba:54:obj:5416":
+  type: armor
+  keywords: [suit, brigandine]
+  short: a suit of brigandine
+  long: A suit of brigandine lies here.
+  flags: [glow, magic, anti_mage, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 20
+  cost: 200
+  rent: 42
+  level: 0
+
+"tba:54:obj:5417":
+  type: armor
+  keywords: [suit, plate, field]
+  short: a suit of field plate
+  long: A suit of field plate lies here.
+  flags: [glow, magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 28
+  cost: 400
+  rent: 100
+  level: 0
+
+"tba:54:obj:5418":
+  type: armor
+  keywords: [suit, ringmail, ring, mail]
+  short: a suit of ringmail
+  long: A suit of ringmail lies here.
+  flags: [anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 6
+  cost: 138
+  rent: 10
+  level: 0
+
+"tba:54:obj:5419":
+  type: armor
+  keywords: [suit, splintmail, splint, mail]
+  short: a suit of splintmail
+  long: A suit of splintmail aromr lies here.
+  flags: [anti_mage]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 5
+  cost: 250
+  rent: 10
+  level: 0
+
+"tba:54:obj:5420":
+  type: armor
+  keywords: [shield, wooden]
+  short: a wooden shield
+  long: A wooden shield lies here
+  wear: [take, shield]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:54:obj:5421":
+  type: armor
+  keywords: [shield, splinted]
+  short: a splinted shield
+  long: A splinted shield lies here.
+  wear: [take, shield]
+  values:
+    armor: 7
+  weight: 8
+  cost: 175
+  rent: 17
+  level: 0
+
+"tba:54:obj:5422":
+  type: armor
+  keywords: [buckler, shield]
+  short: a buckler
+  long: A buckler lies here.
+  wear: [take, shield]
+  values:
+    armor: 1
+  weight: 6
+  cost: 30
+  rent: 7
+  level: 0
+
+"tba:54:obj:5423":
+  type: armor
+  keywords: [jacket, leather]
+  short: a leather jacket
+  long: A leather jacket lies here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 6
+  cost: 600
+  rent: 200
+  level: 0
+
+"tba:54:obj:5424":
+  type: armor
+  keywords: [sleeves, leather]
+  short: a pair of leather sleeves
+  long: A pair of leather sleeves lies here.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 2
+  cost: 350
+  rent: 200
+  level: 0
+
+"tba:54:obj:5425":
+  type: armor
+  keywords: [cap, leather]
+  short: a leather cap
+  long: A leather cap lies here
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 2
+  cost: 65
+  rent: 200
+  level: 0
+
+"tba:54:obj:5426":
+  type: armor
+  keywords: [pants, leather]
+  short: a pair of leather pants
+  long: A pair of leather pants lies here.
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 2
+  cost: 850
+  rent: 200
+  level: 0
+
+"tba:54:obj:5427":
+  type: armor
+  keywords: [gloves, leather]
+  short: a pair of leather gloves
+  long: A pair of leather gloves lies here.
+  wear: [take, hands]
+  values:
+    armor: 2
+  weight: 2
+  cost: 150
+  rent: 200
+  level: 0
+
+"tba:54:obj:5428":
+  type: armor
+  keywords: [boots, padded, leather]
+  short: a pair of padded leather boots
+  long: A pair of padded leather boots lies here.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 410
+  rent: 200
+  level: 0
+
+"tba:54:obj:5429":
+  type: armor
+  keywords: [jacket, studded, leather]
+  short: a studded leather jacket
+  long: A studded leather jacket lies here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 10
+  cost: 650
+  rent: 200
+  level: 0
+
+"tba:54:obj:5430":
+  type: armor
+  keywords: [sleeves, studded, leather]
+  short: a pair of studded leather sleeves
+  long: A pair of studded leather sleeves lie here.
+  wear: [take, arms]
+  values:
+    armor: 3
+  weight: 3
+  cost: 500
+  rent: 200
+  level: 0
+
+"tba:54:obj:5431":
+  type: armor
+  keywords: [pants, studded, leather]
+  short: a pair of studded leather pants
+  long: A pair of studded leather pants lie here.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 3
+  cost: 500
+  rent: 200
+  level: 0
+
+"tba:54:obj:5432":
+  type: armor
+  keywords: [gloves, studded, leather]
+  short: a pair of studded leather gloves
+  long: A pair of studded leather gloves lie here.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 3
+  cost: 500
+  rent: 200
+  level: 0
+
+"tba:54:obj:5433":
+  type: armor
+  keywords: [shield, leather]
+  short: a leather shield
+  long: A leather shield lies here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 3
+  cost: 50
+  rent: 200
+  level: 0
+
+"tba:54:obj:5434":
+  type: container
+  keywords: [sack]
+  short: a sack
+  long: A sack lies here
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 20
+  rent: 200
+  level: 0
+
+"tba:54:obj:5435":
+  type: light
+  keywords: [lamp, oil, oillamp]
+  short: an oil lamp
+  long: An oil lamp lies here
+  wear: [take]
+  values:
+    hours: 48
+  weight: 1
+  cost: 100
+  rent: 200
+  level: 0
+
+"tba:54:obj:5436":
+  type: container
+  keywords: [backpack, back, pack]
+  short: a backpack
+  long: A backpack lies here
+  wear: [take, about]
+  values:
+    capacity: 75
+    lock_flags: 1
+    corpse: false
+  weight: 8
+  cost: 100
+  rent: 100
+  level: 0
+
+"tba:54:obj:5437":
+  type: container
+  keywords: [basket]
+  short: a basket
+  long: A basket lies here.
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 4
+  cost: 250
+  rent: 50
+  level: 0
+
+"tba:54:obj:5438":
+  type: container
+  keywords: [pouch, belt]
+  short: a belt pouch
+  long: A belt pouch lies here
+  wear: [take, waist]
+  values:
+    capacity: 25
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 100
+  rent: 20
+  level: 0
+
+"tba:54:obj:5439":
+  type: light
+  keywords: [candle]
+  short: a candle
+  long: A candle lies here
+  wear: [take, hold]
+  values:
+    hours: 50
+  weight: 1
+  cost: 35
+  rent: 10
+  level: 0
+
+"tba:54:obj:5440":
+  type: food
+  keywords: [cheese]
+  short: a hunk of cheese
+  long: A hunk of cheese lies here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 10
+  level: 0
+
+"tba:54:obj:5441":
+  type: food
+  keywords: [bread]
+  short: some bread
+  long: Some bread lies here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 3
+  rent: 10
+  level: 0
+
+"tba:54:obj:5442":
+  type: food
+  keywords: [rations, dry]
+  short: some dry rations
+  long: Some dry rations lie here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 2
+  cost: 20
+  rent: 30
+  level: 0
+
+"tba:54:obj:5443":
+  type: food
+  keywords: [rations, iron]
+  short: some iron rations
+  long: A tin of iron rations lies here.
+  wear: [take]
+  values:
+    hours: 25
+    poisoned: false
+  weight: 3
+  cost: 25
+  rent: 50
+  level: 0
+
+"tba:54:obj:5445":
+  type: food
+  keywords: [nuts]
+  short: some nuts
+  long: Some nuts lie scatterd on the ground.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 10
+  level: 0
+
+"tba:54:obj:5446":
+  type: armor
+  keywords: [belt]
+  short: a belt
+  long: A nicely made belt lies here.
+  wear: [take, waist]
+  values:
+    armor: 0
+  weight: 2
+  cost: 2
+  rent: 10
+  level: 0
+
+"tba:54:obj:5447":
+  type: armor
+  keywords: [boots, hiking]
+  short: a pair of hiking boots
+  long: A nicely made pair of boots lies here.
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 3
+  cost: 390
+  rent: 10
+  level: 0
+
+"tba:54:obj:5448":
+  type: armor
+  keywords: [cloak, fur]
+  short: a fur cloak
+  long: A nicely made fur cloak lies here.
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 2
+  cost: 455
+  rent: 50
+  level: 0
+
+"tba:54:obj:5449":
+  type: armor
+  keywords: [girdle]
+  short: a girdle
+  long: A nicely made girdle lies here.
+  wear: [take, waist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 375
+  rent: 10
+  level: 0
+
+"tba:54:obj:5450":
+  type: armor
+  keywords: [hose]
+  short: a pair of hose
+  long: A nicely made pair of hose lies here.
+  wear: [take, legs]
+  values:
+    armor: 0
+  weight: 1
+  cost: 120
+  rent: 10
+  level: 0
+
+"tba:54:obj:5451":
+  type: armor
+  keywords: [robe, common]
+  short: a common robe
+  long: A nicely made robe of common cloth lies here.
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 2
+  cost: 90
+  rent: 20
+  level: 0
+
+"tba:54:obj:5452":
+  type: armor
+  keywords: [robe, embroidered]
+  short: an embroidered robe
+  long: A nicely made robe of embroidered cloth lies here.
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 2
+  cost: 250
+  rent: 5
+  level: 0
+
+"tba:54:obj:5453":
+  type: armor
+  keywords: [sandals]
+  short: a pair of sandals
+  long: A nicely made pair of sandals lies here.
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 1
+  cost: 15
+  rent: 10
+  level: 0
+
+"tba:54:obj:5454":
+  type: armor
+  keywords: [sash]
+  short: a sash
+  long: A nicely made sash lies here.
+  wear: [take, waist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 20
+  rent: 10
+  level: 0
+
+"tba:54:obj:5455":
+  type: armor
+  keywords: [jacket, silk]
+  short: a silk jacket
+  long: A nicely made silk jacket lies here.
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 1
+  cost: 380
+  rent: 100
+  level: 0
+
+"tba:54:obj:5456":
+  type: food
+  keywords: [egg]
+  short: an egg
+  long: An egg lies here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 3
+  rent: 10
+  level: 0
+
+"tba:54:obj:5457":
+  type: food
+  keywords: [carrot]
+  short: a carrot
+  long: A carrot lies here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 4
+  rent: 10
+  level: 0
+
+"tba:54:obj:5458":
+  type: food
+  keywords: [tomato]
+  short: a tomato
+  long: A tomato lies here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 10
+  level: 0
+
+"tba:54:obj:5459":
+  type: food
+  keywords: [fig]
+  short: a fig
+  long: A fig lies here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 1
+  cost: 2
+  rent: 10
+  level: 0
+
+"tba:54:obj:5460":
+  type: food
+  keywords: [dates]
+  short: some dates
+  long: A bunch of dates lies here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 4
+  rent: 10
+  level: 0
+
+"tba:54:obj:5461":
+  type: food
+  keywords: [lamb, leg]
+  short: a leg of lamb
+  long: A leg of lamb lies here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 2
+  cost: 10
+  rent: 20
+  level: 0
+
+"tba:54:obj:5462":
+  type: food
+  keywords: [beef, side]
+  short: a side of beef
+  long: A side of beef lies here.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 5
+  cost: 20
+  rent: 50
+  level: 0
+
+"tba:54:obj:5463":
+  type: food
+  keywords: [chicken, whole]
+  short: a whole chicken
+  long: A whole skinned chicken lies here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 3
+  cost: 12
+  rent: 30
+  level: 0
+
+"tba:54:obj:5464":
+  type: food
+  keywords: [herring, salted]
+  short: a salted herring
+  long: A salted herring lies here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 10
+  level: 0
+
+"tba:54:obj:5465":
+  type: food
+  keywords: [mussel]
+  short: a mussel
+  long: A mussel lies here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 4
+  rent: 10
+  level: 0
+
+"tba:54:obj:5467":
+  type: drinkcon
+  keywords: [glass, liquor, blue, oasis, whisky]
+  short: a glass
+  long: A glass of blue alcohol rests here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: whisky
+    poisoned: false
+  weight: 10
+  cost: 180
+  rent: 10
+  level: 0
+
+"tba:54:obj:5468":
+  type: drinkcon
+  keywords: [glass, wine]
+  short: a glass
+  long: A glass rests here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: wine
+    poisoned: false
+  weight: 1
+  cost: 380
+  rent: 10
+  level: 0
+
+"tba:54:obj:5469":
+  type: drinkcon
+  keywords: [bottle, grog, ale]
+  short: a bottle of grog
+  long: A bottle lies here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: ale
+    poisoned: false
+  weight: 7
+  cost: 800
+  rent: 10
+  level: 0
+
+"tba:54:obj:5470":
+  type: potion
+  keywords: [vial, glowing, blue]
+  short: a glowing blue vial
+  long: A glowing blue vial lies here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 1, 3, -1]
+  weight: 1
+  cost: 800
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [vial, glowing, blue]
+    text: >
+      The bluish liquid inside this potion bottle is glowing with a strange light. There is a small label
+      that reads 'Protection'
+
+"tba:54:obj:5471":
+  type: potion
+  keywords: [potion, green]
+  short: a deep-green potion
+  long: A deep-green potion lies here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    raw: [10, 15, 35, -1]
+  weight: 1
+  cost: 500
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [potion, green]
+    text: >
+      The potion inside the bottle is a greenish color and has a small label which reads 'Curative'
+
+"tba:54:obj:5472":
+  type: potion
+  keywords: [potion, crystal, clear]
+  short: a crystal clear potion
+  long: A crystal clear potion lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [10, 50, 51, 35]
+  weight: 1
+  cost: 300
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [potion, crystal, clear]
+    text: >
+      This glass bottle appears to contain a clear liquid.  There is a label on the bottle which reads
+      'Preparation'
+
+"tba:54:obj:5473":
+  type: potion
+  keywords: [potion, white]
+  short: an off-white potion
+  long: An off-white potion lies here.
+  wear: [take, hold]
+  values:
+    raw: [15, 14, 16, -1]
+  weight: 1
+  cost: 800
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [potion, white]
+    text: >
+      This potion bottle contains a whitish liquid that looks rather thick.  A small label reads
+      'Redemption'
+
+"tba:54:obj:5474":
+  type: potion
+  keywords: [potion, dark, blue]
+  short: a dark blue potion
+  long: A dark blue potion lies here.
+  wear: [take, hold]
+  values:
+    raw: [10, 35, 14, -1]
+  weight: 1
+  cost: 400
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [potion, dark, blue]
+    text: This dark blue potion has a small label on it reading 'Restoration'
+
+"tba:54:obj:5475":
+  type: drinkcon
+  keywords: [bottle, scorpion, flaming, beer]
+  short: a flaming scorpion
+  long: A bottle of strong beer lies here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: beer
+    poisoned: false
+  weight: 10
+  cost: 500
+  rent: 10
+  level: 0
+
+"tba:54:obj:5476":
+  type: drinkcon
+  keywords: [barrel, beer]
+  short: a barrel
+  long: A barrel of beer lies here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: beer
+    poisoned: false
+  weight: 15
+  cost: 900
+  rent: 50
+  level: 0
+
+"tba:54:obj:5477":
+  type: drinkcon
+  keywords: [shot, whisky]
+  short: a shot
+  long: A shot of strong liquor lies here.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 350
+  rent: 10
+  level: 0
+
+"tba:54:obj:5478":
+  type: scroll
+  keywords: [scroll, recall]
+  short: a scroll of recall
+  long: A scroll of recall lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 42, -1, -1]
+  weight: 4
+  cost: 200
+  rent: 25
+  level: 0
+
+"tba:54:obj:5479":
+  type: wand
+  keywords: [wand, gray, silver]
+  short: a gray-silver wand
+  long: A gray-silver wand lies here.
+  flags: [magic, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [15, 1, 1, 6]
+  weight: 1
+  cost: 1000
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [wand, gray, silver]
+    text: You see a small engraved storm cloud at the base of this wand.
+
+"tba:54:obj:5480":
+  type: wand
+  keywords: [wand, yellow]
+  short: a wand of glinting yellow
+  long: A wand of glinting yellow lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [1, 1, 1, 19]
+  weight: 1
+  cost: 666
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [wand, yellow]
+    text: You see a shape slowly fading into existance at the base of this wand.
+
+"tba:54:obj:5481":
+  type: wand
+  keywords: [wand, oak]
+  short: an oak wand
+  long: A wand of oak lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [5, 1, 1, 32]
+  weight: 1
+  cost: 500
+  rent: 15
+  level: 0
+
+"tba:54:obj:5482":
+  type: wand
+  keywords: [wand, pink]
+  short: a pink wand
+  long: A pink wand lies here
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [3, 1, 1, 38]
+  weight: 1
+  cost: 500
+  rent: 15
+  level: 0
+
+"tba:54:obj:5483":
+  type: weapon
+  keywords: [shears, sewing]
+  short: a pair of sewing shears
+  long: A pair of sewing shears lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: sting
+  weight: 2
+  cost: 100
+  rent: 50
+  level: 0
+
+"tba:54:obj:5484":
+  type: weapon
+  keywords: [cleaver, meat]
+  short: a meat cleaver
+  long: A meat cleaver lies here
+  flags: [no_rent, no_donate]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: hit
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:54:obj:5485":
+  type: weapon
+  keywords: [pen, fountain]
+  short: a fountain pen
+  long: A fountain pen lies here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: pierce
+  weight: 1
+  cost: 100
+  rent: 5
+  level: 0
+
+"tba:54:obj:5486":
+  type: weapon
+  keywords: [hammer, sledge]
+  short: a sledge hammer
+  long: A sledge hammer lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: crush
+  weight: 24
+  cost: 200
+  rent: 40
+  level: 0
+
+"tba:54:obj:5487":
+  type: armor
+  keywords: [shoe, horse]
+  short: a horse shoe
+  long: A horse shoe lies here.
+  flags: [hum, magic]
+  wear: [take, neck, hold]
+  values:
+    armor: 1
+  weight: 2
+  cost: 1000
+  rent: 200
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:54:obj:5488":
+  type: other
+  keywords: [saddle]
+  short: a saddle
+  long: A saddle lies here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 50
+  level: 0
+
+"tba:54:obj:5489":
+  type: weapon
+  keywords: [crop, riding]
+  short: a riding crop
+  long: A riding crop lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: whip
+  weight: 1
+  cost: 50
+  rent: 10
+  level: 0
+
+"tba:54:obj:5490":
+  type: weapon
+  keywords: [chessboard]
+  short: a chessboard
+  long: A heavy marble chessboard lies here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d30
+    attack: crush
+  weight: 10
+  cost: 100
+  rent: 20
+  level: 0
+
+"tba:54:obj:5491":
+  type: food
+  keywords: [seed, sesame]
+  short: a sesame seed
+  long: A sesame seed lies here.
+  wear: [take, hold]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:54:obj:5492":
+  type: weapon
+  keywords: [spear, gae, bolg]
+  short: Gae Bolg
+  long: A beautiful spear is lying on the ground here.
+  flags: [glow, magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pierce
+  weight: 12
+  cost: 180
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [spear, gae, bolg]
+    text: >
+      The beautiful, glowing spear is close to eight feet long and has a bright, polished silver blade
+      that tapers at the end into what must be the finest point you have ever seen.
+
+"tba:54:obj:5493":
+  type: key
+  keywords: [key]
+  short: the jail key
+  long: The key to the jail lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [5493, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 200
+  level: 0
+
+"tba:54:obj:5494":
+  type: key
+  keywords: [key]
+  short: the dungeon key
+  long: The dungeon key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [5494, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 200
+  level: 0
+
+"tba:54:obj:5495":
+  type: weapon
+  keywords: [claw, wolverine]
+  short: the wolverine claw
+  long: A claw from some animal lies here.
+  flags: [hum, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: claw
+  weight: 2
+  cost: 400
+  rent: 50
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -20
+
+"tba:54:obj:5496":
+  type: weapon
+  keywords: [wrath, allah, mace]
+  short: the wrath of Allah
+  long: A large ornate mace floats above the ground here.
+  flags: [glow, magic, anti_mage, anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: crush
+  weight: 16
+  cost: 250
+  rent: 125
+  level: 0
+  extras:
+  - keywords: [wrath, allah, mace]
+    text: >
+      This enormous weapon looks like it could pound the stuffing out of anything or anyone around.

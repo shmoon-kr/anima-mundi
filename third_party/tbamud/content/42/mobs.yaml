@@ -1,0 +1,233 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 42.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:42:mob:4200":
+  keywords: [red, dragon]
+  short: a red dragon
+  long: A red dragon is curled up here.
+  description: >
+    As you get close enough to see the small details, the dragon whips its snout toward you, breathing
+    a small cloud of smoke.
+  level: 22
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4201":
+  keywords: [king, dragons]
+  short: the King of the Dragons
+  long: The King of the Dragons reclines on his tail here.
+  description: >
+    He looks extremely large, and as you lean a little forward to look closer, he narrows his eyes and
+    breathes a cloud of sulfur smoke into your face, making you cough and take a step backwards.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [detect_invis, detect_magic]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: claw
+  abilities:
+    str: 25
+    int: 25
+    wis: 20
+    dex: 20
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4202":
+  keywords: [hatchling, hatch, dragon, drag]
+  short: a Dragon Hatchling
+  long: A dragon hatchling is lying here curled up into a ball
+  description: It looks up at you and breathes a small tongue of flame.
+  level: 22
+  sex: male
+  alignment: -10
+  flags: [sentinel, scavenger, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4203":
+  keywords: [troll]
+  short: a troll
+  long: A large, hulking troll is standing here.
+  description: It looks big, and very hungry...
+  level: 22
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4204":
+  keywords: [dragon, guard]
+  short: a Guard Dragon
+  long: A dragon is here, blocking your way
+  description: He looks at you, and you see a dangerous glint in his eye...
+  level: 26
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: claw
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4205":
+  keywords: [elf, slave, enslaved, servant]
+  short: an elven slave
+  long: An elf is here, mopping the floor.
+  description: >
+    She looks up at you sadly, and you can tell by her eyes that she was broken by the dragons long ago.
+  level: 22
+  sex: female
+  alignment: 1000
+  flags: [sentinel, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4206":
+  keywords: [dragon, green]
+  short: a green dragon
+  long: A green dragon is standing here!
+  description: >
+    The green dragon is big, strong, and dangerous, Unfortunately for you, it has already seen you, so
+    there is no good in running.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [scavenger, aware, aggressive, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4207":
+  keywords: [dragon, king]
+  short: the king of dragons
+  long: The King of the Dragons reclines on his tail here.
+  description: >
+    He looks extremely large, and as you lean a little forward to look closer, he narrows his eyes and
+    breathes a cloud of sulfur smoke into your face, making you cough and take a step backwards.
+  level: 26
+  sex: neutral
+  alignment: -800
+  flags: [sentinel, scavenger, memory, no_summon, no_bash]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4298":
+  keywords: [income]
+  short: Guldane's Income
+  long: Guldane's Income mob.
+  description: I have not idea what this is for.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: slash
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:42:mob:4299":
+  keywords: [shopkeeper]
+  short: Guldane's Shopkeeper
+  long: Guldane's Shopkeeper stands here
+  description: He has only 2 items....
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sitting
+    default: sitting

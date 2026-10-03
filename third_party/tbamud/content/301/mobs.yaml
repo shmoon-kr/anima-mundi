@@ -1,0 +1,1025 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 301.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:301:mob:30100":
+  keywords: [frec]
+  short: the FREC
+  long: The FREC stands here looking for violence.
+  description: >
+    This large, purpled, mohawked warrior looks quite aggressive.  It is probably not something anyone
+    should mess with.
+  level: 11
+  sex: neutral
+  alignment: 0
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30101":
+  keywords: [boss]
+  short: the Boss
+  long: The Boss is standing here looking somewhat bored.
+  description: >
+    This person is bearing up under University pressures quite well and looks as if it can cope with
+    anything.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30102":
+  keywords: [gael]
+  short: the Gael
+  long: The Gael is here to help you.
+  description: >
+    This person is ready, and willing to help any being in trouble.  Just to top things off, the gael
+    is extremely well dressed.
+  level: 9
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, wimpy]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30103":
+  keywords: [mob, example]
+  short: the Example Mob
+  long: An Example Mob stands here, exampling.
+  description: The example mob looks indistinct, as if it hasn't been completely fleshed out yet.
+  level: 1
+  sex: female
+  alignment: 100
+  flags: [wimpy]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30104":
+  keywords: [professor, prof]
+  short: the Professor
+  long: A professor is standing here, glaring at you.
+  description: >
+    As you glance at the professor, it suddenly begins to scream about homework and its spatial
+    relationship to you.
+  level: 14
+  sex: neutral
+  alignment: 0
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30105":
+  keywords: [security]
+  short: Security
+  long: Security is lurking in the area, watching for misbehavior.
+  description: >
+    You don't want to misbehave when these guys are around.  In fact you don't want to even be around
+    these guys.
+  level: 9
+  sex: neutral
+  alignment: -130
+  flags: [aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30106":
+  keywords: [security]
+  short: Security
+  long: Security is lurking in the area, watching for misbehavior.
+  description: >
+    You don't want to misbehave when these guys are around.  In fact you don't want to even be around
+    these guys.
+  level: 9
+  sex: male
+  alignment: -130
+  flags: [aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30107":
+  keywords: [security]
+  short: Security
+  long: Security is lurking in the area, watching for misbehavior.
+  description: >
+    You don't want to misbehave when these guys are around.  In fact you don't want to even be around
+    these guys.
+  level: 9
+  sex: female
+  alignment: -130
+  flags: [aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30108":
+  keywords: [student, constable, stucon]
+  short: the Student Constable
+  long: A Student Constable is protecting the campus from this point.
+  description: >
+    These are also known as StuCons and are recruited from amongst the ranks of everyday students of
+    the university.  They are not much more than hired help.
+  level: 8
+  sex: neutral
+  alignment: 130
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30109":
+  keywords: [student, constable, stucon]
+  short: the Student Constable
+  long: A Student Constable is guarding the campus from this point.
+  description: >
+    These are also known as StuCons and are recruited from amongst the ranks of everyday students of
+    the university.  They are not much more than hired help.
+  level: 8
+  sex: male
+  alignment: 130
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30110":
+  keywords: [student, constable, stucon]
+  short: the Student Constable
+  long: A Student Constable is guarding the campus from this very point right here.
+  description: >
+    These are also known as StuCons and are recruited from amongst the ranks of everyday students of
+    the university.  They are not much more than hired help.
+  level: 8
+  sex: female
+  alignment: 130
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30111":
+  keywords: [student]
+  short: the student
+  long: The student is hurrying off to its next class.
+  description: >
+    This is just your average it university student, the only interests it has are classes, work, and
+    other its.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30112":
+  keywords: [student]
+  short: the student
+  long: The student is rushing off to his next class.
+  description: >
+    This is just your average male university student, the only interests he has are classes, work, and
+    other students of the opposite sex (females, you think).
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30113":
+  keywords: [student]
+  short: the student
+  long: The student is scurrying off to her next class.
+  description: >
+    This is just your average female university student, the only interests she has are classes, and
+    work.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30114":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is standing here with a confused expression on its face.
+  description: You are looking at the everyday run of the mill confused frosh.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30115":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is standing here with a confused expression on his face.
+  description: You are looking at the everyday run of the mill confused frosh.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30116":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is standing here with a confused expression on her face.
+  description: You are looking at the everyday run of the mill confused frosh.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30117":
+  keywords: [mary, rotte, chef]
+  short: a Mary-Rotte chef
+  long: A Mary-Rotte chef struggles to poison the food quickly.
+  description: >
+    With one hand he fries, with the other he flips the meat (?  ) over, and with the other hand he
+    sprinkles some salt into the other hand which is holding...  Hey!  Isn't that too many hands?  This guy
+    is good (or maybe he isn't...  ).
+  level: 10
+  sex: male
+  alignment: -350
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30118":
+  keywords: [coke, machine]
+  short: the Coke Machine
+  long: A Coke Machine hums quietly.
+  description: >
+    This machine is a marvel of engineering.  After receiving the money, it quickly fouls up the order
+    and delivers it with a large clanging noise.
+  level: 12
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30119":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is lining up here.
+  description: You are looking at the everyday run of the mill lining-up frosh.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30120":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is lining up here.
+  description: You are looking at the everyday run of the mill lining-up frosh.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30121":
+  keywords: [frosh, froshie]
+  short: the froshie
+  long: This frosh is lining up here with a confused expression on her face.
+  description: You are looking at the everyday run of the mill confused frosh.
+  level: 14
+  sex: female
+  alignment: 0
+  flags: [wimpy]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30122":
+  keywords: [frec]
+  short: the FREC
+  long: The FREC waits here for violence to come to it.
+  description: >
+    This large, purpled, mohawked warrior looks quite aggressive.  It is probably not something anyone
+    should mess with.
+  level: 11
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30123":
+  keywords: [caf, employee]
+  short: a caf employee
+  long: A caf employee stands here ready to fill your order.
+  description: As if you'd actually order anything.
+  level: 9
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30124":
+  keywords: [jock]
+  short: a BIG jock
+  long: A rather large jock occupies the room.
+  description: It (he?  ) is quite big.  It (she?  ) looks at you with undisguised hunger...
+  level: 18
+  sex: neutral
+  alignment: 0
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: sitting
+    default: standing
+
+"tba:301:mob:30125":
+  keywords: [mosher]
+  short: a mosher
+  long: A mosher moshes here.  Oh it hit you!
+  description: This mosher moshes with enthusiasm!
+  level: 9
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30126":
+  keywords: [mosher]
+  short: a mosher
+  long: A mosher moshes here.  Oh he hit you!
+  description: This mosher moshes with enthusiasm!
+  level: 9
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30127":
+  keywords: [mosher]
+  short: a mosher
+  long: A mosher moshes here.  Oh she hit you!
+  description: This mosher moshes with enthusiasm!
+  level: 9
+  sex: female
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30128":
+  keywords: [box, postmasters]
+  short: the mailbox
+  long: A friendly mailbox waits for your mail here.
+  description: >
+    This mailbox is a staple in most of Tabrach.  Funny thing though, you've never seen one in your
+    life...  Hmmmm.  On the side is emblazoned the word TP (must stand for Tabrach Post).
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30129":
+  keywords: [swarm, frgo, frgos]
+  short: the swarm of frgos
+  long: A swarm of frgos circles above the building to the west.
+  description: This creature appears to have the body of a cow with eagle's wings...  How strange.
+  level: 15
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30130":
+  keywords: [student]
+  short: the student
+  long: A student is snoozing here.
+  description: This is just your average it university student, and hey, it's sleeping too!
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:301:mob:30131":
+  keywords: [student]
+  short: the student
+  long: A student is furiously taking notes here.
+  description: This is just your average it university student.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:301:mob:30132":
+  keywords: [chris]
+  short: Chris
+  long: Chris is drooling here.
+  description: >
+    The man before you is tall and stocky.  He is clothed in a stone-washed pair of jeans and a purple
+    beret.
+  level: 23
+  sex: male
+  alignment: 150
+  flags: [scavenger]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30133":
+  keywords: [residence, master]
+  short: the Residence Master
+  long: The Residence Master is presiding over his little world here.
+  description: >
+    The creature before you looks EVIL and SCARY, but you being a hearty adventurer are not afraid! 
+    (unless you are less than 15th level ...  That is.
+  level: 16
+  sex: male
+  alignment: -276
+  flags: [aggressive]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30134":
+  keywords: [bennie, boo, ben]
+  short: Bennie Boo
+  long: Bennie Boo is playing The World of Xeen here.
+  description: He seems to need help, any ideas?
+  level: 9
+  sex: male
+  alignment: 298
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: sitting
+    default: sitting
+
+"tba:301:mob:30135":
+  keywords: [bubble, man]
+  short: the Bubble Man
+  long: The Bubble Man is bubbling over.
+  description: His surface is a nice mixture of color and light.  It seems to be very thin though.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30136":
+  keywords: [chimpster, chimp]
+  short: the chimpster
+  long: A chimp-like being is doing acrobatics here.
+  description: >
+    It looks like some kind of cross between a human and a chimpanzee... That's odd.  Those darned
+    elves ...  They should never have invented gene splicing...
+  level: 9
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30137":
+  keywords: [alex]
+  short: Alex
+  long: Alex is here fleshing out the Example Mob.
+  description: >
+    Alex is working hard at fleshing out the example mob which looks indistinct, because it hasn't been
+    completely fleshed out yet.
+  level: 1
+  sex: male
+  alignment: 100
+  flags: [aware]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30138":
+  keywords: [steve]
+  short: Steve
+  long: Steve is working furiously at finishing the wld file so it can be put online.
+  description: Steve is working hard and it looks like he should be finishing soon.
+  level: 1
+  sex: male
+  alignment: 100
+  flags: [aware]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30139":
+  keywords: [bob]
+  short: Bob the storekeeper
+  long: Bob is looking after his store here.
+  description: >
+    As you look more closely, you realize that Bob is somewhat spaced out. Looking at the sheet in his
+    hand reveals that he is doing inventory.  No wonder he is so spaced out.
+  level: 12
+  sex: male
+  alignment: 200
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30140":
+  keywords: [tuck]
+  short: Mr. Tuck
+  long: Mr. Tuck is organizing shelves.
+  description: He seems to be locating things like candy.
+  level: 11
+  sex: male
+  alignment: 200
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30141":
+  keywords: [sue]
+  short: Sue, the book-looker-after-er
+  long: Sue is looking after books here.
+  description: Actually, there doesn't seem to be any books...  Hmmmmmm.
+  level: 9
+  sex: female
+  alignment: 200
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30142":
+  keywords: [bartender]
+  short: the Bartender
+  long: The Bartender pours drinks several at a time to keep up with the rush.
+  description: >
+    The Bartender looks harried as he tries to keep up with several different orders at the same time. 
+    Maybe you should bother him later...
+  level: 14
+  sex: male
+  alignment: 250
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30143":
+  keywords: [drunk]
+  short: the Drunk
+  long: A drunk, babbling about something incessantly.
+  description: The drunk person looks at you and slurs, 'Whatre you lookin' at, bozo?  '
+  level: 4
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30144":
+  keywords: [Chief, FREC]
+  short: Chief FREC
+  long: Chief FREC orders you around here.
+  description: It stands tall and proud...  As if being purple with golden hair can make anyone proud...
+  level: 15
+  sex: neutral
+  alignment: -300
+  flags: [scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30145":
+  keywords: [golden, world, copy]
+  short: a copy of Golden World
+  long: A copy of Golden World lies here.
+  description: >
+    It looks like the student humor newspaper, but it contains nothing to do with actual news that you
+    didn't know already.
+  level: 1
+  sex: neutral
+  alignment: 0
+  affects: [hide]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30146":
+  keywords: [clock, ghost, grant, hall]
+  short: the ghost of Grant
+  long: The clock ghost flits about randomly here.
+  description: The ghost resembles the late Grant Hall.  It seems to be somewhat transparent though.
+  level: 15
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, scavenger]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:301:mob:30147":
+  keywords: [wraith]
+  short: a wraith
+  long: An ethereal wraith-like shape is here.
+  description: This ghostly creature is gray in color and has an amorphous shape.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,641 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 120.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:120:obj:12000":
+  type: worn
+  keywords: [ring, pewter]
+  short: a pewter ring
+  long: There is a pewter ring lying here.
+  flags: [invisible, magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 150
+  rent: 25
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: dex
+    modifier: 1
+
+"tba:120:obj:12001":
+  type: armor
+  keywords: [belt, bronze]
+  short: a bronze belt
+  long: There is a bronze belt on the ground here.
+  flags: [invisible]
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 5
+  cost: 1000
+  rent: 50
+  level: 0
+  affects:
+  - apply: str
+    modifier: -2
+  - apply: hitroll
+    modifier: 1
+
+"tba:120:obj:12002":
+  type: armor
+  keywords: [helmet, roman, combat]
+  short: a Roman combat helmet
+  long: A Roman combat helmet has been left here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 25
+  cost: 120
+  rent: 80
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -2
+  - apply: hitroll
+    modifier: 1
+
+"tba:120:obj:12003":
+  type: treasure
+  keywords: [whistle, coach]
+  short: a coach's whistle
+  long: A coach's whistle has been left here.
+  flags: [no_drop]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 200
+  level: 0
+
+"tba:120:obj:12004":
+  type: worn
+  keywords: [stethoscope, object]
+  short: a stethoscope
+  long: There is an odd object laying on the ground here.
+  flags: [bless]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 150
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: -3
+
+"tba:120:obj:12005":
+  type: worn
+  keywords: [hairpin]
+  short: a hairpin
+  long: A woman's hairpin is lying here.
+  flags: [bless]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 50
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: int
+    modifier: 1
+
+"tba:120:obj:12006":
+  type: food
+  keywords: [apple]
+  short: an apple
+  long: A delicious looking apple has been left here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 5
+  level: 0
+
+"tba:120:obj:12007":
+  type: food
+  keywords: [orange]
+  short: an orange
+  long: A sun-ripened orange has been left here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 6
+  rent: 6
+  level: 0
+
+"tba:120:obj:12008":
+  type: armor
+  keywords: [sandals, leather]
+  short: a pair of leather sandals
+  long: A pair of leather sandals has been dropped here.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 250
+  rent: 41
+  level: 0
+
+"tba:120:obj:12010":
+  type: food
+  keywords: [hotdog, frank, dog]
+  short: a hotdog
+  long: A hotdog loaded with chili and onions has been left here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 11
+  rent: 11
+  level: 0
+
+"tba:120:obj:12011":
+  type: worn
+  keywords: [bracelet, silver, gold]
+  short: a silver and gold bracelet
+  long: A bracelet, made from silver and gold, has been carelessly left here.
+  flags: [hum, no_drop]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 14
+  cost: 1000
+  rent: 800
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: damroll
+    modifier: -3
+
+"tba:120:obj:12012":
+  type: worn
+  keywords: [ring, sapphire]
+  short: a sapphire ring
+  long: A sapphire ring has been left here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 350
+  rent: 55
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: ac
+    modifier: -10
+
+"tba:120:obj:12013":
+  type: worn
+  keywords: [pendant, jade]
+  short: a jade pendant
+  long: A beautiful jade pendant has been left here.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 165
+  rent: 60
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 2
+
+"tba:120:obj:12014":
+  type: worn
+  keywords: [robe, froboz]
+  short: Froboz' robe
+  long: Froboz' robe has been dropped here.
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 150
+  rent: 25
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: save_spell
+    modifier: -2
+
+"tba:120:obj:12015":
+  type: weapon
+  keywords: [sword, tempered]
+  short: a tempered sword
+  long: A nasty looking tempered sword is lying here.
+  flags: [hum, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: slash
+  weight: 16
+  cost: 150
+  rent: 50
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+
+"tba:120:obj:12016":
+  type: weapon
+  keywords: [sword, quenched]
+  short: a quenched sword
+  long: A very bloody, but quenched, sword has been left here.
+  flags: [invisible, anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 14
+  cost: 100
+  rent: 40
+  level: 0
+
+"tba:120:obj:12017":
+  type: armor
+  keywords: [bracers, moorish]
+  short: a pair of Moorish bracers
+  long: A pair of Moorish bracers has been dropped here.
+  flags: [glow]
+  wear: [take, arms]
+  values:
+    armor: 8
+  weight: 15
+  cost: 250
+  rent: 100
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -2
+  - apply: damroll
+    modifier: 2
+
+"tba:120:obj:12018":
+  type: armor
+  keywords: [plate, breast, roman, combat]
+  short: a Roman combat breast plate
+  long: A piece of military combat plate has been left here.
+  flags: [glow]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 50
+  cost: 500
+  rent: 95
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: hitroll
+    modifier: -2
+
+"tba:120:obj:12019":
+  type: armor
+  keywords: [boots, combat]
+  short: a pair of Roman combat boots
+  long: A pair of combat boots have been left here.
+  flags: [glow]
+  wear: [take, feet]
+  values:
+    armor: 8
+  weight: 45
+  cost: 875
+  rent: 90
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: -1
+
+"tba:120:obj:12020":
+  type: weapon
+  keywords: [thunderbolt, jupiter]
+  short: Jupiter's Thunderbolt
+  long: Jupiter's Thunderbolt has been left here.
+  flags: [hum, magic, anti_evil, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: crush
+  weight: 22
+  cost: 1000
+  rent: 250
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+
+"tba:120:obj:12021":
+  type: armor
+  keywords: [loincloth, red, mars]
+  short: a red loincloth
+  long: Mars' red loincloth is resting here.
+  flags: [hum, anti_evil]
+  wear: [take, waist]
+  values:
+    armor: 10
+  weight: 30
+  cost: 1000
+  rent: 200
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: dex
+    modifier: 2
+
+"tba:120:obj:12022":
+  type: worn
+  keywords: [necklace, crystal, venus]
+  short: a crystal necklace
+  long: Someone has left the crystal necklace of knowledge here.
+  flags: [hum]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 35
+  cost: 500
+  rent: 120
+  level: 0
+  affects:
+  - apply: int
+    modifier: 3
+  - apply: wis
+    modifier: 2
+
+"tba:120:obj:12023":
+  type: armor
+  keywords: [sandals, winged, mercury]
+  short: a pair of winged sandals
+  long: Mercury's winged sandals have been left here.
+  flags: [glow, anti_neutral]
+  wear: [take, feet]
+  values:
+    armor: 8
+  weight: 14
+  cost: 750
+  rent: 130
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: move
+    modifier: 50
+
+"tba:120:obj:12024":
+  type: scroll
+  keywords: [scroll, dark, gray]
+  short: a dark gray scroll
+  long: A scroll has been carelessly left here.
+  flags: [invisible, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [20, 4, 15, 1]
+  weight: 2
+  cost: 500
+  rent: 200
+  level: 0
+
+"tba:120:obj:12025":
+  type: scroll
+  keywords: [scroll, ornate]
+  short: an ornate scroll
+  long: An ornate scroll has been left here.
+  flags: [anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [18, 10, 10, 16]
+  weight: 2
+  cost: 700
+  rent: 300
+  level: 0
+
+"tba:120:obj:12026":
+  type: scroll
+  keywords: [scroll, plain]
+  short: a plain scroll
+  long: A plain scroll is lying on the ground.
+  flags: [anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [15, 7, 15, 1]
+  weight: 2
+  cost: 800
+  rent: 220
+  level: 0
+
+"tba:120:obj:12027":
+  type: wand
+  keywords: [bag, herbs]
+  short: a bag of herbs
+  long: There is a small, sweet-smelling bag here on the ground.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 4, 4, 43]
+  weight: 5
+  cost: 150
+  rent: 20
+  level: 0
+
+"tba:120:obj:12028":
+  type: staff
+  keywords: [staff, kodarta]
+  short: a Kodarta staff
+  long: A Kodarta staff has been carelessly left here.
+  wear: [take, hold]
+  values:
+    raw: [17, 3, 3, 15]
+  weight: 6
+  cost: 350
+  rent: 40
+  level: 0
+
+"tba:120:obj:12029":
+  type: wand
+  keywords: [wand, prototype]
+  short: a prototype wand
+  long: There is a prototype of a new magical wand lying here.
+  flags: [invisible, no_drop, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [30, 4, 3, 26]
+  weight: 26
+  cost: 200
+  rent: 130
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: save_spell
+    modifier: 2
+
+"tba:120:obj:12030":
+  type: potion
+  keywords: [flask, potion, blaze, orange]
+  short: a flask
+  long: There is a flask, containing a blaze orange potion, resting here.
+  wear: [take]
+  values:
+    raw: [9, 4, 17, 33]
+  weight: 8
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:120:obj:12031":
+  type: weapon
+  keywords: [mace, executioner]
+  short: an executioner's mace
+  long: An executioner's mace is lying here.
+  flags: [no_drop, anti_mage, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 5d1
+    attack: pound
+  weight: 13
+  cost: 300
+  rent: 18
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -2
+  - apply: str
+    modifier: -2
+
+"tba:120:obj:12032":
+  type: drinkcon
+  keywords: [mug, beer]
+  short: a mug
+  long: A frosty mug has been left on the ground here.
+  wear: [take]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 3
+  cost: 10
+  rent: 5
+  level: 0
+
+"tba:120:obj:12033":
+  type: key
+  keywords: [key, rusted]
+  short: a rusted key
+  long: There is a rusted key here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [12033, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12034":
+  type: key
+  keywords: [key, double]
+  short: a double sided key
+  long: A double sided key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12035":
+  type: key
+  keywords: [key, diamond]
+  short: a diamond studded key
+  long: A diamond studded key is sitting on the ground.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12036":
+  type: key
+  keywords: [key, pearl]
+  short: a key with a pearl handle
+  long: A key with a pearl handle is sitting on the ground.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12037":
+  type: key
+  keywords: [key, aquamarine]
+  short: an aquamarine key
+  long: There is an aquamarine colored key here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12038":
+  type: key
+  keywords: [key, opal]
+  short: an opal key
+  long: An opal key has been left here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:120:obj:12039":
+  type: key
+  keywords: [key, steel]
+  short: a steel key
+  long: A steel key is lying on the ground.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

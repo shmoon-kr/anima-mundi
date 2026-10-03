@@ -1,0 +1,305 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 264.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:264:obj:26400":
+  type: fountain
+  keywords: [pool, eternal]
+  short: the Pool of Eternal Life
+  long: >-
+    The Pool of Eternal Life sits centered in the boulevard, a wondrous beacon of life and the pursuit
+    of the everlasting.
+  flags: [glow]
+  wear: []
+  values:
+    capacity: 1000
+    contains: 1000
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pool, eternal, life]
+    text: >
+      Deep in its mirrored depths, you think you may be able to see something past yourself, something
+      dark, sinister.
+
+"tba:264:obj:26401":
+  type: armor
+  keywords: [robe, father]
+  short: the Robe of the Father
+  long: A glowing robe is rumpled on the ground.
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 7
+  cost: 1
+  rent: 0
+  level: 30
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 2
+  - apply: con
+    modifier: -2
+
+"tba:264:obj:26402":
+  type: light
+  keywords: [lament, father's]
+  short: the Father's Lament
+  long: A strange glowing ball has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: str
+    modifier: 1
+
+"tba:264:obj:26403":
+  type: armor
+  keywords: [gown, mother]
+  short: the Gown of the Mother
+  long: A beautiful gown has been left here.
+  flags: [hum]
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: hit
+    modifier: 25
+  - apply: mana
+    modifier: 20
+
+"tba:264:obj:26404":
+  type: other
+  keywords: [remorse, mother's]
+  short: the Mother's Remorse
+  long: A strange trinket of some sort has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: damroll
+    modifier: 2
+
+"tba:264:obj:26405":
+  type: armor
+  keywords: [mask, enlightenment]
+  short: the Mask of Enlightenment
+  long: A glowing mask is on the ground here.
+  flags: [glow, no_drop, anti_good, anti_thief]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 15
+  cost: 1
+  rent: 0
+  level: 30
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:264:obj:26406":
+  type: worn
+  keywords: [crown, gentle]
+  short: the Gentle Crown of Cathari
+  long: A shimmering crown has been dropped here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: -1
+
+"tba:264:obj:26407":
+  type: weapon
+  keywords: [fist, justice, supreme]
+  short: the Fist of Supreme Justice
+  long: A molded fist made of an unknown material has been left here.
+  flags: [glow, anti_good, anti_mage, anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 5d7
+    attack: pound
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 30
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: dex
+    modifier: -2
+
+"tba:264:obj:26408":
+  type: other
+  keywords: [song, banshee]
+  short: the Song of the Banshee
+  long: A glowing song has been left here.
+  flags: [glow, no_donate, no_invis, anti_good, anti_thief, anti_warrior]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: mana
+    modifier: 15
+  - apply: str
+    modifier: -2
+
+"tba:264:obj:26409":
+  type: worn
+  keywords: [amulet, voce]
+  short: the Voce Amulet
+  long: A wide amulet in the shape of a teardrop has been dropped here.
+  flags: [hum]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: save_para
+    modifier: -2
+  - apply: age
+    modifier: -2
+
+"tba:264:obj:26410":
+  type: armor
+  keywords: [wraps, arm, embrace]
+  short: the Arm Wraps of Embracing
+  long: Some leather wraps have been dropped here.
+  flags: [no_drop, bless]
+  wear: [take, arms]
+  values:
+    armor: 6
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: cha
+    modifier: 3
+  - apply: con
+    modifier: 2
+
+"tba:264:obj:26411":
+  type: worn
+  keywords: [ring, voce]
+  short: the Voce Ring
+  long: A ring with a teardrop insignia has been left here.
+  flags: [glow, anti_good, anti_mage, anti_cleric]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:264:obj:26412":
+  type: worn
+  keywords: [wrap, hand, leather]
+  short: some leather hand wraps
+  long: Some long strips of leather have been left here.
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 550
+  rent: 0
+  level: 20
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: damroll
+    modifier: 1
+
+"tba:264:obj:26414":
+  type: armor
+  keywords: [jacket, stately]
+  short: a stately jacket
+  long: A fine jacket has been left here.
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 8
+  cost: 800
+  rent: 0
+  level: 20
+  affects:
+  - apply: save_breath
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [buttons]
+    text: The heavy buttons are engraved with small anchors.
+  - keywords: [stately, jacket]
+    text: >
+      The dark jacket is really quite nice.  The material is smooth and clean. Heavy metal buttons are
+      sewn in a straight line from top to bottom.
+
+"tba:264:obj:26415":
+  type: armor
+  keywords: [boots, travelling]
+  short: the boots of travelling
+  long: Some soft, comfortable boots have been abandoned here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: move
+    modifier: 16
+  extras:
+  - keywords: [boots, travelling]
+    text: These boots are typical of travellers.  Lightweight and comfortable yet sturdy.

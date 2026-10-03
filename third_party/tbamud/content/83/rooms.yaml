@@ -1,0 +1,2048 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 83.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:83:room:8300":
+  name: Glumgold's Sea [ INDEX ]
+  description:
+    preformatted: |
+      
+      @yBuilder      : @cMeyekul
+      @yZone         : @c83 Glumgold's Sea
+      @yPlayer Level : @c10-30
+      @yRooms        : @c96
+      @yMobs         : @c15
+      @yObjects      : @c20
+      @yShops        : @c0
+      @yTriggers     : @c22
+      @yTheme        : @cAn oceanic zone.  These waters are controlled by Glumgold the Pirate.
+      @yNotes        : @cPlayers have the option of a sea battle with Glumgold, but his ship is
+      @c               extremely tough.  The best way to take him down is from the inside.
+      @c
+      @c               Originally written for @oAnywhere But Home - anywhere.wolfpaw.net:5555@n
+      @c
+      @yZone 83 is linked to the following zones:
+      @c ??                                 at  8301 (east) --->  ????
+      @n
+      Donateable
+  sector: inside
+  flags: [private]
+
+"tba:83:room:8301":
+  name: Near the Shore
+  description: >
+    The sea is calm near the shore, and it spreads out as far west as your eyes can see.  The sand
+    beneath your feet is moist, perfect for making a sand castle if you wanted to.  To the east, there is a
+    path that rims the shore around this part of the sea.
+  sector: water_swim
+  flags: [no_mob]
+  exits:
+    west:
+      to: tba:83:room:8305
+      look: The sea is all that you see to the west.
+
+"tba:83:room:8302":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in plain sight north and east. 
+    However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      look: You see land to the north, but you cannot climb up on the shore from here.
+    east:
+      look: You see land to the east, but you cannot climb up on the shore from here.
+    south:
+      to: tba:83:room:8303
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8310
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8303":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in sight north, south, and
+    east.  However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8302
+      look: You can see land to the north.
+    east:
+      look: There is land to the east, but you cannot climb on to the shore from here.
+    south:
+      to: tba:83:room:8304
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8311
+      look: Rippling water is all that you can see to the west.
+
+"tba:83:room:8304":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in plain sight north and east. 
+    However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8303
+      look: You can see land to the north.
+    east:
+      look: There is land to the east, but you cannot climb up on the shore from here.
+    south:
+      to: tba:83:room:8305
+      look: You can barely see land far to the south.
+    west:
+      to: tba:83:room:8312
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8305":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in plain sight north and east. 
+    There is a clear and seemingly safe path to the shore due east.
+  sector: water_noswim
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:83:room:8304
+      look: Rippling water is all you see to the north.
+    east:
+      to: tba:83:room:8301
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8306
+      look: Rippling water is all you see to the south.
+    west:
+      to: tba:83:room:8313
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8306":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in plain sight north and east. 
+    However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8305
+      look: Rippling water is all that you see to the north.
+    east:
+      look: To the east you see land, but you cannot climb up on the shore from here.
+    south:
+      to: tba:83:room:8307
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8314
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8307":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the west, but land is in plain sight north and east. 
+    However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8306
+      look: Rippling water is all that you see to the north.
+    east:
+      look: You see land to the east, but you cannot climb up on the shore from here.
+    south:
+      to: tba:83:room:8308
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8315
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8308":
+  name: The Sea
+  description: >
+    The sea spreads out as far as you can see to the south and west, but land is in plain sight north
+    and east.  However, reefs, trees, and dense seaweed make it impossible to reach the shore from here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8307
+      look: Rippling water is all that you see to the north.
+    east:
+      look: To the east, you see land, but you cannot climb up on the shore from here.
+    south:
+      to: tba:83:room:8308
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8316
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8309":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: inside
+  exits:
+    north:
+      to: tba:83:room:8309
+      look: Rippling water is all that you see to the north.
+    east:
+      look: To the east you see land, but you cannot climb up to the shore from here.
+    south:
+      to: tba:83:room:8310
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8318
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8310":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8309
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8302
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8311
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8318
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8311":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8310
+      look: Rippling water is all that you can see to the north.
+    east:
+      to: tba:83:room:8303
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8312
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8318
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8312":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8311
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8304
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8313
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8319
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8313":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can see.  To the east, the shore is just
+    barely in sight.  Both to the north and south, nothing but water and sky can be seen except for the
+    faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue sea looks
+    very deep and formidable.  It is not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8312
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8305
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8314
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8320
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8314":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8313
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8306
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8315
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8321
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8315":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8314
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8307
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8316
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8322
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8316":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8315
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8308
+      look: To the east, you see the shore.
+    south:
+      to: tba:83:room:8317
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8323
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8317":
+  name: The Sea
+  description: >
+    The crystal clear waters spread out as far as your eyes can carry your sight.  To the east, shore
+    is just barely in sight.  Both to the north and south, nothing but water and sky can be seen except
+    for the faint outline of the shore bordering the sea just under the horizon.  Below you, the deep blue
+    sea looks very deep and formidable.  Not recommended for swimmers.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8316
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8317
+      look: A strong current pushes out from the shore east of here.
+    south:
+      to: tba:83:room:8317
+      look: Rippling water is all that you see to the south.
+    west:
+      to: tba:83:room:8324
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8318":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8318
+    east:
+      to: tba:83:room:8311
+    south:
+      to: tba:83:room:8319
+    west:
+      to: tba:83:room:8326
+
+"tba:83:room:8319":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8318
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8312
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8320
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8327
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8320":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8319
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8313
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8321
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8328
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8321":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8320
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8314
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8322
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8329
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8322":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8321
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8315
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8323
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8333
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8323":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8322
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8316
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8324
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8334
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8324":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8323
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8317
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8325
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8335
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8325":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8324
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8325
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8325
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8336
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8326":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8326
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8318
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8327
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8337
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8327":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8326
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8319
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8328
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8338
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8328":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8327
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8320
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8329
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8338
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8329":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8328
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8321
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8330
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8339
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8330":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8329
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8321
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8331
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8340
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8331":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8330
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8321
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8332
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8341
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8332":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8331
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8322
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8333
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8342
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8333":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8332
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8322
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8334
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8341
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8334":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8333
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8323
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8335
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8342
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8335":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8334
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8324
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8336
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8343
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8336":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8335
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8325
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8336
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8344
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8337":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8337
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8326
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8338
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8345
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8338":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8337
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8328
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8339
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8345
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8339":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8338
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8329
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8340
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8358
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8340":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8339
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8330
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8341
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8346
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8341":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8340
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8331
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8342
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8350
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8342":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8341
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8332
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8343
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8372
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8343":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8342
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8314
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8344
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8351
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8344":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8343
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8336
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8344
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8351
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8345":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8345
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8337
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8346
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8363
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8346":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8345
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8340
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8347
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8359
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8347":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8346
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8330
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8348
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8360
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8348":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8347
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8331
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8348
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8369
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8349":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8348
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8332
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8349
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8370
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8350":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8349
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8341
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8351
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8370
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8351":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8350
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8343
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8351
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8371
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8352":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8361
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8355
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8353
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8364
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8353":
+  name: Near a Small Island
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8352
+      look: Rippling water is all that you can see to the north.
+    east:
+      to: tba:83:room:8356
+      look: There is a small island to the east.
+    south:
+      to: tba:83:room:8354
+      look: Rippling water is all that you can see to the south.
+    west:
+      to: tba:83:room:8365
+      look: Rippling water is all that you can see to the west.
+
+"tba:83:room:8354":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8353
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8357
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8367
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8355":
+  name: Near a Small Island
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8362
+      look: Rippling water is all that you see to the north.
+    east:
+      to: tba:83:room:8358
+      look: Rippling water is all that you can see to the east.
+    south:
+      to: tba:83:room:8356
+      look: You see a small island to the south.
+    west:
+      to: tba:83:room:8352
+      look: Rippling water is all that you see to the west.
+
+"tba:83:room:8356":
+  name: On a Small Island
+  description: >
+    You tie your boat up near the shore and explore the island a bit.  Most of the island is covered
+    with a dense forrest.  Though it is very small, no more than a few hundred meters wide, there is a
+    small hut almost in the direct center.  The hut is suspended about 3 meters from the ground by some
+    wooden poles of some sort, the only means of entrance being the rope ladder hanging down from a hole in
+    the center.
+  sector: field
+  exits:
+    north:
+      to: tba:83:room:8355
+      look: Rippling water spreads out as far as you can see in every direction.
+    east:
+      to: tba:83:room:8359
+      look: Rippling water spreads out as far as you can see in every direction.
+    south:
+      to: tba:83:room:8357
+      look: Rippling water spreads out as far as you can see in every direction.
+    west:
+      to: tba:83:room:8353
+      look: Rippling water spreads out as far as you can see in every direction.
+    up:
+      to: tba:83:room:8396
+      look: There is a small hutt above your head.
+
+"tba:83:room:8357":
+  name: Near a Small Island
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8356
+      look: You see a small island to the north.
+    east:
+      to: tba:83:room:8360
+      look: Rippling water is all that you can see to the east.
+    south:
+      to: tba:83:room:8368
+      look: Rippling water is all that you can see to the south.
+    west:
+      to: tba:83:room:8354
+      look: Rippling water is all that you can see to the west.
+
+"tba:83:room:8358":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8363
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8355
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8359
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8355
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8359":
+  name: Near a Small Island
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8358
+      look: Rippling water is all that you can see to the north.
+    east:
+      to: tba:83:room:8346
+      look: Rippling water is all that you can see to the east.
+    south:
+      to: tba:83:room:8360
+      look: Rippling water is all that you can see to the south.
+    west:
+      to: tba:83:room:8356
+      look: You see a small island to the west.
+
+"tba:83:room:8360":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8359
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8347
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8369
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8357
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8361":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8361
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8362
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8352
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8362
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8362":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8362
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8363
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8355
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8361
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8363":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8363
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8345
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8358
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8362
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8364":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8364
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8352
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8365":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8364
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8353
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8366":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8365
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8367
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8367":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8354
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8368
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8370
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8368":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8357
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8369
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8370
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8367
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8369":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8360
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8348
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8369
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8368
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8370":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8368
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8349
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8371
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8372
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8371":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8370
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8351
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8371
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8372
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8372":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8342
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8366
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8372
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8373":
+  name: The Sea
+  description: >
+    All around you, in every direction, you see nothing but the sea.  Even if the water seems peaceful,
+    there is still danger lurking behind every wave. Below you, the water is a dark blue, indicating
+    that it is very deep and extremely dangerous.
+  sector: water_noswim
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:83:room:8364
+      look: Rippling water is all that you can see in every direction.
+    east:
+      to: tba:83:room:8365
+      look: Rippling water is all that you can see in every direction.
+    south:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+    west:
+      to: tba:83:room:8373
+      look: Rippling water is all that you can see in every direction.
+
+"tba:83:room:8374":
+  name: The Bow of a Pirate's Ship
+  description: >
+    You are standing on the bow of the ship, gazing over the railing at the rippling water.  There is a
+    large wheel here, obviously used to steer the vessel.
+  sector: inside
+  exits:
+    south:
+      to: tba:83:room:8376
+      look: The Fore Deck is just south of here.
+
+"tba:83:room:8375":
+  name: The Starboard Side of the Boat
+  description: >
+    The edge of the boat here has no railing, and there is a rope ladder leading down to the water. 
+    This could possibly be the only way off the boat, aside from walking the plank...
+  sector: inside
+  flags: [no_mob]
+  exits:
+    west:
+      to: tba:83:room:8376
+    down:
+      to: tba:83:room:8373
+      look: >
+        The ladder extends down to the surface of the water, allowing you to board the boat on this side
+        also.
+
+"tba:83:room:8376":
+  name: The Fore Deck of a Pirate's Ship
+  description: >
+    You are standing on the fore deck of the ship.  High above you, the crow's nest sits atop the
+    mast.  All around you, the sea spreads out as far as your eyes can see.  East of here is a wooden plank
+    extending past the side of the boat.  To the west, is a life boat ready to be dropped into the water.
+  sector: inside
+  exits:
+    north:
+      to: tba:83:room:8374
+      look: The bow of the ship is north of here.
+    east:
+      to: tba:83:room:8375
+      look: A lifeboat hangs from the port side of the boat.
+    south:
+      to: tba:83:room:8379
+      look: There is a door to the south.
+    west:
+      to: tba:83:room:8377
+      look: A long plank extends from the starboard side of the boat.
+    up:
+      to: tba:83:room:8385
+      look: The crow's nest sits high atop the mast.
+
+"tba:83:room:8377":
+  name: Walking the Plank...
+  description: >
+    A wooden plank, barely half a meter wide, is all that is holding you from falling into the churning
+    sea below.  The salty air nearly blows you over to your doom.  The old board creeks beneath your
+    weight...
+  sector: inside
+  exits:
+    east:
+      to: tba:83:room:8376
+    down:
+      to: tba:83:room:8386
+      look: The water is ice cold and would pretty much mean instant death if you were to fall in...
+  extras:
+  - keywords: [plank, wooden]
+    text: The old wooden plank is full of cracks and is swaying very uneasily under your weight.
+
+"tba:83:room:8378":
+  name: The Captain's Quarters
+  description: >
+    The Captain's room is lavishly decorated.  Expensive-looking curtains hang from the windows, the
+    rugs on the floor are top quality, and the furniture is exquisite.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:83:room:8381
+      look: The Captain's Quarters extend to the south.
+    west:
+      to: tba:83:room:8379
+      look: The doorway to the west leads back to the hallway.
+      door:
+        keywords: [door, captain]
+        kind: pickproof
+        key: tba:83:obj:8305
+        reset: closed
+
+"tba:83:room:8379":
+  name: Inside a Pirate's Ship
+  description: >
+    You are standing in a hallway.  To the east is a door, it appears to lead to the Captain's room. 
+    To the west is a door with something written on it. North, there is a door that leads out on the
+    deck.  South, the hallway continues.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8376
+      look: The door to the north leads to the deck.
+    east:
+      to: tba:83:room:8378
+      look: The Captain's quarters are to the east.
+      door:
+        keywords: [door, captain, quarters]
+        kind: pickproof
+        key: tba:83:obj:8305
+        reset: locked
+    south:
+      to: tba:83:room:8382
+      look: The hallway continues south to some more doorways.
+    west:
+      to: tba:83:room:8380
+      look: There is a door marked '@oGALLEY@n' to the west.
+      door:
+        keywords: [door, galley]
+        kind: door
+        reset: closed
+
+"tba:83:room:8380":
+  name: The Galley
+  description: >
+    You are in the galley of the ship.  This is where all the food and provisions are kept during a
+    voyage.  The walls of the room are covered with shelves of food, supplies, and the like.  A few chests
+    are also scattered about the room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:83:room:8379
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:83:room:8383
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:83:room:8381":
+  name: The Captain's Quarters
+  description: >
+    This side of the captain's room is where his bed sits.  The bed looks very comfortable, and very
+    expensive.  Oil paintings hang on the wall, showing various famous figures, as well as some figures you
+    don't recognize.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8378
+      look: The Captain's Quarters extend to the north.
+
+"tba:83:room:8382":
+  name: Inside a Pirate's Ship
+  description: >
+    You are standing in a hallway.  To the west there is an unmarked door, to the south is the stern of
+    the ship, and the hallway continues north towards the bow.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8379
+      look: The hallway continues north toward the bow.
+    west:
+      to: tba:83:room:8383
+      look: There is an unmarked door to the west.
+      door:
+        keywords: [door, stairway]
+        kind: door
+        reset: closed
+
+"tba:83:room:8383":
+  name: Near a Stairway
+  description: >
+    This room is filled mainly with a wide stairway spiraling down to a lower deck.  To the north is a
+    door leading to what appears to be the galley, and the door to the east leads into a hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8380
+      look: The ship's galley is north of here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:83:room:8382
+      look: The doorway to the east leads into the upper hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:83:room:8384
+      look: A stairway leads down below deck.
+
+"tba:83:room:8384":
+  name: The Mid-Deck
+  description: >
+    You are mid-deck in a large ship, close to the bow.  This deck is used as the main dining hall as
+    well as the bar, dance floor, and sometimes as a bed. To the north, west and east, the deck spreads
+    out more.  There is a small stairway leading down from here.  There is another stairway leading up to
+    the top deck.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8387
+      look: This large room extends to the north.
+    west:
+      to: tba:83:room:8399
+      look: This large room extends to the west.
+    up:
+      to: tba:83:room:8383
+      look: A stairway leads up to the top deck.
+    down:
+      to: tba:83:room:8394
+      look: A small stairway leads down to the brig.
+
+"tba:83:room:8385":
+  name: The Crow's Nest
+  description: >
+    You are standing in the crow's nest near the top of the largest mast on the boat.  You can see for
+    many miles in every direction, but you see nothing but water, water, and more water.  The ladder
+    leading back to the deck is the only way out of here, unless you wanted to jump...
+  sector: mountains
+  flags: [peaceful]
+  exits:
+    north:
+      look: >
+        You have a wonderful view of the ocean from up here.  You see nothing but water to the north.
+    east:
+      look: You have a wonderful view of the ocean from up here.  You see land far to the east.
+    south:
+      look: >
+        You have a wonderful view of the ocean from up here.  You see nothing but water to the south.
+    west:
+      look: >
+        You have a wonderful view of the ocean from up here.  You see nothing but water to the west.
+    up:
+      look: >
+        The Jolly Roger flies from a flagpole just above your head, warning other ships that this vessel is
+        not to be messed with.
+    down:
+      to: tba:83:room:8376
+      look: >
+        The deck of the ship is far below you.  You could @ojump@n down, but it is not recommended...
+  extras:
+  - keywords: [flag, jolly, roger]
+    text:
+      preformatted: |2
+           @RMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMMMMi'           ;JMMMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMM>                 MMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMM;                   5MMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMM              ..    'MMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMM    MMMM!   =MMMM;  'MMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMM!  cMMMMM :.MMMMM6  iMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMM   +5M5^MMM'+Yj!   +MMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMM!::'   :MMMM  ;ijjtMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMMMM=+Mt :.'. '.MM MMMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMi=MMMMMM.+MMMtMKYMMM'>MMMMM!  MMMMMMMMMMMMMM
+           MMMMMMMMMMMMMY   !MMMMM c:MMMMDM^= MMMMM   .MMMMMMMMMMMMMM
+           MMMMMMMMMMMMMM.    5MMMM:   ' . >MMMM=      .MMMMMMMMMMMMM
+           MMMMMMMMMMMMM>. .    .:cMMMMMMMMMM=    '>j>+MMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMMMt;   'tMMt>'    iMMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMiiMMMMMMMMji='   .!tcYDMMMMMMJ'  XMMMMMMMMMMM
+           MMMMMMMMMMMM;            ';cQMMM!'           ;MMMMMMMMMMMM
+           MMMMMMMMMMMMM>     .:iMMMMMMMMMMMMMMMMt>'    +MMMMMMMMMMMM
+           MMMMMMMMMMMMM    iMMMMMMMMMMMMMMMMMMMMMMMM   .MMMMMMMMMMMM
+           MMMMMMMMMMMMMc>=MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+           MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM@n
+        
+        
+           @gSome believe the Jolly Roger gets its name from the French
+           "Jolie Rouge" or "Red Flag."  The flag was first used by a
+           French order of militant monks known as the "Poor Soldiers
+           of Christ and the Temple of Solomon" -- commonly known as
+           "The Knights Templar."
+        
+           Just as a terrorist to one is a freedom fighter to another,
+           so it was with the Templars and their fleet. Wanted by the
+           Pope and all the crowns of Europe, they came to be viewed,
+           by the folks on the mainland, as pirates.
+        
+           For more history of the Jolly Roger,
+           visit@n http://www.skullandcrossbones.org
+
+"tba:83:room:8386":
+  name: "@bDavy Jones' Locker@n"
+  description:
+    preformatted: |2
+         @
+      @bSPLASH!@c  You hit the icy water.@n
+      @
+      @
+      @bDeeper..@n
+      @
+      @
+      @b          Deeper...@n
+      @
+      @
+      @
+      @c                     ..and deeper you sink.  You begin to lose any hope of
+      getting back to the surface as your arms grow tired of flailing about.  Your
+      vision fades to black as you lose conciousness and drown in your sleep.
+      @n
+  sector: water_swim
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:83:room:8386
+    east:
+      to: tba:83:room:8386
+    south:
+      to: tba:83:room:8386
+    west:
+      to: tba:83:room:8386
+    up:
+      to: tba:83:room:8386
+    down:
+      to: tba:83:room:8386
+
+"tba:83:room:8387":
+  name: The Mid-Deck
+  description: >
+    You are mid-deck in a large ship, close to the bow.  This deck is used as the main dining hall as
+    well as the bar, dance floor, and sometimes as a bed. To the south and west, the deck spreads out more.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:83:room:8384
+      look: This large room extends to the south.
+    west:
+      to: tba:83:room:8393
+      look: This large room extends to the west.
+
+"tba:83:room:8392":
+  name: A Cramped Cell
+  description: >
+    You find that this cell, much like any jail cell, appears very...  VERY small from the inside; even
+    more so when the iron door is locking you from the relative freedom of the rest of the ship.  The
+    north, east, and west walls of the cell are lined on the outside with slabs of rock and wooden slats.
+    Outside of the iron bars to the south is the rest of the filthy brig.
+  sector: inside
+  flags: [no_mob, indoors, no_track]
+  exits:
+    north:
+      to: tba:83:room:8394
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:83:obj:8307
+        reset: locked
+    south:
+      to: tba:83:room:8394
+      look: The south door is the only exit from this cell.
+      door:
+        keywords: [door, iron, cell]
+        kind: pickproof
+
+"tba:83:room:8393":
+  name: The Mid-Deck
+  description: >
+    You are mid-deck in a large ship, close to the bow.  This deck is used as the main dining hall as
+    well as the bar, dance floor, and sometimes as a bed. To the south and east, the deck spreads out
+    more.  There appears to be some sort of hatch on the floor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:83:room:8387
+      look: This large room extends to the east.
+    south:
+      to: tba:83:room:8399
+      look: This large room extends to the south.
+    down:
+      to: tba:83:room:8395
+      look: The hatch has a small, steel lock on it.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:83:obj:8309
+        reset: locked
+
+"tba:83:room:8394":
+  name: The Brig
+  description: >
+    Looking about the room you're in, it's easy to tell that the pirates don't intend for prisoners to
+    enjoy their stays here.  The walls are unpainted and uncovered; the bare, rotting boards show through
+    clearly.  A single cell north of here takes up most of the brig.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:83:room:8392
+      look: There is a prison cell north of here.
+      door:
+        keywords: [door, cell, iron]
+        kind: pickproof
+        key: tba:83:obj:8304
+    south:
+      to: tba:83:room:8392
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:83:obj:8307
+        reset: locked
+    up:
+      to: tba:83:room:8384
+      look: A small stairway leads up to the mid-deck.
+
+"tba:83:room:8395":
+  name: The Treasury
+  description: >
+    This is it, the mother load of the pirate ship.  This room is where everything the pirates loot or
+    steal ends up.  Needless to say, the pirates wouldn't be very happy to find you sneaking around in
+    here...
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:83:room:8393
+      look: A ladder leads back to the mid-deck.
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+
+"tba:83:room:8396":
+  name: A Small Hutt
+  description: >
+    You are in the middle of a small hut.  The walls are made of something similar to bamboo, tied
+    together with small vines.  The only furniture in the hut is a small bed, a table, and a stove.
+  sector: inside
+  flags: [no_mob, soundproof]
+  exits:
+    down:
+      to: tba:83:room:8356
+      look: A ladder leads back down to the beach.
+
+"tba:83:room:8397":
+  name: On a Fishing Boat
+  description: >
+    You are standing near the stern of a fishing boat as it cruises down the river.  Tiny bones and
+    fish scales litter the floor of this boat, making faint crunching noises as you walk about.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:83:room:8398
+      look: A large flap of canvas separates the cabin from the rest of the boat.
+      door:
+        keywords: [flap, canvas, cloth]
+        kind: door
+        reset: closed
+
+"tba:83:room:8398":
+  name: The Bow of a Fishing Boat
+  description: >
+    You are standing on the bow of a small boat that is probably capable of ocean travel.  There is a
+    roof over the stern of the boat, forming a room that is obviously used to provide shelter during harsh
+    weather.  A flap of thick cloth acts as a door to the cabin.
+  sector: field
+  exits:
+    south:
+      to: tba:83:room:8397
+      look: A large flap of canvas separates the cabin from the rest of the boat.
+      door:
+        keywords: [flap, canvas, cloth]
+        kind: door
+        reset: closed
+
+"tba:83:room:8399":
+  name: The Mid-Deck
+  description: >
+    You are mid-deck in a large ship, close to the bow.  This deck is used as the main dining hall as
+    well as the bar, dance floor, and sometimes as a bed. To the north and east, the deck spreads out
+    more.  To the south, there is a door that has been barred shut from the other side.
+  sector: inside
+  exits:
+    north:
+      to: tba:83:room:8393
+      look: This large room extends to the north.
+    east:
+      to: tba:83:room:8384
+      look: This large room extends to the east.
+    south:
+      look: The south door is barred shut from the other side.
+      door:
+        keywords: [door]
+        kind: pickproof

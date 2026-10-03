@@ -1,0 +1,857 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 288.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:288:room:28800":
+  name: Doctor's Zone Description Room
+  description:
+  - >
+    Galaxy by Doctor of EnvyMUD. To use this zone, make sure that SOMEWHERE in the zone, near the
+    begining, the authors name is visible to the players, a sign or edesc in a room will be fine.
+  - >
+    Include the area and the author (perhaps the EnvyMUD name also) in your help file for areas.  And
+    even a small mention in your credits file would be nice. I myself need no mention, as the work I did
+    was very minimal, and quite truthfully, selfish in nature *8). Many thanks to the EnvyMUD people for
+    allowing this to be shared.
+  - Ghost Shaidan, IMP of Questionable Sanity, agis.ag.net (204.164.158.2) 4000
+  - >
+    #SPECIALS M  28801 spec_thief M  28813/14 spec_breath_fire M 
+    28815/16/17/18/19/20/21/22/23/24/25/26/27/28/29 spec_cast_cleric M  28830/31 spec_cast_mage M  28832 spec_breath_acid
+  - >
+    I do not think that the cleric spec they are talking about is a friendly healing others one, so you
+    will need to work that one out yourself (maybe the mage one will do in a pinch) Links: 01w, 30d
+  - To see the changes made for TBA, look CHANGELOG.
+  sector: inside
+  extras:
+  - keywords: [changelog]
+    text:
+    - "@n Changelog:"
+    - >
+      Entry has been changed to a trig.  To change it back, remove the two items in 28801 and add a door
+      down to 28802.  Remember to replace the credit info.
+    - Removed entrance from 28803 to 28802.
+    - >
+      Added nomob to 28825.  Some muds have people who often go in there to kill all mobs with an
+      areaspell but in a small mud where nobody goes in, all the mobs on that floor will end up there, sooner or
+      later.
+    - >
+      All season doors were locked both sides on the original but Ghost Shaidan seems to have only locked
+      one side and I left it that way.
+    - >
+      Added near-deathtrap prog (almost dead) to 28830.  Original was a deathtrap, port was a
+      non-deathtrap.
+    - >
+      Added trigger functions to cover the spec_cast functions mentioned in room 28800.  These were
+      partly written by me, mostly by Fizban.  If the damages I used seem a bit light, just adjust them.  Saves
+      have not been written in.
+    - Added nomob to various rooms, to keep mobs in their sections.
+    - Fixed various typos, grammatical errors, changed some room descs to fit the changes.
+    - Parna-TBAmud-November 2009
+
+"tba:288:room:28801":
+  name: Inside a Tavern
+  description: >
+    You are inside a dimly-lit room.  The atmosphere makes you feel uncomfortable.  In front of you
+    stands a mysterious gypsy.  She whispers, 'Your fate and destiny lie beyond this world.'  You are still
+    wondering what she means when you suddenly notice the crystal ball ...  It glows fiercely and
+    displays the Universe!
+  sector: inside
+  flags: [indoors]
+
+"tba:288:room:28802":
+  name: Inside the Crystal Ball
+  description: >
+    You have touched the crystal ball and find that you have gone inside it: a world of stars and
+    wonders!  As you look around, you figure out there is no choice but to go forward.
+  sector: field
+  exits:
+    north:
+      to: tba:288:room:28803
+
+"tba:288:room:28803":
+  name: Inside the Galaxy
+  description: >
+    You are now inside the galaxy.  Stars and nebulae smile at your presence, and comets and meteors
+    wander around you.  You realize that this world may not be the true galaxy after all but just another
+    fantasy zone.  Exits lie in most directions.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28804
+    east:
+      to: tba:288:room:28808
+    west:
+      to: tba:288:room:28821
+
+"tba:288:room:28804":
+  name: On an InterGalactic Walkway
+  description: >
+    You are on a well-paved path which seems to have been made deliberately for visitors like you.  The
+    walkway continues north and a small exit lies west.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28805
+    south:
+      to: tba:288:room:28803
+    west:
+      to: tba:288:room:28822
+
+"tba:288:room:28805":
+  name: End of the InterGalactic Walkway
+  description: >
+    You notice the walkway has come to an abrupt end and you wonder why.  You see that there is still a
+    small path which leads north and one to the west. To the east lies a bridge.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28806
+    east:
+      to: tba:288:room:28809
+    south:
+      to: tba:288:room:28804
+    west:
+      to: tba:288:room:28823
+
+"tba:288:room:28806":
+  name: At the Undeveloped Part of the Galaxy
+  description: This place looks deserted, covered with space debris.  Not a sign of life is around.
+  sector: city
+  exits:
+    south:
+      to: tba:288:room:28805
+    west:
+      to: tba:288:room:28824
+
+"tba:288:room:28808":
+  name: On the Bridge of Stars
+  description: >
+    This bridge has been made by the stars to honor their ancestors.  The bridge itself shines brightly
+    and makes you feel that you are walking on a path of light.  An entrance to an ancient building lies
+    north and to the east lies the Milky Way.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28831
+    east:
+      to: tba:288:room:28812
+    west:
+      to: tba:288:room:28803
+
+"tba:288:room:28809":
+  name: On the Bridge of Nebulae
+  description: >
+    This bridge, like the other, was made as a memorial.  The nebulae had to make one just to show that
+    they are as capable as the stars.  North lies a throne room.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28810
+    east:
+      to: tba:288:room:28814
+    west:
+      to: tba:288:room:28805
+
+"tba:288:room:28810":
+  name: The Throne Room of the Nebula King
+  description: >
+    You can only faintly make out that it is a throne room as it is too dark in here.  In the middle is
+    an empty throne.  You wonder where the King has gone, maybe he is hiding from you?
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:288:room:28809
+
+"tba:288:room:28812":
+  name: At the Start of the Milky Way
+  description: >
+    It is here that the famous old Milky Way starts flowing.  You are surrounded by streams of mist the
+    moment you tread on it.  You can't see well in here ... Luckily you haven't fallen yet!
+  sector: hills
+  exits:
+    north:
+      to: tba:288:room:28813
+    west:
+      to: tba:288:room:28808
+
+"tba:288:room:28813":
+  name: Along the Milky Way
+  description: >
+    You are still travelling inside this path of mist.  You notice a small opening to the east.
+  sector: hills
+  exits:
+    north:
+      to: tba:288:room:28814
+    east:
+      to: tba:288:room:28817
+    south:
+      to: tba:288:room:28812
+
+"tba:288:room:28814":
+  name: At the End of the Milky Way
+  description: >
+    Just as you started enjoying this journey inside the mist, you have come to the end of it.  West
+    leads to a bridge and east leads to somewhere else.
+  sector: hills
+  exits:
+    east:
+      to: tba:288:room:28818
+    south:
+      to: tba:288:room:28813
+    west:
+      to: tba:288:room:28809
+
+"tba:288:room:28817":
+  name: A Small Clearing
+  description: >
+    You are inside a small clearing.  You can see that there are signs of a living creature nearby.
+  sector: field
+  exits:
+    north:
+      to: tba:288:room:28818
+    west:
+      to: tba:288:room:28813
+
+"tba:288:room:28818":
+  name: An Edge of the Galaxy
+  description: >
+    You are on the very edge of the galaxy.  Nothing is here except that there is a path which leads
+    down.
+  sector: city
+  exits:
+    south:
+      to: tba:288:room:28817
+    west:
+      to: tba:288:room:28814
+    down:
+      to: tba:288:room:28819
+
+"tba:288:room:28819":
+  name: Very Near to a Gigantic Star
+  description: >
+    You are very near to a gigantic red star.  While you are still fascinated by its beauty, the star
+    keeps on growing ...  Suddenly you realize that you'd better leave.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:288:room:28820
+    east:
+      to: tba:288:room:28820
+    south:
+      to: tba:288:room:28820
+    west:
+      to: tba:288:room:28820
+
+"tba:288:room:28820":
+  name: Too Bright to Tell
+  description: >
+    Indeed it is too bright to tell.  Because what you are witnessing is the rare event of a Supernova,
+    how a star explodes itself into galactic dust.  You may find yourself lucky to witness this rare
+    event and still live.
+  sector: inside
+  flags: [no_mob]
+
+"tba:288:room:28821":
+  name: The Star Cluster
+  description: >
+    You are inside the home of the stars.  All you can see around you are stars and nothing else.  Your
+    eyes become pretty hurt as you look at them.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:288:room:28822
+    east:
+      to: tba:288:room:28803
+
+"tba:288:room:28822":
+  name: An Edge of the Galaxy
+  description: There's not much to see here at the edge of the galaxy.  Exits lie north, east and south.
+  sector: field
+  exits:
+    north:
+      to: tba:288:room:28823
+    east:
+      to: tba:288:room:28804
+    south:
+      to: tba:288:room:28821
+
+"tba:288:room:28823":
+  name: Corner of the Galaxy
+  description: >
+    You wonder why the galaxy is limited.  All you have done in Astronomy courses now prove worthless. 
+    Well, who told you to take one at the start?
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28824
+    east:
+      to: tba:288:room:28805
+    south:
+      to: tba:288:room:28822
+
+"tba:288:room:28824":
+  name: Lost in Space
+  description: >
+    You are now lost in space.  Compasses don't work here, sorry.  What's more you can sense darkness
+    engulfing you.  You'd better get out quick.
+  sector: field
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28825
+    east:
+      to: tba:288:room:28806
+    south:
+      to: tba:288:room:28823
+
+"tba:288:room:28825":
+  name: Black Hole
+  description: >
+    Well you have chosen the wrong path, sorry.  Nothing can escape from this monster, not even light. 
+    PANIC!  You can't escape!
+  sector: inside
+  flags: [no_mob]
+
+"tba:288:room:28826":
+  name: The Homes of the Pleiades
+  description: This is where the famous Seven Sisters live.  You'd better not disturb them.
+  sector: city
+  exits:
+    east:
+      to: tba:288:room:28829
+    south:
+      to: tba:288:room:28827
+
+"tba:288:room:28827":
+  name: Western Side of the Temple
+  description: >
+    You are still wandering around this temple.  You notice exits lie in all directions except west.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28826
+    east:
+      to: tba:288:room:28830
+    south:
+      to: tba:288:room:28828
+
+"tba:288:room:28828":
+  name: Orion's Hunting Lodge
+  description: >
+    This is dedicated to the Great Hunter of all time -- Orion.  Scattered on the floor is the famous
+    hunting equipment used by him.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28827
+    east:
+      to: tba:288:room:28831
+
+"tba:288:room:28829":
+  name: Northern Side of the Temple
+  description: >
+    You are still wandering around this temple.  You notice exits lie in all directions except north.
+  sector: city
+  exits:
+    east:
+      to: tba:288:room:28832
+    south:
+      to: tba:288:room:28830
+    west:
+      to: tba:288:room:28826
+
+"tba:288:room:28830":
+  name: The Offering Chamber
+  description: >
+    This is the sacred offering chamber in which sacrifices are made.  You see a young girl here,
+    chained to the wall, as if she is waiting for execution.  You look up and realize the chains are sent down
+    directly from above.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28829
+    east:
+      to: tba:288:room:28833
+    south:
+      to: tba:288:room:28831
+    west:
+      to: tba:288:room:28827
+    up:
+      to: tba:288:room:28839
+
+"tba:288:room:28831":
+  name: The Entrance of the Ancient Temple
+  description: >
+    You have entered into this old temple, which was built originally for the gods in Mount Olympia,
+    but it is now deserted as someone took over this part of the Universe.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28830
+    east:
+      to: tba:288:room:28834
+    south:
+      to: tba:288:room:28808
+    west:
+      to: tba:288:room:28828
+
+"tba:288:room:28832":
+  name: Hercules' Mighty Throne
+  description: >
+    You stand before the throne of a long-forgotten hero.  It is full of bounty that he got from the
+    Ten Labours.
+  sector: city
+  exits:
+    south:
+      to: tba:288:room:28833
+    west:
+      to: tba:288:room:28829
+
+"tba:288:room:28833":
+  name: Eastern Side of the Temple
+  description: >
+    You are still wandering around this temple.  You notice exits lie in all directions except east.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28832
+    south:
+      to: tba:288:room:28834
+    west:
+      to: tba:288:room:28830
+
+"tba:288:room:28834":
+  name: Perseus' Chamber
+  description: >
+    It is the chamber of the prince, Perseus.  However, he seems not to be here. Maybe he has gone to
+    get Pegasus to save Andromeda?
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28833
+    west:
+      to: tba:288:room:28831
+
+"tba:288:room:28839":
+  name: On the Mystic Chains
+  description: >
+    You are dangling on the chains.  You notice exits lie in all directions. Up above you see the
+    chains continue upwards.  But a forcefield prevents you from going further upwards.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:288:room:28848
+    east:
+      to: tba:288:room:28851
+    south:
+      to: tba:288:room:28842
+    west:
+      to: tba:288:room:28845
+    up:
+      to: tba:288:room:28854
+      look: You see the forcefield of Spring.
+      door:
+        keywords: [forcefield]
+        kind: pickproof
+        key: tba:288:obj:28824
+        reset: locked
+    down:
+      to: tba:288:room:28830
+
+"tba:288:room:28842":
+  name: On a Hill
+  description: >
+    Suddenly you find yourself on a hillside.  As you look around, you notice that Spring has descended
+    upon you.
+  sector: hills
+  exits:
+    north:
+      to: tba:288:room:28839
+    east:
+      to: tba:288:room:28853
+    west:
+      to: tba:288:room:28843
+
+"tba:288:room:28843":
+  name: Inside a Spanish Bull-Ring
+  description: >
+    You are inside what used to be a ground for bull fighting.  But you notice there are no Matadors
+    around.  Maybe they are all dead?
+  sector: field
+  exits:
+    east:
+      to: tba:288:room:28842
+    west:
+      to: tba:288:room:28844
+
+"tba:288:room:28844":
+  name: Inside a study
+  description: >
+    This is a strange study.  Besides the desks and chairs you also see a large mirror in the middle. 
+    So, you wonder, is this how you make a Gemini into two Gemini?
+  sector: inside
+  exits:
+    east:
+      to: tba:288:room:28843
+
+"tba:288:room:28845":
+  name: Along the seashore
+  description: >
+    You start to feel the heat of Summer.  Amongst the rocky beach you notice hidden forms which could
+    be camouflaged crabs.
+  sector: field
+  exits:
+    east:
+      to: tba:288:room:28839
+    west:
+      to: tba:288:room:28846
+
+"tba:288:room:28846":
+  name: Within the Deep Jungle
+  description: >
+    Nearby you can hear the roar of an animal.  Peering through the dense overgrowth you think you
+    glimpse a pair of menacing eyes.
+  sector: forest
+  exits:
+    east:
+      to: tba:288:room:28845
+
+"tba:288:room:28847":
+  name: Inside a Luxurious Bedroom
+  description: >
+    A peaceful feeling overtakes you.  You see a magnificent four-poster bed. It's a double bed and
+    there is only room for one more!  Well, what now ...  ?
+  sector: city
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:288:room:28848
+
+"tba:288:room:28848":
+  name: The Supreme Court
+  description: >
+    You are standing inside the dock of a court.  You feel an overwhelming sense of guilt and you want
+    to protest your innocence!  You fear retribution and feel yourself exposed, just like the trees in
+    Autumn.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:288:room:28839
+    west:
+      to: tba:288:room:28849
+
+"tba:288:room:28849":
+  name: In the Dry Desert
+  description: >
+    You are confused by the shifting sands around you.  Through the shimmering heat you see the hazy
+    outline of a giant scorpion ...  Is this a mirage?
+  sector: field
+  exits:
+    east:
+      to: tba:288:room:28848
+    west:
+      to: tba:288:room:28850
+
+"tba:288:room:28850":
+  name: In the Woods
+  description: >
+    You find yourself in the center of a Centaurion hunting party.  You'd better hide yourself before
+    you become the 'center attraction'!
+  sector: forest
+  exits:
+    east:
+      to: tba:288:room:28849
+
+"tba:288:room:28851":
+  name: On a Mountain Peak
+  description: >
+    You are on the highest peak of the Universe.  You look around and notice clouds below you.  One of
+    the clouds resembles a goat-like form.
+  sector: mountains
+  exits:
+    east:
+      to: tba:288:room:28852
+    west:
+      to: tba:288:room:28839
+
+"tba:288:room:28852":
+  name: Inside a Waterfall
+  description: >
+    The noise is deafening.  You are about to take a drink when you realize that the water is being
+    poured out of a vessel of mind-boggling proportions!
+  sector: mountains
+  exits:
+    west:
+      to: tba:288:room:28851
+
+"tba:288:room:28853":
+  name: Inside a Gigantic Clam
+  description: >
+    You feel uneasy here as if some evil magic is being cast on you.  You suspect something fishy is
+    going on in here.
+  sector: mountains
+  exits:
+    west:
+      to: tba:288:room:28842
+
+"tba:288:room:28854":
+  name: End of the Mystic Chains
+  description: >
+    You have reached the end of the mystic chains.  Looking up, you notice a small landing on which you
+    can climb.  However, there seems to be another forcefield blocking your way.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:288:room:28855
+      look: You see the forcefield of Summer.
+      door:
+        keywords: [forcefield]
+        kind: pickproof
+        key: tba:288:obj:28825
+        reset: locked
+    down:
+      to: tba:288:room:28839
+      look: You see the forcefield of Spring.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:288:obj:28824
+
+"tba:288:room:28855":
+  name: On the Draco
+  description: >
+    You realize you are standing on scaly ground.  As you wonder what the ground is made of, you feel
+    the ground move.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28856
+    down:
+      to: tba:288:room:28854
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:288:obj:28825
+
+"tba:288:room:28856":
+  name: Tail of the Draco
+  description: >
+    At last you realize that you are on a giant snake-like dragon called the Draco, the guardian of the
+    inner galaxy.  You realize that the Draco is actually flying now!
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28857
+    south:
+      to: tba:288:room:28855
+
+"tba:288:room:28857":
+  name: Path of the Draco
+  description: >
+    As you struggle along this scaly creature you realize that the only way you can reach to the inner
+    galaxy is by going all the way to the head.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28858
+    south:
+      to: tba:288:room:28856
+
+"tba:288:room:28858":
+  name: Near the Legs of Draco
+  description: >
+    You are approaching the leg part of this creature.  You look around and see that the surrounding is
+    all dark except for some faint lights from the distant stars.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28859
+    south:
+      to: tba:288:room:28857
+
+"tba:288:room:28859":
+  name: On the Back of Draco
+  description: >
+    At last you are half way through this long, weary journey.  You can see the wings are to the east
+    but it seems that another forcefield is in the way.
+  sector: hills
+  flags: [dark]
+  exits:
+    east:
+      to: tba:288:room:28860
+      look: You see the forcefield of Autumn.
+      door:
+        keywords: [forcefield]
+        kind: pickproof
+        key: tba:288:obj:28826
+        reset: locked
+    south:
+      to: tba:288:room:28858
+
+"tba:288:room:28860":
+  name: Between the Wings of Draco
+  description: >
+    You hear some giant flapping sounds nearby.  You desperately try to get hold of something as the
+    forceful gusts sweep you away.
+  sector: hills
+  flags: [dark]
+  exits:
+    east:
+      to: tba:288:room:28861
+    west:
+      to: tba:288:room:28859
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:288:obj:28826
+
+"tba:288:room:28861":
+  name: Near the Arms of Draco
+  description: >
+    From above you can faintly make out the gigantic arms which extend far beyond into the darkness.
+  sector: hills
+  flags: [dark]
+  exits:
+    south:
+      to: tba:288:room:28862
+    west:
+      to: tba:288:room:28860
+
+"tba:288:room:28862":
+  name: On the Neck of Draco
+  description: Your journey is now approaching the end.  However, this neck seems to be endless.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:288:room:28861
+    west:
+      to: tba:288:room:28863
+
+"tba:288:room:28863":
+  name: Approaching the Head of Draco
+  description: >
+    You have come to the end of Draco, but you can't find the head!  You see a forcefield to the south,
+    some distance away, beyond reach.  If only the head were here ...
+  sector: hills
+  exits:
+    east:
+      to: tba:288:room:28862
+    south:
+      to: tba:288:room:28864
+      look: You see the forcefield of Winter.
+      door:
+        keywords: [forcefield]
+        kind: pickproof
+        key: tba:288:obj:28827
+        reset: locked
+
+"tba:288:room:28864":
+  name: At the Entrance of the Great Dipper
+  description: >
+    Now you are in the innermost part of the galaxy.  What you are walking on now is the path of the
+    Great Dipper or the Plough.  You notice that there are seven rooms in this zone, representing the seven
+    stars of the Dipper.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28863
+      look: You see the forcefield of Winter.
+      door:
+        keywords: [forcefield]
+        kind: pickproof
+        key: tba:288:obj:28827
+    south:
+      to: tba:288:room:28865
+    west:
+      to: tba:288:room:28866
+
+"tba:288:room:28865":
+  name: Cassiopeia's Throne
+  description: >
+    This is the Throne room of the Queen of the Universe.  From here you can see every star and
+    constellation in the Universe.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28864
+    west:
+      to: tba:288:room:28867
+
+"tba:288:room:28866":
+  name: Along the Path of the Dipper
+  description: You can see bright stars shining all around you but nothing of special interest.
+  sector: city
+  exits:
+    east:
+      to: tba:288:room:28864
+    south:
+      to: tba:288:room:28867
+
+"tba:288:room:28867":
+  name: Cepheus' Throne
+  description: >
+    This is the Throne room of the King of the Universe.  From here you can see every star and
+    constellation in the Universe.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28866
+    east:
+      to: tba:288:room:28865
+    south:
+      to: tba:288:room:28868
+
+"tba:288:room:28868":
+  name: Along the path of the Dipper
+  description: You can see bright stars shining all around you but nothing of special interest.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28867
+    west:
+      to: tba:288:room:28869
+
+"tba:288:room:28869":
+  name: Along the path of the Dipper
+  description: You can see bright stars shining all around you but nothing of special interest.
+  sector: city
+  exits:
+    east:
+      to: tba:288:room:28868
+    south:
+      to: tba:288:room:28870
+
+"tba:288:room:28870":
+  name: End of the Dipper
+  description: >
+    You have finished the path of the Dipper.  Here, the most prominent feature is a set of
+    claw-marks.  You also notice a room to the south; it looks as if Polaris could lie here.
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28869
+    south:
+      to: tba:288:room:28871
+
+"tba:288:room:28871":
+  name: The Polar Star
+  description: >
+    You have entered the private chamber of Polaris.  This is a room of great significance.  You can
+    see a powerful telescope pointing down towards the Universe (SNOOPING!  ).  It is from here that
+    Polaris commands the Universe. You feel you have come to end of your search in this galaxy ...
+  sector: city
+  exits:
+    north:
+      to: tba:288:room:28870

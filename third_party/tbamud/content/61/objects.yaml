@@ -1,0 +1,409 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 61.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:61:obj:6101":
+  type: other
+  keywords: [sign]
+  short: a sign
+  long: An old, battered sign lies on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 2
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           Only some of the letters are legible :-
+                        _
+              _________| |_________
+             /         | |         \
+            /  CAR.AX  | |  M.STY   \
+            \  M..SI.N | |  SW..P   /
+             \_________| |_________/
+                       | |
+
+"tba:61:obj:6102":
+  type: container
+  keywords: [tree, opening]
+  short: a colossal tree
+  long: A colossal tree blocks the way westward.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tree]
+    text: >
+      This enormous tree must be a thousand years old.  Its rough bark looks gray and pale and is
+      decorated with scratches and clawmarks.  On its west side is a small opening just above ground level.
+  - keywords: [opening]
+    text: >
+      The opening is far too narrow for you to squeeze through but it looks as if the tree is hollow.
+
+"tba:61:obj:6103":
+  type: light
+  keywords: [branch, gray, long]
+  short: a long, gray branch
+  long: A long, gray branch rests heavily on the ground.
+  wear: [take, hold]
+  values:
+    hours: 25
+  weight: 20
+  cost: 1
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [branch, gray, long]
+    text: >
+      It is quite heavy and looks as if it has been dropped from great height.  It is long dead and very
+      dry.  Could probably be lighted quite easily.
+
+"tba:61:obj:6104":
+  type: weapon
+  keywords: [branch, gray, long]
+  short: a long, gray branch
+  long: A long, gray branch rests heavily on the ground.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 18
+  cost: 60
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  extras:
+  - keywords: [branch, gray, long]
+    text: >
+      It is very heavy and looks as if it has been dropped from great height.  It is long and straight
+      and the wood is very hard, still being full of sap. Although it does not fit very well in your hand, it
+      could be used as a clumsy but very heavy weapon.
+
+"tba:61:obj:6105":
+  type: trash
+  keywords: [branch, gray, long]
+  short: a long, gray branch
+  long: A long, gray branch rests heavily on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 40
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [branch, gray, long]
+    text: >
+      It is very heavy and looks as if it has been dropped from great height.  It is somewhat twisted and
+      the hard wood is still full of sap.
+
+"tba:61:obj:6106":
+  type: food
+  keywords: [toadstool]
+  short: a toadstool
+  long: A large toadstool grows nearby.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 5
+  cost: 20
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [toadstool]
+    text: >
+      It is a large, brown boletus that must weigh nearly five pounds.  The top surface is covered in a
+      thin layer of transparent slime that emits a weak, musty smell.  Not the most delicious thing you have
+      seen.
+
+"tba:61:obj:6107":
+  type: food
+  keywords: [toadstool]
+  short: a toadstool
+  long: A large toadstool grows nearby.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: true
+  weight: 5
+  cost: 20
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [toadstool]
+    text: >
+      It is a large, brown boletus that must weigh nearly five pounds.  It has small white spots and the
+      top surface is covered in a thin layer of transparent slime that emits a weak, musty smell.  Not the
+      most delicious thing you have seen.
+
+"tba:61:obj:6108":
+  type: money
+  keywords: [coins, gold]
+  short: a big pile of gold coins
+  long: A big pile of gold coins is lying here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:61:obj:6109":
+  type: potion
+  keywords: [potion, blue]
+  short: a blue potion
+  long: A blue potion has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [15, 28, -1, -1]
+  weight: 2
+  cost: 680
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [potion, blue]
+    text: It has a nice deep blue color and a smell like peppermint.
+
+"tba:61:obj:6110":
+  type: potion
+  keywords: [potion, yellow, musky]
+  short: a musky yellow potion
+  long: A yellow potion has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [15, 39, -1, -1]
+  weight: 2
+  cost: 1000
+  rent: 200
+  level: 0
+  extras:
+  - keywords: [potion, yellow, musky]
+    text: It has a deep yellow color and and a strong spicy smell.
+
+"tba:61:obj:6111":
+  type: armor
+  keywords: [shield, round, large]
+  short: a large round shield
+  long: A large round shield has been left here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 15
+  cost: 300
+  rent: 800
+  level: 0
+  extras:
+  - keywords: [shield, round, large]
+    text: It is made from hard wood that has been reinforced with heavy iron bands.
+
+"tba:61:obj:6112":
+  type: armor
+  keywords: [crown, iron]
+  short: an iron crown
+  long: An iron crown rests on the ground.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 20
+  cost: 700
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [crown, iron]
+    text: It is a heavy human-sized crown made from solid iron.
+
+"tba:61:obj:6113":
+  type: light
+  keywords: [sceptre, iron]
+  short: an iron sceptre
+  long: An iron sceptre lies on the ground.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 10
+  cost: 500
+  rent: 70
+  level: 0
+  extras:
+  - keywords: [sceptre, iron]
+    text: It is a heavy sceptre made from solid iron.
+
+"tba:61:obj:6114":
+  type: worn
+  keywords: [ring, iron]
+  short: an iron ring
+  long: An iron ring has been left here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: age
+    modifier: 1
+  extras:
+  - keywords: [ring, iron]
+    text: >
+      It is a quite heavy human-sized ring made from solid iron.  It lacks decorations of any kind.
+
+"tba:61:obj:6115":
+  type: weapon
+  keywords: [star, morning-star]
+  short: the morning star
+  long: The morning star is here collecting dust while it lies on the ground.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d9
+    attack: pound
+  weight: 10
+  cost: 150
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:61:obj:6116":
+  type: armor
+  keywords: [shirt, scale]
+  short: a black dragon scale shirt
+  long: A black dragon scale shirt has been left here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 10
+  cost: 1000
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [shirt, scale]
+    text: >
+      It is a sleeveless shirt made from big, black dragon scales joined with silver threads.  Its inside
+      has been made from the soft skin on the dragon's belly, making it very comfortable to wear.  The
+      word 'Isha' has been engraved on one of the scales.
+
+"tba:61:obj:6117":
+  type: armor
+  keywords: [skirt, scale]
+  short: a black dragon scale skirt
+  long: A black dragon scale skirt has been left here.
+  flags: [magic]
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 8
+  cost: 500
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [skirt, scale]
+    text: >
+      It is a short skirt made from big, black dragon scales joined with silver threads.  Its inside has
+      been made from the soft skin on the dragon's belly, making it very comfortable to wear.  The word
+      'Isha' has been engraved on one of the scales.
+
+"tba:61:obj:6118":
+  type: worn
+  keywords: [cloak, black]
+  short: a black, hooded cloak
+  long: A large, hooded cloak, as dark as the night, has been left here.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 800
+  rent: 40
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [cloak, black]
+    text: >
+      It is a heavy, black cloak with a large hood.  The word 'Isha' is written inside it with a silver
+      thread.
+
+"tba:61:obj:6119":
+  type: armor
+  keywords: [belt, silver]
+  short: a broad silver belt
+  long: A broad silver belt has been left here.
+  flags: [glow, magic]
+  wear: [take, waist]
+  values:
+    armor: 6
+  weight: 4
+  cost: 500
+  rent: 35
+  level: 0
+  extras:
+  - keywords: [belt, silver]
+    text: It is a broad belt made from tiny silver rings woven together.
+
+"tba:61:obj:6120":
+  type: weapon
+  keywords: [sword, long, slender]
+  short: a long, slender sword
+  long: A long, slender sword lies on the ground.
+  flags: [glow, magic, anti_good, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 4
+  cost: 300
+  rent: 60
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [sword, long, slender]
+    text: >
+      It is a long, slender sword that seems to be made from silver.  The word 'Isha' has been engraved
+      on the hilt.
+
+"tba:61:obj:6121":
+  type: note
+  keywords: [sign]
+  short: wooden sign
+  long: A wooden sign nailed to a tree is here, You'd better read it...
+  action: |-
+    Warning Spider Trap to the West.  Be Warned, Be Wary.  Tholius, The
+    Travelling Monk.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

@@ -1,0 +1,161 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 96.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:96:obj:9601":
+  type: food
+  keywords: [nut, chest, chestnut]
+  short: a small chestnut
+  long: A half eaten chestnut lies here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [nut, chest, chestnut]
+    text: A squirrel has cracked the shell open and half-eaten the juicy yellow inside.
+
+"tba:96:obj:9602":
+  type: weapon
+  keywords: [blue, rapier, sword]
+  short: a blue rapier
+  long: A blue rapier, glowing with energy hovers above the floor.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pierce
+  weight: 3
+  cost: 225
+  rent: 22
+  level: 0
+  extras:
+  - keywords: [blue, rapier, sword]
+    text: >
+      The finely forged blade glows with a strange blue light.  It seems impossibly light weight and can
+      be swung with the utmost ease and grace.  A finer sword would be hard to come by.
+
+"tba:96:obj:9603":
+  type: key
+  keywords: [key, small, iron]
+  short: a small iron key
+  long: A small iron key lays here, collecting dust.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 250
+  rent: 25
+  level: 0
+
+"tba:96:obj:9604":
+  type: potion
+  keywords: [purple, potion, glowing]
+  short: a purple potion
+  long: A glowing purple potion rests here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [12, 16, 1, -1]
+  weight: 3
+  cost: 500
+  rent: 45
+  level: 0
+
+"tba:96:obj:9606":
+  type: potion
+  keywords: [silver, thin, vial]
+  short: a vial of silver fluid
+  long: A long vial of thin silver fluid balances precariously here.
+  wear: [take]
+  values:
+    raw: [12, -1, -1, -1]
+  weight: 4
+  cost: 800
+  rent: 90
+  level: 0
+
+"tba:96:obj:9608":
+  type: armor
+  keywords: [armor, steel, engraved, breast, plate, breastplate]
+  short: an engraved breastplate
+  long: An engraved breastplate of steel lies here.
+  flags: [bless]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 12
+  cost: 900
+  rent: 90
+  level: 0
+
+"tba:96:obj:9615":
+  type: potion
+  keywords: [thick, green, potion]
+  short: a thick green potion
+  long: A thick green potion sits on the floor, bubbling furiously.
+  wear: [take]
+  values:
+    raw: [12, 29, -1, -1]
+  weight: 1
+  cost: 450
+  rent: 35
+  level: 0
+
+"tba:96:obj:9626":
+  type: weapon
+  keywords: [claws, bear]
+  short: a pair of bear claws
+  long: A pair of large, blunt bear claws await an owner.
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: claw
+  weight: 12
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:96:obj:9646":
+  type: key
+  keywords: [key, silvery]
+  short: a silvery key
+  long: A silvery key lies on the floor here.
+  flags: [no_rent, no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 90
+  rent: 9
+  level: 0
+
+"tba:96:obj:9652":
+  type: key
+  keywords: [key, roughly]
+  short: a roughly made key
+  long: A roughly crafted key of iron lies here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:96:obj:9666":
+  type: trash
+  keywords: [head, knight]
+  short: an old knight's head
+  long: The head of an old knight rolls around, looking for an owner.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0

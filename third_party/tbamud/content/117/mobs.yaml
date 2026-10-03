@@ -1,0 +1,751 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 117.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:117:mob:11700":
+  keywords: [guard, holden]
+  short: Tower Guard Holden
+  long: Tower Guard Holden is here inspecting visitors.
+  description: >
+    It looks unfinished.  A tall male guard in armor stands here inspecting each visitor into the tower
+    before they enter for security.  He is rather satisfied with his duties now and carries an arrogant
+    smirk.
+  level: 15
+  sex: male
+  alignment: 150
+  flags: [sentinel, aware, stay_zone, helper, no_charm]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 300
+  exp: 25000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11701":
+  keywords: [guard, stradler]
+  short: Tower Guard Stradler
+  long: Tower Guard Stradler cheerfully surveys the crowd.
+  description: >
+    Stradler is a charming and attractive guard.  He inspects visitor's inventories for security here. 
+    The ladies (and a few men) seem to flock to him for inspection.  He stands proud and tall for the
+    safety of the people of Los Torres.
+  level: 15
+  sex: male
+  alignment: 175
+  flags: [sentinel, aware, stay_zone, helper, no_charm]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 325
+  exp: 24000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11702":
+  keywords: [citizen]
+  short: citizen
+  long: A citizen stands here.
+  description: >
+    The citizen of Los Torres stands here, minding her own business.  She does not want to be bothered,
+    she has many, many errands to run.  She looks in her purse, counts her money and checks for her ID
+    cards.
+  level: 10
+  sex: female
+  alignment: 25
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11703":
+  keywords: [hired, assassin]
+  short: a hired assassin
+  long: A governmentally hired assassin stalks around here.
+  description: >
+    An assassin veiled in red lurks around in the forest to match the color of the leaves and be
+    unseen.  He crunches on the twigs making it a dead giveaway as to where he is.  He has been ordered by the
+    government to kidnap any people who are planning to attack them.
+  level: 13
+  sex: male
+  alignment: -200
+  flags: [scavenger, aware, aggressive, stay_zone, no_charm]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 200
+  exp: 18000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11704":
+  keywords: [zulthan, waiter]
+  short: Zulthan the Waiter
+  long: Zulthan the Waiter takes orders from customers here.
+  description: >
+    Zulthan the Waiter is here taking orders and retrieving food for people. He seems very busy, but he
+    is very happy doing what he does. He has brown hair and is very short. He is also a bit on the pudgy
+    side as well, though he doesn't seem to care.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11705":
+  keywords: [cassandra, lacela]
+  short: Cassandra Lacela
+  long: Cassandra Lacela kinda stands here, like, drunk, you know...
+  description: >
+    Cassandra Lacela stands here, kind of.  She slurs her tongue and her hair is all messed up.  She
+    must be drunk.  She is wearing a white dress with some red and purple stains on it.  She lazily will
+    take her customer's orders and she seems to have an obsession with lace, due to the decor in the room.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11706":
+  keywords: [official, lesalie]
+  short: the Government Official Lesalie
+  long: The Government Official Lesalie is here.
+  description: >
+    The Government Official Lesalie is here in his brown suit.  He is wearing a white tie and brown
+    pants.  He has brown hair and seems to be very tall.  He has a scar in his left cheek that looks like a
+    slash from a weapon or a claw of sorts.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_summon]
+  affects: [no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: sleeping
+    default: standing
+
+"tba:117:mob:11707":
+  keywords: [salesman, derresor, maosund]
+  short: Salesman Derresor Maosund
+  long: Salesman Derresor Maosund stands here checking his inventory of armor.
+  description: >
+    Salesman Derresor Maosund smiles at his customers as they browse his display and ask him questions
+    on 'What does this armor do' and 'How much are these boots'.  He is wearing a black robe over what
+    seems to be flowing black pants and a black shirt.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 4d5+4
+    bare_hand_attack: punch
+  gold: 0
+  exp: 0
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11708":
+  keywords: [sniper, assassin]
+  short: a Sniper Assassin
+  long: A Sniper Assassin hides here spying on citizens.
+  description: >
+    The assassin here looks through the wall patiently at the citizens walking past.  She has long red
+    hair that matches her red outfit.  She has very unique sniping skills as well as some interesting
+    close up combat technique to boot. She is mumbling to herself as she carefully watches to anyone
+    opposing the government.
+  level: 14
+  sex: female
+  alignment: -200
+  flags: [sentinel, aware, memory]
+  affects: [sneak]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 3d2+140
+    damage: 2d4+2
+  gold: 450
+  exp: 21000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11709":
+  keywords: [assassin, chieftain]
+  short: the Assassin Chieftain
+  long: The Assassin Chieftain stands here guarding over her prisoner.
+  description: >
+    The Chieftain of the Red Assassins stands here with her specially gold rimmed red veil and her dull
+    gold badge that reads 'Red Assassin Chieftain'.  She gives orders to her assassins from the
+    government and checks over her prisoner.  She has long black hair that flies out from behind her veiled
+    head.  She has a very tall and skinny figure and she stands with her hand on her hip.
+  level: 17
+  sex: female
+  alignment: -200
+  flags: [sentinel, aware, memory, no_charm]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 1000
+  exp: 29500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11710":
+  keywords: [government, official, visconti]
+  short: the Government Official Visconti
+  long: The Government Official Visconti crawls up in his own filth.
+  description: >
+    The Government Official Visconti, famous now for the addition of the top floor in the second tower,
+    is covered in dirt, with ragged clothing and a bruised face.  He has a stubbled beard growing from
+    lack of grooming and he smells like a skunk in an exhaust pipe!
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: sleeping
+    default: standing
+
+"tba:117:mob:11711":
+  keywords: [guard, ackley]
+  short: Tower Guard Ackley
+  long: Tower Guard Ackley stands here, slacking off.
+  description: >
+    He stands short, and has a severe acne problem.  He often bites at his nails and shivers
+    uncontrollably.  He has a major temper problem, and can go off the deep end easily when someone comments on one
+    of his flaws.  He snorts loudly at random people for a laugh, and makes lewd gestures at those who
+    have disrespected him before.
+  level: 17
+  sex: male
+  alignment: -50
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11712":
+  keywords: [government, official, miranda]
+  short: the Government Official Miranda
+  long: The Government Official Miranda stands here.
+  description: >
+    Oh, busy, busy, busy!  That's how she wishes her life was.  Now she's been stuck in this dark place
+    for so long all she has left to do now is cry.  Her brown overcoat and pink dress are all tattered,
+    torn and wet.  Her face is covered in dirt, though it is hard to tell through her bushy medium length
+    hair.
+  level: 12
+  sex: female
+  alignment: 0
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 12500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11713":
+  keywords: [government, official, phel]
+  short: the Government Official Phel
+  long: The Government Official Phel is standing here.
+  description: >
+    He grins, he manipulates, he's the sneaky official Phel.  Known for his persuasive skills around
+    the town, nobody is exactly sure if this guy's trustworthy or not.  He wears a dark green suit as he
+    works his busy day.  His hair is blonde with a white streak of hair down the right.  His eyes are
+    colored differently, one being brown and one being hazel.
+  level: 15
+  sex: male
+  alignment: -100
+  flags: [sentinel, aware]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11714":
+  keywords: [government, official, gertrude]
+  short: the Government Official Gertrude
+  long: The Government Official Gertrude sneers wickedly as she works.
+  description: >
+    The pink suited Gertrude always wears a sneer and does things for her own interest instead of who
+    she is supposed to represent.  She constantly sends off any messages of complaint to her, and is
+    blatantly corrupt.
+  level: 14
+  sex: female
+  alignment: -150
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 17500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11715":
+  keywords: [government, official, cecille]
+  short: the Government Official Cecille
+  long: The Government Official Cecille hums ignorantly to herself.
+  description: >
+    Cecille looks pretty darn dumb to be an official.  She is wearing a light pink buttoned shirt and a
+    matching skirt.  She is humming a song that she made up five seconds ago and its rather irritating. 
+    She seems like she would be easily persuaded to believe one way or the other even if its unjust.
+  level: 11
+  sex: female
+  alignment: 0
+  flags: [sentinel, memory, no_charm]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 110
+  exp: 11500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11716":
+  keywords: [government, official, thedoric]
+  short: the Government Official Thedoric
+  long: The Government Official Thedoric grins fakely as he greets his clients.
+  description: >
+    Thedoric is heavily biased toward certain beliefs in life and is not afraid to go to extreme
+    measures to ensure that his beliefs are reality.  He is wearing a red suit and has medium length black
+    hair.  He always wears a rather fake grin as he meets with people.  He tends to favor those who agree
+    with him, and maybe he's a bit irrational when it comes to those who don't...
+  level: 18
+  sex: male
+  alignment: -250
+  flags: [sentinel, aware, memory, no_charm]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 250
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11717":
+  keywords: [government, official, luther]
+  short: the Government Official Luther
+  long: The Government Official Luther tries his best to keep the council in line.
+  description: >
+    Luther is trying all he can do to keep the council in line as of now.  He is wearing a blue trench
+    coat over a blue dress shirt with white pants.  He has very short brown hair with deep blue eyes.  He
+    is scrambling to save the city from the council, though he looks like he could use some help.  Maybe
+    you should say hello to him?
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11718":
+  keywords: [bodyguard, verno]
+  short: the Empress's bodyguard Verno
+  long: The Empress's bodyguard Verno blocks anyone from seeing the Empress.
+  description: >
+    Verno, it would seem, stands very tall though he also has a very large waistline.  He is wearing a
+    standard black tuxedo and he has his arms folded, stepping right in front of the path so that no one
+    will go through.  He has a bald head and is also wearing a pair of black sunglasses.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_kill]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: crush
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11719":
+  keywords: [empress, leraillia]
+  short: Empress Leraillia
+  long: Empress Lerallia smiles warmly at you.
+  description: >
+    Leraillia is very exquisitely dressed.  She is wearing an untied scarlet red robe over a shirt that
+    hangs down to her thighs at some parts.  The shirt is cut so tat triangular flaps hang from the
+    waste.  Her pants are very loose and have several chains hanging from various spots.  The pants are
+    flared a lot at the bottom, so much that it totally covers her feet.  She has long blonde hair and sky
+    blue colored eyes.  Her lips are the scarlet of her robe.
+  level: 34
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+    bare_hand_attack: claw
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11720":
+  keywords: [artist]
+  short: the artist
+  long: The artist paints another picture.
+  description: >
+    The artist wears a paint covered smock and a black beret.  He stands in disgust trying to think of
+    ideas for his next masterpiece.
+  level: 11
+  sex: male
+  alignment: 50
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11721":
+  keywords: [journalist]
+  short: a journalist
+  long: A journalist wanders around asking people questions.
+  description: >
+    The journalist is dressed nicely, and is carrying a notepad, a pen and a sheet of questions to ask
+    the citizens of Los Torres.  The questions mainly deal with the government, though most people seem
+    unwilling to answer them.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11722":
+  keywords: [fat, chef]
+  short: a really fat chef
+  long: A really fat chef stands behind the counter chopping onions.
+  description: >
+    The chef is extremely fat, I mean, totally huge.  He has a thick, black, curly mustache.  He is
+    wearing a big poofy hat that chefs normally wear and a big white apron that somehow manages to fit
+    around his grandiose waist.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11723":
+  keywords: [crying, man]
+  short: a crying man
+  long: A crying man mopes on one of the pews about how he lost his wedding ring.
+  description: >
+    The man has totally wrinkled clothing and bangs his fist on the pew repeatedly for some reason,
+    making all the citizens nearby uncomfortable.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11724":
+  keywords: [government, official, johanes]
+  short: the Government Official Johanes
+  long: The Government Official Johanes works on his papers.
+  description: He looks busy and self important.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11725":
+  keywords: [maid]
+  short: the maid
+  long: The maid stands here doing laundry.
+  description: >
+    The maid is a short skinny woman, wearing a black dress and a white apron. She carries a bunch of
+    towels in her hand and is busy doing the laundrywork to care about anything else.
+  level: 10
+  sex: female
+  alignment: 150
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11726":
+  keywords: [karate, instructor]
+  short: the Karate Instructor
+  long: The Karate Instructor practices Tae Kwon Do.
+  description: >
+    It looks unfinished.  The instructor is bald headed, very short and thin. He wears a white uniform
+    with a black belt tied around the waist.  He is currently practicing one of his forms right now with
+    his eyes closed, thinking about what he is doing.
+  level: 15
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  affects: [sense_life]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 3d2+3
+    bare_hand_attack: punch
+  gold: 150
+  exp: 23500
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11727":
+  keywords: [librarian]
+  short: the librarian
+  long: The Librarian stands here, swatting dust particles that come by.
+  description: >
+    The librarian wears her brown hair down to her waist, and has bright green eyes.  She stands aware,
+    looking t the air.  She seems very conscious about having dust in the room, as she keeps slapping
+    them out of the air with a feather duster.
+  level: 12
+  sex: female
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11728":
+  keywords: [little, alex]
+  short: little Alex
+  long: Little Alex is here running around in circles.
+  description: >
+    The confused little boy named Alex is bored, so he'll just run around in circles now.  H is wearing
+    blue overalls and a red striped T-shirt.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11729":
+  keywords: [clever, josie]
+  short: clever Josie
+  long: Clever Josie sits in the corner reading a book.
+  description: >
+    Clever Josie the know-it--all of the bunch.  She is reading to herself in the corner quietly.  She
+    is the only one of the children that is behaving nicely. She has medium length brown hair and
+    cat-shaped black glasses.  She is wearing a brown dress with pockets at the front.
+  level: 6
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11730":
+  keywords: [teacher]
+  short: the teacher
+  long: The teacher stands here cleaning up after her kids.
+  description: >
+    The teacher wears her hair in a bun, and is wearing small wire glasses.  She has a green dress on
+    and she is aggravated by the mess that all of her students had made when they left.
+  level: 12
+  sex: female
+  alignment: 50
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:117:mob:11731":
+  keywords: [janitor]
+  short: the janitor
+  long: The janitor kneels here, cleaning something off the walls.
+  description: >
+    The janitor has short black hair, and a stubbly beard.  He wears a red T-shirt and blue jeans, and
+    seems very cranky.  HE is unhappy that he has to clean up the messes that people make on the walls.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing

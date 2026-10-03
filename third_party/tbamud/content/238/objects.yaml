@@ -1,0 +1,558 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 238.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:238:obj:23800":
+  type: note
+  keywords: [map]
+  short: a map of the crystal castle
+  long: A map of the crystal castle.
+  action: |-
+    O
+                            |
+                        O O-v
+    
+    
+    
+                                ^
+                                |
+              O-O-O-O-O-O-O-O   O                 O     O
+              | | | | | | | |   |                 |     |
+              O-O-O-O-O-O-O-O   O   O           O O     O
+              | | | | | | | |   |   |           | |     |
+              O-O-O-O-O-O-O-O   O   O           O O   O-O
+              | | | | | | | |   |   |           | |     |
+              O-O-O-O-O-O-O-v   O   O           O O O-O-O
+              |                 |   |           | |     |
+              O                 O   O           O O     v
+              |                 |   |           | |     |
+    O-O-O-O-O-O                 ^   O   O-O-O   O O     ^
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:238:obj:23801":
+  type: armor
+  keywords: [ring]
+  short: a ruby colored ring
+  long: A small ruby covered ring is lying here.
+  flags: [magic, anti_warrior]
+  wear: [take, finger]
+  values:
+    armor: 8
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: str
+    modifier: -2
+  - apply: dex
+    modifier: -1
+
+"tba:238:obj:23802":
+  type: wand
+  keywords: [wand]
+  short: a wisdom wand
+  long: A very colorfull wand is lying here.
+  flags: [magic, anti_evil, anti_neutral, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [12, 4, 4, 24]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 30
+  - apply: str
+    modifier: -2
+  - apply: dex
+    modifier: -1
+
+"tba:238:obj:23803":
+  type: weapon
+  keywords: [bow]
+  short: a short bow
+  long: A emerald covered bow lies here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: blast
+  weight: 14
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  - apply: mana
+    modifier: 30
+  - apply: con
+    modifier: -1
+
+"tba:238:obj:23804":
+  type: armor
+  keywords: [cloak]
+  short: portal cloak
+  long: A large portal looking cloak is lying here.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: int
+    modifier: 2
+  - apply: dex
+    modifier: -2
+
+"tba:238:obj:23805":
+  type: container
+  keywords: [darkness]
+  short: a bottle
+  long: A bag shimmering with dark power is lying here.
+  flags: [anti_good]
+  wear: [take]
+  values:
+    capacity: 1000
+    lock_flags: 1
+    corpse: false
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:238:obj:23806":
+  type: armor
+  keywords: [ring]
+  short: a wedding ring
+  long: A small diamond wedding ring lies here.
+  wear: [take, finger]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: dex
+    modifier: -1
+  - apply: hitroll
+    modifier: -2
+
+"tba:238:obj:23807":
+  type: armor
+  keywords: [boots]
+  short: some boots of stealth
+  long: A set of boots with a wing emblem attached to the heel is lying here.
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 9
+  cost: 600
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: move
+    modifier: 30
+  - apply: hit
+    modifier: -10
+
+"tba:238:obj:23833":
+  type: weapon
+  keywords: [swordfish, nose]
+  short: a swordfish's nose
+  long: A large sword made from the nose of a swordfish lies here.
+  wear: [take, wield]
+  values:
+    damage: 5d10
+    attack: pierce
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -20
+  - apply: ac
+    modifier: 5
+
+"tba:238:obj:23837":
+  type: container
+  keywords: [skull]
+  short: a small skull
+  long: A small skull which seems to be of a very small human.
+  flags: [no_donate, no_invis, no_drop]
+  wear: []
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:238:obj:23838":
+  type: potion
+  keywords: [light, potion]
+  short: a light potion
+  long: A small light potion lies here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [20, 28, -1, -1]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:238:obj:23840":
+  type: light
+  keywords: [torch]
+  short: a light torch
+  long: A small torch sputters on the wall casting a flickering light.
+  flags: [glow]
+  wear: []
+  values:
+    hours: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stone]
+    text: Upon further inspection you notice that the torch is pullable.
+  - keywords: [torch]
+    text: A small light torch is here sticking out of the wall surrounded by loose stones.
+
+"tba:238:obj:23841":
+  type: armor
+  keywords: [bone, necklace]
+  short: a bone necklace
+  long: A necklace made of bones lies here.
+  flags: [no_donate, anti_good, anti_cleric]
+  wear: [take, neck]
+  values:
+    armor: 10
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: wis
+    modifier: -2
+  - apply: mana
+    modifier: -30
+  extras:
+  - keywords: [necklace]
+    text: >
+      As you look at this necklace you see that it is made of small pieces of bone connected by titanium.
+
+"tba:238:obj:23843":
+  type: other
+  keywords: [box]
+  short: a large box
+  long: A large box stands upright here.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [box]
+    text: You notice that this box is in excellent condition.
+
+"tba:238:obj:23844":
+  type: money
+  keywords: [coin]
+  short: a massive heap of coins
+  long: A massive pile of coins lie here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:238:obj:23845":
+  type: armor
+  keywords: [boots]
+  short: some crystal boots
+  long: A set of crystal boots are lying here.
+  wear: [take, feet]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: -2
+  - apply: mana
+    modifier: -10
+
+"tba:238:obj:23846":
+  type: armor
+  keywords: [gloves]
+  short: some crystal gloves
+  long: A set of crystal gloves is lying here.
+  wear: [take, hands]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -3
+  - apply: hitroll
+    modifier: 4
+  - apply: mana
+    modifier: -10
+
+"tba:238:obj:23847":
+  type: armor
+  keywords: [wristband]
+  short: a small crystal wristband
+  long: A small crystal wristband lies here shimmering on the ground.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    armor: 6
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: mana
+    modifier: -10
+  - apply: move
+    modifier: -20
+
+"tba:238:obj:23848":
+  type: armor
+  keywords: [leggings]
+  short: some crystal leggings
+  long: A set of flawless leggings sit upright here.
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -10
+  - apply: hitroll
+    modifier: -2
+  - apply: damroll
+    modifier: 4
+
+"tba:238:obj:23849":
+  type: armor
+  keywords: [girth]
+  short: a crystal girth
+  long: A large crystal girth is lying here.
+  wear: [take, waist]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: -2
+  - apply: save_para
+    modifier: 2
+
+"tba:238:obj:23855":
+  type: fountain
+  keywords: [fountain]
+  short: a large fountain
+  long: A large emerald covered fountain sits here, looking refreshing.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain]
+    text: >
+      Looking closer at the fountain you notice that the bottom is very deep and there is something
+      sparkling in the water.
+  - keywords: [water]
+    text: You notice that there is a small portal on the bottom of the fountain.
+
+"tba:238:obj:23860":
+  type: key
+  keywords: [key]
+  short: a titanium key
+  long: A small titanuim key is lying here.
+  flags: [no_donate]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: -4
+  - apply: save_breath
+    modifier: -2
+  - apply: wis
+    modifier: -3
+
+"tba:238:obj:23861":
+  type: other
+  keywords: [portal]
+  short: a blue portal
+  long: A large blue portal shimmers here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:238:obj:23862":
+  type: other
+  keywords: [portal]
+  short: a red portal
+  long: A large red portal shimmers here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:238:obj:23863":
+  type: other
+  keywords: [portal]
+  short: a green portal
+  long: A large green portal shimmers here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:238:obj:23870":
+  type: armor
+  keywords: [plate]
+  short: a pile of dark plate
+  long: A pile of black plate is lying here.
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 20
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: mana
+    modifier: -50
+  - apply: con
+    modifier: -2
+
+"tba:238:obj:23874":
+  type: light
+  keywords: [scepter]
+  short: queens scepter
+  long: The queens scepter is lying here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 30
+  - apply: hit
+    modifier: -15
+  - apply: con
+    modifier: -1
+
+"tba:238:obj:23875":
+  type: weapon
+  keywords: [claw]
+  short: a large crystal claw
+  long: A dragon claw is lying here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 10d5
+    attack: claw
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:238:obj:23899":
+  type: armor
+  keywords: [head]
+  short: a crystal dragon's head
+  long: A large crystal dragon's head is lying here.
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: -1
+  - apply: str
+    modifier: 2
+  - apply: wis
+    modifier: -2

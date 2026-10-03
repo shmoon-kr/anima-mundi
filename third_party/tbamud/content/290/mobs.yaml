@@ -1,0 +1,152 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 290.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:290:mob:29000":
+  keywords: [sea, serpent]
+  short: the sea serpent
+  long: A sea serpent swims around here.
+  description: Looking closely at this creature reveals its large teeth...  Heading your way.
+  level: 11
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  affects: [detect_invis, hide]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:290:mob:29001":
+  keywords: [lizardman, sentry]
+  short: the sentry
+  long: A lizardman sentry sentries here.
+  description: He seems to be doing a good job sentrying.
+  level: 10
+  sex: male
+  alignment: -150
+  flags: [sentinel, aggressive, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:290:mob:29002":
+  keywords: [lizardman, wizard]
+  short: the wizard
+  long: A lizardman wizard is conjuring here.
+  description: This wizard is deeply involved in his conjuring and hasn't noticed you... Yet.
+  level: 15
+  sex: male
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: sitting
+
+"tba:290:mob:29003":
+  keywords: [water, elemental]
+  short: the water elemental
+  long: A large water elemental is swimming about here.
+  description: It seems to be part of the conjuring spell the wizard is casting.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:290:mob:29004":
+  keywords: [lizardman, guard]
+  short: the guard
+  long: A lizardman guard is guarding this area from people like you.
+  description: >
+    This Guard is guarding.  Obviously he is not doing a good job.  This is proven by the simple fact
+    that you are still here.
+  level: 12
+  sex: male
+  alignment: -100
+  flags: [sentinel, scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:290:mob:29005":
+  keywords: [lizardman, prince]
+  short: the prince
+  long: The lizardman prince glares at you.
+  description: His glare is very unnerving.  Maybe you should attack him...
+  level: 13
+  sex: male
+  alignment: -350
+  flags: [sentinel, scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:290:mob:29006":
+  keywords: [hooper, old, man]
+  short: Mr. Hooper
+  long: From behind the counter, Mr. Hooper smiles at you.
+  description: >
+    Mr.  Hooper is the kind old man that runs this small general store.  He tips his head forward and
+    looks over his glasses at you.  'Is there something that you would like to buy?  ', he asks politely.
+  level: 14
+  sex: male
+  alignment: 250
+  flags: [sentinel, stay_zone, wimpy, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

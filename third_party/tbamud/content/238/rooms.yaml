@@ -1,0 +1,1490 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 238.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:238:room:23800":
+  name: Polar/Higgin's Zone Description Room
+  description:
+    preformatted: |2
+         This area is a very different world.  There are portals and hidden things
+      everywhere.
+      Builders     : Polar Higgins
+      Zone         : 238 Crystal Castle
+      Began        : 1998
+      Player Level : 22-26
+      Rooms        : 80
+      Mobs         : 15
+      Objects      : 29
+      Shops        : 0
+      Triggers     : 16
+      Theme        :
+      Plot         :
+      Links        : 75
+      Map          : 00
+  sector: inside
+  flags: [indoors, private]
+
+"tba:238:room:23801":
+  name: Before the lake
+  description: >
+    This small patch of land lies before a grand lake.  A large crystal castle can be seen far in the
+    distance towards the middle of the lake.  Many small footprints can be seen laying about the trail
+    that has lead you to this marvel of castles.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:238:room:23802
+      look: As you look north you notice that there is nothing but water.
+    south:
+      to: tba:238:room:23880
+      look: Looking south you see an area leading into the fog.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23802":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake. Under the lake can be seen small
+    fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: water_swim
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:238:room:23817
+      look: Looking north is nothing but water.
+    east:
+      to: tba:238:room:23803
+      look: As you look east you see water.
+    south:
+      to: tba:238:room:23801
+      look: >
+        Upon looking south you notice a large patch of ground.  Scattered about are many small footprints
+        and claw marks.
+
+"tba:238:room:23803":
+  name: In the Lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: water_swim
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23816
+      look: Looking north nothing but fog can be seen
+    east:
+      to: tba:238:room:23804
+      look: As you look east you see water.
+    west:
+      to: tba:238:room:23802
+      look: As you look west you see more water.
+
+"tba:238:room:23804":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23815
+      look: Nothing but fog can be seen to the north.
+    east:
+      to: tba:238:room:23805
+      look: As you look east you see nothing but water.
+    west:
+      to: tba:238:room:23803
+      look: As you look west you see nothing but water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23805":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23814
+      look: Nothing but fog and mist can be seen in the distance.
+    east:
+      to: tba:238:room:23806
+      look: As you look east you see more water.
+    west:
+      to: tba:238:room:23804
+      look: As you look west you see more water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23806":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: water_swim
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:238:room:23813
+      look: Upon looking north you see nothing but tons of water.
+    east:
+      to: tba:238:room:23807
+      look: As you look east you see nothing but sickening water.
+    west:
+      to: tba:238:room:23805
+      look: As you look west you see more water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23807":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: water_swim
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23812
+      look: Fog and mist can be seen in the distance.
+    east:
+      to: tba:238:room:23808
+      look: As you look west you see yet more water.
+    west:
+      to: tba:238:room:23806
+      look: As you look west you see more water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23808":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23811
+      look: Fog and mist are the only things to be seen in the distance.
+    east:
+      to: tba:238:room:23809
+      look: As you look east you see a small patch of land.
+    west:
+      to: tba:238:room:23807
+      look: As you look west you see more water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23809":
+  name: Patch of land
+  description: >
+    Here lies a small patch of land in the middle of the lake.  There is a small mist that covers the
+    outside of the lake making it unreachable.  You cannot even see where you come from on the shore side
+    of the lake.  It may be too late to turn back.  Sand covers the ground here with a small patch of
+    square shaped grass in the center of the small island.
+  sector: inside
+  flags: [no_mob, bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23810
+      look: As you look north you see nothing but nasty water.
+    west:
+      to: tba:238:room:23808
+      look: As you look west you see more sickening water.
+    down:
+      to: tba:238:room:23834
+      look: This seems to lead you under the island.
+      door:
+        keywords: [patch]
+        kind: door
+
+"tba:238:room:23810":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23825
+    south:
+      to: tba:238:room:23809
+      look: As you look south you notice a small patch of dry land.
+    west:
+      to: tba:238:room:23811
+      look: As you look west you see nothing but water.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23811":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23824
+    east:
+      to: tba:238:room:23810
+    south:
+      to: tba:238:room:23808
+    west:
+      to: tba:238:room:23812
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23812":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23823
+    east:
+      to: tba:238:room:23811
+    south:
+      to: tba:238:room:23807
+    west:
+      to: tba:238:room:23813
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23813":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23822
+    east:
+      to: tba:238:room:23812
+    south:
+      to: tba:238:room:23806
+    west:
+      to: tba:238:room:23814
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23814":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23821
+    east:
+      to: tba:238:room:23813
+    south:
+      to: tba:238:room:23805
+    west:
+      to: tba:238:room:23815
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23815":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23820
+    east:
+      to: tba:238:room:23814
+    south:
+      to: tba:238:room:23804
+    west:
+      to: tba:238:room:23816
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23816":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.  A
+    thick fog covers this area making it hard to see anything in the distance.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23819
+    east:
+      to: tba:238:room:23815
+    south:
+      to: tba:238:room:23803
+    west:
+      to: tba:238:room:23817
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23817":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23818
+    east:
+      to: tba:238:room:23816
+    south:
+      to: tba:238:room:23802
+      look: Looking south there is water scattered over the entire area.
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23818":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23833
+    east:
+      to: tba:238:room:23819
+    south:
+      to: tba:238:room:23817
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23819":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23832
+    east:
+      to: tba:238:room:23820
+    south:
+      to: tba:238:room:23816
+    west:
+      to: tba:238:room:23818
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23820":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23831
+    east:
+      to: tba:238:room:23821
+    south:
+      to: tba:238:room:23815
+    west:
+      to: tba:238:room:23819
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23821":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23830
+    east:
+      to: tba:238:room:23822
+    south:
+      to: tba:238:room:23814
+    west:
+      to: tba:238:room:23820
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23822":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23829
+    east:
+      to: tba:238:room:23823
+    south:
+      to: tba:238:room:23813
+    west:
+      to: tba:238:room:23821
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23823":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23828
+    east:
+      to: tba:238:room:23824
+    south:
+      to: tba:238:room:23812
+    west:
+      to: tba:238:room:23822
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23824":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23827
+    east:
+      to: tba:238:room:23825
+    south:
+      to: tba:238:room:23811
+    west:
+      to: tba:238:room:23823
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23825":
+  name: In the lake
+  description: >
+    There is a fine layer of film that rests upon the top of the lake.  Under the lake can be seen
+    small fish and a few pieces of garbage but nothing important.  Also the sand at the bottom of the lake is
+    not quite sand rather busted up crystal making it imposable to walk on the bottom of the lake.  Also
+    algae floats towards the top of the lake making it hard to see up from the bottom of the lake.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23826
+    south:
+      to: tba:238:room:23810
+    west:
+      to: tba:238:room:23824
+  extras:
+  - keywords: [look, footprints]
+    text: >
+      You notice that these prints are different creatures.  It appears that they were drug or have drug
+      themselves into this room and and then walked out.
+
+"tba:238:room:23826":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:238:room:23825
+    west:
+      to: tba:238:room:23827
+
+"tba:238:room:23827":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23826
+    south:
+      to: tba:238:room:23824
+    west:
+      to: tba:238:room:23828
+
+"tba:238:room:23828":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23827
+    south:
+      to: tba:238:room:23823
+    west:
+      to: tba:238:room:23829
+
+"tba:238:room:23829":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23828
+    south:
+      to: tba:238:room:23822
+    west:
+      to: tba:238:room:23830
+
+"tba:238:room:23830":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23829
+    south:
+      to: tba:238:room:23821
+    west:
+      to: tba:238:room:23831
+
+"tba:238:room:23831":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23830
+    south:
+      to: tba:238:room:23820
+    west:
+      to: tba:238:room:23832
+
+"tba:238:room:23832":
+  name: In the fog
+  description: >
+    Here it is hard to see anything besides what is in the area with you. There is thick gray fog
+    around everything leaving you wandering where you are and where to go.  This must be some kind of magic
+    because the fog seems to not be moving any and it has a strange glow to it.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23831
+    south:
+      to: tba:238:room:23819
+    west:
+      to: tba:238:room:23833
+
+"tba:238:room:23833":
+  name: Before the castle
+  description: >
+    You find yourself standing before a massive crystal castle.  It seems to be flawless and very
+    delicate yet very strong in design.  There are many small crystals poking out from the sides of the castle
+    making it impossable to scale the wall.  There is a large gate leading into the castle directly to
+    the north.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:238:room:23832
+    south:
+      to: tba:238:room:23818
+
+"tba:238:room:23834":
+  name: Under the sand
+  description: >
+    There are large spider webs and dead insects scattered about.  There is also a fowl stench that has
+    completely closed you in.  Many nasty bugs crawl around looking for a crumb of food here . There is
+    a small tunnel leading off into the north leading you into darkness.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23835
+      look: Looking north there is a small tunnel leading north
+    up:
+      to: tba:238:room:23809
+      look: Leading up is a small patch of land.
+      door:
+        keywords: [patch]
+        kind: door
+  extras:
+  - keywords: [look, spider, web]
+    text: There are many small spiders around the room looking for a bite to eat.
+
+"tba:238:room:23835":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spide webs linning the walls.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23836
+    south:
+      to: tba:238:room:23834
+      look: Looking south you see a small area under a patch of grass.
+
+"tba:238:room:23836":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spide webs linning the walls.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23837
+    south:
+      to: tba:238:room:23835
+
+"tba:238:room:23837":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spider webs linning the walls.  There seems to be the remains of someones skull lying here on the ground.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23838
+    south:
+      to: tba:238:room:23836
+
+"tba:238:room:23838":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spide webs linning the walls.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23839
+    south:
+      to: tba:238:room:23837
+
+"tba:238:room:23839":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spide webs linning the walls.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:238:room:23840
+    south:
+      to: tba:238:room:23838
+
+"tba:238:room:23840":
+  name: Through the tunnel
+  description: >
+    This is a very small tunnel barely big enough for one person.  It seems to have not been used for a
+    very long time . It looks like it was used for an escape route or maybe for someone to sneak in or
+    out.  There are many carvings in the wall nothing special but just notches.  Also there are still
+    spider webs linning the walls.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:238:room:23839
+
+"tba:238:room:23841":
+  name: Entrance to the castle
+  description: >
+    There are many bloody and smelly heads hanging from the walls as if there were some king of crazed
+    monster living here mutilating anything that steps in his way.  The heads appear to have been cut off
+    with some kind of dull blade. Blood lines the floors and mutilated body parts are scattered about.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23842
+      look: Looking north reveals a room full of corpses.
+    west:
+      to: tba:238:room:23843
+      look: Looking to the west appears to be a storage room.
+    up:
+      to: tba:238:room:23845
+      look: Looking up appears to be the main floor to the castle.
+      door:
+        keywords: [trapdoor]
+        kind: door
+    down:
+      to: tba:238:room:23840
+      look: Trap Door
+      door:
+        keywords: [trap, door]
+        kind: door
+  extras:
+  - keywords: [head]
+    text: >
+      There are many heads strown across the room with many nasty smells to follow. These heads appear to
+      have been gnawed off of the owners neck very visiously as if torn off by animals.
+
+"tba:238:room:23842":
+  name: Corpses
+  description: >
+    You are in a room full of decaying corpses.  There are many decapitated ones lying in a big pile on
+    the eastern wall and some without any extra limbs piled on the northern side.  Also there are a pile
+    of heads stacked up on the western wall of this room.  There are many nasty smells that come from
+    this room making anyone who enters want to puke.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:238:room:23841
+      look: Looking south you see the entrance to the castle.
+  extras:
+  - keywords: [corpses]
+    text: There are many decapitated corpse strown about the room piled in all corners of the room.
+
+"tba:238:room:23843":
+  name: Storage room
+  description: >
+    This room has been filled with many small and large boxes.  There are many things stowed away here,
+    many of which are no good anymore due to the current rat population.  It appears that noone was ever
+    planning on coming back to get any of the stored items.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:238:room:23841
+      look: Looking east appears to be the entrance to something.
+
+"tba:238:room:23844":
+  name: Treasure room
+  description: >
+    You have entered the treasure room of the castle.  There are many different piles of coins in one
+    large mass piled up on the floor.  It appears that it was stored here long ago and forgotten.  The
+    room has many different color banners posted all around
+  sector: inside
+
+"tba:238:room:23845":
+  name: Main floor hallway
+  description: >
+    This room is the beginning of the castle's main floor.  There are pillars scattered about in a
+    decorative design.  Many pieces of pottery line the walls atop of many eligant tables.  There are many
+    fine pieses of art and a few sculptures scattered about making the room appear very eligant to those
+    who enter the castle.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:238:room:23847
+      look: Looking north appears to lead to an intersection of the castle.
+    south:
+      to: tba:238:room:23846
+      look: Looking south you see an overview of the lake from the 2nd floor of the castle.
+      door:
+        keywords: [door]
+        kind: door
+    down:
+      to: tba:238:room:23841
+      look: The entrance to the castle appears to be this way.
+      door:
+        keywords: [trapdoor]
+        kind: door
+  extras:
+  - keywords: [pottery]
+    text: These pots are very old and fragile but very valuable.
+  - keywords: [pillar]
+    text: These pillars appear to be made of pure crystal and are about 10 feet tall.
+
+"tba:238:room:23846":
+  name: Outside the castle
+  description: >
+    This room appears to support you even though you did not think it would. There are small trees
+    scattered about below and a massive lake just south. You can see small fish swimming in the lake below. 
+    As you look back you notice that you can go up into a cubby hole which is very large.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:238:room:23845
+      look: Looking north reveals the main floor entrance.
+    up:
+      to: tba:238:room:23881
+      look: Looking up you see a large room with a crystal roof and a crystal floor.
+
+"tba:238:room:23847":
+  name: Intersection
+  description: >
+    The rug covered floor attracts attention to the center of the floor here. There is a large picture
+    of a dragon woven into the center of the beautiful rug.  There are not many decorations here except
+    for the dragon in the center of the rug. The dragon seems to pull you into some kind of trance.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23851
+      look: Looking north you see the northern hallway.
+    east:
+      to: tba:238:room:23850
+      look: Looking east appears to lead to the eastern hallway.
+    south:
+      to: tba:238:room:23845
+      look: Looking south appears to lead to the main hallway to the castle.
+    west:
+      to: tba:238:room:23848
+      look: looking west seems to lead you through the western hallway.
+  extras:
+  - keywords: [dragon]
+    text: >
+      Looking at this picture woven into carpet seems to put you into a trance making it hard to believe
+      that this picture is just a picture.
+
+"tba:238:room:23848":
+  name: Western hallway
+  description: >
+    This room appears to be in excelent condition as well as the rooms before it.  There are no
+    decorations here or any kind of art work.  There are bare walls and tiled floor.  This hallway seems to not
+    be very popular or just not finished.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23847
+    west:
+      to: tba:238:room:23849
+      look: Looking west seems to reveal a dead end.
+
+"tba:238:room:23849":
+  name: Dead end
+  description: >
+    This room seems to be the end of the western hallway that has lead you thus far.  There are no
+    decorations in this room and no kind of evidance of inhabitants.  There are many tiles that line the
+    floor throughout the floor seeming to form a circle.  There are small markings placed in the circle but
+    you cannot tell what they are for or where thet come from.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23848
+      look: Looking east appears to take you to the western hallway.
+  extras:
+  - keywords: [statue]
+    text: Looking at the statue you notice that it is a large statue of a wyvern.
+  - keywords: [scratch]
+    text: There are many scratches forming a small circle in the middle of the tiles.
+
+"tba:238:room:23850":
+  name: Eastern hallway
+  description: >
+    There are many different colors about this room as if it was sprayed with paint.  There are swirls
+    and different patterns as if some kind of art.  There are also some misplaced spots on the floor that
+    appear to have dripped from the roof.  There are no spots on the roof however.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23851
+      look: Looking east you notice that this will lead you further down the eastern hallway.
+    west:
+      to: tba:238:room:23847
+      look: Looking west shows you to the intersection.
+  extras:
+  - keywords: [spots]
+    text: >
+      Looking more carefully you notice that these spots appear to be some kind of tracks leading fomr
+      the roof to the floor.
+
+"tba:238:room:23851":
+  name: Further on the eastern hallway
+  description: >
+    This room appears to be the same as the last except the spots on the floor are not here.  There are
+    also some small items strewn about the floor consisting of rat guano, bird feathers, spider webs,
+    and cockroach shells. There are no traces of anyone ever being here to clean this room or to have even
+    walked through it because there is a coating of dust on the floor revealing your tracks as you cross
+    it.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23854
+    east:
+      look: Looking east seems to lead to a dead end.
+    west:
+      to: tba:238:room:23850
+      look: The eastern hallway is the only thing to the west.
+
+"tba:238:room:23854":
+  name: Northern hallway
+  description: >
+    This room is about the same as the first room of this hallway very clean and well kept.  There are
+    not any smudges or any dirt stains of any kind.  It almost seems that the room is magically
+    maintained and left spotless.  There are also many tapestries in this room.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23855
+      look: Looking north appears to lead you into a dead end.
+    south:
+      to: tba:238:room:23851
+      look: >
+        Looking south leads to lead to the northern hallway. Looking south you notice that it leads to the
+        Northern hallway.
+  extras:
+  - keywords: [tapestries]
+    text: The tapestries are very elegant and well kept they are pictures of different land scapes.
+
+"tba:238:room:23855":
+  name: Dead end
+  description: >
+    This appears to be the end of the line for this hallway.  There are still very eligant pictures and
+    other pieces of art placed about the room here. Just as before the room is spotlessly clean.  There
+    are no traces of anything in this room.
+  sector: inside
+  exits:
+    south:
+      to: tba:238:room:23854
+      look: Looking south seems to lead you into the northern hallway.
+  extras:
+  - keywords: [pictures]
+    text: >
+      These pictures seem to be people but they are slightly blurred when you try to focus on them.
+
+"tba:238:room:23856":
+  name: Hidden hallway
+  description: >
+    This area seems to have been also cleaned even though it was very well hidden.  There are no traces
+    of life and no way to get back up.  There are many cobblestones linning the floor to make it appear
+    as if the floor here was the bottom of the fountain.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23857
+      look: Looking north leads you further down the hidden hallway.
+
+"tba:238:room:23857":
+  name: Further on the hidden hallway
+  description: >
+    This room is as clean as the rest but from here you can see the top of the clouds when you look
+    down.  The floor appears to be the great sky above.  The roof however appears to be the top of a
+    mountain pointing top down towards you.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23858
+      look: Looking north you see the sky and clouds floating through the room ahead.
+    south:
+      to: tba:238:room:23856
+      look: Looking south seems to lead you toward the beginning of the hidden hallway.
+  extras:
+  - keywords: [look, mountain]
+    text: >
+      The mountain looks as if it may fall any second probably because this is not the way you usually
+      see them.
+  - keywords: [look, sky]
+    text: This really looks like the real sky except it is sturdy and can hold you up.
+
+"tba:238:room:23858":
+  name: Walking through the sky
+  description: >
+    You have entered a remarkable room placed above the clouds except for the fact that you cannot walk
+    you you have to fly.  There are birds and clouds drifting about in the distance.  The only thing you
+    can see is clouds and the blue sky above.
+  sector: flying
+  exits:
+    north:
+      to: tba:238:room:23859
+      look: Looking north you see what looks like what could be nearing the end of the hallway.
+    south:
+      to: tba:238:room:23857
+      look: Looking south you see solid ground leading back to the beginning of this hallway.
+
+"tba:238:room:23859":
+  name: Near the end
+  description: >
+    You have set foot on solid ground again.  The room here looks exactly the same as the first and you
+    can see what looks like the first room ahead to the north.  There are many fine pictures on the
+    walls here.  Also the floor seems to be made of some kind of deep brown wood.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23860
+      look: Looking north you see the end of the hallway.
+    south:
+      to: tba:238:room:23858
+      look: Looking south you see the open sky.
+
+"tba:238:room:23860":
+  name: The end
+  description: >
+    You have finally made it to the end of this god forsaken hallway.  There are no more posters or and
+    kind of decoration here just walls a floor and a ceiling, which you much appreciate.  The walls,
+    floor, and ceiling appear to be made of wood.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23861
+      look: Looking north you see a room with 3 large sparkling items.
+      door:
+        keywords: [Gate]
+        kind: pickproof
+        key: tba:238:obj:23860
+        reset: locked
+    south:
+      to: tba:238:room:23859
+      look: Looking south you can see more hallway.
+  extras:
+  - keywords: [troll]
+    text: The troll's marking appear to be those of Lords Of Pain signifying power and courage.
+
+"tba:238:room:23861":
+  name: Portal room
+  description: >
+    Upon entering this room you notice a large green portal standing on the northern wall in this room
+    shimmering in the darkness.  There are no decorations in this room but the room seems to have a green
+    tint to it.
+  sector: inside
+  exits:
+    south:
+      to: tba:238:room:23860
+      look: Looking south you see a long hallway.
+      door:
+        keywords: [Gate]
+        kind: pickproof
+        key: tba:238:obj:23860
+        reset: locked
+
+"tba:238:room:23862":
+  name: Through the blue portal
+  description: >
+    You have entered the portal and have yet to find anything but blue glowing strongly around you. 
+    You walk along whap seems to be a floor but is nothing but light from the portal.  There are many small
+    spots floating around the portal around you.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23867
+      look: Looking north appears to lead you further into the portal.
+  extras:
+  - keywords: [spots]
+    text: >
+      There are many small spots that appear to be some kind of smaller portals inside of the big portal.
+
+"tba:238:room:23863":
+  name: Through the red portal
+  description: >
+    This appears to be some kind of swirling vortex that you can freely travel through.  There are
+    small spots that line the walls here.  Many particles float about bumping into you at times making a
+    spark.  There is no floor, roof, or walls here to guide y
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23871
+      look: Looking north reveals another part of the portal.
+  extras:
+  - keywords: [spot]
+    text: >
+      Looking in for further examination you see that they are balls of energy, as you turn back one pops
+      you in the face OUCH!!!!!
+
+"tba:238:room:23864":
+  name: Through the green portal
+  description: >
+    This room appears to have a green tint to every part of the entire room. There are green posters
+    covering the walls and very small green spots strown about.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23865
+      look: Looking east seems to lead you to another portal room witha blue aurora.
+    west:
+      to: tba:238:room:23866
+
+"tba:238:room:23865":
+  name: Portal room
+  description: >
+    This room has a large blue portal against the far northern wall.  This room has a blue tint to the
+    room and has no decorations or designs anywhere on the room.  The portal seems to have placed a blue
+    aurora about the room.
+  sector: inside
+  exits:
+    west:
+      to: tba:238:room:23864
+
+"tba:238:room:23866":
+  name: Portal room
+  description: >
+    This room has a large red portal placed on the northern wall and also has a tint of red thruought
+    the entire room.  There are no decorative items or any kind of other decorations.  The room is very
+    plain except for the portal itself.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23864
+
+"tba:238:room:23867":
+  name: Further in the blue portal
+  description: >
+    There are still all the small spots floating around but the floor seems to be taking shape more
+    now.  There are no walls or a roof but the floor is beginning to get harder and more sturdy.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23868
+      look: Looking north shows you further into the portal .
+    south:
+      to: tba:238:room:23862
+      look: Looking south shows you to the area where you come into the portal.
+
+"tba:238:room:23868":
+  name: Further in the blue portal
+  description: >
+    There are still all the small spots floating around but the floor seems to be taking shape more
+    now.  There are no walls or a roof but the floor is beginning to get harder and more sturdy.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23869
+      look: Looking north shows you more portal.
+    south:
+      to: tba:238:room:23867
+      look: To the south is toward the beginning of the portal.
+
+"tba:238:room:23869":
+  name: Further in the blue portal
+  description: >
+    There are still all the small spots floating around but the floor seems to be taking shape more
+    now.  There are no walls or a roof but the floor is beginning to get harder and more sturdy.  The floor
+    appears as a solid floor now.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23870
+      look: Looking north reveals the kings throne.
+    south:
+      to: tba:238:room:23868
+      look: Looking south shows you the area that leads to the beginning of the portal.
+
+"tba:238:room:23870":
+  name: Kings chamber
+  description: >
+    You have entered the kings chamber.  You are surrounded by gold and silver everywhere.  The
+    tapestries that line the wall are trimmed in gold.  The floor you walk on is made of silver.  And the roof
+    you look at is made of titanium. There is nothing mis
+  sector: inside
+  exits:
+    south:
+      to: tba:238:room:23869
+      look: Looking south reveals the tunnel you came from.
+
+"tba:238:room:23871":
+  name: Further through the red portal.
+  description: >
+    This area appears the same as the last except for the little floating objects that cause the sparks
+    when you bump them are very scarce here.  The floor is beginning to harden and the walls are
+    beginning to show.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23872
+      look: Looking north reveals an exit leading further into the portal.
+    south:
+      to: tba:238:room:23863
+      look: Looking south appears to lead you into the room that you entered from.
+
+"tba:238:room:23872":
+  name: Far into the red portal.
+  description: >
+    The wals here are shimmering and swirling making a beautiful mass of colors and patterns.  The
+    walls appear to be unreachable but also right beside you. The floor is hard and solid now just the walls
+    appear unstable.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23873
+      look: Looking north shows you the end of this portal.
+    south:
+      to: tba:238:room:23871
+      look: Looking south shows you a continuation of the portal room.
+
+"tba:238:room:23873":
+  name: Towards the end
+  description: >
+    This area seems to be very rich in color and loaded with the small particals.  There are many
+    different colors flowing throught the the walls making it a sight to see.  The spots appear to be avoiding
+    you now saving you a heart ache.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23874
+      look: Looking north you see the queens room.
+    south:
+      to: tba:238:room:23872
+      look: Looking south reveals the portal you came from.
+
+"tba:238:room:23874":
+  name: Queen plegia's room
+  description: >
+    This room is very eligant from top to bottom.  There are many decorative pieces of art in this room
+    revealing the elegant tastes of royalty.  The queens throne is perched atop a large golden square. 
+    The throne itself seems to be made of gold and silk.
+  sector: inside
+  exits:
+    south:
+      to: tba:238:room:23873
+      look: Looking south you see the portal that you came from.
+  extras:
+  - keywords: [throne]
+    text: Made of solid gold linned with silk this throne appears to be a very eligant sitting.
+
+"tba:238:room:23875":
+  name: South road
+  description: >
+    You are walking through a a small trail which seems to lead to nothing. The road has changed here
+    and seems to be less bright and more spooky.  The area is still good and the land is fertile but the
+    air around seems very weird.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23876
+      look: Looking east the road begins to blur and you can not see far into the distance.
+
+"tba:238:room:23876":
+  name: Towards the lake
+  description: >
+    This area seems to be very odd.  There are many odd sounds and different smells.  There are no
+    animals here but you can hear the sounds of animals in the distance.  There is a small fog rolling in
+    which stretches farther to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23877
+      look: Looking east you can see nothing except fog.
+    west:
+      to: tba:238:room:23875
+      look: Looking west you see the southern road.
+
+"tba:238:room:23877":
+  name: In the fog
+  description: >
+    There is a heavy fog here which disallows you to see anything except the exits to the rooms ahead. 
+    The fog appears to be implied by some kind of magical force.  The sounds of animals are no longer
+    heard and no evidence of life are present.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23878
+    west:
+      to: tba:238:room:23876
+
+"tba:238:room:23878":
+  name: In the fog
+  description: >
+    There is a heavy fog here which disallows you to see anything except the exits to the rooms ahead. 
+    The fog appears to be implied by some kind of magical force.  The sounds of animals are no longer
+    heard and no evidence of life are present.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23879
+    west:
+      to: tba:238:room:23877
+
+"tba:238:room:23879":
+  name: In the fog
+  description: >
+    There is a heavy fog here which disallows you to see anything except the exits to the rooms ahead. 
+    The fog appears to be implied by some kind of magical force.  The sounds of animals are no longer
+    heard and no evidence of life are present.
+  sector: inside
+  exits:
+    east:
+      to: tba:238:room:23880
+      look: Looking east you see a large area before a great lake.
+    west:
+      to: tba:238:room:23878
+
+"tba:238:room:23880":
+  name: A Clearing Before the Lake
+  description: >
+    You stand here in front of a massive lake.  There are many small animals scattered about looking as
+    if they want to get out but cannot.  There are many different smells surrounding the area.
+  sector: inside
+  exits:
+    north:
+      to: tba:238:room:23801
+      look: Looking north you see the area before the lake.
+    west:
+      to: tba:238:room:23879
+      look: Looking west you see into the fog.
+
+"tba:238:room:23881":
+  name: Dragons Lair
+  description: >
+    You have entered a large room with very little decorations and no kind of art.  There are claw
+    marks and very large holes in the walls and ceiling around.  The floor is very hard and seems to be
+    composed of crystal.  The roof is also made of the same materials.
+  sector: inside
+  exits:
+    down:
+      to: tba:238:room:23846
+      look: Looking down you see the rocks in front of the castle.
+  extras:
+  - keywords: [scratches]
+    text: Looking in for a closer look you see that these scratches are from some kind of animal.

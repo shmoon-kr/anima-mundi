@@ -1,0 +1,168 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 41.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:41:mob:4100":
+  keywords: [mage]
+  short: the mage
+  long: A small intelligent looking mage is standing here.
+  description: >
+    His IQ makes almost any normal person look stupid...  It looks like he knows his way with magic.
+  level: 13
+  sex: male
+  alignment: -100
+  flags: [sentinel, scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4101":
+  keywords: [troll]
+  short: the troll
+  long: A large mean-looking troll is here.
+  description: Well, it looks dangerous!
+  level: 12
+  sex: male
+  alignment: -800
+  flags: [sentinel, scavenger, aggressive]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4102":
+  keywords: [snake]
+  short: the snake
+  long: A large green snake is here, looks like a guardian for an evil force.
+  description: >
+    You see a evil creature.  The snake measures at least 5 feet in length and is coiled into a tight
+    circle hissing at you.
+  level: 10
+  sex: male
+  alignment: -700
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4103":
+  keywords: [thief]
+  short: the thief
+  long: A thief is here, all dressed in black.
+  description: He seems to be counting a handful of coins.  Maybe you ought to count YOUR gold too...
+  level: 8
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  affects: [detect_invis, sneak, hide]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4104":
+  keywords: [orc, ugly]
+  short: the orc
+  long: A ugly orc is standing here.
+  description: It is quite disgusting to look at.
+  level: 7
+  sex: male
+  alignment: -200
+  flags: [scavenger, aggressive, stay_zone, wimpy]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4105":
+  keywords: [centipede]
+  short: the centipede
+  long: A small harmless centipede is here.
+  description: Well it doesn't seem to pay any attention to you.
+  level: 6
+  sex: neutral
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4106":
+  keywords: [warrior]
+  short: the warrior
+  long: A human warrior is here.  He has a evil grin in his face.
+  description: He doesn't look friendly at all...
+  level: 9
+  sex: male
+  alignment: -300
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:41:mob:4107":
+  keywords: [kobold]
+  short: the kobold
+  long: A green kobold is here.
+  description: It looks slimy..
+  level: 7
+  sex: male
+  alignment: -100
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

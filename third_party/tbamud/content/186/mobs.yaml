@@ -1,0 +1,335 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 186.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:186:mob:18601":
+  keywords: [pitbeast, beast]
+  short: the pit beast
+  long: The big, ugly pit-beast is standing here sizing you up.
+  description: >
+    Ick...  What a disgusting creature!  It is black and green and slimy and it is drooling
+    everywhere...  Looks mean too.
+  level: 5
+  sex: neutral
+  alignment: -750
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18602":
+  keywords: [newbie, monster]
+  short: the newbie monster
+  long: The newbie monster stands here looking confused.  Kill him!  Kill him!
+  description: >
+    What an odd looking little beast.  He looks harmless, but you never can tell. He is only about 4
+    feet tall, but he pretty muscular looking...  Maybe you should ask if he needs help?  Nah...  Kill him.
+  level: 2
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18603":
+  keywords: [pet, dragon, baby, newbie]
+  short: the baby dragon
+  long: Someone's little pet dragon has gotten loose, and is sniffing about here.
+  description: >
+    Awwww...  How cute!  A little baby dragon.  He's about 3 feet long and you just want to cuddle him
+    to death...  No, you really want to kill him to tell the truth.  But, remember, even a little dragon
+    can be a big problem.
+  level: 4
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18604":
+  keywords: [keeper, guard, monster, newbie]
+  short: the Newbie Guard
+  long: The Newbie Guard is here wondering where that dragon went.
+  description: >
+    The Guard also had the job of taking care of the Alchemist's pet dragon, but he doesn't seem to be
+    doing a good job of it.  He looks at you and says, 'Have you seen that dragon?  Master will have my
+    head if I don't find him.  '
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18605":
+  keywords: [alchemist, newbie]
+  short: the Newbie Alchemist
+  long: The Newbie Alchemist is here trying to make something.
+  description: >
+    He is a funny looking, furry little dude.  He looks really busy trying to mix up a batch of
+    something or other.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18606":
+  keywords: [crawler, creepy, bug, thing, newbie]
+  short: the creepy crawler
+  long: A creepy little crawling thing is scuttling along the floor at your feet.
+  description: >
+    Yuck!  If they'd ever clean this place maybe it wouldn't attract vermin like this disgusting,
+    little, six-legged, brown bug.
+  level: 1
+  sex: neutral
+  alignment: -250
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18607":
+  keywords: [newbie, zombie]
+  short: the zombiefied newbie
+  long: A VERY gaunt looking newbie... it looks like a zombie!
+  description: >
+    This guy has been lost in here too long...  It is more zombie than man now. You would feel sorry
+    for it, but it is moving in to attack!
+  level: 4
+  sex: neutral
+  alignment: -500
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18608":
+  keywords: [quasit, imp, thing]
+  short: the quasit
+  long: A funny little imp-like thing (a quasit perhaps?) is sneaking about here.
+  description: >
+    Little green, vaguely humanoid shaped creature, with a long pointed tail. It is hard to say because
+    before you ever get a good look at it, it darts back into the shadows.
+  level: 3
+  sex: male
+  alignment: -800
+  flags: [scavenger, aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18609":
+  keywords: [minotaur]
+  short: the massive Minotaur
+  long: The Great Minotaur is wondering just what you'll taste like.
+  description: >
+    A massive man, with the head of a bull.  He looks as strong as bull too, but not nearly as smart. 
+    Actually, now that you consider it...  He looks a heck of a lot meaner than any bull you have ever
+    seen...  And he is coming this way!
+  level: 7
+  sex: male
+  alignment: -1000
+  flags: [stay_zone, aggr_good, aggr_neutral]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18610":
+  keywords: [spectre, ghost]
+  short: the dark spectre
+  long: The dark spectre is lurking in the shadows.
+  description: >
+    The soul of a long since passed on adventurer...  It lurks here waiting for a chance to bring death
+    to any who cross its path.
+  level: 6
+  sex: neutral
+  alignment: -850
+  flags: [sentinel, stay_zone, memory]
+  affects: [invisible, detect_invis, hide]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18611":
+  keywords: [newbie, annoying, jerk]
+  short: the annoying newbie
+  long: A newbie is here annoying the hell out of you.
+  description: >
+    What a jerk!  He won't shut up, and he keeps making the most irritating comments about everything. 
+    Better silence him with cold, tempered steel MUHAHAHAHAHAHAHAHAHAHA!
+  level: 2
+  sex: male
+  alignment: -500
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18612":
+  keywords: [newbie, clueless, moron]
+  short: the clueless newbie
+  long: A newbie is here looking terribly confused.
+  description: >
+    What a moron!  Every question that is answered in the help files, he will ask and he will probably
+    ask 2 or 3 times too.  This guy just doesn't get it, best put him out of his misery.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18613":
+  keywords: [newbie, talkative]
+  short: the talkative newbie
+  long: A newbie is here talking a lot.
+  description: >
+    Well, at least this gal seems pretty cool.  Talks a lot, but she's a friendly, interesting sort. 
+    Seems to have a clue what she's doing also, unlike some others you might see.
+  level: 3
+  sex: female
+  alignment: 100
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18614":
+  keywords: [newbie, lost]
+  short: the lost newbie
+  long: A newbie is here wandering about aimlessly.
+  description: >
+    Hmmm...  Looks like he has been around a while, but he wandered a little too far from home this
+    time.  Don't think he knows quite where he is, maybe you should help him out?
+  level: 4
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:186:mob:18615":
+  keywords: [newbie, smart]
+  short: the smart newbie
+  long: A newbie is here, and he looks quite sure of himself.
+  description: >
+    Here is a guy who has it all together.  Nice equipment too, must have read the help files, Eh?
+  level: 5
+  sex: male
+  alignment: 500
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing

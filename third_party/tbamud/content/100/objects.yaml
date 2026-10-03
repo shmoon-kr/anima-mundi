@@ -1,0 +1,340 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 100.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:100:obj:10000":
+  type: container
+  keywords: [bunk]
+  short: a dirty bunk
+  long: A flee-infested bunk filled with rags sits in one corner.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dirty, bunk]
+    text: >
+      As you examine the bunk closer you notice some of the rags may not be as shabby as you originally
+      thought. No one would miss them, would they?
+
+"tba:100:obj:10001":
+  type: container
+  keywords: [stove]
+  short: a stove
+  long: An old stove is slowly rusting away to nothing here.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 400
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stove]
+    text: >
+      The stove looks like it hasn't been used for a few years. In the bottom you see a thick pile of
+      ashes. You notice something sparkling in the ashes.
+
+"tba:100:obj:10002":
+  type: container
+  keywords: [river]
+  short: the river
+  long: A clear river with small trout swimming lazily in the current flows by.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 400
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [river]
+    text: >
+      The river here is gently flowing by. Small trout float close to the surface. You wonder if you
+      could catch one of them.
+  - keywords: [fish]
+    text: They are small trout of some kind. They look very tasty.
+
+"tba:100:obj:10003":
+  type: fountain
+  keywords: [lake]
+  short: the lake
+  long: A beautiful, calm lake is sparkling here.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [lake]
+    text: >
+      The lake is perfectly calm, no movement of any kind in the lake makes the surface look like glass.
+      The water looks clean and drinkable.
+
+"tba:100:obj:10004":
+  type: fountain
+  keywords: [pond]
+  short: the pond
+  long: A murky pond is stagnating here.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pond]
+    text: >
+      The pond is a deep brown color and smells funny. You think twice about trying to take a drink from
+      it.
+
+"tba:100:obj:10005":
+  type: fountain
+  keywords: [river]
+  short: the river
+  long: A fast moving river flows by you with a roar.
+  flags: [no_invis]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [river]
+    text: >
+      The river is extremely wide here. You doubt you could make it across. The water looks very
+      refreshing.
+
+"tba:100:obj:10006":
+  type: food
+  keywords: [trout]
+  short: a small trout
+  long: A small trout is squirming in your hands.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [trout]
+    text: >
+      This poor little fella wants to get back into some water before he dies. He looks rather tasty.
+
+"tba:100:obj:10007":
+  type: worn
+  keywords: [pants]
+  short: some pants
+  long: A pair of dirty pants lies crumpled on the ground.
+  flags: [no_invis]
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 3
+  extras:
+  - keywords: [pants]
+    text: >
+      These pants are filthy. They look like they have not been washed in years. Besides the filth and
+      smell they are in relatively good shape.
+
+"tba:100:obj:10008":
+  type: worn
+  keywords: [shirt]
+  short: a shirt
+  long: A filthy looking shirt has been left here.
+  flags: [no_invis]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 3
+  extras:
+  - keywords: [shirt]
+    text: >
+      Although the shirt is dirty, it looks very useable.  The fabric is a fine wool and should stand up
+      to a lot of wear and tear.
+
+"tba:100:obj:10009":
+  type: money
+  keywords: [coins]
+  short: a few coins
+  long: A few coins have been left here.
+  flags: [no_invis]
+  wear: [take]
+  values:
+    coins: 50
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coins]
+    text: The pile sparkles, coins of platinum, gold, silver, and bronze.
+
+"tba:100:obj:10010":
+  type: other
+  keywords: [oak]
+  short: the oak
+  long: A huge oak towers above you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [oak, tree]
+    text: >
+      This impressive tree is thicker than you are tall.  Many animals have homes way up in the top of
+      the tree. Certain parts look hollow and are probably the dens of squirrels and raccoons.
+
+"tba:100:obj:10011":
+  type: other
+  keywords: [maple]
+  short: the maple
+  long: A maple tree sways gently in the breeze here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tree, maple]
+    text: >
+      This massive tree sways gently in the breeze. It towers above all the other trees in the area. If
+      you could climb to the top you could probably get a good view of the area. But you see no branches
+      that you could possibly reach.
+
+"tba:100:obj:10012":
+  type: other
+  keywords: [elm]
+  short: the elm
+  long: A gigantic elm reaches towards the sky.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [elm]
+    text: >
+      This must be one of the biggest trees you've ever seen. The base must be a good three paces in
+      width and you can't even make out the top of the tree because of all the branches.
+
+"tba:100:obj:10013":
+  type: other
+  keywords: [ash]
+  short: the ash
+  long: A tall, straight ash tree stretches towards the sky.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ash]
+    text: >
+      This tree has a rough bark and looks to be perfectly straight, without limbs until it reaches above
+      all the lesser trees. There huge limbs full of healthy, funny shaped leaves take all the sunlight
+      away from the rest of the forest.
+
+"tba:100:obj:10014":
+  type: light
+  keywords: [brass, lantern]
+  short: a brass lantern
+  long: A brass lantern is extinguished here.
+  wear: [take, hold]
+  values:
+    hours: 8
+  weight: 6
+  cost: 120
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [brass, lantern]
+    text: >
+      The brass hood can be opened and closed allowing for dimming the light without actually
+      extinguishing it.  The globe is filthy, but clear enough to let out a fair amount of light.
+
+"tba:100:obj:10015":
+  type: container
+  keywords: [fur, backpack]
+  short: a fur backpack
+  long: A pile of fur with straps on it looks like it might be a backpack.
+  wear: [take, about]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [fur, backpack]
+    text: >
+      This backpack is made from deer hide and is extremely durable.  It can be worn about the body.
+
+"tba:100:obj:10016":
+  type: food
+  keywords: [deer, venison, meat]
+  short: some venison
+  long: This slab of venison is from a large, well-fed deer.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [deer, meat, venison]
+    text: This large slab of meat has been recently cooked and, though dry, looks rather tasty.

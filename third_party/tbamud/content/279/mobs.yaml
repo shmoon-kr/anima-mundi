@@ -1,0 +1,951 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 279.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:279:mob:27900":
+  keywords: [bat, gray]
+  short: a gray bat
+  long: A gray bat hangs from the shadows here.
+  description: >
+    This furry creature looks just like a giant gray rat, only with large pointed ears and webbed wings
+    that it curls around itself whilst hanging. Glistening fangs and keen beady eyes seem ever ready for
+    a chance to attack fresh prey.
+  level: 10
+  sex: neutral
+  alignment: -15
+  flags: [stay_zone, memory, helper, no_blind]
+  affects: [blind, detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: sleeping
+    default: standing
+
+"tba:279:mob:27904":
+  keywords: [poor, citizen]
+  short: a poor citizen
+  long: A poor citizen of France is sitting here.
+  description: >
+    This unfortunate man is obviously from the lower classes of France, unashamedly begging, the state
+    of his appearance and the lingering smell around him leaves no doubt that he is in the very desperate
+    depths of poverty.
+  level: 12
+  sex: male
+  alignment: -20
+  flags: [stay_zone, memory]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 120
+  exp: 14400
+  position:
+    load: sitting
+    default: standing
+
+"tba:279:mob:27911":
+  keywords: [Tintoreto, priest]
+  short: Tintoreto the priest
+  long: A priest is standing here.
+  description: >
+    This elderly man is silver-haired and his aged face is lined with years of concentration and devout
+    prayer. His eyes look far away, as though he has already half passed from this world into the next.
+  level: 12
+  sex: male
+  alignment: 50
+  flags: [sentinel, memory, no_summon]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 120
+  exp: 14400
+  position:
+    load: sitting
+    default: standing
+
+"tba:279:mob:27916":
+  keywords: [believer, man]
+  short: a believer
+  long: A believer man is standing here.
+  description: >
+    This average looking man is probably in his late thirties or early forties. Clean-shaven and
+    reasonably neat, he is most likely of French middle class. His dark eyes look humble and repentant, as
+    though he seeks atonement for his sins here.
+  level: 11
+  sex: male
+  alignment: 10
+  flags: [stay_zone, wimpy, memory, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27921":
+  keywords: [boy, choirboy]
+  short: a choirboy
+  long: A choirboy is singing here.
+  description: >
+    This young lad has an innocent cherubic face, flushed with the effort of recent singing. Pale and
+    solemn, it looks as though he must have spent most of his life within stone walls, his slight build
+    made even frailer through lack of work or play.
+  level: 10
+  sex: male
+  alignment: 20
+  flags: [stay_zone, wimpy, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27922":
+  keywords: [believer, woman]
+  short: a believer woman
+  long: A believer woman is praying here.
+  description: >
+    This woman is obviously a very devout believer in Christ, her expression fervent and concentrated
+    as she prays. Apparently she is also one of the many who value their riches, her garb wealthy and
+    well-adorned with gold.
+  level: 10
+  sex: female
+  alignment: 20
+  flags: [stay_zone, memory, helper]
+  affects: [no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: standing
+
+"tba:279:mob:27924":
+  keywords: [Richelieu, cardinal]
+  short: the cardinal Richelieu
+  long: The cardinal Richelieu is standing here, shouting to the people.
+  description: >
+    This man has a darkly-lined face that is red from bellowing, and a peculiar mustache, identifying
+    him to most as Richelieu, the cardinal of France and minister of Louis XIV. He appears completely
+    absorbed in what he is saying, his eyes bright and fierce with righteous fervor.
+  level: 15
+  sex: male
+  alignment: 50
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27925":
+  keywords: [white, pigeon]
+  short: a pigeon
+  long: A white pigeon is here.
+  description: >
+    This smoothly feathered creature coos gently as it struts about, scavenging for any left over
+    morsels of food. Its wide black eyes peer cautiously about, ever alert for some predator.
+  level: 10
+  sex: neutral
+  alignment: 1
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27926":
+  keywords: [man, hunchback]
+  short: the hunchback
+  long: A man with a strangely shaped body is here wandering amongst the bells.
+  description: >
+    This unusual looking man looks half-crazed, his face flushed as he screams for someone named
+    Esmerelda. His back is strangely bent, a large hump rising from between his shoulders, but he looks
+    incredibly muscular and strong, his strength no doubt more powerful because of his anger.
+  level: 15
+  sex: male
+  alignment: 10
+  flags: [sentinel, memory, no_summon]
+  affects: [detect_align, detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27930":
+  keywords: [monk, Jean]
+  short: Jean the monk
+  long: Jean the monk is wandering here, cleaning the floors.
+  description: >
+    This round-faced monk does not look very happy at all, frowning deeply, he mumbles unhappily to
+    himself as he goes about the menial chore of floor- cleaning.  Short and stout, his beady eyes look more
+    like those of a troublemaker than a man of God.
+  level: 14
+  sex: male
+  alignment: -25
+  flags: [stay_zone, wimpy, helper]
+  affects: [sense_life, no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27934":
+  keywords: [monster, horrible, statue, gargoyle, stone]
+  short: the gargoyle
+  long: A horrible monster made of stone is here collecting dust.
+  description: >
+    This stone monster has been here for years and years judging by the layers of dust. It seems to
+    have become the home of several pigeons and insects, layers of grime and dried on feathers making it
+    truly grotesque, quite apart from the evil and leering face.
+  level: 14
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, memory, no_summon]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27937":
+  keywords: [D'artagnan, apprentice, musketeer, boy]
+  short: D'artagnan
+  long: An apprentice of the Musketeers is standing here.
+  description: >
+    This youth looks fresh faced and eager, his keen piercing eyes showing an unusual power and
+    certainty as though he has great potential for leadership. Still scrawny and small built, he is nonetheless
+    quick and agile in movement, his demeanor almost too confident for one so young.
+  level: 13
+  sex: male
+  alignment: 10
+  flags: [stay_zone, helper]
+  affects: [detect_align]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27940":
+  keywords: [citizen, Lyon]
+  short: a citizen of Lyon
+  long: A citizen of Lyon is standing here.
+  description: >
+    This common citizen looks like one of many farmers and merchants of this town, his expression seems
+    humble and worn as though he has worked long and hard, no energy left for protest or conflict.
+  level: 11
+  sex: male
+  alignment: 10
+  flags: [stay_zone, wimpy, helper]
+  affects: [no_track]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27941":
+  keywords: [white, poodle]
+  short: a white poodle
+  long: A white poodle is tied to a tree here.
+  description: >
+    This little dog is covered in fluffy white fur, carefully groomed and sculpted from head to foot.
+    Its smooth gray face has been clean shaven, two large black eyes blinking at the surroundings as it
+    waits for its owner.
+  level: 11
+  sex: neutral
+  alignment: -15
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27943":
+  keywords: [Pierre, magician]
+  short: Pierre the magician
+  long: Pierre is standing here mixing something very special.
+  description: >
+    Dark haired and pale skinned, his piercing green eyes are fixed keenly on what he is doing, aged
+    hands steadily pouring colorful potions into glass vials. His expression is stern and wise, as though
+    he has learned much of the world in his years.
+  level: 15
+  sex: male
+  alignment: 100
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27945":
+  keywords: [French, merchant]
+  short: a French merchant
+  long: A French merchant is here, trying to make a deal.
+  description: >
+    This elderly man of lower class looks as though he has been at his craft all his life. Honest faced
+    and smiling, he nonetheless looks haggard, as though it is a daily struggle just to bring money in
+    for basic living.
+  level: 12
+  sex: male
+  alignment: 18
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27947":
+  keywords: [French, woman]
+  short: a French woman
+  long: A French woman is sitting here waiting for a carriage to pass.
+  description: >
+    This young lady is very pretty and well-groomed, a hint of expensive perfume lingering about her
+    presence, indicating her upper class status. Waiting patiently, she watches the surroundings dreamily
+    with large chocolate- brown eyes.
+  level: 12
+  sex: female
+  alignment: 8
+  flags: [stay_zone, wimpy, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: resting
+    default: standing
+
+"tba:279:mob:27948":
+  keywords: [black, rat]
+  short: a black rat
+  long: A black rat is here sniffing through trash.
+  description: >
+    This vile creature is covered with matted dark fur, one of the disease- ridden rodents so prevalent
+    in the filthier places of France. Sharp yellowed teeth glint menacingly beneath its twitching
+    whiskers, piercing black eyes on the look out for prey.
+  level: 10
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  affects: [waterwalk]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27949":
+  keywords: [Renoir, thief]
+  short: Renoir the thief
+  long: Renoir the thief lingers here, sharpening his dagger.
+  description: >
+    Dark garbed, and covered with a layer of grime, he blends easily and dangerously into the shadows,
+    his squinting gray eyes watching everything suspiciously. His constant sharpening of his dagger is an
+    indication that he must use it often.
+  level: 15
+  sex: male
+  alignment: -100
+  flags: [sentinel, memory]
+  affects: [detect_invis, sense_life, waterwalk, hide]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 150
+  exp: 22500
+  position:
+    load: sitting
+    default: standing
+
+"tba:279:mob:27951":
+  keywords: [hermit, degas]
+  short: Degas the hermit
+  long: Degas the hermit is collecting some fruit here.
+  description: >
+    Degas is well known throughout these parts for his hermit way of living and revolutionary standing,
+    both these lifestyles well-funded by his less well- known occupation as a thief. Busying himself
+    picking, he nonetheless can be seen glancing furtively at the pockets of passing citizens.
+  level: 13
+  sex: male
+  alignment: -20
+  flags: [stay_zone, wimpy, memory, helper]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27955":
+  keywords: [brown, squirrel]
+  short: a brown squirrel
+  long: A brown squirrel scurries about collecting nuts.
+  description: >
+    This furry little creature looks decidedly like a rat with a bushy tail albeit a little cuter.
+    Bright black eyes scavenge the surroundings for food, its little whiskers twitching nervously as it
+    stands up and peers around.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27957":
+  keywords: [Esmerelda, woman, mysterious, gypsy]
+  short: Esmerelda the gypsy
+  long: A mysterious woman is dancing here.
+  description: >
+    This young woman has smooth olive-colored skin, her jet black hair cascading down her back in loose
+    curls as she dances. Smiling flirtatiously, her emerald green eyes flicker with fiery personality
+    and an almost devilish enjoyment of life.
+  level: 15
+  sex: female
+  alignment: -50
+  flags: [sentinel, memory]
+  affects: [invisible]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27963":
+  keywords: [citizen, Paris]
+  short: a citizen of Paris
+  long: A citizen of Paris is standing here.
+  description: >
+    This simple citizen looks a little nervous and furtive, perhaps because of all the insecurity
+    within France around this time. Plain-faced and wide-eyed he glances around as though expecting trouble at
+    any moment.
+  level: 12
+  sex: male
+  alignment: 10
+  flags: [stay_zone, wimpy, memory, helper]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27967":
+  keywords: [Robespierre, revolutionary]
+  short: Robespierre
+  long: A revolutionary is here.
+  description: >
+    His face is firm and set as though he has utter conviction in his beliefs, stone-gray eyes look
+    ready to take on almost anyone who would disagree with him. He does not look strong enough to be a
+    fighter although his movements are fast and decisive.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, helper]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27968":
+  keywords: [Musketeer, guard]
+  short: a Musketeer in service
+  long: A Musketeer in service is stationed here.
+  description: >
+    This guard does not look as though he takes his post very seriously, in fact he seems more inclined
+    to sleep than to do much of anything else. His face is carefree and bland in expression as though
+    there is little in life he would fight for.
+  level: 14
+  sex: male
+  alignment: -25
+  flags: [sentinel, memory, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 140
+  exp: 19600
+  position:
+    load: sleeping
+    default: standing
+
+"tba:279:mob:27971":
+  keywords: [Monet, chef, cook]
+  short: Monet the cook
+  long: Monet the chef is cooking delicious-smelling food.
+  description: >
+    Known as one of the best chefs of all France, Monet has the privilege of catering for the royal
+    guards of king Louis XIV. Jovial in expression, his dark twinkling eyes seem to indicate that he loves
+    his job, his hands moving in a flurry of busy preparation.
+  level: 13
+  sex: male
+  alignment: 100
+  flags: [sentinel, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27972":
+  keywords: [Porthos]
+  short: Porthos the Musketeer
+  long: Porthos the Musketeer is here, looking for trouble.
+  description: >
+    Large built and muscular, Porthos is known as one of the strongest of the Musketeers. His wide
+    frame and intimidating height make him slower in movement and reaction, but he is nevertheless one of the
+    best fighters in all France.
+  level: 15
+  sex: male
+  alignment: 25
+  flags: [stay_zone, memory, helper]
+  affects: [detect_align]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27977":
+  keywords: [Athos]
+  short: Athos the Musketeer
+  long: Athos the Musketeer is standing here.
+  description: >
+    Not particularly intelligent or strong in appearance, Athos nonetheless is a man of conviction,
+    demanding respect for his sheer loyalty and sense of duty. Neatly groomed, he is mostly sombre in
+    expression, lines of time and hardship creasing his face.
+  level: 15
+  sex: male
+  alignment: 12
+  flags: [sentinel, memory, helper]
+  affects: [no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27978":
+  keywords: [Aramis]
+  short: Aramis the Musketeer
+  long: Aramis the Musketeer is standing here.
+  description: >
+    Sharp eyed and highly perceptive, Aramis has a strong reputation for his quick wit and
+    intelligence. A gleam catches in his eye as he glances around, always on the ready for a good scuffle in the name
+    of duty.
+  level: 15
+  sex: male
+  alignment: 12
+  flags: [sentinel, memory, helper]
+  affects: [no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27987":
+  keywords: [trained, well-trained, Musketeer's, horse]
+  short: a Musketeer's horse
+  long: A well-trained horse is eating some grass here.
+  description: >
+    This beautiful black horse is sleek and glossy, its dark coat and mane well groomed, already
+    saddled and prepared for the guards of the French king. Large, impossibly dark eyes blink at any visitors
+    as the horse chews slowly, shuffling the grass with its hooves.
+  level: 10
+  sex: neutral
+  alignment: 20
+  flags: [sentinel, no_charm]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27988":
+  keywords: [French, woman, receptionist]
+  short: a French receptionist
+  long: A French receptionist is here, waiting to help.
+  description: >
+    This young woman is very pretty and kind-faced, her gentle dark eyes smiling welcomingly at all who
+    pass. Sleek brown hair is pulled back into a shiny ponytail, her smooth face powdered subtly and a
+    hint of red gloss flushing her lips.
+  level: 12
+  sex: female
+  alignment: 15
+  flags: [sentinel, memory, helper]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: sitting
+    default: standing
+
+"tba:279:mob:27989":
+  keywords: [Musketeer, royal]
+  short: a royal Musketeer
+  long: A royal Musketeer is here protecting the king.
+  description: >
+    This Musketeer must be well trusted and competent to have achieved such a place of honor, that of
+    personally guarding the life of the King. Stern in expression, his countenance is one of unyielding
+    loyalty and determination, his keen eyes on the lookout for any danger.
+  level: 14
+  sex: male
+  alignment: 10
+  flags: [stay_zone, memory, helper]
+  affects: [no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27990":
+  keywords: [man, mask]
+  short: a man in an iron mask
+  long: A man in an iron mask languishes here.
+  description: >
+    This scrawny looking man is in pitiable shape, his limbs wasted away from lack of use. His face is
+    completely obscured from view but his presence is somewhat powerful despite his state, as though he
+    once held a position of great importance.
+  level: 15
+  sex: male
+  alignment: -10
+  flags: [sentinel, memory]
+  affects: [no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27992":
+  keywords: [flea]
+  short: a flea
+  long: A tiny flea is jumping around.
+  description: >
+    This ugly little insect is dark and covered with tiny barbed hairs, its little legs allowing it to
+    jump higher and further than would have been thought possible, allowing it to attach itself to almost
+    any warm-blooded creature for a feed.
+  level: 3
+  sex: neutral
+  alignment: -100
+  flags: [stay_zone, wimpy, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27993":
+  keywords: [Paulo, murderer, prisoner]
+  short: Paulo the prisoner
+  long: Paulo the murderer is standing here.
+  description: >
+    This man looks very dangerous, his cruel eyes malicious and calculating as though he has betrayed
+    many and would not hesitate to do it again. Agile and muscular, he seems a formidable enough warrior,
+    almost looking for an excuse to kill.
+  level: 15
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  affects: [detect_invis, sense_life, hide]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27995":
+  keywords: [sentinel]
+  short: a sentinel
+  long: A Musketeer is here on duty as sentinel.
+  description: >
+    This young man looks bored out of his wits, swaying lazily as he stands, almost fighting to keep
+    his eyelids open. Humming gently to himself, it seems almost as if the forlorn tune is more to keep him
+    awake than offer any source of amusement.
+  level: 13
+  sex: male
+  alignment: 10
+  flags: [sentinel, memory, helper, no_charm, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27996":
+  keywords: [guardian]
+  short: the guardian of time and space
+  long: The guardian of time and space stands here.
+  description: >
+    This tall person is slightly strange in appearance, though it is not immediately obvious why. His
+    face is deeply lined and creased with age, his deep-set gray eyes filled with a wisdom rarely seen.
+    Although he does not look particularly strong, something about his presence gives the impression that
+    he is a force to be reckoned with.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  affects: [invisible, detect_invis, sense_life, no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27998":
+  keywords: [Toulouse]
+  short: Toulouse
+  long: Toulouse waits quietly here, ready to help.
+  description: >
+    Bright faced and mild in expression, he looks eager to assist. One of the many merchants to be
+    found here, he does not appear to be wealthy although he seems more than content with his lifestyle and
+    trade.
+  level: 14
+  sex: male
+  alignment: 10
+  flags: [sentinel, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:279:mob:27999":
+  keywords: [king, Louis, France]
+  short: the King of France
+  long: Louis XIV is sitting here.
+  description: >
+    Proud and grim, his features are sharp and striking, dark confident eyes betray no hint of
+    uncertainty though this is the man held responsible for all of the problems in France. He looks completely
+    sure of himself, and this despite the circulating rumors that he is not even really the king.
+  level: 15
+  sex: male
+  alignment: -50
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: sitting
+    default: standing

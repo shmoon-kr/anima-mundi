@@ -1,0 +1,27 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 296.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:296:shop:29659":
+  keeper: tba:296:mob:29604
+  rooms: [tba:296:room:29608]
+  products:
+  - tba:296:obj:29600
+  - tba:296:obj:29602
+  - tba:296:obj:29603
+  profit:
+    buy: 1.5
+    sell: 0.1
+  messages:
+    no_such_item: "%s I'm sorry *BEEP* but I do not have that item."
+    you_dont_have_it: "%s Please do not stuff that in my *BEEP* coin slot."
+    does_not_buy: "%s Please do not stuff that in my *BEEP* coin slot."
+    shop_cannot_afford: "%s Please do not stuff that in my *BEEP* coin slot."
+    you_cannot_afford: "%s Please insert *BEEP* additional coins."
+    bought: "%s *WHIRR* *KACHUNK* %d coins.  Have a nice *BEEP* day."
+    sold: "%s *WHIRR* *KACHUNK* %d coins.  Have a nice *BEEP* day."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24

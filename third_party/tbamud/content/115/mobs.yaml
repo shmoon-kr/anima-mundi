@@ -1,0 +1,968 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 115.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:115:mob:11500":
+  keywords: [woodchuck]
+  short: the woodchuck
+  long: A woodchuck runs for its hole.
+  description: >
+    This small brown animal is covered in thick fur and is about the size of a small dog.  It is built
+    very low to the ground and is actually pretty quick.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11501":
+  keywords: [rat]
+  short: a large gray rat
+  long: A large dusty rat crawls around here.
+  description: This rat seems to be oblivious to all around it.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [scavenger, aware, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11502":
+  keywords: [goblin, raider]
+  short: a goblin raider
+  long: A goblin raider stands here with a really angry look on his face.
+  description: >
+    The goblin charges around looking for anything valuable to loot.  He eyes you up and down trying to
+    determine what you might have of value.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11503":
+  keywords: [mon, goblin]
+  short: a mon's goblin
+  long: A mon's goblin is walking around looking for more artifacts to steal.
+  description: He carries a sack of useless loot.  Loot only to him you guess.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11504":
+  keywords: [hulk, goblin]
+  short: a hulk goblin
+  long: A hulk goblin is here tearing the place down.
+  description: Larger than the typical goblin this beast relies on his brawn to win.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11505":
+  keywords: [bat]
+  short: a small black bat
+  long: This is a small unfeathered vicious looking bat.
+  description: It squeaks and flutters its wings in anticipation to flight, and possibly a feast.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [aware, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11506":
+  keywords: [goblin, bomber]
+  short: a goblin bomber
+  long: A goblin bomber is here setting up an explosive.
+  description: >
+    He carries a flask of gunpowder, flint, and some wicks.  Hardly the type of person you would trust
+    with explosives.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11507":
+  keywords: [centaur, archer]
+  short: a centaur archer
+  long: A centaur archer looks for a point of elevation to fire his arrows from.
+  description: >
+    This beast has the upper body of a troll.  Huge arms and a barrel chest gives proof to his earned
+    position within the military ranks of centaurs as an expert archer.
+  level: 7
+  sex: male
+  alignment: -500
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11508":
+  keywords: [monk, peaceful]
+  short: a peaceful monk
+  long: A peaceful monk wanders the halls in thought.
+  description: >
+    He looks peaceful until you notice what looks like troll armor hidden underneath his robes.
+  level: 7
+  sex: male
+  alignment: 1000
+  flags: [sentinel, stay_zone, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  abilities:
+    str: 20
+    int: 9
+    wis: 9
+    dex: 20
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11509":
+  keywords: [centaur, warrior]
+  short: a centaur warrior
+  long: A centaur warrior runs around the area looking for someone to kill
+  description: >
+    The brown coat of this centaurs body is thick and matted with dirt and grime. It looks like she has
+    had a long battle.
+  level: 7
+  sex: female
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11510":
+  keywords: [rat]
+  short: an oversized rat
+  long: An oversized rat with large fangs looks at you curiously.
+  description: This one looks weak.  Though those fangs look deadly.
+  level: 7
+  sex: neutral
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11511":
+  keywords: [crazy, crazed, monk]
+  short: a crazed monk
+  long: A crazy monk stands her muttering gibberish.
+  description: It appears he saw some things that he really wished he hadn't.
+  level: 7
+  sex: male
+  alignment: 800
+  flags: [sentinel, scavenger, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11512":
+  keywords: [monk, deranged]
+  short: a deranged monk
+  long: A deranged monk screams in fear at your presence and cowers in the corner.
+  description: His eyes have become unfocused and seem to be looking within.  No one is home upstairs.
+  level: 7
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, stay_zone, no_charm, no_summon, no_sleep]
+  affects: [blind, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: blast
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 7
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11513":
+  keywords: [centaur, swordswoman]
+  short: a centaur swordswoman
+  long: A centaur swordswoman stands here looking pretty.
+  description: >
+    She simply stomps over any remaining monks that live.  Crushing skulls and breaking bones as she
+    passes.
+  level: 7
+  sex: female
+  alignment: 400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11514":
+  keywords: [monk, prayer]
+  short: a monk that was praying
+  long: A monk who was kneeling in prayer before you interrupted him.
+  description: The monk looks upset to have been interrupted from his daily ritual.
+  level: 7
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11515":
+  keywords: [centaur, axeman]
+  short: a centaur axeman
+  long: A centaur axeman is here waiting to pick a fight.
+  description: He looks crazed and in pursuit of more blood.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11516":
+  keywords: [centaur, warpriest]
+  short: a centaur warpriest
+  long: A centaur warpriest stands his ground, casting spells on all the enemies.
+  description: Some centaurs have taken up the arcane arts.  Before you stands one of them.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11517":
+  keywords: [centaur, samite, healer]
+  short: a centaur samite healer
+  long: A centaur samite healer runs around trying to revive the wounded centaurs
+  description: He dwells in the arcane art of healing and looks to be very gifted at it.
+  level: 7
+  sex: female
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11518":
+  keywords: [doom, priest, guildmaster]
+  short: the Doom Priest guildmaster
+  long: The Doom Priest guildmaster assesses your abilities and prepares for your training.
+  description: >
+    He is aged and weathered from a hard life.  But, a power emanates from him and the cold stare from
+    his green eyes shows a wisdom and intelligence unparalleled.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11519":
+  keywords: [goblin, horde]
+  short: a goblin horde
+  long: A goblin horde rushes in, attacking you from all directions.
+  description: These goblins are short, fat, and smelly.
+  level: 3
+  sex: female
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11520":
+  keywords: [fat, goblin]
+  short: a fat goblin
+  long: An obese goblin charges in, trying to run you over.
+  description: >
+    She is damn ugly, and smells funny.  Hard to believe something as disgusting as this creature can
+    survive its own breath.
+  level: 3
+  sex: female
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11521":
+  keywords: [white, tan, centaur]
+  short: a white and tan centaur
+  long: A white and tan centaur gallops in your direction.
+  description: This massive beast is half horse and half man.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11522":
+  keywords: [centaur, armored]
+  short: an armored centaur
+  long: A heavily armored centaur points an intimidating finger in your direction.
+  description: >
+    This centaur has been equipped for battle with chainmail.  He stomps around heavily from the added
+    weight.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11523":
+  keywords: [dying, monk]
+  short: a dying monk
+  long: A dying monk sits here in agony.
+  description: This man looks as if he has been attacked by a pack of some wild beasts.
+  level: 7
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  abilities:
+    str: 3
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 70
+  exp: 4900
+  position:
+    load: resting
+    default: resting
+
+"tba:115:mob:11524":
+  keywords: [ensign, goblin]
+  short: an ensign goblin
+  long: An ensign goblin straight out from military camp, leads the raid at the front lines.
+  description: He looks a little bit cleaner than the typical goblin, must be more educated.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11525":
+  keywords: [raging, troll]
+  short: a raging troll
+  long: A raging troll clenches his fist in anger pulling the surroundings down.
+  description: >
+    This troll looks to be in a battle frenzy.  A glazed look covers his eyes as he snorts and grunts
+    in anger.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11526":
+  keywords: [stone, skinned, troll]
+  short: a stone skinned troll
+  long: >-
+    With skin of stone hardness, this troll runs up and down the monastery crashing into everything in
+    his path.
+  description: >
+    The skin of this troll looks like rock!  He uses his arms and legs as bludgeoning weapons against
+    anything he comes across.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11527":
+  keywords: [enormously, troll]
+  short: an enormously huge troll
+  long: An enormously huge troll stands his ground, ready to take on a whole party of warriors.
+  description: >
+    This troll is in a blood rage looking for another innocent victim to slaughter.  He looks your way.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11528":
+  keywords: [doom, priest, guild, guardian]
+  short: a Doom Priest guild guardian
+  long: A powerful Doom Priest guards the stairwell going down.
+  description: >
+    He carries no weapons and wears no armor.  He needs no such thing to protect himself.  A power and
+    intelligence can be seen when looking at this priest.  He acknowledges your presence and stands even
+    closer to the Doom Priest guild entrance.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11529":
+  keywords: [lamb]
+  short: a small lamb
+  long: A small lamb is here looking for little boo peek.
+  description: This poor lamb looks lost and lonely.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11530":
+  keywords: [little, bow, peek]
+  short: little bow peek
+  long: Little bow peek is here looking for her lost sheep
+  description: Nothing.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11534":
+  keywords: [bird]
+  short: a small white bird
+  long: A very small white bird is perched here.
+  description: This bird looks very gentle and sweet.
+  level: 3
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aware, no_sleep, no_blind]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  abilities:
+    str: 9
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11537":
+  keywords: [fish]
+  short: a small fish
+  long: A small black fish swims here.
+  description: This fish looks good.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [sentinel, aware]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: sting
+  abilities:
+    str: 3
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11538":
+  keywords: [piglet]
+  short: a small piglet
+  long: A small piglet dashes around.
+  description: The small pig is covered in mud and is enjoying the mess it is making.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11539":
+  keywords: [snake]
+  short: the small snake
+  long: A small snake lurks here waiting for something to eat.
+  description: This snake looks as if it has been waiting for a while.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  abilities:
+    str: 25
+    int: 3
+    wis: 3
+    dex: 25
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11541":
+  keywords: [lost, goblin]
+  short: a lost goblin
+  long: A goblin is sneaking around looking for some backup.
+  description: >
+    This goblin seems to have lost his counterparts.  He is not quite so sure of himself without
+    friends to hide behind.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [sentinel, memory]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: thrash
+  abilities:
+    str: 25
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11553":
+  keywords: [toad]
+  short: a very large purple toad
+  long: A large purple toad squats here.
+  description: This thing looks uninterested in everything.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: blast
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11563":
+  keywords: [goblin]
+  short: a goblin soldier
+  long: A goblin soldier is finishing off a few of the remaining monks.
+  description: >
+    This yellow-green beast is barely even humanoid in resemblance.  You can smell him from here.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: pound
+  abilities:
+    str: 20
+    int: 9
+    wis: 9
+    dex: 16
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11564":
+  keywords: [ghost, monk]
+  short: a ghost of a monk
+  long: The ghost of a monk who died in an unfair game of politics haunts this room forever.
+  description: Nothing.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, aggressive, no_charm, no_summon, no_bash]
+  affects: [detect_align, detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11575":
+  keywords: [troll, small]
+  short: a small troll
+  long: A small troll stomps around trying to look tough.
+  description: This thing looks pretty weak Though it is a troll and shouldn't be underestimated.
+  level: 7
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: sting
+  abilities:
+    str: 3
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11585":
+  keywords: [grass]
+  short: the grass
+  long: A heap of grass lies here.
+  description: The grass looks like some kind of weed.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  abilities:
+    str: 20
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11588":
+  keywords: [wounded, monk]
+  short: a wounded monk
+  long: A wounded monk is scrunched up here in the corner.
+  description: The monk looks as if he had been attacked.
+  level: 7
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  abilities:
+    str: 25
+    int: 20
+    wis: 20
+    dex: 25
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:115:mob:11589":
+  keywords: [orc]
+  short: orc
+  long: A very large orc is here dead.
+  description: This orc looks as if it was torn apart by a pack of wolves.
+  level: 3
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: dead
+    default: dead

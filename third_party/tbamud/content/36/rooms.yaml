@@ -1,0 +1,1172 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 36.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:36:room:3600":
+  name: The Great Chessboard Of Midgaard
+  description:
+  - >
+    You stand in the archway of the Chessboard of Midgaard.  The giant wooden gate is rusted open.
+  - >
+    A narrow dirt path leads eastwards into the thick grass and the chessboard opens up to the west.
+  sector: city
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:30:room:3066
+      look: A dirt path leads away through the great field north of Midgaard.
+    west:
+      to: tba:36:room:3632
+      look: The huge chessboard opens up to the west.
+
+"tba:36:room:3601":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the Black Queen's Rook.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3602
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3609
+      look: A black square lies to the south.
+
+"tba:36:room:3602":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the Black Queen's Knight.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3603
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3610
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3601
+      look: A white square lies to the west.
+
+"tba:36:room:3603":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the Black Queen's Bishop.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3604
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3611
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3602
+      look: A black square lies to the west.
+
+"tba:36:room:3604":
+  name: A Black Square
+  description: You are standing on a black marble square.  This is usually the home of the Black Queen.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3605
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3612
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3603
+      look: A white square lies to the west.
+    down:
+      to: tba:36:room:3665
+      door:
+        keywords: [marble, square]
+        kind: pickproof
+        key: tba:36:obj:3614
+        reset: locked
+
+"tba:36:room:3605":
+  name: A White Square
+  description: You are standing on a white marble square.  This is usually the home of the Black King.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3606
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3613
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3604
+      look: A black square lies to the west.
+
+"tba:36:room:3606":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the Black King's Bishop.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3607
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3614
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3605
+      look: A white square lies to the west.
+
+"tba:36:room:3607":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the Black King's Knight.
+  sector: city
+  exits:
+    east:
+      to: tba:36:room:3608
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3615
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3606
+      look: A black square lies to the west.
+
+"tba:36:room:3608":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the Black King's Rook.
+  sector: city
+  exits:
+    south:
+      to: tba:36:room:3616
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3607
+      look: A white square lies to the west.
+
+"tba:36:room:3609":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the Black Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3601
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3610
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3617
+      look: A white square lies to the south.
+
+"tba:36:room:3610":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the Black Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3602
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3611
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3618
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3609
+      look: A black square lies to the west.
+
+"tba:36:room:3611":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the Black Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3603
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3612
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3619
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3610
+      look: A white square lies to the west.
+
+"tba:36:room:3612":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the Black Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3604
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3613
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3620
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3611
+      look: A black square lies to the west.
+
+"tba:36:room:3613":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the Black King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3605
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3614
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3621
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3612
+      look: A white square lies to the west.
+
+"tba:36:room:3614":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the Black King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3606
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3615
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3622
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3613
+      look: A black square lies to the west.
+
+"tba:36:room:3615":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the Black King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3607
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3616
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3623
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3614
+      look: A white square lies to the west.
+
+"tba:36:room:3616":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the Black King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3608
+      look: A black square lies to the north.
+    south:
+      to: tba:36:room:3624
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3615
+      look: A black square lies to the west.
+
+"tba:36:room:3617":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3609
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3618
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3625
+      look: A black square lies to the south.
+
+"tba:36:room:3618":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3610
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3619
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3626
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3617
+      look: A white square lies to the west.
+
+"tba:36:room:3619":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3611
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3620
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3627
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3618
+      look: A black square lies to the west.
+
+"tba:36:room:3620":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3612
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3621
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3628
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3619
+      look: A white square lies to the west.
+
+"tba:36:room:3621":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3613
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3622
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3629
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3620
+      look: A black square lies to the west.
+
+"tba:36:room:3622":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3614
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3623
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3630
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3621
+      look: A white square lies to the west.
+
+"tba:36:room:3623":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3615
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3624
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3631
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3622
+      look: A black square lies to the west.
+
+"tba:36:room:3624":
+  name: A Black Square
+  description: You are standing on a black marble square.  You can see a rusty gate to the south.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3616
+      look: A white square lies to the north.
+    south:
+      to: tba:36:room:3632
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3623
+      look: A white square lies to the west.
+
+"tba:36:room:3625":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3617
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3626
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3633
+      look: A white square lies to the south.
+
+"tba:36:room:3626":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3618
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3627
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3634
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3625
+      look: A black square lies to the west.
+
+"tba:36:room:3627":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3619
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3628
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3635
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3626
+      look: A white square lies to the west.
+
+"tba:36:room:3628":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3620
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3629
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3636
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3627
+      look: A black square lies to the west.
+
+"tba:36:room:3629":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3621
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3630
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3637
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3628
+      look: A white square lies to the west.
+
+"tba:36:room:3630":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3622
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3631
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3638
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3629
+      look: A black square lies to the west.
+
+"tba:36:room:3631":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  There is a rusty gate a short distance to the east.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3623
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3632
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3639
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3630
+      look: A white square lies to the west.
+
+"tba:36:room:3632":
+  name: A White Square
+  description: You are standing on a white marble square.  There is a large rusty gate to the east.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3624
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3600
+      look: The gate to the chessboard is just to the east.
+    south:
+      to: tba:36:room:3640
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3631
+      look: A black square lies to the west.
+
+"tba:36:room:3633":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3625
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3634
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3641
+      look: A black square lies to the south.
+
+"tba:36:room:3634":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3626
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3635
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3642
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3633
+      look: A white square lies to the west.
+
+"tba:36:room:3635":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3627
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3636
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3643
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3634
+      look: A black square lies to the west.
+
+"tba:36:room:3636":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3628
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3637
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3644
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3635
+      look: A white square lies to the west.
+
+"tba:36:room:3637":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3629
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3638
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3645
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3636
+      look: A black square lies to the west.
+
+"tba:36:room:3638":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3630
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3639
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3646
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3637
+      look: A white square lies to the west.
+
+"tba:36:room:3639":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3631
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3640
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3647
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3638
+      look: A black square lies to the west.
+
+"tba:36:room:3640":
+  name: A Black Square
+  description: You are standing on a black marble square.  There is a rusty gate to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3632
+      look: A white square lies to the north.
+    south:
+      to: tba:36:room:3648
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3639
+      look: A white square lies to the west.
+
+"tba:36:room:3641":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3633
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3642
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3649
+      look: A white square lies to the south.
+
+"tba:36:room:3642":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3634
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3643
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3650
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3641
+      look: A black square lies to the west.
+
+"tba:36:room:3643":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3635
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3644
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3651
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3642
+      look: A white square lies to the west.
+
+"tba:36:room:3644":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3636
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3645
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3652
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3643
+      look: A black square lies to the west.
+
+"tba:36:room:3645":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3637
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3646
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3653
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3644
+      look: A white square lies to the west.
+
+"tba:36:room:3646":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3638
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3647
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3654
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3645
+      look: A black square lies to the west.
+
+"tba:36:room:3647":
+  name: A Black Square
+  description: You are standing on a black marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3639
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3648
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3655
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3646
+      look: A white square lies to the west.
+
+"tba:36:room:3648":
+  name: A White Square
+  description: You are standing on a white marble square.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3640
+      look: A black square lies to the north.
+    south:
+      to: tba:36:room:3656
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3647
+      look: A black square lies to the west.
+
+"tba:36:room:3649":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the White Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3641
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3650
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3657
+      look: A black square lies to the south.
+
+"tba:36:room:3650":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the White Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3642
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3651
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3658
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3649
+      look: A white square lies to the west.
+
+"tba:36:room:3651":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the White Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3643
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3652
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3659
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3650
+      look: A black square lies to the west.
+
+"tba:36:room:3652":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the White Queen's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3644
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3653
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3660
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3651
+      look: A white square lies to the west.
+
+"tba:36:room:3653":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the White King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3645
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3654
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3661
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3652
+      look: A black square lies to the west.
+
+"tba:36:room:3654":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the White King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3646
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3655
+      look: A white square lies to the east.
+    south:
+      to: tba:36:room:3662
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3653
+      look: A white square lies to the west.
+
+"tba:36:room:3655":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of one of the White King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3647
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3656
+      look: A black square lies to the east.
+    south:
+      to: tba:36:room:3663
+      look: A black square lies to the south.
+    west:
+      to: tba:36:room:3654
+      look: A black square lies to the west.
+
+"tba:36:room:3656":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of one of the White King's
+    Pawns.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3648
+      look: A white square lies to the north.
+    south:
+      to: tba:36:room:3664
+      look: A white square lies to the south.
+    west:
+      to: tba:36:room:3655
+      look: A white square lies to the west.
+
+"tba:36:room:3657":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the White Queen's Rook.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3649
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3658
+      look: A white square lies to the east.
+
+"tba:36:room:3658":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the White Queen's Knight.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3650
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3659
+      look: A black square lies to the east.
+    west:
+      to: tba:36:room:3657
+      look: A black square lies to the west.
+
+"tba:36:room:3659":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the White Queen's Bishop.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3651
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3660
+      look: A white square lies to the east.
+    west:
+      to: tba:36:room:3658
+      look: A white square lies to the west.
+
+"tba:36:room:3660":
+  name: A White Square
+  description: You are standing on a white marble square.  This is usually the home of the White Queen.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3652
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3661
+      look: A black square lies to the east.
+    west:
+      to: tba:36:room:3659
+      look: A black square lies to the west.
+    down:
+      to: tba:36:room:3666
+      door:
+        keywords: [marble, square]
+        kind: pickproof
+        key: tba:36:obj:3615
+        reset: locked
+
+"tba:36:room:3661":
+  name: A Black Square
+  description: You are standing on a black marble square.  This is usually the home of the White King.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3653
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3662
+      look: A white square lies to the east.
+    west:
+      to: tba:36:room:3660
+      look: A white square lies to the west.
+
+"tba:36:room:3662":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the White King's Bishop.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3654
+      look: A black square lies to the north.
+    east:
+      to: tba:36:room:3663
+      look: A black square lies to the east.
+    west:
+      to: tba:36:room:3661
+      look: A black square lies to the west.
+
+"tba:36:room:3663":
+  name: A Black Square
+  description: >
+    You are standing on a black marble square.  This is usually the home of the White King's Knight.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3655
+      look: A white square lies to the north.
+    east:
+      to: tba:36:room:3664
+      look: A white square lies to the east.
+    west:
+      to: tba:36:room:3662
+      look: A white square lies to the west.
+
+"tba:36:room:3664":
+  name: A White Square
+  description: >
+    You are standing on a white marble square.  This is usually the home of the White King's Rook.
+  sector: city
+  exits:
+    north:
+      to: tba:36:room:3656
+      look: A black square lies to the north.
+    west:
+      to: tba:36:room:3663
+      look: A black square lies to the west.
+
+"tba:36:room:3665":
+  name: The Black Treasury
+  description: >
+    You are standing in the treasury of the Black Court.  Hopefully no one has looted the Crown's
+    treasure.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    up:
+      to: tba:36:room:3604
+      look: A small staircase rises above you.
+      door:
+        keywords: [marble, square]
+        kind: pickproof
+        key: tba:36:obj:3614
+        reset: locked
+
+"tba:36:room:3666":
+  name: The White Treasury
+  description: >
+    You are standing in the treasury of the White Court.  Hopefully no one has looted the Crown's
+    treasure.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    up:
+      to: tba:36:room:3660
+      look: A small staircase rises above you.
+      door:
+        keywords: [marble, square]
+        kind: pickproof
+        key: tba:36:obj:3615
+        reset: locked

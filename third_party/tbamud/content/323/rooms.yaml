@@ -1,0 +1,1459 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 323.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:323:room:32300":
+  name: Entry into the Darkness
+  description: >
+    A cold rush of air rushes up from the depths of the caverns, one that could chill a frost giant. 
+    The uncompromising, black granite walls reflect the flickering light back in a thousand ways, making
+    this place seem surreal, almost otherwordly.  A steep slope heads east, downward into darkness.  There
+    are no sounds of movement or voices at all, only the steady, quiet drip of the caverns' moist walls.
+  sector: inside
+  flags: [dark, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32301
+  extras:
+  - keywords: [credits, info]
+    text:
+    - "*Caverns of the Pale Man"
+    - >
+      *Written by Kaan for Dibrova Level: 25 - 50 100 rooms 23 mobs 45 objs Connector Zones: The Plains
+      of Blood These are a sytem of caverns made of black rock which catacomb for many miles. There are a
+      number of cavernous mobs, all of them relatively high level - even the bats kick some ass. This zone is
+      mainly intended to be a zone for high level players to gain good exp and find some good eq.
+
+"tba:323:room:32301":
+  name: Descending Into the Depths
+  description: >
+    The air gets markedly colder the farther to the east that is traveled.  The floor slopes gently at
+    first, then with more vigor as it continues.  Soon anyone trying to negotiate east would have to lean
+    back as they walk just so that they might keep their balance.
+  sector: inside
+  flags: [dark, indoors, soundproof]
+  exits:
+    east:
+      to: tba:323:room:32302
+    west:
+      to: tba:323:room:32300
+
+"tba:323:room:32302":
+  name: The Air Gets Cold
+  description: >
+    It is no longer getting cold, it IS cold.  The air has dropped dwon near freezing, the steady
+    breeze that blows through the caves making it seem all the more cold.  The floor continues to slope
+    downward to the east, the darkness as complete as darkness can be.  Any sounds made in this dark, lonely
+    place echo back a thousand fold - making the isolation complete.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32303
+    west:
+      to: tba:323:room:32301
+
+"tba:323:room:32303":
+  name: Deeper and Deeper
+  description: >
+    The steady depth at which the cavern angles toward is enough to make ears pop and eyes water.  A
+    faint pinpoint of light is all that can be seen of the entrance far west and above this locale.  Oddly,
+    there seems to be no change in the color or makeup of the rock walls that this tunnel runs through. 
+    They are a solid, gleaming black which seems to both reflect the light and soak it up all at once -
+    it is unnerving.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32304
+    west:
+      to: tba:323:room:32302
+
+"tba:323:room:32304":
+  name: Hundreds of Feet Below the Surface
+  description: >
+    The surface, the open air - it is all now just a memory.  It is easy to lose track of time down in
+    places such as these with no light and no other human contact.  The steady drip of the walls is still
+    all that comes back from this dreary place as you make your way through.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32305
+    west:
+      to: tba:323:room:32303
+
+"tba:323:room:32305":
+  name: The Floor Levels
+  description: >
+    The tunnel bends to the south, heading level and straight in that direction. To the west the cavern
+    begins its steep ascent toward the exit and open air. Somewhere - perhaps far away, perhaps close
+    nearby - the sound of steady breathing can be heard, or at least that is what it sounds like.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32306
+    west:
+      to: tba:323:room:32304
+
+"tba:323:room:32306":
+  name: A Smooth Passage
+  description: >
+    The walls of the cave are still made of the same rock as the rest of the caverns, however here the
+    walls and floor are unnaturally smooth, almost like black marble.  The sound of the breathing comes a
+    bit louder now, a steady rasping breath that almost sounds like a heavy smoker asleep.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32305
+    south:
+      to: tba:323:room:32309
+    west:
+      to: tba:323:room:32307
+
+"tba:323:room:32307":
+  name: A Secret Chamber
+  description: >
+    This is no more than a small area in the smooth walls, which was somehow hidden on the outside by
+    the rock's smooth, reflective surface.  The sound of the breathing is no doubt coming from a small
+    opening just to the west, a place that gives a certain aura of dread.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32306
+    west:
+      to: tba:323:room:32308
+
+"tba:323:room:32308":
+  name: Chamber of Fear
+  description: >
+    This chamber is aptly named, aptly indeed.  The creature which occupies this small space is a feyr,
+    pronounced *fear*, a creature made and created by the terrible fears of men and beast in the area. 
+    A feyr is said to rest during daylight hours in places such as this and terrorize the ones who
+    unknowingly created it during the night hours.  It is said only very powerful magic can destroy or even
+    harm a creature such as this one.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32307
+
+"tba:323:room:32309":
+  name: A Curve in the Passage
+  description: >
+    The walls are not as smooth here as they are to the north, however they are still quite smooth to
+    the touch.  Certainly there are no sharp points to these walls.  Somewhere - perhaps far away, perhaps
+    close nearby - the sound of steady breathing can be heard, or at least that is what it sounds like.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32306
+    east:
+      to: tba:323:room:32310
+
+"tba:323:room:32310":
+  name: Near an Alcove
+  description: >
+    To the east the cave widens, opening into what appears to be a very large, open area.  The feel of
+    the breeze which runs through the caves seems to come from that direction.  To the west, the cave
+    makes a curve to the north, heading into darkness.  These two directions are interesting enough by
+    themselves, but the real interest at this juncture is the alcove just north and what lies within.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32311
+    east:
+      to: tba:323:room:32312
+    west:
+      to: tba:323:room:32309
+
+"tba:323:room:32311":
+  name: An Alcove
+  description: >
+    Some old straw has been strewn about the floor, heaps of stinking waste and droppings lie scattered
+    in the hay.  It appears that the creature which occupies this space feels no need to stay clean and
+    tidy.  It also appears that the creature eats well from the number of skeletons and loose bones
+    scattered through the hay and wastes.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32310
+
+"tba:323:room:32312":
+  name: The Passage Widens
+  description: >
+    The cave widens, opening east into an enormous subterranean cavern.  The sound of running water
+    comes from somewhere in that cavern, however exactly where is hard to tell, since everything here
+    echoes.  To the west is a passage quite the same as the one you now stand within.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32313
+    west:
+      to: tba:323:room:32310
+
+"tba:323:room:32313":
+  name: An Enormous Cavern
+  description: >
+    This is a huge cavern, the ceiling lost in darkness at the highest point, sloping high and away
+    from the walls.  The southeast wall glimmers and shimmers, this being the source of the running water,
+    as the entire wall is covered in a cascade of clear water which runs down through a crack in the
+    ceiling.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32314
+    east:
+      to: tba:323:room:32316
+    south:
+      to: tba:323:room:32317
+    west:
+      to: tba:323:room:32312
+
+"tba:323:room:32314":
+  name: An Enormous Cavern
+  description: >
+    The cavern is huge and glistening, large enough to hold an army and all its cavalry and then some. 
+    The ceiling is so tall that at its peak it cannot be seen, so lost it is in the darkness.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32315
+    south:
+      to: tba:323:room:32313
+
+"tba:323:room:32315":
+  name: An Enormous Cavern
+  description: >
+    The cavern is huge and glistening, large enough to hold an army and all its cavalry and then some. 
+    The ceiling is so tall that at its peak it cannot be seen, so lost it is in the darkness.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32328
+    east:
+      to: tba:323:room:32321
+    south:
+      to: tba:323:room:32316
+    west:
+      to: tba:323:room:32314
+
+"tba:323:room:32316":
+  name: An Enormous Cavern
+  description: >
+    The cavern is huge and glistening, large enough to hold an army and all its cavalry and then some. 
+    The ceiling is so tall that at its peak it cannot be seen, so lost it is in the darkness.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32315
+    east:
+      to: tba:323:room:32320
+    south:
+      to: tba:323:room:32318
+    west:
+      to: tba:323:room:32313
+
+"tba:323:room:32317":
+  name: An Enormous Cavern
+  description: >
+    The southwest corner of the room curves around, not really making a right angle, but making a
+    corner nonetheless.  To the south is a small fissure in the rock, just wide enough for one man to squeeze
+    through.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32313
+    east:
+      to: tba:323:room:32318
+    south:
+      to: tba:323:room:32325
+
+"tba:323:room:32318":
+  name: An Enormous Cavern
+  description: >
+    The cavern's southern wall is a mass of moldy growth, the fungus growing wild along the wall.  Just
+    east on the wall is a cascade of water, running from an unknown source out of a crack in the ceiling
+    and disappearing into another crack in the floor.  The cavern itself looms ever large, the black
+    walls glistening in the faint light.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32316
+    east:
+      to: tba:323:room:32319
+    west:
+      to: tba:323:room:32317
+
+"tba:323:room:32319":
+  name: An Enormous Cavern
+  description: >
+    The water cascades over the south wall, making it look almost as if it had a pane of glass over the
+    rock in constant movement.  The water looks to be clear and clean, its fresh scent a nice change
+    from the dreary stuffiness of the caverns.  To the east there is an opening in the ceiling above the
+    cascade, it looks like you might fit up there.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32320
+    east:
+      to: tba:323:room:32324
+    west:
+      to: tba:323:room:32318
+
+"tba:323:room:32320":
+  name: An Enormous Cavern
+  description: >
+    Your footsteps echo back you a thousand times, the cavern's black walls sending all sounds back to
+    you in a chorus of clicks and scrapes.  The open air above your head whistles through unknown cracks
+    and openings unseen high at the ceiling of the cavern.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32321
+    east:
+      to: tba:323:room:32323
+    south:
+      to: tba:323:room:32319
+    west:
+      to: tba:323:room:32316
+
+"tba:323:room:32321":
+  name: An Enormous Cavern
+  description: >
+    Looking up into the darkness, you can see nothing except the occasional creak of a bat's wings ro
+    the drip of the water on the south wall.  The darkness surrounding you is now not only just dark, but
+    wide open.  That is almost worse than clautrophobia.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32327
+    east:
+      to: tba:323:room:32322
+    south:
+      to: tba:323:room:32320
+    west:
+      to: tba:323:room:32315
+
+"tba:323:room:32322":
+  name: An Enormous Cavern
+  description: >
+    A strangely shaped hall runs east from this side of the cavern, its shape vaulted at the top.  The
+    cavern opens up wide and unvitingly to the west and south.  The sound of the water is very loud here.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32370
+    south:
+      to: tba:323:room:32323
+    west:
+      to: tba:323:room:32321
+
+"tba:323:room:32323":
+  name: An Enormous Cavern
+  description: >
+    The cavern opens up large and mysterious, its heights up higher than the naked eye can make out
+    from the floor.  A hall runs off the east wall just north of here, leading farther, deeper into caverns.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32322
+    south:
+      to: tba:323:room:32324
+    west:
+      to: tba:323:room:32320
+
+"tba:323:room:32324":
+  name: An Enormous Cavern
+  description: >
+    You stand before the cascade, an opening above it appearing to lead further up into darkness.  The
+    cavern opens out large and dark to the north and west.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32323
+    west:
+      to: tba:323:room:32319
+    up:
+      to: tba:323:room:32352
+
+"tba:323:room:32325":
+  name: Narrow Crack in the Walls
+  description: >
+    Squeezing through this narrow fissure is no small feat, the walls are about a foot and a half from
+    each other, forcing a sideways entry.  The crack makes a corner and opens to the west into small
+    room.  It is completely dark in the room, but a sound can be heard - almost like someone clicking their
+    nails loud enough for it to echo.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, tunnel]
+  exits:
+    north:
+      to: tba:323:room:32317
+    west:
+      to: tba:323:room:32326
+
+"tba:323:room:32326":
+  name: Horror Chamber
+  description: >
+    The clicking noise must have come from the gruesome thing that dwells within this place.  The
+    stench is beyond description, the walls scratched and nicked in many places.  It is not a comfortable
+    place.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32325
+
+"tba:323:room:32327":
+  name: An Enormous Cavern
+  description: >
+    The cavern north wall prohibits any more travel in that direction, east is much the same.  To the
+    west is an opening in the north wall, a wide tunnel heading off into darkness.  The cavern spreads out
+    to the south.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32321
+    west:
+      to: tba:323:room:32328
+
+"tba:323:room:32328":
+  name: An Enormous Cavern
+  description: >
+    This part of the cavern appears very well used, very well travelled.  There is a great deal of dirt
+    and grime about the floor, the mark of many many footprints having passed this way.  There is a wide
+    passageway to the north, it apparently the path that is most commonly taken by whoever makes these
+    tracks - the tracks lead straight north.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32329
+    east:
+      to: tba:323:room:32327
+    south:
+      to: tba:323:room:32315
+
+"tba:323:room:32329":
+  name: A Wide Passage
+  description: >
+    The passage runs north toward some sort of light source which undiscernable from here.  A passage
+    runs off east just to the north, the sound of many voices coming from that direction.  Many, many
+    voices.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32330
+    south:
+      to: tba:323:room:32328
+
+"tba:323:room:32330":
+  name: Three-Way Split
+  description: >
+    The passage continues to the north and south, but also heads off to the east, also fairly wide and
+    open in that direction.  The sound of the voices is extremely loud here, the noise rose to a
+    crascendo as soon as you rounded the corner of the passage.
+  sector: inside
+  flags: [dark, no_mob, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32338
+    east:
+      to: tba:323:room:32331
+    south:
+      to: tba:323:room:32329
+
+"tba:323:room:32331":
+  name: Noisy Tunnel
+  description: >
+    This grubby section of the caves is the home of a large family of gibberlings, a small and filthy
+    humanoid creature which always fights in large numbers.  They must sleep and eat and fornicate about
+    anywhere as all the floors and walls are covered in grease and grime and the Gods only know what else.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32332
+    west:
+      to: tba:323:room:32330
+
+"tba:323:room:32332":
+  name: A Thousand Small Voices
+  description: >
+    The voices are enough to drive any calm adventurer straight to Hell.  That coupled with the fact
+    that these little buggers love raw human meat is a pretty disturbing fact.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32333
+    west:
+      to: tba:323:room:32331
+
+"tba:323:room:32333":
+  name: An Enormous Din
+  description: >
+    The noise only increases with every step further into the home of these vile creatures.  The grease
+    and slime underfoot makes it tough to negotiate, but negotiate you do as you work your way through
+    their homes.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32335
+    south:
+      to: tba:323:room:32334
+    west:
+      to: tba:323:room:32332
+
+"tba:323:room:32334":
+  name: A Private Chamber
+  description: >
+    This chamber is even dirtier than those in the main hall to the north, if that is possible.  The
+    clatter and din of the gibberlings makes thought all but impossible, keeping you on the verge of
+    madness at a constant.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32333
+
+"tba:323:room:32335":
+  name: Loud as Hell
+  description: >
+    The noise is now deafening, maddening.  To think that any creature would spend its entire existance
+    like this is an atrocity.  The gibberlings take their delight in the mental anguish they cause their
+    prey, watching it squirm and writhe just before they attack.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32337
+    east:
+      to: tba:323:room:32336
+    west:
+      to: tba:323:room:32333
+
+"tba:323:room:32336":
+  name: A Large Room
+  description: >
+    This must be the main living area for the gibberling tribe - the place where they make their last
+    stands against bugbear invasions.  Bones are strewn about, not in an eerie way, just sloppy. 
+    Everything is coated with the same grime and goo found all over this area.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32335
+
+"tba:323:room:32337":
+  name: A Private Chamber
+  description: >
+    This chamber is even dirtier than those in the main hall to the south, if that is possible.  The
+    clatter and din of the gibberlings makes thought all but impossible, keeping you on the verge of
+    madness at a constant.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32335
+
+"tba:323:room:32338":
+  name: A Wide Passage
+  description: >
+    The noise begins to taper off a bit as you get further from the eastern tunnel.  To the north is
+    some sort of habitation - there is a light source of some sort.  It is no longer only light where your
+    light shines, it light to north.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32339
+    south:
+      to: tba:323:room:32330
+
+"tba:323:room:32339":
+  name: A Wide Passage
+  description: >
+    Just to the north is a curve in the passage where two torches can be seen burning in sconces. 
+    Guttural sounds can be heard, rumbling voices of some sort of creature.  There is also the sound of
+    movement by a number of feet.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32340
+    south:
+      to: tba:323:room:32338
+
+"tba:323:room:32340":
+  name: Entrance to the Dens
+  description: >
+    The light shines upon a den of bugbears, their lair opening up to the east and spreading out for
+    quite some area in these caverns.  It does not appear that they will venture forth into the cavern
+    proper, although within their own domain they will certainly show no fear.
+  sector: inside
+  flags: [no_mob, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32341
+    south:
+      to: tba:323:room:32339
+
+"tba:323:room:32341":
+  name: Den of the Bugbears
+  description: >
+    This is the fringe of the bugbear territory in these caverns.  Their deep, guttural language can be
+    heard in snatches and rumblings from afar.  Every now again a heavy huff or thump can be heard over
+    the voices, sometimes even the clang of metal on metal.  Tread lightly.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32342
+    west:
+      to: tba:323:room:32340
+
+"tba:323:room:32342":
+  name: Den of the Bugbears
+  description: >
+    The bugbear clan does not enjoy intrusion in any way.  They are very protective of what little area
+    the Pale Man allows them to occupy here and will fight to the death to keep it for their own.  The
+    large stewpot to the north in the main room gives testament to that fact.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32343
+    west:
+      to: tba:323:room:32341
+
+"tba:323:room:32343":
+  name: Den of the Bugbears
+  description: >
+    The bugbear clan does not enjoy intrusion in any way.  They are very protective of what little area
+    the Pale Man allows them to occupy here and will fight to the death to keep it for their own.  The
+    large stewpot to the north in the main room gives testament to that fact.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32344
+    south:
+      to: tba:323:room:32342
+
+"tba:323:room:32344":
+  name: Main Room in the Den
+  description: >
+    This is the social gathering room for the clan.  Rites of religion and cerimony are held here, as
+    well as feasts of an ugly nature.  This is considered sacred ground by the clan - your life is forfeit.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32347
+    east:
+      to: tba:323:room:32345
+    south:
+      to: tba:323:room:32343
+    west:
+      to: tba:323:room:32349
+
+"tba:323:room:32345":
+  name: Den of the Bugbears
+  description: >
+    The bugbear clan does not enjoy intrusion in any way.  They are very protective of what little area
+    the Pale Man allows them to occupy here and will fight to the death to keep it for their own.  The
+    large waiting stewpot to the west gives testament to the fact that the bugbears mean business.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32346
+    west:
+      to: tba:323:room:32344
+
+"tba:323:room:32346":
+  name: Den of the Bugbears
+  description: >
+    The bugbear clan does not enjoy intrusion in any way.  They are very protective of what little area
+    the Pale Man allows them to occupy here and will fight to the death to keep it for their own. 
+    Trespassers will be prosecuted.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32345
+    west:
+      to: tba:323:room:32347
+
+"tba:323:room:32347":
+  name: Den of the Bugbears
+  description: >
+    The bugbear clan does not enjoy intrusion in any way.  They are very protective of what little area
+    the Pale Man allows them to occupy here and will fight to the death to keep it for their own.  The
+    large waiting stewpot to the south gives testament to the fact that the bugbears mean business.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32346
+    south:
+      to: tba:323:room:32344
+
+"tba:323:room:32348":
+  name: Den of the Bugbears
+  description: >
+    This is the lair of the bugbear shaman.  He is the one who administers the word of the Gods among
+    his clansmen, sharing with them the will of the Gods and keeping the clan from spiritual danger. 
+    Usually, the word from the Gods is that the clan should go out and slay as many of the neighboring
+    gibberlings as possible, as the shaman is quite fond of gibebrling meat.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32349
+
+"tba:323:room:32349":
+  name: Den of the Bugbears
+  description: >
+    The clan keeps a very efficient den, having certain areas sectioned off for persons of import and
+    other, larger areas available for the general clansmen. Some of the more prestigious dwellings of
+    bugbear clansmen lie to the north, south and west.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32348
+    east:
+      to: tba:323:room:32344
+    south:
+      to: tba:323:room:32351
+    west:
+      to: tba:323:room:32350
+
+"tba:323:room:32350":
+  name: Den of the Bugbears
+  description: >
+    This is the home of the clan's leader.  This is the one who takes the clan out on raids, always at
+    the front of the battle.  If there is ever any discipline in the ranks that needs doled out, it is
+    this bugbear who does the doling.  Being that he also leads most raids, the leader is often replaced
+    out of need - bugbears are not stupid, but neither are they all that smart.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32349
+
+"tba:323:room:32351":
+  name: Den of the Bugbears
+  description: >
+    This is the private den of the bugbear chief.  All matters pertaining to the clan end at this one. 
+    If the leader or shaman wish to impose their will upon the clan, they first must get the support of
+    the chief.  If the chief disagrees, then it ends there.  A chief can only be replaced through a
+    direct challenge from another of the clansmen, therefore the chief always remains a young, robust bugbear
+    with great physical prowess.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32349
+
+"tba:323:room:32352":
+  name: A Steep Climb
+  description: >
+    This has turned out to be some sort of shaft or chimney which leads far up into the rock above. 
+    The water does not flow from this place, it is completely dry here and hand holds abound, making the
+    climb relatively easy.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    up:
+      to: tba:323:room:32353
+    down:
+      to: tba:323:room:32324
+
+"tba:323:room:32353":
+  name: Up Toward a Fresh Scent
+  description: >
+    The breeze wafting down from above carries the same fresh smell of the water below.  Could the
+    source of the cascade be somewhere above?  The scent energizes you, giving you fresh vigor for the climb.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    up:
+      to: tba:323:room:32354
+    down:
+      to: tba:323:room:32352
+
+"tba:323:room:32354":
+  name: Small Cavernway
+  description: >
+    This is the top of the chimney, the dark shaft leading back down into the main cavern below.  This
+    cavernway leads off to the east and west, following along the shore of an underground lake which
+    looks to be quite deep indeed. The lake is close enough that you could stick your toe in it - the ledge
+    you stand upon must drop off quite immediately into the water.  To the west, the ledge curves around
+    the 'shore' of the lake, plus a small cave leads away from the lake's edge even farther west.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32355
+    west:
+      to: tba:323:room:32360
+    down:
+      to: tba:323:room:32353
+
+"tba:323:room:32355":
+  name: Along the Tributary
+  description: >
+    The lake begins to taper down into a smooth, flowing river which along side this walkway.  It
+    appears that the water flows east into the lake, which must then leak somewhere underneath down along the
+    wall of the cavern below, cascading past the cavern down deeper into the earth.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32356
+    west:
+      to: tba:323:room:32354
+
+"tba:323:room:32356":
+  name: Along the Tributary
+  description: >
+    Ahead, a stone wall prohibits any further progress east.  The water flows from an opening which is
+    not large enough to accomodate your girth.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32357
+    west:
+      to: tba:323:room:32355
+
+"tba:323:room:32357":
+  name: The Water Flows Under
+  description: >
+    The source of the water may never be known, at least not at this point as the water comes from some
+    place past this wall which keeps any further travel east impossible.  There is a narrow passage to
+    the north, a barely noticeable thing leading away from the tributary's shore.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32358
+    west:
+      to: tba:323:room:32356
+
+"tba:323:room:32358":
+  name: A Tiny Crack
+  description: >
+    A strange quiet pervades this small area.  One that is completely unsettling and certainly not
+    natural.  Every warning bell in your being is going off, telling you that this is not the place of a
+    being that either kind nor honorable.  A slight chill runs through your spine.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, tunnel]
+  exits:
+    north:
+      to: tba:323:room:32359
+    south:
+      to: tba:323:room:32357
+
+"tba:323:room:32359":
+  name: Death's Kiss
+  description: >
+    The room has a strange chill to it, an unholy chill which comes not from the stone around it, but
+    from the thing which dwells within it.  The small crack to the south looks almost inviting in
+    comparison to the feeling of horror which pervades this room.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32358
+
+"tba:323:room:32360":
+  name: The Lake's Edge
+  description: >
+    A passage runs west away from the lake.  The ledge that borderd the lake runs south around it for a
+    short space and then terminates at the cavern wall. Small ripples dance across the surface of the
+    lake - otherwise, it is dead calm.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32354
+    south:
+      to: tba:323:room:32368
+    west:
+      to: tba:323:room:32361
+
+"tba:323:room:32361":
+  name: Moldy Passage
+  description: >
+    A strange mold grows over the walls and floor of this cavern, probably from the moister of the
+    nearby lake.  The mold glows slightly with a strange luminescence.  It is really quite comforting after
+    being the complete darkness for so long.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32360
+    west:
+      to: tba:323:room:32362
+
+"tba:323:room:32362":
+  name: Moldy Passage
+  description: >
+    The mold on the floor and walls continues unabated, making it feel as if you were walking upon a
+    thick carpet.  As indeed in a sense you are.  A fairly large room opens up to the south, its walls and
+    floor covered just the same.
+  sector: inside
+  flags: [no_mob, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32361
+    south:
+      to: tba:323:room:32363
+
+"tba:323:room:32363":
+  name: Mold Cavern
+  description: >
+    This small cavern is a mass of fungi and mold, every inch of the walls, floor, and ceiling are
+    covered in the glowing growth.  The sounds that you became so accustomed to in the caves outside - the
+    echoes, the wide open sound of the air blowing through - all of that is gone here, replaced by a deep
+    penetrating silence.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32362
+    south:
+      to: tba:323:room:32367
+    west:
+      to: tba:323:room:32364
+
+"tba:323:room:32364":
+  name: Mold Cavern
+  description: >
+    This small cavern is a mass of fungi and mold, every inch of the walls, floor, and ceiling are
+    covered in the glowing growth.  The sounds that you became so accustomed to in the caves outside - the
+    echoes, the wide open sound of the air blowing through - all of that is gone here, replaced by a deep
+    penetrating silence.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32363
+    south:
+      to: tba:323:room:32366
+
+"tba:323:room:32365":
+  name: Cold Storage
+  description: >
+    This chamber is covered in the mold on the walls and floor, but it is easily thrity degrees cooler
+    here than just a few feet to the east.  You begin to feel the heat drain from your body and suddenly
+    realize what the thing on the floor is!
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32366
+
+"tba:323:room:32366":
+  name: Mold Cavern
+  description: >
+    This small cavern is a mass of fungi and mold, every inch of the walls, floor, and ceiling are
+    covered in the glowing growth.  The sounds that you became so accustomed to in the caves outside - the
+    echoes, the wide open sound of the air blowing through - all of that is gone here, replaced by a deep
+    penetrating silence.  To the west is a small chamber, one which appears to hold a mass of something on
+    the floor.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32364
+    east:
+      to: tba:323:room:32367
+    west:
+      to: tba:323:room:32365
+
+"tba:323:room:32367":
+  name: Mold Cavern
+  description: >
+    This small cavern is a mass of fungi and mold, every inch of the walls, floor, and ceiling are
+    covered in the glowing growth.  The sounds that you became so accustomed to in the caves outside - the
+    echoes, the wide open sound of the air blowing through - all of that is gone here, replaced by a deep
+    penetrating silence.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32363
+    west:
+      to: tba:323:room:32366
+
+"tba:323:room:32368":
+  name: The Lake's Edge
+  description: >
+    With your back against a wall to the west and a deep subterrainean lake to the east, you may either
+    go north or south along this ledge.  You see a pile of...  Something just south of here heaped
+    against the south wall on the ground.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32360
+    south:
+      to: tba:323:room:32369
+
+"tba:323:room:32369":
+  name: The Lake's Edge
+  description: >
+    The ledge has reached the southern wall of the cavern, ended any further progress on the ledge. 
+    Something smells quite dreadful here, very much like dead, decayed fish - but maginified many times
+    over.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32368
+    down:
+      to: tba:323:room:32399
+
+"tba:323:room:32370":
+  name: Vaulted Chamber
+  description: >
+    The cave here is very wide and very tall, the black rock looking as if it were carved by the hands
+    of man - or something like man.  The top of the cave comes to a point, the ceiling sloping down in
+    two perfectly even archs to reach the walls, making this almost seem like a holy walkway - one that
+    might lead to a holy man of some sort.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32371
+    west:
+      to: tba:323:room:32322
+
+"tba:323:room:32371":
+  name: Vaulted Chamber
+  description: >
+    The chamber ends just east of here at a giant hole in the center of the floor.  The ceiling and
+    walls do not stray from their shape or form that began at the entrance to the main cavern, indeed they
+    hold their shape right up to the point where they meet the far eastern wall on the other side of the
+    hole.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32372
+    west:
+      to: tba:323:room:32370
+
+"tba:323:room:32372":
+  name: Top of the Shaft
+  description: >
+    The gigantic hole on the floor turns out that it is a huge circular shaft which down deeper into
+    the rock.  This was most definitely man-made as it is completely smooth walled with a set of rungs
+    built into one side, made for easy climbing.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32371
+    down:
+      to: tba:323:room:32373
+
+"tba:323:room:32373":
+  name: In the Shaft
+  description: >
+    You are about midway through the shaft now.  The ceiling of the chamber above can be seen from here
+    as can the floor of a chamber below.  Both seem about as promising as a night on the iron maiden.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    up:
+      to: tba:323:room:32372
+    down:
+      to: tba:323:room:32374
+
+"tba:323:room:32374":
+  name: Bottom of the Shaft
+  description: >
+    The shaft rises high above you, black rock rungs climbing up one side of the wall of the shaft.  A
+    vaulted passage runs off to the east, much like the one above.  In fact, it is exactly like the one
+    above.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32375
+    up:
+      to: tba:323:room:32373
+
+"tba:323:room:32375":
+  name: Vaulted Chamber
+  description: >
+    You notice for the first time that the grime and filth of the caverns above does no seem to extend
+    down into this section of the caves.  The floors are free of litter, indeed they are free of dirt, as
+    it appears they are swept or scrubbed regularly.  The passageway continues east for a short distance
+    further then turns north, the vaulted ceiling turning with the rest of the cavern.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32376
+    west:
+      to: tba:323:room:32374
+
+"tba:323:room:32376":
+  name: Archway
+  description: >
+    The vaulting of the ceiling runs off to the north through a very well-crafted archway.  The archway
+    boasts two statues on either side of the entrance north, both of short, bald men who hold their
+    hands over their hearts and stare resolutely into space in front of them.  To the east the cavern
+    continues, however the walls and ceiling become rough, no longer carved in that direction. The way east
+    gains width as it runs in that direction, getting more and more wide with every foot east.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32377
+    east:
+      to: tba:323:room:32388
+    west:
+      to: tba:323:room:32375
+
+"tba:323:room:32377":
+  name: Wide Carpeted Caveway
+  description: >
+    Oddly enough, the floor of this caveway is carpeted with a fine black rug, making the way north
+    quite enjoyable.  Ahead are torches in ornate sconces, burning strongly, lighting the whole way.  You
+    can see that the caveway runs north for quite some distance before turning east.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32378
+    south:
+      to: tba:323:room:32376
+
+"tba:323:room:32378":
+  name: Wide Carpeted Caveway
+  description: >
+    The caveway runs north to south, the ceiling still vaulted and the walls smooth and clean as any
+    palace.  The denizens of this place seem especially proud of their home.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32379
+    south:
+      to: tba:323:room:32377
+
+"tba:323:room:32379":
+  name: Wide Carpeted Caveway
+  description: >
+    The caveway makes its turn just north from here, the carpet following along. To the south is the
+    way back to the vaulted caves which lead back into the main cavern.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32380
+    south:
+      to: tba:323:room:32378
+
+"tba:323:room:32380":
+  name: Before the Chamber
+  description: >
+    The view to the east is nothing short of astonishing!  A large black rock throne lies against the
+    far east wall, quite some distance from here, small alcoves hold waiting attendants the length of the
+    hall.  The black carpeting runs straight to the throne.
+  sector: inside
+  flags: [no_mob, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32383
+    south:
+      to: tba:323:room:32379
+
+"tba:323:room:32381":
+  name: Waiting Chamber
+  description: >
+    All manner of cave dwellers have waited in this place.  Waited on the pleasure of the Pale Man, who
+    it is said holds the power of the Underdark. Legends told of the Pale Man say that he has lived for
+    a thousand years and will live for a thousand more.  No one disputes them, as the Pale Man kills any
+    being foolhardy enough to make an attempt on his life, even in thought.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32383
+
+"tba:323:room:32382":
+  name: Side Chamber
+  description: >
+    All manner of cave dwellers have waited in this place.  Waited on the pleasure of the Pale Man, who
+    it is said holds the power of the Underdark. Legends told of the Pale Man say that he has lived for
+    a thousand years and will live for a thousand more.  No one disputes them, as the Pale Man kills any
+    being foolhardy enough to make an attempt on his life, even in thought.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    south:
+      to: tba:323:room:32384
+
+"tba:323:room:32383":
+  name: Entering the Chamber
+  description: >
+    The hall runs east toward the throne, to the north and south are small alcoves.  The alcoves are
+    where beings wait for their chance to speak to or make a request of the Pale Man.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32381
+    east:
+      to: tba:323:room:32384
+    south:
+      to: tba:323:room:32386
+    west:
+      to: tba:323:room:32380
+
+"tba:323:room:32384":
+  name: Chamber of the Pale Man
+  description: >
+    The hall runs east toward the throne, to the north and south are small alcoves.  The alcoves are
+    where beings wait for their chance to speak to or make a request of the Pale Man.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32382
+    east:
+      to: tba:323:room:32385
+    south:
+      to: tba:323:room:32387
+    west:
+      to: tba:323:room:32383
+
+"tba:323:room:32385":
+  name: Throne Room
+  description: >
+    The walls are all worked in glorious carvings, all of them of the likeness of the Pale Man.  Many
+    fine underworld carvers have paid tribute to the Pale Man over the millenia in donating some of their
+    talent to beautifying his abode. All these walls pale, however, in comparison to the huge black
+    throne which stands tall and proud on its dias against the far east wall.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32384
+
+"tba:323:room:32386":
+  name: Waiting Chamber
+  description: >
+    All manner of cave dwellers have waited in this place.  Waited on the pleasure of the Pale Man, who
+    it is said holds the power of the Underdark. Legends told of the Pale Man say that he has lived for
+    a thousand years and will live for a thousand more.  No one disputes them, as the Pale Man kills any
+    being foolhardy enough to make an attempt on his life, even in thought.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32383
+
+"tba:323:room:32387":
+  name: Side Chamber
+  description: >
+    All manner of cave dwellers have waited in this place.  Waited on the pleasure of the Pale Man, who
+    it is said holds the power of the Underdark. Legends told of the Pale Man say that he has lived for
+    a thousand years and will live for a thousand more.  No one disputes them, as the Pale Man kills any
+    being foolhardy enough to make an attempt on his life, even in thought.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32384
+
+"tba:323:room:32388":
+  name: The Cavern Widens
+  description: >
+    And widen it does, indeed.  It continues to widen until it reaches a huge circular well just to the
+    east.  A small chamber to the south looks particularly uninviting, however it may warrant a quick
+    look.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32390
+    south:
+      to: tba:323:room:32389
+    west:
+      to: tba:323:room:32376
+
+"tba:323:room:32389":
+  name: A Grim Chamber
+  description: >
+    Maybe it wasn't such a good idea to get that quick look.  The dreadful creature which makes its
+    home in this place is not at all what one might call a good host, and if it not here now, chances are
+    that it will be back very quickly.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32388
+
+"tba:323:room:32390":
+  name: Deep Well
+  description: >
+    Looking down into the depths of this thing, you cannot see bottom.  That does not mean that there
+    isn't one, though - never fear.  Dropping a pebble down into it you hear...  Nothing.  That does not
+    mean it didn't land, though - do not be afraid.  It appears that the rocky interior of the well would
+    be suitable for climbing.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32388
+    down:
+      to: tba:323:room:32391
+
+"tba:323:room:32391":
+  name: In the Well
+  description: >
+    The handholds turn out to be quite stable, allowing access to both the top and bottom of the well. 
+    The bottom of the well can be seen now, bone dry.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    up:
+      to: tba:323:room:32390
+    down:
+      to: tba:323:room:32392
+
+"tba:323:room:32392":
+  name: Well's Base
+  description: >
+    The well ascends above you into the wide chamber.  It turns out there is yet another wide chamber
+    leading east from down here as well.  It also seems much warmer down here than it did above.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32393
+    up:
+      to: tba:323:room:32391
+
+"tba:323:room:32393":
+  name: Crosschamber
+  description: >
+    The cavern splits here, one chamber heading off south, the other continuing east.  It is much wider
+    to the east, however the heat that you feel seems to radiate from that direction - a sign, perhaps?
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32394
+    south:
+      to: tba:323:room:32396
+    west:
+      to: tba:323:room:32392
+
+"tba:323:room:32394":
+  name: Near a Glow
+  description: >
+    A strange maroon glow comes from the eastern chamber, some sort of maroon draping or mound lies in
+    that room.  The glow shimmers and dazzles as it shines. The heat now has become nearly unbearable,
+    you can feel your face and hands burning slightly, turning red.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    east:
+      to: tba:323:room:32395
+    west:
+      to: tba:323:room:32393
+
+"tba:323:room:32395":
+  name: The Dragon's Hoarde
+  description: >
+    Ahh, so it was the glow of all that money and treasure gleaming on a huge dragon's scales - that's
+    all it was.  Maybe it would have been better had you stayed in Jareth, maybe tossed a couple of beers
+    down at the Goat and called it a night...
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32394
+
+"tba:323:room:32396":
+  name: Side Tunnel
+  description: >
+    This tunnel is certainly more narrow than the one to the north.  However, that does not help to
+    ease the uneasy feeling you get from this small tunnel. Something, someone lies to the south and it is
+    not something good.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32393
+    south:
+      to: tba:323:room:32397
+
+"tba:323:room:32397":
+  name: Side Tunnel
+  description: >
+    The tunnel makes a curve, heading into a small chamber filled with heaps of coins!  Maybe that bad
+    feeling was just that you weren't sure how you were going to carry all this gold back to the bank.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    north:
+      to: tba:323:room:32396
+    east:
+      to: tba:323:room:32398
+
+"tba:323:room:32398":
+  name: Deep Room
+  description: >
+    You realize with a sinking feeling that the heaps you thought were gold were actually the sides of
+    the Deepspawn inhabiting this place.  Somewhere, somehow back just west of Jareth, you feel you must
+    have taken a wrong turn.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:323:room:32397
+
+"tba:323:room:32399":
+  name: The Aboleth's Lair
+  description: >
+    So this is why the aboleth attacked so suddenly on the ledge!  She was protecting her babies.  Not
+    to mention a considerable treasure...
+  sector: inside
+  flags: [dark, soundproof, no_track]
+  exits:
+    up:
+      to: tba:323:room:32369

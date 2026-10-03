@@ -1,0 +1,165 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 120.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:120:shop:12011":
+  keeper: tba:120:mob:12011
+  rooms: [tba:120:room:12006]
+  products:
+  - tba:30:obj:3020
+  - tba:30:obj:3021
+  - tba:30:obj:3022
+  - tba:30:obj:3023
+  - tba:30:obj:3024
+  - tba:30:obj:3025
+  - tba:120:obj:12008
+  buys:
+  - type: weapon
+  - type: armor
+  profit:
+    buy: 2.25
+    sell: 0.6
+  messages:
+    no_such_item: "%s We are out of that item right now."
+    you_dont_have_it: "%s You don't have that.  Stop wasting my time!"
+    does_not_buy: "%s This is a weapon and armor shop!  Go someplace else!"
+    shop_cannot_afford: "%s A fine weapon indeed, but more than I can afford."
+    you_cannot_afford: "%s NO CREDIT!"
+    bought: "%s Here you go.  That will be %d coins.  Don't get hurt!"
+    sold: "%s You'll get %d for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:120:shop:12012":
+  keeper: tba:120:mob:12012
+  rooms: [tba:120:room:12032]
+  products:
+  - tba:120:obj:12006
+  - tba:120:obj:12007
+  profit:
+    buy: 1.2
+    sell: 0.6
+  messages:
+    no_such_item: "%s I don't have anything like that.  Sorry."
+    you_dont_have_it: "%s I don't think you have that."
+    does_not_buy: "%s I don't stock that stuff.  Try another shop."
+    shop_cannot_afford: "%s I can't afford to buy anything, I'm only a poor peddler."
+    you_cannot_afford: "%s No cash, no goods!"
+    bought: "%s Here you go.  That'll be... %d coins."
+    sold: "%s Thank-you very much.  Here are your %d coins as payment."
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 13
+  - open: 14
+    close: 19
+
+"tba:120:shop:12016":
+  keeper: tba:120:mob:12016
+  rooms: [tba:120:room:12003, tba:120:room:12004, tba:120:room:12008, tba:120:room:12015, tba:120:room:12022, tba:120:room:12023]
+  profit:
+    buy: 1.6
+    sell: 0.3
+  messages:
+    no_such_item: "%s We don't sell that."
+    you_dont_have_it: "%s I don't think you have that."
+    does_not_buy: "%s I don't stock that stuff.  Try another shop."
+    shop_cannot_afford: "%s I can't afford to buy anything, I'm only a poor peddler."
+    you_cannot_afford: "%s No cash, no goods!"
+    bought: "%s Here you go.  That'll be... %d coins."
+    sold: "%s Thank-you very much.  Here are your %d coins as payment."
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 9
+    close: 17
+  - open: 18
+    close: 22
+
+"tba:120:shop:12034":
+  keeper: tba:120:mob:12034
+  rooms: [tba:120:room:12042]
+  products:
+  - tba:30:obj:3050
+  - tba:30:obj:3051
+  - tba:30:obj:3052
+  - tba:30:obj:3053
+  - tba:30:obj:3054
+  - tba:120:obj:12030
+  buys:
+  - type: scroll
+  - type: wand
+  profit:
+    buy: 1.85
+    sell: 0.5
+  messages:
+    no_such_item: "%s We don't carry that item."
+    you_dont_have_it: "%s You don't have that."
+    does_not_buy: "%s I can't buy that.  See another shop."
+    shop_cannot_afford: "%s We are low on cash.  Come back later."
+    you_cannot_afford: "%s Sorry, but you can't afford that."
+    bought: "%s Here you go.  That will cost you %d."
+    sold: "%s I will give you %d coins for that."
+  temper: 2
+  flags: 6
+  trade_with: 96
+  hours:
+  - open: 8
+    close: 18
+
+"tba:120:shop:12036":
+  keeper: tba:120:mob:12036
+  rooms: [tba:120:room:12062]
+  products:
+  - tba:30:obj:3000
+  - tba:30:obj:3001
+  - tba:30:obj:3009
+  - tba:30:obj:3010
+  - tba:30:obj:3011
+  - tba:120:obj:12006
+  - tba:120:obj:12007
+  profit:
+    buy: 1.1
+    sell: 0.8
+  messages:
+    no_such_item: "%s We don't have that item in stock right now."
+    you_dont_have_it: "%s I don't think you have that item."
+    does_not_buy: "%s Hmmmm... if I was in a good mood, I'd consider it.  But I'm not."
+    shop_cannot_afford: "%s The Emperor's tax collector just came.  I don't have the cash.  Sorry."
+    you_cannot_afford: "%s NO CREDIT!  We don't even take the Renaissance Express card!"
+    bought: "%s That will be %d coins.  Enjoy!"
+    sold: "%s You'll get %d coins for that."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:120:shop:12037":
+  keeper: tba:120:mob:12037
+  rooms: [tba:120:room:12063]
+  products:
+  - tba:30:obj:3030
+  - tba:30:obj:3031
+  - tba:30:obj:3032
+  - tba:30:obj:3033
+  - tba:30:obj:3036
+  - tba:120:obj:12003
+  profit:
+    buy: 1.75
+    sell: 0.6
+  messages:
+    no_such_item: "%s We don't have that item on stock."
+    you_dont_have_it: "%s I don't think you have that."
+    does_not_buy: "%s I don't stock that stuff.  Try another shop."
+    shop_cannot_afford: "%s I can't afford it right now.  Come back tomorrow."
+    you_cannot_afford: "%s No cash, no goods!"
+    bought: "%s Here you go.  That'll be... %d coins."
+    sold: "%s Thank-you very much.  Here are your %d coins as payment."
+  temper: 2
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 6
+    close: 20

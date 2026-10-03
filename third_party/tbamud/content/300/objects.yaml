@@ -1,0 +1,551 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 300.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:300:obj:30000":
+  type: weapon
+  keywords: [falchion, sword]
+  short: a falchion
+  long: A strange looking sword lies discarded here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 5
+  cost: 900
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [falchion, sword]
+    text: It is a short sword of the hacking variety, it seems a bit worn.
+
+"tba:300:obj:30001":
+  type: drinkcon
+  keywords: [blood, chalice, blood]
+  short: a chalice
+  long: A blood-stained chalice has been set down here.
+  wear: [take, hold]
+  values:
+    capacity: 6
+    contains: 6
+    liquid: blood
+    poisoned: true
+  weight: 11
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chalice]
+    text: What a perfect gift for mother!
+
+"tba:300:obj:30002":
+  type: container
+  keywords: [coffer, copper, ornate]
+  short: the copper coffer
+  long: An ornate copper coffer is set against the far wall.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 13
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coffer, copper, ornate]
+    text: >
+      This small coffer looks like it could contain all of your belongings, which isn't really saying a
+      lot.
+
+"tba:300:obj:30003":
+  type: potion
+  keywords: [tonic, root, comfrey]
+  short: a tonic of comfrey root
+  long: A tonic of comfrey root has been discarded here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [15, 39, 39, 33]
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tonic, root, comfrey]
+    text: What doesn't kill you makes you stronger, right?
+
+"tba:300:obj:30004":
+  type: potion
+  keywords: [elixir, tongue, adder]
+  short: an elixir of Adder's Tongue
+  long: An elixir of Adder's Tongue lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [15, 44, 21, -1]
+  weight: 1
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [elixir, tongue, adder]
+    text: This elixer may be good for you, but it sure looks disgusting.  Adder's tongue indeed.
+
+"tba:300:obj:30005":
+  type: key
+  keywords: [key, skeleton]
+  short: a skeleton key
+  long: An old skeleton key lies on the floor.
+  wear: [take, hold]
+  values:
+    raw: [30005, 0, 0, 0]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, skeleton]
+    text: It is made of bone.  What did you expect, in this place of death?
+
+"tba:300:obj:30006":
+  type: weapon
+  keywords: [blowgun, bamboo]
+  short: a blowgun
+  long: A long, bamboo blowgun rest on the ground.
+  wear: [take, wield]
+  values:
+    damage: 9d2
+    attack: pound
+  weight: 5
+  cost: 160
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [blowgun, bamboo]
+    text: How odd, who would have ever expected you to find a bamboo blowgun in these parts...
+
+"tba:300:obj:30007":
+  type: drinkcon
+  keywords: [blood, pool, blood]
+  short: the pool
+  long: You seem to be standing in a pool of blood.
+  wear: []
+  values:
+    capacity: 15
+    contains: 15
+    liquid: blood
+    poisoned: true
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blood, pool]
+    text: Wow!  Perfect for the vampire in you!  I wonder if it is human or animal blood however...
+
+"tba:300:obj:30008":
+  type: staff
+  keywords: [Bloodstone, stone, red]
+  short: the Bloodstone
+  long: A large, dull red stone awaits, invitingly, to be picked up.
+  flags: [hum, magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [13, 7, 7, 25]
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: -2
+  extras:
+  - keywords: [bloodstone, stone, red]
+    text: >
+      It glows malignantly with its own ruddy light.  You peer within the stone only to see the vague
+      impression of some misshaped soul trapped within.
+
+"tba:300:obj:30009":
+  type: weapon
+  keywords: [Heartseeker, stiletto, blade]
+  short: the Heartseeker
+  long: A nasty looking stiletto with a shiny black blade lies amid the dust.
+  flags: [hum, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: pierce
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: hit
+    modifier: -10
+  extras:
+  - keywords: [Heartseeker, stiletto, blade]
+    text: This blade has a distinct aura of evil surrounding its fine blade.
+
+"tba:300:obj:30010":
+  type: armor
+  keywords: [shield, scarab]
+  short: a scarab shield
+  long: A shield with a large, dead scarab mounted in the center lies here.
+  flags: [magic]
+  wear: [take, shield]
+  values:
+    armor: 6
+  weight: 17
+  cost: 900
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [shield, scarab, beetle]
+    text: >
+      This shield is unremarkable except for the oversized scarab beetle mounted in the center.  The
+      beetle appears to be an enormous strain of the ordinary scarab.
+
+"tba:300:obj:30011":
+  type: weapon
+  keywords: [mace, fred, skull]
+  short: the Mace of Undead Fred
+  long: A skull-headed mace has been left here.
+  flags: [hum, magic, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: crush
+  weight: 10
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [mace, fred, skull]
+    text: >
+      The stout leather-wrapped shaft is topped with the animated skull of Fred himself.  Though the
+      jawbone is missing, you can hear him scream obscenities even in the midst of a fray.  A vague light stirs
+      within his eyesockets as he says, 'What are ye looking at, maggot breath!  '
+
+"tba:300:obj:30012":
+  type: container
+  keywords: [buckler, arsenal]
+  short: an arsenal buckler
+  long: A spiked buckler with a circle of knives set in it, has been left here.
+  wear: [take, shield]
+  values:
+    capacity: 3
+    lock_flags: 0
+    corpse: false
+  weight: 7
+  cost: 240
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [buckler, arsenal]
+    text: The buckler has a circle of throwing knives set around its center spike.
+
+"tba:300:obj:30013":
+  type: weapon
+  keywords: [knife, throwing]
+  short: a throwing knife
+  long: A well balanced throwing knife lies on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: slash
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [knife, throwing]
+    text: >
+      This knife has been carefully crafted to provide maximum balance, so that it can be used for
+      accurate throwing.
+
+"tba:300:obj:30014":
+  type: container
+  keywords: [pile, debris]
+  short: the pile
+  long: A pile of debris has been stacked on a small plateau, away from the acid.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, debris]
+    text: >
+      It contains all manner of rusty items and beaten equipment garnered by the fastidious denizens of
+      this place.
+
+"tba:300:obj:30015":
+  type: weapon
+  keywords: [guisarme, polearm]
+  short: a guisarme
+  long: A long, sharp polearm has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 16
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [guisarme, polearm]
+    text: What more can be said?  It is a rather long weapon of destruction.
+
+"tba:300:obj:30016":
+  type: armor
+  keywords: [glove, minstrels, minstrel]
+  short: a minstrel's glove
+  long: A single, white minstrel's glove has been discarded here.
+  flags: [glow, magic]
+  wear: [take, hands]
+  values:
+    armor: 6
+  weight: 8
+  cost: 450
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [glove, minstrels, minstrel, harp, pattern]
+    text: The glove has a small needlework pattern in the back formed in the shape of a small harp.
+
+"tba:300:obj:30017":
+  type: armor
+  keywords: [mail, shabby]
+  short: some shabby mail
+  long: A worn and shabby suit of ring mail has been cast away here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 20
+  cost: 700
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mail, shabby]
+    text: It seems about ready to fall apart!
+
+"tba:300:obj:30018":
+  type: key
+  keywords: [key, granite]
+  short: a granite key
+  long: A key fashioned of stone has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, granite]
+    text: >
+      This key appears to have be crafted from solid granite.  You wonder what kind of tools could have
+      been used to do such a thing.
+
+"tba:300:obj:30019":
+  type: other
+  keywords: [flesh, embalmed]
+  short: the embalmed flesh
+  long: A large pile of presumably human flesh has been embalmed and stored here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flesh, embalmed]
+    text: >
+      Ugh.  You have never seen such sickly looking flesh before in your life. And the smell of it!
+
+"tba:300:obj:30020":
+  type: weapon
+  keywords: [flail, beater, grave]
+  short: a grave beater
+  long: A rusty grave beater flail has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: whip
+  weight: 12
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [flail, beater, grave]
+    text: This flail seems only to have been used to keep the dead in their place.
+
+"tba:300:obj:30021":
+  type: weapon
+  keywords: [dagger, rusty]
+  short: a rusty dagger
+  long: An old and rusty dagger has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: slash
+  weight: 1
+  cost: 2
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dagger, rusty]
+    text: >
+      This dagger appears to be rather old and by the looks of it, has been left here to rust for quite
+      some time.
+
+"tba:300:obj:30022":
+  type: potion
+  keywords: [vial, potion, puce]
+  short: a puce potion
+  long: A small vial has been forgotten here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [25, 19, 33, -1]
+  weight: 2
+  cost: 35
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [vial, potion, puce]
+    text: The vial contains a disgusting looking liquid, which appears to be almost puce in color.
+
+"tba:300:obj:30023":
+  type: armor
+  keywords: [shield, large, shiny]
+  short: a large, shiny shield
+  long: A glistening metal object is here, it appears to be a shield.
+  flags: [magic]
+  wear: [take, shield]
+  values:
+    armor: 9
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -2
+  - apply: age
+    modifier: 10
+  extras:
+  - keywords: [shield, large, shiny]
+    text: >
+      This shield is very shiny, and appears to have been recently polished by something or someone, yet
+      it also appears to be several decades old from the style is has been crafted in.
+
+"tba:300:obj:30024":
+  type: light
+  keywords: [torch, green]
+  short: a green torch
+  long: An odd torch glowing green has been left here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch, green]
+    text: >
+      This torch is quite odd, since you have never seen a torch glow with an everlasting flame before,
+      and a green flame no less...
+
+"tba:300:obj:30025":
+  type: armor
+  keywords: [helm, silver, metal]
+  short: a silver helm
+  long: A helm made of a silverish metal has been left here.
+  wear: [take, head, hold]
+  values:
+    armor: 0
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [engravings, lines, pattern]
+    text: >
+      The lines appear to be a part of a pattern, but you cannot make out exactly what the pattern is.
+  - keywords: [helm, silver, metal]
+    text: >
+      This helm looks to be purely ornamental, and does not look like it would afford the wearer any
+      protection whatsoever.  It is finely engraven with small wavy lines however.
+
+"tba:300:obj:30026":
+  type: armor
+  keywords: [jacket, rotted, leather]
+  short: a rotted leather jacket
+  long: An old, rotted leather jacket is decomposing on the ground here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [jacket, rotted, leather]
+    text: >
+      This jacket looks like it may have once been in decent condition, but is no longer in any condition
+      to speak of.
+
+"tba:300:obj:30027":
+  type: trash
+  keywords: [rod, metal, strange]
+  short: a strange metal rod
+  long: A rather strange rod of a metallic material has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 7
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rod, metal, strange]
+    text: >
+      This strange metallic rod looks like it was once a wooden branch, so carefully crafted are the
+      "knots", bends, and bumps along the shaft.  You have no clue whatsoever of anything you could use it for,
+      but you should hang onto it since there could always be some use beyond your imagination.

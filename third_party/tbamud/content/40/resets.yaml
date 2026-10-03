@@ -1,0 +1,153 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 40.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:40:mob:4000
+  room: tba:40:room:4030
+  limit: 1
+  carry:
+  - object: tba:40:obj:4001
+    limit: 1
+    contents:
+    - object: tba:40:obj:4002
+      limit: 1
+- mob: tba:40:mob:4001
+  room: tba:40:room:4025
+  limit: 2
+- mob: tba:40:mob:4001
+  room: tba:40:room:4015
+  limit: 2
+- mob: tba:40:mob:4002
+  room: tba:40:room:4023
+  limit: 3
+- mob: tba:40:mob:4002
+  room: tba:40:room:4017
+  limit: 3
+- mob: tba:40:mob:4002
+  room: tba:40:room:4020
+  limit: 3
+- mob: tba:40:mob:4003
+  room: tba:40:room:4021
+  limit: 6
+- mob: tba:40:mob:4003
+  room: tba:40:room:4021
+  limit: 6
+- mob: tba:40:mob:4003
+  room: tba:40:room:4013
+  limit: 6
+- mob: tba:40:mob:4003
+  room: tba:40:room:4013
+  limit: 6
+- mob: tba:40:mob:4003
+  room: tba:40:room:4027
+  limit: 6
+- mob: tba:40:mob:4003
+  room: tba:40:room:4027
+  limit: 6
+- mob: tba:40:mob:4004
+  room: tba:40:room:4015
+  limit: 3
+- mob: tba:40:mob:4004
+  room: tba:40:room:4028
+  limit: 3
+- mob: tba:40:mob:4004
+  room: tba:40:room:4028
+  limit: 3
+- mob: tba:40:mob:4005
+  room: tba:40:room:4022
+  limit: 1
+  equip:
+    finger_right:
+      object: tba:40:obj:4000
+      limit: 5
+- mob: tba:40:mob:4050
+  room: tba:40:room:4062
+  limit: 1
+  carry:
+  - object: tba:40:obj:4051
+    limit: 3
+- mob: tba:40:mob:4051
+  room: tba:40:room:4070
+  limit: 4
+- mob: tba:40:mob:4051
+  room: tba:40:room:4050
+  limit: 4
+- mob: tba:40:mob:4051
+  room: tba:40:room:4073
+  limit: 4
+- mob: tba:40:mob:4051
+  room: tba:40:room:4055
+  limit: 4
+- mob: tba:40:mob:4052
+  room: tba:40:room:4056
+  limit: 3
+- mob: tba:40:mob:4052
+  room: tba:40:room:4065
+  limit: 3
+- mob: tba:40:mob:4052
+  room: tba:40:room:4059
+  limit: 3
+- mob: tba:40:mob:4053
+  room: tba:40:room:4058
+  limit: 2
+- mob: tba:40:mob:4053
+  room: tba:40:room:4068
+  limit: 2
+- mob: tba:40:mob:4054
+  room: tba:40:room:4060
+  limit: 3
+- mob: tba:40:mob:4054
+  room: tba:40:room:4053
+  limit: 3
+- mob: tba:40:mob:4054
+  room: tba:40:room:4052
+  limit: 3
+- mob: tba:40:mob:4055
+  room: tba:40:room:4064
+  limit: 2
+  carry:
+  - object: tba:40:obj:4050
+    limit: 20
+- mob: tba:40:mob:4055
+  room: tba:40:room:4071
+  limit: 2
+  carry:
+  - object: tba:40:obj:4050
+    limit: 20
+- mob: tba:40:mob:4056
+  room: tba:40:room:4067
+  limit: 2
+- mob: tba:40:mob:4056
+  room: tba:40:room:4057
+  limit: 2
+- object: tba:40:obj:4052
+  room: tba:40:room:4068
+  limit: 8
+- object: tba:40:obj:4052
+  room: tba:40:room:4069
+  limit: 8
+- object: tba:40:obj:4052
+  room: tba:40:room:4070
+  limit: 8
+- object: tba:40:obj:4052
+  room: tba:40:room:4071
+  limit: 8
+- mob: tba:40:mob:4057
+  room: tba:40:room:4038
+  limit: 2
+- mob: tba:40:mob:4057
+  room: tba:40:room:4041
+  limit: 2
+- mob: tba:40:mob:4058
+  room: tba:40:room:4044
+  limit: 1
+removes:
+- room: tba:40:room:4068
+  object: tba:40:obj:4052
+- room: tba:40:room:4069
+  object: tba:40:obj:4052
+- room: tba:40:room:4070
+  object: tba:40:obj:4052
+- room: tba:40:room:4071
+  object: tba:40:obj:4052

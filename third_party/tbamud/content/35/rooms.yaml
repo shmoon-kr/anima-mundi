@@ -1,0 +1,734 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 35.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:35:room:3500":
+  name: The Plains
+  description: >
+    You are standing on the plains.  This is a vast desolate place where the wind can howl undisturbed
+    since nothing but you bars its way.  However you are not the first to wander here.  Before you
+    somebody has left a small path.  The path looks rather bewildered and is not the kind of path to lead to
+    anywhere significant or important but it seems to have made up its mind to enter the hills far away
+    north.  A narrow trail scars its way off to the east as it leads up towards a hillside.
+  sector: city
+  exits:
+    north:
+      to: tba:40:room:4000
+    east:
+      to: tba:33:room:3300
+    south:
+      to: tba:35:room:3501
+
+"tba:35:room:3501":
+  name: The Lane
+  description:
+  - >
+    You are strolling along a pleasant, shady lane.  The road is lined on both sides by tall, stately
+    trees which lend the scene with a sense of quiet serenity.
+  - You can follow the road north or south.
+  sector: city
+  exits:
+    north:
+      to: tba:35:room:3500
+    south:
+      to: tba:35:room:3502
+
+"tba:35:room:3502":
+  name: The Laneway
+  description:
+  - >
+    The trees stand close here, and the tall, bushy undergrowth prevents you from seeing far in any
+    direction save east, where a broad lane continues off into the distance; and west, where the same lane
+    continues towards what looks like a fairly large city.  The muted sounds of city commotion reach your
+    ears from a distance; stray dogs barking, children crying, and street salesmen shouting.
+  - >
+    A steep path leads down from here to the northeast towards the Dwarven Village, and a small trail
+    leads through the trees towards the hills to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:35:room:3501
+    east:
+      to: tba:150:room:15000
+      look: You see a fairly large road leading towards a grand castle in the distance.
+    west:
+      to: tba:35:room:3503
+    down:
+      to: tba:65:room:6500
+      look: The well trodden path leads down to the northeast towards a small bustling village.
+
+"tba:35:room:3503":
+  name: The City Entrance
+  description: >
+    You stand on the outskirts of a large city - Midgaard; the capital of this land.  The road leads
+    east into the peace and quiet - and dangers - of the forest; and to the west it becomes the main street
+    of the town; surrounded by a confusion of shops, bars, and market places.
+  sector: city
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:35:room:3502
+    west:
+      to: tba:30:room:3053
+
+"tba:35:room:3504":
+  name: The South Gate
+  description: >
+    You are standing on a small, dusty path leading away from the south gate of Midgaard, to the forest
+    of Miden'Nir (Goblinic for 'Green Blood'). You can still see the city to the east, but if you go
+    south, there is fresh air and greenery.
+  sector: forest
+  exits:
+    east:
+      to: tba:31:room:3127
+      look: You can see the walls of the South Gate.
+    south:
+      to: tba:35:room:3505
+      look: If you go south, you will enter the Miden'Nir.
+
+"tba:35:room:3505":
+  name: The Trail To Miden'Nir
+  description: >
+    You are in a light forest.  A path leads south, but the passage to the east is easy enough.  To the
+    west, smoke can be seen rising above the treetops.  The sprawl of Midgaard lies north of here.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:35:room:3504
+      look: To the north, you see the South Gate of Midgaard.
+    east:
+      to: tba:35:room:3506
+      look: More light forest.
+    south:
+      to: tba:35:room:3507
+      look: This path cuts through the darkness of the Miden'Nir.
+    west:
+      to: tba:35:room:3570
+      look: >
+        The Woodsman's Inn can be seen a short distance to the west, it appears to be the source of the
+        smoke.
+
+"tba:35:room:3506":
+  name: The Miden'nir
+  description: >
+    You are in a dark forest.  To the east, mountains block passage.  From here, only the lighter
+    forest to the west or south offer a way to travel.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3550
+      look: The mountains can be seen jutting up to the east.
+    south:
+      to: tba:35:room:3509
+      look: The forest is darker to the south.
+    west:
+      to: tba:35:room:3505
+      look: The forest gets lighter as you go west.
+
+"tba:35:room:3507":
+  name: The Miden'nir
+  description: >
+    The forest is deep here and the wind blows through the trees and through your hair.  To the north,
+    the forest gets lighter.  However, the southern and western paths place you even deeper in the wood.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3505
+      look: The forest is lighter in this direction.
+    south:
+      to: tba:35:room:3510
+      look: More and darker woods.
+    west:
+      to: tba:35:room:3508
+      look: There is a small path leading west.
+
+"tba:35:room:3508":
+  name: On a Small Path
+  description: >
+    A path is here, leading east and south through the dark woods of Miden'nir.  Mountains slash the
+    scenery to the west of here.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3507
+      look: Wind-swept forest.
+    south:
+      to: tba:35:room:3511
+      look: To the south, the trail continues.
+
+"tba:35:room:3509":
+  name: The Miden'nir
+  description: >
+    The trees of Miden'nir are lush and green, hiding the evil that lurks in these woods.  The trees
+    become too thick to the west, but you may go north, south or travel toward the mountains that lie east
+    of here.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3506
+      look: The trees lighten up a bit this way.
+    east:
+      to: tba:35:room:3512
+      look: Huge gray mountains lie in this direction.
+    south:
+      to: tba:35:room:3514
+      look: The forest continues.
+
+"tba:35:room:3510":
+  name: A Crossroads
+  description: >
+    Here footworn paths meet leading north, south and east.  The trees seem to be closing in on you at
+    this point, and you can barely see the sky through the thick branches above your head.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3507
+      look: Trees as far as the eye can see.
+    east:
+      to: tba:35:room:3514
+      look: There is an especially dark part of the forest this way.
+    south:
+      to: tba:35:room:3516
+      look: There is an especially dark section of forest this way.
+
+"tba:35:room:3511":
+  name: The Trail
+  description: >
+    You are on a north-south trail through the woods.  To the west, impassable mountains glare at you,
+    and the thick woods and undergrowth prevent any movement westward.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3508
+      look: The trail bends to the north.
+    south:
+      to: tba:35:room:3515
+      look: To the south, the path re-enters the forest.
+
+"tba:35:room:3512":
+  name: The Miden'nir
+  description: >
+    The trees of Miden'nir are lush and green, hiding the evil that lurks in these woods.  You can go
+    north toward the mountains, or west to the forest, but the steep mountains prevent any movement east.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3550
+      look: The mountains can be seen to the north.
+    south:
+      to: tba:35:room:3513
+      look: A light section of forest.
+    west:
+      to: tba:35:room:3509
+      look: The forest continues here.
+
+"tba:35:room:3513":
+  name: The Miden'nir
+  description: >
+    The forest is dark, and becomes even darker west.  You sense that there is something evil hidden in
+    these woods.  The forest gets lighter to the north.  The wind kicks up as you ponder your options.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3512
+      look: There is a small clearing to the north.
+    west:
+      to: tba:35:room:3514
+      look: It gets darker and thicker this way.
+
+"tba:35:room:3514":
+  name: The Deep Forest
+  description: >
+    It is quite dark here, forest surrounds you.  With each step, the forest seems to close around you,
+    and get darker and more foreboding. It might just be time to head back to somewhere safe.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3509
+      look: More forest.
+    east:
+      to: tba:35:room:3513
+      look: Lighter forest and mountains in the distance.
+    south:
+      to: tba:35:room:3517
+      look: More trees.
+    west:
+      to: tba:35:room:3510
+      look: The forest continues.
+
+"tba:35:room:3515":
+  name: The Light Forest
+  description: >
+    The forest is light here and you can easily pick your way through the trail.  To the east, the
+    forest becomes thick and darker.  South, the trail continues.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3511
+      look: A trail leading north-south.
+    east:
+      to: tba:35:room:3516
+      look: The trees get thicker as you go east.
+    south:
+      to: tba:35:room:3518
+      look: More trees and some small hills.
+
+"tba:35:room:3516":
+  name: Some Muddy Ground
+  description: >
+    The ground is quite muddy here and puddles are all around.  Your boots make a disgusting SQUISH as
+    you walk here.  You can go in any of the four cardinal directions from here.  Hopefully, it will be
+    dryer.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3510
+      look: The Miden'nir continues.
+    east:
+      to: tba:35:room:3517
+      look: More trees.
+    south:
+      to: tba:35:room:3519
+      look: The trees get VERY thick to the south.  You can barely see...
+    west:
+      to: tba:35:room:3515
+      look: Some light trees and daylight.
+
+"tba:35:room:3517":
+  name: Near The Mountains
+  description: >
+    The most prominent feature here is the mountains that lie to the east.  You can only go north and
+    west from here as the rocks stop all other movement.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3514
+      look: Many trees to the north.
+    west:
+      to: tba:35:room:3516
+      look: There is a bit of a slope downward to the west.
+
+"tba:35:room:3518":
+  name: The Fading Trail
+  description: >
+    The trail becomes nearly unpassable here.  You can go north as the forest is relatively light.  To
+    the south, you can see a path.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3515
+      look: You can see a trail this way.
+    east:
+      look: The trees are nearly trunk-to-trunk this way.
+    south:
+      to: tba:35:room:3522
+      look: Dark forests.
+
+"tba:35:room:3519":
+  name: The Dark Path
+  description: >
+    You are hemmed in by trees on either side of you.  The path continues north and south, and while is
+    much to thick to explore west, you can head off into the woods to the west.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3516
+      look: The forest gets lighter this way.
+    east:
+      to: tba:35:room:3520
+      look: The forest continues.
+    south:
+      to: tba:35:room:3521
+      look: There is a strong stench coming from this direction.
+    west:
+      look: The trees are nearly trunk-to-trunk this way.
+
+"tba:35:room:3520":
+  name: The Dark Forest
+  description: >
+    You stomp your way through the underbrush.  The dark forest of Miden'nir get pretty thick here, and
+    the branches high above your head are so thick that they block out all direct sunlight.  While it is
+    much too thick to go further east, you might be able to make your way though the forest to the south
+    and west.
+  sector: forest
+  exits:
+    south:
+      to: tba:35:room:3523
+      look: The thick forest continues.
+    west:
+      to: tba:35:room:3519
+      look: The thick forest continues.
+
+"tba:35:room:3521":
+  name: The Carnage
+  description: >
+    Here, you see a gruesome sight.  Blood is everywhere... on the trees and soaked into the ground. 
+    Two carcasses lie in front of you, seeming to look up at you.  The forest is impassible to the south,
+    but the other directions look ok.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:35:room:3519
+      look: Darkness...
+    east:
+      to: tba:35:room:3523
+      look: Your light does not extend that far.
+    west:
+      to: tba:35:room:3522
+      look: More dark forest.
+  extras:
+  - keywords: [carcass, body, corpse, carcasses, bodies, corpses]
+    text: >
+      The corpses looked as if they have been pierced by a large, jagged spear. The damage these people
+      sustained is simply amazing.  Worse, the lips on the bodies are a light shade of blue, hinting at
+      poison in their systems.
+
+"tba:35:room:3522":
+  name: Deep In The Forest Of Miden'nir
+  description: >
+    There is a sickening stench here.  It smells of blood and death. To the north, you catch glimpses
+    of daylight.  To the east, you simply cannot see.  The trees are close and stifling.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3518
+      look: You see daylight and a trail to follow.
+    east:
+      to: tba:35:room:3521
+      look: The stench seems to becoming from this direction.
+
+"tba:35:room:3523":
+  name: The Dark Forest
+  description: >
+    The branches above you block out all direct sunlight, making the forest in this area rather dark. 
+    The forest continues east, where it meets the mountains.  The air is still and stuffy - a stench
+    comes from the west and an ugly feeling causes the hair to rise on the back of your neck!
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3520
+      look: It appears to get much darker that direction.
+    east:
+      to: tba:35:room:3551
+      look: The forest appears to get much darker in this direction.
+    west:
+      to: tba:35:room:3521
+      look: The sky becomes lighter in this direction.
+
+"tba:35:room:3550":
+  name: At The Foot Of The Mountains
+  description: >
+    You find yourself at the foot of the mountains, where it is much to steep to continue north or
+    east.  You see the lush, green forest of Miden'nir to the south and west.
+  sector: mountains
+  exits:
+    south:
+      to: tba:35:room:3512
+      look: The forest of Miden'nir spreads out before you.
+    west:
+      to: tba:35:room:3506
+      look: The forest of Miden'nir spreads out before you.
+
+"tba:35:room:3551":
+  name: Deep In The Forest Of Miden'nir
+  description: >
+    The branches above you block out all direct sunlight, making the forest in this area very dark. 
+    The forest continues west, but mountains block further exploration in all other directions, except
+    south, where you notice a small tunnel dug into the mountainside.
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:35:room:3552
+      look: The tunnel leads into the mountainside.
+    west:
+      to: tba:35:room:3523
+      look: The forest continues, but appears to be getting lighter.
+
+"tba:35:room:3552":
+  name: A Tunnel In The Mountains
+  description: >
+    The walls of this tunnel were carved out many years ago by the goblins of this forest.  The floor
+    is well worn, and continues south, into the mountain, or back north out into the forest.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:35:room:3551
+      look: Outside, you see the forest of Miden'nir.
+    south:
+      to: tba:35:room:3553
+      look: The tunnel continues to the south.
+
+"tba:35:room:3553":
+  name: A Tunnel In The Mountains
+  description: >
+    The tunnel gets lighter to the north, presumably leading out, while to the south the passage gets
+    smaller and smaller.  A small alcove has been carved into the east wall.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:35:room:3552
+      look: The tunnel gets wider in this direction.
+    east:
+      to: tba:35:room:3554
+      look: You see a small alcove.
+    south:
+      to: tba:35:room:3555
+      look: The tunnel gets smaller in this direction.
+
+"tba:35:room:3554":
+  name: A Small Alcove
+  description: >
+    A small alcove has been carved out here.  There are a bunch of twigs and leaves thrown into a pile
+    here, probably serving as a bed.
+  sector: city
+  flags: [dark]
+  exits:
+    west:
+      to: tba:35:room:3553
+      look: You see the main passageway.
+  extras:
+  - keywords: [twigs, leaves, bead]
+    text: >
+      The twigs and leaves have all been piled together as a makeshift bed for some small humanoid.
+
+"tba:35:room:3555":
+  name: A Tunnel In The Mountains
+  description: >
+    As you explore further into the mountainside, the tunnel gets smaller and smaller to the south. 
+    You almost have to hunch over to make your way through this area.  A small archway to the south leads
+    into a large chamber.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:35:room:3553
+      look: The tunnel continues north.
+    south:
+      to: tba:35:room:3556
+      look: You see a small cavern.
+
+"tba:35:room:3556":
+  name: The Goblin HeadQuarters
+  description: >
+    The tunnel widens into a large (well, large for goblins) cavern that serves as the living quarters
+    for the goblins of Miden'nir.  The bones of numbers woodland creatures are strewn about the room, the
+    remanents of a recent meal.
+  sector: city
+  flags: [dark]
+  exits:
+    north:
+      to: tba:35:room:3555
+      look: The tunnel heads north.
+
+"tba:35:room:3570":
+  name: The Front Of The Inn
+  description: >
+    You are standing on a well-worn path which opens into a clearing. An old, wooden building is here
+    with smoke billowing from its chimney.  A painted sign is visible on the porch to the west.  You could
+    go north or south around the building or leave this place and return to the forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3571
+      look: You can go north around the Inn.
+    east:
+      to: tba:35:room:3505
+      look: Back through the trees to the Miden'nir.
+    south:
+      to: tba:35:room:3572
+      look: You can go south around the Inn.
+    west:
+      to: tba:35:room:3574
+      look: The front door of the Inn beckons.
+  extras:
+  - keywords: [sign]
+    text: "The sign reads: The Woodsman"
+
+"tba:35:room:3571":
+  name: North Of The Inn
+  description: >
+    You are standing north of the Inn.  Things don't look much different from this angle.  The air here
+    is filled with smells of smoke and cooking. South, the front porch is waiting for you... or you can
+    see if there is a back door.
+  sector: forest
+  exits:
+    south:
+      to: tba:35:room:3570
+      look: You see the front of the Inn.
+
+"tba:35:room:3572":
+  name: South Of The Inn
+  description: >
+    You are standing south of the Inn.  You could easily go north and enter through the front door, or
+    west and to the rear of the establishment.  You here some muffled cries from a tiny trail leading
+    south of here.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3570
+      look: This way leads to the front of the Inn.
+    south:
+      to: tba:35:room:3575
+      look: The trail heads south.
+    west:
+      to: tba:35:room:3573
+      look: This way leads to the back of the Inn.
+
+"tba:35:room:3573":
+  name: Behind The Inn
+  description: >
+    You now stand behind the Inn.  The smell here is not so pleasant as the keeper and his help throw a
+    good deal of garbage here.  A couple of piles of rubbish are to the west, but you will smell the
+    worse for meddling there.  As a clean alternative, you can go east around the Inn.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3572
+      look: You can go around the Inn this way.
+    west:
+      to: tba:35:room:3578
+      look: Only rats and fool adventurers play in garbage.
+
+"tba:35:room:3574":
+  name: The Woodsman Inn
+  description: >
+    You are in the common room of the Woodsman Inn.  A thin haze of smoke sits in the air here.  The
+    Inn is often empty, as the forest has become overrun by goblins as of late, and it is no longer safe in
+    these parts. The bar is just north of here.  If you'd rather have your own table, one is empty to
+    the south.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:35:room:3576
+      look: The bar is here, manned by the Innkeeper.
+    east:
+      to: tba:35:room:3570
+      look: You can leave now and return to fresher air.
+    south:
+      to: tba:35:room:3579
+      look: An empty table is a rare commodity.
+    west:
+      to: tba:35:room:3577
+      look: There is a table to the south occupied by a heavy drinker.
+
+"tba:35:room:3575":
+  name: The Ambush Point
+  description: >
+    This is a overgrown foot-trail south of the Inn.  It leads west, but you would be hard pressed to
+    follow it far.  A number of bushes are trampled on and some medium sized branches have been knocked
+    down.  Obviously there has been a battle here rather recently.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3572
+      look: The Inn lies to the north.
+    west:
+      to: tba:35:room:3581
+      look: A trail through the woods.
+
+"tba:35:room:3576":
+  name: The Bar
+  description: >
+    This is where people use to come and enjoy the food, drink and hospitality of the Innkeeper, but as
+    of late, he only serves the few adventurers that manage to survive a trip through the forest. You
+    can leave south and return to the common room.
+  sector: city
+  flags: [indoors, soundproof]
+  exits:
+    south:
+      to: tba:35:room:3574
+      look: You may retreat south back to the common room.
+
+"tba:35:room:3577":
+  name: The Bard's Table
+  description: >
+    You are in a darker corner in the Inn.  A large round table with a few wooden chairs sits here. 
+    There is a large stain on the table, the remnants of a spilled drink.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:35:room:3574
+      look: You see the main floor of the Inn to the east.
+
+"tba:35:room:3578":
+  name: The Garbage Dump
+  description: >
+    You stand knee deep in garbage.  YECCH!!!  It smells terrible and who knows what vermin live in
+    these piles of filth...
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3573
+      look: You can return to cleaner lands this way.
+
+"tba:35:room:3579":
+  name: A Quieter Section Of The Inn
+  description: >
+    There seems to be no one in this end of the Woodsman, probably a safe place to rest and lick your
+    wounds...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:35:room:3574
+      look: You see the common room.
+
+"tba:35:room:3581":
+  name: On The Trail Of The Horsemen
+  description: >
+    The path continues east and west of here.  You notice fresh tracks in the soft ground that show the
+    horsemen fled to the west.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3575
+      look: Back to ambush point.
+    west:
+      to: tba:35:room:3582
+      look: The trail continues.
+
+"tba:35:room:3582":
+  name: On The Trail Of The Horsemen
+  description: >
+    The path continues east and south.  You notice fresh tracks in the soft ground that show the
+    horsemen turned, and fled south.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3581
+      look: The trail continues.
+    south:
+      to: tba:35:room:3583
+      look: The tracks lead south.
+
+"tba:35:room:3583":
+  name: On The Trail Of The Horsemen
+  description: >
+    The trail of the horsemen continues east and north along this path through the forest.  The tracks
+    are still fresh, so they must be near.
+  sector: forest
+  exits:
+    north:
+      to: tba:35:room:3582
+      look: The trail continues.
+    west:
+      to: tba:35:room:3584
+      look: The tracks lead east.
+
+"tba:35:room:3584":
+  name: A Dead End Trail
+  description: >
+    The path comes to an abrupt end here, as the trees close around you and make any further
+    exploration impossible.  Fresh tracks cover the ground, and end right here.  The horsemen must be nearby.
+  sector: forest
+  exits:
+    east:
+      to: tba:35:room:3583
+      look: Back to along the trail.

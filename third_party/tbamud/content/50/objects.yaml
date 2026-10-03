@@ -1,0 +1,492 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 50.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:50:obj:5000":
+  type: weapon
+  keywords: [pick, mining]
+  short: a small mining pick
+  long: A small mining pick made of what appears to be silver lies on the ground.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 1d9
+    attack: pierce
+  weight: 3
+  cost: 600
+  rent: 500
+  level: 0
+
+"tba:50:obj:5001":
+  type: armor
+  keywords: [suit, mail, banded]
+  short: a glowing suit of banded mail
+  long: A glowing suit of banded mail lies on the ground.
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 10
+  cost: 750
+  rent: 20
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: ac
+    modifier: -4
+
+"tba:50:obj:5002":
+  type: weapon
+  keywords: [halberd]
+  short: a halberd
+  long: A mighty halberd lies against the wall.
+  flags: [magic, bless]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 16
+  cost: 120
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:50:obj:5003":
+  type: armor
+  keywords: [amulet, mushroom]
+  short: a mushroom amulet
+  long: A mushroom-shaped amulet lies on the ground.
+  flags: [magic, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 2
+  cost: 150
+  rent: 40
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:50:obj:5005":
+  type: weapon
+  keywords: [bone, leg]
+  short: a large leg bone
+  long: A large leg bone rests on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pound
+  weight: 5
+  cost: 300
+  rent: 60
+  level: 0
+
+"tba:50:obj:5006":
+  type: drinkcon
+  keywords: [cactus, cup, water]
+  short: a small cactus cup
+  long: A small cactus cup lies on the ground.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: water
+    poisoned: false
+  weight: 6
+  cost: 30
+  rent: 5
+  level: 0
+
+"tba:50:obj:5007":
+  type: container
+  keywords: [basket, wicker, small]
+  short: a small wicker basket
+  long: A small wicker basket sits on the ground.
+  wear: [take]
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 50
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:50:obj:5008":
+  type: container
+  keywords: [basket, wicker, small]
+  short: a small wicker basket
+  long: A small wicker basket sits on the ground.
+  wear: [take]
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 50
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:50:obj:5009":
+  type: container
+  keywords: [basket, wicker, small]
+  short: a small wicker basket
+  long: A small wicker basket sits on the ground.
+  wear: [take]
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 50
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:50:obj:5010":
+  type: container
+  keywords: [basket, wicker, small]
+  short: a small wicker basket
+  long: A small wicker basket sits on the ground.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:50:obj:5011":
+  type: other
+  keywords: [rope, coil]
+  short: a coil of rope
+  long: A long coil of rope lies on the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 450
+  rent: 45
+  level: 0
+
+"tba:50:obj:5012":
+  type: weapon
+  keywords: [stakes, bundle, bunch]
+  short: a bunch of stakes
+  long: A small bundle of stakes lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d2
+    attack: pierce
+  weight: 6
+  cost: 250
+  rent: 30
+  level: 0
+
+"tba:50:obj:5013":
+  type: other
+  keywords: [ttatered, old, parchment]
+  short: an old, tattered parchment
+  long: An old, tattered, and much faded parchment lies here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 20
+  level: 0
+
+"tba:50:obj:5014":
+  type: armor
+  keywords: [turban, padded]
+  short: a thick padded turban
+  long: A thick padded turban lies here.
+  flags: [magic, no_drop]
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 15
+  cost: 430
+  rent: 100
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 1
+
+"tba:50:obj:5015":
+  type: money
+  keywords: [coins, treasure]
+  short: a great pile of treasure
+  long: A great, gleaming pile of treasure lies at your feet.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:50:obj:5016":
+  type: weapon
+  keywords: [sabre, curved, long]
+  short: a long, curved sabre
+  long: A long, curved sabre stands upright in the ground.
+  flags: [anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 7
+  cost: 105
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:50:obj:5017":
+  type: weapon
+  keywords: [scimitar, curved]
+  short: a curved scimitar
+  long: A curved scimitar lies at your feet.
+  flags: [anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 6
+  cost: 600
+  rent: 150
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:50:obj:5018":
+  type: weapon
+  keywords: [cutlass, pointed, long]
+  short: a long, pointed cutlass
+  long: A long, pointed cutlass lies here.
+  flags: [anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 1d7
+    attack: slash
+  weight: 5
+  cost: 550
+  rent: 10
+  level: 0
+
+"tba:50:obj:5019":
+  type: potion
+  keywords: [potion, pink]
+  short: a pink potion
+  long: A pink potion stands here.
+  wear: [take]
+  values:
+    raw: [25, 33, 17, -1]
+  weight: 6
+  cost: 600
+  rent: 100
+  level: 0
+
+"tba:50:obj:5020":
+  type: wand
+  keywords: [wand, platinum]
+  short: a platinum wand
+  long: A platinum wand lies here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [30, 10, 10, 32]
+  weight: 50
+  cost: 190
+  rent: 10
+  level: 0
+
+"tba:50:obj:5021":
+  type: weapon
+  keywords: [bow, golden]
+  short: a golden bow
+  long: A powerful golden bow lies here.
+  flags: [glow, hum, invisible, magic, bless, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: blast
+  weight: 20
+  cost: 150
+  rent: 20
+  level: 0
+
+"tba:50:obj:5022":
+  type: scroll
+  keywords: [scroll, encrypted]
+  short: an encrypted scroll
+  long: An encrypted scroll lies at your feet.
+  wear: [take]
+  values:
+    raw: [22, 14, 35, 43]
+  weight: 7
+  cost: 150
+  rent: 50
+  level: 0
+
+"tba:50:obj:5023":
+  type: container
+  keywords: [chest, iron, bound]
+  short: an iron bound chest
+  long: An iron bound chest with a shiny lock sits here.
+  wear: []
+  values:
+    capacity: 200
+    lock_flags: 13
+    key: tba:50:obj:5024
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:50:obj:5024":
+  type: key
+  keywords: [key, golden]
+  short: a golden key
+  long: A shiny golden key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [10, 0, 0, 0]
+  weight: 1
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:50:obj:5025":
+  type: armor
+  keywords: [bracelet, copper]
+  short: a copper bracelet
+  long: A tarnished copper bracelet lies at your feet.
+  flags: [magic, no_drop]
+  wear: [take, wrist]
+  values:
+    armor: -5
+  weight: 10
+  cost: 230
+  rent: 25
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: damroll
+    modifier: -4
+
+"tba:50:obj:5026":
+  type: treasure
+  keywords: [ruby, gem]
+  short: a large ruby
+  long: A large ruby lies on the ground, collecting dust.
+  flags: [magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [20, 0, 0, 0]
+  weight: 9
+  cost: 400
+  rent: 20
+  level: 0
+
+"tba:50:obj:5027":
+  type: treasure
+  keywords: [diamond, gem]
+  short: a glittering diamond
+  long: A glittering diamond lies at your feet.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [21, 0, 0, 0]
+  weight: 10
+  cost: 950
+  rent: 20
+  level: 0
+
+"tba:50:obj:5028":
+  type: treasure
+  keywords: [sapphire, gem]
+  short: a brilliant sapphire
+  long: A brilliant sapphire lies here, twinkling happily.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [22, 0, 0, 0]
+  weight: 7
+  cost: 350
+  rent: 20
+  level: 0
+
+"tba:50:obj:5029":
+  type: treasure
+  keywords: [lapis, lazuli, blue, gem]
+  short: a deep blue lapis lazuli
+  long: A deep blue lapis lazuli gem lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [24, 0, 0, 0]
+  weight: 11
+  cost: 850
+  rent: 20
+  level: 0
+
+"tba:50:obj:5030":
+  type: treasure
+  keywords: [jewel, tiger]
+  short: the Tiger Jewel
+  long: The Tiger Jewel lies here blazing.
+  flags: [bless]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 23
+  cost: 430
+  rent: 150
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+
+"tba:50:obj:5031":
+  type: treasure
+  keywords: [jewel, red-eyed]
+  short: the red-eyed jewel
+  long: The red-eyed jewel glares at you greedily.
+  flags: [no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 30
+  cost: 350
+  rent: 50
+  level: 0
+  affects:
+  - apply: int
+    modifier: -2
+
+"tba:50:obj:5032":
+  type: treasure
+  keywords: [emerald, gem, fiery, green]
+  short: a fiery green emerald
+  long: A fiery green emerald sits here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [23, 0, 0, 0]
+  weight: 7
+  cost: 550
+  rent: 20
+  level: 0

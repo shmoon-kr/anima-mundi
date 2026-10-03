@@ -1,0 +1,164 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 44.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:44:mob:4401":
+  keywords: [orc]
+  short: the terrible orc
+  long: A seriously menacing orc is here, growling at you.
+  description: >
+    This orc looks really ugly, and you realize that wherever he's from, he sure wasn't first in line
+    when the gods handed out beauty.  However, there seem to be nothing amiss with his sword arm, and he
+    doesn't seem to like you.
+  level: 3
+  sex: male
+  alignment: -650
+  flags: [scavenger, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:44:mob:4402":
+  keywords: [orc]
+  short: the terrible orc
+  long: A seriously menacing orc is here, resting.
+  description: >
+    The terrible orc is here, resting and having a quiet and of course unintelligent conversation with
+    his friends.
+  level: 3
+  sex: male
+  alignment: -650
+  flags: [scavenger, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: resting
+    default: resting
+
+"tba:44:mob:4403":
+  keywords: [orc]
+  short: the terrible orc
+  long: A seriously menacing orc is getting a - much needed - beauty sleep here.
+  description: >
+    The orc is battle-scarred, and seem to have just been in a fight.  You guess he's just getting
+    ready to go back in the fray.
+  level: 3
+  sex: male
+  alignment: -650
+  flags: [scavenger, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:44:mob:4404":
+  keywords: [orc, halfogre, h'ogh]
+  short: H'Ogh
+  long: H'Ogh the Half-ogre is here, guarding the Boss' tent.
+  description: >
+    A closer examination of H'Ogh reveals an extremely ugly halfogre.  He obviously lives in this room,
+    just to protect the Boss around the clock.  As if he knew what that is.
+  level: 7
+  sex: male
+  alignment: -650
+  flags: [sentinel, scavenger, aware, aggressive, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:44:mob:4405":
+  keywords: [orc, halfogre, dra'l]
+  short: Dra'L
+  long: Dra'L the Half-ogre is here, guarding the Boss' tent.
+  description: >
+    A closer examination of Dra'L reveals an extremely ugly halfogre.  He obviously lives in this room,
+    just to protect the Boss around the clock.  As if he knew what that is.
+  level: 7
+  sex: male
+  alignment: -650
+  flags: [sentinel, scavenger, aware, aggressive, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:44:mob:4406":
+  keywords: [ogre, boss, orc, chief]
+  short: the Boss
+  long: The Boss, chief of the raiding orcs, is sitting on his throne, contemplating.
+  description: >
+    The Boss is not even an orc himself, but actually an ogre, which gives him a big physical advantage
+    over his people.  This also makes for small differences in world view, but after the introduction of
+    his personal guards H'Ogh and Dra'L, there has been little said against his position.  As you look
+    closer he turns to you and reaches for his sword.
+  level: 7
+  sex: male
+  alignment: -650
+  flags: [sentinel, scavenger, aggressive, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: pound
+  abilities:
+    str: 21
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:44:mob:4407":
+  keywords: [orc, shaman]
+  short: the orc Shaman
+  long: The orc Shaman is here, screaming, because you interrupted the spell.
+  description: >
+    This little orc is not pretty, but being totally covered by a purple robe helps a bit.  He seems to
+    be all but out of his mind, and you decide to put him out of his misery.
+  level: 7
+  sex: male
+  alignment: -650
+  flags: [sentinel, scavenger, aggressive, memory, helper, no_charm]
+  affects: [detect_invis, detect_magic]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

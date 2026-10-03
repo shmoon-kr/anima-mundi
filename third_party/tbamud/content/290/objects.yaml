@@ -1,0 +1,268 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 290.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:290:obj:29000":
+  type: treasure
+  keywords: [crown, gold]
+  short: a crown of gold
+  long: A crown of gold lies forgotten here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [crown, gold]
+    text: This golden crown looks to be worth its weight in gold...
+
+"tba:290:obj:29001":
+  type: weapon
+  keywords: [claymore]
+  short: a claymore
+  long: An almost new claymore lies here on the ground.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pierce
+  weight: 2
+  cost: 110
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [claymore]
+    text: >
+      This claymore has a similar shape to a dagger except that the hilt is perpendicular to the blade
+      not parallel.
+
+"tba:290:obj:29002":
+  type: armor
+  keywords: [robes, lizardman]
+  short: a set of lizardman robes
+  long: A pile of clothing has been left here.  It looks like robes.
+  flags: [glow, magic]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [robes, lizardman]
+    text: >
+      These robes have intricate designs on them with a flavour towards the religion of the lizardmen. 
+      They are a deep blue color.
+
+"tba:290:obj:29003":
+  type: key
+  keywords: [key, useless]
+  short: a useless key
+  long: A completely useless key lies here.
+  wear: [take, finger]
+  values:
+    raw: [29003, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  extras:
+  - keywords: [key, useless]
+    text: >
+      This key is completely useless since it cannot be picked up and to get to it, the door it unlocks
+      must be unlocked...  Hmmmmm, I'm sure that there is some obscure reason for it though...
+  - keywords: [reason]
+    text: >
+      There is absolutely no reason for this key except to be an ignorant item that no one can get.  The
+      bonuses are in case some Id's it and should be ignored since the item cannot be used anyways.
+
+"tba:290:obj:29004":
+  type: armor
+  keywords: [altar]
+  short: a large altar
+  long: An astronomically huge altar stands in the middle of the room.
+  flags: [glow]
+  wear: []
+  values:
+    armor: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -30
+  - apply: hit
+    modifier: 30
+  extras:
+  - keywords: [altar]
+    text: This altar is really BIG.  It has neat little incomprehensible writing all over it.
+  - keywords: [twit]
+    text: It can be worn on your head, you twit!
+  - keywords: [writing]
+    text: >
+      Not to insult your intelligence or anything, but it happens to be completely and utterly
+      incomprehensible.
+
+"tba:290:obj:29005":
+  type: key
+  keywords: [key, green]
+  short: a green key for the exit
+  long: A large green key lies here.
+  flags: [glow, hum, magic]
+  wear: [take, hold]
+  values:
+    raw: [29005, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, green]
+    text: This key is to be used for the exit.  Nothing else.
+
+"tba:290:obj:29006":
+  type: scroll
+  keywords: [scroll, magic]
+  short: a magic scroll
+  long: A magical scroll sits here.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [17, 1, 3, 35]
+  weight: 5
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [magic, scroll]
+    text: This magical scroll has the word 'EEFRTFG' on it.
+  - keywords: [eefrtfg]
+    text: Actually, I was sort of hoping you knew what it meant...  Since I haven't the foggiest.
+
+"tba:290:obj:29007":
+  type: armor
+  keywords: [shield]
+  short: a shield
+  long: A shield is laying here on the ground.
+  flags: [glow]
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 13
+  cost: 513
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: -3
+  extras:
+  - keywords: [shield]
+    text: >
+      This is a very plain shield as if the creator had gotten extremely annoyed by the time he, she or
+      it got to this point.
+
+"tba:290:obj:29008":
+  type: key
+  keywords: [lucky]
+  short: a LUCKY
+  long: A LUCKY is lying here on the ground.
+  wear: [take, hold]
+  values:
+    raw: [29008, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [lucky]
+    text: Boy are you lucky you found this...  IT opens the door in the tunnels.
+
+"tba:290:obj:29009":
+  type: drinkcon
+  keywords: [milk, barrel, milk]
+  short: a barrel
+  long: A milk barrel has been left here.
+  wear: [take]
+  values:
+    capacity: 50
+    contains: 50
+    liquid: milk
+    poisoned: false
+  weight: 50
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [milk, barrel]
+    text: >
+      This barrel is a standard Sesame Street milk barrel, normally found in Mr. Hooper's Store.
+
+"tba:290:obj:29010":
+  type: drinkcon
+  keywords: [milk, cup, milk]
+  short: a cup
+  long: A cup of milk, don't spill it.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: milk
+    poisoned: false
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:290:obj:29011":
+  type: drinkcon
+  keywords: [milk, glass, milk]
+  short: a glass
+  long: A milk glass is sitting here waiting for an eager drinker.
+  wear: [take, hold]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: milk
+    poisoned: false
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [milk, glass]
+    text: This is an ordinary glass with the Sesame Street emblem engraved on the side.
+
+"tba:290:obj:29012":
+  type: food
+  keywords: [cookie, choclate, chip, small]
+  short: a small chocolate chip cookie
+  long: A small chocolate chip cookie has been left here.
+  wear: [take, hold]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 7
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cookie, chocolate, chip, small]
+    text: >
+      This is essentially just a small version of the VERY BIG CHOCOLATE CHIP COOKIE found elsewhere.

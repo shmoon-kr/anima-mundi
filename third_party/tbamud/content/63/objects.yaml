@@ -1,0 +1,122 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 63.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:63:obj:6300":
+  type: key
+  keywords: [key, black]
+  short: a black key
+  long: A somewhat plain black key has been left here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+
+"tba:63:obj:6301":
+  type: weapon
+  keywords: [knife, thief]
+  short: a very sharp knife
+  long: A very sharp knife lies here.
+  flags: [magic, anti_neutral, anti_mage, anti_cleric, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 8d1
+    attack: pierce
+  weight: 9
+  cost: 1000
+  rent: 2500
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [knife, thief]
+    text: A keen knife, very sharp -- you could cut the air in two!
+
+"tba:63:obj:6302":
+  type: armor
+  keywords: [hat, wizard]
+  short: a wizard's hat
+  long: A blue wizard's hat lies here.
+  flags: [invisible, magic, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 5
+  cost: 200
+  rent: 10
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: mana
+    modifier: 17
+  extras:
+  - keywords: [hat, wizard]
+    text: A hat made of blue cloth.  It looks very comfortable.
+
+"tba:63:obj:6303":
+  type: armor
+  keywords: [headress, pontiff, ornament, cone, head]
+  short: a pontiff's headress
+  long: A white cone-shaped head ornament with religious symbols lies here.
+  flags: [invisible, magic, anti_mage, anti_thief, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 5
+  cost: 200
+  rent: 10
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: mana
+    modifier: 13
+  extras:
+  - keywords: [headress, pontiff, ornament, cone, head]
+    text: A starchy headress worn by powerful secular types.
+
+"tba:63:obj:6304":
+  type: armor
+  keywords: [visor, black, knight]
+  short: a black knight's visor
+  long: A black visor sits here.
+  flags: [invisible, magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 5
+  cost: 200
+  rent: 10
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [visor, black, knight]
+    text: A visor that protects the head, good for warriors.
+
+"tba:63:obj:6305":
+  type: potion
+  keywords: [potion, thick, white]
+  short: a thick white potion
+  long: A thick white potion has been left here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [25, 15, 35, 19]
+  weight: 9
+  cost: 210
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [potion, thick, white]
+    text: It is disgusting thick white gunk which looks like liquid web and smells like medicine.

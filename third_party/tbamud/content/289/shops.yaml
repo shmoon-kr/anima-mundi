@@ -1,0 +1,133 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 289.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:289:shop:28900":
+  keeper: tba:289:mob:28921
+  rooms: [tba:289:room:28913]
+  products:
+  - tba:289:obj:28917
+  - tba:289:obj:28918
+  - tba:289:obj:28919
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s I don't know how to make one of those!"
+    you_dont_have_it: "%s We don't *buy* drinks...we sell 'em!"
+    does_not_buy: "%s We don't *buy* drinks...we sell 'em!"
+    shop_cannot_afford: "%s We don't *buy* drinks...we sell 'em!"
+    you_cannot_afford: "%s I don't give 'em away free, you know!"
+    bought: "%s That's %d gold."
+    sold: "%s We don't *buy* drinks...we sell 'em!"
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:289:shop:28901":
+  keeper: tba:289:mob:28920
+  rooms: [tba:289:room:28921]
+  products:
+  - tba:289:obj:28917
+  - tba:289:obj:28918
+  - tba:289:obj:28919
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s I don't know how to make one of those!"
+    you_dont_have_it: "%s We don't *buy* drinks...we sell 'em!"
+    does_not_buy: "%s We don't *buy* drinks...we sell 'em!"
+    shop_cannot_afford: "%s We don't *buy* drinks...we sell 'em!"
+    you_cannot_afford: "%s I don't give 'em away free, you know!"
+    bought: "%s That's %d gold."
+    sold: "%s We don't *buy* drinks...we sell 'em!"
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:289:shop:28902":
+  keeper: tba:289:mob:28915
+  rooms: [tba:289:room:28928]
+  products:
+  - tba:289:obj:28917
+  - tba:289:obj:28918
+  - tba:289:obj:28919
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s I don't know how to make one of those!"
+    you_dont_have_it: "%s We don't *buy* drinks...we sell 'em!"
+    does_not_buy: "%s We don't *buy* drinks...we sell 'em!"
+    shop_cannot_afford: "%s We don't *buy* drinks...we sell 'em!"
+    you_cannot_afford: "%s I don't give 'em away free, you know!"
+    bought: "%s That's %d gold."
+    sold: "%s We don't *buy* drinks...we sell 'em!"
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:289:shop:28903":
+  keeper: tba:289:mob:28914
+  rooms: [tba:289:room:28920]
+  products:
+  - tba:289:obj:28917
+  - tba:289:obj:28918
+  - tba:289:obj:28919
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s Say again, friend?"
+    you_dont_have_it: "%s Thanks, but no thanks."
+    does_not_buy: "%s Thanks, but no thanks."
+    shop_cannot_afford: "%s Thanks, but no thanks."
+    you_cannot_afford: "%s No tabs, friend.  Sorry."
+    bought: "%s That's %d gold."
+    sold: "%s We don't *buy* drinks...we sell 'em!"
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+  - open: 1
+    close: 24
+
+"tba:289:shop:28904":
+  keeper: tba:289:mob:28919
+  rooms: [tba:289:room:28927]
+  buys:
+  - type: wand
+  - type: staff
+  - type: treasure
+  - type: potion
+  - type: scroll
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s Don't have one, but I think I might be able to find one..."
+    you_dont_have_it: "%s You have one?  Really?  Let me see!"
+    does_not_buy: "%s I'm not interested.  Anything else?"
+    shop_cannot_afford: "%s Too rich for my blood!"
+    you_cannot_afford: "%s Perhaps you should go visit the bank first..."
+    bought: "%s That's just %d coins, cash in advance."
+    sold: "%s I'll take that for %d coins, thank you!"
+  temper: 1
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+  - open: 1
+    close: 24

@@ -1,0 +1,58 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 150.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:150:shop:15019":
+  keeper: tba:150:mob:15019
+  rooms: [tba:150:room:15052]
+  products:
+  - tba:150:obj:15012
+  - tba:30:obj:3050
+  - tba:30:obj:3052
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: potion
+  profit:
+    buy: 1.2
+    sell: 0.3
+  messages:
+    no_such_item: "%s But I have no such thing for sale."
+    you_dont_have_it: "%s But you do not have this item."
+    does_not_buy: "%s I have no interest in that."
+    shop_cannot_afford: "%s I am sorry, but I can not afford such a valuable item."
+    you_cannot_afford: "%s But you can not afford that item."
+    bought: "%s It will cost you %d coins."
+    sold: "%s Here, you shall have %d coins for it."
+  temper: 2
+  flags: 6
+  trade_with: 40
+  hours:
+  - open: 2
+    close: 8
+  - open: 20
+    close: 28
+
+"tba:150:shop:15022":
+  keeper: tba:150:mob:15022
+  rooms: [tba:150:room:15005]
+  products:
+  - tba:150:obj:15019
+  - tba:150:obj:15020
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s Je suis tres desole, mais je n'ai pas ca."
+    you_dont_have_it: "%s Mais, je n'achete pas!"
+    does_not_buy: "%s Mais, je n'achete pas!"
+    shop_cannot_afford: "%s Mais, je n'achete pas!"
+    you_cannot_afford: "%s Si vous n'avez d'argent, vous ne pouvez p'acheter!"
+    bought: "%s Ca coute %d piece d'or, s'il vous plait."
+    sold: "%s %d piece d'or."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 6
+    close: 23

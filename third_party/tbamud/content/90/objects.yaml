@@ -1,0 +1,86 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 90.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:90:obj:9000":
+  type: weapon
+  keywords: [ranger, bow]
+  short: the ranger's bow
+  long: A finely crafted bow lies on the ground.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: blast
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+
+"tba:90:obj:9001":
+  type: trash
+  keywords: [bow, string]
+  short: the bow string
+  long: A piece of string was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:90:obj:9002":
+  type: weapon
+  keywords: [bow, unfinished]
+  short: an unfinished bow
+  long: A bow that wasn't quite finished was left here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: thrash
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+
+"tba:90:obj:9003":
+  type: weapon
+  keywords: [ranger, sword]
+  short: the sword of the ranger
+  long: A expertly crafted sword is stuck into the ground.
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: slash
+  weight: 9
+  cost: 675
+  rent: 67
+  level: 0
+
+"tba:90:obj:9004":
+  type: other
+  keywords: [arrow]
+  short: an arrow
+  long: An arrow is stuck into the ground.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:90:obj:9005":
+  type: container
+  keywords: [quiver]
+  short: a quiver
+  long: A quiver was left here.
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

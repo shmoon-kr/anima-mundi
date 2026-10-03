@@ -1,0 +1,1987 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 653.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:653:room:65300":
+  name: Utility Room
+  description:
+  - >
+    This is the room where all the work of the building gets done.  For a map of the building, look map.
+  - To assign the rooms, stand in any apartment with the player and use hcontrol.
+  - >
+    *WARNING* Before the first apartment, please check for the file lib/house. This will sometimes be
+    deleted as an empty file.  The house contents will not save without this directory!
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65398
+  extras:
+  - keywords: [map]
+    text:
+      preformatted: |2
+           Map
+        
+        @c      01    02    03@n
+               |     |     |
+               |     |     |
+               |     |     |
+        @c15@n-----@wH@n-----@wH@n-----@wH@n----@c04@n
+               |     |     |
+               |     |     |
+               |     |     |
+        @c13@n-----@wH@n-@c14  @yE  @c06@n-@wH@n----@c05@n
+               |           |
+               |    @c10@n     |
+               |     |     |
+        @c12@n-----@wH@n-----@wH@n-----@wH@n----@c07@n
+               |     |     |
+               |     |     |
+               |     |     |
+        @c      11    09    08@n
+        @yElevator@n
+        @wHalls@n
+        @cApartments@n
+  - keywords: [Plan]
+    text:
+      preformatted: |2
+           Plan
+        
+        @r98@n-@y99@n-@r00@n
+            |
+           @r97
+        
+        @c      37    38    39       @n .@c        52    53    54      @n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c51@n----@w05@n----@w06@n----@w07@n----@c40  @n.  @c66----@w13----@w14----@w15----@c55@n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c49@n----@w08@n-@c50 @y01 @c42@n-@w09@n----@c41  @n.  @c64@n----@w16@n-@c65 @y02 @c57@n-@w17@n----@c56@n
+               |           |        .         |           |
+               |    @c46@n     |        .         |    @c61@n     |
+               |     |     |        .         |     |     |
+        @c48@n----@w10@n----@w11@n----@w12@n----@c43  @n.  @c63@n----@w18@n----@w19@n----@w20@n----@c58@n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c      47    45    44        @n.@c        62    60    59      @n
+        .........................................................
+        @c      67    68    69        @n.@c        82    83    84      @n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c81@n----@w21@n----@w22@n----@w23@n----@c70  @n.  @c96@n----@w29@n----@w30@n----@w31@n----@c85@n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c79@n----@w24@n-@c80 @y03 @c72@n-@w25@n----@c71  @n.  @c94@n----@w32@n-@c95 @y04 @c87@n-@w33@n----@c86@n
+               |           |        .         |           |
+               |    @c76@n     |        .         |    @c91@n     |
+               |     |     |        .         |     |     |
+        @c78@n----@w26@n----@w27@n----@w28@n----@c73  @n.  @c93@n----@w34@n----@w35@n----@w36@n----@c88@n
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+               |     |     |        .         |     |     |
+        @c      77    75    74        @n.@c        92    90    89      @n
+        @yElevator: 01-04@n
+        @wHalls: 05-36@n
+        @cApartments: 37-96@n
+
+"tba:653:room:65301":
+  name: The Elevator
+  description:
+    preformatted: |2
+         It's your run-of-the-mill, everyday, totally normal looking, elevator.  The
+      walls are plain metalic silver.  Soft Muzak plays through the speakers.
+      
+         A panel with five buttons is here.  Which floor are you looking for?
+      
+      PUSH       4
+      PUSH       3
+      PUSH       2
+      PUSH       1
+      PUSH       G
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65306
+      door:
+        keywords: [door]
+        kind: pickproof
+        reset: locked
+    up:
+      to: tba:653:room:65302
+
+"tba:653:room:65302":
+  name: Second Floor Elevator
+  description:
+    preformatted: |2
+         It's your run-of-the-mill, everyday, totally normal looking, elevator.  The
+      walls are plain metalic silver.  Soft Muzak plays through the speakers.
+      
+         A panel with five buttons is here.  Which floor are you looking for?
+      
+      PUSH       4
+      PUSH       3
+      PUSH       2
+      PUSH       1
+      PUSH       G
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65314
+    up:
+      to: tba:653:room:65303
+    down:
+      to: tba:653:room:65301
+
+"tba:653:room:65303":
+  name: Third Floor Elevator
+  description:
+    preformatted: |2
+         It's your run-of-the-mill, everyday, totally normal looking, elevator.  The
+      walls are plain metalic silver.  Soft Muzak plays through the speakers.
+      
+         A panel with five buttons is here.  Which floor are you looking for?
+      
+      PUSH       4
+      PUSH       3
+      PUSH       2
+      PUSH       1
+      PUSH       G
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65306
+      door:
+        keywords: [door]
+        kind: door
+    up:
+      to: tba:653:room:65304
+    down:
+      to: tba:653:room:65302
+
+"tba:653:room:65304":
+  name: Fourth Floor Elevator
+  description:
+    preformatted: |2
+         It's your run-of-the-mill, everyday, totally normal looking, elevator.  The
+      walls are plain metalic silver.  Soft Muzak plays through the speakers.
+      
+         A panel with five buttons is here.  Which floor are you looking for?
+      
+      PUSH       4
+      PUSH       3
+      PUSH       2
+      PUSH       1
+      PUSH       G
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65330
+    south: {}
+    down:
+      to: tba:653:room:65303
+
+"tba:653:room:65305":
+  name: First Floor North-West Corner
+  description: >
+    The hall runs to the east and south.  The door to room 101 is north and the door to 115 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65337
+    east:
+      to: tba:653:room:65306
+    south:
+      to: tba:653:room:65312
+    west:
+      to: tba:653:room:65351
+
+"tba:653:room:65306":
+  name: First Floor North
+  description: >
+    The hall runs east and west.  The door to room 102 is north.  An elevator door is south with a
+    button beside it.  To call the elevator, just PUSH BUTTON. There is a display above the elevator.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65338
+    east:
+      to: tba:653:room:65307
+    south:
+      to: tba:653:room:65399
+      door:
+        keywords: [elevator]
+        kind: pickproof
+        reset: locked
+    west:
+      to: tba:653:room:65305
+
+"tba:653:room:65307":
+  name: First Floor North-East Corner
+  description: >
+    The hall runs to the south and west.  The door to room 103 is north and the door to 104 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65339
+    east:
+      to: tba:653:room:65340
+    south:
+      to: tba:653:room:65308
+    west:
+      to: tba:653:room:65306
+
+"tba:653:room:65308":
+  name: First Floor East
+  description: >
+    The hall runs north and south.  The door to room 105 is east and the door to room 106 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65307
+    east:
+      to: tba:653:room:65341
+    south:
+      to: tba:653:room:65309
+    west:
+      to: tba:653:room:65342
+
+"tba:653:room:65309":
+  name: First Floor South-East Corner
+  description: >
+    The hall runs to the north and west.  The door to room 107 is east and the door to 108 is south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65308
+    east:
+      to: tba:653:room:65343
+    south:
+      to: tba:653:room:65344
+    west:
+      to: tba:653:room:65310
+
+"tba:653:room:65310":
+  name: First Floor South
+  description: >
+    The hall runs east and west.  The door to room 109 is south and the door to room 110 is north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65346
+    east:
+      to: tba:653:room:65309
+    south:
+      to: tba:653:room:65345
+    west:
+      to: tba:653:room:65311
+
+"tba:653:room:65311":
+  name: First Floor South-West Corner
+  description: >
+    The hall runs to the north and east.  The door to room 111 is south and the door to 112 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65312
+    east:
+      to: tba:653:room:65310
+    south:
+      to: tba:653:room:65347
+    west:
+      to: tba:653:room:65348
+
+"tba:653:room:65312":
+  name: First Floor West
+  description: >
+    The hall runs north and south.  The door to room 113 is west and the door to room 114 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65305
+    east:
+      to: tba:653:room:65350
+    south:
+      to: tba:653:room:65311
+    west:
+      to: tba:653:room:65349
+
+"tba:653:room:65313":
+  name: Second Floor North-West Corner
+  description: >
+    The hall runs to the east and south.  The door to room 201 is north and the door to 215 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65352
+    east:
+      to: tba:653:room:65314
+    south:
+      to: tba:653:room:65320
+    west:
+      to: tba:653:room:65366
+
+"tba:653:room:65314":
+  name: Second Floor North
+  description: >
+    The hall runs east and west.  The door to room 202 is north.  An elevator door is south with a
+    button beside it.  To call the elevator, just PUSH BUTTON. There is a display above the elevator.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65353
+    east:
+      to: tba:653:room:65315
+    south:
+      to: tba:653:room:65399
+      door:
+        keywords: [elevator]
+        kind: pickproof
+    west:
+      to: tba:653:room:65313
+
+"tba:653:room:65315":
+  name: Second Floor North-East Corner
+  description: >
+    The hall runs to the south and west.  The door to room 203 is north and the door to 204 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65354
+    east:
+      to: tba:653:room:65355
+    south:
+      to: tba:653:room:65316
+    west:
+      to: tba:653:room:65314
+
+"tba:653:room:65316":
+  name: Second Floor East
+  description: >
+    The hall runs north and south.  The door to room 205 is east and the door to room 206 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65315
+    east:
+      to: tba:653:room:65356
+    south:
+      to: tba:653:room:65317
+    west:
+      to: tba:653:room:65357
+
+"tba:653:room:65317":
+  name: Second Floor South-East Corner
+  description: >
+    The hall runs to the north and west.  The door to room 207 is east and the door to 208 is south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65316
+    east:
+      to: tba:653:room:65358
+    south:
+      to: tba:653:room:65359
+    west:
+      to: tba:653:room:65318
+
+"tba:653:room:65318":
+  name: Second Floor South
+  description: >
+    The hall runs east and west.  The door to room 209 is south and the door to room 210 is north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65361
+    east:
+      to: tba:653:room:65317
+    south:
+      to: tba:653:room:65360
+    west:
+      to: tba:653:room:65319
+
+"tba:653:room:65319":
+  name: Second Floor South-West Corner
+  description: >
+    The hall runs to the north and east.  The door to room 211 is south and the door to 212 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65320
+    east:
+      to: tba:653:room:65318
+    south:
+      to: tba:653:room:65362
+    west:
+      to: tba:653:room:65363
+
+"tba:653:room:65320":
+  name: Second Floor West
+  description: >
+    The hall runs north and south.  The door to room 213 is west and the door to room 214 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65313
+    east:
+      to: tba:653:room:65365
+    south:
+      to: tba:653:room:65319
+    west:
+      to: tba:653:room:65364
+
+"tba:653:room:65321":
+  name: Third Floor North-West Corner
+  description: >
+    The hall runs to the east and south.  The door to room 301 is north and the door to 315 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65367
+    east:
+      to: tba:653:room:65322
+    south:
+      to: tba:653:room:65328
+    west:
+      to: tba:653:room:65381
+
+"tba:653:room:65322":
+  name: Third Floor North
+  description: >
+    The hall runs east and west.  The door to room 302 is north.  An elevator door is south with a
+    button beside it.  To call the elevator, just PUSH BUTTON. There is a display above the elevator.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65368
+    east:
+      to: tba:653:room:65323
+    south:
+      to: tba:653:room:65399
+      door:
+        keywords: [elevator]
+        kind: pickproof
+    west:
+      to: tba:653:room:65321
+
+"tba:653:room:65323":
+  name: Third Floor North-East Corner
+  description: >
+    The hall runs to the south and west.  The door to room 303 is north and the door to 304 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65369
+    east:
+      to: tba:653:room:65370
+    south:
+      to: tba:653:room:65324
+    west:
+      to: tba:653:room:65322
+
+"tba:653:room:65324":
+  name: Third Floor East
+  description: >
+    The hall runs north and south.  The door to room 305 is east and the door to room 306 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65323
+    east:
+      to: tba:653:room:65371
+    south:
+      to: tba:653:room:65325
+    west:
+      to: tba:653:room:65372
+
+"tba:653:room:65325":
+  name: Third Floor South-East Corner
+  description: >
+    The hall runs to the north and west.  The door to room 307 is east and the door to 308 is south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65324
+    east:
+      to: tba:653:room:65373
+    south:
+      to: tba:653:room:65374
+    west:
+      to: tba:653:room:65326
+
+"tba:653:room:65326":
+  name: Third Floor South
+  description: >
+    The hall runs east and west.  The door to room 309 is south and the door to room 310 is north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65376
+    east:
+      to: tba:653:room:65325
+    south:
+      to: tba:653:room:65375
+    west:
+      to: tba:653:room:65327
+
+"tba:653:room:65327":
+  name: Third Floor South-West Corner
+  description: >
+    The hall runs to the north and east.  The door to room 311 is south and the door to 312 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65328
+    east:
+      to: tba:653:room:65326
+    south:
+      to: tba:653:room:65377
+    west:
+      to: tba:653:room:65378
+
+"tba:653:room:65328":
+  name: Third Floor West
+  description: >
+    The hall runs north and south.  The door to room 313 is west and the door to room 314 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65321
+    east:
+      to: tba:653:room:65380
+    south:
+      to: tba:653:room:65327
+    west:
+      to: tba:653:room:65379
+
+"tba:653:room:65329":
+  name: Fourth Floor North-West Corner
+  description: >
+    The hall runs to the east and south.  The door to room 401 is north and the door to 415 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65382
+    east:
+      to: tba:653:room:65330
+    south:
+      to: tba:653:room:65336
+    west:
+      to: tba:653:room:65396
+
+"tba:653:room:65330":
+  name: Fourth Floor North
+  description: >
+    The hall runs east and west.  The door to room 402 is north.  An elevator door is south with a
+    button beside it.  To call the elevator, just PUSH BUTTON. There is a display above the elevator.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65383
+    east:
+      to: tba:653:room:65331
+    south:
+      to: tba:653:room:65399
+      door:
+        keywords: [elevator]
+        kind: door
+    west:
+      to: tba:653:room:65329
+    up:
+      to: tba:653:room:65399
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:653:room:65331":
+  name: Fourth Floor North-East Corner
+  description: >
+    The hall runs to the south and west.  The door to room 403 is north and the door to 404 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65384
+    east:
+      to: tba:653:room:65385
+    south:
+      to: tba:653:room:65332
+    west:
+      to: tba:653:room:65330
+
+"tba:653:room:65332":
+  name: Fourth Floor East
+  description: >
+    The hall runs north and south.  The door to room 405 is east and the door to room 406 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65331
+    east:
+      to: tba:653:room:65386
+    south:
+      to: tba:653:room:65333
+    west:
+      to: tba:653:room:65387
+
+"tba:653:room:65333":
+  name: Fourth Floor South-East Corner
+  description: >
+    The hall runs to the north and west.  The door to room 407 is east and the door to 408 is south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65332
+    east:
+      to: tba:653:room:65388
+    south:
+      to: tba:653:room:65389
+    west:
+      to: tba:653:room:65334
+
+"tba:653:room:65334":
+  name: Fourth Floor South
+  description: >
+    The hall runs east and west.  The door to room 409 is south and the door to room 410 is north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65391
+    east:
+      to: tba:653:room:65333
+    south:
+      to: tba:653:room:65390
+    west:
+      to: tba:653:room:65335
+
+"tba:653:room:65335":
+  name: Fourth Floor South-West Corner
+  description: >
+    The hall runs to the north and east.  The door to room 411 is south and the door to 412 is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65336
+    east:
+      to: tba:653:room:65334
+    south:
+      to: tba:653:room:65392
+    west:
+      to: tba:653:room:65393
+
+"tba:653:room:65336":
+  name: Fourth Floor West
+  description: >
+    The hall runs north and south.  The door to room 413 is west and the door to room 414 is east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65329
+    east:
+      to: tba:653:room:65395
+    south:
+      to: tba:653:room:65335
+    west:
+      to: tba:653:room:65394
+
+"tba:653:room:65337":
+  name: Apartment 101
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65305
+
+"tba:653:room:65338":
+  name: Apartment 102
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65306
+
+"tba:653:room:65339":
+  name: Apartment 103
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65307
+
+"tba:653:room:65340":
+  name: Apartment 104
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65307
+
+"tba:653:room:65341":
+  name: Apartment 105
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65308
+
+"tba:653:room:65342":
+  name: Apartment 106
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65308
+
+"tba:653:room:65343":
+  name: Apartment 107
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65309
+
+"tba:653:room:65344":
+  name: Apartment 108
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65309
+
+"tba:653:room:65345":
+  name: Apartment 109
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65310
+
+"tba:653:room:65346":
+  name: Apartment 110
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65310
+
+"tba:653:room:65347":
+  name: Apartment 111
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65311
+
+"tba:653:room:65348":
+  name: Apartment 112
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65311
+
+"tba:653:room:65349":
+  name: Apartment 113
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65312
+
+"tba:653:room:65350":
+  name: Apartment 114
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65312
+
+"tba:653:room:65351":
+  name: Apartment 115
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65305
+
+"tba:653:room:65352":
+  name: Apartment 201
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65313
+
+"tba:653:room:65353":
+  name: Apartment 202
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65314
+
+"tba:653:room:65354":
+  name: Apartment 203
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65315
+
+"tba:653:room:65355":
+  name: Apartment 204
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65315
+
+"tba:653:room:65356":
+  name: Apartment 205
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65316
+
+"tba:653:room:65357":
+  name: Apartment 206
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65316
+
+"tba:653:room:65358":
+  name: Apartment 207
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65317
+
+"tba:653:room:65359":
+  name: Apartment 208
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65317
+
+"tba:653:room:65360":
+  name: Apartment 209
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65318
+
+"tba:653:room:65361":
+  name: Apartment 210
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65318
+
+"tba:653:room:65362":
+  name: Apartment 211
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65319
+
+"tba:653:room:65363":
+  name: Apartment 212
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65319
+
+"tba:653:room:65364":
+  name: Apartment 213
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65320
+
+"tba:653:room:65365":
+  name: Apartment 214
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65320
+
+"tba:653:room:65366":
+  name: Apartment 215
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65313
+
+"tba:653:room:65367":
+  name: Apartment 301
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65321
+
+"tba:653:room:65368":
+  name: Apartment 302
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65322
+
+"tba:653:room:65369":
+  name: Apartment 303
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65323
+
+"tba:653:room:65370":
+  name: Apartment 304
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65323
+
+"tba:653:room:65371":
+  name: Apartment 305
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65324
+
+"tba:653:room:65372":
+  name: Apartment 306
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65324
+
+"tba:653:room:65373":
+  name: Apartment 307
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65325
+
+"tba:653:room:65374":
+  name: Apartment 308
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65325
+
+"tba:653:room:65375":
+  name: Apartment 309
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65326
+
+"tba:653:room:65376":
+  name: Apartment 310
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65326
+
+"tba:653:room:65377":
+  name: Apartment 311
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65327
+
+"tba:653:room:65378":
+  name: Apartment 312
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65327
+
+"tba:653:room:65379":
+  name: Apartment 313
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65328
+
+"tba:653:room:65380":
+  name: Apartment 314
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65328
+
+"tba:653:room:65381":
+  name: Apartment 315
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65321
+
+"tba:653:room:65382":
+  name: Apartment 401
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65329
+
+"tba:653:room:65383":
+  name: Apartment 402
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65330
+
+"tba:653:room:65384":
+  name: Apartment 403
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65331
+
+"tba:653:room:65385":
+  name: Apartment 404
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65331
+
+"tba:653:room:65386":
+  name: Apartment 405
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65332
+
+"tba:653:room:65387":
+  name: Apartment 406
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65332
+
+"tba:653:room:65388":
+  name: Apartment 407
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65333
+
+"tba:653:room:65389":
+  name: Apartment 408
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65333
+
+"tba:653:room:65390":
+  name: Apartment 409
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65334
+
+"tba:653:room:65391":
+  name: Apartment 410
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:653:room:65334
+
+"tba:653:room:65392":
+  name: Apartment 411
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65335
+
+"tba:653:room:65393":
+  name: Apartment 412
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65335
+
+"tba:653:room:65394":
+  name: Apartment 413
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65336
+
+"tba:653:room:65395":
+  name: Apartment 414
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:653:room:65336
+
+"tba:653:room:65396":
+  name: Apartment 415
+  description:
+  - >
+    This room is a convenient space where the legal tenant can leave things to have them protected
+    against crashes and reboots.  If this is a vacant apartment, do not leave your things here.  Only owned
+    apartments are protected.
+  - >
+    Guests can also leave things.  If this is your apartment, typing 'house' with the name of a player
+    will add that player to your guest list if the player is not on the list, or will remove the player
+    from the guest list if the player is already on the list.  The player specified must be in the player
+    database for the MUD, although he or she does not necessarily have to be logged on at the time.
+  - >
+    Typing 'house' with no arguments gives a list of the people currently on your house's guest list.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:653:room:65329
+
+"tba:653:room:65397":
+  name: A Generic Sort of Building
+  description: >
+    This is just a generic sort of guilding made of red brick.  It's a blocky looking square, five
+    stories high.
+  sector: city
+  exits:
+    east:
+      to: tba:654:room:65400
+    south:
+      to: tba:653:room:65398
+      door:
+        keywords: [door, south, apartment]
+        kind: door
+        reset: closed
+
+"tba:653:room:65398":
+  name: Building Foyer
+  description: >
+    This is a basic apartment-type foyer.  Mailboxes line one wall.  Another wall has a bulletin board
+    with various notes of interest for the tenants.  Hey, there's a tenant meeting on Tuesday!  The
+    elevator takes up the south wall. There is a button beside the elevator and a display above it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65397
+    east:
+      to: tba:653:room:65300
+      look: Utility Room - Employees Only!
+      door:
+        keywords: [utility, door, east]
+        kind: door
+    south:
+      to: tba:653:room:65399
+      door:
+        keywords: [elevator]
+        kind: pickproof
+
+"tba:653:room:65399":
+  name: Inside the Elevator
+  description:
+    preformatted: |2
+         It's your run-of-the-mill, everyday, totally normal looking, elevator.  The
+      walls are plain metalic silver.  Soft Muzak plays through the speakers.
+      
+         A panel with five buttons is here.  Which floor are you looking for?
+      
+      PUSH       4
+      PUSH       3
+      PUSH       2
+      PUSH       1
+      PUSH       G
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:653:room:65330
+      door:
+        keywords: [door]
+        kind: door

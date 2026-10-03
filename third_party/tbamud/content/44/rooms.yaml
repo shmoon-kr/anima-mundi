@@ -1,0 +1,330 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 44.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:44:room:4400":
+  name: Welcor's Zone Description Room
+  description:
+    preformatted: |2
+         This area was written by Welcor for CruelWorld 1999 (c)
+      Builder      : Welcor
+      Zone         : 44 Orc Camp
+      Began        :
+      Player Level : 3-7
+      Rooms        : 18
+      Mobs         : 7
+      Objects      : 11
+      Shops        :
+      Triggers     : 3
+      Theme        :
+      Plot         :
+      Links        : 01e, 17n
+  sector: inside
+  flags: [private]
+
+"tba:44:room:4401":
+  name: Before the Clearing
+  description: >
+    North of you is a clearing in the forest, encircled in tents, while to the east you see the eastern
+    highway.  The tents are crude, made of thick cloth and dyed green to blend in the shades. 
+    Occasionally you hear the sound of a dove or a crow.  Oh yes, and of course the clang of sword against shield.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4402
+      look: The clearing continues.
+
+"tba:44:room:4402":
+  name: In the clearing.
+  description: >
+    You are in a clearing in the forest.  Around you are tents made from curde planks and rough linen. 
+    They have been dyed green so they blend in the surrounding forest.  North the clearing continues,
+    while to the west and east are tents.  You can also go south to the eastern highway.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4405
+      look: The clearing continues.
+    east:
+      to: tba:44:room:4404
+      look: A small crude tent is here. It's made from crude planks and rough linen.
+    south:
+      to: tba:44:room:4401
+      look: In the distance you see the eastern highway.
+    west:
+      to: tba:44:room:4403
+      look: A small crude tent, it's made from rough linen spanned over crude planks.
+
+"tba:44:room:4403":
+  name: In a tent.
+  description: >
+    You've entered a crude tent, with nothing more in it than 4 bunks, obviously just a place to sleep
+    for the orcs.  The only exit you see takes you back east to the outside.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:44:room:4402
+      look: The way out!
+
+"tba:44:room:4404":
+  name: In a Tent
+  description: >
+    You are in a small tent with four bunks in a corner.  The only exit seems to be back west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:44:room:4402
+      look: The way out!
+
+"tba:44:room:4405":
+  name: In the clearing.
+  description: >
+    You are about in the middle of the clearing and to your west a tent quite a bit larger than the
+    rest, suggest which way to go talk to the Boss.  You can also enter a smaller tent with dagger symbol
+    over the entrance to your east. North and south the clearing continues.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4408
+      look: The clearing continues.
+    east:
+      to: tba:44:room:4407
+      look: >
+        A crude tent with a dagger symbol over the entryway. You hear the sounds of snoring mixed with
+        murmurs coming from it.
+    south:
+      to: tba:44:room:4402
+      look: The clearing continues.
+    west:
+      to: tba:44:room:4406
+      look: >
+        You stand before the Boss' tent. Three tents has been sewn together forming almost a house.
+
+"tba:44:room:4406":
+  name: The orc leaders tent.
+  description: >
+    This tent is so big, because it's actually three tents built together, and you have just entered
+    the first.  Two bunks are in the corner, and a weaponsrack stands here - now empty.  You can go further
+    into the tent to the west, or leave to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:44:room:4405
+      look: The way out!
+    west:
+      to: tba:44:room:4411
+      look: You see the throne room.
+  extras:
+  - keywords: [rack, weaponsrack]
+    text: >
+      A weaponsrack is here, just ready to put all your weapons on.  Only too heavy to carry around.
+
+"tba:44:room:4407":
+  name: The resting area.
+  description: >
+    A tent filled with resting, sleeping, talking, smelly orcs, this is the combat retreat for the
+    orcs.  They come here to get strength for yet another attack on the caravans on the eastern highway.  The
+    only exit is back out into the clearing.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:44:room:4405
+      look: The way out!
+
+"tba:44:room:4408":
+  name: In the clearing.
+  description: >
+    The forest clearing winds through the forest and continues south and east. West of you is a small
+    green tent made from crude planks and rough linen, while to the south the clearing continues, a wide
+    path cuts into the forest to the north.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4416
+    east:
+      to: tba:44:room:4410
+      look: The clearing continues.
+    south:
+      to: tba:44:room:4405
+      look: The clearing continues.
+    west:
+      to: tba:44:room:4409
+      look: You see a small tent with a peculiar smell about it.
+  extras:
+  - keywords: [forest, north]
+    text: The Forest is so dense here, that no man or beast could ever hope to get through.
+
+"tba:44:room:4409":
+  name: In a small tent.
+  description: >
+    You are in a small green tent, made from crude planks with rough linen.  In this little tent a
+    small orc makes food for the rest of them to eat.  In the middle of the tent is a fireplace with a stew
+    pot, and in one corner is a bunk. You can leave the tent to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:44:room:4408
+      look: The way out!
+  extras:
+  - keywords: [stew, pot]
+    text: A small iron pot is on the fireplace, filled with a strange green stew-like thing.  Yuk!
+
+"tba:44:room:4410":
+  name: In the clearing.
+  description: >
+    The clearing stretches to the west and north of here is a small tent. Unlike the rest of the tents,
+    this is not green, more like a shade of purple. It is well hidden in the shades from the woods.  A
+    small star has been painted on the tent, just over the entrance.  To your south you see the side of a
+    crude tent with green linen, and a dagger in relief painted on it, while west a thicket blocks your
+    way.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4413
+      look: >
+        The tent is a dark shade of purple, and is very well hidden in the shade. Near the entrance a small
+        star has been painted with green paint.
+    west:
+      to: tba:44:room:4408
+      look: The clearing continues.
+  extras:
+  - keywords: [east, thicket]
+    text: This thicket looks like you might be able to hack your way through it.
+
+"tba:44:room:4411":
+  name: The Throne room.
+  description: >
+    You've entered the throne room of the Orc Chief called "the Boss".  In the middle of this quite big
+    though still crude, green tent is a big chair.  From this chair the Boss directs the attacks on the
+    caravans along the eastern highway.  North you see yet another opening to another tent and you may
+    leave to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:44:room:4412
+      look: Through this opening in the linen you may enter the private area of the Boss.
+    east:
+      to: tba:44:room:4406
+      look: This opening will take you to the entrance.
+  extras:
+  - keywords: [throne, chair]
+    text: >
+      A chair made from fresh wood, bound with bands of tree bark.  On the top, skulls smile back at you
+      with empty eyesockets.
+  - keywords: [skulls]
+    text: Human skulls, no doubt about it!
+
+"tba:44:room:4412":
+  name: Sleeping room.
+  description: >
+    The sleeping area for the Boss, this tent is fashionably decorated.  A bed in the corner makes for
+    a place to sleep for the Boss, and a table in the middle of the room contains maps of the
+    surroundings.  You may leave to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:44:room:4411
+      look: The throne room.
+  extras:
+  - keywords: [map, table]
+    text:
+      preformatted: |2
+           This is what you see on the table:
+                   XXXXXXXXXXXXXX
+                XXXXXXXXXXXXXXXXX
+           XXXXXXXXXXXXX      XXX
+         XXXXXXXXXXXXXXX +  + XXX
+        XXXXXXX          |  | XXX
+        XXXXXXX +  +--+--+/-+ XXX
+         XXXXXX |     |       XXX
+          XXXXX +--+--+--+ XXXXX
+           XXXX       |    XXXX
+            XXXXXX +--+--+ XXX
+             XXXXX    |    XX
+              XXXXXXX + XXXX
+
+"tba:44:room:4413":
+  name: In the Shamans Tent
+  description: >
+    You have entered the shamans hut, and a bizarre light is streaming from the center of the tent. 
+    It's a mixture of blue and the purple from the tent.  You think this is very pretty, and you'd like to
+    watch it for a long time. Unfortunately you seem to have come at a bad time for that, since the owner
+    is here...  In the middle of the tent a fire is burning with a blue flame, and magic seems to
+    permeate the very fabric of the tent.  You see a bunk in the corner, and you can leave to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:44:room:4410
+      look: The way out!
+  extras:
+  - keywords: [bunk]
+    text: An ordinary sleeping place.
+
+"tba:44:room:4414":
+  name: Deep in the forest.
+  description: >
+    It's totally impossible to get any further into the woods.  All around you is dense forest, leaving
+    only one direction to travel, namely back south.
+  sector: forest
+  exits:
+    south:
+      to: tba:44:room:4415
+      look: You think you might be able to push through this way.
+  extras:
+  - keywords: [forest, woods, wood]
+    text: The forest is very dense, actually you can see no more than 3' in all directions
+
+"tba:44:room:4415":
+  name: Behind the shubbery.
+  description: >
+    You are in the forest, and a small path leads to your west, back to the orc camp.  To your north
+    you might be able to push through the undergrowth and get further into the forest, while both south and
+    east the forest is too dense.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4414
+      look: You think you might be able to force your way through here.
+    west:
+      to: tba:44:room:4410
+      look: A thicket is here, which might be pushed aside.
+      door:
+        keywords: [thicket]
+        kind: door
+
+"tba:44:room:4416":
+  name: A wide path through the forest
+  description: >
+    The path leads north and south through the forest, to the south is a large clearing, where some
+    creatures can be seen moving between the trees, while to the north faint sounds of battle can be heard
+    in the distance.
+  sector: forest
+  exits:
+    north:
+      to: tba:44:room:4417
+    south:
+      to: tba:44:room:4408
+
+"tba:44:room:4417":
+  name: A wide path through the forest
+  description: >
+    The path continues north and south from here, lined by dense forest on both the eastern and western
+    side.  Small figures moving between the trees can be seen to the south, while lound noises of battle
+    fill the air from the north, where the great gates of Hannah can be seen in the distance.
+  sector: forest
+  exits:
+    south:
+      to: tba:44:room:4416
+
+"tba:44:room:4436":
+  name: An unfinished room
+  description: You are in an unfinished room.
+  sector: inside

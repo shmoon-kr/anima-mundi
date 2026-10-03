@@ -1,0 +1,1214 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 56.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:56:room:5600":
+  name: The Cell
+  description: You are in a cold, cramped chamber with only one exit.
+  sector: inside
+  flags: [dark, indoors, soundproof, private]
+  exits:
+    south:
+      to: tba:55:room:5595
+      door:
+        keywords: [cell]
+        kind: pickproof
+        key: tba:54:obj:5493
+        reset: locked
+  extras:
+  - keywords: [info, credits]
+    text: "Links: 10n to a valley"
+
+"tba:56:room:5601":
+  name: The Cell
+  description: You are in a cold, cramped chamber with only one exit.
+  sector: inside
+  flags: [dark, indoors, soundproof, private]
+  exits:
+    north:
+      to: tba:55:room:5592
+      door:
+        keywords: [cell]
+        kind: pickproof
+        key: tba:54:obj:5493
+        reset: locked
+
+"tba:56:room:5602":
+  name: The Cell
+  description: You are in a cold, cramped chamber with only one exit.
+  sector: inside
+  flags: [dark, indoors, soundproof, private]
+  exits:
+    north:
+      to: tba:55:room:5593
+      door:
+        keywords: [cell]
+        kind: pickproof
+        key: tba:54:obj:5493
+        reset: locked
+
+"tba:56:room:5603":
+  name: The Cell
+  description: You are in a cold, cramped chamber with only one exit.
+  sector: inside
+  flags: [dark, indoors, soundproof, private]
+  exits:
+    north:
+      to: tba:55:room:5594
+      door:
+        keywords: [cell]
+        kind: pickproof
+        key: tba:54:obj:5493
+        reset: locked
+
+"tba:56:room:5604":
+  name: The Cell
+  description: You are in a cold, cramped chamber with only one exit.
+  sector: inside
+  flags: [dark, indoors, soundproof, private]
+  exits:
+    north:
+      to: tba:55:room:5595
+      door:
+        keywords: [cell]
+        kind: pickproof
+        key: tba:54:obj:5493
+        reset: locked
+
+"tba:56:room:5605":
+  name: A Hall
+  description: >
+    You stand in a large cedar wood hall leading east and west.  On the floor lies a thin and narrow
+    purple rug.  The hall leads west inside the Palace and east to the Grand Entrance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:55:room:5550
+    west:
+      to: tba:55:room:5573
+
+"tba:56:room:5606":
+  name: A Path Through The Mountains
+  description: The narrow path turns here heading south and west.
+  sector: mountains
+  exits:
+    south:
+      to: tba:56:room:5607
+    west:
+      to: tba:56:room:5611
+
+"tba:56:room:5607":
+  name: A Path Through The Mountains
+  description: >
+    Travel is hard and slow as you almost have to climb around large boulders strewn about the path.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5606
+    east:
+      to: tba:56:room:5608
+
+"tba:56:room:5608":
+  name: The Edge Of The Ravine
+  description: >
+    The ground drops off below down to a rushing river.  A small rope bridge sways to and fro in the
+    wind giving you access to the other side.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5609
+    west:
+      to: tba:56:room:5607
+
+"tba:56:room:5609":
+  name: On A Rope Bridge
+  description: The small rope bridge shudders under your weight as you make your way across the valley.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5627
+    west:
+      to: tba:56:room:5608
+
+"tba:56:room:5610":
+  name: The Ledge Around The Valley
+  description: >
+    You are walking around a small ledge overlooking a large valley deep within the eastern mountains. 
+    The ledge turns north following the shape of the valley and a steep trail continues to the east.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5611
+
+"tba:56:room:5611":
+  name: A Path Through The Mountains
+  description: >
+    You are walking through a rock strewn path deep within the mountains east of Midgaard.  The going
+    is rough and you constantly twist your ankle on the small stones lying about.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5606
+    west:
+      to: tba:56:room:5610
+
+"tba:56:room:5612":
+  name: On The Eastern Edge Of The Mountains
+  description: >
+    You stand on the eastern edge of the eastern mountains.  The high peaks lie to the west and rolling
+    hills and plains open up to your east.
+  sector: mountains
+  exits:
+    south:
+      to: tba:56:room:5613
+    west:
+      to: tba:56:room:5629
+
+"tba:56:room:5613":
+  name: In The Foothills
+  description: >
+    The path curves down the face of the mountain allowing you to move up or down the face of this
+    missive hunk of stone.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5612
+    east:
+      to: tba:56:room:5614
+
+"tba:56:room:5614":
+  name: In The Foothills
+  description: >
+    The path curves down the face of the mountain allowing you to move up or down as you please.
+  sector: mountains
+  exits:
+    south:
+      to: tba:56:room:5615
+    west:
+      to: tba:56:room:5613
+
+"tba:56:room:5615":
+  name: A Rocky Trail
+  description: >
+    The faint sound of a flowing river reaches your ears from the south and through the trees you can
+    see water.  The path you are on continues north and east from here.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5614
+    east:
+      to: tba:56:room:5630
+    south:
+      to: tba:56:room:5645
+
+"tba:56:room:5616":
+  name: On A Road
+  description: This long road continues to the east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5617
+    south:
+      to: tba:56:room:5633
+
+"tba:56:room:5617":
+  name: On A Road
+  description: The well kept road continues east and west from here.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5618
+    west:
+      to: tba:56:room:5616
+
+"tba:56:room:5618":
+  name: On A Road
+  description: >
+    You stand on a well maintained road leading east towards New Thalos and west towards the Eastern
+    Mountains.  To the north you can see wide plains stretching out as far as the eye can see.  South of
+    you begins a dark green forest.
+  sector: field
+  exits:
+    east:
+      to: tba:55:room:5569
+    west:
+      to: tba:56:room:5617
+
+"tba:56:room:5619":
+  name: The Headwaters Of The River Of Lost Souls
+  description: >
+    You are at the headwaters of what is oft called the darkest river in the land.  Looking at the
+    swampy water pooling in this rocky valley, you can see why the water downstream is so dark.  The rock
+    walls reach up around you blocking all exits except that to the north up onto the banks, and to the
+    south where the river flows.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:15:room:1500
+      look: There is a small path leading away from the bank just to the north.
+    south:
+      to: tba:56:room:5634
+      look: The waters of this swampy pool are flowing slowly towards the south.
+
+"tba:56:room:5620":
+  name: River Ishtar
+  description: >
+    The river calms a bit after being thrashed in the interior of the mountain.  Although still deep
+    within the rocks you can see faint traces of green to the east.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5621
+    west:
+      to: tba:56:room:5639
+
+"tba:56:room:5621":
+  name: River Ishtar
+  description: The river flows east and west through the hills.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5622
+    west:
+      to: tba:56:room:5620
+
+"tba:56:room:5622":
+  name: River Ishtar
+  description: The river begins its decent out of the mountains now and continues its flow to the east.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5644
+    west:
+      to: tba:56:room:5621
+
+"tba:56:room:5623":
+  name: River Ishtar
+  description: >
+    The river flows under the wall of the city to the east and stretches off towards high snow capped
+    mountains far far to the west.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:54:room:5487
+      door:
+        keywords: [grating]
+        kind: door
+        reset: closed
+    west:
+      to: tba:56:room:5649
+
+"tba:56:room:5624":
+  name: River Ishtar
+  description: >
+    The river flows out from the city down a long winding gully towards the Sea of Dragons.  To the
+    south of you lies the Great Eastern Desert and north a wide open expanse of grass.  You can just barely
+    make out a road that seems to be traveling along side the river but the banks are to steep for you to
+    see very far.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5625
+    west:
+      to: tba:54:room:5483
+
+"tba:56:room:5625":
+  name: River Ishtar
+  description: >
+    The river continues its descent down the lowlands flowing ever so gently south.  It is hard to
+    believe this is the same river that came cascading down the mountainside.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5626
+    west:
+      to: tba:56:room:5624
+
+"tba:56:room:5626":
+  name: River Ishtar
+  description: >
+    Small animals and herd animals can be heard in the distance, though you don't actually see any near
+    the river.  Perhaps the steep slopes pervent them from using the river.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5684
+    west:
+      to: tba:56:room:5625
+
+"tba:56:room:5627":
+  name: The Edge Of The Ravine
+  description: >
+    You stand at the edge of a really long drop down.  A small rope bridge has conviently been placed
+    here to allow you access to the other side of the bridge.  Unfortunately the wind seems to be kicking
+    up making the bridge sway slightly.  The path leads off through the mountains to the east.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5628
+    west:
+      to: tba:56:room:5609
+
+"tba:56:room:5628":
+  name: A Path Through The Mountains
+  description: >
+    The narrow path makes its way through the mountains east and west.  You hear the squawking of a
+    large bird over head most likely a buzzard waiting for you to drop.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5629
+    south:
+      to: tba:40:room:4049
+    west:
+      to: tba:56:room:5627
+
+"tba:56:room:5629":
+  name: A Path Through The Mountains
+  description: >
+    A large boulder suddenly decides it wants to occupy the same space you are currently standing in.
+  sector: mountains
+  exits:
+    east:
+      to: tba:56:room:5612
+    west:
+      to: tba:56:room:5628
+
+"tba:56:room:5630":
+  name: On A Road
+  description: The road you are on continues east and west.
+  sector: hills
+  exits:
+    east:
+      to: tba:56:room:5631
+    west:
+      to: tba:56:room:5615
+
+"tba:56:room:5631":
+  name: On A Road
+  description: The road you are on continues east and west.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5632
+    west:
+      to: tba:56:room:5630
+
+"tba:56:room:5632":
+  name: On A Road
+  description: The road you are on continues east and west.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5633
+    west:
+      to: tba:56:room:5631
+
+"tba:56:room:5633":
+  name: On A Road
+  description: >
+    The road bends here toward the riverbank giving access to the River Ishtar.  The road continues
+    north and west from the river bank.
+  sector: field
+  exits:
+    north:
+      to: tba:56:room:5616
+    south:
+      to: tba:56:room:5649
+    west:
+      to: tba:56:room:5632
+
+"tba:56:room:5634":
+  name: The River Of Lost Souls
+  description: >
+    The river flows south through a valley in the mountains.  You can see a small village to the west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5619
+    south:
+      to: tba:56:room:5635
+
+"tba:56:room:5635":
+  name: The River Of Lost Souls
+  description: >
+    The river flows south in the southern end of this wide valley.  The walls of the valley close in to
+    the south.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5634
+    south:
+      to: tba:56:room:5636
+
+"tba:56:room:5636":
+  name: The River Of Lost Souls
+  description: >
+    The river begins to speed up as it cascades down this mountain crevice.  High above you a small
+    rope bridge sways in the wind.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5635
+    south:
+      to: tba:56:room:5637
+
+"tba:56:room:5637":
+  name: The River Of Lost Souls
+  description: >
+    The river rapidly flows down this crack in the side of the mountain to the south.  Hopefully you
+    will hear any aproaching rapids.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5636
+    south:
+      to: tba:56:room:5638
+
+"tba:56:room:5638":
+  name: The River Of Lost Souls
+  description: >
+    The river seems to calm a bit as the crevase widens lessens its stranglehold on the waters.  The
+    river continues to the north through a crack and flows to the south.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5637
+    south:
+      to: tba:56:room:5639
+
+"tba:56:room:5639":
+  name: A Split In The River
+  description: >
+    The waters of the river crash down upon a rock and split into two bodies of water.  The river you
+    are on continues its southern course and the new river heads off to the east.  To your west you notice
+    that the rocks have split and crumbled as if torn asunder by some massive force.  It looks
+    impossible to traverse.  The River of Lost Souls also continues to the north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5638
+    east:
+      to: tba:56:room:5620
+    south:
+      to: tba:56:room:5640
+
+"tba:56:room:5640":
+  name: The River Of Lost Souls
+  description: The river continues north and south from here through a water eroded valley.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5639
+    south:
+      to: tba:56:room:5641
+
+"tba:56:room:5641":
+  name: The River Of Lost Souls
+  description: The river continues north and south from here through a water eroded valley.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5640
+    south:
+      to: tba:56:room:5642
+
+"tba:56:room:5642":
+  name: The River Of Lost Souls
+  description: The river continues north and south from here through a water eroded valley.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5641
+    south:
+      to: tba:56:room:5643
+
+"tba:56:room:5643":
+  name: The River Of Lost Souls
+  description: >
+    The river makes a sharp bend here and heads south into a large mountain and north through a
+    valley.  On a ledge above you, and to the west, you can see movement.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5642
+    south:
+      to: tba:50:room:5004
+
+"tba:56:room:5644":
+  name: River Ishtar
+  description: The river widens here, no longer bounded by rock, and flows east towards a plain.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5645
+    west:
+      to: tba:56:room:5622
+
+"tba:56:room:5645":
+  name: River Ishtar
+  description: >
+    The river continues here east to east.  There is a landing area to the north where you can gain
+    access to the shore.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5615
+    east:
+      to: tba:56:room:5646
+    west:
+      to: tba:56:room:5644
+
+"tba:56:room:5646":
+  name: River Ishtar
+  description: >
+    The river meanders through the foothills of the eastern mountains. The air is dryer on this side of
+    the continental divide and it seems a bit warmer.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5647
+    west:
+      to: tba:56:room:5645
+
+"tba:56:room:5647":
+  name: River Ishtar
+  description: >
+    The river continues its journey eastward flowing through the plains.  To the west you see the peaks
+    of large snow capped mountains and to the east you see the outline of a large city.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5648
+    west:
+      to: tba:56:room:5646
+
+"tba:56:room:5648":
+  name: River Ishtar
+  description: The river flows east and west from here.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5649
+    west:
+      to: tba:56:room:5647
+
+"tba:56:room:5649":
+  name: River Ishtar
+  description: >
+    The river slows as it widens and meanders through the lowlands.  A small dock give access to the
+    north shore.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5633
+    east:
+      to: tba:56:room:5623
+    west:
+      to: tba:56:room:5648
+
+"tba:56:room:5651":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5652
+    east:
+      to: tba:56:room:5656
+    south:
+      to: tba:56:room:5654
+    west:
+      to: tba:56:room:5657
+
+"tba:56:room:5652":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5652
+    east:
+      to: tba:56:room:5655
+    south:
+      to: tba:56:room:5652
+    west:
+      to: tba:56:room:5651
+
+"tba:56:room:5653":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5654
+    east:
+      to: tba:56:room:5639
+      look: You see a large boulder blocking your path.
+      door:
+        keywords: [boulder, rock, crack]
+        kind: door
+        reset: closed
+    south:
+      to: tba:56:room:5656
+    west:
+      to: tba:56:room:5657
+
+"tba:56:room:5654":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5654
+    east:
+      to: tba:56:room:5658
+    south:
+      to: tba:56:room:5657
+    west:
+      to: tba:56:room:5660
+
+"tba:56:room:5655":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5655
+    east:
+      to: tba:56:room:5659
+    south:
+      to: tba:56:room:5658
+    west:
+      to: tba:56:room:5654
+
+"tba:56:room:5656":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: inside
+  exits:
+    north:
+      to: tba:56:room:5653
+    east:
+      to: tba:56:room:5658
+    south:
+      to: tba:56:room:5655
+    west:
+      to: tba:56:room:5651
+
+"tba:56:room:5657":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5654
+    east:
+      to: tba:56:room:5658
+    south:
+      to: tba:56:room:5654
+    west:
+      to: tba:56:room:5654
+
+"tba:56:room:5658":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5655
+    east:
+      to: tba:56:room:5657
+    south:
+      to: tba:56:room:5659
+    west:
+      to: tba:56:room:5654
+
+"tba:56:room:5659":
+  name: In The Mountains
+  description:
+  - >
+    You are walking over rocks and stones through the mountains between the Ishtar and Dark rivers.
+  - It is funny how all the rocks look alike.
+  sector: mountains
+  exits:
+    north:
+      to: tba:56:room:5652
+    east:
+      to: tba:56:room:5659
+    south:
+      to: tba:56:room:5654
+    west:
+      to: tba:56:room:5658
+
+"tba:56:room:5660":
+  name: The Headwaters Of The Dark River
+  description: >
+    A large natural spring issues forth from the heart of the mountain and flows west down the
+    mountain.  It looks like there was a terrible earthquake here not too long ago, and a path that leads
+    eastwards through the mountains is covered with rocks, making passage difficult.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5654
+    west:
+      to: tba:56:room:5661
+
+"tba:56:room:5661":
+  name: On The Dark River
+  description: >
+    The river flows down the mountain through a large crevasse to the west and up into the mountains
+    east.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5660
+    west:
+      to: tba:56:room:5662
+
+"tba:56:room:5662":
+  name: On The Dark River
+  description: The walls of this canyon tower overhead as the river continues east and west from here.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5661
+    west:
+      to: tba:56:room:5663
+
+"tba:56:room:5663":
+  name: On The Dark River
+  description: >
+    The walls of rock around you slowly shrink to ground level as the river flows out of the mountains
+    and onto the plains.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5662
+    west:
+      to: tba:56:room:5664
+
+"tba:56:room:5664":
+  name: On The Dark River
+  description: >
+    The river continues east and west from here out of the foothills to the east down into the
+    mountains south of here.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5663
+    south:
+      to: tba:56:room:5665
+
+"tba:56:room:5665":
+  name: On The Dark River
+  description: >
+    The river, following a low spot in the foothills, bends and twists. Tall mountains can be seen off
+    to the south and east.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    north:
+      to: tba:56:room:5664
+    south:
+      to: tba:56:room:5666
+
+"tba:56:room:5666":
+  name: On The Dark River
+  description: The river makes a wide sweeping turn here into the mountain.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    north:
+      to: tba:56:room:5665
+    west:
+      to: tba:56:room:5667
+
+"tba:56:room:5667":
+  name: On The Dark River
+  description: >
+    The river flows west from here into the heart of the mountain and east towards the foothills once
+    more.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:56:room:5666
+    west:
+      to: tba:56:room:5668
+
+"tba:56:room:5668":
+  name: On The Dark River
+  description: >
+    You can barely make out what is ahead of you as the river flows quietly through the passageway.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:56:room:5667
+    south:
+      to: tba:56:room:5669
+
+"tba:56:room:5669":
+  name: On The Dark River
+  description: >
+    The river slowly flows west towards the heart of the mountain.  There are small cracks in the
+    passage wall to the north where you might be able to get up out of the water.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:56:room:5672
+    east:
+      to: tba:56:room:5668
+    west:
+      to: tba:56:room:5670
+
+"tba:56:room:5670":
+  name: On The Dark River
+  description: >
+    The river continues east and west from here flowing south of a dark ledge high above the water
+    level.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:56:room:5669
+    west:
+      to: tba:56:room:5671
+
+"tba:56:room:5671":
+  name: On The Dark River
+  description: >
+    The river flows south through a narrowing part of the passage as it progresses deeper into the
+    mountain.
+  sector: water_noswim
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:56:room:5670
+    south:
+      to: tba:50:room:5005
+
+"tba:56:room:5672":
+  name: On A Small Ledge
+  description: >
+    You clamber out of the water up onto this narrow ledge to see if it leads deeper into the
+    mountain.  Unfortunately, the ledge is only wide enough to rest upon for a while and there does not appear to
+    be any other exits other than rejoining the underground river.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:56:room:5669
+
+"tba:56:room:5681":
+  name: On The Plains
+  description: >
+    You stand on an open expanse of grass extending in all directions. To the south of you stand the
+    might northern gates of New Thalos.  East and west of you the grassy fields continue and north, in the
+    distance, you see a line of trees.
+  sector: field
+  exits:
+    north:
+      to: tba:56:room:5682
+    east:
+      to: tba:56:room:5681
+    south:
+      to: tba:55:room:5567
+    west:
+      to: tba:56:room:5681
+
+"tba:56:room:5682":
+  name: On The Plains
+  description: >
+    You stand on an open field of grass.  The forest to the north is closer but still a good distance
+    away.  To the south a small dirt path has been trodden into the ground heading towards New Thalos.
+  sector: field
+  exits:
+    north:
+      to: tba:56:room:5683
+    east:
+      to: tba:56:room:5682
+    south:
+      to: tba:56:room:5681
+    west:
+      to: tba:56:room:5682
+
+"tba:56:room:5683":
+  name: The Edge Of The Forest
+  description: >
+    You stand at the edge of a huge forest.  The line of trees continues as far as the eye can see to
+    the east and west.  A large expanse of grass spreads out to the south.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5683
+    south:
+      to: tba:56:room:5682
+    west:
+      to: tba:56:room:5683
+
+"tba:56:room:5684":
+  name: River Ishtar
+  description: >
+    The river broadens even more here and the waters become murky. The smell of saltwater has reached
+    you from the east.  The Dragon Sea cannot be far away.  To the east you can see the faint outline of a
+    city and to the north you see a large expanse of grass.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5685
+    west:
+      to: tba:56:room:5626
+
+"tba:56:room:5685":
+  name: The River Delta
+  description: >
+    This is where the river empties out into the Dragon Sea.  The backrush of water has kicked up a lot
+    of sand and the blue sea is stained where the river empties.  Looking west all you can see is
+    water... all the way to the horizon.  North of here is a small dock you think you should be able to reach
+    with out too much trouble.  The river stretches off to the west back towards New Thalos.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:56:room:5686
+    west:
+      to: tba:56:room:5684
+
+"tba:56:room:5686":
+  name: The Dragon Sea
+  description: >
+    You are on the clear blue seas of the Dragon Sea.  Water extends in all directions as far as the
+    eye can see.  Off in the distance you think you might see a small dock to the north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5687
+    east:
+      to: tba:56:room:5686
+    south:
+      to: tba:56:room:5686
+    west:
+      to: tba:56:room:5685
+
+"tba:56:room:5687":
+  name: The Dragon Sea
+  description: >
+    The Dragon Sea comes up along the shore here.  The deep blue waters rolling in and crashing against
+    the beach.  To the north you see a small dock jutting out into the surf.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5695
+    east:
+      to: tba:56:room:5696
+    south:
+      to: tba:56:room:5686
+
+"tba:56:room:5688":
+  name: The Dragon Sea
+  description: >
+    You are on the clear blue seas of the Dragon Sea.  Water extends in all directions as far as the
+    eye can see.  Off in the distance you think you might see a small dock to the west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5688
+    east:
+      to: tba:56:room:5697
+    south:
+      to: tba:56:room:5695
+
+"tba:56:room:5689":
+  name: The Dragon Sea
+  description: >
+    You are on the clear blue seas of the Dragon Sea.  Water extends in all directions as far as the
+    eye can see.  Off in the distance you think you might see a small dock to the west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5697
+    east:
+      to: tba:56:room:5689
+    south:
+      to: tba:56:room:5696
+    west:
+      to: tba:56:room:5695
+    down:
+      to: tba:56:room:5698
+
+"tba:56:room:5690":
+  name: On A Road
+  description: >
+    The people of New Thalos take great pride in the services their city may provide.  One of these
+    services is the construction crews the go to great lengths to keep all the roads in order.  Although the
+    taxes in New Thalos are higher then other cities in the realm most of the money is used for the good
+    of the people.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5691
+    west:
+      to: tba:55:room:5568
+
+"tba:56:room:5691":
+  name: On A Road
+  description: >
+    You walk along a well used road with beautiful scenery.  To the north tall pine trees form a wall
+    that goes on for miles.  Between the road and the trees lies a great expanse of grassy plains.  South
+    of here, beyond the river, lies the Great Eastern Desert.  The road continues east and west.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5692
+    west:
+      to: tba:56:room:5690
+
+"tba:56:room:5692":
+  name: On A Road
+  description: >
+    The Dragon Sea can be seen to the east now spreading out to unknown lands.  The road continues east
+    and west.  To the south you hear the sounds of boats traveling the River Ishtar delivering goods.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5693
+    west:
+      to: tba:56:room:5691
+
+"tba:56:room:5693":
+  name: On A Road
+  description: >
+    This is the man land route through the land.  Merchants can bring their goods to the coastline and
+    have them ferried onto ships for export.  Travel by foot west will take you through New Thalos up and
+    over the Eastern Mountains and down into Midgaard.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5694
+    west:
+      to: tba:56:room:5692
+
+"tba:56:room:5694":
+  name: Near The Shore
+  description: >
+    The road ends here turning into a small dirt path leading down the beach and onto a dock.  To the
+    north and south you see the coastline stretching out before you.  West of here the lowlands roll up
+    into huge snow capped mountains.
+  sector: field
+  exits:
+    east:
+      to: tba:56:room:5695
+    west:
+      to: tba:56:room:5693
+
+"tba:56:room:5695":
+  name: On A Dock
+  description: >
+    You stand on a simple wooden dock that acts as an extension of the road to the west.  The dock
+    seems to have been here for quite a long time but is still sturdy.  A small ladder has been built on the
+    eastern end to allow easy access to and from ships.
+  sector: city
+  exits:
+    north:
+      to: tba:56:room:5688
+    east:
+      to: tba:56:room:5689
+    south:
+      to: tba:56:room:5687
+    west:
+      to: tba:56:room:5694
+
+"tba:56:room:5696":
+  name: The Dragon Sea
+  description: >
+    You are on the clear blue seas of the Dragon Sea.  Water extends in all directions as far as the
+    eye can see.  Off in the distance you think you might see a small dock to the west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5689
+    east:
+      to: tba:56:room:5696
+    west:
+      to: tba:56:room:5687
+
+"tba:56:room:5697":
+  name: The Dragon Sea
+  description: >
+    The ocean spreads out in all directions rolling gently.  In the distance you can see an island on
+    the horizon.  To the west you see the mainland.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:56:room:5697
+    east:
+      to: tba:56:room:5697
+    south:
+      to: tba:56:room:5689
+    west:
+      to: tba:56:room:5688
+
+"tba:56:room:5698":
+  name: Under The dock
+  description: >
+    You are swiming underneath the dock.  You can see the four wooden pylons that support the
+    structure.  The murky water clouds you vision as you gaze westward, but you think you can make out an iron
+    grating in that direction.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    west:
+      to: tba:56:room:5699
+      door:
+        keywords: [grate]
+        kind: door
+        reset: closed
+    up:
+      to: tba:56:room:5697
+
+"tba:56:room:5699":
+  name: The Lair Of The Ixitxachitl
+  description: >
+    Blood swirls around in the water as the Ixitxachitl devours the last of its meal.  Swirling around
+    quickly as you intrude upon his meal the large sting ray attacks!
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    east:
+      to: tba:56:room:5698
+      door:
+        keywords: [grate]
+        kind: door
+        reset: closed

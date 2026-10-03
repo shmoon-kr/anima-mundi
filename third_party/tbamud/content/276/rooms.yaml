@@ -1,0 +1,345 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 276.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:276:room:27600":
+  name: The Church
+  description:
+  - >
+    Looking at the condition of the church, you wonder what kind of bishop would allow a church's
+    condition to get so bad.  As you look around, you notice a sign that reads Church of the Pythons.  After a
+    moment of pondering, you realize that this is the home of the famed Bishop from Monty Python. 
+    Remember... the Bishop is watching YOU!
+  - Second Avenue is to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:275:room:27599
+      look: You see Second Avenue.
+  extras:
+  - keywords: [sign]
+    text: The sign reads Church of the Pythons.  Like you didn't already know that, duh!
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           The city of New Sparta. By Naved.
+        Zone 276 is linked to the following zones:
+        275 New Sparta                     at 27600 (south) ---> 27599
+        275 New Sparta                     at 27601 (north) ---> 27599
+        275 New Sparta                     at 27604 (east ) ---> 27570
+        275 New Sparta                     at 27612 (south) ---> 27580
+        275 New Sparta                     at 27614 (east ) ---> 27516
+        275 New Sparta                     at 27616 (west ) ---> 27569
+
+"tba:276:room:27601":
+  name: Fire Station
+  description:
+  - >
+    This is the place where the firemen spend most of their time, free or otherwise.  Because they
+    hardly ever see their wives, they particularly enjoy sliding down the pole to the fire engines.
+  - >
+    Stairs lead up to the firemen's quarters, Second Avenue is to the north, and to the south is Fire
+    Marshall Bob's office.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:275:room:27599
+      look: You see the Second Avenue.
+    south:
+      to: tba:276:room:27602
+      look: You see the Fire Marshall's office.
+    up:
+      to: tba:276:room:27603
+      look: You look up to the firemen's quarters.
+
+"tba:276:room:27602":
+  name: Fire Marshall Bob's Office
+  description:
+  - >
+    Small fires are scattered about the office as well as various highly flammable chemicals.  The Fire
+    Marshall is obviously not very competent.
+  - The Fire Station is to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:276:room:27601
+      look: You see the fire station.
+
+"tba:276:room:27603":
+  name: Firemen's Quarters
+  description:
+  - >
+    This is a well lived in room, and from the looks of the empty beer cans, pizza boxes and the
+    scattered decks of playing cards, it seems like this room is used for more than just sleeping.  Other
+    discarded objects in the room prove that this room is frequented by call girls.
+  - The Fire Station is down the fire pole.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:276:room:27601
+      look: You see the station.
+  extras:
+  - keywords: [objects]
+    text: They seem to be some kind of used contraceptive device.
+
+"tba:276:room:27604":
+  name: Second Avenue
+  description:
+  - >
+    Nothing here... you can go now.  The construction workers still haven't started building on this
+    section of the road.
+  - >
+    To the east is the intersection of Broadway and Second Ave and to the west you smell something bad.
+  sector: city
+  exits:
+    east:
+      to: tba:275:room:27570
+      look: We already told you in the description that Broadway is there.
+    west:
+      to: tba:276:room:27605
+      look: Second avenue continues.
+
+"tba:276:room:27605":
+  name: Second Avenue
+  description: >
+    The stench is REALLY strong here.  It is so strong and ubiquitous, you can't tell whether the smell
+    is coming from the dump to the west, the pigs to the south, or from the animals to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:276:room:27606
+      look: You hear lots of barking and meowing.
+    east:
+      to: tba:276:room:27604
+      look: Doesn't Second Avenue look boring?
+    south:
+      to: tba:276:room:27607
+      look: The Police Station.
+    west:
+      to: tba:276:room:27608
+      look: >
+        Now that you've stopped for a while, it has become apparent the smell is emanating from this
+        direction.
+
+"tba:276:room:27606":
+  name: The Pound
+  description: >
+    Yes, as a favor to newbies everywhere, we created the pound full of fidos and cats for quick
+    experience.  Go to town on them.  Second Avenue is to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:276:room:27605
+      look: You see Second Avenue.
+
+"tba:276:room:27607":
+  name: The Police Station
+  description:
+  - >
+    There are dozens of policemen franticly searching through various tidbits of evidence looking for
+    answers to all the killings and murders in New Sparta.  Watch out, they might even have your name!
+  - >
+    Second Avenue is to the north, the Chief's office is to the south, and the jail is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:276:room:27605
+      look: You see Second Avenue.
+    south:
+      to: tba:276:room:27609
+      look: You see the Chief's office.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:276:room:27610
+      look: You see the Jail.
+
+"tba:276:room:27608":
+  name: The Jersey Dump
+  description:
+  - >
+    This is the main dump, where everyone from anywhere throws their trash, radioactive or otherwise. 
+    Go ahead -- feel free to dump here too, but don't stay too long 'cause the radiation can be fatal.
+  - Second Avenue runs east.
+  sector: city
+  exits:
+    east:
+      to: tba:276:room:27605
+      look: You see Second Avenue.
+
+"tba:276:room:27609":
+  name: The Chief's Office
+  description:
+  - >
+    Here you are in the office of New Sparta's new Chief of Police, Chief O'Hara, who just transferred
+    from the Gotham Police Force.  His office is neatly decorated with bat paraphranalia on one wall, and
+    a fully stocked bar on the other.
+  - A door to the north leads to the rest of the station.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:276:room:27607
+      look: You see the main station.
+
+"tba:276:room:27610":
+  name: The Jail
+  description:
+  - >
+    You get the impression that more things go on in here than is supposed to.  South of here is the
+    actual jail cell, where most of New Sparta's notorious criminals reside.  There are only two ways into
+    the cell -- get the key off of the warden, or be convicted...
+  - The Police Station is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:276:room:27607
+      look: You see the Police Station.
+    south:
+      to: tba:276:room:27611
+      look: You see the jail cell, along with various criminals, including the notorious Esprit.
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:275:obj:27500
+        reset: locked
+
+"tba:276:room:27611":
+  name: The Jail Cell
+  description: >
+    If you are in here, for your sake you had better have a key, or you may rot here indefinitely, as
+    the cell door is extremely hard to open from the inside.  Oh, and just one word of advice -- don't
+    bend over for the soap!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:276:room:27610
+      look: You see the cell door leading to the free world.
+      door:
+        keywords: [cell, door]
+        kind: pickproof
+        key: tba:275:obj:27500
+        reset: locked
+
+"tba:276:room:27612":
+  name: The Entrance To Goethe's Garden
+  description:
+  - >
+    This is the entrance to Goethe's Garden, the public park of New Sparta.  The park is named after
+    the famous martyr and generous donor of the land which New Sparta is built upon, Goethe.
+  - To the north is the Statue of Goethe, and to the south is Broadway.
+  sector: city
+  exits:
+    north:
+      to: tba:276:room:27613
+      look: You see the Statue of Goethe.
+    south:
+      to: tba:275:room:27580
+      look: You see Broadway.
+
+"tba:276:room:27613":
+  name: The Statue Of Goethe
+  description:
+  - >
+    Much like the man, the very lifelike statue exudes an aura of verbosity.  The Statue was
+    constructed many years ago to honor his genius and humanitarianism, and to his contribution to the foundation
+    of New Sparta.
+  - To the south is Goethe's Garden.
+  sector: city
+  exits:
+    south:
+      to: tba:276:room:27612
+      look: You see Goethe's Garden.
+  extras:
+  - keywords: [statue, goethe]
+    text: >
+      You witness in front of yourself a monolith of manhood, a guru of grandiosity a plethora of poetic
+      prowess, an epitome of elegance, the sultan of sonnets, the champion of chivalry, an embodyment of
+      empathy, and the zenith of... Something.  It is Goethe!  The statue of Goethe looms before you.  He is
+      mounted on his favorite steed, the trusty Nessumsar.  As always the sweet essence of his poetry is
+      dripping off his tongue.  His all-knowing eyes seem to pierce through you.  You can't help but fell
+      embarrassed about all your shortcomings as you stand beside this solemn stud (not the horse silly, the
+      man-stud Goethe!  ).
+
+"tba:276:room:27614":
+  name: First Avenue
+  description:
+  - >
+    You immediatly realize that the city suddenly grew darker when you left Broadway and it makes you
+    feel uncomfortable.  You hear the sounds of what you think is a war being raged off to the west and
+    you wonder if it is safe to find out what's going on.
+  - The Intersection of First and Broadway is to the east and Hell's Kitchen is to the west.
+  sector: city
+  exits:
+    east:
+      to: tba:275:room:27516
+      look: You see the Intersection of First and Broadway.
+    west:
+      to: tba:276:room:27615
+      look: You see the entrance to Hell's Kitchen.
+
+"tba:276:room:27615":
+  name: The Entrance To Hell's Kitchen
+  description:
+  - >
+    As you walk in, you wonder why it is so dark here... and then you realize either that the electric
+    company is too afraid to come and repair the lights or because the people here are too poor to afford
+    lights.  You sense the tremendous evil that lurks within and decide that your personal safety is
+    more important than exploring... besides you can think of at least of a dozen better places you'd rather
+    be than in Hell's Kitchen.
+  - You decide that the only real exit is to First Avenue which is to the east.
+  sector: city
+  flags: [dark]
+  exits:
+    east:
+      to: tba:276:room:27614
+      look: You see First Avenue.
+
+"tba:276:room:27616":
+  name: Petland Discount Store
+  description:
+  - >
+    This is more then just your average neighborhood pet store... Here, they specialize in exotic pets
+    for today's adventurers.  There is a sign on the wall.
+  - Broadway is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:275:room:27569
+      look: You see a doorway that leads to Broadway.
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign reads:"
+    - Use 'List' to see the available pets. Use 'Buy <pet>' to buy yourself a pet.
+    - "Instructions for having pets:"
+    - >
+      You can use 'order <pet> <instructions>' to order your pets around. If you abuse your pet, it will
+      no longer regard you as its master. If you have several pets you may use 'order followers
+      <instructions>'
+    - "You can name the pet you buy as : \"buy <pet> <name>\""
+    - Regards,
+    - The Shopkeeper
+
+"tba:276:room:27617":
+  name: PETSHOP STOREROOM
+  description: >
+    Make two rooms and some pets.  The rooms MUST be sequential.  If the first room is 315 then the
+    second must be 316.  The second room is known as the storeroom.  All that is required in the storeroom
+    is to load one of each mob you wish to be a pet.  This room can not have any exits and will never be
+    used by mortals.  Although a pet shopkeeper is not required it is recommended.  After all of this is
+    done ask your coder to implement the petshop.  It will not work until the code is changed and the MUD
+    is rebooted.  The cost of pets is 300 times their level.
+  sector: inside
+  flags: [private, godroom]

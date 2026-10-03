@@ -1,0 +1,69 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 43.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:43:shop:4300":
+  keeper: tba:43:mob:4309
+  rooms: [tba:43:room:4385]
+  products:
+  - tba:43:obj:4311
+  - tba:43:obj:4312
+  - tba:43:obj:4313
+  - tba:43:obj:4316
+  profit:
+    buy: 1.5
+    sell: 0.9
+  messages:
+    no_such_item: "%s Our hunters don't kill that."
+    you_dont_have_it: "%s You ain't got that item."
+    does_not_buy: "%s I only sell!"
+    shop_cannot_afford: "%s I'm low on cash at the moment, come back later."
+    you_cannot_afford: "%s Come back later, when you have enough money!"
+    bought: "%s Thank you have a nice day."
+    sold: "%s Thank you have a nice day."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:43:shop:4301":
+  keeper: tba:43:mob:4310
+  rooms: [tba:43:room:4386]
+  products:
+  - tba:43:obj:4314
+  - tba:43:obj:4315
+  - tba:43:obj:4317
+  profit:
+    buy: 1.5
+    sell: 0.9
+  messages:
+    no_such_item: "%s Sorry, I don't make that."
+    you_dont_have_it: "%s You don't have that."
+    does_not_buy: "%s I don't want that."
+    shop_cannot_afford: "%s I don't seem to have that much."
+    you_cannot_afford: "%s Not enough money there."
+    bought: "%s Thank you, come again."
+    sold: "%s Thank you, come again."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:43:shop:4302":
+  keeper: tba:43:mob:4311
+  rooms: [tba:43:room:4387]
+  products:
+  - tba:43:obj:4318
+  - tba:43:obj:4319
+  - tba:43:obj:4320
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s That's not in stock."
+    you_dont_have_it: "%s You don't have that."
+    does_not_buy: "%s I don't want that item."
+    shop_cannot_afford: "%s I don't have THAT much money!"
+    you_cannot_afford: "%s You don't have enough money for that."
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

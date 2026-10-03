@@ -1,0 +1,23 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 249.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:249:mob:24901":
+  keywords: [Natasha]
+  short: natasha shopkeeper woman keeper
+  long: Natasha, the shopkeeper, is here ready for trading.
+  description: You see a very beautiful woman.  But you note she is very powerful.
+  level: 30
+  sex: female
+  alignment: 500
+  flags: [sentinel, aware, wimpy, memory, no_charm, no_summon, no_sleep, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

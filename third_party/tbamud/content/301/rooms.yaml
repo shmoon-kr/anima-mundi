@@ -1,0 +1,2098 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 301.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:301:room:30100":
+  name: The Western Campus Entrance
+  description: >
+    This gateway is made of limestone, and covered in ivy.  Beyond the entrance, the university
+    stretches as far as the eye can see.  A sign is neatly posted on the left pillar of the gateway.  It is made
+    of nicely polished brass.  Because of this, it looks rather important (as all signs go).
+  sector: city
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:301:room:30101
+      look: Campus Crescent continues to the east.
+  extras:
+  - keywords: [sign]
+    text: Campus by Matrix and The Wandering Bard Copyright 1994 by Curious Areas Workshop
+  - keywords: [info, credits]
+    text:
+      preformatted: |2
+           Campus by Matrix and The Wandering Bard
+        Copyright 1994 by Curious Areas Workshop
+        Campus is a large tongue-in-cheek area loosely based on a Canadian
+        university campus.  Below is a step by step guide that should work
+        for most DikuMuds...
+        The campus consists of 232 rooms.
+          #00 (exit west to the rest of the world)
+          #22 (exit north to the rest of the world)
+          #86 (add a PEACEFUL flag if you have one)
+        Edit the following objects:
+          #46 (make the edesc appear as your login screen.)
+          #59
+        *
+        The mobs in this area were built on a -100 (good) to 100 (bad) armor
+        class range.  Remove the extra '0' if you don't need/want it.
+        *
+        Here are some recommended specials for the mobs:
+          #04 should be given a sleep spell to cast
+          #47 should be given an undead process.
+        Zone 301 is linked to the following zones:
+        302 Campus                         at 30123 (south) ---> 30236
+        302 Campus                         at 30124 (north) ---> 30250
+        302 Campus                         at 30126 (east ) ---> 30294
+        302 Campus                         at 30126 (west ) ---> 30295
+        303 Campus                         at 30129 (west ) ---> 30330
+        303 Campus                         at 30130 (east ) ---> 30320
+        303 Campus                         at 30130 (south) ---> 30325
+        303 Campus                         at 30130 (west ) ---> 30324
+        302 Campus                         at 30133 (east ) ---> 30274
+        302 Campus                         at 30134 (north) ---> 30276
+        302 Campus                         at 30135 (north) ---> 30292
+        302 Campus                         at 30135 (west ) ---> 30291
+        302 Campus                         at 30136 (east ) ---> 30266
+        302 Campus                         at 30140 (south) ---> 30260
+        302 Campus                         at 30142 (north) ---> 30201
+        302 Campus                         at 30142 (east ) ---> 30203
+        302 Campus                         at 30199 (up   ) ---> 30200
+        
+           (Mobs Stay_Zone flags have all been disabled to allow free access between
+        301, 302 and 303.  Please ensure that any entrances into the area are flagged
+        nomob to keep them in.  -  Parna for TBAMud.)
+
+"tba:301:room:30101":
+  name: Campus Crescent
+  description: >
+    This cobblestone road is not littered in any way, thus displaying the conscientious behaviour of
+    the politically correct students (as they all seem to be).  The road continues east and west.
+  sector: city
+  exits:
+    east:
+      to: tba:301:room:30102
+      look: Campus Crescent continues to the east.
+    west:
+      to: tba:301:room:30100
+      look: The gateway can be seen to the west.
+  extras:
+  - keywords: [cobblestone, stone, cobble]
+    text: The cobblestones are clean.
+
+"tba:301:room:30102":
+  name: Campus Crescent
+  description: >
+    This cobblestone road is not littered in any way, thus displaying the conscientious behaviour of
+    the politically correct students (as they all seem to be).  The road continues east and west.  To the
+    north and south, you can see dormitories.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30125
+      look: To the north you see Victoria Hall.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30145
+        reset: locked
+    east:
+      to: tba:301:room:30103
+      look: Campus Crescent continues to the east.
+    south:
+      to: tba:301:room:30126
+      look: To the south you see Leonard Hall.
+    west:
+      to: tba:301:room:30101
+      look: Campus Crescent continues to the west.
+  extras:
+  - keywords: [cobblestone, stone, cobble]
+    text: The cobblestones are clean.
+  - keywords: [dorm, dormitory, dormitories]
+    text: Well, they're dormitories.  What else can be said?
+
+"tba:301:room:30103":
+  name: Campus Crescent
+  description: >
+    This cobblestone road is not littered in any way, thus displaying the conscientious behaviour of
+    the politically correct students (as they all seem to be).  The road continues east and west.  A
+    noxious smell permeates from the south.
+  sector: city
+  exits:
+    east:
+      to: tba:301:room:30104
+      look: Campus Crescent crosses University Avenue to the east.
+    south:
+      to: tba:301:room:30127
+      look: To the south you barely see the Mary Rotte Cafeteria.
+    west:
+      to: tba:301:room:30102
+      look: Campus Crescent continues to the west.
+  extras:
+  - keywords: [caf, cafeteria]
+    text: You barely see, through the thick putrid fumes, the Mary Rotte Cafeteria.
+  - keywords: [cobblestone, stone, cobble]
+    text: The cobblestones are clean.
+
+"tba:301:room:30104":
+  name: The Crossroads
+  description: >
+    Campus Crescent meets University Avenue at this very point...  Right here. (Thus the name
+    Crossroads.  ) University runs north-south whilst Campus runs east-west.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30110
+      look: University Avenue heads off to the north.
+    east:
+      to: tba:301:room:30105
+      look: Campus Crescent runs to the east.
+    south:
+      to: tba:301:room:30108
+      look: To the south, you see University Avenue.
+    west:
+      to: tba:301:room:30103
+      look: To the west, Campus Crescent continues merrily.
+  extras:
+  - keywords: [cobblestone, stone, cobble]
+    text: >
+      There are no cobblestones here!  You feel very silly looking at something that is not here.
+
+"tba:301:room:30105":
+  name: Campus Crescent
+  description: >
+    This cobblestone road is not littered in any way, thus displaying the conscientious behaviour of
+    the politically correct students (as they all seem to be).  The road continues east and west.  A large
+    building lies south, off the road.  You can see another building to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30134
+      look: To the north, lies the Arts faculty building, Corry-Mack.
+    east:
+      to: tba:301:room:30106
+      look: Campus Crescent continues to the east.
+    south:
+      to: tba:301:room:30131
+      look: The Student Health Services building lies off the road to the south.
+    west:
+      to: tba:301:room:30104
+      look: The Crossroads lie to the west.
+  extras:
+  - keywords: [building]
+    text: The buildings seem warm and inviting.  You almost feel like hugging one.
+  - keywords: [cobblestone, stone, cobble]
+    text: The cobblestones are clean.
+
+"tba:301:room:30106":
+  name: Campus Crescent
+  description: >
+    This cobblestone road is not littered in any way, thus displaying the conscientious behaviour of
+    the politically correct students (as they all seem to be).  The road continues east and west.  The
+    bookstore is to the north.  An odd, round-shaped building lies to the south.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30165
+      look: Well, as I said earlier, the bookstore is to the north!  Try looking at it.
+    east:
+      to: tba:301:room:30107
+      look: Campus Crescent ends to the east.
+    south:
+      to: tba:301:room:30130
+      look: The Physics building, Sterling Hall is to the south.
+    west:
+      to: tba:301:room:30105
+      look: Campus Crescent continues to the west.
+  extras:
+  - keywords: [round, building]
+    text: Yes...  It's a round building.  Go figure.
+  - keywords: [bookstore]
+    text: The bookstore is a 2-story cubical building, loud noises emanate from the top floor.
+  - keywords: [cobblestone, stone, cobble]
+    text: The cobblestones are still clean.
+
+"tba:301:room:30107":
+  name: Division Road
+  description: >
+    Asphalt pavement lies heinously beneath your feet.  The road continues north and south.  A nice
+    cobblestone road leads off to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30118
+      look: Division Road continues north.
+    south:
+      to: tba:301:room:30119
+      look: Division Road continues south.
+    west:
+      to: tba:301:room:30106
+      look: Campus Crescent and its cobblestones are to the west.
+  extras:
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+  - keywords: [cobblestone, stone, cobble]
+    text: It's asphalt, you idiot!  If you want to look at cobblestones, go west.
+
+"tba:301:room:30108":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  It is normally filled with students.  An awful fog
+    drifts in from the west.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30104
+      look: University Avenue crosses a cobblestone road to the north.
+    south:
+      to: tba:301:room:30109
+      look: University Avenue continues south.
+    west:
+      to: tba:301:room:30128
+      look: The cafeteria lies to the west.
+  extras:
+  - keywords: [cafeteria, fog]
+    text: The fog seems to be coming from the Mary Rotte Cafeteria.
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+  - keywords: [cobblestone, stone, cobble]
+    text: It's a dirt road.  There are NO cobblestones here, although to the north...
+
+"tba:301:room:30109":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  But it ends here.  It is normally filled with
+    students.  There is a dormitory to west.
+  sector: field
+  exits:
+    north:
+      to: tba:301:room:30108
+      look: University Avenue continues to the north.
+    west:
+      to: tba:301:room:30129
+      look: Morris House lies to the west.
+  extras:
+  - keywords: [dormitory, dorm]
+    text: They are student living establishments.
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+
+"tba:301:room:30110":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  It is normally filled with students.  Buildings
+    lie on either side of the street.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30111
+      look: University Avenue continues to the north.
+    east:
+      to: tba:301:room:30133
+      look: The Arts building, Corry-Mack, lies to the east.
+    south:
+      to: tba:301:room:30104
+      look: University Avenue crosses Campus Crescent to the south.
+    west:
+      to: tba:301:room:30132
+      look: The Engineering building, Ellis Hall, lies to the west.
+  extras:
+  - keywords: [building, buildings]
+    text: There are two buildings here.  Which one?
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+  - keywords: [cobblestone, stone, cobble]
+    text: It's a dirt road.  There are NO cobblestones here, although to the south...
+
+"tba:301:room:30111":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  It is normally filled with students.  Buildings
+    lie on either side of the street.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30112
+      look: University Avenue continues to the north.
+    east:
+      to: tba:301:room:30136
+      look: The Science building, Frosty Annex, lies to the east.
+    south:
+      to: tba:301:room:30110
+      look: University Avenue continues to the south.
+    west:
+      to: tba:301:room:30135
+      look: The Commerce building, Dunning Hall, lies to the west.
+  extras:
+  - keywords: [building, buildings]
+    text: There are two buildings here.  Which one?
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+
+"tba:301:room:30112":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  It is normally filled with students.  A road
+    branches off to the east.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30113
+      look: University Avenue continues to the north.
+    east:
+      to: tba:301:room:30114
+      look: Union Street branches off to the east.
+    south:
+      to: tba:301:room:30111
+      look: University Avenue continues to the south.
+  extras:
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+
+"tba:301:room:30113":
+  name: University Avenue
+  description: >
+    This nicely crafted dirt road runs north-south.  It is normally filled with students.  To the north
+    you can see several menacing figures.  There is a sign here.  Reading it would be beneficial to your
+    health and general well-being.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30124
+      look: Low-income student housing lies to the north.  BEWARE!
+    east:
+      to: tba:301:room:30138
+      look: The student center, known as the "J" Dock, stands to the east.
+    south:
+      to: tba:301:room:30112
+      look: University Avenue continues to the south.
+  extras:
+  - keywords: [building]
+    text: The student center lies to the east.
+  - keywords: [sign, warning]
+    text: >
+      The sign says: Welcome to the Student Ghetto! n Fine $103.50 for carrying open alcohol in the
+      streets. Fine $ 53.75 for excessively loud noises. n ENTER AT YOUR OWN RISK!
+  - keywords: [dirt]
+    text: >
+      It's unclean matter, such as mud, trash, earth, or soil.  (Webster's New World Dictionary)
+
+"tba:301:room:30114":
+  name: Union Street
+  description: >
+    This non-descript road segment runs east-west between University Avenue and Division Road.  To the
+    north is the student center.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30137
+      look: The student center, known as the "J" Dock, stands to the north.
+    east:
+      to: tba:301:room:30115
+      look: Union Street continues to the east.
+    west:
+      to: tba:301:room:30112
+      look: University Avenue lies to the west.
+  extras:
+  - keywords: [building]
+    text: The student center lies to the north.
+  - keywords: [non-descript, non, descript]
+    text: (No description)
+
+"tba:301:room:30115":
+  name: Union Street
+  description: >
+    This non-descript road segment runs east-west between University Avenue and Division Road.  There
+    are buildings on either side of the street.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30139
+      look: The main entrance to the Jock Hardy Gym lies to the north.
+    east:
+      to: tba:301:room:30116
+      look: Division Road lies to the east.
+    south:
+      to: tba:301:room:30140
+      look: The Grant Hall assembly hall is south of here.
+    west:
+      to: tba:301:room:30114
+      look: Union Street continues to the west.
+  extras:
+  - keywords: [building, buildings]
+    text: There are two buildings here.  Which one?
+  - keywords: [non-descript, non, descript]
+    text: (No description)
+
+"tba:301:room:30116":
+  name: Division Road
+  description: >
+    Asphalt pavement lies heinously beneath your feet.  The road continues south.  A non-descript road
+    leads off to the west.  A building lies to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30161
+      look: The Jock Hardy Arena is to the north.
+    south:
+      to: tba:301:room:30117
+      look: Division Road continues south.
+    west:
+      to: tba:301:room:30115
+      look: Union Street is to the west.
+  extras:
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+  - keywords: [building, gym, arena]
+    text: The Jock Hardy Arena lies to the north.
+
+"tba:301:room:30117":
+  name: Division Road
+  description: Asphalt pavement lies heinously beneath your feet.  The road continues north and south.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30116
+      look: Division Road continues north.
+    south:
+      to: tba:301:room:30118
+      look: Division Road continues south.
+  extras:
+  - keywords: [zork]
+    text: What would possess you to look at that?  What is a zork anyways?
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+
+"tba:301:room:30118":
+  name: Division Road
+  description: >
+    Asphalt pavement lies heinously beneath your feet.  The road continues north and south.  A building
+    is off to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:301:room:30117
+      look: Division Road continues north.
+    south:
+      to: tba:301:room:30107
+      look: Division Road continues south.
+    west:
+      to: tba:301:room:30141
+      look: The Campus bookstore lies to the west.
+  extras:
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+  - keywords: [bookstore, building]
+    text: The bookstore is a 2-story cubical building, loud noises emanate from the top floor.
+
+"tba:301:room:30119":
+  name: Division Road
+  description: Asphalt pavement lies heinously beneath your feet.  The road continues north and south.
+  sector: forest
+  exits:
+    north:
+      to: tba:301:room:30107
+      look: Division Road continues north.
+    south:
+      to: tba:301:room:30120
+      look: Division Road continues south.
+  extras:
+  - keywords: [zork]
+    text: What would possess you to look at that?  What is a zork anyways?
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+
+"tba:301:room:30120":
+  name: Division Road
+  description: >
+    Asphalt pavement lies heinously beneath your feet.  The road continues north and south.  A tree has
+    been planted here.
+  sector: mountains
+  exits:
+    north:
+      to: tba:301:room:30119
+      look: Division Road continues north.
+    south:
+      to: tba:301:room:30121
+      look: Division Road continues south.
+  extras:
+  - keywords: [tree]
+    text: >
+      It has been placed here just to relieve the monotony.  It serves no other purpose whatsoever.
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+
+"tba:301:room:30121":
+  name: Division Road
+  description: >
+    Asphalt pavement lies heinously beneath your feet.  The road continues north.  A dormitory sits to
+    the east.  Strange that it's so far from everything else...
+  sector: forest
+  exits:
+    north:
+      to: tba:301:room:30120
+      look: Division Road continues north.
+    east:
+      to: tba:301:room:30142
+      look: Wally World sits to the east.
+  extras:
+  - keywords: [dorm, dormitory]
+    text: >
+      This is a rather tall dormitory.  You'd guess that in real life, it's probably 11-stories high, but
+      since that would take an absurd amount of time to program, you don't think that there are that many
+      floors in this replica of the building.
+  - keywords: [asphalt, pavement]
+    text: It's asphalt.
+
+"tba:301:room:30122":
+  name: The Northern Campus Entrance
+  description: >
+    This gateway is made of limestone, and covered in ivy.  Beyond the entrance, the university
+    stretches as far as the eye can see.  A sign is neatly posted on the left pillar of the gateway.  It is made
+    of nicely polished brass.  Because of this, it looks rather important (as all signs go).  The road
+    continues north and south from your present location.
+  sector: city
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:301:room:30123
+      look: The Student GHETTO...  Beware!
+  extras:
+  - keywords: [gate, gateway, pillar]
+    text: >
+      The gateway is made of limestone and covered in ivy.  As you already knew that you feel rather
+      silly wasting your time looking at it.  There is a sign on the left pillar.
+  - keywords: [sign, plaque]
+    text:
+    - "The nicely polished brass plaque reads:"
+    - University of XXX
+    - ENTER AT YOUR OWN RISK
+
+"tba:301:room:30123":
+  name: The Ghetto
+  description: >
+    The area you see ahead of you is low cost student housing, which is quite run down, almost into the
+    ground in fact.  You can see many furtive shapes moving through the darkness.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:301:room:30122
+      look: The gateway lies to the north.
+    south:
+      to: tba:302:room:30236
+      look: This is the ghetto, do you really need to know what is south of you?
+
+"tba:301:room:30124":
+  name: The Ghetto
+  description: >
+    The area you see ahead of you is low cost student housing, which is quite run down, almost into the
+    ground in fact.  You can see many furtive shapes moving through the darkness.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:302:room:30250
+      look: This is the ghetto, do you really need to know what is north of you?
+    south:
+      to: tba:301:room:30113
+      look: The nice part of University Avenue begins to the south.
+
+"tba:301:room:30125":
+  name: Victoria Hall
+  description: >
+    This is a locked room with no method of entry...  Yet...  The main reason for this is the high
+    number of already existing dormitories and it was thought that this one wouldn't add anything.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:301:room:30102
+      look: Campus Crescent lies to the south.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30145
+        reset: locked
+
+"tba:301:room:30126":
+  name: Leonard Hall Lobby
+  description: >
+    This is the lobby of the all-males residence.  To the north you can see Campus Crescent.  To both
+    the east and west you can see locked doors.  The floor is decorated with rather ugly, puce tiles. 
+    Beside the east door you can see an enormous amount of mailboxes.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30102
+      look: The cobblestoned Campus Crescent lies to the north.
+    east:
+      to: tba:302:room:30294
+      look: There is a locked door leading to a stairwell.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30106
+        reset: locked
+    west:
+      to: tba:302:room:30295
+      look: There is a locked door leading to a stairwell.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30105
+        reset: locked
+  extras:
+  - keywords: [tiles, floor]
+    text: >
+      The floor is covered with tiles that are so ugly, you have a difficult time keeping your lunch down
+  - keywords: [mailbox, mailboxes]
+    text: All of the mailboxes are all empty ...  Just like normal you think.
+
+"tba:301:room:30127":
+  name: Mary Rotte Cafeteria Entrance
+  description: >
+    As you walk through the entrance of the cafeteria, your appetite suddenly disappears.  In this
+    entrance, you'll normally find long line-ups to get into the cafeteria, but it's incomprehensible why. 
+    The only safe exit is to the north, but if you feel courageous enough, you can venture south.  There
+    is a door to the west.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:301:room:30103
+      look: You long to go north.
+    south:
+      to: tba:301:room:30145
+      look: The dining hall lies to the south... Beware!
+    west:
+      to: tba:301:room:30143
+      look: There is a doorway leading to the kitchen.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [door, doorway]
+    text: >
+      You believe that the doorway leads to the kitchen.  Let's give our compliments to the chef... 
+      *grin*
+  - keywords: [cafeteria, caf]
+    text: Yes, this is the cafeteria.
+
+"tba:301:room:30128":
+  name: Mary Rotte Cafeteria Entrance
+  description: >
+    As you walk through the entrance of the cafeteria, your appetite suddenly disappears.  In this
+    entrance, you'll normally find long line-ups to get into the cafeteria, but it's incomprehensible why. 
+    The only safe exit is to the east, but if you feel courageous enough, you can venture west.  There is
+    a door to the south.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    east:
+      to: tba:301:room:30108
+      look: You long to go east.
+    south:
+      to: tba:301:room:30151
+      look: There is a doorway leading to the kitchen.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+    west:
+      to: tba:301:room:30148
+      look: The dining hall lies to the west... Beware!
+  extras:
+  - keywords: [door, doorway]
+    text: >
+      You believe that the doorway leads to the kitchen.  Let's give our compliments to the chef... 
+      *grin*
+  - keywords: [cafeteria, caf]
+    text: Yes, this is the cafeteria.
+
+"tba:301:room:30129":
+  name: Morris House
+  description: >
+    This large building seems to be another dormitory...  Of sorts.  It is built is a style combining
+    Neo-Georgian features with all the advantages of modern design.  A hallway shrouded in darkness leads
+    off to the west, and the road is to the east.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:301:room:30109
+      look: University Avenue lies to the east.
+    west:
+      to: tba:303:room:30330
+      look: This hallway leads into the depths of Morris.
+
+"tba:301:room:30130":
+  name: The Entrance To Sterling Hall
+  description: >
+    This is the entrance to the famed circular building, Sterling Hall. Supposedly, if you walk in one
+    direction long enough, you will get to where you want to be.  Exits lead in all cardinal directions. 
+    A footnote has been attached to this description.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30106
+      look: Campus Crescent can be seen through the glass doors.
+    east:
+      to: tba:303:room:30320
+      look: The hallway continues east.
+    south:
+      to: tba:303:room:30325
+      look: An opening to the south brings you to the center of the building.
+    west:
+      to: tba:303:room:30324
+      look: The hallway continues west.
+  extras:
+  - keywords: [footnote]
+    text: >
+      Yes, believe it or not, this is a reasonably accurate representation of the Physics building,
+      Stirling Hall at our university.  The lecture halls are numbered in the same manner as represented and it
+      is in fact round, so that you can walk in one direction all the way around the building.
+  - keywords: [round, circle, circular]
+    text: Yes, it's round.
+
+"tba:301:room:30131":
+  name: The Student Health Services Entrance
+  description: >
+    This nice and inviting building does not seem quite so nice and inviting anymore now that you can
+    smell the Formeldehyde.  But life has brightened substantially, there is a Birth Control Center to the
+    east and a De-Tox unit to the south.  To the north lies a tempting exit to a cobblestone covered
+    street.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:301:room:30105
+      look: Back to cobblestones, eh?
+    east:
+      to: tba:301:room:30172
+      look: The Birth Control Center looks mighty inviting doesn't it?
+    south:
+      to: tba:301:room:30173
+      look: The De-Tox unit to the south looks like a good place to rest.
+
+"tba:301:room:30132":
+  name: Entrance To Ellis Hall
+  description: >
+    This entrance is covered in finely wrought carvings depicting great engineering events (like the
+    construction of this area) that have taken place in XXX's history.  There are two exits, east to the
+    street and west further inside the building.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30110
+      look: University Avenue lies to the east.
+    west:
+      to: tba:301:room:30174
+      look: It is too dark to tell what the next room is.
+  extras:
+  - keywords: [carvings]
+    text: >
+      These carvings depict the heroic deeds of Matrix and the Wandering Bard. Here they have just
+      defeated the creature known as the Zon File.
+
+"tba:301:room:30133":
+  name: Corry-Mack Building
+  description: >
+    The Arts faculty building was obviously the brain child of a maze enthusiast.  Its twisting halls
+    have absolutely boggled the greatest minds of Vernmot...  As well as the not so great minds.  The
+    halls beckon you to the east.  University Avenue lies to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30274
+      look: The twisting halls of Corry-Mack call from the east.
+    west:
+      to: tba:301:room:30110
+      look: University Avenue lies to the west.
+  extras:
+  - keywords: [minds, mind, great, greatest]
+    text: All of whom were probably smarter than you.
+  - keywords: [halls, hallways, hall, hallway]
+    text: They are twisting alright.
+
+"tba:301:room:30134":
+  name: Corry-Mack Hall
+  description: >
+    The Arts faculty building was obviously the brain child of a maze enthusiast.  Its twisting halls
+    have absolutely boggled the greatest minds of XXX...  As well as the not so great minds.  The halls
+    beckon you to the north.  Campus Crescent is south of here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30276
+      look: The twisting halls of Corry-Mack lie ahead.
+    south:
+      to: tba:301:room:30105
+      look: Campus Crescent lies to the south.
+  extras:
+  - keywords: [minds, mind, great, greatest]
+    text: All of whom were probably smarter than you.
+  - keywords: [halls, hallways, hall, hallway]
+    text: They are twisting alright.
+
+"tba:301:room:30135":
+  name: Dunning Hall Lobby
+  description: >
+    This is the nerve center of the Commerce Department at UNX (University of North XXX).  There are
+    two exits.  One to the north which seems to lead to a hall of some sort, and on to the west which leads
+    into a large room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30292
+      look: A hall leads off to the north.
+    east:
+      to: tba:301:room:30111
+      look: University Avenue lies to the east.
+    west:
+      to: tba:302:room:30291
+      look: A large room stands to the east.  What else would it do, sit?
+
+"tba:301:room:30136":
+  name: Frosty Annex Entrance Hall
+  description: >
+    As you walk off the street, you begin to notice how old and decrepit this building is.  If
+    perchance you are passing through this room on your way out of the building you noticed how old this building
+    seemed quite a long time ago. There are two exits.  One to the road, which happens to lie to the
+    west and the exit to the east leads to a long hallway.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30266
+      look: A long hallway leads off in this direction.
+    west:
+      to: tba:301:room:30111
+      look: University Avenue lies immediately to your west.
+
+"tba:301:room:30137":
+  name: The Central Annex
+  description: >
+    This nicely decorated, cavernous room resembles a large meeting hall.  To the east you can see the
+    Infobank, and to the west, you can see the Tuck Shoppe.  North of you is the back hall with its bank
+    machines, and south is the exit to Union Street.  This area is usually rather busy with students as
+    this is the University Student Center.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30138
+      look: >
+        To the north you can see the back hall, complete with numerous bank machines, but of course you
+        already knew that, didn't you?
+    east:
+      to: tba:301:room:30167
+      look: To the east you can see the Infobank of the University.
+    south:
+      to: tba:301:room:30114
+      look: To the south is the exit onto the street.
+    west:
+      to: tba:301:room:30169
+      look: The Tuck Shoppe is located to your west.
+  extras:
+  - keywords: [prawn]
+    text: You see nothing even remotely resembling that here.
+
+"tba:301:room:30138":
+  name: The Back Hall
+  description: >
+    This is the back hall of the Student Center.  You can see a Post Office to the north, and a games
+    room to the east.  The Central Annex is located to the south whilst the street is located directly to
+    your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      look: >
+        You can distinctly see a post office here, it might have a message in it, but you are not quite
+        sure.
+    east:
+      to: tba:301:room:30168
+      look: There are electronic sounds coming from the east.
+    south:
+      to: tba:301:room:30137
+      look: The large central annex lies to the south.
+    west:
+      to: tba:301:room:30113
+      look: University Avenue is located just to the west.
+
+"tba:301:room:30139":
+  name: Jock Hardy Lobby
+  description: >
+    Several plaques line the walls, commemorating the great athletic achievements of the students and
+    alumni.  Exits branch off in many directions. There is a sign here.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30152
+      look: There is a stairway to the north.
+    east:
+      to: tba:301:room:30160
+      look: A long hallway lies to the east.
+    south:
+      to: tba:301:room:30115
+      look: Union Street lies to the south.
+    west:
+      to: tba:301:room:30153
+      look: A long hallway lies to the west.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign says:
+        	n
+            Gym           -> North
+            Arena         -> East
+            Locker Rooms  -> West
+            Exit          -> South
+  - keywords: [plaque, plaques]
+    text: They are rather boring.  A bunch of people you don't know.
+
+"tba:301:room:30140":
+  name: The Grant Hall Building
+  description: >
+    This is the entry hall of the Grant Hall Building.  This building is lavishly furnished (with only
+    chairs) and is used for important assemblies. The auditorium lies to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30115
+      look: Union Street lies to the north.
+    south:
+      to: tba:302:room:30260
+      look: The auditorium lies to the south.
+
+"tba:301:room:30141":
+  name: Campus Bookstore
+  description: >
+    This shop is filled with over-priced items that every university student would want for his, her,
+    or its own home.  Such items as sweatshirts, pants, T-shirts, and, of course, over-priced books that
+    can do for presents to the rest of the family.  There are two exits, one to the south and one to the
+    east. Both exits are well guarded by security to prevent stolen goods from leaving the store before
+    being (over-) priced.
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    east:
+      to: tba:301:room:30118
+      look: Outside you can see Division Road.
+    south:
+      to: tba:301:room:30165
+      look: To the south you can see the entrance to the Campus Pub.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [sweatshirt, sweatshirts, pants, t-shirt, t-shirts, books]
+    text: >
+      There is absolutely no point in looking at anything because the prices are almost like paying two
+      or three arms and legs to buy something to cover them...
+
+"tba:301:room:30142":
+  name: Wally World Reception Area
+  description: >
+    This is the entrance to the fabulous Wally World, located soulfully on East Campus, miles away from
+    everything else.  There are three exits from here, west to the street and main campus, east to
+    explore the depths of Wally World, and north to visit the front office and reception desk.
+  sector: forest
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30201
+      look: This way leads to the reception desk.
+    east:
+      to: tba:302:room:30203
+      look: This leads to the lounge.
+    west:
+      to: tba:301:room:30121
+      look: This leads back to Division Road and the main campus.
+
+"tba:301:room:30143":
+  name: The Kitchen
+  description: >
+    The kitchen is filled with a light mist of smoke rising from the stoves. The food here is
+    mass-produced and cheaply made.  After watching how they cook this food you are glad you do not normally eat
+    at the cafeteria.  There is a door to the east.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30127
+      look: The doorway leads back out of the kitchen.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+    south:
+      to: tba:301:room:30144
+      look: The kitchen continues south.
+  extras:
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+  - keywords: [door, doorway]
+    text: You stare intently at the door.  Its wooden frame enthrals you.
+
+"tba:301:room:30144":
+  name: The Kitchen
+  description: >
+    The kitchen is filled with a light mist of smoke rising from the stoves. The food here is
+    mass-produced and cheaply made.  After watching how they cook this food you are glad you do not normally eat
+    at the cafeteria.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30143
+      look: The kitchen continues north.
+  extras:
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30145":
+  name: Dining Hall
+  description: >
+    The cafeteria dining hall is filled with poor students that are forced to eat this food to
+    subsist.  You feel pity upon them as you watch them fill their stomachs with this sorry excuse for food.  The
+    dining hall continues east and south.  The exit is to the north.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30127
+      look: An unknown force draws you north.
+    east:
+      to: tba:301:room:30146
+      look: The dining hall continues east.
+    south:
+      to: tba:301:room:30147
+      look: The dining hall continues south.
+  extras:
+  - keywords: [students, poor]
+    text: You feel sorry for them.
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30146":
+  name: Dining Hall
+  description: >
+    The cafeteria dining hall is filled with poor students that are forced to eat this food to
+    subsist.  You feel pity upon them as you watch them fill their stomachs with this sorry excuse for food.  The
+    dining hall continues west and south.
+  sector: hills
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30148
+      look: The dining hall continues south.
+    west:
+      to: tba:301:room:30145
+      look: The dining hall continues west.
+  extras:
+  - keywords: [students, poor]
+    text: You feel sorry for them.
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30147":
+  name: Dining Hall
+  description: >
+    The cafeteria dining hall is filled with poor students that are forced to eat this food to
+    subsist.  You feel pity upon them as you watch them fill their stomachs with this sorry excuse for food.  The
+    dining hall continues north and east.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30145
+      look: The dining hall continues north.
+    east:
+      to: tba:301:room:30148
+      look: The dining hall continues east.
+  extras:
+  - keywords: [students, poor]
+    text: You feel sorry for them.
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30148":
+  name: Dining Hall
+  description: >
+    The cafeteria dining hall is filled with poor students that are forced to eat this food to
+    subsist.  You feel pity upon them as you watch them fill their stomachs with this sorry excuse for food.  The
+    dining hall continues north and west.  The exit is to the east.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30146
+      look: The dining hall continues north.
+    east:
+      to: tba:301:room:30128
+      look: An unknown force draws you east.
+    west:
+      to: tba:301:room:30147
+      look: The dining hall continues west.
+  extras:
+  - keywords: [students, poor]
+    text: You feel sorry for them.
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30149":
+  name: Kitchen
+  description: >
+    The kitchen is filled with a light mist of smoke rising from the stoves. The food here is
+    mass-produced and cheaply made.  After watching how they cook this food you are glad you do not normally eat
+    at the cafeteria.  There is a door here.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30151
+      look: The kitchen continues east.
+    south:
+      to: tba:301:room:30150
+      look: There is a storeroom beyond the door to the south.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [door, doorway]
+    text: It's a door.  It has a nice steel frame surrounding a metallic door.
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+
+"tba:301:room:30150":
+  name: A Storeroom
+  description: >
+    Stowed away here are different ingredients and packages containing pre-made spam and other
+    uninteresting stuff.  But wait!  They keep edible food here too! So that's what the staff eats!
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30149
+      look: These stairs lead back to the door to the kitchen.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [door, doorway]
+    text: It's a door.  It has a nice steel frame surrounding a metallic door.
+  - keywords: [spam, pre-made, packages, ingredients, uninteresting, stuff]
+    text: It's rather uninteresting.
+  - keywords: [food]
+    text: Well, it's food.
+
+"tba:301:room:30151":
+  name: Kitchen
+  description: >
+    The kitchen is filled with a light mist of smoke rising from the stoves. The food here is
+    mass-produced and cheaply made.  After watching how they cook this food you are glad you do not normally eat
+    at the cafeteria.  There is a door to the north.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30128
+      look: The doorway leads back out of the kitchen.
+      door:
+        keywords: [door, doorway]
+        kind: door
+        reset: closed
+    west:
+      to: tba:301:room:30149
+      look: The kitchen continues west.
+  extras:
+  - keywords: [food]
+    text: Believe me, you don't want to look at that!
+  - keywords: [door, doorway]
+    text: You stare intently at the door.  Its wooden frame enthrals you.
+
+"tba:301:room:30152":
+  name: Stairway
+  description: As the title implies, there is a set of stairs here which lead up.
+  sector: field
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30139
+      look: The main lobby is to the south.
+    up:
+      to: tba:301:room:30154
+      look: The stairs lead up.
+
+"tba:301:room:30153":
+  name: Hallway
+  description: The hallway leads off west into the locker room, and east into the lobby.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30139
+      look: The main lobby is east.
+    west:
+      to: tba:301:room:30155
+      look: The smell wafting from the room behind the door identifies it as a locker room.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:301:room:30154":
+  name: Equipment Room
+  description: >
+    The equipment room houses various items used to work out and for sports. There is a set of stairs
+    here which lead down.
+  sector: field
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:301:room:30156
+      look: The Gym is to the west.
+    down:
+      to: tba:301:room:30152
+      look: The stairs lead down.
+
+"tba:301:room:30155":
+  name: Locker Room
+  description: The fresh smell of sweat lingers in the locker rooms.  There is a set of stairs nearby.
+  sector: forest
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30153
+      look: A hallway branches off to the east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:301:room:30156
+      look: The stairs lead up.
+
+"tba:301:room:30156":
+  name: The Gym
+  description: >
+    Think big.  Think very big.  Think bigger still.  Well, this gym isn't that big, but it's pretty
+    big.  The locker rooms are down the stairs.  The equipment room lies to the east.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30157
+      look: The gym continues to the north.
+    east:
+      to: tba:301:room:30154
+      look: The equipment room is to the east.
+    west:
+      to: tba:301:room:30159
+      look: The gym continues to the west.
+    down:
+      to: tba:301:room:30155
+      look: The stairs lead down.
+
+"tba:301:room:30157":
+  name: The Gym
+  description: >
+    Think big.  Think very big.  Think bigger still.  Well, this gym isn't that big, but it's pretty
+    big.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30156
+      look: The gym continues to the south.
+    west:
+      to: tba:301:room:30158
+      look: The gym continues to the west.
+
+"tba:301:room:30158":
+  name: The Gym
+  description: >
+    Think big.  Think very big.  Think bigger still.  Well, this gym isn't that big, but it's pretty
+    big.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30157
+      look: The gym continues to the east.
+    south:
+      to: tba:301:room:30159
+      look: The gym continues to the south.
+
+"tba:301:room:30159":
+  name: The Gym
+  description: >
+    Think big.  Think very big.  Think bigger still.  Well, this gym isn't that big, but it's pretty
+    big.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30158
+      look: The gym continues to the north.
+    east:
+      to: tba:301:room:30156
+      look: The gym continues to the east.
+
+"tba:301:room:30160":
+  name: The Hall To The Arena
+  description: >
+    This hall leads to the arena (that is if you are coming from the lobby). Otherwise, this hall leads
+    to the lobby (from the arena, that is).
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30161
+      look: That is the direction to the arena.
+    west:
+      to: tba:301:room:30139
+      look: This is the direction to the lobby.
+
+"tba:301:room:30161":
+  name: Jock Hardy Arena
+  description: >
+    The arena is about as big as the gym, but it is covered in ICE!  Wheeeee! There is an entrance to
+    the south and a hallway to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30162
+      look: The arena continues to the north.
+    east:
+      to: tba:301:room:30164
+      look: The arena continues to the east.
+    south:
+      to: tba:301:room:30116
+      look: Division Road lies to the south.
+    west:
+      to: tba:301:room:30160
+      look: The hall which leads to the lobby (from here) is west.
+  extras:
+  - keywords: [ice, covered]
+    text: Never seen ice before?  Try Canada.
+
+"tba:301:room:30162":
+  name: Jock Hardy Arena
+  description: The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30163
+      look: The arena continues to the east.
+    south:
+      to: tba:301:room:30161
+      look: The arena continues to the south.
+  extras:
+  - keywords: [ice, covered]
+    text: Never seen ice before?  Try Canada.
+
+"tba:301:room:30163":
+  name: Jock Hardy Arena
+  description: The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30164
+      look: The arena continues to the south.
+    west:
+      to: tba:301:room:30162
+      look: The arena continues to the west.
+  extras:
+  - keywords: [ice, covered]
+    text: Never seen ice before?  Try Canada.
+
+"tba:301:room:30164":
+  name: Jock Hardy Arena
+  description: The arena is about as big as the gym, but it is covered in ICE!  Wheeeee!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30163
+      look: The arena continues to the north.
+    west:
+      to: tba:301:room:30161
+      look: The arena continues to the west.
+  extras:
+  - keywords: [ice, covered]
+    text: Never seen ice before?  Try Canada.
+
+"tba:301:room:30165":
+  name: Campus Pub Stairwell
+  description: >
+    This stairwell leads up to the ever popular (and ever-loud) Campus Pub. There are also exits to the
+    north and south leading to the Campus Bookstore and University Crescent respectively.  The stairwell
+    is quite worn in from all the boots trampling up and down it all day (and night).  The exit to the
+    north is much less worn but the path to the south has been worn right down.  There is a small sign
+    partway up the stairwell.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30141
+      look: The Campus Bookstore is located to the north.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:301:room:30106
+      look: Campus Crescent, and its cobblestones, is just to the south.
+    up:
+      to: tba:301:room:30166
+      look: >
+        The Campus Pub is just above your head...just go up the stairs...if you can stand the noise that is.
+  extras:
+  - keywords: [small, sign]
+    text: "The sign reads: NO minors allowed."
+
+"tba:301:room:30166":
+  name: Campus Pub
+  description: >
+    This is your everyday campus pub with loud music, lots of underagers, lots of beer, and the
+    perennial favorite, Moshing.  You find it very difficult to move around, so decide to limit yourself to the
+    bar.  There is only one exit... The one you entered by (down if you can't remember).
+  sector: mountains
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:301:room:30165
+      look: The only way out is down.
+  extras:
+  - keywords: [moshing, mosh]
+    text: All you can see is a mass of bodies moving up and down, up and down...
+  - keywords: [zorpa]
+    text: You see nothing special.  Now what is a zorpa anyways?
+
+"tba:301:room:30167":
+  name: The Infobank
+  description: >
+    This is the Infobank of the university.  From previous experience you realize that any information
+    will be grossly inaccurate, if truthful at all. You can see a map of the university on the wall as
+    well as a list of the student government.  The only exit is the way you came in, but with student
+    governments you never know...
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:301:room:30137
+      look: Back to the Central annex.
+    down:
+      to: tba:301:room:30171
+      door:
+        keywords: [plank]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [list]
+    text:
+      preformatted: |2
+           The list reads:
+                <name scratched out>    President
+                <name scratched out>    Vice-President
+        Seems as though everyone is claiming ignorance today.
+  - keywords: [map]
+    text: >
+      This map shows absolutely nothing, further proving the value of student governments to you.
+
+"tba:301:room:30168":
+  name: The Games Room
+  description: >
+    In this room you see many arcade style games, none of which are plugged in. In one corner you can
+    see a girl playing the Addams Family Pinball Game. There is only one exit.  (Guess where it is).
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:301:room:30138
+      look: You can still see the central annex from here, there seems to be no getting away from it.
+  extras:
+  - keywords: [girl, pinball, addams, family]
+    text: You can see a girl playing the Addams Family Pinball Game in one corner.
+
+"tba:301:room:30169":
+  name: The Tuck Shoppe
+  description: >
+    This is the place to buy whatever kind of food you are looking for, according to the sign all types
+    of food are sold here, all you need to do is ask...
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    east:
+      to: tba:301:room:30137
+      look: You can see the central annex to the east.
+
+"tba:301:room:30170":
+  name: The Post Office
+  description: >
+    This seems to be the standard post office given to any university by the wonderful XXX government. 
+    You can tell that it is a university post office because of the surplus amount of obscene graffiti
+    upon the walls.  The back hall is south of here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30138
+      look: You can see the back hall from here complete with humming bank machines.
+  extras:
+  - keywords: [graffiti]
+    text: You really don't want to read this!  (if you want to continue reading type "look wirt")
+  - keywords: [wirt]
+    text: >
+      You really are a sucker for punishment now aren't you?  If you still want to read it type "look
+      prawn"
+  - keywords: [prawn]
+    text: You see nothing special.  The Prawn is in excellent condition.
+
+"tba:301:room:30171":
+  name: The Special Hidden Room
+  description: >
+    This room is completely empty except for the things you can see in it.  The only thing of real
+    importance you can see is the plank in the ceiling.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:301:room:30167
+      look: Back to the Infobank we go.
+      door:
+        keywords: [plank]
+        kind: door
+
+"tba:301:room:30172":
+  name: Birth Control Center
+  description: >
+    This room is literally plastered with photographs, leaflets, and other birth control
+    paraphernalia.  On the table for instance is a stack of pamphlets to be handed out to any students who wish to read
+    them.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:301:room:30131
+      look: To the west you can see the entrance to the building.
+  extras:
+  - keywords: [pamphlet, leaflet, photograph, photo]
+    text: >
+      This portrays various bodily functions and things vaguely related that turn even your stomach... 
+      Blech!
+
+"tba:301:room:30173":
+  name: De-Tox Unit
+  description: >
+    This room seems to be the place where people get "detoxified".  Although it smells pretty bad, it
+    wouldn't be a bad idea to remember where this is so that you can rest here later.  You find it rather
+    difficult to manoeuvre in here because of the large number of drunks on the floor.  The only exit is
+    north.
+  sector: hills
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:301:room:30131
+      look: Back to the entrance...  out of the bad smells here...
+
+"tba:301:room:30174":
+  name: Ellis Hall Lobby
+  description: >
+    This large room seems to serve as a display area for neat engineering devices and awards.  There
+    are four exits.  The east exit will take you out towards the street whilst the north and west exits are
+    too dark to see the ends of.  The stairs on the south side of the room lead up to the second floor
+    and whatever might be up there...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:301:room:30175
+      look: You can't tell, it's too dark.
+    east:
+      to: tba:301:room:30132
+      look: The street entrance to the building.
+    west:
+      to: tba:301:room:30177
+      look: You can't tell, it's too dark.
+    up:
+      to: tba:301:room:30180
+      look: >
+        You aren't quite sure what could be at the top of the stairs, but it could be interesting.
+  extras:
+  - keywords: [award, awards]
+    text: >
+      These are awards for various Engineering competitions which the university entered at one time or
+      another.
+  - keywords: [neat, engineering, devices]
+    text: >
+      You see lots of neat engineering devices which were used in the real world at some point or
+      another.  At least you think they were.
+
+"tba:301:room:30175":
+  name: Hallway
+  description: >
+    This hallway is non-descript and has two exits.  The eastern exit seems to lead into a large room
+    while the southern exit leads, well, south.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30176
+      look: There seems to be a large room to the east.
+    south:
+      to: tba:301:room:30174
+      look: What did you expect? This exit leads south.
+  extras:
+  - keywords: [hallway]
+    text: The hallway is non-descript, ie it has NO description, so why are you looking at it?
+
+"tba:301:room:30176":
+  name: Auditorium
+  description: >
+    This is the large room you probably saw from the hallway attached to its only exit (west).  There
+    are numerous seats arranged like a theater would be. There is a large stage at the east end of the
+    room.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:301:room:30175
+      look: The hallway you probably entered from is handily located to the west.
+  extras:
+  - keywords: [goalie]
+    text: How did you know it was a goalie stick?  Have you been reading the keywords?
+  - keywords: [crest]
+    text: The crest seems to be the crest belonging to the class of `97.
+  - keywords: [hockey, stick]
+    text: >
+      This is a hockey stick with illegible writing on it.  On one side there is a crest prominently
+      displayed.
+  - keywords: [stage]
+    text: >
+      The stage is located at the west end of the room.  In one corner of the stage, there is a hockey
+      stick lying on the ground.
+
+"tba:301:room:30177":
+  name: Hallway
+  description: >
+    This non-descript hallway has an exit to the east and one to the west. Unfortunately, you can't see
+    what the exits lead to.  Just before you finish looking, you notice a door to the north.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:301:room:30179
+      look: This seems to lead to a library.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:301:room:30174
+      look: You still can't see where this leads.
+    west:
+      to: tba:301:room:30178
+      look: You can't see where this exit leads so stop trying to get a sneak preview.
+  extras:
+  - keywords: [door]
+    text: It looks just like every other door you've seen.
+
+"tba:301:room:30178":
+  name: The Back Exit
+  description: >
+    This corridor comes to a sudden halt here as a door seems to be blocking the way to the west.  If
+    you were to go east, though, you would not have a problem as the corridor seems to continue that way.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30177
+      look: The hallway looks to continue in this direction.
+    west:
+      to: tba:301:room:30187
+      look: This leads to a back pathway.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30101
+        reset: locked
+
+"tba:301:room:30179":
+  name: Library
+  description: >
+    This library is full of incomprehensible engineering texts.  Included in the selection here are
+    textbooks dealing with Geology, Calculus, and Mechanics. What fun it would be to spend an entire day
+    just reading these books! Fortunately you won't be disturbed because there is one exit.  To the south
+    there is a door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:301:room:30177
+      look: A hallway lies to the south.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [calculus, geology, mechanics, text, textbook, texts, textbooks]
+    text: These exciting books are sure to fill one of your days with joy!
+
+"tba:301:room:30180":
+  name: Upper Lobby
+  description: >
+    This lobby has four exits, East and West, North and the stairwell to the south which leads down. 
+    You can't see where the stairwell leads.  For that matter you can't see where any of the exits lead.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:301:room:30183
+      look: It's too dark to see.
+    east:
+      to: tba:301:room:30181
+      look: It's too dark to see.
+    west:
+      to: tba:301:room:30182
+      look: It's also too dark to see.
+    down:
+      to: tba:301:room:30174
+      look: This, like all the other exits, is to dark to tell what it is.
+
+"tba:301:room:30181":
+  name: A Classroom
+  description: >
+    This classroom is completely deserted.  There are no desks, no chairs, no tables, no nothing... 
+    Wait, that would mean something is here, wouldn't it? Alright, there is something, there is an exit to
+    the west.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:301:room:30180
+      look: This leads back to the upper lobby.
+
+"tba:301:room:30182":
+  name: A Classroom
+  description: >
+    This classroom is completely deserted.  There are no desks, no chairs, no tables, no nothing... 
+    Ok, you caught me again, there is an exit to the east.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:301:room:30180
+      look: This leads back to the upper lobby.
+
+"tba:301:room:30183":
+  name: Hallway
+  description: >
+    This hallway has three conventional exits and a door.  East, south and west are conventional whilst
+    the north wall holds a door.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:301:room:30186
+      look: This seems to be an office.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30100
+        reset: locked
+    east:
+      to: tba:301:room:30184
+      look: It's too dark to see.
+    south:
+      to: tba:301:room:30180
+      look: It's too dark to see.
+    west:
+      to: tba:301:room:30185
+      look: It's too dark to see.
+
+"tba:301:room:30184":
+  name: A Classroom
+  description: >
+    This classroom is completely deserted.  There are no desks, no chairs, no tables, no nothing... 
+    Except the typical exit to the west of course.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    west:
+      to: tba:301:room:30183
+      look: This leads back to the hallway.
+
+"tba:301:room:30185":
+  name: A Classroom
+  description: >
+    This classroom is completely deserted.  There are no desks, no chairs, no tables, no nothing... 
+    Not even an exit to the north, good thing since the actual exit is to the east.
+  sector: city
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:301:room:30183
+      look: This leads back to the hallway.
+
+"tba:301:room:30186":
+  name: Faculty Office
+  description: >
+    This room seems to be in shambles, as security has recently apprehended a student trying to break
+    in.  A huge desk has been toppled over and now rests against a wall.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:301:room:30183
+      look: This door leads to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30100
+        reset: locked
+  extras:
+  - keywords: [desk, huge]
+    text: It rests against the wall.
+
+"tba:301:room:30187":
+  name: Back Path
+  description: >
+    This pathway leads off into the distance.  You find yourself wondering what could be at the end of
+    it.  To the north the path continues, to the east, a door graces the building next to you.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:301:room:30188
+      look: The pathway continues.
+    east:
+      to: tba:301:room:30178
+      look: This leads into the building.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30101
+        reset: locked
+  extras:
+  - keywords: [building]
+    text: This is the back side of Ellis Hall, the Engineering building.
+  - keywords: [pathway]
+    text: The path is well worn, but there are no discernible footsteps upon it.
+
+"tba:301:room:30188":
+  name: A Pathway
+  description: The path continues north-south.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:301:room:30189
+      look: The path continues.
+    south:
+      to: tba:301:room:30187
+      look: The path approaches a building.
+  extras:
+  - keywords: [building]
+    text: Wait until you can see it better.
+
+"tba:301:room:30189":
+  name: A Pathway
+  description: >
+    The pathway continues north-south.  To the north you can see a tall, thin structure sticking up
+    from the ground.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:301:room:30190
+      look: The pathway continues.
+    south:
+      to: tba:301:room:30188
+      look: The pathway continues.
+
+"tba:301:room:30190":
+  name: Approach To The Greasepole
+  description: >
+    The path seems to be taking a direct route to the needle-like structure just to the north.  To the
+    south the path continues.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:301:room:30191
+      look: The path begins to lead to a large pit.
+    south:
+      to: tba:301:room:30189
+      look: The path continues.
+
+"tba:301:room:30191":
+  name: The Greasepit
+  description: >
+    The tall, needle-like structure stands right in front of you.  There are two ways you can go: to
+    the south on the path, or up the greasepole.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:301:room:30190
+      look: The path leads off to the south.
+    up:
+      to: tba:301:room:30193
+      look: The pole looms tall in front of you.  The only way up it is obvious... Up.
+  extras:
+  - keywords: [pole, grease, greasepole]
+    text: This pole is covered with grease and looks horrendously hard to climb.
+
+"tba:301:room:30192":
+  name: The Greasepole
+  description: >
+    SPLASH!!!  Down the pole you slide...  You arrive at the bottom again... As usual the exits are to
+    the south and up.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:301:room:30190
+      look: The path leads off to the south.  It looks like a good place to go.
+    up:
+      to: tba:301:room:30193
+      look: The pole looms tall in front of you.
+  extras:
+  - keywords: [pole, grease, greasepole]
+    text: This pole is covered with grease and looks even worse than it did before.
+
+"tba:301:room:30193":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30194
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30194":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30195
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30195":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30192
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30196
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30196":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30197
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30197":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30198
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30198":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:301:room:30192
+      look: The pole looms ever high above you.
+    down:
+      to: tba:301:room:30199
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.
+
+"tba:301:room:30199":
+  name: The Greasepole
+  description: The only exits are up and down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    up:
+      to: tba:302:room:30200
+      look: The pole doesn't loom quite so high above you any more.
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole, grease]
+    text: The pole still looks pretty bad, and things don't seem to be getting better.

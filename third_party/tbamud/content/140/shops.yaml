@@ -1,0 +1,210 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 140.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:140:shop:14000":
+  keeper: tba:140:mob:14014
+  rooms: [tba:140:room:14079]
+  products:
+  - tba:140:obj:14022
+  - tba:140:obj:14023
+  buys:
+  - type: weapon
+  - type: furniture
+  - type: free
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Go somewhere else ya bum, I aint got tat."
+    you_dont_have_it: "%s Get a brain, you don't got tat."
+    does_not_buy: "%s Whata ya tinking? I don't want dat."
+    shop_cannot_afford: "%s I'm broke, try later."
+    you_cannot_afford: "%s What'a ya thinking, I can gives the stuff away???"
+    bought: "%s Tanks, anything else I can getcha?"
+    sold: "%s Not bad I can use dis."
+  temper: 0
+  flags: 7
+  trade_with: 8
+  hours:
+  - open: 0
+    close: 24
+
+"tba:140:shop:14001":
+  keeper: tba:140:mob:14016
+  rooms: [tba:140:room:14080]
+  products:
+  - tba:140:obj:14032
+  - tba:140:obj:14033
+  - tba:140:obj:14034
+  - tba:140:obj:14035
+  buys:
+  - type: drinkcon
+  - type: food
+  profit:
+    buy: 1.2
+    sell: 0.85
+  messages:
+    no_such_item: "%s Go somewhere else will ya? We only got food and drink here."
+    you_dont_have_it: "%s I'm only buying thinks you got, not stuff you aint."
+    does_not_buy: "%s Wada ya tink I am, a general store? I don't want tat."
+    shop_cannot_afford: "%s Shoot wish I had that kind of doe."
+    you_cannot_afford: "%s I aint given dis stuff away, go beg'n somewhere else."
+    bought: "%s Tanks I'm gona hit ya for %d we don't have a tab here."
+    sold: "%s I'll give ya %d for it, take it or leave it."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:140:shop:14002":
+  keeper: tba:140:mob:14015
+  rooms: [tba:140:room:14081]
+  products:
+  - tba:140:obj:14024
+  - tba:140:obj:14025
+  - tba:140:obj:14026
+  - tba:140:obj:14027
+  - tba:140:obj:14028
+  - tba:140:obj:14029
+  - tba:140:obj:14030
+  - tba:140:obj:14031
+  - tba:140:obj:14031
+  buys:
+  - type: armor
+  profit:
+    buy: 1.2
+    sell: 0.9
+  messages:
+    no_such_item: "%s You see that here? Go somewhere else."
+    you_dont_have_it: "%s You blind? I don't by things in your imagination."
+    does_not_buy: "%s Armor, dats it. Anything else you go out the door."
+    shop_cannot_afford: "%s Too rich for my blood."
+    you_cannot_afford: "%s Sure how bout I give you  the shop too. Go get a job."
+    bought: "%s Thanks. Anything else I can get ya?"
+    sold: "%s %d up front. Take it or leave it."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:140:shop:14003":
+  keeper: tba:140:mob:14013
+  rooms: [tba:140:room:14082]
+  products:
+  - tba:140:obj:14020
+  - tba:140:obj:14021
+  buys:
+  - type: treasure
+  - type: key
+  - type: money
+  - type: light
+  - type: container
+  profit:
+    buy: 1.5
+    sell: 0.8
+  messages:
+    no_such_item: "%s If you run across one let me no, but I don't have it right now."
+    you_dont_have_it: "%s I don't by dreams."
+    does_not_buy: "%s Maybe in the future, but not into that right now."
+    shop_cannot_afford: "%s Kind of strapped right now, try later."
+    you_cannot_afford: "%s Prices aren't up for discussion."
+    bought: "%s Here ya go."
+    sold: "%s Hmm...Here's %d for it."
+  temper: 0
+  flags: 6
+  trade_with: 32
+  hours:
+  - open: 1
+    close: 24
+
+"tba:140:shop:14004":
+  keeper: tba:140:mob:14017
+  rooms: [tba:140:room:14083]
+  products:
+  - tba:140:obj:14036
+  - tba:140:obj:14037
+  - tba:140:obj:14038
+  - tba:140:obj:14039
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: potion
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s I Do not have that My Child. Pray and It will come."
+    you_dont_have_it: "%s I fear you do not carry such an item with you..you must have more faith...then will the gods reward you."
+    does_not_buy: "%s I do not trade in mortal goods...I am sorry my child."
+    shop_cannot_afford: "%s My vows do not permit me to carry such wealth...wealth is for the sinfull."
+    you_cannot_afford: "%s You must donate more than that to gain such a blessing."
+    bought: "%s Take this and live a blessed life my child."
+    sold: "%s For such an object I can give you %d."
+  temper: 0
+  flags: 6
+  trade_with: 32
+  hours:
+  - open: 1
+    close: 24
+
+"tba:140:shop:14005":
+  keeper: tba:140:mob:14011
+  rooms: [tba:140:room:14084]
+  products:
+  - tba:140:obj:14016
+  - tba:140:obj:14017
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: potion
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Don't have that in my spell book..yet."
+    you_dont_have_it: "%s Got to see it before I'll buy it."
+    does_not_buy: "%s Got to be magic or I don't buy."
+    shop_cannot_afford: "%s Can't aford that, us wizards aren't rich."
+    you_cannot_afford: "%s No credit!"
+    bought: "%s %d up front...no financing."
+    sold: "%s I need that here's %d"
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:140:shop:14006":
+  keeper: tba:140:mob:14012
+  rooms: [tba:140:room:14085]
+  products:
+  - tba:140:obj:14018
+  - tba:140:obj:14019
+  buys:
+  - type: potion
+  - type: drinkcon
+  - type: fountain
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I sell water, only water."
+    you_dont_have_it: "%s You may think you have that, but you don't."
+    does_not_buy: "%s I only buy liquid, that's it."
+    shop_cannot_afford: "%s Water's down lately, can't buy that much..sorry."
+    you_cannot_afford: "%s Sorry, I need gold not dreams, and you only have dreams."
+    bought: "%s Enjoy. Did you know water is one of the 4 elements?"
+    sold: "%s Here's %d. Nice doing business with you."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24

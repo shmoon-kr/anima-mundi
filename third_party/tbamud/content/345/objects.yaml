@@ -1,0 +1,89 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 345.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:345:obj:34500":
+  type: key
+  keywords: [skeleton, key]
+  short: a skeleton key
+  long: A skeleton key is lying here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 5
+  extras:
+  - keywords: [skeleton, key]
+    text: >
+      The key is a old skeleton key. At the decorative end of the key there is an engraving of a mansion
+      that looks a lot like the sanatorium.
+
+"tba:345:obj:34501":
+  type: weapon
+  keywords: [scalpel]
+  short: a blood-stained scalpel
+  long: A blood-stained scalpel is lying here
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: stab
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 5
+
+"tba:345:obj:34502":
+  type: other
+  keywords: [severed, head]
+  short: a severed head
+  long: A severed head bloodies the floor here
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [head]
+    text: >
+      The head drips blood into a pool of crimson on the floor. The face is twisted in terror and pain.
+      There is little doubt that this person meet his end in a horrific manner.
+
+"tba:345:obj:34503":
+  type: armor
+  keywords: [skull, cap]
+  short: a skull cap
+  long: A skull cap sits here.
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 8
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: wis
+    modifier: -3
+  extras:
+  - keywords: [skull, cap]
+    text: >
+      Made from the top of an actual human skull, this cap is rather plain. The only adornments are a
+      series of red zig-zag line running the length of it.
+
+"tba:345:obj:34504":
+  type: light
+  keywords: [light]
+  short: a light
+  long: A light sits here.
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

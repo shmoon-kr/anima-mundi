@@ -1,0 +1,157 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 130.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:130:mob:13000":
+  keywords: [hopelessness, feeling]
+  short: a feeling of hopelessness
+  long: A feeling of hopelessness threatens to overcome you.
+  description: >
+    Depression, hopelessness, fear and anxiety all come together to try and bring you down.  They
+    threaten to overcome and overpower you.  Separately, each is a dangerous foe, but together they are near
+    unstoppable.  Perhaps, before they grow any more in numbers, or torment your soul any further you
+    should just kill yourself and end your pain.
+  level: 20
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, stay_zone, memory, helper, no_charm, no_sleep, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 0
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:130:mob:13001":
+  keywords: [depression, feeling]
+  short: a feeling of depression
+  long: A feeling of depression threatens to drag you down.
+  description: >
+    Depression, hopelessness, fear and anxiety all come together to try and bring you down.  They
+    threaten to overcome and overpower you.  Separately, each is a dangerous foe, but together they are near
+    unstoppable.  Perhaps, before they grow any more in numbers, or torment your soul any further you
+    should just kill yourself and end your pain.
+  level: 21
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: pierce
+  gold: 0
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:130:mob:13002":
+  keywords: [fear, feeling]
+  short: a feeling of fear
+  long: A feeling of fear stings in the pit of your stomach.
+  description: >
+    Depression, hopelessness, fear and anxiety all come together to try and bring you down.  They
+    threaten to overcome and overpower you.  Separately, each is a dangerous foe, but together they are near
+    unstoppable.  Perhaps, before they grow any more in numbers, or torment your soul any further you
+    should just kill yourself and end your pain.
+  level: 25
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aware, aggressive, stay_zone, memory, helper, no_charm, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: sting
+  gold: 0
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:130:mob:13003":
+  keywords: [anxiety, feeling]
+  short: a feeling of anxiety
+  long: A feeling of anxiety gnaws at the back of your mind.
+  description: >
+    Depression, hopelessness, fear and anxiety all come together to try and bring you down.  They
+    threaten to overcome and overpower you.  Separately, each is a dangerous foe, but together they are near
+    unstoppable.  Perhaps, before they grow any more in numbers, or torment your soul any further you
+    should just kill yourself and end your pain.
+  level: 25
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, stay_zone, memory, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 0
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:130:mob:13004":
+  keywords: [mist]
+  short: the swirling mist
+  long: The swirling mists try to strike out at you!
+  description: >
+    It looks unfinished.  This stray tendril of a mist seems to come from nowhere just as it seems to
+    lead nowhere.  But looks can be deceiving.  Something about the mist beckons and draws you toward it. 
+    Draws you in to it.  Something about it forces you to wield whatever weapons are at your disposal
+    and defend yourself.
+  level: 32
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, stay_zone, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [invisible, detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 10d10+320
+    damage: 7d5+6
+    bare_hand_attack: whip
+  gold: 50000
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:130:mob:13005":
+  keywords: [suicide]
+  short: suicide
+  long: The urge to commit suicide rips at your will.
+  description: >
+    Suicide is the act of killing oneself.  But this isn't you.  So if you kill this is it really
+    suicide?  Or is it murder?  Whatever this is, it is dangerous and may be the cause of feelings that keep
+    spreading through you and attempting to drag down your soul.
+  level: 32
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, aggressive, stay_zone, helper, no_summon, no_sleep]
+  affects: [invisible, sense_life, no_track]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 6d5+6
+    bare_hand_attack: maul
+  gold: 50000
+  exp: 102400
+  position:
+    load: standing
+    default: standing

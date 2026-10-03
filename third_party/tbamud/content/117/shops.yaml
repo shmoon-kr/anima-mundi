@@ -1,0 +1,92 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 117.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:117:shop:11700":
+  keeper: tba:117:mob:11704
+  rooms: [tba:117:room:11704]
+  products:
+  - tba:117:obj:11707
+  - tba:117:obj:11709
+  - tba:117:obj:11705
+  - tba:117:obj:11710
+  - tba:117:obj:11711
+  - tba:117:obj:11712
+  - tba:117:obj:11713
+  buys:
+  - type: undefined
+  profit:
+    buy: 1.0
+    sell: 0.0
+  messages:
+    no_such_item: "%s So sorry, but I don't have that item!"
+    you_dont_have_it: "%s But, er, you don't have one of those!"
+    does_not_buy: "%s I don't want that, sorry."
+    shop_cannot_afford: "%s You think I can afford that?? Hah!"
+    you_cannot_afford: "%s You cannot afford that!"
+    bought: "%s It will cost you %d coins. Thank you very much!"
+    sold: "%s I am willing to pay you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:117:shop:11701":
+  keeper: tba:117:mob:11705
+  rooms: [tba:117:room:11706]
+  products:
+  - tba:117:obj:11714
+  - tba:117:obj:11716
+  - tba:117:obj:11715
+  - tba:117:obj:11717
+  - tba:117:obj:11719
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Shorry, I don't hab dat..."
+    you_dont_have_it: "%s You don't *hic* hab one a doz"
+    does_not_buy: "%s I don't think I *hic* want *hic* that, rrreally... *hic*"
+    shop_cannot_afford: "%s I dun 'ave teh *hic* monney"
+    you_cannot_afford: "%s Youuuu can't afforrrd it..."
+    bought: "%s It'll cosht ya %d thingammajigs..."
+    sold: "%s Yoo cn'ave %d fer it."
+  temper: 0
+  flags: 0
+  trade_with: 0
+  hours:
+  - open: 3
+    close: 25
+
+"tba:117:shop:11702":
+  keeper: tba:117:mob:11707
+  rooms: [tba:117:room:11751]
+  products:
+  - tba:117:obj:11721
+  - tba:117:obj:11722
+  - tba:117:obj:11723
+  - tba:117:obj:11724
+  - tba:117:obj:11725
+  buys:
+  - type: armor
+  - type: weapon
+  profit:
+    buy: 1.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Look at my display, do you see one of those there? No? I thought so."
+    you_dont_have_it: "%s I do not see one of those on you."
+    does_not_buy: "%s I will not take that."
+    shop_cannot_afford: "%s I seem to be unable to afford what you have."
+    you_cannot_afford: "%s You do not have sufficient funds!"
+    bought: "%s It will be %d coins. Thank you for your patronage."
+    sold: "%s I can give you %d coins for your item."
+  temper: 0
+  flags: 4
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 18
+  - open: 22
+    close: 28

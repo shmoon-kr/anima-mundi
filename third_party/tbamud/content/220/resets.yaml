@@ -1,0 +1,71 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 220.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:220:mob:22000
+  room: tba:220:room:22017
+  limit: 10
+- object: tba:220:obj:22005
+  room: tba:220:room:22015
+  limit: 1
+- object: tba:220:obj:22003
+  room: tba:220:room:22012
+  limit: 20
+- mob: tba:220:mob:22004
+  room: tba:220:room:22008
+  limit: 3
+- mob: tba:220:mob:22007
+  room: tba:220:room:22018
+  limit: 1
+- mob: tba:220:mob:22000
+  room: tba:220:room:22007
+  limit: 10
+- mob: tba:220:mob:22000
+  room: tba:220:room:22025
+  limit: 10
+- mob: tba:220:mob:22001
+  room: tba:220:room:22005
+  limit: 1
+  carry:
+  - object: tba:220:obj:22000
+    limit: 100
+- mob: tba:220:mob:22006
+  room: tba:220:room:22021
+  limit: 1
+- mob: tba:220:mob:22005
+  room: tba:220:room:22016
+  limit: 1
+  equip:
+    wield:
+      object: tba:220:obj:22004
+      limit: 100
+- mob: tba:220:mob:22000
+  room: tba:220:room:22016
+  limit: 10
+- mob: tba:220:mob:22003
+  room: tba:220:room:22020
+  limit: 1
+  equip:
+    wield:
+      object: tba:220:obj:22002
+      limit: 100
+- mob: tba:220:mob:22000
+  room: tba:220:room:22004
+  limit: 10
+- mob: tba:220:mob:22000
+  room: tba:220:room:22003
+  limit: 10
+- mob: tba:220:mob:22002
+  room: tba:220:room:22006
+  limit: 1
+  equip:
+    neck_1:
+      object: tba:220:obj:22001
+      limit: 2
+- mob: tba:220:mob:22000
+  room: tba:220:room:22003
+  limit: 10
+removes:
+- room: tba:220:room:22015
+  object: tba:220:obj:22005

@@ -1,0 +1,158 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 255.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:255:mob:25500":
+  keywords: [parrot, ghost]
+  short: a parrot ghost
+  long: A ghost parrot suddenly appears before you in a flurry of motion.
+  description: Man that thing is fast!
+  level: 5
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aware, aggr_evil, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, no_track]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:255:mob:25501":
+  keywords: [pirate, ghost]
+  short: a pirate ghost
+  long: A pirate ghost fades into existence, intent on getting you off his ship.
+  description: >
+    The image of this being flickers in and out of existence, making it hard for you to distinguish any
+    specific features.
+  level: 8
+  sex: male
+  alignment: -1000
+  flags: [aware, aggressive, stay_zone, memory, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:255:mob:25502":
+  keywords: [captain, ghost]
+  short: the Captain ghost
+  long: The Captain blurs into focus, just as he slams his weapon into your head!
+  description: >
+    The ghost of the captain is much larger than the other ghosts you've seen. And much meaner!
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: thrash
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:255:mob:25503":
+  keywords: [ghost, cook, pirate]
+  short: the ghost cook
+  long: The ghost of the pirate cook blurs into focus before your eyes.  Is that a meat cleaver?
+  description: You cannot get a solid look at the cook, the apparition is not distinct enough for that.
+  level: 10
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, memory, no_sleep, no_bash, no_blind]
+  affects: [invisible, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:255:mob:25504":
+  keywords: [first, mate, ghost, pirate]
+  short: the ghost of the First Mate
+  long: The ghost of the First Mate comes flying at you, a silent scream of fury on it's lips!
+  description: This man must have been a maniac even when he was alive!
+  level: 27
+  sex: male
+  alignment: -1000
+  flags: [aware, aggressive, stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [invisible, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: maul
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:255:mob:25505":
+  keywords: [sailor, old, man]
+  short: an old sailor
+  long: An old sailor sits before the fire, cross-legged, staring at the flames.
+  description: The old man does not even seem to notice that you have entered into his domain.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 200
+  exp: 40000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:255:mob:25506":
+  keywords: [bones, pile]
+  short: the pile of bones
+  long: A pile of bones suddenly rises up, comes to life and attacks!
+  description: Horror of horrors, RUN!
+  level: 13
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive, no_sleep, no_bash, no_blind]
+  affects: [invisible]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing

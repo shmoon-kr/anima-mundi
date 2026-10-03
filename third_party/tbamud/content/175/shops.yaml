@@ -1,0 +1,35 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 175.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:175:shop:17500":
+  keeper: tba:175:mob:17500
+  rooms: [tba:175:room:17502]
+  products:
+  - tba:175:obj:17500
+  - tba:175:obj:17501
+  - tba:175:obj:17502
+  - tba:175:obj:17506
+  buys:
+  - type: potion
+  - type: wand
+  - type: light
+  - type: scroll
+  - type: treasure
+  - type: key
+  - type: furniture
+  - type: staff
+  - type: other
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Your eyes fool you child. I have that item not."
+    you_dont_have_it: "%s You have that item not, child."
+    does_not_buy: "%s I have no need of that item."
+    shop_cannot_afford: "%s I apologise, but I have not the coin for such an item."
+    you_cannot_afford: "%s Unfortunately, you have not enough money."
+    bought: "%s You may have it. My price is %d coins."
+    sold: "%s Thankyou! Here is %d coins for your trouble."
+  temper: 0
+  flags: 6
+  trade_with: 0

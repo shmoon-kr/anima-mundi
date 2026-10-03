@@ -1,0 +1,375 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 238.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:238:mob:23802":
+  keywords: [fish]
+  short: the large fish
+  long: A large fish swims here.
+  description: This fish looks very mean and hungry.
+  level: 22
+  sex: neutral
+  alignment: -20
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23833":
+  keywords: [swordfish, fish]
+  short: a large swordfish
+  long: A large swordfish swims here.
+  description: This fish has a very long and sharp looking nose and appears to not notice you.
+  level: 22
+  sex: neutral
+  alignment: -20
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: stab
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23841":
+  keywords: [Monster]
+  short: the ugly monster
+  long: A large ugly monster stands here.
+  description: >
+    This monster looks hungry for blood.  There are many blood stains around his mouth and about his
+    body.  Many different bones line his neck connected by some kind of metal.
+  level: 23
+  sex: male
+  alignment: -100
+  flags: [sentinel, scavenger, aware]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: bite
+  abilities:
+    str: 25
+    int: 4
+    wis: 5
+    dex: 9
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23842":
+  keywords: [rat]
+  short: the small rat
+  long: A small rat is here running in circles.
+  description: >
+    The rat looks as if it has many wounds on his back as if something has attacked it or something. 
+    The rat itself looks all but sick, it has a lot of energy and appears to have been running in circles
+    for hours.
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware]
+  affects: [curse]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: claw
+  abilities:
+    str: 3
+    int: 4
+    wis: 4
+    dex: 4
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23849":
+  keywords: [Crystal, wyvern]
+  short: the crystal wyvern
+  long: A large statue stands firm here.
+  description: >
+    This statue appears to be solid yet alive.  It looks very strong but not to fast but it seems to
+    not be moving at all.  The statue stands firm looking east towards where you came from.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [invisible]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: crush
+  abilities:
+    str: 25
+    int: 15
+    wis: 15
+    dex: 3
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23851":
+  keywords: [spider]
+  short: a large spider
+  long: A large spider with a look for blood is stuck to the wall here.
+  description: This spider has many corpses strewn about his web and it seems to want to add you.
+  level: 24
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, aware]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23855":
+  keywords: [man]
+  short: the old man
+  long: A very old looking man stands tall here.
+  description: >
+    This man appears to be very old and has many war wounds.  He also seems to be experienced in the
+    art of war.  The old man looks not to be a warrior or fighter but rather a spell caster.  Wearing many
+    valuable looking pieces of eq makes you wonder can this guy be serious.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: pierce
+  abilities:
+    str: 5
+    int: 20
+    wis: 20
+    dex: 14
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23860":
+  keywords: [troll]
+  short: the large troll
+  long: A large troll with markings of some king of clan stands here.
+  description: The troll looks to be tired and stressed.
+  level: 26
+  sex: male
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: punch
+  abilities:
+    str: 20
+    int: 20
+    wis: 25
+    dex: 10
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23874":
+  keywords: [Queen, Plegia]
+  short: the queen plegia
+  long: Queen Plegia sits atop her throne here.
+  description: >
+    The queen looks as if she has a lot of power and experience.  She has beautiful white hair and baby
+    blue eyes.  She appears to not question your intrusion rather seems glad you came.
+  level: 26
+  sex: female
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: blast
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23875":
+  keywords: [dragon]
+  short: a crystal dragon
+  long: A large crystal covered dragon rests here.
+  description: >
+    This dragon seems to be very old and very experienced due to the massive war wounds on it's back
+    and wings.  The dragon looks very tough and seems to be made of crystal.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [hide]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: claw
+  abilities:
+    str: 18
+    int: 13
+    wis: 18
+    dex: 3
+  gold: 260
+  exp: 67600
+  position:
+    load: resting
+    default: resting
+
+"tba:238:mob:23876":
+  keywords: [trout]
+  short: the trout
+  long: A large trout swims here.
+  description: >
+    This trout looks a little bit mean.  His eyes are glowing red and his scales are slightly glowing. 
+    The fish swims here unaware of your entrance.
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23877":
+  keywords: [bird]
+  short: the blue bird
+  long: A swift blue bird is flying here.
+  description: >
+    This bird seems very fast not very strong but very fast.  This bird is flying around very fast
+    making it hard for you to keep up with.
+  level: 22
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  abilities:
+    str: 3
+    int: 3
+    wis: 3
+    dex: 20
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23878":
+  keywords: [crab]
+  short: the little crab
+  long: A small crab sits here.
+  description: >
+    This crab looks very tough.  The crab has only one claw but that has been enough to keep it alive
+    so far.  The crab also is missing a leg which appears to have been eaten.
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: sting
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23879":
+  keywords: [duck]
+  short: the swimming duck
+  long: A swimming duck is here in the water.
+  description: >
+    The duck has many colorful feathers and seems flawless in pattern and color of it's feathers.  The
+    duck itself seems very calm and easy.  The water around the duck seems to be cleaner than the rest.
+  level: 24
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:238:mob:23880":
+  keywords: [swallow]
+  short: the swallow
+  long: A large swallow is here hunting fish.
+  description: >
+    This swallow looks very hungry and has determination in his eye but has had no luck as of yet.  The
+    bird is very persistent and seems almost dead from hunger but he keeps searching.
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing

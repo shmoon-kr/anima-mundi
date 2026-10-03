@@ -1,0 +1,422 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 53.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:53:mob:5300":
+  keywords: [asp, snake]
+  short: the horrible asp
+  long: A small, poisonous asp slithers over your feet.
+  description: >
+    The asp is a small, smooth-scaled snake the color of worn pottery.  The poison bite of this snake
+    has felled many a mighty pharaoh.
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5301":
+  keywords: [cobra, snake]
+  short: the hooded cobra snake
+  long: A cobra snake rears up and opens its fearsome hood.
+  description: >
+    The cobra snake waves back and forth before you, its hood displaying brilliant colors designed to
+    serve notice to its prey that it is about to strike.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5302":
+  keywords: [mongoose]
+  short: the wily little mongoose
+  long: A small mongoose slinks along the ground, hunting snakes.
+  description: >
+    The mongoose is a wily rodent, a quick hunter of nasty poisonous snakes. She sniffs you and appears
+    to be looking for food in your hand.
+  level: 11
+  sex: female
+  alignment: 10
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5303":
+  keywords: [pyramid, watcher]
+  short: the pyramid watcher
+  long: The pyramid watcher protects the tombs from intruders.
+  description: >
+    The pyramid watcher has made a pledge to destroy any would-be looters of the tombs of the
+    pharaohs.  He is clad from head to foot in utilitarian sand-colored clothing.
+  level: 8
+  sex: male
+  alignment: 250
+  flags: [sentinel, aware, helper]
+  affects: [no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5304":
+  keywords: [thief, tomb]
+  short: the tomb thief
+  long: A sneaky tomb thief moves about in search of treasure.
+  description: The thief brushes against you briefly, then slinks back into the shadows.
+  level: 10
+  sex: male
+  alignment: -250
+  flags: [stay_zone, wimpy]
+  affects: [no_track, sneak, hide]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5305":
+  keywords: [ali, baba, thief]
+  short: Ali Baba
+  long: Ali Baba is here, hunting for the pharaoh's tomb.
+  description: >
+    You see a tall, full-bearded man with a mischievous glint in his eye.  Ali Baba has made his life
+    from stealing things from others, including many items stolen recently from under the nose of the
+    hapless guardians of this pyramid. Someday he might get caught, but not today...
+  level: 18
+  sex: male
+  alignment: -300
+  flags: [scavenger, aware, stay_zone, memory]
+  affects: [no_track, sneak]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5306":
+  keywords: [magic, carpet]
+  short: the magic carpet
+  long: A small woven carpet lies under your feet.
+  description: >
+    The carpet is simply beautiful, made from intricately woven silken material. It seems to rise up at
+    the touch of your feet.  Wait, it is rising, a few feet above the ground!  In fact, it seems to be
+    ALIVE!
+  level: 9
+  sex: neutral
+  alignment: 500
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5307":
+  keywords: [mummy]
+  short: the mummy
+  long: A mummy reaches for you, disturbed by your presence.
+  description: >
+    You only see the disfigured, rotting features of decaying human flesh, animated by the distempered
+    spirit of a long-deceased person.
+  level: 12
+  sex: neutral
+  alignment: -600
+  flags: [aggressive, stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5308":
+  keywords: [sand, man, sandman]
+  short: the sandman
+  long: A sandman rises up from the desert floor.
+  description: >
+    The sandman is exactly that -- some sort of strange being formed from the sands of the desert
+    floor.  It seems quite large and strong and at home in the heat and sandy winds.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [aware, aggressive, stay_zone, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5309":
+  keywords: [efreeti, efreet]
+  short: the efreeti
+  long: The efreeti stands here, sheathed in a column of fire.
+  description: >
+    The efreeti is a mighty being formed from living fire.  He gazes down at you with disdain and
+    scorn, arms folded across his mighty chest.
+  level: 20
+  sex: male
+  alignment: -600
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5310":
+  keywords: [caryatid, column]
+  short: the caryatid
+  long: A sandstone column stands here, carved into a feminine figure.
+  description: >
+    The column has been carved into a set of four shapely women, each facing outward into the room. 
+    The sandstone of the caryatid is smooth with age, but you can still make out a deadly stone sword in
+    the hands of each figure.
+  level: 24
+  sex: female
+  alignment: 0
+  flags: [sentinel, aware, memory, helper, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [no_track]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5311":
+  keywords: [djinn, genie]
+  short: the djinn
+  long: The djinn issues forth from the confines of a small lamp.
+  description: >
+    The djinn is a mighty being formed from the air itself and frequently imprisoned in a small lamp,
+    used to do the bidding of those who find him.  He smiles down at you congenially, arms folded across
+    his blue-tinged skin, and strokes his goatee.
+  level: 28
+  sex: male
+  alignment: 600
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5312":
+  keywords: [hieracosphinx, sphinx]
+  short: the hieracosphinx
+  long: A hieracosphinx looks at you cunningly.
+  description: >
+    The hieracosphinx are cunning, small, but nasty creatures, having the heads of birds, mighty
+    wingspans, and a full set of four paws to rend their victims to pieces.  They tend to be quite jealous of
+    the sharper wits of their older cousins.
+  level: 15
+  sex: neutral
+  alignment: -200
+  flags: [aware, aggressive, stay_zone, memory, no_charm, no_summon, no_bash]
+  affects: [no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5313":
+  keywords: [gynosphinx, sphinx]
+  short: the gynosphinx
+  long: A gynosphinx sits here, befuddled by a riddle.
+  description: >
+    The gynosphinx is a crafty but gentle creature, having the body of a beautiful dark-skinned woman
+    from the waist up, a feathery set of wings and the hind legs of a mighty cat.  Right now she is
+    confused, having just heard a puzzling riddle from a cousin criosphinx.
+  level: 19
+  sex: female
+  alignment: 100
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_bash]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5314":
+  keywords: [criosphinx, sphinx]
+  short: the criosphinx
+  long: A criosphinx calmly watches you.
+  description: >
+    The criosphinx is a calm and friendly creature, having the head of a ram atop the body of a
+    well-furred feline with eagle-like wings.  He delights in riddles, and in poking occasional fun at his
+    easily confused lesser cousins.
+  level: 23
+  sex: male
+  alignment: 300
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_bash]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5315":
+  keywords: [androsphinx, sphinx]
+  short: the androsphinx
+  long: A mighty androsphinx tosses its lion-like mane.
+  description: >
+    The mighty androsphinx is a huge creature, with the body of a lion whose face is quite man-like,
+    perhaps even handsome, and a massive pair of feathered wings. Tales are told of pharaohs that were
+    rendered permanently deaf by the mighty roar of this sphinx.
+  level: 27
+  sex: neutral
+  alignment: 400
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_bash]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5316":
+  keywords: [great, sphinx]
+  short: the great sphinx
+  long: A mighty sphinx rests here in the sand, dormant now for centuries.
+  description: >
+    The great sphinx towers tens of feet above you, resting here in a state of dormancy.  It has become
+    almost indistinguishable from the sand that surrounds it, although you can still make out the
+    features of the handsome face that once advised many rulers.
+  level: 30
+  sex: neutral
+  alignment: 500
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:53:mob:5317":
+  keywords: [ramses, mummy]
+  short: Ramses the Damned
+  long: You have awakened the mighty servant to the pharaohs, Ramses.
+  description: >
+    As your light spills over his face and body, you can see his features begin to fill out, swell, and
+    harden, until an apparently healthy man stands before you, clad only in the raiments he was left in
+    when he last slept.  His hair is a soft black, his skin a deep chocolate, and his tall frame is
+    totally still, his chest not even moving to breathe.
+  level: 30
+  sex: male
+  alignment: 150
+  flags: [sentinel, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

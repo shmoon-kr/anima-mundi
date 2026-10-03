@@ -1,0 +1,1571 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 243.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:243:room:24300":
+  name: The Great Field Of Midgaard
+  description: >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the north, east, and west; the busy city of Midgaard lies to the south.  All
+    around you is healthy green grass and an occasional large oak tree.  The sun feels wonderful on your
+    face and a pleasant wind blows through your hair.  Birds chirp quietly to themselves and you can smell
+    the faint scent of flowers and freshly cut grass.  You feel like you could lie down in the grass and
+    stay here forever, surrounded by powerful beauty in all directions.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24301
+      look: The field continues North.
+  extras:
+  - keywords: [info, credits]
+    text:
+      preformatted: |2
+            x---------------------------------------------------------------------x
+            |                SNOWY VALLEY ZONE - FOR CIRCLEMUD 3.1                |
+            |                     Written in 2001 by Crazyman                     |
+            |                        www.nt.net/saarinen                          |
+            x---------------------------------------------------------------------x
+             I originally decided to make this zone a place to connect new zones
+             north of Midgaard. Later on, I decided to add a ski hill and under-
+             ground temple. This zone contains about 100 rooms, 3 shops, 1 death
+             trap, several new items, and a bunch of new mobs. In a small cave at
+             the southernmost part of the zone is a locked room, guarded by a
+             mob. Inside the room is the "Belt of the Ancients", a good piece of
+             equipment. You might want to check out the difficulty of the mob
+             guarding the belt and ensure that he's strong enough for your MUD.
+             You don't want players gettting good equipment too easily! :)
+        
+             Written entirely from scratch in WordPad. Feel free to edit, modify,
+             and do what you want with this zone!
+            x---------------------------------------------------------------------x
+           Builder      : Crazyman
+           Zone         : 243 Snowy Valley
+           Began        : 2001
+           Player Level : 7-10
+           Rooms        : 88
+           Mobs         : 9
+           Objects      : 12
+           Shops        : 3
+           Triggers     : 0
+           Links        : 00sw, 23n, 68e
+
+"tba:243:room:24301":
+  name: The Great Field Of Midgaard
+  description: >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the east and west; you can see some hills to the north.  All around you is
+    healthy green grass and an occasional large oak tree.  The sun feels wonderful on your face and a pleasant
+    wind blows through your hair.  Birds chirp quietly to themselves and you can smell the faint scent
+    of flowers and freshly cut grass.  You feel like you could lie down in the grass and stay here
+    forever, surrounded by powerful beauty in all directions. You can see a large sign on the left side of the
+    road.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24302
+      look: The field continues North.
+    south:
+      to: tba:243:room:24300
+      look: The field continues South.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign reads:
+                x------------------------------------------------x
+                |                                                |
+                |   <------   BigKing's Castle - West            |
+                |                                                |
+                x------------------------------------------------x
+
+"tba:243:room:24302":
+  name: The Great Field Of Midgaard
+  description: >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the east and west; you can see some hills to the north.  The grass is no longer
+    cut here, and you can feel a cold wind coming from the north. The hills up ahead have a bit of snow
+    on them.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24305
+      look: The field continues North.
+    south:
+      to: tba:243:room:24301
+      look: The field continues South.
+
+"tba:243:room:24303":
+  name: Snowy Pass Entrance
+  description: >
+    You're standing at the entance to the frozen valley. The grass here still grows green,  but the
+    hills straight ahead of you are covered with snow. A dirt trail leads north into the hills.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24306
+      look: A dirt path leads North.
+    east:
+      to: tba:243:room:24304
+      look: The path continues East.
+
+"tba:243:room:24304":
+  name: The Great Field of Midgaard
+  description: >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the east and west. You find yourself at the base of a long hill that spans east
+    and west. The grass is no longer cut here, and you can feel a cold wind coming from the north.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24305
+      look: The field continues East.
+    west:
+      to: tba:243:room:24303
+      look: The field continues West.
+
+"tba:243:room:24305":
+  name: The Great Field Of Midgaard
+  description: >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the east and west. You find yourself at the base of a long hill that spans east
+    and west. The grass is no longer cut here, and you can feel a cold wind coming from the north.
+  sector: field
+  exits:
+    south:
+      to: tba:243:room:24302
+      look: The field continues South.
+    west:
+      to: tba:243:room:24304
+      look: The field continues West.
+
+"tba:243:room:24306":
+  name: In the Hills
+  description: >
+    You find yourself on a narrow path in between two hills. A bit of snow covers the ground here, as
+    well as the two hills. To the north you can see a wide expanse of deep snow. You can see a very small
+    hole leading into the eastern hill. A short wooden sign has been shoved into the ground beside the
+    hill.
+  sector: hills
+  exits:
+    north:
+      to: tba:243:room:24311
+      look: The trail continues North.
+    east:
+      to: tba:243:room:24307
+      look: A small hole leads East.
+    south:
+      to: tba:243:room:24303
+      look: The trail continues South.
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign reads:"
+    - x---------------------------------x
+    - "|   Beware of the strange beast   |"
+    - "|   who lives inside this hole!   |"
+    - x---------------------------------x
+
+"tba:243:room:24307":
+  name: A Small Hole
+  description: >
+    You find yourself in a very small dark hole. It's only about 3 feet high and about 2 feet wide. You
+    can see bits of hair clinging to the rocky walls, and you can smell rotten food. This appears to be
+    the home for some sort of animal.
+  sector: inside
+  flags: [dark, no_mob, soundproof, no_track, tunnel]
+  exits:
+    east:
+      to: tba:243:room:24308
+      look: The hole continues East.
+    west:
+      to: tba:243:room:24306
+      look: A dirt path is West.
+
+"tba:243:room:24308":
+  name: A Small Hole
+  description: >
+    You find yourself in a very small dark hole. It's only about 3 feet high and about 2 feet wide. You
+    can see bits of hair clinging to the rocky walls, and you can smell rotten food. This appears to be
+    the home for some sort of animal.
+  sector: inside
+  flags: [dark, soundproof, no_track, tunnel]
+  exits:
+    east:
+      to: tba:243:room:24309
+      look: The hole continues East.
+    west:
+      to: tba:243:room:24307
+      look: The hole continues West.
+
+"tba:243:room:24309":
+  name: A Small Hole
+  description: >
+    You emerge in a slightly larger room. You can see a small pile of straw and grasses, obviously used
+    as a matress by someone. A tiny table with an equally small chair is set against the southern wall.
+    A burned out candle sits on the table. A tiny wooden door leads east. This is definetely the home of
+    something.
+  sector: inside
+  flags: [dark, soundproof, no_track, tunnel]
+  exits:
+    east:
+      to: tba:243:room:24310
+      look: A tiny door leads East.
+      door:
+        keywords: [tiny, door, wooden]
+        kind: pickproof
+        key: tba:243:obj:24398
+        reset: locked
+    west:
+      to: tba:243:room:24308
+      look: The hole continues West.
+
+"tba:243:room:24310":
+  name: A Small Room
+  description: >
+    You find yourself in a really tiny room. A really old wooden table is here, almost rotting. A small
+    door leads west.
+  sector: inside
+  flags: [dark, soundproof, no_track, tunnel]
+  exits:
+    west:
+      to: tba:243:room:24309
+      look: A tiny doors leads West.
+      door:
+        keywords: [tiny, door, wooden]
+        kind: pickproof
+        key: tba:243:obj:24398
+        reset: locked
+
+"tba:243:room:24311":
+  name: A Snowy Path
+  description: >
+    You emerge from the hills to find yourself caught in a winter storm. It's snowing heavily, and a
+    strong wind is blowing it all around. Huge drifts of snow block your way east and west. The path has
+    several inches of snow covering it.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24345
+      look: The path continues North.
+    south:
+      to: tba:243:room:24306
+      look: The path continues South.
+
+"tba:243:room:24312":
+  name: A Snowy Path
+  description: >
+    You find yourself in the middle of a winter storm. It's snowing heavily, and a strong wind is
+    blowing it all around. A huge drift of snow blocks your way west, but a very narrow path has been shoveled
+    east. The path has several inches of snow covering it.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24322
+      look: The path continues North.
+    east:
+      to: tba:243:room:24313
+      look: A narrow trail leads East.
+    south:
+      to: tba:243:room:24311
+      look: The path continues South.
+
+"tba:243:room:24313":
+  name: A Snowy Trail
+  description: >
+    You find yourself in the middle of a winter storm. It's snowing heavily, and a strong wind is
+    blowing it all around. Huge drifts of snow block your way north and south. You can see some old frozen
+    steps leading up to a wooden shack to the east.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24314
+      look: An old shack is East.
+    west:
+      to: tba:243:room:24312
+      look: The main path is West.
+
+"tba:243:room:24314":
+  name: Frozen Shack
+  description: >
+    You're in an old wooden shack. The walls are covered in frost, and the roof is beginning to cave
+    in. A crumbling stone fireplace is built into the northern wall, and a boarded up window faces south. A
+    sturdy trapdoor with a rusting latch is located in the southeastern corner of the room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:243:room:24313
+      look: A narrow trail is west.
+    down:
+      to: tba:243:room:24315
+      look: The trapdoor leads into darkness.
+      door:
+        keywords: [door, trapdoor, trap]
+        kind: door
+        reset: closed
+
+"tba:243:room:24315":
+  name: Icy Ladder
+  description: >
+    You're climbing on an icy ladder. The rungs are quite slippery, so you have to be careful not to
+    fall. The ladder appears to descend fairly deeply into the frozen ground.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:243:room:24314
+      look: The trapdoor leads to the old Shack.
+      door:
+        keywords: [door, trap, trapdoor]
+        kind: door
+        reset: closed
+    down:
+      to: tba:243:room:24316
+      look: The ladder continues Down.
+
+"tba:243:room:24316":
+  name: Icy Ladder
+  description: >
+    You're climbing on an icy ladder. The rungs are quite slippery, so you have to be careful not to
+    fall. The ladder appears to descend fairly deeply into the frozen ground.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:243:room:24315
+      look: The ladder continues Up.
+    down:
+      to: tba:243:room:24317
+      look: The ladder continues Down.
+
+"tba:243:room:24317":
+  name: Icy Ladder
+  description: >
+    You're climbing on an icy ladder. The rungs are quite slippery, so you have to be careful not to
+    fall. The ladder appears to descend fairly deeply into the frozen ground.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:243:room:24316
+      look: The ladder continues Up.
+    down:
+      to: tba:243:room:24318
+      look: The ladder continues Down.
+
+"tba:243:room:24318":
+  name: Icy Ladder
+  description: >
+    You're climbing on an icy ladder. The rungs are quite slippery, so you have to be careful not to
+    fall. The ladder appears to descend fairly deeply into the frozen ground.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    up:
+      to: tba:243:room:24317
+      look: The ladder continues Up.
+    down:
+      to: tba:243:room:24334
+      look: The ladder continues Down.
+
+"tba:243:room:24320":
+  name: Ski Hill Road
+  description: >
+    You're on a wide shovelled road. To the west you can see a fairly high hill, which must be the
+    Cooland Ski Hill. To the east you can see a log cabin.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24321
+      look: The cabin is East.
+    west:
+      to: tba:243:room:24392
+      look: The ski hill entrance is West.
+
+"tba:243:room:24321":
+  name: Log Cabin
+  description: >
+    You're in a warm log cabin. A roaring fireplace is set into the northern wall, and it has several
+    chairs set around it. This room has a fairly high ceiling, and you can see two large chandeliers
+    hanging from the rafters. Two windows look out onto the dark snowy plains to the south. A wide set of
+    double doors leads to Cooland Ski Hill to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:243:room:24322
+      look: The main path is East.
+    west:
+      to: tba:243:room:24320
+      look: The bar is West.
+
+"tba:243:room:24322":
+  name: A Snowy Path
+  description: >
+    You find yourself in the middle of a winter storm. It's snowing heavily, and a strong wind is
+    blowing it all around. A huge drift of snow blocks your way east, but a huge log cabin lies directly west.
+    The path continues north.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:243:room:24323
+      look: The path continues North.
+    south:
+      to: tba:243:room:24312
+      look: The path continues South.
+    west:
+      to: tba:243:room:24321
+      look: The path continues West.
+
+"tba:243:room:24323":
+  name: A Snowy Path
+  description: >
+    You find yourself in the middle of a winter storm.  It's snowing heavily, and a strong wind is
+    blowing all around.  Huge snow drifts block your way to the east, west and north.
+  sector: field
+  exits:
+    south:
+      to: tba:243:room:24322
+      look: The path continues South.
+
+"tba:243:room:24325":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:243:room:24326
+      look: Another room lies to the East.
+
+"tba:243:room:24326":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:243:room:24327
+      look: Another room lies to the East.
+    south:
+      to: tba:243:room:24329
+      look: A corridor leads South.
+    west:
+      to: tba:243:room:24325
+      look: Another room lies to the West.
+
+"tba:243:room:24327":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    west:
+      to: tba:243:room:24326
+      look: Another room lies to the West.
+
+"tba:243:room:24328":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    south:
+      to: tba:243:room:24331
+      look: Another room lies to the South.
+
+"tba:243:room:24329":
+  name: A Cold Corridor
+  description: >
+    You're in a dark, cold corridor. The walls are made of worn stone, and frost covers everything. The
+    ceiling here is slightly higher than in the rooms, and no straw or wood bits litter the floors.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24326
+      look: A cold room is North.
+    south:
+      to: tba:243:room:24334
+      look: The corridor leads South.
+
+"tba:243:room:24330":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    south:
+      to: tba:243:room:24336
+      look: Another room lies to the South.
+
+"tba:243:room:24331":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24328
+      look: Another room lies to the North.
+    east:
+      to: tba:243:room:24332
+      look: A dark corridor leads East.
+    south:
+      to: tba:243:room:24337
+      look: Another room lies to the South.
+
+"tba:243:room:24332":
+  name: A Cold Corridor
+  description: >
+    You're in a dark, cold corridor. The walls are made of worn stone, and frost covers everything. The
+    ceiling here is slightly higher than in the rooms, and no straw or wood bits litter the floors.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:243:room:24334
+      look: A Cold Intersection is East.
+    west:
+      to: tba:243:room:24331
+      look: A cold room is West.
+
+"tba:243:room:24334":
+  name: A Cold Intersection
+  description: >
+    You're at the main intersection of the Underground Temple. Dark corridors lead in all directions.
+    The frost cracked walls are made from ancient granite stones. A thick frost covers many parts of the
+    walls and ceiling. A darkened skeleton lies in the middle of the floor, obviously from someone who
+    fell down the icy ladder.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24329
+      look: A corridor leads North.
+    east:
+      to: tba:243:room:24335
+      look: A corridor leads East.
+    south:
+      to: tba:243:room:24338
+      look: A corridor leads South.
+    west:
+      to: tba:243:room:24332
+      look: A corridor leads West.
+    up:
+      to: tba:243:room:24318
+      look: An old icy rusty ladder leads Up.
+
+"tba:243:room:24335":
+  name: A Cold Corridor
+  description: >
+    You're in a dark, cold corridor. The walls are made of worn stone, and frost covers everything. The
+    ceiling here is slightly higher than in the rooms, and no straw or wood bits litter the floors.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:243:room:24336
+      look: A cold room is East.
+    west:
+      to: tba:243:room:24334
+      look: A cold intersection is West.
+
+"tba:243:room:24336":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24330
+      look: Another room lies to the North.
+    south:
+      to: tba:243:room:24339
+      look: Another room lies to the South.
+    west:
+      to: tba:243:room:24335
+      look: A dark corridor leads West.
+
+"tba:243:room:24337":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24331
+      look: Another room lies to the North.
+
+"tba:243:room:24338":
+  name: A Cold Corridor
+  description: >
+    You're in a dark, cold corridor. The walls are made of worn stone, and frost covers everything. The
+    ceiling here is slightly higher than in the rooms, and no straw or wood bits litter the floors.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24334
+      look: The corridor leads North.
+    south:
+      to: tba:243:room:24341
+      look: A cold room is South.
+
+"tba:243:room:24339":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24336
+      look: Another room lies to the North.
+
+"tba:243:room:24340":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    east:
+      to: tba:243:room:24341
+      look: Another room lies to the East.
+
+"tba:243:room:24341":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    north:
+      to: tba:243:room:24338
+      look: A corridor leads North.
+    east:
+      to: tba:243:room:24342
+      look: Another room lies to the East.
+    west:
+      to: tba:243:room:24340
+      look: Another room lies to the West.
+
+"tba:243:room:24342":
+  name: A Cold Room
+  description: >
+    You're in a dark, cold room. The walls are made of worn stone, and frost covers everything. The low
+    hanging ceiling seems ready to collapse. Bits of straw and wood are scattered out on the stone
+    floor, and a burned out torch is on the wall. This reminds you of a meat locker.
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    west:
+      to: tba:243:room:24341
+      look: Another room lies to the West.
+
+"tba:243:room:24345":
+  name: A Snowy Path
+  description: >
+    You find yourself in the middle of a winter storm. It's snowing heavily, and a strong wind is
+    blowing all around. Huge snow drifts block your way to the east and west. The path continues north and
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24346
+      look: The path continues North.
+    south:
+      to: tba:243:room:24311
+      look: The path continues South.
+
+"tba:243:room:24346":
+  name: A Snowy Path
+  description: >
+    You find yourself in the middle of a winter storm. It's snowing heavily, and a strong wind is
+    blowing all around. Huge snow drifts block your way to the east and west. The path continues north and
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24312
+      look: The path continues North.
+    south:
+      to: tba:243:room:24345
+      look: The path continues South.
+
+"tba:243:room:24347":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    north and west.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24348
+      look: The trail continues East.
+    south:
+      to: tba:243:room:24353
+      look: The trail continues South.
+
+"tba:243:room:24348":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    north.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24349
+      look: The trail continues East.
+    south:
+      to: tba:243:room:24354
+      look: A forest is South.
+    west:
+      to: tba:243:room:24347
+      look: The trail continues West.
+
+"tba:243:room:24349":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    north.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24350
+      look: The trail continues East.
+    south:
+      to: tba:243:room:24355
+      look: A forest is South.
+    west:
+      to: tba:243:room:24348
+      look: The trail continues West.
+
+"tba:243:room:24350":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    north. You can see the back of the chalet to the south.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24351
+      look: The trail continues East.
+    west:
+      to: tba:243:room:24349
+      look: The trail continues West.
+
+"tba:243:room:24351":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    north. You can see the back of the chalet to the south.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24352
+      look: The trail continues East.
+    west:
+      to: tba:243:room:24350
+      look: The trail continues West.
+
+"tba:243:room:24352":
+  name: Start of the newbie ski trail
+  description: >
+    You find yourself at the top of a ski run. The freshly groomed slope isn't too steep, so this must
+    be a newbie trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks
+    your way north and east. The chalet is to the southwest. A wide path (almost a road) leads south to
+    the ski hill's main entrance.
+  sector: field
+  exits:
+    south:
+      to: tba:243:room:24357
+      look: The path continues South.
+    west:
+      to: tba:243:room:24351
+      look: The trail continues West.
+
+"tba:243:room:24353":
+  name: Newbie ski trail
+  description: >
+    You find yourself on a freshly groomed ski run. The run isn't too steep, so this must be a newbie
+    trail. You see the odd skier go by, but this trail is fairly empty. A thick forest blocks your way
+    west.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24347
+      look: The trail continues North.
+    east:
+      to: tba:243:room:24354
+      look: A forest is East.
+    south:
+      to: tba:243:room:24358
+      look: The trail continues South.
+
+"tba:243:room:24354":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the ski trail to the
+    north and west. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24348
+      look: The newbie run is North.
+    east:
+      to: tba:243:room:24355
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24359
+      look: The forest continues South.
+    west:
+      to: tba:243:room:24353
+      look: The newbie run is West.
+
+"tba:243:room:24355":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the ski trail to the
+    north. Since this place is more hidden than the open trails, snowboarders like to come here to smoke up.
+    The back of the chalet is directly east, blocking your way.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24349
+      look: The newbie run is North.
+    south:
+      to: tba:243:room:24360
+      look: The forest continues South.
+    west:
+      to: tba:243:room:24354
+      look: The forest continues West.
+
+"tba:243:room:24356":
+  name: Lounge
+  description: >
+    You're in the chalet's lounge. Various couches and Lazyoy chairs are scattered around the room. A
+    pool table is against the western wall, and a couple dartboards are located beside it. A huge 60" TV
+    sits on the floor against the northern wall. A large chandelier hangs from the high peaked ceiling. A
+    beautifully carved double width stairway leads down to the cafateria. This is where people can relax
+    while they aren't skiing.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:243:room:24361
+      look: The cafateria is Down.
+
+"tba:243:room:24357":
+  name: Main Path
+  description: >
+    You find yourself at the top of the ski hill on a wide path. The chalet blocks your way west, while
+    a thick forest blocks your way east.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24352
+      look: The path continues North.
+    south:
+      to: tba:243:room:24363
+      look: The path continues South.
+
+"tba:243:room:24358":
+  name: Bottom of the Newbie ski trail
+  description: >
+    You find yourself at the bottom of a freshly groomed ski run. The run isn't too steep, so this must
+    be a newbie trail. You see the odd skier go by, but thistrail is fairly empty. A thick forest blocks
+    your way west and south. Since there aren't any ski lifts at this hill, you'll have to walk back up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24353
+      look: The trail continues North.
+    east:
+      to: tba:243:room:24359
+      look: A forest is East.
+
+"tba:243:room:24359":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the newbie trail to the
+    west. Since this place is more hidden than the open trails, snowboarders like to come here to smoke
+    up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24354
+      look: The forest continues North.
+    east:
+      to: tba:243:room:24360
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24364
+      look: The forest continues South.
+    west:
+      to: tba:243:room:24358
+      look: The newbie run is West.
+
+"tba:243:room:24360":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the newbie trail to the
+    west. The chalet blocks your way east. Since this place is more hidden than the open trails,
+    snowboarders like to come here to smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24355
+      look: The forest continues North.
+    south:
+      to: tba:243:room:24365
+      look: The forest continues South.
+    west:
+      to: tba:243:room:24359
+      look: The forest continues West.
+
+"tba:243:room:24361":
+  name: Chalet Cafateria
+  description: >
+    Expensive wooden panelling and fancy carpet line the room. The ceiling is fairly low, giving off a
+    cozy feeling to the room. A long glass countertop is against the western wall, where hamburgers,
+    french fries, and potato chips are sold. Long, wide tables are lined up in the middle of the room, with
+    about a dozen chairs around each one. A beautifully carved double width stairway leads up to the
+    lounge.  Surprisingly, this place is fairly empty.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:243:room:24362
+      look: The cafateria continues East.
+    up:
+      to: tba:243:room:24356
+      look: The lounge is Up.
+
+"tba:243:room:24362":
+  name: Chalet
+  description: >
+    Expensive wooden panelling and fancy carpet line the room. The ceiling is fairly low, giving a cozy
+    feeling to the room. An enourmous stone fireplace is roaring in the southern part of the room. Two
+    couches are set against the door, and several chairs are arranged around the fireplace. Four large
+    tables are lined up in the middle of the room, and you can see that the cafateria extends west where you
+    can buy your food. You can see the ski shop the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:243:room:24399
+      look: The ski shop is North.
+    east:
+      to: tba:243:room:24363
+      look: The main path is East.
+    west:
+      to: tba:243:room:24361
+      look: The cafateria continues West.
+
+"tba:243:room:24363":
+  name: Main Path
+  description: >
+    You find yourself at the top of the ski hill on a wide path. A thick forest blocks your way east. A
+    large wooden building is built right into the hill to the west. Several ski racks sit outside the
+    door, and a huge chimney is billowing out smoke from the side of the chalet.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24357
+      look: The path continues North.
+    south:
+      to: tba:243:room:24368
+      look: The main entrance is South.
+    west:
+      to: tba:243:room:24362
+      look: The chalet is West.
+
+"tba:243:room:24364":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the south. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up. The forest thickens and blocks your way west.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24359
+      look: The forest continues North.
+    east:
+      to: tba:243:room:24365
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24371
+      look: The intermediate trail is South.
+
+"tba:243:room:24365":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the south. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24360
+      look: The forest continues North.
+    east:
+      to: tba:243:room:24366
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24372
+      look: The intermediate trail is South.
+    west:
+      to: tba:243:room:24364
+      look: The forest continues West.
+
+"tba:243:room:24366":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the newbie trail to the
+    west. Since this place is more hidden than the open trails, snowboarders like to come here to smoke
+    up. The chalet blocks your way north.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24367
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24373
+      look: The intermediate trail is South.
+    west:
+      to: tba:243:room:24365
+      look: The forest continues West.
+
+"tba:243:room:24367":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the newbie trail to the
+    west. Since this place is more hidden than the open trails, snowboarders like to come here to smoke
+    up. The chalet blocks your way north, while you can see the main path east.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24368
+      look: The main path is East.
+    south:
+      to: tba:243:room:24374
+      look: The intermediate trail is South.
+    west:
+      to: tba:243:room:24366
+      look: The forest continues West.
+
+"tba:243:room:24368":
+  name: Main Path
+  description: >
+    You're on the main path of the ski hill. The newbie run and chalet is north, while the more
+    advanced runs are south. A forest lies west, and the steel entrance gate is east.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24363
+      look: The main path continues North.
+    south:
+      to: tba:243:room:24375
+      look: The main path continues South.
+    west:
+      to: tba:243:room:24367
+      look: A forest is West.
+
+"tba:243:room:24369":
+  name: Intermediate ski trail
+  description: >
+    You're at the bottom of the intermediate ski trail. A thick forest blocks your way in all
+    directions, wait, you think you can see a narrow trail leading west and down. except east where the trail
+    leads up. The snow is rather deep here, and it isn't groomed. You can see large ape-like footprints in
+    the snow. You get the feeling no one comes down here very often.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24370
+      look: The intermediate trail continues East.
+    down:
+      to: tba:243:room:24376
+      look: A narrow trail leads Down.
+
+"tba:243:room:24370":
+  name: Intermediate ski trail
+  description: >
+    You're on the intermediate ski trail. You can see the odd rock sticking up through the snow, and
+    many moguls and bumps are all around. This trail is obviously made for better skiers and snowboarders.
+    A thick forest blocks your way north.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24371
+      look: The intermediate trail continues East.
+    south:
+      to: tba:243:room:24380
+      look: A forest is South.
+    west:
+      to: tba:243:room:24369
+      look: The intermediate trail continues West.
+
+"tba:243:room:24371":
+  name: Intermediate ski trail
+  description: >
+    You're on the intermediate ski trail. You can see the odd rock sticking up through the snow, and
+    many moguls and bumps are all around. This trail is obviously made for better skiers and snowboarders.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24364
+      look: A forest is North.
+    east:
+      to: tba:243:room:24372
+      look: The intermediate trail continues East.
+    south:
+      to: tba:243:room:24381
+      look: A forest is South.
+    west:
+      to: tba:243:room:24370
+      look: The intermediate trail continues West.
+
+"tba:243:room:24372":
+  name: Intermediate ski trail
+  description: >
+    You're on the intermediate ski trail. You can see the odd rock sticking up through the snow, and
+    many moguls and bumps are all around. This trail is obviously made for better skiers and snowboarders.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24365
+      look: A forest is North.
+    east:
+      to: tba:243:room:24373
+      look: The intermediate trail continues East.
+    south:
+      to: tba:243:room:24382
+      look: A forest is South.
+    west:
+      to: tba:243:room:24371
+      look: The intermediate trail continues West.
+
+"tba:243:room:24373":
+  name: Intermediate ski trail
+  description: >
+    You're on the intermediate ski trail. You can see the odd rock sticking up through the snow, and
+    many moguls and bumps are all around. This trail is obviously made for better skiers and snowboarders.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24366
+      look: A forest is North.
+    east:
+      to: tba:243:room:24374
+      look: The intermediate trail continues East.
+    south:
+      to: tba:243:room:24383
+      look: A forest is South.
+    west:
+      to: tba:243:room:24372
+      look: The intermediate trail continues West.
+
+"tba:243:room:24374":
+  name: Intermediate ski trail
+  description: >
+    You're on the intermediate ski trail. You can see the odd rock sticking up through the snow, and
+    many moguls and bumps are all around. This trail is obviously made for better skiers and snowboarders.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24367
+      look: A forest is North.
+    east:
+      to: tba:243:room:24375
+      look: The main path is East.
+    south:
+      to: tba:243:room:24384
+      look: A forest is South.
+    west:
+      to: tba:243:room:24373
+      look: The intermediate trail continues West.
+
+"tba:243:room:24375":
+  name: Start of the intermediate trailt
+  description: >
+    You're on the main path of the ski hill, at the entrance to the intermediate run. A thick forest
+    blocks your way east.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24368
+      look: The main path continues North.
+    south:
+      to: tba:243:room:24385
+      look: The main path continues South.
+    west:
+      to: tba:243:room:24374
+      look: The intermediate run is West.
+
+"tba:243:room:24376":
+  name: Dark Path
+  description: >
+    You're on a very dark path. Low hanging branches make it impossible to stand fully errect. The path
+    is very narrow, again due to the thick branches. Clumps of hair can be seen all over. Now that your
+    eyes have adjusted, you can see a low entry way into a cave to the south. Human bones are scattered
+    around the entrance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:243:room:24377
+      look: A cave is South.
+    up:
+      to: tba:243:room:24369
+      look: The intermediate trail is Up.
+
+"tba:243:room:24377":
+  name: Small Cave
+  description: >
+    You find yourself in a small, dark cave. A bed of straw can be seen against the southern wall, and
+    a crude firepit has been built into the eastern wall. This is the home of the Yeti!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:243:room:24376
+      look: A narrow trail is North.
+
+"tba:243:room:24380":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the north. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up. The forest thickens and completely blocks your way west and south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24370
+      look: The intermediate trail is North.
+    east:
+      to: tba:243:room:24381
+      look: The forest continues East.
+
+"tba:243:room:24381":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the north. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24371
+      look: The intermediate trail is North.
+    east:
+      to: tba:243:room:24382
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24386
+      look: The advanced trail is South.
+    west:
+      to: tba:243:room:24380
+      look: The forest continues West.
+
+"tba:243:room:24382":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the north. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24372
+      look: The intermediate trail is North.
+    east:
+      to: tba:243:room:24383
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24387
+      look: The advanced trail is South.
+    west:
+      to: tba:243:room:24381
+      look: The forest continues West.
+
+"tba:243:room:24383":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the north. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24373
+      look: The intermediate trail is North.
+    east:
+      to: tba:243:room:24384
+      look: The forest continues East.
+    south:
+      to: tba:243:room:24388
+      look: The advanced trail is South.
+    west:
+      to: tba:243:room:24382
+      look: The forest continues West.
+
+"tba:243:room:24384":
+  name: Forest
+  description: >
+    You're in a snowy forest. The vegetation isn't very thick, and you can see the intermediate trail
+    to the north. Since this place is more hidden than the open trails, snowboarders like to come here to
+    smoke up.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24374
+      look: The intermediate trail is North.
+    east:
+      to: tba:243:room:24385
+      look: The main path is East.
+    south:
+      to: tba:243:room:24389
+      look: The advanced trail is South.
+    west:
+      to: tba:243:room:24383
+      look: The forest continues West.
+
+"tba:243:room:24385":
+  name: Main Path
+  description: >
+    You're on the main path of the ski hill, at the entrance to the intermediate run. A thick forest
+    blocks your way east.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24375
+      look: The main path continues North.
+    south:
+      to: tba:243:room:24390
+      look: The main path continues South.
+    west:
+      to: tba:243:room:24384
+      look: A forest is West.
+
+"tba:243:room:24386":
+  name: Advanced ski trail
+  description: >
+    You're on the advanced ski trail. Icy patches abound, rocks stick out of the snow, and huge jumps
+    and bumps sit right in the middle of the trail. The slope is very steep. This place is definitely not
+    for beginners. A high cliff is directly south. A large sign sits on the left side of the trail. (You
+    should read it!)
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24381
+      look: A forest is North.
+    east:
+      to: tba:243:room:24387
+      look: The advanced trail continues East.
+    south:
+      to: tba:243:room:24391
+      look: A high cliff is South.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign reads:
+             x---------------------------------------------------------x
+             | <!>        A MESSAGE FROM COOLAND SKI HILL         <!>  |
+             |                                                         |
+             | This cliff is only recommended for advanced skiers. The |
+             | cliff is 75 feet high, and the edge can get very icy at |
+             | times. Use at own risk! Again, let us remind you that   |
+             | we shall not be held liable for any injuries incurred   |
+             | on this property. (The cliff is our property in case    |
+             | you were wondering.)                                    |
+             x---------------------------------------------------------x
+
+"tba:243:room:24387":
+  name: Advanced ski trail
+  description: >
+    You're on the advanced ski trail. Icy patches abound, rocks stick out of the snow, and huge jumps
+    and bumps sit right in the middle of the trail. The slope is very steep. This place is definitely not
+    for beginners. A thick forest blocks your way south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24382
+      look: A forest is North.
+    east:
+      to: tba:243:room:24388
+      look: The advanced trail continues East.
+    west:
+      to: tba:243:room:24386
+      look: The advanced trail continues West.
+
+"tba:243:room:24388":
+  name: Advanced ski trail
+  description: >
+    You're on the advanced ski trail. Icy patches abound, rocks stick out of the snow, and huge jumps
+    and bumps sit right in the middle of the trail. The slope is very steep. This place is definitely not
+    for beginners. A thick forest blocks your way south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24383
+      look: A forest is North.
+    east:
+      to: tba:243:room:24389
+      look: The advanced trail continues East.
+    west:
+      to: tba:243:room:24387
+      look: The advanced trail continues West.
+
+"tba:243:room:24389":
+  name: Advanced ski trail
+  description: >
+    You're on the advanced ski trail. Icy patches abound, rocks stick out of the snow, and huge jumps
+    and bumps sit right in the middle of the trail. The slope is very steep. This place is definitely not
+    for beginners. A thick forest blocks your way south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24384
+      look: A forest is North.
+    east:
+      to: tba:243:room:24390
+      look: The advanced trail continues East.
+    west:
+      to: tba:243:room:24388
+      look: The advanced trail continues West.
+
+"tba:243:room:24390":
+  name: Start of the advanced ski trail
+  description: >
+    You're on the advanced ski trail. Icy patches abound, rocks stick out of the snow, and huge jumps
+    and bumps sit right in the middle of the trail. The slope is very steep. This place is definitely not
+    for beginners. A thick forest blocks your way west and south.
+  sector: field
+  exits:
+    north:
+      to: tba:243:room:24385
+      look: The main path is North.
+    west:
+      to: tba:243:room:24389
+      look: The advanced trail continues West.
+
+"tba:243:room:24391":
+  name: Steep Cliff
+  description: >
+    Oops. You didn't read the sign, did you? As you go south, your feet slip right off the edge of the
+    cliff. Now you're plunging downward towards the forest below. Hey, now it doesn't look so far
+    anymore. Oh, now you're impaled on a tall icy pine tree. Right before you black out, you feel the coldness
+    of the wood in your chest.
+  sector: forest
+  flags: [no_mob]
+
+"tba:243:room:24392":
+  name: Ski Hill Entrance
+  description:
+  - >
+    You're at the ski hill entrance. The snow is well packed down, and pine trees line the north and
+    south sides of the road. A large plastic banner spans the entire width of the road exclaiming,
+  - >
+    "WELCOME TO THE COOLAND SKI HILL!" A small booth stands here, where people must buy their lift
+    tickets to get in. A small wooden sign has been nailed to the booth. A steel gate lies west.
+  sector: field
+  flags: [no_mob, no_track]
+  exits:
+    east:
+      to: tba:243:room:24320
+      look: The road continues East.
+    west:
+      to: tba:243:room:24393
+      look: The main path is West.
+      door:
+        keywords: [gate, steel]
+        kind: pickproof
+        key: tba:243:obj:24306
+        reset: locked
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           The sign reads:
+             x---------------------------------------------------------------x
+             |               WELCOME TO COOLAND SKI HILL!                    |
+             |                   "Home of the Yeti"                          |
+             |                                                               |
+             |      Lift tickets.........................$15000/day          |
+             |                                                               |
+             |     WE ARE NOT RESPONSIBLE FOR ANY INJURIES INCURRED ON       |
+             |     THIS PROPERTY!!! USE AT OWN RISK!!!                       |
+             x---------------------------------------------------------------x
+
+"tba:243:room:24393":
+  name: Main Path
+  description: >
+    You're standing on the main path of the ski hill entrance. To the east you can see the entry gates,
+    while to the west you can see the ski hill. A thick forest blocks your way north and south.
+  sector: field
+  exits:
+    east:
+      to: tba:243:room:24392
+      look: The main entrance is East.
+      door:
+        keywords: [gate, steel]
+        kind: pickproof
+        key: tba:243:obj:24306
+        reset: locked
+    west:
+      to: tba:243:room:24368
+      look: The path continues West.
+
+"tba:243:room:24399":
+  name: Ski Shop
+  description: >
+    You're in a small ski shop. Skis, snowboards, and assorted winter clothing are packed on hangers,
+    shelves, walls, just about everywhere. A small glass countertop contains various pairs of expensive
+    ski goggles and sun glasses.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:243:room:24362
+      look: The cafateria is South.

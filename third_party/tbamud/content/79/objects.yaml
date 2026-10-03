@@ -1,0 +1,413 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 79.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:79:obj:7900":
+  type: key
+  keywords: [key, steel]
+  short: a large key
+  long: A large steel key has been left here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [steel, key]
+    text: This huge key is made from solid steel.
+
+"tba:79:obj:7901":
+  type: key
+  keywords: [key, copper]
+  short: a copper key
+  long: A copper key has been left on the floor.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [copper, key]
+    text: This little key is made from copper.
+
+"tba:79:obj:7902":
+  type: key
+  keywords: [key, brass]
+  short: a small brass key
+  long: A small brass key lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [7902, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [key, brass]
+    text: It is a small, simple brass key with no inscriptions or marks of any kind.
+
+"tba:79:obj:7903":
+  type: money
+  keywords: [treasure, coins]
+  short: a huge treasure
+  long: There is a huge treasure here, looking moderately valuable.
+  wear: [take]
+  values:
+    coins: 799
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [treasure]
+    text: This looks like a whole lot of coins, though not as many as you expected.
+
+"tba:79:obj:7904":
+  type: container
+  keywords: [chest, wooden]
+  short: a wooden chest
+  long: A wooden chest stands in the corner.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 15
+    key: tba:79:obj:7902
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chest, wooden]
+    text: >
+      It is a robust chest made from short, heavy planks that have been fastened together with tenons. 
+      It is equipped with a simple brass lock.
+
+"tba:79:obj:7905":
+  type: container
+  keywords: [chest]
+  short: a chest
+  long: A heavy iron chest sits in one corner of the room.
+  flags: [invisible]
+  wear: []
+  values:
+    capacity: 15
+    lock_flags: 15
+    key: tba:79:obj:7902
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:79:obj:7906":
+  type: weapon
+  keywords: [dagger, plain, black]
+  short: a plain dagger
+  long: A long black, but very plain, dagger rests here.
+  flags: [no_donate, invisible, no_drop, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pierce
+  weight: 3
+  cost: 650
+  rent: 150
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: damroll
+    modifier: -1
+
+"tba:79:obj:7907":
+  type: worn
+  keywords: [bracelet, spiked]
+  short: a large spiked bracelet
+  long: A large spiked bracelet has been left here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 120
+  rent: 20
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -4
+
+"tba:79:obj:7908":
+  type: food
+  keywords: [waybread, bread]
+  short: a waybread
+  long: Some waybread has been put here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [waybread, bread]
+    text: >
+      The waybread is the traditional feed of elves when travelling, they call it lembas.  It is said to
+      refresh the weary traveler greatly.
+
+"tba:79:obj:7909":
+  type: worn
+  keywords: [ring, gold, goldring]
+  short: a golden ring
+  long: A shiny goldring has been abandoned here.
+  flags: [no_donate, invisible, anti_mage, anti_warrior, no_sell]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 350
+  rent: 20
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:79:obj:7910":
+  type: weapon
+  keywords: [sword, bastard]
+  short: a huge bastard sword
+  long: There is a huge bastard sword here.
+  flags: [magic, anti_evil, anti_neutral, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 18
+  cost: 170
+  rent: 80
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [bastard, sword]
+    text: Quite a heavy weapon, with a pure white hilt.
+
+"tba:79:obj:7911":
+  type: armor
+  keywords: [helmet, large]
+  short: a large helmet
+  long: There is a large helmet on the floor.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 5
+  cost: 450
+  rent: 150
+  level: 0
+  extras:
+  - keywords: [large, helmet]
+    text: This looks like some heavy protection, for the head of course.
+
+"tba:79:obj:7912":
+  type: armor
+  keywords: [helmet, chaos]
+  short: a chaos helmet
+  long: On the floor is a grand evil-looking chaos helmet.
+  flags: [invisible, magic, anti_good]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 8
+  cost: 230
+  rent: 100
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [chaos, helmet]
+    text: >
+      This helmet has mounted some mean looking spikes on the front, moreover it looks like good
+      protection.
+
+"tba:79:obj:7913":
+  type: weapon
+  keywords: [sword, two-handed]
+  short: a two-handed sword
+  long: On the floor rests a enormous two-handed sword.
+  flags: [magic, anti_good, anti_evil, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 22
+  cost: 350
+  rent: 350
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 10
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [two-handed, sword]
+    text: >
+      You notice that there has been inscribed some runes and a sort of pattern, which resembles flames
+      running along the edge.
+  - keywords: [runes]
+    text: On the blade you can read 'Flame And Strength United Are My Soul Power'.
+
+"tba:79:obj:7914":
+  type: armor
+  keywords: [plate, breast, silvery, silver]
+  short: a silvery breast plate
+  long: There is a silvery breast plate on the floor.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 50
+  cost: 200
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [plate, breast, silvery, silver]
+    text: >
+      On the breast plate you notice a relief of large rose.  The metal seems to be some kind of silver
+      or platinum.
+
+"tba:79:obj:7915":
+  type: armor
+  keywords: [plates, leg, silvery]
+  short: some silvery leg plates
+  long: On the floor you see some leg plates.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 40
+  cost: 125
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [leg, plates, silvery, silver]
+    text: They seem to be made from silver or platinum.  You see the outline of a rose.
+
+"tba:79:obj:7916":
+  type: armor
+  keywords: [gloves, silvery, silver]
+  short: a pair of silvery gloves
+  long: You can see a pair of gloves on the floor.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 14
+  cost: 250
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [gloves, silvery, silver]
+    text: The gloves are made of silver threads.
+
+"tba:79:obj:7917":
+  type: armor
+  keywords: [helmet, silvery, silver]
+  short: a silvery helmet
+  long: The silvery helmet lies here.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, head]
+  values:
+    armor: 8
+  weight: 35
+  cost: 900
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [helmet, silvery, silver]
+    text: The helmet is made from platinum or silver and has a white fur brush attached on the top.
+
+"tba:79:obj:7918":
+  type: armor
+  keywords: [shield, rose]
+  short: the shield of the rose
+  long: The shield of the rose rests on the floor.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 50
+  cost: 800
+  rent: 75
+  level: 0
+  extras:
+  - keywords: [shield, rose]
+    text: >
+      On the shield you see a clear and perfect painting of a dark red rose on a white background.  You
+      also notice an inscription.
+  - keywords: [inscription]
+    text: "The inscription reads: Pax Est Sanctuum"
+
+"tba:79:obj:7919":
+  type: armor
+  keywords: [boots, heavy, plated]
+  short: a pair of heavy plated boots
+  long: A pair of heavy plated boots stand on the floor.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 40
+  cost: 350
+  rent: 35
+  level: 0
+  extras:
+  - keywords: [boots, heavy, plated]
+    text: The boots are made from a silvery metal.
+
+"tba:79:obj:7920":
+  type: armor
+  keywords: [plates, arm, silvery, silver]
+  short: some silvery arm plates
+  long: On the floor you see some arm plates.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 40
+  cost: 800
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [plates, arm, silvery, silver]
+    text: They seem to be made from silver or platinum.  You see the outline of a rose.
+
+"tba:79:obj:7921":
+  type: drinkcon
+  keywords: [barrel, water]
+  short: a barrel
+  long: A water barrel has been left here.
+  wear: [take]
+  values:
+    capacity: 40
+    contains: 40
+    liquid: clear_water
+    poisoned: false
+  weight: 45
+  cost: 60
+  rent: 20
+  level: 0

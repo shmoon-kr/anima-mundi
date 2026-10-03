@@ -1,0 +1,322 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 101.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:101:obj:10100":
+  type: fountain
+  keywords: [irrigation, ditch]
+  short: an irrigation ditch
+  long: An irrigation ditch has been dug across the road to water the fields.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [irrigation, ditch]
+    text: >
+      The ditch is full of fresh water from a recent rain.  It crosses under a small wooden grating in
+      the road.  The water looks clear and refreshing.
+
+"tba:101:obj:10101":
+  type: container
+  keywords: [caravan]
+  short: the caravan
+  long: A caravan of wagons lies burned in ruins from a recent raid.
+  wear: []
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [caravan]
+    text: >
+      Several different wagons make up the caravan.  They appear to have been carrying fish and crops
+      between the cities.  Right up until a group of bandits or mercenaries ransacked it, that is.
+
+"tba:101:obj:10102":
+  type: food
+  keywords: [salmon]
+  short: some salmon
+  long: Several fresh cuts of salmon have been recently filleted.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [salmon]
+    text: These salmon steaks look delicious.  Except for the fact that they are rare.
+
+"tba:101:obj:10103":
+  type: food
+  keywords: [large, assortment, crops, fish]
+  short: a large assortment of crops and fish
+  long: A large assortment of crops and fish.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 50
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [large, assortment, crops, fish]
+    text: Various crops, such as wheat, corn, and rice, are laid out besides crates of fish.
+
+"tba:101:obj:10104":
+  type: weapon
+  keywords: [shovel, manure]
+  short: a shovel covered in manure
+  long: A shovel covered in cow manure smells here.
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: pound
+  weight: 7
+  cost: 350
+  rent: 35
+  level: 0
+  extras:
+  - keywords: [shovel, manure]
+    text: The shovel reeks of the barn and cows.  It is covered from end to end with manure.
+
+"tba:101:obj:10105":
+  type: worn
+  keywords: [worn, coveralls]
+  short: some worn coveralls
+  long: Some coveralls that have been worn and abused were discarded.
+  flags: [magic]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 25
+  rent: 3
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  extras:
+  - keywords: [worn, coveralls]
+    text: >
+      A set of farmers coveralls.  They are made of a light but durable cloth. They have been heavily
+      used and look about ready to be junked.
+
+"tba:101:obj:10106":
+  type: armor
+  keywords: [cow, bell]
+  short: a cow bell
+  long: This bell was made to hang around a cow's neck.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 9
+  cost: 180
+  rent: 18
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [cow, bell]
+    text: The brass bell is affixed to a leather adjustable strap.
+
+"tba:101:obj:10107":
+  type: armor
+  keywords: [small, cow, nose, ring]
+  short: a nose ring for a cow
+  long: A small cow's nose ring glistens brightly.
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 20
+  rent: 2
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [small, cow's, nose, ring]
+    text: >
+      The ring is made from solid brass, and is meant to prevent a cow from drinking from its mother's
+      teats.
+
+"tba:101:obj:10108":
+  type: weapon
+  keywords: [fishing, pole]
+  short: a fishing pole
+  long: A fishing pole looks bare without a line, hook, or sinkers.
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: whip
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [fishing, pole]
+    text: >
+      The pole is made from a strange wood, reminding you of bamboo.  It is extremely flexible and rugged.
+
+"tba:101:obj:10109":
+  type: armor
+  keywords: [bandit, mask]
+  short: a mask for a bandit
+  long: A bandit's mask is waiting to be worn.
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bandit's, mask]
+    text: >
+      The cloth mask has been dyed black with holes cut out for the eyes and mouth.  It is very crude and
+      extremely itchy.
+
+"tba:101:obj:10110":
+  type: armor
+  keywords: [camouflage, pants]
+  short: some camouflage pants
+  long: A set of camouflaged pants, dyed black and brown, blend into their surroundings.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [camouflage, pants]
+    text: >
+      The pants are made from burlap, and have been dyed a deep black and brown to blend in with the
+      surrounding terrain.
+
+"tba:101:obj:10111":
+  type: armor
+  keywords: [camouflage, moccasins]
+  short: some camouflage moccasins
+  long: A pair of camouflage moccasins blend into their surroundings.
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [camouflage, moccasins]
+    text: These fur moccasins have been dyed brown and black to blend in with their surroundings.
+
+"tba:101:obj:10112":
+  type: armor
+  keywords: [camouflage, gloves]
+  short: some camouflage gloves
+  long: A set of camouflaged gloves blend into their surroundings.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [camouflage, gloves]
+    text: >
+      The gloves are dyed brown, black, and green to help conceal their wearer in the wilderness.
+
+"tba:101:obj:10113":
+  type: armor
+  keywords: [torn, sleeves, coat]
+  short: some torn sleeves
+  long: A once fine coat has had its sleeves torn off and left here.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torn, sleeves, coat]
+    text: >
+      The coat must have been very fine by the look of these embroidered sleeves, but now it's been
+      ravaged and torn.
+
+"tba:101:obj:10114":
+  type: drinkcon
+  keywords: [local, bottle, rum, local]
+  short: a bottle
+  long: A bottle of cheap rum lies here.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: local_speciality
+    poisoned: false
+  weight: 8
+  cost: 120
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [bottle, rum]
+    text: >
+      Many find solace and protection within bottles such as these.  At least those that are dim witted
+      and hopeless.
+
+"tba:101:obj:10115":
+  type: armor
+  keywords: [beltpouch, pouch]
+  short: a beltpouch
+  long: This fancy beltpouch is made from a fine leather.
+  wear: [take, waist]
+  values:
+    armor: 3
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [beltpouch, pouch]
+    text: >
+      The beltpouch is top of the line, a fine pouch with a brass clasp and leather belt combined into
+      one.
+
+"tba:101:obj:10116":
+  type: other
+  keywords: [gypsy, bracelet]
+  short: a bracelet of the gypsy
+  long: A gypsy's bracelet sparkles brightly.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 130
+  rent: 15
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [gypsy's, bracelet]
+    text: >
+      The bracelet glimmers.  It's fake diamonds and emeralds set into a fake gold.  But it looks pretty
+      real from a distance.

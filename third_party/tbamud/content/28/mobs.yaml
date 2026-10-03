@@ -1,0 +1,71 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 28.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:28:mob:2800":
+  keywords: [teacher]
+  short: the teacher
+  long: A teacher of skills and spells sits here, waiting for someone to teach.
+  description: >
+    He looks skinny and has heavy glasses.  Also he looks rather intelligent. To be taught what you
+    can, type <prac> now.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: pound
+  gold: 30
+  exp: 900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:28:mob:2801":
+  keywords: [piglet, pig]
+  short: the piglet
+  long: A small piglet is sleeping here.
+  description: >
+    It's a small piglet, sleeping, unaware that soon it will be pork chops. Type <consider piglet>
+    first and read what you're told.  Then <kill piglet> to start fighting it.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:28:mob:2802":
+  keywords: [shopkeeper, keeper]
+  short: the shopkeeper
+  long: The shopkeeper for Mudschool is ready to sell newbie-items.
+  description: >
+    He looks like any other merchant, only his clothes are ragged.  He must have too low prices.  To
+    see what he sells type <list>, then <buy> to buy it.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing

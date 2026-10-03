@@ -1,0 +1,702 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 286.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:286:obj:28601":
+  type: weapon
+  keywords: [wicked, trident]
+  short: a wicked looking trident
+  long: A wicked looking trident is stuck into the ground here.
+  flags: [glow, no_invis, magic, anti_mage, anti_cleric, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: pierce
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28602":
+  type: weapon
+  keywords: [black, leather, whip]
+  short: a black leather whip
+  long: A black leather whip lies on the ground here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 7d3
+    attack: whip
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28603":
+  type: weapon
+  keywords: [hickey, maker]
+  short: hickey maker
+  long: A hickey maker lies on the ground here making a soft sucking sound.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: blast
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28604":
+  type: weapon
+  keywords: [farslayer, sword]
+  short: a black hilted sword called, "Farslayer"
+  long: A black hilted sword with engravings on the blade lies here.
+  flags: [no_donate, no_invis, magic, no_drop, anti_good, anti_mage, anti_cleric, anti_thief, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 1d20
+    attack: pierce
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -10
+  - apply: move
+    modifier: -20
+  extras:
+  - keywords: [sword]
+    text:
+    - >
+      The blade of the sword is a full meter long, and straight as an arrow, with lightly fluted sides. 
+      Both edges keened down to perfect lines, invisibly sharp. Perfection like this could of only been
+      forged by a god.  The black hilt is contrasted only by the faint symbol of a white arrow.  Upon the
+      blade is engraved a poem:
+    - Farslayer howls across the world
+    - For thy heart, for thy heart, who hast wronged me!
+    - Vengeance is his who casts the blade
+    - Yet he will in the end no triumph see.
+
+"tba:286:obj:28605":
+  type: armor
+  keywords: [angel's, skull]
+  short: angel's skull
+  long: An angel's skull lies here on the ground.
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28606":
+  type: armor
+  keywords: [rotting, flesh]
+  short: rotting flesh
+  long: Some rotting flesh lies here in a pile.
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28607":
+  type: weapon
+  keywords: [sword, vorpal, blade]
+  short: vorpal blade
+  long: A magnificently crafted blade lies here humming softly.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 1d20
+    attack: sting
+  weight: 6
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28608":
+  type: weapon
+  keywords: [flaming, claw]
+  short: flaming claw
+  long: A flaming claw lies here burning brightly.
+  wear: [take, wield]
+  values:
+    damage: 1d25
+    attack: bludgeon
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28609":
+  type: armor
+  keywords: [Demonskin]
+  short: demonskin
+  long: A black scaley pile of demonskin lies here.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28610":
+  type: weapon
+  keywords: [demon, teeth]
+  short: demon teeth
+  long: A bunch of very sharp slimy teeth lie here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: thrash
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28611":
+  type: armor
+  keywords: [burning, flesh]
+  short: burning flesh
+  long: A pile of burning flesh lies here.
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 5
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28612":
+  type: wand
+  keywords: [rivet, gun]
+  short: rivet gun
+  long: A rivet gun loaded with hot rivets lies here.
+  wear: [take]
+  values:
+    raw: [4, 3, 3, 30]
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 15
+
+"tba:286:obj:28613":
+  type: weapon
+  keywords: [circular, saw]
+  short: circular saw
+  long: A circular saw lies here humming.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: hit
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28614":
+  type: staff
+  keywords: [box, matches]
+  short: box of matches
+  long: A box of matches lies here ready to light something.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [4, 3, 3, 26]
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28615":
+  type: weapon
+  keywords: [bloody, black, talon]
+  short: bloody black talon
+  long: A severed bloody black talon lies here.
+  flags: [anti_good, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: bludgeon
+  weight: 6
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28616":
+  type: potion
+  keywords: [jar, blood]
+  short: jar of blood
+  long: A dark jar of blood lies here.
+  wear: [take]
+  values:
+    raw: [30, 17, 46, 20]
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28617":
+  type: weapon
+  keywords: [hell, hound, teeth]
+  short: hell hound teeth
+  long: The bloody teeth of a hell hound sit here.
+  wear: [take, wield]
+  values:
+    damage: 6d3
+    attack: thrash
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28618":
+  type: potion
+  keywords: [icy, bottle]
+  short: icy bottle
+  long: An icy bottle sits here sits on the floor.
+  wear: [take]
+  values:
+    raw: [30, 22, 15, 15]
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 10
+
+"tba:286:obj:28619":
+  type: weapon
+  keywords: [ice, spear]
+  short: ice spear
+  long: A spear made out of ice lies here.
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: pierce
+  weight: 5
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28620":
+  type: weapon
+  keywords: [large, meat, hook]
+  short: large meat hook
+  long: A large meat hook is stuck into the ground.
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: bite
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28621":
+  type: food
+  keywords: [meat]
+  short: meat
+  long: A chuck of meat lies here.
+  wear: [take]
+  values:
+    hours: 30
+    poisoned: false
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28622":
+  type: food
+  keywords: [blueprint]
+  short: blueprint
+  long: A construction blueprint lies on the ground.
+  wear: [take]
+  values:
+    hours: 31
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28623":
+  type: weapon
+  keywords: [electric, eraser]
+  short: electric eraser
+  long: A electric eraser lies on the ground waiting an erasermate.
+  wear: [take, wield]
+  values:
+    damage: 6d3
+    attack: hit
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28624":
+  type: armor
+  keywords: [spectacles]
+  short: spectacles
+  long: A set of spectacles lies here on the ground. Don't step on them.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:286:obj:28625":
+  type: wand
+  keywords: [unholy, symbol]
+  short: unholy symbol
+  long: A sinistar looking symbol of evil lies here smoldering.
+  wear: [take, neck]
+  values:
+    raw: [30, 1, 1, 42]
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28626":
+  type: armor
+  keywords: [unholy, robe, pile, cloth]
+  short: unholy robe
+  long: A stinking pile of cloth lies here.
+  flags: [glow, anti_good]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+
+"tba:286:obj:28627":
+  type: weapon
+  keywords: [sharp, teeth, lawyer]
+  short: sharp teeth of a lawyer
+  long: A set of sharp evil looking teeth lie here. Probably a lawyer's.
+  wear: [take, wield]
+  values:
+    damage: 6d4
+    attack: hit
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28628":
+  type: money
+  keywords: [golden, ring]
+  short: golden ring
+  long: A golden ring lies on the ground here.
+  wear: [take, finger]
+  values:
+    coins: 5000
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28629":
+  type: money
+  keywords: [engagement, ring]
+  short: engagement ring
+  long: An engagement ring lies here.
+  wear: [take, finger]
+  values:
+    coins: 7000
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28630":
+  type: scroll
+  keywords: [prenuptial, agreement]
+  short: prenuptial agreement
+  long: A prenuptial agreement lies here.
+  wear: [take]
+  values:
+    raw: [30, 29, 42, 16]
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28631":
+  type: weapon
+  keywords: [ionic, torque, wrench]
+  short: ionic torque wrench
+  long: You see an ionic torque wrench on the ground.
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: pound
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28632":
+  type: armor
+  keywords: [figurine, horse]
+  short: figurine of a horse
+  long: You see a small figurine of a horse on the ground.
+  wear: [take]
+  values:
+    armor: 0
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 20
+
+"tba:286:obj:28633":
+  type: wand
+  keywords: [figurine, winged, horse, pegasus]
+  short: figurine of a winged horse
+  long: You see a small figurine of a winged horse on the ground.
+  wear: [take]
+  values:
+    raw: [30, 3, 3, 42]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 25
+
+"tba:286:obj:28634":
+  type: wand
+  keywords: [figurine, dark, horse, nightmare]
+  short: figurine of a nightmare
+  long: You see a small figurine of a dark horse on the ground.
+  wear: [take]
+  values:
+    raw: [30, 3, 3, 17]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 30
+
+"tba:286:obj:28635":
+  type: wand
+  keywords: [figurine, black, dragon]
+  short: figurine of a black dragon
+  long: You see a small figurine of a black dragon on the ground.
+  wear: [take]
+  values:
+    raw: [10, 1, 1, 32]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28636":
+  type: wand
+  keywords: [figurine, red, dragon]
+  short: a figurine of a red dragon
+  long: You see a small figurine of a red dragon on the ground.
+  wear: [take]
+  values:
+    raw: [30, 1, 1, 37]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 35
+
+"tba:286:obj:28637":
+  type: wand
+  keywords: [figurine, white, dragon]
+  short: figurine of a white dragon
+  long: You see a small figurine of a white dragon on the ground.
+  wear: [take]
+  values:
+    raw: [30, 1, 1, 16]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 35
+
+"tba:286:obj:28638":
+  type: wand
+  keywords: [figurine, green, dragon]
+  short: figurine of a green dragon
+  long: You see a small figurine of a green dragon on the ground.
+  wear: [take]
+  values:
+    raw: [30, 1, 1, 30]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 35
+
+"tba:286:obj:28639":
+  type: wand
+  keywords: [figurine, blue, dragon]
+  short: figurine of a blue dragon
+  long: You see a small figurine of a blue dragon on the ground.
+  wear: [take]
+  values:
+    raw: [30, 1, 1, 6]
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 35
+
+"tba:286:obj:28640":
+  type: wand
+  keywords: [geiger, counter]
+  short: geiger counter
+  long: You see a geiger counter here.
+  flags: [glow]
+  wear: [take]
+  values:
+    raw: [10, 1, 1, 31]
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28641":
+  type: weapon
+  keywords: [photon, displacement, matrix]
+  short: photon displacement matrix
+  long: You see a photon displacement matrix on the ground.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 1d24
+    attack: crush
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28642":
+  type: armor
+  keywords: [black, jumpsuit]
+  short: black jumpsuit
+  long: You see a black jumpsuit on the ground.
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28643":
+  type: food
+  keywords: [antacid, pill]
+  short: antacid pill
+  long: You see an antacid pill here.
+  wear: [take]
+  values:
+    hours: 54
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28644":
+  type: weapon
+  keywords: [manes, claw, claws]
+  short: mane's claws
+  long: The severed claws of a sub-demon lie here, twitching.
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: bludgeon
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28645":
+  type: weapon
+  keywords: [welding, torch]
+  short: welding torch
+  long: A welding torch sits on the ground here.
+  wear: [take, wield]
+  values:
+    damage: 1d30
+    attack: hit
+  weight: 7
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28646":
+  type: armor
+  keywords: [blond, wig]
+  short: blond wig
+  long: A blond wig lies on the ground.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28647":
+  type: armor
+  keywords: [yellow, jumpsuit, nuclear, symbol]
+  short: yellow jumpsuit
+  long: You see a yellow jumpsuit with a nuclear warning symbol.
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 3
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:286:obj:28648":
+  type: weapon
+  keywords: [cleaver]
+  short: cleaver
+  long: You see a nasty looking cleaver stuck in the ground.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: sting
+  weight: 6
+  cost: 20
+  rent: 0
+  level: 0

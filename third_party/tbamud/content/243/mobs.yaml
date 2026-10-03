@@ -1,0 +1,242 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 243.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:243:mob:24300":
+  keywords: [frost, demon]
+  short: the frost demon
+  long: A cold frost demon is staring at you.
+  description: >
+    These frost demons are quite powerful.  They use their cold bodies to freeze their enemies to
+    death.  Be careful!
+  level: 10
+  sex: male
+  alignment: -800
+  flags: [scavenger, stay_zone, helper, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24301":
+  keywords: [deformed, skeleton]
+  short: the deformed skeleton
+  long: A badly deformed skeleton is standing here.
+  description: >
+    Due to spending thousands of years here in the sub-zero temperatures, this skeleton's spine has
+    been arched over, one of his arms is missing, and part of another skull has grown out of his shoulder. 
+    Scary!
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: crush
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 12
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24302":
+  keywords: [furry, beast]
+  short: the furry beast
+  long: A very small furry beast is here.
+  description: >
+    This is a very strange creature.  It looks like a cross between a mouse and a cat, and is only
+    about one foot tall.  It looks quite weak.  This can't be real, can it?
+  level: 10
+  sex: male
+  alignment: -250
+  flags: [sentinel, scavenger, memory, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24303":
+  keywords: [downhill, skier]
+  short: the downhill skier
+  long: An athletic looking downhill skier is here.
+  description: >
+    This skier sure is enjoying himself.  He has a big smile on his face as he zooms down the hill. 
+    Skiers like this often get into fights with the snowboarders.
+  level: 8
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: pound
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24304":
+  keywords: [snowboarder]
+  short: the snowboarder
+  long: A scuzzy looking snowboarder is standing here, smoking pot.
+  description: >
+    Snowboarders like these are trouble.  They only seem to like the sport so they can have an easy
+    place to sell drugs.
+  level: 9
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: pound
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24305":
+  keywords: [lunch, lady]
+  short: the lunch lady
+  long: An old lunch lady is here, ready to serve you.
+  description: >
+    These lunch ladies must be a 100 years old.  Most of them have moustaches and beards, and they're
+    fairly fat too.  Your typical grandmother character.
+  level: 9
+  sex: male
+  alignment: 350
+  flags: [sentinel, wimpy, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24306":
+  keywords: [ski, salesman]
+  short: the ski salesman
+  long: An annoying ski salesman is ready to sell you something.
+  description: >
+    Geez is this guy annoying.  While he's trying to sell you those new $30k pair of skis, he's
+    blabbing on his cell phone with another customer.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24307":
+  keywords: [yeti]
+  short: a hairy yeti
+  long: A stinky hairy yeti is here, staring at you in awe.
+  description: >
+    Whoa!  You never knew these things actually existed, but now you do.  These guys are supposed to be
+    close relatives of another legendary species, bigfoot.
+  level: 9
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aggressive, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: pound
+  abilities:
+    str: 17
+    int: 17
+    wis: 17
+    dex: 17
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:243:mob:24308":
+  keywords: [ski, bum]
+  short: the ski bum
+  long: A ski bum is here selling ski passes.
+  description: >
+    Ski bums spend their days on the slopes.  They get free passes, and have to spend their days skiing
+    on the hill.  They get paid for it too!  Man, what a hard life.
+  level: 7
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, memory, no_charm, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

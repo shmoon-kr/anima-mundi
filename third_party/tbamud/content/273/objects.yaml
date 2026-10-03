@@ -1,0 +1,315 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 273.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:273:obj:27300":
+  type: staff
+  keywords: [staff, Ra, ra]
+  short: the Staff of Ra
+  long: The Staff of Ra has been left here unguarded! What luck!
+  flags: [glow, no_donate, no_invis, magic, bless, anti_evil, anti_neutral, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [30, 5, 5, 26]
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: hit
+    modifier: -50
+  extras:
+  - keywords: [staff, Ra, ra]
+    text: >
+      The Golden Staff of Ra is topped by the holy symbol of the sun god himself. This staff eminates
+      great power!
+
+"tba:273:obj:27301":
+  type: armor
+  keywords: [ACEPLM, modules, leg]
+  short: a pair of ACELM's
+  long: A pair of ACE leg modules are lying here.
+  flags: [hum]
+  wear: [take, legs]
+  values:
+    armor: 7
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -50
+  - apply: save_para
+    modifier: -2
+  extras:
+  - keywords: [leg, legmodules, pants, modules]
+    text: These leggings are labeled "Advanced Combat Exoskeleton Leg Modules"
+
+"tba:273:obj:27302":
+  type: armor
+  keywords: [ACEMFG, boots, magnetic]
+  short: some ACEMFG
+  long: A pair of ACEMFG are sitting here on the floor.
+  flags: [hum]
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [boots]
+    text: "These strange boots are labeled: \"Advanced Combat Exoskeleton Magnetic Foot Gear\""
+
+"tba:273:obj:27303":
+  type: container
+  keywords: [ACEUB, belt, utility]
+  short: an advanced combat exoskeleton utility belt (ACEUB)
+  long: An ACEUB is hanging here
+  wear: [take, waist]
+  values:
+    capacity: 40
+    lock_flags: 1
+    corpse: false
+  weight: 5
+  cost: 350
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 2
+
+"tba:273:obj:27304":
+  type: armor
+  keywords: [ACES, sleeves]
+  short: a pair of advanced combat exoskeleton sleeves (ACES)
+  long: A pair of ACE sleeves are laying here!
+  flags: [hum]
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 5
+  cost: 330
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+
+"tba:273:obj:27305":
+  type: armor
+  keywords: [ACEG, gloves]
+  short: a pair of advanced combat exoskeletion gloves (ACEG)
+  long: A pair of ACEGs are laying here!
+  flags: [hum]
+  wear: [take, hands]
+  values:
+    armor: 2
+  weight: 2
+  cost: 290
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:273:obj:27306":
+  type: armor
+  keywords: [ACPEH, helmet]
+  short: an advanced combat presurized exoskeleton helmet (ACPEH)
+  long: An ACPEH is laying laying here!
+  flags: [hum]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: save_spell
+    modifier: -2
+
+"tba:273:obj:27307":
+  type: boat
+  keywords: [ACEGP, gravpack, gravity, pack]
+  short: an advanced combat exoskeleton gravity pack (ACEGP)
+  long: An ACEGP is laying here!
+  flags: [hum]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 13
+  cost: 340
+  rent: 0
+  level: 20
+  affects:
+  - apply: move
+    modifier: 44
+
+"tba:273:obj:27308":
+  type: light
+  keywords: [AHHL, flashlight]
+  short: an advanced halogen helmet light (AHHL)
+  long: An AHHL is laying here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 400
+  rent: 0
+  level: 0
+
+"tba:273:obj:27309":
+  type: weapon
+  keywords: [HEPG, plasmagun, gun, plasma]
+  short: a High Energy Plasma Gun (HEPG)
+  long: A HEPG is laying here at your feet.
+  flags: [hum, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: blast
+  weight: 21
+  cost: 450
+  rent: 0
+  level: 20
+
+"tba:273:obj:27310":
+  type: weapon
+  keywords: [laser, pistol]
+  short: a shiny new laser pistol
+  long: A shiny new government issue laser pistol is lying here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 3d9
+    attack: blast
+  weight: 8
+  cost: 900
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gun, laser, pistol]
+    text: >
+      This is a USSN general issue hand held high-intensity photon emission device. AKA a laser pistol.
+
+"tba:273:obj:27311":
+  type: weapon
+  keywords: [laser, rifle, gun]
+  short: a laser rifle
+  long: A well used laser rifle is laying here in the dust.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 5d8
+    attack: blast
+  weight: 16
+  cost: 750
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [laser, rifle, gun, weapon]
+    text: >
+      This a USSN general issue two handed personal high-intensity photon emission device.  AKA a laser
+      rifle.
+
+"tba:273:obj:27312":
+  type: light
+  keywords: [IR, Goggles]
+  short: a pair of IR goggles
+  long: A pair of USSN Infra Red goggles lies here in the dust.
+  wear: [take, head, hold]
+  values:
+    hours: 0
+  weight: 2
+  cost: 400
+  rent: 0
+  level: 0
+
+"tba:273:obj:27313":
+  type: weapon
+  keywords: [flying-blade, blade]
+  short: a Predator flying blade.
+  long: A Predator flying blade is lying here stuck into the ground.
+  flags: [glow, hum, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d9
+    attack: slash
+  weight: 10
+  cost: 750
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [blade, flying-blade]
+    text: >
+      This strange looking roundish disk has a oversized handgrip in it.  There are numerous lights
+      flashing on it and it hums.
+
+"tba:273:obj:27314":
+  type: key
+  keywords: [keycard, key, card, red]
+  short: a red plastic card
+  long: A red plastic card is laying here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:273:obj:27315":
+  type: key
+  keywords: [keycard, key, card, blue]
+  short: a blue plastic card
+  long: A blue plastic card is laying here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:273:obj:27316":
+  type: key
+  keywords: [keycard, key, card, white]
+  short: a white plastic card
+  long: A white plastic card lies here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:273:obj:27317":
+  type: key
+  keywords: [keycard, key, card, green]
+  short: a green plastic card
+  long: A green plastic key card is laying here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

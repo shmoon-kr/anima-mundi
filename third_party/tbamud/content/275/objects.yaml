@@ -1,0 +1,507 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 275.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:275:obj:27500":
+  type: key
+  keywords: [key, jail]
+  short: a jail key
+  long: A jail key has been carelessly left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, jail]
+    text: This is the key to the jail of New Sparta.
+
+"tba:275:obj:27501":
+  type: weapon
+  keywords: [handgun, gun]
+  short: a handgun
+  long: A handgun has been left here.  Looks pretty dangerous.
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: thrash
+  weight: 12
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: hitroll
+    modifier: -2
+  extras:
+  - keywords: [handgun, gun]
+    text: This is a very deadly weapon, but takes skill to aim and fire.
+
+"tba:275:obj:27502":
+  type: armor
+  keywords: [slippers, doggie]
+  short: a pair of doggie slippers
+  long: A pair of doggie slippers are on the floor.
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [slippers, doggie]
+    text: These are very cute and comfortable bulldog slippers.
+
+"tba:275:obj:27503":
+  type: armor
+  keywords: [sneakers, nike]
+  short: a pair of Nike sneakers
+  long: A pair of Nike sneakers are on the ground.
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 14
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [nike, sneakers]
+    text: These are just like the ones Michael Jordan wears!
+
+"tba:275:obj:27504":
+  type: armor
+  keywords: [jeans, blue]
+  short: a pair of blue jeans
+  long: A pair of blue jeans is lying on the ground.
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 8
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:275:obj:27505":
+  type: armor
+  keywords: [sweatshirt, sweat, shirt]
+  short: a sweatshirt
+  long: A sweatshirt is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:275:obj:27506":
+  type: worn
+  keywords: [overcoat, coat]
+  short: an overcoat
+  long: An overcoat was thrown on the ground here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -4
+
+"tba:275:obj:27507":
+  type: armor
+  keywords: [sweatpants, pants]
+  short: a pair of sweatpants
+  long: A pair of sweatpants has been left here.
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 8
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:275:obj:27508":
+  type: worn
+  keywords: [pads, shoulder]
+  short: a pair of shoulder pads
+  long: A pair of shoulder pads is sitting here.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+
+"tba:275:obj:27509":
+  type: weapon
+  keywords: [bat, baseball]
+  short: a baseball bat
+  long: A baseball bat is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [baseball, bat]
+    text: A 34 oz.  Louisville Slugger
+
+"tba:275:obj:27510":
+  type: weapon
+  keywords: [nightstick, stick]
+  short: a nightstick
+  long: A nightstick is has been left here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pound
+  weight: 6
+  cost: 600
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [nightstick, stick]
+    text: Just like the ones used to beat Rodney King!
+
+"tba:275:obj:27511":
+  type: weapon
+  keywords: [switchblade, knife, blade]
+  short: a switchblade knife
+  long: A switchblade knife has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pierce
+  weight: 6
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [switchblade, knife, blade]
+    text: If you are using this, you are probably a punk.
+
+"tba:275:obj:27512":
+  type: weapon
+  keywords: [chain]
+  short: a chain
+  long: A long chain is lying on the ground.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d3
+    attack: whip
+  weight: 10
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:275:obj:27513":
+  type: weapon
+  keywords: [rod, connecting]
+  short: a connecting rod
+  long: A connecting rod is lying on the ground.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: slash
+  weight: 20
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [connecting, rod]
+    text: >
+      This is a long, heavy rod with a pointy end used on the job by construction workers -- structural
+      ironworkers to be exact.
+
+"tba:275:obj:27514":
+  type: weapon
+  keywords: [dildo, silver]
+  short: a silver dildo
+  long: A silver dildo is vibrating on the ground.
+  flags: [hum]
+  wear: [take, wield, hold]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 3
+  cost: 160
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silver, dildo]
+    text: >
+      As it has many uses, this fine piece of both weaponry and pleasure sure gets a lot of use.
+
+"tba:275:obj:27515":
+  type: weapon
+  keywords: [set, pom-poms]
+  short: a set of pom-poms
+  long: A set of pom-poms is lying here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d3
+    attack: slash
+  weight: 3
+  cost: 30
+  rent: 0
+  level: 0
+
+"tba:275:obj:27516":
+  type: food
+  keywords: [fish]
+  short: a fish
+  long: A dead fish has been left here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:275:obj:27517":
+  type: armor
+  keywords: [belt, tool]
+  short: a tool belt
+  long: A tool belt has been left here.
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 13
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tool, belt]
+    text: Don't wear this too long, or your pants will sag and your butt will show.
+
+"tba:275:obj:27518":
+  type: armor
+  keywords: [hardhat, hat]
+  short: a hardhat
+  long: A hardhat is lying on the ground.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 6
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hardhat, hat]
+    text: A construction worker's hardhat.
+
+"tba:275:obj:27519":
+  type: weapon
+  keywords: [axe, fireman]
+  short: a fireman's axe
+  long: A fireman's axe lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 10
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:275:obj:27520":
+  type: food
+  keywords: [doughnut]
+  short: a doughnut
+  long: A doughnut is here, waiting to be eaten.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:275:obj:27521":
+  type: food
+  keywords: [lobster]
+  short: a lobster
+  long: A lobster is here, ready to be eaten.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+
+"tba:275:obj:27522":
+  type: food
+  keywords: [bag, potato, chips]
+  short: a bag of potato chips
+  long: A bag of potato chips has been left here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+
+"tba:275:obj:27523":
+  type: food
+  keywords: [box, pretzels]
+  short: a box of pretzels
+  long: A box of pretzels is here.
+  wear: [take]
+  values:
+    hours: 9
+    poisoned: false
+  weight: 1
+  cost: 18
+  rent: 0
+  level: 0
+
+"tba:275:obj:27524":
+  type: drinkcon
+  keywords: [water, coke, bottle, litre, water]
+  short: a two litre bottle
+  long: A two litre of Coke is here.
+  wear: [take]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: clear_water
+    poisoned: false
+  weight: 9
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:275:obj:27525":
+  type: drinkcon
+  keywords: [tea, carton, iced, tea]
+  short: a carton
+  long: A carton of iced tea is here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: tea
+    poisoned: false
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:275:obj:27526":
+  type: drinkcon
+  keywords: [milk, carton, milk]
+  short: a carton
+  long: A carton of milk is here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: milk
+    poisoned: false
+  weight: 7
+  cost: 15
+  rent: 0
+  level: 0
+
+"tba:275:obj:27527":
+  type: food
+  keywords: [hoagie, italian]
+  short: an Italian hoagie
+  long: An Italian hoagie is sitting here.
+  wear: [take]
+  values:
+    hours: 11
+    poisoned: false
+  weight: 1
+  cost: 18
+  rent: 0
+  level: 0
+
+"tba:275:obj:27528":
+  type: armor
+  keywords: [jacket, suit]
+  short: a suit jacket
+  long: A suit jacket is lying here.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:275:obj:27529":
+  type: armor
+  keywords: [necktie, tie, neck]
+  short: a necktie
+  long: A necktie has been left here.
+  wear: [take, neck]
+  values:
+    armor: 2
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [necktie, tie, neck]
+    text: This is worse looking than what you gave you dad on Father's Day!
+
+"tba:275:obj:27530":
+  type: wand
+  keywords: [camera]
+  short: a camera
+  long: A camera is on the ground.
+  flags: [magic]
+  wear: [take, neck, hold]
+  values:
+    raw: [8, 3, 3, 4]
+  weight: 24
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [camera]
+    text: This camera is more confusing than any item you have ever seen.
+
+"tba:275:obj:27531":
+  type: drinkcon
+  keywords: [water, canteen, water]
+  short: a canteen
+  long: A hard leather canteen was left here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: water
+    poisoned: false
+  weight: 15
+  cost: 50
+  rent: 0
+  level: 0

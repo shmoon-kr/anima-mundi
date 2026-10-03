@@ -1,0 +1,26 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 96.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:96:shop:9600":
+  keeper: tba:96:mob:9603
+  rooms: [tba:96:room:9600]
+  products:
+  - tba:96:obj:9615
+  - tba:96:obj:9606
+  - tba:96:obj:9604
+  buys:
+  - type: potion
+  profit:
+    buy: 1.2
+    sell: 0.7
+  messages:
+    no_such_item: "%s I don't carry that, fool!"
+    you_dont_have_it: "%s You don't have that. Check your inventory."
+    does_not_buy: "%s I trade in only what I sell."
+    shop_cannot_afford: "%s Er...I don't seem to have the funds for that item."
+    you_cannot_afford: "%s What are you trying to pull! You can't pay for that!"
+    bought: "%s Really? Ok! That's...%d coins."
+    sold: "%s Against my better judgement, I'll pay %d coins."
+  temper: 0
+  flags: 6
+  trade_with: 0

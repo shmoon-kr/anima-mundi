@@ -1,0 +1,318 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 65.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:65:mob:6500":
+  keywords: [guard, dwarf, dwarven]
+  short: the dwarf guard
+  long: A dwarven guard is here.
+  description: >
+    The guard looks very tough and mean.  He wears his beard long, and he smells like he hasn't bathed
+    in over a month.
+  level: 21
+  sex: male
+  alignment: 1000
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6501":
+  keywords: [worker, dwarf, dwarven]
+  short: the dwarf worker
+  long: A dwarven mining worker is here.
+  description: He is very dirty, and looks extremely over-worked.
+  level: 13
+  sex: male
+  alignment: 900
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6502":
+  keywords: [wraith]
+  short: the wraith
+  long: A wraith is awaiting your first move here.
+  description: A black, almost transparent wraith.
+  level: 25
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6503":
+  keywords: [storekeeper]
+  short: the Hide & Tooth storekeeper
+  long: The Hide & Tooth storekeeper is standing here, waiting patiently.
+  description: The storekeeper is very rotund, but looks in excellent condition.
+  level: 33
+  sex: male
+  alignment: 1000
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6504":
+  keywords: [baker, granite, head]
+  short: Granite Head the baker
+  long: Granite Head, the baker, is waiting for a customer here.
+  description: Granite Head is covered with flour and grains.
+  level: 33
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6505":
+  keywords: [lizard, giant]
+  short: the giant lizard
+  long: A giant lizard is foraging for food along the cavern floor here.
+  description: >
+    This scaly creature looks like it is well adapted to its underground habitat. He looks very
+    powerful.
+  level: 21
+  sex: male
+  alignment: 100
+  flags: [stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6506":
+  keywords: [giant]
+  short: the giant
+  long: A giant is wandering around the mountainside here.
+  description: >
+    The giant is about 18 feet tall, with arms of steel, and looks in excellent physical condition.
+  level: 19
+  sex: male
+  alignment: 600
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6507":
+  keywords: [mineworker, dwarven, dwarf, miner, worker]
+  short: the dwarven mineworker
+  long: A dwarven mineworker is here.
+  description: The mineworker is very tired, and very dirty, and he has bulging muscles.
+  level: 4
+  sex: male
+  alignment: 500
+  flags: [sentinel, memory]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6508":
+  keywords: [mineleader, dwarven, dwarf, mine, leader]
+  short: the mine leader
+  long: A dwarven mine leader is here, supervising the work.
+  description: >
+    The mine leader is very big and very strong, though he must be fairly bright also, to have gotten
+    this job.
+  level: 19
+  sex: male
+  alignment: 700
+  flags: [sentinel, memory]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6509":
+  keywords: [doctor, dwarven, healer]
+  short: the dwarven doctor
+  long: The dwarven doctor is here, aiding the sick of his people.
+  description: He is a very skilled healer, and extremely faithful to his god.
+  level: 22
+  sex: male
+  alignment: 999
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6510":
+  keywords: [peon, dwarven]
+  short: the dwarven peon
+  long: A dwarven peon is awaiting help here.
+  description: Incapable of doing anything himself this dwarf is utterly lost and is awaiting orders.
+  level: 3
+  sex: male
+  alignment: 500
+  flags: [sentinel, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6511":
+  keywords: [dwarf]
+  short: the Dwarf
+  long: A dwarf is here.
+  description: He is short and stout as their kind is famed to be.
+  level: 6
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6514":
+  keywords: [guard, barrack]
+  short: the barrack guard
+  long: A barrack guard is here, lounging around while off duty.
+  description: This middle aged man seems lost without something to guard.
+  level: 14
+  sex: male
+  alignment: 100
+  flags: [sentinel, helper]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6516":
+  keywords: [mazekeeper, keeper]
+  short: the mazekeeper
+  long: A mazekeeper is here.
+  description: He looks VERY tough.
+  level: 29
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:65:mob:6517":
+  keywords: [snake, giant]
+  short: the giant snake
+  long: There is a giant snake here.
+  description: >
+    The snake is coiled tightly and ready to strike at the first sign of trouble. The scaly skin is a
+    mottled brown, black, and gray that blends into the surrounding terrain.
+  level: 33
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing

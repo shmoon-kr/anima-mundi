@@ -1,0 +1,1271 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 277.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:277:obj:27700":
+  type: light
+  keywords: [rainbow, staff]
+  short: the rainbow staff
+  long: The rainbow staff lies here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 8
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:277:obj:27701":
+  type: weapon
+  keywords: [sting]
+  short: Sting
+  long: Sting lies here.
+  flags: [glow, hum, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: thrash
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:277:obj:27702":
+  type: other
+  keywords: [sign]
+  short: a sign
+  long: A sign demands your attention.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - >
+      Welcome to the Shire.  As you enter the Shire from Haon-Dor you come under the jurisdiction of the
+      Thain, the peacekeeper of the Shire.  Consequently, by entering these lands you agree to obey our
+      laws.  If you break these laws, you will be severely punished.  We do not like riff raff in our peaceful
+      town.
+    - The Thain Peacekeeper of the Shire
+
+"tba:277:obj:27703":
+  type: food
+  keywords: [pipeweed, bread]
+  short: a pipeweed bread
+  long: A loaf of pipeweed bread arouses your hunger.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 13
+  rent: 0
+  level: 0
+
+"tba:277:obj:27704":
+  type: armor
+  keywords: [silvery, cloak]
+  short: a silvery cloak
+  long: A silvery cloak lies here.
+  flags: [magic, anti_evil]
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+
+"tba:277:obj:27705":
+  type: armor
+  keywords: [one, ring]
+  short: the One Ring
+  long: The One Ring is here.
+  flags: [magic]
+  wear: [take, finger, hold]
+  values:
+    armor: 0
+  weight: 3
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 10
+  - apply: mana
+    modifier: 20
+
+"tba:277:obj:27706":
+  type: weapon
+  keywords: [elven, bow]
+  short: an elven bow
+  long: An elven bow lies here.
+  flags: [hum, magic, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: bite
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:277:obj:27707":
+  type: weapon
+  keywords: [mithril, axe]
+  short: a mithril axe
+  long: A mithril axe lies here.
+  flags: [glow, no_rent, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: bludgeon
+  weight: 12
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:277:obj:27708":
+  type: armor
+  keywords: [thain, girth]
+  short: the thain girth
+  long: The girth of the thain lies here.
+  flags: [anti_cleric]
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+
+"tba:277:obj:27709":
+  type: weapon
+  keywords: [tiny, dagger]
+  short: a tiny dagger
+  long: A tiny dagger lies here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pierce
+  weight: 3
+  cost: 40
+  rent: 0
+  level: 0
+
+"tba:277:obj:27710":
+  type: food
+  keywords: [egg]
+  short: an egg
+  long: An egg lies here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 9
+  rent: 0
+  level: 0
+
+"tba:277:obj:27711":
+  type: container
+  keywords: [bag]
+  short: a bag
+  long: A bag is on the floor.
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 5
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:277:obj:27712":
+  type: light
+  keywords: [lantern]
+  short: a lantern
+  long: A lantern is on the floor.
+  wear: [take]
+  values:
+    hours: 20
+  weight: 4
+  cost: 50
+  rent: 0
+  level: 0
+
+"tba:277:obj:27713":
+  type: weapon
+  keywords: [bardiche, long, weapon]
+  short: a bardiche
+  long: A long weapon with a sharp end is on the floor.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+
+"tba:277:obj:27714":
+  type: weapon
+  keywords: [flail]
+  short: a flail
+  long: A flail is on the floor.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: crush
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:277:obj:27715":
+  type: container
+  keywords: [sunflower, golden, flower]
+  short: a golden sunflower
+  long: A golden sunflower blooms here.
+  wear: [take]
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sunflower, golden, flower]
+    text: >
+      This large flower is the bright golden yellow color of sunshine, beautiful splayed petals
+      surrounding the dark seeded center, providing a source of nourishment as well as beauty.
+
+"tba:277:obj:27716":
+  type: food
+  keywords: [sunflower, seeds]
+  short: a pile of sunflower seeds
+  long: A pile of sunflower seeds has been left here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sunflower, seeds]
+    text: >
+      This little teardrop shaped seeds are dark gray and striped with white, the crispy shell breaking
+      easily to reveal the soft white seed.  Its salty nutty flavour a tasty and nutritious snack.
+
+"tba:277:obj:27717":
+  type: fountain
+  keywords: [water, trickle, Brandywine, water]
+  short: a trickle of water
+  long: A trickle of water flows from the Brandywine.
+  wear: []
+  values:
+    capacity: 99
+    contains: 99
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, trickle, Brandywine, water]
+    text: >
+      This little trickle of sparkling water comes straight from the Brandywine River, winding its way
+      gently through the surrounding reeds and dissipating gradually into the well-watered grasslands.
+
+"tba:277:obj:27718":
+  type: food
+  keywords: [plate, toad, hole, toad-in-the-hole]
+  short: a plate of toad-in-the-hole
+  long: A plate of toad-in-the-hole is steaming here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, toad, hole, toad-in-the-hole]
+    text: >
+      This steaming dish is made mainly of battered sausages, crisp brown batter curling around the
+      succulent meat and glistening with a trickle of hot gravy. Cooked green vegetables have been arranged
+      neatly to the side, long string beans and crisp sliced carrots.
+
+"tba:277:obj:27719":
+  type: food
+  keywords: [plate, venison, red, wine]
+  short: a plate of venison in red wine
+  long: A plate of venison in red wine is steaming here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, venison, red, wine]
+    text: >
+      This delicious looking meal is made from diced venison that has been simmered with sliced onions
+      and carrots in a rich gravy of black pepper and red wine.  A few stewed mushrooms sit to the side, a
+      sprinkling of whole juniper berries and bay leaves garnishes the dish.
+
+"tba:277:obj:27720":
+  type: food
+  keywords: [plate, suet, pudding, beef]
+  short: a plate of suet pudding with beef
+  long: A plate of suet pudding with beef sits steaming here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, suet, pudding, beef]
+    text: >
+      This brown crisp battering looks perfectly made, puffy and steaming next to a pile of sliced roast
+      beef and covered with a drizzle of onion gravy.  A little helping of horseradish sauce sits to the
+      side, and a sprinkling of salt covers the dish.
+
+"tba:277:obj:27721":
+  type: food
+  keywords: [bowl, apple, crumble]
+  short: a bowl of apple crumble
+  long: A bowl of apple crumble sits here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, apple, crumble]
+    text: >
+      This dish is made of diced apples that have been coated with brown sugar and tossed with chopped
+      walnuts and hazelnuts.  Baked together with a sprinkling of porrige oats, the whole steaming mixture
+      has been coated with a generous helping of cold cream.
+
+"tba:277:obj:27722":
+  type: food
+  keywords: [bowl, apricot, fool]
+  short: a bowl of apricot fool
+  long: A bowl of apricot fool sits here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, apricot, fool]
+    text: >
+      Golden apricots have been mashed to a smooth puree and allowed to soak in cool milky cream.  The
+      soft mixture has been chilled and sprinkled with a spoonful of sugar.
+
+"tba:277:obj:27723":
+  type: food
+  keywords: [plate, bacon, roly-poly]
+  short: a plate of bacon roly-poly
+  long: A plate of bacon roly-poly sits steaming here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, bacon, roly-poly]
+    text: >
+      This traditional dish is made with moist suet pastry, filled with chopped bacon and onion and baked
+      slowly.  Sliced green vegetables and a deep brown sause are drizzled over the plate, a sprinkling of
+      pepper and parsley dashed here and there.
+
+"tba:277:obj:27724":
+  type: food
+  keywords: [plate, bangers, mash]
+  short: a plate of bangers and mash
+  long: A plate of bangers and mash smells absolutely delicious.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, bangers, mash]
+    text: >
+      Three crispy brown sausages sit side by side, nestled next to a generous dollop of fluffy white
+      mashed potatoes.  A few slices of fried onion are laid over the dish and the whole thing coated with
+      thick, rich gravy.
+
+"tba:277:obj:27725":
+  type: food
+  keywords: [bowl, bread, butter, pudding]
+  short: a bowl of bread and butter pudding
+  long: A bowl of bread and butter pudding is soaking here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 12
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, bread, butter, pudding]
+    text: >
+      Sliced bread has been soaked in sugared milk until completely moist and soft, dried currants and
+      sultanas have been added to the mixture, and the whole thing tossed with brown sugar and powdered
+      cinnamon.  The finished dish has then been baked slowly until golden brown.
+
+"tba:277:obj:27726":
+  type: food
+  keywords: [plate, bubble, squeak]
+  short: a plate of bubble and squeak
+  long: A plate of bubble and squeak wafts heat into the air.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, bubble, squeak]
+    text: >
+      Chopped up beef has been fried together with green cabbage and mixed thoroughly into a dish of
+      mashed potatoes.  The whole mixture has been cooked until set solid and the outsides a crispy golden
+      brown.
+
+"tba:277:obj:27727":
+  type: food
+  keywords: [plate, cauliflower, cheese]
+  short: a plate of cauliflower cheese
+  long: A plate of cauliflower cheese sits temptingly here.
+  wear: [take]
+  values:
+    hours: 16
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, cauliflower, cheese]
+    text: >
+      Pale cauliflower florets have been steamed lightly until softened and baked in a rich cheese sauce
+      until slightly browned.  A sprinkling of parmesan has been grated over the top, and a single sprig of
+      parsley set in the center.
+
+"tba:277:obj:27728":
+  type: food
+  keywords: [plate, chicken, kiev]
+  short: a plate of chicken kiev
+  long: A plate of chicken kiev steams slowly.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, chicken, kiev]
+    text: >
+      A piece of succulent white chicken breast has been carefully pierced and stuffed with a stick of
+      garlic butter and cooked slowly.  A little pile of leeks sits to the side and the whole thing sprinkled
+      with ground black pepper and a dash of lemon juice.
+
+"tba:277:obj:27729":
+  type: food
+  keywords: [plate, fried, duck, breast]
+  short: a plate of fried duck breast
+  long: A plate of fried duck breast simmers with heat.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, fried, duck, breast]
+    text: >
+      This slightly fatty piece of deep red meat has been seared with intense heat to make the skin crisp
+      while leaving the meat tender and juicy.  A light bitter gravy has been drizzled over top along with
+      a squeeze of orange and topped with a slice of lime.
+
+"tba:277:obj:27730":
+  type: food
+  keywords: [scotch, egg]
+  short: a scotch egg
+  long: A scotch egg has been dropped here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [scotch, egg]
+    text: >
+      This filling little snack has been made from a hard boiled egg which has then had sausage meat
+      moulded around it and been rolled in breadcrumbs before the whole thing is deep fried.
+
+"tba:277:obj:27731":
+  type: food
+  keywords: [bowl, bananas, custard]
+  short: a bowl of bananas and custard
+  long: A bowl of bananas and custard has been left here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, bananas, custard]
+    text: >
+      This delicious desert has been made from sliced bananas left to simmer in hot creamy custard.  Fine
+      white sugar has been sprinkled over the top and a vanilla pod placed in the middle for flavouring.
+
+"tba:277:obj:27732":
+  type: food
+  keywords: [piece, sticky, gingerbread]
+  short: a piece of sticky gingerbread
+  long: A piece of sticky gingerbread is lying here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [piece, sticky, gingerbread]
+    text: >
+      This golden brown piece of gingerbread is soft and squidgy, made from mostly butter and treacle and
+      baked until set.  This particular piece has been cut in the shape of a star and dusted with a light
+      coat of powdered sugar.
+
+"tba:277:obj:27733":
+  type: food
+  keywords: [plate, smoked, mackerel]
+  short: a plate of smoked mackerel
+  long: A plate of smoked mackerel has been set here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, smoked, mackerel]
+    text: >
+      Creamy colored mackerel meat has been cooked and mashed together with melted butter to make a
+      creamy pate.  This has been sprinkled with ground black pepper and served with a tiny dollop of
+      horseradish sauce and a crisp green side of salad.
+
+"tba:277:obj:27734":
+  type: food
+  keywords: [plate, shepherd's, pie]
+  short: a plate of shepherd's pie
+  long: A plate of shepherd's pie gives off a delicious smell.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, shepherd's, pie]
+    text: >
+      This piping hot dish has been made from minced mutton mixed with sliced onions and carrots and
+      fried until brown.  Salt, pepper and a little tomato puree has been added, and the mixture covered with
+      creamy mashed potato, baked until just golden and served with a side of green beans.
+
+"tba:277:obj:27735":
+  type: food
+  keywords: [pickled, onion]
+  short: a pickled onion
+  long: A pickled onion lies on the ground.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pickled, onion]
+    text: >
+      This very small onion is about the size of a whole walnut, peeled and scalded before being left to
+      pickle for several days in a jar of vinegar, leaving it slightly browned and very strongly flavoured.
+
+"tba:277:obj:27736":
+  type: food
+  keywords: [sausage, roll]
+  short: a sausage roll
+  long: A sausage roll lies steaming here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sausage, roll]
+    text: >
+      A slightly spiced sausage has been cooked until soft and tender and rolled in a light pastry, then
+      baked golden and flaky.  Piping hot, it has been rolled in some brown paper for easy snacking.
+
+"tba:277:obj:27737":
+  type: food
+  keywords: [spotted, dick, bowl]
+  short: a bowl of spotted dick
+  long: A bowl of spotted dick is set here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spotted, dick, bowl]
+    text: >
+      Shredded suet pastry has been tossed with breadcrumbs and raisins, seasoned with ginger and nutmeg
+      and packed into a bowl before being drizzled with brandy and steamed.  The hot mixture has been
+      served with a lashing of creamy custard and some grated orange zest.
+
+"tba:277:obj:27738":
+  type: food
+  keywords: [plate, baked, gammon, cider]
+  short: a plate of baked gammon in cider
+  long: A plate of baked gammon in cider sits here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, baked, gammon, cider]
+    text: >
+      A joint of gammon has been slowly simmered in a cider sauce with chopped chives until tender. 
+      Peach juice has been drizzled over top, and a few peach slices left to garnish the dish along with a
+      sprig of bay leaves.
+
+"tba:277:obj:27739":
+  type: food
+  keywords: [plate, baked, flounder]
+  short: a plate of baked flounder
+  long: A plate of baked flounder smells delicious.
+  wear: [take]
+  values:
+    hours: 14
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, baked, flounder]
+    text: >
+      Two small flounders have been baked with nutmeg and herbs before being drizzled with white wine and
+      melted butter.  The meat has then been rolled in breadcrumbs and chopped chives and rebaked until
+      browned, sprinkled with a little parsley and tarragon.
+
+"tba:277:obj:27740":
+  type: food
+  keywords: [crumpet]
+  short: a crumpet
+  long: A crumpet has been left here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [crumpet]
+    text: >
+      A salted batter of flour and yeast has been mixed with warm milk and fried until golden brown and
+      fluffy.  The cooked batter has then been spread with butter until it has melted and absorbed into the
+      crumpet.
+
+"tba:277:obj:27741":
+  type: food
+  keywords: [plate, lamprey, brewet]
+  short: a plate of lampery in brewet
+  long: A plate of lamprey in brewet sits here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 24
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, lamprey, brewet]
+    text: >
+      A piece of fresh white lamprey has been boiled in salted water and then fried in melted butter with
+      mixed sweet herbs.  A little white wine has been added, along with a sprinkling of ground ginger,
+      and the cooked meat served with its own juices and a slab of hot white bread.
+
+"tba:277:obj:27742":
+  type: food
+  keywords: [piece, lemon, cake]
+  short: a piece of lemon cake
+  long: A piece of lemon cake sits here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [piece, lemon, cake]
+    text: >
+      This deliciously sweet and lemony piece of cake is a delicate yellow color, sprinkled with powdered
+      sugar and zest of lemon, and baked until light and fluffy.
+
+"tba:277:obj:27743":
+  type: food
+  keywords: [plate, mushroom, croustades]
+  short: a plate of mushroom croustades
+  long: A plate of mushroom croustades is steaming here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 24
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, mushroom, croustades]
+    text: >
+      Wholemeal rolls have been hollowed out and spread with crushed garlic, chopped rosemary and black
+      pepper in a butter sauce.  Sliced, sauteed mushrooms have then been stuffed into the flavoured rolls
+      and baked until golden, served with a side of green crisp salad.
+
+"tba:277:obj:27744":
+  type: food
+  keywords: [bowl, treacle, pudding]
+  short: a bowl of treacle pudding
+  long: A bowl of treacle pudding sits here.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bowl, treacle, pudding]
+    text: >
+      A golden tart of treacle and rich shortcrust pastry has been sprinkled with lemon juice and baked
+      until piping hot before being drizzled with cold custard and a little lashing of golden syrup.
+
+"tba:277:obj:27745":
+  type: food
+  keywords: [plate, skirlie, mushrooms]
+  short: a plate of skirlie with mushrooms
+  long: A plate of skirlie with mushrooms has been set here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, skirlie, mushrooms]
+    text: >
+      Sliced mushrooms and onion have been fried until golden brown in good meat dripping.  The mixture
+      has been tossed with oatmeal and browned again before being seasoned with salt and black pepper.
+
+"tba:277:obj:27746":
+  type: food
+  keywords: [plate, quails, mushrooms]
+  short: a plate of quails on mushrooms
+  long: A plate of quails on mushrooms has been set here.
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plate, quails, mushrooms]
+    text: >
+      Two plump quails have been stuffed with finely chopped garlic, chives, and parsley, sprinkled with
+      lemon juice before being cooked and seasoned with salt and pepper.  The cooked birds have then been
+      set onto large grilled mushrooms and drizzled with garlic butter.
+
+"tba:277:obj:27747":
+  type: weapon
+  keywords: [hunter's, knife]
+  short: a hunter's knife
+  long: A hunter's knife lies forgotten here.
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: pierce
+  weight: 1
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hunter's, knife]
+    text: >
+      This little serrated blade has been designed for sawing through tough hides and slabs of meat. 
+      Neatly sharpened, the petrified wooden handle has been tightly bound with black leather, making it
+      easier to grip.
+
+"tba:277:obj:27748":
+  type: worn
+  keywords: [flowing, purple, skirt]
+  short: "@Ma flowing purple skirt@n"
+  long: "@MA flowing purple skirt@g lies on the ground."
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [flowing, purple, skirt]
+    text: >
+      This long skirt is made from masses of purple fabric, making it very full and ruffled indeed.  The
+      hemline is neatly sewn with a pretty gold ribbon for decoration.
+
+"tba:277:obj:27749":
+  type: worn
+  keywords: [purple, bodice]
+  short: "@ma purple bodice@n"
+  long: "@mA purple bodice@g lies here."
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [purple, bodice]
+    text: >
+      This delicate bodice has been designed to tightly cinch the waist of the wearer, giving them a more
+      hourglass figure.  Pretty celtic buttons have been fastened to the front as decoration, long laces
+      closing it at the back.
+
+"tba:277:obj:27750":
+  type: worn
+  keywords: [white, cotton, blouse]
+  short: "@wa white cotton blouse@n"
+  long: "@wA white cotton blouse@g lies forgotten on the ground."
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 90
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [white, cotton, blouse]
+    text: >
+      This simple gauzy blouse is loose and airy, gathered sleeves ending at the elbow, allowing the
+      wearer to work without soiling the cuffs.  Little wooden buttons line the front, covered over with a seam
+      of material and a slight ruffle around the neck.
+
+"tba:277:obj:27751":
+  type: worn
+  keywords: [daisy, chain]
+  short: "@Wa @Yd@Wa@Yi@Ws@Yy @Wc@Yh@Wa@Yi@Wn@n"
+  long: "@WA @Yd@Wa@Yi@Ws@Yy @Wc@Yh@Wa@Yi@Wn@g has been left here."
+  wear: [take, head, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [daisy, chain]
+    text: >
+      This pretty little chain is made up of flowers as white as pure snow, their beautifully fragranced
+      centers the color of golden streaming sunshine.
+
+"tba:277:obj:27752":
+  type: worn
+  keywords: [sweeping, green, skirt]
+  short: "@Ga sweeping green skirt@n"
+  long: "@GA sweeping green skirt@g lies crumpled here."
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 110
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [sweeping, green, skirt]
+    text: >
+      This long velvety skirt hangs in deep sweeping folds, the long hem trimmed with a delicate cord of
+      gold and gathered tightly at the waist.
+
+"tba:277:obj:27753":
+  type: worn
+  keywords: [green, bodice]
+  short: "@ga green bodice@n"
+  long: "@gA green bodice is lying here."
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [green, bodice]
+    text: >
+      This deep green material is slightly velvety in feel, dark wooden buttons running down either side
+      carved with beautiful patterns.  Dark green cords lace the material together, strong enough to cinch
+      the wearer's waist tightly.
+
+"tba:277:obj:27754":
+  type: worn
+  keywords: [light, yellow, skirt]
+  short: "@Ya light yellow skirt@n"
+  long: "@YA light yellow skirt@g has been left here."
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [light, yellow, skirt]
+    text: >
+      This brightly colored skirt is made from a very fragile and airy material, delicate veins of gold
+      embroidered here and there and sparkling in any light.
+
+"tba:277:obj:27755":
+  type: worn
+  keywords: [yellow, bodice]
+  short: "@ya yellow bodice@n"
+  long: "@yA yellow bodice@g has been dropped here."
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [yellow, bodice]
+    text: >
+      This pretty little bodice is hemmed with a delicate embroidering of gold, and decorated with a
+      single line of brass buttons down the front.  Strong lacings fastening the bodice tightly at the back.
+
+"tba:277:obj:27756":
+  type: worn
+  keywords: [flowing, blue, skirt]
+  short: "@Ca flowing blue skirt@n"
+  long: "@CA flowing blue skirt@g lies dropped here."
+  wear: [take, legs]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 120
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [flowing, blue, skirt]
+    text: >
+      Made from light silky material, this delicate blue skirt is soft and smooth to the touch, hanging
+      in flowing folds long enough to brush the ground.
+
+"tba:277:obj:27757":
+  type: worn
+  keywords: [blue, bodice]
+  short: "@ca blue bodice@n"
+  long: "@cA blue bodice@g is lying here."
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 90
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [blue, bodice]
+    text: >
+      Lightly embroidered with silver thread, this blue bodice is made of a very soft and smooth
+      material, that nonetheless is strong enough to cinch the waist tightly, laced with several silver cords at
+      the back.
+
+"tba:277:obj:27758":
+  type: container
+  keywords: [wooden, crate]
+  short: a wooden crate
+  long: A wooden crate stands amongst the shadows.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, crate]
+    text: >
+      Made of damp and mouldy wooden boards, this crate looks more likely to fall apart than be of any
+      use in containing its contents.  A layer of dust and cobwebs covers the grimey surface, as if this box
+      has been left untouched for a long time.
+
+"tba:277:obj:27759":
+  type: worn
+  keywords: [string, black, pearls]
+  short: "@Da string of black pearls@n"
+  long: "@DA string of black pearls@g lies here."
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 2
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [string, black, pearls]
+    text: >
+      Darkly beautiful, these smooth black pearls are linked with a fine silver cord that spirals
+      elegantly around each one.  A strange sinister feeling seems to emanate from them, as though they once
+      belonged to a powerfully evil owner.
+
+"tba:277:obj:27760":
+  type: container
+  keywords: [treasure, chest]
+  short: a treasure chest
+  long: A treasure chest stands against the wall.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 13
+    key: tba:277:obj:27761
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [treasure, chest]
+    text: >
+      This strong wooden chest is bound with thick metal bands, keeping the contents safely protected
+      from all but the owner of the key.  Slight blue and green streaks marr the beauty of its design, growths
+      of mould and fungus beginning to flourish on the dark, damp wooden surface.
+
+"tba:277:obj:27761":
+  type: key
+  keywords: [tiny, metal, key]
+  short: a tiny metal key
+  long: A tiny metal key glints on the ground.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tiny, metal, key]
+    text: >
+      This little key has been forged from a silvery metal, its once polished surface beginning to decay
+      with rust and neglect, although it nevertheless appears in working order.
+
+"tba:277:obj:27762":
+  type: money
+  keywords: [pile, gold, coins]
+  short: a pile of gold coins
+  long: A pile of gold coins glints temptingly here.
+  wear: [take]
+  values:
+    coins: 1220
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, gold, coins]
+    text: >
+      Various pieces of gold lie gathered in a pile, worn with time and lack of use, but still obviously
+      valuable.
+
+"tba:277:obj:27763":
+  type: armor
+  keywords: [paladin's, bejewelled, shield]
+  short: Paladin's shield
+  long: A bejewelled shield sparkles here.
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 3
+  cost: 1000
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [paladin's, bejewelled, shield]
+    text: >
+      This shield is inscribed with the name of Paladin Took II, and seems to be the shield that would
+      have been used against Lotho in the Battle of Bywater. Gilded with gold and silver, several precious
+      gems are studded here and there, rubies, sapphires, and emeralds all testifying to the wealth and pride
+      of the owner.
+
+"tba:277:obj:27764":
+  type: container
+  keywords: [chest, small]
+  short: a small chest
+  long: A small chest stands here, covered over with a dirty cloth.
+  wear: []
+  values:
+    capacity: 99
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chest, small]
+    text: >
+      This decrepit wooden chest is made from dark mouldy boards, almost completely rotted away with
+      various fungi, and the continual dampness that has soaked through the wood.
+
+"tba:277:obj:27765":
+  type: trash
+  keywords: [old, skeleton]
+  short: an old skeleton
+  long: An old skeleton lies crumpled here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [old, skeleton]
+    text: >
+      This intact pile of bones is obviously the long decayed form of a hobbit, seeming proof that murder
+      exists even amongst these normally peace-loving people.  There is no telling how long this skeleton
+      has been here, although the thick layer of dust seems to indicate many years.

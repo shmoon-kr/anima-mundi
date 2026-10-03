@@ -1,0 +1,260 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 20.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:20:obj:2000":
+  type: armor
+  keywords: [helmet]
+  short: a helmet
+  long: A strange looking helmet with an ornamental fish on it.
+  flags: [no_invis]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:20:obj:2001":
+  type: weapon
+  keywords: [shortsword]
+  short: a shortsword
+  long: A short, thick sword is stuck in the ground up to its hilt.
+  flags: [no_invis, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:20:obj:2002":
+  type: armor
+  keywords: [shield]
+  short: a shield
+  long: A strange oblong shaped shield with a fish painted on it is lying here.
+  flags: [no_invis, no_sell]
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 6
+  cost: 450
+  rent: 0
+  level: 0
+
+"tba:20:obj:2003":
+  type: armor
+  keywords: [leg, shield]
+  short: some leg shields
+  long: A pair of metal plates lie on the floor.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:20:obj:2004":
+  type: armor
+  keywords: [arm, shield]
+  short: some arm shields
+  long: A set of arm shields are lying in the dust.
+  flags: [no_invis]
+  wear: [take, arms]
+  values:
+    armor: 3
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:20:obj:2005":
+  type: other
+  keywords: [net]
+  short: a net
+  long: A net, with weighted lead balls on its edges, is lying here.
+  flags: [no_invis]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+
+"tba:20:obj:2006":
+  type: weapon
+  keywords: [spiked, trident]
+  short: a trident
+  long: A trident with barbed points was left here.
+  flags: [no_invis, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 6d3
+    attack: pierce
+  weight: 6
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:20:obj:2007":
+  type: weapon
+  keywords: [dagger]
+  short: a dagger
+  long: An old dull looking dagger was discarded here.
+  flags: [no_invis, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: stab
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 0
+
+"tba:20:obj:2008":
+  type: other
+  keywords: [pot]
+  short: a smelly pot
+  long: A smelly pot is stinking up the entire room.
+  flags: [no_donate, no_drop]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -2
+  - apply: move
+    modifier: -20
+
+"tba:20:obj:2009":
+  type: weapon
+  keywords: [iron, tusk]
+  short: an iron tusk
+  long: A long sharpened iron tusk was left here.
+  flags: [no_invis, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:20:obj:2010":
+  type: worn
+  keywords: [warriors, medal]
+  short: the warriors medal
+  long: A medal is lying here
+  flags: [glow, anti_mage, anti_cleric, anti_thief, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: hit
+    modifier: 25
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:20:obj:2011":
+  type: worn
+  keywords: [thieves, medal]
+  short: the thieves medal
+  long: A medal is lying here
+  flags: [glow, anti_mage, anti_cleric, anti_warrior, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: move
+    modifier: 25
+  - apply: hitroll
+    modifier: 1
+
+"tba:20:obj:2012":
+  type: worn
+  keywords: [clerics, medal]
+  short: the clerics medal
+  long: A medal is lying here
+  flags: [glow, anti_mage, anti_thief, anti_warrior, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:20:obj:2013":
+  type: worn
+  keywords: [mages, medal]
+  short: the mages medal
+  long: A medal is lying here
+  flags: [glow, anti_cleric, anti_thief, anti_warrior, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:20:obj:2014":
+  type: worn
+  keywords: [gladiators, medal]
+  short: the gladiators medal
+  long: A medal is lying here
+  flags: [glow, no_sell]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+  - apply: move
+    modifier: 25

@@ -1,0 +1,270 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 200.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:200:mob:20000":
+  keywords: [lost, woman, adventurer]
+  short: a lost adventurer
+  long: A dirty woman dressed in ragged clothing wanders past.
+  description: >
+    She definitely looks like she's had better days.  It looks as if she has not bathed or eaten for
+    several days.  You smell her long before and after you see her.  She hobbles along aimlessly.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [stay_zone, aggr_evil]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20001":
+  keywords: [bunny, rabbit, fuzzy]
+  short: the rabbit
+  long: A cute, furry rabbit is hopping about here.
+  description: A large, white, furry rabbit with a big bushy tail.
+  level: 3
+  sex: neutral
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20002":
+  keywords: [fawn, deer]
+  short: the fawn
+  long: A little fawn is standing here.
+  description: A cute, little fawn.  It looks quite lost.  Perhaps it has lost it's mother.
+  level: 3
+  sex: neutral
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20003":
+  keywords: [bear, cub]
+  short: a bear cub
+  long: A bear cub stares warily at your intrusion.
+  description: A small, black bear cub.  Better hope it's mother is not around.
+  level: 3
+  sex: neutral
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20004":
+  keywords: [wondering, missionary]
+  short: the missionary
+  long: A wondering missionary is looking for someone to preach too.
+  description: >
+    The missionary looks a bit rough and seems that he has been walking around for quite some time. 
+    Perhaps a nice warm meal would help to up his spirits a bit.
+  level: 3
+  sex: neutral
+  alignment: 350
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: punch
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20005":
+  keywords: [man, woodsman]
+  short: a woodsman
+  long: A grizzly old man stomps past with confidence.
+  description: >
+    This man has lived out in the wilderness for the majority of his life.  Few things surprise or
+    threaten him on his own turf.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20006":
+  keywords: [mother, bear]
+  short: an angry black bear
+  long: A huge black bear crashes through the brush as you approach.
+  description: >
+    The thick black fur covering this massive animal can bring a good price if you can kill it, and
+    find a fur trader.  Unfortunately, bears are not an easy kill.  They are even known to become aggressive
+    when cornered or protecting their young.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20007":
+  keywords: [sairith, fur, trader, man]
+  short: Sairith, the fur trader
+  long: An old man covered from head to toe in fur pelts shows them off and starts to haggle.
+  description: >
+    This old man looks at you with a toothless grin and begins to haggle with you immediately.  He
+    swears that he sells the finest furs in the realm and you could never find a better bargain anywhere else.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20008":
+  keywords: [trapper, man, talbath]
+  short: Talbath, the trapper
+  long: An old man strolls past walking his trapline.
+  description: >
+    It looks like he's had a long day out in the wilderness.  He is checking his trapline for any catch
+    that he can take back to the trading post and sell.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20009":
+  keywords: [fox, red]
+  short: the red fox
+  long: A red fox lopes along, trying to keep a safe distance from you.
+  description: >
+    This sly little create is reddish brown with a white-tipped tail.  Foxes are well known for their
+    cunning and intelligence.  Usually passive and wary they have been known to raid local farms when food
+    becomes sparse.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20010":
+  keywords: [crazy, lunatic, man, jaron]
+  short: Jaron, the lunatic
+  long: An old man with a crazy look in his eyes squints up at you and begins to rant and rave.
+  description: >
+    You've heard stories about this man before.  Jaron used to be a well known citizen.  But he was a
+    witness to something terrible that drove him crazy.  He now roams the wilderness looking for something
+    that he can never seem to find. You suddenly realize that he is naked, solely covered by dirt and
+    grime.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:200:mob:20011":
+  keywords: [Captain]
+  short: the soaked captain
+  long: The soaked captain is drying off here.
+  description: >
+    Once a captain of a barge that would travel down the river.  His boat seemed to have ran afoul on
+    some rocks and he barely was able to SWIM for his life. He has to have been very strong and good at
+    swimming to have fought off the river like he did.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: resting
+    default: resting

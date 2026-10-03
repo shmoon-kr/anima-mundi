@@ -1,0 +1,184 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 50.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:50:mob:5015
+  room: tba:50:room:5039
+  limit: 3
+- mob: tba:50:mob:5015
+  room: tba:50:room:5033
+  limit: 3
+- mob: tba:50:mob:5015
+  room: tba:50:room:5049
+  limit: 3
+- mob: tba:50:mob:5017
+  room: tba:50:room:5058
+  limit: 1
+- mob: tba:50:mob:5000
+  room: tba:50:room:5047
+  limit: 5
+  equip:
+    wield:
+      object: tba:72:obj:7211
+      limit: 25
+- mob: tba:50:mob:5000
+  room: tba:50:room:5033
+  limit: 5
+  equip:
+    wield:
+      object: tba:72:obj:7211
+      limit: 25
+- mob: tba:50:mob:5001
+  room: tba:50:room:5040
+  limit: 8
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 25
+- mob: tba:50:mob:5002
+  room: tba:50:room:5031
+  limit: 5
+- mob: tba:50:mob:5003
+  room: tba:50:room:5050
+  limit: 5
+- mob: tba:50:mob:5004
+  room: tba:50:room:5036
+  limit: 1
+  carry:
+  - object: tba:50:obj:5019
+    limit: 10
+  - object: tba:50:obj:5020
+    limit: 5
+  - object: tba:50:obj:5021
+    limit: 1
+- mob: tba:50:mob:5005
+  room: tba:50:room:5065
+  limit: 1
+  carry:
+  - object: tba:50:obj:5024
+    limit: 1
+  - object: tba:50:obj:5022
+    limit: 10
+- mob: tba:50:mob:5006
+  room: tba:50:room:5061
+  limit: 1
+  equip:
+    wield:
+      object: tba:50:obj:5016
+      limit: 10
+- mob: tba:50:mob:5007
+  room: tba:50:room:5060
+  limit: 1
+  equip:
+    wield:
+      object: tba:50:obj:5017
+      limit: 15
+- mob: tba:50:mob:5008
+  room: tba:50:room:5059
+  limit: 5
+  equip:
+    wield:
+      object: tba:50:obj:5018
+      limit: 25
+- mob: tba:50:mob:5009
+  room: tba:50:room:5057
+  limit: 10
+- mob: tba:50:mob:5010
+  room: tba:50:room:5011
+  limit: 1
+  equip:
+    body:
+      object: tba:50:obj:5001
+      limit: 1
+    wield:
+      object: tba:50:obj:5002
+      limit: 1
+- mob: tba:50:mob:5011
+  room: tba:50:room:5009
+  limit: 3
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 50
+- mob: tba:50:mob:5012
+  room: tba:50:room:5014
+  limit: 3
+  equip:
+    wield:
+      object: tba:50:obj:5000
+      limit: 15
+- mob: tba:50:mob:5013
+  room: tba:50:room:5021
+  limit: 4
+- mob: tba:50:mob:5014
+  room: tba:50:room:5021
+  limit: 1
+  equip:
+    neck_1:
+      object: tba:50:obj:5003
+      limit: 1
+- object: tba:50:obj:5005
+  room: tba:50:room:5011
+  limit: 1
+- object: tba:50:obj:5006
+  room: tba:50:room:5049
+  limit: 6
+- object: tba:50:obj:5006
+  room: tba:50:room:5031
+  limit: 6
+- object: tba:50:obj:5006
+  room: tba:50:room:5044
+  limit: 6
+- object: tba:50:obj:5007
+  room: tba:50:room:5060
+  limit: 1
+  contents:
+  - object: tba:50:obj:5012
+    limit: 1
+  - object: tba:50:obj:5011
+    limit: 1
+- object: tba:50:obj:5008
+  room: tba:50:room:5061
+  limit: 1
+  contents:
+  - object: tba:50:obj:5014
+    limit: 5
+- object: tba:50:obj:5009
+  room: tba:50:room:5061
+  limit: 1
+- object: tba:50:obj:5010
+  room: tba:50:room:5061
+  limit: 1
+  contents:
+  - object: tba:50:obj:5013
+    limit: 50
+- object: tba:50:obj:5023
+  room: tba:50:room:5070
+  limit: 1
+  contents:
+  - object: tba:50:obj:5025
+    limit: 3
+  - object: tba:50:obj:5026
+    limit: 3
+  - object: tba:50:obj:5027
+    limit: 3
+  - object: tba:50:obj:5028
+    limit: 3
+  - object: tba:50:obj:5029
+    limit: 3
+  - object: tba:50:obj:5030
+    limit: 1
+  - object: tba:50:obj:5031
+    limit: 1
+  - object: tba:50:obj:5032
+    limit: 3
+  - object: tba:50:obj:5015
+    limit: 1
+removes:
+- room: tba:50:room:5049
+  object: tba:50:obj:5006
+- room: tba:50:room:5031
+  object: tba:50:obj:5006
+- room: tba:50:room:5044
+  object: tba:50:obj:5006

@@ -1,0 +1,125 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 296.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:296:obj:29600":
+  type: drinkcon
+  keywords: [water, fizzypop, pop, can, water]
+  short: a can of FizzyPop
+  long: A can of FizzyPop sits here, cool and refreshing.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: clear_water
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:296:obj:29601":
+  type: weapon
+  keywords: [AXE]
+  short: the AXE
+  long: The AXE sits here, waiting to be given to someone.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: slash
+  weight: 15
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:296:obj:29602":
+  type: food
+  keywords: [sandwich]
+  short: an old sandwich
+  long: A vending machine sandwich sits here till the end of time.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:296:obj:29603":
+  type: food
+  keywords: [froboz, candy, bar, crunchie, chewie]
+  short: a Froboz candy bar
+  long: A Froboz Crunchie-Chewie candy bar is here!  Yum!
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 3
+  rent: 0
+  level: 0
+
+"tba:296:obj:29604":
+  type: container
+  keywords: [cart, chevvy, lay]
+  short: the cart
+  long: A brand new Magic-cart creation of Wizard Chevvy Lay is parked here.
+  flags: [hum]
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:296:obj:29605":
+  type: container
+  keywords: [wagon, Too-yoto]
+  short: the beat up too-yoto
+  long: A beat up Too-yoto wagon is parked here.
+  flags: [hum]
+  wear: []
+  values:
+    capacity: 300
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:296:obj:29606":
+  type: armor
+  keywords: [beanie, propeller, hat]
+  short: the propeller hat
+  long: A nice looking hat with a propeller on top is here.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:296:obj:29607":
+  type: light
+  keywords: [gear, magic]
+  short: the magic gear
+  long: A magic gear sits here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1

@@ -1,0 +1,276 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 61.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:61:mob:6100":
+  keywords: [warg, vicious]
+  short: the vicious warg
+  long: A vicious warg is here, snarling angrily at you.
+  description: >
+    It is an exceptionally large wolf with thick, black fur.  Saliva is dripping quickly from its long,
+    white fangs.  It looks quite dangerous and very angry.
+  level: 5
+  sex: neutral
+  alignment: -350
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6101":
+  keywords: [warg, ferocious]
+  short: the ferocious warg
+  long: A ferocious warg is here, snarling angrily at you.
+  description: >
+    It is an exceptionally large wolf with thick, black fur.  Saliva is dripping quickly from its long,
+    white fangs.  It looks quite dangerous and very angry.
+  level: 5
+  sex: neutral
+  alignment: -350
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6102":
+  keywords: [wolf, gray]
+  short: the large, gray wolf
+  long: A large, gray wolf is here, glaring hungrily at you.
+  description: The large, gray wolf eyes you with interest while licking its lips.
+  level: 3
+  sex: neutral
+  alignment: -150
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6103":
+  keywords: [wolf, black]
+  short: the large, black wolf
+  long: A large, black wolf is here, glaring hungrily at you.
+  description: The large, black wolf eyes you with interest while licking its lips.
+  level: 3
+  sex: neutral
+  alignment: -150
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6110":
+  keywords: [tree, ancient]
+  short: the ancient tree
+  long: A huge, ancient tree towers above you.
+  description: >
+    Its roots are extremely big and large parts of them are above ground. Something about it makes you
+    think that this is not a normal oak tree.  The enormous gray trunk shivers slightly, as if sighing
+    deeply.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, no_track, sneak, hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6111":
+  keywords: [tree, ancient]
+  short: the ancient tree
+  long: A huge, ancient tree towers above you.
+  description: >
+    Its roots are extremely big and large parts of them are above ground. Something about it makes you
+    think that this is not a normal oak tree.  The enormous gray trunk emits a deep, moaning sound.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, no_track, sneak, hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6112":
+  keywords: [dragon, green]
+  short: the green dragon
+  long: A huge green dragon is here, its narrow yellow eyes glowing with rage.
+  description: >
+    This enormous winged serpent has dark green scales covering most of its colossal body.  Numerous
+    holes in its heavy wings tell of many fights as does the nicks in the horns on its head.  It smells as
+    disgusting as only dragons do.
+  level: 20
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone, no_charm, no_summon, no_bash]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6113":
+  keywords: [spider, poisonous]
+  short: the huge, poisonous spider
+  long: A huge, poisonous spider is here.
+  description: >
+    This disgusting creature is at the size of a human crawling on all four.  It has eight hairy legs
+    that gives it a tremendous speed on almost any surface and sharp poisonous fangs to paralyze or kill
+    its prey.
+  level: 8
+  sex: neutral
+  alignment: -350
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6114":
+  keywords: [queen, spider]
+  short: the Queen spider
+  long: The huge, bulky Queen spider is here.
+  description: >
+    This disgusting creature is at the size of a small elephant.  It has eight huge, hairy legs that
+    would give it a tremendous speed on almost any surface if it wasn't so immensely fat.  Its large,
+    bulbous eyes stare back at you.
+  level: 15
+  sex: female
+  alignment: -1000
+  flags: [sentinel, stay_zone, aggr_good, memory]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6115":
+  keywords: [shargugh, brownie]
+  short: Shargugh
+  long: Shargugh the Forest Brownie is here, grinning broadly at you.
+  description: >
+    This little fellow is only three foot tall with wild matted brown hair and long tangled brown
+    beard.  He wears ragged brown and green clothing and looks as if he is having great fun.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [scavenger, stay_zone, wimpy, memory]
+  affects: [invisible, detect_invis, sense_life, waterwalk, no_track, sneak, hide]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6116":
+  keywords: [elder, druid]
+  short: the Elder druid
+  long: The Elder druid is here.  He looks very upset about your presence in his home.
+  description: >
+    The druid looks quite old.  You would think of him as venerable but yet you know he would be a
+    tough foe.
+  level: 19
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggr_evil, aggr_good]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:61:mob:6117":
+  keywords: [isha, elf]
+  short: Isha the Dark Elf
+  long: Isha the Dark Elf is here, observing you silently.
+  description: >
+    She is no less than beautiful, skin as dark as the night and hair shining like silver in the
+    moonlight.  Her slender body is adorned with a sleeveless shirt and a short skirt made from black scales
+    joined with silver threads.  Her back is covered by a large, hooded cloak as black as her skin and in
+    her broad silver belt hangs a long, slender sword in a silver scabbard.
+  level: 20
+  sex: female
+  alignment: -1000
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

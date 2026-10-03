@@ -1,0 +1,641 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 291.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:291:mob:29100":
+  keywords: [headless, horseman]
+  short: the Headless Horseman
+  long: The Headless Horseman, riding his nightmare, comes charging down on you.
+  description: >
+    The horseman eternally looks for his missing head.  In an ancient military uniform he sits on top
+    of a powerful nightmare.  He turns toward you and levels his sword at your neck, just before he
+    charges.
+  level: 30
+  sex: male
+  alignment: -250
+  flags: [stay_zone]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29101":
+  keywords: [elvis, impersonator]
+  short: an Elvis Impersonator
+  long: An Elvis Impersonator is hiding behind a potted ficus here.
+  description: >
+    This jumpsuitted throwback likes strutting his stuff.  The jumpsuit is absolutely covered with
+    flashy sequins.  As you look at him, he snaps his fingers and points at you as he says, "Thank you. 
+    Thank you very much!  "
+  level: 12
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, no_sleep]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29102":
+  keywords: [plant, ficus, rabid]
+  short: a Rabid Potted Ficus
+  long: A Rabid Potted Ficus sits here, grooving to the music.
+  description: It is a rabid Potted plant.
+  level: 10
+  sex: neutral
+  alignment: -100
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: maul
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29105":
+  keywords: [Lesser, Ghoul]
+  short: the Lesser Ghoul
+  long: A gibbering lesser ghoul is savaging for his next meal here.
+  description: >
+    It is a little thing, three feet tall at the most.  Its warped, green little body twitches almost
+    uncontrollably as he scans you deciding if it is worth the risk to try to make you his next meal.
+  level: 15
+  sex: male
+  alignment: -5
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29106":
+  keywords: [Goblin]
+  short: a Goblin
+  long: A gray-skinned goblin is prowling around here.
+  description: >
+    The gray skinned creature is prowling here.  He carries a crude club and a nasty expression
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy, memory]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29107":
+  keywords: [Crystal, Monster]
+  short: the Crystal Monster
+  long: A monster made of crystal lurks here,
+  description: >
+    Almost invisible against the rocky backdrop, the rock monster went unnoticed until it struck.  Made
+    of crystals and minerals it is slow but powerful.
+  level: 30
+  sex: neutral
+  alignment: -290
+  flags: [sentinel]
+  affects: [invisible]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: pound
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29108":
+  keywords: [red, scorpion]
+  short: the red scorpion
+  long: a red scorpion scuttles over a rocky patch of ground here.
+  description: >
+    An arachnid about the the size of your two hands put together, the red carapace of this creature
+    provides it with a protective shells while its stinger drips with a nasty venom.
+  level: 26
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: sting
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29110":
+  keywords: [doom, guard, doomguard, armor]
+  short: the DoomGuard
+  long: One of the citadel's doomguard is patrolling the area here.
+  description: >
+    A lumbering, clanking suit of animated platemail is all that makes up the doomguard.  Like an
+    invisible man in visible armor it forever walks the halls of the citadel protecting it from outside
+    threats.
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, helper]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29111":
+  keywords: [Clock, Guardian, guard]
+  short: a Clock Guardian
+  long: A Clock Guardian lurks here waiting to get the drop on you.
+  description: >
+    You didn't see it until it was almost on top of you.  The Clockwork nightmare is in a vaguely
+    humanoid shape.  It jerks and quirks as if it is not totally in control of its own movements.
+  level: 30
+  sex: neutral
+  alignment: -50
+  flags: [sentinel, aggressive]
+  affects: [invisible]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: crush
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29112":
+  keywords: [Grim, Reaper, Death]
+  short: the Grim Reaper
+  long: The Grim Reaper himself stands here waiting for those who would challenge him
+  description: >
+    This is death himself.  The reaper stands as a grim figure.  His skeletal hands clutch at his
+    scythe.  His bony skull only partially concealed by his black robe.  He looks at you a moment before he
+    attacks.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_sleep]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: slash
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29113":
+  keywords: [zombie, legionnaire, undead]
+  short: an Undead Legionnaire
+  long: A shambling zombie patrols the area here
+  description: >
+    A walking, rotting corpse.  This is one of the mistresses countless thralls. What they lack in
+    individual strength, they make up for in numbers.
+  level: 10
+  sex: male
+  alignment: -50
+  flags: [stay_zone, helper, no_sleep]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bludgeon
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29114":
+  keywords: [Suit, armor, dark, stormy, knight]
+  short: the Dark and Stormy Knight
+  long: A Gigantic Suit of Armor stands here contesting your right to proceed further
+  description: >
+    This monstrous suit of armor stands over ten feet tall and five feet wide. Four inches thick as its
+    thinnest point, the armor is covered with all form of arcane runes that glow with power, burnishing
+    the dark metal with an unholy green glow that flows from deep within the Doomguard.  Who can guess
+    what foul dwenomers have been placed on this armor to give it its vital force.
+  level: 30
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, no_charm, no_sleep]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: thrash
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29115":
+  keywords: [A, Greater, Ghoul]
+  short: the Greater Ghoul
+  long: A Greater ghoul stands on the balcony gnawing on the leg bone of his last victim
+  description: >
+    A Humanoid mass of massive gray-green muscle and yellowed teeth.  Always and eternally hungry.  He
+    likes to take his victims here to eat in peace.  Will you be his next victim.
+  level: 30
+  sex: male
+  alignment: -60
+  flags: [scavenger, stay_zone, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: maul
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29116":
+  keywords: [short, squat, purple, child, children]
+  short: the Child of Ilian
+  long: A short, squat, purple child sits at the foot of Ilian's throne.
+  description: >
+    A Gibbering little delinquent.  This child sits amused with childish toys. Playing with rattles or
+    slingshots or tops and the like.  It seems content with its lot in life.
+  level: 25
+  sex: neutral
+  alignment: -200
+  flags: [sentinel, helper]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29117":
+  keywords: [Prisoner, helpless]
+  short: the Helpless Prisoner
+  long: A helpless prisoner is chained to the wall here.
+  description: >
+    This pathetic individual has not been fed in weeks.  He is lean and gaunt from starvation.  He
+    looks at you, pleading for mercy.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29119":
+  keywords: [Ilian]
+  short: Ilian, the Mistress of the Void
+  long: Ilian, the mistress of the Void sits on her throne here glaring at you.
+  description: >
+    The mistress of the void stands a full ten feet tall.  She personifies the beauty of the night
+    sky.  It is a cold, distant beauty, yet awesome in its vastness and power.  Her smooth bone white skin is
+    like flawless porcelain. Her face has a haunting beauty ensculped in her evil.  The flowing purple
+    robes she wears are woven with the vastness of space.  She sits on her throne, glaring at you while
+    her children scuttle about her.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: blast
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29130":
+  keywords: [doom, doomguard, armor]
+  short: the doomguard
+  long: a flawed doomguard in on assignment, patrolling outside the citadel walls here.
+  description: >
+    Like an invisible man in visible armor, the animated suit of plate was relegated to outerpatrol due
+    to its inferior quality.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29140":
+  keywords: [doom, guard, doomguard, armor]
+  short: the DoomGuard
+  long: One of the citadel's doomguard is patrolling the area here.
+  description: >
+    A lumbering, clanking suit of platemail is all that makes up the doomguard. Like an invisible man
+    in visible armor, it forever walks the halls of the citadel.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29150":
+  keywords: [Scarlet, Fever]
+  short: Scarlet Fever
+  long: Scarlet Fever stands here with her hand on her saber
+  description: She looks diseased.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29175":
+  keywords: [elf, dark, drow]
+  short: the Drow Hunter
+  long: A dark-skinned elf is stalking through the forest.
+  description: >
+    It is a dark skinned creature, with all the usual fine refinements associated with their race.  His
+    hair is a pale, bone white.  He stalks his prey with a long curved knife.
+  level: 10
+  sex: male
+  alignment: -200
+  flags: [stay_zone]
+  affects: [no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29180":
+  keywords: [Mosquito, bug]
+  short: a Mosquito
+  long: A bug, one of a swarm flies around here, pestering you.
+  description: Its a mosquito, what else do you want.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: sting
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29181":
+  keywords: [plant, venus, flytrap]
+  short: the Venus Flytrap
+  long: A Large venus flytrap pokes itself out of the vines here.
+  description: It is a venus flytrap.  What more do you people want?
+  level: 22
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  affects: [sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:291:mob:29199":
+  keywords: [Band]
+  short: the Band
+  long: The Band stands here.
+  description: The band is playing a local favorite.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing

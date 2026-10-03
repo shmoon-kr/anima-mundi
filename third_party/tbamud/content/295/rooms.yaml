@@ -1,0 +1,229 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 295.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:295:room:29500":
+  name: The start of the jungle
+  description: >
+    Going by the trees, you appear to have left the forest and entered a jungle! There are exotic trees
+    and plants that you have never seen anywhere before.
+  sector: forest
+  exits:
+    south:
+      to: tba:295:room:29501
+  extras:
+  - keywords: [credits, info]
+    text:
+    - >
+      Um, ok just a small zone, with only 16 rooms, 12 mobs, and 10 objects. It is based on a jungle, and
+      was designed to join to a forest area at room 1000
+    - >
+      It is not finished, I started building it for a Mud that never realy got of the ground, so I
+      thought I would tidy it up a little and upload it to the circleMud ftp site.  If you want to use it as it
+      is, or even add more to it, feel free to do so.  If you use it just send me a quick E-mail to let me
+      know.
+    - Martin Winning, iwinning@@proweb.co.uk
+    - p.s  If you are looking for a builder, I need somewhere to build :)-
+    - "gimmie a mail at the above address. Links: 00n"
+
+"tba:295:room:29501":
+  name: Deeper into the jungle
+  description: >
+    As you go deeper into the jungle you start to hear sounds of strange animals comming from all
+    around you, and someone somewhere is beating some drums. Hope the natives are friendly!
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29500
+    south:
+      to: tba:295:room:29502
+
+"tba:295:room:29502":
+  name: Deeper in to the jungle
+  description: >
+    You are standing at a joining of 4 paths.  North heads back out of the jungle, east appears to lead
+    down a small trail from which the sound of drums can be heard, west heads in to some thicker trees
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29501
+    east:
+      to: tba:295:room:29503
+    west:
+      to: tba:295:room:29509
+
+"tba:295:room:29503":
+  name: On a small trail
+  description: >
+    You are on a small trail leading away from the main path through the jungle. To the east the sound
+    of drums are getting very loud. Maybe you should turn back and go and get some help before you go any
+    further!
+  sector: forest
+  exits:
+    east:
+      to: tba:295:room:29504
+    west:
+      to: tba:295:room:29502
+
+"tba:295:room:29504":
+  name: The gate to the camp
+  description: >
+    This is what looks like the gate to a small camp.  It could be a good place to rest for a while,
+    but the skulls that are stuck on the end of spears tell you different!
+  sector: forest
+  exits:
+    east:
+      to: tba:295:room:29505
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:295:room:29503
+
+"tba:295:room:29505":
+  name: In the camp
+  description: >
+    Yikes!  You have walked right into a cannibals camp!  There are bones laying all over the place,
+    some of them are obviously human!  It looks like you just missed a big feast. Maybe you should leave
+    before they make you the guest of honor at the next one!
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29507
+    east:
+      to: tba:295:room:29506
+    south:
+      to: tba:295:room:29508
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:295:obj:29502
+        reset: locked
+    west:
+      to: tba:295:room:29504
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+
+"tba:295:room:29506":
+  name: The food store
+  description: >
+    There are hooks dangling from the roof wich look like they are used to store meat, but what sort of
+    meat? Use you imagination!
+  sector: inside
+  exits:
+    west:
+      to: tba:295:room:29505
+
+"tba:295:room:29507":
+  name: The womans room
+  description: >
+    You have walked in to what must be the room where the cannibals keep their women when they are out
+    hunting.  There are animal skins waiting to be made into clothes for the cannibals, and a few items
+    of high cannibal fashion!
+  sector: inside
+  exits:
+    south:
+      to: tba:295:room:29505
+
+"tba:295:room:29508":
+  name: The chiefs room
+  description: >
+    This is obviously the room of the chief of the cannibals.  There are animal skins on the wall with
+    crude paintings on them. Could be worth a bit!
+  sector: inside
+  exits:
+    north:
+      to: tba:295:room:29505
+      look: Nothing.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:295:obj:29502
+        reset: locked
+
+"tba:295:room:29509":
+  name: To the monkeys!
+  description: >
+    The trees seem to be getting a little thicker the further west you go. There are vines hanging down
+    from some of the trees that look like you could climb up.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:295:room:29502
+    west:
+      to: tba:295:room:29513
+    up:
+      to: tba:295:room:29510
+
+"tba:295:room:29510":
+  name: In the trees
+  description: >
+    Wow, these trees are high!  You think you can almost see Midgaard from up here! Wonder if there are
+    any animals living up here?
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29511
+    down:
+      to: tba:295:room:29509
+
+"tba:295:room:29511":
+  name: In the trees
+  description: >
+    As you jump over to this tree you nearly fall down!  The trees look less stable in the trees around
+    you, maybe you should go back down.  You also notice what looks like a bit of snake skin hanging
+    from a branch. Wonder where its owner is?
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29512
+    south:
+      to: tba:295:room:29510
+
+"tba:295:room:29512":
+  name: In the trees
+  description: >
+    It looks like you have just walked in to a nest of greater climbing tree snakes! Watch out, they
+    could be poison in them there fangs!
+  sector: forest
+  exits:
+    south:
+      to: tba:295:room:29511
+
+"tba:295:room:29513":
+  name: Close to the monkeys
+  description: >
+    The sound of many animals is getting louder the further east you go.  It sounds like all the apes
+    from the jungle are having some sort of a meeting! This has got to be worth a look at.
+  sector: forest
+  exits:
+    east:
+      to: tba:295:room:29509
+    west:
+      to: tba:295:room:29514
+
+"tba:295:room:29514":
+  name: The meeting room
+  description: >
+    This would appear to be the meeting place for all the apes.  It looks like they have one hell of a
+    party at these meetings, judging from all the junk left around.
+  sector: forest
+  exits:
+    north:
+      to: tba:295:room:29515
+    east:
+      to: tba:295:room:29513
+
+"tba:295:room:29515":
+  name: North of the meeting place
+  description: >
+    This looks like somewhere the apes can come to rest after a big meet. There are some comfy looking
+    leaves to rest on, and a nice fountain in the corner of the room.
+  sector: inside
+  exits:
+    south:
+      to: tba:295:room:29514

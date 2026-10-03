@@ -1,0 +1,278 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 274.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:274:shop:27400":
+  keeper: tba:274:mob:27402
+  rooms: [tba:274:room:27444]
+  products:
+  - tba:274:obj:27405
+  - tba:274:obj:27403
+  - tba:274:obj:27418
+  - tba:274:obj:27419
+  - tba:274:obj:27420
+  - tba:274:obj:27421
+  buys:
+  - type: armor
+    keywords: Armor
+  - type: weapon
+    keywords: Weapons
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:274:shop:27401":
+  keeper: tba:274:mob:27403
+  rooms: [tba:274:room:27445]
+  products:
+  - tba:274:obj:27406
+  - tba:274:obj:27407
+  - tba:274:obj:27408
+  - tba:274:obj:27409
+  - tba:274:obj:27410
+  - tba:274:obj:27411
+  - tba:274:obj:27412
+  - tba:274:obj:27413
+  - tba:274:obj:27414
+  - tba:274:obj:27415
+  - tba:274:obj:27416
+  - tba:274:obj:27417
+  buys:
+  - type: weapon
+    keywords: Weapon
+  - type: armor
+    keywords: Armor
+  - type: worn
+    keywords: Worn
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:274:shop:27402":
+  keeper: tba:274:mob:27401
+  rooms: [tba:274:room:27459]
+  products:
+  - tba:30:obj:3000
+  - tba:30:obj:3001
+  - tba:30:obj:3002
+  - tba:30:obj:3003
+  - tba:30:obj:3004
+  buys:
+  - type: food
+    keywords: Food
+  - type: drinkcon
+    keywords: Liquid Containers
+  profit:
+    buy: 1.25
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:274:shop:27403":
+  keeper: tba:274:mob:27407
+  rooms: [tba:274:room:27440]
+  products:
+  - tba:30:obj:3030
+  - tba:30:obj:3031
+  - tba:30:obj:3032
+  - tba:30:obj:3033
+  - tba:30:obj:3037
+  - tba:30:obj:3038
+  - tba:30:obj:3039
+  - tba:31:obj:3104
+  - tba:31:obj:3103
+  - tba:30:obj:3060
+  - tba:30:obj:3061
+  buys:
+  - type: container
+    keywords: Container
+  - type: light
+    keywords: light
+  - type: drinkcon
+    keywords: Liquid Container
+  - type: food
+    keywords: Food
+  - type: boat
+    keywords: Boatr
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:274:shop:27404":
+  keeper: tba:274:mob:27408
+  rooms: [tba:274:room:27434]
+  products:
+  - tba:30:obj:3009
+  - tba:30:obj:3010
+  - tba:30:obj:3011
+  buys:
+  - type: food
+    keywords: Food
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:274:shop:27405":
+  keeper: tba:274:mob:27405
+  rooms: [tba:274:room:27431]
+  buys:
+  - type: scroll
+    keywords: Scroll
+  - type: potion
+    keywords: Potion
+  - type: wand
+    keywords: Wand
+  - type: treasure
+    keywords: Treasure
+  - type: staff
+    keywords: Staff
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 32
+
+"tba:274:shop:27406":
+  keeper: tba:274:mob:27409
+  rooms: [tba:274:room:27435]
+  products:
+  - tba:30:obj:3050
+  - tba:30:obj:3051
+  - tba:30:obj:3052
+  - tba:30:obj:3054
+  - tba:30:obj:3053
+  - tba:30:obj:3055
+  buys:
+  - type: scroll
+    keywords: Scroll
+  - type: staff
+    keywords: staff
+  - type: potion
+    keywords: potion
+  - type: wand
+    keywords: wand
+  - type: pen
+    keywords: pen
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:274:shop:27407":
+  keeper: tba:274:mob:27430
+  rooms: [tba:274:room:27458, tba:274:room:27459, tba:274:room:27472]
+  products:
+  - tba:30:obj:3001
+  - tba:30:obj:3002
+  - tba:30:obj:3003
+  - tba:30:obj:3004
+  - tba:30:obj:3000
+  profit:
+    buy: 2.25
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:274:shop:27408":
+  keeper: null
+  rooms: [tba:274:room:27458, tba:274:room:27459, tba:274:room:27472]
+  products:
+  - tba:30:obj:3001
+  - tba:30:obj:3002
+  - tba:30:obj:3003
+  - tba:30:obj:3004
+  - tba:30:obj:3000
+  profit:
+    buy: 2.25
+    sell: 1.0
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0

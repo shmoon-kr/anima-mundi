@@ -1,0 +1,326 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 304.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:304:obj:30401":
+  type: armor
+  keywords: [brown, fur, cape]
+  short: a brown fur cape
+  long: A brown fur cape is piled on the floor here.
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 5
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [brown, fur, cape]
+    text: It is a rather coarse brown cape.
+
+"tba:304:obj:30402":
+  type: weapon
+  keywords: [sword]
+  short: a Statue's Sword
+  long: An straight sword is stuck in the ground here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: slash
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [sword]
+    text: The sword looks rather old.
+
+"tba:304:obj:30403":
+  type: weapon
+  keywords: [seasoned, staff]
+  short: a seasoned staff
+  long: A well seasoned staff has been dropped here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pound
+  weight: 9
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [seasoned, staff]
+    text: It looks like a seasoned staff.  Probably good for hitting people.
+
+"tba:304:obj:30404":
+  type: trash
+  keywords: [wet, mop]
+  short: a wet mop
+  long: A soaking wet mop is here, making a puddle.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 5
+  extras:
+  - keywords: [wet, mop]
+    text: Yuck, its a smelly wet mop..  Better run before you have to mop something.
+
+"tba:304:obj:30405":
+  type: key
+  keywords: [marble, key]
+  short: a marble key
+  long: A marble key lies here, gathering dust.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [marble, key]
+    text: Its a small marble key, would fit in a marble door methinks.
+
+"tba:304:obj:30406":
+  type: key
+  keywords: [oak, key]
+  short: an oak key
+  long: An oak key rests here.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [oak, key]
+    text: It's a small oak key, would fit in an oak door methinks.
+
+"tba:304:obj:30407":
+  type: key
+  keywords: [iron, key]
+  short: an iron key
+  long: An iron key lies here, rusting.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [iron, key]
+    text: It's an iron key, would fit in an iron door methinks.
+
+"tba:304:obj:30408":
+  type: armor
+  keywords: [taurus, ring]
+  short: a taurus ring
+  long: A ring shaped like a bull lies here.
+  flags: [glow, invisible]
+  wear: [take, finger, hold]
+  values:
+    armor: 5
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [taurus, ring]
+    text: It is a ring with a golden bull insignia.
+
+"tba:304:obj:30410":
+  type: armor
+  keywords: [great, fur, cloak]
+  short: a great fur cloak
+  long: A great fur cloak is here.
+  flags: [glow, hum]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 8
+  cost: 333
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -10
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [fur, cloak]
+    text: >
+      This was once the skin of a great bull.  The hide has been tanned and oiled. Thick black coarse fur
+      on the outside and the hardened leather inside would make this cloak a good defense against most
+      attacks.
+
+"tba:304:obj:30411":
+  type: armor
+  keywords: [golden, horn, mask]
+  short: a golden horned mask
+  long: A mask with two wicked horns rests here.
+  flags: [glow, hum, invisible]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [golden, horn, mask]
+    text: This mask is made out of pure gold, and has two wicked horns.
+
+"tba:304:obj:30412":
+  type: staff
+  keywords: [wabat, bible]
+  short: a WABAT bible
+  long: A strange book is collecting dust on the floor.
+  flags: [glow, hum]
+  wear: [take, hold]
+  values:
+    raw: [10, 10, 10, 4]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wabat, bible]
+    text:
+    - "The WABAT bible is printed thus:"
+    - I.   Thou shalt behave with honor at all times.
+    - II.  Thou shalt shalt disperse thy enemies with thy sword.
+    - III. Thou shalt defend WABAT and those who cannot
+    - defend themselves.
+    - IV.  Thou shalt have no guilds before WABAT.
+    - V.   Thou shalt kill those who take the name of WABAT in vain.
+    - Thus speaketh the WABAT bible.
+
+"tba:304:obj:30413":
+  type: weapon
+  keywords: [dagger, fire, atens]
+  short: a Fire Dagger
+  long: A dagger with strange blue flames dancing along it's tip.
+  flags: [glow, hum]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fire, dagger]
+    text: A thin stream of fire runs from the dagger's leather bound hilt to its razor sharp tip.
+
+"tba:304:obj:30414":
+  type: armor
+  keywords: [suit, chain, chainmail]
+  short: a Suit of Old Chainmail
+  long: A full suit of chainmail is looking very old and used.
+  flags: [glow, hum]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [suit, old, chainmail]
+    text: Wow!  A suit of old chainmail!  Who told you these things don't exist anymore?
+
+"tba:304:obj:30415":
+  type: armor
+  keywords: [holy, cloak]
+  short: a Holy Cloak
+  long: A beautiful cloak of pristine white silke hangs on a peg.
+  flags: [glow, hum]
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [holy, cloak]
+    text: It is a holy cloak, crafted by the gods.
+
+"tba:304:obj:30416":
+  type: armor
+  keywords: [leggings, leg, brown, fur]
+  short: a set of brown fur leggings
+  long: A pair of brown fur leggings lie on the ground here.
+  flags: [glow, hum]
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 5
+  cost: 250
+  rent: 0
+  level: 10
+  affects:
+  - apply: move
+    modifier: 20
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [leggings, leg, brown, fur]
+    text: They seem to have been stripped off of a Bull.
+
+"tba:304:obj:30417":
+  type: armor
+  keywords: [bracelet, horn, twisted]
+  short: a twisted horn
+  long: A twisted piece of horn has been dropped here.
+  flags: [glow, hum]
+  wear: [take, wrist]
+  values:
+    armor: 5
+  weight: 2
+  cost: 1000
+  rent: 0
+  level: 10
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [bracelet, horn, twisted]
+    text: It is a highly polished piece of horn, might fit on your wrist.

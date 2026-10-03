@@ -1,0 +1,454 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 33.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:33:mob:3300":
+  keywords: [farmer]
+  short: the farmer
+  long: A farmer walks around, looking for something to do.
+  description: >
+    This farmer is a resident of Stanneg by the Mountains, and as such, is one of the most boring
+    people on earth.
+  level: 7
+  sex: male
+  alignment: 500
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3301":
+  keywords: [storekeeper]
+  short: the storekeeper
+  long: A bored storekeeper waits for you to do something.
+  description: >
+    The bored storekeeper keeps a lazy eye on you as he waits for you to buy something.  Whee.
+  level: 20
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3302":
+  keywords: [cowgirl]
+  short: the cowgirl
+  long: A cowgirl stand here ready to defend her horses...
+  description: >
+    This woman seems ready for anything you might do...  She is truly a woman to be reckoned with...
+  level: 20
+  sex: female
+  alignment: 750
+  flags: [sentinel, memory, helper]
+  affects: [detect_invis, sneak, hide]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3303":
+  keywords: [horse]
+  short: the horse
+  long: A horse does horsely things here.
+  description: >
+    This horse looks like a nice horse.  It looks at you with soft brown eyes and you want to give it a
+    carrot.
+  level: 5
+  sex: male
+  alignment: 250
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3304":
+  keywords: [farmer's, wife]
+  short: the farmer's wife
+  long: A farmer's wife offers you some vegetables.
+  description: >
+    This woman has many different types of fruits and vegetables for you to buy. She looks bored,
+    though.
+  level: 20
+  sex: female
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3305":
+  keywords: [aglandiir, dragon]
+  short: Aglandiir
+  long: The Dragon Prince, Aglandiir, sits here looking at you curiously.
+  description: >
+    Aglandiir is a prince of his kind, and he didn't get where he is today by letting people steal from
+    his horde!
+  level: 30
+  sex: male
+  alignment: 750
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: claw
+  abilities:
+    str: 25
+    int: 25
+    wis: 25
+    dex: 25
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3306":
+  keywords: [cyclops]
+  short: the Cyclops
+  long: A Cyclops is here, trying to judge range with no depth perception.
+  description: >
+    This Cyclops throws rocks real good.  With one eye though, hitting the target is another matter. 
+    He looks at you and growls as he misses again!
+  level: 16
+  sex: male
+  alignment: -500
+  flags: [sentinel, scavenger, aggressive, memory, no_charm, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3307":
+  keywords: [salle, woman]
+  short: Salle
+  long: A woman ignores you completely, so intent is she upon her sword.
+  description: >
+    She is a stunning woman, all hair and eyes, it seems.  Her clothing is of the same tawny brown of
+    her skin and hair.  Her blue eyes look at you appraisingly, seemingly to show great intelligence.  Her
+    mouth twitches into a sneer...
+  level: 15
+  sex: female
+  alignment: -600
+  flags: [sentinel, helper]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3308":
+  keywords: [duwick, man]
+  short: Duwick
+  long: A truly immense man laughs at you, and draws his knife!
+  description: >
+    This has to be one of the biggest men you've ever seen.  He is a full seven feet toe to head, and
+    weighs a good three hundred pounds -- mostly on his biceps and pectorals it appears.  An ornate
+    scabbard slaps by his side, with the pommel of a silvered dagger sticking out...  A tiny weapon for such a
+    large man!
+  level: 22
+  sex: male
+  alignment: -900
+  flags: [sentinel, helper]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3309":
+  keywords: [receptionist]
+  short: the Receptionist
+  long: A receptionist offers you a room.
+  description: He looks like a retired farmer now making an honest living in an inn.  More power to him!
+  level: 12
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3310":
+  keywords: [innkeeper]
+  short: the innkeeper
+  long: An aged innkeeper greets you as you enter.
+  description: >
+    He is old and graying, but seems to have been able to keep his mental faculties through the years. 
+    A large woolen sweater is wrapped about him for warmth.  His blue eyes dance with amusement as he
+    notices your weapons, but he doesn't seem too terribly startled.
+  level: 10
+  sex: male
+  alignment: 750
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3311":
+  keywords: [hunter]
+  short: the hunter
+  long: A hunter walks through the town streets on his own time.
+  description: >
+    He looks mean, as if the very personality of the mountains had infected him with hardness.  His
+    stride is purposeful, his face weathered, his eyes cold and dark.  Others are standing out of his way as
+    he walks on by.
+  level: 11
+  sex: male
+  alignment: 500
+  flags: [scavenger, stay_zone, helper]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3312":
+  keywords: [waiter]
+  short: a waiter
+  long: A waiter rushes by, intent on his business.
+  description: >
+    He looks harried from the way he hastily takes orders and rushes in the back to get food, and to
+    the bar for drinks.  He doesn't even spare you a glance as he passes by.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3313":
+  keywords: [waitress]
+  short: a waitress
+  long: A waitress rushes by, intent on her business.
+  description: >
+    She looks harried from the way she hastily takes orders and rushes in the back to get food, and to
+    the bar for drinks.  She doesn't even spare you a glance as she passes by.
+  level: 5
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3314":
+  keywords: [bartender]
+  short: a bartender
+  long: A bartender washes a glass idly here.
+  description: >
+    He nods, smiles, and asks you what you would like to drink.  As you decide, he slowly polishes a
+    glass with an old bar rag.  The glass is completely clean, but he polishes it anyway.  Go figure.
+  level: 15
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3315":
+  keywords: [bandit]
+  short: the bandit
+  long: A bandit springs into action upon seeing you.
+  description: >
+    Whew!  Has this guy ever seen a bath?  His face, hands, arms...  Nearly every bit of him is covered
+    with grime, dust, dirt and decay.  His sword is polished and cleaned though...
+  level: 16
+  sex: male
+  alignment: -500
+  flags: [scavenger, stay_zone, wimpy, aggr_good, aggr_neutral]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3316":
+  keywords: [bandit, guard]
+  short: the bandit guard
+  long: A bandit guard stands at attention here.
+  description: >
+    He may be a bandit, but he's no slacker.  You wonder who would be able to keep these bandits in
+    line enough to pull a good guard duty...  (boy is this guy DIRTY!!!  )
+  level: 18
+  sex: male
+  alignment: -500
+  flags: [sentinel, aggr_good, aggr_neutral]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3317":
+  keywords: [miner, worker, slave]
+  short: the slave
+  long: A slave here is mining out a new passageway.
+  description: >
+    The slave looks up at you with pleading eyes.  He wants his freedom.  The chains around his ankles
+    are tight, and you wonder if you should set him free, and if you even can.
+  level: 6
+  sex: male
+  alignment: 1000
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3318":
+  keywords: [farmer]
+  short: the farmer
+  long: A farmer walks around, looking for something to do.
+  description: >
+    This farmer is a resident of Stanneg by the Mountains, and as such, is one of the most boring
+    people on earth.
+  level: 7
+  sex: male
+  alignment: 500
+  flags: [sentinel, scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:33:mob:3319":
+  keywords: [hunter]
+  short: the hunter
+  long: A hunter walks through the town streets on his own time.
+  description: >
+    He looks mean, as if the very personality of the mountains had infected him with hardness.  His
+    stride is purposeful, his face weathered, his eyes cold and dark.  Others are standing out of his way as
+    he walks on by.
+  level: 11
+  sex: male
+  alignment: 500
+  flags: [sentinel, scavenger, stay_zone, helper]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing

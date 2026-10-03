@@ -1,0 +1,83 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 32.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:32:room:3200":
+  name: Under The Bridge
+  description: >
+    The arch under the bridge is covered by seaweed about a foot above the surface of the river.  The
+    water gently flows through an opening in the lower part of the city wall.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:32:room:3201
+    west:
+      to: tba:9:room:900
+  extras:
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      Looks pretty solid.
+
+"tba:32:room:3201":
+  name: On The River
+  description: >
+    North of here you see the miserable buildings of Poor Alley.  The river flows west towards the
+    bridge.  The riverbanks are too steep to climb.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:32:room:3202
+    west:
+      to: tba:32:room:3200
+
+"tba:32:room:3202":
+  name: On The River
+  description: >
+    North of here you see the dump.  The river flows from east to west.  The riverbanks are too steep
+    to climb.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:32:room:3203
+    west:
+      to: tba:32:room:3201
+
+"tba:32:room:3203":
+  name: On The River
+  description: The levee is directly north of here.  The river flows in an east west direction.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:30:room:3049
+    east:
+      to: tba:32:room:3204
+    west:
+      to: tba:32:room:3202
+
+"tba:32:room:3204":
+  name: On The River
+  description: >
+    You see the warehouse on the northern riverbank.  East of here you see the city wall.  The river
+    flows west towards the levee.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:32:room:3205
+    west:
+      to: tba:32:room:3203
+
+"tba:32:room:3205":
+  name: On The River
+  description: >
+    The river enters from a hole in the eastern city wall.  The hole has been blocked by several
+    vertically positioned iron bars set into the wall.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:50:room:5001
+      look: >
+        The iron bars make it difficult to pass through the hole in the wall. Beyond the bars you see that
+        the river leads into a cavern below the mountain range to the east.
+    west:
+      to: tba:32:room:3204

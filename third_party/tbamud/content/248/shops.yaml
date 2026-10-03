@@ -1,0 +1,157 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 248.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:248:shop:24800":
+  keeper: tba:248:mob:24804
+  rooms: [tba:248:room:24811]
+  products:
+  - tba:248:obj:24801
+  - tba:30:obj:3020
+  - tba:30:obj:3021
+  - tba:30:obj:3023
+  - tba:248:obj:24806
+  - tba:72:obj:7211
+  - tba:60:obj:6000
+  buys:
+  - type: weapon
+  - type: furniture
+  - type: free
+  - type: undefined
+  - type: undefined
+  profit:
+    buy: 1.3
+    sell: 0.4
+  messages:
+    no_such_item: "%s Sorry, I don't have that weapon."
+    you_dont_have_it: "%s Sorry, you don't seem to have that..."
+    does_not_buy: "%s I don't buy such an item, try some other shop."
+    shop_cannot_afford: "%s Sorry, that's a too expensive weapon for me, try in Thewston."
+    you_cannot_afford: "%s Get some money if you wanna buy something..."
+    bought: "%s Ok, I'll charge you %d coins for it."
+    sold: "%s Here you are, I'll give you %d coins for it."
+  temper: 2
+  flags: 6
+  trade_with: 0
+
+"tba:248:shop:24801":
+  keeper: tba:248:mob:24805
+  rooms: [tba:248:room:24810]
+  products:
+  - tba:30:obj:3042
+  - tba:30:obj:3086
+  - tba:30:obj:3076
+  - tba:248:obj:24802
+  - tba:60:obj:6002
+  - tba:248:obj:24807
+  - tba:248:obj:24808
+  buys:
+  - type: armor
+  - type: undefined
+  - type: undefined
+  - type: undefined
+  - type: undefined
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't have that armor."
+    you_dont_have_it: "%s Sorry, you don't seem to have that."
+    does_not_buy: "%s I don't buy such a item, try some other shop."
+    shop_cannot_afford: "%s Sorry, that's a too expensive armor for me, try in Thewston."
+    you_cannot_afford: "%s Get some money if you like to buy something..."
+    bought: "%s Ok, that'll be %d coins, please."
+    sold: "%s Here you are, I'll give you %d coins for it."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:248:shop:24802":
+  keeper: tba:248:mob:24806
+  rooms: [tba:248:room:24814]
+  products:
+  - tba:30:obj:3050
+  - tba:30:obj:3051
+  - tba:248:obj:24809
+  - tba:248:obj:24810
+  - tba:248:obj:24811
+  - tba:248:obj:24812
+  buys:
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: potion
+  - type: undefined
+  profit:
+    buy: 1.05
+    sell: 0.15
+  messages:
+    no_such_item: "%s To bad, I don't seem to have that item."
+    you_dont_have_it: "%s Sorry, I don't buy something you don't have."
+    does_not_buy: "%s Sorry that's not my part of business..."
+    shop_cannot_afford: "%s Sorry, that's a too expensive item for me, try in Thewston."
+    you_cannot_afford: "%s Get lost punk! You don't have that much money."
+    bought: "%s That'll be %d coins!"
+    sold: "%s I'll give you about %d coins for it."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:248:shop:24803":
+  keeper: tba:248:mob:24807
+  rooms: [tba:248:room:24813]
+  products:
+  - tba:248:obj:24813
+  - tba:248:obj:24814
+  - tba:248:obj:24815
+  - tba:248:obj:24816
+  - tba:248:obj:24817
+  - tba:72:obj:7208
+  buys:
+  - type: light
+  - type: container
+  - type: note
+  - type: pen
+  - type: treasure
+  profit:
+    buy: 1.5
+    sell: 0.4
+  messages:
+    no_such_item: "%s Sorry, I'm unfortunatly out of that for the moment."
+    you_dont_have_it: "%s You don't seem to be a honest man, maybe I should call the guards?"
+    does_not_buy: "%s I don't trade in that kind of objects."
+    shop_cannot_afford: "%s Sorry, I'm out of cash, try in Thewston, or give it to me. :-)"
+    you_cannot_afford: "%s You seem to have been robbed if you thought you had that kind of money?"
+    bought: "%s That'll be %d coins, please..."
+    sold: "%s I'll give you about %d coins for it, here you go..."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:248:shop:24804":
+  keeper: tba:248:mob:24808
+  rooms: [tba:248:room:24816]
+  products:
+  - tba:31:obj:3102
+  - tba:248:obj:24818
+  - tba:248:obj:24819
+  - tba:248:obj:24820
+  buys:
+  - type: drinkcon
+  - type: food
+  - type: undefined
+  - type: undefined
+  - type: undefined
+  profit:
+    buy: 2.0
+    sell: 0.9
+  messages:
+    no_such_item: "%s It's very noisy in here, what did you say you wanted to buy?"
+    you_dont_have_it: "%s You don't seem to be a honest man, maybe I should call the guards?"
+    does_not_buy: "%s I don't trade in that kind of objects."
+    shop_cannot_afford: "%s Sorry, I'm out of cash, try in Thewston, or give it to me for free...:-)"
+    you_cannot_afford: "%s Are you drunk or what ??? - NO CREDIT!"
+    bought: "%s That'll be - say %d coins."
+    sold: "%s I'll give you about %d coins for it, here you go..."
+  temper: 0
+  flags: 6
+  trade_with: 0

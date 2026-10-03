@@ -1,0 +1,511 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 175.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:175:room:17500":
+  name: The Cardinal Wizards Zone Description Room
+  description:
+    preformatted: |2
+         Builder   :
+      Zone         : 175 Cardinal Wizards
+      Began        : 2000
+      Player Level : 18-22
+      Rooms        : 27
+      Mobs         : 13
+      Objects      : 14
+      Shops        : 1
+      Triggers     : 16
+      Theme        : A wizards castle with riddles.
+      Notes        : This is not an easy zone. The riddles are very tough and I doubt
+                     many people will be able to complete them. So the prize should
+                     be worthwhile. I'm sure the word will get out as soon as someone
+                     guesses them though.
+      Links        : 01s, 25w
+  sector: inside
+  flags: [indoors, private]
+  exits:
+    down:
+      to: tba:175:room:17501
+
+"tba:175:room:17501":
+  name: A Gravel Path
+  description: >
+    The path beneath you is made of loose gravel, and travels both north and east.  To the north a
+    large complex is visible, with a tower peaking into the sky to the northwest.  To the south lies a
+    granite castle.
+  sector: inside
+  exits:
+    north:
+      to: tba:175:room:17502
+    west:
+      to: tba:175:room:17526
+
+"tba:175:room:17502":
+  name: A Dead End
+  description: >
+    The path halts suddenly here at the base of what at first glance looks like a cliff.  But upon
+    closer examination, the cliff is revealed to be part of a wall that extends to the east and west as far
+    as the eye can see.
+  sector: inside
+  exits:
+    north:
+      to: tba:175:room:17503
+      look: >
+        Looking closer at the sheer wall before you, it becomes obvious that there is a finely constructed
+        door here, designed to merge seamlessly into the northern wall.
+      door:
+        keywords: [door, hidden]
+        kind: pickproof
+        key: tba:175:obj:17500
+        reset: locked
+    south:
+      to: tba:175:room:17501
+
+"tba:175:room:17503":
+  name: The Wizard's Mansion
+  description: >
+    You are in a richly decorated room, with thick carpet under your feet and tapestries hanging from
+    the walls.  To the west lies a staircase, and to the east you can hear the gurgling of water.  On the
+    north wall hangs a curious quicksilver mirror.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:175:room:17515
+      look: >
+        The mirror is a gray stone frame the size of a door set against the wall. Within it, a vertical
+        pool of quicksilver ripples gently, held in place by some magical means.
+    east:
+      to: tba:175:room:17504
+    south:
+      to: tba:175:room:17502
+      look: >
+        From this side, the door is clearly visible, but the way the edge of the door merges with the frame
+        suggests that from the other side the door is well hidden.
+      door:
+        keywords: [door, hidden]
+        kind: pickproof
+        key: tba:175:obj:17500
+        reset: locked
+    west:
+      to: tba:175:room:17516
+      look: To the west lies the base of a staircase.
+  extras:
+  - keywords: [mirror]
+    text: >
+      The mirror is a gray stone frame the size of a door set against the wall. Within it, a vertical
+      pool of quicksilver ripples gently, held in place by some magical means.
+
+"tba:175:room:17504":
+  name: An Indoor River
+  description: >
+    The carpet here comes to an abrupt halt as some hidden mechanism pumps water into the hallway and
+    sends it flowing to the east, where it quickly becomes rapid and hostile.  On the north wall is a
+    large tapestry, which appears suspiciously door-like.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:175:room:17505
+      look: >
+        The brilliant tapestry is a rich and colorful depiction of a violent clash of four armies, each led
+        by it's own Wizardly commander. It is so realistic, it could almost be moving. It is also
+        suspiciously door-shaped.
+      door:
+        keywords: [tapestry]
+        kind: door
+        reset: closed
+    east:
+      to: tba:175:room:17506
+      look: >
+        An inexplicable river begins to the east, and continues down the hallway and out of sight.
+    west:
+      to: tba:175:room:17503
+
+"tba:175:room:17505":
+  name: A Tight Space
+  description: >
+    You are in a tight space behind a tapestry.  It is cramped, cold, dark, and smells of moist, moldy
+    stone.  The only thing of intrest is an inscription on the wall.
+  sector: inside
+  flags: [dark, indoors, tunnel]
+  exits:
+    south:
+      to: tba:175:room:17504
+      look: From behind, the tapestry is merly thick cloth.
+      door:
+        keywords: [tapestry]
+        kind: door
+        reset: closed
+
+"tba:175:room:17506":
+  name: The River Quickens
+  description: >
+    The absurd indoor river quickens now, and you realize that you cannot hope to make your way back
+    upstream.  The brick walls around you become coarse and poorly cut as you move downstream.
+  sector: water_swim
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:175:room:17507
+      look: To the east, the indoor river turns towards the north.
+
+"tba:175:room:17507":
+  name: A Bend in the River
+  description: >
+    Here the river bends, and continues onwards to the north.  The walls continue to deteriorate closer
+    towards that of a cavern, and you can see what looks like daylight ahead to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:175:room:17508
+      look: The river continues on to the north, and you see daylight ahead.
+
+"tba:175:room:17508":
+  name: The River Continues
+  description: >
+    The river continues onwards to the north from here, and you can definitely see what looks like the
+    exit of a cave's mouth up ahead.  The walls have degenerated into uncut stone.
+  sector: water_swim
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:175:room:17509
+      look: >
+        To the north lies the exit from the hallway (tunnel?) you are in, and the river turns to the east.
+
+"tba:175:room:17509":
+  name: A Bend to the East
+  description: >
+    You leave the cave entrance only to find yourself outside in the wilderness. However, the banks of
+    the river are too steep to climb, and you are forced along a tight bend to the east.
+  sector: water_swim
+  exits:
+    east:
+      to: tba:175:room:17510
+      look: To the east, the river pours into a lake.
+
+"tba:175:room:17510":
+  name: Out on the Lake
+  description: >
+    The river pours into a lake here, and the water stills.  To the north lies a shimmering white
+    light, and far to the east you can see a door-sized mirror hovering vertically above the water.
+  sector: water_swim
+  exits:
+    north:
+      to: tba:175:room:17511
+      look: >
+        To the north the flickering white light grows stronger. It seems to be congregating about a point.
+    east:
+      to: tba:175:room:17512
+    west:
+      to: tba:175:room:17514
+      look: The river flows into the lake to the west.
+
+"tba:175:room:17511":
+  name: Trilless's Sanctuary.
+  description: >
+    You are surrounded by a shimmering white light in all directions but down. Beneath you, water laps
+    gently through the void of brightness, and to the south you hear the sounds of a lake.  To the west,
+    you can hear the muffled bickering of two guards.
+  sector: water_swim
+  exits:
+    south:
+      to: tba:175:room:17510
+    west:
+      to: tba:175:room:17513
+      look: >
+        To the west, Trilless' Sanctuary glows as brightly as in every other direction. Yet from the west
+        also comes the muffled sounds of voices.
+      door:
+        keywords: [sanctuary, door]
+        kind: pickproof
+        key: tba:175:obj:17510
+        reset: locked
+
+"tba:175:room:17512":
+  name: The Mirror on the Lake
+  description: >
+    To the south rises a large ivory doorframe, carved with ethereal runes and symbols.  Within the
+    frame ripples quicksilver, and your warped reflection stares back at you.  The mirror could be easily
+    walked through.
+  sector: water_swim
+  exits:
+    south:
+      to: tba:175:room:17515
+      look: The mirror completely restricts your sight to what may possibly lie beyond.
+    west:
+      to: tba:175:room:17510
+
+"tba:175:room:17513":
+  name: The Guardian Room
+  description: >
+    But for the four exits, this room is completly and utterly bare.  In each of the four cardinal
+    directions lies a door, and only the northern is even remotely earthly in appearance.  The west wall has
+    a carved obsidian doorframe attached, pure blackness inside.  The east is the inverse of the first, a
+    carved ivory frame with glowing white light.  The south has a gray stone frame, and liquid
+    quicksilver ripples gently on the surface.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:175:room:17511
+      look: To the east, a doorframe surrounds a flat, flickering window of white light.
+      door:
+        keywords: [sanctuary]
+        kind: pickproof
+        key: tba:175:obj:17510
+        reset: locked
+    south:
+      to: tba:175:room:17503
+      look: Nothing. The mirror completely restricts your sight to what may possibly lie beyond.
+    west:
+      to: tba:175:room:17522
+      look: A carved obsidian doorframe surrounds a rectangle of pure darkness.
+      door:
+        keywords: [darkness]
+        kind: door
+        reset: locked
+
+"tba:175:room:17514":
+  name: The Flowing River
+  description: >
+    The river soon turns out to become to powerful an opponent to battle, and it unceremoniously forces
+    you back to the east.
+  sector: water_swim
+  exits:
+    east:
+      to: tba:175:room:17510
+      look: The lake opens before you to the east.
+
+"tba:175:room:17515":
+  name: Inside the Mirror
+  description: >
+    Nothing but rippling liquid reflection makes up the existence of the world. Beneath your feet, up
+    above, and to either side all you can see is your own reflection, warped into odd contorted shapes.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:175:room:17503
+      look: >
+        To the south, the mirror thins and the faint impression of a room can be seen behind the reflection.
+
+"tba:175:room:17516":
+  name: The Base of the Stairs
+  description: >
+    The room around you is rich, luxuriant, and very, very black.  A stairwell leads upwards into the
+    level above, and a small sign is attached to the rail. To the east you can see the entrance to the
+    wizards mansion.
+  sector: inside
+  exits:
+    east:
+      to: tba:175:room:17503
+      look: The entrance to the Wizard's Mansion lies to the east.
+    up:
+      to: tba:175:room:17517
+      look: The stairwell winds upwards above you into a foyer.
+  extras:
+  - keywords: [read, sign]
+    text: >
+      My Tower of Evil lies above.  All tresspassers will be killed on sight. Turn back now, or face my
+      wrath. - Carcophan
+
+"tba:175:room:17517":
+  name: The Foyer of the Tower
+  description: >
+    You are in a foyer.  The floor, walls, and ceiling are black, with the occasional blood red splash
+    of a rug or a tapestry.  There is a desk to the west that you could easily fit behind.  The stairwell
+    continues up before coming to an abrubt halt at the ceiling.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:175:room:17518
+    up:
+      to: tba:175:room:17519
+      look: >
+        There is a small porthole covering the ascent of the stairwell. On it is written the following
+        words: "I am the end of every life, and the beggining of every end. What am I?"
+    down:
+      to: tba:175:room:17516
+  extras:
+  - keywords: [ceiling, porthole, stairwell]
+    text: >
+      There is a small porthole covering the ascent of the stairwell. There is an inscription written on
+      the porthole: I am the end of every life, and the beginning of every end. What am I?
+
+"tba:175:room:17518":
+  name: Behind the Desk
+  description: The desk is cluttered with papers and records, but nothing is of exceptional notice here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:175:room:17517
+
+"tba:175:room:17519":
+  name: Outside
+  description: >
+    The porthole at your feet is surrounded as far as the eye can see by a vast desert in the grips of
+    eternal night.  The stars and moon provide enough light to see by.  Before you lies a rock carved
+    with what looks like crude poetry. You see no reason to explore the desert.  It's absolutely empty as
+    far as the eye can see, and probably further.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:175:room:17519
+    east:
+      to: tba:175:room:17519
+    south:
+      to: tba:175:room:17519
+    west:
+      to: tba:175:room:17519
+    down:
+      to: tba:175:room:17517
+      look: >
+        The inscription on the porthole reads: "This way is now barred to you, You, my friend, cannot come
+        through."
+  extras:
+  - keywords: [rock, stone, poetry]
+    text:
+      preformatted: |2
+           "_____ smother light,
+        Black bleak land,
+        Done with bright,
+        Do in dark,
+        Smother tight,
+        Dark and hide,
+        Foolsie sight,
+        Stay inside,
+        Fear the _____,
+        Call the Dark!
+        Call the Black!
+        Bringsie forth,
+        I call it back!"
+        
+        - Trickster
+  - keywords: [look, porthole]
+    text: >
+      The inscription on the porthole reads: "This way is now barred to you, You, my friend, cannot come
+      through."
+
+"tba:175:room:17520":
+  name: The Forge.
+  description: >
+    This room looks to be an oversized forge.  An anvil larger then you are stands in the center of the
+    room, and several huge smithy weapons adorn the walls.  The chimeny to the forge looks safe to
+    climb, but a large grate blocks your path upwards.
+  sector: inside
+  exits:
+    up:
+      to: tba:175:room:17521
+      look: >
+        The grate is huge, thick and immovable. There is writing here: "If this riddle you wish to solve,
+        Five keys you need to find, Look for them all in your forge's anvil, And you will find they be of like
+        kind."
+  extras:
+  - keywords: [anvil]
+    text: >
+      Upon close inspection you find the following is engraved into the metal:
+      "abcdefghijklmnopqrstuvwkyz."
+  - keywords: [grate, door, plaque, poetry]
+    text: >
+      The grate is huge, thick and immovable.  There is writing here: "If this riddle you wish to solve,
+      Five keys you need to find, Look for them all in your forge's anvil, And you will find they be of
+      like kind."
+
+"tba:175:room:17521":
+  name: The Windy Chimney
+  description: >
+    By some trick of placement, a gale blows up the chimney from below.  The rushing air howls and
+    wails, pulling and pushing at anything not fixed to the wall.  Above you is another grate, with a plaque
+    fixed in the center.
+  sector: inside
+  exits:
+    down:
+      to: tba:175:room:17520
+      look: >
+        The grate can only open inwards, and if it did so it would crush you. Probably better not to mess
+        with it.
+  extras:
+  - keywords: [plaque, grate, riddle, poem]
+    text: Lipless cries, Mouthless mutters, Toothless shrieks, Wingless flutters.
+
+"tba:175:room:17522":
+  name: Deeper Within the Darkness
+  description: >
+    You are surrounded on all sides by deep, black, malign darkness.  You can see nothing whatsoever
+    beyond the outer limit of your light's glow.  But to the south you can hear an echo, as if there is
+    more space in that direction than in the others.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:175:room:17513
+      look: >
+        To the east the darkness grows more solid. An echo can be heard far off in this direction.
+      door:
+        keywords: [darkness]
+        kind: door
+        key: tba:175:obj:17513
+        reset: locked
+    south:
+      to: tba:175:room:17523
+    west:
+      to: tba:175:room:17524
+      door:
+        keywords: [darkness]
+        kind: door
+        reset: locked
+
+"tba:175:room:17523":
+  name: Within the Darkness
+  description: >
+    You are surrounded on all sides by deep, black, malign darkness.  You can see nothing whatsoever
+    beyond the outer limit of your light's glow.  But to the north you can hear an echo, as if there is
+    more space in that direction than in the others.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:175:room:17522
+
+"tba:175:room:17524":
+  name: Carcophan's Study
+  description: >
+    You are standing inside what looks to be a large tent in the middle of a desert.  A small fire
+    burns giving off light, and comfortable pillows lie scattered across the ground.  There is a desk in one
+    corner, with papers and pens scattered across it.
+  sector: inside
+  exits:
+    east:
+      to: tba:175:room:17522
+      door:
+        keywords: [darkness]
+        kind: door
+        reset: closed
+
+"tba:175:room:17525":
+  name: Before a Cliff Face
+  description: >
+    The gravel path continues east and west along the cliff face that towers above you, too steep to
+    climb.  It stretches to the east and west just north of the path.
+  sector: inside
+  exits:
+    east:
+      to: tba:175:room:17526
+
+"tba:175:room:17526":
+  name: Before a Cliff Face
+  description: >
+    The gravel path looks out of place at the base of this cliff with an open field to the south.  A
+    turn in the path can be seen to the east while the city of Elcardo is visible to the west.
+  sector: inside
+  exits:
+    east:
+      to: tba:175:room:17501
+    west:
+      to: tba:175:room:17525

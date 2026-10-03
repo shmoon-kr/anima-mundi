@@ -1,0 +1,397 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 294.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:294:obj:29400":
+  type: weapon
+  keywords: [Knife, madman, madmans, piece, cutlery]
+  short: the Madman's Knife
+  long: A dangerous piece of cutlery sits here.
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: pierce
+  weight: 6
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: -2
+  extras:
+  - keywords: [Knife, madman, madmans, piece, cutlery]
+    text: There's dried blood on the blade.
+
+"tba:294:obj:29401":
+  type: weapon
+  keywords: [Awl]
+  short: an Awl
+  long: A discarded awl lies here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d1
+    attack: pierce
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [awl]
+    text: Looks like a normal awl, used to punch holes through leather.
+
+"tba:294:obj:29402":
+  type: trash
+  keywords: [T-Square, square, t]
+  short: a T-Square
+  long: An architect's T-Square lies forgotten here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [T-Square, square, t]
+    text: You think its used for angles and lines and ...  Stuff.
+
+"tba:294:obj:29403":
+  type: weapon
+  keywords: [Cleaver, knife, meat, meatcleaver]
+  short: a Huge Meat Cleaver
+  long: A huge meat cleaver gathers rust here.
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: crush
+  weight: 15
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: hitroll
+    modifier: -1
+  extras:
+  - keywords: [Cleaver, knife, meat, meatcleaver]
+    text: Looks like you could really hack through some meat with that thing!
+
+"tba:294:obj:29404":
+  type: armor
+  keywords: [silver, ring]
+  short: a silver ring
+  long: A silver ring lies here.
+  wear: [take, finger, hold]
+  values:
+    armor: 2
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ring, silver]
+    text: Small and silver, Nice.
+
+"tba:294:obj:29405":
+  type: armor
+  keywords: [boots, pair, leather]
+  short: a pair of Leather Boots
+  long: A pair of Leather Boots are sitting here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 6
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boots, pair, leather]
+    text: A nice set of heavy leather boots.
+
+"tba:294:obj:29406":
+  type: armor
+  keywords: [Tie, leather, necktie]
+  short: a leather tie
+  long: A Leather tie is here.  Fashionable!
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 450
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Tie, leather, necktie]
+    text: A black leather necktie.  It would go well with nothing you have.
+
+"tba:294:obj:29407":
+  type: armor
+  keywords: [jacket, leather]
+  short: a Leather Jacket
+  long: A nice leather jacket gathers dust on the ground.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 15
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [jacket, leather]
+    text: A heavy-duty leather jacket, made for warmth and protection.
+
+"tba:294:obj:29408":
+  type: armor
+  keywords: [Gloves, leather]
+  short: a pair of Leather Gloves
+  long: A pair of leather gloves have been discarded in a pile.
+  wear: [take, hands]
+  values:
+    armor: 2
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Gloves, leather]
+    text: >
+      These heavy-duty leather gloves seem to offer a lot of hand protection for day-to-day activities.
+
+"tba:294:obj:29409":
+  type: treasure
+  keywords: [Sapphire, gem, jewel]
+  short: a Sapphire
+  long: A glittering blue gem sits here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Sapphire, gem, jewel]
+    text: Pretty.  It's a sapphire, isn't it?
+
+"tba:294:obj:29410":
+  type: treasure
+  keywords: [Emerald, gem, jewel]
+  short: an Emerald
+  long: A sparkling green jewel sits here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Emerald, gem, jewel]
+    text: Exquisite...  A fantastic stone.
+
+"tba:294:obj:29411":
+  type: treasure
+  keywords: [Diamond, gem, jewel]
+  short: a Diamond
+  long: A diamond gathers dust here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [Diamond, gem, jewel]
+    text: Wow!  A real Diamond!
+
+"tba:294:obj:29412":
+  type: food
+  keywords: [Slab, beef]
+  short: a slab of beef
+  long: A fresh slab of beef is wrapped up here.
+  wear: [take, hold]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 10
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Slab, beef]
+    text: It's a big, bloody hunk of meat.  Mmmm.
+
+"tba:294:obj:29413":
+  type: food
+  keywords: [Haunch, mutton]
+  short: a haunch of mutton
+  long: A haunch of fresh mutton is sitting here.
+  wear: [take, hold]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 7
+  cost: 25
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Haunch, mutton]
+    text: Looks like it came from a nice, fat sheep.
+
+"tba:294:obj:29414":
+  type: food
+  keywords: [Steak, deer]
+  short: a deer steak
+  long: A steak of deer meat is wrapped in paper here.
+  wear: [take, hold]
+  values:
+    hours: 9
+    poisoned: false
+  weight: 5
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Steak, deer]
+    text: Smells gamy, but seems edible.
+
+"tba:294:obj:29415":
+  type: trash
+  keywords: [Rope, coil]
+  short: a coil of rope
+  long: A length of rope is neatly coiled here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 25
+  cost: 250
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Rope, coil]
+    text: The rope seems to be made of a good quality hemp.
+
+"tba:294:obj:29416":
+  type: trash
+  keywords: [Anchor]
+  short: an anchor
+  long: A large metal anchor sits here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:294:obj:29417":
+  type: weapon
+  keywords: [Net]
+  short: a net
+  long: A fishing net is lying on the ground.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Net]
+    text: Its a fishing net, with little fishing hooks attached to the knots.
+
+"tba:294:obj:29418":
+  type: weapon
+  keywords: [Fishhook, hook]
+  short: a fishhook
+  long: A stray fishhook is lying here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d1
+    attack: pierce
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Fishhook, hook]
+    text: Its a tiny wire fishhook.  You've seen these before...
+
+"tba:294:obj:29419":
+  type: drinkcon
+  keywords: [beer, glass, beer]
+  short: a glass
+  long: A glass of beer sits forgotten here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: beer
+    poisoned: false
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Beer, glass]
+    text: A nice glass filled with 'Mr.  Beer' brand beer.
+
+"tba:294:obj:29420":
+  type: drinkcon
+  keywords: [ale, mead, glass, ale]
+  short: a glass
+  long: A big glass of mead sits here, cool and frosty.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: ale
+    poisoned: false
+  weight: 2
+  cost: 8
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Mead, glass]
+    text: Looks good.  Looks cold.  You sure could use some cold and alcoholic right about now...
+
+"tba:294:obj:29421":
+  type: drinkcon
+  keywords: [whisky, shot, whiskey, whisky]
+  short: a shot
+  long: A shot of Whiskey is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: whisky
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Whiskey, shot]
+    text: Whew!  Looks like potent stuff!
+
+"tba:294:obj:29422":
+  type: weapon
+  keywords: [Sword, Long, Longsword]
+  short: a long sword
+  long: A long sword gathers rust here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 12
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Sword, Long, Longsword]
+    text: Looks like your generic long sword.

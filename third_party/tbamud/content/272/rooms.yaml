@@ -1,0 +1,1331 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 272.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:272:room:27200":
+  name: A short rockslide
+  description: >
+    You stand amidst a tumble of rocks of various sizes and shades of gray and ebony.  A pale hawk
+    circles overhead, uttering a shivering cry.  It is impossible to continue downwards without meeting an
+    untimely (?  ) death.  A few homes have been hidden here in the cliff face, a bit of a hike from any
+    civilization.
+  sector: mountains
+  exits:
+    east:
+      to: tba:272:room:27202
+    west:
+      to: tba:272:room:27201
+    up:
+      to: tba:272:room:27204
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Sundhaven is designed to be a newbie starting town, essentially
+        an alternative to a time-worn Midgaard. It is complete with the guilds
+        of the four basic classes, shops, bank, post office, and several
+        connecting points which make it easy to link to any world.
+        SPECS:
+        guilds:  {CLASS_WARRIOR, 6757, SCMD_WEST},
+                 {CLASS_THIEF, 6740, SCMD_EAST},
+                 {CLASS_MAGIC_USER, 6616, SCMD_UP},
+                 {CLASS_CLERIC, 6661, SCMD_WEST},
+           Room 6602 may function as a donation room if you desire.
+        Room 6601 may serve as a player loadroom, with the following
+        equipment loading with new players:
+              objs 6602, 6603, 6604 to all.
+              obj 6605 to thieves  (dagger).
+              obj 6606 to mages  (staff).
+              obj 6607 to clerics  (mace).
+              obj 6608 to warriors  (short sword).
+           I hope you find the zone useful.
+        
+        Zone 272 is linked to the following zones:
+        271 Sundhaven                      at 27221 (east ) ---> 27145
+        271 Sundhaven                      at 27233 (north) ---> 27127
+        271 Sundhaven                      at 27236 (up   ) ---> 27125
+        271 Sundhaven                      at 27245 (up   ) ---> 27121
+        271 Sundhaven                      at 27249 (west ) ---> 27149
+        271 Sundhaven                      at 27250 (east ) ---> 27152
+        271 Sundhaven                      at 27251 (west ) ---> 27101
+        271 Sundhaven                      at 27252 (up   ) ---> 27101
+        271 Sundhaven                      at 27253 (north) ---> 27162
+        271 Sundhaven                      at 27254 (down ) ---> 27101
+        271 Sundhaven                      at 27255 (north) ---> 27118
+        271 Sundhaven                      at 27256 (south) ---> 27101
+        271 Sundhaven                      at 27257 (west ) ---> 27152
+        271 Sundhaven                      at 27257 (up   ) ---> 27148
+        271 Sundhaven                      at 27258 (east ) ---> 27138
+        271 Sundhaven                      at 27259 (east ) ---> 27136
+        271 Sundhaven                      at 27260 (west ) ---> 27144
+        271 Sundhaven                      at 27270 (up   ) ---> 27161
+        271 Sundhaven                      at 27281 (south) ---> 27135
+        271 Sundhaven                      at 27282 (west ) ---> 27134
+        271 Sundhaven                      at 27284 (up   ) ---> 27100
+
+"tba:272:room:27201":
+  name: A home embedded in the cliff
+  description: >
+    This is a windowless, but airy, nook of walls built inside cliff stone.  It looks as though with
+    some cleaning up it could be a comfortable place to live.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27200
+
+"tba:272:room:27202":
+  name: A home embedded in the cliff
+  description: >
+    This is a windowless, but airy, nook of walls built inside cliff stone.  It looks as though with
+    some cleaning up it could be a comfortable place to live.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27200
+
+"tba:272:room:27203":
+  name: A path of black grass
+  description: >
+    A little trail picks its way among small ill-anchored stones and patches of black, wiry grass, that
+    at first site gives the place a ravaged, charred look. However, the vegetation is living, just
+    endowed with a dark hue.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27204
+    south:
+      to: tba:272:room:27207
+    west:
+      to: tba:272:room:27209
+
+"tba:272:room:27204":
+  name: A small haunted grove
+  description: >
+    With the exception of the inexplicable darkness permeating this grove, there is little way to
+    explain the odd feeling of foreboding about this place.  No birds sing, no rat scurries in the open, the
+    leaves rustle barely enough to break the silence.  Yet an odd presence makes itself felt.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:272:room:27210
+    east:
+      to: tba:272:room:27206
+    south:
+      to: tba:272:room:27205
+    west:
+      to: tba:272:room:27203
+    down:
+      to: tba:272:room:27200
+
+"tba:272:room:27205":
+  name: A home embedded in the cliff
+  description: >
+    This is a windowless, but airy, nook of walls built inside cliff stone.  It looks as though with
+    some cleaning up it could be a comfortable place to live.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:272:room:27204
+
+"tba:272:room:27206":
+  name: A home embedded in the cliff
+  description: >
+    This is a windowless, but airy, nook of walls built inside cliff stone.  It looks as though with
+    some cleaning up it could be a comfortable place to live.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27204
+
+"tba:272:room:27207":
+  name: A home embedded in the cliff
+  description: >
+    This is a windowless, but airy, nook of walls built inside cliff stone.  It looks as though with
+    some cleaning up it could be a comfortable place to live.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:272:room:27203
+
+"tba:272:room:27208":
+  name: A dwelling perched precariously on the edge
+  description: >
+    This home is so tenuously held to the brink of stone and mud that you have to wonder how long
+    before the rains carry it over the edge.  However, if a god assures you it is safe, it must be.... 
+    Right?  You trust us, don't you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27215
+
+"tba:272:room:27209":
+  name: A black stone dwelling
+  description: >
+    You stand in a quiet, empty dwelling of sturdy black sandstone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live with a little work.  With enough gold,
+    perhaps one of the higher gods might sell it to you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27203
+
+"tba:272:room:27210":
+  name: A garden of wild rosethorn
+  description: >
+    Dense bushes of rosethorn, growing wild, fill the garden with splashes of white and red colors. 
+    There is a grassy space in the center, circled by smooth gray stones, where children play and older
+    residents of the town picnic and enjoy themselves.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27212
+    south:
+      to: tba:272:room:27211
+    west:
+      to: tba:272:room:27213
+
+"tba:272:room:27211":
+  name: A black stone dwelling
+  description: >
+    You stand in a quiet, empty dwelling of sturdy black sandstone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live with a little work.  With enough gold,
+    perhaps one of the higher gods might sell it to you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:272:room:27210
+
+"tba:272:room:27212":
+  name: A black stone dwelling
+  description: >
+    You stand in a quiet, empty dwelling of sturdy black sandstone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live with a little work.  With enough gold,
+    perhaps one of the higher gods might sell it to you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27210
+
+"tba:272:room:27213":
+  name: A black stone dwelling
+  description: >
+    You stand in a quiet, empty dwelling of sturdy black sandstone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live with a little work.  With enough gold,
+    perhaps one of the higher gods might sell it to you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27210
+
+"tba:272:room:27214":
+  name: A red stone dwelling
+  description: >
+    You stand in a quiet dwelling of mortar and rose-colored stone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live, with a little work.  And gold, of course. 
+    Perhaps it may be bought from one of the gods.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27217
+
+"tba:272:room:27215":
+  name: Passing through a vine-wreathed gate
+  description: >
+    A gate swathed in green, fruitless vine lies open, but the path looks little-travelling.  You
+    wonder if there is anything of use to you out this remote way, apparently passing out of the residential
+    area.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27216
+    east:
+      to: tba:272:room:27208
+    west:
+      to: tba:272:room:27222
+
+"tba:272:room:27216":
+  name: A black stone dwelling
+  description: >
+    You stand in a quiet, empty dwelling of sturdy black sandstone.  Occupied now by only a few
+    spiders, it looks like it could be a comfortable place to live with a little work.  With enough gold,
+    perhaps one of the higher gods might sell it to you?
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:272:room:27215
+
+"tba:272:room:27217":
+  name: A path hung with golden lanterns
+  description: >
+    A wide path of chalky-white cobblestone leads to southwards towards some dense illumination.  Here
+    the lane is lined with poles hung with lanterns giving off a mild golden glow, swinging in the
+    breeze.  The wind passes more strongly along a lane to the north.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27218
+    west:
+      to: tba:272:room:27214
+
+"tba:272:room:27218":
+  name: A circle of golden lanterns
+  description: >
+    The path fades into a broad circular clearing, ringed with white stones and hanging golden lanterns
+    that provide a bright radiance.  A few white stone houses, small but cozy-looking, lie just east and
+    west, enjoying the luminescence.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27220
+    south:
+      to: tba:272:room:27217
+    west:
+      to: tba:272:room:27219
+
+"tba:272:room:27219":
+  name: A white stone dwelling
+  description: >
+    A small dwelling has been fashioned from chalky-white stones and gray mortar.  It is empty of signs
+    of habitation.  You feel, nevertheless, that this could be a comfortable place to live, if bought
+    from the gods of the realm.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27218
+
+"tba:272:room:27220":
+  name: A white stone dwelling
+  description: >
+    A small dwelling has been fashioned from chalky-white stones and gray mortar. It is empty of signs
+    of habitation.  You feel, nevertheless, that this could be a comfortable place to live, if bought
+    from the gods of the realm.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27218
+
+"tba:272:room:27221":
+  name: A wide cart path
+  description: >
+    The road outside the town of Sundhaven is well-travelled by vehicles of trade....  Is it a path for
+    wide carts, or a wide path for carts?  Westwards, a dense forest is blurred with low-hanging clouds.
+  sector: field
+  exits:
+    east:
+      to: tba:271:room:27145
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:271:obj:27179
+        reset: closed
+    west:
+      to: tba:272:room:27227
+
+"tba:272:room:27222":
+  name: An untravelled path
+  description: >
+    A thin line of soil barely resembling a path threads its lonesome way between the dull gray
+    stones.  You can only wonder if there is much of note out this direction, as a sense of barrenness is
+    prominent.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27217
+    east:
+      to: tba:272:room:27215
+    west:
+      to: tba:272:room:27223
+
+"tba:272:room:27223":
+  name: An untravelled path
+  description: >
+    A thin line of soil barely resembling a path threads its lonesome way between the dull gray
+    stones.  You can only wonder if there is much of note out this direction, as a sense of barrenness is
+    prominent.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27224
+    east:
+      to: tba:272:room:27222
+
+"tba:272:room:27224":
+  name: An untravelled path
+  description: >
+    A thin line of soil barely resembling a path threads its lonesome way between the dull gray
+    stones.  You can only wonder if there is much of note out this direction, as a sense of barrenness is
+    prominent.
+  sector: field
+  exits:
+    south:
+      to: tba:272:room:27223
+    up:
+      to: tba:272:room:27225
+
+"tba:272:room:27225":
+  name: Climbing a small bluff
+  description: >
+    A few gnarled, wind-tortured trees spread their meager limbs in hunched eastward arcs.  There is
+    little that is extraordinary about this place.  It is deserted, it is lonely, yet a particularly green
+    bluff forms a plateau just above you.  It calls to you in an eerie way, yet emits a chaotic aura that
+    might be best left alone.
+  sector: hills
+  exits:
+    up:
+      to: tba:272:room:27226
+    down:
+      to: tba:272:room:27224
+
+"tba:272:room:27226":
+  name: Blind Man's Bluff
+  description: >
+    The lonely hilltop is blanketed in a strange, rich green grass-cover, and the only sound is that of
+    the wind whistling over the moors.  A haunting, otherworldly presence has made this bluff its home,
+    casting what malevolence it yet can on the mortal world, and giving the bluff its name.
+  sector: field
+  exits:
+    down:
+      to: tba:272:room:27225
+
+"tba:272:room:27227":
+  name: A clearing circled by oaks and maples
+  description: >
+    The stone-rimmed path opens out to a clearing of dirt, encircled by broad oaks and maples with
+    leaves the color of honey.  To the north a black gate is closed against the clamor of the world, and the
+    road continues east to town, and west where it vanishes into a fog banked forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:272:room:27228
+    east:
+      to: tba:272:room:27221
+    west:
+      to: tba:272:room:27248
+
+"tba:272:room:27228":
+  name: The black orchard gate
+  description: >
+    A small gate wrought with black iron flowers and arches swings loosely in the shallow wind. 
+    Beyond, rows of brambles are stretching past the range of your vision.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27229
+      door:
+        keywords: [gate]
+        kind: pickproof
+        key: tba:271:obj:27179
+        reset: closed
+    south:
+      to: tba:272:room:27227
+
+"tba:272:room:27229":
+  name: The blackberry orchard
+  description: >
+    Dark brambles hung with dully shining berries form condensed hedges, growing in lines and
+    stretching their thorny tendrils across your path.  The limbs trail low, heavy with fruit in temperate
+    climate.  High stone walls protect this precious bower from the destructive noise and thoughts of ordinary
+    humans.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27230
+    south:
+      to: tba:272:room:27228
+      door:
+        keywords: [gate]
+        kind: pickproof
+        key: tba:271:obj:27179
+        reset: closed
+    west:
+      to: tba:272:room:27232
+
+"tba:272:room:27230":
+  name: Under an oak dark and wet with rain
+  description: >
+    A broad oak, knotted with the eons it has seen, stands amidst a circle of blackberry shrubs that
+    seem to form a protective shroud of thorns about the area.  Ivy vines hang loose from its many-cornered
+    limbs.  Some images have been carved into the oak.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27247
+    south:
+      to: tba:272:room:27229
+    west:
+      to: tba:272:room:27231
+  extras:
+  - keywords: [oak]
+    text: >
+      The giant oak is covered in thick blue-green mosses and dark swaying ivy. Some images have been
+      carved and charred in by a fiery touch, a sternly beautiful woman with a ruby dagger sheathed at her
+      waist stands beside a man with the robe of the priesthood.  The cold wind of the sea blows the sails of
+      the rocking ship they ride upon.  The rogue woman is imploring a second man to destroy a beast far
+      too great for his strength, a cruel smile playing upon her lips.  The image is frozen upon the bark,
+      immobile, yet it is apparent she is winning the battle.  Beneath the picture are engraved the words
+      "Know thy limits".
+
+"tba:272:room:27231":
+  name: The blackberry orchard
+  description: >
+    Dark brambles hung with dully shining berries form condensed hedges, growing in lines and
+    stretching their thorny tendrils across your path.  The limbs trail low, heavy with fruit in temperate
+    climate.  High stone walls protect this precious bower from the destructive noise and thoughts of ordinary
+    humans.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27230
+    south:
+      to: tba:272:room:27232
+    west:
+      to: tba:272:room:27246
+
+"tba:272:room:27232":
+  name: The blackberry orchard
+  description: >
+    Dark brambles hung with dully shining berries form condensed hedges, growing in lines and
+    stretching their thorny tendrils across your path.  The limbs trail low, heavy with fruit in temperate
+    climate.  High stone walls protect this precious bower from the destructive noise and thoughts of ordinary
+    humans.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27231
+    east:
+      to: tba:272:room:27229
+
+"tba:272:room:27233":
+  name: The southern path
+  description: >
+    The soft mud of the path loosens and parts as it meets your heels, pulling you in slightly with
+    each step.  A rotten stench is filtering in from the west, repelling you in another direction
+    automatically such that it takes a great conscious effort for you to turn that way.  The path heads north into
+    the town's mainstream, and south closer to the wildlands beyond it.
+  sector: city
+  exits:
+    north:
+      to: tba:271:room:27127
+    south:
+      to: tba:272:room:27235
+    down:
+      to: tba:272:room:27234
+      door:
+        keywords: [stone]
+        kind: pickproof
+        key: tba:0:obj:23
+        reset: closed
+
+"tba:272:room:27234":
+  name: The House of Witches
+  description: >
+    Dangling mirrors reflect your face a thousand times from the walls and ceiling of this supply house
+    of witchcraft.  Ingredients for the hexes of hags and the poisons of roguish assassins bubble and
+    float in jars crowded onto shelves, and tinkling against each other from strings around the stone
+    doorway. A voodoo doll pinned to one wall seems to be eyeing you.  Let's hope you are not already
+    earmarked for demise by someone.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    up:
+      to: tba:272:room:27233
+      door:
+        keywords: [stone]
+        kind: pickproof
+        key: tba:0:obj:23
+        reset: closed
+
+"tba:272:room:27235":
+  name: The southern gate
+  description: >
+    You stand before the southern gate,forged into ornaments of the triskelion in black iron and
+    covered with ivy.  Beyond it, days distant, the mountains of black glass rise shrouded in permanent night. 
+    Northwards lies the spread of the town of Sundhaven, hooded in wreaths of cooking smoke.
+  sector: city
+  exits:
+    north:
+      to: tba:272:room:27233
+    south:
+      to: tba:272:room:27283
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:271:obj:27179
+        reset: closed
+
+"tba:272:room:27236":
+  name: A foul staircase
+  description: >
+    A staircase littered with rubble descends into a passageway crawling with rats and smelling of.. 
+    Your imagination needs no assistance here.  The place gives you the creeps, particularly since there
+    seem to be faint traces of recent footfalls outlined in the slime on the soiled floor..
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27237
+    up:
+      to: tba:271:room:27125
+      door:
+        keywords: [rubble]
+        kind: pickproof
+        key: tba:0:obj:23
+        reset: closed
+
+"tba:272:room:27237":
+  name: A dark passageway
+  description: >
+    You slip cautiously along the passage.  The wall is dotted with large holes, roomy enough for a
+    large rat..  Or something..  To pass through with ease, and are not just down by the ground but up near
+    the ceiling.  A fetid stench rolls over you from within the holes.  The passage continues south and
+    east into black.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:272:room:27238
+    south:
+      to: tba:272:room:27236
+
+"tba:272:room:27238":
+  name: A dark passageway
+  description: >
+    Your foot slides as your boot sinks into some unpleasant substance on the muddy floor..  Mold? 
+    Only inspection in better light will tell.  Eastwards the passage slants into a dark pool, and
+    disappears to the west into blackness.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:272:room:27239
+    west:
+      to: tba:272:room:27237
+
+"tba:272:room:27239":
+  name: Trudging through a pool of slime
+  description: >
+    The dark passage slopes into a pool of drainage from the roads of town, seeping in through cracks
+    above you and wetting your hair with slime.  There is an eerie feeling about this place, as if only
+    the few and priviledged are welcome here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:272:room:27240
+    west:
+      to: tba:272:room:27238
+    up:
+      to: tba:272:room:27245
+
+"tba:272:room:27240":
+  name: A doorway hung with daggers
+  description: >
+    The dark hall of the underground ends here before a tall, narrow door of sturdy oak, scarred with
+    daggerpoints.  The soil is wet with some dark fluid.. Slime from the boots of passersby?  Of course. 
+    A circular emblem is etched into the door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:272:room:27241
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:0:obj:23
+        reset: closed
+    west:
+      to: tba:272:room:27239
+  extras:
+  - keywords: [emblem]
+    text: >
+      An emblem of a black naga chasing its tail is engraved in a crimson border on the thick oaken
+      door.  Beneath, something has been scrawled by daggerpoint. ...  Round the gallows, one-armed and bland We
+      dance and dance, the devil's own band Of wary highwaymen.  Let no rogue fail to keep his head.  This
+      is no monastery here, I say, you dead.  ...
+
+"tba:272:room:27241":
+  name: A hall in the Assassins Guild
+  description: >
+    You stand in a wide, dark hallway of the Assassins Guild.  On the ceiling spreads a gigantic mural
+    of the black serpentlike naga, a model of stealth and intelligence, in muted blue and black.  An
+    elegant table stands against the wall, laid with a simple black cloth and a few daggers.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:272:room:27244
+    east:
+      to: tba:272:room:27242
+    west:
+      to: tba:272:room:27240
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:0:obj:23
+        reset: closed
+    down:
+      to: tba:272:room:27243
+      door:
+        keywords: [rug]
+        kind: door
+        key: tba:271:obj:27181
+        reset: locked
+
+"tba:272:room:27242":
+  name: The Assassin Hideout
+  description: >
+    The hideout of rogues is surprisingly comfortable.  Although no refuge from the blood and risk of
+    their everyday existence, it is nevertheless a haven in which bounties can be split and repose taken
+    by a warm fireplace hung with guild daggers, skillfully tapered and too hot from the flames to steal. 
+    A bar sunken into the far stone wall assists your dexterity..  So it is said..  And bunks are layer
+    the area to the east, hung with stolen tapestries and sheets.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:272:room:27252
+    west:
+      to: tba:272:room:27241
+
+"tba:272:room:27243":
+  name: A secret hideaway
+  description: >
+    You slip down into the hideaway.  A pleasant room encloses you, a windowless dugout hidden from the
+    lawful population and furnished with kick-back chairs and half-full bottles of wine.  No bounty
+    hunter could find a lounging thief here, sheltered away from the executioners of town.  No hunter, that
+    is, except a rogue like yourself.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:272:room:27241
+      door:
+        keywords: [rug]
+        kind: door
+        key: tba:271:obj:27181
+        reset: locked
+
+"tba:272:room:27244":
+  name: Beside a row of hanging spines
+  description: >
+    This is where the rogues of Sundhaven come to gain and improve their skills of the trade.  A
+    hanging row of the spines of previous victims covers the east wall, scarred with the dagger twists of
+    countless thieves perfecting their backstab.  You may have to travel far in search of more fine-tuned
+    skills, but the guildmistress is willing to give newcomers their start in the art of fiends.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    south:
+      to: tba:272:room:27241
+
+"tba:272:room:27245":
+  name: Slippery stone steps
+  description: >
+    The darkness of a steep stairwell encloses you.  The dripping and oozing sounds of slime creeping
+    down the walls is barely detectable beneath the sounds of your own breathing.  There seems to be
+    tracks of footfalls in the slime coating the steps..  Evidently this serves as a secret passageway,
+    regularly used, for some individuals of a shady nature.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:271:room:27121
+      door:
+        keywords: [trapdoor]
+        kind: door
+        key: tba:271:obj:27181
+        reset: locked
+    down:
+      to: tba:272:room:27239
+
+"tba:272:room:27246":
+  name: The blackberry orchard
+  description: >
+    Dark brambles hung with dully shining berries form condensed hedges, growing in lines and
+    stretching their thorny tendrils across your path.  The limbs trail low, heavy with fruit in temperate
+    climate.  High stone walls protect this precious bower from the destructive noise and thoughts of ordinary
+    humans.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27231
+
+"tba:272:room:27247":
+  name: The blackberry orchard
+  description: >
+    Dark brambles hung with dully shining berries form condensed hedges, growing in lines and
+    stretching their thorny tendrils across your path.  The limbs trail low, heavy with fruit in temperate
+    climate.  High stone walls protect this precious bower from the destructive noise and thoughts of ordinary
+    humans.
+  sector: field
+  exits:
+    south:
+      to: tba:272:room:27230
+
+"tba:272:room:27248":
+  name: A wide cart path
+  description: >
+    The road outside the town of Sundhaven is well-travelled by vehicles of trade....  Is it a path for
+    wide carts, or a wide path for carts?  Westwards, a dense forest is blurred with low-hanging clouds.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27227
+
+"tba:272:room:27249":
+  name: A dark corner of the tavern
+  description: >
+    The loners of Sundhaven gather here (figure *that* one out) to mourn their losses over gallons of
+    liquid spirits.  Occasionally, one can be seen passed out on the floor, robbed by some thief slipping
+    in from the Nightbreak, but generally the livers here are stout from long and weary experiences.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:271:room:27149
+
+"tba:272:room:27250":
+  name: The Lodge of Wrath
+  description: >
+    The home lodge of warriors is a surprisingly comfortable place, furnished with a thick, hardy rug
+    of a red so dark as to almost be black, beds shelved in bunks of hearty oak, a roaring fireplace in
+    the corner.  Several large chairs stuffed with coarse wool are situated round the fire for the rowdy
+    telling of tales over inebriating brews.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:272:room:27251
+    east:
+      to: tba:271:room:27152
+
+"tba:272:room:27251":
+  name: A red portal
+  description: >
+    You stand in the shimmering glow of a portal of deep red light.  This is the gift of the Archmage
+    to the warriors guild, in return for other favors, of course.  Beyond the glare is a vision of the
+    temple courtyard, the center of town, to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:272:room:27250
+    west:
+      to: tba:271:room:27101
+
+"tba:272:room:27252":
+  name: A black portal
+  description: >
+    You stand in the shimmering glow of a portal of rogue-black light.  This is the gift of the
+    Archmage to the assassin's guild, in return for a few bounties performed, of course.  Ever wonder who put
+    the Earl of Sundhaven in power?.. Nevermind.  Beyond the dark glare is a vision of the temple
+    courtyard, the center of town, above you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:272:room:27242
+    up:
+      to: tba:271:room:27101
+
+"tba:272:room:27253":
+  name: The Sanctuary
+  description: >
+    The walls of the sanctuary of those of a priestly bent are indefinite, seemingly rounded and
+    blurred by a muted pale light that seems to come from nowhere.  It is perhaps a product of the combined
+    faiths of those who live here..  Dark, alabaster, and every shade in between.  All beliefs are accepted
+    here, provided they are not discussed too often, lest blood should be spilt. There are several
+    bookshelves of varying religious works, an altar without ornament, and numerous cots for clerics to take
+    their rest in.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:271:room:27162
+    east:
+      to: tba:272:room:27254
+
+"tba:272:room:27254":
+  name: A white portal
+  description: >
+    You stand bathed in the glow of a portal of white light.  This is the gift of the Archmage to the
+    guild of the ministry, in return for certain blessings, of course.  Beyond the pale glare is a vision
+    of the temple courtyard, the center of town, below you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:272:room:27253
+    down:
+      to: tba:271:room:27101
+
+"tba:272:room:27255":
+  name: The Den of Sorcery
+  description: >
+    The den of sorcery for mages and witches and wizards is a comfortable place, well-lit by magical
+    rose and violet faerie fires for the reading of tomes. There is a rug in guild colors of blue and
+    violet which spans the stone floor, and hammocks hang in rows along the walls, where the mages take their
+    repose. A series of bookshelves provide ample guild literature, and an oak coffee table before a
+    couch dominates the room.
+  sector: inside
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:271:room:27118
+    down:
+      to: tba:272:room:27256
+
+"tba:272:room:27256":
+  name: A blue portal
+  description: >
+    You stand in the faerie glow of a portal of brilliant blue light.  This is the gift of the previous
+    Archmage upon his own guild.  He went on to fashion further portals all leading all over the known
+    world, before the Lady Assassin extinguished his life.  Beyond the blue glare is a vision of the
+    temple courtyard, the center of town.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:271:room:27101
+    up:
+      to: tba:272:room:27255
+
+"tba:272:room:27257":
+  name: Some battered stone steps
+  description: >
+    Broad, shallow stairs of dark stone descend into a hallway warm with the heat of sparring
+    warriors.  Above you the sounds of the alehouse distract you with bawdy laughter.  A doorway is west, bruised
+    with sword-points.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:271:room:27152
+    up:
+      to: tba:271:room:27148
+
+"tba:272:room:27258":
+  name: The town treasury
+  description: >
+    With the exception of a few portraits of the founders of you-don't- know-what, the room is quite
+    drab, and could benefit from some fresh air.  A huge pile of the town's wealth lies on the tile floor,
+    guarded from your meddling by a protective amber shield.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:271:room:27138
+  extras:
+  - keywords: [gold]
+    text: >
+      You can't get near it.  On attempting to reach in and partake of the wealth, a protective amber
+      shield balks your hand as if it were a wall of steel. However, you can create your own account by
+      depositing some money.  If you want to know your balance, typing balance will do the job.  If you'd care to
+      see it again, type withdraw (amount).  Then please put it back again.  Your support is appreciated,
+      we know the town's security rests with you.  Have a nice day.
+  - keywords: [pile]
+    text: >
+      You can't get near it.  On attempting to reach in and partake of the wealth, a protective amber
+      shield balks your hand as if it were a wall of steel. However, you can create your own account by
+      depositing some money.  If you want to know your balance, typing balance will do the job.  If you'd care to
+      see it again, type withdraw (amount).  Then please put it back again.  Your support is appreciated,
+      we know the town's security rests with you.  Have a nice day.
+
+"tba:272:room:27259":
+  name: The Tiger's Eye
+  description: >
+    Three cases, locked and faced in glass, reveal their glittering contents along the walls.  These
+    selfsame jewels perhaps attracted you from the street...  Clouded pearls, white and blue diamonds,
+    amethyst and golden tigers eyes.  Using 'list' will allow you to peruse the goods available.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:271:room:27136
+
+"tba:272:room:27260":
+  name: A stone path
+  description: >
+    You stand just outside the eastern gate of the town of Sundhaven.  Fresh bread and cool drink await
+    those within who are willing to pay for the service, and about the city, other willing merchants may
+    also be found in abundance. Eastwards the land stretches in unmarred wilderness to the far horizon,
+    and to the southeast you think you can catch glimpses of the thatched roofs of yet another village,
+    this one smaller and more humble.  A trail south along the cobblestone wall seems to head in that
+    direction.
+  sector: field
+  exits:
+    south:
+      to: tba:272:room:27261
+    west:
+      to: tba:271:room:27144
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:271:obj:27179
+        reset: closed
+
+"tba:272:room:27261":
+  name: Along the town wall
+  description: >
+    You follow the thick wall of gray cobblestone that marks the outer border of Sundhaven.  Moss,
+    nourished by frequent rainfall, hides portions of the wall under its green tendrils.  A stony path can be
+    made out to the north, and the wall makes its way southwards to a corner.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27260
+    south:
+      to: tba:272:room:27262
+
+"tba:272:room:27262":
+  name: Along the town wall
+  description: >
+    You reach a bend in the town wall, and the trail follows it on both sides to the north and west. 
+    Ivy growing along the wall here brushes your arm as you pass.  Dense shrubbery lining the path to the
+    east renders that way unnavigable.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27261
+    west:
+      to: tba:272:room:27263
+
+"tba:272:room:27263":
+  name: Along the town wall
+  description: >
+    A small path lined with broad trees breaks off to the south from the cobblestone wall of Sundhaven,
+    which runs eastwards to a corner.  The gate of the town must be somewhere near.  You can make out
+    the buzz of city life, hushed by the stone barrier, from the north.
+  sector: field
+  exits:
+    east:
+      to: tba:272:room:27262
+    south:
+      to: tba:272:room:27264
+
+"tba:272:room:27264":
+  name: A path hung with moss
+  description: >
+    A narrow path bordered with ancient, broad-trunked trees leads north to the town wall of Sundhaven
+    and southwards to a short drop.  Moss completely covers and overflows from the oaks, brushing the
+    hair and helms of all but the shortest races of beings.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:272:room:27263
+    down:
+      to: tba:272:room:27265
+
+"tba:272:room:27265":
+  name: A short mossy cliff
+  description: >
+    A four foot gray stone cliff, matted with clumps of green moss and overhung with tall bending
+    trees, is easily scaled by handy footholds in the rock.  The place looks well-travelled by some hardy
+    population of small-footed creatures. One path continues in a north-south vein over the cliff, another
+    breaks off and leads east.
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:272:room:27266
+    up:
+      to: tba:272:room:27264
+
+"tba:272:room:27266":
+  name: A path hung with moss
+  description: >
+    The slender trail winds its way north-south through bending trees laiden with spanish moss. 
+    (Except this was before Spain.  ) It comes to an end before the bubbling ebbs of a tiny stream, pouring
+    gently forth from a hole in the rock on which you are poised, and flows southward.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:272:room:27265
+    down:
+      to: tba:272:room:27267
+
+"tba:272:room:27267":
+  name: A stream
+  description: >
+    A quietly flowing stream drifts down a slim riverbed, leading south from a small hole in the rock
+    to the north.  The water is clear and pure, and seems entirely empty of creatures..  It may be true
+    this stream was taxed by heavy fishing long ago that long since cleaned it of all life.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    south:
+      to: tba:272:room:27268
+    up:
+      to: tba:272:room:27266
+
+"tba:272:room:27268":
+  name: A stream
+  description: >
+    The clear waters begin to shift and curl and the current increase slightly. Tiny brown reeds on the
+    banks lean downstream, sending the dragonflies airborne from their stalks.  A wind whistles in the
+    leaves of the trees above and no sound can be made out from ahead.
+  sector: water_noswim
+  flags: [dark]
+  exits:
+    north:
+      to: tba:272:room:27267
+    south:
+      to: tba:272:room:27269
+
+"tba:272:room:27269":
+  name: A whirlpool
+  description: >
+    A slowly churning blue whirlpool pulls you gently underwater, without sound and without breath. 
+    The tree-darkened sky disappears in a circular motion above your eyes as the world turns to water, and
+    you cannot help but feel that what goes down, must continue down..  The waters engulf you and suck
+    you downwards, where you awake with stars circling before your eyes.
+  sector: flying
+  flags: [dark]
+  exits:
+    north:
+      to: tba:272:room:27268
+
+"tba:272:room:27270":
+  name: A stairwell
+  description: >
+    An old temple stairwell winds down in darkness into the inner, long abandoned recesses of the
+    golden temple.  It seems few have reason to travel this way.  The dust that coats the steps lies mostly
+    undisturbed, and an aura of desertion hangs about the place.  Whoever does traverse these ancient halls
+    may or may not have the light of goodness in their motivations.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:272:room:27272
+    up:
+      to: tba:271:room:27161
+
+"tba:272:room:27271":
+  name: A stairwell
+  description: >
+    The old stairwell completes its descent here, and a single passage, shadowed in darkness black as
+    ink, leads east.  The stairs, floor, and walls are all wooden.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:272:room:27273
+    up:
+      to: tba:272:room:27272
+
+"tba:272:room:27272":
+  name: A dark landing
+  description: >
+    A seatless landing creates a pause in the stairwell before its final descent.  Angular shapes of
+    lighter areas on the walls indicate this place may have once been hung with numerous paintings or
+    tapestries, possibly comemorating the priests and gods of the past.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:272:room:27270
+    down:
+      to: tba:272:room:27271
+
+"tba:272:room:27273":
+  name: A dark corridor
+  description: >
+    Shadows seem to creep within the shadows already existing, clashing and clambering over one another
+    before the approach of your footfalls, yet everything seems to indicate to you that this is not the
+    sort of fun fairy-tale niche your mother liked to tell tales about by the fireside of your ancient
+    home.  Do you continue, or turn back?  Sometimes shadows may form a bluff of great danger in the
+    recesses of your imagination.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:272:room:27274
+    west:
+      to: tba:272:room:27271
+
+"tba:272:room:27274":
+  name: A dark corridor
+  description: >
+    The hallway bends sharply, leading off to the south and west.  No light penetrates either one, so
+    as always the question of where you want to go depends on where you've been.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27284
+      door:
+        keywords: [stone]
+        kind: pickproof
+        key: tba:272:obj:27217
+        reset: locked
+    south:
+      to: tba:272:room:27275
+    west:
+      to: tba:272:room:27273
+
+"tba:272:room:27275":
+  name: A dark corridor
+  description: >
+    The corridor halts abruptly.  A drop opens out at your feet, beneath which water shivers and
+    shimmers, black against black.  The pool is nearly still, only an occasional ripple moving across the
+    surface gives any indication of life, or life in death, within.  Northwards the hall disappears into the
+    dark.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27274
+    down:
+      to: tba:272:room:27276
+
+"tba:272:room:27276":
+  name: Edge of a black-bottom pool
+  description: >
+    You wade ankle-deep into the murky waters of a black-bottom pool.  It appears this pool was once a
+    nice pleasure bath for the priests and their guests, but has fallen into decay from recent lack of
+    use.  Who knows what creatures make their home beneath the dark surface.
+  sector: water_swim
+  flags: [dark, no_mob, indoors]
+  exits:
+    south:
+      to: tba:272:room:27278
+    up:
+      to: tba:272:room:27275
+
+"tba:272:room:27277":
+  name: A black-bottom pool
+  description: >
+    Swamp-like waters black as coal enclose you and wash like cold slime over every limb, each movement
+    sending a chill coursing through from ears to toes. The smooth, dark bottom of the pool shows traces
+    of faded ornamental designs, now mostly hidden and eroded with moss and algae.  Few can pin a name
+    on the grotesque underwater creatures that now make this their home.
+  sector: flying
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27278
+    east:
+      to: tba:272:room:27279
+
+"tba:272:room:27278":
+  name: A black-bottom pool
+  description: >
+    Swamp-like waters black as coal enclose you and wash like cold slime over every limb, each movement
+    sending a chill coursing through from ears to toes. The smooth, dark bottom of the pool shows traces
+    of faded ornamental designs, now mostly hidden and eroded with moss and algae.  Few can pin a name
+    on the grotesque underwater creatures that now make this their home.
+  sector: flying
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27276
+    east:
+      to: tba:272:room:27280
+    south:
+      to: tba:272:room:27277
+
+"tba:272:room:27279":
+  name: A black-bottom pool
+  description: >
+    Swamp-like waters black as coal enclose you and wash like cold slime over every limb, each movement
+    sending a chill coursing through from ears to toes. The smooth, dark bottom of the pool shows traces
+    of faded ornamental designs, now mostly hidden and eroded with moss and algae.  Few can pin a name
+    on the grotesque underwater creatures that now make this their home.
+  sector: flying
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:272:room:27280
+    west:
+      to: tba:272:room:27277
+
+"tba:272:room:27280":
+  name: A black-bottom pool
+  description: >
+    Swamp-like waters black as coal enclose you and wash like cold slime over every limb, each movement
+    sending a chill coursing through from ears to toes. The smooth, dark bottom of the pool shows traces
+    of faded ornamental designs, now mostly hidden and eroded with moss and algae.  Few can pin a name
+    on the grotesque underwater creatures that now make this their home.
+  sector: flying
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:272:room:27279
+    west:
+      to: tba:272:room:27278
+
+"tba:272:room:27281":
+  name: The cartographers
+  description: >
+    You are in a closely walled-in room with little air and much light; a glass-fronted bookcase
+    displays a variety of map parchments, though as they are curled and bound with colored ribbon, it is
+    difficult to discern their contents.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:271:room:27135
+
+"tba:272:room:27282":
+  name: The corner store
+  description: >
+    You enter a small, wooden-planked shop, in sore need of some repairs, but essentially kept very
+    tidy by someone with little else to do but revel in her senility.  A few crowded shelves hold items that
+    may be of use to you in everyday living.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:271:room:27134
+
+"tba:272:room:27283":
+  name: A cobblestone road
+  description: >
+    You stand outside the southern gate of the town of Sundhaven.  The walls are high enough to keep
+    the town secure, and ringed with tendrils of lush green ivy.  The busy murmur of citylife can be heard
+    from beyond.  Southwards, the cobblestone road crosses a meadow of sorts before disappearing into a
+    line of dark woods.
+  sector: field
+  exits:
+    north:
+      to: tba:272:room:27235
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:271:obj:27179
+        reset: closed
+
+"tba:272:room:27284":
+  name: A crawlspace
+  description: >
+    You slip into someone's private domain.  Better leave without a trace before long, it could be
+    dangerous to remain, should the dweller of this place return and claim what is theirs.
+  sector: inside
+  flags: [no_mob, indoors, private]
+  exits:
+    south:
+      to: tba:272:room:27274
+      door:
+        keywords: [stone]
+        kind: pickproof
+        key: tba:272:obj:27217
+        reset: locked
+    up:
+      to: tba:271:room:27100

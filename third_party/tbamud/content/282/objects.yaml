@@ -1,0 +1,106 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 282.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:282:obj:28200":
+  type: weapon
+  keywords: [gothic, kris, obsidian, demonic, blade]
+  short: the gothic kris
+  long: A demonic blade of obsidian lies on the ground.
+  flags: [anti_good, anti_neutral, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d10
+    attack: pierce
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 30
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 3
+
+"tba:282:obj:28201":
+  type: armor
+  keywords: [crown, emerald]
+  short: an emerald crown
+  long: An Emerald crown is here glittering magnificently in the sunshine
+  flags: [anti_good, anti_thief, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: -1
+
+"tba:282:obj:28202":
+  type: armor
+  keywords: [armplates, glowing, arm, armor]
+  short: a set of glowing armplates
+  long: An armplate glows here.
+  wear: [take, body]
+  values:
+    armor: -9
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -2
+  - apply: str
+    modifier: -2
+  - apply: damroll
+    modifier: 3
+
+"tba:282:obj:28203":
+  type: armor
+  keywords: [belt, jeweled]
+  short: a jeweled belt
+  long: A sparkling jeweled belt is lying on the ground here.
+  flags: [anti_good, anti_cleric, anti_thief]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 20
+  - apply: damroll
+    modifier: 2
+
+"tba:282:obj:28204":
+  type: weapon
+  keywords: [spear, death]
+  short: a death spear
+  long: A death spear is lying here
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: pierce
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 30
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 4
+  - apply: hit
+    modifier: 10

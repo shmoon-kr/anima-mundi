@@ -1,0 +1,1707 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 266.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:266:room:26600":
+  name: Edge of the Walkway
+  description: >
+    You have skirted your way right to edge of the path and are now able to get a good look at what
+    lies below.  Way below.  The 'path' that you thought might lead down in a zig zag or perhaps in steps is
+    actually a set of stone rungs notched into the cliff face.  The forest, so far below where you stand
+    looking down upon it, seems strangely dark, strangely forbidding and very far away. Maybe it would
+    just be best to forget climbing this ledge.  After all, isn't Thursday?  Seems like Grainy's in Jareth
+    had a really good dinner special on Thursdays...  Yeah, that's it.
+  sector: mountains
+  exits:
+    south:
+      to: tba:263:room:26354
+    down:
+      to: tba:266:room:26601
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           The Realm of Lord Ankou by Kaan for Dibrova
+        aka The Dark and Sinister Forest
+        This is a forest zone surrounded on all four sides by an unscalable cliff
+        face.  It is meant to hold four zones Banshide, the Haunted House and the
+        Castle of the Vampyre.  This is an extremely high level zone, meant for
+        groups, the mobs are often aggro, Lord Ankou himself drives a band of
+        spectral minions before his cart which he rides throught the forest, so
+        players not only have to contend with Ankou as the highest level mob, but
+        also his minions who will fight for their Lord to the death.  The code for
+        the minions to follow Ankou can be found on the snippets page. This was
+        originally intended to connect to the farmlands, at their western-most side
+        at the chasm.  The lack of a way out of this zone is intentional, just a
+        little thing to get players stark raving mad when visiting here if they forget
+        to bring a recall.
+        
+        Zone 266 is linked to the following zones:
+        263 Farmlands                      at 26600 (south) ---> 26354
+        252 Castle of the Vampyre          at 26633 (east ) ---> 25200
+        252 Castle of the Vampyre          at 26634 (south) ---> 25200
+        259 Haunted Mansion                at 26643 (west ) ---> 25900
+        259 Haunted Mansion                at 26647 (south) ---> 25902
+        259 Haunted Mansion                at 26649 (north) ---> 25906
+        264 Banshide                       at 26655 (west ) ---> 26400
+        259 Haunted Mansion                at 26657 (east ) ---> 25904
+        264 Banshide                       at 26664 (south) ---> 26428
+        264 Banshide                       at 26665 (north) ---> 26419
+        
+           * In room 26659, the reset has moved object 26604 to neck, since there is no
+        face slot here.  If you have a face slot, this should be moved back to face.
+
+"tba:266:room:26601":
+  name: Climbing down the Cliff
+  description: >
+    Standing so near to the top of the walkway, hanging on for dear life, you realize what a follhearty
+    decision this was to climb this rocky face.  You can see birds playing below you, almost DIRECTLY
+    below you in the treetops of the forest so far beneath your feet.  One wrong step, one slip of the hand
+    on the tenuous handhold you already maintain, and you are birdfeed in the treetops. Maybe you should
+    just climb up one more step, get off this walkway and call it all good.
+  sector: mountains
+  exits:
+    up:
+      to: tba:266:room:26600
+    down:
+      to: tba:266:room:26602
+
+"tba:266:room:26602":
+  name: Climbing down the Cliff
+  description: >
+    This climb is going to take forever!  You are still not even halfway down the cliff and it seems
+    like the closer to the forest you get, the darker and more forboding it gets.  Not to mention every
+    time you look down, a wave of nausea racks your body, making you almost lose your grip on the rungs.
+  sector: inside
+  exits:
+    up:
+      to: tba:266:room:26601
+    down:
+      to: tba:266:room:26603
+
+"tba:266:room:26603":
+  name: Halfway down a 'Trail'
+  description: >
+    Well, here you are - halfway up or down depending on how you look at it. Your situation has
+    improved a little bit.  It looks like if you fell now, you would only break a great many bones, rather than
+    just die.  Of course, maybe dying would be preferable.  You see that the trees below are twisted and
+    gnarled, all of them seeming more dead than alive.  Sure is encouraging.
+  sector: mountains
+  exits:
+    up:
+      to: tba:266:room:26602
+    down:
+      to: tba:266:room:26604
+
+"tba:266:room:26604":
+  name: Nearing the Forest Floor
+  description: >
+    The forest looms ever closer, ever more dark and sinister.  You can now see that the birds you saw
+    from up above playing in the treetops were actually buzzards which seem to constantly circle the
+    treetops everywhere, fighting each other and anything that trys to get past them.  Looking up, you
+    realize that the climb ahead would be a real bitch, maybe even impossible.
+  sector: inside
+  exits:
+    up:
+      to: tba:266:room:26660
+    down:
+      to: tba:266:room:26605
+
+"tba:266:room:26605":
+  name: Tree Top Level - Almost to the Ground
+  description: >
+    The trees that you have begun to descend through seem to try to grab your feet as you climb down
+    the cliff.  The branches all snag your clothing, sharp and piercing as you climb down.  The buzzards
+    won't seem to leave you alone and fighting here is just not what you had in mind when you began your
+    descent. The forest floor below you, all covered in shadows and mystery, is just a long jump down, but
+    still a far enough jump that a broken leg or ankle would almost certainly result in a jumping attempt.
+  sector: mountains
+  exits:
+    up:
+      to: tba:266:room:26604
+    down:
+      to: tba:266:room:26606
+
+"tba:266:room:26606":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along to your south, the forest growing right up to the edge and up the edge in some spots.  There is a
+    set of rungs grooved into the cliff face here.  It looks as if you may be able to climb up!
+  sector: forest
+  flags: [dark, no_mob]
+  exits:
+    north:
+      to: tba:266:room:26607
+    east:
+      to: tba:266:room:26619
+    west:
+      to: tba:266:room:26639
+    up:
+      to: tba:266:room:26605
+
+"tba:266:room:26607":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26608
+    east:
+      to: tba:266:room:26618
+    south:
+      to: tba:266:room:26606
+    west:
+      to: tba:266:room:26640
+
+"tba:266:room:26608":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26609
+    east:
+      to: tba:266:room:26617
+    south:
+      to: tba:266:room:26607
+    west:
+      to: tba:266:room:26641
+
+"tba:266:room:26609":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26610
+    east:
+      to: tba:266:room:26616
+    south:
+      to: tba:266:room:26608
+    west:
+      to: tba:266:room:26642
+
+"tba:266:room:26610":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26611
+    east:
+      to: tba:266:room:26615
+    south:
+      to: tba:266:room:26609
+    west:
+      to: tba:266:room:26643
+
+"tba:266:room:26611":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26612
+    east:
+      to: tba:266:room:26614
+    south:
+      to: tba:266:room:26610
+    west:
+      to: tba:266:room:26644
+
+"tba:266:room:26612":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26681
+    east:
+      to: tba:266:room:26613
+    south:
+      to: tba:266:room:26611
+    west:
+      to: tba:266:room:26645
+
+"tba:266:room:26613":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26680
+    east:
+      to: tba:266:room:26626
+    south:
+      to: tba:266:room:26614
+    west:
+      to: tba:266:room:26612
+
+"tba:266:room:26614":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26613
+    east:
+      to: tba:266:room:26625
+    south:
+      to: tba:266:room:26615
+    west:
+      to: tba:266:room:26611
+
+"tba:266:room:26615":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26614
+    east:
+      to: tba:266:room:26624
+    south:
+      to: tba:266:room:26616
+    west:
+      to: tba:266:room:26610
+
+"tba:266:room:26616":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26615
+    east:
+      to: tba:266:room:26623
+    south:
+      to: tba:266:room:26617
+    west:
+      to: tba:266:room:26609
+
+"tba:266:room:26617":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26616
+    east:
+      to: tba:266:room:26622
+    south:
+      to: tba:266:room:26618
+    west:
+      to: tba:266:room:26608
+
+"tba:266:room:26618":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26617
+    east:
+      to: tba:266:room:26621
+    south:
+      to: tba:266:room:26619
+    west:
+      to: tba:266:room:26607
+
+"tba:266:room:26619":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along to your south, the forest growing right up to the edge and up the edge in some spots.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26618
+    east:
+      to: tba:266:room:26620
+    west:
+      to: tba:266:room:26606
+
+"tba:266:room:26620":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along to your south, the forest growing right up to the edge and up the edge in some spots.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26621
+    east:
+      to: tba:266:room:26633
+    west:
+      to: tba:266:room:26619
+
+"tba:266:room:26621":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26622
+    east:
+      to: tba:266:room:26632
+    south:
+      to: tba:266:room:26620
+    west:
+      to: tba:266:room:26618
+
+"tba:266:room:26622":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26623
+    east:
+      to: tba:266:room:26631
+    south:
+      to: tba:266:room:26621
+    west:
+      to: tba:266:room:26617
+
+"tba:266:room:26623":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26624
+    east:
+      to: tba:266:room:26630
+    south:
+      to: tba:266:room:26622
+    west:
+      to: tba:266:room:26616
+
+"tba:266:room:26624":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26625
+    east:
+      to: tba:266:room:26629
+    south:
+      to: tba:266:room:26623
+    west:
+      to: tba:266:room:26615
+
+"tba:266:room:26625":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26626
+    east:
+      to: tba:266:room:26628
+    south:
+      to: tba:266:room:26624
+    west:
+      to: tba:266:room:26614
+
+"tba:266:room:26626":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26679
+    east:
+      to: tba:266:room:26627
+    south:
+      to: tba:266:room:26625
+    west:
+      to: tba:266:room:26613
+
+"tba:266:room:26627":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26678
+    east:
+      to: tba:266:room:26638
+    south:
+      to: tba:266:room:26628
+    west:
+      to: tba:266:room:26626
+
+"tba:266:room:26628":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  Off to the east is a
+    deep hollow, dark and foreboding.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26627
+    south:
+      to: tba:266:room:26629
+    west:
+      to: tba:266:room:26625
+
+"tba:266:room:26629":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26628
+    east:
+      to: tba:266:room:26637
+    south:
+      to: tba:266:room:26630
+    west:
+      to: tba:266:room:26624
+
+"tba:266:room:26630":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26629
+    east:
+      to: tba:266:room:26636
+    south:
+      to: tba:266:room:26631
+    west:
+      to: tba:266:room:26623
+
+"tba:266:room:26631":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26630
+    east:
+      to: tba:266:room:26635
+    south:
+      to: tba:266:room:26632
+    west:
+      to: tba:266:room:26622
+
+"tba:266:room:26632":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  exits:
+    north:
+      to: tba:266:room:26631
+    east:
+      to: tba:266:room:26634
+    south:
+      to: tba:266:room:26633
+    west:
+      to: tba:266:room:26621
+
+"tba:266:room:26633":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along to your south, the forest growing right up to the edge and up the edge in some spots.  To the
+    east there is some sort of break in the forest, maybe a clearing or something, although it doesn't look
+    like it gets any lighter...
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26632
+    east:
+      to: tba:252:room:25200
+    west:
+      to: tba:266:room:26620
+
+"tba:266:room:26634":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the south is a
+    strange opening in the trees, almost as if it lead to a meadow or field of some sort, but it couldn't be,
+    because it is still just as dark as ever in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26635
+    east:
+      to: tba:266:room:26667
+    south:
+      to: tba:252:room:25200
+    west:
+      to: tba:266:room:26632
+
+"tba:266:room:26635":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26636
+    east:
+      to: tba:266:room:26668
+    south:
+      to: tba:266:room:26634
+    west:
+      to: tba:266:room:26631
+
+"tba:266:room:26636":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26637
+    east:
+      to: tba:266:room:26670
+    south:
+      to: tba:266:room:26635
+    west:
+      to: tba:266:room:26630
+
+"tba:266:room:26637":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  North is a deep
+    hollow, one which looks to hold a great many dark secrets.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26672
+    south:
+      to: tba:266:room:26636
+    west:
+      to: tba:266:room:26629
+
+"tba:266:room:26638":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the south the
+    forest slopes steepy downhill into a deep valley or hollow.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26691
+    east:
+      to: tba:266:room:26677
+    west:
+      to: tba:266:room:26627
+
+"tba:266:room:26639":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along beside you on the south, hemming you into the forest.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26640
+    east:
+      to: tba:266:room:26606
+    west:
+      to: tba:266:room:26652
+
+"tba:266:room:26640":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26641
+    east:
+      to: tba:266:room:26607
+    south:
+      to: tba:266:room:26639
+    west:
+      to: tba:266:room:26651
+
+"tba:266:room:26641":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26642
+    east:
+      to: tba:266:room:26608
+    south:
+      to: tba:266:room:26640
+    west:
+      to: tba:266:room:26650
+
+"tba:266:room:26642":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26643
+    east:
+      to: tba:266:room:26609
+    south:
+      to: tba:266:room:26641
+    west:
+      to: tba:266:room:26649
+
+"tba:266:room:26643":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  Towering high above
+    the trees to your west is a huge, wood sided house which seems to lean to one side. It looks very old
+    and very unsafe.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26644
+    east:
+      to: tba:266:room:26610
+    south:
+      to: tba:266:room:26642
+    west:
+      to: tba:259:room:25900
+
+"tba:266:room:26644":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26645
+    east:
+      to: tba:266:room:26611
+    south:
+      to: tba:266:room:26643
+    west:
+      to: tba:266:room:26647
+
+"tba:266:room:26645":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26682
+    east:
+      to: tba:266:room:26612
+    south:
+      to: tba:266:room:26644
+    west:
+      to: tba:266:room:26646
+
+"tba:266:room:26646":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26683
+    east:
+      to: tba:266:room:26645
+    south:
+      to: tba:266:room:26647
+    west:
+      to: tba:266:room:26659
+
+"tba:266:room:26647":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  South of you a large
+    house rises from the forest floor, it's top floor higher than the towering trees all around you.  The
+    house looks very old and very unsafe.  Also uninviting.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26646
+    east:
+      to: tba:266:room:26644
+    south:
+      to: tba:259:room:25902
+    west:
+      to: tba:266:room:26658
+
+"tba:266:room:26648":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the west is the
+    cliff face, solid and unyielding, penning you into this awful place.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26685
+    east:
+      to: tba:266:room:26659
+    south:
+      to: tba:266:room:26662
+
+"tba:266:room:26649":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the north is a huge
+    house, very old and ugly.  There are no lights of any kind coming from it.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:259:room:25906
+    east:
+      to: tba:266:room:26642
+    south:
+      to: tba:266:room:26650
+    west:
+      to: tba:266:room:26656
+
+"tba:266:room:26650":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26649
+    east:
+      to: tba:266:room:26641
+    south:
+      to: tba:266:room:26651
+    west:
+      to: tba:266:room:26655
+
+"tba:266:room:26651":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26650
+    east:
+      to: tba:266:room:26640
+    south:
+      to: tba:266:room:26652
+    west:
+      to: tba:266:room:26654
+
+"tba:266:room:26652":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along beside you on the south, hemming you into the forest.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26651
+    east:
+      to: tba:266:room:26639
+    west:
+      to: tba:266:room:26653
+
+"tba:266:room:26653":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face runs
+    along beside you on the south, hemming you into the forest.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26654
+    east:
+      to: tba:266:room:26652
+    west:
+      to: tba:266:room:26666
+
+"tba:266:room:26654":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26655
+    east:
+      to: tba:266:room:26651
+    south:
+      to: tba:266:room:26653
+    west:
+      to: tba:266:room:26665
+
+"tba:266:room:26655":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the west is some
+    sort of deep fell or hollow where the forest slopes downward out of sight toward the rocky cliff far to
+    the west.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26656
+    east:
+      to: tba:266:room:26650
+    south:
+      to: tba:266:room:26654
+    west:
+      to: tba:264:room:26400
+
+"tba:266:room:26656":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26657
+    east:
+      to: tba:266:room:26649
+    south:
+      to: tba:266:room:26655
+    west:
+      to: tba:266:room:26664
+
+"tba:266:room:26657":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  There is a large wood
+    sided house to your east, one that stands extremely tall in this monstrous forest. The house looks to
+    be in deplorable condition, it leans to one side looking as if it might fall over at any time.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26658
+    east:
+      to: tba:259:room:25904
+    south:
+      to: tba:266:room:26656
+    west:
+      to: tba:266:room:26663
+
+"tba:266:room:26658":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26659
+    east:
+      to: tba:266:room:26647
+    south:
+      to: tba:266:room:26657
+    west:
+      to: tba:266:room:26662
+
+"tba:266:room:26659":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26684
+    east:
+      to: tba:266:room:26646
+    south:
+      to: tba:266:room:26658
+    west:
+      to: tba:266:room:26648
+
+"tba:266:room:26660":
+  name: Halfway Up a 'Trail'
+  description: >
+    You find your arms are getting way too tired to keep up the climbing the way you've been.  The top
+    of the cliff still seems miles away from where you are now, and there is no spot on this cliff to
+    just stop and take a break.  It might be a good idea to climb back down, and take your chances in the
+    forest.
+  sector: inside
+  exits:
+    up:
+      to: tba:266:room:26661
+    down:
+      to: tba:266:room:26604
+
+"tba:266:room:26661":
+  name: Climbing Up the Cliff
+  description: >
+    You simply cannot do it.  Your arms are like jello and your breath is coming in hot racking gasps
+    that make your palms sweat and your head ache.  You have no choice but to head back down to the forest
+    and find your way out some other way.
+  sector: mountains
+  exits:
+    up:
+      to: tba:266:room:26661
+    down:
+      to: tba:266:room:26603
+
+"tba:266:room:26662":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the west is the
+    cliff face, solid and unyielding, penning you into this awful place.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26648
+    east:
+      to: tba:266:room:26658
+    south:
+      to: tba:266:room:26663
+
+"tba:266:room:26663":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky cliff runs
+    along beside you on the west.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26662
+    east:
+      to: tba:266:room:26657
+    south:
+      to: tba:266:room:26664
+
+"tba:266:room:26664":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face is to
+    the west, hemming you into this evil forest.  To the south is some sort of hollow which leads downhill
+    into territory that you cannot see from here.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26663
+    east:
+      to: tba:266:room:26656
+    south:
+      to: tba:264:room:26428
+
+"tba:266:room:26665":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff runs along
+    your west side, an ever present reminder that you are trapped in this valley.  To the north there is
+    some sort of hollow, or slope that leads downward into deeper forest.  Looks very ominous, caution is
+    advised.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:264:room:26419
+    east:
+      to: tba:266:room:26654
+    south:
+      to: tba:266:room:26666
+
+"tba:266:room:26666":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The cliff face makes
+    an abrupt turn here, curving itself north and east, running along your south and west sides.  It looks
+    as if this forest may be completely enclosed by this strange rock formation.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26665
+    east:
+      to: tba:266:room:26653
+
+"tba:266:room:26667":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky cliff makes
+    a turn heading north and west, blocking you movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26668
+    west:
+      to: tba:266:room:26634
+
+"tba:266:room:26668":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26670
+    east:
+      to: tba:266:room:26669
+    south:
+      to: tba:266:room:26667
+    west:
+      to: tba:266:room:26635
+
+"tba:266:room:26669":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky cliff makes
+    a turn heading north and west, blocking you movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26671
+    west:
+      to: tba:266:room:26668
+
+"tba:266:room:26670":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26672
+    east:
+      to: tba:266:room:26671
+    south:
+      to: tba:266:room:26668
+    west:
+      to: tba:266:room:26636
+
+"tba:266:room:26671":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26673
+    east:
+      to: tba:266:room:26690
+    south:
+      to: tba:266:room:26669
+    west:
+      to: tba:266:room:26670
+
+"tba:266:room:26672":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To your north is a
+    deep, dark valley.  It looks exteremely uninviting from here, best to just pass it by.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26673
+    south:
+      to: tba:266:room:26670
+    west:
+      to: tba:266:room:26637
+
+"tba:266:room:26673":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the north the
+    forest runs downhill into a deep fell.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26689
+    south:
+      to: tba:266:room:26671
+    west:
+      to: tba:266:room:26672
+
+"tba:266:room:26674":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the south is a deep
+    hollow, many miles across and quite deep from the looks of it.  Of course, it is hard to tell by
+    looks since it is so dark here.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26675
+    east:
+      to: tba:266:room:26687
+    west:
+      to: tba:266:room:26677
+
+"tba:266:room:26675":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rock wall on your
+    north is such a presence, such a large obstacle, you feel that this valley must have been created on
+    purpose by some god, some higher power, to punish the inhabitants for wrongdoings.  Or something.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26686
+    south:
+      to: tba:266:room:26674
+    west:
+      to: tba:266:room:26676
+
+"tba:266:room:26676":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky wall still
+    runs along on the north side.  You feel like a caged animal.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26675
+    south:
+      to: tba:266:room:26677
+    west:
+      to: tba:266:room:26691
+
+"tba:266:room:26677":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  There is some sort of
+    inner valley to the south, one that looks very deep and very dark.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26676
+    east:
+      to: tba:266:room:26674
+    west:
+      to: tba:266:room:26638
+
+"tba:266:room:26678":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26691
+    south:
+      to: tba:266:room:26627
+    west:
+      to: tba:266:room:26679
+
+"tba:266:room:26679":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26678
+    south:
+      to: tba:266:room:26626
+    west:
+      to: tba:266:room:26680
+
+"tba:266:room:26680":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26679
+    south:
+      to: tba:266:room:26613
+    west:
+      to: tba:266:room:26681
+
+"tba:266:room:26681":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26680
+    south:
+      to: tba:266:room:26612
+    west:
+      to: tba:266:room:26682
+
+"tba:266:room:26682":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26681
+    south:
+      to: tba:266:room:26645
+    west:
+      to: tba:266:room:26683
+
+"tba:266:room:26683":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26682
+    south:
+      to: tba:266:room:26646
+    west:
+      to: tba:266:room:26684
+
+"tba:266:room:26684":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26683
+    south:
+      to: tba:266:room:26659
+    west:
+      to: tba:266:room:26685
+
+"tba:266:room:26685":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky wall turns
+    here, running south and east, keeping you from continuing north or west any farther.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26684
+    south:
+      to: tba:266:room:26648
+
+"tba:266:room:26686":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rock wall makes a
+    curve here, hemming you in and hindering any movement east or north.  Over time, rocks have fallen
+    off from the cliffsides and piled up at the base.  A set of small tracks seem to come and go from
+    beneath two large rocks.
+  sector: forest
+  flags: [dark]
+  exits:
+    south:
+      to: tba:266:room:26687
+    west:
+      to: tba:266:room:26675
+    down:
+      to: tba:266:room:26692
+      door:
+        keywords: [rock]
+        kind: door
+
+"tba:266:room:26687":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rock wall runs
+    along to the east.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26686
+    south:
+      to: tba:266:room:26688
+    west:
+      to: tba:266:room:26674
+
+"tba:266:room:26688":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rock wall prevents
+    any movement to the east.  To the west is a deep hollow, a very large one from the looks of it
+    although it is hard to tell for sure in this darkness.  Looks almost like a valley inside this valley.
+  sector: forest
+  exits:
+    north:
+      to: tba:266:room:26687
+    south:
+      to: tba:266:room:26689
+
+"tba:266:room:26689":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  To the east is the
+    rocky wall that holds you captive in this God-Forsaken forest.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26688
+    south:
+      to: tba:266:room:26690
+    west:
+      to: tba:266:room:26673
+
+"tba:266:room:26690":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky cliff makes
+    a turn heading north and west, blocking you movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:266:room:26689
+    west:
+      to: tba:266:room:26671
+
+"tba:266:room:26691":
+  name: Dark and Sinister Forest
+  description: >
+    The forest around you seems dead, all the trees and their branches seem withered and brittle. 
+    Strangely enough, with all the lingering death around you, there seems to be a great deal of movement
+    around you, but always out of the corner of your eye.  Always just out of sight.  The rocky face runs
+    along north of you preventing any further movement in that direction.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:266:room:26676
+    south:
+      to: tba:266:room:26638
+    west:
+      to: tba:266:room:26678
+
+"tba:266:room:26692":
+  name: Dark Tunnel
+  description: >
+    As your eyes adjust to the darkness, you see that you are in a tunnel hewn out of the cliff
+    rockbed.  A feeling in your gut tells you that this tunnel was not made by ordinary creatures.  Little
+    tracks lead to and from a crude nest near the tunnel entrance.  A sudden movement catches your eye and you
+    see the fleeing form of some small creature dashing outside through the rockfall.  You can explore
+    the tunnel more to the north or head back outside.
+  sector: inside
+  flags: [dark, no_mob, no_track, tunnel]
+  exits:
+    north:
+      to: tba:266:room:26693
+    up:
+      to: tba:266:room:26686
+      door:
+        keywords: [rock]
+        kind: door
+
+"tba:266:room:26693":
+  name: Dark Tunnel
+  description: >
+    A think layer of dust covers the hewn floor.  The undisturbed state of things in the tunnel show
+    that no one has passed through this way in ages.  The stone walls become more polished and smoother as
+    one progresses northwards.  A faint odor of incense and spices lingers in the air.
+  sector: inside
+  flags: [dark, no_track, tunnel]
+  exits:
+    north:
+      to: tba:266:room:26694
+    south:
+      to: tba:266:room:26692
+
+"tba:266:room:26694":
+  name: Dark Chamber
+  description: >
+    The tunnel opens up into a small chamber.  The polished walls reflect the torchlight in an eerie
+    way.  The smell of incense and spices hang heavily in the air, stiffling you.  A stone slab sits in the
+    middle of the chamber.  Strange runes adorn the stone slab.  A faded trail of blood upon the slab
+    catches your eye and you follow the trail to the floor.  There you see that you are standing in the
+    middle of a pentagram inscribed into the stone floor.  Repressing a feeling of dread, you get on your
+    knees to study a small indentation in the middle of the pentagram....
+  sector: inside
+  flags: [dark, indoors, no_track]
+  exits:
+    south:
+      to: tba:266:room:26693
+    down:
+      to: tba:266:room:26695
+      door:
+        keywords: [pentagram]
+        kind: door
+  extras:
+  - keywords: [slab]
+    text: It is encrypted with strange runes.
+  - keywords: [runes]
+    text: >
+      The runes depict what appears to be the very same stone slab that they are inscribed upon.  The
+      runes show a manlike being standing before the runes, the runes glowing fiercely, and then the man gone.
+
+"tba:266:room:26695":
+  name: Entrance to another Dimension
+  description: >
+    - The walls of the chamber begin to shimmer brightly.  The outline of the pentagram catches fire
+    and burns brightly.  The runes on the slab begin to glow fiercely.  A droning sound begins and
+    intensifies painfully.  Reality seems to slip away as the room begins to spin around you.  Trying to get a
+    grip on yourself in this maddening scene, you notice an entryway opening up before you.
+  sector: inside

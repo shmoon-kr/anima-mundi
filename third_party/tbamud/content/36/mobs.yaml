@@ -1,0 +1,274 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 36.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:36:mob:3600":
+  keywords: [black, pawn]
+  short: the Pawn of the Black Court
+  long: You see a pawn standing here waiting for orders.
+  description: >
+    The Black Pawn looks quite like a small knight without his powerful steed. His armor is shiny and
+    black.  He stands ready to give his life for the Crown.
+  level: 6
+  sex: male
+  alignment: -400
+  flags: [sentinel, scavenger, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3601":
+  keywords: [white, pawn]
+  short: the Pawn of the White Court
+  long: You see a pawn standing here waiting for orders.
+  description: >
+    The White Pawn looks quite like a small knight without his powerful steed. His armor is spotless
+    and white.  He stands ready to give his life for the Crown.
+  level: 6
+  sex: male
+  alignment: 400
+  flags: [sentinel, scavenger, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3602":
+  keywords: [black, rook, castle]
+  short: the Black Rook
+  long: In the corner you see a large, black, stone castle on wheels.
+  description: >
+    The Black Rook is a very large man-made tomb on wheels.  Just from the looks of it, it will
+    probably be YOUR tomb.
+  level: 27
+  sex: neutral
+  alignment: -600
+  flags: [sentinel, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3603":
+  keywords: [white, rook, castle]
+  short: the White Rook
+  long: In the corner you see a large, white, stone castle on wheels.
+  description: >
+    The White Rook is a very large man-made tomb on wheels.  Just from the looks of it, it will
+    probably be YOUR tomb.
+  level: 27
+  sex: neutral
+  alignment: 600
+  flags: [sentinel, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3604":
+  keywords: [black, knight]
+  short: the Black Knight
+  long: Here stands a magnificent knight of the dark realm.
+  description: >
+    The Black Knight is here, riding his ebony black war horse.  His eyes flash behind his visor in
+    vengeance.
+  level: 18
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3605":
+  keywords: [white, knight]
+  short: the White Knight
+  long: Here stands a magnificent knight of the light realm.
+  description: >
+    The White Knight is here, riding his ivory white war horse.  His eyes gleam behind his visor in joy.
+  level: 18
+  sex: neutral
+  alignment: 400
+  flags: [sentinel, aggressive]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3606":
+  keywords: [black, bishop, priest]
+  short: the Black Bishop
+  long: A dark priest stands here.
+  description: >
+    The Black Bishop seems willing to help you straight into your grave so he can bless you properly.
+  level: 24
+  sex: neutral
+  alignment: -500
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3607":
+  keywords: [white, bishop, priest]
+  short: the White Bishop
+  long: A light priest stands here.
+  description: >
+    The White Bishop seems willing to help you in any possible so that he can attain a higher
+    spirituality.
+  level: 24
+  sex: neutral
+  alignment: 500
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3608":
+  keywords: [black, queen]
+  short: the Black Queen
+  long: The Black Queen stands here.
+  description: >
+    The Black Queen is a strikingly beautiful woman with pale skin and a mass of dark hair that crowns
+    her head like a black cloud.  If looks could kill, you would already be dead.
+  level: 29
+  sex: neutral
+  alignment: -750
+  flags: [sentinel, scavenger, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3609":
+  keywords: [white, queen]
+  short: the White Queen
+  long: The White Queen stands here.
+  description: >
+    The White Queen is a stunningly beautiful woman with dark skin and a mass of light hair that frames
+    her head like the sun.  This is surely love at first sight for you.
+  level: 29
+  sex: neutral
+  alignment: 750
+  flags: [sentinel, scavenger, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3610":
+  keywords: [black, king]
+  short: the Black King
+  long: The Black King stands here.
+  description: >
+    The Black King is a menacing figure.  You can easily understand why he is the king and you are not.
+  level: 30
+  sex: neutral
+  alignment: -999
+  flags: [sentinel, scavenger, aware, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:36:mob:3611":
+  keywords: [white, king]
+  short: the White King
+  long: The White King stands here.
+  description: >
+    The White King is a stately figure.  You can easily understand why he is the king and you are not.
+  level: 30
+  sex: neutral
+  alignment: 999
+  flags: [sentinel, scavenger, aware, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

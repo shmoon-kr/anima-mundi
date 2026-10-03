@@ -1,0 +1,94 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 78.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:78:mob:7805
+  room: tba:78:room:7804
+  limit: 4
+  equip:
+    wield:
+      object: tba:78:obj:7816
+      limit: 100
+    body:
+      object: tba:78:obj:7814
+      limit: 50
+    feet:
+      object: tba:78:obj:7815
+      limit: 100
+- mob: tba:78:mob:7810
+  room: tba:78:room:7811
+  limit: 1
+- object: tba:78:obj:7801
+  room: tba:78:room:7818
+  limit: 1
+- mob: tba:78:mob:7808
+  room: tba:78:room:7818
+  limit: 1
+- mob: tba:78:mob:7809
+  room: tba:78:room:7823
+  limit: 1
+  equip:
+    wield:
+      object: tba:78:obj:7822
+      limit: 100
+- mob: tba:78:mob:7807
+  room: tba:78:room:7812
+  limit: 1
+  equip:
+    wield:
+      object: tba:78:obj:7821
+      limit: 100
+- mob: tba:78:mob:7806
+  room: tba:78:room:7809
+  limit: 1
+  equip:
+    wield:
+      object: tba:78:obj:7820
+      limit: 100
+    legs:
+      object: tba:78:obj:7817
+      limit: 100
+    body:
+      object: tba:78:obj:7818
+      limit: 100
+    head:
+      object: tba:78:obj:7819
+      limit: 100
+- mob: tba:78:mob:7801
+  room: tba:78:room:7813
+  limit: 1
+- mob: tba:78:mob:7804
+  room: tba:78:room:7819
+  limit: 2
+- mob: tba:78:mob:7803
+  room: tba:78:room:7822
+  limit: 1
+  carry:
+  - object: tba:78:obj:7809
+    limit: 100
+  - object: tba:78:obj:7810
+    limit: 100
+  - object: tba:78:obj:7811
+    limit: 100
+  - object: tba:78:obj:7812
+    limit: 100
+- mob: tba:78:mob:7802
+  room: tba:78:room:7820
+  limit: 1
+  carry:
+  - object: tba:78:obj:7803
+    limit: 100
+  - object: tba:78:obj:7804
+    limit: 100
+  - object: tba:78:obj:7805
+    limit: 100
+  - object: tba:78:obj:7806
+    limit: 100
+  - object: tba:78:obj:7807
+    limit: 100
+  - object: tba:78:obj:7808
+    limit: 100
+removes:
+- room: tba:78:room:7818
+  object: tba:78:obj:7801

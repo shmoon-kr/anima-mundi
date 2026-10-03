@@ -1,0 +1,506 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 291.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:291:obj:29100":
+  type: armor
+  keywords: [triangled, wheel, medallion]
+  short: a triangled wheel medallion
+  long: A Dark Amulet rests amulet here, bathed in its unholy glow.
+  flags: [glow, magic, anti_good]
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: mana
+    modifier: 20
+  - apply: cha
+    modifier: -2
+  extras:
+  - keywords: [triangled, wheel]
+    text: >
+      Attached to a chain, this unholy symbol is made of an unknown alloy.  It is imbued with a portion
+      of the power of the Mistress of the Void, giving its wearer a taste of the power of the Symmetry.
+
+"tba:291:obj:29101":
+  type: light
+  keywords: [rustry, lantern]
+  short: a rusty lantern
+  long: A rusty lantern hangs on a peg on the wall here
+  wear: [take]
+  values:
+    hours: 24
+  weight: 3
+  cost: 55
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rusty, lantern]
+    text: >
+      An aged light giving device, rusted with the passage of the years.  It still works quite well
+      though.  Useful for all your lighting needs.
+
+"tba:291:obj:29102":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A torch is set in a mounting in the wall here.
+  wear: [take]
+  values:
+    hours: 5
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch]
+    text: This is a simple torch.  It looks like it is of at least decent quality.
+
+"tba:291:obj:29103":
+  type: treasure
+  keywords: [silver, feather]
+  short: a silver feather
+  long: A metallic feather rests here in the dust.
+  flags: [bless, anti_evil]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: cha
+    modifier: 1
+  extras:
+  - keywords: [silver, feather]
+    text: A piece of metallic down donated from the wing of the silver angel.
+
+"tba:291:obj:29104":
+  type: weapon
+  keywords: [Black, Scimitar, Horseman]
+  short: the Horseman's scimitar
+  long: A night black scimitar.
+  flags: [hum, magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 8d5
+    attack: slash
+  weight: 10
+  cost: 250
+  rent: 0
+  level: 20
+  affects:
+  - apply: wis
+    modifier: -3
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [black, horseman, scimitar]
+    text: >
+      This just black sword is made of an unnatural metal.  It hums with the resonance of the void.  This
+      is a powerful weapon.
+
+"tba:291:obj:29105":
+  type: potion
+  keywords: [Green, herb]
+  short: a green herb
+  long: Some green herbs grow in the ground here.
+  wear: [take]
+  values:
+    raw: [20, 43, -1, -1]
+  weight: 1
+  cost: 900
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [green, herb]
+    text: >
+      A small cluster of bright green leaves sprouts out of the ground.  Even in the most opperssive of
+      places, the hardiest of weeds can grow.
+
+"tba:291:obj:29107":
+  type: light
+  keywords: [crystal, orb]
+  short: a crystal orb
+  long: A Crystal orb bound in black, wrought iron rests here.
+  flags: [glow, anti_good, anti_neutral]
+  wear: [take]
+  values:
+    hours: -1
+  weight: 5
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: hit
+    modifier: -30
+
+"tba:291:obj:29109":
+  type: armor
+  keywords: [DoomGuard, Breastplate]
+  short: the Breastplate of a DoomGuard
+  long: The breastplate of a Doomguard lies here, gathering dust.
+  flags: [anti_warrior]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 30
+  cost: 1000
+  rent: 0
+  level: 20
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: hit
+    modifier: 20
+
+"tba:291:obj:29110":
+  type: weapon
+  keywords: [power, silver, angel]
+  short: the Power of the Silver Angel
+  long: A glowing aura of energy hovers near the floor.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 4d8
+    attack: blast
+  weight: 10
+  cost: 830
+  rent: 0
+  level: 20
+
+"tba:291:obj:29111":
+  type: note
+  keywords: [Sign]
+  short: a sign
+  long: A sign is placed on the wall here you may wish to read.
+  action: |-
+    Unwelcome Guests,
+    
+    Your presence is not wanted here. If you wish to confront me, I will
+    be foreced to stop you. You are welcome to try, but I will not save
+    you from your own stupidity. You have been warned.
+    
+    Ilian
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:291:obj:29115":
+  type: key
+  keywords: [Death's, Key]
+  short: Death's Key
+  long: Death's Key lis lying here amongst much debris.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:291:obj:29116":
+  type: container
+  keywords: [Telescope]
+  short: the Telescope
+  long: The Observing telescope is mounted into the wall here.
+  wear: []
+  values:
+    capacity: 10
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:291:obj:29117":
+  type: key
+  keywords: [key, C]
+  short: the Key of C
+  long: The Key of C rests here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:291:obj:29118":
+  type: container
+  keywords: [shelf, bookshelf]
+  short: a Bookshelf
+  long: A Bookshelf rests on the wall here, gathering dust.
+  wear: []
+  values:
+    capacity: 75
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:291:obj:29119":
+  type: note
+  keywords: [Book, key, harmony, harmonious, ascension]
+  short: the Book of Harmonious Ascension
+  long: A Book titled "The Key to Harmonious Ascension" Gathers dust here.
+  action: |-
+    The Key to Harmonious Ascension: The Extremes are unpleasent things.
+    Invaribly, they all work to prevent harmony.  Therefore, only the key that has
+    lost its razor-sharp edges and its flat and blunt ends can unlock the doorwaay
+    to the above which stands amongst the pillars of this world.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:291:obj:29120":
+  type: scroll
+  keywords: [tome, red, book]
+  short: the Tome of Infernal Burning
+  long: A book bound in fiery red leather lies here.
+  action: $n recites the ancient words "Incenderius Diabolicius!  "
+  flags: [no_donate]
+  wear: [take]
+  values:
+    raw: [30, 26, 17, 35]
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:291:obj:29121":
+  type: scroll
+  keywords: [tome, book, blue, icy]
+  short: the Tome of Icy Chill
+  long: A Book bound with an Icy-blue leather rests here.
+  action: $n recites the ancient words "Subthermae Aeterna!"
+  wear: [take]
+  values:
+    raw: [30, 1, 2, 36]
+  weight: 15
+  cost: 100
+  rent: 0
+  level: 30
+
+"tba:291:obj:29122":
+  type: scroll
+  keywords: [tome, book, yellow]
+  short: the Tome of Maximum Zappage
+  long: A book bound in bright yellow leather rests here.
+  action: $n recites the ancient words "Volteaic Electrum Teslagrate!"
+  wear: [take]
+  values:
+    raw: [30, 23, 28, 39]
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 15
+
+"tba:291:obj:29130":
+  type: key
+  keywords: [Key, D]
+  short: the Key of D
+  long: The Key of D is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 35
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:291:obj:29131":
+  type: weapon
+  keywords: [key, sharp]
+  short: the Key of A Sharp
+  long: The Key of A sharp is lying here.
+  wear: [take, wield]
+  values:
+    damage: 3d15
+    attack: slash
+  weight: 20
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:291:obj:29132":
+  type: wand
+  keywords: [key, B]
+  short: the Key of B
+  long: The Key of B is lying here.
+  wear: [take]
+  values:
+    raw: [25, 7, 7, 29]
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+
+"tba:291:obj:29133":
+  type: key
+  keywords: [Key, F, sharp, Fsharp]
+  short: the Key of F sharp
+  long: The key of F sharp is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 35
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -3
+  - apply: con
+    modifier: 2
+  - apply: dex
+    modifier: 1
+
+"tba:291:obj:29134":
+  type: key
+  keywords: [Key, G]
+  short: the Key of G
+  long: The Key of G is lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: damroll
+    modifier: -2
+  - apply: wis
+    modifier: 1
+
+"tba:291:obj:29135":
+  type: key
+  keywords: [Key, E]
+  short: the Key of E
+  long: The Key of E is lying here.
+  flags: [glow, hum, magic, no_drop]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: move
+    modifier: -30
+  - apply: hit
+    modifier: -30
+
+"tba:291:obj:29136":
+  type: container
+  keywords: [Music, stand]
+  short: a Music Stand
+  long: A music stand is standing in the middle of the room here.
+  wear: []
+  values:
+    capacity: 245
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:291:obj:29137":
+  type: armor
+  keywords: [guantlet, black, iron, doomguard]
+  short: the Guantlet of a DoomGuard
+  long: A black iron guantlet rests here.
+  flags: [anti_thief]
+  wear: [take, hands]
+  values:
+    armor: 10
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: -15
+  - apply: hit
+    modifier: 20
+
+"tba:291:obj:29138":
+  type: armor
+  keywords: [helm, doomguard, iron]
+  short: the helm of a doomguard
+  long: A thick black iron helmet is here.
+  flags: [magic, anti_mage]
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 20
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: mana
+    modifier: -10
+  - apply: move
+    modifier: -15
+
+"tba:291:obj:29150":
+  type: weapon
+  keywords: [Feverpitch]
+  short: the Fever Pitch
+  long: Scarlet Fever's Sword, The Fever Pitch is here.
+  wear: [take, wield]
+  values:
+    damage: 4d8
+    attack: stab
+  weight: 10
+  cost: 543
+  rent: 0
+  level: 20
+
+"tba:291:obj:29151":
+  type: treasure
+  keywords: [Tome, Book, manule, golem]
+  short: the Manule of the Golems
+  long: An old book with a humanoid symbol on it rests here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 2

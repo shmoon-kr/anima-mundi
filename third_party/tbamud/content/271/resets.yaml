@@ -1,0 +1,856 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 271.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:271:obj:27110
+  room: tba:271:room:27100
+  limit: 1
+- object: tba:271:obj:27147
+  room: tba:271:room:27139
+  limit: 99
+- mob: tba:271:mob:27138
+  room: tba:271:room:27139
+  limit: 2
+  equip:
+    hold:
+      object: tba:271:obj:27147
+      limit: 99
+- object: tba:271:obj:27147
+  room: tba:271:room:27133
+  limit: 99
+- mob: tba:271:mob:27138
+  room: tba:271:room:27133
+  limit: 2
+  equip:
+    hold:
+      object: tba:271:obj:27147
+      limit: 99
+- mob: tba:271:mob:27131
+  room: tba:271:room:27150
+  limit: 1
+  carry:
+  - object: tba:271:obj:27133
+    limit: 99
+  - object: tba:272:obj:27217
+    limit: 99
+- mob: tba:271:mob:27148
+  room: tba:271:room:27142
+  limit: 1
+  equip:
+    wield:
+      object: tba:271:obj:27155
+      limit: 1
+  carry:
+  - object: tba:271:obj:27175
+    limit: 99
+  - object: tba:271:obj:27176
+    limit: 99
+  - object: tba:271:obj:27177
+    limit: 99
+  - object: tba:271:obj:27178
+    limit: 99
+- object: tba:271:obj:27109
+  room: tba:271:room:27101
+  limit: 1
+- object: tba:271:obj:27115
+  room: tba:271:room:27106
+  limit: 1
+- object: tba:271:obj:27154
+  room: tba:271:room:27103
+  limit: 1
+- object: tba:271:obj:27152
+  room: tba:271:room:27119
+  limit: 1
+- object: tba:271:obj:27153
+  room: tba:271:room:27120
+  limit: 1
+- object: tba:271:obj:27114
+  room: tba:271:room:27121
+  limit: 1
+- object: tba:271:obj:27148
+  room: tba:271:room:27160
+  limit: 1
+- object: tba:272:obj:27220
+  room: tba:271:room:27161
+  limit: 1
+- object: tba:272:obj:27221
+  room: tba:271:room:27125
+  limit: 1
+- mob: tba:271:mob:27164
+  room: tba:271:room:27157
+  limit: 1
+- mob: tba:271:mob:27102
+  room: tba:271:room:27119
+  limit: 1
+  equip:
+    wield:
+      object: tba:271:obj:27111
+      limit: 1
+  carry:
+  - object: tba:271:obj:27100
+    limit: 1
+- mob: tba:271:mob:27149
+  room: tba:271:room:27144
+  limit: 4
+  equip:
+    wield:
+      object: tba:271:obj:27173
+      limit: 4
+- mob: tba:271:mob:27121
+  room: tba:271:room:27121
+  limit: 1
+  carry:
+  - object: tba:271:obj:27116
+    limit: 2
+  - object: tba:271:obj:27117
+    limit: 2
+  - object: tba:271:obj:27118
+    limit: 2
+  - object: tba:271:obj:27119
+    limit: 2
+  - object: tba:271:obj:27120
+    limit: 2
+  - object: tba:271:obj:27121
+    limit: 2
+  - object: tba:271:obj:27123
+    limit: 2
+- mob: tba:271:mob:27149
+  room: tba:271:room:27145
+  limit: 4
+  equip:
+    wield:
+      object: tba:271:obj:27173
+      limit: 4
+- mob: tba:271:mob:27133
+  room: tba:271:room:27146
+  limit: 1
+  carry:
+  - object: tba:271:obj:27139
+    limit: 1
+  - object: tba:271:obj:27140
+    limit: 1
+  - object: tba:271:obj:27141
+    limit: 1
+  - object: tba:271:obj:27142
+    limit: 1
+- mob: tba:271:mob:27149
+  room: tba:271:room:27109
+  limit: 4
+  equip:
+    wield:
+      object: tba:271:obj:27173
+      limit: 4
+- mob: tba:271:mob:27132
+  room: tba:271:room:27147
+  limit: 1
+  carry:
+  - object: tba:271:obj:27163
+    limit: 1
+  - object: tba:271:obj:27164
+    limit: 1
+  - object: tba:271:obj:27165
+    limit: 1
+  - object: tba:271:obj:27166
+    limit: 1
+  - object: tba:271:obj:27167
+    limit: 1
+- mob: tba:271:mob:27120
+  room: tba:271:room:27148
+  limit: 1
+  carry:
+  - object: tba:271:obj:27122
+    limit: 1
+  - object: tba:271:obj:27125
+    limit: 1
+  - object: tba:271:obj:27124
+    limit: 1
+  - object: tba:271:obj:27126
+    limit: 1
+  - object: tba:271:obj:27127
+    limit: 1
+  - object: tba:271:obj:27128
+    limit: 1
+  - object: tba:271:obj:27129
+    limit: 1
+- mob: tba:271:mob:27111
+  room: tba:271:room:27149
+  limit: 1
+- mob: tba:271:mob:27112
+  room: tba:271:room:27149
+  limit: 1
+- mob: tba:271:mob:27113
+  room: tba:271:room:27149
+  limit: 1
+- mob: tba:271:mob:27118
+  room: tba:271:room:27152
+  limit: 1
+- mob: tba:271:mob:27165
+  room: tba:271:room:27104
+  limit: 4
+  equip:
+    wield:
+      object: tba:272:obj:27213
+      limit: 7
+    about:
+      object: tba:272:obj:27216
+      limit: 7
+- mob: tba:271:mob:27165
+  room: tba:271:room:27106
+  limit: 4
+  equip:
+    wield:
+      object: tba:272:obj:27213
+      limit: 7
+    about:
+      object: tba:272:obj:27216
+      limit: 7
+- mob: tba:271:mob:27165
+  room: tba:271:room:27107
+  limit: 4
+  equip:
+    wield:
+      object: tba:272:obj:27213
+      limit: 7
+    about:
+      object: tba:272:obj:27216
+      limit: 7
+- mob: tba:271:mob:27165
+  room: tba:271:room:27108
+  limit: 4
+  equip:
+    wield:
+      object: tba:272:obj:27213
+      limit: 7
+    about:
+      object: tba:272:obj:27216
+      limit: 7
+- mob: tba:271:mob:27128
+  room: tba:271:room:27153
+  limit: 1
+  carry:
+  - object: tba:271:obj:27130
+    limit: 1
+  - object: tba:271:obj:27131
+    limit: 1
+  - object: tba:271:obj:27132
+    limit: 1
+- mob: tba:271:mob:27103
+  room: tba:271:room:27101
+  limit: 1
+  equip:
+    light:
+      object: tba:271:obj:27101
+      limit: 15
+- mob: tba:271:mob:27101
+  room: tba:271:room:27108
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+    hold:
+      object: tba:271:obj:27179
+      limit: 1
+- mob: tba:271:mob:27101
+  room: tba:271:room:27134
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27128
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27141
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27113
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27108
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27113
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27138
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27134
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27132
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27101
+  room: tba:271:room:27128
+  limit: 11
+  equip:
+    shield:
+      object: tba:271:obj:27143
+      limit: 30
+    body:
+      object: tba:271:obj:27144
+      limit: 30
+    feet:
+      object: tba:271:obj:27145
+      limit: 30
+    wield:
+      object: tba:271:obj:27146
+      limit: 30
+- mob: tba:271:mob:27160
+  room: tba:271:room:27119
+  limit: 1
+  equip:
+    about:
+      object: tba:271:obj:27185
+      limit: 8
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+  carry:
+  - object: tba:271:obj:27186
+    limit: 20
+- mob: tba:271:mob:27159
+  room: tba:271:room:27140
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27113
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27165
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27108
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27148
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27130
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27159
+  room: tba:271:room:27127
+  limit: 8
+  equip:
+    body:
+      object: tba:271:obj:27184
+      limit: 20
+    wield:
+      object: tba:271:obj:27182
+      limit: 15
+    hold:
+      object: tba:271:obj:27183
+      limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27136
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27128
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27126
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27119
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27131
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27164
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27126
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27140
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27140
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27113
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27107
+  limit: 15
+- mob: tba:271:mob:27106
+  room: tba:271:room:27130
+  limit: 15
+- mob: tba:271:mob:27166
+  room: tba:271:room:27108
+  limit: 1
+- mob: tba:271:mob:27139
+  room: tba:271:room:27104
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27139
+  room: tba:271:room:27104
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27139
+  room: tba:271:room:27107
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27139
+  room: tba:271:room:27107
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27139
+  room: tba:271:room:27108
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27139
+  room: tba:271:room:27109
+  limit: 6
+  equip:
+    head:
+      object: tba:271:obj:27149
+      limit: 8
+- mob: tba:271:mob:27107
+  room: tba:271:room:27138
+  limit: 1
+- mob: tba:271:mob:27115
+  room: tba:271:room:27128
+  limit: 1
+- mob: tba:271:mob:27142
+  room: tba:271:room:27152
+  limit: 1
+- mob: tba:271:mob:27125
+  room: tba:271:room:27154
+  limit: 1
+- mob: tba:271:mob:27122
+  room: tba:271:room:27155
+  limit: 1
+- mob: tba:271:mob:27147
+  room: tba:271:room:27106
+  limit: 2
+- mob: tba:271:mob:27157
+  room: tba:271:room:27161
+  limit: 1
+- mob: tba:271:mob:27146
+  room: tba:271:room:27140
+  limit: 4
+- mob: tba:271:mob:27146
+  room: tba:271:room:27107
+  limit: 4
+- mob: tba:271:mob:27146
+  room: tba:271:room:27125
+  limit: 4
+- mob: tba:271:mob:27146
+  room: tba:271:room:27126
+  limit: 4
+- mob: tba:271:mob:27140
+  room: tba:271:room:27115
+  limit: 1
+- mob: tba:271:mob:27158
+  room: tba:271:room:27116
+  limit: 1
+- mob: tba:271:mob:27129
+  room: tba:271:room:27111
+  limit: 1
+  carry:
+  - object: tba:272:obj:27208
+    limit: 1
+  - object: tba:272:obj:27222
+    limit: 1
+  - object: tba:272:obj:27223
+    limit: 1
+- mob: tba:271:mob:27130
+  room: tba:271:room:27112
+  limit: 1
+  carry:
+  - object: tba:272:obj:27209
+    limit: 1
+  - object: tba:272:obj:27224
+    limit: 1
+- mob: tba:271:mob:27136
+  room: tba:271:room:27108
+  limit: 1
+  equip:
+    wield:
+      object: tba:271:obj:27150
+      limit: 5
+    hold:
+      object: tba:271:obj:27151
+      limit: 5
+- mob: tba:271:mob:27150
+  room: tba:271:room:27156
+  limit: 1
+- mob: tba:271:mob:27151
+  room: tba:271:room:27156
+  limit: 1
+- mob: tba:271:mob:27152
+  room: tba:271:room:27156
+  limit: 1
+- mob: tba:271:mob:27114
+  room: tba:271:room:27164
+  limit: 5
+  equip:
+    legs:
+      object: tba:271:obj:27187
+      limit: 10
+    body:
+      object: tba:271:obj:27188
+      limit: 10
+    hold:
+      object: tba:271:obj:27189
+      limit: 10
+- mob: tba:271:mob:27114
+  room: tba:271:room:27131
+  limit: 5
+  equip:
+    legs:
+      object: tba:271:obj:27187
+      limit: 10
+    body:
+      object: tba:271:obj:27188
+      limit: 10
+    hold:
+      object: tba:271:obj:27189
+      limit: 10
+- mob: tba:271:mob:27114
+  room: tba:271:room:27127
+  limit: 5
+  equip:
+    legs:
+      object: tba:271:obj:27187
+      limit: 10
+    body:
+      object: tba:271:obj:27188
+      limit: 10
+    hold:
+      object: tba:271:obj:27189
+      limit: 10
+- mob: tba:271:mob:27114
+  room: tba:271:room:27120
+  limit: 5
+  equip:
+    legs:
+      object: tba:271:obj:27187
+      limit: 10
+    body:
+      object: tba:271:obj:27188
+      limit: 10
+    hold:
+      object: tba:271:obj:27189
+      limit: 10
+- mob: tba:271:mob:27114
+  room: tba:271:room:27120
+  limit: 5
+  equip:
+    legs:
+      object: tba:271:obj:27187
+      limit: 10
+    body:
+      object: tba:271:obj:27188
+      limit: 10
+    hold:
+      object: tba:271:obj:27189
+      limit: 10
+- mob: tba:271:mob:27109
+  room: tba:271:room:27122
+  limit: 3
+  equip:
+    body:
+      object: tba:271:obj:27194
+      limit: 10
+    hold:
+      object: tba:271:obj:27195
+      limit: 10
+      contents:
+      - object: tba:271:obj:27196
+        limit: 5
+      - object: tba:271:obj:27197
+        limit: 5
+      - object: tba:271:obj:27198
+        limit: 5
+      - object: tba:271:obj:27199
+        limit: 5
+      - object: tba:272:obj:27200
+        limit: 5
+      - object: tba:272:obj:27201
+        limit: 5
+      - object: tba:272:obj:27202
+        limit: 5
+- mob: tba:271:mob:27109
+  room: tba:271:room:27145
+  limit: 3
+  equip:
+    body:
+      object: tba:271:obj:27194
+      limit: 10
+    hold:
+      object: tba:271:obj:27195
+      limit: 10
+      contents:
+      - object: tba:271:obj:27196
+        limit: 5
+      - object: tba:271:obj:27197
+        limit: 5
+      - object: tba:271:obj:27198
+        limit: 5
+      - object: tba:271:obj:27199
+        limit: 5
+      - object: tba:272:obj:27200
+        limit: 5
+      - object: tba:272:obj:27201
+        limit: 5
+      - object: tba:272:obj:27202
+        limit: 5
+- mob: tba:271:mob:27110
+  room: tba:271:room:27124
+  limit: 3
+- mob: tba:271:mob:27110
+  room: tba:271:room:27124
+  limit: 3
+- mob: tba:271:mob:27110
+  room: tba:271:room:27124
+  limit: 3
+- mob: tba:271:mob:27135
+  room: tba:271:room:27114
+  limit: 2
+- mob: tba:271:mob:27135
+  room: tba:271:room:27114
+  limit: 2
+- mob: tba:271:mob:27100
+  room: tba:271:room:27113
+  limit: 1
+  equip:
+    waist:
+      object: tba:271:obj:27172
+      limit: 5
+    wield:
+      object: tba:271:obj:27171
+      limit: 5
+- mob: tba:271:mob:27147
+  room: tba:271:room:27141
+  limit: 2
+- mob: tba:271:mob:27119
+  room: tba:271:room:27118
+  limit: 1
+- mob: tba:271:mob:27141
+  room: tba:271:room:27160
+  limit: 2
+- mob: tba:271:mob:27141
+  room: tba:271:room:27160
+  limit: 2
+- mob: tba:271:mob:27104
+  room: tba:271:room:27103
+  limit: 1
+- mob: tba:271:mob:27144
+  room: tba:271:room:27163
+  limit: 1
+- mob: tba:271:mob:27145
+  room: tba:271:room:27163
+  limit: 1
+- mob: tba:271:mob:27116
+  room: tba:271:room:27162
+  limit: 1
+removes:
+- room: tba:271:room:27139
+  object: tba:271:obj:27147
+- room: tba:271:room:27133
+  object: tba:271:obj:27147

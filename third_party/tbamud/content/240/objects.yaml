@@ -1,0 +1,522 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 240.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:240:obj:24000":
+  type: armor
+  keywords: [robe]
+  short: a gray robe
+  long: A nice robe is laying abandoned on the ground.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [robe]
+    text: A long, loose flowing, outer garment, significant of church rank or position.
+
+"tba:240:obj:24001":
+  type: armor
+  keywords: [mantle]
+  short: a cloth mantle
+  long: Someone left a bright white mantle here.
+  wear: [take, neck]
+  values:
+    armor: 2
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mantle]
+    text: A very short cloak, often covering just the shoulders.
+
+"tba:240:obj:24002":
+  type: weapon
+  keywords: [axe]
+  short: a battle axe
+  long: A large battle axe is stuck into the ground.
+  wear: [take, wield]
+  values:
+    damage: 7d3
+    attack: crush
+  weight: 16
+  cost: 800
+  rent: 120
+  level: 0
+  extras:
+  - keywords: [axe]
+    text: A single-bladed axe designed primarily for combat.
+
+"tba:240:obj:24003":
+  type: weapon
+  keywords: [axe]
+  short: a double headed axe
+  long: A massive double headed axe is half buried in the ground.
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 18
+  cost: 850
+  rent: 135
+  level: 0
+  extras:
+  - keywords: [axe]
+    text: A war axe with two opposing blades.
+
+"tba:240:obj:24004":
+  type: weapon
+  keywords: [lochaber]
+  short: a lochaber
+  long: An expertly crafted lochaber is hidden in the dirt.
+  wear: [take, wield]
+  values:
+    damage: 8d3
+    attack: slash
+  weight: 12
+  cost: 600
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [axe]
+    text: >
+      As much a polearm as an axe, it is a single edged axe head attached to a 6 foot long haft.
+
+"tba:240:obj:24005":
+  type: weapon
+  keywords: [axe]
+  short: a broad axe
+  long: A large axe was left here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: crush
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [axe]
+    text: A single wide-edged axe.
+
+"tba:240:obj:24006":
+  type: weapon
+  keywords: [bardiche]
+  short: a bardiche
+  long: A bardiche was negligently left here.
+  wear: [take, wield]
+  values:
+    damage: 7d4
+    attack: thrash
+  weight: 7
+  cost: 525
+  rent: 52
+  level: 0
+  extras:
+  - keywords: [bardiche]
+    text: A type of pole-axe, typically a long, convex blade attached to the pole at two points.
+
+"tba:240:obj:24007":
+  type: weapon
+  keywords: [halberd]
+  short: a halberd
+  long: A halberd is rusting in the damp air.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d10
+    attack: crush
+  weight: 8
+  cost: 600
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [halberd]
+    text: A large, angled axe blade atop a pole, set with a back spike.
+
+"tba:240:obj:24008":
+  type: weapon
+  keywords: [hatchet]
+  short: a hatchet
+  long: A small hatchet has been abandoned by its owner.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [hatchet]
+    text: A small, one handed axe, designed for labor more than combat.
+
+"tba:240:obj:24009":
+  type: weapon
+  keywords: [polearm]
+  short: a polearm
+  long: A expertly crafted polearm is lying here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: thrash
+  weight: 13
+  cost: 465
+  rent: 47
+  level: 0
+  extras:
+  - keywords: [polearm]
+    text: >
+      This horrifying weapons main feeature is that a large hook is the main body of the weapon, with a
+      convex axe blade on the end with sharpened edges and spikes.
+
+"tba:240:obj:24010":
+  type: armor
+  keywords: [loincloth]
+  short: a leather loincloth
+  long: A leather loincloth is laying on the ground.
+  wear: [take, waist]
+  values:
+    armor: 3
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [loincloth]
+    text: >
+      This is the only clothing most minotaurs wear.  It looks very uncomfortable and you would rather
+      not be caught wearing it.
+
+"tba:240:obj:24011":
+  type: food
+  keywords: [bear, meat]
+  short: some bear meat
+  long: A large side of meat is lying here attracting flies.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [meat]
+    text: >
+      This large hunk of meat must have come from a big animal.  You guess it's probably from the bears
+      outside the city of Dun Maura.
+
+"tba:240:obj:24012":
+  type: food
+  keywords: [elk, meat]
+  short: some elk meat
+  long: A side of meat was left here.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 2
+  cost: 10
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [meat]
+    text: >
+      This large hunk of meat must have come from a big animal.  You guess it's probably from the elks
+      outside the city of Dun Maura.
+
+"tba:240:obj:24013":
+  type: food
+  keywords: [salmon, fish]
+  short: some salmon
+  long: A large fish stinks here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 2
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [fish]
+    text: >
+      A large fish, looks like salmon, was left here.  It still looks edible, at least if you like fish.
+
+"tba:240:obj:24014":
+  type: armor
+  keywords: [loincloth, fur]
+  short: a fur loincloth
+  long: A loincloth made of soft fur has your name on it.
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [loincloth]
+    text: >
+      This attractive little getup is very soft.  You wouldn't mind wearing this at all.  Who knows,
+      maybe you'll attract some attention.
+
+"tba:240:obj:24015":
+  type: treasure
+  keywords: [minotaur, horns]
+  short: a set of minotaur horns
+  long: A set of minotaur horns was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 350
+  rent: 35
+  level: 0
+  extras:
+  - keywords: [minotaur, horns]
+    text: >
+      Whoever, or whatever killed the minotaur to get these horns must be one tough SOB.  These horns are
+      prized in some areas and will fetch a good price.
+
+"tba:240:obj:24016":
+  type: other
+  keywords: [gold, nosering, ring]
+  short: a minotaur's nosering
+  long: A gold nosering is covered in dust.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 260
+  rent: 26
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [nosering]
+    text: >
+      This prized item among the minotaurs looks almost big enough to fit around your wrist.  The
+      minotaurs use the nosering as a symbol of office.  Only an experienced guildsman is allowed to wear them.
+
+"tba:240:obj:24017":
+  type: weapon
+  keywords: [staff, oak, quarterstaff]
+  short: an oak quarterstaff
+  long: A large oak quarterstaff is perfectly straight and smooth without imperfection.
+  flags: [magic, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: pound
+  weight: 5
+  cost: 125
+  rent: 12
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [oak, quarterstaff]
+    text: >
+      A long staff a few inches thick.  It is made of oak and is in perfect condition.  It is the best
+      staff you have ever seen.
+
+"tba:240:obj:24018":
+  type: armor
+  keywords: [brass, knuckles]
+  short: a set of brass knuckles
+  long: A set of brass knuckles is lying in the dirt.
+  flags: [glow, magic]
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 4
+  cost: 280
+  rent: 28
+  level: 0
+  extras:
+  - keywords: [brass, knuckles]
+    text: >
+      This deadly looking weapon is very good during fist fights.  That or it can be worn when wielding a
+      weapon to prevent a foe from raking your fingers and trying to make you drop your own weapon.
+
+"tba:240:obj:24019":
+  type: light
+  keywords: [hooded, lantern]
+  short: a hooded lantern
+  long: A large hooded lantern is unlit.
+  wear: [take, hold]
+  values:
+    hours: 36
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [lantern, hooded]
+    text: >
+      This is a rugged lantern used on long treks when searching caves or underground tunnels.  It is
+      made to last a long time, but the price is outrageous.
+
+"tba:240:obj:24020":
+  type: container
+  keywords: [belt, pouch]
+  short: a belt pouch
+  long: A small belt pouch was left here, maybe there is some money in it.
+  wear: [take, waist]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 2
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [belt, pouch]
+    text: This small pouch is used by merchants to carry their gold, is this one empty?
+
+"tba:240:obj:24021":
+  type: armor
+  keywords: [fancy, cape]
+  short: a fancy cape
+  long: A fancy cape was left here.
+  wear: [take, neck, about]
+  values:
+    armor: 2
+  weight: 4
+  cost: 204
+  rent: 20
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [cape]
+    text: >
+      An fancy unhooded cloak that serves no real purpose except look silly.  You wonder how anyone could
+      wear one of these and not get all tangled up in it.
+
+"tba:240:obj:24022":
+  type: trash
+  keywords: [sandals]
+  short: a pair of sandals
+  long: A pair of hoof looking sandals are lying here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [sandals]
+    text: >
+      These sandals won't even fit on your feet.  Some rich minotaurs of Dun Maura are supposed to wear
+      these, they are considered a type of high status if you have a pair.  To you they are just junk.
+
+"tba:240:obj:24023":
+  type: weapon
+  keywords: [scourge]
+  short: a scourge
+  long: A wicked looking whip is coiled up neatly in a circle.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: whip
+  weight: 8
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: -3
+  extras:
+  - keywords: [scourge]
+    text: A whip with sharp metal attached to the end.
+
+"tba:240:obj:24024":
+  type: light
+  keywords: [sceptre]
+  short: a bronze sceptre
+  long: A large bronze sceptre sparkles brightly.
+  wear: [take]
+  values:
+    hours: -1
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spectre]
+    text: >
+      This spectre gives off a strange light from an unkown source.  It does not flicker like a torch or
+      lantern but radiates constantly.
+
+"tba:240:obj:24025":
+  type: container
+  keywords: [purse]
+  short: a purse
+  long: A fancy fur purse is hidden in the shadows.
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 9
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [purse]
+    text: This nice looking purse is very pretty.  You wonder what poor woman dropped it.
+
+"tba:240:obj:24026":
+  type: armor
+  keywords: [gold, band]
+  short: a gold band
+  long: A gold band, signifying an arena win has been lost here.
+  flags: [anti_good, anti_evil]
+  wear: [take, finger]
+  values:
+    armor: 5
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: con
+    modifier: -2
+  extras:
+  - keywords: [gold, ring]
+    text: >
+      This ring signifies a victory in the arena of Dun Maura, city of minotaurs. These are considered
+      precious.  Minotaurs wear these on their horns after a victory.  Anyone falsely wearing this is
+      deserving of a long painful death.
+
+"tba:240:obj:24027":
+  type: fountain
+  keywords: [fountain]
+  short: the fountain
+  long: A pool of clear water is contained within a large fountain made of stone.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

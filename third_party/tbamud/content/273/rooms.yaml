@@ -1,0 +1,1464 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 273.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:273:room:27300":
+  name: The Bridge
+  description: >
+    You have reached the Bridge, the central nervous system for Space Station Alpha.  All around you
+    are flashing screens a ndlights.  Status reports and damage reports are scrolling o ffthe screen faster
+    than you can read them. The gravity is ve rylight in this room.  You can see blood staining the
+    crash couch of what was probably the Computer Systems Officer.  There are dozens of egg pods here!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    up:
+      to: tba:273:room:27306
+      door:
+        keywords: [red, hatch]
+        kind: pickproof
+        key: tba:273:obj:27314
+  extras:
+  - keywords: [credits, info]
+    text: >
+      Hi, just a quick explanation of Space Station Alpha. Esentially this area is a Sci-fi based area. A
+      space station has been in orbit around your planet and something has gone terribly wrong. Predator
+      aliens and introduced Alien aliens into the station to hunt along with the humans! The station is
+      completely infested and the crew of Space Station Alpha is doing their best to hold out and clear the
+      station. Too bad the captain has snapped and more than half the crew has been killed or committed
+      suicide. Room #61 is a space shuttle that is the entrance to the station from the rest of the world. Edit
+      it to fit in yours. Other than that it should be pretty much plug and play. It contains 1 deathtrap, a
+      room that has been sealed off that the players will definitely have to ignore all the warnings to
+      get killed in. It will serve them right if they are dumb enough to walk into a sealed room that has a
+      hull breach and no pressure! This area is nasty. Not for people who are simply hack & slash. It will
+      take some thinking to clear. Best not to go alone too. 2 or 3 higher level characters should be able
+      to clear it if they follow a hit and run campaign. Since all but a few of the rooms are no magic spell
+      casters should map out which rooms magic will work in and cast protection spells there or before
+      they enter the station.  Magic works in the hangars and a few other rooms. Best bet is to set up a base
+      camp in the main hagar and clear the immeadiate area of wandering aliens. Then heal up in the hangar
+      and explore until the next battle. Then drop back, heal up and head back out into it. Pick the mobs
+      off one at a time if possible. You really don't want to go into a combat wounded. Plus fleeing here
+      can get you killed too. I recommend setting the zone reset bit so that it doesn't reload while players
+      are in the station. I don't think I have it set that way as the default. Anyway, enjoy. Magnus/Stan
+      Rohrer magnus@@ix.netcom.com
+  - keywords: [egg, eggs, pod]
+    text: Yes, your presence in this room has been noticed by the proto-aliens in the pods!
+
+"tba:273:room:27301":
+  name: Weapon Storage Chamber
+  description: >
+    You have located the weapons storage chamber.  Unfortunatelyit is empty. Apparently the crewmembers
+    had a chance to get to the weapons.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27302
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27305
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27302":
+  name: Officer's Mess
+  description: >
+    This is where the officers of Space Station Alpha take their meals.  It looks as if the room is
+    being used as a staging area for alien hunting Predators!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27303
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27301
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27303":
+  name: Systems Officer's Quarters
+  description: >
+    These are the quarters of the Systems Officer.  What is left of her is scattered all about the
+    room.  The grate over the ventilation shaft has been torn off.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27304
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27302
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27304":
+  name: Communications Officer's Quarters
+  description: >
+    These are the quarters of Lt.  Oshura, communications officer of the station.  There is no sign of
+    Oshura here.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    south:
+      to: tba:273:room:27307
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27303
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27305":
+  name: Captain's Quarters
+  description: >
+    These are the quarters of Captain Vance Marshal.  They look recently occupied but Captain Marshal
+    is not in the room.  A steel plate has been hastily welded over the ventilation shaft.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27301
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27306
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27308
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27306":
+  name: Main Axis Transportation Column
+  description: >
+    You are in the main transportation column.  There are some burn marks here on the walls and the
+    rungs directly above you have been corroded away by acid.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27307
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27305
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    up:
+      to: tba:273:room:27318
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+    down:
+      to: tba:273:room:27300
+      door:
+        keywords: [red, hatch]
+        kind: pickproof
+        key: tba:273:obj:27314
+
+"tba:273:room:27307":
+  name: Science Officer's Quarters
+  description: >
+    These are the quarters of the stations Science Officer.  The room is in complete dissaray.  A vent
+    cover in the ceiling has been forcibly removed from the inside.  There are burn marks and signs of
+    acid corrosion on the floor below the vent.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27304
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27311
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27306
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27308":
+  name: Recreation Room
+  description: >
+    You have found the recreation room.  It looks like there was some strenuous activity going on here
+    recently judging by the human body parts.  Where is the skull though?
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27305
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27309
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27309":
+  name: The Latrine
+  description: >
+    You have found the latrine.  The fixtures have been torn off the floor and smashed by something
+    with great strength.  Part of a dead adult stage alien is here.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27310
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27308
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27310":
+  name: A Storage Room
+  description: >
+    This room stored various replacement parts for the spacestation.  Boxes are tossed randomly about.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27311
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27309
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27311":
+  name: Food Storage
+  description: >
+    This was where the dry rations for the station were stored.  Most packages have been ripped open.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27307
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27310
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27312":
+  name: Storage Room
+  description: This room is stored with huge metal barrels.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27313
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27317
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27313":
+  name: Bio Lab
+  description: >
+    This room is full of high tech equipment for disection and analisis of biological specimens.  There
+    is a naked human on an examination table here.  A facehugger is firmly attached to him.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27314
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27312
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27314":
+  name: Cryo Storage
+  description: >
+    This room is bitterly cold.  There are some large glass tubes here containing frozen humanbeings. 
+    Other containers house suspended alien life forms.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27315
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27313
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27315":
+  name: An Empty Stateroom
+  description: There are a couple neately made beds here.  Nothing else is out of the ordingary.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:273:room:27319
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27314
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27316":
+  name: "Hangar #1"
+  description: >
+    You are in Hangar #1 on Space Station Alpha.  A suttlecraft is waiting here to transport you to the
+    planet's surface.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:273:room:27317
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+    west:
+      to: tba:273:room:27361
+      look: The Shuttle awaits you to head back to the planet's surface.
+
+"tba:273:room:27317":
+  name: "Air Lock #1"
+  description: >
+    This room has especially thick hatches to it with a large control pannel mounted next to the hatch
+    to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:273:room:27312
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27318
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27321
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27316
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+
+"tba:273:room:27318":
+  name: Main Axis Transportation Column
+  description: >
+    You are in the main transportation column.  There are some burn marks on the walls here.  What's
+    that!?????  A part of a human face?!  Something isn't right here!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27319
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27317
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    up:
+      to: tba:273:room:27330
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+    down:
+      to: tba:273:room:27306
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+
+"tba:273:room:27319":
+  name: "Airlock #2"
+  description: >
+    This room has especially thick hatches to it with a large control pannel mounted next to the hatch
+    to the east.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27315
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27320
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+    south:
+      to: tba:273:room:27324
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27318
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27320":
+  name: "Hanger #2"
+  description: >
+    This is a rather large room, similar to the room you entered the station from.  There is no other
+    space craft here however.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    west:
+      to: tba:273:room:27319
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+
+"tba:273:room:27321":
+  name: "Preparation Room #1"
+  description: >
+    This room contains a number of vacum suits and other equipment for walking out side the hull of the
+    station.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:273:room:27317
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27322
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27322":
+  name: Repair Shop
+  description: >
+    This room is obviously a repairshop of some sort.  There is a half assembled robot on a table here
+    along with some weapons that are recharging.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27323
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27321
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27323":
+  name: A Storage Room
+  description: >
+    Spare parts are stacked to the ceiling in this room.  There are a few overturned boxes but
+    otherwise this room is intact.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27324
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27322
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27324":
+  name: "Preparation Room #2"
+  description: >
+    This room is full of vacum suits and equipment for space walking out side the hull of the ship.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27319
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27323
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27325":
+  name: A Kitchen
+  description: >
+    This is a small kitchen used for making snacks for the crew.  The place has been ransacked!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27326
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27329
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27326":
+  name: A Crew Stateroom
+  description: The room was until recently occupied by a memeber of the space station's crew.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:273:room:27327
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27325
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27327":
+  name: A Crew Stateroom
+  description: The room was until recently occupied by a memeber of the space station's crew.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27328
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27326
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27328":
+  name: A Crew Stateroom
+  description: >
+    The room was until recently occupied by a memeber of the space station's crew.  The bed in this
+    room is soaked with blood from the poor slob on the floor.  The corpse has a gaping hole in its chest.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    south:
+      to: tba:273:room:27331
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27327
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27329":
+  name: Video Room
+  description: >
+    This room contains a dozen comfortable looking reclining couches each equiped with their own video
+    screen on a swivel are attached to the couch. One of the video couches is occupied by a corpse with a
+    large hole it his chest.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27325
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27330
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27332
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27330":
+  name: Main Axis Transportation Column
+  description: >
+    You are in the main transportation column.  There are some burn marks here on the walls and blood
+    covers most of the shaft here.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27331
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27329
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    up:
+      to: tba:273:room:27342
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+    down:
+      to: tba:273:room:27318
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+
+"tba:273:room:27331":
+  name: Crew Stateroom
+  description: >
+    This room was recently occupied by one of the crew members of the spacestation.  There is a hastily
+    scribbled note laying on the desk here.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27328
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27335
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27330
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27332":
+  name: Sceen of a Battle
+  description: >
+    It is hard to say what this room once was.  Everything has been destroyed. There are burn marks and
+    holes everywhere.  It looks like some eventually tossed in a fragmentation grenade and closed the
+    door.  Bits of alien flesh cling to the walls and ceiling.  Score one up for the crew!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27329
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27333
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27333":
+  name: A Crew Stateroom
+  description: >
+    A corpse lies slumped over a small metal desk against the far wall of thisroom.  As you lift the
+    head up to have a better look you notice the singleperfectly round hole through the right temple and
+    out the other side. This crewmenber took the easy way out.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27334
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27332
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27334":
+  name: A Small Theater
+  description: >
+    This is a small theater.  One entire wall is a huge viewing screen for moviesand entertainment
+    views.  Unfortunately the screen has been damaged by splattered alien blood.  A translucent alien arm
+    lays on the floor just inchesfrom your feet.  Looks like the crew didn't do so badly after all.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27335
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27333
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27335":
+  name: Observation Room
+  description: >
+    The external wall of this room is completely transparent.  There are a numberof comfortable chairs
+    here for simply sitting and staring out into space. You could stare at the stars forever, just like
+    the dead crewman to your right with the huge gaping hole in his chest!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:273:room:27331
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27334
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27336":
+  name: "Agrodome #1"
+  description: >
+    This room is full of lush plant life that has been designed to live in lowgravity environments such
+    as are found on orbiting space platforms.  The foliage offers great cover.  This room is a veritable
+    jungle in space!
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:273:room:27337
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27341
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27337":
+  name: "Agrodome #2"
+  description: >
+    This room is full of row after row of editable plant life.  There are gainttomatoes, two foot long
+    cucumbers, carrots, and other vegetables.  They haveno doubt been geneticaly altered to grow in the
+    light gravity of a spacestation.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27338
+      look: >
+        The access pannel for this hatch has a red flashing light on it. The LCD reads: 'No Pressure'
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+        reset: locked
+    west:
+      to: tba:273:room:27336
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27338":
+  name: "Agrodome #3"
+  description: >
+    It was a BIG mistake to open that hatch!  The hull of the station has been breached here!  Anything
+    that wasn't nailed down has been sucked out of this room...  Including you!  Should have paid more
+    attention to that little light on the hatch console now shouldn't you?
+  sector: inside
+  flags: [no_mob, soundproof, no_track]
+  exits:
+    east:
+      to: tba:273:room:27339
+      look: "Agrodome #4 is that way."
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+        reset: locked
+    west:
+      to: tba:273:room:27337
+      look: "Agrodome #2 is that way."
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+        reset: locked
+
+"tba:273:room:27339":
+  name: "Agrodome #4"
+  description: >
+    All the plantlife in this room has been destroyed by energy weapon fire. Someone apparently got
+    spookedand just started opening up at radom here. Either thator they simply went nuts!  Maybe both.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    south:
+      to: tba:273:room:27343
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27338
+      look: >
+        The hatch to Agrodome #3 is closed. The control pannel onthe door has a red flashing light on it.
+        The LCD reads: ** NO PRESSURE **
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+        reset: locked
+
+"tba:273:room:27340":
+  name: Hangar Delta
+  description: >
+    This is another space hangar.  The shuttle in this hangar has been destroyed by a powerful blast. 
+    Parts from four or five aliens are lying here on the floor, most of the hangar deck had been corroded
+    away and it looks unsafe to walk here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:273:room:27341
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+
+"tba:273:room:27341":
+  name: Preparation Room
+  description: >
+    This is a equipment preparation room for crew memebers who will be walking outside the ship or
+    taking a flight in one of the shuttles.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27336
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27342
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27345
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27340
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+
+"tba:273:room:27342":
+  name: Main Axis Transportation Column
+  description: You are in the main transportation column.  There are more burn marks on the walls here.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27343
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27341
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    up:
+      to: tba:273:room:27354
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+    down:
+      to: tba:273:room:27330
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+
+"tba:273:room:27343":
+  name: Predator Remote Command Facility
+  description: >
+    This room has been converted over from its former function to serve as a Predator remote comand and
+    control base.  You get the feeling you are being watched!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27339
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27344
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+    south:
+      to: tba:273:room:27348
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27342
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27344":
+  name: Hangar Gamma
+  description: >
+    This hangar is occupied by and extreamly strange looking spacecraft.  The markings on the hull are
+    not human in origin.  A large access hatch is open on the alien craft.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27362
+      look: The main hatch of the Predator ship is that way.
+      door:
+        keywords: [hatch]
+        kind: door
+        key: tba:273:obj:27307
+    west:
+      to: tba:273:room:27343
+      door:
+        keywords: [airlock]
+        kind: pickproof
+        key: tba:273:obj:27316
+
+"tba:273:room:27345":
+  name: A Storage Room
+  description: >
+    Strange markings have been crudely painted on the wall here in what appears to be Predator blood!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27341
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27346
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27346":
+  name: A Passageway
+  description: The passage continues east and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27347
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27345
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27347":
+  name: Cleaning Room
+  description: Cleaning supplies are stored in this room.  Mops, sponges etc.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27348
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27346
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27348":
+  name: The Sickbay
+  description: >
+    This is the hospital for the station.  There are 10 beds, one of which is totaly soaked in blood. 
+    The others are empty.  A corpse lies on the floor of the bloodstained bed with a gaping hole in her
+    chest.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27343
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27347
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27349":
+  name: Surgery
+  description: >
+    This is the surgery room of the station.  Most of the equipment has been badly damaged here. 
+    Smashed readouts broken glass, a major mess.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27350
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27353
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27350":
+  name: A Crew Stateroom
+  description: >
+    This room has been left pretty much intact.  The bed is still made and there is no sign of anything
+    out of the ordinary.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27351
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27349
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27351":
+  name: A Passageway
+  description: The passage continues east and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27352
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27350
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27352":
+  name: A Passageway
+  description: The passage continues south and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    south:
+      to: tba:273:room:27355
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27351
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27353":
+  name: A Passageway
+  description: The passage continues south, east, and north.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27349
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27354
+    south:
+      to: tba:273:room:27356
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27354":
+  name: Main Axis Transportation Column
+  description: You are in the main transportation tube.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27355
+    west:
+      to: tba:273:room:27353
+    up:
+      to: tba:273:room:27360
+      door:
+        keywords: [red, hatch]
+        kind: pickproof
+        key: tba:273:obj:27314
+    down:
+      to: tba:273:room:27342
+      door:
+        keywords: [green, hatch]
+        kind: pickproof
+        key: tba:273:obj:27317
+
+"tba:273:room:27355":
+  name: A Passageway
+  description: The passage continues south, west, and north.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27352
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    south:
+      to: tba:273:room:27359
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27354
+
+"tba:273:room:27356":
+  name: A Passageway
+  description: The passage continues north and east.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27353
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    east:
+      to: tba:273:room:27357
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27357":
+  name: A Passageway
+  description: The passage continues east and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27358
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27356
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27358":
+  name: A Passageway
+  description: The passage continues east and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27359
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27357
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27359":
+  name: A Passageway
+  description: The passage continues north and west.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    north:
+      to: tba:273:room:27355
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+    west:
+      to: tba:273:room:27358
+      door:
+        keywords: [hatch]
+        kind: pickproof
+        key: tba:273:obj:27315
+
+"tba:273:room:27360":
+  name: Reactor Room
+  description: >
+    The main reactors that power the station are here.  There is a pannel on the main reactor that
+    looks as if a code has been partially entred.  Suddenly you are surprized by Captain Marshal!  The man is
+    obviously insane and screams "I must destroy the station!  " as he aims his weapon at your head!
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    down:
+      to: tba:273:room:27354
+      door:
+        keywords: [red, hatch]
+        kind: pickproof
+        key: tba:273:obj:27314
+
+"tba:273:room:27361":
+  name: Space Shuttle Galeleo
+  description: >
+    You have entered the strange looking craft and you search it for signs of life.  There are none. 
+    What you do find is a button marked 'Return'.
+  sector: inside
+  flags: [dark, indoors, no_magic]
+  exits:
+    up:
+      to: tba:273:room:27316
+      look: Pressing the 'Return' button launches the ship.
+
+"tba:273:room:27362":
+  name: The Bridge of the Predator Craft
+  description: >
+    You stand on the mist shrouded bridge of the Predator aliean spacecraft. Strange glowing controls
+    hypnotically flash and change color.  Occasionally a strange spiting-hissing sound comes over what
+    must be an intercom speaker.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:273:room:27363
+      look: A misty trophy room.
+      door:
+        keywords: [hatch]
+        kind: door
+        key: tba:273:obj:27305
+    west:
+      to: tba:273:room:27344
+      look: Ship's hatch to hangar Gamma.
+      door:
+        keywords: [hatch]
+        kind: door
+        key: tba:273:obj:27305
+
+"tba:273:room:27363":
+  name: Trophy Room
+  description: >
+    You have entered the main hold and trophy room of the Predator ship.  There are skulls of all sorts
+    on trophy stands along the walls.  These monsters have killed a lot of men, and other things in
+    their travels!
+  sector: inside
+  flags: [indoors, soundproof, no_magic]
+  exits:
+    east:
+      to: tba:273:room:27366
+      look: The Predator's Engine room.
+    west:
+      to: tba:273:room:27362
+      look: The main bridge of the craft.
+
+"tba:273:room:27366":
+  name: Predator Engine Room
+  description: >
+    Somehow you have managed to get all the way to the main engine room ofthe Peredator's ship!  Too
+    bad the technology here is so alien you can find nothing of use.  Strange machinery hums and glows. 
+    The same thick mist that covers most of the ship is on the floor here too.
+  sector: inside
+  flags: [dark, indoors, soundproof, no_track, no_magic]
+  exits:
+    west:
+      to: tba:273:room:27363
+      look: West is the main hold of the Predator ship.

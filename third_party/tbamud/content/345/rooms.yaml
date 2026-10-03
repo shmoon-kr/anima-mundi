@@ -1,0 +1,983 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 345.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:345:room:34500":
+  name: Duluth's Zone Description Room
+  description: >
+    The Location is going to be an old insane asylum with a level range of 6 to 10. The whole zone is
+    about 55 rooms large with three sections, the asylum, the asylum's cemetery, and the basement. It will
+    have a horror theme so the alignment will be evil. As for the Plot, the player will have to make
+    his/her way through the grounds to on a mini quest to find a piece of eq that will modify their strength
+    up by three but lower their wisdom by three when they wear it. The quest will have one task that
+    will need to be completed to get the piece of eq, but there is a quest just to get into the asylum as
+    well. This is all in a modern day time period.
+  sector: inside
+  exits:
+    down:
+      to: tba:345:room:34501
+
+"tba:345:room:34501":
+  name: A Paved Road
+  description: >
+    The road has seen better days. It is doubtful that a car could even drive on it anymore. To the
+    north the road is blocked by a fallen tree. To the south the road continues. A vine covered brick wall
+    greets the eye to the east, effectively hiding what may lay beyond it.
+  sector: city
+  exits:
+    south:
+      to: tba:345:room:34502
+  extras:
+  - keywords: [brick, wall]
+    text: >
+      The wall is made of a crumbling red brick. Vines cover the bottom half of it and reach upwards.
+      Lining the top of the wall are decorative black iron bars, to keep people out, or perhaps in.
+
+"tba:345:room:34502":
+  name: Before a Gate
+  description: >
+    The road is cracked and falling apart here. It continues that way to the north and south. There is
+    a break in the wall to the east. A heavy iron bar gate stands there allowing a glimpse of what is
+    behind the wall. Next to it is an old bronze plaque.
+  sector: city
+  exits:
+    north:
+      to: tba:345:room:34501
+    east:
+      to: tba:345:room:34504
+      look: >
+        Made from heavy black iron, the left side of the gate is only hanging by the bottom hinge. A large
+        mansion can be seen through the bars.
+      door:
+        keywords: [gate, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:345:room:34503
+  extras:
+  - keywords: [plaque, sign]
+    text:
+      preformatted: |2
+           @Y
+        @y
+        **************************
+        *    NEW YORK ASYLUM     *
+        *                        *
+        *        FOR THE         *
+        *                        *
+        *   CRIMINALLY INSANE    *
+        ************************** @n
+  - keywords: [iron, gate]
+    text: >
+      Made from heavy black iron, the left side of the gate is only hanging by the bottom hinge. A large
+      mansion can be seen through the bars.
+
+"tba:345:room:34503":
+  name: A Broken Road
+  description: >
+    The road seems to be in disrepair here. It doesn't look like it gets much better to the north. To
+    the south the road is so bad that its not usable. Your view to the east is blocked by a large vine
+    covered wall.
+  sector: city
+  exits:
+    north:
+      to: tba:345:room:34502
+    east:
+      look: Your view is obstructed by a high wall.
+  extras:
+  - keywords: [brick, wall']
+    text: >
+      The wall is made of a crumbling red brick. Vines cover the bottom half of it and reach upwards.
+      Lining the top of the wall are decorative black iron bars, to keep people out, or perhaps in.
+
+"tba:345:room:34504":
+  name: Inside the Gate
+  description: >
+    All about are the signs that this property is unused. To the west an iron gate hangs slightly. To
+    the north and south overgrown bushes and tall grass seem to harbor unknown secrets. To the east a dirt
+    road leads to do an old abandoned building, shrouded in a fog.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:345:room:34505
+    west:
+      to: tba:345:room:34502
+      look: >
+        Made from heavy black iron, the right side of the gate is only hanging by the bottom hinge. A
+        crumbling old road can be seen through the bars.
+      door:
+        keywords: [gate, west]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [iron, gate]
+    text: >
+      Made from heavy black iron, the right side of the gate is only hanging by the bottom hinge. A
+      crumbling old road can be seen through the bars.
+
+"tba:345:room:34505":
+  name: Before the Sanatorium
+  description: >
+    The dirt driveway coninutes east to the building and west towards the gates and saftey. A small
+    over-grown path that leads to south, but its unclear where it heads. There is an unnatural fog in the
+    air, making seeing very far difficult.
+  sector: field
+  exits:
+    east:
+      to: tba:345:room:34506
+    south:
+      to: tba:345:room:34507
+    west:
+      to: tba:345:room:34504
+
+"tba:345:room:34506":
+  name: At the Doors
+  description: >
+    An imposing building dominates the view. The brick walls showing signs of their age. While not yet
+    falling out, it looks as if a strong wind could collapse the whole wall. To the south there appears
+    to be headstones, with someone moving in among them... Or it could just be the swirling fog playing
+    tricks.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:345:room:34508
+      look: A heavy iron reinforced oak door.
+      door:
+        keywords: [door, east]
+        kind: pickproof
+        key: tba:345:obj:34500
+        reset: locked
+    west:
+      to: tba:345:room:34505
+
+"tba:345:room:34507":
+  name: A Well Worn Path
+  description: >
+    The fog turns and swirls here, creating shapes and images of a most horrific nature. A black
+    wrought iron fence with a gate leads to a path to the south. Northeast is a large building in disrepair.
+    Faintly to west, you can make out a high wall.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:345:room:34505
+    south:
+      to: tba:345:room:34509
+      look: A black wrought iron gate, hanging slightly off its hinges.
+      door:
+        keywords: [gate, south]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [wall]
+    text: It is very hard to see from here.
+  - keywords: [gate]
+    text: A black wrought iron gate, hanging slightly from its hinges.
+
+"tba:345:room:34508":
+  name: Entrance to the Asylum
+  description: >
+    The is the entrance way to asylum. At one point in time it may have been grand, but now everything
+    is covered in dust and cob webs. It appears that some animals have made a home here as well. There is
+    a reception area at the northern end of the room with an old sign next to it telling the way to
+    different sections of the compound.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34520
+    east:
+      to: tba:345:room:34519
+    south:
+      to: tba:345:room:34526
+    west:
+      to: tba:345:room:34506
+      look: A heavy iron reinforced oak door.
+      door:
+        keywords: [door, west]
+        kind: pickproof
+        key: tba:345:obj:34500
+        reset: locked
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           @n
+        *********************************
+        *       Doctor Offices          *
+        *          Upstairs             *
+        *                               *
+        *        Patient Rooms          *
+        *    To the North or South      *
+        *                               *
+        *       Procedure Rooms         *
+        *         Downstairs            *
+        *********************************
+
+"tba:345:room:34509":
+  name: Entrance to the Cemetery
+  description: >
+    Headstones can be seen from here, to the east. The fog swirls low around them. A few trees can be
+    seen about, looking as depressed as the area around them. The path continues east into the cemetery
+    and north past an iron gate.
+  sector: inside
+  exits:
+    north:
+      to: tba:345:room:34507
+      look: A black wrought iron gate, hanging slightly from its hinges.
+      door:
+        keywords: [gate, north]
+        kind: door
+        reset: closed
+    east:
+      to: tba:345:room:34510
+    south:
+      to: tba:345:room:34517
+  extras:
+  - keywords: [iron, gate]
+    text: A black wrought iron gate, hanging slightly from its hinges.
+
+"tba:345:room:34510":
+  name: Among Crumbled Stone
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:345:room:34516
+    south:
+      to: tba:345:room:34511
+    west:
+      to: tba:345:room:34509
+
+"tba:345:room:34511":
+  name: Among Crumbled Stone
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34510
+    east:
+      to: tba:345:room:34512
+    south:
+      to: tba:345:room:34518
+    west:
+      to: tba:345:room:34518
+  extras:
+  - keywords: [headstones]
+    text: >
+      The headstone is like any of the many others in this graveyard. The name has been worn down with
+      time. The only letter that can be distinguished now is the letter E.
+
+"tba:345:room:34512":
+  name: Among Crumbled Stone
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    south:
+      to: tba:345:room:34513
+    west:
+      to: tba:345:room:34511
+  extras:
+  - keywords: [headstones]
+    text: >
+      The headstone is like any of the many others in this graveyard. The name has been worn down with
+      time. The only letter that can be distinguished now is the letter D.
+
+"tba:345:room:34513":
+  name: Among Crumbled Stone
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34512
+    east:
+      to: tba:345:room:34514
+    west:
+      to: tba:345:room:34517
+  extras:
+  - keywords: [headstones]
+    text: >
+      This headstone is in the shape of a giant letter G for some unknown reason. Perhaps the name of the
+      person buried here started with a G. Time has seen to it that no one will ever find out.
+
+"tba:345:room:34514":
+  name: Among Crumbled Stone
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34515
+    east:
+      to: tba:345:room:34515
+    west:
+      to: tba:345:room:34513
+  extras:
+  - keywords: [headstones]
+    text: >
+      The headstone is like any of the many others in this graveyard. The name has been worn down with
+      time. The only letter that can be distinguished now is the letter A.
+
+"tba:345:room:34515":
+  name: Among Crumbled Stone
+  description: >
+    The crumbled stones of a monument litters the ground. There is a sense of foreboding in the air, as
+    if some terribly evil is lurking in the area. All around the dead seem to call out from beyond the
+    grave. Although this whole place is strange there is something odd about a nearby grave stone.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34517
+    east:
+      to: tba:345:room:34514
+    south:
+      to: tba:345:room:34514
+    west:
+      to: tba:345:room:34514
+  extras:
+  - keywords: [grave, stone]
+    text: >
+      The headstone is like any of the many others in this graveyard except this one had an ornately
+      carved R place at the top of it. It stands out because there is no reason for it to be there... Odd.
+
+"tba:345:room:34516":
+  name: Among the Headstones
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34518
+    east:
+      to: tba:345:room:34517
+    south:
+      to: tba:345:room:34518
+    west:
+      to: tba:345:room:34510
+
+"tba:345:room:34517":
+  name: Among the Headstones
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34509
+    east:
+      to: tba:345:room:34513
+    west:
+      to: tba:345:room:34516
+
+"tba:345:room:34518":
+  name: Among the Headstones
+  description: >
+    In amongst the headstones and tombs, the fog swirls creating the illusion that there are creatures
+    and other beings around. The area is over grown with grass and weeds. Strangely, there is still a
+    well worn path in amongst the graves, as if others have passed through here recently.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34511
+    east:
+      to: tba:345:room:34511
+    south:
+      to: tba:345:room:34516
+
+"tba:345:room:34519":
+  name: A Courtyard
+  description: >
+    The courtyard is overgrown with weeds just like the grounds outside. There once was a glass dome
+    covering the open space, but that has since been broken exposing the it to the elements. To the north,
+    south, east, and west are entry ways into the main building. There are benches, in various states of
+    disrepair, scattered throughout the space.
+  sector: field
+  exits:
+    north:
+      to: tba:345:room:34521
+    east:
+      to: tba:345:room:34523
+    south:
+      to: tba:345:room:34525
+    west:
+      to: tba:345:room:34508
+    down:
+      to: tba:345:room:34540
+
+"tba:345:room:34520":
+  name: A Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. The sounds of screams con be heard faintly in the air. To the north is a heavy door with a
+    lock on the outside.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34527
+      door:
+        keywords: [door, north]
+        kind: door
+        reset: closed
+    east:
+      to: tba:345:room:34521
+    south:
+      to: tba:345:room:34508
+
+"tba:345:room:34521":
+  name: A Long Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. The sounds of screams con be heard faintly in the air. To the north is a heavy door off its
+    hinges.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34528
+      door:
+        keywords: [door, north]
+        kind: door
+    east:
+      to: tba:345:room:34522
+    south:
+      to: tba:345:room:34519
+    west:
+      to: tba:345:room:34520
+
+"tba:345:room:34522":
+  name: A Long Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. The sounds of screams con be heard faintly in the air. To the north is a heavy door with a
+    lock on the outside.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34529
+    south:
+      to: tba:345:room:34523
+    west:
+      to: tba:345:room:34521
+
+"tba:345:room:34523":
+  name: A Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. The sounds of screams con be heard faintly in the air. To the east is a heavy door with an old
+    rusted lock hanging on it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34522
+    east:
+      to: tba:345:room:34530
+    south:
+      to: tba:345:room:34524
+    west:
+      to: tba:345:room:34519
+
+"tba:345:room:34524":
+  name: A Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood, death, and insanity if there is such a smell. Your light
+    doesn't seem to penetrate as far as it should. To the south is a heavy wooden door with iron reinforcing
+    straps.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34523
+    south:
+      to: tba:345:room:34531
+      door:
+        keywords: [door, south]
+        kind: door
+    west:
+      to: tba:345:room:34525
+    up:
+      to: tba:345:room:34534
+
+"tba:345:room:34525":
+  name: A Long Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. The sounds of screams con be heard faintly in the air. To the south a door hangs off its
+    hinges.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34519
+    east:
+      to: tba:345:room:34524
+    south:
+      to: tba:345:room:34532
+    west:
+      to: tba:345:room:34526
+
+"tba:345:room:34526":
+  name: A Long Dark Hallway
+  description: >
+    This is a dark hallway. Like the rest of the building, it is covered in dust and cob webs. The air
+    is thick with the smell of stale blood and death. Your light doesn't seem to penetrate as far as it
+    should. From the south the sounds of someone moving around can be heard.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:345:room:34508
+    east:
+      to: tba:345:room:34525
+    south:
+      to: tba:345:room:34533
+
+"tba:345:room:34527":
+  name: A Patient's Room
+  description: >
+    This room is sparse with only a cot hanging from the wall. The walls appear to have been all white
+    at one time, thought time has seen to the chipping of the paint. The stench of human and animal waste
+    fills the air. The only place to retreat is to the south
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34520
+      door:
+        keywords: [door, south]
+        kind: door
+        reset: closed
+
+"tba:345:room:34528":
+  name: A Padded Room
+  description: >
+    This room is sparse with only a cot hanging from the wall. The walls are padded, but most of the
+    stuffing has been removed or is hanging out of gaping holes. The body of what can only be assumed to be
+    a patient is in one corner as if the person had just died yesterday.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34521
+      door:
+        keywords: [door, south]
+        kind: door
+
+"tba:345:room:34529":
+  name: Community Room
+  description: >
+    This room has a few old couchs and seats. A table sits at the northern end next to a broken out
+    window. This room looks as if it might have been for visitions or as a community room for the patients.
+    The walls use to be a bright yellow and show signs that pictures use to hang on them. The only exit
+    is to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34522
+
+"tba:345:room:34530":
+  name: Staff Room
+  description: >
+    There are a few desks and a long table here. Along the north wall is a bank of filing cabinets.
+    While the staff may have all left their work area remains along with all the files of the patients.
+    Paper litters the floor like a carpet. The only entrance or exit is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:345:room:34523
+
+"tba:345:room:34531":
+  name: A Patient's Room
+  description: >
+    This room is sparse with only a cot hanging from the wall. The walls appear to have been all white
+    at one time, thought time has seen to the chipping of the paint. The stench of human and animal waste
+    fills the air. The only place to retreat is to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34524
+      door:
+        keywords: [door, north]
+        kind: door
+
+"tba:345:room:34532":
+  name: The Kitchen
+  description: >
+    A large room first greets the eye. There are stainless steel tables and work areas all over. This
+    must have been the kitchen, though most of the appliances have been removed. While the stench of the
+    rest of the building reaches here as well, but for some reason its not as bad.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34525
+
+"tba:345:room:34533":
+  name: A Padded Room
+  description: >
+    This room is sparse with only a cot hanging from the wall. The walls are padded, but most of the
+    stuffing has been removed or is hanging out of gaping holes. The stench of human and animal waste fills
+    the air. To the north is only escape from the smell.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34526
+
+"tba:345:room:34534":
+  name: Second Floor Landing
+  description: >
+    The landing on the second level, while still as dark as the ground level, seems to be in better
+    upkeep. Strange since no one is suppose to be living or working in the building. This area looks as if
+    it was kept up better and looks nicer than the rest of the building. There is a room to the east and a
+    hallway that runs from north to south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34535
+    east:
+      to: tba:345:room:34537
+      door:
+        keywords: [door, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:345:room:34538
+    down:
+      to: tba:345:room:34524
+
+"tba:345:room:34535":
+  name: A Hallway
+  description: >
+    The most notable thing about this hallway is that there are still pictures hanging on the walls.
+    They are worn and dusty but they seem like they might have been placed here after the asylum closed. To
+    the east is a door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:345:room:34536
+      door:
+        keywords: [door, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:345:room:34534
+  extras:
+  - keywords: [pictures]
+    text: >
+      The pictures are not anything special. They look to be past doctors that had worked here or perhaps
+      ran the asylum.
+
+"tba:345:room:34536":
+  name: A Red Office
+  description: >
+    This room has the look and feel of a an office. Everything in here is red making it seem a little
+    unnerving. Its a wonder why anyone would ever decorate an office in all the same color. There is an
+    old wooden desk dominating the center of the room and a filing cabinet in one corner. The only exit is
+    to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:345:room:34535
+      door:
+        keywords: [door, west]
+        kind: door
+        reset: closed
+
+"tba:345:room:34537":
+  name: A Green Office
+  description: >
+    This room has the look of a an office. The over all color is green. Everything about this room
+    seems to reflect that from the carpet to the window curtains to other varies odds and ends that adorn the
+    room. There is an old wooden desk dominating the center of the room and a filing cabinet in one
+    corner. On the desk is some yellowed paper. Against one wall is a book case that still has a few books on
+    it. The only exit is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:345:room:34534
+      door:
+        keywords: [door, west]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [bookcase]
+    text: >
+      Old and dusty like the rest of the room the book case only house a few books now. Interestingly
+      enough they are all by or about the same person... Edgar Allen Poe. What an curious thing that is.
+  - keywords: [paper]
+    text: >
+      The paper, yellowed with age, has only one simple line on it: If one is seeking true enlightenment,
+      one must first learn the correct words.
+
+"tba:345:room:34538":
+  name: A Hallway
+  description: >
+    The most notable thing about this hallway is that there are still pictures hanging on the walls.
+    They are worn and dusty but they seem like they might have been placed here after the asylum closed. To
+    the east is a door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34534
+    east:
+      to: tba:345:room:34539
+      door:
+        keywords: [door, east]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [pictures]
+    text: >
+      The pictures are not anything special. They look to be past doctors that had worked here or perhaps
+      ran the asylum.
+
+"tba:345:room:34539":
+  name: A Purple Office
+  description: >
+    This room has the look and feel of a an office. Everything in here is purple from the carpet to the
+    wall coverings. It gives the room a dark and depressing feeling. There is an old wooden desk
+    dominating the center of the room and a filing cabinet in one corner. The only exit is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:345:room:34538
+      door:
+        keywords: [door, west]
+        kind: door
+        reset: closed
+
+"tba:345:room:34540":
+  name: In the Basement
+  description: >
+    This is a dark musty place. Old hospital beds and other equipment line the walls. The lights
+    flicker every now and then, throwing shadows along the wall. The faint sounds of screams can be heard but
+    its difficult to tell from what direction. From here you can go up to the courtyard or continue you
+    along to the north or east.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:345:room:34541
+    east:
+      to: tba:345:room:34551
+    up:
+      to: tba:345:room:34519
+
+"tba:345:room:34541":
+  name: A Crumbling Hallway
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. One thing that catches the eyes is a rack with some straight jackets in it, dirty and tan from
+    years of use and storage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34540
+    west:
+      to: tba:345:room:34542
+
+"tba:345:room:34542":
+  name: A Crumbling Hallway
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. The way west is blocked by debris and would take much to long to get around it. The south is a
+    doorway that looks like it use to have door at one point in time.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:345:room:34541
+    south:
+      to: tba:345:room:34543
+
+"tba:345:room:34543":
+  name: An Operating Room
+  description: >
+    The first sight of this room assaults the eyes. In the center is a large table with a light hanging
+    over head. The tile walls and floor are covered in blood, some of which looks recent. The smell of
+    death is heavy in the air here. The only way to escape this room is to the north and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34542
+    west:
+      to: tba:345:room:34544
+
+"tba:345:room:34544":
+  name: A Crumbling Hallway
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. The way north is blocked by debris and would take much to long to get around it. The hallway
+    continues on to the south and there is a doorway to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:345:room:34543
+    south:
+      to: tba:345:room:34545
+
+"tba:345:room:34545":
+  name: A Hallway in Disrepair
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. The way south is blocked by debris. The hallway continues on to the north and there is a
+    doorway to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34544
+    east:
+      to: tba:345:room:34546
+
+"tba:345:room:34546":
+  name: Insulin Shock Room
+  description: >
+    The most dominate piece of equipment seen is a large bed with restraining straps. Next to it is a
+    drip apparatus and a stainless steel work try on the other side of the bed. There is still a needle
+    and syringe on the try. The visions of people convulsing and having seizures cross your vision for a
+    brief moment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:345:room:34547
+    west:
+      to: tba:345:room:34545
+
+"tba:345:room:34547":
+  name: Electro-Shock Therapy
+  description: >
+    This area is set up much like the Insulin shock treatment room to the west. There is a large bed
+    with restraints. An electrical device sits behind it. At the top of the bed is an object that looks as
+    if it is suppose to fit over the head of the patient. Funny... The piece of electrical equipment
+    doesn't have any dust build up on it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34548
+    west:
+      to: tba:345:room:34546
+
+"tba:345:room:34548":
+  name: A Hallway in Disarray
+  description: >
+    This hallway looks like a giant hand shook it upside down. There is equipment and trash littering
+    the ground everywhere making it difficult to walk through. There is a door to the north. The hallway
+    goes east but the passage to the west is block with debris.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34547
+    east:
+      to: tba:345:room:34549
+
+"tba:345:room:34549":
+  name: A Hallway in Disarray
+  description: >
+    This hallway looks like a giant hand shook it upside down. There is equipment and trash littering
+    the ground everywhere making it difficult to walk through. The hallway continues to the west and north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34550
+    west:
+      to: tba:345:room:34548
+
+"tba:345:room:34550":
+  name: A Crumbling Hallway
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. The hallway runs north and south. The lights seem to flicker a lot in this part of the asylum.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:345:room:34551
+    south:
+      to: tba:345:room:34549
+
+"tba:345:room:34551":
+  name: A Crumbling Hallway
+  description: >
+    This is just one of the many hallways that make up this maze called a basement. Old rusted pipes
+    and wires can be seen running above into the dark ahead of you. Lining the walls are all sorts of
+    equipment. The hallway runs to the south and makes a turn to the west here. The lights seem to flicker a
+    lot in this part of the asylum.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:345:room:34550
+    west:
+      to: tba:345:room:34540
+
+"tba:345:room:34552":
+  name: A Secret Room
+  description: >
+    Unlike the rest of the building this room is in remarkable shape. There is blood red carpet on the
+    floor and a few disturbing paintings on the walls. In the center of the room is wooden table. Even
+    though this room is in good shape there is still an uneasy feeling. Maybe its from the low lighting.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:345:room:34537
+  extras:
+  - keywords: [table]
+    text: >
+      The table is about waist high and made from a rich mahogany. It has many dents and ding's in it
+      from years of use. The most interesting thing about it is its lack of dust.
+  - keywords: [paintings]
+    text: >
+      The paintings are of morbid landscapes or of hell it. They are both beautiful and disturbing. They
+      are framed in thick mahogany.

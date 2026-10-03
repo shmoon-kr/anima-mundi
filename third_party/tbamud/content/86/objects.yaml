@@ -1,0 +1,243 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 86.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:86:obj:8601":
+  type: container
+  keywords: [swan]
+  short: ceramic swan
+  long: A small ceramic swan sits here.
+  wear: []
+  values:
+    capacity: 10
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [swan, ceramic]
+    text: >
+      This small ceramic swan has a gently curving neck and slightly raised wings. The bill has been
+      dipped in gold and the feathers are lightly brushed with gold as well.  There seems to be an opening
+      between the slightly raised wings.
+
+"tba:86:obj:8602":
+  type: key
+  keywords: [small, key]
+  short: a small key
+  long: A small gold key shines here.
+  flags: [glow, no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [small, gold, key]
+    text: This small golden key has a singular word written upon it.  'home'
+
+"tba:86:obj:8603":
+  type: weapon
+  keywords: [small, dagger]
+  short: a small dagger
+  long: A small dagger is laying here.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: pierce
+  weight: 1
+  cost: 40
+  rent: 4
+  level: 0
+
+"tba:86:obj:8610":
+  type: key
+  keywords: [spider, key]
+  short: a spidery key
+  long: A silver spider shaped key is laying in the dust here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [silver, small, spider]
+    text: A small spider that appears to have been cast in solid silver.
+
+"tba:86:obj:8611":
+  type: scroll
+  keywords: [picture, Emily]
+  short: a picture of emily
+  long: A tattered and faded picture lays on the floor here.
+  wear: [take]
+  values:
+    raw: [12, 1, -1, -1]
+  weight: 2
+  cost: 2
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [picture, emily, tattered, faded]
+    text: >
+      Emily smiles out from this faded picture.  Her long curly chocolate colored hair has been
+      painstakingly arranged and her features are astonishingly beautiful.
+
+"tba:86:obj:8612":
+  type: weapon
+  keywords: [rusty, short, sword]
+  short: a rusty short sword
+  long: A short sword is rusting here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:86:obj:8613":
+  type: armor
+  keywords: [dirty, bracers]
+  short: a pair of dirty bracers
+  long: Something dirty is laying here.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 2
+  cost: 80
+  rent: 8
+  level: 0
+
+"tba:86:obj:8614":
+  type: container
+  keywords: [dresser]
+  short: an old wooden dresser
+  long: An old wooden dresser is standing here, shakily.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:86:obj:8615":
+  type: weapon
+  keywords: [long, black, whip]
+  short: a long black whip
+  long: A long whip lays curled up here.
+  flags: [anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: whip
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:86:obj:8616":
+  type: key
+  keywords: [rock-shaped, key]
+  short: a rock-shaped key
+  long: An oddly shaped rock has been tossed away here.
+  flags: [no_rent, no_invis]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [stone, rock, odd]
+    text: >
+      Marked with various small knobs and rods, this rock is much different from the others that lay
+      about on the ground.
+
+"tba:86:obj:8617":
+  type: container
+  keywords: [formation]
+  short: a rock formation
+  long: A rock formation is laying here, waiting
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [formation, rock, stone]
+    text: >
+      This largish rock formation rests at the end of the dirt path.  Some rocks are smooth while others
+      are pockmarked with holes and divots where minerals have washed away.  There is a small hole between
+      two of the smaller rocks.
+
+"tba:86:obj:8618":
+  type: scroll
+  keywords: [bandit, journal]
+  short: a journal of the bandit
+  long: A bandit's journal lays open on the ground here.
+  flags: [no_rent, no_drop]
+  wear: [take]
+  values:
+    raw: [12, 2, -1, -1]
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [journal, bandit]
+    text: >
+      I have traveled far in these last few months with little success in my ventures.  Even now, my
+      comrades are investigating the ruins of Kalithorn's Keep in hopes of finding treasure or something that
+      we can live off of for a while.  I found a strange book today with runes such as i have never seen.  I
+      have copied them into this journal so that I may study them further.  I believe they are some kind
+      of spell that will transport me to another place in this world, but I am unsure.
+
+"tba:86:obj:8619":
+  type: container
+  keywords: [desk]
+  short: a desk
+  long: A grand oaken desk is standing here.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [oaken, desk]
+    text: This old oaken roll-top desk has seen many, many years of use.
+
+"tba:86:obj:8620":
+  type: treasure
+  keywords: [piece, jade]
+  short: a piece of jade
+  long: A small sliver of jade is laying on the ground here.
+  flags: [no_rent, no_donate]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [small, jade]
+    text: This small piece of jade has been smoothed out to perfection by some loving hand.

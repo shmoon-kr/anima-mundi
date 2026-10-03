@@ -1,0 +1,48 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 18.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:18:obj:1803":
+  type: key
+  keywords: [key]
+  short: a password key
+  long: A key with a password written on it is lying here.
+  flags: [glow, no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:18:obj:1804":
+  type: key
+  keywords: [key, card]
+  short: a key card
+  long: An electronic key card is hidden here
+  flags: [glow, no_rent, no_donate]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:18:obj:1805":
+  type: weapon
+  keywords: [battle, rifle]
+  short: a battle rifle
+  long: A wicked looking rifle is lying here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 5d6
+    attack: blast
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2

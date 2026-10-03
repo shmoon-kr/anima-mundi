@@ -1,0 +1,328 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 64.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:64:obj:6400":
+  type: weapon
+  keywords: [dagger, glowing]
+  short: a glowing dagger
+  long: A glowing dagger glows here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 1000
+  rent: 300
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+
+"tba:64:obj:6401":
+  type: armor
+  keywords: [platemail, glowing, plate, mail]
+  short: the glowing platemail
+  long: Some glowing platemail lies in a heap here.
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 50
+  cost: 300
+  rent: 10
+  level: 0
+
+"tba:64:obj:6402":
+  type: treasure
+  keywords: [agate, gem]
+  short: an agate
+  long: A small gem lies here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:64:obj:6403":
+  type: treasure
+  keywords: [jade, jewel]
+  short: a piece of jade
+  long: A small jewel gleams here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:64:obj:6404":
+  type: treasure
+  keywords: [sculpture]
+  short: a piece of sculpture
+  long: A nice piece of sculpture is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [sculpture]
+    text: >
+      It is of a beautiful woman, straining beneath a heavy weight.  She looks tired, with chiseled tears
+      staining her cheeks.  It makes you sad.
+
+"tba:64:obj:6405":
+  type: potion
+  keywords: [vial, dragons, blood]
+  short: a vial of dragon's blood
+  long: A small vial filled with a red fluid lies in the dust here.
+  wear: [take]
+  values:
+    raw: [7, 39, 39, 39]
+  weight: 5
+  cost: 480
+  rent: 21
+  level: 0
+
+"tba:64:obj:6406":
+  type: armor
+  keywords: [amulet]
+  short: an amulet
+  long: An odd looking amulet has been discarded here.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 3
+  cost: 200
+  rent: 30
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+
+"tba:64:obj:6407":
+  type: wand
+  keywords: [pole, tent]
+  short: a tent pole
+  long: A tent pole has been tossed away here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    raw: [25, 5, 5, 38]
+  weight: 10
+  cost: 250
+  rent: 50
+  level: 0
+
+"tba:64:obj:6408":
+  type: money
+  keywords: [bag, powder, wealth]
+  short: a bag of powder of wealth
+  long: A small bag filled with powder of wealth lies here.
+  flags: [glow, magic]
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:64:obj:6409":
+  type: container
+  keywords: [desk]
+  short: a desk
+  long: There is an ebony desk here.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 13
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:64:obj:6410":
+  type: wand
+  keywords: [book, chaos]
+  short: the Book of Chaos
+  long: A book with a title written in moving letters rests here.
+  flags: [glow, hum, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [20, 1, 1, 26]
+  weight: 25
+  cost: 1000
+  rent: 250
+  level: 0
+
+"tba:64:obj:6411":
+  type: wand
+  keywords: [book, elder]
+  short: the Book of the Elder
+  long: A gray-bound book lies here.
+  flags: [glow, hum, magic]
+  wear: [take, hold]
+  values:
+    raw: [30, 1, 1, 28]
+  weight: 25
+  cost: 300
+  rent: 50
+  level: 0
+
+"tba:64:obj:6412":
+  type: light
+  keywords: [lens, occluded]
+  short: the Occluded Lens
+  long: A smoky lens about a foot around has been scuffled in the dirt here.
+  flags: [glow, magic, no_drop, anti_good, anti_evil]
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 20
+  cost: 200
+  rent: 50
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: wis
+    modifier: 1
+
+"tba:64:obj:6413":
+  type: potion
+  keywords: [mevais, herb, leaf]
+  short: a leaf of mevais
+  long: A small black leaf of a mevais plant lies here, well preserved.
+  wear: [take]
+  values:
+    raw: [30, 27, 33, 4]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [mevais, herb, leaf]
+    text: Quaffing this down might provide interesting effects.
+
+"tba:64:obj:6414":
+  type: potion
+  keywords: [bottle, peska]
+  short: a bottle of peska
+  long: There is a bottle of a milky fluid here.
+  wear: [take]
+  values:
+    raw: [30, 28, 3, 1]
+  weight: 12
+  cost: 150
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [bottle, peska]
+    text: It is a milky concoction, with strange motes floating in it.
+
+"tba:64:obj:6415":
+  type: armor
+  keywords: [staff, rand]
+  short: Rand's staff
+  long: There is a metal-shod staff here.
+  flags: [glow, magic, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, hold]
+  values:
+    armor: 8
+  weight: 7
+  cost: 1000
+  rent: 250
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 5
+  - apply: ac
+    modifier: 5
+
+"tba:64:obj:6416":
+  type: container
+  keywords: [chest, wooden]
+  short: a wooden chest
+  long: There is a wooden chest here.
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 13
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:64:obj:6417":
+  type: container
+  keywords: [chest, wooden]
+  short: a wooden chest
+  long: There is a wooden chest here.
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 13
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:64:obj:6418":
+  type: container
+  keywords: [chest, wooden]
+  short: a wooden chest
+  long: There is a wooden chest here.
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 13
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:64:obj:6419":
+  type: drinkcon
+  keywords: [basin, water]
+  short: a water basin
+  long: A basin filled with crisp, clean water is here.
+  flags: [glow]
+  wear: []
+  values:
+    capacity: 100
+    contains: 100
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:64:obj:6420":
+  type: food
+  keywords: [food]
+  short: some food
+  long: There's some food lying here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 3
+  cost: 20
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [food]
+    text: It is just random and assorted food.  Don't ask questions.  It is only a game.

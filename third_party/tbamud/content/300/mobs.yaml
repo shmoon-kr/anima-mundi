@@ -1,0 +1,359 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 300.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:300:mob:30000":
+  keywords: [zombie, putrid]
+  short: the putrid zombie
+  long: A putrid zombie is here.
+  description: >
+    It is a prime example of the undead: sickly green skin, sunken eyes with a yellowish tinge, and
+    sharp, dirt-encrusted claws.
+  level: 13
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30001":
+  keywords: [asp, snake]
+  short: the deadly asp
+  long: A poisonous asp slithers here.
+  description: This small snake looks quite dangerous, better take a wide detour around it.
+  level: 12
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30002":
+  keywords: [morticia, guildhead]
+  short: Morticia
+  long: Morticia, Guildhead of the Living Dead, is here.
+  description: >
+    Her long, raven black hair drapes those stunning curves of hers.  How did such a sweet thing become
+    the leader of this cult?  As a bard once wrote, 'You could tell she was practiced at the art of
+    deception by her bloodstained hands. '
+  level: 19
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30003":
+  keywords: [lazarus, assassin, physician]
+  short: Lazarus
+  long: Lazarus, Assassin and Guild Physician, is here.
+  description: >
+    This master herbalist was found too valuable to the Guild as a maker of both soothing balms and
+    poisons.  Even death could not release him...  The necromancers just reanimated him.
+  level: 19
+  sex: male
+  alignment: -900
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30004":
+  keywords: [beetle, undead]
+  short: the undead riding beetle
+  long: An undead riding beetle is parked here.
+  description: >
+    A fine example of Necromancy, this giant beast can travel for miles with no need for food nor
+    water.  A most economical mount -- and sporty too!
+  level: 11
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30005":
+  keywords: [wraith, knight]
+  short: the wraith knight
+  long: A wraith knight stands a silent watch here.
+  description: >
+    This was probably some poor adventurer, like you, before the Necromancers got their hold on him. 
+    Now he just awaits, blade drawn, like some ethereal beefeater.
+  level: 15
+  sex: male
+  alignment: -800
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30006":
+  keywords: [keeper]
+  short: the Crypt Keeper
+  long: The Crypt Keeper, grinning at you maliciously, is here.
+  description: >
+    The dessicated little fellow cackles with mad glee as he approaches you. He twitches from
+    excitement so much that his scraggly hair jostles as he flashes his dull yellow teeth.
+  level: 25
+  sex: male
+  alignment: 20
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30007":
+  keywords: [hermit]
+  short: the hermit
+  long: A Hermit, starved for company, is here.
+  description: >
+    Although raving mad, the hermit has come out of his isolation since he has not spoken with anyone
+    for ages.  The shaggy hermit draws you over and begins to tell a strange tale, 'Some 600 years ago,
+    when I was but a lad, a great dragon ruled the land.  His name was Ancalador.  Many heroes came to do
+    battle with him, but all failed and died, horribly, I imagine.  But one wizard challenged the Drake to
+    a magic duel.  He too died, like the others, but with his last breath, the wizard turned the mighty
+    Ancalador to stone!  Many believed the dragon's evil reign ended, but after the dancing and drinking
+    were over, and life returned to its quiet pace, the people began to notice that the Dragon's presence
+    could still be felt.  Ancalador did, in fact, continue to rule from his petrified prison through the
+    manipulation of the minds of men. Indeed, he has done so to this day.  Many believe he is plotting
+    the day he can return in the flesh, so to speak...  ' With that the Hermit begins to cackle madly,
+  level: 10
+  sex: neutral
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30008":
+  keywords: [slime, blob]
+  short: the green slime
+  long: A blob of green slime drops upon you!
+  description: It looks like animated mucous, dissolving and eating all it touches.
+  level: 6
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30009":
+  keywords: [dweller, flame]
+  short: the flame dweller
+  long: A flame dweller is basking in fire here.
+  description: >
+    Its shape changes like the flame it lives in.  One moment it may resemble a serpent, the next, a
+    man.  It seems to be thoroughly enjoying itself.
+  level: 14
+  sex: neutral
+  alignment: -50
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:300:mob:30010":
+  keywords: [spider, green]
+  short: the green crystal spider
+  long: A green crystal spider is roaming here.
+  description: >
+    The fantastic beast seems to be made of a crystalline substance which is giving off a green light. 
+    It clicks its crystal mandibles in irritation with you.
+  level: 8
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30011":
+  keywords: [spider, yellow]
+  short: the yellow crystal spider
+  long: A yellow crystal spider is clicking its mandibles here.
+  description: >
+    Slightly smaller than its green cousin, this creature also appears to be made of living crystalline
+    substance which glows yellow.
+  level: 7
+  sex: neutral
+  alignment: -350
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30012":
+  keywords: [warden, petrified]
+  short: the Petrified Warden
+  long: The Petrified Warden guards the way.
+  description: It wears the sneer of cold command upon its stony visage.
+  level: 12
+  sex: neutral
+  alignment: -700
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30013":
+  keywords: [hulk, umber]
+  short: the umber hulk
+  long: A lumbering umber hulk is here.
+  description: >
+    This great beast has huge mandibles and a mammals' mouth, angry animal eyes set between unreadable
+    insect eyes.  The effect is confusing.
+  level: 18
+  sex: neutral
+  alignment: -750
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30014":
+  keywords: [jello, ochre]
+  short: the ochre jello
+  long: A hideous ochre jello approaches.
+  description: >
+    As it oozes slowly at you, you can make out items undigested within it. From past unfortunates, you
+    presume.
+  level: 16
+  sex: neutral
+  alignment: -700
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:300:mob:30015":
+  keywords: [necromancer]
+  short: the Necromancer
+  long: A Necromancer of the Bloodstone, creating zombies, is here.
+  description: >
+    Evil reeks from his dark robes.  His hands are adorned with the long, wicked nails which are
+    stained with the ichor of embalmers and malignant salves.
+  level: 17
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, wimpy]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing

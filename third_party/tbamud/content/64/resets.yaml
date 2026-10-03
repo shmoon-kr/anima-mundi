@@ -1,0 +1,116 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 64.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:64:mob:6400
+  room: tba:64:room:6400
+  limit: 3
+- mob: tba:64:mob:6406
+  room: tba:64:room:6445
+  limit: 1
+- mob: tba:64:mob:6400
+  room: tba:64:room:6402
+  limit: 3
+- mob: tba:64:mob:6400
+  room: tba:64:room:6404
+  limit: 3
+- mob: tba:64:mob:6401
+  room: tba:64:room:6407
+  limit: 2
+- mob: tba:64:mob:6401
+  room: tba:64:room:6407
+  limit: 2
+- mob: tba:64:mob:6402
+  room: tba:64:room:6412
+  limit: 1
+  carry:
+  - object: tba:64:obj:6410
+    limit: 20
+  - object: tba:64:obj:6411
+    limit: 20
+- mob: tba:64:mob:6403
+  room: tba:64:room:6411
+  limit: 1
+- mob: tba:64:mob:6405
+  room: tba:64:room:6437
+  limit: 1
+- object: tba:64:obj:6416
+  room: tba:64:room:6416
+  limit: 1
+  contents:
+  - object: tba:64:obj:6401
+    limit: 50
+- mob: tba:64:mob:6404
+  room: tba:64:room:6416
+  limit: 3
+- object: tba:64:obj:6417
+  room: tba:64:room:6416
+  limit: 1
+  contents:
+  - object: tba:64:obj:6405
+    limit: 100
+  - object: tba:64:obj:6407
+    limit: 50
+- mob: tba:64:mob:6404
+  room: tba:64:room:6416
+  limit: 3
+- object: tba:64:obj:6418
+  room: tba:64:room:6416
+  limit: 1
+  contents:
+  - object: tba:64:obj:6406
+    limit: 100
+  - object: tba:64:obj:6408
+    limit: 1
+  - object: tba:64:obj:6412
+    limit: 10
+- mob: tba:64:mob:6404
+  room: tba:64:room:6416
+  limit: 1
+- object: tba:64:obj:6404
+  room: tba:64:room:6411
+  limit: 5
+- object: tba:64:obj:6409
+  room: tba:64:room:6411
+  limit: 1
+  contents:
+  - object: tba:64:obj:6402
+    limit: 50
+  - object: tba:64:obj:6403
+    limit: 50
+  - object: tba:64:obj:6400
+    limit: 50
+- object: tba:64:obj:6413
+  room: tba:64:room:6441
+  limit: 100
+- object: tba:64:obj:6414
+  room: tba:64:room:6441
+  limit: 100
+- object: tba:64:obj:6415
+  room: tba:64:room:6436
+  limit: 10
+- object: tba:64:obj:6419
+  room: tba:64:room:6410
+  limit: 1
+- object: tba:64:obj:6420
+  room: tba:64:room:6424
+  limit: 10
+- object: tba:64:obj:6420
+  room: tba:64:room:6424
+  limit: 10
+removes:
+- room: tba:64:room:6411
+  object: tba:64:obj:6404
+- room: tba:64:room:6441
+  object: tba:64:obj:6413
+- room: tba:64:room:6441
+  object: tba:64:obj:6414
+- room: tba:64:room:6436
+  object: tba:64:obj:6415
+- room: tba:64:room:6410
+  object: tba:64:obj:6419
+- room: tba:64:room:6424
+  object: tba:64:obj:6420
+- room: tba:64:room:6424
+  object: tba:64:obj:6420

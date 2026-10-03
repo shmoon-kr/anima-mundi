@@ -1,0 +1,197 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 251.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:251:obj:25100":
+  type: weapon
+  keywords: [rifle, gun]
+  short: a short ape rifle
+  long: A short black ape rifle is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: blast
+  weight: 7
+  cost: 600
+  rent: 25
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [rifle, gun]
+    text: >
+      These rifles are the main weapons of the Gorilla Soliders.  Their .308 calibre makes them quite
+      deadly.
+
+"tba:251:obj:25101":
+  type: weapon
+  keywords: [shotgun, gun]
+  short: an ape shotgun
+  long: A black ape shotgun is lying here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: blast
+  weight: 7
+  cost: 800
+  rent: 35
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [shotgun, gun]
+    text: >
+      These shotguns are used mainly by Gorilla Hunters for hunting humans.  Since this gun is a 12
+      guage, little aiming is required.
+
+"tba:251:obj:25102":
+  type: armor
+  keywords: [green, thick, cloak]
+  short: a thick, green ape cloak
+  long: A thick green ape cloak is lying here.
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 10
+  cost: 200
+  rent: 45
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [green, thick, cloak]
+    text: >
+      Green ape cloaks are worn mainly by the chimpanzees.  Due to their thickness, they provide decent
+      armor.
+
+"tba:251:obj:25103":
+  type: other
+  keywords: [small, ape, doll]
+  short: a small ape doll
+  long: A small ape doll is lying here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 600
+  rent: 150
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [small, ape, doll]
+    text: >
+      Most ape children own one of these ape dolls.  This particular one resembles a chimpanzee, and it
+      has dark green clothes.
+
+"tba:251:obj:25104":
+  type: armor
+  keywords: [black, leather, gorilla, armor, armor]
+  short: black gorilla armor
+  long: Some black leather gorilla armor is lying here.
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 5
+  cost: 600
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [black, leather, gorilla, armor, armor]
+    text: >
+      This black leather ape armor is worn only by Gorillas.  It doesn't offer very good protection, as
+      this suit is worn with a few holes in it.
+
+"tba:251:obj:25105":
+  type: armor
+  keywords: [ursus, helm, helmet, leather, black]
+  short: Ursus's black leather helm
+  long: Ursus's black leather helmet is lying here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 3
+  cost: 250
+  rent: 20
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 4
+  extras:
+  - keywords: [ursus, black, helm, helmet, leather, black]
+    text: >
+      This is Ursus's black helm.  Ursus is the captain of the Gorilla Soldiers, so this helm signifies
+      his power.
+
+"tba:251:obj:25106":
+  type: weapon
+  keywords: [club, wood, wooden]
+  short: a wooden club
+  long: A simple wooden club is lying here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: bludgeon
+  weight: 5
+  cost: 100
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [club, wood, wooden]
+    text: >
+      This is your basic wooden club.  Some Gorilla Soldiers use these weapons, and so do the wild humans.
+
+"tba:251:obj:25108":
+  type: weapon
+  keywords: [ape, machine, gun]
+  short: an ape machine gun
+  long: A polished ape machine gun is lying here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: blast
+  weight: 7
+  cost: 1000
+  rent: 350
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [ape, machine, gun]
+    text: >
+      These machine guns are used mainly for village defense.  It shoots 10 rounds per second, which
+      means most enemies can be filled with lead quite quickly
+
+"tba:251:obj:25109":
+  type: weapon
+  keywords: [rusty, spike]
+  short: a rusty spike
+  long: An old rusty spike is lying here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: pierce
+  weight: 5
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [rusty, spike]
+    text: >
+      This old spike seems to have once been part of a metal structure.  It features a sharp end, and a
+      filed handle.  An excellent, if not crude, weapon.

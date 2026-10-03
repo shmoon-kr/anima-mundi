@@ -1,0 +1,812 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 16.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:16:mob:1600":
+  keywords: [serf]
+  short: a serf
+  long: A dirty serf shuffles along here.
+  description: The serf is in rags, he smells, and you actually think you can see lice on him.
+  level: 7
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1601":
+  keywords: [squire]
+  short: a squire
+  long: A squire is on an errand from his lord.
+  description: >
+    A squire stands here on a mission for his lord.  He is dressed in plain drab clothes and aspires to
+    some day earning the right to be knighted.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1602":
+  keywords: [benlad]
+  short: Sir Benlad
+  long: Sir Benlad slaps you with his gauntlet and challenges you!
+  description: >
+    Sir Benlad is clad in his renowned green armor, rumored to be impervious to normal weaponry.  He
+    bears a huge battle axe.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: maul
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1603":
+  keywords: [Galahad]
+  short: Sir Galahad
+  long: Sir Galahad, paragon of chivalry, bastard of Lancelot & Elane, stands here.
+  description: Sir Galahad is dressed all in white armor and walks with pride.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1604":
+  keywords: [Gareth, knight]
+  short: Sir Gareth
+  long: A knight with armor of many colors stands here.
+  description: >
+    Sir Gareth, son of Lot, aka Beaumains proudly wears his armor and shield of many colors.  He
+    anxiously awaits an opportunity to help a damsel in distress.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1605":
+  keywords: [Garlon]
+  short: Sir Garlon
+  long: Sir Garlon, the invisible knight, is waiting here.
+  description: >
+    Sir Garlon (the vile villain) is hiding here.  He was given his invisibility power by the witch of
+    the fens for the furtherment of evil.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  affects: [invisible, detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: maul
+  abilities:
+    str: 18
+    int: 10
+    wis: 10
+    dex: 18
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1606":
+  keywords: [gawaine]
+  short: Sir Gawaine
+  long: Sir Gawaine, the strong, is on a mission of vengeance!
+  description: >
+    Sir Gawaine, the red headed cousin of Arthur, is mounted, fully armored and wears his famous horned
+    helm.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1607":
+  keywords: [merlin]
+  short: Merlin
+  long: The mighty Merlin is here grumbling over a book.
+  description: >
+    Merlin, the son of a sorceress and a demon, seer of Camelot, is garbed in an earth colored robe and
+    bears a twisted staff.  His flowing white beard offsets his rosy cheeks and sparkling blue eyes.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: pound
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1608":
+  keywords: [king, pellinore]
+  short: King Pellinore
+  long: King Pellinore is here searching for the Questing Beast.
+  description: >
+    King Pellinore tells you that his family has been searching for the Questing Beast for generations
+    and asks if you have seen it.  Pellinore is just past middle age, though he is still a stout fighter.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1609":
+  keywords: [tristram]
+  short: Sir Tristram
+  long: Sir Tristram smirks at you.
+  description: >
+    Sir Tristram, suitor of Isolade, is considered by many to be second only to Lancelot in his skill
+    of arms.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1610":
+  keywords: [mordred, boy]
+  short: Mordred
+  long: An boy in golden armor gives you an elfin laugh and strikes with his spear!
+  description: >
+    Mordred, bastard son of Arthur and Morgause, wears his enchanted golden armor and his unholy spear.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_charm, no_sleep]
+  affects: [detect_invis, sense_life, sneak, hide]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: pierce
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1611":
+  keywords: [knight, barant]
+  short: Barant Les Apres
+  long: A knight in a flowing white cape swings a spiked ball here.
+  description: >
+    Barant Les Apres, King of the Hundred Knights, stands here.  Barant wears a white cape and carries
+    a spiked ball and chain.  He hefts his weapon and grins at you.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1612":
+  keywords: [fool, dagonet]
+  short: Dagonet
+  long: A fool in motley cavorts here!
+  description: >
+    Dagonet, the court jester of Arthur, is a master of his craft.  He dances on his hands while
+    juggling a set of knives.  You get the impression that he could handle himself well in a fight.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: blast
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1613":
+  keywords: [Knight, turquine]
+  short: Sir Turquine
+  long: A knight with a wolf helm cackles with glee!
+  description: >
+    Turquine is dressed in scale mail and a wolf helm.  He is a slender whip of a man, and his eyes
+    dart left and right.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: pound
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1614":
+  keywords: [Perimones, knight]
+  short: Perimones
+  long: A knight dressed in red shimmering armor faces you!
+  description: >
+    Perimones, the red knight, has a red beard and mustache.  He is a short stocky man.  His ruby armor
+    is shimmering in the sunlight, and he wears the silken red favor of Galenvine on his sleeve.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1615":
+  keywords: [nobleman]
+  short: a nobleman
+  long: A nobleman stands here in all his finery.
+  description: >
+    The nobleman wears the finest cotton and wool clothing available.  Riches adorn him in the form of
+    chains, and a rather heavy looking purse.  He seems intent on going somewhere.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1616":
+  keywords: [merchant]
+  short: a merchant
+  long: A brightly clothed merchant hawks his goods to you!
+  description: The merchant wears a bright tunic to draw attention and signify his wares.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1617":
+  keywords: [servant]
+  short: a servant
+  long: A servant is rushing by.
+  description: The servant has a plate of hot food that looks delicious.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1618":
+  keywords: [demon]
+  short: a demon
+  long: A towering, black scaled demon has come to eat your soul!
+  description: >
+    As it breathes, the ground you stand on rumbles and you are seared by its hot breath.  It is this
+    demon which has been laughing at you in all your visions. Merlin has bound this demon here to use its
+    power in the fabrication of magic items.  However his hold has slipped a few times, enabling the
+    demon to give out a few artifacts to encourage the downfall of Camelot.
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  affects: [detect_align]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1619":
+  keywords: [Iron, Jack]
+  short: Iron Jack
+  long: Iron Jack, the armorer of Camelot, is here.
+  description: Iron Jack wears his smith apron, leather leggings, and has corded muscular arms.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1620":
+  keywords: [persante]
+  short: Persante of Inde
+  long: Persante of Inde is here, marshalling the troops of Camelot.
+  description: >
+    Persante is called the blue knight because of his brilliant blue armor.  He is mounted on a fine
+    charger, and is waving his blue pennant.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: blast
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1621":
+  keywords: [dodinas, le, savage]
+  short: Dodinas Le Savage
+  long: Dodinas le Savage is here, holding a wicked looking sword!
+  description: >
+    Dodinas is a whirlwind of weapons and martial skill, felling all who challenge him.  He is mounted
+    atop his famed steed, Rue.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1622":
+  keywords: [lionel]
+  short: Lionel
+  long: Lionel, the knight, staggers past.
+  description: >
+    Lionel is covered in blood, and is walking as if stunned.  It looks like he is going to fall.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1623":
+  keywords: [gaheris]
+  short: Gaheris
+  long: Gaheris, Gawaine's brother, is here.
+  description: >
+    Gaheris has long red hair and a gray stallion.  He is extremely angry and is looking for someone to
+    take it out on.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1624":
+  keywords: [crow]
+  short: a crow
+  long: A crow cocks its head sideways, staring at you inquiringly.
+  description: One of Merlin's pets, this crow is supposed to have extraordinary intelligence.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1625":
+  keywords: [toad]
+  short: a toad
+  long: A toad is hopping around on the floor.
+  description: This toad is used by Merlin for various experiments.  It is unnaturally large.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1626":
+  keywords: [cat]
+  short: a cat
+  long: A cat rubs up against your leg, shedding half its fur on you.
+  description: >
+    Another one of Merlins experimental pets, this cat looks extremely dangerous.  It is the largest
+    cat you have ever seen.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1627":
+  keywords: [master, bleise]
+  short: Master Bleise
+  long: Master Bleise is here paging through some books.
+  description: >
+    Merlin's mentor is completely absorbed in his reading and does not even look up when you enter.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1628":
+  keywords: [cook]
+  short: a cook
+  long: A fat cook is walking around with a spoons tasting all the food.
+  description: She must weigh over 200 pounds.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1629":
+  keywords: [guard]
+  short: a guard
+  long: A guard is standing a sharp watch.
+  description: He seems to be suspicious of everyone.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: crush
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1630":
+  keywords: [archer]
+  short: a archer
+  long: An archer is dying here.
+  description: He looks like he'll die any minute now.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: blast
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1631":
+  keywords: [infantryman]
+  short: a dying infantryman
+  long: An infantryman is dying here.
+  description: He looks to be almost dead.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1632":
+  keywords: [knight]
+  short: a dying knight
+  long: A knight is slowly bleeding to death.
+  description: >
+    He has suffered several wounds during his battles.  It doesn't look like he'll last much longer.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1633":
+  keywords: [wolf]
+  short: a large wolf
+  long: A wolf is chewing on something.  It looks like... someone's arm!
+  description: The wolf is huge.  Its shoulder comes up to about your waist and it looks hungry.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1634":
+  keywords: [creature, beast, lion]
+  short: a questing beast
+  long: A long necked, lion pawed, spotted creature is here gnawing on a femur.
+  description: It looks hungry!
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [aggressive, stay_zone, wimpy, no_charm, no_sleep, no_bash]
+  affects: [invisible, detect_invis, sneak]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:16:mob:1635":
+  keywords: [damsel]
+  short: a damsel in distress
+  long: A damsel in distress is here, screaming for help!
+  description: >
+    The damsel in distress has been badly roughed up by the ruffians.  She is tied with her hands
+    behind her back.  Her courtly gown is soiled and tattered.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,198 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 311.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:311:obj:31100":
+  type: armor
+  keywords: [hide, green, dragon]
+  short: a green dragon's hide
+  long: A green drgaon's hide has been left here.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 11
+  cost: 800
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 25
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: -2
+
+"tba:311:obj:31101":
+  type: armor
+  keywords: [shield, scale, red, dragon]
+  short: the scale from a red dragon
+  long: The scale from a red dragon has been dropped here.
+  wear: [take, shield]
+  values:
+    armor: 9
+  weight: 10
+  cost: 700
+  rent: 0
+  level: 25
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: hit
+    modifier: 20
+  - apply: damroll
+    modifier: -3
+
+"tba:311:obj:31102":
+  type: weapon
+  keywords: [claw, ice, dragon, white]
+  short: the Ice Claw
+  long: The icy claw of a white dragon has been dropped here.
+  wear: [take, wield, hold]
+  values:
+    damage: 6d8
+    attack: claw
+  weight: 5
+  cost: 1000
+  rent: 0
+  level: 27
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 4
+  - apply: hit
+    modifier: -30
+
+"tba:311:obj:31103":
+  type: other
+  keywords: [fang, dripping, ooze, black]
+  short: a fang dripping with black ooze
+  long: A fang dripping with black ooze has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 28
+  affects:
+  - apply: mana
+    modifier: 30
+
+"tba:311:obj:31104":
+  type: container
+  keywords: [nest, blue, dragon]
+  short: the nest of the blue dragon
+  long: The nest of the blue dragon lies in the center of the room.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 15
+    key: tba:311:obj:31109
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+
+"tba:311:obj:31105":
+  type: treasure
+  keywords: [pile, blue, sapphires]
+  short: a pile of blue sapphires
+  long: A pile of blue sapphires lie upon the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 900
+  rent: 0
+  level: 1
+
+"tba:311:obj:31106":
+  type: weapon
+  keywords: [gleaming, blue, blade]
+  short: a gleaming blue blade
+  long: A gleaming blue blade lies on the ground.
+  wear: [take, wield]
+  values:
+    damage: 6d9
+    attack: slash
+  weight: 11
+  cost: 654
+  rent: 0
+  level: 29
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 20
+
+"tba:311:obj:31107":
+  type: armor
+  keywords: [armor, mail, scale, gleaming]
+  short: a set of gleaming blue scale mail armor
+  long: A set of gleaming blue scale mail armor lies tossed to the ground.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 50
+  cost: 1000
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: -2
+  - apply: str
+    modifier: 2
+
+"tba:311:obj:31108":
+  type: potion
+  keywords: [potion, blue, deep]
+  short: a deep blue potion
+  long: A deep blue potion lies thrown to the ground, unbroken.
+  flags: [glow, no_rent]
+  wear: [take]
+  values:
+    raw: [30, 16, -1, -1]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:311:obj:31109":
+  type: key
+  keywords: [scale, tiny, blue]
+  short: a tiny blue scale
+  long: A tiny blue scale lies upon the ground.
+  flags: [glow, no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:311:obj:31110":
+  type: other
+  keywords: [eye, dragon]
+  short: the Eye of the Dragon
+  long: A dragon's eye has been left on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 22
+  affects:
+  - apply: mana
+    modifier: 30
+  - apply: hit
+    modifier: 20
+  - apply: hitroll
+    modifier: -3

@@ -1,0 +1,116 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 220.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:220:obj:22000":
+  type: armor
+  keywords: [cheese, triangle, hat]
+  short: a triangle of @Ycheese@n
+  long: A big triangle of cheese looks @Gdelicious@n. @BM@Cm@Rm!@n
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: -5
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 15
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 2
+
+"tba:220:obj:22001":
+  type: armor
+  keywords: [oreo's, collar]
+  short: "@DO@Wre@Do@n's collar"
+  long: A black collar with a silver @Bpendant@n is here.
+  wear: [take, neck]
+  values:
+    armor: -2
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [pendant]
+    text: The pendant is engraved with the name @DO@WRE@DO@n.
+
+"tba:220:obj:22002":
+  type: weapon
+  keywords: [icepick, toothpick]
+  short: an @Cice@Dpick@n
+  long: A long, @Cice-coated @ytoothpick@n sits here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: pierce
+  weight: 4
+  cost: 40
+  rent: 0
+  level: 15
+  extras:
+  - keywords: [toothpick]
+    text: >
+      It looks a like a toothpick was thrown into a freezer and left for a while. It has been covered in
+      a thick layer of sharp, @Rdeadly@n @Cice@n.
+
+"tba:220:obj:22003":
+  type: food
+  keywords: [burnt, cookie]
+  short: a @Dburnt @Ycookie@n
+  long: "@nA @gginormous @Ycookie @nsits here, steaming slightly. Looks kinda @yburnt@n..."
+  flags: [no_sell]
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: true
+  weight: 3
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [burnt, cookie]
+    text: "@nThis rock-hard lump of overcooked cookie smells horrible!"
+
+"tba:220:obj:22004":
+  type: weapon
+  keywords: [spork, plastic]
+  short: a @Dplastic @Wspork@n
+  long: A @Dplastic @Wspork@n is sitting here.
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: stab
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 13
+  affects:
+  - apply: str
+    modifier: 2
+
+"tba:220:obj:22005":
+  type: fountain
+  keywords: [drippy, faucet, water]
+  short: "@ca @ndrippy @cfaucet@n"
+  long: "@nThe drippy @cfaucet @nleaks @Wclean @Cwa@Bt@Cer@n at its base."
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 10
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leaky, faucet, water]
+    text: >
+      @nThe faucet has a leak at its base, creating a pool of @Wclean @Cwa@Bt@Cer @nwhich is spilling
+      like a waterfall into the sink.

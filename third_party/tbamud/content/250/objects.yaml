@@ -1,0 +1,464 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 250.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:250:obj:25000":
+  type: weapon
+  keywords: [pixie, sword]
+  short: a very tiny sword
+  long: A very petite sword lies here on the ground, you almost didn't see it.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: -1
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [sword, pixie]
+    text: >
+      This elegant sword appears to have served its previous owner very well, but you aren't sure how
+      well a weapon this small would serve you.
+
+"tba:250:obj:25001":
+  type: key
+  keywords: [white, dragon, claw, key]
+  short: a small white key shaped like a claw
+  long: A small white claw is sitting here, lost.
+  flags: [anti_mage]
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, claw, white, dragon]
+    text: >
+      This key appears to have been fashioned from the claw of a dragon.  You are glad you weren't the
+      locksmith assigned to getting the materials.
+
+"tba:250:obj:25002":
+  type: key
+  keywords: [door, key]
+  short: a door key
+  long: There is a door key sitting here.
+  flags: [anti_mage]
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, door]
+    text: This is a small nondescript key, with nothing special about it.
+
+"tba:250:obj:25003":
+  type: key
+  keywords: [gate, keeper, key]
+  short: the gatekeeper's key
+  long: A large bronze key sits upon the ground, covered with dust.
+  flags: [anti_mage]
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gate, keeper, key]
+    text: >
+      This is the key to the gate.  It belongs to the gatekeeper, and he is probably looking for it.
+
+"tba:250:obj:25004":
+  type: key
+  keywords: [copper, dragon, claw, key]
+  short: a small copper key shaped like a claw
+  long: A small copper claw lies here, abonded by everyone
+  flags: [anti_mage]
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [copper, dragon, claw, key]
+    text: This key appears to have been fashioned from a dragon's claw.  It is quite large.
+
+"tba:250:obj:25005":
+  type: key
+  keywords: [pixie, king, key]
+  short: a very small key
+  long: The key to the Pixie King's bedroom is here, it is almost impossible find.
+  flags: [anti_mage]
+  wear: [take, hold]
+  values:
+    raw: [2, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pixie, king, key]
+    text: This is a very small key, you cannot imagine what door this would go to.
+
+"tba:250:obj:25006":
+  type: armor
+  keywords: [white, pendant, dragon, scale]
+  short: a white dragon scale pendant
+  long: Upon the ground lies a solid white pendant, it issues forth an aura of cold.
+  flags: [glow, magic, bless]
+  wear: [take, neck, hold]
+  values:
+    armor: 5
+  weight: 5
+  cost: 1000
+  rent: 50
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [white, pendant, dragon, scale]
+    text: >
+      This pendant appears to be very ancient.  It is solid white, with a blue diamond set in the
+      center.  You feel chilled whenever it touches open flesh.
+
+"tba:250:obj:25007":
+  type: armor
+  keywords: [copper, pendant, dragon, scale]
+  short: a copper dragon scale pendant
+  long: Upon the ground lies a solid copper pendant, as you reach for it, time seems to slow.
+  flags: [glow, magic, bless]
+  wear: [take, neck, hold]
+  values:
+    armor: 5
+  weight: 5
+  cost: 1000
+  rent: 50
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [copper, pendant, dragon, scale]
+    text: >
+      The pendant you now own appears to be very new, in fact it looks freshly forged.  It is solid
+      copper, white a streak of gold shaped like an hourglass in the center.  When you look back up, hours have
+      passed.
+
+"tba:250:obj:25008":
+  type: light
+  keywords: [pixie, wings]
+  short: a pair of pixie wings
+  long: A pair of translucent wings lie upon the ground, their is an eerie glow about them.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 250
+  rent: 150
+  level: 0
+  affects:
+  - apply: move
+    modifier: 30
+  extras:
+  - keywords: [pixie, wings]
+    text: Just what they are called.  You feel sorry for the pixie who used to own these.
+
+"tba:250:obj:25009":
+  type: armor
+  keywords: [pendant, eternity]
+  short: the pendant of eternity
+  long: A small pendant is here on the ground, you almost ignore it, til it calls out your name.
+  flags: [glow, magic, bless]
+  wear: [take, neck, hold]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pendant, eternity]
+    text: >
+      As you stare at the pendant, you begin to feel as if you are being sucked in. It is all you can do
+      to look away.
+
+"tba:250:obj:25010":
+  type: armor
+  keywords: [white, dragon, scale, breast, plate]
+  short: a white dragonscale breast plate
+  long: A shimmering white breast plate lies here, it is cold to the touch.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 12
+  cost: 200
+  rent: 100
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [white, dragon, scale, breast, plate]
+    text: >
+      This is a very quickly strewn together breast plate.  It looks like it was fashioned from the
+      breast of a real dragon, minutes after it was slain.
+
+"tba:250:obj:25011":
+  type: armor
+  keywords: [copper, dragon, scale, breast, plate]
+  short: a copper dragonscale breast plate
+  long: An elegant copper breast plate lies here, it looks very new.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 12
+  cost: 200
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [copper, dragon, scale, breast, plate]
+    text: >
+      This is a very hastely strewn together breast plate.  It looks like it was made from the breast of
+      a real dragon, minutes after it was slain.
+
+"tba:250:obj:25012":
+  type: armor
+  keywords: [carcass]
+  short: a carcass
+  long: A carcass is lying on the ground, mangled beyond recognition.
+  wear: []
+  values:
+    armor: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [carcass]
+    text: >
+      This carcass appears to be that of an adventurer who wasn't as lucky as you. Looking around, you
+      can't see anything that could have destroyed his body this badly, but then again, you probably wouldn't
+      want to.
+
+"tba:250:obj:25013":
+  type: other
+  keywords: [spray, paint, can]
+  short: a can of spraypaint
+  long: A can of spraypaint is sitting here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 25
+  level: 0
+
+"tba:250:obj:25014":
+  type: weapon
+  keywords: [pixie, stick]
+  short: a Pixie Stick
+  long: A Pixie Stick lies here on the ground, it looks tasty.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: crush
+  weight: 2
+  cost: 1
+  rent: 1
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: -3
+  extras:
+  - keywords: [pixie, stick]
+    text: >
+      This is a Pixie Stick.  While you may be used to eating these "sugar sticks", the Pixies use them,
+      quite well, as weapons.
+
+"tba:250:obj:25015":
+  type: armor
+  keywords: [pixie, plate, breast]
+  short: a Pixie breast plate
+  long: There is a very small piece of metal lying here.
+  flags: [glow]
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 5
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: str
+    modifier: -3
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [plate, pixie, breast]
+    text: >
+      This is a piece of Pixie armor.  It looks very well crafted, but has an odd aura about it.
+
+"tba:250:obj:25016":
+  type: armor
+  keywords: [pixie, greaves]
+  short: a pair of Pixie greaves
+  long: A pair of very small metallic pants lie here.
+  flags: [glow]
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: con
+    modifier: -2
+  - apply: int
+    modifier: 3
+  extras:
+  - keywords: [pixie, greaves]
+    text: These are VERY small pants....  Although they do seem fairly stretchy.....
+
+"tba:250:obj:25017":
+  type: armor
+  keywords: [pixie, arm, plates]
+  short: a pair of Pixie armplates
+  long: A pair of small metal sleeves lie here, glowing
+  flags: [glow]
+  wear: [take, arms]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: height
+    modifier: -30
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [pixie, arm, plates]
+    text: >
+      These arm plates would be a tad bit to small for you.....  IF YOU WERE A FREAKING SMURF!!!!
+
+"tba:250:obj:25018":
+  type: light
+  keywords: [wisp, dragon, fire]
+  short: a wisp of DragonFyre
+  long: There is a small flame sitting here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [flame, wisp, dragon, fyre, fire]
+    text: You aren't quite sure how it is, but the DragonFyre is existing without its dragon.
+
+"tba:250:obj:25019":
+  type: armor
+  keywords: [helm, dragon]
+  short: a white dragon scale helm
+  long: A white dragon scale helm with a plume of dragon mane lies here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 6
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: dex
+    modifier: -2
+  extras:
+  - keywords: [helm, dragon]
+    text: >
+      This helm appears to have been created from the scales of a freshly dead dragon.  The plume is made
+      from the mane of said dragon.
+
+"tba:250:obj:25020":
+  type: armor
+  keywords: [helm, dragon]
+  short: a copper dragon scale helm
+  long: A copper helm made from the scales of a dragon is here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 5
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: dex
+    modifier: -2
+  extras:
+  - keywords: [helm, dragon]
+    text: >
+      This helm appears to be made from the scales of a recently dead dragon.  The plume appears to be
+      made from the plume of said dragon.  It has a copper sheen to it.
+
+"tba:250:obj:25021":
+  type: weapon
+  keywords: [staff, magius]
+  short: the Staff of the Magius
+  long: A gnarled wooden shaft lies here, pulsing slightly.
+  flags: [glow, hum, no_rent, invisible, magic]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pound
+  weight: 4
+  cost: 900
+  rent: 100
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 50
+  - apply: mana
+    modifier: -50
+  extras:
+  - keywords: [staff, magius]
+    text: >
+      This is the Staff of the Magius.  Rumored to bring untold mystical power to the one who owns it, it
+      is also rumored to completely destroy the person physically.

@@ -1,0 +1,769 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 64.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:64:room:6400":
+  name: A Mountain Trail
+  description: >
+    This trail leads up, up, up into the mountains.  You hope you don't fall down, because that would
+    hurt, hurt, hurt!  The trail continues to the east, and you can go back down to the small hidden
+    valley to the west.
+  sector: mountains
+  exits:
+    east:
+      to: tba:64:room:6401
+    west:
+      to: tba:40:room:4078
+
+"tba:64:room:6401":
+  name: A Mountain Trail
+  description: >
+    You're really high up now.  You can keep going even farther up into the mountains to the east, or
+    go back down to the west.
+  sector: mountains
+  exits:
+    east:
+      to: tba:64:room:6402
+    west:
+      to: tba:64:room:6400
+
+"tba:64:room:6402":
+  name: A Mountain Trail
+  description: >
+    Wispy clouds are beginning to surround you now, and your ears pop due to the altitude.  To the
+    east, you see the summit of the mountain, and from the way the nearby mountains are arranged behind it,
+    you believe you're on your way to a big valley.  You can also go down to the west.
+  sector: mountains
+  exits:
+    east:
+      to: tba:64:room:6403
+    west:
+      to: tba:64:room:6401
+
+"tba:64:room:6403":
+  name: Near The Mountain's Peak
+  description:
+  - >
+    The peak of this mountain is another couple hundred feet above you, but here is where the trail
+    leads down into the valley...  What an odd valley!
+  - >
+    The valley seems to have been filled up by a hundreds of feet of lava many years ago.  It gives the
+    valley an odd, 'flat' look and darkish ground.  The path leads down east into the valley, and west
+    back to civilization.
+  sector: mountains
+  exits:
+    east:
+      to: tba:64:room:6404
+    west:
+      to: tba:64:room:6402
+
+"tba:64:room:6404":
+  name: The Trail To The Valley
+  description: >
+    The trail leads down into the valley, where, by judging by the height of the trees, the lava had
+    cooled tens of decades ago.  Down below you see the path lead into the small forest in the valley, and
+    disappear out of sight.  East leads into the valley, West back to civilization.
+  sector: mountains
+  exits:
+    east:
+      to: tba:64:room:6405
+    west:
+      to: tba:64:room:6403
+
+"tba:64:room:6405":
+  name: In The Valley
+  description:
+  - >
+    The ground has taken on the texture of dirt on the top, but this valley is far too flat and too
+    rocky to disguise the catastrophe that happened here so long ago.  Looking up to the mountains ringing
+    this area, you notice several mountains look as if they had 'exploded', which is strange, considering
+    that they are not volcanos.
+  - The path leads into the woods to the east, and back up the mountain to the west.
+  sector: forest
+  exits:
+    east:
+      to: tba:64:room:6406
+    west:
+      to: tba:64:room:6404
+
+"tba:64:room:6406":
+  name: In A Clearing
+  description: >
+    You come to a small clearing now, after walking for several minutes through the silent woods.  An
+    odd block sticks up here and there in   the ground... wait a minute.  These stones seem a little too
+    regular, and from the circle formation and size you could almost swear that they were...
+    crenellations?  Could some sort of building been buried by the lava here?  A rusty ring sticks out of the earth in
+    the center... a trapdoor?  This is almost too good to be true!
+  sector: forest
+  exits:
+    west:
+      to: tba:64:room:6405
+    down:
+      to: tba:64:room:6407
+      look: An ancient trapdoor, grimed with earth and age.
+      door:
+        keywords: [trapdoor, trap]
+        kind: door
+        reset: closed
+
+"tba:64:room:6407":
+  name: A Stairwell
+  description: >
+    This small room is the top of a stairwell leading down deep into the tower.  A small trapdoor
+    overhead leaks the light of day around its edges.  To the south is a wooden door, preserved through the
+    ages by means unknown.  To the west is a short hall.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6408
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:64:room:6409
+    up:
+      to: tba:64:room:6406
+      look: An ancient trapdoor, grimed with earth and age.
+      door:
+        keywords: [trapdoor, trap]
+        kind: door
+        reset: closed
+    down:
+      to: tba:64:room:6413
+
+"tba:64:room:6408":
+  name: A Linen Closet
+  description: >
+    This small room holds many types of linen on shelves along the walls.  They are undoubtedly
+    preserved by magic against the toil of the ages, since they seem freshly washed and folded.  You wonder what
+    sort of mage could wield so much power to waste on such little things.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6407
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [linen, shelf, shelves]
+    text: White sheets, pillow-cases, etc.  Not really anything that you need, but interesting.
+
+"tba:64:room:6409":
+  name: A Corridor
+  description: >
+    This is only a clean corridor, that leads back to the stairwell to the east, and has doors leading
+    to other rooms to the north and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6411
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:64:room:6407
+    south:
+      to: tba:64:room:6410
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6410":
+  name: A Bathroom
+  description: >
+    This is some sort of bathroom, like you've never seen before...  Water appliances leading from
+    nowhere deliver hot and cold running water to basins that drain to... where?  How strange!
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6409
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6411":
+  name: The Master Bedroom
+  description: >
+    This is an opulent room, decorated in silks and gold. There is an ebony desk against one wall,
+    cooled lava rock spilling over its surface from the window it once looked out at.  A nice, spacious
+    closet is filled with clothes just cleaned and pressed.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6409
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [desk]
+    text: The desk is basically uninteresting, as are the papers on top of it...
+  - keywords: [closet]
+    text: Nice clothes, but not your size at all.
+
+"tba:64:room:6412":
+  name: The Library
+  description: >
+    A great mages' library is contained on this floor of the tower.  You feel you could learn anything
+    you wanted to if you only looked and read long enough.  A door opens up back on the stairwell to the
+    east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6413
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:64:room:6414
+      look: A big bookcase, that looks rather odd.
+      door:
+        keywords: [bookcase]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [book, books]
+    text: There are lots of books about everything here!
+
+"tba:64:room:6413":
+  name: The Stairwell
+  description: This stairwell continues up and down here, and there is a door to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6412
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:64:room:6407
+    down:
+      to: tba:64:room:6415
+
+"tba:64:room:6414":
+  name: A Hidden Hall
+  description: >
+    This is a small hidden hall with a secret entrance to the library on the north end of the west
+    wall, and a trapdoor on the south end.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6412
+      look: The backside of a movable bookcase.
+      door:
+        keywords: [book, bookcase]
+        kind: door
+        reset: closed
+    down:
+      to: tba:64:room:6416
+      door:
+        keywords: [trapdoor, trap]
+        kind: door
+        reset: closed
+
+"tba:64:room:6415":
+  name: A Stairwell
+  description: >
+    This stairwell continues up and down, and there is a door to the west opening up onto this level.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6417
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:64:room:6413
+    down:
+      to: tba:64:room:6422
+
+"tba:64:room:6416":
+  name: The Hidden Treasure Room
+  description: You hit the jackpot!  A small room filled with treasure chests!  Go get them!
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:64:room:6414
+      door:
+        keywords: [trapdoor, trap]
+        kind: door
+        reset: closed
+
+"tba:64:room:6417":
+  name: A Hallway
+  description: >
+    This hall runs through the tower.  There's more hall to the west, and doors to your north and
+    south.  A door to the east leads back to the stairwell.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6419
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:64:room:6415
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:64:room:6418
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:64:room:6420
+
+"tba:64:room:6418":
+  name: A Servant's Room
+  description: >
+    This seems to be a small servant's bedroom, sparsely decorated and outfitted with a bed,
+    nightstand, chair and table, etc.  Nothing real important here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6417
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6419":
+  name: A Servant's Room
+  description: >
+    This seems to be a small servant's bedroom, sparsely decorated and outfitted with a bed,
+    nightstand, chair and table, etc.  Nothing real important here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6417
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6420":
+  name: A Hallway
+  description: >
+    This hallway continues to the east, and has a door to the north.  You could swear that the way this
+    level is arranged... nah, couldn't be.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6421
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:64:room:6417
+
+"tba:64:room:6421":
+  name: A Servant's Room
+  description: >
+    This seems to be a small servant's bedroom, sparsely decorated and outfitted with a bed,
+    nightstand, chair and a table, etc.  Nothing real important here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6420
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6422":
+  name: The Stairwell
+  description: This stairwell leads up and down, and there is a big open room to your west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6423
+    up:
+      to: tba:64:room:6415
+    down:
+      to: tba:64:room:6425
+
+"tba:64:room:6423":
+  name: The Dining Hall
+  description: >
+    This is a large dining hall, with a long table that runs down the length of it.  Chairs are set up
+    along the sides to accomodate approximately 10 people.  There are paintings and tapestries on the
+    walls, adding color to the stonework, The cooled lava that had poured in the windows makes the place
+    seem eerie somehow .  There is a door to the north, and the stairwell is to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6424
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:64:room:6422
+  extras:
+  - keywords: [tapestry, tapestries, painting, paintings]
+    text: >
+      Many of these show scenes of high magic and heroism.  Just like almost every tapestry and painting
+      you've seen.
+
+"tba:64:room:6424":
+  name: The Kitchen Area
+  description: >
+    This is a well-stocked kitchen, the larders still fresh and full as if by magic.  Perhaps this
+    would be a good place to take a break.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6423
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6425":
+  name: The Stairwell
+  description: The stairwell leads up and down here, and there is a hall you can enter to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6426
+    up:
+      to: tba:64:room:6422
+    down:
+      to: tba:64:room:6429
+
+"tba:64:room:6426":
+  name: A Hall
+  description: >
+    This area of the tower seems dank and oppressive.  The hall runs north-south, and there is an empty
+    cell to your west.  The stairwell is to your east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6427
+    east:
+      to: tba:64:room:6425
+    south:
+      to: tba:64:room:6428
+  extras:
+  - keywords: [cell, cells]
+    text: It is open, empty, and uninteresting.
+
+"tba:64:room:6427":
+  name: A Hall
+  description: >
+    This is the northern end of the hall.  There are cells to your right and left, empty and awaiting
+    occupants.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6426
+  extras:
+  - keywords: [cell, cells]
+    text: It is open, empty, and uninteresting.
+
+"tba:64:room:6428":
+  name: A Hall
+  description: >
+    This is the southern end of the hall.  There are cells to your right and left, empty and awaiting
+    occupants.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6426
+  extras:
+  - keywords: [cell, cells]
+    text: It is open, empty, and uninteresting.
+
+"tba:64:room:6429":
+  name: A Stairwell
+  description: The stairwell continues up and down here.  A large room opens up to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6430
+    up:
+      to: tba:64:room:6425
+    down:
+      to: tba:64:room:6431
+
+"tba:64:room:6430":
+  name: A Mage's Office
+  description: >
+    A small desk here is cluttered with magically preserved papers and documents.  None seem of value,
+    except perhaps to a historian.  This place seems vaguely uninteresting...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6429
+  extras:
+  - keywords: [paper, papers, documents, document]
+    text: >
+      Well, one of the papers relate a story about how the mage of this tower, Rand, angered many kings,
+      and relates how they set his armies on him.  You wonder if the lava outside was a failed attempt to
+      destroy the armies...
+  - keywords: [desk]
+    text: It is cluttered with all sorts of papers.  Some look half interesting, actually.
+
+"tba:64:room:6431":
+  name: The Stairwell
+  description: The stairwell continues up and down here, and there is a room to the west...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6432
+    up:
+      to: tba:64:room:6429
+    down:
+      to: tba:64:room:6433
+
+"tba:64:room:6432":
+  name: A Sitting Room
+  description:
+  - >
+    This is a simply furnished room, with chairs all about. A fireplace is inset into an inner wall,
+    the chimney undoubtedly directed by magic...
+  - This would be a nice place to rest a while...
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:64:room:6431
+
+"tba:64:room:6433":
+  name: The Stairwell
+  description: This is where the stairwell finally ends.  There is a hall to your west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6434
+    up:
+      to: tba:64:room:6431
+
+"tba:64:room:6434":
+  name: A Hallway
+  description: >
+    This small hallway on the former 'ground floor' ran north- south.  To the east is the stairwell
+    that leads up into the shadowy recesses of the tower.  To the west is the entrance way to the tower. 
+    The north is completely blocked off by lava, and the way south is still clear.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6433
+    south:
+      to: tba:64:room:6437
+    west:
+      to: tba:64:room:6435
+
+"tba:64:room:6435":
+  name: The Entranceway
+  description: >
+    This is a grand chamber with giant double-doors to the west.  To the east is the main floor of the
+    tower.  This room is arranged highly attractively and very impressively, with sculptures and
+    tapistries everywhere.  The doors seem impenetrable... you don't think you'd be able to get through them if
+    you really had to...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6434
+    west:
+      to: tba:64:room:6436
+      look: These doors seem incredible.  Unfortunately, they're locked.
+      door:
+        keywords: [door, double]
+        kind: door
+        reset: locked
+  extras:
+  - keywords: [sculpture, tapestry, sculptures, tapestries]
+    text: They look nice, but aren't very valuable.
+
+"tba:64:room:6436":
+  name: The Doorway
+  description:
+  - "This was the entrance to the tower.  Now lava has blocked it up completely.  However:"
+  - >
+    It seems when the lava came down a man was outside the doors.  He was blasted into the doors, and
+    died instantly, but his skeleton still clutches a staff in perfect condition...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6435
+      look: These double doors have the outline of a man blasted into them...
+      door:
+        keywords: [double, doors]
+        kind: door
+        reset: locked
+
+"tba:64:room:6437":
+  name: The Hallway
+  description: >
+    This is the southern part of the hallway.  There is a door to the west, barred with gleaming bands
+    of lights. To the north is more hallway.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6434
+    west:
+      to: tba:64:room:6438
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:64:room:6438":
+  name: The Stairs
+  description: >
+    Stairs lead down here into the tower's basement, or you can head east into the main floor of the
+    tower.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6437
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:64:room:6439
+
+"tba:64:room:6439":
+  name: The Stairs
+  description: Stairs lead up here to the main level, or you can go east to the basement of the tower.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6440
+    up:
+      to: tba:64:room:6438
+
+"tba:64:room:6440":
+  name: An Alcove
+  description: >
+    This alcove leads into a huge room to your north, and to stairs leading down to the east, and
+    stairs going up to your west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:64:room:6441
+    east:
+      to: tba:64:room:6442
+    west:
+      to: tba:64:room:6439
+
+"tba:64:room:6441":
+  name: The Laboratory
+  description: >
+    This laboratory has lots of stuff in it.  Beakers, flasks, burners, tongs, mortars and pestles,
+    jars filled with normal things, jars filled with abnormal things, jars filled with things you'd rather
+    not think about... A search could reveal many things...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:64:room:6440
+  extras:
+  - keywords: [beaker, beakers, flask, flasks, burner, burners, tong, tongs]
+    text: Looks like normal, fragile lab equipment to you.
+  - keywords: [mortar, mortars, pestle, pestles, jar, jars]
+    text: Looks like normal, fragile lab equipment to you.
+
+"tba:64:room:6442":
+  name: The Stairs
+  description: Stairs lead down here to the second level of the basement, or back west to the alcove.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:64:room:6440
+    down:
+      to: tba:64:room:6443
+
+"tba:64:room:6443":
+  name: The Stairs
+  description: >
+    Stairs lead up here to the first level of the basement, or you can go east to another big room.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:64:room:6444
+    up:
+      to: tba:64:room:6442
+
+"tba:64:room:6444":
+  name: The Summoning Room
+  description: >
+    This room is darkly lit by a giant glowing pentagram in the center of the room.  Bands of force
+    encircle some sort of being trapped inside.  You think that going inside would be an EXTREMELY BAD
+    idea...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:64:room:6445
+    west:
+      to: tba:64:room:6443
+  extras:
+  - keywords: [pentagram]
+    text: It is centuries old.  You don't think standing close by would be a good idea.
+  - keywords: [being]
+    text: >
+      You can't see it clearly through the energy field of the pentagram, but you sense that whatever it
+      is, it is very, very, very, very angry.
+
+"tba:64:room:6445":
+  name: Inside A Pentagram
+  description: >
+    Inside the pentagram the floor is covered in a fine golden dust.  The lines of the pentagram seem
+    to be drawn in blood which has dried to a dark reddish-brown.  The edges of the pentagram seem to hold
+    some unseen power or protection.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:64:room:6444

@@ -1,0 +1,248 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 46.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:46:obj:4600":
+  type: other
+  keywords: [giant, anthill]
+  short: a giant anthill
+  long: There is a particularly large anthill here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [anthill]
+    text: >
+      You are looking at a huge anthill, it's unfanthomably big, there is a large man size hole leading
+      into it.
+
+"tba:46:obj:4601":
+  type: weapon
+  keywords: [giant, ant, feeler]
+  short: a feeler from a giant ant
+  long: A long whip, looking like a piece of a bug is lying here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d2
+    attack: whip
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:46:obj:4602":
+  type: armor
+  keywords: [exoskeleton, shell]
+  short: an exoskeleton shell
+  long: An exoskeleton shell is lying here.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 4
+  cost: 40
+  rent: 4
+  level: 0
+
+"tba:46:obj:4603":
+  type: weapon
+  keywords: [ant, pincher]
+  short: an ant's pincher
+  long: Some insect pinchers have been hacked off and left here, oozing green slime.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: sting
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: ac
+    modifier: -1
+
+"tba:46:obj:4604":
+  type: weapon
+  keywords: [queen, ants, stinger]
+  short: a stinger from the queen ant
+  long: Looks like someone ripped off the tip of a Queen ant's butt.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: sting
+  weight: 1
+  cost: 40
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 5
+
+"tba:46:obj:4605":
+  type: light
+  keywords: [red, ant, eye]
+  short: a red ant's eye
+  long: A bright shining eye is here looking back at you.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 90
+  rent: 10
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+
+"tba:46:obj:4606":
+  type: wand
+  keywords: [poisoned, metasoma]
+  short: a poisoned metasoma
+  long: A small sac of sweet smelling liquid oozing out from a metasoma.
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 33]
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:46:obj:4607":
+  type: armor
+  keywords: [sleeves, exoskeleton]
+  short: a pair of exoskeleton sleeves
+  long: Small bits of exoskeleton stiched together lay here in armor form.
+  wear: [take, arms]
+  values:
+    armor: 3
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:46:obj:4608":
+  type: armor
+  keywords: [legging, exoskeleton]
+  short: a pair of exoskeleton leggings
+  long: Long pieces of exoskeleton lay here in armor form.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:46:obj:4609":
+  type: food
+  keywords: [larvae]
+  short: an ant larvae
+  long: A small ant larvae has been left behind here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:46:obj:4610":
+  type: trash
+  keywords: [junk]
+  short: some junk
+  long: Broken shells, unborn larvae and heaps of other junk have been thrown here in an untidy pile.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:46:obj:4611":
+  type: armor
+  keywords: [red, exoskeleton]
+  short: a leather underlined red plated exoskeleton
+  long: Slabs of an exoskeleton bounded together on a large piece of leather lays here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 9
+  cost: 140
+  rent: 15
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+
+"tba:46:obj:4612":
+  type: weapon
+  keywords: [red, ant, stinger]
+  short: a red ant's stinger
+  long: Someone has ripped the butt off a red ant and threw it here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: sting
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:46:obj:4613":
+  type: trash
+  keywords: [leg, broken, red, ant]
+  short: a broken red ant's leg
+  long: The remaining leg of a red ant lays here, it's never gonna walk again.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:46:obj:4616":
+  type: weapon
+  keywords: [sharp, claws]
+  short: a pair of sharp claws
+  long: A pair of sharp claws, taken from an extremely large ant is here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: claw
+  weight: 5
+  cost: 150
+  rent: 20
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:46:obj:4633":
+  type: armor
+  keywords: [antenna]
+  short: an antennae
+  long: An ant antennae still twitches on the ground.
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: hit
+    modifier: 3
+  - apply: ac
+    modifier: 5

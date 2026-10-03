@@ -1,0 +1,398 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 7.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:7:obj:700":
+  type: trash
+  keywords: [useless, trinkets]
+  short: some useless trinkets
+  long: A lot of useless trinkets, nothing of value.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [useless, trinkets]
+    text: >
+      Bits of discarded metal have been strung together by a piece of twine, too heavy to wear, but light
+      enough to carry.
+
+"tba:7:obj:701":
+  type: weapon
+  keywords: [tempered, broadsword, sword]
+  short: a tempered broadsword
+  long: A large tempered broadsword was left here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d12
+    attack: slash
+  weight: 8
+  cost: 400
+  rent: 40
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [tempered, silver, broadsword]
+    text: >
+      The fine blade of silver looks magnificently crafted and forged.  The hilt is protected by a silver
+      wire mesh that wraps around the wielder's entire hand.
+
+"tba:7:obj:702":
+  type: armor
+  keywords: [silver, chain, armor]
+  short: some silver chain armor
+  long: Some chain armor made of silver is lying here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 8
+  cost: 400
+  rent: 40
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [silver, chain, armor]
+    text: >
+      Links of silver chain have been woven into this fine vest meant to be worn on the body.  It is in
+      pristine condition and looks to offer a good level of protection.
+
+"tba:7:obj:703":
+  type: armor
+  keywords: [silver, wristguard]
+  short: a silver wristguard
+  long: Someone left a silver wristguard here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 8
+  cost: 340
+  rent: 34
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [silver, wristguard]
+    text: >
+      A thick band of silver looking to fit around a wrist.  It is superbly crafted with engravings
+      winding around the bracelet, of a snake eating its own tail in an endless cycle.
+
+"tba:7:obj:704":
+  type: fountain
+  keywords: [crystal, clear, stream]
+  short: a crystal clear stream
+  long: A crystal clear stream gently flows by you.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stream, crystal, clear]
+    text: >
+      You can peer to the bottom of the clear stream as it flows gently over a bed of rock and sand.  It
+      looks untainted and refreshing.
+
+"tba:7:obj:705":
+  type: armor
+  keywords: [silver, link, chain, belt]
+  short: a belt of silver chain links
+  long: A belt of silver chain links was left here.
+  flags: [no_drop]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 5
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [silver, link, chain, belt]
+    text: >
+      The links of silver have been placed over a leather belt that could easily fit around the waist.
+
+"tba:7:obj:706":
+  type: armor
+  keywords: [silver, shield]
+  short: a silver shield
+  long: A silver shield with the crest of Camelot engraved on the front.
+  flags: [magic]
+  wear: [take, shield]
+  values:
+    armor: 3
+  weight: 12
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [silver, shield]
+    text: >
+      The crest of Camelot adorns both sides of this sturdy shield.  The weight is cumbersome, but
+      bearable.
+
+"tba:7:obj:707":
+  type: armor
+  keywords: [silver, trimmmed, coat]
+  short: a silver trimmed coat
+  long: A fine coat trimmed with silver.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silver, trimmed, coat]
+    text: >
+      A fine hooded woolen coat with wide sleeves that are trimmed with silver. It can be worn over
+      almost anything, a good way to conceal heavy, bulky armor.
+
+"tba:7:obj:708":
+  type: armor
+  keywords: [silver, bracers, pair]
+  short: a pair of silver bracers
+  long: A pair of silver bracers.
+  wear: [take, arms]
+  values:
+    armor: 4
+  weight: 5
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [pair, silver, bracers]
+    text: >
+      A shiny pair of silver bracers that can be worn upon the arms.  They are well made and should offer
+      good protection.
+
+"tba:7:obj:709":
+  type: armor
+  keywords: [set, silver, gauntlets]
+  short: a set of silver gauntlets
+  long: A set of silver gauntlets engraved with the crest of Camelot.
+  flags: [magic]
+  wear: [take, hands]
+  values:
+    armor: 4
+  weight: 5
+  cost: 200
+  rent: 25
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [set, silver, gauntlets]
+    text: >
+      The crest of Camelot is engraved on the palm of these fine gauntlets of steel.  The fingers are
+      jointed and allow for good movement and flexibility.
+
+"tba:7:obj:710":
+  type: armor
+  keywords: [set, silver, boots]
+  short: a set of silver boots
+  long: A set of silver boots with the crest of Camelot.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 5
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [silver, set, boots]
+    text: >
+      A set of sturdy silver boots engraved with the crest of Camelot.  They are slightly worn but still
+      in excellent condition.
+
+"tba:7:obj:711":
+  type: armor
+  keywords: [set, silver, greaves]
+  short: a set of silver greaves
+  long: A set of silver greaves with the crest of Camelot on them.
+  wear: [take, legs]
+  values:
+    armor: 4
+  weight: 4
+  cost: 120
+  rent: 12
+  level: 0
+  extras:
+  - keywords: [set, silver, greaves]
+    text: >
+      A set of silver greaves with the crest of Camelot engraved on them appear to be in excellent
+      condition and design.
+
+"tba:7:obj:712":
+  type: armor
+  keywords: [fine, silver, helm]
+  short: a fine silver helm
+  long: A fine silver helm with the crest of Camelot on the forehead.
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 5
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [fine, silver, helm]
+    text: >
+      The helm's polished surface gleams around the crest of Camelot embossed upon the front.  Made of
+      pure silver, the helm is in excellent condition.
+
+"tba:7:obj:713":
+  type: armor
+  keywords: [silver, chain]
+  short: a silver chain
+  long: A silver chain made from small links with the crest of Camelot hanging from it.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 5
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [silver, chain]
+    text: >
+      A silver chain with a medallion hanging from it that resembles the crest of Camelot.  The chain is
+      made up of fine links, each one about the size of a copper coin.
+
+"tba:7:obj:714":
+  type: other
+  keywords: [silver, ring]
+  short: a silver ring
+  long: A silver ring with the crest of Camelot upon it.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 90
+  rent: 9
+  level: 0
+  extras:
+  - keywords: [silver, ring]
+    text: >
+      The surface of the ring is engraved with the crest of Camelot with the sword of Excalibur wrapping
+      around it.  The ring is made of solid silver and is in good condition.
+
+"tba:7:obj:715":
+  type: light
+  keywords: [silver, sceptre]
+  short: a silver sceptre
+  long: A silver sceptre with the crest of Camelot upon it.
+  flags: [magic, anti_evil]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 4
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+  extras:
+  - keywords: [silver, sceptre]
+    text: >
+      The crest of Camelot is embossed in gold upon the face of this silver sceptre.  It looks extremely
+      valuable and glows slightly, emitting enough light to see by.
+
+"tba:7:obj:716":
+  type: fountain
+  keywords: [stone, fountain]
+  short: the stone fountain
+  long: A stone fountain depicts three bare-breasted women pouring water out of jugs.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [stone, fountain]
+    text: >
+      The white stone is remarkably smooth and finely detailed.  From a distance the three woman almost
+      look real, extremely pale, but real.  The water is clear and rushes out from the jugs the women hold
+      and down three tiers of large bowls filled with water.
+
+"tba:7:obj:717":
+  type: other
+  keywords: [gold, panning, bowl]
+  short: a gold panning bowl
+  long: A wooden bowl with a screen mesh on its bottom was left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gold, panning, bowl]
+    text: >
+      The bowl is worn from use.  It looks like it is meant to pan for gold.  You simply scoop up some
+      dirt and swirl in with water to try to find gold nuggets.
+
+"tba:7:obj:718":
+  type: treasure
+  keywords: [gold, nugget]
+  short: a small gold nugget
+  long: A small nugget of gold is glittering here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gold, nugget]
+    text: The small nugget is probably not worth very much, but it is gold.
+
+"tba:7:obj:719":
+  type: fountain
+  keywords: [water, flowing, river, water]
+  short: a gently flowing river
+  long: A river with a few small white caps flows between tall banks eroded over generations.
+  wear: []
+  values:
+    capacity: -1
+    contains: 1
+    liquid: clear_water
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [river, flowing, water]
+    text: >
+      You can peer to the bottom of the clear river as it flows gently over a bed of rock and sand.  You
+      notice strange glints of gold in the river bed.

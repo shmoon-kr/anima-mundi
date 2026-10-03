@@ -1,0 +1,43 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 16.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:16:shop:1600":
+  keeper: tba:16:mob:1619
+  rooms: [tba:16:room:1627]
+  products:
+  - tba:16:obj:1600
+  - tba:7:obj:701
+  - tba:7:obj:702
+  - tba:7:obj:703
+  - tba:7:obj:705
+  - tba:7:obj:706
+  - tba:7:obj:707
+  - tba:7:obj:708
+  - tba:7:obj:709
+  - tba:7:obj:710
+  - tba:7:obj:711
+  - tba:7:obj:712
+  - tba:7:obj:713
+  - tba:7:obj:714
+  - tba:7:obj:715
+  buys:
+  - type: weapon
+    keywords: lifecutter
+  - type: armor
+    keywords: silver
+  - type: other
+    keywords: silver
+  profit:
+    buy: 1.5
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s Sorry, I don't stock that item."
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0

@@ -1,0 +1,186 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 200.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:200:mob:20004
+  room: tba:200:room:20015
+  limit: 1
+  equip:
+    about:
+      object: tba:200:obj:20004
+      limit: 99
+    hold:
+      object: tba:200:obj:20003
+      limit: 99
+- object: tba:200:obj:20005
+  room: tba:200:room:20015
+  limit: 1
+- mob: tba:200:mob:20003
+  room: tba:200:room:20010
+  limit: 3
+  equip:
+    wrist_right:
+      object: tba:200:obj:20013
+      limit: 30
+- mob: tba:200:mob:20002
+  room: tba:200:room:20010
+  limit: 3
+  equip:
+    arms:
+      object: tba:200:obj:20014
+      limit: 99
+- mob: tba:200:mob:20002
+  room: tba:200:room:20014
+  limit: 3
+  equip:
+    arms:
+      object: tba:200:obj:20014
+      limit: 99
+- mob: tba:200:mob:20003
+  room: tba:200:room:20013
+  limit: 3
+  equip:
+    wrist_right:
+      object: tba:200:obj:20013
+      limit: 99
+- mob: tba:200:mob:20009
+  room: tba:200:room:20031
+  limit: 3
+  equip:
+    neck_2:
+      object: tba:200:obj:20020
+      limit: 99
+- mob: tba:200:mob:20009
+  room: tba:200:room:20027
+  limit: 3
+  equip:
+    neck_2:
+      object: tba:200:obj:20020
+      limit: 99
+- mob: tba:200:mob:20010
+  room: tba:200:room:20034
+  limit: 1
+  equip:
+    finger_left:
+      object: tba:200:obj:20024
+      limit: 99
+- mob: tba:200:mob:20009
+  room: tba:200:room:20034
+  limit: 3
+  equip:
+    neck_2:
+      object: tba:200:obj:20020
+      limit: 99
+- object: tba:200:obj:20000
+  room: tba:200:room:20017
+  limit: 1
+- object: tba:200:obj:20001
+  room: tba:200:room:20017
+  limit: 1
+- mob: tba:200:mob:20011
+  room: tba:200:room:20017
+  limit: 1
+- mob: tba:200:mob:20007
+  room: tba:200:room:20040
+  limit: 1
+  carry:
+  - object: tba:200:obj:20023
+    limit: 99
+  - object: tba:200:obj:20014
+    limit: 100
+  - object: tba:200:obj:20013
+    limit: 100
+  - object: tba:200:obj:20012
+    limit: 100
+  - object: tba:200:obj:20007
+    limit: 100
+  - object: tba:200:obj:20015
+    limit: 100
+  - object: tba:200:obj:20017
+    limit: 100
+  - object: tba:200:obj:20020
+    limit: 100
+  - object: tba:200:obj:20021
+    limit: 100
+  - object: tba:200:obj:20022
+    limit: 100
+- mob: tba:200:mob:20008
+  room: tba:200:room:20028
+  limit: 1
+  equip:
+    hold:
+      object: tba:200:obj:20016
+      limit: 5
+    wield:
+      object: tba:200:obj:20018
+      limit: 100
+    hands:
+      object: tba:200:obj:20019
+      limit: 100
+  carry:
+  - object: tba:200:obj:20017
+    limit: 20
+- mob: tba:200:mob:20003
+  room: tba:200:room:20012
+  limit: 1
+- mob: tba:200:mob:20006
+  room: tba:200:room:20016
+  limit: 3
+  equip:
+    body:
+      object: tba:200:obj:20015
+      limit: 100
+- mob: tba:200:mob:20006
+  room: tba:200:room:20020
+  limit: 3
+  equip:
+    body:
+      object: tba:200:obj:20015
+      limit: 100
+- mob: tba:200:mob:20006
+  room: tba:200:room:20023
+  limit: 3
+  equip:
+    body:
+      object: tba:200:obj:20015
+      limit: 100
+- mob: tba:200:mob:20001
+  room: tba:200:room:20003
+  limit: 3
+  equip:
+    head:
+      object: tba:200:obj:20012
+      limit: 10
+  carry:
+  - object: tba:200:obj:20007
+    limit: 10
+- mob: tba:200:mob:20000
+  room: tba:200:room:20008
+  limit: 3
+  equip:
+    body:
+      object: tba:200:obj:20008
+      limit: 100
+    waist:
+      object: tba:200:obj:20009
+      limit: 100
+    feet:
+      object: tba:200:obj:20010
+      limit: 100
+    legs:
+      object: tba:200:obj:20011
+      limit: 100
+- object: tba:200:obj:20002
+  room: tba:200:room:20025
+  limit: 1
+- mob: tba:200:mob:20005
+  room: tba:200:room:20025
+  limit: 1
+  equip:
+    hold:
+      object: tba:200:obj:20006
+      limit: 20
+removes:
+- room: tba:200:room:20017
+  object: tba:200:obj:20000

@@ -1,0 +1,372 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 310.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:310:mob:31001":
+  keywords: [brownie, forest]
+  short: the forest brownie
+  long: A forest brownie scampers about here.
+  description: The forest brownie winks at you and scurries away.  Quite an amicable fellow.
+  level: 12
+  sex: male
+  alignment: 800
+  flags: [scavenger, stay_zone, wimpy]
+  affects: [invisible, hide]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31002":
+  keywords: [wolf]
+  short: the wolf
+  long: a wolf trots by, looking for a rabbit
+  description: The wolf looks rather hungry.  You see him trying to decide if YOU taste like rabbit.
+  level: 13
+  sex: neutral
+  alignment: -300
+  flags: [scavenger, stay_zone]
+  affects: [hide]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31003":
+  keywords: [rabbit, brown]
+  short: the brown rabbit
+  long: A brown rabbit hops along merrily.
+  description: >
+    The rabbit looks up at you with big brown eyes, then scoots away..  Hey.. There goes lunch!
+  level: 14
+  sex: neutral
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31004":
+  keywords: [tomal, woodsman]
+  short: Tomal
+  long: A woodsman watches you, a stalk of grass hanging from his mouth
+  description: The woodsman chuckles and says, 'Howdy stranger- the name is Tomal..  Howya doing?  '
+  level: 23
+  sex: male
+  alignment: 800
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31005":
+  keywords: [demon, guardian]
+  short: the guardian demon
+  long: A shadowy form steps out of the mist.
+  description: >
+    You see a nightmarish array of teeth and claws, the guardian demon is determined to rip your guts
+    out.
+  level: 25
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive]
+  affects: [detect_align, detect_invis, detect_magic]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31006":
+  keywords: [guard, graye, guardsman]
+  short: the Graye guardsman
+  long: The Graye guardsman is posted here.
+  description: >
+    The guardsman smiles at you kindly.  He says, 'better stick with me guy-- its a dangerous world out
+    there.  '
+  level: 20
+  sex: male
+  alignment: 900
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31007":
+  keywords: [demon, imp]
+  short: the demon imp
+  long: A tiny demon snarls at you.
+  description: >
+    It seems like a relatively harmless little demon, but those sharp teeth might hurt if they were
+    wrapped around your arm.
+  level: 12
+  sex: neutral
+  alignment: -800
+  flags: [scavenger, stay_zone]
+  affects: [hide]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31008":
+  keywords: [minor, demon]
+  short: the minor demon
+  long: A minor demon jumps out of the shadows at you!
+  description: >
+    The demon resembles little, but a sinewy mass of flesh, tendons, and teeth. It glares at you with
+    pure fury in it's eyes.
+  level: 13
+  sex: neutral
+  alignment: -900
+  flags: [aggressive, stay_zone]
+  affects: [invisible]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31009":
+  keywords: [citizen, graye, man]
+  short: the Graye Citizen
+  long: A citizen of Graye rushes by here, looking over his shoulder.
+  description: The citizen looks rather nervous- You would too if your town was besieged by demons.
+  level: 15
+  sex: male
+  alignment: 700
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31010":
+  keywords: [citizen, gray, woman]
+  short: the Graye Citizen
+  long: A citizen of Graye rushes by here, looking over her shoulder.
+  description: The citizen looks rather nervous- You would too if your town was besieged by demons.
+  level: 15
+  sex: female
+  alignment: 700
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31011":
+  keywords: [demon, major]
+  short: a major demon
+  long: A major demon lurks about here.
+  description: >
+    You look deep into the eyes of the beast.  You sense no absolutely no intellect, only raw power and
+    rage.
+  level: 22
+  sex: neutral
+  alignment: -900
+  flags: [scavenger, aggressive, stay_zone]
+  affects: [invisible]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31012":
+  keywords: [guardian, rift]
+  short: the rift guardian
+  long: A shadow wraith drifts into your way.
+  description: All you see is a fog-like apparition, with two glowing red eyes...
+  level: 24
+  sex: neutral
+  alignment: -900
+  flags: [sentinel, aggressive]
+  affects: [invisible]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31013":
+  keywords: [guard, jail]
+  short: the jail guard
+  long: A jail guard patrols here, whipping the prisoners.
+  description: >
+    The guard seems to be, well, mostly human.  He is covered in boils and tufts of hair.  He glares at
+    you with his one good eye and says, 'Put down that weapon, prisoner!  '
+  level: 20
+  sex: male
+  alignment: -800
+  flags: [sentinel, scavenger, aggressive]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31014":
+  keywords: [rymat]
+  short: Rymat
+  long: The King's Advisor is here, weeping.
+  description: >
+    He looks at you and begs, 'please!  They have taken him!  I can see that you are a great
+    adventurer..  Please bring him back to us!  ' The advisor turns from you and continues to sob uncontrollably.
+  level: 22
+  sex: male
+  alignment: 900
+  flags: [sentinel]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31015":
+  keywords: [irgon, arch, demon]
+  short: the Arch-Demon Irgon
+  long: The Arch-Demon Irgon emerges from the shadows.
+  description: >
+    Irgon frowns down upon you.  His oily black skin reflects the torchlight. A thick white claw points
+    at you, and he utters, 'prepare to die.  '
+  level: 28
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive]
+  affects: [invisible]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31016":
+  keywords: [scrytin, demon]
+  short: Scrytin
+  long: Scrytin, the demon lord's apprentice, smiles at you.
+  description: >
+    Scrytin looks at you kindly, and suddenly you feel very peaceful and relaxed.  You stare directly
+    into his eyes, and feel yourself slipping deeper and deeper...  NOOO!!  Scrytin growls, 'Won't become
+    a minion of mine eh?.. Then you shall DIE!  '
+  level: 30
+  sex: male
+  alignment: -999
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:310:mob:31017":
+  keywords: [relnar, king]
+  short: Relnar
+  long: The good king Relnar is here.
+  description: >
+    You look into the eyes of the descendant of Graye, and know now why his city is so prosperous and
+    happy.
+  level: 30
+  sex: male
+  alignment: 999
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

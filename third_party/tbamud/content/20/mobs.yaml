@@ -1,0 +1,518 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 20.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:20:mob:2000":
+  keywords: [senator, official]
+  short: a senator
+  long: An official is trying to look important here.
+  description: This senator is busy sucking up to the higher authorities.
+  level: 12
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2001":
+  keywords: [priest]
+  short: a priest
+  long: A priest is praying for his favorite gladiator to win.
+  description: For a priest he seems to be enjoying the bloodshed a little too much.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, no_sleep, no_bash, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2002":
+  keywords: [augur]
+  short: an augur
+  long: An augur is trying to predict the winner of the next bout.
+  description: >
+    Known for their predictions by the reading of omens, these men are very popular among the rich.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [aware, stay_zone, wimpy, memory]
+  affects: [sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2003":
+  keywords: [magistrate]
+  short: a magistrate
+  long: A magistrate is standing here with his nose stuck up in the air.
+  description: He looks rather ridiculous and extremely full of himself.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory]
+  affects: [sense_life, no_track]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2004":
+  keywords: [vestal, virgin]
+  short: a vestal virgin
+  long: A Vestal Virgin brushes close against you and winks seductively.
+  description: She doesn't look nearly as innocent as she's supposed to be.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2005":
+  keywords: [samnite]
+  short: a Samnite warrior
+  long: A Samnite warrior is waiting for his next bout.
+  description: >
+    This warrior looks depressed, already realizing his fate.  He will battle in the arena until he is
+    killed.  It could be today or years from now, but his fate is unavoidable.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [aware, stay_zone, memory, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: blast
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2006":
+  keywords: [thracian, warrior]
+  short: a Thracian warrior
+  long: This warrior is covered in sweat, practicing his hand to hand combat skills.
+  description: >
+    This guy is huge, well over six feet and pure muscle.  Looks like he's been training for years.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: maul
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2007":
+  keywords: [slave]
+  short: a slave
+  long: A slave is hauling dead bodies to the graves.
+  description: >
+    This slave looks like he's almost been worked to death, cleaning up after the animals, hauling the
+    corpses to the common grave, retrieving armor and weapons from the dead.  He will soon be left alone
+    in the arena and the starved wild animals will feed on him for the entertainment of the populace.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2008":
+  keywords: [ostrich, bird]
+  short: an ostrich
+  long: A strange bird with long legs and a long neck stands here.
+  description: >
+    This must be one of the exotic animals from far away countries that the emperor brings in to amuse
+    his people.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2009":
+  keywords: [horse, giraffe]
+  short: a giraffe
+  long: An odd animal, looking like a stretched-out horse, towers above you.
+  description: >
+    Another one of those exotic animals the emperor imports to keep his people happy by slaughtering
+    them in the arena.  What sort of strange name is 'giraffe'?"
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, no_bash]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2010":
+  keywords: [elephant]
+  short: an elephant
+  long: A huge gray beast with long tusks and large floppy ears trumpets at you.
+  description: >
+    Yet another exotic animal the emperor imports so his people can watch it be riddled with arrows and
+    then slaughtered by gladiators.  Metal tusks have been placed over the regular ivory ones and look
+    very sharp.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: pierce
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2011":
+  keywords: [retiarius, warrior]
+  short: a retiarius warrior
+  long: A warrior in training practices with a wicked looking trident.
+  description: >
+    This warrior is heavily equipped with weapons.  He carries a dagger, a trident and a weighted net.
+  level: 19
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: slash
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2012":
+  keywords: [murmillo, gladiator]
+  short: a murmillo
+  long: This gladiator practices with a shortsword.  He looks very skilled.
+  description: >
+    He is heavily armored with a helmet, arm and leg guards and a funny looking shield.  The crest of
+    his helmet has a strange ornament of a fish on it.  He swings a shortsword with ease and familiarity.
+  level: 17
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2013":
+  keywords: [lion]
+  short: a lion
+  long: A lion looks up as you enter.  He looks hungry.
+  description: These lions are starved then let loose in the arenas with gladiators or unarmed slaves.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2014":
+  keywords: [tiger]
+  short: a tiger
+  long: A tiger looks at you hungrily.
+  description: >
+    Another animal that is let loose in the arenas to battle against the gladiators or feed on the
+    slaves, this large cat looks like it hasn't eaten in a long time.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2015":
+  keywords: [Gladiator]
+  short: a gladiator
+  long: A professional gladiator pushes you out of his way.
+  description: >
+    Years of experience and the battle scars to prove it makes this gladiator a veteran of combat of
+    all kinds.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_charm, no_bash, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2016":
+  keywords: [Gaul]
+  short: a Gaul
+  long: A Gaul is practicing.  He looks pathetic.
+  description: This gladiator looks like he has just begun his training.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2017":
+  keywords: [Emperor, Titus]
+  short: Emperor Titus
+  long: Emperor Titus is overseeing the amphitheater.
+  description: >
+    Emperor Titus abuses his wealth and power, all the while holding these great games to distract the
+    ignorant masses.  He is very good at it.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2018":
+  keywords: [knight]
+  short: a knight
+  long: This gladiator is dressed up like a knight.  He looks ridiculous.
+  description: This gladiator is dressed up like a knight for one of the many shows.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2019":
+  keywords: [soldier]
+  short: a soldier
+  long: A soldier stands here catching his breath before the next battle.
+  description: Another member of the dozen or so gladiators.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2020":
+  keywords: [civilian]
+  short: a civilian
+  long: A civilian is screaming at the top of his lungs, enthralled with the battle.
+  description: >
+    He is watching the bout, screaming his encouragement to his favorite gladiator.  He seems to enjoy
+    the bloodshed and death.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2021":
+  keywords: [religious, official]
+  short: a religious official
+  long: A religious official is wandering aimlessly through the crowd.
+  description: He walks around, spouting religious dogma to anyone who will listen.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:20:mob:2022":
+  keywords: [lanista]
+  short: a lanista
+  long: A lanista is busy training gladiators.
+  description: >
+    The lanista is a former gladiator who has managed to survive long enough to retire and pass on all
+    his skills to others.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

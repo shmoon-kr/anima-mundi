@@ -1,0 +1,94 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 79.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:79:mob:7900
+  room: tba:79:room:7900
+  limit: 1
+  equip:
+    hold:
+      object: tba:79:obj:7901
+      limit: 4
+    wield:
+      object: tba:79:obj:7910
+      limit: 2
+    body:
+      object: tba:79:obj:7914
+      limit: 2
+    legs:
+      object: tba:79:obj:7915
+      limit: 2
+    hands:
+      object: tba:79:obj:7916
+      limit: 2
+    head:
+      object: tba:79:obj:7917
+      limit: 2
+    shield:
+      object: tba:79:obj:7918
+      limit: 2
+    feet:
+      object: tba:79:obj:7919
+      limit: 2
+    arms:
+      object: tba:79:obj:7920
+      limit: 2
+- mob: tba:79:mob:7901
+  room: tba:79:room:7907
+  limit: 2
+  carry:
+  - object: tba:79:obj:7900
+    limit: 1
+- mob: tba:79:mob:7901
+  room: tba:79:room:7907
+  limit: 2
+- mob: tba:79:mob:7902
+  room: tba:79:room:7913
+  limit: 1
+  equip:
+    wrist_right:
+      object: tba:79:obj:7907
+      limit: 6
+    wrist_left:
+      object: tba:79:obj:7907
+      limit: 6
+    head:
+      object: tba:79:obj:7911
+      limit: 2
+  carry:
+  - object: tba:79:obj:7902
+    limit: 1
+- object: tba:79:obj:7908
+  room: tba:79:room:7907
+  limit: 40
+- object: tba:79:obj:7921
+  room: tba:79:room:7908
+  limit: 10
+- object: tba:79:obj:7904
+  room: tba:79:room:7903
+  limit: 1
+  contents:
+  - object: tba:79:obj:7903
+    limit: 1
+  - object: tba:79:obj:7909
+    limit: 4
+- object: tba:79:obj:7905
+  room: tba:79:room:7913
+  limit: 1
+  contents:
+  - object: tba:79:obj:7906
+    limit: 5
+  - object: tba:79:obj:7912
+    limit: 3
+  - object: tba:79:obj:7913
+    limit: 2
+removes:
+- room: tba:79:room:7907
+  object: tba:79:obj:7908
+- room: tba:79:room:7908
+  object: tba:79:obj:7921
+- room: tba:79:room:7903
+  object: tba:79:obj:7904
+- room: tba:79:room:7913
+  object: tba:79:obj:7905

@@ -1,0 +1,1203 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 30.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:30:room:3000":
+  name: The Reading Room
+  description: >
+    You are in a small, simple room which is mostly empty, save a few wooden desks and benches.  To the
+    east you hear the bustle of the Temple of Midgaard, a sharp contrast to the relative quiet of this
+    peaceful room.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    east:
+      to: tba:30:room:3001
+      look: You see the Temple of Midgaard.
+  extras:
+  - keywords: [credits, info]
+    text: "Guilds: 20-23"
+
+"tba:30:room:3001":
+  name: The Temple Of Midgaard
+  description:
+  - >
+    You are in the southern end of the temple hall in the Temple of Midgaard. The temple has been
+    constructed from giant marble blocks, eternal in appearance, and most of the walls are covered by ancient
+    wall paintings picturing Gods, giants and peasants.
+  - >
+    Large steps lead down through the grand temple gate, descending the huge mound upon which the
+    temple is built and ends on the temple square below. To the west, you see the Reading Room.  The donation
+    room is in a small alcove to your east.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3054
+      look: At the northern end of the temple hall is a statue and a huge altar.
+    east:
+      to: tba:30:room:3063
+      look: >
+        In the east, you see a small alcove with a rickety wooden sign which reads "Midgaard Donation Room."
+    south:
+      to: tba:30:room:3005
+      look: You look down the huge stone steps at the temple square below.
+    west:
+      to: tba:30:room:3000
+      look: You see the Reading Room.
+    down:
+      to: tba:30:room:3005
+      look: You see the temple square.
+  extras:
+  - keywords: [paintings, ancient, wall, peasants, gods, giants]
+    text: >
+      The paintings are numerous in style and quality.  But, they all have the same surreal quality that
+      tugs at the mind to become lost in their depth and detail.
+
+"tba:30:room:3002":
+  name: The Clerics' Inner Sanctum
+  description: >
+    This is the inner sanctum.  A picture of the mighty Thor, is hanging on the wall, just above the
+    altar which is set against the western wall.  A well in the middle of the floor leads down into
+    darkness.  Vile smells waft from the depths.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:30:room:3003
+      look: You see your favorite place, the bar of divination.
+    down:
+      to: tba:70:room:7026
+      look: >
+        You can't see what is down there, it is too dark.  Looks like it would be impossible to climb back
+        up.
+
+"tba:30:room:3003":
+  name: The Bar Of Divination
+  description: >
+    The bar is one of the finest in the land, lucky it is members only.  Fine furniture is set all
+    around the room.  A small sign is hanging on the wall.
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3004
+      look: You see the entrance.
+    west:
+      to: tba:30:room:3002
+      look: You see the inner sanctum.
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign reads: Free instructions provided by the waiter:"
+    - Buy  - Buy something (drinkable) from the waiter.
+    - List - The waiter will show you all the different drinks and
+    - specialties, and tell the price of each.
+
+"tba:30:room:3004":
+  name: The Entrance To The Clerics' Guild
+  description: >
+    The entrance hall is a small modest room, reflecting the true nature of the Clerics.  The exit
+    leads east to the temple square.  A small entrance to the bar is in the northern wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3003
+      look: You see the bar, richly decorated with really stylish furniture.
+    east:
+      to: tba:30:room:3005
+      look: You see the Temple Square.
+
+"tba:30:room:3005":
+  name: The Temple Square
+  description: >
+    You are standing on the temple square.  Huge marble steps lead up to the temple gate.  The entrance
+    to the Clerics' Guild is to the west, and the old Grunting Boar Inn, is to the east.  Just south of
+    here you see the market square, the center of Midgaard.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3001
+      look: You see the temple.
+    east:
+      to: tba:30:room:3006
+      look: You see the good old Grunting Boar Inn.
+    south:
+      to: tba:30:room:3014
+      look: You see the Market Square.
+    west:
+      to: tba:30:room:3004
+      look: You see the entrance to the Clerics' Guild.
+
+"tba:30:room:3006":
+  name: The Entrance Hall Of The Grunting Boar Inn
+  description: >
+    You are standing in the entrance hall of the Grunting Boar Inn.  The hall has been wisely decorated
+    with simple, functional furniture.  The heavy smell of dust and aging paper drifts in from the Post
+    Office to the north.  A small staircase leads up to the reception and the bar is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3062
+      look: You see the Midgaard Post Office.
+    east:
+      to: tba:30:room:3007
+      look: Surprise!  You see the bar.
+    west:
+      to: tba:30:room:3005
+      look: You see the temple square.
+    up:
+      to: tba:30:room:3008
+      look: You see the reception.
+
+"tba:30:room:3007":
+  name: The Grunting Boar
+  description: >
+    You are standing in the bar.  The bar is set against the northern wall, old archaic writing,
+    carvings and symbols cover its top.  A fireplace is built into the western wall, and through the
+    southeastern windows you can see the temple square.  This place makes you feel like home. A small sign with big
+    letters is fastened to the bar.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    west:
+      to: tba:30:room:3006
+      look: You see the exit to the entrance hall.
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign reads: Free instructions provided by the Grunting Boar Inn."
+    - Buy  - Buy something (drinkable) from the bartender.
+    - List - The bartender will show you all the different drinks and
+    - specialties, and tell the price of each.
+  - keywords: [writing, carving, carvings, symbols, symbol]
+    text: >
+      Although it is very hard to understand, you think it looks a lot like beer, poems about beer, and
+      small beer-mugs.
+
+"tba:30:room:3008":
+  name: The Reception
+  description: >
+    You are standing in the reception.  The staircase leads down to the entrance hall.  An exit to the
+    north leads to the Cryogenic Center. There is a small sign on the counter.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3064
+      look: You see the Cryogenic Center.
+    down:
+      to: tba:30:room:3006
+      look: You see the entrance hall.
+  extras:
+  - keywords: [sign]
+    text:
+    - "Rooms are expensive but good!  You may:"
+    - Offer - get an offer on a room - Time is in real life days.
+    - Rent  - Rent a room (saves your stuff, and quits the game),
+    - minimum charge is one day.
+    - MY WAY OR THE HIGHWAY
+    - PAY YOUR RENT!
+    - WE WON'T THINK TWICE BEFORE KICKING YOU OUT.
+
+"tba:30:room:3009":
+  name: The Bakery
+  description: >
+    You are standing inside the small bakery.  A sweet scent of danish and fine bread fills the room. 
+    The bread and Danish are arranged in fine order on the shelves, and seem to be of the finest quality.
+    A small sign is on the counter.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3013
+      look: You see the main street.
+  extras:
+  - keywords: [danish, pastry]
+    text: >
+      You see that this is truly delicious pastry.  Must be made by a Dane from Denmark (which surely is
+      not the capital of Sweden!  ).  Former ruler of Scandinavia, England, Northern Germany, Northern
+      France, Russia, Greenland, Iceland, Estonia etc.  Etc.  The sight of those large, wholesome
+      chokoladeboller makes your mouth water and your soul sing.
+  - keywords: [sign]
+    text:
+    - "Free instructions provided by the store:"
+    - Buy  - Will buy you some bread or pastry.
+    - List - The baker will kindly tell you the price and sort of the bread in
+    - his bakery.
+
+"tba:30:room:3010":
+  name: The General Store
+  description: >
+    You are inside the general store.  All sorts of items are stacked on shelves behind the counter,
+    safely out of your reach. A small note hangs on the wall.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3015
+      look: You see the main street.
+  extras:
+  - keywords: [note]
+    text:
+    - >
+      The note reads: List  - Show which various items are in the store. Buy   - Buy an item. Value - The
+      shopkeeper will (free of charge) tell how much he will
+    - pay for your item. Sell  - Sell an item.
+
+"tba:30:room:3011":
+  name: The Weapon Shop
+  description: >
+    The smell of worked metals and various quenching oils fills the room.  Every available space in the
+    room including the ceiling is loaded with various equipment and weaponry.  There is a small note on
+    the counter.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3016
+      look: You see the main street.
+  extras:
+  - keywords: [note]
+    text:
+    - >
+      The note reads: List  - Show which various items are in the store. Buy   - Buy an item. Value - The
+      shopkeeper will (free of charge) tell how much he will
+    - pay for your item. Sell  - Sell an item.
+
+"tba:30:room:3012":
+  name: Main Street
+  description: >
+    You are at the end of the main street of Midgaard.  South of here is the entrance to the Guild of
+    Magic Users.  The street continues east towards the market square.  The magic shop is to the north and
+    to the west is the city gate.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3033
+      look: You see the magic shop.
+    east:
+      to: tba:30:room:3013
+      look: You see the main street.
+    south:
+      to: tba:30:room:3017
+      look: You see the entrance to the Guild of Magic Users.
+    west:
+      to: tba:30:room:3040
+      look: You see the city gate.
+
+"tba:30:room:3013":
+  name: Main Street
+  description: >
+    You are on the main street passing through the City of Midgaard.  South of here is the entrance to
+    the Armory, and the bakery is to the north.  East of here is the market square.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3009
+      look: You see the bakery.
+    east:
+      to: tba:30:room:3014
+      look: You see the market square.
+    south:
+      to: tba:30:room:3020
+      look: You see the armory.
+    west:
+      to: tba:30:room:3012
+      look: You see the main street.
+
+"tba:30:room:3014":
+  name: Market Square
+  description: >
+    You are standing on the market square, the famous Square of Midgaard. A large, peculiar looking
+    statue is standing in the middle of the square. Roads lead in every direction, north to the temple
+    square, south to the common square, east and westbound is the main street.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3005
+      look: You see the temple square.
+    east:
+      to: tba:30:room:3015
+      look: You see the main street.
+    south:
+      to: tba:30:room:3025
+      look: You see the common square.
+    west:
+      to: tba:30:room:3013
+      look: You see the main street.
+  extras:
+  - keywords: [statue]
+    text: What you see is the Midgaard Worm, stretching around the Palace of Midgaard.
+
+"tba:30:room:3015":
+  name: Main Street
+  description: >
+    You are on the main street crossing through town.  To the north is the general store, and the main
+    street continues east.  To the west you see and hear the market place, to the south a small door
+    leads into the Pet Shop.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3010
+      look: You see the general store.
+    east:
+      to: tba:30:room:3016
+      look: You see the main street.
+    south:
+      to: tba:30:room:3031
+      look: You see the Pet Shop.
+    west:
+      to: tba:30:room:3014
+      look: You see the market square.
+
+"tba:30:room:3016":
+  name: Main Street
+  description: >
+    The main street, to the north is the weapon shop and to the south is the Guild of Swordsmen.  To
+    the east you leave town and to the west the street leads to the market square.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3011
+      look: You see the weapon shop.
+    east:
+      to: tba:30:room:3041
+      look: You see the city gate.
+    south:
+      to: tba:30:room:3021
+      look: You see the swordsmen's guild.
+    west:
+      to: tba:30:room:3015
+      look: You see the main street leading to the market square.
+
+"tba:30:room:3017":
+  name: The Entrance To The Mages' Guild
+  description: The entrance hall to this guild is a small, poor lighted room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3012
+      look: You see the main street.
+    south:
+      to: tba:30:room:3018
+      look: You see your favorite place, the Mages' Bar.
+
+"tba:30:room:3018":
+  name: The Mages' Bar
+  description: >
+    The bar is one of the weirdest in the land.  Mystical images float around the air.  Illusions of
+    fine furniture appear all around the room.
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3017
+      look: You see the lobby.
+    east:
+      to: tba:30:room:3019
+      look: You see the laboratory.
+
+"tba:30:room:3019":
+  name: The Mages' Laboratory
+  description: >
+    This is the Magical Experiments Laboratory.  Dark smoke-stained stones arch over numerous huge
+    oaken tables, most of these cluttered with strange- looking pipes and flasks.  The floor is covered with
+    half-erased pentagrams and even weirder symbols, and a blackboard in a dark corner has only been
+    partially cleaned, some painful-looking letters faintly visible.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:30:room:3018
+      look: You see the bar.
+
+"tba:30:room:3020":
+  name: The Armory
+  description: >
+    The armory has a wide assortment of armor displayed on the walls and in the windows. Helmets,
+    shields, and suits of armor are for sale. To the north is the main street. On the wall is a small note.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3013
+      look: You see the main street.
+  extras:
+  - keywords: [note]
+    text:
+      preformatted: |2
+           You can use these commands for trading:
+          value <item>     To get the price of an item in your possession.
+          sell <item>      To sell something.
+          buy <item>       To buy something (provided that the shop has it in store).
+          list             Gives you a listing of the shop's inventory.
+                WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+                                     NO HAGGLING
+
+"tba:30:room:3021":
+  name: The Entrance Hall To The Guild Of Swordsmen
+  description: >
+    The entrance hall to the Guild of Swordsmen.  A place where one has to be careful not to say
+    something wrong (or right).  To the east is the bar and to the north is the main street.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3016
+      look: You see the main street.
+    east:
+      to: tba:30:room:3022
+      look: You see the swordsmen's bar, many noises comes from there.
+
+"tba:30:room:3022":
+  name: The Bar Of Swordsmen
+  description: >
+    The bar of swordsmen, once upon a time beautifully furnished.  But now the furniture is all around
+    you in small pieces.  To the south is the yard, and to the west is the entrance hall.
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3023
+      look: You see the practice yard.
+    west:
+      to: tba:30:room:3021
+      look: You see the entrance hall to the warriors' guild.
+
+"tba:30:room:3023":
+  name: The Tournament And Practice Yard
+  description: >
+    This is the practice yard of the fighters.  To the north is the bar. A well leads down into
+    darkness.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:30:room:3022
+      look: You see the bar.
+    down:
+      to: tba:70:room:7048
+      look: >
+        You can't see what is down there, it is too dark.  Looks like it would be impossible to climb back
+        up.
+
+"tba:30:room:3024":
+  name: The Eastern End Of Poor Alley
+  description: >
+    You are at the poor alley.  South of here is the Grubby Inn and to the east you see common square. 
+    The alley continues further west.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3025
+      look: You see the common square.
+    south:
+      to: tba:30:room:3048
+      look: You see the Inn.
+    west:
+      to: tba:30:room:3044
+      look: You see the poor alley.
+
+"tba:30:room:3025":
+  name: The Common Square
+  description: >
+    The common square, people pass you, talking to each other.  To the west is the poor alley and to
+    the east is the dark alley.  To the north, this square is connected to the market square.  From the
+    south you notice a nasty smell.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3014
+      look: You see the market square.
+    east:
+      to: tba:30:room:3026
+      look: You see the dark alley.
+    south:
+      to: tba:30:room:3030
+      look: You see the city dump.
+    west:
+      to: tba:30:room:3024
+      look: You see Poor Alley.
+
+"tba:30:room:3026":
+  name: The Dark Alley
+  description: >
+    The dark alley, to the west is the common square and to the south is the Guild of Thieves.  The
+    alley continues east.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3045
+      look: The alley continues east.
+    south:
+      to: tba:30:room:3027
+      look: You see the entrance to the thieves' guild.
+    west:
+      to: tba:30:room:3025
+      look: You see the common square.
+  extras:
+  - keywords: [guild]
+    text: It is the thieves' guild, don't enter if you care about your health or money.
+
+"tba:30:room:3027":
+  name: The Entrance Hall To The Guild Of Thieves
+  description: >
+    The entrance hall to the thieves' and assassins' guild.  A place where you can lose both your life
+    and your money, if you are not careful.  To the north is the dark alley and to the east is the
+    thieves' bar.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3026
+      look: You see the alley.
+    east:
+      to: tba:30:room:3028
+      look: You see the thieves bar, where everything disappears.
+
+"tba:30:room:3028":
+  name: The Thieves' Bar
+  description:
+  - >
+    The bar of the thieves.  Once upon a time this place was beautifully furnished, but now it seems
+    almost empty.  To the south is the yard, and to the west is the entrance hall.
+  - (Maybe the furniture has been stolen?!)
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3029
+      look: You see the secret yard.
+    west:
+      to: tba:30:room:3027
+      look: You see the entrance hall to the thieves' guild.
+  extras:
+  - keywords: [furniture]
+    text: As you look at the furniture, the chair you sit on disappears.
+
+"tba:30:room:3029":
+  name: The Secret Yard
+  description: >
+    The secret practice yard of thieves and assassins.  To the north is the bar.  A well leads down
+    into darkness.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:30:room:3028
+      look: You see the bar.
+    down:
+      to: tba:70:room:7043
+      look: >
+        You can't see what is down there, it is too dark.  Looks like it would be impossible to climb back
+        up.
+
+"tba:30:room:3030":
+  name: The Dump
+  description: >
+    The dump, where the people from the city drop their garbage.  Through the garbage you can see a
+    large junction of pipes, looks like the entrance to the sewer system.  North of here you see the common
+    square.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:30:room:3025
+      look: You see the common square.
+    down:
+      to: tba:70:room:7030
+      look: You see the sewers.
+      door:
+        keywords: [grate]
+        kind: pickproof
+        key: tba:30:obj:3005
+
+"tba:30:room:3031":
+  name: The Pet Shop
+  description: >
+    The Pet Shop is a small crowded store, full of cages and animals of various sizes.  There is a sign
+    on the wall.
+  sector: inside
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3015
+      look: You see the main street.
+  extras:
+  - keywords: [sign]
+    text: >
+      The sign reads: Use 'List' to see the available pets. Use 'Buy <pet>' to buy yourself a pet.
+      Instructions for having pets: You can use 'order <pet> <instructions>' to order your pets around. If you
+      abuse your pet, it will no longer regard you as its master. If you have several pets you may use 'order
+      followers <instructions>' You can name the pet you buy with: 'buy <pet> <name>' Regards, The
+      Shopkeeper
+
+"tba:30:room:3032":
+  name: PETSHOP STOREROOM
+  description: >
+    Make two rooms and some pets.  The rooms MUST be sequential.  If the first room is 315 then the
+    second must be 316.  The second room is known as the storeroom.  All that is required in the storeroom
+    is to load one of each mob you wish to be a pet.  This room can not have any exits and will never be
+    used by mortals.  Although a pet shopkeeper is not required it is recommended.  After all of this is
+    done ask your coder to implement the petshop.  It will not work until the code is changed and the MUD
+    is rebooted.  The cost of pets is 300 times their level.
+  sector: inside
+  flags: [private, godroom]
+
+"tba:30:room:3033":
+  name: The Magic Shop
+  description: >
+    Behind the counter you see various items, neatly placed in racks, presumably most of them are magic.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    south:
+      to: tba:30:room:3012
+      look: You see the main street.
+
+"tba:30:room:3040":
+  name: Inside The West Gate Of Midgaard
+  description: >
+    You are by two small towers that have been built into the city wall and connected with a footbridge
+    across the heavy wooden gate.  Main Street leads east and Wall Road leads south from here.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3012
+      look: You see Main Street.
+    south:
+      to: tba:30:room:3042
+      look: >
+        You see the road running along the inner side of the city wall.  You notice that it is called Wall
+        Road.
+    west:
+      to: tba:30:room:3052
+      look: The city gate is to the west.
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:31:obj:3112
+  extras:
+  - keywords: [bridge, footbridge]
+    text: >
+      It is too high up to reach but it looks as if one easily could walk across it from one tower to the
+      other.
+  - keywords: [gate]
+    text: >
+      It is a set of very big double doors made from hard wood.  They have been reinforced with large
+      iron bands to make them even more sturdy.  One of the doors is equipped with a very big lock.
+  - keywords: [tower, towers]
+    text: >
+      Both of the towers are built from large gray rocks that have been fastened to each other with some
+      kind of mortar, just like the city wall.
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3041":
+  name: Inside The East Gate Of Midgaard
+  description: >
+    You are by two small towers that have been built into the city wall and connected with a footbridge
+    across the heavy wooden gate.  Main Street leads west from here.  To the south you see the Water
+    Shop.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3053
+      look: You see the city gate.
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:31:obj:3112
+    south:
+      to: tba:30:room:3058
+      look: You see the water shop.
+    west:
+      to: tba:30:room:3016
+      look: You see Main Street.
+  extras:
+  - keywords: [bridge, footbridge]
+    text: >
+      It is too high up to reach but it looks as if one easily could walk across it from one tower to the
+      other.
+  - keywords: [gate]
+    text: >
+      It is a set of very big double doors made from hard wood.  They have been reinforced with large
+      iron bands to make them even more sturdy.  One of the doors is equipped with a very big lock.
+  - keywords: [tower, towers]
+    text: >
+      Both of the towers are built from large gray rocks that have been fastened to each other with some
+      kind of mortar, just like the city wall.
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3042":
+  name: Wall Road
+  description: >
+    You are walking next to the western city wall.  The road continues further south and the city gate
+    is just north of here.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3040
+      look: You see the city gate.
+    south:
+      to: tba:30:room:3043
+      look: The road continues further south.
+  extras:
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3043":
+  name: Wall Road
+  description: >
+    You are walking next to the western city wall.  Wall Road continues further north and south.  A
+    small, poor alley leads east. Some letters have been written on the wall here.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3042
+      look: The road continues further north.
+    east:
+      to: tba:30:room:3044
+      look: Poor Alley leads east.
+    south:
+      to: tba:30:room:3047
+      look: The road continues further south.
+  extras:
+  - keywords: [wall, writing, letters]
+    text: It says 'Who watches the watchmen?  '
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3044":
+  name: Poor Alley
+  description: You are on Poor Alley, which continues further east.  You see the city wall to the west.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3024
+      look: The alley leads east.
+    west:
+      to: tba:30:room:3043
+      look: The alley leads west.
+
+"tba:30:room:3045":
+  name: The Dark Alley At The Levee
+  description: >
+    You are standing in the alley which continues east and west.  South of here you see the levee.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3046
+      look: The alley leads east.
+    south:
+      to: tba:30:room:3049
+      look: You see the levee.
+    west:
+      to: tba:30:room:3026
+      look: The alley leads west.
+
+"tba:30:room:3046":
+  name: The Eastern End Of The Alley
+  description: >
+    You are standing at the eastern end of the alley, the city wall is just east, blocking any further
+    movement.  A small warehouse is directly south of here.
+  sector: city
+  exits:
+    south:
+      to: tba:30:room:3050
+      look: You see the warehouse.
+    west:
+      to: tba:30:room:3045
+      look: You see the alley.
+
+"tba:30:room:3047":
+  name: Wall Road
+  description: >
+    You are standing on the road next to the western city wall, which continues north.  South of here
+    is a bridge across the river.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3043
+      look: You see the road.
+    south:
+      to: tba:30:room:3051
+      look: You see the bridge.
+  extras:
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3048":
+  name: Grubby Inn
+  description: >
+    You are inside the old Grubby Inn.  This place has not been cleaned for several decades; vile
+    smells make you dizzy.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3024
+      look: You see the alley.
+
+"tba:30:room:3049":
+  name: The Levee
+  description: >
+    You are at the levee.  South of here you see the river gently flowing west. The river bank is very
+    low making it possible to enter the river.
+  sector: city
+  flags: [no_magic]
+  exits:
+    north:
+      to: tba:30:room:3045
+      look: You see the alley.
+    south:
+      to: tba:32:room:3203
+      look: You see the river flowing west.
+
+"tba:30:room:3050":
+  name: The Deserted Warehouse
+  description: You are inside the warehouse.  The room is decorated with various old items from ships.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3046
+      look: You see the alley.
+
+"tba:30:room:3051":
+  name: On The Bridge
+  description: >
+    You are standing on the stone bridge crosses the river.  The bridge is built out from the western
+    city wall and the river flows west through an opening in the wall ten feet below the bridge.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3047
+      look: You see the road.
+    south:
+      to: tba:31:room:3100
+      look: You see the Concourse.
+  extras:
+  - keywords: [bridge]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar,
+      just like the wall.
+  - keywords: [opening]
+    text: You cannot really see it from here as it is somewhere beneath your feet.
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3052":
+  name: Outside The West Gate Of Midgaard
+  description: >
+    You are by two small towers that have been built into the city wall and connected with a footbridge
+    across the heavy wooden gate.  To the west you can see the edge of a big forest.
+  sector: city
+  exits:
+    east:
+      to: tba:30:room:3040
+      look: The city gate is to the east.
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:31:obj:3112
+    west:
+      to: tba:60:room:6092
+      look: The forest edge is to the west.
+  extras:
+  - keywords: [bridge, footbridge]
+    text: >
+      It is too high up to reach but it looks as if one easily could walk across it from one tower to the
+      other.
+  - keywords: [gate]
+    text: >
+      It is a set of very big double doors made from hard wood.  They have been reinforced with large
+      iron bands to make them even more sturdy.  One of the doors is equipped with a very big lock.
+  - keywords: [tower, towers]
+    text: >
+      Both of the towers are built from large gray rocks that have been fastened to each other with some
+      kind of mortar, just like the city wall.
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3053":
+  name: Outside The East Gate Of Midgaard
+  description: >
+    You are by two small towers that have been built into the city wall and connected with a footbridge
+    across the heavy wooden gate.  To the east the plains stretch out in the distance.
+  sector: city
+  exits:
+    east:
+      to: tba:35:room:3503
+      look: You see the plains.
+    west:
+      to: tba:30:room:3041
+      look: You see the city gate.
+      door:
+        keywords: [gate]
+        kind: door
+        key: tba:31:obj:3112
+  extras:
+  - keywords: [bridge, footbridge]
+    text: >
+      It is too high up to reach but it looks as if one easily could walk across it from one tower to the
+      other.
+  - keywords: [gate]
+    text: >
+      It is a set of very big double doors made from hard wood.  They have been reinforced with large
+      iron bands to make them even more sturdy.  One of the doors is equipped with a very big lock.
+  - keywords: [tower, towers]
+    text: >
+      Both of the towers are built from large gray rocks that have been fastened to each other with some
+      kind of mortar, just like the city wall.
+  - keywords: [wall]
+    text: >
+      It is built from large gray rocks that have been fastened to each other with some kind of mortar. 
+      It is far too high to climb.
+
+"tba:30:room:3054":
+  name: By The Temple Altar
+  description: >
+    You are by the temple altar in the northern end of the Temple of Midgaard. A huge altar made from
+    white polished marble dominates this part of the temple. Towering behind the altar is a ten foot tall
+    sitting statue of Odin, the King of the Gods. To the north, steps lead out the back of the temple
+    towards the countryside.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:30:room:3059
+      look: You see the vast Midgaard countryside.
+    south:
+      to: tba:30:room:3001
+      look: You see the southern end of the temple.
+  extras:
+  - keywords: [altar]
+    text: >
+      Even though the altar is more than ten feet long it appears to be made from a single block of white
+      virgin marble.
+  - keywords: [statue, odin, king, god]
+    text: >
+      The statue represents the one-eyed Odin sitting on a his throne.  He has long, gray hair and beard
+      and a strict look on his face.  On top of the throne, just above his shoulders, his two ravens Hugin
+      and Munin are sitting and at his feet are his wolves Gere and Freke.
+
+"tba:30:room:3058":
+  name: Ye Olde Water Shoppe
+  description: >
+    You are standing in the center of a small wooden shop whose walls are covered with racks upon racks
+    of water jugs.  Several large barrels with spigots are stacked in the corner.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:30:room:3041
+      look: You see the East Gate.
+
+"tba:30:room:3059":
+  name: Behind The Temple Altar
+  description: >
+    You are on a dirt path leading away from the Temple Altar which is south of here.  To the north,
+    the path continues through the lush contryside of Midgaard towards the Dragonhelm Mountains far off to
+    the north.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3060
+      look: You see the lush, green countryside of Midgaard.
+    south:
+      to: tba:30:room:3054
+      look: You see the Temple Altar.
+
+"tba:30:room:3060":
+  name: The Great Field Of Midgaard
+  description:
+  - >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the north, east, and west; the busy city of Midgaard lies to the south.  All
+    around you is healthy green grass and an occasional large oak tree.  The sun feels wonderful on your
+    face and a pleasant wind blows through your hair.  Birds chirp quietly to themselves and you can smell
+    the faint scent of flowers and freshly cut grass.  You feel like you could lie down in the grass and
+    stay here forever, surrounded by powerful beauty in all directions.
+  - The path you are on continues north through the field and south back to Midgaard.
+  sector: city
+  exits:
+    north:
+      to: tba:30:room:3061
+      look: You see more of the path through the Great Field.
+    south:
+      to: tba:30:room:3059
+      look: You see the path which goes back to Midgaard.
+
+"tba:30:room:3061":
+  name: The Great Field Of Midgaard
+  description:
+  - >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the north, east, and west; the busy city of Midgaard lies to the south.  All
+    around you is healthy green grass and an occasional large oak tree.  The sun feels wonderful on your
+    face and a pleasant wind blows through your hair.  Birds chirp quietly to themselves and you can smell
+    the faint scent of flowers and freshly cut grass.  You feel like you could lie down in the grass and
+    stay here forever, surrounded by powerful beauty in all directions.
+  - >
+    There is a strange structure on the eastern side of the path.  A small dirt path splits off of the
+    main path and leads off to the west.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:30:room:3065
+      look: The path continues northwards bringing you ever closer to the Dragonhelm Mountains.
+    east:
+      to: tba:186:room:18600
+      look: There is a strange structure to the east on the edge of the trail.
+    south:
+      to: tba:30:room:3060
+      look: You see more of the Field.
+    west:
+      to: tba:30:room:3066
+      look: There is a strange path leading towards a rusty gate to the west.
+
+"tba:30:room:3062":
+  name: The Post Office
+  description: >
+    You are in the central post office for Midgaard.  Piles of assorted mail lay untouched in the
+    corners, collecting cobwebs.  Several large crates have been pried open by curious customs agents, and are
+    now stacked along the west wall, hiding plenty of 'WANTED' posters. There is a sign posted on the
+    wall here.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:30:room:3006
+      look: You see the entrance to the Grunting Boar Inn and Tavern.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           **********************************************************
+           *                                                        *
+           *    Mail Instructions:                                  *
+           *                                                        *
+           *      To send a note to someone:                        *
+           *         MAIL <playername>                              *
+           *                                                        *
+           *      To see if you have any mail:                      *
+           *         CHECK                                          *
+           *                                                        *
+           *      To get the Postmaster to give you your mail:      *
+           *         RECEIVE                                        *
+           *                                                        *
+           *         Stamps cost 150 coins per letter               *
+           *         Type 'HELP MAIL' for more info                 *
+           **********************************************************
+  - keywords: [letters, envelopes, assorted]
+    text: >
+      Envelopes of all sizes are heaped into hugh piles around the room.  As you look closer, you see a
+      letter that you had posted a full week ago, laying unnoticed and slightly rat-chewed towards the
+      bottom of the pile.
+  - keywords: [cobwebs]
+    text: They seem to cover everything here, even the Postmaster himself.
+  - keywords: [crates, opened, large]
+    text: >
+      As you know, it is illegal to send contraband items through the Midgaard Mail.  The customs agents
+      use this as a great excuse to seize liquor, rare spices, and just about anything they might find
+      useful or profitable.
+  - keywords: [WANTED, posters, poster, wall]
+    text: >
+      Faces of various known Killers and Thieves can barely be seen behind the crates on the west wall. 
+      Some of them look quite familar, sorta like that guy who you saw in the Reception a minute ago... 
+      But then again, they are rather hard to see past the crates.
+
+"tba:30:room:3063":
+  name: The Midgaard Donation Room
+  description: >
+    You are in a small, undecorated room just off of the main temple.  There are a couple of small
+    wooden benches here where people occasionally sit while they wait for items to appear.  The temple is to
+    the west.
+  sector: city
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    west:
+      to: tba:30:room:3001
+      look: The busy temple is back west.
+
+"tba:30:room:3064":
+  name: The Cryogenic Center
+  description: >
+    You are standing in an impossibly white sterile room with cylindrical body-length canisters lined
+    up against the walls.  The Reception is to the south.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:30:room:3008
+      look: The Reception is to the south.
+
+"tba:30:room:3065":
+  name: The Great Field Of Midgaard
+  description:
+  - >
+    You are walking on a wide dirt path through the lush, green, fresh Midgaard countryside.  You can
+    see to the horizon to the north, east, and west; the busy city of Midgaard lies to the south.  All
+    around you is healthy green grass and an occasional large oak tree.  The sun feels wonderful on your
+    face and a pleasant wind blows through your hair.  Birds chirp quietly to themselves and you can smell
+    the faint scent of flowers and freshly cut grass.  You feel like you could lie down in the grass and
+    stay here forever, surrounded by powerful beauty in all directions.
+  - >
+    The way north appears to be blocked by a large plot device and you cannot see any way around it.
+  sector: field
+  exits:
+    north:
+      look: >
+        Unfortunately the way north is blocked by a large plot device and there does not seem to be any way
+        around it.
+    south:
+      to: tba:30:room:3061
+      look: >
+        The path continues through the field to the south past an odd structure on the eastern side of the
+        path.
+  extras:
+  - keywords: [plot, device]
+    text: >
+      What more is a plot device than something to block a certain direction for reasons beyond your
+      comprehension.
+
+"tba:30:room:3066":
+  name: The Dirt Path
+  description:
+  - >
+    You are walking along a narrow dirt path through the lush, green, fresh Midgaard countryside.  You
+    can see to the horizon to the north and east; the busy city of Midgaard lies to the south.  All
+    around you is healthy green grass and an occasional large oak tree.  The sun feels wonderful on your face
+    and a pleasant wind blows through your hair.  Birds chirp quietly to themselves and you can smell the
+    faint scent of flowers and freshly cut grass.  You feel like you could lie down in the grass and
+    stay here forever, surrounded by powerful beauty in all directions.
+  - There is a large rusty gate sitting in a stone archway just to the west.
+  sector: field
+  exits:
+    east:
+      to: tba:30:room:3061
+      look: The path meets up with a larger path just to the east.
+    west:
+      to: tba:36:room:3600
+      look: There is a large rusty gate just to the west.

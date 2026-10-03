@@ -1,0 +1,560 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 288.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:288:obj:28801":
+  type: weapon
+  keywords: [comet's, tail]
+  short: a comet's tail
+  long: A long, slender whip lies here.
+  flags: [glow, hum]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: whip
+  weight: 9
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:288:obj:28802":
+  type: armor
+  keywords: [arm, hercules]
+  short: the Titanic Arm plates of Hercules
+  long: Arm plates of the Zodiac lie here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, arms]
+  values:
+    armor: 6
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [arm]
+    text: These mighty armors have been worn by this immortal, since the ancient time.
+
+"tba:288:obj:28804":
+  type: armor
+  keywords: [belt, orion]
+  short: the Titanic Belt of Orion
+  long: A belt of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, waist]
+  values:
+    armor: 9
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [belt]
+    text: You can immediately see that it belongs to Orion, from the three stars engraved on it.
+
+"tba:288:obj:28805":
+  type: staff
+  keywords: [skull, draco]
+  short: an ugly skull of Draco
+  long: A massive skull of a dead Draco lies here.
+  flags: [hum, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [15, 5, 5, 44]
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:288:obj:28806":
+  type: armor
+  keywords: [fleece, aries]
+  short: the Titanic Fleece of Aries
+  long: A fleece of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, neck]
+  values:
+    armor: 9
+  weight: 9
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fleece]
+    text: From a look it resembles the Golden Fleece that exists in the Greek myths.
+
+"tba:288:obj:28807":
+  type: armor
+  keywords: [hoof, taurus]
+  short: the Titanic Hoof of Taurus
+  long: A hoof of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 3
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 50
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [hoof]
+    text: It is with these hooves that Taurus can stand against Orion's attacks.
+
+"tba:288:obj:28808":
+  type: armor
+  keywords: [mask, gemini]
+  short: the Titanic Mask of Gemini
+  long: A mask of the Zodiac lies here.
+  flags: [glow, magic, no_drop, anti_evil]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [mask]
+    text: >
+      You notice the mask has got two faces, one smiling and the other crying. You don't know which way
+      you should wear it.
+
+"tba:288:obj:28809":
+  type: armor
+  keywords: [shell, cancer]
+  short: the Titanic Shell of Cancer
+  long: A shell of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  extras:
+  - keywords: [shell]
+    text: >
+      A shell which is dented in the middle, resulting from the Hercules' mighty pound when the Crab was
+      still an enemy of Hercules in ancient times.
+
+"tba:288:obj:28810":
+  type: armor
+  keywords: [skin, leo]
+  short: the Titanic Skin of Leo
+  long: A skin of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [skin]
+    text: A skin made of metal, which was worn by Hercules during his Ten Labours.
+
+"tba:288:obj:28811":
+  type: armor
+  keywords: [bracelet, virgo]
+  short: the Titanic Bracelet of Virgo
+  long: A bracelet of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, wrist]
+  values:
+    armor: 4
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [bracelet]
+    text: A bracelet of purity and youth, only worn by selected virgins.
+
+"tba:288:obj:28812":
+  type: armor
+  keywords: [scale, libra]
+  short: the Titanic Scale of Libra
+  long: A shield of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: hit
+    modifier: 15
+  extras:
+  - keywords: [scale]
+    text: It is a shield of justice, used in the ancient battle against injustice.
+
+"tba:288:obj:28813":
+  type: armor
+  keywords: [scale, libra]
+  short: the Titanic Scale of Libra
+  long: A shield of the Zodiac lies here.
+  flags: [hum, magic, no_drop]
+  wear: [take, shield]
+  values:
+    armor: 0
+  weight: 15
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 6
+  - apply: hit
+    modifier: -30
+  extras:
+  - keywords: [scale]
+    text: It is a shield of injustice, it picks on the innocent.
+
+"tba:288:obj:28814":
+  type: weapon
+  keywords: [sting, scorpio]
+  short: the Sting of Scorpio
+  long: Sting of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 4d4
+    attack: sting
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 4
+  extras:
+  - keywords: [sting]
+    text: This dreadful weapon put a lot of mortals to death before Scorpio was banished.
+
+"tba:288:obj:28815":
+  type: wand
+  keywords: [arrow, sagittarius]
+  short: the Arrow of Sagittarius
+  long: The Arrow of Sagittarius lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [10, 10, 10, 30]
+  weight: 7
+  cost: 500
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [arrow]
+    text: It's an arrow of lightning; it will never miss any target.
+
+"tba:288:obj:28816":
+  type: weapon
+  keywords: [bow, sagittarius]
+  short: the Titanic Bow of Sagittarius
+  long: The Titanic Bow of Sagittarius lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 2d9
+    attack: blast
+  weight: 20
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [bow]
+    text: The gigantic bow used by the Archer; it is a very powerful weapon.
+
+"tba:288:obj:28817":
+  type: armor
+  keywords: [horns, capricorn]
+  short: the Titanic Horns of Capricorn
+  long: A pair of horns of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, hands]
+  values:
+    armor: 4
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [horn]
+    text: >
+      These strange horns are the work of gods, shaped to fit on hands.  They look powerful indeed.
+
+"tba:288:obj:28818":
+  type: staff
+  keywords: [vessel, aquarius]
+  short: the Ancient Vessel of Aquarius
+  long: A vessel of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [10, 5, 5, 43]
+  weight: 12
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [vessel]
+    text: This vessel has been carried by the Water Bearer ever since she came to the Zodiac.
+
+"tba:288:obj:28819":
+  type: armor
+  keywords: [tail, pisces]
+  short: the Titanic Tail of Pisces
+  long: A fish tail of the Zodiac lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, legs]
+  values:
+    armor: 10
+  weight: 10
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: dex
+    modifier: -2
+  extras:
+  - keywords: [tail]
+    text: >
+      This tail can actually be worn by mortals somehow as leggings ...  Another work of the gods.
+
+"tba:288:obj:28820":
+  type: armor
+  keywords: [ring, dignity]
+  short: the Ring of Dignity
+  long: A ring of specialty lies here.
+  flags: [glow, hum, invisible, magic, anti_evil]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 3
+  cost: 2000
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [ring]
+    text: This ring belongs to Cassiopeia, queen of the Universe.  Mortals, do not touch!
+
+"tba:288:obj:28821":
+  type: light
+  keywords: [sceptre, might]
+  short: the Sceptre of Might
+  long: A sceptre of interest lies here.
+  flags: [glow, hum, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 4
+  cost: 2000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [sceptre]
+    text: You'd better give it back, or the king of the Universe will punish you.
+
+"tba:288:obj:28822":
+  type: armor
+  keywords: [ring, universe]
+  short: the ring of the universe
+  long: Here lies a fortune ... a small ring of power.
+  flags: [glow, hum, invisible, magic, bless]
+  wear: [take, finger]
+  values:
+    armor: 4
+  weight: 3
+  cost: 4000
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 15
+  - apply: hit
+    modifier: 30
+  extras:
+  - keywords: [ring]
+    text: It conceals the power of the universe.
+
+"tba:288:obj:28823":
+  type: weapon
+  keywords: [great, dipper]
+  short: the Great Dipper of the Skies
+  long: A dazzling white object lies on the ground.
+  flags: [glow, hum, invisible, magic, bless]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: crush
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:288:obj:28824":
+  type: key
+  keywords: [spring, shoot]
+  short: a spring shoot
+  long: A shoot grows here, covered with dew.
+  flags: [glow, hum]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:288:obj:28825":
+  type: key
+  keywords: [summer, flower]
+  short: a summer flower
+  long: A flower grows here, waiting to be picked up.
+  flags: [glow, hum]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:288:obj:28826":
+  type: key
+  keywords: [autumn, leaf]
+  short: an autumn leaf
+  long: A leaf lies here, as if just fallen from a tree.
+  flags: [glow, hum]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:288:obj:28827":
+  type: key
+  keywords: [winter, branch]
+  short: a winter branch
+  long: A branch lies here, still covered with snow.
+  flags: [glow, hum]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:288:obj:28828":
+  type: trash
+  keywords: [chains, andromeda]
+  short: chains of Andromeda
+  long: Some chains lie on the floor.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chains]
+    text: They certainly look important!
+
+"tba:288:obj:28829":
+  type: other
+  keywords: [plinth, plaque]
+  short: a plinth
+  long: A plith, with an engraved plaque, sits on a table.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [plinth, plaque]
+    text:
+    - >
+      A wooden base holds a glowing crystal ball.  An engraved brass plaque is attached to the plinth. 
+      The plaque reads:
+    - The galaxy within this crystal ball was created by Doctor of EnvyMUD.
+
+"tba:288:obj:28830":
+  type: other
+  keywords: [crystal, ball, crystalball]
+  short: the crystal ball
+  long: A crystal ball sits on the plinth.
+  flags: [glow]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

@@ -1,0 +1,326 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 242.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:242:mob:24200":
+  keywords: [cityguard, guard]
+  short: the cityguard
+  long: A cityguard stands here, watching you intently.
+  description: >
+    The guard looks very strong.  He looks to be about 30 years of age, and is wearing the standard
+    guard uniform.  He'd do anything to protect the citizens of Midgaard.
+  level: 7
+  sex: male
+  alignment: 1000
+  flags: [scavenger, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24201":
+  keywords: [mayor]
+  short: the Mayor
+  long: The Mayor is walking around here, inspecting the city.
+  description: He is a stocky, middle-aged man with thin, gray hair.
+  level: 7
+  sex: male
+  alignment: 1000
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:242:mob:24202":
+  keywords: [bank, manager]
+  short: the Bank Manager
+  long: The Bank Manager is here, watching your every move.
+  description: >
+    The bank manager runs this place.  He makes lots of money, and spends his time counting other
+    people's money.  He likes money.
+  level: 7
+  sex: male
+  alignment: -350
+  flags: [sentinel, aware, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  abilities:
+    str: 18
+    int: 18
+    wis: 18
+    dex: 18
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24203":
+  keywords: [theater, manager]
+  short: the theater manager
+  long: The theater manager is here, looking bored.
+  description: >
+    The theater manager stares back at you.  He's a balding older man, and he wears a cheap looking
+    suit.  He expects that you've bought tickets to tonight's performance.
+  level: 6
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory, no_charm]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  abilities:
+    str: 15
+    int: 15
+    wis: 15
+    dex: 15
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24204":
+  keywords: [usher]
+  short: the usher
+  long: A young looking usher is here, showing you to your seat.
+  description: >
+    This usher looks quite young.  His job is to make sure people have their tickets, and that they sit
+    down during the play.  Due to his small size, you can't imagine how he'd enforce these rules if
+    somebody resisted.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24205":
+  keywords: [computer, salesman]
+  short: the computer salesman
+  long: A computer salesman is here, blabbering about a new technology.
+  description: >
+    This computer salesman obviously doesn't know what he's talking about. He's busy telling you about
+    all the great features of some OEM PC.  You try to ask him a question, but he raises had hand to
+    silence you, and continues talking.  Oh well.
+  level: 5
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24206":
+  keywords: [clothing, salesman]
+  short: the clothing salesman
+  long: A clothing salesman is here, waiting to serve you.
+  description: >
+    This clothing salesman is standing here, watching you.  He's wearing an expensive suit, and his
+    hair is slicked back.
+  level: 7
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24207":
+  keywords: [waitress]
+  short: the waitress
+  long: A waitress is here, ready to bring you some food.
+  description: >
+    This waitress looks tired.  She seems distracted, frequently looking out the windows.  She hurries
+    from table to table, pouring coffee to the different patrons.
+  level: 5
+  sex: female
+  alignment: 900
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24208":
+  keywords: [stagehand, stage, hand]
+  short: the stagehand
+  long: A stagehand is here, waiting for something to do.
+  description: >
+    This stagehand looks bored.  He's wearing a pair of dark blue overalls, and he's got on a black
+    baseball cap.  He looks pretty strong.
+  level: 4
+  sex: male
+  alignment: 1000
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24209":
+  keywords: [actor]
+  short: the actor
+  long: An actor is here, studying his lines.
+  description: >
+    This actor looks quite busy.  He's reading his lines, and not paying much attention to you.
+  level: 5
+  sex: male
+  alignment: 1000
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24210":
+  keywords: [actress]
+  short: the actress
+  long: An actress is here, studying her lines.
+  description: >
+    This actress looks quite busy.  She's reading her lines, and not paying much attention to you.
+  level: 6
+  sex: female
+  alignment: 1000
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24211":
+  keywords: [snack, booth, attendant]
+  short: the snack booth attendant
+  long: A snack booth attendant is here, ready to serve you.
+  description: >
+    This snack booth attendant is tired of taking crap from ungrateful customers.  He looks like he's
+    going to snap soon.
+  level: 7
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24212":
+  keywords: [curler]
+  short: the curler
+  long: A curler is here, practicing his sliding technique.
+  description: >
+    This curler is busy practicing for tonight's game.  He's stretching, and trying to improve his
+    technique.  He doesn't look to scary.
+  level: 4
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:242:mob:24213":
+  keywords: [waitress]
+  short: the waitress
+  long: A waitress is here, ready to bring you some food.
+  description: >
+    This waitress looks tired.  She seems distracted, frequently looking out the windows.  She hurries
+    from table to table, pouring coffee to the different patrons.
+  level: 6
+  sex: female
+  alignment: 900
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing

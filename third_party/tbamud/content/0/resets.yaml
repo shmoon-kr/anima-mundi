@@ -1,0 +1,133 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 0.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:0:mob:34
+  room: tba:0:room:8
+  limit: 1
+- mob: tba:0:mob:29
+  room: tba:0:room:7
+  limit: 2
+- mob: tba:0:mob:24
+  room: tba:0:room:20
+  limit: 1
+  carry:
+  - object: tba:0:obj:46
+    limit: 99
+- mob: tba:0:mob:31
+  room: tba:0:room:89
+  limit: 1
+  carry:
+  - object: tba:0:obj:68
+    limit: 99
+- mob: tba:0:mob:18
+  room: tba:0:room:2
+  limit: 1
+- object: tba:12:obj:1228
+  room: tba:0:room:88
+  limit: 99
+- mob: tba:0:mob:1
+  room: tba:0:room:1
+  limit: 1
+- object: tba:0:obj:84
+  room: tba:0:room:90
+  limit: 1
+  contents:
+  - object: tba:0:obj:85
+    limit: 99
+- mob: tba:0:mob:29
+  room: tba:0:room:90
+  limit: 2
+- object: tba:0:obj:89
+  room: tba:0:room:90
+  limit: 99
+- mob: tba:0:mob:28
+  room: tba:0:room:6
+  limit: 2
+- mob: tba:0:mob:28
+  room: tba:0:room:93
+  limit: 2
+- object: tba:0:obj:89
+  room: tba:0:room:97
+  limit: 99
+- object: tba:0:obj:98
+  room: tba:0:room:99
+  limit: 1
+- mob: tba:0:mob:97
+  room: tba:0:room:99
+  limit: 1
+  carry:
+  - object: tba:0:obj:92
+    limit: 100
+  - object: tba:0:obj:97
+    limit: 100
+  - object: tba:0:obj:91
+    limit: 100
+  - object: tba:0:obj:90
+    limit: 100
+- mob: tba:0:mob:99
+  room: tba:0:room:99
+  limit: 1
+  equip:
+    wield:
+      object: tba:0:obj:99
+      limit: 100
+- mob: tba:0:mob:22
+  room: tba:0:room:91
+  limit: 2
+- mob: tba:0:mob:22
+  room: tba:0:room:98
+  limit: 2
+- mob: tba:0:mob:21
+  room: tba:0:room:4
+  limit: 2
+- mob: tba:0:mob:21
+  room: tba:0:room:92
+  limit: 2
+- mob: tba:0:mob:17
+  room: tba:0:room:3
+  limit: 2
+- mob: tba:0:mob:17
+  room: tba:0:room:94
+  limit: 2
+- mob: tba:0:mob:23
+  room: tba:0:room:95
+  limit: 2
+- mob: tba:0:mob:23
+  room: tba:0:room:5
+  limit: 2
+- mob: tba:0:mob:27
+  room: tba:0:room:96
+  limit: 2
+- mob: tba:0:mob:27
+  room: tba:0:room:17
+  limit: 2
+- mob: tba:0:mob:26
+  room: tba:0:room:22
+  limit: 1
+- object: tba:0:obj:47
+  room: tba:0:room:22
+  limit: 99
+- mob: tba:0:mob:25
+  room: tba:0:room:21
+  limit: 1
+- mob: tba:0:mob:16
+  room: tba:0:room:19
+  limit: 1
+- mob: tba:0:mob:14
+  room: tba:0:room:18
+  limit: 1
+removes:
+- room: tba:0:room:88
+  object: tba:12:obj:1228
+- room: tba:0:room:90
+  object: tba:0:obj:86
+- room: tba:0:room:90
+  object: tba:0:obj:84
+- room: tba:0:room:90
+  object: tba:0:obj:89
+- room: tba:0:room:97
+  object: tba:0:obj:89
+- room: tba:0:room:22
+  object: tba:0:obj:47

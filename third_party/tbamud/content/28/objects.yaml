@@ -1,0 +1,114 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 28.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:28:obj:2803":
+  type: weapon
+  keywords: [whip, newbie]
+  short: a newbie whip
+  long: A small whip, obviously made for those new to the game, is here.
+  flags: [no_donate, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: whip
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [whip, newbie]
+    text: It's a small whip, not made to last, but it'll hold a couple of days.
+
+"tba:28:obj:2804":
+  type: armor
+  keywords: [cloak, newbie]
+  short: a newbie cloak
+  long: A cloak, obviously made for those new to the game, is here.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  extras:
+  - keywords: [newbie, cloak]
+    text: >
+      This drap garment can be worn around the neck to protect an adventurer from the weather.  It
+      affords very little protection from anything else.
+
+"tba:28:obj:2805":
+  type: drinkcon
+  keywords: [water, canteen, newbie, water]
+  short: a canteen
+  long: A brand new canteen is here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: water
+    poisoned: false
+  weight: 15
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [water, canteen, newbie]
+    text: >
+      The canteen can hold only a few mouthfuls of water.  It would be handy to keep this canteen in case
+      you travel a short distance away from the clean waters of the town.
+
+"tba:28:obj:2806":
+  type: food
+  keywords: [porkchop, chop]
+  short: a pork chop
+  long: A side of pork has been cut into a pork chop here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 2
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [porkchop, chop]
+    text: >
+      This slab of meat looks quite appetizing.  Just brush off some of the dirt and grime first.
+
+"tba:28:obj:2807":
+  type: container
+  keywords: [purse]
+  short: a purse
+  long: A small purse has been dropped here.
+  wear: [take]
+  values:
+    capacity: 10
+    lock_flags: 5
+    corpse: false
+  weight: 10
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [purse]
+    text: A small purse for carrying a few items.  It cannot hold much, but it looks useful.
+
+"tba:28:obj:2808":
+  type: money
+  keywords: [coins, pile]
+  short: a small pile of coins
+  long: Some coins has been thrown here. - Should never be seen.
+  wear: [take]
+  values:
+    coins: 25
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coins, pile]
+    text: A small pile of coins, what luck you have to stumble upon such a thing.

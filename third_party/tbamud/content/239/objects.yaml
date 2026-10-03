@@ -1,0 +1,603 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 239.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:239:obj:23900":
+  type: trash
+  keywords: [dry, canteen]
+  short: a canteen
+  long: A once full canteen is dry now.
+  flags: [no_donate, no_drop, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [canteen]
+    text: >
+      The canteen is dry and cursed. It's not nice to kill poor defenseless bugbears. A weary travelling
+      bugbear canteen is empty.
+
+"tba:239:obj:23901":
+  type: weapon
+  keywords: [wooden, club, sasquatch]
+  short: a huge wooden club
+  long: A huge wooden club with two spikes on the end.
+  flags: [no_rent, no_donate]
+  wear: [take, wield]
+  values:
+    damage: 3d10
+    attack: bludgeon
+  weight: 5
+  cost: 300
+  rent: 3
+  level: 17
+  extras:
+  - keywords: [club]
+    text: >
+      The wooden club has sharp spikes protruding from the end of it.  Could definitely cause some damage
+      if it hit someone.
+
+"tba:239:obj:23902":
+  type: weapon
+  keywords: [sentinel, hammer]
+  short: a sentinel hammer
+  long: A Dwarven Sentinel's Hammer
+  flags: [glow, no_rent, no_donate, anti_evil, anti_thief, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 0d0
+    attack: hit
+  weight: 5
+  cost: 900
+  rent: 0
+  level: 17
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [hammer, sentinel]
+    text: >
+      A fine weapon crafted by the ancient dwarven weaponsmiths of NewHaven.  It once belonged to a
+      Dwarven Sentinel to help it guard the north face of the Southern Mountains from enemies of the NewHaven
+      Dwarves.
+
+"tba:239:obj:23903":
+  type: armor
+  keywords: [shield, sentinal, stone, dwarven]
+  short: a stone shield
+  long: A shield of stone manufactered by the finest dwarven stone cutters of NewHaven
+  flags: [glow, no_rent, no_donate, anti_evil, anti_warrior]
+  wear: [take, shield]
+  values:
+    armor: 3
+  weight: 2
+  cost: 900
+  rent: 0
+  level: 16
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [stone, shield]
+    text: >
+      Finely Dwarven crafted stone shield with unknow magical powers.  Was crafted centuries ago by
+      dwarven stone cutters for the Dwarven Sentinal in the Southern Mountains.
+
+"tba:239:obj:23904":
+  type: armor
+  keywords: [bark, helmet, ponderosa, pine]
+  short: a bark helm
+  long: A bark helm crafted by Ewts.
+  flags: [invisible, magic, anti_evil]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 900
+  rent: 200
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: mana
+    modifier: -20
+  extras:
+  - keywords: [bark, helm]
+    text: >
+      Helm of Bark from the root of an ancient ponderosa pine.  Crafted by ewts of old with long
+      forgotten forging skills and long lost spells of ewt sorcery
+
+"tba:239:obj:23910":
+  type: weapon
+  keywords: [club, stone, drow]
+  short: an obsidian club
+  long: A Drow's stone club.
+  flags: [bless]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: pound
+  weight: 3
+  cost: 500
+  rent: 5
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: move
+    modifier: -15
+  extras:
+  - keywords: [club, stone, drow, obsidian]
+    text: >
+      A very nice club chipped from obsidian by drow slaves in the drow mines. It seems to have some
+      maigical powers cast upon it.
+
+"tba:239:obj:23911":
+  type: armor
+  keywords: [boots, drow]
+  short: a pair of drow boots
+  long: A pair of Drow boots
+  flags: [glow, anti_good, anti_thief, anti_warrior]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 3
+  cost: 500
+  rent: 25
+  level: 15
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: cha
+    modifier: -2
+  - apply: move
+    modifier: 20
+  extras:
+  - keywords: [drow, boots]
+    text: >
+      Boots of the finest drow construction, with spider webbing padding and magical spells cast upon it
+      by the drow clerics.
+
+"tba:239:obj:23912":
+  type: armor
+  keywords: [black, cape, drow]
+  short: a black cape
+  long: A Drow's black cape
+  flags: [anti_thief, anti_warrior]
+  wear: [take, neck, about]
+  values:
+    armor: 1
+  weight: 2
+  cost: 500
+  rent: 10
+  level: 15
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: cha
+    modifier: -1
+  - apply: str
+    modifier: -1
+  extras:
+  - keywords: [cape, black, drow]
+    text: >
+      A drow cleric's cape of spider web.  It has been skillfully woven with a strange fabric and
+      interlaced with magical spells of the drow clerics.
+
+"tba:239:obj:23913":
+  type: weapon
+  keywords: [staff, drow]
+  short: a spider staff
+  long: A staff of spider silk woven with magical powers.
+  flags: [invisible, anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d10
+    attack: bludgeon
+  weight: 3
+  cost: 500
+  rent: 10
+  level: 15
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+  - apply: move
+    modifier: -10
+  extras:
+  - keywords: [spider, staff, drow]
+    text: A gray staff of spider silk woven into a staff by drow mages.  It has some magical powers
+
+"tba:239:obj:23914":
+  type: armor
+  keywords: [robe, drow, amber]
+  short: an amber robe
+  long: An amber black robe woven from spider silk.
+  flags: [magic, anti_thief, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 3
+  weight: 3
+  cost: 500
+  rent: 10
+  level: 15
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: hit
+    modifier: -10
+  extras:
+  - keywords: [amber, drow, robe]
+    text: >
+      Woven from spider silk by the Drow mages it is said to have some magical powers.  A long amber robe
+      of the finest Drow quality.  The mages wear it for protection and to religous ceremonies.
+
+"tba:239:obj:23915":
+  type: armor
+  keywords: [helmet, drow]
+  short: a drow helmet
+  long: A drow helmet with a spider emblem.
+  flags: [anti_good, anti_neutral, anti_mage, anti_cleric, anti_thief]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 200
+  rent: 5
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 15
+  - apply: cha
+    modifier: -2
+  extras:
+  - keywords: [drow, helmet]
+    text: >
+      A helmet of drow construction has a spider emblem on the brow.  Seems to have been woven with some
+      magical spells by a drow mage.
+
+"tba:239:obj:23916":
+  type: armor
+  keywords: [spider, web, collar]
+  short: a spider web collar
+  long: A drow spider web collar.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 2
+  cost: 200
+  rent: 8
+  level: 15
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: move
+    modifier: -7
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [spider, collar, drow]
+    text: A fine woven drow collar.  Constructed of spider web and woven with magical spells.
+
+"tba:239:obj:23917":
+  type: armor
+  keywords: [breastplate, plate, drow, dark]
+  short: a dark breastplate
+  long: A dark drow breastplate.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 5
+  cost: 400
+  rent: 5
+  level: 15
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [dark, drow, breastplate, plate]
+    text: >
+      A drow guard's breastplate made from a black metal.  Finely contructed by drow weaponsmiths and
+      offers good protection of the body.
+
+"tba:239:obj:23918":
+  type: armor
+  keywords: [drow, belt, guard]
+  short: a drow guard belt
+  long: A drow guard's belt woven with leather.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 1
+  cost: 200
+  rent: 3
+  level: 15
+  extras:
+  - keywords: [guard, belt, drow]
+    text: >
+      A leather drow guard's belt is woven with spider web and leather.  Hand made by the drow guards in
+      a method only know to them.
+
+"tba:239:obj:23919":
+  type: armor
+  keywords: [drow, guard, bracelet]
+  short: a drow bracelet
+  long: A drow guard's bracelet.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 2
+  cost: 300
+  rent: 3
+  level: 15
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: int
+    modifier: -1
+  extras:
+  - keywords: [drow, bracelet]
+    text: A drow bracelet is made of some shiny metal.  It offers good wrist protection.
+
+"tba:239:obj:23920":
+  type: armor
+  keywords: [black, silk, pants]
+  short: a pair of black silk pants
+  long: A pair of black silk pants.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 3
+  cost: 300
+  rent: 5
+  level: 15
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: -1
+  extras:
+  - keywords: [black, silk, pants]
+    text: >
+      A pair of black silk pants interwoven with spider web.  Crafted by drow guards and interwoven with
+      the dark magic of the drow.
+
+"tba:239:obj:23921":
+  type: armor
+  keywords: [guard, drow, boots]
+  short: a pair of drow boots
+  long: A black pair of guard boots.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 300
+  rent: 5
+  level: 15
+  affects:
+  - apply: move
+    modifier: 15
+  - apply: hit
+    modifier: -20
+  extras:
+  - keywords: [black, drow, boots]
+    text: >
+      A pair of finely crafted drow guard boots.  Sturdy and durable they are comfortable on the feet.
+
+"tba:239:obj:23922":
+  type: armor
+  keywords: [arm, band, drow, armband]
+  short: a drow armband
+  long: A drow guard's armband.
+  flags: [magic, anti_thief]
+  wear: [take, arms]
+  values:
+    armor: 1
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 15
+  extras:
+  - keywords: [arm, band, armband, drow, guard]
+    text: >
+      A finely crafted armband of drow construction.  Seems to be woven with strands of spider web,
+      leather, and metal links.
+
+"tba:239:obj:23923":
+  type: armor
+  keywords: [leg, leggings, leather, black, drow]
+  short: a pair of drow leggings
+  long: A pair of finely crafted drow leggings lays here.
+  flags: [magic, anti_good, anti_thief]
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 2
+  cost: 300
+  rent: 2
+  level: 15
+  extras:
+  - keywords: [leggings, leg, drow, guard, black]
+    text: >
+      A finely crafted pair of drow leggings offers good protection for the legs. They are made from
+      small metal rings interwoven with spider web and leather.
+
+"tba:239:obj:23924":
+  type: weapon
+  keywords: [rusty, sword]
+  short: a rusty sword
+  long: A rusty sword lies here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d10
+    attack: slash
+  weight: 3
+  cost: 300
+  rent: 3
+  level: 15
+  affects:
+  - apply: save_spell
+    modifier: 2
+  extras:
+  - keywords: [rusty, sword]
+    text: >
+      The sword was probably a good weapon at one time but now it has rusted and needs sharpening.  It is
+      well balanced and easy to use.  With a little care and polishing this weapon could be better.
+
+"tba:239:obj:23925":
+  type: weapon
+  keywords: [rusty, knife]
+  short: a rusty knife
+  long: A rusty knife lays here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 2d5
+    attack: pierce
+  weight: 2
+  cost: 300
+  rent: 2
+  level: 15
+  extras:
+  - keywords: [rusty, knife]
+    text: >
+      A long thin knife good for piercing armor.  Sturdy and well balanced it is not difficult to use. 
+      Rust has dulled the blade and would need care to return it to it's original luster.
+
+"tba:239:obj:23926":
+  type: armor
+  keywords: [crude, shield]
+  short: a crude shield
+  long: A crude shield with a blue dragon on it lays here.
+  flags: [glow]
+  wear: [take, shield]
+  values:
+    armor: 2
+  weight: 3
+  cost: 300
+  rent: 2
+  level: 15
+  affects:
+  - apply: dex
+    modifier: -1
+  - apply: ac
+    modifier: 2
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [crude, shield]
+    text: >
+      A crude shield of ancient times is round, hard to hold and easily broken. There is a blue dragon
+      emblem on the front of the worn, dented and thin face of the shield.
+
+"tba:239:obj:23927":
+  type: armor
+  keywords: [leather, halter]
+  short: a leather halter
+  long: A shabby leather halter lays in a pile here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 2
+  cost: 300
+  rent: 1
+  level: 12
+  extras:
+  - keywords: [shabby, leather, halter]
+    text: >
+      A leather halter is poorly contructed and offers little protection to the body.  Made from leather
+      then dyed black it is held together with metal rings.
+
+"tba:239:obj:23928":
+  type: armor
+  keywords: [leather, vest]
+  short: a leather vest
+  long: A leather vest is lying here.
+  flags: [anti_good]
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 2
+  cost: 300
+  rent: 3
+  level: 15
+  affects:
+  - apply: cha
+    modifier: -1
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [leather, vest]
+    text: A poorly crafted leather vest of elf skin.  Offers little protection to the body.
+
+"tba:239:obj:23929":
+  type: key
+  keywords: [key, obsidian]
+  short: an obsidian gate key
+  long: An obsidian key shines here.
+  flags: [hum, no_drop]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, obsidian]
+    text: >
+      The key is a finely crafted obisidian stone key that shines a black gleaming shine.  It emits some
+      strange sounds, and vibrates when touched.
+
+"tba:239:obj:23930":
+  type: other
+  keywords: [sign, crude]
+  short: a crude sign
+  long: A crude sign is scrawled here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign, crude]
+    text: GoBlinz OnnLee TrASSpassers wiLT B KiLtted DaT Meeens U Dunt Foller dis path
+
+"tba:239:obj:23931":
+  type: other
+  keywords: [green, sign]
+  short: a green sign
+  long: A green sign is posted next to the tree here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign, green]
+    text: >
+      Climb Tree at Own Risk Please do not feed the animals Please do not harm the birds Thank you

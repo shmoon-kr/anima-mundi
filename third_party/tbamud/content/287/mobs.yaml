@@ -1,0 +1,1660 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 287.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:287:mob:28700":
+  keywords: [innkeeper, reilly]
+  short: Reilly the Innkeeper
+  long: The innkeeper watches for customers and drinks imported Scotch.
+  description: >
+    Reilly doesn't keep this inn open by sitting and watching the goblins invade! He looks more like a
+    hobo than an innkeeper but you can at least see that he is wearing a huge Scotch sword at his side. 
+    He is also drinking from a huge bottle of Scotch whiskey, probably not the single-malt variety.
+  level: 30
+  sex: male
+  alignment: 200
+  flags: [sentinel, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: punch
+  abilities:
+    str: 18
+    str_add: 100
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28701":
+  keywords: [priest, pater, vinci]
+  short: Pater Vinci
+  long: Pater Vinci greets you as you pass by.
+  description: >
+    Pater Vinci did not bear a weapon in the good old days, but now the goblins ought to avoid him,
+    because the good priest fought for King Korbor before he took holy orders, and still carries a sturdy
+    club.
+  level: 15
+  sex: male
+  alignment: 900
+  flags: [aware, stay_zone, wimpy, memory, no_charm]
+  affects: [detect_align, protect_evil]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28702":
+  keywords: [sheriff, zeb]
+  short: Zeb Rykalp
+  long: Zeb Rykalp, sheriff of Ofingia, watches you closely.
+  description: >
+    You had better keep on Zeb's good side.  He has few qualms about roughing up the Midgaarders, and
+    is ever-vigilant for evil.
+  level: 15
+  sex: male
+  alignment: 700
+  flags: [scavenger, aware, stay_zone, aggr_evil, memory, no_charm]
+  affects: [detect_align]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28703":
+  keywords: [smith, dorig, dwarf]
+  short: Dorig Foehammer
+  long: Dorig the dwarf welds bars together with a 10 pound hammer.
+  description: >
+    He is too strong for you to beat easily in a fight, and if he had a beer or two in him Dorig would
+    be invincible.  At least, he would think himself invincible.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28704":
+  keywords: [carpenter, joel]
+  short: Joel Kreb
+  long: Joel Kreb, the village carpenter, rests with an axe close at hand.
+  description: >
+    That axe he has has a long spike opposite its blade, and you do not think it is intended for wood,
+    but for flesh and bone, particularly of goblin-kind.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28705":
+  keywords: [maxtrum, halfling, shopkeeper]
+  short: Maxtrum Holloknob
+  long: A stout halfling shopkeeper eyes your moneybag with a glinting eye.
+  description: >
+    Guard your wallet carefully!  Rumor has it that Maxtrum rarely runs out of money, which would be
+    wonderful, if only his customers didn't so often find their pockets lighter after leaving his store,
+    though they bought nothing.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28706":
+  keywords: [churt, elf, elven, alchemist]
+  short: Churt Agenris
+  long: An elven alchemist inhales the fumes deeply and sighs happily.
+  description: >
+    Churt notices you gagging as you enter his shop and peers at you with some surprise.  He is a
+    powerful wizard, having practiced such great spells as `Churt's Irresistible Retch' and `Word of Command:
+    Go away, I...  ' Well, never mind that one.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28707":
+  keywords: [dek, ranger, elf, elven, leatherworker]
+  short: Dek Shattershock
+  long: A retired elven ranger works here as a leatherworker.
+  description: >
+    Dek Shattershock- the name inspires fear in goblin and githyanki warrior alike!  You ought to be
+    scared, too, you shrimp.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28708":
+  keywords: [marya, woman, baker]
+  short: Marya the Baker
+  long: A young Ofintine woman kneads dough here.
+  description: >
+    She is not a noblewoman, but is a lady all the same.  After all, lady means `loaf-kneader' just as
+    lord means `loaf-ward' in the old Anglo- Saxon tongue. She has bashed more goblins with her rolling
+    pin than Jewish rye has caraway seeds.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28709":
+  keywords: [serathana, priestess, librarian]
+  short: Serathana the Guardian of Lore
+  long: A priestess watches you carefully.
+  description: >
+    This priestess is an old friend of Dek, Dorig, Churt, and Maxtrum.  They saved the world from
+    destruction, but there isn't much need for heroes in peacetime.  You can see Sara's long spear hung on the
+    wall where she can instantly reach it.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, detect_magic, sense_life, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28710":
+  keywords: [kelek, guard, captain]
+  short: Sir Kelek
+  long: Passing guards raise their visors in salute to Sir Kelek, their captain.
+  description: He did not reach this rank by staying close by the Newbie Zone.
+  level: 10
+  sex: male
+  alignment: 700
+  flags: [sentinel, aware, aggr_evil, memory, helper, no_charm]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28711":
+  keywords: [king, korbor]
+  short: King Korbor
+  long: Clad in bright mail and girt with a sword, King Korbor goes to war.
+  description: >
+    Once King Korbor sat in his lofty hall, but now he marches with his army to drive off the goblins
+    which threaten his realm.
+  level: 15
+  sex: male
+  alignment: 800
+  flags: [sentinel, aware, aggr_evil, memory, helper, no_charm]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28712":
+  keywords: [tim, thief, boy]
+  short: Tim the Thief
+  long: A small boy sneaks silently through the shadows.
+  description: Guard your money!  It is that dratted Tim!
+  level: 8
+  sex: male
+  alignment: 100
+  flags: [scavenger, aware, stay_zone, memory, no_sleep]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28713":
+  keywords: [sir, mischa]
+  short: Sir Mischa
+  long: Sir Mischa guards his town from evil creatures.
+  description: This knight could easily kill Curley GreenLeaf.
+  level: 10
+  sex: male
+  alignment: 700
+  flags: [stay_zone, aggr_evil, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28714":
+  keywords: [guard]
+  short: the Ofintine guard
+  long: A guard of Ofintinia patrolls his town.
+  description: A sturdy guardsman, loyal to King Korbor.
+  level: 6
+  sex: male
+  alignment: 400
+  flags: [stay_zone, aggr_evil, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28715":
+  keywords: [guard]
+  short: the Ofintine guard
+  long: An Ofintine guard watches the gate.
+  description: A sturdy guardsman, ever vigilant for evil.
+  level: 6
+  sex: male
+  alignment: 400
+  flags: [sentinel, aggr_evil, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28716":
+  keywords: [volunteer]
+  short: an Ofintine volunteer
+  long: An Ofintine volunteer patrolls his town.
+  description: He has taken up arms to fight the goblins.
+  level: 3
+  sex: male
+  alignment: 400
+  flags: [stay_zone, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28717":
+  keywords: [volunteer]
+  short: an Ofintine volunteer
+  long: A citizen of Ofinitine looks fierce and determined.
+  description: She has taken up arms to fight the goblins.
+  level: 3
+  sex: female
+  alignment: 400
+  flags: [stay_zone, helper]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28718":
+  keywords: [man]
+  short: a Lonoyan man
+  long: A man of Ofingia stands here.
+  description: He won't desert his town for a million goblins, all waving axes.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28719":
+  keywords: [woman]
+  short: a Lonoyan citizen
+  long: An Lonoyan woman walks through town.
+  description: Though the goblins poured in through every gate, she would stay here.
+  level: 2
+  sex: female
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28720":
+  keywords: [boy]
+  short: a small boy
+  long: A small boy runs around shouting at unseen foes.
+  description: He is ready for the goblins when they come!
+  level: 1
+  sex: male
+  alignment: 300
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28721":
+  keywords: [girl]
+  short: a young girl
+  long: A Lonoyan girl stands here.
+  description: You are sure she has killed many trolls and more goblins.
+  level: 1
+  sex: female
+  alignment: 300
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28722":
+  keywords: [big, dog]
+  short: the big dog
+  long: A huge dog runs about, tongue lolling out of his mouth in a silly way.
+  description: A big goofy retriever, with a rough, coarse black coat.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy, helper]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28723":
+  keywords: [dog]
+  short: Reilly's dog
+  long: You cringe in fear when a small black dog growls menacingly.
+  description: Reilly's miniature schnauzer looks tougher than a small dragon.
+  level: 6
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28724":
+  keywords: [farmer, man]
+  short: a Lonoyan farmer
+  long: A farmer strolls about town in his Sunday clothes.
+  description: >
+    As he walks past you, you see him stop and stare with an expression of recognition, changing to
+    anger.  Perhaps you left his gate open on the way here.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28725":
+  keywords: [dwarf]
+  short: a dwarf
+  long: A drunken Dwarf rests here, singing loud enough to wake the dead.
+  description: >
+    It takes more than a beer or two to intoxicate the sturdy mountain folk; he must have had enough to
+    stun a giant.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28726":
+  keywords: [hobbit]
+  short: a hobbit landowner
+  long: A fine fat gentlehobbit swaggers around, whistling merrily.
+  description: >
+    There aren't too many hobbits living in Lonoya, and he is most likely a visitor from the Shire.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28727":
+  keywords: [woman, barmaid, maid]
+  short: the bar maid
+  long: A lovely Lonoyan woman serves mead to Reilly's customers.
+  description: >
+    No one bothers her as she serves drinks, because they know that she has a dagger ready for anyone
+    who gets `fresh'.
+  level: 2
+  sex: female
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28728":
+  keywords: [man]
+  short: the old man
+  long: An old Lonoyan man sweeps the road clean.
+  description: >
+    Too old to wield a glaive, this man has taken upon himself the task of picking up the litter that
+    passerby drop in Lonoyan gutters.  Ofingia, the "Jewel of Lonoya", would not sparkle as it does in
+    Korbor's crown if he was not so busy.  The old man really hates adventurers who don't clean up after
+    themselves.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28729":
+  keywords: [goblin]
+  short: the goblin
+  long: A forest goblin roams Lonoya, arguing with himself.
+  description: >
+    He doesn't seem to notice you right away, but I wouldn't wait for him to stop talking and see you. 
+    Goblins hate strangers, especially if they are armed.
+  level: 4
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28730":
+  keywords: [goblin, raider]
+  short: the goblin
+  long: A goblin raider prowls Lonoya, looking for travellers to rob.
+  description: Stumpy-short but thick, green-skinned and great-headed.  Ugly, ain't he?
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28731":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin crouches in ambush here.
+  description: Another goblin, another battle, another notch in your newbie dagger.
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28732":
+  keywords: [goblin]
+  short: the goblin watchman
+  long: A goblin stands watch here.
+  description: Goblins, it seems, are not trusty watchmen.  You'd expect no more.
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [sentinel, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sleeping
+    default: standing
+
+"tba:287:mob:28733":
+  keywords: [serpent]
+  short: the serpent
+  long: A great serpent slithers through the caverns, ignoring you.
+  description: >
+    For a little while you fear poison, but this snake looks about as harmless as any forty-five-foot
+    reptile can.  Perhaps this serpent lives off the carcasses of those killed by these goblins.
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28734":
+  keywords: [gnome]
+  short: the lost gnome
+  long: A stone-gnome is far from home.
+  description: He is wandering, as you are, through these tunnels to find an exit.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [scavenger, aware, stay_zone, wimpy, memory]
+  affects: [no_track, sneak]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28735":
+  keywords: [goblin]
+  short: the goblin guard
+  long: A goblin stands here alert, vigilant for intruders.
+  description: No one will pass by him unnoticed.
+  level: 5
+  sex: male
+  alignment: -350
+  flags: [sentinel, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28736":
+  keywords: [goblin]
+  short: the goblin
+  long: A green-skinned goblin warrior stands here, clutching a bloody scimitar.
+  description: He looks tougher than the average goblin.
+  level: 6
+  sex: male
+  alignment: -400
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28737":
+  keywords: [goblin]
+  short: the goblin warrior
+  long: A goblin warrior glares at you, angry at having been awakened.
+  description: He looks tougher than the average goblin.
+  level: 6
+  sex: male
+  alignment: -400
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: sleeping
+    default: standing
+
+"tba:287:mob:28738":
+  keywords: [hobgoblin, goblin]
+  short: a hobgoblin
+  long: A large goblin clad in stinking hides glares at you.
+  description: >
+    You would NEVER wear his armor; untanned cowhide is not your style.  He doesn't seem to mind it,
+    however, and in any case this fellow is a dangerous foe for any knight.
+  level: 8
+  sex: male
+  alignment: -400
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28739":
+  keywords: [toadstool, goblin, chieftain]
+  short: Toadstool the Goblin
+  long: Toadstool, chief of the forest goblins, shouts and throws things at you.
+  description: >
+    What does he throw?  Rocks, mostly.  Toadstool is taller than a dwarf, and ugly as a toad.  He is
+    larger than any goblin you have seen, in fact; maybe Toadstool is orcish or half-orcish.
+  level: 10
+  sex: male
+  alignment: -500
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28740":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin gnaws a bone here.
+  description: That bone looks very tasty, but he probably won't share it.
+  level: 4
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28741":
+  keywords: [groff, troll, cook]
+  short: Groff the Troll
+  long: A huge hairy troll stirs a bubbling pot.
+  description: >
+    As you watch, safely hidden, he picks up a dead goblin and throws it into his pot, followed by a
+    few spotted mushrooms and a halfling.  Then he catches sight of you, and wonders what flavor you'd add
+    to his concoction.  Oops!  Should have stayed still, you idiot.
+  level: 12
+  sex: male
+  alignment: -800
+  flags: [sentinel, scavenger, aggressive]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28742":
+  keywords: [mimic, barrel]
+  short: the mimic
+  long: A sturdy oaken barrel bound with iron hoops stands in the corner.
+  description: >
+    This barrel has no tap, but perhaps you could borrow one from the goblins. No, I doubt it. 
+    Besides, there is something queer about that cask.  Did it just move?
+  level: 11
+  sex: neutral
+  alignment: 10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28743":
+  keywords: [mimic, cabinet]
+  short: the mimic
+  long: A cabinet marked `Magical Items Only' stands in the corner.
+  description: >
+    You nearly open the cabinet when you realize goblins don't write in the Common Speech.  Perhaps
+    it's a trap.
+  level: 11
+  sex: neutral
+  alignment: 10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28744":
+  keywords: [hybrid, centipede, cementipede]
+  short: the Cementipede
+  long: A strange hybrid of stone and centipede prowls the caves.
+  description: Half-crawler, half-concrete; it could only be the legendary Cementipede!
+  level: 4
+  sex: neutral
+  alignment: 0
+  flags: [aware, stay_zone, wimpy, no_charm, no_bash]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28745":
+  keywords: [goblin]
+  short: the goblin
+  long: A drunken goblin staggers around.
+  description: You don't want to THINK about what he's been drinking.
+  level: 4
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28746":
+  keywords: [warg]
+  short: the hungry warg
+  long: A hungry warg stands here, growling at you.
+  description: >
+    The goblins sometimes ride wargs, and maybe this one is trained as a mount. You only know that the
+    white fangs it now shows as it sees you approaching look very sharp.
+  level: 5
+  sex: neutral
+  alignment: -350
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28747":
+  keywords: [mold]
+  short: the green mold
+  long: A peculiar green mold looks at you from the wall.
+  description: Looks at you?  Molds don't usually have EYES!  But this one does.
+  level: 12
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, stay_zone, no_bash, no_blind]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: sting
+  abilities:
+    str: 3
+    int: 3
+    wis: 3
+    dex: 3
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28748":
+  keywords: [orc]
+  short: the orc
+  long: An Orc guards the caves here.
+  description: He is not as large as the usual Orc, probably half a goblin.
+  level: 6
+  sex: male
+  alignment: -400
+  flags: [sentinel, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: sleeping
+    default: standing
+
+"tba:287:mob:28749":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin miner chips away at the mountains' stony innards.
+  description: He doesn't seem to be in the best of spirits.  It's been a long day.
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28750":
+  keywords: [stalker]
+  short: the Stalker
+  long: The invisible stalker is, fortunately, not after you.
+  description: You can't see him.
+  level: 33
+  sex: neutral
+  alignment: -1000
+  flags: [aware, stay_zone, memory, no_charm, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_align, detect_invis, detect_magic, sense_life, waterwalk, no_track, sneak]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+    bare_hand_attack: thrash
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28751":
+  keywords: [kobold]
+  short: the kobold
+  long: A kobold slave hauls rubble for the goblins.
+  description: He is always looking for a way to escape.
+  level: 4
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28752":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin miner rests here, out of his master's sight.
+  description: He is not too tired to kill you with that big nasty pick.
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [sentinel, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: resting
+    default: resting
+
+"tba:287:mob:28753":
+  keywords: [mimic, boulder]
+  short: the mimic
+  long: A great boulder nearly blocks the tunnel.
+  description: Where did that thing come from?  It didn't just MOVE, did it?  Hmmm...
+  level: 14
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28754":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin slave driver supervises the miners and cracks his whip!
+  description: He lashes fiercely at you with that great whip when he sees you in his mine tunnels.
+  level: 8
+  sex: male
+  alignment: -800
+  flags: [scavenger, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: whip
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28755":
+  keywords: [slave]
+  short: the human slave
+  long: An Ofintine works as a goblin slave, with no hope of escape.
+  description: The goblins captured him in a raid and now work him to death in their huge mines.
+  level: 2
+  sex: male
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28756":
+  keywords: [slave]
+  short: the human slave
+  long: An Ofintine works as a goblin slave, with no hope of escape.
+  description: The goblins captured her in a raid and now work her to death in their huge mines.
+  level: 2
+  sex: female
+  alignment: 400
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28757":
+  keywords: [goblin, blacksmith]
+  short: the goblin blacksmith
+  long: Wielding two great hammers, the goblin smith toils at his forge.
+  description: His knotted, iron-hard muscles attest to long hours at the anvil.
+  level: 8
+  sex: male
+  alignment: -800
+  flags: [sentinel, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28758":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin pumps the great forge-bellows here.
+  description: >
+    He works at a furious pace as the overseer cracks his whip, to keep the goblins' iron furnace
+    white-hot.
+  level: 5
+  sex: male
+  alignment: -250
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28759":
+  keywords: [kobold, slave]
+  short: the kobold slave
+  long: A kobold shuffles quickly about, carrying iron ore and lime.
+  description: He avoids the whip nimbly as he feeds the roaring furnace.
+  level: 4
+  sex: neutral
+  alignment: -100
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28760":
+  keywords: [giant, overseer]
+  short: the hill giant
+  long: A hill giant `encourages' the slaves with a huge flint-studded whip.
+  description: >
+    He is not very bright, as few giants are, and might think you work here if you stay much longer. 
+    Like any evil giant, he loves causing pain.
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28761":
+  keywords: [mimic, pig, iron]
+  short: the mimic
+  long: A glowing iron pig cools in the sand, away from the others.
+  description: This iron pig seems to be chuckling softly.  Odd.
+  level: 14
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28762":
+  keywords: [ogre]
+  short: the ogre
+  long: A large ogre trudges about, pushing boulders that must weigh tons.
+  description: He looks very strong.
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28763":
+  keywords: [elf, elven]
+  short: an Elf
+  long: An Elven hunter stalks goblins here.
+  description: >
+    He, like you, has crept into Goblin-Town to hunt goblins.  Seems as though he is doing a good job
+    of it, so why not let him continue?
+  level: 6
+  sex: male
+  alignment: 1000
+  flags: [aware, stay_zone, aggr_evil, memory]
+  affects: [detect_invis, detect_magic, sense_life, hide]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: sleeping
+    default: standing
+
+"tba:287:mob:28764":
+  keywords: [dragon]
+  short: the red dragon
+  long: A large red dragon stands here, angry that you disturbed his rest.
+  description: He can't see you when he's sleeping, and you had best let him stay that way.
+  level: 20
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive, stay_zone, no_charm, no_summon, no_bash]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: sleeping
+    default: standing
+
+"tba:287:mob:28765":
+  keywords: [troll, guard]
+  short: the troll guard
+  long: A huge troll of the Olog-Hai stands guard here.
+  description: Oh dear!  Time to leave the way you came in!
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: punch
+  abilities:
+    str: 24
+    int: 3
+    wis: 3
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28766":
+  keywords: [orc]
+  short: the orc
+  long: A large Orc stands here, looking for dinner.
+  description: >
+    Offering him a waybread was a BAD idea, you now think.  Orcs don't like elves very much.  Well,
+    they do like elves dead.  In fact, they like almost any meat. You probably look like a tasty meal.
+  level: 8
+  sex: male
+  alignment: -800
+  flags: [scavenger, aggressive, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28767":
+  keywords: [wall]
+  short: the living wall
+  long: A section of stone wall has many treasures embedded in it.
+  description: >
+    You have heard of walls that came alive by wicked sorcery and absorb great treasures within their
+    magical masonry.
+  level: 33
+  sex: neutral
+  alignment: -750
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28768":
+  keywords: [mimic, chest]
+  short: the mimic
+  long: A fine iron-bound chest would catch any cabinetmaker's eye.
+  description: The chest was truly the work of a master carpenter.
+  level: 14
+  sex: neutral
+  alignment: -10
+  flags: [sentinel, no_bash, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28769":
+  keywords: [goblin, moragd]
+  short: Moragd the Goblin
+  long: Moragd the Goblin stands here.
+  description: Moragd is a great goblin warrior, son of Gorgh the Knob-headed.
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28770":
+  keywords: [goblin, gorgh]
+  short: Gorgh the Goblin
+  long: Gorgh the Knob-Headed stands here.
+  description: Gorgh, father of Moragd , is the greatest goblin warrior yet to taint this world.
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28771":
+  keywords: [goblin, Khos]
+  short: Khos the Goblin
+  long: Khos the Greatnosed stands here.
+  description: Khos, Gorgh, and Moragd are the three best soldiers of the Great Goblin.
+  level: 12
+  sex: male
+  alignment: -900
+  flags: [sentinel, aggressive, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28772":
+  keywords: [goblin]
+  short: the goblin
+  long: A goblin warrior stands here.
+  description: Ugly, slime-green, and bull-strong.
+  level: 6
+  sex: male
+  alignment: -400
+  flags: [aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28773":
+  keywords: [ogre, guard, Thrash]
+  short: Thrash the Ogre
+  long: Thrash the Ogre Mercenary guards the Great Goblin.
+  description: >
+    You are sure you have seen Thrash before, somewhere.  Maybe he was in the Grunting Boar the other
+    day with Pippin.  Anyway, the Great Goblin has hired him as a bodyguard.
+  level: 27
+  sex: male
+  alignment: -900
+  flags: [sentinel, scavenger, aggressive, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: thrash
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28774":
+  keywords: [giant, guard, Throm]
+  short: Throm the Giant
+  long: Throm the Giant guards the Great Goblin.
+  description: >
+    You are sure you have seen Throm before, somewhere.  Maybe he was at the weapon shop the other
+    day?  Anyway, the Great Goblin has hired this renowned giant to guard his person.
+  level: 23
+  sex: male
+  alignment: -900
+  flags: [sentinel, scavenger, aggressive, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: punch
+  abilities:
+    str: 25
+    int: 3
+    wis: 3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28775":
+  keywords: [human, guard, Tarus]
+  short: Tarus
+  long: Tarus the Swordpupil guards the Great Goblin.
+  description: >
+    You are sure you have seen Tarus before, perhaps on BluemageMUD.  This sturdy human is one of the
+    Great Goblin's bodyguards.
+  level: 23
+  sex: male
+  alignment: -900
+  flags: [sentinel, scavenger, aggressive, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:287:mob:28776":
+  keywords: [great, goblin]
+  short: the Great Goblin
+  long: The Great Goblin sees you and calls his guards!
+  description: >
+    His head is bigger than any goblin's you have seen, and he is quite proud of it.  This goblin is
+    quite strong, and quite ugly, and has quite a few guards around him.  Kill him, and King Korbor will
+    repay you handsomely.
+  level: 17
+  sex: male
+  alignment: -990
+  flags: [sentinel, scavenger, aggressive, stay_zone, memory, helper]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing

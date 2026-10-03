@@ -1,0 +1,228 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 235.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:235:obj:23500":
+  type: weapon
+  keywords: [pickaxe]
+  short: a pickaxe
+  long: A pickaxe is here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d3
+    attack: slash
+  weight: 6
+  cost: 350
+  rent: 0
+  level: 7
+  extras:
+  - keywords: [axe, pickaxe]
+    text: The pickaxe is mostly used for diging but also can be used for combat.
+
+"tba:235:obj:23501":
+  type: note
+  keywords: [map, dwarven, mines]
+  short: a map of the dwarven mines
+  long: A map of the dwarven mines was left here.
+  action: |-
+    O-O-O       O               v-^
+        |   |       |
+        O   O-O-O-O-O         v         O-O-O-^-O-O-O-O
+        |         |           |               |   | |
+      O-O         O           ^               O   O O
+      |                                       |     |
+      O                                       O     O O-O
+      |                                       |     | | |
+      O-O-O-O-O-O-O-O                         O     O-O O
+          |         |                         |     |   |
+          O         O-O                       O-O-O-O   O
+          |         |                               |   |
+          O       O-O                             ^-O-O-O
+          |       |
+    ^     O-O-O-O-O
+    |           |
+    O           O
+    |           |
+    O v-O-O-O   O-O-O-O               v
+    |   |   |       |
+    O-O-v   O-O     O
+              |     |
+        ^-v-O-O-O-O-O
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:235:obj:23502":
+  type: other
+  keywords: [boulder]
+  short: a boulder
+  long: A large boulder is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boulder]
+    text: The boulder is enormous in size and would take more then one person to move it.
+
+"tba:235:obj:23509":
+  type: other
+  keywords: [pebble]
+  short: a small pebble
+  long: A small pebble is lying on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [small, pebble, rock]
+    text: >
+      The pebble is quite dusty, but it's in the shape of a heart.  It might be worth holding onto.
+
+"tba:235:obj:23513":
+  type: other
+  keywords: [rock, pile]
+  short: a pile of rocks
+  long: A pile of rocks have been lazily discarded here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rock, pile]
+    text: >
+      There must be atleast twenty rocks here in this mess!  Someone should come by and move them.
+
+"tba:235:obj:23517":
+  type: weapon
+  keywords: [stone, mace]
+  short: a stone mace
+  long: A large stone mace.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d3
+    attack: slash
+  weight: 6
+  cost: 450
+  rent: 0
+  level: 7
+  extras:
+  - keywords: [stone, mace]
+    text: >
+      The mace is quite heavy.  You notice it's in excellent condition.  It would protect you well.
+
+"tba:235:obj:23519":
+  type: other
+  keywords: [skeleton]
+  short: a skeleton
+  long: A skeleton is lying on the ground before you.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [skeleton]
+    text: >
+      This is the skeleton of one of the dwarven workers.  They must have been crushed to death during an
+      avalanche.
+
+"tba:235:obj:23520":
+  type: container
+  keywords: [bag]
+  short: a leather bag
+  long: A leather bag was left here.
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 1
+    corpse: false
+  weight: 3
+  cost: 350
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, bag]
+    text: >
+      The bag looks brand new!  You can smell the leather every time you open the bag.  What a marvelous
+      scent!
+
+"tba:235:obj:23523":
+  type: armor
+  keywords: [helmet]
+  short: a workers helmet
+  long: A workers helmet was abandoned here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 4
+  cost: 200
+  rent: 0
+  level: 7
+  extras:
+  - keywords: [worker, workers, helmet, hat]
+    text: >
+      It looks very much like hard hat, but it some what larger.  There is a small hole in the front,
+      where a light used to be.
+
+"tba:235:obj:23526":
+  type: other
+  keywords: [enormous, boulder]
+  short: an enormous boulder
+  long: An enormous boulder rolls past you!
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [boulder]
+    text: The boulder is the size of a small house!  It would easily crush you into the ground.
+
+"tba:235:obj:23531":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A torch is hanging from the wall beside you.
+  flags: [glow]
+  wear: []
+  values:
+    hours: -1
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [torch]
+    text: The torch is rather ratty looking.  It looks half rotted and could easily fall apart.
+
+"tba:235:obj:23599":
+  type: weapon
+  keywords: [long, sword]
+  short: a long sword
+  long: A long sword is half-buried here.
+  wear: [take, wield, hold]
+  values:
+    damage: 5d5
+    attack: slash
+  weight: 6
+  cost: 800
+  rent: 0
+  level: 0

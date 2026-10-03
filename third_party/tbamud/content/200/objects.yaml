@@ -1,0 +1,469 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 200.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:200:obj:20000":
+  type: fountain
+  keywords: [river]
+  short: the river
+  long: The edge of the waters spilt from the overflowed river stops at your feet.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [river, water, overflowed, edge, spilt]
+    text: >
+      From the messy and untamed way the debris are jumbled along the bank of the river, a raging torrent
+      must have came through recently.
+
+"tba:200:obj:20001":
+  type: other
+  keywords: [bridge]
+  short: the bridge
+  long: Sharp splinters from the collasped bridge lay here in the wet grounds.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bridge]
+    text: >
+      Once again cultural monuments fall to the destructive powers of mother nature.  The bridge that has
+      withstood the poundings of centuries, from the brightest of days to the darkest of nights has
+      finally succumbed and only bits and pieces are left.  Barely good enough for even firewood.
+
+"tba:200:obj:20002":
+  type: other
+  keywords: [fallen, pine]
+  short: the fallen pine
+  long: Logs of fallen pine wood obstructs the way around.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fallen, pine]
+    text: >
+      Huge logs of fallen pine make passage difficult, the bases look to have been chopped by either a
+      woodsman or beavers.  Not many beavers in these parts...
+
+"tba:200:obj:20003":
+  type: light
+  keywords: [solid, brass, crucifix]
+  short: a solid brass crucifix
+  long: A gleaming crucifix made of brass lies here.
+  flags: [bless]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 60
+  rent: 6
+  level: 0
+  extras:
+  - keywords: [solid, brass, crucifix]
+    text: This brass crucifix fits snugly in the palm of your hand.
+
+"tba:200:obj:20004":
+  type: armor
+  keywords: [heavy, set, white, robe]
+  short: a heavy set of white robes
+  long: A white robe made from a very thick woolen material lies here soaked in the mud.
+  flags: [magic, anti_thief, anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 6
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [robe]
+    text: >
+      This fine, white robe is made of course cloth.  It looks as if the maker threw it together quite
+      hastily.
+
+"tba:200:obj:20005":
+  type: other
+  keywords: [a, small, sign]
+  short: small sign
+  long: Stuck to the ground on a short rotten pole. A small sign is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text: >
+      The sign is rotten and falling apart.  You can no longer read what was once written upon it.
+
+"tba:200:obj:20006":
+  type: weapon
+  keywords: [woodsmans, axe]
+  short: an axe of a woodsman
+  long: A make shift axe lays here, looking like it's been through a tougher life than you!
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: crush
+  weight: 8
+  cost: 400
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [woodmsan's, axe]
+    text: >
+      The axe is crude, but well-made.  Looks like it could hack a limb off just as easy as it could cut
+      wood.
+
+"tba:200:obj:20007":
+  type: other
+  keywords: [rabbit, foot, fur]
+  short: a rabbit's foot
+  long: A hacked off rabbit's foot lays here, hopping no more.
+  flags: [no_donate, anti_evil, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 5
+  rent: 1
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: ac
+    modifier: 3
+  extras:
+  - keywords: [rabbit, foot, fur]
+    text: >
+      The rabbits foot has been known to bring good luck to those who hold it. But then again maybe that
+      is just another old wive's tale.
+
+"tba:200:obj:20008":
+  type: armor
+  keywords: [smelly, rags, tattered, cloths]
+  short: some smelly rags
+  long: Bits of tattered cloths lay here smelling badly of pesperation.
+  wear: [take, body]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -2
+  extras:
+  - keywords: [smelly, rags, tattered, cloths]
+    text: These rags emanate a foul stench that would surely never wash out.
+
+"tba:200:obj:20009":
+  type: armor
+  keywords: [belt, cloth, strip]
+  short: a strip of torn cloth
+  long: A strip of torn cloth lays here, maybe you could use it for a belt?
+  wear: [take, waist]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [belt, cloth, strip]
+    text: This old and worn bit of cloth looks like it was meant to be used as a belt.
+
+"tba:200:obj:20010":
+  type: armor
+  keywords: [broken, sandals]
+  short: a pair of broken sandals
+  long: A well worn down pair of hide sandals has been discarded here.
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 1
+  cost: 110
+  rent: 12
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [broken, sandals]
+    text: >
+      The leather hide straps have been broken, re-stitched, and broken again. The look wearable, but
+      barely.
+
+"tba:200:obj:20011":
+  type: armor
+  keywords: [tattered, pants]
+  short: some tattered pants
+  long: An already torn apart pair of pants lies here unwanted.
+  wear: [take, legs]
+  values:
+    armor: 2
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pants, tattered]
+    text: These old pants are faded and have patches covering most of the holes in it.
+
+"tba:200:obj:20012":
+  type: armor
+  keywords: [rabbit, ears, fur]
+  short: a pair of rabbit ears
+  long: A pair of bloody rabbit ears are here sticking out of the ground.
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [rabbit, ears, fur]
+    text: >
+      A scalp of a rabbit lies here.  Looks like someone must have been practicing their scalping
+      techniques on the poor critter.  It almost looks like the rabbit fur has been cut into a makeshift helm.
+
+"tba:200:obj:20013":
+  type: armor
+  keywords: [brown, fur, piece]
+  short: a piece of brown fur
+  long: A small piece of brown fur has been dropped here, barely enough to cover anything.
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  - apply: wis
+    modifier: -1
+  extras:
+  - keywords: [brown, fur, piece]
+    text: >
+      This small patch of fur has been fashioned into some sort of wristguard. Barely large enough to
+      really cover anything.
+
+"tba:200:obj:20014":
+  type: armor
+  keywords: [fawn, fur]
+  short: some fawn fur
+  long: The remains of a skinned fawn is here rotting away.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fawn, fur]
+    text: The hide of a fawn has been skinned into some make shift arm guards.
+
+"tba:200:obj:20015":
+  type: armor
+  keywords: [thick, black, fur, coat]
+  short: a thick black fur coat
+  long: A luxurious thick black fur coat lays here covered in dirt.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [thick, black, fur, coat]
+    text: >
+      A thick black fur coat from the hide of a bear.  It is extremely heavy and bulky, but affords a
+      remarkeable amount of protection.
+
+"tba:200:obj:20016":
+  type: other
+  keywords: [rusty, steel, trap]
+  short: a rusty steel trap
+  long: An old rusty steel trap lays on the ground looking dangerous.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 450
+  rent: 45
+  level: 0
+  extras:
+  - keywords: [rusty, steel, trap]
+    text: >
+      This metal foot trap is almost rusted completely shut.  The springs on each side of the metal
+      clamps are old and worn.
+
+"tba:200:obj:20017":
+  type: container
+  keywords: [canvas, harversack]
+  short: a canvas harversack
+  long: A canvas harversack lays here.
+  wear: [take, about]
+  values:
+    capacity: 25
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [canvas, harversack]
+    text: This sack though small would be excellent to store a few belongings in.
+
+"tba:200:obj:20018":
+  type: weapon
+  keywords: [sharpened, wooden, dagger]
+  short: a sharpened wooden dagger
+  long: A large wooden splinter leans against the long grass.
+  wear: [take, wield]
+  values:
+    damage: 3d1
+    attack: pierce
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [sharpened, wooden, dagger]
+    text: >
+      At first glance it is just a piece of wood, until you examine it more closely and you realize it is
+      a weapon.
+
+"tba:200:obj:20019":
+  type: worn
+  keywords: [bounded, gloves]
+  short: some bounded gloves
+  long: Pieces of leather stiched together lays here, probably a makeshift glove.
+  flags: [magic]
+  wear: [take, hands]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [bounded, gloves]
+    text: These gloves are well made and extremely sturdy.
+
+"tba:200:obj:20020":
+  type: armor
+  keywords: [red, fox, pelt, fur]
+  short: a red fox pelt
+  long: An attractive game prized pelt lays here, unwanted.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [red, fox, pelt, fur]
+    text: >
+      This bright red fur could only have come from a red fox.  It is smooth and in excellent condition.
+
+"tba:200:obj:20021":
+  type: food
+  keywords: [dehydrated, meat]
+  short: a piece of dehydrated meat
+  long: A piece of meat rubs in the dirt here, not sure what sort and it doesn't look too tasty.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [dehydrated, meat]
+    text: This meat has been dehydrated out in the sun and then smoked to increase it's life.
+
+"tba:200:obj:20022":
+  type: wand
+  keywords: [polishing, kit]
+  short: a polishing kit
+  long: A can of ultra shine is here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 1, 1, 3]
+  weight: 1
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [polishing, kit]
+    text: This polishing kit could add sparkle to almost anything if you simply used it.
+
+"tba:200:obj:20023":
+  type: armor
+  keywords: [stretched, hide, shield]
+  short: a stretched hide shield
+  long: A hide stretched over a frame of wood appears to be a shield.
+  wear: [take, shield]
+  values:
+    armor: 3
+  weight: 4
+  cost: 20
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [stretched, hide, shield]
+    text: >
+      The hide has been pulled taught by a sappling that has been bent into a circle and the hide placed
+      over it.  It looks like it could make do as a shield.
+
+"tba:200:obj:20024":
+  type: other
+  keywords: [twine, ring]
+  short: a twine ring
+  long: A piece of twine has been braided into a nice little ring.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 25
+  rent: 3
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -1
+  extras:
+  - keywords: [twine, ring]
+    text: >
+      The twine looks like hemp, but hard to tell.  It has been braided into a looping knot that can fit
+      over your finger.

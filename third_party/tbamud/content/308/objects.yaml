@@ -1,0 +1,388 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 308.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:308:obj:30800":
+  type: key
+  keywords: [key, old, brittle]
+  short: an old and brittle key
+  long: An old and brittle key lies on the ground.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:308:obj:30801":
+  type: weapon
+  keywords: [flail, baron]
+  short: the Baron's Flail
+  long: A strange, silver flail has been left here.
+  wear: [take, wield]
+  values:
+    damage: 6d8
+    attack: thrash
+  weight: 7
+  cost: 560
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: -2
+
+"tba:308:obj:30802":
+  type: armor
+  keywords: [adornment, holy, white, shroud, cloth]
+  short: a holy adornment
+  long: A brilliant white shroud of cloth has been dropped here.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 23
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: str
+    modifier: 1
+  - apply: hit
+    modifier: 30
+
+"tba:308:obj:30803":
+  type: worn
+  keywords: [bracelet, white, bead]
+  short: a white bead bracelet
+  long: A white bead bracelet has been left here.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: save_spell
+    modifier: -2
+  - apply: int
+    modifier: 2
+  - apply: damroll
+    modifier: 3
+
+"tba:308:obj:30804":
+  type: worn
+  keywords: [pewter, cross]
+  short: a pewter cross
+  long: An earring in the shape of a pewter cross has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 1
+  - apply: hit
+    modifier: -30
+
+"tba:308:obj:30805":
+  type: armor
+  keywords: [gown, flowing, white]
+  short: a flowing white gown
+  long: A pile of thin white fabric lies upon the ground.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: hit
+    modifier: 30
+  - apply: mana
+    modifier: 30
+
+"tba:308:obj:30806":
+  type: worn
+  keywords: [crest, cailveh, ring]
+  short: the Crest of Cailveh
+  long: A silver ring lies upon the ground.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+
+"tba:308:obj:30807":
+  type: worn
+  keywords: [sandals, scholar's]
+  short: some scholar's sandals
+  long: Some scholar's sandals lie upon the ground.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 27
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: int
+    modifier: 3
+  - apply: wis
+    modifier: 2
+
+"tba:308:obj:30808":
+  type: scroll
+  keywords: [book, warding]
+  short: the Book of Warding
+  long: A glowing book lies upon the ground.
+  wear: [take, hold]
+  values:
+    raw: [30, 3, 1, 24]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:308:obj:30809":
+  type: other
+  keywords: [paper, wadded, piece]
+  short: a wadded piece of paper
+  long: A wadded piece of paper lies crumpled on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:308:obj:30810":
+  type: worn
+  keywords: [ring, diamond, sparkling]
+  short: a sparkling diamond
+  long: A diamond ring
+  wear: [take, finger, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 12
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+
+"tba:308:obj:30811":
+  type: weapon
+  keywords: [maul, two, handed]
+  short: a two-handed maul
+  long: A two-handed maul has been left here.
+  wear: [take, wield]
+  values:
+    damage: 8d8
+    attack: maul
+  weight: 9
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+
+"tba:308:obj:30812":
+  type: armor
+  keywords: [shield, silver, face]
+  short: a silver face shield
+  long: A silver face shield has been left here.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 2
+  - apply: con
+    modifier: 1
+
+"tba:308:obj:30813":
+  type: armor
+  keywords: [plates, set, scuffed, thigh]
+  short: a set of scuffed thigh plates
+  long: A set of scuffed thigh plates have been tossed aside.
+  wear: [take, legs]
+  values:
+    armor: 8
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 17
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 3
+  - apply: dex
+    modifier: -1
+
+"tba:308:obj:30814":
+  type: container
+  keywords: [belt, weapons, tarnished]
+  short: a tarnished weapons belt
+  long: A tarnished weapons belt has been dropped here.
+  wear: [take, waist, hold]
+  values:
+    capacity: 150
+    lock_flags: 0
+    corpse: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 23
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 2
+
+"tba:308:obj:30815":
+  type: worn
+  keywords: [tie, waist, beaded]
+  short: a white beaded waist tie
+  long: A white beaded waist tie has been left here.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -1
+  - apply: mana
+    modifier: 20
+  - apply: hit
+    modifier: 20
+
+"tba:308:obj:30816":
+  type: potion
+  keywords: [potion, refresh]
+  short: a refreshing potion
+  long: A potion lies upon the ground, untouched.
+  wear: [take, hold]
+  values:
+    raw: [10, 1, 17, 35]
+  weight: 2
+  cost: 103
+  rent: 0
+  level: 1
+
+"tba:308:obj:30817":
+  type: potion
+  keywords: [potion, curing]
+  short: a potion of curing
+  long: A potion lies upon the ground, untouched.
+  wear: [take, hold]
+  values:
+    raw: [10, 3, 39, 18]
+  weight: 2
+  cost: 184
+  rent: 0
+  level: 1
+
+"tba:308:obj:30818":
+  type: food
+  keywords: [pork, roast, platter, potatoes]
+  short: a pork roast platter with potatoes
+  long: A pork roast platter with potatoes has been thrown to the ground.
+  wear: [take, hold]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 3
+  cost: 9
+  rent: 0
+  level: 1
+
+"tba:308:obj:30819":
+  type: food
+  keywords: [sandwich, supreme, deluxe, salaylia]
+  short: a Deluxe Salaylia Sandwich Supreme
+  long: The biggest damn sandwich you've ever seen has been dropped here.
+  wear: [take, hold]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 3
+  cost: 12
+  rent: 0
+  level: 1
+
+"tba:308:obj:30820":
+  type: drinkcon
+  keywords: [water, barrel, small, water]
+  short: a small barrel
+  long: A small barrel of water has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 40
+    contains: 40
+    liquid: clear_water
+    poisoned: false
+  weight: 45
+  cost: 200
+  rent: 0
+  level: 1
+
+"tba:308:obj:30821":
+  type: drinkcon
+  keywords: [water, barrel, large, water]
+  short: a large barrel
+  long: A large barrel of water has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 80
+    contains: 80
+    liquid: clear_water
+    poisoned: false
+  weight: 85
+  cost: 300
+  rent: 0
+  level: 1

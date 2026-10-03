@@ -1,0 +1,412 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 2.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:2:mob:200":
+  keywords: [baker's, assistant]
+  short: the baker's assistant
+  long: An assistant to the baker is learning the trade.
+  description: >
+    He sifts some flour with glazed over eyes that seem to be somewhere else. Obviously daydreaming of
+    better things.  His white apron is covered in floor. He stands a good six feet tall, all skin and
+    bones.
+  level: 13
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:201":
+  keywords: [apprentice, healer]
+  short: the apprentice healer
+  long: An apprentice healer helps any who are in need.
+  description: >
+    He has devoted his life to selflessly aid those who are in need of either physical or mental aid. 
+    The clerics of Sanctus are well known for their aiding those physically wounded, but are seldom known
+    for their great prowess in the emotoinal aid they give.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:202":
+  keywords: [horse, pets]
+  short: the horse
+  long: A beautiful horse shakes his mane and swishes his tail.
+  description: The horse has been well groomed and seems to be in excellent shape.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:203":
+  keywords: [stablemasters, petshops]
+  short: the stablemaster
+  long: The stablemaster is busily cleaning out the stalls.
+  description: >
+    He looks and smells like the rest of the stables.  His clothes are the same color and texture as
+    the manure that he shovels into a wheelbarrow beside him. He could definitely use a bath.  But he does
+    know his horses and makes a living selling, training, and breeding them.
+  level: 34
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:204":
+  keywords: [horse, pets, mare]
+  short: the fine mare
+  long: A gentle and kind horse stares at you.
+  description: >
+    The horse seems to be well trained, but somewhat lazy.  She Doesn't look fast though her build
+    shows promise of endurance.
+  level: 6
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:205":
+  keywords: [horse, pets, stallion]
+  short: the stallion
+  long: A sleek and mean looking horse tramps impatiently.
+  description: >
+    The horse looks about ready to bolt, a strange gleam in its eyes makes you wonder why this animal
+    is even standing here.  The animal looks wild.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:206":
+  keywords: [chunky, philosopher, man, old]
+  short: a chunky philosopher
+  long: An old man roams about whispering to himself.
+  description: >
+    He is a large middle-aged man missing most of his hair.  He ambles about seemingly oblivious to his
+    own girth and the world around him.  Occasionally he rambles on about truth, existence, and other
+    esoteric topics that better mind than his have already questioned.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:207":
+  keywords: [angel, jack, russell, terrier]
+  short: Angel
+  long: Angel, the Jack Russel Terrier, is racing around looking for someone to play with.
+  description: >
+    This dog has to be on drugs.  She never stops running around looking for attention or someone to
+    play with.  Her breath smells strangely of bacon.  She appears to be beggin for some treats.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:208":
+  keywords: [haruspex, diviner]
+  short: the haruspex
+  long: A haruspex is predicting your demise.
+  description: >
+    She is a diviner of what the future holds.  Her predictions are gathered by the inspection of the
+    entrails of sacrificial animals.
+  level: 20
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:209":
+  keywords: [bob, midget, dwarf, achondroplastic]
+  short: Bob, the achondroplastic dwarf
+  long: Bob is bobbing and weaving his way past people who don't seem to notice him.
+  description: >
+    He is noticeably upset about the lack of attention the big people give him. He is desperately
+    trying not to be trampled on or shoved out of the way.  His short stature puts him about waist level to
+    most people.  Bob is an achondroplastic dwarf.  His torso is normal while his limbs are extremely short.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:210":
+  keywords: [questmaster, shopkeeper]
+  short: the quest shopkeeper
+  long: A shopkeeper with a variety of powerful quest items waits for a customer.
+  description: >
+    Experienced adventurers often come to her since she carries the best equipment in the realm. But,
+    the prices are steep and only the most experienced questors can afford to pay her.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:211":
+  keywords: [phoenix]
+  short: the phoenix
+  long: A phoenix looks up at you with intelligent eyes.
+  description: >
+    This beautiful and magical bird is the source of many tales.  Most so outrageous they can't be
+    true, or can they?
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 0
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:212":
+  keywords: [pirate, parrot]
+  short: a parrot with an eye patch
+  long: This parrot seems to have lost his pirate. He squawks incessantly.
+  description: >
+    The parrot paces back and forth with a look of authority.  The usual scratching of its small feet
+    is punctuated by a thudding.  Upon closer inspection the parrot has a wooden leg and an eye patch!
+  level: 5
+  sex: male
+  alignment: 0
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:213":
+  keywords: [santa, claus, man]
+  short: Santa Claus
+  long: A merry old man with rosy-red cheeks and a full white beard is dressed all in red.
+  description: >
+    "Santa Claus" is the American version of St.  Nicholas, who originally descended from the Dutch
+    Sinte Klaas.  Santa's gift-giving role in Christmas rites follows from his fame as the friend of
+    children.  His story also tells that he used to give donations o spread to Europe and Chritmas presents were
+    distributed on Dec.  6 during the pageant of St.  Nicholas.  In many countries, this day is still
+    the day of gift-giving although in America it's celebrated on Dec.  24 and 25.
+  level: 34
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:214":
+  keywords: [old, magi, guard]
+  short: the magi guard
+  long: An old magi has been guarding the orb for decades, his sanity seems questionable.
+  description: >
+    After over 50 years of guard duty this magi seems to have lost touch with reality.  He stares
+    blankly around the room and doesn't seem to even notice you. He wears a plain gray robe and is a member of
+    the magi guards, a once elite group of magi dedicated to protecting the Orb of Sanctum.
+  level: 5
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:215":
+  keywords: [magi, guard, young]
+  short: the magi guard
+  long: A young member of the magi guard watches over the Orb of Sanctum.
+  description: >
+    This elite member of the magi guard has dedicated her life to protecting the orb and maintaining
+    the precarious balance within the protected walls of Sanctus.  The magi guards numbers have dwindled
+    over the years to only a select few who have the necessary skills to protect this most valuable of
+    treasures.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:216":
+  keywords: [Yoda]
+  short: Yoda
+  long: Jedi Master Yoda.
+  description: >
+    A tiny green alien, dressed in gray and white robes.  He carries around a small cane, and speaks
+    oddly.
+  level: 12
+  sex: male
+  alignment: 1000
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:2:mob:218":
+  keywords: [woman, fashionable, interior, design]
+  short: a woman dressed in the latest fashions
+  long: A prissy woman dressed in the latest fashion struts past.
+  description: >
+    She has a haughty expression on her face with her large nose stuck up in the air.  She looks around
+    in discuss at her surroundings.  A large badge over her right breast is labeled "interior designer."
+  level: 10
+  sex: female
+  alignment: 0
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  saves:
+    para: 2
+    rod: 2
+    petri: 2
+    breath: 2
+    spell: 2
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing

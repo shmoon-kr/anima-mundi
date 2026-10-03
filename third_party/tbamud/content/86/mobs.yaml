@@ -1,0 +1,315 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 86.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:86:mob:8601":
+  keywords: [rat]
+  short: a rat
+  long: A rat is chewing on an moldy piece of bread here.
+  description: A rat is a small, black, greasy looking rodent with a tiny twitching nose.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: sitting
+    default: standing
+
+"tba:86:mob:8602":
+  keywords: [moth]
+  short: a moth
+  long: A dusty white moth beats her wings here.
+  description: >
+    No longer than the first joint of a human finger, this tiny moth flits about looking for more
+    curtains to chew upon.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8603":
+  keywords: [rat, black]
+  short: a rat
+  long: A rat is wiggling beneath the covers here.
+  description: >
+    The rat is a fairly large black rodent with shiny black whiskers and a foul odor about him.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8604":
+  keywords: [rat]
+  short: a small rat
+  long: A small rat is here, nibbling on something.
+  description: >
+    This rat is a tiny specimen considering what else is roaming about this Keep. His eyes are shiny
+    black and his coat is of a dark brown color.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8605":
+  keywords: [bandit]
+  short: a bandit
+  long: A bandit is sleeping on the floor here.
+  description: >
+    His skin is covered by about three layers of grime and has various scars all over his face.  The
+    bandits clothing is ripped and riddled with lice and food.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pierce
+  gold: 100
+  exp: 10000
+  position:
+    load: resting
+    default: standing
+
+"tba:86:mob:8606":
+  keywords: [female, bandit]
+  short: a female bandit
+  long: A female bandit is here, looking for something to wear.
+  description: >
+    This young woman is half dressed in one of Lady Kalithorn's old dusty dresses.  The dress has been
+    ripped at the hem and is missing a sleeve.  The young woman is rummaging through her closet for a
+    better one.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel, stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8607":
+  keywords: [bat]
+  short: a bat
+  long: A bat is flapping about here.
+  description: It looks like a flying rat!
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8608":
+  keywords: [mouse, small, gray]
+  short: a mouse
+  long: A mouse is running about here, looking for a scrap of food.
+  description: >
+    Small and gray this mouse looks a little on the thin side.  Its whiskers twitch quickly and it
+    blinks rapidly.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8609":
+  keywords: [stone, guardian]
+  short: the stone guardian
+  long: A stone guardian is fixed into the wall here.
+  description: >
+    The guardian appears to be made of a chiseled marble.  A wondrous hand has chiseled out a most
+    imposing carving.  The guardian's stone delineated muscles seem to quiver and its eyes almost shift. 
+    Whomever set them here must have something to protect...
+  level: 14
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, stay_zone, memory, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bludgeon
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8610":
+  keywords: [Grand, Duke, Kalithorn]
+  short: Grand Duke Kalithorn
+  long: Grand Duke Kalithorn is here, plotting his revenge.
+  description: >
+    Clad in a long tunic and matching brown hose, Grand Duke Kalithorn is bent over his desk scribbling
+    and mumbling to himself about his ultimate revenge upon the bandits who took his wife.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 140
+  exp: 19600
+  position:
+    load: sitting
+    default: standing
+
+"tba:86:mob:8611":
+  keywords: [bandit, man]
+  short: a wandering bandit
+  long: A wandering bandit is here, staring off into the distance.
+  description: >
+    Unshaved, scarred and generally unappealing to look at, a bandit, grins broadly as he stares off
+    into the distance.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: slash
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8613":
+  keywords: [dirty, man, bandit]
+  short: a dirty bandit
+  long: A dirty bandit is standing here.
+  description: Looks like this fella hasn't washed in a loooong time.  His stench alone could kill.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8614":
+  keywords: [bandit, man, leader]
+  short: the bandit leader
+  long: The leader of the bandits is here, writing something down.
+  description: >
+    This bandit is at least somewhat clean as compared to the rest of the riff-raff.  His hair is bound
+    back with a leather fillip and he appears to be writing something down in a notebook.
+  level: 14
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone, no_charm, no_sleep, no_blind]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: whip
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:86:mob:8615":
+  keywords: [young, bandit]
+  short: a young bandit
+  long: A young bandit is sneaking about here.
+  description: >
+    This small, lanky bandit is hardly old enough to have hair on his face, yet he walks with the
+    confidence of a much older individual.  The calluses on his hands prove that he knows his way around a
+    sword.
+  level: 7
+  sex: male
+  alignment: 0
+  flags: [stay_zone, helper, no_charm]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

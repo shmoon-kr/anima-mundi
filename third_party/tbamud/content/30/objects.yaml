@@ -1,0 +1,1026 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 30.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:30:obj:3000":
+  type: drinkcon
+  keywords: [barrel, beer]
+  short: a barrel
+  long: A beer barrel has been left here.
+  wear: [take]
+  values:
+    capacity: 50
+    contains: 50
+    liquid: beer
+    poisoned: false
+  weight: 50
+  cost: 300
+  rent: 100
+  level: 0
+
+"tba:30:obj:3001":
+  type: drinkcon
+  keywords: [bottle, beer]
+  short: a bottle
+  long: A beer bottle has been left here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: beer
+    poisoned: false
+  weight: 10
+  cost: 20
+  rent: 8
+  level: 0
+
+"tba:30:obj:3002":
+  type: drinkcon
+  keywords: [bottle, dark, ale]
+  short: a bottle
+  long: A dark bottle of ale has been left here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: ale
+    poisoned: false
+  weight: 10
+  cost: 10
+  rent: 3
+  level: 0
+
+"tba:30:obj:3003":
+  type: drinkcon
+  keywords: [bottle, firebreather]
+  short: a bottle
+  long: A bottle of firebreather has been left here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: firebreather
+    poisoned: false
+  weight: 10
+  cost: 50
+  rent: 17
+  level: 0
+
+"tba:30:obj:3004":
+  type: drinkcon
+  keywords: [bottle, local]
+  short: a bottle
+  long: A dark bottle has been left here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: local_speciality
+    poisoned: false
+  weight: 10
+  cost: 20
+  rent: 7
+  level: 0
+
+"tba:30:obj:3005":
+  type: key
+  keywords: [key, dull, metal]
+  short: a key of dull metal
+  long: A key made of a dull metal is lying on the ground here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:30:obj:3006":
+  type: other
+  keywords: [teleporter]
+  short: the teleporter
+  long: A strange device labeled "teleporter" was left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [teleporter]
+    text:
+      preformatted: |
+        This teleporter is used to transfer players between zones.  Accessible zones
+        are listed under HELP ZONES by being CAPITALIZED.  For example to teleport to:
+          74 Newbie GRAVEyard                   -- Jojen                       3- 5
+        type: teleport grave
+           The teleporter may also be used to recall back to Midgaard at any time.
+        
+        Uncapitalized zones are linked through a capitalized zone.
+
+"tba:30:obj:3009":
+  type: food
+  keywords: [waybread, bread]
+  short: a waybread
+  long: Some waybread has been put here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 50
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [waybread, bread]
+    text: >
+      The waybread is the traditional feed of elves when travelling, they call it lembas.  It is said to
+      refresh the weary traveler greatly.
+
+"tba:30:obj:3010":
+  type: food
+  keywords: [bread, loaf]
+  short: a bread
+  long: A loaf of bread has been left here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:30:obj:3011":
+  type: food
+  keywords: [danish, pastry]
+  short: a danish pastry
+  long: A nice looking delicious danish pastry has been placed here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 5
+  level: 0
+
+"tba:30:obj:3012":
+  type: food
+  keywords: [taco, mexican]
+  short: a Mexican taco
+  long: A tasty looking Mexican taco has been dropped here.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 15
+  level: 0
+
+"tba:30:obj:3013":
+  type: food
+  keywords: [burrito, hot]
+  short: a spicy hot burrito
+  long: A spicy looking burrito has been set here.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:30:obj:3014":
+  type: food
+  keywords: [nachos, nacho]
+  short: some nachos with cheese
+  long: Some nachos have been left here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [nachos, nacho]
+    text: They have cheese on them.  Looks like one of Uncle Juan's specials.
+
+"tba:30:obj:3015":
+  type: food
+  keywords: [meat, chunk]
+  short: a piece of meat
+  long: A rather dubious looking piece of meat is on the ground here.
+  wear: [take]
+  values:
+    hours: 14
+    poisoned: false
+  weight: 5
+  cost: 24
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [meat, chunk]
+    text: >
+      It isn't so much that the meat looks poisoned or anything, but that you just are not sure of its
+      origins.  You doubt that a hunter would drop a side of venison or rabbit meat...  What in the world
+      could this meat have come from, you wonder...
+
+"tba:30:obj:3020":
+  type: weapon
+  keywords: [dagger]
+  short: a dagger
+  long: A dagger with a long thin blade is here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: pierce
+  weight: 1
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:30:obj:3021":
+  type: weapon
+  keywords: [sword, small]
+  short: a small sword
+  long: A small sword lies here.
+  flags: [no_invis]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: pierce
+  weight: 3
+  cost: 60
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [inscription]
+    text: "It says: 'May this sword be a good companion.  '"
+  - keywords: [sword, small]
+    text: The small sword seems to have an inscription of some sort.
+
+"tba:30:obj:3022":
+  type: weapon
+  keywords: [sword, long]
+  short: a long sword
+  long: A long sword has been left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 8
+  cost: 600
+  rent: 10
+  level: 0
+
+"tba:30:obj:3023":
+  type: weapon
+  keywords: [club, wooden]
+  short: a wooden club
+  long: A simple looking wooden club is here.
+  wear: [take, wield]
+  values:
+    damage: 1d3
+    attack: pound
+  weight: 3
+  cost: 12
+  rent: 10
+  level: 0
+
+"tba:30:obj:3024":
+  type: weapon
+  keywords: [warhammer, hammer]
+  short: a warhammer
+  long: A medium sized warhammer is here.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: pound
+  weight: 6
+  cost: 50
+  rent: 10
+  level: 0
+
+"tba:30:obj:3025":
+  type: weapon
+  keywords: [flail, large]
+  short: a flail
+  long: A large flail is here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pound
+  weight: 6
+  cost: 625
+  rent: 10
+  level: 0
+
+"tba:30:obj:3030":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A large torch.
+  wear: [take, hold]
+  values:
+    hours: 24
+  weight: 1
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:30:obj:3031":
+  type: light
+  keywords: [lantern, brass]
+  short: a lantern
+  long: A brass lantern is here.
+  wear: [take, hold]
+  values:
+    hours: 96
+  weight: 1
+  cost: 50
+  rent: 10
+  level: 0
+
+"tba:30:obj:3032":
+  type: container
+  keywords: [bag]
+  short: a bag
+  long: A small bag is here.
+  wear: [take, hold]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 20
+  rent: 10
+  level: 0
+
+"tba:30:obj:3033":
+  type: container
+  keywords: [box]
+  short: a box
+  long: A small box is here.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 5
+  cost: 50
+  rent: 10
+  level: 0
+
+"tba:30:obj:3034":
+  type: other
+  keywords: [atm, teller, banks, machine]
+  short: an automatic teller machine
+  long: An automatic teller machine has been installed in the wall here.
+  flags: [no_rent, no_donate, no_invis, magic]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [atm, teller, bank, machine]
+    text:
+    - "There is a small note on the machine which says:"
+    - >
+      To use, type 'BALANCE', 'WITHDRAW <amount>', or 'DEPOSIT <amount>'. Please report any strange
+      occurrences to the bank manager.
+
+"tba:30:obj:3035":
+  type: fountain
+  keywords: [fountain, water]
+  short: the large fountain
+  long: A large fountain carved from blue-streaked marble is here, bubbling merrily.
+  flags: [no_rent, no_donate, no_invis, magic]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [marble, blue, streaked, fountain]
+    text: >
+      It is a well crafted fountain, carved from a single piece of very beautiful white marble shot
+      through with electric blue streaks that look almost like lightning dancing along the sides of the
+      fountain.  It seems to be enchanted in some manner, as the water level seems to never lower.
+
+"tba:30:obj:3036":
+  type: other
+  keywords: [cashcard, card, atm, banks]
+  short: a cashcard
+  long: A handy dandy cashcard is sitting on the ground here.
+  flags: [no_rent, no_donate, no_invis, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [cashcard, card, atm]
+    text:
+    - "There is some writing on the back of the card which reads:"
+    - >
+      To use, type 'BALANCE', 'WITHDRAW <amount>', or 'DEPOSIT <amount>'. Please report any strange
+      occurrences to the bank manager.
+
+"tba:30:obj:3037":
+  type: light
+  keywords: [candle]
+  short: a candle
+  long: A candle lies here, unlit.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 5
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [candle]
+    text: A home-made candle, how quaint!
+
+"tba:30:obj:3038":
+  type: weapon
+  keywords: [nail]
+  short: a nail
+  long: A penny nail lies in the dust.
+  wear: [take, wield]
+  values:
+    damage: 1d1
+    attack: pierce
+  weight: 1
+  cost: 5
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [nail]
+    text: Its a common iron nail, used for carpentry work.
+
+"tba:30:obj:3039":
+  type: container
+  keywords: [pot]
+  short: a pot
+  long: A cast-iron pot sits on the ground.
+  wear: [take]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 10
+  cost: 100
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [pot]
+    text: It is a nice pot.  You could use it, if you ever settled down.
+
+"tba:30:obj:3040":
+  type: armor
+  keywords: [plate, breast]
+  short: a breast plate
+  long: A breast plate is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 50
+  cost: 180
+  rent: 15
+  level: 0
+
+"tba:30:obj:3041":
+  type: armor
+  keywords: [shirt, chain, mail]
+  short: a chain mail shirt
+  long: A chain mail shirt is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 50
+  cost: 250
+  rent: 5
+  level: 0
+
+"tba:30:obj:3042":
+  type: armor
+  keywords: [shield, wooden]
+  short: a shield
+  long: A small wooden shield is lying on the ground.
+  wear: [take, shield]
+  values:
+    armor: 2
+  weight: 3
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:30:obj:3043":
+  type: armor
+  keywords: [jacket, soft, leather]
+  short: a leather jacket
+  long: A soft leather jacket is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 10
+  cost: 200
+  rent: 10
+  level: 0
+
+"tba:30:obj:3044":
+  type: armor
+  keywords: [jacket, studded, leather]
+  short: a studded leather jacket
+  long: A studded leather jacket is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 3
+  weight: 20
+  cost: 500
+  rent: 10
+  level: 0
+
+"tba:30:obj:3045":
+  type: armor
+  keywords: [jacket, scale, mail]
+  short: a scale mail jacket
+  long: A scale mail jacket is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 40
+  cost: 1000
+  rent: 10
+  level: 0
+
+"tba:30:obj:3046":
+  type: armor
+  keywords: [plate, bronze, breast]
+  short: a bronze breast plate
+  long: A bronze breast plate is lying on the ground.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 50
+  cost: 700
+  rent: 10
+  level: 0
+
+"tba:30:obj:3050":
+  type: scroll
+  keywords: [scroll, identify]
+  short: a scroll of identify
+  long: A scroll has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [1, 52, -1, -1]
+  weight: 1
+  cost: 5000
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [scroll, identify]
+    text:
+    - "The scroll has a magic formula drawn upon it:"
+    - ???
+    - "?   ?"
+    - "?"
+    - "?"
+    - "?"
+    - "*"
+
+"tba:30:obj:3051":
+  type: potion
+  keywords: [potion, yellow]
+  short: a yellow potion of see invisible
+  long: A small yellow potion has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 19, -1, -1]
+  weight: 1
+  cost: 400
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [potion, yellow]
+    text: The potion has a small label 'Detect The Invisible'.
+
+"tba:30:obj:3052":
+  type: scroll
+  keywords: [scroll, recall]
+  short: a scroll of recall
+  long: A scroll has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 42, -1, -1]
+  weight: 4
+  cost: 200
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [scroll, recall]
+    text: The scroll has written a formulae of 'Word of Recall' upon it.
+
+"tba:30:obj:3053":
+  type: wand
+  keywords: [wand, gray]
+  short: a gray wand of invisibility
+  long: A gray wand has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 29]
+  weight: 2
+  cost: 400
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [wand, gray]
+    text:
+    - >
+      The wand is an old dark gray stick.  You notice a small symbol etched at the base of the wand.  It
+      looks like this:
+    - \ /
+    - "- O -"
+    - / \
+
+"tba:30:obj:3054":
+  type: staff
+  keywords: [staff, gnarled]
+  short: a gnarled staff
+  long: A gnarled staff has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [12, 1, 1, 38]
+  weight: 17
+  cost: 700
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [staff, gnarled]
+    text:
+    - >
+      The staff is made of old oak, and is around five feet long. It fits perfectly into your hand. You
+      notice a small symbol etched at the base of the staff, it looks like:
+    - ZZZZZ
+    - Z
+    - Z
+    - Z ZZZZZ  z   z
+
+"tba:30:obj:3055":
+  type: staff
+  keywords: [staff, metal]
+  short: a metal staff
+  long: A metal staff has carelessly been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [10, 8, 8, 15]
+  weight: 7
+  cost: 850
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [staff, metal]
+    text: The staff is made of metals unknown to you.
+
+"tba:30:obj:3060":
+  type: boat
+  keywords: [raft]
+  short: a raft
+  long: A raft has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 400
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [raft]
+    text: The raft looks very primitive.
+
+"tba:30:obj:3061":
+  type: boat
+  keywords: [canoe]
+  short: a canoe
+  long: A canoe has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 32
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [canoe]
+    text: The canoe is fairly light.
+
+"tba:30:obj:3070":
+  type: armor
+  keywords: [gauntlets, bronze]
+  short: a pair of bronze gauntlets
+  long: A pair of bronze gauntlets is lying on the ground.
+  wear: [take, hands]
+  values:
+    armor: 6
+  weight: 8
+  cost: 175
+  rent: 10
+  level: 0
+
+"tba:30:obj:3071":
+  type: armor
+  keywords: [gloves, leather]
+  short: a pair of leather gloves
+  long: A pair of leather gloves is lying on the ground.
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 3
+  cost: 75
+  rent: 10
+  level: 0
+
+"tba:30:obj:3075":
+  type: armor
+  keywords: [helmet, bronze]
+  short: a bronze helmet
+  long: A bronze helmet is lying on the ground.
+  wear: [take, head]
+  values:
+    armor: 6
+  weight: 8
+  cost: 350
+  rent: 10
+  level: 0
+
+"tba:30:obj:3076":
+  type: armor
+  keywords: [cap, leather]
+  short: a leather cap
+  long: A leather cap is lying on the ground.
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 150
+  rent: 10
+  level: 0
+
+"tba:30:obj:3080":
+  type: armor
+  keywords: [leggings, bronze]
+  short: a pair of bronze leggings
+  long: A pair of bronze leggings is lying on the ground.
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 8
+  cost: 350
+  rent: 10
+  level: 0
+
+"tba:30:obj:3081":
+  type: armor
+  keywords: [pants, leather]
+  short: a pair of leather pants
+  long: A pair of leather pants is lying on the ground.
+  wear: [take, legs]
+  values:
+    armor: 3
+  weight: 8
+  cost: 150
+  rent: 10
+  level: 0
+
+"tba:30:obj:3082":
+  type: armor
+  keywords: [leather, gorget, neck, guard]
+  short: a leather gorget
+  long: A leather neck guard has been left here
+  wear: [take, neck]
+  values:
+    armor: 3
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, gorget, neck, guard]
+    text: This leather neck guard is meant to protect the throat and face in battle.
+
+"tba:30:obj:3083":
+  type: worn
+  keywords: [leather, ring]
+  short: a leather ring
+  long: A leather ring with strange symbols lies here.
+  wear: [take, finger]
+  values:
+    raw: [1, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [leather, ring]
+    text: >
+      The ring used to have some strange writing and symbols around the band but it has become so worn
+      with time and use that it is unreadable.
+
+"tba:30:obj:3084":
+  type: worn
+  keywords: [leather, boots]
+  short: a pair of leather boots
+  long: A pair of leather boots is lying here.
+  wear: [take, feet]
+  values:
+    raw: [4, 0, 0, 0]
+  weight: 2
+  cost: 11
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, boots]
+    text: The boots are worn with age but well oiled and polished to still remain useable.
+
+"tba:30:obj:3085":
+  type: armor
+  keywords: [sleeves, bronze]
+  short: a pair of bronze sleeves
+  long: A pair of bronze sleeves is lying on the ground.
+  wear: [take, arms]
+  values:
+    armor: 6
+  weight: 8
+  cost: 175
+  rent: 10
+  level: 0
+
+"tba:30:obj:3086":
+  type: armor
+  keywords: [sleeves, leather]
+  short: a pair of leather sleeves
+  long: A pair of leather sleeves is lying on the ground.
+  wear: [take, arms]
+  values:
+    armor: 2
+  weight: 4
+  cost: 75
+  rent: 10
+  level: 0
+
+"tba:30:obj:3087":
+  type: armor
+  keywords: [brown, leather, cape]
+  short: a brown leather cape
+  long: A brown leather cape was abandoned on the floor
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [brown, leather, cape]
+    text: It is a rough brown leather cape that is frayed at the end.
+
+"tba:30:obj:3088":
+  type: armor
+  keywords: [leather, old, belt]
+  short: an old leather belt
+  long: A belt made of leather was left here.
+  flags: [no_invis]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [belt, leather, old]
+    text: It looks very, very old.
+
+"tba:30:obj:3089":
+  type: armor
+  keywords: [leather, wristguard]
+  short: a leather wristguard
+  long: A leather wristguard lies in the dirt.
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 3
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, wristguard]
+    text: >
+      The wristguard has been heavily oiled and is extremely flexible and supportive.  It is laced with
+      some leather string to loosen and tighten to almost any size.
+
+"tba:30:obj:3096":
+  type: other
+  keywords: [boards, social, bulletin, gen_boards]
+  short: a social bulletin board
+  long: A large, sociable bulletin board is mounted on a wall here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [social, bulletin]
+    text: Use 'look board' to read the board.
+  - keywords: [board]
+    text: If you can read this, the board is not working.
+
+"tba:30:obj:3097":
+  type: trash
+  keywords: [boards, frozen, bulletin, gen_boards]
+  short: a frozen bulletin board
+  long: A large bulletin board is here, carved from a block of ice.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [freeze, bulletin]
+    text: Use 'look board' to read the board.
+  - keywords: [board]
+    text: If you can read this, the board is not working.
+
+"tba:30:obj:3098":
+  type: trash
+  keywords: [boards, holy, bulletin, gen_boards]
+  short: a holy bulletin board
+  long: A large bulletin board is mounted on a wall here.  It glows with a faint aura.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [holy, bulletin]
+    text: Use 'look board' to read the board.
+  - keywords: [board]
+    text: If you can read this, the board is not working.
+
+"tba:30:obj:3099":
+  type: trash
+  keywords: [boards, bulletin, gen_boards]
+  short: a bulletin board
+  long: A large bulletin board is mounted on a wall here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bulletin]
+    text: Use 'look board' to read the board.
+  - keywords: [board]
+    text: If you can read this, the board is not working.

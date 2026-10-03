@@ -1,0 +1,673 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 234.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:234:obj:23400":
+  type: drinkcon
+  keywords: [goatskin, skin, water]
+  short: a goatskin
+  long: A skin with water seeping out of it, is lying here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: water
+    poisoned: false
+  weight: 13
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:234:obj:23401":
+  type: food
+  keywords: [black, berries, blackberries]
+  short: some blackberries
+  long: A bunch of blackberries.
+  wear: [take]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 1
+  cost: 8
+  rent: 0
+  level: 0
+
+"tba:234:obj:23402":
+  type: container
+  keywords: [pouch]
+  short: a small pouch
+  long: A small pouch has been dropped here.
+  wear: [take]
+  values:
+    capacity: 15
+    lock_flags: 1
+    corpse: false
+  weight: 1
+  cost: 30
+  rent: 0
+  level: 0
+
+"tba:234:obj:23403":
+  type: fountain
+  keywords: [milk, fountain, milk]
+  short: a fountain
+  long: A drinking fountain looks out of place, here in the Arena.
+  wear: []
+  values:
+    capacity: -1
+    contains: 1
+    liquid: milk
+    poisoned: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fountain, milk]
+    text: The fountain seems to be filled with milk!  Of course, newbies drink milk.
+
+"tba:234:obj:23404":
+  type: food
+  keywords: [leaves, leaf]
+  short: a leaf
+  long: A fallen leaf rests here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leaves, leaf]
+    text: >
+      The leaf has a strange magical affect to it.  Your feet seem lighter as if you may be able to walk
+      on water.
+
+"tba:234:obj:23405":
+  type: weapon
+  keywords: [newbie, sword, short, shortsword]
+  short: a newbie shortsword
+  long: A newbie shortsword is sitting here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: slash
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:234:obj:23406":
+  type: weapon
+  keywords: [Newbie, mace]
+  short: a newbie mace
+  long: A newbie mace has been dropped here.
+  flags: [anti_thief, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: bludgeon
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [newbie, mace]
+    text: A short mace designed for new characters.
+
+"tba:234:obj:23407":
+  type: weapon
+  keywords: [newbie, dagger]
+  short: a newbie dagger
+  long: A newbie dagger is resting here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 1d6
+    attack: pierce
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [newbie, dagger]
+    text: A small dagger designed for thieves, or an offset weapon.
+
+"tba:234:obj:23408":
+  type: weapon
+  keywords: [Newbie, club]
+  short: a newbie club
+  long: A newbie club has been left here.
+  flags: [anti_thief, anti_warrior]
+  wear: [take, wield, hold]
+  values:
+    damage: 1d4
+    attack: pound
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [newbie, club]
+    text: A small club designed for an offset hand.
+
+"tba:234:obj:23409":
+  type: armor
+  keywords: [Newbie, chest]
+  short: a newbie chest
+  long: A newbie chest plate rests here.
+  wear: [take, body]
+  values:
+    armor: 2
+  weight: 6
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [newbie, chest]
+    text: A small chest place designed for all classes.
+
+"tba:234:obj:23410":
+  type: armor
+  keywords: [ring, power]
+  short: a ring of power
+  long: A shiny ring is trying to hide here.
+  flags: [glow, anti_mage, anti_cleric, anti_thief]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [ring, power]
+    text: A ring with a fighter drawing his sword is engraved on this shiny ring.
+
+"tba:234:obj:23411":
+  type: armor
+  keywords: [ring, shadows]
+  short: a ring of shadows
+  long: A black ring is hiding in the shadows
+  flags: [anti_mage, anti_cleric, anti_warrior]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [ring, shadows]
+    text: A dark black ring with no markings on it.
+
+"tba:234:obj:23412":
+  type: armor
+  keywords: [Blessed, ring]
+  short: a blessed ring
+  long: A humming ring is calling out to you.
+  flags: [glow, hum, anti_mage, anti_thief, anti_warrior]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [ring, blessed]
+    text: A ring that looks pure and glows brightly.
+
+"tba:234:obj:23413":
+  type: armor
+  keywords: [ring, fire]
+  short: a ring of fire
+  long: A ring that glows like fire is warding you off.
+  flags: [glow, anti_cleric, anti_thief, anti_warrior]
+  wear: [take, finger]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  extras:
+  - keywords: [ring, fire]
+    text: This ring burns bright red and burns to the touch.
+
+"tba:234:obj:23414":
+  type: armor
+  keywords: [Warriors, Amulet]
+  short: a warriors amulet
+  long: An amulet is lying here.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [warriors, amulet]
+    text: This amulet is designed to protect the neck of a Warrior.
+
+"tba:234:obj:23415":
+  type: armor
+  keywords: [Black, collar]
+  short: a black collar
+  long: A black collar has been left here.
+  flags: [anti_mage, anti_cleric, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [black, collar]
+    text: This collar wraps around the neck of a thief to prevent this skin from showing.
+
+"tba:234:obj:23416":
+  type: armor
+  keywords: [Silver, pendant]
+  short: a silver pendant
+  long: A silver pendant is resting here.
+  flags: [anti_mage, anti_thief, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 15
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [silver, pendant]
+    text: This pendant is shaped as a cross.  It shines brightly.
+
+"tba:234:obj:23417":
+  type: armor
+  keywords: [Red, charm]
+  short: a red charm
+  long: A fire red charm is burning a hole here.
+  flags: [anti_cleric, anti_thief, anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [red, charm]
+    text: This charm is red as fire and burns to the touch.
+
+"tba:234:obj:23418":
+  type: armor
+  keywords: [Warriors, Helm]
+  short: a warriors helm
+  long: A large Helm is looking for an owner
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [warriors, helm]
+    text: A large helm which covers the entire face.  It has slits for the Eyes and for the nose.
+
+"tba:234:obj:23419":
+  type: armor
+  keywords: [Leather, Helm]
+  short: a leather helm
+  long: A dark leather helm is sitting here.
+  flags: [anti_mage, anti_cleric, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, helm]
+    text: >
+      This is helm is black and covers the entire face except for the eyes.  It most resembles a mask.
+
+"tba:234:obj:23420":
+  type: armor
+  keywords: [gold, Tiara]
+  short: a gold tiara
+  long: A gold tiara calls out to you.
+  flags: [anti_mage, anti_thief, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gold, tiara]
+    text: A tiara designed to show respect to the Deities.
+
+"tba:234:obj:23421":
+  type: armor
+  keywords: [Wizards, Hat]
+  short: a wizards hat
+  long: A pointy hat is floating here.
+  flags: [anti_cleric, anti_thief, anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_rod
+    modifier: 1
+  extras:
+  - keywords: [wizards, hat]
+    text: A common wizards hat which points at the end.  The hat is red with pictures of fire.
+
+"tba:234:obj:23422":
+  type: armor
+  keywords: [Leggings]
+  short: some leggings
+  long: A pair of leggings are resting here.
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leggings]
+    text: Leggings that cover the entire legs but has the ability to bend at the knee.
+
+"tba:234:obj:23423":
+  type: armor
+  keywords: [Leather, leggings]
+  short: some leather leggings
+  long: A set of leather leggings.
+  flags: [anti_mage, anti_cleric, anti_warrior]
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, leggings]
+    text: A pair of leggings designed for maneuverability.
+
+"tba:234:obj:23424":
+  type: armor
+  keywords: [Cleric, Breeches]
+  short: some cleric's breeches
+  long: A pair of breeches that allows for great movement.
+  flags: [anti_mage, anti_thief, anti_warrior]
+  wear: [take, legs]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: 1
+  extras:
+  - keywords: [cleric, breeches]
+    text: Breeches that fight very loosely but provides extra protection.
+
+"tba:234:obj:23425":
+  type: container
+  keywords: [Leather, leggings]
+  short: some leather leggings
+  long: A set of leggings rest here.
+  flags: [anti_cleric, anti_thief, anti_warrior]
+  wear: [take, legs]
+  values:
+    capacity: 15
+    lock_flags: 1
+    corpse: false
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leather, leggings]
+    text: Leather leggings with pouches along the side.
+
+"tba:234:obj:23426":
+  type: armor
+  keywords: [mail, boots, plate]
+  short: some mail boots
+  long: A pair plate mail boots
+  flags: [anti_mage, anti_cleric, anti_thief]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 50
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: -10
+  extras:
+  - keywords: [mail, plate, boots]
+    text: A pair of boots that is made completely of Plate.
+
+"tba:234:obj:23427":
+  type: armor
+  keywords: [Leather, boots]
+  short: some leather boots
+  long: A rugged pair of boots.
+  flags: [anti_mage, anti_cleric, anti_warrior]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 20
+  extras:
+  - keywords: [leather, boots]
+    text: A pair of leather boots that look very comfortable.
+
+"tba:234:obj:23428":
+  type: armor
+  keywords: [Sandals]
+  short: some sandals
+  long: A pair of Sandals.
+  flags: [anti_mage, anti_thief, anti_warrior]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sandals]
+    text: A pair of light weight sandals.
+
+"tba:234:obj:23429":
+  type: armor
+  keywords: [Mage, boots]
+  short: some mage boots
+  long: A pair of Mage boots are floating here.
+  flags: [anti_cleric, anti_thief, anti_warrior]
+  wear: [take, feet]
+  values:
+    armor: 1
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mage, boots]
+    text: A pair of boots that are very lightweight, but provide good protection.
+
+"tba:234:obj:23430":
+  type: note
+  keywords: [map, newbie, school]
+  short: a map of the newbie school
+  long: A map of the newbie school was left here.
+  action: |-
+    v              O-v-O            O-^-O-O-O-O-O
+                     |              | | | | | | |
+      O              O            O-O-O-O-O-O-O-O
+      |              |              | | | | | | |
+      O   O        O-O-O            O-O-O-O-O-O-O
+      |   |          |              | | | | | | |
+    ^-O-O-O-v        O   O   O      O-O-O-O-O-O-O
+      |   |          |   |   |      | | | | | | |
+      O   O          O-O-O-O-O-^    O-O-O-O-O-O-O
+                         |   |      | | | | | | |
+                         O v O      O-O-O-O-^-O-O
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:234:obj:23495":
+  type: armor
+  keywords: [Tuxedo]
+  short: a tuxedo
+  long: A tuxedo sized for a dragon.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 0
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tuxedo]
+    text: You see a dragon sized Tuxedo.  Its coat has a twin tail.
+
+"tba:234:obj:23496":
+  type: worn
+  keywords: [wedding, dress, gown]
+  short: a wedding dress
+  long: A long white gown.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wedding, dress]
+    text: >
+      You see a beautiful white wedding dress.  It covers the complete body of the bride and its train
+      stretches five feet out from the bride.
+
+"tba:234:obj:23497":
+  type: armor
+  keywords: [engagement, ring]
+  short: an engagement ring
+  long: A beautiful ring of twisted gold and platinum.
+  flags: [glow, magic, bless]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [ring]
+    text: >
+      A beautiful ring of twisted gold and platinum.  There is an engravement on the inside: "I love you
+      Erica"
+
+"tba:234:obj:23498":
+  type: armor
+  keywords: [wedding, ring]
+  short: a wedding ring
+  long: A wedding ring that shines brightly.
+  flags: [glow, magic, bless]
+  wear: [take, finger]
+  values:
+    armor: 5
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [ring]
+    text: A ring that symbols love.  Engraved in the ring, I will love you forever,
+
+"tba:234:obj:23499":
+  type: other
+  keywords: [little, black, book]
+  short: a little black book
+  long: A little black book is sitting here calling your name.
+  flags: [hum, magic, bless]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [book]
+    text:
+    - Upon these pages are players that have upset Ferret and will not receive help!
+    - Demigod Saint Angel Phoenix Alexander @w(Maybe you!)!@n

@@ -1,0 +1,115 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 75.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:75:shop:7500":
+  keeper: tba:75:mob:7522
+  rooms: [tba:75:room:7522]
+  products:
+  - tba:75:obj:7521
+  - tba:75:obj:7522
+  - tba:75:obj:7520
+  buys:
+  - type: treasure
+  - type: weapon
+  - type: food
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You can't afford my drinks! Get out!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 28
+
+"tba:75:shop:7501":
+  keeper: tba:75:mob:7588
+  rooms: [tba:75:room:7588]
+  products:
+  - tba:75:obj:7587
+  - tba:75:obj:7588
+  buys:
+  - type: container
+  - type: light
+  - type: worn
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 6
+    close: 23
+
+"tba:75:shop:7502":
+  keeper: tba:75:mob:7589
+  rooms: [tba:75:room:7589]
+  products:
+  - tba:75:obj:7507
+  - tba:75:obj:7508
+  - tba:75:obj:7509
+  - tba:75:obj:7510
+  buys:
+  - type: food
+  - type: container
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I only stock the best food in town."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't want that!"
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s Sorry, no charity."
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 7
+    close: 23
+
+"tba:75:shop:7503":
+  keeper: tba:75:mob:7590
+  rooms: [tba:75:room:7590]
+  products:
+  - tba:75:obj:7590
+  - tba:75:obj:7537
+  - tba:75:obj:7506
+  buys:
+  - type: wand
+  - type: potion
+  - type: scroll
+  - type: staff
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor! Get out of here you bum!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

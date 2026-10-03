@@ -1,0 +1,189 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 232.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:232:mob:23200":
+  keywords: [Wizard, merchant]
+  short: a wizard
+  long: A tall man wearing a wizards hat stands behind a counter.
+  description: >
+    The wizard is tall man with a gray beard.  You can see such great wisdom in his eyes.  His hat
+    makes him look very comical.
+  level: 22
+  sex: male
+  alignment: 600
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, protect_evil, no_track]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: blast
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23201":
+  keywords: [Baker, lady, woman]
+  short: the Baker
+  long: A beautiful Baker stands behind a counter full of goodies.
+  description: >
+    You see a tall slender woman with some flour over her close and a touch on her nose.  She is very
+    attractive and has a friendly attitude.
+  level: 21
+  sex: female
+  alignment: 150
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, protect_evil]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23202":
+  keywords: [man, shopkeeper, merchant, Zorg]
+  short: Zorg the shopkeeper
+  long: Zorg the shopkeeper sits behind a table with his feet propped up.
+  description: >
+    You see a medium sized man with long hair.  His hygiene is a little bit questionable.  His beard
+    needs to be tended to.  He looks as though he could get out and exercise a LOT!
+  level: 22
+  sex: male
+  alignment: -200
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23203":
+  keywords: [Lora, Croft]
+  short: Lora Croft
+  long: You see Lora Croft examining some of the weapons she sells.
+  description: >
+    You see a beautiful well built woman.  She wears a white tank top shirt that is almost see
+    through.  She looks very strong yet feminine
+  level: 24
+  sex: female
+  alignment: 250
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, protect_evil]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23204":
+  keywords: [tarzan, petshops]
+  short: Tarzan
+  long: Tarzan walks about feeding the pets.
+  description: >
+    Tarzan seems to be a strange individual.  Someone forgot to tell him that causal day doesn't mean
+    to just prance around in a short cloth wrapped around his waist.  He seems to know what he is doing
+    though, all the Pets seem to worship him.
+  level: 21
+  sex: male
+  alignment: 300
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, protect_evil]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23205":
+  keywords: [sabertooth, tiger, pets]
+  short: Sabertooth Tiger
+  long: A Sabertooth Tiger stands here protecting it's owner.
+  description: >
+    You see a large feline with very long, very sharp teeth.  The tiger watches you suspiciously,
+    growling at you as you try to approach.
+  level: 22
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, scavenger, aware, no_charm, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23206":
+  keywords: [anaconda, pets]
+  short: Anaconda
+  long: A large anaconda watches you closely.
+  description: The snake looks at you evilly, flicking it's tongue to you, wondering how good you taste.
+  level: 23
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, scavenger, memory, no_charm, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+    bare_hand_attack: crush
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:232:mob:23207":
+  keywords: [Armorer]
+  short: the armorer
+  long: The armorer is here forging new items.
+  description: >
+    You see a very large man.  He holds a large hammer and his muscles bulge as he swings the hammer. 
+    He is very strong and has a soft smile.  He looks pleased to see you.
+  level: 22
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,907 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 19.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:19:mob:1900":
+  keywords: [young, bullywug, xyoung]
+  short: a young bullywug
+  long: A young bullywug scavenges about.
+  description: >
+    This rather small bullywug has the same frog-like features as its adult kin, only slightly paler
+    and less muscular.  Its mottled hide looks soft in places, affording it less protection than the
+    armor-like skin of a full grown bullywug.
+  level: 12
+  sex: male
+  alignment: -200
+  flags: [sentinel, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1901":
+  keywords: [small, cricket]
+  short: a small cricket
+  long: A small cricket chirps obnoxiously.
+  description: >
+    This little green insect is covered with an unusually tough exoskeleton, perhaps evolved to survive
+    the attacks of local predators.  Large multi-faceted eyes peer alertly about and every few seconds
+    the creature announces its presence with its characteristic chirp.
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 0
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1902":
+  keywords: [xleviathanfortrigx, scaly, leviathan, head]
+  short: the scaly leviathan
+  long: A scaly leviathan's monstrous head protrudes from the water.
+  description: >
+    Sharp serrated teeth frame the open massive jaw of this creature.  Two tiny black eyes peer out
+    from the scale armor of its gigantic face.  Deep below the water, the enormous undulating shadow of its
+    body sends waves rippling across the surface.
+  level: 22
+  sex: neutral
+  alignment: -100
+  flags: [sentinel, aggressive, no_charm, no_summon, no_sleep]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1903":
+  keywords: [menacing, lizard, warrior]
+  short: a lizard warrior
+  long: A menacing lizard warrior stands at post.
+  description: >
+    This savage, reptilian humanoid stands tall, proud, and muscular.  Dark gray scales armor almost
+    his entire body, making him blend seamlessly into shadow, only his fierce yellow eyes piercingly
+    obvious.
+  level: 17
+  sex: male
+  alignment: -200
+  flags: [aware, aggressive, stay_zone, no_charm, no_summon]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1904":
+  keywords: [menacing, lizard, warrior, xgateopenerx]
+  short: a lizard warrior
+  long: A menacing lizard warrior stands at post.
+  description: >
+    This savage, reptilian humanoid stands tall, proud, and muscular.  Dark gray scales armor almost
+    his entire body, making him blend seamlessly into shadow, only his fierce yellow eyes piercingly
+    obvious.
+  level: 17
+  sex: male
+  alignment: -200
+  flags: [sentinel, aware, aggressive, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1905":
+  keywords: [tiny, lizard, hatchling]
+  short: a tiny lizard hatchling
+  long: A tiny lizard hatchling crawls about.
+  description: >
+    This tiny lizard is humanoid but crawling about on four legs as though newly-born.  Soft
+    translucent scales cover its whole body and its small eyes are still squinted shut as though asleep.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 0
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1906":
+  keywords: [Lizard, King, lizard, king, enormously, tall, man]
+  short: the Lizard King
+  long: An enormously tall lizard man lounges on the throne.
+  description: >
+    Unusually tall, this reptilian humanoid is covered from head to toe in magnificent flecked green
+    scales.  His long sweeping tail flicks restlessly from side to side, and his cruel black eyes seem
+    extraordinarily intelligent.
+  level: 19
+  sex: male
+  alignment: 18
+  flags: [sentinel, aware, aggressive, no_charm, no_summon]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 500
+  exp: 43320
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1907":
+  keywords: [bullywug, subleader, xlead]
+  short: a bullywug subleader
+  long: The bullywug subleader patrols cautiously.
+  description: >
+    This large, bipedal amphibian looks almost like a frog.  Covered in smooth, mottled olive green
+    hide he looks naturally well-armored.  A wide gaping mouth covers much of his face, the only other
+    noteworthy feature being his large bulbous eyes that peer keenly about.
+  level: 18
+  sex: male
+  alignment: -200
+  flags: [aware, stay_zone, helper, no_summon]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1908":
+  keywords: [jet-black, jet, black, crow]
+  short: a jet-black crow
+  long: A jet-black crow hops warily along the ground.
+  description: >
+    This large bird is covered in shimmering inky feathers that glisten almost iridescent in any
+    light.  Its large, sharp beak is curved and predatory, as is the look in its tiny beaded eyes.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 0
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1909":
+  keywords: [hairy, leader]
+  short: a hairy spider
+  long: A hairy spider hunts the area for prey.
+  description: >
+    This vicious, black, hunting spider is most often found in jungles and caverns, though the damp of
+    the swampland is equally acceptable as long as there is food to be found.  Incredibly large,
+    effective eyes ensure that even the dark cannot serve as a hiding place from this predator.
+  level: 12
+  sex: female
+  alignment: 12
+  flags: [aware, aggressive, stay_zone, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1910":
+  keywords: [hairy, spider]
+  short: a hairy spider
+  long: A hairy spider hunts the area for prey.
+  description: >
+    This vicious, black, hunting spider is most often found in jungles and caverns, though the damp of
+    the swampland is equally acceptable as long as there is food to be found.  Incredibly large,
+    effective eyes ensure that even the dark cannot serve as a hiding place from this predator.
+  level: 10
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aware, aggressive, stay_zone, helper]
+  affects: [sense_life]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 0
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1911":
+  keywords: [cross, spider]
+  short: a cross spider
+  long: A cross spider scuttles about warily.
+  description: >
+    This rather plain-looking spider has the characteristic sleek legs and large fangs of its more
+    dangerous arachnid kin.  Large bulbous eyes peer keenly and evilly about, watching for any opportunity
+    this creature could take to capture a new meal.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1912":
+  keywords: [bolas, spider]
+  short: a bolas spider
+  long: A bolas spider clicks its fangs, filling the air with a heady scent.
+  description: >
+    The air seems vaguely foggy around this creature, a powerful almost hypnotizing scent wafting
+    around it.  The natural pheromones of this animal are apparently as deadly as they are intoxicating,
+    judging by the predatory gleam in its calculating eyes.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1913":
+  keywords: [fishing, spider]
+  short: a fishing spider
+  long: A fishing spider scurries about on spindly legs.
+  description: >
+    This delicate-looking spider is light and agile enough to run across the surface of still waters
+    with its long, slender legs.  Small in size and almost fragile in appearance, only its large glistening
+    fangs betray the ferocity of this creature.
+  level: 17
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  affects: [waterwalk, no_track]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1914":
+  keywords: [flat, spider]
+  short: a flat spider
+  long: A flat spider moves stealthily and quickly along.
+  description: >
+    This extremely agile little spider moves in sudden quick bursts, scuttling rapidly from one hiding
+    place to another.  Its tiny beady eyes take in the surroundings with ease, its relatively small fangs
+    clicking almost impatiently with the urge to kill.
+  level: 17
+  sex: neutral
+  alignment: -400
+  flags: [aggressive, stay_zone, memory]
+  affects: [sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1915":
+  keywords: [widow, spider]
+  short: a widow spider
+  long: A widow spider wanders silently about.
+  description: >
+    This black bulbous spider has an unproportionately large belly, scarlet markings decorating its
+    black hide like fresh blood.  Abnormally large poison sacks are visible behind its substantial fangs,
+    indicating that this spider's bite could be worse than most.
+  level: 17
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1916":
+  keywords: [mangora, spider, beautiful]
+  short: a mangora spider
+  long: A beautiful mangora spider shimmers as it hurries along.
+  description: >
+    This large delicate-looking spider is covered in beautiful soft velvety fur. Shimmering like a
+    large jewel, the deep reddish purple coloring of its soft hide stands out strikingly.
+  level: 18
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone, wimpy]
+  affects: [detect_invis, detect_magic]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1917":
+  keywords: [bird, eating, spider, bird-eating]
+  short: a bird-eating spider
+  long: A bird-eating spider lies in wait here, cleaning its pincers.
+  description: >
+    This large, incredibly ferocious spider has intimidatingly huge fangs, coupled with a sturdy hairy
+    body and long well-armored forearms.  Although its pincers are slick with fresh blood, its eyes look
+    almost murderously hungry.
+  level: 18
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1918":
+  keywords: [jumping, spider]
+  short: a jumping spider
+  long: A jumping spider crouches here, ready to spring.
+  description: >
+    This light-bodied spider has large, powerful legs that allow it to jump both great distances
+    forward and into the air.  Long, lean pincers glisten unsheathed and ready for striking as its body stays
+    tense for a leap.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1919":
+  keywords: [funnel, spider]
+  short: a funnel spider
+  long: A funnel spider's large eyes gleam in the shadows.
+  description: >
+    This spider keeps as much of its body shrouded in darkness as it can. Enormously large, vulnerable
+    looking eyes peer cautiously about, so keenly able in the dark, this spider is probably all but blind
+    in sunlight.
+  level: 18
+  sex: neutral
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1920":
+  keywords: [crab, spider]
+  short: a crab spider
+  long: A crab spider darts over the landscape in sudden bursts.
+  description: >
+    This smallish, pancake-shaped spider moves quickly and decisively in almost random directions
+    whilst managing to stay in the same area.  Highly intelligent eyes survey the surroundings, burning with a
+    fierce predatory lust.
+  level: 15
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1921":
+  keywords: [trapdoor, spider]
+  short: a trapdoor spider
+  long: A trapdoor spider crouches, attempting to hide itself.
+  description: >
+    This stealthy spider gets its name from its love of hiding places and attacking its prey with a
+    quick ambush.  Dark shades of drab colors, its relatively small body is easy to conceal, only the glint
+    of its smooth fangs and dark eyes easily betray its presence.
+  level: 19
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1922":
+  keywords: [water, spider]
+  short: a water spider
+  long: A water spider lingers here, spinning wisps of silk.
+  description: >
+    This spider has tiny spines all over its body that seem to trap a bubble of air around the
+    creature, allowing it to breathe underwater.  Its round dark eyes appear slightly clouded, as though some
+    mucusy residue protects them from the water.
+  level: 19
+  sex: neutral
+  alignment: -400
+  flags: [sentinel]
+  affects: [waterwalk]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1923":
+  keywords: [spitting, spider]
+  short: a spitting spider
+  long: A spitting spider flexes its fangs menacingly.
+  description: >
+    This particularly ugly spider is short and squat, sharp wiry black hairs sticking up like spines
+    all over its body.  Large glands sit behind its front fangs, producing copious amounts of sticky
+    webbing that the creature can project at will from its mouth.
+  level: 19
+  sex: neutral
+  alignment: -400
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1924":
+  keywords: [wasp, spider]
+  short: "@ya @Dw@ya@Ds@yp@D s@yp@Di@yd@De@yr@n"
+  long: "@yA @Dw@ya@Ds@yp@D s@yp@Di@yd@De@yr lurks here, sticky ooze coating its forelegs."
+  description: >
+    This smallish spider has a subtly striped hide, and a constant stream of sticky web-like substance
+    that it coats its legs with, particularly useful for capturing and entangling unobservant prey.
+  level: 17
+  sex: neutral
+  alignment: -400
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1925":
+  keywords: [magnificent, orb, spider]
+  short: a magnificent orb spider
+  long: A magnificent orb spider stands here, jewelled eyes perceiving all.
+  description: >
+    This large regal looking spider has striking scarlet patterning all over its bulging round body. 
+    Delicate, long legs look far too fragile to support it but its movements are quick and elegant. 
+    Blackberry clusters of gleaming eyes watch the entrance way without let up, seeing through cloaks of
+    darkness and magic alike.
+  level: 20
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1935":
+  keywords: [enormous, whisper, spider]
+  short: an enormous whisper spider
+  long: An enormous whisper spider stirs from her blanket of webbing.
+  description: >
+    This massive spider is almost ten feet in width, long jointed legs clicking slightly as they
+    support the weight of its huge bulbous black body.  The two signature gray stripes of the whisper species
+    mark this creature's underbelly, and two blood red eyes peer effortlessly through the dark.
+  level: 23
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_charm, no_sleep]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+500
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1936":
+  keywords: [tall, glowering, drow, lord, Selvetarm, prince, aranea]
+  short: Selvetarm, Prince of the Aranea
+  long: A dark and glowering drow lord stands proudly here.
+  description: >
+    An aura of immense confidence and fearlessness surrounds him, jet-black skin shimmering slightly as
+    though moonlit, complimenting the silvery hair that cascades down his back.  Bloodlust burns in his
+    fierce eyes, like burning coals they glow vaguely red, casting his regal features in an eerie crimson
+    hue.
+  level: 23
+  sex: male
+  alignment: -500
+  flags: [sentinel, no_charm, no_summon, no_blind]
+  affects: [detect_align]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1937":
+  keywords: [spirit, maiden, Drow, xdrowfortrigx]
+  short: a Drow spirit maiden
+  long: A spirit maiden of the Drow flickers in the light of her held candle.
+  description: >
+    Sorrowful ruby eyes glint like rose petals in her shimmering dusky skin. Long silver hair floats
+    softly about her face in a starlit haze, casting her delicate features in and out of shadows as her
+    entire slender form flickers eerily.
+  level: 23
+  sex: female
+  alignment: 500
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1938":
+  keywords: [vicious, drider]
+  short: a vicious drider
+  long: A vicious drider prowls through the shadows.
+  description: >
+    This strange creature has the head and torso of a drow, and the legs and lower body of a giant
+    spider.  Evil and unnaturally bloodthirsty, its scarlet glowing eyes show no sign of any remaining higher
+    emotion, just an insatiable lust for killing.
+  level: 20
+  sex: male
+  alignment: -500
+  flags: [aggressive, stay_zone]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1939":
+  keywords: [albino, frog]
+  short: an albino frog
+  long: An albino frog hops blindly along.
+  description: >
+    This sickly-looking creature is obviously used to dwelling in dark places as its pale skin offers
+    absolutely no protection from the sun.  Its light-pink eyes are almost completely useless, gazing
+    blindly about as it moves cautiously from rock to rock.
+  level: 6
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 0
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1940":
+  keywords: [tiny, fly, glittering, dragonfly]
+  short: a tiny glittering dragonfly
+  long: A tiny glittering dragonfly flexes its wings.
+  description: >
+    This tiny jewelled insect is sleek and shimmering with beautiful iridescent colors.  Fragile
+    silvery wings open and close reflexively as it rests, delicate metallic veins sparkling as they catch the
+    light.
+  level: 2
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 0
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1941":
+  keywords: [scruffy-haired, gnome, xgnomex]
+  short: a scruffy-haired gnome
+  long: A scruffy-haired gnome rubs his eyes, blinking with confusion.
+  description: >
+    Similar in appearance to a dwarf, this little humanoid is somewhat frailer, being the lighter build
+    of his gnomish kin.  Long wisps of frizzy gray hair stick out haphazardly from both his head and his
+    large, pointed ears. Friendly-faced, his skin is lined with many years of laughter and sorrow alike,
+    wise gray eyes twinkling with a stubborn humor.
+  level: 17
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1942":
+  keywords: [giant, spider]
+  short: a giant spider
+  long: A giant spider moves silently through the shadows.
+  description: >
+    This spider's legs alone are larger than most humanoids, glistening razor-sharp fangs the size of
+    spears protrude menacingly as its calculating eyes pierce all darkness.  Extremely intelligent, these
+    spiders are often used as viciously effective guards, eager to kill and devour even those of their
+    own kind.
+  level: 19
+  sex: neutral
+  alignment: -500
+  flags: [aggressive, stay_zone, no_blind]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 0
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1943":
+  keywords: [spider, ball]
+  short: a spider ball
+  long: A spider ball stands here.
+  description: It looks unfinished.
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1997":
+  keywords: [sexy, stripper]
+  short: a sexy stripper
+  long: A sexy stripper poses flirtatiously.
+  description: >
+    Skimpily dressed, this curvacious woman is posing in ways that show off her ample assets.  Long
+    platinum blonde hair swishes around her hips, and a mischievous sparkle glimmers in her green eyes.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1998":
+  keywords: [gorilla, man, suit]
+  short: a hairy gorilla
+  long: A man in a gorilla suit stands here.
+  description: >
+    This gorilla suit is very realistic, right down to the smell!  Black tufts of matted hair spring
+    out haphazardly from this creature's sweaty body.  The only thing revealing that there is in fact a man
+    inside, are the human eyes blinking from two cut-out sockets.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 0
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:19:mob:1999":
+  keywords: [mob, deliverer]
+  short: the deliverer
+  long: A deliverer stands here.
+  description: >
+    This mob is in neutral form, ready to take on whatever shape you request for your singing telegram!
+  level: 1
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing

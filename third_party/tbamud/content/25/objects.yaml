@@ -1,0 +1,1542 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 25.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:25:obj:2500":
+  type: key
+  keywords: [key, diamond]
+  short: a diamond key
+  long: A glinting key of diamond has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [2500, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2501":
+  type: container
+  keywords: [oven, black]
+  short: an oven
+  long: .a hidden oven
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2502":
+  type: container
+  keywords: [locker]
+  short: a meat locker
+  long: .a hidden meat locker
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [locker]
+    text: You just had the horrid thought that a cadaver might be in there.
+
+"tba:25:obj:2503":
+  type: container
+  keywords: [rack, spice]
+  short: a spice rack
+  long: .a hidden spice rack
+  wear: [take]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 10
+  cost: 150
+  rent: 50
+  level: 0
+
+"tba:25:obj:2504":
+  type: food
+  keywords: [slice, bread, traveller]
+  short: a slice of traveller's bread
+  long: A slice of traveller's bread is here looking very tasty.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 1
+  cost: 12
+  rent: 3
+  level: 0
+
+"tba:25:obj:2505":
+  type: food
+  keywords: [chunk, meat]
+  short: a large chunk of meat
+  long: A large chunk of meat is here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: true
+  weight: 2
+  cost: 20
+  rent: 5
+  level: 0
+
+"tba:25:obj:2506":
+  type: food
+  keywords: [sandwich]
+  short: a finger sandwich
+  long: A finger sandwich is here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    hours: 20
+    poisoned: false
+  weight: 2
+  cost: 15
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [sandwich, finger]
+    text: It would look quite tasty if someone had first removed the fingernails!
+
+"tba:25:obj:2507":
+  type: boat
+  keywords: [broom, straw]
+  short: a straw broom
+  long: A straw broom is here leaning against the wall.
+  flags: [no_donate]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 5
+  rent: 600
+  level: 0
+  extras:
+  - keywords: [broom, straw]
+    text: A magical flying broomstick?  Nah!  Not here.
+
+"tba:25:obj:2508":
+  type: container
+  keywords: [cabinet]
+  short: a cabinet
+  long: A cabinet is here.
+  wear: []
+  values:
+    capacity: 5000
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2509":
+  type: treasure
+  keywords: [bar, silver]
+  short: a bar of silver
+  long: A bar of silver has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1000
+  rent: 500
+  level: 0
+
+"tba:25:obj:2510":
+  type: treasure
+  keywords: [bar, gold]
+  short: a bar of gold
+  long: A bar of gold has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 11
+  cost: 200
+  rent: 75
+  level: 0
+
+"tba:25:obj:2511":
+  type: treasure
+  keywords: [bar, mithril]
+  short: a bar of mithril
+  long: A bar of mithril has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 12
+  cost: 300
+  rent: 95
+  level: 0
+
+"tba:25:obj:2512":
+  type: treasure
+  keywords: [bar, adamantite]
+  short: a bar of adamantite
+  long: A bar of adamantite has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 500
+  rent: 100
+  level: 0
+
+"tba:25:obj:2513":
+  type: weapon
+  keywords: [hammer, mithril]
+  short: a mithril hammer
+  long: A mithril hammer has been left here
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 19
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+
+"tba:25:obj:2514":
+  type: container
+  keywords: [chest]
+  short: a chest
+  long: A chest is here.
+  flags: [glow]
+  wear: []
+  values:
+    capacity: 5000
+    lock_flags: 15
+    key: tba:13:obj:1316
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2515":
+  type: key
+  keywords: [key]
+  short: a small key
+  long: A small key has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2516":
+  type: weapon
+  keywords: [long, sword]
+  short: a long sword
+  long: A long sword has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 8
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+
+"tba:25:obj:2517":
+  type: weapon
+  keywords: [dagger, silver]
+  short: a silver dagger
+  long: A finely crafted dagger made of silver is on the ground here.
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 5
+  cost: 150
+  rent: 120
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+
+"tba:25:obj:2518":
+  type: weapon
+  keywords: [scimitar]
+  short: a curved scimitar
+  long: A curved scimitar is here in a jewel-covered sheath.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: slash
+  weight: 10
+  cost: 175
+  rent: 19
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 3
+
+"tba:25:obj:2519":
+  type: weapon
+  keywords: [staff, wooden]
+  short: a wooden staff
+  long: A wooden staff is against the wall here.
+  wear: [take, wield]
+  values:
+    damage: 1d4
+    attack: claw
+  weight: 6
+  cost: 10
+  rent: 5
+  level: 0
+
+"tba:25:obj:2520":
+  type: container
+  keywords: [cabinet, silver]
+  short: a silver chased cabinet
+  long: A large cabinet with a silver finish is here.
+  wear: []
+  values:
+    capacity: 5000
+    lock_flags: 15
+    key: tba:25:obj:2523
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2521":
+  type: container
+  keywords: [cabinet, silver]
+  short: a silver chased cabinet
+  long: A large cabinet with a silver finish is here.
+  wear: []
+  values:
+    capacity: 5000
+    lock_flags: 15
+    key: tba:25:obj:2523
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2522":
+  type: key
+  keywords: [key, old]
+  short: an old key
+  long: An old key is here
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2523":
+  type: key
+  keywords: [key, silvery]
+  short: a silvery key
+  long: A silvery key has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2524":
+  type: key
+  keywords: [key, silvery]
+  short: a silvery key
+  long: A silvery key has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2525":
+  type: staff
+  keywords: [staff, red, white]
+  short: a red and white staff
+  long: A red and white staff is leaning against the wall here
+  wear: [take, hold]
+  values:
+    raw: [20, 3, 3, 28]
+  weight: 8
+  cost: 550
+  rent: 50
+  level: 0
+
+"tba:25:obj:2526":
+  type: staff
+  keywords: [staff, burnt]
+  short: a burnt staff
+  long: A burnt staff is leaning against the wall here.
+  wear: [take, hold]
+  values:
+    raw: [20, 4, 4, 4]
+  weight: 6
+  cost: 900
+  rent: 60
+  level: 0
+
+"tba:25:obj:2527":
+  type: wand
+  keywords: [rod, black]
+  short: a black rod
+  long: A black rod has been left here.
+  wear: [take, hold]
+  values:
+    raw: [20, 3, 3, 22]
+  weight: 4
+  cost: 800
+  rent: 200
+  level: 0
+
+"tba:25:obj:2528":
+  type: wand
+  keywords: [stick, wooden, wand]
+  short: a wooden stick
+  long: A wooden stick is here
+  wear: [take, hold]
+  values:
+    raw: [20, 10, 10, 3]
+  weight: 4
+  cost: 600
+  rent: 60
+  level: 0
+
+"tba:25:obj:2529":
+  type: wand
+  keywords: [wand, metal]
+  short: a metal wand
+  long: A metal wand is here.
+  wear: [take, hold]
+  values:
+    raw: [20, 20, 4, 25]
+  weight: 5
+  cost: 800
+  rent: 350
+  level: 0
+
+"tba:25:obj:2530":
+  type: container
+  keywords: [cauldron, black]
+  short: a black cauldron
+  long: A large black cauldron is here bubbling.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2531":
+  type: trash
+  keywords: [wings, bat]
+  short: a small pair of bat wings
+  long: A small pair of bat wings is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 1
+  level: 0
+
+"tba:25:obj:2532":
+  type: trash
+  keywords: [eyeball, eye]
+  short: an eyeball
+  long: An eyeball has been left here
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+
+"tba:25:obj:2533":
+  type: container
+  keywords: [book, tome]
+  short: the book of magic
+  long: An enormous book is lying open here
+  flags: [glow, magic]
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2534":
+  type: armor
+  keywords: [spectacles, glasses]
+  short: a pair of spectacles
+  long: A pair of wire-rimmed spectacles has been left here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 4
+  cost: 1000
+  rent: 500
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:25:obj:2535":
+  type: container
+  keywords: [altar]
+  short: a golden altar
+  long: A golden altar stands here.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2536":
+  type: armor
+  keywords: [medallion, heart]
+  short: a heart shaped medallion
+  long: A heart shaped medallion is here.
+  flags: [hum, no_donate, no_invis, bless]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: con
+    modifier: -1
+
+"tba:25:obj:2537":
+  type: container
+  keywords: [chest]
+  short: a large chest
+  long: A large chest is here.
+  flags: [glow, magic]
+  wear: []
+  values:
+    capacity: 2000
+    lock_flags: 15
+    key: tba:25:obj:2538
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:25:obj:2538":
+  type: key
+  keywords: [key, intricate]
+  short: an intricately carved key
+  long: An intricately carved key has been left here.
+  flags: [glow, no_rent, no_donate, magic, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -1
+
+"tba:25:obj:2539":
+  type: money
+  keywords: [pile, coins]
+  short: a pile of coins is here
+  long: A pile of coins is here.
+  wear: [take]
+  values:
+    coins: 235
+  weight: 23
+  cost: 235
+  rent: 0
+  level: 0
+
+"tba:25:obj:2540":
+  type: armor
+  keywords: [cloak, brown]
+  short: a brown cloak
+  long: A travel worn cloak has carelessly been left here.
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 5
+  cost: 200
+  rent: 25
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2541":
+  type: armor
+  keywords: [chameleon, poncho, cloth]
+  short: a chameleon poncho
+  long: Some multicolored cloth is on the ground here
+  flags: [magic]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 4
+  cost: 150
+  rent: 50
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: ac
+    modifier: -3
+
+"tba:25:obj:2542":
+  type: armor
+  keywords: [boots, worn]
+  short: a pair of old boots
+  long: A pair of old boots is here, they look very comfortable.
+  flags: [magic]
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 2
+  cost: 350
+  rent: 90
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+
+"tba:25:obj:2543":
+  type: boat
+  keywords: [ring, seashell]
+  short: a seashell ring
+  long: A small seashell has been left here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 650
+  rent: 110
+  level: 0
+
+"tba:25:obj:2544":
+  type: container
+  keywords: [backpack, leather]
+  short: a leather backpack
+  long: A leather backpack is here.
+  wear: [take, about]
+  values:
+    capacity: 750
+    lock_flags: 0
+    corpse: false
+  weight: 9
+  cost: 750
+  rent: 50
+  level: 0
+
+"tba:25:obj:2545":
+  type: drinkcon
+  keywords: [cup, brew, herbal, tea]
+  short: a herbal brew
+  long: A herbal brew is here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: tea
+    poisoned: true
+  weight: 10
+  cost: 11
+  rent: 5
+  level: 0
+
+"tba:25:obj:2546":
+  type: food
+  keywords: [waybread]
+  short: a waybread
+  long: A loaf of waybread has been left here.
+  wear: [take]
+  values:
+    hours: 32
+    poisoned: false
+  weight: 3
+  cost: 65
+  rent: 5
+  level: 0
+
+"tba:25:obj:2547":
+  type: weapon
+  keywords: [cleaver]
+  short: a meat cleaver
+  long: A meat cleaver is sticking in the wall here.
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: sting
+  weight: 8
+  cost: 600
+  rent: 100
+  level: 0
+
+"tba:25:obj:2548":
+  type: trash
+  keywords: [shackles, chain]
+  short: some chain shackles
+  long: Some chain shackles have been discarded here
+  flags: [magic, no_drop]
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 750
+  rent: 1000
+  level: 0
+  affects:
+  - apply: mana
+    modifier: -50
+  - apply: move
+    modifier: -50
+
+"tba:25:obj:2549":
+  type: weapon
+  keywords: [dagger, silvery]
+  short: a silvery dagger
+  long: A long dagger that seems to be made of silver is here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 5
+  cost: 120
+  rent: 50
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+
+"tba:25:obj:2550":
+  type: scroll
+  keywords: [scroll]
+  short: a scroll
+  long: A scroll is here.
+  wear: [take, hold]
+  values:
+    raw: [21, 4, 17, 38]
+  weight: 5
+  cost: 300
+  rent: 100
+  level: 0
+
+"tba:25:obj:2551":
+  type: scroll
+  keywords: [scroll, bound]
+  short: a bound scroll
+  long: A bound scroll is here blowing in the breeze.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [16, 1, 2, 34]
+  weight: 3
+  cost: 950
+  rent: 300
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -6
+
+"tba:25:obj:2552":
+  type: container
+  keywords: [tube, cylinder]
+  short: a long cylindrical tube
+  long: A long cylindrical tube is rolling around here.
+  flags: [magic]
+  wear: [take]
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 8
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:25:obj:2553":
+  type: scroll
+  keywords: [scroll, old]
+  short: an old scroll
+  long: An old scroll has been left here.
+  wear: [take, hold]
+  values:
+    raw: [10, 12, -1, -1]
+  weight: 2
+  cost: 500
+  rent: 100
+  level: 0
+
+"tba:25:obj:2554":
+  type: scroll
+  keywords: [scroll, blue]
+  short: a scroll written on blue paper
+  long: A blue scroll has been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [24, 24, -1, -1]
+  weight: 5
+  cost: 200
+  rent: 150
+  level: 0
+
+"tba:25:obj:2555":
+  type: container
+  keywords: [pouch, leather]
+  short: a leather pouch
+  long: A leather pouch is on the ground here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    capacity: 150
+    lock_flags: 0
+    corpse: false
+  weight: 2
+  cost: 175
+  rent: 5
+  level: 0
+
+"tba:25:obj:2556":
+  type: other
+  keywords: [spoon, silver]
+  short: a silver stirring spoon
+  long: A silver stirring spoon has been left here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 565
+  rent: 90
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -1
+
+"tba:25:obj:2557":
+  type: potion
+  keywords: [potion, blue]
+  short: a blue potion
+  long: A blue potion is here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [24, 27, 27, 27]
+  weight: 2
+  cost: 900
+  rent: 50
+  level: 0
+
+"tba:25:obj:2558":
+  type: potion
+  keywords: [potion, red]
+  short: a bright red potion
+  long: A bright red potion is here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [15, 15, -1, -1]
+  weight: 2
+  cost: 150
+  rent: 50
+  level: 0
+
+"tba:25:obj:2559":
+  type: potion
+  keywords: [potion, green]
+  short: a green potion
+  long: A green potion is here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [20, 4, 2, 14]
+  weight: 2
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:25:obj:2560":
+  type: potion
+  keywords: [potion, effervescent]
+  short: an effervescent potion
+  long: An effervescent potion is bubbling away here
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [16, 18, 19, 20]
+  weight: 2
+  cost: 1000
+  rent: 150
+  level: 0
+  extras:
+  - keywords: [potion, effervescent]
+    text: Ahh!  Schwepes Sparkling Soda a refreshing drink.
+
+"tba:25:obj:2561":
+  type: potion
+  keywords: [white, milky, potion]
+  short: a milky white potion
+  long: A milky white potion is here.
+  wear: [take, hold]
+  values:
+    raw: [14, 42, -1, -1]
+  weight: 2
+  cost: 750
+  rent: 50
+  level: 0
+
+"tba:25:obj:2562":
+  type: staff
+  keywords: [staff, black]
+  short: a black staff
+  long: A black staff is leaning against the wall here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [18, 2, 2, 2]
+  weight: 5
+  cost: 500
+  rent: 50
+  level: 0
+
+"tba:25:obj:2563":
+  type: staff
+  keywords: [flute, golden]
+  short: a golden flute
+  long: A golden flute has been left here.
+  flags: [invisible, magic]
+  wear: [take, hold]
+  values:
+    raw: [22, 1, 1, 7]
+  weight: 4
+  cost: 150
+  rent: 50
+  level: 0
+  affects:
+  - apply: int
+    modifier: -5
+
+"tba:25:obj:2564":
+  type: staff
+  keywords: [figurine, humanoid, small]
+  short: a small figurine
+  long: A small figurine in the shape of a humanoid is standing here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [21, 10, 10, 32]
+  weight: 4
+  cost: 600
+  rent: 65
+  level: 0
+
+"tba:25:obj:2565":
+  type: container
+  keywords: [belt, holster]
+  short: a holstered belt
+  long: A holstered belt is here.
+  wear: [take, waist]
+  values:
+    capacity: 20
+    lock_flags: 0
+    corpse: false
+  weight: 4
+  cost: 290
+  rent: 29
+  level: 0
+
+"tba:25:obj:2566":
+  type: wand
+  keywords: [wand]
+  short: a blackened wand
+  long: A blackened wand is here.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [17, 5, 1, 26]
+  weight: 4
+  cost: 250
+  rent: 50
+  level: 0
+
+"tba:25:obj:2567":
+  type: weapon
+  keywords: [chisel, runed]
+  short: a runed chisel
+  long: A runed chisel is here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 2d3
+    attack: pierce
+  weight: 6
+  cost: 150
+  rent: 50
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+
+"tba:25:obj:2568":
+  type: container
+  keywords: [pouch, belt, beltpouch]
+  short: a beltpouch
+  long: A beltpouch is here.
+  wear: [take, waist]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 5
+  cost: 750
+  rent: 50
+  level: 0
+
+"tba:25:obj:2569":
+  type: staff
+  keywords: [dust]
+  short: some sparkling dust
+  long: Some sparkling dust is in a pile here.
+  wear: [take, hold]
+  values:
+    raw: [20, 1, 1, 38]
+  weight: 2
+  cost: 1000
+  rent: 150
+  level: 0
+
+"tba:25:obj:2570":
+  type: armor
+  keywords: [cowl, dark]
+  short: a dark cowl
+  long: A dark cowl is here.
+  flags: [glow, hum, magic, anti_good]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 5
+  cost: 120
+  rent: 40
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -8
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2571":
+  type: wand
+  keywords: [wand, ashen]
+  short: an ashen wand
+  long: An ashen wand is here
+  flags: [anti_good]
+  wear: [take, hold]
+  values:
+    raw: [20, 4, 4, 5]
+  weight: 4
+  cost: 200
+  rent: 60
+  level: 0
+
+"tba:25:obj:2572":
+  type: weapon
+  keywords: [club, spiked]
+  short: a huge spiked club
+  long: A huge spiked club has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: claw
+  weight: 29
+  cost: 750
+  rent: 200
+  level: 0
+
+"tba:25:obj:2573":
+  type: container
+  keywords: [robe, gray]
+  short: a gray robe
+  long: A pile of gray cloth has been left here.
+  flags: [magic, anti_good, anti_evil]
+  wear: [take, about]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 8
+  cost: 500
+  rent: 75
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -9
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2574":
+  type: armor
+  keywords: [bracelet, silver]
+  short: a glinting silver bracelet
+  long: A glinting hoop of silvery metal is here.
+  flags: [magic, anti_good, anti_evil]
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 5
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+
+"tba:25:obj:2575":
+  type: armor
+  keywords: [cloak, gray]
+  short: a long gray cloak
+  long: A pile of gray cloth has been left here.
+  flags: [magic, anti_good, anti_evil]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 7
+  cost: 120
+  rent: 12
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2576":
+  type: weapon
+  keywords: [staff]
+  short: an iron shod staff
+  long: A gray piece of wood shod in iron has been left here.
+  flags: [magic, anti_good, anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: claw
+  weight: 7
+  cost: 900
+  rent: 300
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+
+"tba:25:obj:2577":
+  type: armor
+  keywords: [minor, ward, cube, clear]
+  short: a ward minor
+  long: A small clear cube is sitting here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    armor: 0
+  weight: 5
+  cost: 500
+  rent: 100
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+
+"tba:25:obj:2578":
+  type: container
+  keywords: [robe, black]
+  short: a black robe
+  long: A pile of black cloth is on the ground here.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, about]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 8
+  cost: 500
+  rent: 75
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -9
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2579":
+  type: armor
+  keywords: [bracelet, onyx]
+  short: an onyx bracelet
+  long: A hoop of black onyx is here.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 6
+  cost: 850
+  rent: 85
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:25:obj:2580":
+  type: armor
+  keywords: [cloak, black, dark]
+  short: a dark black cloak
+  long: A pile of black cloth is on the ground here.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 8
+  cost: 900
+  rent: 95
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2581":
+  type: weapon
+  keywords: [shard, black, obsidian]
+  short: a sharp shard of obsidian
+  long: A piece of black glass is here.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: sting
+  weight: 8
+  cost: 120
+  rent: 20
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:25:obj:2582":
+  type: container
+  keywords: [robe, white]
+  short: a white robe
+  long: A pile of white cloth is on the ground here.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, about]
+  values:
+    capacity: 50
+    lock_flags: 0
+    corpse: false
+  weight: 7
+  cost: 750
+  rent: 75
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -9
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2583":
+  type: armor
+  keywords: [bracelet, white, gold]
+  short: a white gold bracelet
+  long: A hoop of silvery metal is here.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 5
+  cost: 500
+  rent: 100
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+
+"tba:25:obj:2584":
+  type: armor
+  keywords: [cloak, white]
+  short: a white cloak
+  long: A pile of white cloth is on the ground here.
+  flags: [magic, bless, anti_evil, anti_neutral]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 7
+  cost: 900
+  rent: 150
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2585":
+  type: weapon
+  keywords: [ivory, dagger]
+  short: an ivory hilted dagger
+  long: An ivory hilted dagger has been left here
+  flags: [magic, bless, anti_evil, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pierce
+  weight: 8
+  cost: 120
+  rent: 15
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+
+"tba:25:obj:2586":
+  type: armor
+  keywords: [collar, spiked]
+  short: a spiked collar
+  long: A small spiked collar is here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 9
+  cost: 100
+  rent: 50
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: damroll
+    modifier: 3
+
+"tba:25:obj:2587":
+  type: container
+  keywords: [cloak, shimmering]
+  short: a shimmering cloak of many colors
+  long: A multi-colored pile of cloth is here.
+  flags: [glow, magic]
+  wear: [take, neck]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 8
+  cost: 250
+  rent: 55
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2588":
+  type: armor
+  keywords: [emerald, ring]
+  short: a small emerald ring
+  long: A small ring with a green gemstone is here.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 5
+  cost: 500
+  rent: 100
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+
+"tba:25:obj:2589":
+  type: armor
+  keywords: [bracelet, emerald]
+  short: an emerald bracelet
+  long: A beautifully crafted hoop of emerald is here.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    armor: 0
+  weight: 5
+  cost: 300
+  rent: 35
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: int
+    modifier: 1
+
+"tba:25:obj:2590":
+  type: armor
+  keywords: [ward, major, clear, crystal]
+  short: a ward major
+  long: A large clear crystal cube is here.
+  flags: [glow, magic]
+  wear: [take, hold]
+  values:
+    armor: 0
+  weight: 6
+  cost: 200
+  rent: 20
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -10
+  - apply: save_spell
+    modifier: -2
+
+"tba:25:obj:2591":
+  type: weapon
+  keywords: [ebony, kris]
+  short: the ebony kris
+  long: A wavy bladed knife made of ebony is here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 9
+  cost: 600
+  rent: 50
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: damroll
+    modifier: 5
+
+"tba:25:obj:2592":
+  type: armor
+  keywords: [green, scale, shirt]
+  short: a tight fitting green dragon scale shirt
+  long: Some green dragon scales which have been sewn together are here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 9
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: ac
+    modifier: -5
+  extras:
+  - keywords: [green, scale, shirt]
+    text: This Green dragon scale shirt was made from a poor unfortunate green dragon.
+
+"tba:25:obj:2593":
+  type: key
+  keywords: [key, gray, metal]
+  short: a gray key
+  long: A key made of a strange gray metal has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2594":
+  type: key
+  keywords: [key, black, obsidian]
+  short: a black key
+  long: A key made of black obsidian has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:25:obj:2595":
+  type: key
+  keywords: [key, white, ivory]
+  short: a white key
+  long: A key made of white ivory has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0

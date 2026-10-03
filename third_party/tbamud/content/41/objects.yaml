@@ -1,0 +1,94 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 41.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:41:obj:4100":
+  type: weapon
+  keywords: [blade, black, demon]
+  short: a black demon blade
+  long: A black demon blade is here.
+  flags: [anti_good, anti_neutral, anti_mage]
+  wear: [take, wield]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 8
+  cost: 1000
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [blade, black, demon]
+    text: >
+      You'll become as evil as the weapon, if you use it as you sense the forces of evil controlling the
+      weapon...
+
+"tba:41:obj:4101":
+  type: armor
+  keywords: [gloves, swordmans]
+  short: a pair of swordsmans' gloves
+  long: A pair of finely crafted gloves are lying on the ground here.
+  flags: [anti_good]
+  wear: [take, hands]
+  values:
+    armor: 0
+  weight: 1
+  cost: 350
+  rent: 80
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [gloves, swordsmans]
+    text: They look like the right kind of equipment to use when fighting.
+
+"tba:41:obj:4102":
+  type: scroll
+  keywords: [scroll, ysafg]
+  short: a scroll which reads 'ysafg'
+  long: A scroll which reads 'ysafg', it looks very fragile and quite old.
+  wear: [take]
+  values:
+    raw: [1, 44, -1, -1]
+  weight: 1
+  cost: 150
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [scroll, ysafg]
+    text: It looks informative.
+
+"tba:41:obj:4103":
+  type: food
+  keywords: [slime, mould, green]
+  short: a green slime mould
+  long: A green slime mould is here.  Stinks like you wouldn't believe!
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 20
+  rent: 8
+  level: 0
+  extras:
+  - keywords: [smile, mould]
+    text: It wasn't meant to be food -- at least, certainly not for humans.
+
+"tba:41:obj:4104":
+  type: food
+  keywords: [slime, mould, green]
+  short: a green slime mould
+  long: A green slime mould is here.  Stinks like you wouldn't believe!
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: true
+  weight: 1
+  cost: 20
+  rent: 8
+  level: 0
+  extras:
+  - keywords: [smile, mould]
+    text: It wasn't meant to be food -- at least, certainly not for humans.

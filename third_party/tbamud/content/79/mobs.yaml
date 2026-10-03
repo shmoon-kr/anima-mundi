@@ -1,0 +1,71 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 79.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:79:mob:7900":
+  keywords: [paladin, grand, knight]
+  short: the Grand Knight of Paladins
+  long: The Grand Knight is standing here, waiting for someone to help.
+  description: >
+    The Knight is standing here, smiling at you.  He is dressed all in white, blue and silver.  He
+    looks VERY strong, as he stands here, ready to help the innocent.
+  level: 26
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, aggr_evil, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:79:mob:7901":
+  keywords: [rat, large]
+  short: the large rat
+  long: There is a large rat here, poking through the foodstuffs lying around.
+  description: >
+    The large rat is about two feet long from head to tail and has claws the size of your fingers,
+    looking very nasty.  It seems to be quite occupied with all the chewed open foodstuffs lying about the
+    room.
+  level: 12
+  sex: neutral
+  alignment: -800
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:79:mob:7902":
+  keywords: [cleaver]
+  short: the Cleaver
+  long: The Cleaver is here eyeing you hungrily in anticipation of its next meal.
+  description: >
+    The Cleaver is a huge spidery chitinous creature with four large spindly arms ending in
+    cleaver-like talons that will surely cut you to ribbons.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [aware, aggressive, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

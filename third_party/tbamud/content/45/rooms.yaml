@@ -1,0 +1,807 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 45.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:45:room:4500":
+  name: An Unused Corner
+  description: >
+    You have come to an unused corner of the garden.  The land has been neatly worked, but nothing
+    seems to have been planted yet.  Various gardening implements are scattered about subject to the weather.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4523
+    west:
+      to: tba:45:room:4524
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Builder   : Gnoff
+        Zone         : 45 Woodland Monastery
+        Began        : 1998
+        Player Level : 12-15
+        Rooms        : 62
+        Mobs         : 14
+        Objects      : 9
+        Shops        :
+        Triggers     : 3
+        Theme        :
+        Plot         :
+        Links        : 12w
+
+"tba:45:room:4501":
+  name: A Dormitory
+  description: >
+    You have entered some sleeping quarters.  The walls are lined with several beds.  Besides each bed
+    is a small table and a chair.  The room has a very cluttered look.  Several animals are lying in bed,
+    or sitting around talking and making a tremendous noise.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4502
+
+"tba:45:room:4502":
+  name: The End of the Hallway
+  description: >
+    You have come to the end of the hallway.  Loud talking can be heard from the north and south.  A
+    small otter runs out from the south, almost knocking you down.  It is followed by a larger otter
+    chasing after it with a determined look on it's face.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4501
+    east:
+      to: tba:45:room:4504
+    south:
+      to: tba:45:room:4503
+
+"tba:45:room:4503":
+  name: A Dormitory
+  description: >
+    You have entered some sleeping quarters.  The walls are lined with several beds.  Besides each bed
+    is a small table and a chair.  The room has a very cluttered look.  Several animals sit in a small
+    circle, meditating quietly.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4502
+
+"tba:45:room:4504":
+  name: A Hallway
+  description: >
+    You stand in the middle of a fairly long hallway.  More tapestries are placed on the walls, with
+    statues placed in between the large pieces of cloth. The hallway continues to the east and to the west.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4505
+    west:
+      to: tba:45:room:4502
+
+"tba:45:room:4505":
+  name: An Intersection
+  description: >
+    You have come to an intersection.  You can hear laughter and merriment to the east and to the
+    west.  From the top of the stair case you can hear music that seems to be of a religious nature.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4506
+    south:
+      to: tba:45:room:4510
+    west:
+      to: tba:45:room:4504
+    up:
+      to: tba:45:room:4518
+
+"tba:45:room:4506":
+  name: A Hallway
+  description: >
+    You stand in the middle of a fairly long hallway.  More tapestries are placed on the walls, with
+    statues placed in between the large pieces of cloth. The hallway continues to the east and to the west.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4508
+    west:
+      to: tba:45:room:4505
+
+"tba:45:room:4507":
+  name: The Grand Hall
+  description: >
+    You have entered a very large room.  The ceiling is intricately carved, and large paintings line
+    the walls.  Two large rows of tables occupy most of the room.  They seem to be filled with various
+    woodland creatures, busily eating and drinking.  Their seems to be some kind of celebration going on.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4508
+
+"tba:45:room:4508":
+  name: End of the Hall
+  description: >
+    You have come to the end of a hallway.  Two doors lie to the north and to the south.  From the
+    north you can hear a loud raucous, to the south, you hear the banging of metal, and the shouting of a
+    very loud individual.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4507
+    south:
+      to: tba:45:room:4509
+    west:
+      to: tba:45:room:4506
+
+"tba:45:room:4509":
+  name: In the Kitchen
+  description: >
+    You have entered a very cluttered kitchen.  A large badger seems to be in charge, and is giving
+    orders quite loudly to a pair of rather young squirrels. The room smells of freshly baked cakes and
+    cooked meat.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4508
+
+"tba:45:room:4510":
+  name: Inside the Temple
+  description: >
+    You stand inside a small temple.  The walls are lined with rich tapestries of various woodland
+    creatures conducting various activities.  To the north their seems to be an intersection, and a small
+    staircase.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4505
+    south:
+      to: tba:45:room:4511
+
+"tba:45:room:4511":
+  name: Inside the Monastery
+  description: >
+    You have entered the walls of the monastery.  You stand on a path that leads to a fairly extensive
+    compound.  Lines of very large oak trees line the nicely paved path.  At regular intervals, you see
+    statues of various woodland creatures.  They are postured like humans, and seem to be wearing clothes.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:45:room:4510
+    south:
+      to: tba:45:room:4512
+      door:
+        keywords: [gate]
+        kind: door
+
+"tba:45:room:4512":
+  name: Outside the Monastery
+  description: >
+    The path ends abruptly at a small gate.  The gate is a simple wire frame, with a large red bird
+    placed in the center.  Through the bars you can seem some sort of church.  A small path leads off to the
+    east.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4511
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    east:
+      to: tba:45:room:4513
+
+"tba:45:room:4513":
+  name: A Small Path
+  description: >
+    You stand in a small dirt path.  It is lined with several apple trees. Birds sing sweetly from
+    there large branches.  The path seems to be heading eastward towards a rather large garden.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4519
+    west:
+      to: tba:45:room:4512
+
+"tba:45:room:4514":
+  name: The Treasure Chamber
+  description: >
+    You seem to have stumbled in to the secret treasure chamber of the monks. It ain't much, but it's
+    something.  Several small piles of gold sit at various locations around the room.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4515
+      door:
+        keywords: [panel]
+        kind: pickproof
+        key: tba:45:obj:4500
+
+"tba:45:room:4515":
+  name: The Top of the Dark Staircase
+  description: >
+    The stairs come to a strange abrupt halt at a wall.  Looking more carefully, you see pictures
+    lightly engraved in the east and west walls.  To the east is the carving of a large phoenix in flight, and
+    to the west is the etching of an injured chimera.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4516
+      door:
+        keywords: [panel]
+        kind: door
+        reset: closed
+    west:
+      to: tba:45:room:4514
+      door:
+        keywords: [panel]
+        kind: pickproof
+        key: tba:45:obj:4517
+        reset: locked
+    down:
+      to: tba:45:room:4517
+
+"tba:45:room:4516":
+  name: The Phoenix's Lair
+  description: >
+    You seem to have stumbled into the secret den of a phoenix!  It sits majestically in in a nest near
+    the northwest corner.  It looks up at you and say "Your not suppose to be here!  "
+  sector: inside
+  exits:
+    west:
+      to: tba:45:room:4515
+      door:
+        keywords: [panel]
+        kind: door
+
+"tba:45:room:4517":
+  name: Behind the Tapestry
+  description: >
+    Sneaking behind the tapestry, you have entered a very dark staircase.  You cannot see anything of
+    note in front of you.  Suddenly, you are paralyzed by an ear piercing shriek coming from the top of
+    the stairs.  You start to feel apprehensive about continuing up these dark stairs.
+  sector: inside
+  flags: [no_mob, no_track]
+  exits:
+    up:
+      to: tba:45:room:4515
+    down:
+      to: tba:45:room:4518
+      door:
+        keywords: [tapestry]
+        kind: pickproof
+        key: tba:45:obj:4518
+
+"tba:45:room:4518":
+  name: Atop the Stairs
+  description: >
+    After climbing the chairs you come to a large temple.  A choir sings behind an otter wearing robes
+    who is standing in front of a few random creatures sitting along the pews.  A large tapestry sits
+    behind him.
+  sector: inside
+  exits:
+    up:
+      to: tba:45:room:4517
+      door:
+        keywords: [tapestry]
+        kind: pickproof
+        key: tba:45:obj:4518
+        reset: locked
+    down:
+      to: tba:45:room:4505
+
+"tba:45:room:4519":
+  name: The Garden Gate
+  description: >
+    You have come to a small fence, deterring entrance into a rather large garden.  It is a flimsy wire
+    fence, most likely meant to keep the rabbits out. From here you can see large rows of various
+    vegetables.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4522
+      door:
+        keywords: [gate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:45:room:4513
+
+"tba:45:room:4520":
+  name: The Celery Corner
+  description: >
+    You among the celery.  It's rather nice celery too, with nice firm stiff stalks.  They seems as if
+    they would be pretty tasty.  Go ahead, they won't hurt you, or so you hope...
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4521
+    south:
+      to: tba:45:room:4522
+
+"tba:45:room:4521":
+  name: The Tomato Corner
+  description: >
+    You are currently in the north east corner of the garden.  Several large tomato plants grow quite
+    splendidly here.  A small stone wall is to the east, and a large field lies to the north.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4523
+    west:
+      to: tba:45:room:4520
+
+"tba:45:room:4522":
+  name: The Carrot Row
+  description: >
+    You stand in the middle of a fair sized garden.  More specifically, you stand in the middle of a
+    row of very large carrots.  The garden seems to be fairly well taken care of, with only a few nibbles
+    on some of the smaller shoots.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4520
+    east:
+      to: tba:45:room:4523
+    south:
+      to: tba:45:room:4524
+    west:
+      to: tba:45:room:4519
+      door:
+        keywords: [gate]
+        kind: door
+
+"tba:45:room:4523":
+  name: The Carrot Row
+  description: >
+    You among several very large carrots.  They sit in neat little rows, and seem to be of a fair
+    size.  A rock wall lines the east wall of the garden, and it seems some of the stones have fallen out of
+    place.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4521
+    south:
+      to: tba:45:room:4500
+    west:
+      to: tba:45:room:4522
+    down:
+      to: tba:45:room:4525
+      door:
+        keywords: [stones]
+        kind: door
+        reset: closed
+
+"tba:45:room:4524":
+  name: A Strawberry Patch
+  description: >
+    You stand among the delicious strawberries.  The small shrubs contain several large juicy
+    strawberries.  A rabbit tries to blend in amont them, it fur stained red.  In a flash, it runs away.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4522
+    east:
+      to: tba:45:room:4500
+
+"tba:45:room:4525":
+  name: A Gopher Hole
+  description: >
+    You find yourself in a strange underground burrow.  To small beady little eyes stare at you from a
+    dark corner.  Your starting to feel a little uneasy about this place...
+  sector: inside
+  exits:
+    up:
+      to: tba:45:room:4523
+      door:
+        keywords: [stone]
+        kind: door
+
+"tba:45:room:4526":
+  name: A Clear Trail
+  description: >
+    You find yourself standing on a nicely tended trail.  It leads straight to the east.  From here you
+    can see that it ends abbruptly at the entrance to a large wooden fortress.  This must be the path
+    way to the fabled Outpost of the Rangers of the Broken Bow.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4527
+
+"tba:45:room:4527":
+  name: The End of the Path
+  description: >
+    The path comes to an end at the gates to a small fortress.  It's walls are entirely wood and you
+    can see sentries marching along the walls.  A two men dressed all in green come out of a small door
+    near the main entrance.  One comes up to you and says "Why are you here?  "
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4528
+    west:
+      to: tba:45:room:4526
+      door:
+        keywords: [door]
+        kind: pickproof
+
+"tba:45:room:4528":
+  name: Within the Walls
+  description: >
+    Apparently the walls are much, much thicker than they look.  Looking around, you find yourself in
+    the wall.  It's about 10 paces wide.  A staircase leads up.  The path also continues to the east.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:45:room:4529
+    west:
+      to: tba:45:room:4527
+      door:
+        keywords: [gate]
+        kind: pickproof
+    up:
+      to: tba:45:room:4588
+
+"tba:45:room:4529":
+  name: Through the Wall
+  description: >
+    Coming out the other side of the wall you see you have entered a very large, very busy outpost. 
+    People are constantly moving around.  You see a training field a bit to the northeast, and various
+    buildings.  Sentries patrol everywhere.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4557
+    west:
+      to: tba:45:room:4528
+
+"tba:45:room:4530":
+  name: A Corner of the Wall
+  description: >
+    You have come to the end of this section of wall.  A small tower rises up out of the wall here. 
+    From here you can see still more guards quietly patroling the walls.  They seem a little paranoid...
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4531
+    south:
+      to: tba:45:room:4534
+    up:
+      to: tba:45:room:4543
+
+"tba:45:room:4531":
+  name: Atop the Wall
+  description: >
+    You stand on the wall of the outpost from here you can see a very large mountain range to the
+    north.  Archers patrol everywhere, just like the rest of this strangly over manned outpost.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4532
+    west:
+      to: tba:45:room:4530
+
+"tba:45:room:4532":
+  name: Atop the Wall
+  description: >
+    Spying over the wall you gaze intently into the forest.  Suddenly you see some motion within the
+    forest.  In an instant, you see several orcs rush out of the forest.  Quickly the archers jump into
+    action and the orcs turn in to pin cushions in short order.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4533
+    west:
+      to: tba:45:room:4531
+
+"tba:45:room:4533":
+  name: An Abrupy End
+  description: >
+    For some strange reason, the walkway on the wall ends very abruptly here. To the south is more
+    wall, however it is 3 times thicker then the rest of the wall, and about 30 feet higher.  Very peculiar.
+  sector: inside
+  exits:
+    west:
+      to: tba:45:room:4532
+    up:
+      to: tba:45:room:4544
+
+"tba:45:room:4534":
+  name: Atop the Wall
+  description: >
+    You stand one the top of the high wooden walls of the outpost.  From here, you can see a good
+    distance into the forest.  Guards slowly march along the top of the wall.  Intently gazing into the forest.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4530
+    south:
+      to: tba:45:room:4588
+
+"tba:45:room:4537":
+  name: Atop the Walls
+  description: >
+    You stand one the top of the high wooden walls of the outpost.  From here, you can see a good
+    distance into the forest.  Guards slowly march along the top of the wall.  Intently gazing into the forest.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4588
+    south:
+      to: tba:45:room:4539
+
+"tba:45:room:4539":
+  name: A Corner
+  description: >
+    You have come to the southwest corner of the wall tops.  Here the wall turns and makes a right
+    angle.  You can see more guards slowly marching along the wall.  A tower rises out of the wall here.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4537
+    east:
+      to: tba:45:room:4540
+    up:
+      to: tba:45:room:4545
+
+"tba:45:room:4540":
+  name: Atop the Wall
+  description: >
+    You stand on the wall of the outpost.  Men wearing green uniforms slowly patrol along the wall. 
+    From here you can see the entire complex to the north. It consists of several large buildings, with one
+    being larger then most.  To the south you can see an seeminly endless ocean of trees.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4541
+    west:
+      to: tba:45:room:4539
+
+"tba:45:room:4541":
+  name: Atop the Wall
+  description: >
+    The wall top continues here to the east and west here.  More sentries stand here watching the
+    forest intently.  For some reason the eastern wall seems a bit large then this wall...  Odd.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4542
+    west:
+      to: tba:45:room:4540
+
+"tba:45:room:4542":
+  name: End of the Wall
+  description: >
+    Strange the path on the top of the wall ends here.  It is replaced by another giant wall that is
+    roughly 30 feet higher and 3 times thicker than the rest of the wall.  An extraordinarily large tower
+    rises up next to the wall.
+  sector: inside
+  exits:
+    west:
+      to: tba:45:room:4541
+    up:
+      to: tba:45:room:4546
+
+"tba:45:room:4543":
+  name: A Tower
+  description: >
+    You have climbed to the top of a tower.  A guard sits slumped against a pole.  He seems to be
+    asleep.  Odd, he must be the first slacker you've seen in the entire outpost.  Maybe you should report
+    him.  From here you have a breath taking view of the mountains to the north.
+  sector: inside
+  exits:
+    down:
+      to: tba:45:room:4530
+
+"tba:45:room:4544":
+  name: Atop a Tower
+  description: >
+    You stand at the top of a fairly high tower.  It runs slightly higher then the odd eastern wall of
+    this fortress.  From here you think you can see subtle movemnets coming from the outside of the wall,
+    but you cannot make out anything for certain.
+  sector: inside
+  exits:
+    down:
+      to: tba:45:room:4533
+
+"tba:45:room:4545":
+  name: A Tower
+  description: >
+    You have climbed up into a look out tower.  From here you can see leagues into the forest.  A
+    sentry gazes intently around, alert for any signs of danger.
+  sector: inside
+  exits:
+    down:
+      to: tba:45:room:4539
+
+"tba:45:room:4546":
+  name: Tower
+  description: >
+    The tower stairs wind up and around in a tight spiral.  Finally ending at a small room at the very
+    top with no windows or furnishings.  It is completely barren.
+  sector: inside
+  exits:
+    down:
+      to: tba:45:room:4542
+
+"tba:45:room:4557":
+  name: Down the Path
+  description: >
+    As you continue you walk down the path you arrive closer to the training area and the other
+    buildings.  As guards walk by you they give you a strange look and the procede on their way.  Maybe you
+    should stay more out of sight.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4558
+    east:
+      to: tba:45:room:4559
+    west:
+      to: tba:45:room:4529
+
+"tba:45:room:4558":
+  name: Training Area
+  description: >
+    This small area has been cleared for training.  Various sparring tools and equipment are scattered
+    about the area.  From the looks of things it has not been used in a while.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4557
+
+"tba:45:room:4559":
+  name: Path
+  description: >
+    The path splits apart here leading to a wooden building with a large chimney to the north and a
+    small wooden shack to the south.  East and west the path continues.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4561
+    east:
+      to: tba:45:room:4560
+    south:
+      to: tba:45:room:4562
+    west:
+      to: tba:45:room:4557
+
+"tba:45:room:4560":
+  name: Path
+  description: >
+    A small building lies to the east while the clearing and training area are to the west.  The path
+    is well packed from heavy use.  Vegetation is abundant on both sides of the path.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4563
+    east:
+      to: tba:45:room:4565
+    west:
+      to: tba:45:room:4559
+
+"tba:45:room:4561":
+  name: Smithy
+  description: >
+    The smithy is a large wooden hut with a rock foundation.  A rock hearth and bellows is unused and
+    cool to the touch.  The place is empty.  The fires must have been out for a long time.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4559
+
+"tba:45:room:4562":
+  name: Storehouse
+  description: >
+    Crates, boxes, and jars line the shelves and floor of this wooden shack. The storage looks like
+    enough to feed a dozen people for half a year. Everything is well preserved and sealed tightly.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4559
+
+"tba:45:room:4563":
+  name: Quartermaster
+  description: >
+    A small entranceway is setup with a desk and ledger for new arrivals.  This small building seems to
+    be where the records are kept in order.  A few bookshelves are filled on the far wall.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4564
+    south:
+      to: tba:45:room:4560
+
+"tba:45:room:4564":
+  name: BackRoom
+  description: >
+    A fine desk, ink, and pen are setup for whoever keeps the books for this place.  Several shelves
+    are full of written material and seem to be quiet old and unkept.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4563
+
+"tba:45:room:4565":
+  name: Barrack
+  description: >
+    A table and set of chairs fills the middle of the room while bunks line the walls.  Everything in
+    the room is worn with use and age.  A set of stairs lead down into darkness.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4567
+    west:
+      to: tba:45:room:4560
+    down:
+      to: tba:45:room:4566
+
+"tba:45:room:4566":
+  name: Dungeon
+  description: >
+    Walls of rock damp with condensation makes everything dance mystically from the light of the
+    torches.  The occasional echoing footstep can be heard in the distance.  A set of stairs lead up out of the
+    dungeon.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4568
+    up:
+      to: tba:45:room:4565
+
+"tba:45:room:4567":
+  name: Captian's Quarters
+  description: >
+    This small room is more functional than elaborate.  A large bed, desk, and chair fill the majority
+    of the room with a few odds and ends scattered in the corners.
+  sector: inside
+  exits:
+    south:
+      to: tba:45:room:4565
+
+"tba:45:room:4568":
+  name: Tunnel
+  description: >
+    The earthen walls are broken by the occasional root or rock that juts through the brown soil. 
+    Torches are placed sparingly providing very little light.  An opening can be seen further to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:45:room:4569
+    west:
+      to: tba:45:room:4566
+
+"tba:45:room:4569":
+  name: Outside
+  description: >
+    The clean fresh air is fouled by a blast of hot air that comes up out of a pit below you.  The pit
+    has a steep incline but looks like it is traversible both down and back up.
+  sector: inside
+  exits:
+    west:
+      to: tba:45:room:4568
+    down:
+      to: tba:45:room:4570
+
+"tba:45:room:4570":
+  name: Dragon Pit
+  description: >
+    The pit is dark and moist with very little light.  A soft rasping can be heard.  As if a large
+    animal is breathing deeply.  The only exit is back up out of the pit.
+  sector: inside
+  exits:
+    up:
+      to: tba:45:room:4569
+
+"tba:45:room:4588":
+  name: Atop the Wall
+  description: >
+    You stand one the top of the high wooden walls of the outpost.  From here, you can see a good
+    distance into the forest.  Guards slowly march along the top of the wall.  Intently gazing into the forest.
+  sector: inside
+  exits:
+    north:
+      to: tba:45:room:4534
+    south:
+      to: tba:45:room:4537
+    down:
+      to: tba:45:room:4528

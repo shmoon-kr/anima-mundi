@@ -1,0 +1,1576 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 20.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:20:room:2000":
+  name: Entrance
+  description: >
+    The lighted passageway continues to the north where you can hear loud cheering and the sounds of
+    battle.  The walls are covered with posters announcing future bouts in the arena with some of the
+    famous gladiators. One poster catches your eye as it is written in blood red ink.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2001
+      look: Nothing.
+    west:
+      to: tba:20:room:2099
+  extras:
+  - keywords: [poster, credits, info]
+    text:
+      preformatted: |2
+           Builder   : Rumble
+        Zone         : 20 Arena
+        Began        : 1998
+        Player Level : 10-20
+        Rooms        : 100
+        Mobs         : 23
+        Objects      : 15
+        Shops        : 0
+        Triggers     : 0
+        Theme        : Gladiator Arena
+        Plot         : Modeled after a Roman amphitheater.
+        Links        : 00es
+
+"tba:20:room:2001":
+  name: Spectators Entrance
+  description: >
+    A sign points spectators towards the stairs leading up into the balconies while another points down
+    towards the gladiators cells.  Yet another sign points north towards the Gladiators Entrance.  The
+    cheering is even louder here.  You can barely hear the clash of weapons and screams of pain over it
+    all.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:20:room:2002
+    south:
+      to: tba:20:room:2000
+    up:
+      to: tba:20:room:2094
+    down:
+      to: tba:20:room:2003
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           _____________________________
+          |      Up - Balconies         |
+          |   Down - Gladiators Cells   |
+          |North - Entrance to the Arena|
+          |_____________________________|
+
+"tba:20:room:2002":
+  name: Gladiators Entrance
+  description: >
+    Five separate arenas are accessible here, one for each class and a fifth which can be used by any. 
+    To the north is the Mages Arena, down is the Warriors Arena.  East is the Thieves Arena and west is
+    the Clerics arena.  Stairs leading up take you into the Main arena in the center of the Amphitheater.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2042
+    east:
+      to: tba:20:room:2047
+    south:
+      to: tba:20:room:2001
+    west:
+      to: tba:20:room:2058
+    up:
+      to: tba:20:room:2072
+    down:
+      to: tba:20:room:2067
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+           _______________________
+          | North - Mages Arena   |
+          | East - Thieves Arena  |
+          | West - Clerics Arena  |
+          | Down - Warriors Arena |
+          | Up - Main Arena       |
+          |_______________________|
+
+"tba:20:room:2003":
+  name: Gladiators Cells
+  description: >
+    There is noise everywhere produced by the equipment of death, here a sword is being sharpened,
+    there someone is heating metal plates to be used on fallen gladiators, to see if they are dead, here rods
+    are produced, there whips to encourage unwilling participants.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2006
+    east:
+      to: tba:20:room:2004
+    west:
+      to: tba:20:room:2005
+    up:
+      to: tba:20:room:2001
+
+"tba:20:room:2004":
+  name: Training Room
+  description: >
+    These rooms are set aside by the Lanistas to train the gladiators.  The various moves and attacks
+    seem to be more for looks than anything else. Gladiators always have to play to the crowd.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2003
+
+"tba:20:room:2005":
+  name: Training Room
+  description: >
+    More gladiators spar and tussle back and forth across the room.  Sawdust and dirt covers the
+    floor.  Everything in the room is spartan and dull.  The only thing extravagant is a few bits of the
+    gladiators weaponry and armor.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2003
+
+"tba:20:room:2006":
+  name: Gladiators Cells
+  description: >
+    As unattractive as being a Gladiator may sound, a gladiator's life takes on new meaning.  First,
+    his status is now voluntary rather than involuntary.  He also becomes a member of a cohesive group that
+    is known for its courage, good morale, and absolute fidelity to their master to the point of death.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2009
+    east:
+      to: tba:20:room:2007
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2003
+    west:
+      to: tba:20:room:2008
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2007":
+  name: Training Room
+  description: >
+    The Lanistas are hard at work preparing their gladiators for the big show. Many are scarred
+    gladiator veterans themselves and know very well how to please the crowd.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2006
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2008":
+  name: Training Room
+  description: >
+    A Lanistas demonstrates a few moves to a gladiator who is just learning the ropes.  The motivation
+    to learn is high since failing at this usually costs someone their life or limbs.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2006
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2009":
+  name: Gladiators Cell
+  description: >
+    Gladiators are usually criminals, slaves, captured fugitives or prisoners of war.  It would seem
+    that for men of these categories it was a matter of going from the frying pan into the fire, but that
+    is a misunderstanding.  Becoming a gladiator is obviously better fate than being put to death by being
+    set upon by wild animals or being tortured in the amphitheater.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2012
+    east:
+      to: tba:20:room:2010
+    south:
+      to: tba:20:room:2006
+    west:
+      to: tba:20:room:2011
+
+"tba:20:room:2010":
+  name: Training Room
+  description: >
+    A lone gladiator here is on the verge of a breakdown.  He is faced with either fighting to the
+    death in the arena or being hung for not fighting. Either way death is assured with time.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2009
+
+"tba:20:room:2011":
+  name: Gladiators Room
+  description: >
+    A Gladiator devotes himself body and soul to the owner of his troupe or lanista by swearing an oath
+    "to endure branding, chains, flogging or death by the sword" and to do whatever the master ordered.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2009
+
+"tba:20:room:2012":
+  name: Gladiators Cells
+  description: >
+    No doubt it was thought too dangerous to allow private citizens to own and train gladiators who
+    could be easily turned into a private army for revolutionary purposes.  Therefore, with very few
+    exceptions, gladiators are under the control and ownership of the emperor.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2015
+    east:
+      to: tba:20:room:2013
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2009
+    west:
+      to: tba:20:room:2014
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2013":
+  name: Gladiators Room
+  description: >
+    A Gladiator devotes himself body and soul to the owner of his troupe or lanista by swearing an oath
+    "to endure branding, chains, flogging or death by the sword" and to do whatever the master ordered.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2012
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2014":
+  name: Retiarii Cell
+  description: >
+    This room is set aside for the retiarii who fight with a net, a spiked trident and a dagger.  The
+    floor is lined with straw and a smelly pot sits in the corner.  How could anyone live in these
+    conditions?
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2012
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2015":
+  name: Gladiators Cells
+  description: >
+    The gladiators life becomes a model of military discipline and through courageous behavior he is
+    also now capable of achieving honor similar to that enjoyed by Roman soldiers on the battlefield.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2018
+    east:
+      to: tba:20:room:2016
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2012
+    west:
+      to: tba:20:room:2017
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2016":
+  name: Murmillones Cell
+  description: >
+    This room is set aside for the murmillones, so called from the fish ornament on their helmets. 
+    Each murmillo is armed with a short, thick sword, an oblong shield and leg and arm shields of metal.  A
+    smelly pot sits in the corner.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2015
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2017":
+  name: Retiarii Cell
+  description: >
+    This is where the retiarii wait to be brought up to the arena for their bouts.  Most of them are
+    dressed up in funny armor and look like common thieves.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2015
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2018":
+  name: Gladiators Cells
+  description: >
+    Gladiators are owned by a person called a lanista and are trained in the lanistas school.  Training
+    involves the learning of a series of figures which are broken down into various phases.  The
+    training of gladiators has been taken over by the state.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2021
+    east:
+      to: tba:20:room:2019
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2015
+    west:
+      to: tba:20:room:2020
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2019":
+  name: Murmillones Cell
+  description: >
+    This is where the murmillones wait to be brought up to the arena for their bouts.  Most of them are
+    dressed up in funny armor and look like common thieves.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2018
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2020":
+  name: Samnites Cell
+  description: >
+    This is where the Samnites wait to be brought up to the arena for their bouts.  Most of them are
+    dressed up in funny armor and look like common thieves.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2018
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2021":
+  name: Prisons
+  description: >
+    Cell doors to the east and west are closed and barred from the outside.  You hear voices muttering
+    in a different and very strange language behind each door.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2024
+    east:
+      to: tba:20:room:2022
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2018
+    west:
+      to: tba:20:room:2023
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2022":
+  name: Thracian Cell
+  description: >
+    This is where the Thracians wait to be brought up to the arena for their bouts.  Most of them are
+    dressed up in funny armor and look like common thieves.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2021
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2023":
+  name: Ostrich Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2021
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2024":
+  name: Prisons
+  description: >
+    These dungeons are damp, dark and reek of some unidentifiable source.  All the victims to be led
+    into the arena are kept down here until their fight. Those that do not fight are killed.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2027
+    east:
+      to: tba:20:room:2025
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2021
+    west:
+      to: tba:20:room:2026
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2025":
+  name: Animal Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2024
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2026":
+  name: Elephant Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2024
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2027":
+  name: Prisons
+  description: >
+    The smell of refuse is strong here, coming mostly from behind the closed doors to the east and
+    west.  The prisons continue north and south with a long hallway of cells.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2030
+    east:
+      to: tba:20:room:2028
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2024
+    west:
+      to: tba:20:room:2029
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2028":
+  name: Giraffe Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2027
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2029":
+  name: Lion Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2027
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2030":
+  name: Prisons
+  description: >
+    Doors to the east and west lead to the prison cells.  You hear growling and snarling in both
+    directions.  The prisons continue north and south with no end in sight.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2032
+    east:
+      to: tba:20:room:2031
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:20:room:2027
+    west:
+      to: tba:20:room:2034
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2031":
+  name: Animal Cell
+  description: >
+    This is where the exotic animals for the arena games are kept until needed.  Straw lines the floor
+    and the animals' refuse is thick on the floor. The animals are starved before the games so they will
+    be crazed and aggressive.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2030
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2032":
+  name: Prisons
+  description: >
+    The Prison to the south is full of activity while to the north you see a trail of blood.  You also
+    notice light filtering in from the north penetrating the gloom.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2033
+    south:
+      to: tba:20:room:2030
+
+"tba:20:room:2033":
+  name: Prisons
+  description: >
+    The prison continues north out the back entrance of the amphitheater and south deeper into the
+    prisons.  A trail of blood leads east.  Wheelbarrow treadmarks are visible in the blood.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2097
+    east:
+      to: tba:20:room:2096
+    south:
+      to: tba:20:room:2032
+
+"tba:20:room:2034":
+  name: Training Room
+  description: >
+    Another practice room the Lanistas set aside for their gladiators.  The competition is intense and
+    good gladiators can make their owners very wealthy and famous.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2030
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:20:room:2035":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2036
+    south:
+      to: tba:20:room:2038
+
+"tba:20:room:2036":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2037
+    south:
+      to: tba:20:room:2039
+    west:
+      to: tba:20:room:2035
+
+"tba:20:room:2037":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2040
+    west:
+      to: tba:20:room:2036
+
+"tba:20:room:2038":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2035
+    east:
+      to: tba:20:room:2039
+    south:
+      to: tba:20:room:2041
+
+"tba:20:room:2039":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2036
+    east:
+      to: tba:20:room:2040
+    south:
+      to: tba:20:room:2042
+    west:
+      to: tba:20:room:2038
+
+"tba:20:room:2040":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2037
+    south:
+      to: tba:20:room:2043
+    west:
+      to: tba:20:room:2039
+
+"tba:20:room:2041":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2038
+    east:
+      to: tba:20:room:2042
+
+"tba:20:room:2042":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2039
+    east:
+      to: tba:20:room:2043
+    south:
+      to: tba:20:room:2002
+    west:
+      to: tba:20:room:2041
+
+"tba:20:room:2043":
+  name: Mages Arena
+  description: >
+    This arena was built solely for gladiatorial duels between mages.  The air in this room seems to be
+    charged and you can feel the powerful residue of forces that have been unleashed during previous
+    battles.  The walls glow with a faint phosphorescent light, making the paintings of various mages locked
+    in battle along the walls seem alive.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2040
+    west:
+      to: tba:20:room:2042
+
+"tba:20:room:2044":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2045
+    south:
+      to: tba:20:room:2047
+
+"tba:20:room:2045":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2046
+    south:
+      to: tba:20:room:2048
+    west:
+      to: tba:20:room:2044
+
+"tba:20:room:2046":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2049
+    west:
+      to: tba:20:room:2045
+
+"tba:20:room:2047":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2044
+    east:
+      to: tba:20:room:2048
+    south:
+      to: tba:20:room:2050
+    west:
+      to: tba:20:room:2002
+
+"tba:20:room:2048":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?  Are you ready to Rumble?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2045
+    east:
+      to: tba:20:room:2049
+    south:
+      to: tba:20:room:2051
+    west:
+      to: tba:20:room:2047
+
+"tba:20:room:2049":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2046
+    south:
+      to: tba:20:room:2052
+    west:
+      to: tba:20:room:2048
+
+"tba:20:room:2050":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2047
+    east:
+      to: tba:20:room:2051
+
+"tba:20:room:2051":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2048
+    east:
+      to: tba:20:room:2052
+    west:
+      to: tba:20:room:2050
+
+"tba:20:room:2052":
+  name: Thieves Arena
+  description: >
+    This room was made especially for gladiatorial bouts between thieves. Pillars of black marble and
+    widely spaced torches cause shadows to dance wildly around the room.  A thief could easily practice
+    his skills in hiding and backstabbing in such a room.  Life size drawings of famous thieves cover the
+    walls, which one of them isn't a drawing?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2049
+    west:
+      to: tba:20:room:2051
+
+"tba:20:room:2053":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2054
+    south:
+      to: tba:20:room:2056
+
+"tba:20:room:2054":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2055
+    south:
+      to: tba:20:room:2057
+    west:
+      to: tba:20:room:2053
+
+"tba:20:room:2055":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2058
+    west:
+      to: tba:20:room:2054
+
+"tba:20:room:2056":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2053
+    east:
+      to: tba:20:room:2057
+    south:
+      to: tba:20:room:2059
+
+"tba:20:room:2057":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.  Are you ready to Rumble?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2054
+    east:
+      to: tba:20:room:2058
+    south:
+      to: tba:20:room:2060
+    west:
+      to: tba:20:room:2056
+
+"tba:20:room:2058":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2055
+    east:
+      to: tba:20:room:2002
+    south:
+      to: tba:20:room:2061
+    west:
+      to: tba:20:room:2057
+
+"tba:20:room:2059":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2056
+    east:
+      to: tba:20:room:2060
+
+"tba:20:room:2060":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2057
+    east:
+      to: tba:20:room:2061
+    west:
+      to: tba:20:room:2059
+
+"tba:20:room:2061":
+  name: Clerics Arena
+  description: >
+    This arena was made specifically for gladiatorial matches between clerics. The room is well-lit by
+    some unseen source from high above.  Though clerics are usually thought of as healers they can also
+    be deadly opponents.  Murals of clerics from the past hang on all the walls.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2058
+    west:
+      to: tba:20:room:2060
+
+"tba:20:room:2062":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2063
+    south:
+      to: tba:20:room:2065
+
+"tba:20:room:2063":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2064
+    south:
+      to: tba:20:room:2066
+    west:
+      to: tba:20:room:2062
+
+"tba:20:room:2064":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2067
+    west:
+      to: tba:20:room:2063
+
+"tba:20:room:2065":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2065
+    east:
+      to: tba:20:room:2066
+    south:
+      to: tba:20:room:2068
+
+"tba:20:room:2066":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+    Are you ready to Rumble?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2063
+    east:
+      to: tba:20:room:2067
+    south:
+      to: tba:20:room:2069
+    west:
+      to: tba:20:room:2065
+
+"tba:20:room:2067":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2064
+    south:
+      to: tba:20:room:2070
+    west:
+      to: tba:20:room:2066
+    up:
+      to: tba:20:room:2002
+
+"tba:20:room:2068":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2065
+    east:
+      to: tba:20:room:2069
+
+"tba:20:room:2069":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2066
+    east:
+      to: tba:20:room:2070
+    west:
+      to: tba:20:room:2068
+
+"tba:20:room:2070":
+  name: Warriors Arena
+  description: >
+    This large dome-ceiling room has been set aside for gladiatorial fights between warriors of great
+    strength and weapon-skills.  The room has a slight smoky haze from the torches sputtering in brackets
+    lining the walls. Paintings of famous battles and past gladiators cover the room floor to ceiling.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2067
+    west:
+      to: tba:20:room:2069
+
+"tba:20:room:2071":
+  name: Main Arena
+  description: >
+    The arena continues east and south.  The walls are too steep and sloped inward to climb to the
+    north or west.  The crowd above starts yelling at you to begin fighting soon or they would send in some
+    real gladiators.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2074
+    south:
+      to: tba:20:room:2072
+
+"tba:20:room:2072":
+  name: Main Arena
+  description: >
+    The floor of the arena is covered with a fine sand.  The crowd cheers in anticipation of the
+    fighting and bloodshed.  The sound is deafening and definitely distracting.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2071
+    east:
+      to: tba:20:room:2075
+    south:
+      to: tba:20:room:2073
+    down:
+      to: tba:20:room:2002
+
+"tba:20:room:2073":
+  name: Main Arena
+  description: >
+    The crowd is deafening and the heat stifling.  The sand is baking underneath your feet.  This is
+    where the gladiators fight to the death for the pleasure of the citizens of Rome.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2072
+    east:
+      to: tba:20:room:2076
+
+"tba:20:room:2074":
+  name: Main Arena
+  description: >
+    The arena floor is slick with blood and other bodily fluids that make your stomach turn.  Above you
+    is the Imperial Box where Emperor Titus commands the fights of the arena.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2077
+    south:
+      to: tba:20:room:2075
+    west:
+      to: tba:20:room:2071
+
+"tba:20:room:2075":
+  name: Main Arena
+  description: >
+    You stand in the center of the arena.  The crowd starts to calm down and silence blankets the arena
+    as everyone waits in anticipation.  Are you ready to Rumble?
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2074
+    east:
+      to: tba:20:room:2078
+    south:
+      to: tba:20:room:2076
+    west:
+      to: tba:20:room:2072
+
+"tba:20:room:2076":
+  name: Main Arena
+  description: >
+    Thousands of battles and even more deaths have colored the sand on the arena floor a sickly brown. 
+    Slaves are dumping fresh sand over the stains, but it doesn't seem to be helping.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2075
+      look: Nothing.
+    east:
+      to: tba:20:room:2079
+    west:
+      to: tba:20:room:2073
+
+"tba:20:room:2077":
+  name: Main Arena
+  description: >
+    The crowd is going wild and you start to wonder if some of them may come down into the arena after
+    you.  In the crowd above you sits the prestigious magistrates, senators, augurs and priests of Rome.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2078
+    west:
+      to: tba:20:room:2074
+
+"tba:20:room:2078":
+  name: Main Arena
+  description: >
+    The walls slope inwards above you making them impossible to scale. The heat and noise of the crowd
+    is very aggravating.  Your foot sinks into a puddle of blood from the last person who came into this
+    arena.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2077
+    south:
+      to: tba:20:room:2079
+    west:
+      to: tba:20:room:2075
+
+"tba:20:room:2079":
+  name: Main Arena
+  description: >
+    Prisoners can fight for their freedom here to become gladiators and make some good money or, even
+    better, become a famous gladiator and be held in awe by all the citizens of Rome.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2078
+    west:
+      to: tba:20:room:2076
+
+"tba:20:room:2080":
+  name: Roman Ampitheater
+  description: >
+    The arena below you is empty right now, but from the shouting of the crowd you expect the games are
+    about to begin.  The crowd that seems to be more of a mob than anything else is growing impatient.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2081
+    south:
+      to: tba:20:room:2095
+
+"tba:20:room:2081":
+  name: Roman Ampitheater
+  description: >
+    The amphitheater is a microcosm of Roman society.  The seating arrangements reflect the
+    stratification of Roman society.  The emperor has a special box for himself and his family.  Senators and
+    knights sit in their own special section.  Soldiers are separated from civilians, married men, from
+    bachelors.  Boys and their tutors sit together.  Women, except for the Vestal Virgins who sit in the best
+    seats with religious officials, sit with the poorest men in the top tier.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2082
+    west:
+      to: tba:20:room:2080
+
+"tba:20:room:2082":
+  name: Imperial Box
+  description: >
+    The emperor sits on his lavish throne, watching the bouts that he has provided for his people so
+    they will look upon him with favor.  The Vestal Virgins sit to both sides of the emperor fanning
+    themselves from the oppressive heat.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2083
+    west:
+      to: tba:20:room:2081
+
+"tba:20:room:2083":
+  name: Roman Amphitheater
+  description: >
+    Certain criminals are executed here by being given to the wild beasts or are forced to fight to the
+    death as gladiators.  It also represents the domination of Rome over its enemies: prisoners of war
+    are either executed or forced to fight each other as gladiators.  But for the professional gladiator
+    it is also a place of redemption, in which one can overcome death by victory or by stoically accepting
+    it.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2084
+    west:
+      to: tba:20:room:2082
+
+"tba:20:room:2084":
+  name: Roman Amphitheater
+  description: >
+    Several slaves walk into the arena with barrows of sand to cover over the blood stains and prepare
+    for the next bout.  The populace is once again getting restless.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2085
+    west:
+      to: tba:20:room:2083
+
+"tba:20:room:2085":
+  name: Roman Amphitheater
+  description: >
+    Slaves, that had been forced to exhaust themselves helping to finish building the very amphitheater
+    in which they are to die, are pushed into the arena.  As the mob screams, howls and roars, barred
+    doors are lifted, releasing man-eating lions and tigers who have not been fed for quite a time.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2084
+    south:
+      to: tba:20:room:2086
+
+"tba:20:room:2086":
+  name: Roman Amphitheater
+  description: >
+    At last this fighting seems to have gone on long enough to satisfy, momentarily, the mob.  The few
+    survivors retire to get their laurel crowns, their bags of gold and to anticipate the adulation of
+    Rome.  Squads of little men run into the arena with ropes and metal hooks to drag the bodies of the
+    dead and wounded to a mortuary cell where valuable weapons and armor are retrieved and sorted out.  The
+    gasping, bleeding, groaning and wounded are finished off.  The bodies are then piled into carts to be
+    taken and flung into a nameless common grave.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2085
+    south:
+      to: tba:20:room:2087
+
+"tba:20:room:2087":
+  name: Roman Amphitheater
+  description: >
+    Flashing swords, the clash of steel, and the first wounds arouse the passions, the hatred and the
+    desperate fury of the gladiators and inflame the blood-lust of the mob.  The shouts and yells and
+    screams of the onlookers grow to a huge, roaring crescendo of sound as one Samnite after another go down
+    with their stomachs gashed open or their necks spouting blood and one Thracian after another crumbles
+    with a Samnite sword through his chest.  Reinforcements are rushed in to restore the balance and to
+    add to the pile of bleeding, writhing bodies on the sand-strewn floor.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2086
+    south:
+      to: tba:20:room:2088
+
+"tba:20:room:2088":
+  name: Roman Amphitheater
+  description: >
+    Another fanfare of trumpets announces the entry of two teams of 24 gladiators in charge of two
+    renowned trainers, themselves former gladiators who, scarred and maimed, have somehow survived with their
+    glory from many a combat.  According to tradition, 24 men heavily armed as the ancient Samnites,
+    Rome's oldest enemies, face 24 lightly clad and lightly armed 'Thracians,' each with exposed chests. 
+    Both teams march smartly up to face the Emperor in his resplendent Imperial Box to shout as one man:
+    'Hail, Caesar.  Those about to die salute you.'
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2087
+    west:
+      to: tba:20:room:2089
+
+"tba:20:room:2089":
+  name: Roman Amphitheater
+  description: >
+    A tremendous fanfare of trumpets follows the entrance of the Emperor. The Games begin.  It is the
+    turn of the gladiators, men trained for battle, sworn to the gladiators' oath to suffer death by fire,
+    in chains, under the lash or by the sword as their master might decide and to obey as a true
+    gladiator should.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2088
+    west:
+      to: tba:20:room:2090
+
+"tba:20:room:2090":
+  name: Roman Amphitheater
+  description: >
+    You walk under a spread of canvas which sailors of the fleet have slung as a partial roof from
+    masts all around the amphitheater's rim, to serve as a shield against the sun.  It makes a hothouse of
+    the upper seats. After the solemn, long procession of civic dignitaries, priests and performers,
+    together with images of the gods, the entry of the Emperor Titus across the floor of the arena is the
+    signal for renewed frenzied applause from the restive crowd.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2089
+    west:
+      to: tba:20:room:2091
+
+"tba:20:room:2091":
+  name: Roman Amphitheater
+  description: >
+    The first rows are filled with senators, priests, augurs, magistrates, and other officials of
+    distinction.  Up to the first 17 rows are crammed with the worthy citizens of wealth and standing.  Above
+    them and entirely filling the second and third rows up to the very top is the mob making up the great
+    mass of the inhabitants of the Imperial City.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2090
+    west:
+      to: tba:20:room:2092
+
+"tba:20:room:2092":
+  name: Roman Amphitheater
+  description: >
+    The whole amphitheater and the lavish shows held in it are arranged to keep the populace of this
+    city amused.  Excitable and noisy, the crowds near-animal instincts and passions, unrestrained by
+    education, good manners or breeding, are squashed promiscuously together, men, women and children, crying,
+    shouting and sweating in a deafening crescendo of noise.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2093
+    east:
+      to: tba:20:room:2091
+
+"tba:20:room:2093":
+  name: Roman Amphitheater
+  description: >
+    It is here the Romans hold their gladiatorial games, with man against man or man against beast. 
+    Trap doors in the floor allow famous gladiators to make grand entrances, or to allow the Caesar to
+    spring animals into the arena.  The Colosseum looks like it could hold about 50,000 spectators.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2094
+    south:
+      to: tba:20:room:2092
+
+"tba:20:room:2094":
+  name: Roman Amphitheater
+  description: >
+    You have entered a great oval amphitheater, also known as the Colosseum. Crowds of people pour in
+    through the entrance, pushing, shoving and scrambling to fill the top half of the immense number of
+    seats looking down on the huge arena.  It looks like the whole of Rome is here.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2095
+    south:
+      to: tba:20:room:2093
+    down:
+      to: tba:20:room:2001
+
+"tba:20:room:2095":
+  name: Roman Amphitheater
+  description: >
+    Thousands of people are crowded together, pushing, shoving, trying to find the best view of the
+    arena below.  A bout must be getting started soon. Gladiators fight for money or in order to compensate
+    for crimes they have committed.  The money is good and the adoration of the people of Rome is even
+    better.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2080
+    south:
+      to: tba:20:room:2094
+
+"tba:20:room:2096":
+  name: Mortuary Cell
+  description: >
+    The losers of various bouts in the arena are piled high while slaves sort through the corpses,
+    retrieving the weapons and armor for a future battle. Flies are everywhere and you gag at the stench.
+  sector: inside
+  exits:
+    west:
+      to: tba:20:room:2033
+
+"tba:20:room:2097":
+  name: Outside the Amphitheater
+  description: >
+    The amphitheater towers above you to the south and you stare at the impressive Roman architecture. 
+    The smell of death hangs heavy in the air.  So many gladiators have fought and died in this place.
+  sector: inside
+  exits:
+    north:
+      to: tba:20:room:2098
+    south:
+      to: tba:20:room:2033
+
+"tba:20:room:2098":
+  name: Common Grave
+  description: >
+    A massive hole has been dug here to dump all the corpses from the arena fights.  A few beggars
+    scrounge through the corpses looking for valuables.  The stench is overpowering.
+  sector: inside
+  exits:
+    south:
+      to: tba:20:room:2097
+
+"tba:20:room:2099":
+  name: Trophy Room
+  description: >
+    Trophies line the walls of all the famous gladiators.  You notice five medals hanging inside a
+    glass case.  Four of them are for the strongest gladiators of each class; Mage, Thief, Warrior and
+    Cleric.  The fifth is for the strongest gladiator alive, no matter what class.  Do you think you could
+    compete for and win one of them?  A sign listing the rules of the arena is posted here.
+  sector: inside
+  exits:
+    east:
+      to: tba:20:room:2000
+  extras:
+  - keywords: [godsign, sign]
+    text: >
+      This arena is not meant for random player killing of anyone within, but was instead made for
+      players to challenge and fight against each other to see who is the strongest.  Players can challenge each
+      other in any of the arenas.  The strongest of each class will be awarded a medal, or if he/she is the
+      strongest of all classes he/she will also receive the gladiators medal.  There will only be one
+      medal for each class and the gladiators medal.  Who ever holds a medal MUST meet all challenges, within
+      one day of the challenge, or forfeit their right to keep it.  Do not make the gods interfere.  If you
+      can't meet a challenge for whatever reason, simply give up the medal and win it back at another
+      time.  If you are going to be gone for more than a week, junk the medal and inform the gods so other
+      players can compete for it.  Player looting and Player stealing is NOT allowed. Matches can be played to
+      the death or the first to flee. Either way the loser, if he has the medal, must give it to the winner.
+      The gods will give out the medals to the first champions. After that we expect the players to handle
+      it. Again, don't make the gods interfere! Rumble

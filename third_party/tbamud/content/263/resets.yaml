@@ -1,0 +1,152 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 263.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:263:mob:26314
+  room: tba:263:room:26339
+  limit: 1
+  equip:
+    head:
+      object: tba:263:obj:26318
+      limit: 1
+    feet:
+      object: tba:263:obj:26319
+      limit: 500
+- mob: tba:263:mob:26311
+  room: tba:263:room:26328
+  limit: 5
+- mob: tba:263:mob:26311
+  room: tba:263:room:26321
+  limit: 5
+- mob: tba:263:mob:26311
+  room: tba:263:room:26335
+  limit: 5
+- mob: tba:263:mob:26311
+  room: tba:263:room:26332
+  limit: 5
+- mob: tba:263:mob:26311
+  room: tba:263:room:26330
+  limit: 5
+- mob: tba:263:mob:26316
+  room: tba:263:room:26340
+  limit: 2
+- mob: tba:263:mob:26316
+  room: tba:263:room:26340
+  limit: 2
+- mob: tba:263:mob:26318
+  room: tba:263:room:26340
+  limit: 1
+- mob: tba:263:mob:26315
+  room: tba:263:room:26341
+  limit: 3
+- mob: tba:263:mob:26315
+  room: tba:263:room:26341
+  limit: 3
+- mob: tba:263:mob:26315
+  room: tba:263:room:26341
+  limit: 3
+- mob: tba:263:mob:26317
+  room: tba:263:room:26341
+  limit: 1
+- mob: tba:263:mob:26309
+  room: tba:263:room:26324
+  limit: 1
+  equip:
+    legs:
+      object: tba:263:obj:26314
+      limit: 1
+    wield:
+      object: tba:263:obj:26315
+      limit: 1
+  carry:
+  - object: tba:263:obj:26313
+    limit: 1
+- mob: tba:263:mob:26311
+  room: tba:263:room:26325
+  limit: 1
+- mob: tba:263:mob:26310
+  room: tba:263:room:26323
+  limit: 1
+  equip:
+    hold:
+      object: tba:263:obj:26316
+      limit: 1
+  carry:
+  - object: tba:263:obj:26317
+    limit: 1
+- mob: tba:263:mob:26303
+  room: tba:263:room:26309
+  limit: 1
+  equip:
+    head:
+      object: tba:263:obj:26304
+      limit: 1
+    about:
+      object: tba:263:obj:26305
+      limit: 1
+  carry:
+  - object: tba:263:obj:26301
+    limit: 1
+- mob: tba:263:mob:26307
+  room: tba:263:room:26315
+  limit: 1
+- mob: tba:263:mob:26306
+  room: tba:263:room:26316
+  limit: 2
+- mob: tba:263:mob:26306
+  room: tba:263:room:26314
+  limit: 2
+- mob: tba:263:mob:26305
+  room: tba:263:room:26317
+  limit: 1
+  equip:
+    wield:
+      object: tba:263:obj:26309
+      limit: 1
+    hold:
+      object: tba:263:obj:26310
+      limit: 1
+    feet:
+      object: tba:263:obj:26311
+      limit: 1
+    head:
+      object: tba:263:obj:26312
+      limit: 1
+- mob: tba:263:mob:26302
+  room: tba:263:room:26308
+  limit: 1
+  equip:
+    body:
+      object: tba:263:obj:26306
+      limit: 1
+  carry:
+  - object: tba:263:obj:26300
+    limit: 1
+- mob: tba:263:mob:26304
+  room: tba:263:room:26308
+  limit: 4
+- mob: tba:263:mob:26300
+  room: tba:263:room:26307
+  limit: 1
+  equip:
+    feet:
+      object: tba:263:obj:26302
+      limit: 1
+    about:
+      object: tba:263:obj:26303
+      limit: 1
+- mob: tba:263:mob:26301
+  room: tba:263:room:26307
+  limit: 1
+- object: tba:263:obj:26307
+  room: tba:263:room:26308
+  limit: 1
+- object: tba:263:obj:26308
+  room: tba:263:room:26317
+  limit: 1
+removes:
+- room: tba:263:room:26308
+  object: tba:263:obj:26307
+- room: tba:263:room:26317
+  object: tba:263:obj:26308

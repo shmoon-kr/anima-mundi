@@ -1,0 +1,1261 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 316.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:316:obj:31600":
+  type: food
+  keywords: [pie, spiced]
+  short: a spiced pie
+  long: A hot spiced pie is here.
+  wear: [take, hold]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 3
+  cost: 7
+  rent: 0
+  level: 0
+
+"tba:316:obj:31604":
+  type: worn
+  keywords: [muffler, silk]
+  short: a silk muffler
+  long: A strip of silk has been dropped here.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:316:obj:31605":
+  type: worn
+  keywords: [bandanna, red]
+  short: a large red bandanna
+  long: A red bandanna has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 7
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -1
+
+"tba:316:obj:31606":
+  type: worn
+  keywords: [bandana]
+  short: a blue bandanna
+  long: A blue bandanna has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -2
+
+"tba:316:obj:31607":
+  type: container
+  keywords: [sack, burlap]
+  short: a burlap sack
+  long: A burlap sack has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 350
+  rent: 0
+  level: 0
+
+"tba:316:obj:31608":
+  type: armor
+  keywords: [jerkin, burlap]
+  short: a burlap jerkin
+  long: A length of burlap has been left here.
+  wear: [take, hold]
+  values:
+    armor: 5
+  weight: 6
+  cost: 12
+  rent: 0
+  level: 1
+
+"tba:316:obj:31609":
+  type: weapon
+  keywords: [dagger, dark]
+  short: a dark dagger
+  long: A dark-looking dagger has been dropped here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d4
+    attack: pierce
+  weight: 9
+  cost: 25
+  rent: 0
+  level: 9
+
+"tba:316:obj:31610":
+  type: weapon
+  keywords: [dagger, ruby]
+  short: a ruby-hilted dagger
+  long: An exquisitely crafted dagger has been left here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 7
+  cost: 56
+  rent: 0
+  level: 5
+
+"tba:316:obj:31611":
+  type: worn
+  keywords: [shades]
+  short: a pair of dark-tinted shades
+  long: Someone dropped their shades here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 15
+  rent: 0
+  level: 1
+  affects:
+  - apply: ac
+    modifier: -1
+
+"tba:316:obj:31612":
+  type: armor
+  keywords: [glasses, read]
+  short: a pair of reading glasses
+  long: A pair of glasses are here - be careful, don't step on them!
+  flags: [anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 3
+  weight: 3
+  cost: 75
+  rent: 0
+  level: 1
+  affects:
+  - apply: wis
+    modifier: 1
+
+"tba:316:obj:31613":
+  type: worn
+  keywords: [ring, emerald, carved]
+  short: a carved emerald ring
+  long: An emerald ring has been left here.
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 34
+  rent: 0
+  level: 12
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: ac
+    modifier: -2
+
+"tba:316:obj:31614":
+  type: armor
+  keywords: [band, golden, ring]
+  short: a golden band
+  long: A beautiful gold ring has been dropped here.
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 3
+  cost: 56
+  rent: 0
+  level: 1
+
+"tba:316:obj:31615":
+  type: armor
+  keywords: [ring, silver, wide]
+  short: a wide silver ring
+  long: A silver ring has been dropped here.
+  wear: [take, finger]
+  values:
+    armor: 3
+  weight: 3
+  cost: 21
+  rent: 0
+  level: 1
+
+"tba:316:obj:31616":
+  type: drinkcon
+  keywords: [water, cup, water]
+  short: a cup
+  long: A cup has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+
+"tba:316:obj:31617":
+  type: drinkcon
+  keywords: [water, goblet, water]
+  short: a goblet
+  long: A goblet is here on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 5
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:316:obj:31618":
+  type: drinkcon
+  keywords: [water, grail, water]
+  short: a grail
+  long: A grail has been left on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 3
+  cost: 21
+  rent: 0
+  level: 0
+
+"tba:316:obj:31619":
+  type: potion
+  keywords: [potion]
+  short: a glowing potion of invisibility
+  long: A glowing potion of invisibility
+  wear: [take, hold]
+  values:
+    raw: [1, 29, -1, -1]
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:316:obj:31620":
+  type: potion
+  keywords: [potion, green, bright]
+  short: a bright green potion
+  long: A bright green potion is on the ground.
+  wear: [take, hold]
+  values:
+    raw: [1, 39, 1, 1]
+  weight: 3
+  cost: 66
+  rent: 0
+  level: 0
+
+"tba:316:obj:31621":
+  type: potion
+  keywords: [potion, cure, blind]
+  short: a potion of cure blindness
+  long: A potion of cure blindness is fizzing here.
+  wear: [take, hold]
+  values:
+    raw: [1, 14, -1, -1]
+  weight: 3
+  cost: 700
+  rent: 0
+  level: 0
+
+"tba:316:obj:31622":
+  type: weapon
+  keywords: [staff, magi, glowing]
+  short: the Staff of the Magi
+  long: A glowing staff lays here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d8
+    attack: blast
+  weight: 6
+  cost: 233
+  rent: 0
+  level: 25
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: mana
+    modifier: 10
+  extras:
+  - keywords: [staff, magi, glowing]
+    text: >
+      Strange signs and sigils cover most of it's length - this must be a fearsome weapon, indeed.
+
+"tba:316:obj:31623":
+  type: armor
+  keywords: [hat, mage's, runed]
+  short: a runed mage's hat
+  long: A runed hat lies on the ground.
+  flags: [hum]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 6
+  cost: 555
+  rent: 0
+  level: 5
+  affects:
+  - apply: mana
+    modifier: 5
+  - apply: save_para
+    modifier: -2
+  extras:
+  - keywords: [hat, mage's, runed]
+    text: >
+      It looks quite ridiculous the way it points at the top and has all those moons and stars all over
+      it, but hey, anything for some mana!
+
+"tba:316:obj:31624":
+  type: weapon
+  keywords: [sword, short, encrypted]
+  short: an encrypted short sword
+  long: A small glowing sword has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: slash
+  weight: 10
+  cost: 342
+  rent: 0
+  level: 13
+  extras:
+  - keywords: [sword, short, encrypted]
+    text: >
+      Up and down the lengths of it's blade are strange sigils and signs.  They must be where the power
+      emanates from.
+
+"tba:316:obj:31625":
+  type: weapon
+  keywords: [dagger, glowing]
+  short: a glowing dagger
+  long: A glowing dagger has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 6
+  cost: 386
+  rent: 0
+  level: 20
+  affects:
+  - apply: mana
+    modifier: 15
+  extras:
+  - keywords: [dagger, glowing]
+    text: >
+      It seems to be a plain enough dagger, however the glow which radiates it's length is near blinding.
+
+"tba:316:obj:31626":
+  type: armor
+  keywords: [robe, magi]
+  short: the Robe of the Magi
+  long: A crumpled pile of cloth lies here.
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 11
+  cost: 222
+  rent: 0
+  level: 17
+  affects:
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [robe, magi]
+    text: You sense something strange about this pile of cloth - almost like energy.
+
+"tba:316:obj:31627":
+  type: armor
+  keywords: [sash, magician's]
+  short: a Magician's Sash
+  long: A length of cloth lies here.
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 6
+  cost: 177
+  rent: 0
+  level: 12
+  affects:
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [sash, magician]
+    text: This wide, purple belt made of velvet feels so soft, so smooth and SO powerful.
+
+"tba:316:obj:31628":
+  type: scroll
+  keywords: [scroll, vellum]
+  short: a vellum scroll
+  long: A vellum scroll has been left here.
+  action: It glows with its own bright light, almost as if it were alive.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [5, 1, 16, 19]
+  weight: 7
+  cost: 145
+  rent: 0
+  level: 0
+
+"tba:316:obj:31629":
+  type: scroll
+  keywords: [scroll, frayed]
+  short: a frayed scroll
+  long: A frayed scroll has been dropped here.
+  action: Its edges seem almost as if they might crumble with the slightest touch.
+  wear: [take, hold]
+  values:
+    raw: [5, 26, -1, -1]
+  weight: 9
+  cost: 177
+  rent: 0
+  level: 0
+
+"tba:316:obj:31630":
+  type: scroll
+  keywords: [scroll, bound, tightly]
+  short: a tightly bound scroll
+  long: A tightly bound scroll has been dropped here.
+  action: A thin piece of string secures this scroll, keeping it tightly bound.
+  wear: [take, hold]
+  values:
+    raw: [5, -1, -1, -1]
+  weight: 8
+  cost: 123
+  rent: 0
+  level: 0
+
+"tba:316:obj:31631":
+  type: armor
+  keywords: [boots, sneaking]
+  short: the boots of sneaking
+  long: A pair of sneaking boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 10
+  cost: 455
+  rent: 0
+  level: 15
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [boots, sneaking]
+    text: >
+      They appear to be made of the softest leather, leather that would almost seem to suck to your
+      feet.  The soles, made of the same leather, are only slightly more thick from the rest of the boot, but
+      appear to be quite durable.
+
+"tba:316:obj:31632":
+  type: armor
+  keywords: [cloak, shadows]
+  short: the cloak of shadows
+  long: A shadowy cloak has been dropped here.
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 11
+  cost: 565
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [cloak, shadows]
+    text: >
+      It appears that it would cover its wearer completely, obscuring identity and because of its dark
+      color, enable the wearer to hide well in shadows.
+
+"tba:316:obj:31633":
+  type: armor
+  keywords: [hood, identity, hidden]
+  short: the hood of hidden identity
+  long: A dark hood has been left here.
+  wear: [take, neck, head]
+  values:
+    armor: 3
+  weight: 7
+  cost: 777
+  rent: 0
+  level: 15
+  extras:
+  - keywords: [hooden, hidden, identity]
+    text: >
+      This hood looks menacing even without being worn by anyone.  It appears to have been tailor-made
+      for those who deal in the darker trades.
+
+"tba:316:obj:31634":
+  type: armor
+  keywords: [gloves, snatching]
+  short: the gloves of snatching
+  long: A pair of thieven gloves have been left here.
+  wear: [take, hands]
+  values:
+    armor: 4
+  weight: 4
+  cost: 644
+  rent: 0
+  level: 10
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [gloves, snatching]
+    text: >
+      These gloves, made from a soft, supple leather with the finger tips cut out were made to serve a
+      thief.
+
+"tba:316:obj:31635":
+  type: armor
+  keywords: [face, plate, darkened]
+  short: a darkened face plate
+  long: A darkened face plate lies discarded on the ground.
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 6
+  cost: 375
+  rent: 0
+  level: 10
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [face, plate, darkened]
+    text: >
+      It appears that when worn, this plate would conceal not only the identity of the wearer, but also
+      shade the eyes so that others would not be able to discern which direction the wearer might be looking
+      in.
+
+"tba:316:obj:31636":
+  type: weapon
+  keywords: [dirk, snake, blade]
+  short: a Snake-blade dirk
+  long: A strange dirk with a curving blade has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: pierce
+  weight: 8
+  cost: 877
+  rent: 0
+  level: 10
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [dirk, snake, blade]
+    text: >
+      The workmanship on this is superb, its carftsman obviously someone who's life work is creating
+      beautiful wweapons such as this.
+
+"tba:316:obj:31637":
+  type: weapon
+  keywords: [sword, short, glowing]
+  short: a glowing short sword
+  long: A glowing short sword has been left here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: pierce
+  weight: 12
+  cost: 267
+  rent: 0
+  level: 30
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [sword, short, glowing]
+    text: >
+      Up and down its entire length, this small sword, almost small enough to be called a dagger, glows
+      with its own fierce light.
+
+"tba:316:obj:31638":
+  type: drinkcon
+  keywords: [beer, tankard, heavy, beer]
+  short: a heavy tankard
+  long: A heavy tankard has been dropped here.
+  wear: [take, hold]
+  values:
+    capacity: 30
+    contains: 30
+    liquid: beer
+    poisoned: false
+  weight: 35
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [beer, heavy, tankard, beer]
+    text: >
+      This thing looks like it could hold enough beer for THREE warriors, but... It appears that you are
+      meant to drink its contents to the finish.
+
+"tba:316:obj:31639":
+  type: weapon
+  keywords: [sword, short, blade, warrior's, companion]
+  short: the Warrior's Companion
+  long: A small sword with a wolf's head pommel has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: stab
+  weight: 11
+  cost: 460
+  rent: 0
+  level: 10
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [sword, short, blade, warrior's, companion]
+    text: >
+      This is the blade that no warrior should be without...  At least that is the sales pitch.  It is
+      quite an impressive blade.
+
+"tba:316:obj:31640":
+  type: weapon
+  keywords: [sword, deathbringer]
+  short: DeathBringer
+  long: A huge sword made of blazing gold has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: slash
+  weight: 14
+  cost: 800
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [deathbringer, sword]
+    text: >
+      Strange that a sword could be made of gold and still maintain an edge - it must be magically
+      enhanced.
+
+"tba:316:obj:31641":
+  type: weapon
+  keywords: [sword, bastard]
+  short: a huge bastard sword
+  long: A huge bastard sword lies on the ground.
+  wear: [take, wield]
+  values:
+    damage: 5d8
+    attack: stab
+  weight: 18
+  cost: 400
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 3
+  - apply: str
+    modifier: -3
+  extras:
+  - keywords: [sword, bastard]
+    text: >
+      It would take a being of great strength to wield this mighty blade - a being of great strength,
+      indeed.
+
+"tba:316:obj:31642":
+  type: weapon
+  keywords: [knuckles, brass]
+  short: a pair of brass knuckles
+  long: A pair of brass knuckles have been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: pound
+  weight: 7
+  cost: 210
+  rent: 0
+  level: 30
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: 20
+  - apply: dex
+    modifier: -1
+  extras:
+  - keywords: [knuckles, brass]
+    text: >
+      They appear big enough to fit the hand of an ogre, but when you try them on your own hands, they
+      meld into the sahpe of your fist, fitting perfectly!
+
+"tba:316:obj:31643":
+  type: weapon
+  keywords: [bola]
+  short: a black bola
+  long: A black bola has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: bludgeon
+  weight: 12
+  cost: 460
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [bola]
+    text: >
+      Just looking at this fine piece of weapontry makes you want to go thump someone on the head!
+
+"tba:316:obj:31644":
+  type: weapon
+  keywords: [club, death]
+  short: a huge club, Death
+  long: A very huge and very nasty looking club has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 5d8
+    attack: maul
+  weight: 25
+  cost: 750
+  rent: 0
+  level: 25
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: damroll
+    modifier: 2
+  - apply: int
+    modifier: -3
+  extras:
+  - keywords: [club, death]
+    text: >
+      Shot through with metal spikes at the end and heavy as an ogre weapon, this thing looks as
+      impressive as any club could look.  No wonder they named it Death.
+
+"tba:316:obj:31645":
+  type: armor
+  keywords: [helm, horns]
+  short: the helm of horns
+  long: A huge helm with two bull horns on top has been left here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 13
+  cost: 477
+  rent: 0
+  level: 10
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [helm, horns]
+    text: >
+      The two horns curve up menacingly, allowing the wearer to use this helm as a secondary weapon.
+
+"tba:316:obj:31646":
+  type: armor
+  keywords: [shield, agate, glowing]
+  short: a glowing agate shield
+  long: A glowing agate shield has been discarded here.
+  wear: [take, shield]
+  values:
+    armor: 9
+  weight: 8
+  cost: 400
+  rent: 0
+  level: 10
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [shield, agate, glowing]
+    text: >
+      The power emenating from this huge piece of agate carved into a shield is so immense that it makes
+      the entire thing glow.
+
+"tba:316:obj:31647":
+  type: armor
+  keywords: [buckler, black, stone, blackstone]
+  short: a blackstone buckler
+  long: A blackstone buckler has been left on the ground.
+  wear: [take, waist]
+  values:
+    armor: 10
+  weight: 12
+  cost: 650
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [buckler, stone, blackstone]
+    text: It appears to be in fine shape - a formidable guard against attack.
+
+"tba:316:obj:31648":
+  type: armor
+  keywords: [plate, chest, crested, eagle]
+  short: an eagle crested chest plate
+  long: A chest plate bearing the crest of an eagle has been left here.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 10
+  cost: 450
+  rent: 0
+  level: 10
+  affects:
+  - apply: hit
+    modifier: 20
+  extras:
+  - keywords: [plate, chest, crested, eagle]
+    text: >
+      The insignia of the eagle is bold and bright, making your heart soar and your spirit long for the
+      din battle to surround you.
+
+"tba:316:obj:31649":
+  type: armor
+  keywords: [arm, guard, spiked]
+  short: a set of spiked arm guards
+  long: A set of arm guards have been left here.
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 7
+  cost: 650
+  rent: 0
+  level: 15
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: move
+    modifier: 20
+  extras:
+  - keywords: [arm, guard, spiked]
+    text: >
+      They look like any other set of arm guards you have seen in the past - well, except for the
+      three-inch spikes which protrude from the lower arm area.
+
+"tba:316:obj:31650":
+  type: armor
+  keywords: [diamond-chip, chip, gauntlets]
+  short: a pair of diamond-chip gauntlets
+  long: A pair of gauntlets lie on the ground.
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 9
+  cost: 777
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [diamond-chip, gauntlets, chip]
+    text: >
+      These gauntlets are made from a sturdy metal and leather combination, with diamond chips embedded
+      into the knuckles - made to slice into the opponent's flesh.
+
+"tba:316:obj:31651":
+  type: scroll
+  keywords: [book, Krolar]
+  short: the Book of Krolar
+  long: Someone left the Book of Krolar here.
+  action: |-
+    The Holy Book of Krolar emenates a power, a presence unmatched by any
+    other book you ever have held.
+  wear: [take, hold]
+  values:
+    raw: [1, 1, 3, 22]
+  weight: 7
+  cost: 389
+  rent: 0
+  level: 10
+
+"tba:316:obj:31652":
+  type: weapon
+  keywords: [mace]
+  short: a glowing mace
+  long: A mace infused with the power of a God has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: bludgeon
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 10
+  affects:
+  - apply: mana
+    modifier: 15
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [mace]
+    text: >
+      It gently glows, inviting you to pick it up, find some poor innocent slob, clobber him on the head
+      repeatedly until the blood and brains that ooze from his head are so thick and juicy that you cannot
+      even make out his features, whether he was a man, woman, human or ogre it doesn't matter you just
+      want to bludgeon, kill, mangle, maim!!!!!......  Now where did all that come from?
+
+"tba:316:obj:31653":
+  type: weapon
+  keywords: [sceptre, holy]
+  short: Krolar's Holy Sceptre
+  long: Someone in their haste has dropped their sceptre.
+  wear: [take, wield, hold]
+  values:
+    damage: 5d8
+    attack: crush
+  weight: 12
+  cost: 321
+  rent: 0
+  level: 25
+  affects:
+  - apply: mana
+    modifier: 35
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [sceptre, holy]
+    text: >
+      It is rumored that every one of Krolar's Holy Sceptres made was forged with a small piece of the
+      original Sceptre that Krolar used to vanquish the evil Amos Trask, thief and rogue who plagued the men
+      and creatures of Jareth for nearly a decade.
+
+"tba:316:obj:31654":
+  type: weapon
+  keywords: [whip, power]
+  short: the Power Whip
+  long: A whip glowing with energy lies here.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: whip
+  weight: 5
+  cost: 997
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [whip, power]
+    text: >
+      Suffused with some unknown God's power, this whip has all the power of a whip and then some.
+
+"tba:316:obj:31655":
+  type: scroll
+  keywords: [book, word, holy]
+  short: the Holy Word
+  long: A book has been dropped here.
+  action: |-
+    You can only see one word on the interior of this book - only one page
+    fills it's entire content.
+  wear: [take, hold]
+  values:
+    raw: [1, 47, 33, 43]
+  weight: 4
+  cost: 278
+  rent: 0
+  level: 1
+
+"tba:316:obj:31656":
+  type: worn
+  keywords: [amulet, sacred]
+  short: a sacred amulet
+  long: A small clear stone on a chain has been left here.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 567
+  rent: 0
+  level: 10
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [amulet, sacred]
+    text: You see nothing all that special about the amulet, however looks can be deceiving.
+
+"tba:316:obj:31657":
+  type: worn
+  keywords: [wristlet, glory]
+  short: the Wristlet of Glory
+  long: A small wristlet has been left here.
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 340
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [wristlet, glory]
+    text: >
+      It looks almost too small to be worn at all, but opun trying it on, you see that it is not too
+      small at all.
+
+"tba:316:obj:31658":
+  type: worn
+  keywords: [ring, krolar, holy]
+  short: Krolar's Holy Stone
+  long: A small holy, red ring has been left here.
+  wear: [take, arms, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 14
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [ring, krolar, holy]
+    text: Red stone inset in a black band - wow, this thing is cool!
+
+"tba:316:obj:31659":
+  type: armor
+  keywords: [robe, yellow]
+  short: a yellow robe
+  long: A yellow robe has been dropped here.
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 9
+  cost: 699
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [robe, yellow]
+    text: It looks to be in decent enough shape.
+
+"tba:316:obj:31660":
+  type: armor
+  keywords: [robe, bright]
+  short: a bright robe
+  long: A bright robe lies crumpled in a corner.
+  wear: [take, about]
+  values:
+    armor: 8
+  weight: 9
+  cost: 900
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: hit
+    modifier: 25
+  extras:
+  - keywords: [robe, bright]
+    text: It is made from some sort of material that makes the color just seem to jump out at you!
+
+"tba:316:obj:31661":
+  type: armor
+  keywords: [robe, white]
+  short: a white robe
+  long: A beautiful white robe has been left here.
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 9
+  cost: 235
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [robe, white]
+    text: >
+      An exquisite robe of the finest fabric.  One of the finest pieces of cloth you have ever seen.  Who
+      in their right mind would sell or leave this thing unaccounted for must be an absolute idiot.  Why
+      would anyone want to leave this lovely piece of fabric behind?
+
+"tba:316:obj:31662":
+  type: armor
+  keywords: [shield, rose]
+  short: a gray shield emblazoned with the Black Rose
+  long: A gray shield of the Deathknight has been left here.
+  wear: [take, shield]
+  values:
+    armor: 9
+  weight: 12
+  cost: 766
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: -3
+  extras:
+  - keywords: [shield, rose]
+    text: >
+      The black rose is symbolic of the hatred for all others, the desire to kill and maim that a
+      Deathknight has breeded into them as part of their training.
+
+"tba:316:obj:31663":
+  type: armor
+  keywords: [armor, body, black, onyx]
+  short: some black onyx body armor
+  long: Someone left their black onyx body armor here.
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 22
+  cost: 890
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: -35
+  extras:
+  - keywords: [armor, body, black, onyx]
+    text: >
+      It is not a gleaming black color that this armor exhibits, but a dull, flat black that seems to
+      soak up all color and joy around it.
+
+"tba:316:obj:31664":
+  type: armor
+  keywords: [cape, rose, black]
+  short: the Black Rose Cape
+  long: Some Deathknight left their cape laying here.
+  flags: [no_sell]
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 8
+  cost: 666
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [cape, rose, black]
+    text: >
+      The Black Rose, the traditional symbol of the Deathknight, proudly adorns the back of this cape.
+
+"tba:316:obj:31665":
+  type: weapon
+  keywords: [sword, rose, black]
+  short: the Sword of the Black Rose
+  long: A Deathknight has left their sword here.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: slash
+  weight: 9
+  cost: 600
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [sword, rose, black]
+    text: >
+      The pommel is in the shape of a wilted black rose, the thorns on the stem serving as the grip.
+
+"tba:316:obj:31666":
+  type: weapon
+  keywords: [mace, nail, studded]
+  short: a nail-studded mace
+  long: A mean-looking mace with nails studding its length has been dropped here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d7
+    attack: pound
+  weight: 10
+  cost: 300
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [mace, nail, studded]
+    text: This mean looking weapon looks as if it could do more damage than a bastard sword.
+
+"tba:316:obj:31667":
+  type: fountain
+  keywords: [water, fountain, mermaid, water]
+  short: a beautiful mermaid fountain
+  long: >-
+    An inticately carved fountain with a naked mermaid in the center sprays a fine geyser of clear
+    water into its basin.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [water, fountain, mermaid]
+    text: >
+      Local lore states that a tribe of merfolk live just off the coast near the city, and that this
+      fountain was a gift to the people of McGintey by the Lord of those merfolk.

@@ -1,0 +1,397 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 249.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:249:room:24900":
+  name: Jedi Zone Description Room
+  description:
+    preformatted: |2
+         Builder      : G.Threepwood
+         Zone         : 249 Jedi Clan House
+         Began        :
+         Player Level :
+         Rooms        : 20
+         Mobs         : 1
+         Objects      : 2
+         Links        :
+  sector: inside
+
+"tba:249:room:24901":
+  name: The Entrance of JEDI CLAN house
+  description: >
+    You have just entered in JEDI clan general headquarters. Suddenly you realize that a different
+    atmosphere surrounds you... You have a strange feeling, you feel the FORCE getting stronger in you. You
+    see a sign. To the north, you find the JEDI clan atrium.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:249:room:24902
+      look: You see a central room, an atrium, that way.
+  extras:
+  - keywords: [sign]
+    text:
+      preformatted: |2
+            +-----------------------------------------+
+            |   This area was create by G.Threepwood  |
+            |            for NIRVANA mud.             |
+            +-----------------------------------------+
+
+"tba:249:room:24902":
+  name: The Atrium
+  description: >
+    You see a great room with a wide opening in the ceiling, light floods the room. Huge marble pillars
+    rise on either side of you and hold the ceiling. In the middle of the room you note a beautiful
+    circular table made of marble. You perceive that the Jedi member come to here to expose their ideas. The
+    walls are white with some inscriptions in it. You also see a Code of Laws where can be read the
+    JEDI's rules. To the east you see the Library, to the west the Treasury.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:249:room:24905
+      look: You see the Hall.
+    east:
+      to: tba:249:room:24903
+      look: You see the path to the Library.
+    south:
+      to: tba:249:room:24901
+      look: You see the Entrance of JEDI clan house.
+    west:
+      to: tba:249:room:24904
+      look: You see the Treasury.
+  extras:
+  - keywords: [code, laws]
+    text:
+      preformatted: |2
+           .                     The Jedi Member Rules                          .
+        ----------------------------------------------------------------------------
+        Obligations
+              1 - Total obdience to the Masters of the Clan;
+              2 - Keep in secret the arquitecture of the clan house;
+              3 - Aid brothers who are in trouble;
+              4 - Do not distribute clan's holy equipment;
+        Rights
+              1 - Have access to the Jedi HQ;
+              2 - Pick up any eq found in the donation room or in the store;
+              3 - Ask others members help;
+        Punishments
+              1 - Desertors are punished with their lives;
+              2 - Killing members of this brotherhood is punished with death;
+              3 - Treason is punishable by immediate death;
+        ....                                                                ....
+             ....                                                     ....
+                  ....       May the Force be with you!         ....
+  - keywords: [inscription, wall]
+    text: May the Force be with you.
+
+"tba:249:room:24903":
+  name: The Library
+  description: >
+    You are standing in a large room with many bookcases. The shelves have a great deal of books,
+    scrolls, papyrus and notes. The room is lighted by many candeladra, which makes this room very clear. You
+    also perceive some desks and a bench where a scribe works hard. Here the JEDI members exercise their
+    mental faculty. To the west you see the atrium.
+  sector: inside
+  flags: [indoors, soundproof, no_track]
+  exits:
+    west:
+      to: tba:249:room:24902
+      look: You see the Atrium.
+  extras:
+  - keywords: [note]
+    text: Scribere scribendo, dicendo dicere disces.
+
+"tba:249:room:24904":
+  name: The Treasury
+  description: >
+    You are in a relatively small room. There are some benches and desks. You see a big bin that seems
+    to be impossible to open. Here is protected the gold and the values of the JEDI members. To the east
+    you get to the Atrium.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:249:room:24902
+      look: You see the Atrium.
+
+"tba:249:room:24905":
+  name: The Common Hall
+  description: >
+    You in a simple room with some pictures on the wall and on the floor. There is a big stair made of
+    old good oak just in front of you. Where does it lead?, you inquire yourself. To the south you get to
+    the Atrium.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:249:room:24906
+      look: You see the High Members Hall.
+    south:
+      to: tba:249:room:24902
+      look: You see the Atrium.
+    up:
+      to: tba:249:room:24907
+      look: You hear some voices and noises from there.
+
+"tba:249:room:24906":
+  name: The High Members Hall
+  description: >
+    You are in the middle of a well ardornated room. Many pictures were drawn on the walls. Undoubtly,
+    holy pictures. You note the existence of three rooms adjacents to this one. You see a yellow glow
+    coming from the west room. What is there?
+  sector: inside
+  flags: [indoors, peaceful, no_track]
+  exits:
+    north:
+      to: tba:249:room:24919
+      look: You see the Threepwood's Office.
+    east:
+      to: tba:249:room:24918
+      look: You see the Sneaky's Room.
+    south:
+      to: tba:249:room:24905
+      look: You see the Common Hall.
+    west:
+      to: tba:249:room:24917
+      look: You see the Kirian's Laboratory.
+
+"tba:249:room:24907":
+  name: The Upper Floor
+  description: >
+    You are in the upstairs. You are positive that here you will find many interesting things. The
+    Force runs faster in your soul. You note a imposing statue of an Old Jedi situated in front of you. To
+    down you reach the downstairs, to the east there is a corridor, to the west you see the training center.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:249:room:24911
+      look: You see nothing important.
+      door:
+        keywords: [statue, old, jedi]
+        kind: door
+        reset: closed
+    east:
+      to: tba:249:room:24908
+      look: You see a long corridor.
+    west:
+      to: tba:249:room:24912
+      look: You see the Upper Hall.
+    down:
+      to: tba:249:room:24905
+      look: You see the downstaris.
+
+"tba:249:room:24908":
+  name: The Corridor
+  description: >
+    You get to a wide corridor that becomes narrower as you walk through it. The Force is more powerful
+    in you. You note that to the east the room become dark. There are paintings hanged on the wall. The
+    light comes from a very small hole in the ceiling.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:249:room:24909
+      look: You see the tunnel.
+    west:
+      to: tba:249:room:24907
+      look: You see the the Upper Floor.
+
+"tba:249:room:24909":
+  name: The Tunnel
+  description: >
+    You find yourself in a narrow dark tunnel. The light is really poor here. The inscriptions and the
+    pictures on the walls are almost invisible. Althrough you are in this strange ambient, you get the
+    impression that you have been here before... How odd!
+  sector: inside
+  flags: [dark, indoors, no_track, tunnel]
+  exits:
+    east:
+      to: tba:249:room:24910
+      look: You see the Holy Chamber.
+    west:
+      to: tba:249:room:24908
+      look: You see the corridor.
+  extras:
+  - keywords: [holy]
+    text: You note that the force is stronger in the Holy Chamber.
+
+"tba:249:room:24910":
+  name: The Holy Chamber
+  description: >
+    You are in a mystical atmosphere here. Your soul is in real peace and you feel better than never
+    before. The wall, the floor, everything is very clear and white. You see a great pedestal and some
+    candeladra. There is a beautiful holy altar with a great ark on it. A Jedi Member get here to rise his
+    spiritual status. You understand that religion is taken serious by the JEDI. A Jedi have his
+    inicialization here during the Holy Ritual.
+  sector: inside
+  flags: [indoors, peaceful, no_track]
+  exits:
+    west:
+      to: tba:249:room:24909
+      look: You see the tunnel.
+  extras:
+  - keywords: [ark]
+    text: It is so bright that you cannot perceive its details.
+  - keywords: [rules]
+    text:
+      preformatted: |2
+           .                     The Jedi Member Rules                          .
+        ----------------------------------------------------------------------------
+        Obligations
+              1 - Total obdience to the Masters of the Clan;
+              2 - Keep in secret the arquitecture of the clan house;
+              3 - Aid brothers who are in trouble;
+              4 - Do not distribute clan's holy equipment;
+        Rights
+              1 - Have access to the Jedi HQ;
+              2 - Pick up any eq found in the donation room or in the store;
+              3 - Ask others members help;
+        Punishments
+              1 - Desertors are punished with their lives;
+              2 - Killing members of this brotherhood is punished with death;
+              3 - Treason is punishable by immediate death;
+        ....                                                              ....
+             ....                                                   ....
+                  ....        May the Force be with you!       ....
+
+"tba:249:room:24911":
+  name: The JEDI's Donation Room
+  description: >
+    You see a large room with many things on it. There are on the ceiling some unknow, at least for
+    you, hanging objects. The floor is covered with a white painting, with many symbols. Holy symbols? Here
+    you find equipments and weapons that were donated by other members of the clan.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    south:
+      to: tba:249:room:24907
+      look: You see the Upper Floor.
+
+"tba:249:room:24912":
+  name: The Tablinum
+  description: >
+    The Upper Floor continues. But the walls become stronger. You almost feel in jail. There is on the
+    floor a big soft carpet ornated this many geometric figures, you feel like stepping in a cloud. The
+    walls are covered with a special paint.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    north:
+      to: tba:249:room:24913
+      look: You see a big wall, seems to be indestructible.
+      door:
+        keywords: [wall, paint]
+        kind: door
+        reset: closed
+    east:
+      to: tba:249:room:24907
+      look: The Hall continues that way.
+    south:
+      to: tba:249:room:24914
+      look: You see the restaurant.
+    west:
+      to: tba:249:room:24915
+
+"tba:249:room:24913":
+  name: The Store
+  description: >
+    You are in small room but it is full of things. There are many shelves filled with all sorts of
+    boxes. You see many containers, crates and sacks everywhere. The Jedi members' equipment can be left
+    here save from disasters. Cool!!
+  sector: inside
+  exits:
+    south:
+      to: tba:249:room:24912
+      look: You see the Upper floor.
+
+"tba:249:room:24914":
+  name: The Restaurant
+  description: >
+    You are in a very spacious room. The smell is very rich. You note that very tasteful food is being
+    made here. A incredible sort of bread is here. Danish, croissant, french... Uhmmm! Your stomach
+    moves. You see many drinks being sold here. This remembers you you are thirsty.
+  sector: inside
+  exits:
+    north:
+      to: tba:249:room:24912
+      look: You see the Upper floor.
+
+"tba:249:room:24915":
+  name: The Trainning Center
+  description: >
+    The Jedi knight's legacy is the knowlegment. Here the Jedi passes their fighting experience to
+    youngers. You hear some shouts and noises from the west. To the east you see the Upper Floor, and to the
+    west the Jedi Arena.
+  sector: inside
+  flags: [indoors, no_track]
+  exits:
+    east:
+      to: tba:249:room:24912
+      look: You see the Upper foor.
+    west:
+      to: tba:249:room:24916
+      look: Wow! The Arena.
+
+"tba:249:room:24916":
+  name: The Jedi Arena
+  description: >
+    You see a very large circular area where fighters and gladiators exercise their physicals
+    habilities. The ground is covered with sand, compacted sand. Outside the this area, there is a sitting in
+    which people watch the trainment of the members.
+  sector: inside
+  exits:
+    east:
+      to: tba:249:room:24915
+      look: You see the trainnig center.
+
+"tba:249:room:24917":
+  name: Kirian's Laboratory
+  description: >
+    You are standing in a simple adorned room, but you note your fine accomplishment. The walls and the
+    floor are very smooth. In the middle of room you see two large marble tables. On the first many
+    books of science an mystical arts. On the second, a collection of magic objects. On the corner you see a
+    small desk with some scrolls. A floating magic light illumines the room. Surrounded by this magic
+    atmosphere you realize that the FORCE is strong here.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, private]
+  exits:
+    east:
+      to: tba:249:room:24906
+      look: You see the High Members Hall.
+
+"tba:249:room:24918":
+  name: Sneaky's Room
+  description: Sneaky's room description must be setted here!!
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, private]
+  exits:
+    west:
+      to: tba:249:room:24906
+      look: You see the High Member Hall.
+
+"tba:249:room:24919":
+  name: Threepwood's Office
+  description: >
+    You entered in dark room. Shadows are everywhere. The shadows seem to move. You have the true
+    impression that you are being beholded. You become nervous when you see an incredible collection of
+    daggers. A bookcase holds many books of secret arts. You also perceive a big desk on where is found a lot
+    of papers and a spot of blood... What!!!! You feel something touching your back. You turn around, and
+    see nothing. Although the lack of illumination you can positively realize holy inscriptions written
+    on the walls.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_track, private]
+  exits:
+    south:
+      to: tba:249:room:24906
+      look: You see the High Members Hall.
+  extras:
+  - keywords: [wall]
+    text: Unum castigabis, centum emendabis.
+  - keywords: [collection]
+    text: You have never seen so many daggers.  And how sharp!!  Ouch!
+  - keywords: [inscription]
+    text: Qui spernit consilium, spernit auxilium.
+  - keywords: [blood]
+    text: My God!!  This blood is still warm!!

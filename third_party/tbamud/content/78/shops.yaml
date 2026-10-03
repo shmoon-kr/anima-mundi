@@ -1,0 +1,50 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 78.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:78:shop:7801":
+  keeper: tba:78:mob:7802
+  rooms: [tba:78:room:7820]
+  products:
+  - tba:78:obj:7803
+  - tba:78:obj:7804
+  - tba:78:obj:7805
+  - tba:78:obj:7806
+  - tba:78:obj:7807
+  - tba:78:obj:7808
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0
+
+"tba:78:shop:7802":
+  keeper: tba:78:mob:7803
+  rooms: [tba:78:room:7822]
+  products:
+  - tba:78:obj:7809
+  - tba:78:obj:7810
+  - tba:78:obj:7811
+  - tba:78:obj:7812
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

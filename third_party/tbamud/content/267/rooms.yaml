@@ -1,0 +1,1925 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 267.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:267:room:26700":
+  name: Vice Island Zone Description Room
+  description:
+    preformatted: |2
+         Vice Island is an evil-only area. It's rather large for a medium-sized MUD
+      and is intended to be used in concurrence with Oceania.
+      This area is intended to be part 1 of 4 subareas I have in mind for Oceania.
+      It has mainly evil mobs, and almost all of the equipment in it is evil only.
+      ---------------------------------------------------------------------------
+      I make no legal claim on Vice Island save this: You MUST give me credit for
+      its design SOMEPLACE in your mud. You can hide it if you want, but I want
+      some credit somewhere for it. :) I spent 6 months making Oceania and Vice
+      Island, and I feel some need to have it known that my work is appreciated.
+      ---------------------------------------------------------------------------
+      Builder      : Questor
+      Zone         : 267 Vice Island
+      Player Level : 20-25
+      Rooms        : 98
+      Mobs         : 20
+      Objects      : 41
+      Triggers     : 9
+      Links        :
+      Zone 267 is linked to the following zones:
+      268 Vice Island II                 at 26797 (west ) ---> 26804
+      268 Vice Island II                 at 26798 (east ) ---> 26800
+  sector: inside
+
+"tba:267:room:26701":
+  name: Port Harem
+  description: >
+    You stand on a blindingly white beach; it stretches to your north and south as far as you can see. 
+    Hundred of beautifuly garbed women of all shades languish on the shore; they have stony-dull eyes
+    that stare right past you. Something looks not-quite-so-right in this pristine place.
+  sector: field
+  exits:
+    east:
+      to: tba:267:room:26702
+      look: To your east you can see a huge mound of dirt.
+  extras:
+  - keywords: [women, woman]
+    text: >
+      Each woman is spectacularly beautiful--except for their glazed eyes and expressions of utter
+      stupor.  What on earth could be wrong with them?
+  - keywords: [sand, beach]
+    text: >
+      Close examination of the beach shows that the sand is not only white--each and every grain is a
+      single crystal; it reflects the light of the sun into a blinding display of bright white.  While each
+      one exhibits a different color, they all blend into this pristine color.
+
+"tba:267:room:26702":
+  name: Beachside Harem
+  description: >
+    Now THIS is weird.  Frightened women scamper out from a hole in a huge mound and you can hear
+    screaming from down in the depths.  A large forest lies to your east, and a trail can be vaguely seen.
+  sector: hills
+  flags: [dark]
+  exits:
+    east:
+      to: tba:267:room:26703
+      look: To your east you can see a beach road that leads into the forest.
+    west:
+      to: tba:267:room:26701
+      look: You can see the blindingly bright white beach to your east.
+    down:
+      to: tba:267:room:26704
+      look: Downwards you can see what looks to be a lush harem.
+
+"tba:267:room:26703":
+  name: Beach Road
+  description: >
+    This path is extremely well-kept.  Small stones line the outer path, and the sand from the beach
+    has been lain to make a path--though the crystal seems to have been melted down to make the floor
+    harder.  The palm trees here completely fill every part of the area outside the path.  Strange noises and
+    utterly blood-chilling screams fill the air.  It is very dark here.  The path leads on to your west,
+    and a strange mound lies to your east.
+  sector: field
+  flags: [dark]
+  exits:
+    east:
+      to: tba:267:room:26705
+      look: The beach road continues on.
+    west:
+      to: tba:267:room:26702
+      look: To your west you can see a huge mound.
+
+"tba:267:room:26704":
+  name: Harem
+  description: >
+    This place is full of imported beauty--lavish Persian rugs, assorted priceless vases, and piles of
+    money and jewelry everywhere.  Beautiful, silent women dance before you, twirling in silk gowns that
+    barely hide their beauty. A sound can be heard over all the racket, shouting, "Keep working!  "
+  sector: city
+  flags: [dark, indoors, private]
+  exits:
+    up:
+      to: tba:267:room:26702
+      look: >
+        You can just see from the hole in the ground that you are right by a path that leads into the woods.
+
+"tba:267:room:26705":
+  name: Beach Road
+  description: >
+    This path is extremely well-kept.  Small stones line the outer path, and the sand from the beach
+    has been lain to make a path--though the crystal seems to have been melted down to make the floor
+    harder.  The palm trees here completely fill every part of the area outside the path.  Strange noises and
+    utterly blood-chilling screams fill the air.  It is very dark here.  A large hill rises to your east,
+    and the beach road lies to your west.
+  sector: field
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:267:room:26739
+      look: A large hill rises to your east.
+    west:
+      to: tba:267:room:26703
+      look: You see a well-kept trail.
+
+"tba:267:room:26706":
+  name: Creepy Road
+  description: >
+    You're not quite sure why, but this road sends shivers down your very spine. Perhaps it's the total
+    and complete silence.  Or perhaps it's the skeletons strown haphazardly about.  You just don't know.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:267:room:26707
+      look: The creepy road continues east.
+    west:
+      to: tba:267:room:26739
+      look: The huge Vice Hill lies to your west.
+  extras:
+  - keywords: [skeletons]
+    text: They're quite real, and quite frightening.  We weren't lying to you.
+
+"tba:267:room:26707":
+  name: Creepy Road
+  description: >
+    You're not quite sure why, but this road sends shivers down your very spine. Perhaps it's the total
+    and complete silence.  Or perhaps it's the skeletons strown haphazardly about.  You just don't know.
+  sector: field
+  exits:
+    east:
+      to: tba:267:room:26708
+      look: The creepy road continues east.
+    west:
+      to: tba:267:room:26706
+      look: The creepy road continues west.
+  extras:
+  - keywords: [skeletons]
+    text: They're quite real, and quite frightening.  We weren't lying to you.
+
+"tba:267:room:26708":
+  name: Creepy Road
+  description: >
+    You're not quite sure why, but this road sends shivers down your very spine. Perhaps it's the total
+    and complete silence.  Or perhaps it's the skeletons strown haphazardly about.  You just don't
+    know.  A large building towers above you to the east.
+  sector: field
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:267:room:26745
+      look: You know, like we said, a large building lieing to your east and all.
+    west:
+      to: tba:267:room:26739
+      look: The creepy road continues west.
+  extras:
+  - keywords: [building]
+    text: The building is a dark gray shade, but it seems to have been soiled by grimy tar.
+  - keywords: [skeletons]
+    text: They're quite real, and quite frightening.  We weren't lying to you.
+
+"tba:267:room:26709":
+  name: Vice Hill
+  description: >
+    You are on a tall hill overlooking the entire island.  You can see the zenith to your far north;
+    the hill blocks all the view to the north and on. To your south, you can see the beginnings of a
+    rock-strewn-path...  Continuing further down, you can see the end of the hill.  The forest covers up most
+    of the view from here.
+  sector: hills
+  exits:
+    up:
+      to: tba:267:room:26739
+      look: Looking up, you can see the zenith of Vice Hill.
+    down:
+      to: tba:267:room:26723
+      look: Looking down, you can see the end of the hill.
+
+"tba:267:room:26710":
+  name: Vice Hill
+  description: >
+    You are on a tall hill overlooking the entire island.  You can see the zenith to your far south;
+    the hill blocks all the view to south and on.  To your south, you can see the beginnings of a
+    rock-strewn path...  Continuing further down, you can see the end of the hill.  The forest covers up most of
+    the view from here.
+  sector: hills
+  exits:
+    up:
+      to: tba:267:room:26739
+      look: Looking up, you can see the zenith of Vice Hill.
+    down:
+      to: tba:267:room:26728
+      look: Looking down, you can see the end of the hill.
+
+"tba:267:room:26711":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26713
+      look: The tarry tunnel continues to your north.
+    east:
+      to: tba:267:room:26723
+      look: The tarry tunnel ascends onto a hill to your east.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26712":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26714
+      look: The tarry tunnel continues to your north.
+    west:
+      to: tba:267:room:26723
+      look: The tarrry ascends onto a hill to your west.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26713":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26715
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26711
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26714":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26716
+      look: The tarry tunnel continues to your south.
+    south:
+      to: tba:267:room:26712
+      look: The tarry tunnel continues to your north.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26715":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26717
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26713
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26716":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26718
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26714
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26717":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26719
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26715
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26718":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26720
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26716
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26719":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26721
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26717
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26720":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26722
+      look: The tarry tunnel continues to your north.
+    south:
+      to: tba:267:room:26718
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26721":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, no_mob, no_magic]
+  exits:
+    east:
+      to: tba:267:room:26778
+      look: The tarry tunnel opens into a strange building to your east.
+    south:
+      to: tba:267:room:26719
+      look: The tarry tunnel continues to your south.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26722":
+  name: Tarry Tunnel
+  description: >
+    The walls of this tunnel are covered and dripping with wet, gooey tar. Your shoes half-squish,
+    half-sink, half-stick in the disgusting substance as you slowly slog your way through the gunk.
+  sector: inside
+  flags: [dark, no_mob, no_magic]
+  exits:
+    south:
+      to: tba:267:room:26720
+      look: The tarry tunnel continues to your south.
+    west:
+      to: tba:267:room:26779
+      look: The tarry tunnel opens into a strange building to your west.
+  extras:
+  - keywords: [goo, tar]
+    text: The tar looks disgusting, but not too dangerous.
+
+"tba:267:room:26723":
+  name: Vice Hill
+  description: >
+    You stand at the bottom of a tall hill.  The forestry around you keeps you from seeing too much,
+    but you can make out a tarry road to your north, and the dark openings of two tunnels to your east and
+    west.  Of course, you could always go south up to the relative safety of the hill.  A huge tree here
+    looks climbable, and you can vaguely see a net at the top.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:267:room:26724
+      look: You can see a dangerous-looking tarry road to your north.
+    east:
+      to: tba:267:room:26712
+      look: You can see a dark, tarry tunnel opening to your east.
+    south:
+      to: tba:267:room:26710
+      look: You see the relative safety of Vice Hill.
+    west:
+      to: tba:267:room:26711
+      look: You can see a dark, tarry tunnel opening to your west.
+    up:
+      to: tba:267:room:26784
+      look: You can see a path through the huge trees of the forest.
+
+"tba:267:room:26724":
+  name: Tarry Road
+  description: >
+    The tarry gunk of the road sticks firmly to your feet here, and it gets thicker and thicker as you
+    venture north.  If you go south, you'll probably be able to turn back before it's too late.
+  sector: field
+  flags: [dark, no_mob, private]
+  exits:
+    north:
+      to: tba:267:room:26725
+      look: It looks very dangerous and squishy that way, but you could probably survive it.
+    south:
+      to: tba:267:room:26723
+      look: It's much safer to your south. Perhaps you should go back.
+
+"tba:267:room:26725":
+  name: Tarry Road
+  description: >
+    The tarry gunk of the road sticks firmly to your feet here, and it gets thicker and thicker as you
+    venture south.  If you go north, you'll probably be able to turn back before it's too late.  There is
+    a sign on the side of the road here.
+  sector: field
+  flags: [dark, no_mob, private]
+  exits:
+    north:
+      to: tba:267:room:26726
+      look: The tar looks even more dangerous that way, but survivable.
+    south:
+      to: tba:267:room:26724
+      look: The tar thins out a bit in that direction--better go that way.
+  extras:
+  - keywords: [sign, note, writings, writing, inscription, inscriptions, rune, runes]
+    text:
+    - TAR PIT
+    - DO NOT ENTER ! ! !
+    - THIS IS THE POINT OF NO RETURN!
+
+"tba:267:room:26726":
+  name: Tarry Road
+  description: >
+    The tar here is so bad that you can't turn around.  There is no natural way of escape--either go
+    forward, or don't move at all.  Right ahead of you is a bubbling, boiling tar pit--it looks quite
+    disgusting.  PANIC!
+  sector: field
+  flags: [dark, no_mob, private]
+  exits:
+    north:
+      to: tba:267:room:26727
+      look: Looks like that would be a VERY bad idea. I don't think you could escape that one.
+  extras:
+  - keywords: [tar, pit, tarpit]
+    text: >
+      It's big, black, boiling, sticky, and gooey.  What more incintive do you need to stay away from it?
+
+"tba:267:room:26727":
+  name: Boiling Tar Pit
+  description: >
+    As you sink one foot into the goo, it sticks.  You try to pull it out, but lose your balance, and
+    the other foot gets stuck in the pit.  Try and try as you might, you can't get them out!  Each sinks
+    lower and lower until your entire legs are encased in the pit.  You scream for help, but no one can
+    hear you.
+  sector: field
+  flags: [no_mob, soundproof, private]
+
+"tba:267:room:26728":
+  name: Vice Hill
+  description: >
+    You stand at the bottom of a large hill.  It is eerily beautiful here, but it still looks quite
+    sinister.  You notice a rocky road to your south, and you can ascend the hill to take a look around
+    you.  A road hangs a bit above you to your left by no supports!  Hmm...  A beautifuly made road is to
+    your west.
+  sector: hills
+  exits:
+    north:
+      to: tba:267:room:26709
+      look: You can see the beautiful Vice Hill.
+    east:
+      to: tba:267:room:26730
+      look: You can see a very strange road to your east. Worth exploring? Probably.
+    south:
+      to: tba:267:room:26740
+      look: You see a slippery-looking rocky road to your south.
+    west:
+      to: tba:267:room:26729
+      look: A beautifuly made, well-kept path is to your west.
+    up:
+      to: tba:267:room:26730
+      look: Of course, you should ascend a hill, right?
+
+"tba:267:room:26729":
+  name: High Path
+  description: >
+    This road is amazingly built--some sort of black onyxlike substance, shined to a mirror-like gleam
+    forms the main of the path.  Bricks of the same substance line the path--it doesn't look as if a
+    piece of paper could be inserted between them.  The trees have been trimmed back to allow easy passage.
+    Even among all this beauty, you sense a sinister presence.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:267:room:26728
+      look: To your east you can see the bottom of Vice Hill.
+    south:
+      to: tba:267:room:26731
+      look: The high path continues on.
+
+"tba:267:room:26730":
+  name: Trail of Terror
+  description: >
+    This trail is covered by the skeletal ribs of a huge creature in some sort of diabolocal canopy. 
+    You can hear--drums?  --some sort of pulsing beat in the distance.  A soft chanting can be heard in
+    the far distance, but you can see no sign of life.  Lonliness sends you into a panicky state.
+  sector: city
+  exits:
+    south:
+      to: tba:267:room:26732
+      look: The strange trail continues on.
+    west:
+      to: tba:267:room:26728
+      look: The bottom of Vice Hill starts to your west.
+  extras:
+  - keywords: [ribs, skeleton]
+    text: >
+      This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just not have to find
+      out.  Each rib seems to be razer-sharp at the edges, and the bones have been cleaned to a perfect white.
+
+"tba:267:room:26731":
+  name: High Path
+  description: >
+    This road is amazingly built--some sort of blax onyxlike substance, shined to a mirror-like gleam
+    forms the main of the path.  Bricks of the same substance line the path--it doesn't look as if a piece
+    of paper could be inserted between them.  The trees have been trimmed back to allow easy passage.
+    Even among all this beauty, you sense a sinister presence.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    north:
+      to: tba:267:room:26729
+      look: The high path continues on.
+    south:
+      to: tba:267:room:26733
+      look: The high path continues on.
+
+"tba:267:room:26732":
+  name: Trail of Terror
+  description: >
+    This trail is covered by the skeletal ribs of a huge creature in some sort of diabolocal canopy. 
+    You can hear--drums?  --some sort of pulsing beat in the distance.  A soft chanting can be heard in
+    the far distance, but you can see no sign of life.  Lonliness sends you into a panicky state.
+  sector: city
+  exits:
+    north:
+      to: tba:267:room:26730
+      look: The strange trail continues on..
+    south:
+      to: tba:267:room:26734
+      look: The strange trail continues on.
+  extras:
+  - keywords: [ribs, skeleton]
+    text: >
+      This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just not have to find
+      out.  Each rib seems to be razer-sharp at the edges, and the bones have been cleaned to a perfect white.
+
+"tba:267:room:26733":
+  name: High Path
+  description: >
+    This road is amazingly built--some sort of blax onyxlike substance, shined to a mirror-like gleam
+    forms the main of the path.  Bricks of the same substance line the path--it doesn't look as if a piece
+    of paper could be inserted between them.  The trees have been trimmed back to allow easy passage.
+    Even among all this beauty, you sense a sinister presence.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    north:
+      to: tba:267:room:26731
+      look: The high path continues on.
+    south:
+      to: tba:267:room:26735
+      look: The high path continues on.
+
+"tba:267:room:26734":
+  name: Trail of Terror
+  description: >
+    This trail is covered by the skeletal ribs of a huge creature in some sort of diabolocal canopy. 
+    You can hear--drums?  --some sort of pulsing beat in the distance.  A soft chanting can be heard in
+    the far distance, but you can see no sign of life.  Lonliness sends you into a panicky state.
+  sector: city
+  exits:
+    north:
+      to: tba:267:room:26732
+      look: The strange trail continues on..
+    south:
+      to: tba:267:room:26736
+      look: The strange trail continues on.
+  extras:
+  - keywords: [ribs, skeleton]
+    text: >
+      This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just not have to find
+      out.  Each rib seems to be razer-sharp at the edges, and the bones have been cleaned to a perfect white.
+
+"tba:267:room:26735":
+  name: High Path
+  description: >
+    This road is amazingly built--some sort of blax onyxlike substance, shined to a mirror-like gleam
+    forms the main of the path.  Bricks of the same substance line the path--it doesn't look as if a piece
+    of paper could be inserted between them.  The trees have been trimmed back to allow easy passage.
+    Even among all this beauty, you sense a sinister presence.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    north:
+      to: tba:267:room:26733
+      look: The high path continues on.
+    south:
+      to: tba:267:room:26737
+      look: The high path continues on.
+
+"tba:267:room:26736":
+  name: Trail of Terror
+  description: >
+    This trail is covered by the skeletal ribs of a huge creature in some sort of diabolocal canopy. 
+    You can hear--drums?  --some sort of pulsing beat in the distance.  A soft chanting can be heard in
+    the far distance, but you can see no sign of life.  Lonliness sends you into a panicky state.
+  sector: city
+  exits:
+    north:
+      to: tba:267:room:26734
+      look: The strange trail continues on.
+    south:
+      to: tba:267:room:26738
+      look: The strange trail continues on.
+  extras:
+  - keywords: [ribs, skeleton]
+    text: >
+      This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just not have to find
+      out.  Each rib seems to be razer-sharp at the edges, and the bones have been cleaned to a perfect white.
+
+"tba:267:room:26737":
+  name: High Path
+  description: >
+    This road is amazingly built--some sort of blax onyxlike substance, shined to a mirror-like gleam
+    forms the main of the path.  Bricks of the same substance line the path--it doesn't look as if a piece
+    of paper could be inserted between them.  The trees have been trimmed back to allow easy passage.
+    Even among all this beauty, you sense a sinister presence.
+  sector: city
+  flags: [dark, no_mob]
+  exits:
+    north:
+      to: tba:267:room:26735
+      look: The high path continues on.
+    south:
+      to: tba:267:room:26791
+      look: A building of exquisite craftsmanship is to your south.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26727
+
+"tba:267:room:26738":
+  name: Trail of Terror
+  description: >
+    This trail is covered by the skeletal ribs of a huge creature in some sort of diabolocal canopy. 
+    You can hear--drums?  --some sort of pulsing beat in the distance.  A soft chanting can be heard in
+    the far distance, but you can see no sign of life.  Lonliness sends you into a panicky state.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:267:room:26736
+      look: The strange trail continues on.
+    south:
+      to: tba:267:room:26797
+      look: A building made of a strange, purely black substance is to your south.
+      door:
+        keywords: [Temple, of, terror]
+        kind: door
+        key: tba:267:obj:26728
+        reset: locked
+  extras:
+  - keywords: [ribs, skeleton]
+    text: >
+      This must have been a HUGE monster!  Whoever slayed it--no, you'd rather just not have to find
+      out.  Each rib seems to be razer-sharp at the edges, and the bones have been cleaned to a perfect white.
+
+"tba:267:room:26739":
+  name: Vice Hill
+  description: >
+    You stand at the zenith of a tall hill overlooking the entire island.  The view here would be
+    breathtaking, were it not so sinister.  You can see a gooey, tarry brine to your north, and to all other
+    directions a sinister, black forest is eerily silent.  If you look very carefully, you can see the
+    harbours to your north and east.  The exits descend in all directions.
+  sector: hills
+  exits:
+    north:
+      to: tba:267:room:26709
+      look: The hill descends down into a tarry road, filled with the gooey stuff.
+    east:
+      to: tba:267:room:26706
+      look: You can see the creepy road.
+    south:
+      to: tba:267:room:26710
+      look: The road is much more rocky in this direction.
+    west:
+      to: tba:267:room:26705
+      look: You see the strange beach road.
+  extras:
+  - keywords: [brine, tar, goo, sinister, black, forest, harbour, see, view]
+    text: >
+      Nothing describes this island with more clarity than "horror".  All around you, you can sense evil,
+      but you can't pinpoint why.  The entire island is quite silent--not a chirp can be heard.
+
+"tba:267:room:26740":
+  name: Cliff Road
+  description: >
+    The road is quite slippery here, and you can see to your far south what looks like a dropoff into
+    absolute nothingness.  Rocks skitter as you slide around the road.  It really looks quite
+    dangerous--the hill would be a much safer way to look at the view.
+  sector: mountains
+  exits:
+    north:
+      to: tba:267:room:26728
+      look: You can see the bottom of Vice Hill to your north. It looks comparatively safe.
+    south:
+      to: tba:267:room:26741
+      look: The cliff road continues on, though I suggest you don't take it.
+  extras:
+  - keywords: [cliff]
+    text: You can't quite see it yet--all you can see is a line that extends across the horizon.
+
+"tba:267:room:26741":
+  name: Cliff Road
+  description: >
+    The road is even more slippery here, and you can see to your south what looks like a dropoff into
+    absolute nothingness.  Rocks skitter as you slide around the road.  It really looks quite
+    dangerous--you'd be much better going back--now.
+  sector: mountains
+  exits:
+    north:
+      to: tba:267:room:26740
+      look: You can still go back--it's a better idea to anyways.
+    south:
+      to: tba:267:room:26742
+      look: You ARE one for taking risks, aren't you?
+  extras:
+  - keywords: [cliff]
+    text: You can now see a little of it.  It looks quite unstable.
+
+"tba:267:room:26742":
+  name: Cliff Road
+  description: >
+    The road is quite slippery here, and you can see to your south what looks like a dropoff into
+    absolute nothingness.  Rocks skitter as you slide around the road.  It really looks quite dangerous--you'd
+    be much better going back--now.
+  sector: mountains
+  exits:
+    north:
+      to: tba:267:room:26741
+      look: You can still go back--it's a better idea to anyways.
+    south:
+      to: tba:267:room:26743
+      look: Don't say we didn't warn you. It's a cliff allright. A big and unsteady one.
+  extras:
+  - keywords: [cliff]
+    text: You can see it.  It looks quite close.  It looks very dangerous.
+
+"tba:267:room:26743":
+  name: Cliff Road
+  description: >
+    What a view!  If you weren't having such trouble staying up, you could see it much better.  Each
+    step brings you closer to the edge--it looks very danger- ous, and the cliff's edge is quite close
+    now.  The ground is beginning to shake under your weight.
+  sector: mountains
+  exits:
+    north:
+      to: tba:267:room:26742
+      look: You can still go back--it's a better idea to anyways.
+    south:
+      to: tba:267:room:26744
+      look: It's the cliff's edge. The ground looks quite unsteady there.
+  extras:
+  - keywords: [cliff]
+    text: Umm...  We've warned you quite enough.  Either go back, or face the consequences.
+
+"tba:267:room:26744":
+  name: Cliff's Edge
+  description: >
+    The view is never better when you're seeing it from mid-air.  But you've only got a few seconds to
+    see it, as you're squashed down below.  Too bad shrieks don't make you fly.
+  sector: mountains
+  flags: [no_mob, private]
+
+"tba:267:room:26745":
+  name: Entrance to the Building of Fear
+  description: >
+    Low moans seem to come from the walls as you stand before the fallen entrance to a huge building. 
+    The walls appear to be made of some kind of gray stone-- that, or they have turned gray with age.  A
+    passageway opens to your east, but you can't see anything in the room, because of the darkness.
+    Shadows cast weird angles everywhere.  A faded plaque has hangs from a nail in a far corner of the room.
+  sector: inside
+  exits:
+    east:
+      to: tba:267:room:26746
+      look: You can vaguly see some kind of picture or something on one of the walls...
+    west:
+      to: tba:267:room:26708
+      look: The creepy road continues in that direction.
+  extras:
+  - keywords: [sign, note, plaque]
+    text:
+    - Building of Fear
+    - HIGH PRIESTS OF TERROR ALLOWED SAFE PASSAGE ONLY
+    - You have been forewarned.
+
+"tba:267:room:26746":
+  name: The Tapestry Room
+  description: >
+    Strange tapestries fill all the walls here.  Each one seems to depict a horrendous torture at the
+    hands of some foul monster.  If you look closely enough, the pictures are so realistic, so clear, so
+    true-to-life, that they look real.  Even closer examaniation reveals that they`re moving!  You
+    probably don't want to stay here long.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:267:room:26748
+      look: You see a room filled with trophies.
+    west:
+      to: tba:267:room:26745
+      look: You can see the entrance to the Building of Fear.
+
+"tba:267:room:26747":
+  name: Gargoyle Room
+  description: >
+    The gargoyle looks quite stony--that is, until you reach out to touch it. Suddenly, it seems to
+    come to life and move slightly or was that just a shadow.
+  sector: inside
+  flags: [no_mob, private]
+  extras:
+  - keywords: [gargoyle, statue]
+    text: >
+      It's a gargoyle, with a large gaping mouth.  Since you shouldn't be able to wee it, we're not going
+      to tell you anything else.
+
+"tba:267:room:26748":
+  name: Trophy Room
+  description: >
+    There are literally hundereds of pedestals here, each with the skulls of a different animal.  Some
+    are large, some quite small--some look like nothing you have ever seen before.  You can see a large
+    ritual altar on one side of the room, and a strange room encased in seamless glass on the other half. 
+    Behind the altar, a little uneavenness in the wall can be seen, as if someone cut perforations
+    through the wall.
+  sector: inside
+  flags: [indoors, private]
+  exits:
+    north:
+      to: tba:267:room:26747
+      look: >
+        There's something very strange up ahead. It looks like a huge statue--but you can clearly see a
+        gaping maw...no human would ever make something so grotesque. It's quite frightening...it's probably not
+        good that you go in there.
+      door:
+        keywords: [glass, glassdoor, door]
+        kind: pickproof
+        key: tba:267:obj:26729
+        reset: locked
+    east:
+      to: tba:267:room:26750
+      look: You see what looks to be a comfortable(?) waiting room.
+    south:
+      to: tba:267:room:26749
+      look: You see nothing but a slight unevenness in the wall.
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26730
+    west:
+      to: tba:267:room:26746
+      look: You can see a room filled with strange and horrifying tapestries.
+  extras:
+  - keywords: [pedestal, skull]
+    text: >
+      Each pedestal is about the size of your waist; each skull--well, it just depends.  None look
+      benevolent...  Whoever caught them must have been a very skilled hunter.
+
+"tba:267:room:26749":
+  name: Dressing Room
+  description: >
+    This room looks to be more the kind of room where a person dresses than a butcher shop--meat racks,
+    knives of all various and sundry sizes, and other assorted meat-preparing items lie strewn around
+    the room.  There is, of course, the paltry coatrack, with what look to be strange robes in it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26748
+      look: >
+        You see the strange trophy room(which now begins to seem more a sacrificial chamber, as you look at
+        it from this point of view...).
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26730
+
+"tba:267:room:26750":
+  name: Wailing Tower
+  description: >
+    The howls you heard at the entrance are much louder here.  It appears to be coming from above
+    you--indeed, you can see a spiral staircase ascending into the building.  Should you go up?  You decide.
+  sector: inside
+  flags: [dark, no_mob, indoors, private]
+  exits:
+    west:
+      to: tba:267:room:26748
+      look: You can see the trophy room.
+    up:
+      to: tba:267:room:26751
+      look: The spiral staircase ascends up farther than the eye can see.
+  extras:
+  - keywords: [stair, spiral, staircase]
+    text: This staircase appears to go up to infinity.  You can't see where it ends.
+
+"tba:267:room:26751":
+  name: On the staircase
+  description: >
+    The wailing surrounds you entirely here.  You feel you might go mad if you don't leave this
+    stairwell.  Over and over and over the sounds shriek over you. Perhaps you should go up--and quickly.
+  sector: inside
+  flags: [dark, no_mob, indoors, private]
+  exits:
+    up:
+      to: tba:267:room:26753
+      look: You see a very weirdly shaped hallway.
+    down:
+      to: tba:267:room:26750
+      look: You see the bottom of the staircase.
+
+"tba:267:room:26752":
+  name: Cell
+  description: >
+    The stench of refuse is particularly strong here.  The cell can't be more than 3-by-2 meters.  A
+    small cot is bolted to the floor, and a small drainage hole with no covering is in the mi268le of the
+    room.  The floors slant down to the hole, and you can see streaks of rust where the iron bolts have
+    oxidized. Manacles hang from the wall in the back of the cell, and you can see two skeletal hands, all
+    that is left of what once must have been a human being.
+  sector: inside
+  flags: [dark, no_mob, indoors, private]
+  exits:
+    north:
+      to: tba:267:room:26753
+      look: You can see the strangely shaped hallway.
+      door:
+        keywords: [bars, cell, door]
+        kind: door
+        key: tba:267:obj:26713
+        reset: locked
+  extras:
+  - keywords: [manacles, legirons, irons, hands, skeletal]
+    text: >
+      Two small hands are all that remain of what must have once been a small child, or a very small
+      human.  You can see teeth marks where it looks like someone was trying to bite their way out.
+  - keywords: [hole, drainage]
+    text: >
+      The hole is about the size of your fist, and from the smell, it doesn't take a whole lot of
+      imagination to figure out what is supposed to go down in that one.
+  - keywords: [cot, bed]
+    text: >
+      The cot is made of black.  A mattress made of straw lies on top of it--very thin, and certainly not
+      comfortable.  Rats scuttle underneath the bed as you walk near it.
+
+"tba:267:room:26753":
+  name: Strangely shaped hallway.
+  description: >
+    This hallway appears to be nothing more than an extension around the stairs. Made from the same
+    gray material as the rest of the building, this room seems to have something strange about it.  Perhaps
+    it's the strange black tiling at certain points around the room.  There are doors leading in almost
+    all directions, and the stairs continue on upward.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26754
+      look: You see what looks to be the smoldered remains of a bonfire.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:267:room:26755
+      look: You see what look to be crates and crates of supplies.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:267:obj:26731
+        reset: locked
+    south:
+      to: tba:267:room:26752
+      look: You see the bars of what is obviously a prison cell.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26713
+        reset: locked
+    up:
+      to: tba:267:room:26757
+      look: The stairs ascend upwards.
+    down:
+      to: tba:267:room:26751
+      look: The stairs ascend downwards.
+
+"tba:267:room:26754":
+  name: Open Hearth
+  description: >
+    The damp remains of what was probably once a huge bonfire are strewn about the room.  The coals are
+    mushy here, and they're everywhere.  They creep through the soles of your boots and get caught
+    between your toes.  What a disgusting place.  You can exit this gross room to your south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:267:room:26753
+      look: You can see the strangely-shaped hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [coals, fire, coal]
+    text: >
+      They're wet, and mushy.  As you pick one up, it crumbles into a disgusting mass of mud in your hand.
+
+"tba:267:room:26755":
+  name: Supply Room
+  description: >
+    Old, rotten crates are piled up everywhere here.  They appear to have been looted a long time ago. 
+    Some have been shattered to pieces.  You have an exit to your west.
+  sector: inside
+  flags: [dark, no_mob, indoors, private]
+  exits:
+    west:
+      to: tba:267:room:26753
+      look: You can see the strangely-shaped hallway.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:267:obj:26731
+        reset: locked
+  extras:
+  - keywords: [crates]
+    text: >
+      The crates are old, rotting, and totally empty--except for one, snuck in the corner.  It looks to
+      have an o268 device of some kind in it.
+
+"tba:267:room:26756":
+  name: Deserted Bedroom
+  description: >
+    This lush chamber looks as if it hasn't been used for centuries.  A bed, once beautiful, has
+    cobwebs hanging from its huge canopy.  The room is so dark that you can only view certain things even WITH
+    a light.  A dresser is at the very back of the room.  You can exit to your north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26757
+      look: You see the creepy hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [bed]
+    text: >
+      The bed has a pink/tapia canopy hanging over it, with cobwebs covering its entire surface.  The
+      spiders seemed to have a heyday over this one.
+
+"tba:267:room:26757":
+  name: Creepy Hallway
+  description: >
+    You can hear strange music floating throughout the corridor.  The hallway is lit by some unknown
+    source in an eerie green light.  The walls are painted a bright scarlet red.  Whoever painted this
+    hallway didn't have kindness or bunnies and light in mind.  Exits lead in every direction but up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26759
+      look: You can see the creepy hallway.
+    east:
+      to: tba:267:room:26758
+      look: You can see a door.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26732
+        reset: locked
+    south:
+      to: tba:267:room:26756
+      look: You can see a door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:267:room:26761
+      look: You can see the creepy hallway.
+    down:
+      to: tba:267:room:26753
+      look: The stairs descend downwards into nothingness.
+
+"tba:267:room:26758":
+  name: Office of the High Priest of Fear
+  description: >
+    This office is hardly the regular office.  The High Priest of Fear is obviously into the torture
+    thing, as manacles, iron maidens, and racks line the walls.  A boiling cauldron of oil is in the very
+    center of the room.  A door is to your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:267:room:26757
+      look: You can see the creepy hallway.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26732
+        reset: locked
+  extras:
+  - keywords: [cauldron, boiling, oil]
+    text: The thing bubbles.  It curdles the brain and sends chills down your spine.
+  - keywords: [iron, maidens, maiden]
+    text: >
+      This coffin-like object is lined with huge spikes.  If closed, it looks like it would be an
+      unpleasant experience.
+  - keywords: [manacles, manacle, chain]
+    text: The manacles are small, and have spikes on the insides of them.  They look very painful.
+
+"tba:267:room:26759":
+  name: Creepy Hallway
+  description: >
+    You can hear strange music floating throughout the corridor.  The hallway is lit by some unknown
+    source in an eerie green light.  The walls are painted a bright scarlet red.  Whoever painted this
+    hallway didn't have kindness or bunnies and light in mind.  You can go to your north or south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26760
+      look: You can't see much in that direction.
+      door:
+        keywords: [closet]
+        kind: door
+        reset: closed
+    south:
+      to: tba:267:room:26757
+      look: You see the creepy hallway.
+
+"tba:267:room:26760":
+  name: Closet
+  description: >
+    This closet has strange clothes strewn everywhere.  It probably wouldn't be a good idea to try them
+    on.  A stale musty smell has infested everything in this small space.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:267:room:26759
+      look: You see the creepy hallway.
+      door:
+        keywords: [Creepy, Hallway]
+        kind: door
+        reset: closed
+
+"tba:267:room:26761":
+  name: Creepy Hallway
+  description: >
+    You can hear strange music floating throughout the corridor.  The hallway is lit by some unknown
+    source in an eerie green light.  The walls are painted a bright scarlet red.  Whoever painted this
+    hallway didn't have kindness or bunnies and light in mind.  You can go to your north or east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26762
+      look: You see the creepy hallway.
+    east:
+      to: tba:267:room:26757
+      look: You see the creepy hallway.
+
+"tba:267:room:26762":
+  name: Creepy Hallway
+  description: >
+    You can hear strange music floating throughout the corridor.  The hallway is lit by some unknown
+    source in an eerie green light.  The walls are painted a bright scarlet red.  Whoever painted this
+    hallway didn't have kindness or bunnies and light in mind.  You can go to your north or south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26763
+      look: You see the creepy hallway.
+    south:
+      to: tba:267:room:26761
+      look: You see the creepy hallway.
+
+"tba:267:room:26763":
+  name: Creepy Hallway
+  description: >
+    You can hear strange music floating throughout the corridor.  The hallway is lit by some unknown
+    source in an eerie green light.  The walls are painted a bright scarlet red.  Whoever painted this
+    hallway didn't have kindness or bunnies and light in mind.  You can go to your south or west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26762
+      look: You see the creepy hallway.
+    west:
+      to: tba:267:room:26764
+      look: The end of the hallways opens up into the outside. It looks to be a balcony.
+
+"tba:267:room:26764":
+  name: Balcony
+  description: >
+    From here, you can see the entire island.  The vantange is breathtaking, and still looks to be
+    sinister.  To your far south, you can see what looks like the ribs of a huge animal.  To your far east,
+    you can see a pristine white beach. Most of the island is covered in forest, and extends around a huge
+    hill.  The far, far north shows some absolutely huge trees, and a rather large, black pool of what
+    can only be tar.  You can go back into the building by going east.
+  sector: city
+  exits:
+    east:
+      to: tba:267:room:26763
+      look: You see the creepy hallway.
+
+"tba:267:room:26765":
+  name: Torture Chambre
+  description: >
+    This room is stacked high with torture instruments of all kinds, ranging from the mild shackle to
+    spiked manacles, to several different whips, to some rather sinister-looking magical instruments, to a
+    yoke that is obviously fitted to the human body.  This isn't a pleasant place.  An interrogation
+    room lies to your east, and a teleporting zone is to your north.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    north:
+      to: tba:267:room:26778
+      look: You can see a teleportation square.
+    south:
+      to: tba:267:room:26766
+      look: You see the screening room.
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:267:room:26766":
+  name: Screening Room
+  description: >
+    This is the room where all prisoners are interrogated.  Should they be found lacking in the
+    information the interrogators need, they are taken to the torture chamber to your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26767
+      look: You see the outlay.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26733
+    west:
+      to: tba:267:room:26765
+      look: You see the torture chambre.
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:267:room:26767":
+  name: Outlay
+  description: >
+    This room is an outlying area of the square hallway in the House of Despair. Strange pictures line
+    the walls, and shrieks can be heard all around you.  You see no visible exits.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26766
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26733
+
+"tba:267:room:26768":
+  name: Outlay
+  description: >
+    This room is an outlying area of the square hallway in the House of Despair. Strange pictures line
+    the walls, and shrieks can be heard all around you.  You see no visible exits.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26769
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26733
+
+"tba:267:room:26769":
+  name: Waiting Room
+  description: >
+    This room has nothing but two chair in it, lined with straps.  The walls are painted a sterile
+    white, and the air has a hint of fog in it.  There is an interrogation center to your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:267:room:26770
+      look: You can see the interrogation room.
+
+"tba:267:room:26770":
+  name: Interrogation Center
+  description: >
+    A long, circular desk forms the central piece of furniture in this room.  A huge, stark chair is at
+    the head, while smaller chairs line the rest.  An opening in the desk allows a person to be placed
+    in the iron chair with straps in the center.  For what purpose, you shu268er to guess.  You can go
+    back into the waiting room, or can go south through a teleportation device to the square room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:267:room:26769
+      look: You see the waiting room.
+    south:
+      to: tba:267:room:26778
+      look: You see a teleportation square.
+
+"tba:267:room:26771":
+  name: Office of the Priest of Despair
+  description: >
+    This plush office is full of every item that could ever please any child. From cute little cu268ly
+    kittens to darling, stuffed dolls, they line the walls--just out of your reach.  A beautiful chair
+    sits in the mi268le of the room, but it's bolted to the ground, and there's a huge spike in the center.
+    What sicko would make a room up like this?  You can leave this place through a transporter to your
+    east or go back to the waiting room to your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:267:room:26778
+      look: You see a transportation platform.
+    west:
+      to: tba:267:room:26772
+      look: You see a waiting room.
+
+"tba:267:room:26772":
+  name: Waiting Room
+  description: >
+    This room has nothing but two chair in it, lined with straps.  The walls are painted a sterile
+    white, and the air has a hint of fog in it.  There is an office to your east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:267:room:26770
+      look: You can see the office of the Priest of Despair.
+
+"tba:267:room:26773":
+  name: Outlay
+  description: >
+    This room is an outlying area of the square hallway in the House of Despair. Strange pictures line
+    the walls, and shrieks can be heard all around you.  You see no visible exits.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26772
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26733
+
+"tba:267:room:26775":
+  name: Alcove
+  description: >
+    This small alcove has no real interesting quality, save the fact that it has a large opening to a
+    tar pit of boggling dimensions.  You can(and should) go back to your west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26727
+      look: DON'T GO THAT WAY! It's a tar pit, STUPID! DORK!
+    west:
+      to: tba:267:room:26776
+      look: You can see the sitting room.
+
+"tba:267:room:26776":
+  name: Sitting Room
+  description: >
+    Here the Priest of Despair could sit and watch as his prisoners (and hapless adventurers were
+    thrown(or stupidly walked into) the tar pit.  Looks as though they were thrown in not far from here, as
+    you can see telltale signs of scuffling around you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:267:room:26775
+      look: That's probably as close as you'd want to get to the tar pit.
+
+"tba:267:room:26777":
+  name: Outlay
+  description: >
+    This room is an outlying area of the square hallway in the House of Despair. Strange pictures line
+    the walls, and shrieks can be heard all around you.  You see no visible exits.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26776
+      door:
+        keywords: [door, secret]
+        kind: door
+        key: tba:267:obj:26733
+
+"tba:267:room:26778":
+  name: Square
+  description: >
+    Here, there are exits in all directions.  These, however, are no ordinary exits.  They're
+    transporter platforms, each designed to be a room to step in to go to the designated areas.  A small sign is
+    on a wall at the corner of the room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26767
+      look: You see a transporter platform.
+    east:
+      to: tba:267:room:26779
+      look: You see a transporter platform.
+    south:
+      to: tba:267:room:26768
+      look: You see a transporter platform.
+    up:
+      to: tba:267:room:26773
+      look: You can see a transporter platform.
+    down:
+      to: tba:267:room:26777
+      look: You see a transporter platform.
+  extras:
+  - keywords: [sign, note, plaque]
+    text:
+    - YOU HAVE ENTERED THE HALL OF DESPAIR
+    - AUTHORIZED PERSONNEL AND PRISONERS ONLY!!!
+
+"tba:267:room:26779":
+  name: Entrance to the Hall of Hopelessness
+  description: >
+    You stand on a dusty floor in a fallen-down hut.  Just to the east, you can see the remains of a
+    deserted corridor.  The entire chamber is empty and devoid of anything of any real interest.  You can
+    see an transporter platform to your north.  All around you are depictions of people in inescapable
+    situations.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26778
+      look: You can see a transporter platform.
+    east:
+      to: tba:267:room:26781
+      look: You can see the deserted corridor.
+    south:
+      to: tba:267:room:26722
+      look: You can see a tarry tunnel.
+
+"tba:267:room:26780":
+  name: Deserted Corridor
+  description: >
+    A damp, musty hall leads north.  You detect no sounds--in fact, all sounds seem to be muted in this
+    strange place.  The air seem thicker and heavier than usual.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26781
+      look: You see a deserted corridor.
+    east:
+      to: tba:267:room:26783
+      look: You see nothing.
+      door:
+        keywords: [door, secret]
+        kind: door
+    west:
+      to: tba:267:room:26779
+      look: You can see the entrance to the Hall of Hopelessness.
+
+"tba:267:room:26781":
+  name: Deserted Corridor
+  description: >
+    A damp, musty hall leads north and south.  You detect no sounds--in fact, all sounds seem to me
+    muted in this strange place.  The air seem thicker and heavier than usual.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26782
+      look: You see a deserted corridor.
+    east:
+      to: tba:267:room:26783
+      look: You see nothing.
+      door:
+        keywords: [door, secret]
+        kind: door
+    south:
+      to: tba:267:room:26780
+      look: You see a deserted corridor.
+    west:
+      to: tba:267:room:26779
+      look: You can see the entrance to the Hall of Hopelessness.
+
+"tba:267:room:26782":
+  name: Deserted Corridor
+  description: >
+    A damp, musty hall leads south.  You detect no sounds--in fact, all sounds seem to be muted in this
+    strange place.  The air seem thicker and heavier than usual.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:267:room:26783
+      look: You see nothing.
+      door:
+        keywords: [door, secret]
+        kind: door
+    south:
+      to: tba:267:room:26781
+      look: You see a deserted corridor.
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:267:room:26779
+      look: You can see the entrance to the Hall of Hopelessness.
+
+"tba:267:room:26783":
+  name: Dark Room
+  description: >
+    The walls are totally painted black in this strange room.  You can detect nothing short of your
+    hand in front of your face.  The air seem thicker and heavier than usual.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:267:room:26781
+      look: You can see the deserted corridor.
+      door:
+        keywords: [door, secret]
+        kind: door
+
+"tba:267:room:26784":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north or down.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26785
+      look: The netting continues through the trees here.
+    down:
+      to: tba:267:room:26723
+      look: You can see the bottom of Vice Hill from here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26785":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north or south on through the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26786
+      look: The netting continues through the trees here.
+    south:
+      to: tba:267:room:26784
+      look: The netting continues through the trees here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26786":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north or south on through the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26787
+      look: The netting continues through the trees here.
+    south:
+      to: tba:267:room:26785
+      look: The netting continues through the trees here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26787":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north or south on through the trees.  You can see a very dangerous tar pit right below you.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26788
+      look: The netting continues through the trees here.
+    south:
+      to: tba:267:room:26786
+      look: The netting continues through the trees here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26788":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north or south on through the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26789
+      look: The netting continues through the trees here.
+    south:
+      to: tba:267:room:26787
+      look: The netting continues through the trees here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26789":
+  name: Through the Trees
+  description: >
+    Someone has most convieniently placed netting through the trees here, so you may walk along it
+    without fear of falling.  This is probably best, as you are extremely high up from the ground.  You hear
+    birds chirping right by you, and feel very peaceful here--that is, as long as you are in the trees. 
+    You may go north to a dock, or south on through the trees.
+  sector: forest
+  exits:
+    north:
+      to: tba:267:room:26790
+      look: The netting ends at a dock.
+    south:
+      to: tba:267:room:26788
+      look: The netting continues through the trees here.
+  extras:
+  - keywords: [netting]
+    text: >
+      The netting is firm, and made from some extremely tough substance--it looks quite strong, and
+      supportable.  You don't need to fear being on it at all.
+
+"tba:267:room:26790":
+  name: Port by the Forest
+  description: >
+    You are at an extremely weird dock.  It's raised high on stilts on one side-- apparently keeping
+    you from falling off of a cliff.  Netting starts out to your south, keeping you from falling through
+    the trees.  You can see a large tar pit to your south--good thing there's that netting to keep you from
+    falling into it.
+  sector: city
+  exits:
+    south:
+      to: tba:267:room:26789
+      look: The netting begins to your south.
+
+"tba:267:room:26791":
+  name: Hall of Wax
+  description: >
+    Gory statues line this hall--statues of all kinds of torture, from the most mundane iron-maiden
+    experience to the more imaginative things one can do with a cat-of-nine tails and razors.  The thing
+    that makes these statues most uncomfortable to look at is the fact that they are made from wax--and look
+    so lifelike you can almost see them screaming in terror.  Do you see one move? No, it must be your
+    mind playing tricks on you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:267:room:26793
+      look: You can see a horrid hall to your north.
+
+"tba:267:room:26792":
+  name: Entrance to the Office of the High Priest of Terror
+  description: >
+    This is certainly not your average office--certain telltale signs lead you to this fact.  Perhaps
+    it's the skulls lined up on spikes around the room. Or, perhaps the fact that it looks to be several
+    rooms.  You really don't want to be here.  You can go south or north...  Neither way looks too
+    comforting.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26738
+      look: You see the strange trail.
+      door:
+        keywords: [Trail, of, terror]
+        kind: door
+        key: tba:267:obj:26727
+        reset: locked
+    south:
+      to: tba:267:room:26791
+      look: You can see a hall of wax statues.
+
+"tba:267:room:26793":
+  name: Hall of Torture
+  description: >
+    This certainly isn't the entrance to the office...  How does one get back? You feel somewhat turned
+    around.  As you look around you, you are overcome with nausea as you realize immediately that you
+    shouldn't have.  Many items of torture lie around here, some that you'd never imagined could have been
+    invent- ed.  Certainly not by a sane person.  You can go to your east(oh, so that's how you get back
+    to the entrance), or to the south, into another chambre.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:267:room:26792
+      look: You see the entrance to the Office of the High Priest of Terror, of course.
+    south:
+      to: tba:267:room:26794
+      look: You see a hall with lots of dead bodies around.
+
+"tba:267:room:26794":
+  name: Hall of Death
+  description: >
+    Dead bodies lie strewn about here.  They appear to have been killed from the devices in the Hall of
+    Torture.  You certainly don't want to think too long about it, as they are so mangled you can't tell
+    what they were--whether they were human or other.  You can get out of here by going back to the Hall
+    of Torture, to the Temple of Terror to your east, or to the Office of the High Priest to your south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26793
+      look: You can see the hall of torture.
+    east:
+      to: tba:267:room:26797
+      look: You can see the entrance to the Temple of Terror.
+    south:
+      to: tba:267:room:26795
+      look: You can see the entrance to the office of the High Priest of Terror.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:267:obj:26734
+        reset: locked
+
+"tba:267:room:26795":
+  name: Office of the High Priest of Terror
+  description: >
+    This is probably the most beautiful part of the entire island you have seen. Amazingly enough,
+    there are no signs of the carnage and disgusting methods of torture that can be seen throughout the rest
+    of the buildings you've viewed. In fact, this place looks downright natural.  A nice desk made of
+    redwood is the frontpiece of the room, and a high-backed chair is behind it.  A plush sofa is in front
+    of it, and plaques and other credentials line the walls.  An insignia--the cat o' nine tails--is
+    frosted into the only window in the room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26792
+      look: You, amazingly enough, end right back up at the entrance.
+  extras:
+  - keywords: [insignia, window]
+    text: >
+      The cat o' nine tails, a whip with multiple straps, apparently is the ultimate symbol for the Reign
+      of Terror.  It's the most painful--sometimes even fatal--whip known.
+  - keywords: [plaques]
+    text: >
+      These aren't awards--they're decrees and petitions outlining the law of Vice Island.  Each one is
+      more severe than the last.  What you basically glean from the rules of the land is that while this
+      once was a prosperous island, several people began to experiment with dark magic, and began to mu268le
+      in affairs they had no business in.  Eventually, the island became nothing more than a place for
+      several delvers to take up shop--and build a religion based mostly on the most horrible feelings in
+      life--Despair, Hopelessness, Fear, and the crowning emotion, in which all these culminate--Terror.  Not a
+      pretty picture.
+  - keywords: [sofa]
+    text: This sofa looks so comfortable, you want to just sink right into it.
+  - keywords: [chair]
+    text: The chair is made of redwood, and looks very comfortable.  It also looks VERY heavy.
+
+"tba:267:room:26797":
+  name: Entrance to the Temple of Terror
+  description: >
+    The entrance to this temple is blinding--that's probably the most noteworthy point of note. 
+    Flashes of light emenate from a globe in the center of the room, causing strange effects in the room.  The
+    room is made from a metal that reflects the light like a mirror--but brighter.  You can go to the
+    strange trail to your north, or on into the temple to your east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26738
+      look: You can see the strange trail.
+      door:
+        keywords: [trail]
+        kind: door
+        key: tba:267:obj:26728
+        reset: locked
+    east:
+      to: tba:267:room:26798
+      look: You see a blindingly lit hallway.
+    west:
+      to: tba:268:room:26804
+  extras:
+  - keywords: [globe, ball, light]
+    text: >
+      All the light seems to emenate from this globe.  It's made from material that looks to come from
+      the sun itself--yet it's cold--very cold.
+
+"tba:267:room:26798":
+  name: Blindingly lit hallway
+  description: >
+    This east-west hallway is so brightly lit that you can barely see anything. You have to shield your
+    eyes just to see in front of you.  It appears to be made from the same metal as the entrance to the
+    building does.  A small room opens to your north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:267:room:26799
+      look: You see a small shrine to your north.
+    east:
+      to: tba:268:room:26800
+      look: The hallway continues on.
+    west:
+      to: tba:267:room:26797
+      look: The entrance to the temple is to your direct west.
+
+"tba:267:room:26799":
+  name: Shrine to Vice
+  description: >
+    This small shrine contains nothing other than an alter and a small book with the inscription, "You
+    cannot take that which is not yours--but you can have as much of it as you want.  "...  You think you
+    hear maniacal cackling somewhere around you, but when you turn, you see nothing.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:267:room:26798
+      look: You see the blindingly lit hallway.
+  extras:
+  - keywords: [alter, altar]
+    text: >
+      This small alter looks as if you could bow and pray with relative comfort. But you somehow get the
+      feeling you shouldn't bend over.

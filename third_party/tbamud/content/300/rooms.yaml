@@ -1,0 +1,910 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 300.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:300:room:30000":
+  name: A Wild Valley
+  description: >
+    You move slowly through the green vines and thick undergrowth that cover the valley floor.  It
+    would appear that not many have come here in ages.  To the west, the land rises to leave the valley.  To
+    the east the vegetation clears to give way to a strange uprising of stone.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:300:room:30001
+      look: The uprising looks like some huge beast set to pounce.
+    west:
+      to: tba:300:room:30057
+  extras:
+  - keywords: [uprising, stone]
+    text: The uprising looks like some huge beast set to pounce.
+  - keywords: [info, credits]
+    text:
+    - >
+      Ancalador *by Mercutio * *Copyright 1994 by Curious Areas Workshop * 1)  Edit room #00 to connect
+      with somewhere in a jungle in your mud.
+    - Exits can be joined to this room from any direction but from the
+    - >
+      east.  Edit the room description to reflect the new exit. * Note:  Mercutio has provided room #57
+      as an easy connection point,
+    - >
+      connecting from room #00 to room 6121 in the Haon-Dor forest. * 2)  Check the following items to
+      make sure the value used for spells
+    - conforms to the same spell on your mud.
+    - "*#03 -- Strength(39), Strength(39), Poison(33)"
+    - "*#04 -- Sense Life(44), Detect Poison (21)"
+    - "*#08 -- Energy Drain(25)"
+    - >
+      *#22 -- Detect Invisible(19), Poison(33) * If your mud does not allow some of these as 'wand' or
+      'potion' type items, replace with a suitable spell of your own choice. * 3)  Add specials, if desired,
+      for the mobs listed in the 'notes' section. * 4)  Fix the files to conform to your database style, if
+      needed. * Here are some recommended specials for the mobs: Spellcasters: #02, #03, #06, #15
+      Poisonous: #01, #10 Flame Breathing: #09 Undead: #00, #03, #04, #05, #06, #12 * Credits * We are greatly
+      indebted to Tarkin and Freja of VieMud (viemud.org 4000) for all the time and code contributed. * Thanks
+      to the players at VieMud, for playtesting above and beyond the call of duty. Even more thanks to the
+      people supporting C.A.W. and using our areas.  We love your feedback, even the flames. * Mercutio's
+      donation to the Curious Areas Workshop is highly appreciated.
+
+"tba:300:room:30001":
+  name: Before The Dragon
+  description: >
+    You stand before the Dragon Ancalador.  You can still make out its petrified form despite the earth
+    that has filled in the crevices between its limbs and the huge oaks, dwarfed by the dragon itself,
+    which have grown there.  A vague evil emanates from the once-alive stone that terrorized nations long
+    ago.
+  sector: hills
+  exits:
+    east:
+      to: tba:300:room:30002
+      look: >
+        The huge maw lies frozen in midsnarl.  You could find enough purchase to scale the tongue and enter
+        inside, should you want to.
+    west:
+      to: tba:300:room:30000
+
+"tba:300:room:30002":
+  name: In The Dragon's Mouth
+  description: >
+    Rows of stone teeth as large as trolls line the walls here.  A tongue of pitted stone leads east,
+    behind stone molars as large as iron shields.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30003
+    west:
+      to: tba:300:room:30001
+
+"tba:300:room:30003":
+  name: By Some Stone Tonsils
+  description: >
+    You are in the back of the dragon's mouth.  The throat continues down and something oozes from
+    petrified sinuses above.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:300:room:30002
+    down:
+      to: tba:300:room:30004
+
+"tba:300:room:30004":
+  name: A Throat Of Stone
+  description: >
+    The floor is uneven -- the middle of the passage being lower than the sides, which rise up to the
+    walls.  The whole passage is slightly graded, moving east and downward.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:300:room:30003
+    down:
+      to: tba:300:room:30005
+
+"tba:300:room:30005":
+  name: Further Down The Dragon's Throat
+  description: >
+    The tunnel begins to lose its steepness and merely runs eastward now.  The shapes of what might be
+    petrified muscles line the walls.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30006
+    up:
+      to: tba:300:room:30004
+
+"tba:300:room:30006":
+  name: A Junction
+  description: >
+    You are in a four way junction.  The dragon's throat continues east and west, but by squeezing
+    under some stone flaps you can make out tunnels leading north and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30007
+      look: You peer under the petrified flap and see a faint light amid darkness.
+    east:
+      to: tba:300:room:30055
+    south:
+      to: tba:300:room:30010
+      look: You peer under the petrified flap and see a faint light amid darkness.
+    west:
+      to: tba:300:room:30005
+  extras:
+  - keywords: [flaps, flap]
+    text: Who can say which part of draconian anatomy this might be?
+
+"tba:300:room:30007":
+  name: A Stone Tunnel
+  description: This circular passage of stone gradually curves up to a place of great light and heat.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:300:room:30006
+    up:
+      to: tba:300:room:30008
+      look: All you can see upwards in a great glare followed by gusts of hot wind.
+
+"tba:300:room:30008":
+  name: A Dragon Lung
+  description: Ancient fires burns here, awaiting the rebirth of their master.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:300:room:30007
+
+"tba:300:room:30009":
+  name: The Heart Of The Dragon
+  description: >
+    Runes which glow with a blue light are carved into the stone walls of Ancalador's heart chamber
+    here.  Their magical purity counters his evil and makes for a holy balance that is Neutrality.  It seems
+    some music lover has set up residence here, judging by all the instruments and sheet music floating
+    here.
+  sector: inside
+  flags: [indoors, private]
+  exits:
+    north:
+      to: tba:300:room:30055
+      look: You see the chamber wall dilate open for you, leading to the tunnel beyond.
+
+"tba:300:room:30010":
+  name: A Stone Tunnel
+  description: >
+    This stone passage is lit by a great light and fierce heat from its far end, which lies above.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30006
+    up:
+      to: tba:300:room:30011
+      look: You must cover your eyes rather than peer into the sun-like brightness.
+
+"tba:300:room:30011":
+  name: A Dragon Lung
+  description: >
+    The nuclear fires that empowered the dragon with its frightful breath are here, and though they
+    have been smoldered for so very long, they scorch you and make you rue the choice wearing of metal armor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:300:room:30010
+
+"tba:300:room:30012":
+  name: Ancalador's Stomach
+  description: >
+    The dragon's throat ends, revealing a huge cavern lit from below by eerie and diffuse lights of
+    yellow and green.  Even more amazingly, a wooden bridge spans the the stalactite-roofed cavern!  A steep
+    grade leads down to the cavern floor safely enough and the bridge leads east.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:300:room:30013
+    west:
+      to: tba:300:room:30055
+    down:
+      to: tba:300:room:30020
+      look: Though steep, the climb down seems arduous, but not overly hazardous.
+
+"tba:300:room:30013":
+  name: A Wooden Bridge
+  description: >
+    You cannot imagine who would want to build a bridge in this fantastic cavern.  Large stalagmites
+    sit and rise up while the eerie lights seem to move in the mists below.  The bridge continues to the
+    east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30014
+    west:
+      to: tba:300:room:30012
+      look: You see the entrance ledge to the stomach chamber.
+    down:
+      to: tba:300:room:30016
+      look: The stalagmites look up menacingly at you.
+
+"tba:300:room:30014":
+  name: A Wooden Bridge
+  description: >
+    You are in the middle of the wooden bridge.  Large stalagmites rise around you and the eerie lights
+    continue to dance in the mists below. The bridge continues to the east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30015
+    west:
+      to: tba:300:room:30013
+    down:
+      to: tba:300:room:30016
+      look: The stalagmites look up menacingly at you.
+
+"tba:300:room:30015":
+  name: A Wooden Bridge
+  description: >
+    The wood here is old and acid eaten, similar to the rest of the bridge. The deadly stalagmites jut
+    up from below and more of the green and yellow light can be seen to move in the mists below.  The
+    bridge ends at a small plateau to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30026
+      look: You see the bridge meet the end of the cavern.
+    west:
+      to: tba:300:room:30014
+    down:
+      to: tba:300:room:30016
+      look: The stalagmites look up menacingly at you.
+
+"tba:300:room:30016":
+  name: A Stalagmite Forest
+  description: >
+    You take the plunge off of the wooden bridge and find yourself stuck between several stalagmites. 
+    It hurts to move much, and you cannot see any way short of magic to escape this predicament.
+  sector: inside
+  flags: [indoors]
+
+"tba:300:room:30017":
+  name: The Acid Forest
+  description: >
+    Sharp stalagmites reach up wards, created by the mineral ichors dripping off stalactites far
+    above.  Pools of acid fill every crevice on the craggy cavern floor.  The cavern continues to the south and
+    east.
+  sector: hills
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30018
+    south:
+      to: tba:300:room:30020
+
+"tba:300:room:30018":
+  name: The Acid Forest
+  description: >
+    The stalagmites here are large and rainbow-hued, like giants in jester's garb.  Puddles of weak
+    stomach acid are pooled on the floor. The cavern stretches in all directions but north.
+  sector: hills
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30019
+    south:
+      to: tba:300:room:30021
+    west:
+      to: tba:300:room:30017
+
+"tba:300:room:30019":
+  name: The Acid Forest
+  description: >
+    Sharp stalagmites reach upwards, created by the mineral ichors dripping off stalactites far above. 
+    Pools of acid fill every crevice on the craggy cavern floor.
+  sector: hills
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:300:room:30022
+    west:
+      to: tba:300:room:30018
+
+"tba:300:room:30020":
+  name: The Acid Forest
+  description: >
+    You stand before an amazing sight.  Wrapped within the mists here on the cavern floor is a forest
+    of oddly shaped stalagmites surrounded everywhere by puddles of what must be the remnants of the
+    dragons stomach acid.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30017
+    east:
+      to: tba:300:room:30021
+    south:
+      to: tba:300:room:30023
+    up:
+      to: tba:300:room:30012
+      look: You see the ledge at the entrance to the stomach cavern.
+
+"tba:300:room:30021":
+  name: The Acid Forest
+  description: >
+    You are in the center of the dragons stomach cavern.  A wooden bridge passes far overhead.  Sharp
+    stalagmites poise here to meet those who would drop from it.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30018
+    east:
+      to: tba:300:room:30022
+    south:
+      to: tba:300:room:30024
+    west:
+      to: tba:300:room:30020
+
+"tba:300:room:30022":
+  name: The Acid Forest
+  description: >
+    The stalagmites here are large and rainbow-hued, like giants in jester's garb.  Puddles of weak
+    stomach acid are pooled on the floor. A steep climb up leads to a large plateau at the end of the cavern.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30019
+    south:
+      to: tba:300:room:30025
+    west:
+      to: tba:300:room:30021
+    up:
+      look: Apparently it is too steep a climb to go back up.
+
+"tba:300:room:30023":
+  name: The Acid Forest
+  description: >
+    Mists swirl around strange crystal egg shells here.  The cavern continues to the north and to the
+    east.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30020
+    east:
+      to: tba:300:room:30024
+
+"tba:300:room:30024":
+  name: The Acid Forest
+  description: >
+    Sharp stalagmites reach upwards, created by the mineral ichors dripping off stalactites far above. 
+    Pools of acid fill every crevice on the craggy cavern floor.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30021
+    east:
+      to: tba:300:room:30025
+    west:
+      to: tba:300:room:30023
+
+"tba:300:room:30025":
+  name: The Acid Forest
+  description: >
+    The stalagmites here are large and rainbow-hued, like giants in jester's garb.  Puddles of weak
+    stomach acid are pooled on the floor. The cavern stretches to the north and west.
+  sector: hills
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30022
+    west:
+      to: tba:300:room:30024
+
+"tba:300:room:30026":
+  name: The End Of The Stomach
+  description: >
+    The wooden bridge ends here, on a large plateau above the cavern floor. The plateau overlooks the
+    entire forest of acid and stone below.  A tunnel set in the cavern wall to the east has been shored up
+    with a wall of plaster and bones.  Two very large skull-knobbed doors have been set in it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30056
+      look: You see a huge set of doors fashioned from bones.
+      door:
+        keywords: [door, doors, skull]
+        kind: door
+        key: tba:300:obj:30018
+        reset: locked
+    west:
+      to: tba:300:room:30015
+      look: You see the wooden bridge.
+    down:
+      to: tba:300:room:30022
+      look: You see a steep climb down to the cavern floor.
+
+"tba:300:room:30027":
+  name: The Dragon's Pancreas
+  description:
+  - >
+    You are in an oddly shaped chamber, what might have been some foul organ of Ancalador.  A yellowish
+    light fills the room from nowhere, as if only by the dragon's will alone.  The feeling of malignant
+    evil is great here, which is only compounded by the large sign overhead which reads, 'Memento Mori',
+    or in the common tongue, 'Remember to Die.'
+  - The chamber has exits worked into it, to the east and down.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30056
+      look: You see a fissure in the organ wall.
+      door:
+        keywords: [fissure]
+        kind: door
+        reset: closed
+    east:
+      to: tba:300:room:30045
+    down:
+      to: tba:300:room:30049
+
+"tba:300:room:30028":
+  name: The Small Intestine
+  description: >
+    You enter a featureless tunnel of what must be the beginning of the dragon's small intestine. 
+    Small piles of human bones and armor bits have been left here.  The tunnel continues north and to the
+    west a rougher tunnel can be seen.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30029
+    west:
+      to: tba:300:room:30056
+
+"tba:300:room:30029":
+  name: The Small Intestine
+  description: The tunnel twists to the south and to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30030
+    south:
+      to: tba:300:room:30028
+
+"tba:300:room:30030":
+  name: The Small Intestine
+  description: The smooth tunnel curves to the west and to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:300:room:30031
+    west:
+      to: tba:300:room:30029
+
+"tba:300:room:30031":
+  name: The Small Intestine
+  description: The blank walls of the tunnel run north and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30030
+    south:
+      to: tba:300:room:30032
+
+"tba:300:room:30032":
+  name: The Small Intestine
+  description: The tunnel comes from the north and dips sharply downward here.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30031
+    down:
+      to: tba:300:room:30033
+
+"tba:300:room:30033":
+  name: The Small Intestine
+  description: >
+    The featureless tunnel leads up and north.  Echo bounce off the blank walls, whether from near or
+    far, you cannot tell.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30034
+    up:
+      to: tba:300:room:30032
+
+"tba:300:room:30034":
+  name: The Small Intestine
+  description: >
+    Bits of broken equipment from long dead adventurers have been collected here.  The tunnel runs
+    north and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30035
+    south:
+      to: tba:300:room:30033
+
+"tba:300:room:30035":
+  name: The Small Intestine
+  description: >
+    The tunnel bends from the south to the east.  You imagine the remains of many a brave warrior who
+    dared the dragon passed here, torn and unmourned.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30036
+    south:
+      to: tba:300:room:30034
+
+"tba:300:room:30036":
+  name: The Small Intestine
+  description: The blank walls of the tunnel lead west and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:300:room:30037
+    west:
+      to: tba:300:room:30035
+
+"tba:300:room:30037":
+  name: The Small Intestine
+  description: The smooth tunnel contracts to the south of here into a new tunnel.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30036
+    south:
+      to: tba:300:room:30038
+      look: The new tunnel seems composed of different textures.
+
+"tba:300:room:30038":
+  name: The Large Intestine
+  description: >
+    Unlike the the small intestine, the walls here have a nook and cranny quality about them.  They are
+    quite rough and dust fills many of the spaces.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30037
+    east:
+      to: tba:300:room:30039
+
+"tba:300:room:30039":
+  name: The Large Intestine
+  description: >
+    The smell of dust is thick in this section of the tunnel that runs to the west and to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30040
+    west:
+      to: tba:300:room:30038
+
+"tba:300:room:30040":
+  name: The Large Intestine
+  description: >
+    The rough walls of the tunnel scrape your armor and cuts your exposed skin as you travel north or
+    south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30041
+    south:
+      to: tba:300:room:30039
+
+"tba:300:room:30041":
+  name: The Large Intestine
+  description: The tunnel drops to the east but you find many handholds among the nooks and crannies.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30042
+    south:
+      to: tba:300:room:30040
+
+"tba:300:room:30042":
+  name: The Large Intestine
+  description: The roughly hewn tunnel constricts to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:300:room:30043
+    west:
+      to: tba:300:room:30041
+
+"tba:300:room:30043":
+  name: A Stony Sphincter
+  description: >
+    You are in a narrow tunnel, barely able to walk upright without knocking your head.  A breeze from
+    the south swirls the dust here and you begin to believe that safety is not far off.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:300:room:30042
+    east:
+      to: tba:300:room:30044
+
+"tba:300:room:30044":
+  name: At The Dragon's Tail
+  description: >
+    You have never been so happy to see the light of day!  You are by the dragon's stone tail, which is
+    covered with green, growing vines and small, violet flowers.  The birds sing and you can make out a
+    faint path to the south, leading back around the dragon-hill. A skull-topped signpost flanks an
+    unused road to the north. There is a large plot device blocking the way along the road to the north.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    north:
+      look: A large plot device blocks the unused road to the north.
+    south:
+      to: tba:300:room:30001
+      look: You see a path leading around the dragon, back to its toothy maw.
+    west:
+      to: tba:300:room:30043
+      look: There is a strange hole in the rock wall, circular in shape.
+  extras:
+  - keywords: [sign, signpost]
+    text:
+    - >
+      The signpost reads in ancient runic script: The Penultimate Tower of Wizardry was rumored to exist,
+      once, just down this road... who knows if this is true?  For though many have went on to see, none
+      have returned to claim it true...
+    - --Mercutio the Bard of the Realm
+  - keywords: [plot, device]
+    text: >
+      This large and strange creation is merely a device often used by writers to steer people away from
+      something that he or she does not want them to see at the present moment.  Speaking of which, you
+      *did* see the path leading away to the south did you not?
+
+"tba:300:room:30045":
+  name: An Undead Garden
+  description: >
+    Shaking shrubberies and quivering palms surround a few skeletal trees that make up this gruesome
+    garden.  The shriveled plantlife, set in niches within the deformed chamber walls, seem to have all
+    died and come back from the afterlife somehow.  Openings in the petrified organ wall lead west and down.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:300:room:30027
+    down:
+      to: tba:300:room:30050
+
+"tba:300:room:30046":
+  name: The Private Chambers
+  description: >
+    This small room seems to have been carved by hand from the pancreas of Ancalador.  It has some
+    amenities, like a soft bed and a small alchemist's workbench, but if the dragon is ever freed from his
+    stone prison, he will surely be quite unhappy about this situation. The only exit is west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:300:room:30047
+      look: Outside is the amphitheater chamber.
+      door:
+        keywords: [door, coffin]
+        kind: door
+        reset: closed
+
+"tba:300:room:30047":
+  name: The Macabre Amphitheather
+  description: >
+    You are in on a wide, circular ledge overlooking a large slab of stone in the chamber below.  Crude
+    seats are fashioned here from the surrounding porous rock and the walls are decorated with various
+    bonesaws and a quote in blood, 'That fell arrest without bail.'  A coffin lid door is set in the east
+    wall, while steps cut into the rock lead down and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30046
+      look: You see a doorway made from a coffin's lid.
+      door:
+        keywords: [door, coffin]
+        kind: door
+        reset: closed
+    west:
+      to: tba:300:room:30048
+    down:
+      to: tba:300:room:30051
+
+"tba:300:room:30048":
+  name: The Temple Of Death
+  description: >
+    You are in a small shrine in honor of the 'Pale Priest of the Mute People'.  Here, Hell's Grim
+    Tyrant is sought as a source of inspiration and wisdom by the Guildmembers.  The chamber walls open to
+    exits heading down and east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30047
+    down:
+      to: tba:300:room:30052
+
+"tba:300:room:30049":
+  name: Cold Storage
+  description: >
+    The stink of this storage chamber makes you balk at once.  Through your nausea you make out
+    cadavers kept cool in niches in the stone walls.  Barrels of dust and decanters of blood fill the room.  On
+    the wall, in some dark ink, is scrawled, 'That dreamless sleep.'  The chamber exits south and up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:300:room:30052
+    up:
+      to: tba:300:room:30027
+
+"tba:300:room:30050":
+  name: The Kennel Of The Demised
+  description: >
+    This chamber of hard stone is empty save for a sturdy iron ring set in the floor.  A large, heavy
+    chain with collar at one end is attached to the ring.  Small print on the collar reads, 'Quietus.'
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:300:room:30051
+    up:
+      to: tba:300:room:30045
+
+"tba:300:room:30051":
+  name: The Operating Room
+  description: >
+    This circular chamber is dominated by a large stone slab in the center which bears the stains of
+    countless horrible experiments.  The cruel work that goes on here is generally viewed from the
+    amphitheater above by the guild apprentices and patrons.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30050
+    up:
+      to: tba:300:room:30047
+
+"tba:300:room:30052":
+  name: The Guildhall
+  description: >
+    This is the largest chamber cut from Ancalador's pancreas.  A long feasting table made of coffins
+    lashed together fills the length of the room.  On the wall, in the dried ichor that passes for blood
+    in demons, is written, 'A debt we must all pay.'  A set of double coffin-lid doors is to the west, and
+    other exits are to the north and up.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:300:room:30049
+    west:
+      to: tba:300:room:30053
+      door:
+        keywords: [door, doors, coffin]
+        kind: door
+        reset: closed
+    up:
+      to: tba:300:room:30048
+
+"tba:300:room:30053":
+  name: The Altar Of Annihilation
+  description: >
+    You stand before the horrific Altar of Annihilation where the magic and power of extinguishment and
+    dissolution are full explored.  You feel the countless ceremonies of extinction performed here, like
+    a gloom that pervades the altar, which looks like a huge rib cage centered with a demon's skull. 
+    Before the altar is a black iron grating covering a dark pit where the ebb of life is glorified in
+    sacrifice.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:300:room:30052
+      door:
+        keywords: [door, doors, coffin]
+        kind: door
+        reset: closed
+    down:
+      to: tba:300:room:30054
+      look: You can't see much, but you don't like the little you do see.
+      door:
+        keywords: [grating, grate]
+        kind: pickproof
+        key: tba:300:obj:30005
+        reset: locked
+
+"tba:300:room:30054":
+  name: The Darken Pit
+  description: >
+    The very evil of this place seeks to extinguish your light as if the gloom had a nefarious soul of
+    its own.  You know true fear as something moves in the darkness... toward you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:300:room:30053
+      look: You see a black iron grating above you.
+      door:
+        keywords: [grating, grate]
+        kind: pickproof
+        key: tba:300:obj:30005
+        reset: locked
+
+"tba:300:room:30055":
+  name: A Stone Tunnel
+  description: >
+    The dragon's throat continues east and west on a path which neither rises nor falls.  On the south
+    wall, to the dragon's left, a warmth can be felt, followed by a feeling of pure evil.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:300:room:30012
+      look: You see the tunnel open up to a great cavern beyond.
+    west:
+      to: tba:300:room:30006
+
+"tba:300:room:30056":
+  name: A Stone Corridor
+  description: >
+    You are in a circular tunnel of stone.  The walls are irregular and pockmarked.  The tunnel
+    continues east and west.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:300:room:30028
+      look: You see the beginning of a new, smoother tunnel.
+    south:
+      to: tba:300:room:30027
+      look: It seems you might be able to pry the fissure open.
+      door:
+        keywords: [fissure]
+        kind: door
+        reset: closed
+    west:
+      to: tba:300:room:30026
+      look: You see the bone doorway leading towards the stomach cavern.
+      door:
+        keywords: [door, doors, bone]
+        kind: door
+        key: tba:300:obj:30018
+        reset: locked
+  extras:
+  - keywords: [walls]
+    text: A small fissure appears to be set in the south wall.
+
+"tba:300:room:30057":
+  name: Muddy Riverbank
+  description: >
+    You are on the south bank of a rushing river.  An old, mossy and huge stone slab hangs over the
+    riverbank, allowing you to cross towards a great forest.  A verdant valley stretches before you to the
+    east, while the terrain to the west and south quickly become mountainous, and impassible.
+  sector: mountains
+  exits:
+    east:
+      to: tba:300:room:30000

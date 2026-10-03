@@ -1,0 +1,406 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 16.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:16:obj:1600":
+  type: weapon
+  keywords: [lifecutter, sword]
+  short: Lifecutter
+  long: A blue black crusader hilt sword is stuck in the ground.
+  flags: [magic, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 9
+  cost: 450
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sword, lifecutter]
+    text: >
+      As you look at the sword you hear inside your head the words, "My name is Lifecutter and my last
+      master was Dodinas le Savage.  Take me and let's slay evil!"
+
+"tba:16:obj:1601":
+  type: weapon
+  keywords: [axe]
+  short: an axe
+  long: A huge axe is lying here
+  flags: [magic, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d7
+    attack: thrash
+  weight: 8
+  cost: 600
+  rent: 60
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [axe]
+    text: The axe handle has the name 'Gaheris' inscibed on it.
+
+"tba:16:obj:1602":
+  type: weapon
+  keywords: [axe]
+  short: an axe
+  long: A two headed axe with the Hautdesert crest lies here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: thrash
+  weight: 10
+  cost: 500
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [axe]
+    text: The strange crest of Hautdesert is engraved on both heads of this large axe.
+
+"tba:16:obj:1603":
+  type: worn
+  keywords: [crest]
+  short: a crest
+  long: The crest has a stag on a verdant field
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 250
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [crest, stag]
+    text: The crest is about the size of your fist and is made of what looks like pewter.
+
+"tba:16:obj:1604":
+  type: armor
+  keywords: [armor, green]
+  short: some green armor
+  long: A fine suit of green armor bearing the crest of Hautdesert glistens here!
+  flags: [magic, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 9
+  cost: 900
+  rent: 90
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [green, armor]
+    text: >
+      The strange crest of Hautdesert is engraved on the breast of this fine armor.  The strange green
+      color is like no other metal you have ever seen.
+
+"tba:16:obj:1605":
+  type: armor
+  keywords: [colored, cloak]
+  short: a cloak of many colors
+  long: A cloak of many colors and the crest of Orkney lies here.
+  flags: [no_donate]
+  wear: [take, about]
+  values:
+    armor: 1
+  weight: 4
+  cost: 4
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [colored, cloak]
+    text: >
+      The cloak is made from many patches of various shades and colors.  Making it look more like a
+      clown's garment than something a warrior would wear.
+
+"tba:16:obj:1606":
+  type: armor
+  keywords: [colored, shield]
+  short: a shield of many colors
+  long: A rainbow of colors is reflected from the shield which lies here!
+  wear: [take, shield]
+  values:
+    armor: 4
+  weight: 5
+  cost: 25
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [colored, shield]
+    text: >
+      The shield has been shellacked with some strangely colorful paint that has hardened it to an above
+      average durability.
+
+"tba:16:obj:1607":
+  type: armor
+  keywords: [armbands]
+  short: garlons invisible armbands
+  long: A set of armbands of black iron lie here.
+  flags: [invisible, magic]
+  wear: [take, arms]
+  values:
+    armor: 5
+  weight: 3
+  cost: 450
+  rent: 50
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 15
+  extras:
+  - keywords: [armbands]
+    text: Made of pure silver these armbands have been turned invisible.
+
+"tba:16:obj:1608":
+  type: scroll
+  keywords: [merlins, scroll]
+  short: Merlin's scroll
+  long: A scroll was left here.
+  wear: [take]
+  values:
+    raw: [12, 44, -1, -1]
+  weight: 1
+  cost: 500
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [merlins, scroll]
+    text: >
+      The thick parchment is yellow from age and crumbling at the corners.  An arcane spell is written
+      upon it.
+
+"tba:16:obj:1609":
+  type: wand
+  keywords: [merlins, wand]
+  short: Merlin's wand
+  long: A wand, glowing with power, lies here.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [12, 3, 3, 6]
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [merlins, wand]
+    text: >
+      The wand is capped on both ends with clear crystal orbs.  Small sparks can be seen within each orb.
+
+"tba:16:obj:1610":
+  type: armor
+  keywords: [white, bracers]
+  short: the white bracers
+  long: A humming, blinding white bracer lies here!
+  wear: [take, arms]
+  values:
+    armor: 6
+  weight: 3
+  cost: 525
+  rent: 60
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [white, bracers]
+    text: >
+      These bracers are made from a strange white metal, or alloy.  They gleam and reflect a perfect
+      image.
+
+"tba:16:obj:1611":
+  type: armor
+  keywords: [black, greaves]
+  short: some black greaves
+  long: A pair of blackened steel greaves lies here.
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 4
+  cost: 300
+  rent: 30
+  level: 0
+  extras:
+  - keywords: [black, greaves]
+    text: These black metal plates fit over a person's legs to help protect from disabling attacks.
+
+"tba:16:obj:1612":
+  type: weapon
+  keywords: [club, ball, mace]
+  short: a spiked mace
+  long: A clublike weapon with a spiked balled head lies here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: bludgeon
+  weight: 9
+  cost: 650
+  rent: 65
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [club, ball, mace, spiked]
+    text: >
+      The spiked ball is affixed to the top of a long pole and looks deadly as a bludgeoning weapon.
+
+"tba:16:obj:1613":
+  type: container
+  keywords: [pack, backpack]
+  short: Pellinore's pack
+  long: A backpack made of fine leather sits here. You see lettering on its corner.
+  wear: [take]
+  values:
+    capacity: 150
+    lock_flags: 1
+    corpse: false
+  weight: 15
+  cost: 150
+  rent: 15
+  level: 0
+  extras:
+  - keywords: [lettering, backpack, pack]
+    text: >
+      You read the writing on the pack.  It says "To my dear friend Pellinore, may this pack make your
+      journeys shorter and allow you to bring all the provisions you need.  Simply wear the pack, and the
+      weight and number of items you carry will decrease, and you will be able to travel long distances
+      without tiring. May you succeed in your quest!  - Merlin".
+
+"tba:16:obj:1614":
+  type: weapon
+  keywords: [unholy, spear]
+  short: an unholy spear
+  long: A spear is here, glowing with an unholy dark light.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: stab
+  weight: 5
+  cost: 200
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [unholy, spear]
+    text: >
+      You look at the unholy light surrounding the spear.  Your vision darkens. Out of the darkness red
+      glowing eyes laugh and dance at you.  A rage slowly fills you, you want to kill.  Rend.  Tear.  Rape. 
+      Murder - ahhahahahah!
+
+"tba:16:obj:1616":
+  type: armor
+  keywords: [wolf, helm]
+  short: the wolf helm
+  long: A helm with the semblance of a wolf is here
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 3
+  cost: 160
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [wolf, helm]
+    text: The metal helm has been wrapped with the fur and head of a wolf.
+
+"tba:16:obj:1617":
+  type: pen
+  keywords: [pen]
+  short: a pen
+  long: An old pen is leaking ink everywhere here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pen]
+    text: This writing utensil could be used if only you had something to write on.
+
+"tba:16:obj:1618":
+  type: armor
+  keywords: [horned, helm]
+  short: a horned helm
+  long: A burnished steel helm with oxen horns lies here.
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 5
+  cost: 375
+  rent: 37
+  level: 0
+  extras:
+  - keywords: [horned, helm]
+    text: >
+      This strange hide helm has a set of horns sticking out of the top, they look like goblin horns, but
+      hard to tell.
+
+"tba:16:obj:1619":
+  type: note
+  keywords: [note]
+  short: a note
+  long: A note is lying here.
+  action: If only you had a pen, you could write on this.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:16:obj:1620":
+  type: weapon
+  keywords: [ball, chain, spiked]
+  short: spiked ball and chain
+  long: A massive spiked iron ball is attached to a iron handle by a 3 foot chain.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: crush
+  weight: 8
+  cost: 600
+  rent: 60
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [ball, chain, spiked]
+    text: >
+      This spiked ball is attached to a long metal handle and can be swung as a bludgeoning weapon.
+
+"tba:16:obj:1621":
+  type: wand
+  keywords: [rod, command]
+  short: a rod of command
+  long: A rod of black, runed metal swallows light here.
+  flags: [magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [12, 2, 2, 7]
+  weight: 1
+  cost: 900
+  rent: 90
+  level: 0
+  extras:
+  - keywords: [rod, command]
+    text: The black, runed metal seems to absorb all heat and light it comes in contact with.

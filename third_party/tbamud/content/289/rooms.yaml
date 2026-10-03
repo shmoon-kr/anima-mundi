@@ -1,0 +1,710 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 289.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:289:room:28900":
+  name: Outside the Wayhouse
+  description: >
+    You are outside a large, two-story building which proports to be 'Werith's Wayhouse' on a brightly
+    lettered sign out front.  You hear laughing and revelry from inside -- sounds like a lively place. 
+    The main doors are directly south of you, and small paths lead east and west around the building. 
+    Eastward is another smaller building; obviously a stable.  Northward is the main road, providing all the
+    traffic and customers for this establishment.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:258:room:25805
+    east:
+      to: tba:289:room:28907
+    south:
+      to: tba:289:room:28915
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    west:
+      to: tba:289:room:28901
+  extras:
+  - keywords: [credits, info]
+    text: >
+      Werith's Wayhouse by Builder_5 Copyright 1993 by Curious Areas Workshop * 'Werith's Wayhouse' is a
+      high-mob population area, with 40 rooms, 19 different types of mobs and objects.  It was meant to be
+      placed somewhere between two widely used towns as a rest stop area. We hope you like it. * #00 -- add
+      entrance/exit to the north. The north exit is #00. A receptionist can be added to the upstairs area:
+      around #30 would probably be the best area. Mob ##04 should have the standard spellcaster routine. *
+      Credits A Big Thanks to Builder_5 for supporting C.A.W. Also, kudos to Tarkin of VieMud (viemud.org
+      4000) for allowing us to use his mud for pre-release testing. This area was built with the aid of
+      George Essl's Dikued program.  We would like to thank Mr. Essl for his time and determination to create
+      and support Dikued. The following people have aided C.A.W. and Builder_5 in numerous ways, and all
+      receive our deepest gratitude: Shane Finkel, Josh 'Champion of Bagels' Megerman, John D. Horner, and
+      the System Adminstrators of ODU * Additionally, Builder_5 would like thank the following people. These
+      people played several of the mobs included in this area in various role-playing games that Builder_5
+      participated in: John D. Horner: Desslok, Michael Goodwin: Airden (the Wanderer), David "Big Guy"
+      Burke: Seemie, Jordo, Chris Grove: Drogo, 'd.' Page: Eshiay, Farlenian (and Koofy!), Aaron Barrs: Alerka
+  - keywords: [sign]
+    text:
+    - It says,
+    - "\"WERITH'S WAYHOUSE\""
+  - keywords: [stable]
+    text: A place to keep your horses while you enjoy yourself inside...
+  - keywords: [path, paths]
+    text: Well-trodden paths around the sides of the building.  Not much of interest.
+
+"tba:289:room:28901":
+  name: Near a Large Building
+  description: >
+    You are north-west of the Wayhouse.  This section of the path seems less used, possibly because
+    there's nothing really over here.  The trees crowd in towards the clearing, making the general area seem
+    rather eerie somehow.  The voices coming from inside are clearly audible, and by listening hard you
+    can almost make out the words.  The path around the building continues to the west and south.
+  sector: field
+  exits:
+    east:
+      to: tba:289:room:28900
+    south:
+      to: tba:289:room:28902
+
+"tba:289:room:28902":
+  name: Near a Large Building
+  description: >
+    You are standing on the path that runs around the Wayhouse to the west.  A window spills light onto
+    the trees that block out all available light overhead. You hear general merryment and alcoholism
+    from inside, and wonder if being inside would be more fun than walking around outside...
+  sector: field
+  exits:
+    north:
+      to: tba:289:room:28901
+    south:
+      to: tba:289:room:28903
+
+"tba:289:room:28903":
+  name: Near a Large Building
+  description: >
+    You are south-west of the main structure of the Wayhouse.  A lone rain barrel catches run-off from
+    the roof eaves by the corner of the building, and you spy a small white fence cordoning off an herb
+    garden nearby.  The path around the building leads to the north and east.
+  sector: field
+  exits:
+    north:
+      to: tba:289:room:28902
+    east:
+      to: tba:289:room:28904
+
+"tba:289:room:28904":
+  name: Outside the Wayhouse
+  description: >
+    You are standing just south of Werith's Wayhouse, right where the kitchen entrance is.  A well
+    trodden path leads east, towards a small shack that is unmistakeably an outhouse.  You hear the
+    unmistakeable sound of clanging pots and pans from the inside, the warning of an upcoming meal.  The path
+    around the building here runs east, and west.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:289:room:28926
+    east:
+      to: tba:289:room:28905
+    west:
+      to: tba:289:room:28903
+
+"tba:289:room:28905":
+  name: Near a Large Building
+  description: >
+    The Wayhouse is just north-west of you here, and you are right by the facility's outhouse to the
+    south.  The wooden planks of the stable form an alley to the north, with the path leading right
+    in-between.  Westwards is the kitchen entrance to the Wayhouse, kept wide open to let the heat inside escape.
+  sector: field
+  exits:
+    north:
+      to: tba:289:room:28906
+    south:
+      to: tba:289:room:28940
+    west:
+      to: tba:289:room:28904
+
+"tba:289:room:28906":
+  name: Near a Large Building
+  description: >
+    This is a small, outdoors 'alley' formed by the Wayhouse's stone walls to the west, and the wooden
+    planked walls of the stable to the east.  The path around the building leads north and south of here.
+  sector: field
+  exits:
+    north:
+      to: tba:289:room:28907
+    south:
+      to: tba:289:room:28905
+
+"tba:289:room:28907":
+  name: Near a Large Building
+  description: >
+    You are on a small, well-travelled path that leads between Werith's Wayhouse to the west, and the
+    stables to the east.  Another path breaks off to the south, between the two buildings, towards what
+    appears to be an outhouse.
+  sector: field
+  exits:
+    east:
+      to: tba:289:room:28908
+    south:
+      to: tba:289:room:28906
+    west:
+      to: tba:289:room:28900
+
+"tba:289:room:28908":
+  name: Just Outside the Stable
+  description: >
+    The stable of the Wayhouse is just south of you, its wooden doors spread open and inviting.  Inside
+    you can hear the snorting of horses, and the occasional hoof scraping against the ground.  The path
+    leads to the west, towards the Wayhouse.
+  sector: field
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:289:room:28909
+    west:
+      to: tba:289:room:28907
+
+"tba:289:room:28909":
+  name: Inside the Stable
+  description: >
+    You are standing inside the dusty confines of the stable.  Stalls line the aisle, some with horses,
+    some empty.  A pail filled with water and a stack of grain are heaped up against the interior wall,
+    dimly illuminated by a lantern hanging from a rafter.  Seems rather quiet in here...
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28908
+    east:
+      to: tba:289:room:28912
+    south:
+      to: tba:289:room:28910
+
+"tba:289:room:28910":
+  name: Inside the Stable
+  description: >
+    You are standing inside the dusty confines of the stable.  Stalls line the aisle, some with horses,
+    some empty.  A pail filled with water and a stack of grain are heaped up against the interior wall,
+    dimly illuminated by a lantern hanging from a rafter.  Seems rather quiet in here...
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28909
+    east:
+      to: tba:289:room:28911
+
+"tba:289:room:28911":
+  name: Inside the Stable
+  description: >
+    You are standing inside the dusty confines of the stable.  Stalls line the aisle, some with horses,
+    some empty.  A pail filled with water and a stack of grain are heaped up against the interior wall,
+    dimly illuminated by a lantern hanging from a rafter.  Seems rather quiet in here...
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28912
+    west:
+      to: tba:289:room:28910
+
+"tba:289:room:28912":
+  name: Inside the Stable
+  description: >
+    You are standing inside the dusty confines of the stable.  Stalls line the aisle, some with horses,
+    some empty.  A pail filled with water and a stack of grain are heaped up against the interior wall,
+    dimly illuminated by a lantern hanging from a rafter.  Seems rather quiet in here...
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28911
+    west:
+      to: tba:289:room:28909
+
+"tba:289:room:28913":
+  name: Main Room
+  description: >
+    The bar runs south here all along the western wall.  A few smaller tables here are set up with
+    various board games, ready to play.  There's also a shelf along the wall, lined with a few popular books;
+    light reading all of them. The patrons here seem to be a bit quieter than the rowdy bunch in the
+    rest of the building.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:289:room:28914
+    south:
+      to: tba:289:room:28920
+  extras:
+  - keywords: [board, games]
+    text: Chess, checkers, stomp-the-orc...  That sort of thing.
+
+"tba:289:room:28914":
+  name: Main Room
+  description: >
+    A window here offers a view outside, where it doesn't seem near as social as it is inside.  Tables
+    filled with laughing customers eat and drink and generally be merry, not caring what the weather is
+    like, and probably not even knowing.  There's a general sense of joy in the room; the joy of still
+    being alive in such a dangerous world as this one.  For a moment, you feel like joining them...
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:289:room:28915
+    south:
+      to: tba:289:room:28919
+    west:
+      to: tba:289:room:28913
+
+"tba:289:room:28915":
+  name: Main Room
+  description: >
+    You stand just inside the Main Room of Werith's Wayhouse.  The whole place stretches out all around
+    you, a conglomeration of people, food, and alcohol. The sheer chatter and roar of conversation makes
+    your ears hurt a little, and then you suddenly notice you're smiling.  Yes, this place might do for
+    awhile...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28900
+      door:
+        keywords: [door, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:289:room:28916
+    south:
+      to: tba:289:room:28918
+    west:
+      to: tba:289:room:28914
+
+"tba:289:room:28916":
+  name: Main Room
+  description: >
+    The giant fireplace here sends a great amount of heat throughout the room. The sheer massiveness of
+    the stone edifice and the literal bonfire inside makes you give the area a clear way.  A few of the
+    older and less human residents of the inn seem to be enjoying these tables, however.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28917
+    west:
+      to: tba:289:room:28915
+
+"tba:289:room:28917":
+  name: Main Room
+  description: >
+    Several dart boards line the wall to the south, and darts are scattered all about on the tables and
+    stuck in the wall.  The people coming up and down the stairs to the east carefully walk by the wall
+    to avoid being pin-cushioned involuntarily, and you think it would be a good idea to do the same.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28916
+    east:
+      to: tba:289:room:28929
+    west:
+      to: tba:289:room:28918
+
+"tba:289:room:28918":
+  name: Main Room
+  description: >
+    The tables seem to thin out around here, to give room for the traffic going in and out of the
+    kitchen through the archway to the south.  Waiters and waitresses march in and out with empty plates and
+    sumptuous platters, hardly stopping to breathe in their business.  You hear the distant clank of a pot
+    banging against something -- the chefs are busy too it seems.  Your stomach growls...  Are you
+    hungry at all?
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28915
+    east:
+      to: tba:289:room:28917
+    south:
+      to: tba:289:room:28923
+    west:
+      to: tba:289:room:28919
+
+"tba:289:room:28919":
+  name: Main Room
+  description: >
+    This seems to be a central part of the room, where many people congregate to talk or sing or dance
+    or whatever they feel like at that exact moment.  The people seem just on the edge of being
+    completely carried away at every moment, and you wonder if it would be beneath your dignity to join them.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28914
+    east:
+      to: tba:289:room:28918
+    south:
+      to: tba:289:room:28922
+    west:
+      to: tba:289:room:28920
+
+"tba:289:room:28920":
+  name: Main Room
+  description: >
+    The wooden bar runs along the length of the western wall, just in front of the many shelves of
+    different colored alcohol in different shaped bottles. You espy drunkards and waitresses, adventurers and
+    farmers althroughout the building from this vantage point, and guess that this establishment is
+    turning a pretty penny in profits.  Nice.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28913
+    east:
+      to: tba:289:room:28919
+    south:
+      to: tba:289:room:28921
+
+"tba:289:room:28921":
+  name: Main Room
+  description: >
+    The bar continues along the length of the western wall.  An empty bottle with some spare coppers in
+    it lies on top of its polished surface; tip collection evidently.  The tables nearby seem mostly
+    filled with people and food, the bar appears at times to be either packed, or merely elbow-to- elbow. A
+    lantern hanging from a rafter overhead casts shadows among the beerstains on the floor and gives the
+    complexion of everyone around a sort of glow.  You feel...  Comfortable here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28920
+    east:
+      to: tba:289:room:28922
+    south:
+      to: tba:289:room:28928
+
+"tba:289:room:28922":
+  name: Main Room
+  description: >
+    In the clutter of the main room of the Wayhouse, is a path leading out from the kitchen to the
+    east.  A wide archway allows admittance to the back room, from which you hear the distant clank of a pan
+    hitting another.  There aren't very many tables here, due to the amount of traffic coming in and out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28919
+    east:
+      to: tba:289:room:28923
+    south:
+      to: tba:289:room:28927
+    west:
+      to: tba:289:room:28921
+
+"tba:289:room:28923":
+  name: Kitchen
+  description: >
+    This is the main entranceway of the kitchen.  Two archways serve as an entry and exit point from
+    the main room of the wayhouse, one north, one west.  The kitchen is a room roughly thirty feet by
+    thirty feet, extending from the south and east from here.  You see many pots on the stove bubbling away
+    and hear the whistle of a kettle somewhere off to the left...  Business must be good.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28918
+    east:
+      to: tba:289:room:28924
+    south:
+      to: tba:289:room:28926
+    west:
+      to: tba:289:room:28922
+
+"tba:289:room:28924":
+  name: Kitchen
+  description: >
+    You are standing in a more quiet area of the kitchen, where various supplies of flour, grain and
+    meats are kept.  The kitchen extends south and west from here; that's where the main clutter seems to
+    be.  A steady thump-thump-thump from the north wall reminds you that the main room is where are the
+    fun and action seems to be...
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28925
+    west:
+      to: tba:289:room:28923
+
+"tba:289:room:28925":
+  name: Kitchen
+  description: >
+    The south-eastern section of the kitchen here is a veritable whirlwind of activity!  The entire
+    area is comprised of cooking surfaces and ovens; enough to keep a massive amount of food ready at any
+    one time.  The aisles are large, allowing room for frantic chefs and waiters to hurtle through the
+    kitchen with only a small amount of collisions.  Seems hectic, yet efficient.  The rest of the kitchen is
+    to the north and west from here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28924
+    west:
+      to: tba:289:room:28926
+
+"tba:289:room:28926":
+  name: Kitchen
+  description: >
+    This is the back entranceway to the kitchen, where the door is kept seasonally open to allow the
+    hot air to escape.  Some trash is piled up near the door, waiting to be taken out.  The main area of
+    the kitchen extends to the north and east from here, a hodge-podge of business and insanity in motion.
+    Looking at the general cleanliness, however, you think this would be a good place to eat.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28923
+    east:
+      to: tba:289:room:28925
+    south:
+      to: tba:289:room:28904
+
+"tba:289:room:28927":
+  name: Main Room
+  description: >
+    This is a quiet, darkened corner -- it appears someone has put out the lantern here on purpose. 
+    You feel a chill, probably due to your distance from the fire, and rub your arms absently.  There's a
+    table set near the corner, a single chair behind it in the shadowy of shadows.  You get the cliche'd
+    feeling someone in robes should be sitting there.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28922
+    west:
+      to: tba:289:room:28928
+
+"tba:289:room:28928":
+  name: Main Room
+  description: >
+    The bar runs along the length of the west wall here, dispensing drinks to all customers with
+    impunity.  A few tables are empty here in the southern part of the wayhouse, but the whole place still has
+    that 'mostly filled' air to it. The dull roar of conversation and the warm air from the fire makes
+    you feel at home somehow, makes you want to have a seat.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28921
+    east:
+      to: tba:289:room:28927
+
+"tba:289:room:28929":
+  name: Stairwell
+  description: >
+    Some sturdy wooden stairs lead up to the second floor of the wayhouse, where there are a few rooms
+    for rent.  A lonely lantern lights the way up, glinting off the polished handrail.  An arch to the
+    east opens up into the main room... Where the noise informs you that the revelry hasn't stopped yet.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:289:room:28917
+    up:
+      to: tba:289:room:28930
+
+"tba:289:room:28930":
+  name: Stairwell
+  description: >
+    A stairwell here leads back down to the first floor and the main room of the wayhouse.  A hallway
+    leads east along the second floor here, lined with doors to private bedrooms.  The floors, stairs, and
+    walls are all made with sturdy oak in contrast of the heavy stone of the exterior walls.  A light at
+    the top of the stairs throws illumination down the hall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:289:room:28931
+    down:
+      to: tba:289:room:28929
+
+"tba:289:room:28931":
+  name: Hallway
+  description: >
+    This is a plain hallway on the second floor.  The stairs leading down are to the east, and the hall
+    continues to the west.  On either side to the north and south are doors to private rooms.  You can
+    hear a dull roar coming from below in the main room, but the thick wooden floorboards do a good job of
+    blocking the majority of the noise out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28938
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:289:room:28930
+    south:
+      to: tba:289:room:28939
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+    west:
+      to: tba:289:room:28932
+
+"tba:289:room:28932":
+  name: Hallway
+  description: >
+    This is a plain hallway on the second floor.  The stairs leading down are down the hall to the
+    east, and westwards the hall continues.  On either side to the north and south are doors to private
+    rooms.  You can hear a dull roar coming from below in the main room, but the thick wooden floorboards do a
+    good job of blocking the majority of the noise out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28936
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:289:room:28931
+    south:
+      to: tba:289:room:28937
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+    west:
+      to: tba:289:room:28933
+
+"tba:289:room:28933":
+  name: Hallway
+  description: >
+    This is a plain hallway on the second floor.  The hall continues to the east, all the way down to
+    where the stairs are.  On either side to the north and south are doors to private rooms.  You can hear
+    a dull roar coming from below in the main room, but the thick wooden floorboards do a good job of
+    blocking the majority of the noise out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28934
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+    east:
+      to: tba:289:room:28932
+    south:
+      to: tba:289:room:28935
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28934":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets, a rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28933
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28935":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets, a rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28933
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28936":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets, a rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28932
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28937":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets,. A rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28932
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28938":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets, a rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:289:room:28931
+      door:
+        keywords: [door, south, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28939":
+  name: Private Room
+  description: >
+    This is a smallish private room, with an adequate bed with clean sheets, a rather
+    beat-up-but-serviceable clothes chest, and a table and chair.  Plain and simple, yet nice in a strange sort of way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28931
+      door:
+        keywords: [door, north, wooden]
+        kind: door
+        reset: closed
+
+"tba:289:room:28940":
+  name: Outhouse
+  description: >
+    Um.  Whew!  It's definitely an outhouse...  Doesn't smell too good at all. There's a wooden plank
+    with a few 'convenient' holes cut in it for service, and several curtains hung up for privacy.  A bowl
+    with a large cake of soap next to it serve as sanitary measures.  Otherwise, there's not too much
+    here that you take an interest in...
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:289:room:28905

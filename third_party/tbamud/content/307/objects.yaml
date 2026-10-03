@@ -1,0 +1,431 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 307.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:307:obj:30700":
+  type: worn
+  keywords: [eyepiece, brass]
+  short: a brass eyepiece
+  long: A brass eyepiece has been left here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: 1
+
+"tba:307:obj:30701":
+  type: armor
+  keywords: [finery, suit]
+  short: a suit of elegant finery
+  long: A suit of elegant finery has been tossed aside.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: con
+    modifier: 1
+
+"tba:307:obj:30702":
+  type: worn
+  keywords: [bracelet, delicate]
+  short: a delicate bracelet
+  long: A delicate bracelet has been left on the ground.
+  flags: [glow]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: damroll
+    modifier: 1
+  - apply: int
+    modifier: -1
+
+"tba:307:obj:30703":
+  type: armor
+  keywords: [dress, elegant]
+  short: an elegant dress
+  long: An elegant dress has been left here.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+  affects:
+  - apply: dex
+    modifier: -2
+
+"tba:307:obj:30704":
+  type: worn
+  keywords: [string, pearls]
+  short: a string of pearls
+  long: A string of pearls have been left behind.
+  flags: [glow]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -1
+  - apply: mana
+    modifier: 20
+  - apply: int
+    modifier: 2
+
+"tba:307:obj:30705":
+  type: worn
+  keywords: [veil, maiden's]
+  short: a maiden's veil
+  long: A maiden's veil lies crumple on the floor.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: dex
+    modifier: 1
+  - apply: cha
+    modifier: -2
+
+"tba:307:obj:30706":
+  type: light
+  keywords: [light, servant's]
+  short: the servant's light
+  long: The servant's light has been left on the floor.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+
+"tba:307:obj:30707":
+  type: drinkcon
+  keywords: [whisky, whiskey, bottle, whisky]
+  short: a bottle
+  long: A bottle of whiskey lies thrown to the floor.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: whisky
+    poisoned: false
+  weight: 15
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+
+"tba:307:obj:30708":
+  type: armor
+  keywords: [belt, thick, embossed, buckle]
+  short: a thick belt with an embossed buckle
+  long: A thick belt with an embossed buckle has been left here.
+  flags: [hum]
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: -15
+
+"tba:307:obj:30709":
+  type: armor
+  keywords: [mask, worked, steel]
+  short: a worked steel mask
+  long: A worked steel mask has been left on the ground.
+  wear: [take, head]
+  values:
+    armor: 0
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: hit
+    modifier: -20
+
+"tba:307:obj:30710":
+  type: armor
+  keywords: [boots, cuffed, pair]
+  short: a pair of cuffed leather boots
+  long: A pair of cuffed leather boots have been left here.
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+  - apply: move
+    modifier: 10
+
+"tba:307:obj:30711":
+  type: armor
+  keywords: [gloves, pair, elbow, length, leather]
+  short: a pair of elbow-length leather gloves
+  long: A pair of elbow-length leather gloves have been laft here.
+  wear: [take, hands]
+  values:
+    armor: 0
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: hit
+    modifier: -20
+
+"tba:307:obj:30712":
+  type: armor
+  keywords: [shield, full, length, iron]
+  short: a full-length iron shield
+  long: A full-length iron shield has been dropped to the ground.
+  wear: [take, shield]
+  values:
+    armor: 0
+  weight: 9
+  cost: 9
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: dex
+    modifier: -2
+
+"tba:307:obj:30713":
+  type: armor
+  keywords: [gloves, white]
+  short: a pair of white gloves
+  long: A pair of white gloves have been left here.
+  wear: [take, hands]
+  values:
+    armor: 0
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:307:obj:30714":
+  type: worn
+  keywords: [specs, wire, pair]
+  short: a pair of wire specs
+  long: A pair of wire specs have been left here.
+  wear: [take, head, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 15
+  affects:
+  - apply: ac
+    modifier: -1
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+
+"tba:307:obj:30715":
+  type: container
+  keywords: [bag, book]
+  short: a book bag
+  long: A book bag lies on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 300
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 11
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:307:obj:30716":
+  type: other
+  keywords: [fiddle, bowed]
+  short: a bowed fiddle
+  long: A bowed fiddle lies on its back on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:307:obj:30717":
+  type: armor
+  keywords: [shoes, work]
+  short: a pair of work shoes
+  long: A pair of work shoes have been left here.
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:307:obj:30718":
+  type: worn
+  keywords: [ring, thumb, gaudy]
+  short: a gaudy thumb ring
+  long: A gaudy thumb ring has been dropped here.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+
+"tba:307:obj:30719":
+  type: worn
+  keywords: [headband, band, jeweled]
+  short: a jeweled headband
+  long: A jeweled headband has been left here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: -1
+
+"tba:307:obj:30720":
+  type: worn
+  keywords: [ring, webbed, full, finger]
+  short: a webbed full-finger ring
+  long: A webbed full-finger ring has been left here.
+  flags: [hum]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: mana
+    modifier: 10
+
+"tba:307:obj:30721":
+  type: scroll
+  keywords: [book, life]
+  short: the Book of Life
+  long: The Book of Life has been left here by someone very careless.
+  flags: [glow, no_rent]
+  wear: [take, hold]
+  values:
+    raw: [21, 34, 43, 44]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 21
+
+"tba:307:obj:30722":
+  type: armor
+  keywords: [cassock, black]
+  short: a black cassock
+  long: A black cassock has been left in a crumpled heap on the floor.
+  wear: [take, waist]
+  values:
+    armor: 3
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: hit
+    modifier: 20
+  - apply: str
+    modifier: -2

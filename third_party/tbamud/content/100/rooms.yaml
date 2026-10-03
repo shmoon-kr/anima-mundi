@@ -1,0 +1,1467 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 100.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:100:room:10000":
+  name: Inside a Small Cabin
+  description: >
+    As you step into the shabby cabin, the smell makes you gag.  A slight haze makes your eyes sting. 
+    Whoever lives here has no regard for cleanliness. Piles of rags lie everywhere.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10001
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Builder   : Rumble
+        Zone         : 100 Northern Highway
+        Began        : 1999
+        Player Level : 3-7
+        Rooms        : 100
+        Mobs         : 17
+        Objects      : 17
+        Shops        : 0
+        Triggers     : 0
+        Theme        : Connector forest between a city and Dun Maura
+        Links        : 04s, 56w, 96n
+        Zone 100 was linked to the following zones:
+         96 Domiae                         at 10056 (west ) --->  9603
+        240 Dun Maura                      at 10096 (north) ---> 24000
+  - keywords: [stove]
+    text: >
+      The stove looks like it hasn't been used for a few years. In the bottom you see a thick pile of
+      ashes. You notice something sparkling in the ashes.
+  - keywords: [bunk]
+    text: >
+      As you examine the bunk closer you notice some of the rags may not be as shabby as you originally
+      thought. No one would miss them, would they?
+
+"tba:100:room:10001":
+  name: In Front of the Hermit's Cabin
+  description: >
+    You stop and stare at the decrepit bundle of sticks that must be where some recluse hermit lives. 
+    You can't imagine living out here, beyond the safety of the city walls.  Thick forests block any exit
+    to the north and you can see the city wall to the south.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10002
+    west:
+      to: tba:100:room:10000
+
+"tba:100:room:10002":
+  name: Along the City Wall
+  description: >
+    As you walk by the city wall, you notice the forest is getting thicker.  A slight gloom hangs over
+    this part of the woods.  You start to walk a little faster.  Further to the west you can see a small
+    clearing with something that looks like a shack.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10009
+    east:
+      to: tba:100:room:10003
+    west:
+      to: tba:100:room:10001
+
+"tba:100:room:10003":
+  name: Along the City Wall
+  description: >
+    The few animals in this part of the forest scatter as you walk by.  The forest is thickening
+    slightly, a little less sunlight is making it to the forest floor.  Overhead you can hear birds chirping
+    and squirrels chattering.  This place feels very peaceful.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10010
+    east:
+      to: tba:100:room:10004
+    west:
+      to: tba:100:room:10002
+
+"tba:100:room:10004":
+  name: The Northern Road
+  description: >
+    You are standing at the beginning of the road to the city of the Minotaurs, Dun Maura.  Many rumors
+    abound of these savage beasts but few leave the city walls to explore.  To the north you see a thick
+    forest.  To the east and west are small paths along the city wall.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10011
+    east:
+      to: tba:100:room:10005
+    west:
+      to: tba:100:room:10003
+
+"tba:100:room:10005":
+  name: Along the City Wall
+  description: >
+    The forest along this part of the wall is thinnning out.  Further east it looks as if the forest
+    disappears all together and turns into a grassy plain. Small innocent forest creatures abound in this
+    healthy forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10012
+    east:
+      to: tba:100:room:10006
+    west:
+      to: tba:100:room:10004
+
+"tba:100:room:10006":
+  name: Along the City Wall
+  description: >
+    The forest is almost completely gone now, replaced by tall fields of grass as far as the eyes can
+    see.  An unnatural cold breeze blows from the east.  You have a sudden urge to head back towards the
+    safety of the forest, or even better yet, back to the city.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10013
+    east:
+      to: tba:100:room:10007
+    west:
+      to: tba:100:room:10005
+
+"tba:100:room:10007":
+  name: A Dead End
+  description: >
+    Because of the tall grass, you almost stumble right into a massive crevice to the east.  It looks
+    impossible to cross.  You have no choice but to head back west.  These plains give you an eerie
+    feeling anyways.
+  sector: forest
+  exits:
+    west:
+      to: tba:100:room:10006
+
+"tba:100:room:10008":
+  name: Deep Forest
+  description: >
+    The forest is so dense you can hardly see more than ten feet without a tree blocking your vision. 
+    It would be very easy for someone, or something, to sneak up on you here.  You can continue north or
+    east through the forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10014
+    east:
+      to: tba:100:room:10009
+
+"tba:100:room:10009":
+  name: Deep Forest
+  description: >
+    The forest seems so peaceful and quiet, a little too quiet.  Where have all the animals gone?  Tall
+    trees are blocking a lot of the sunlight here.  It looks even thicker to the west.  The forest
+    continues in all directions.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10015
+    east:
+      to: tba:100:room:10010
+    south:
+      to: tba:100:room:10002
+    west:
+      to: tba:100:room:10008
+
+"tba:100:room:10010":
+  name: Off the Northern Road
+  description: >
+    Just west off the northern road, the forest is very peaceful and quiet.  The sounds of nature
+    soothe you into a feeling of false security.  You wonder at the tall trees and abundant wildlife.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10016
+    east:
+      to: tba:100:room:10011
+    south:
+      to: tba:100:room:10003
+    west:
+      to: tba:100:room:10009
+
+"tba:100:room:10011":
+  name: The Northern Road
+  description: >
+    The northern road is made of hard dirt.  Packed solid from years of use from both travelers,
+    merchants, and peddlers.  Wagon tracks leave small ruts in the road.  To the west is some thick woodlands,
+    while to the east you think you can make out some plains in the distance.  The road continues north
+    or south.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10017
+    east:
+      to: tba:100:room:10012
+    south:
+      to: tba:100:room:10004
+    west:
+      to: tba:100:room:10010
+
+"tba:100:room:10012":
+  name: Off the Northern Road
+  description: >
+    As you walk off the beaten path into the beginning of some plains you notice the trees here are
+    shorter and spaced further apart.  To the east you see that the forest fades away into plains.  You can
+    explore in any direction.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10018
+    east:
+      to: tba:100:room:10013
+    south:
+      to: tba:100:room:10005
+    west:
+      to: tba:100:room:10011
+
+"tba:100:room:10013":
+  name: The Beginning of the Plains
+  description: >
+    As you finally reach the edge of the plains you are disappointed by a large chasm that blocks any
+    further travel east.  You wonder at what could have caused this natural barrier.  You are blocked from
+    continuing north or east.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10006
+    west:
+      to: tba:100:room:10012
+
+"tba:100:room:10014":
+  name: Deep Forest
+  description: >
+    The forest is too thick to see more than a few feet.  Trees and brush block the exits to the north
+    and east.  You start to wonder if someone could be spying on you.  Someone could be standing behind
+    any one of these huge trees and you would never know.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10015
+    south:
+      to: tba:100:room:10008
+
+"tba:100:room:10015":
+  name: Deep Forest
+  description: >
+    The forest clears to the north and east.  It looks like you are close to the northern road.  Small
+    animals scatter as you walk by, leaves and twigs crunch under your feet.  Someone could hear you
+    coming from a mile away.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10022
+    east:
+      to: tba:100:room:10016
+    south:
+      to: tba:100:room:10009
+    west:
+      to: tba:100:room:10014
+
+"tba:100:room:10016":
+  name: Off the Northern Road
+  description: >
+    The northern road is just to your east now.  It seems to curve around to the north.  The trees here
+    are spaced several feet apart and you can see the movement of wildlife in the distance.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10023
+    east:
+      to: tba:100:room:10017
+    south:
+      to: tba:100:room:10010
+    west:
+      to: tba:100:room:10015
+
+"tba:100:room:10017":
+  name: The Northern Road
+  description: >
+    You stand in the middle of the northern road.  It is almost completely deserted.  You can see a few
+    people off in the distance to the south, close to the city.  To the north you can make out what
+    looks like a body of water in the distance.  The forest is to the west and there are some plains in the
+    distance to the east.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10024
+    east:
+      to: tba:100:room:10018
+    south:
+      to: tba:100:room:10011
+    west:
+      to: tba:100:room:10016
+
+"tba:100:room:10018":
+  name: Light Forest
+  description: >
+    The forest is starting to fade away into plains.  A stiff wind blows from the east.  It seems a
+    little cold for this time of year.  To the north you think you can hear the sound of rushing water.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10025
+    east:
+      to: tba:100:room:10019
+    south:
+      to: tba:100:room:10012
+    west:
+      to: tba:100:room:10017
+
+"tba:100:room:10019":
+  name: Before the Plains
+  description: >
+    The way to the plains is blocked by a huge chasm.  It looks like a river used to flow through it. 
+    But somehow it must have dried up.  You can hear the sound of running water in the distance.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10026
+    west:
+      to: tba:100:room:10018
+
+"tba:100:room:10020":
+  name: Deep Forest
+  description: >
+    The forest is extremely dense through here.  The exits west and south are blocked by the thick
+    brush.  To the north you can hear the roar of rushing water.  Animals seem to abound in this forest. 
+    They keep distracting you.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10028
+    east:
+      to: tba:100:room:10021
+
+"tba:100:room:10021":
+  name: Deep Forest
+  description: >
+    The thick forest to the north and south is untraversable.  Your only choice is to continue east or
+    west between the massive trees.  The safety and easy travel of the northern road is just to your east.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10022
+    west:
+      to: tba:100:room:10020
+
+"tba:100:room:10022":
+  name: A Bend in the Northern Road
+  description: >
+    The northern road curves around the edge of a lake here.  The lake is shrouded in fog.  You can not
+    make out what is on the other side.  A large river feeds into the lake to the north.  You can follow
+    the road north or head back toward the city to the east.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10030
+    east:
+      to: tba:100:room:10023
+    south:
+      to: tba:100:room:10015
+    west:
+      to: tba:100:room:10021
+
+"tba:100:room:10023":
+  name: The Northern Road
+  description: >
+    The northern road leads right up to the edge of a vast lake.  The water looks clean and
+    refreshing.  A blanket of fog obscures what is on the other side. The road goes continues east to west to go
+    around the lake.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10024
+    south:
+      to: tba:100:room:10016
+    west:
+      to: tba:100:room:10022
+
+"tba:100:room:10024":
+  name: A Bend in the Northern Road
+  description: >
+    The road ends abruptly at the edge of the lake.  You stare dumbfounded, then realize it curves
+    around to the west.  The lake has a layer of fog over it.  To the east you can see plains in the distance.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10025
+    south:
+      to: tba:100:room:10017
+    west:
+      to: tba:100:room:10023
+
+"tba:100:room:10025":
+  name: Edge of the Lake
+  description: >
+    You start to walk around the edge of the lake.  You hear the sound of rushing water to the north. 
+    The lake seems very serene, you're tempted to take a quick dip in the water, but who knows what could
+    be watching you.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10031
+    south:
+      to: tba:100:room:10018
+    west:
+      to: tba:100:room:10024
+
+"tba:100:room:10026":
+  name: Light Forest
+  description: >
+    You tromp your way through the forest.  The forest floor is clear and makes for good travelling. 
+    You feel like you are making good time and actually getting somewhere.  The forest thickens to the
+    west and north, leaving the only exits to the south and east.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10027
+    south:
+      to: tba:100:room:10019
+
+"tba:100:room:10027":
+  name: Before the Plains
+  description: >
+    The plains to the east are blocked by a large chasm. You doubt you could make your way across it. 
+    The only way to continue is to the west or to the north. You can hear the sound of running water to
+    the north.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10033
+    west:
+      to: tba:100:room:10026
+
+"tba:100:room:10028":
+  name: By the River
+  description: >
+    A massive river roars past you.  It's a good twenty strides wide.  No way to cross without a
+    bridge.  To the west the thick forest looks impenetrable.  You think you can see a road to the east.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10029
+    south:
+      to: tba:100:room:10020
+
+"tba:100:room:10029":
+  name: By the River
+  description: >
+    The river roars past you to the north.  You can only leave east or west.  To the east you can see
+    the northern road and what looks like a bridge to get across the river.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10030
+    west:
+      to: tba:100:room:10028
+
+"tba:100:room:10030":
+  name: The River Bridge
+  description: >
+    A large stone bridge crosses the river just to the north.  It is made of stone and must have taken
+    years to build.  The river empties into a massive lake just to the east.  The northern road continues
+    across the bridge.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10036
+    south:
+      to: tba:100:room:10022
+    west:
+      to: tba:100:room:10029
+
+"tba:100:room:10031":
+  name: Beside the Lake
+  description: >
+    As you walk along the edge of the lake you come to its outlet.  A small river blocks the way
+    north.  Though small, the rivers current looks fast and strong. You doubt you could wade across without
+    being swept downstream.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10032
+    south:
+      to: tba:100:room:10025
+
+"tba:100:room:10032":
+  name: Light Forest
+  description: >
+    As you walk along the edge of the river you begin to wonder why there are no signs of civilization
+    around.  You would think this would be a great place to live off the land.  You can continue along
+    the river east or west.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10033
+    west:
+      to: tba:100:room:10031
+
+"tba:100:room:10033":
+  name: Before the Plains
+  description: >
+    The river drops off into an impressive waterfall that flows into a small lake to the east.  Across
+    the canyon you see fields of grass.  A small rickety rope bridge crosses the river to the north.  It
+    looks like it might be able to hold one person at a time.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10041
+    south:
+      to: tba:100:room:10027
+    west:
+      to: tba:100:room:10032
+
+"tba:100:room:10034":
+  name: Deep Forest
+  description: >
+    The forest leads right up to the edge of the river bank here.  Trees lean out precariously over the
+    river as the water washes away the soil from underneath them.  The forest continues north or west.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10042
+    east:
+      to: tba:100:room:10035
+
+"tba:100:room:10035":
+  name: A Curve in the Northern Road
+  description: >
+    As you walk on the northern road, just north of the river, you feel as if you are being watched. 
+    Someone could easily hide in these woods.  The road continues north or turns east towards a bridge.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10043
+    east:
+      to: tba:100:room:10036
+    west:
+      to: tba:100:room:10034
+
+"tba:100:room:10036":
+  name: A Curve in the Northern Road
+  description: >
+    Just to the south a massive stone bridge crosses the river.  The land to the east looks like the
+    beginning of a swamp.  A heavy fog from the lake billows slowly across the road.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10044
+    east:
+      to: tba:100:room:10037
+    south:
+      to: tba:100:room:10030
+    west:
+      to: tba:100:room:10035
+
+"tba:100:room:10037":
+  name: North of the Lake
+  description: >
+    The ground here is definitely getting swampy.  Your feet start to stick in the soft soil.  The fog
+    blowing off the lake is getting thicker.  The silence is almost scary.  You wonder what kind of
+    creatures live in a swamp?
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10045
+    east:
+      to: tba:100:room:10038
+    west:
+      to: tba:100:room:10036
+
+"tba:100:room:10038":
+  name: North of the Lake
+  description: >
+    Your feet are starting to sink up to the ankle in the muck and mud.  The stench of rot and decay is
+    thick along with the fog.  The wind coming off the lake does not seem to help at all.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10046
+    east:
+      to: tba:100:room:10039
+    west:
+      to: tba:100:room:10037
+
+"tba:100:room:10039":
+  name: Light Forest
+  description: >
+    The swamp clears up a little, tall healthy trees keep the soil under your feet firm.  The river to
+    the south must be the outlet to the massive lake. You can only leave to the north or west.  It looks
+    like swampland in both directions.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10047
+    west:
+      to: tba:100:room:10038
+
+"tba:100:room:10040":
+  name: Swamp
+  description: >
+    You walk out onto a small natural jetty sticking out into the middle of the swamp.  Fetid water
+    surrounds you, leaving the only way out to the north. Something causes ripples in the water, but is gone
+    before you can tell what it was.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10048
+
+"tba:100:room:10041":
+  name: Before the Plains
+  description: >
+    You stand just north of a rope bridge, on the edge of the plains.  A bog to the east looks
+    dangerous.  To the north you can continue into the plains.  The way east is blocked by the river.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10049
+    south:
+      to: tba:100:room:10033
+
+"tba:100:room:10042":
+  name: The Northern Road
+  description: >
+    The northern road continues here, north to Dun Maura or east back toward the city.  You wonder
+    about the fabled Dun Maura, city of the minotaurs.  Many stories abound about it, but you doubt half of
+    them are true.  To the south you could enter the dense forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10050
+    east:
+      to: tba:100:room:10043
+    south:
+      to: tba:100:room:10034
+
+"tba:100:room:10043":
+  name: A Curve in the Northern Road
+  description: >
+    The road turns west around a small pond or heads south back to the city. The pond just to the north
+    looks more like a bog than anything else.  Sick and dying trees are scattered throughout it.  It
+    looks as if the area was recently flooded.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10044
+    south:
+      to: tba:100:room:10035
+    west:
+      to: tba:100:room:10042
+
+"tba:100:room:10044":
+  name: Swamp
+  description: >
+    You stand at the southeast corner of the pond, surrounded by swamp, except to the south and west
+    that appear to be where the northern road works its way around this marsh.  The smell of decomposition
+    is strong here.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10051
+    east:
+      to: tba:100:room:10045
+    south:
+      to: tba:100:room:10036
+    west:
+      to: tba:100:room:10043
+
+"tba:100:room:10045":
+  name: Swamp
+  description: >
+    You stand in the middle of the swamp, carefully testing every step as you step into the muck.  It
+    seems to be getting deeper here.  Your feet sink above the ankles once in a while.  Wildlife seems
+    scarce.  You wonder why anything would live here.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10052
+    east:
+      to: tba:100:room:10046
+    south:
+      to: tba:100:room:10037
+    west:
+      to: tba:100:room:10044
+
+"tba:100:room:10046":
+  name: Swamp
+  description: >
+    You are afraid you might lose your way in this dismal marsh.  Your feet are starting to sink almost
+    all the way up to your knees now.  You wonder about the possibilities of quicksand, and all those
+    stories you hear about people disappearing in these swamps.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10053
+    east:
+      to: tba:100:room:10047
+    south:
+      to: tba:100:room:10038
+    west:
+      to: tba:100:room:10045
+
+"tba:100:room:10047":
+  name: Swamp
+  description: >
+    The thought of taking a wrong step and sinking to your death makes you slow down a little.  To the
+    west you think you can see some drier land.  You thank the gods above.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10054
+    east:
+      to: tba:100:room:10048
+    south:
+      to: tba:100:room:10039
+    west:
+      to: tba:100:room:10046
+
+"tba:100:room:10048":
+  name: Swamp
+  description: >
+    The swamp is starting to firm up underneath you.  To the north you see a large crater in the
+    ground.  You wonder who the unfortunate soul was to be walking across that when it gave out.  To the south
+    and west the swamp looks even worse.  East you see the beginning of some plains.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10049
+    south:
+      to: tba:100:room:10040
+    west:
+      to: tba:100:room:10047
+
+"tba:100:room:10049":
+  name: Edge of the Plains
+  description: >
+    The plains stretch to the north and east as far as you can see.  To the south you can hear the
+    sound of rushing water.  West you stare into a dismal swampland.  The stories you've heard about getting
+    lost in those plains makes you decide to stick closer to civilization.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10055
+    south:
+      to: tba:100:room:10041
+    west:
+      to: tba:100:room:10048
+
+"tba:100:room:10050":
+  name: The Northern Road
+  description: >
+    The northern road hugs the edge of the pond to the east.  The forest to the west looks too thick to
+    bother leaving the easy travelling of this road.  The road continues north and south.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10056
+    south:
+      to: tba:100:room:10042
+
+"tba:100:room:10051":
+  name: Beside the Pond
+  description: >
+    A small pond is just to the west.  The water looks murky and unclean.  To the north is more forest
+    while east and south it looks a little swampy.  Small animals scatter as you intrude on their
+    territory.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10058
+    east:
+      to: tba:100:room:10052
+    south:
+      to: tba:100:room:10044
+
+"tba:100:room:10052":
+  name: Swamp
+  description: >
+    The smell here is overpowering.  The stench of stagnant water and rot makes your eyes tear.  The
+    swamp continues to the south.  To the west you can see a body of water.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10045
+    west:
+      to: tba:100:room:10051
+
+"tba:100:room:10053":
+  name: A Small Bridge
+  description: >
+    Someone had the common sense to put a bridge here so you would not have to walk in the muddy
+    swamp.  It feels good to be on dry ground for a change.  The bridge leads north or south.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10060
+    south:
+      to: tba:100:room:10046
+
+"tba:100:room:10054":
+  name: The Edge of a Sink Hole
+  description: >
+    You walk towards the large crater and the ground underneath you starts to fall away.  Luckily, you
+    jump back before falling into this natural trap.  You look down into the sink hole and think you can
+    see a corpse.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10047
+  extras:
+  - keywords: [corpse]
+    text: >
+      It definitely is a corpse. But not human. As you look closer it seems it must have been a minotaur.
+      You can just barely make out some horns and one leg floating in the muck has a hoove.
+
+"tba:100:room:10055":
+  name: The Edge of the Plains
+  description: >
+    With the swamp to the south and plains north and east you enjoy the fresh, clean, open air.  A sink
+    hole is just to the west.  Someone must have walked over it and caused it to collapse.  You pity the
+    poor adventurer.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10063
+    south:
+      to: tba:100:room:10049
+
+"tba:100:room:10056":
+  name: The Northern Road
+  description: >
+    The northern road turns sharply east here.  You must be getting closer to the city of Dun Maura. 
+    The road to the south leads back to the safety of the city.  North is more dense forest.  To the west
+    a fresh path has been hacked through the woods.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10064
+    east:
+      to: tba:100:room:10057
+    south:
+      to: tba:100:room:10050
+
+"tba:100:room:10057":
+  name: A Turn in the Northern Road
+  description: >
+    The northern road curves yet again to the north.  You wonder why they could not just make a
+    straight road.  Then you realize the swamp probably made it impossible.  The pond is to the south and it
+    looks like a swamp to the east.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10065
+    east:
+      to: tba:100:room:10058
+    west:
+      to: tba:100:room:10056
+
+"tba:100:room:10058":
+  name: Swamp
+  description: >
+    You frown in disgust as you slosh your way through this bog.  It just does not seem like a good day
+    anymore.  The swamp is dismal and smelly.  The northern road is to the west.  Dry forest is north or
+    east.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10066
+    east:
+      to: tba:100:room:10059
+    south:
+      to: tba:100:room:10051
+    west:
+      to: tba:100:room:10057
+
+"tba:100:room:10059":
+  name: Deep Forest
+  description: >
+    Small animals abound in this part of the forest.  Most of them are too fast and too suspicious for
+    you to see.  You only hear the rustle of leaves as they hide from you.  The forest continues in all
+    directions.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10067
+    east:
+      to: tba:100:room:10060
+    west:
+      to: tba:100:room:10058
+
+"tba:100:room:10060":
+  name: Deep Forest
+  description: >
+    Just to the south you see a bridge that crosses some of the swamp.  Forest surrounds you on all
+    other sides.  This part of the forest seems peaceful. Birds chirping and small animals chattering.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10068
+    east:
+      to: tba:100:room:10061
+    south:
+      to: tba:100:room:10053
+    west:
+      to: tba:100:room:10059
+
+"tba:100:room:10061":
+  name: Light Forest
+  description: >
+    The forest is slowly turning into plains here.  To the east you see huge fields of grass, perfectly
+    level land that you can see for miles.  South of you is a large natural crater of some sort.  It
+    looks as if the ground had recently just given way.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10069
+    east:
+      to: tba:100:room:10062
+    west:
+      to: tba:100:room:10060
+
+"tba:100:room:10062":
+  name: Light Forest
+  description: >
+    The trees here are all tall hardwoods, spread far apart so you can see for some distance.  To the
+    east the trees grow even more sparse and finally give way to the plains.  West will take you back into
+    the thick forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10070
+    east:
+      to: tba:100:room:10063
+    west:
+      to: tba:100:room:10061
+
+"tba:100:room:10063":
+  name: The Edge of the Plains
+  description: >
+    The forest finally gives way to the plains here.  Although the plains are perfectly level, allowing
+    you to see for miles, one could easily get lost out there once they lost sight of the forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10071
+    south:
+      to: tba:100:room:10055
+    west:
+      to: tba:100:room:10062
+
+"tba:100:room:10064":
+  name: Deep Forest
+  description: >
+    You find yourself in dense woodland.  Hardwood trees tower above you while small pine and fir trees
+    hug the ground, reducing visibility.  The northern road is just south and east of here.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10072
+    south:
+      to: tba:100:room:10056
+
+"tba:100:room:10065":
+  name: The Northern Road
+  description: >
+    You walk along the northern road.  The well-made path makes travel easy. The road continues north
+    and south.  To the east and west is thick forest.  You think you can see an intersection of roads to
+    the north.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10073
+    south:
+      to: tba:100:room:10057
+
+"tba:100:room:10066":
+  name: Deep Forest
+  description: >
+    Pine and fir trees are everywhere in this part of the woods.  You seem to have found some sort of
+    trail leading north and south between them.  You brush past the trees thankful for the bed of pine
+    needles that quiets your footsteps.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10074
+    south:
+      to: tba:100:room:10058
+
+"tba:100:room:10067":
+  name: Deep Forest
+  description: >
+    More pine, fir and cedar trees make you push limbs aside and force your way through the
+    underbrush.  Cobwebs cling to your face and sticks keep seeming to try to poke you in the eye.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10075
+    east:
+      to: tba:100:room:10068
+    south:
+      to: tba:100:room:10059
+
+"tba:100:room:10068":
+  name: Light Forest
+  description: >
+    You make it to a small clearing where the trees no longer crowd you.  The forest continues in all
+    directions.  To the north you think you can see the northern road.  South looks like more swamp.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10076
+    east:
+      to: tba:100:room:10069
+    south:
+      to: tba:100:room:10060
+    west:
+      to: tba:100:room:10067
+
+"tba:100:room:10069":
+  name: Light Forest
+  description: >
+    The noise of wild animals keeps distracting you.  You wonder if there are any dangerous animals in
+    these woods.  Childhood stories of vicious minotaurs spark sudden fears.  They were just stories to
+    kep the children inside the city walls, weren't they?
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10077
+    south:
+      to: tba:100:room:10061
+    west:
+      to: tba:100:room:10068
+
+"tba:100:room:10070":
+  name: Light Forest
+  description: >
+    The forest is light and cheery here.  You forget about all your worries and enjoy the fine
+    scenery.  Nothing to worry about here.  Just a bunch of harmless little forest animals.  Then again, maybe
+    some of these animals are not so harmless.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10078
+    south:
+      to: tba:100:room:10062
+
+"tba:100:room:10071":
+  name: The Edge of the Plains
+  description: >
+    Plains continue in all directions except for the forest to the west.  You think of the stories
+    about the plains of lost souls and wonder whether those were just stories or actually true.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10079
+    south:
+      to: tba:100:room:10063
+
+"tba:100:room:10072":
+  name: Deep Forest
+  description: >
+    The forest is thick with huge elms and maples.  Just to the north you can make out a small road of
+    some sort.  It definitely is not the northern road which you believe is due east of where you are.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10080
+    south:
+      to: tba:100:room:10064
+
+"tba:100:room:10073":
+  name: A Turn in the Northern Road
+  description: >
+    The northern road turns to the east or south from here.  You notice another smaller road leading
+    off to the north.  It looks like it has been rarely used. Which way to go?  How about the one less
+    travelled?
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10081
+    east:
+      to: tba:100:room:10074
+    south:
+      to: tba:100:room:10065
+
+"tba:100:room:10074":
+  name: The Northern Road
+  description: >
+    The northern road continues east and west from here.  To the east it must eventually turn back
+    north to the city of minotaurs.  To the west it heads back to the city.  North and south you see more
+    forest.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10075
+    south:
+      to: tba:100:room:10066
+    west:
+      to: tba:100:room:10073
+
+"tba:100:room:10075":
+  name: The Northern Road
+  description: >
+    The road stretches to the east and west.  Thick forest are to the north and south.  The road seems
+    a little less traveled through this part.  You notice fewer ruts in the road from wagons and even
+    fewer people.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10083
+    east:
+      to: tba:100:room:10076
+    south:
+      to: tba:100:room:10067
+    west:
+      to: tba:100:room:10074
+
+"tba:100:room:10076":
+  name: A Small Road
+  description: >
+    The small road continues to the east from here.  The main road lies to the west while forest
+    stretches out in all other directions.  This road looks like it has not been used for years.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10084
+    east:
+      to: tba:100:room:10077
+    south:
+      to: tba:100:room:10068
+    west:
+      to: tba:100:room:10075
+
+"tba:100:room:10077":
+  name: A Bend in the Small Road
+  description: >
+    The road turns to the north or west from here.  Forest lies to the south and the start of the
+    plains is to the east.  This road is covered with grass and even a few small trees.  It looks like no one
+    has travelled it for years.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10085
+    east:
+      to: tba:100:room:10078
+    south:
+      to: tba:100:room:10069
+    west:
+      to: tba:100:room:10076
+
+"tba:100:room:10078":
+  name: Light Forest
+  description: >
+    A small road lies just to the west and the plains are to the east.  North and south is even more
+    forest.  It seems no one ever comes this deep into the woods.  All the animals seem to be staring at
+    you.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10070
+    west:
+      to: tba:100:room:10077
+
+"tba:100:room:10079":
+  name: The Edge of the Plains
+  description: >
+    The plains stretch out for miles.  You actually miss the confines of the woods compared to this
+    open vulnerability.  To the north you can see a small road.  You occasionally notice the sway of the
+    grass on the plains as something, or someone, moves stealthily through.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10087
+    south:
+      to: tba:100:room:10071
+
+"tba:100:room:10080":
+  name: A Small Road
+  description: >
+    The road is completely overgrown here and you can't tell which way it was meant to go.  It looks
+    like it might continue to the east, or you can enter the forest to the south.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10081
+    south:
+      to: tba:100:room:10072
+
+"tba:100:room:10081":
+  name: A Small Road
+  description: >
+    The road here is starting to fade back into the land.  Few traces actually remain that allow you to
+    determine which way it goes.  It looks like it continues to the west and to the south.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10088
+    east:
+      to: tba:100:room:10082
+    south:
+      to: tba:100:room:10073
+    west:
+      to: tba:100:room:10080
+
+"tba:100:room:10082":
+  name: Deep Forest
+  description: >
+    The forest is thick and dismal.  The northern road is to the east while another smaller road lies
+    to the west.  Small animals sit and stare at you instead of running away.  They must not be used to
+    seeing trespassers.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10083
+    west:
+      to: tba:100:room:10081
+
+"tba:100:room:10083":
+  name: The Northern Road
+  description: >
+    The northern road goes north or south from here.  It seems you must be coming close to Dun Maura by
+    now.  You have been travelling forever.  Fewer people seem to be on the road anymore.  You are not
+    sure if that is a good or bad sign.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10090
+    east:
+      to: tba:100:room:10084
+    south:
+      to: tba:100:room:10075
+    west:
+      to: tba:100:room:10082
+
+"tba:100:room:10084":
+  name: Light Forest
+  description: >
+    The trees open up into small fields.  To the east you can see a small road. The road also seems to
+    curve to the south.  West is the main road to Dun Maura or back to the safety of the city.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10091
+    east:
+      to: tba:100:room:10085
+    south:
+      to: tba:100:room:10076
+    west:
+      to: tba:100:room:10083
+
+"tba:100:room:10085":
+  name: A Small Road
+  description: >
+    The road turns to the east or south from here.  You think to the west you can see the northern
+    road.  You look for any signs of life, but find nothing. It seems you are deep into the wilderness where
+    few dare go.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10086
+    south:
+      to: tba:100:room:10077
+    west:
+      to: tba:100:room:10084
+
+"tba:100:room:10086":
+  name: A Small Road
+  description: >
+    This road is completely overgrown here.  You start to have to concentrate to keep track of where it
+    goes.  It seems to be heading to the east toward the plains.  It also goes west toward the main road.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10093
+    east:
+      to: tba:100:room:10087
+    west:
+      to: tba:100:room:10085
+
+"tba:100:room:10087":
+  name: A Small Road Into the Plains
+  description: >
+    This small road continues on through the plains or heads back to the northern road towards the
+    minotaur city.  The confines of the forest seem to beckon you compared to the openness of the plains.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10079
+    west:
+      to: tba:100:room:10086
+
+"tba:100:room:10088":
+  name: Deep Forest
+  description: >
+    The forest is dark and quiet here.  Few animals can be seen or heard.  To the south you can make
+    out a small road.  To the north you think you can see some sort of wall.  Could it be the city of the
+    minotaurs at last?
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10094
+    east:
+      to: tba:100:room:10089
+    south:
+      to: tba:100:room:10081
+
+"tba:100:room:10089":
+  name: Deep Forest
+  description: >
+    Thick forest surrounds you.  It feels suffocating and you wonder if you may be getting a little
+    claustrophobic.  To the south you can make out the northern road.  North you can just barely see some
+    sort of wall.  Definitely not nature's work.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10095
+    east:
+      to: tba:100:room:10090
+    west:
+      to: tba:100:room:10088
+
+"tba:100:room:10090":
+  name: Near the End of the Northern Road
+  description: >
+    At last you have almost made it to the end of the great northern road. Just to the north you can
+    see the city of the minotaurs.  A great wall surrounds the entire city.  You wonder about heading back
+    south to safety.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10096
+    east:
+      to: tba:100:room:10091
+    south:
+      to: tba:100:room:10083
+    west:
+      to: tba:100:room:10089
+
+"tba:100:room:10091":
+  name: Light Forest
+  description: >
+    The northern road is just west of you.  To the north you can see the famed city of minotaurs.  The
+    woods here are very dark and quiet.  Few creaturs seem to live in these parts.  A gloom seems to hang
+    over this forest.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10097
+    east:
+      to: tba:100:room:10092
+    south:
+      to: tba:100:room:10084
+    west:
+      to: tba:100:room:10090
+
+"tba:100:room:10092":
+  name: Light Forest
+  description: >
+    Although the forest seems thin in this part, you start feeling a sense of gloom and despair.  The
+    woods seem to look darker by the minute.  Something is definitely wrong with this part of the woods,
+    but you can not tell what.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10093
+    west:
+      to: tba:100:room:10091
+
+"tba:100:room:10093":
+  name: Edge of the Plains
+  description: >
+    Barren plains stretch east and south from here.  Just to the north you see the walls of a city. 
+    West you can enter a dark forest.  A wind blows from the east, bringing with it an unseasonal chill.
+  sector: forest
+  exits:
+    north:
+      to: tba:100:room:10099
+    south:
+      to: tba:100:room:10086
+    west:
+      to: tba:100:room:10092
+
+"tba:100:room:10094":
+  name: Beside the City Walls of Dun Maura
+  description: >
+    You stand before the towering city walls of the minotaurs.  The forest has been cut back away from
+    the walls to allow good visibility for defense.  The gate of the city must be to the east.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10095
+    south:
+      to: tba:100:room:10088
+
+"tba:100:room:10095":
+  name: Beside the City Walls of Dun Maura
+  description: >
+    The walls of the city look to be made from huge blocks of granite-like rock. You couldn't imagine
+    any human being able to lift such things.  The walls are definite eye sores, but they serve their
+    purpose well.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10096
+    south:
+      to: tba:100:room:10089
+    west:
+      to: tba:100:room:10094
+
+"tba:100:room:10096":
+  name: Before the City of Dun Maura
+  description: >
+    You stand before the gates of the city of minotaurs.  Unfortunately, the gates are closed and they
+    look like they have been that way for quite some time.  You can search the city walls east and west
+    or head back south towards home.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10097
+    south:
+      to: tba:100:room:10090
+    west:
+      to: tba:100:room:10095
+
+"tba:100:room:10097":
+  name: Beside the City Walls of Dun Maura
+  description: >
+    The walls tower above you.  Nothing seems to be moving up there, but you can not help but wonder if
+    someone has a bow pointed at you from above.  You should probably move a little deeper into the
+    woods away from the walls before you find out.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10098
+    south:
+      to: tba:100:room:10091
+    west:
+      to: tba:100:room:10096
+
+"tba:100:room:10098":
+  name: Beside the City Walls of Dun Maura
+  description: >
+    The wall of the city of minotaurs blocks you from going any further north. The gates to the city
+    must be west from here.  The forest south looks very gloomy.  To the east is more of the city wall that
+    heads out into the plains.
+  sector: forest
+  exits:
+    east:
+      to: tba:100:room:10099
+    west:
+      to: tba:100:room:10097
+
+"tba:100:room:10099":
+  name: Beside the City Walls of Dun Maura
+  description: >
+    The plains go for miles to the south and east.  The city walls of Dun Maura are directly north of
+    you.  Also to the west you can see a light forest and what looks like the northern road in the
+    distance.
+  sector: forest
+  exits:
+    south:
+      to: tba:100:room:10093
+    west:
+      to: tba:100:room:10098

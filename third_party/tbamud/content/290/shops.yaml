@@ -1,0 +1,27 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 290.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:290:shop:29000":
+  keeper: tba:290:mob:29006
+  rooms: [tba:290:room:29018]
+  products:
+  - tba:290:obj:29009
+  - tba:290:obj:29010
+  - tba:290:obj:29011
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s I don't seem to have anything like that.  Sorry."
+    you_dont_have_it: "%s I'm sorry, I don't purchase goods."
+    does_not_buy: "%s I'm sorry, I don't purchase goods."
+    shop_cannot_afford: "%s I'm sorry, I don't purchase goods."
+    you_cannot_afford: "%s If I gave you credit, Cookie Monster would ruin me."
+    bought: "%s That will be %d coins.  I sincerely hope you enjoy it."
+    sold: "%s I'm sorry, I don't purchase goods."
+  temper: 0
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 24

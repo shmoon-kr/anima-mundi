@@ -1,0 +1,121 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 62.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:62:obj:6200":
+  type: key
+  keywords: [key]
+  short: a key
+  long: A key sits here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key]
+    text: It is a plain looking key.
+
+"tba:62:obj:6201":
+  type: armor
+  keywords: [manacles]
+  short: a set of manacles
+  long: A set of iron manacles lie here.
+  flags: [no_drop]
+  wear: [take, hands]
+  values:
+    armor: 0
+  weight: 20
+  cost: 100
+  rent: 20
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -5
+  extras:
+  - keywords: [manacles]
+    text: They're big steel cuffs, meant to be locked around the hands.
+
+"tba:62:obj:6202":
+  type: armor
+  keywords: [shackles]
+  short: a set of shackles
+  long: A set of shackles sit here, discarded.
+  flags: [no_drop]
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 20
+  cost: 100
+  rent: 20
+  level: 0
+  affects:
+  - apply: move
+    modifier: -50
+  extras:
+  - keywords: [shackles]
+    text: Big iron cuffs, meant to be locked around the ankles.
+
+"tba:62:obj:6203":
+  type: light
+  keywords: [Runestone, rune, stone]
+  short: the Runestone
+  long: A small stone with an inscription sits here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 1
+  cost: 1000
+  rent: 200
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 8
+  extras:
+  - keywords: [runestone, rune, stone]
+    text: It is a small, carved stone with a strange symbol carved upon it. Strange...
+
+"tba:62:obj:6204":
+  type: weapon
+  keywords: [club]
+  short: a club
+  long: A crude wooden club sits here.
+  wear: [take, wield]
+  values:
+    damage: 2d2
+    attack: pound
+  weight: 12
+  cost: 10
+  rent: 2
+  level: 0
+  extras:
+  - keywords: [club]
+    text: It is a big, wooden club.
+
+"tba:62:obj:6205":
+  type: weapon
+  keywords: [Starkblade, knife, dagger, blade]
+  short: Starkblade
+  long: A knife hums with eternal energy here.
+  flags: [hum, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: slash
+  weight: 1
+  cost: 1000
+  rent: 200
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: hit
+    modifier: -20
+  extras:
+  - keywords: [starkblade, knife, dagger, blade]
+    text: >
+      It is an odd knife, with an inset of sapphire in the pommel.  It hums constantly, and your hand
+      stings a bit when you touch it.

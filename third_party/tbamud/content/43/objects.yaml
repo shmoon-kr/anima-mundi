@@ -1,0 +1,366 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 43.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:43:obj:4301":
+  type: armor
+  keywords: [royal, penguins, crown]
+  short: a crown of ice
+  long: There is a bright icy crown here, melting.
+  flags: [anti_warrior]
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 2
+  cost: 75
+  rent: 7
+  level: 0
+  affects:
+  - apply: mana
+    modifier: -30
+  extras:
+  - keywords: [crown, royal, ice]
+    text: This crown is slowling melting into water so you had better pick it up fast.
+
+"tba:43:obj:4302":
+  type: wand
+  keywords: [royal, penguin, scepter]
+  short: a scepter of ice
+  long: An icy scepter is here.
+  flags: [magic, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [12, 6, 6, 10]
+  weight: 6
+  cost: 500
+  rent: 150
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [scepter, icy]
+    text: >
+      This scepter is very cold to the touch.  You now that it is made out of ice but you can't figure
+      out why it doesn't melt.
+
+"tba:43:obj:4303":
+  type: armor
+  keywords: [penguin, pelt]
+  short: a penguin's pelt
+  long: The pelt of some unfortunate penguin lies crumpled here.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [penguin, pelt]
+    text: This is all that's left of a poor penguin.
+
+"tba:43:obj:4304":
+  type: other
+  keywords: [penguin, claw]
+  short: a black penguin claw
+  long: A smooth, black claw of a penguin lays here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+
+"tba:43:obj:4305":
+  type: weapon
+  keywords: [walrus, tusk]
+  short: the tusk of a walrus
+  long: The tusk of some walrus is here.
+  flags: [anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 6d4
+    attack: stab
+  weight: 4
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:43:obj:4306":
+  type: container
+  keywords: [chest]
+  short: a chest
+  long: A chest is here.
+  wear: []
+  values:
+    capacity: 10
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:43:obj:4307":
+  type: armor
+  keywords: [ice, boots, melting]
+  short: a pair of melting boots
+  long: A pair of melting boots lies here.
+  flags: [glow]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 4
+  cost: 160
+  rent: 16
+  level: 0
+  affects:
+  - apply: move
+    modifier: -10
+  - apply: mana
+    modifier: 5
+
+"tba:43:obj:4308":
+  type: note
+  keywords: [sign, ice, covered]
+  short: an icy covered sign
+  long: An ice covered sign stands here, slightly tilted.
+  action: |-
+    North: Barren Fields
+    
+    West: The Realm of Glogtar
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:43:obj:4309":
+  type: other
+  keywords: [engraved, bone, sign]
+  short: an engraved, bone sign
+  long: An bone sign with engraved symbols stands here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign, bone]
+    text: Welcome to Rankir!
+
+"tba:43:obj:4310":
+  type: fountain
+  keywords: [ice, sculpted, fountain]
+  short: a Beautifully Carven Ice Fountain
+  long: A beautifully carven ice fountain is here with almost frozen water.
+  wear: []
+  values:
+    capacity: 1000
+    contains: 1000
+    liquid: clear_water
+    poisoned: false
+  weight: 1005
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [ice, fountain]
+    text: >
+      The fountain before yu is the most beautiful ice sculpture you have ever seen.  The ice is
+      sculpted, on one side, as an Eskimo with a whaling spear returning with a kill, displayed on the other.
+
+"tba:43:obj:4311":
+  type: food
+  keywords: [strip, penguin, flesh]
+  short: a strip of penguin flesh
+  long: A strip of penguin flesh lies here, rotting.
+  wear: [take]
+  values:
+    hours: 7
+    poisoned: true
+  weight: 1
+  cost: 9
+  rent: 0
+  level: 0
+
+"tba:43:obj:4312":
+  type: food
+  keywords: [walrus, meat]
+  short: a chunk of walrus meat
+  long: A chunk of walrus meat lies here, spoiling.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: true
+  weight: 2
+  cost: 11
+  rent: 1
+  level: 0
+
+"tba:43:obj:4313":
+  type: food
+  keywords: [whale, blubber]
+  short: whale blubber
+  long: A dirty piece of whale blubber.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 4
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:43:obj:4314":
+  type: weapon
+  keywords: [eskimo, whaling, spear]
+  short: an eskimo whaling spear
+  long: An eskimo's spear is her with a very sharp barb.
+  flags: [anti_evil, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 2d16
+    attack: stab
+  weight: 5
+  cost: 250
+  rent: 40
+  level: 0
+
+"tba:43:obj:4315":
+  type: weapon
+  keywords: [iditarod, whip]
+  short: a strong bound whip
+  long: A whip for the iditarod dog sled race is coiled up here.
+  flags: [anti_evil]
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: whip
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:43:obj:4316":
+  type: food
+  keywords: [seal, meat]
+  short: a slice of seal meat
+  long: A slice of seal meat is here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 2
+  cost: 13
+  rent: 0
+  level: 0
+
+"tba:43:obj:4317":
+  type: weapon
+  keywords: [eskimo, hunting, knife]
+  short: an eskimo hunting knife
+  long: A knife made for hunting is lying here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: pierce
+  weight: 6
+  cost: 450
+  rent: 45
+  level: 0
+  extras:
+  - keywords: [hunting, knife]
+    text: This knife is used to skin the spoils of an eskimo hunting trip,
+
+"tba:43:obj:4318":
+  type: armor
+  keywords: [leather, snow, shoes]
+  short: a pair of leather snow shoes
+  long: A pair of snow shoes is here, snow melting all over them.
+  flags: [anti_evil]
+  wear: [take, feet]
+  values:
+    armor: 2
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:43:obj:4319":
+  type: armor
+  keywords: [hood, soft, leather]
+  short: a hood of soft leather
+  long: A soft leather hood is folded over on the ground.
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 2
+  cost: 20
+  rent: 2
+  level: 0
+
+"tba:43:obj:4320":
+  type: armor
+  keywords: [fur, cape]
+  short: a cape of fur
+  long: A cape lined with fur is lying here.
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+
+"tba:43:obj:4321":
+  type: money
+  keywords: [huge, pile, money, gold, coin]
+  short: a HUGE pile of money
+  long: A HUGE glittering pile of money.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:43:obj:4322":
+  type: key
+  keywords: [glogtar, key]
+  short: Glogtar's key
+  long: A key is lying here, covered with dirt.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 5
+  level: 0
+
+"tba:43:obj:4323":
+  type: armor
+  keywords: [king, hunting, tunic]
+  short: a hunting tunic for the king
+  long: A tunic for hunting lies here, unused for years.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 4
+  cost: 293
+  rent: 30
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2

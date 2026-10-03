@@ -1,0 +1,89 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 125.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:125:shop:12500":
+  keeper: tba:125:mob:12569
+  rooms: [tba:125:room:12569]
+  products:
+  - tba:125:obj:12569
+  - tba:125:obj:12570
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 7
+  trade_with: 0
+
+"tba:125:shop:12562":
+  keeper: tba:125:mob:12562
+  rooms: [tba:125:room:12562]
+  products:
+  - tba:125:obj:12562
+  - tba:125:obj:12509
+  - tba:125:obj:12510
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s I'm not interested!"
+    does_not_buy: "%s Not interested!"
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s Go make some money first."
+    bought: "%s Lets see, that's %d coins."
+    sold: "%s That'll be %d coins for ya, good deal eh?"
+  temper: 0
+  flags: 3
+  trade_with: 0
+
+"tba:125:shop:12567":
+  keeper: tba:125:mob:12566
+  rooms: [tba:125:room:12567]
+  products:
+  - tba:125:obj:12567
+  - tba:125:obj:12503
+  - tba:125:obj:12508
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 7
+  trade_with: 0
+
+"tba:125:shop:12568":
+  keeper: tba:125:mob:12505
+  rooms: [tba:125:room:12568]
+  products:
+  - tba:125:obj:12568
+  - tba:125:obj:12511
+  - tba:125:obj:12501
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s A what?"
+    you_dont_have_it: "%s I don't buy, only sell."
+    does_not_buy: "%s I don't buy, only sell."
+    shop_cannot_afford: "%s Out of cash."
+    you_cannot_afford: "%s You need money idiot."
+    bought: "%s That's %d, thank you."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 7
+  trade_with: 0

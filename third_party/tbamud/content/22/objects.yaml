@@ -1,0 +1,483 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 22.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:22:obj:2200":
+  type: weapon
+  keywords: [scimitar, sword, saber]
+  short: a curved scimitar
+  long: An old rusted sword that barely looks usable is lying here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: slash
+  weight: 4
+  cost: 300
+  rent: 30
+  level: 20
+  extras:
+  - keywords: [scimitar, sword]
+    text: >
+      A saber having a curved blade with the edge on the convex side is pitted and rusty.  The blade is
+      miraculously sharp for its condition
+
+"tba:22:obj:2201":
+  type: armor
+  keywords: [black, chainmail]
+  short: the black chainmail
+  long: A dark chainmail shirt covered in grime was left here.
+  flags: [magic]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 11
+  cost: 825
+  rent: 82
+  level: 21
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [chainmail, black, dark]
+    text: >
+      Bits of rotted clothing, and possibly even flesh are caught in between the chain links of this
+      shirt.  The smell is not too appealing, but the shirt is in good condition and looks like it can afford a
+      fair amount of protection.
+
+"tba:22:obj:2202":
+  type: armor
+  keywords: [ferret, pelt]
+  short: a ferret pelt
+  long: A ferret skin is lying here.
+  flags: [anti_warrior]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 2
+  cost: 400
+  rent: 50
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [ferret, pelt, skin]
+    text: >
+      The hide has been well-tanned and the fur is very soft and supple.  An expert tanner must have aged
+      this hide to perfection.
+
+"tba:22:obj:2203":
+  type: other
+  keywords: [vampire, heart]
+  short: a vampire heart
+  long: A heart lying on the floor is still beating.
+  flags: [glow, magic, anti_good, anti_neutral]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1000
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [heart, vampire]
+    text: >
+      The heart still beats with some strange life of its own.  Small spurts of blood ooze out of it with
+      every pulse.  It looks dark and diseased.
+
+"tba:22:obj:2204":
+  type: armor
+  keywords: [gloves, ferret]
+  short: a pair of ferret skin gloves
+  long: A pair of gloves made of fine fur lay here.
+  flags: [magic, anti_good, anti_warrior]
+  wear: [take, hands]
+  values:
+    armor: 3
+  weight: 2
+  cost: 200
+  rent: 25
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 2
+  extras:
+  - keywords: [fur, gloves, ferret]
+    text: >
+      The gloves are small and well-made.  The stitching is almost impercebtible within the inside of the
+      gloves.  Ferret fur lines both the inside and out. They are of very high quality and make.
+
+"tba:22:obj:2205":
+  type: armor
+  keywords: [gloves]
+  short: the animators gloves
+  long: A pair of black velvet gloves are lying here.
+  flags: [anti_thief, anti_warrior]
+  wear: [take, hands]
+  values:
+    armor: 2
+  weight: 2
+  cost: 500
+  rent: 50
+  level: 5
+  affects:
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [animators, gloves]
+    text: >
+      The gloves seem to have some form of magical quality.  They are hard to focus on direcdtly.  They
+      seem to move with a life of their own.  At first glance they look black, but upon further examination
+      they appear to be stained black from dried blood.
+
+"tba:22:obj:2206":
+  type: weapon
+  keywords: [stiletto]
+  short: a stiletto
+  long: A finely crafted stiletto is lying on the ground.
+  flags: [glow, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 4d2
+    attack: pierce
+  weight: 5
+  cost: 500
+  rent: 55
+  level: 21
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [stiletto]
+    text: >
+      It is a slender dagger with a blade thick in proportion to its breadth. Usually used to cause
+      horrible puncture wounds, this weapon is meant for a thief.
+
+"tba:22:obj:2207":
+  type: armor
+  keywords: [corset]
+  short: a queens corset
+  long: A smelly and stained corset was discarded here.
+  flags: [anti_good, anti_warrior]
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 10
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [corset]
+    text: >
+      It is a woman's close-fitting boned supporting undergarment that is often hooked and laced and that
+      extends from above or beneath the bust or from the waist to below the hips and has garters attached.
+
+"tba:22:obj:2208":
+  type: weapon
+  keywords: [sword]
+  short: a zombie sword
+  long: An old sword was left here.
+  flags: [anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: stab
+  weight: 4
+  cost: 300
+  rent: 30
+  level: 12
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [sword]
+    text: >
+      It is a weapon with a long blade for cutting or thrusting that is often used as a symbol of honor
+      or authority.
+
+"tba:22:obj:2209":
+  type: armor
+  keywords: [boots]
+  short: the zombie boots
+  long: A pair of old leather boots lie here.
+  flags: [anti_good]
+  wear: [take, feet]
+  values:
+    armor: 3
+  weight: 4
+  cost: 240
+  rent: 30
+  level: 4
+  affects:
+  - apply: move
+    modifier: 20
+  extras:
+  - keywords: [leather, boots]
+    text: >
+      These boots are rotted and slowly falling apart from age.  The stitching has come loose and the
+      left boots heel flops about annoyingly.
+
+"tba:22:obj:2210":
+  type: armor
+  keywords: [helm]
+  short: a zombie helm
+  long: An old dented helm is lying here, with a head still in it.
+  flags: [anti_good]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 2
+  cost: 40
+  rent: 4
+  level: 3
+  extras:
+  - keywords: [helm]
+    text: >
+      The remains of someone's brains is splattered into the top of the helm. Chunks of scalp and hair
+      cover the chin strap that appears to be broken.
+
+"tba:22:obj:2211":
+  type: armor
+  keywords: [gray, robe]
+  short: a gray robe
+  long: A gray robe with two lightning bolts crossed on the chest is hanging here.
+  flags: [anti_evil]
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 7
+  cost: 7
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [robe]
+    text: >
+      A pair of crossed lightning bolts are emblazoned on the front of this fine robe.  It looks to be
+      made of a strange gray velvet like material that your eyes slide off as soon as you look at it, making
+      it impossible to focus.
+
+"tba:22:obj:2212":
+  type: weapon
+  keywords: [masters, sword]
+  short: a masters sword
+  long: A finely crafted sword with lightning bolts engraved on the handle lies here.
+  flags: [anti_evil, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 3d9
+    attack: slash
+  weight: 10
+  cost: 900
+  rent: 300
+  level: 30
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [masters, sword]
+    text: >
+      The quality of this blade mesmerizes you, as does the finely emblazoned lightning bolts on its
+      handle.  Something about this sword just makes you want to pick it up.
+
+"tba:22:obj:2213":
+  type: armor
+  keywords: [brass, knuckles]
+  short: the brass knuckles
+  long: A pair of brass knuckles are lying here.
+  flags: [magic, anti_good]
+  wear: [take, hands]
+  values:
+    armor: 2
+  weight: 2
+  cost: 240
+  rent: 24
+  level: 3
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [brass, knuckles]
+    text: >
+      The knuckles are roughly made, pitted and even cracked in one place were the tempering must have
+      failed.  They are very heavy but look like they could be very lethal on someone who knew how to use
+      them.
+
+"tba:22:obj:2214":
+  type: other
+  keywords: [flames]
+  short: some flames
+  long: Flames flicker across the floor, burning everything in their path.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flames]
+    text: >
+      They dance across the floor, ceiling, and walls.  Just waiting for an unsespecting traveller to
+      attempt to cross through them.
+
+"tba:22:obj:2215":
+  type: container
+  keywords: [cadaver, hidden]
+  short: a half-eaten cadaver
+  long: >-
+    .This is a hidden object. The long description can only be seen with holylight. If you see this as
+    a mortal please report the bug.
+  wear: []
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cadaver, hidden]
+    text: >
+      The stench permeates you and all your clothing as you examine it closer. Small teeth marks cover
+      the arms and legs.  Larger teeth marks cover the torso, they look human.
+
+"tba:22:obj:2216":
+  type: other
+  keywords: [emerald, ring]
+  short: an emerald ring
+  long: A beatiful ring with a large emerald set in it's face.
+  flags: [magic]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 30
+  rent: 3
+  level: 10
+  affects:
+  - apply: ac
+    modifier: -1
+  extras:
+  - keywords: [emerald, ring]
+    text: This gold ring has been set with a large green emerald, princess cut.
+
+"tba:22:obj:2217":
+  type: light
+  keywords: [flickering, candle]
+  short: a flickering candle
+  long: A candle lies here
+  wear: [take, hold]
+  values:
+    hours: 50
+  weight: 3
+  cost: 3
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -3
+  extras:
+  - keywords: [flickering, candle]
+    text: A little stub of candle is all that is left.
+
+"tba:22:obj:2218":
+  type: armor
+  keywords: [leg, plates, steel]
+  short: some steel leg plates
+  long: Some steel leg plates are in need of some legs to protect.
+  wear: [take, legs]
+  values:
+    armor: 8
+  weight: 4
+  cost: 300
+  rent: 30
+  level: 20
+  extras:
+  - keywords: [steel, leg, plates]
+    text: Made from a dull hard metal, these plates are surprisingly light for their durability.
+
+"tba:22:obj:2219":
+  type: armor
+  keywords: [steel, arm, plates]
+  short: some steel arm plates
+  long: Some steel arm plates have been abandoned.
+  wear: [take, arms]
+  values:
+    armor: 8
+  weight: 5
+  cost: 375
+  rent: 37
+  level: 20
+  extras:
+  - keywords: [steel, arm, plates]
+    text: >
+      The plates are made from a durable and light alloy that appears to be steel. They can be placed
+      over the arms for protection.
+
+"tba:22:obj:2220":
+  type: armor
+  keywords: [shield, blackened]
+  short: a blackened shield
+  long: A blackened shield is propped up here, waiting to be carried into battle.
+  wear: [take, shield]
+  values:
+    armor: 8
+  weight: 10
+  cost: 750
+  rent: 75
+  level: 20
+  extras:
+  - keywords: [blackened, shield]
+    text: >
+      The shield was once made of a fine wood, but has now been hardened and burnt by fire, it is the
+      strongest wood you have ever come across.
+
+"tba:22:obj:2221":
+  type: armor
+  keywords: [thick, braided, twine]
+  short: some thick braided twine
+  long: Some twine that has been braided into a belt.
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 2
+  cost: 10
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [twine]
+    text: >
+      This loosely braided piece of twine has been made into a belt, a poor one, but a belt none the less.
+
+"tba:22:obj:2222":
+  type: armor
+  keywords: [leather, wristguard]
+  short: a leather wristguard
+  long: A leather wristguard lies in the dirt.
+  wear: [take, wrist]
+  values:
+    armor: 1
+  weight: 3
+  cost: 30
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [leather, wristguard]
+    text: >
+      The wristguard has been heavily oiled and is extremely flexible and supportive.  It is laced with
+      some leather string to loosen and tighten to almost any size.

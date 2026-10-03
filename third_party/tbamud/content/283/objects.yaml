@@ -1,0 +1,613 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 283.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:283:obj:28300":
+  type: armor
+  keywords: [ring, devil, evil]
+  short: a ring of the devil
+  long: Something very evil lies here haunting you.
+  flags: [no_donate, invisible, no_drop, anti_good]
+  wear: [take, finger]
+  values:
+    armor: 5
+  weight: 1
+  cost: 564
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: ac
+    modifier: -4
+  - apply: hit
+    modifier: 5
+
+"tba:283:obj:28301":
+  type: armor
+  keywords: [shield, dead, evil]
+  short: the shield of the dead
+  long: A shield lies here, with an evil aura to it...
+  flags: [hum, no_donate, invisible, no_drop, anti_good]
+  wear: [take, shield]
+  values:
+    armor: 5
+  weight: 3
+  cost: 780
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 7
+  - apply: dex
+    modifier: 1
+  - apply: str
+    modifier: 1
+
+"tba:283:obj:28302":
+  type: key
+  keywords: [skeleton, key, bone]
+  short: a skeleton key
+  long: There is a key-shaped item here, which looks to be made from real bone.
+  flags: [no_rent, no_donate, invisible, no_drop, anti_good, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  - apply: age
+    modifier: 5
+
+"tba:283:obj:28303":
+  type: key
+  keywords: [secret, key]
+  short: a secret key
+  long: Something lies here...
+  flags: [no_rent, no_donate, invisible, anti_good, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+
+"tba:283:obj:28304":
+  type: trash
+  keywords: [fireplace]
+  short: the fireplace
+  long: The fireplace sits here in the corner.
+  flags: [no_invis]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:283:obj:28305":
+  type: key
+  keywords: [special, key]
+  short: a special key
+  long: A key lays here, and somehow you think it is very special.
+  flags: [invisible, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:283:obj:28306":
+  type: other
+  keywords: [well]
+  short: an old well
+  long: A well sits here, mangled from time.
+  flags: [no_invis]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:283:obj:28307":
+  type: key
+  keywords: [key, treasure]
+  short: the key to the treasure
+  long: A golden key lays here.
+  flags: [invisible]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:283:obj:28308":
+  type: trash
+  keywords: [small, bed]
+  short: a small bed
+  long: A tiny bed sits here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:283:obj:28309":
+  type: weapon
+  keywords: [golden, lance]
+  short: a golden lance
+  long: A large weapon sticks into the ground here, glowing a golden color.
+  flags: [bless]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: crush
+  weight: 4
+  cost: 700
+  rent: 0
+  level: 0
+
+"tba:283:obj:28310":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: An unlit torch hangs on the wall here.
+  flags: [anti_good]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 3
+  cost: 208
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 20
+  - apply: damroll
+    modifier: 1
+
+"tba:283:obj:28311":
+  type: weapon
+  keywords: [bloody, claws]
+  short: a pair of bloody claws
+  long: Claws lay here in a pool of blood.
+  flags: [no_invis]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: bludgeon
+  weight: 2
+  cost: 907
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: ac
+    modifier: -1
+  - apply: move
+    modifier: 25
+  extras:
+  - keywords: [bloody, claws]
+    text: They're all bloody!  How sick!
+
+"tba:283:obj:28312":
+  type: weapon
+  keywords: [punisher]
+  short: the PUNISHER
+  long: A huge weapon lays here.
+  wear: [take, wield]
+  values:
+    damage: 5d6
+    attack: slash
+  weight: 5
+  cost: 909
+  rent: 0
+  level: 30
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  - apply: mana
+    modifier: -20
+  extras:
+  - keywords: [punisher]
+    text: This weapon rocks butt!!!
+
+"tba:283:obj:28313":
+  type: weapon
+  keywords: [rusty, sword]
+  short: a rusty sword
+  long: A sword has been stuck in the wall here.
+  flags: [no_invis]
+  wear: [take, wield]
+  values:
+    damage: 1d2
+    attack: hit
+  weight: 4
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:283:obj:28314":
+  type: potion
+  keywords: [potion, purple]
+  short: a purple potion
+  long: A potion lays here.
+  flags: [invisible]
+  wear: [take]
+  values:
+    raw: [20, 1, 1, 1]
+  weight: 1
+  cost: 150
+  rent: 0
+  level: 0
+
+"tba:283:obj:28315":
+  type: armor
+  keywords: [leather, old, belt]
+  short: an old leather belt
+  long: A belt made of leather lays here.
+  flags: [no_invis, anti_good]
+  wear: [take, waist]
+  values:
+    armor: 4
+  weight: 1
+  cost: 560
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [belt, leather, old]
+    text: It looks very, very old.
+
+"tba:283:obj:28316":
+  type: armor
+  keywords: [jacket, old]
+  short: an old jacket
+  long: A jacket, which is torn from wear, is here.
+  flags: [no_invis, anti_good]
+  wear: [take, about]
+  values:
+    armor: 2
+  weight: 1
+  cost: 607
+  rent: 0
+  level: 0
+  affects:
+  - apply: age
+    modifier: 6
+  - apply: ac
+    modifier: -1
+
+"tba:283:obj:28317":
+  type: armor
+  keywords: [scarf]
+  short: a scarf
+  long: A scarf lays here.
+  flags: [no_invis, anti_good]
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 207
+  rent: 0
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 1
+  - apply: ac
+    modifier: -1
+
+"tba:283:obj:28318":
+  type: money
+  keywords: [gold, coins]
+  short: lots of gold coins
+  long: There are quite a few gold coins in a pile here.
+  flags: [invisible]
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 2
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:283:obj:28319":
+  type: container
+  keywords: [ghost, head]
+  short: a ghosts' head
+  long: The head of a ghost lays here making a huge pool of blood.
+  flags: [invisible]
+  wear: [take, hold]
+  values:
+    capacity: 14
+    lock_flags: 1
+    corpse: false
+  weight: 2
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 15
+
+"tba:283:obj:28320":
+  type: trash
+  keywords: [stupid, brain, ghost]
+  short: a stupid ghost's brain
+  long: A brain lays here. How sick!
+  flags: [invisible]
+  wear: [take, head, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: mana
+    modifier: 20
+
+"tba:283:obj:28321":
+  type: trash
+  keywords: [skull]
+  short: a skull
+  long: A skull lays here.
+  flags: [no_invis]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:283:obj:28322":
+  type: trash
+  keywords: [bench]
+  short: a bench
+  long: A bench sits in the corner.
+  flags: [no_invis]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:283:obj:28323":
+  type: container
+  keywords: [box]
+  short: a box
+  long: A box sits in another corner.
+  flags: [no_invis]
+  wear: [take]
+  values:
+    capacity: 49
+    lock_flags: 5
+    corpse: false
+  weight: 20
+  cost: 900
+  rent: 0
+  level: 0
+
+"tba:283:obj:28324":
+  type: drinkcon
+  keywords: [water, bottle, water]
+  short: a bottle
+  long: A bottle of water sits here.
+  flags: [invisible, anti_good]
+  wear: [take]
+  values:
+    capacity: 17
+    contains: 17
+    liquid: water
+    poisoned: false
+  weight: 22
+  cost: 125
+  rent: 0
+  level: 0
+
+"tba:283:obj:28325":
+  type: drinkcon
+  keywords: [whisky, bottle, old, whisky]
+  short: an old bottle
+  long: A bottle of whisky sits here.
+  flags: [no_invis]
+  wear: [take, hold]
+  values:
+    capacity: 34
+    contains: 26
+    liquid: whisky
+    poisoned: true
+  weight: 31
+  cost: 470
+  rent: 0
+  level: 0
+
+"tba:283:obj:28326":
+  type: food
+  keywords: [old, bread]
+  short: an old bread
+  long: Mold grows all over a small piece of bread here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: true
+  weight: 1
+  cost: 238
+  rent: 0
+  level: 0
+
+"tba:283:obj:28327":
+  type: weapon
+  keywords: [dark, sword, power]
+  short: the dark sword of power
+  long: A shadowy sword lies here, deserted.
+  flags: [invisible]
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: slash
+  weight: 4
+  cost: 543
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  - apply: hit
+    modifier: -30
+
+"tba:283:obj:28328":
+  type: trash
+  keywords: [file, rusted]
+  short: a rusted file
+  long: A file sits here looking very rusted.
+  flags: [no_invis]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 870
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: move
+    modifier: -15
+
+"tba:283:obj:28329":
+  type: wand
+  keywords: [glowing, wand]
+  short: a glowing wand
+  long: A wand is glowing here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [18, 3, 2, 16]
+  weight: 3
+  cost: 304
+  rent: 0
+  level: 0
+
+"tba:283:obj:28330":
+  type: scroll
+  keywords: [violet, scroll]
+  short: a violet scroll
+  long: A violet scroll sits here, crumbled into a big ball.
+  flags: [no_donate, invisible]
+  wear: [take, hold]
+  values:
+    raw: [10, 1, 33, 17]
+  weight: 1
+  cost: 123
+  rent: 0
+  level: 0
+
+"tba:283:obj:28331":
+  type: weapon
+  keywords: [dragon, tail]
+  short: a dragon tail
+  long: A dragon's tail sits here.
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: thrash
+  weight: 6
+  cost: 450
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: mana
+    modifier: 21
+
+"tba:283:obj:28332":
+  type: armor
+  keywords: [bull, skull]
+  short: a bull skull
+  long: A bull's skull lays here.
+  flags: [no_donate, invisible, no_drop, anti_good, no_sell]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 4
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: -2
+  - apply: int
+    modifier: 1
+
+"tba:283:obj:28333":
+  type: armor
+  keywords: [key, rugged]
+  short: a rugged key
+  long: A dirty key lays on the ground here...
+  flags: [invisible]
+  wear: [take, wield, hold]
+  values:
+    armor: 3
+  weight: 1
+  cost: 651
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: mana
+    modifier: -40
+  - apply: move
+    modifier: 7
+
+"tba:283:obj:28334":
+  type: weapon
+  keywords: [jagged, piece, stone]
+  short: a jagged piece of stone
+  long: A very sharp and jagged stone is laying here...
+  wear: [take, wield]
+  values:
+    damage: 6d4
+    attack: crush
+  weight: 4
+  cost: 508
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 12
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: -1

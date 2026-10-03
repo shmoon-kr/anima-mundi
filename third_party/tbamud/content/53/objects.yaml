@@ -1,0 +1,578 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 53.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:53:obj:5300":
+  type: weapon
+  keywords: [mace, egyptian]
+  short: an egyptian mace
+  long: A hierogylph-engraved mace has been left here.
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pound
+  weight: 10
+  cost: 800
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [mace, egyptian]
+    text: The mace is formed from solid brass, and engraved in strange hieroglyphs.
+
+"tba:53:obj:5301":
+  type: armor
+  keywords: [robe, sand]
+  short: some sand-colored robes
+  long: Sand-colored robes lie here.
+  wear: [take, about]
+  values:
+    armor: 4
+  weight: 5
+  cost: 500
+  rent: 40
+  level: 0
+  extras:
+  - keywords: [robes, sand]
+    text: >
+      The robes are colored a sandy off-white, and are in fact caked and covered with sand as well.  You
+      don't seem to be able to remove all of the sand, no matter how much you try.
+
+"tba:53:obj:5302":
+  type: weapon
+  keywords: [dirk, obsidian]
+  short: an obsidian dirk
+  long: A flat dirk made of chipped obsidian lies here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 8
+  cost: 1000
+  rent: 100
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [dirk, obsidian]
+    text: The blade of the dirk is black, glassy obsidian, chipped razor sharp.
+
+"tba:53:obj:5303":
+  type: armor
+  keywords: [turban, cloth]
+  short: a dirty cloth turban
+  long: A dirty cloth turban has been forgotten here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 5
+  weight: 10
+  cost: 150
+  rent: 25
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: hit
+    modifier: 5
+  extras:
+  - keywords: [turban, cloth]
+    text: >
+      The turban used to be white cloth, now it is covered with oil and dirt from the head and hair of
+      its previous owner, who must not have bathed much.
+
+"tba:53:obj:5304":
+  type: armor
+  keywords: [wrappings, cloth]
+  short: some cloth wrappings
+  long: Long cloth wrappings lie on the ground in a pile.
+  wear: [take, body]
+  values:
+    armor: 5
+  weight: 15
+  cost: 125
+  rent: 17
+  level: 0
+  extras:
+  - keywords: [wrappings, cloth]
+    text: The cloth wrappings are old, wrinkled, and stink of embalming fluid.
+
+"tba:53:obj:5305":
+  type: potion
+  keywords: [bottle, fluid]
+  short: a bottle of embalming fluid
+  long: A dusty bottle lies here on the ground.
+  wear: [take]
+  values:
+    raw: [5, 33, -1, -1]
+  weight: 5
+  cost: 250
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [bottle, fluid]
+    text: The bottle is dusty and the fluid has a strange sickly-sweet smell to it.
+
+"tba:53:obj:5306":
+  type: potion
+  keywords: [jar, formaldehyde]
+  short: a jar of formaldehyde
+  long: A small jar lies here on the ground.
+  wear: [take]
+  values:
+    raw: [10, 16, -1, -1]
+  weight: 6
+  cost: 300
+  rent: 60
+  level: 0
+  extras:
+  - keywords: [jar, formaldehyde]
+    text: The jar is sticky and smells really bad.
+
+"tba:53:obj:5307":
+  type: light
+  keywords: [ball, fire]
+  short: a small hot ball of fire
+  long: A little ball of fire hovers in the air before your eyes.
+  flags: [glow, magic, anti_warrior]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 10
+  cost: 350
+  rent: 50
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 10
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [ball, fire]
+    text: The ball of fire is hot to the touch and very very bright.
+
+"tba:53:obj:5308":
+  type: weapon
+  keywords: [scimitar, stone]
+  short: a stone scimitar
+  long: A curved scimitar made of stone rests on the ground.
+  flags: [hum, magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 4d3
+    attack: slash
+  weight: 18
+  cost: 1000
+  rent: 75
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [scimitar, stone]
+    text: >
+      The scimitar is formed from solid stone, chipped and carved to perfection, with a sharp, cold blade
+      that is marred only by a few nicks here and there.
+
+"tba:53:obj:5309":
+  type: key
+  keywords: [key, stone]
+  short: a stone key
+  long: A stone key has been dropped here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, stone]
+    text: The key is made from stone, but is otherwise unremarkable.
+
+"tba:53:obj:5310":
+  type: container
+  keywords: [sarcophagus, stone]
+  short: a mighty stone sarcophagus
+  long: A mighty stone sarcophagus lies in the center of the tomb.
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 15
+    key: tba:53:obj:5309
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sarcophagus, stone]
+    text: >
+      The sarcophagus is engraved on the sides with the images of pharaohs, great wars fought long ago,
+      mighty pyramids being constructed...  A raised image atop the sarcophagus is formed in the visage of
+      one of the mighty pharaohs, painted in gold and studded with precious gems.  You see a small keyhole
+      in the side of the sarcophagus.
+
+"tba:53:obj:5311":
+  type: trash
+  keywords: [dust]
+  short: some ancient dust
+  long: A small pile of dust is being scattered by the breeze.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [dust]
+    text: >
+      The dust is old.  As you sift it through your hands you find tiny chips of aged bone inside -- it
+      must be the ancient remains of something.
+
+"tba:53:obj:5312":
+  type: key
+  keywords: [scarab, emerald]
+  short: a small emerald scarab
+  long: A small emerald scarab lies here on the ground.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [scarab, emerald]
+    text: >
+      The scarab is intricately detailed, down to the tiny hairs on its insectile legs and the faceting
+      of the emeralds in its eyes.
+
+"tba:53:obj:5313":
+  type: staff
+  keywords: [lamp]
+  short: the lamp
+  long: A small, tarnished, battered lamp has been dropped here.
+  flags: [glow, hum, magic, anti_evil]
+  wear: [take, hold]
+  values:
+    raw: [25, 5, 5, 51]
+  weight: 10
+  cost: 250
+  rent: 60
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [lamp]
+    text: >
+      The lamp is quite old and tarnished.  You rub at it to get some of the grime off, but it doesn't
+      seem like anybody is home.
+
+"tba:53:obj:5314":
+  type: armor
+  keywords: [ankh]
+  short: an ankh
+  long: A small brass ankh has been left here.
+  flags: [bless, anti_evil]
+  wear: [take, hold]
+  values:
+    armor: 7
+  weight: 9
+  cost: 1000
+  rent: 30
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [ankh]
+    text: >
+      The ankh is a small brass symbol of an ancient religion.  It glows with a soft bright light that is
+      soothing to you.
+
+"tba:53:obj:5315":
+  type: scroll
+  keywords: [book, riddles]
+  short: a book of riddles
+  long: A medium-sized parchment book with well-worn pages lies here.
+  wear: [take]
+  values:
+    raw: [21, 1, 20, 21]
+  weight: 15
+  cost: 750
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [book, riddles]
+    text: >
+      The book has well-worn pages, containing many befuddling riddles to surprise, confuse, and amuse
+      you.  You find yourself bewildered by its contents and put it down to sort your head out.
+
+"tba:53:obj:5316":
+  type: weapon
+  keywords: [paw, lion]
+  short: a lion's paw
+  long: The mighty paw of a lion-like creature has been dropped here.
+  flags: [magic]
+  wear: [take, wield]
+  values:
+    damage: 1d14
+    attack: bludgeon
+  weight: 20
+  cost: 180
+  rent: 60
+  level: 0
+  affects:
+  - apply: con
+    modifier: 1
+  - apply: hitroll
+    modifier: 4
+  extras:
+  - keywords: [paw, lion]
+    text: >
+      The massive paw has straps on it formed of bronze, so that it will fit snugly over your hand.  As
+      you put it on, it melds with your hand, becoming an extension of your arm.
+
+"tba:53:obj:5317":
+  type: key
+  keywords: [parchment, answer]
+  short: the answer
+  long: A small piece of parchment covered in hieroglyphics lies here.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [5317, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [answer, hieroglyphics, parchment]
+    text: You cannot decipher the strange hieroglyphics that cover the sheet of parchment.
+
+"tba:53:obj:5318":
+  type: money
+  keywords: [treasure]
+  short: the treasure of the sphinx
+  long: The massive treasure of the sphinx lies here in a big pile.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 23
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [treasure]
+    text: >
+      The treasure is incredibly large, filled with gold coins and valuables, more wealth than you could
+      ever possibly imagine accumulated in one place.
+
+"tba:53:obj:5319":
+  type: money
+  keywords: [sand, pile]
+  short: a pile of sand
+  long: You see a small pile of sand.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 12
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sand, pile]
+    text: You think you see some coins and valuables glinting amongst the grains of sand.
+
+"tba:53:obj:5320":
+  type: trash
+  keywords: [curse, mummy]
+  short: the curse of the mummy
+  long: Some fortunate soul has escaped the mummy's curse, for now.
+  flags: [no_rent, no_donate, invisible, magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 50
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -50
+  - apply: move
+    modifier: -50
+  extras:
+  - keywords: [curse, mummy]
+    text: >
+      Rumor has it that whomever disturbs the grave of the mummy shall be cursed for all eternity, and
+      that the descendents of that person shall likewise be cursed for ten generations to follow.
+
+"tba:53:obj:5321":
+  type: potion
+  keywords: [elixir, small, glass]
+  short: a small elixir
+  long: A small glass elixir lies under your feet.
+  flags: [magic]
+  wear: [take]
+  values:
+    raw: [30, 39, 1, 36]
+  weight: 2
+  cost: 1000
+  rent: 50
+  level: 0
+  extras:
+  - keywords: [elixir, small, glass]
+    text: >
+      The elixir is deceptively small.  Something tells you that its contents are truly quite potent. 
+      Perhaps too potent for ordinary mortals to attempt to consume.
+
+"tba:53:obj:5322":
+  type: armor
+  keywords: [mask, golden]
+  short: a golden mask
+  long: A beautiful, intricately detailed mask has been forgotten here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 10
+  cost: 150
+  rent: 75
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 25
+  - apply: hit
+    modifier: 10
+  extras:
+  - keywords: [mask, golden]
+    text: >
+      This beautiful mask was shaped from solid gold and magically enchanted to perfectly fit the face of
+      any who choose to wear it, its golden features and turquoise highlights even moving to match the
+      expressions of the face of the wearer.
+
+"tba:53:obj:5323":
+  type: trash
+  keywords: [diamond]
+  short: the diamond
+  long: .A hidden diamond.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [diamond]
+    text: >
+      Aha!  You see a multifaceted gemstone, which strangely reflects no light, making it very hard to
+      see when it lies on the ground.
+
+"tba:53:obj:5324":
+  type: wand
+  keywords: [wand, sun, brass, pipe]
+  short: a blazing sun wand
+  long: A small length of brass pipe shines here with its own light.
+  flags: [glow, magic, anti_warrior]
+  wear: [take, hold]
+  values:
+    raw: [25, 5, 5, 27]
+  weight: 10
+  cost: 250
+  rent: 10
+  level: 0
+  affects:
+  - apply: save_rod
+    modifier: -2
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [wand, sun, brass, pipe]
+    text: >
+      This small brass shaft is a holy weapon used by the ancient people of this land to defend against
+      the deadliest of foes.  It shines with the brilliant blazing light of the sun.
+
+"tba:53:obj:5325":
+  type: armor
+  keywords: [ring, sandy]
+  short: a sandy-colored ring
+  long: A small sandy-colored ring has been carelessly dropped here.
+  flags: [hum, magic]
+  wear: [take, finger]
+  values:
+    armor: 8
+  weight: 5
+  cost: 200
+  rent: 75
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: mana
+    modifier: 35
+  extras:
+  - keywords: [ring, sandy]
+    text: >
+      The ring is small, smooth, sandy-colored and unremarkable, save that it gives off a continuous low
+      humming noise that tickles your fingertips.
+
+"tba:53:obj:5326":
+  type: treasure
+  keywords: [sphinx, golden]
+  short: a small golden sphinx
+  long: A small golden sphinx glints in the light.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 500
+  rent: 75
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 2
+  extras:
+  - keywords: [sphinx, golden]
+    text: >
+      The golden sphinx is incredibly detailed and very small, fitting easily into the palm of your
+      hand.  You can even make out the expression of wisdom and peace on its face.
+
+"tba:53:obj:5327":
+  type: armor
+  keywords: [leggings, sphinxian]
+  short: a pair of sphinxian leggings
+  long: Massive leggings formed from the body of a sphinx stand here.
+  flags: [magic, anti_evil]
+  wear: [take, legs]
+  values:
+    armor: 10
+  weight: 20
+  cost: 200
+  rent: 50
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [leggings, sphinxian]
+    text: >
+      These magically fashioned leggings impart the strength and stamina of the mightiest of the ancient
+      sphinxes.  You feel ancient power emanating from them; they seem to be almost alive.

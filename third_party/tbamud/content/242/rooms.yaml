@@ -1,0 +1,1695 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 242.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:242:room:24200":
+  name: Wall Road
+  description: >
+    You are walking next to the western city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations. To the north, you see the western bridge.
+  sector: city
+  exits:
+    east:
+      to: tba:242:room:24201
+    south:
+      to: tba:242:room:24206
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+            x---------------------------------------------------------------------x
+            |            NEW SOUTHERN MIDGAARD ZONE - FOR CIRCLEMUD 3.1           |
+            |                      Written in 2002 by Crazyman                    |
+            |                         www.nt.net/saarinen                         |
+            x---------------------------------------------------------------------x
+             I found the stock Southern Midgaard to be really confusing, so I
+             decided to write a new one. This new zone features about 100 rooms,
+             several new shops, a theater, and a curling rink. I've used a few
+             of the old Southern Midgaard rooms and objects, but everything else
+             is totally different.
+             Stuff You Need to Change:
+             -------------------------
+             The Chain
+                1. In 79.wld, find room 7914.
+                2. Change the room leading down (D5) to 3135.
+             The Southwestern Gate:
+                1. In 35.wld, find room 3505. Change the room leading north (D0)
+                   to 3112.
+             The Central Bridge/The Dump
+                1. In 30.wld, find room 3025 (The Common Square). Change the room
+                   leading south (D2) to 3118.
+                2. In 30.wld, find room 3030 (The Dump). Change the room leading
+                   north (D0) to 3044.
+                3. In 30.wld, find room 3044 (Poor Alley). Add a room leading
+                   south (D2) to room 3030 (The Dump).
+              (You don't HAVE to make the above changes. They are just what I
+               decided to do on my MUD. Place the zone wherever YOU want!)
+            x---------------------------------------------------------------------x
+            |         Written  entirely from  scratch in WordPad.  Feel           |
+            |         free to edit, modify, and redistribute this zone!           |
+            x---------------------------------------------------------------------x
+           Builder      : Crazyman
+           Zone         : 242 New Southern Midgaard
+           Began        : 2001
+           Player Level : 3-7
+           Rooms        : 98
+           Mobs         : 14
+           Objects      : 39
+           Shops        : 5
+           Triggers     : 0
+           Links        : 11e
+  - keywords: [maps]
+    text:
+      preformatted: |2
+           SOUTHERN MIDGAARD
+              To Wall Road         To Central Square
+                   |                      |             Midgaard
+          <=== [Bridge] =============[Central========== River =============>
+                   |                  Bridge]
+                   |                     |       Newspaper  Docks--Docks
+                   |         Bank        |        Office      |      |
+                   |          |          |          |         |      |
+                   +----------+-------Southern------+---------+------+
+                   |          |        Square       |         |      |
+                   |       Computer      |        Empty    Clothing  |
+                 (Wall      Store        |                  Store  (Wall
+                  Road)                  |                          Road)
+                   |        Garden       |        Theater  City Hall |
+                   |          |          |          |         |      |
+                   +----------+--------Razor's------+---------+------+--Prison
+                   |          |        Square       |         |      |
+                   |        Empty        |        Empty      School  |
+                 (Wall                   |                         (Wall
+                  Road)                  |       Police    Curling  Road)
+                   |        Cafe         |       Station    Club     |
+                   |          |          |          |         |      |
+                   +----------+-----(Wall Road)-----+---------+------+
+        MIDGAARD CURLING CLUB
+                  Sheet 1----Sheet 2----Sheet 3
+                   3182       3185       3188
+                    |           |         |
+                    |           |         |
+                  Sheet 1----Sheet 2----Sheet 3
+                   3181       3184       3187
+                    |           |         |
+                    |           |         |
+                  Sheet 1----Sheet 2----Sheet 3
+                   3180       3183       3186
+                    |                     |
+                    |                     |
+                   3177-------3178------3179
+                                |
+          3172----Curling-----3174-----Curling-----Coffee
+           |     Club 3173            Club 3175  Shop 3176
+           |
+        Entrance
+          3171
+        MIDGAARD THEATER
+        Catwalks---Catwalks---Catwalks---Catwalks
+          3167       3168       3169       3170
+           \
+            \
+           Ladder
+            3166
+              \
+               \Back----Left----Center----Right---Back---3164---Dressing
+                Stage   Stage   Stage     Stage   Stage    |   Room 1 3165
+                3159    3160    3161      3162    3163     |
+                  |                          |             |
+                 3153--3154-(Seats)-3155---3156          3157---Dressing
+                  |                          |             |   Room 2 3158
+                  |                          |             |
+                 3147--3148-(Seats)-3149---3150          3151---Dressing
+                  |                          |             |   Room 3 3152
+                  |                          |             |
+                 3141--3142-(Seats)-3143---3144          3145---Dressing
+                  |                          |             |   Room 4 3146
+                  |                          |             |
+                 3137------Snack Booth-----3139----------3140
+                              3138
+                               |
+                Theater        |
+              Office 3136---Entrance
+
+"tba:242:room:24201":
+  name: Emerald Avenue
+  description: >
+    You are on Emerald Avenue. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. Streetlights can be seen along the
+    road, and you also notice the odd tree.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24219
+    east:
+      to: tba:242:room:24202
+    south:
+      to: tba:242:room:24223
+    west:
+      to: tba:242:room:24200
+
+"tba:242:room:24202":
+  name: The Southern Square
+  description: >
+    You find yourself in the middle of the Southern Square. Tall buildings stand all around you,
+    blocking out much of the sunlight. A twenty foot high stone statue of a man stands here, surrounded by a
+    ring of bushes and flowers. From all around you, you can hear the bustle of daily city life in
+    Midgaard. The central bridge is north, leading to the old part of Midgaard.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24218
+    east:
+      to: tba:242:room:24203
+    south:
+      to: tba:242:room:24208
+    west:
+      to: tba:242:room:24201
+  extras:
+  - keywords: [stone, statue, man]
+    text:
+      preformatted: |2
+           The statue is of a man, looking up to the sky. He's dressed in a
+        suit, and he's wearing a top hat. At the base of the statue is
+        a plaque, which looks like this:
+             x-----------------------------------------------x
+             | . SOUTHERN MIDGAARD RECONSTRUCTION MONUMENT . |
+             |                                               |
+             |      Completed on Friday, March 29, 2002.     |
+             |                                               |
+             |          "The old south was a mess,           |
+             |            this one is the best!"             |
+             | .                                           . |
+             x-----------------------------------------------x
+
+"tba:242:room:24203":
+  name: Emerald Avenue
+  description: >
+    You are on Emerald Avenue. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. Streetlights can be seen along the
+    road, and you also notice the odd tree.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24220
+    east:
+      to: tba:242:room:24204
+    west:
+      to: tba:242:room:24202
+
+"tba:242:room:24204":
+  name: Emerald Avenue
+  description: >
+    You are on Emerald Avenue. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. Streetlights can be seen along the
+    road, and you also notice the odd tree. You can see the southern docks to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24221
+    east:
+      to: tba:242:room:24205
+    south:
+      to: tba:242:room:24224
+    west:
+      to: tba:242:room:24203
+
+"tba:242:room:24205":
+  name: Wall Road
+  description: >
+    You are walking next to the eastern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations. To the north, you can see the southern docks.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24222
+    south:
+      to: tba:242:room:24211
+    west:
+      to: tba:242:room:24204
+
+"tba:242:room:24206":
+  name: Wall Road
+  description: >
+    You are walking next to the western city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24200
+    east:
+      to: tba:242:room:24207
+    south:
+      to: tba:242:room:24212
+
+"tba:242:room:24207":
+  name: Razor's Road
+  description: >
+    You are on Razor's Road. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. Streetlights can be seen along the road,
+    and you also notice the odd tree.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24225
+    east:
+      to: tba:242:room:24208
+    south:
+      to: tba:242:room:24228
+    west:
+      to: tba:242:room:24206
+
+"tba:242:room:24208":
+  name: Razor's Square
+  description: >
+    Razor's Square is the southernmost square in Midgaard. South of you is wall road, while to the
+    north you can see most of the city of Midgaard. You can see some street vendors here, standing inside
+    small kiosks. You can see everything from cheap jewelry to leather jackets for sale.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24202
+    east:
+      to: tba:242:room:24209
+    south:
+      to: tba:242:room:24214
+    west:
+      to: tba:242:room:24207
+
+"tba:242:room:24209":
+  name: Razor's Road
+  description: >
+    You are on Razor's Road. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. A portion of the roof juts out from the
+    northern building, just above the door. The overhang sticks out about ten feet from the building, and
+    is about twenty feet wide. All along the bottom edge of it are lightbulbs. A double glass door leads
+    north, while a few signs have been set up here on the sidewalk. You recognize this as the entrance
+    to the Midgaard Theater.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24226
+    east:
+      to: tba:242:room:24210
+    south:
+      to: tba:242:room:24229
+    west:
+      to: tba:242:room:24208
+  extras:
+  - keywords: [sign, signs]
+    text:
+      preformatted: |2
+           The signs are all the same, and they look like this:
+                x---------------------------------------------x
+                |                                             |
+                |         MIDGAARD THEATER PRESENTS:          |
+                |                                             |
+                |       T H E   S T R E E T   V E N D O R     |
+                |              F R O M   H E L L              |
+                |                                             |
+                |                   /|   |\                   |
+                |                 __\ \ / /__                 |
+                |                /           \                |
+                |               /     \  /    \               |
+                |               |   (.)\/(.)   |              |
+                |               |      ^^      |              |
+                |               |     ____     |              |
+                |                \   /    \   /               |
+                |                 \__________/                |
+                |                     \/\/                    |
+                |                      \/                     |
+                |                                             |
+                | Admission: Free                             |
+                |                                             |
+                | Times: Hey, for a free play, we'll put it   |
+                |        on when WE want. Too bad if you      |
+                |        miss it!                             |
+                |                                             |
+                x---------------------------------------------x
+
+"tba:242:room:24210":
+  name: Razor's Road
+  description: >
+    You are on Razor's Road. The road looks brand new, as do the shops and buildings that line the
+    road. This is obviously the newer part of Midgaard. People are bustling about, while street vendors are
+    trying hard to sell hotdogs and other less legal merchandise. Streetlights can be seen along the road,
+    and you also notice the odd tree.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24227
+    east:
+      to: tba:242:room:24211
+    south:
+      to: tba:242:room:24230
+    west:
+      to: tba:242:room:24209
+
+"tba:242:room:24211":
+  name: Wall Road
+  description: >
+    You are walking next to the eastern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. You can see a large stone entrance leading into the
+    wall here, leading east. People are walking past you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24205
+    south:
+      to: tba:242:room:24217
+    west:
+      to: tba:242:room:24210
+
+"tba:242:room:24212":
+  name: Southwest Gate
+  description: >
+    You are walking next to the western city wall, at the southwest gate. The gate is currently up,
+    allowing people to freely pass. A dusty path leads south to the forest of Miden'Nir (Goblinic for 'Green
+    Blood'). You can still see the city to the east, but if you go south, there is fresh air and
+    greenery.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24206
+    east:
+      to: tba:242:room:24213
+
+"tba:242:room:24213":
+  name: Wall Road
+  description: >
+    You are walking next to the southern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24231
+    east:
+      to: tba:242:room:24214
+    west:
+      to: tba:242:room:24212
+
+"tba:242:room:24214":
+  name: Wall Road
+  description: >
+    You are walking next to the southern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24208
+    east:
+      to: tba:242:room:24215
+    west:
+      to: tba:242:room:24213
+
+"tba:242:room:24215":
+  name: Wall Road
+  description: >
+    You are walking next to the southern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24232
+    east:
+      to: tba:242:room:24216
+    west:
+      to: tba:242:room:24214
+
+"tba:242:room:24216":
+  name: Wall Road
+  description: >
+    You are walking next to the southern city wall. It is built from large gray rocks that have been
+    fastened to each other with some kind of mortar. It is far too high to climb. People are walking past
+    you, hurrying to their destinations.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24271
+    east:
+      to: tba:242:room:24217
+    west:
+      to: tba:242:room:24215
+
+"tba:242:room:24217":
+  name: Southeast Gate
+  description: >
+    You are walking next to the western city wall, at the southeast gate.  The gate is closed and seems
+    to have been that way for a long time.  You are walking next to the western city wall, at the
+    southeast gate.  The gate is closed, blocking all passage and seems to have been that way for a long time.
+  sector: city
+  exits:
+    north:
+      to: tba:242:room:24211
+    west:
+      to: tba:242:room:24216
+
+"tba:242:room:24218":
+  name: On the Central Bridge
+  description: >
+    The central bridge is the main connection between northern and southern Midgaard. The bridge is
+    constructed from iron support beams and concrete. It looks very solid. From below, you can see the
+    swiftly flowing river, leading east and west. The tall buildings of southern Midgaard dominate the
+    southern skyline, while you can see the huge temple of Midgaard off in the north.
+  sector: city
+  exits:
+    south:
+      to: tba:242:room:24202
+
+"tba:242:room:24219":
+  name: The Bank of Midgaard
+  description: >
+    You enter the doors and you find yourself in the bank of Midgaard. It's a very large room, with
+    high ceilings and a shiny polished floor. Large windows let in light, giving the bank a bright glow. A
+    long desk spans the entire western wall, and behind it stand several tellers, looking bored. An
+    immensely thick steel door leads north, to the vault.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24234
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:242:obj:24298
+        reset: locked
+    south:
+      to: tba:242:room:24201
+
+"tba:242:room:24220":
+  name: The Cooland Press Office
+  description: >
+    You find yourself in a quiet newspaper office. A row of darkly tinted windows look out onto the
+    street, making this place fairly dark. A high desk stands directly in front of you, and from behind it
+    you can see many desks with computers on them. Journalists are seated, typing up stories for the
+    Cooland Press.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24203
+
+"tba:242:room:24221":
+  name: The Southern Docks
+  description: >
+    You're on the docks on the southern side of the river. The wooden docks have been built fairly high
+    off the river, making it impossible to access the river from here. Several large crates and barrels
+    are scattered around here. Across the river, you can see the levee.
+  sector: city
+  exits:
+    east:
+      to: tba:242:room:24222
+    south:
+      to: tba:242:room:24204
+
+"tba:242:room:24222":
+  name: The Southern Docks
+  description: >
+    You're on the docks on the southern side of the river. The wooden docks have been built fairly high
+    off the river, making it impossible to access the river from here. Across the river, you can see a
+    building that looks like an old warehouse.
+  sector: city
+  exits:
+    south:
+      to: tba:242:room:24205
+    west:
+      to: tba:242:room:24221
+
+"tba:242:room:24223":
+  name: The Computer Store
+  description: >
+    The computer store is the only one of its kind in Cooland. This store is very large, with very high
+    ceilings and bright lights. Wide shelves, twenty feet high, run the entire length of the store.
+    Aisles run in between them. Computer parts of all kinds are neatly stacked on the shelves. Several
+    checkouts are located beside the door.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24201
+
+"tba:242:room:24224":
+  name: Clothing Store
+  description: >
+    You're in the Midgaard clothing store. It's a fairly small shop, with rather low ceilings. Racks of
+    clothing totally fill the store, making it almost impossible to move. You can faintly hear some
+    classical music being played.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24204
+
+"tba:242:room:24225":
+  name: South Gardens
+  description: >
+    You leave the street and enter a beautiful garden. Tall trees of all kinds are growing here, and a
+    winding gravel path leads to a set of benches in the middle. You can see flowers growing along the
+    path. Even though you're in the middle of the city, you feel as though you're in a deep forest. As your
+    eyes adjust to the lower light, you notice a rope softly swaying in the wind, behind a thick tree.
+  sector: city
+  exits:
+    south:
+      to: tba:242:room:24207
+    up:
+      to: tba:242:room:24235
+
+"tba:242:room:24226":
+  name: Midgaard Theater
+  description: >
+    You find yourself inside the lobby of the Midgaard Theater. A rich navy blue carpet covers the
+    floor, while expensive looking wallpaper covers the walls. An elaborate chandelier hangs from the
+    ceiling. A small ticket booth is located near the front door.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:242:room:24238
+    south:
+      to: tba:242:room:24209
+    west:
+      to: tba:242:room:24236
+
+"tba:242:room:24227":
+  name: City Hall
+  description: >
+    You're inside the Midgaard City Hall. It's a large domed room, almost circular in shape, with a
+    round skylight at the top, looking to the sky. The walls are all solid wood. A large U shaped desk sits
+    in the middle of the room, where the secretary usually sits. A beautifully carved staircase leads up
+    to the mayor's office.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24210
+    up:
+      to: tba:242:room:24298
+
+"tba:242:room:24228":
+  name: An Empty Room
+  description: >
+    You're inside a completely empty room.  The walls are barren and the floor is covered in dust.  A
+    few small tracks, most likely from rodents or cockroaches, can be seen in the dust.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24207
+
+"tba:242:room:24229":
+  name: An Empty Room
+  description: >
+    You're inside a completely empty room.  The walls are barren and the floor is covered in dust.  A
+    few small tracks, most likely from rodents or cockroaches, can be seen in the dust.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24209
+
+"tba:242:room:24230":
+  name: Midgaard Public School
+  description: >
+    You're inside the main lobby of Cooland's only school (no, we're not counting that monkey school in
+    Ape Village). Everything looks neat and tidy, which is surprising for a public school. You notice
+    the odd student walking past you, giving you funny looks.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24210
+
+"tba:242:room:24231":
+  name: The Midgaard Cafe
+  description: >
+    The Midgaard Cafe is a nice little place, where people can come to eat lunch or have snacks. The
+    entire southern wall is covered in windows, looking out onto Wall Road. Many round tables are scattered
+    throughout the room, with people seated around many of them. Plants and small potted shrubs are also
+    scattered around.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24213
+
+"tba:242:room:24232":
+  name: The Cityguard Headquarters
+  description: >
+    You're in the cityguard headquarters. It's a large room, completely filled with desks and filing
+    cabinets. Guards are here, talking on the phones and writing down stuff in books. They're ready to be
+    dispatched to whoever needs help.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24215
+
+"tba:242:room:24234":
+  name: The Bank of Midgaard - Vault
+  description: >
+    You find yourself inside the bank vault. Row upon row of stainless steel safety deposit boxes cover
+    the walls. Three rows of extremely bright lights shine down on you, making everything completely
+    visible. It would be impossible to hide in here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24219
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:242:obj:24298
+        reset: locked
+
+"tba:242:room:24235":
+  name: The top of the Tree
+  description: >
+    You climb the rope, and find yourself on a wooden platform at the top of the tree. From here, you
+    have an excellent view of Midgaard. From out of nowhere, a thick chain falls out of the sky, right in
+    front of your face. It leads up into the clouds above.
+  sector: city
+  exits:
+    down:
+      to: tba:242:room:24225
+
+"tba:242:room:24236":
+  name: Theater Office
+  description: >
+    You're in the theater office. Posters from past performances cover the walls, and a thick dark
+    carpet covers the floor. An ancient looking wooden desk sits in far end of the room, covered with papers
+    and old documents. Only a single reading lamp is on, making this room fairly dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24226
+
+"tba:242:room:24237":
+  name: Theater Corridor
+  description: >
+    You're in the main theater corridor. The walls and ceiling have been painted black, and the floor
+    is also black. A dark wooden door leads south to the main part of the theater.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:242:room:24241
+    east:
+      to: tba:242:room:24238
+
+"tba:242:room:24238":
+  name: Snack Booth
+  description: >
+    You're in the main theater corridor, at the snack booth. A bar has been built into the northern
+    wall, and behind it a glass-doored fridge and a selection of snacks can been seen. In between scenes,
+    audience members come here to get some food or a drink.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24239
+    south:
+      to: tba:242:room:24226
+    west:
+      to: tba:242:room:24237
+
+"tba:242:room:24239":
+  name: Theater Corridor
+  description: >
+    You're in the main theater corridor. The walls and ceiling have been painted black, and the floor
+    is also black. A dark wooden door leads south to the main part of the theater. A set of stairs leads
+    down the the dressing rooms.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:242:room:24244
+    west:
+      to: tba:242:room:24238
+    down:
+      to: tba:242:room:24240
+
+"tba:242:room:24240":
+  name: Dressing Room Hallway
+  description: >
+    You're in the dressing room hallway, in the basement of the theater. It's fairly narrow, with dark
+    wallpaper covering the walls. A row of lights hangs from the ceiling. Dressing room doors can been
+    seen all along the hallway. A wooden door leads south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24245
+    south:
+      to: tba:242:room:24296
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+    up:
+      to: tba:242:room:24239
+
+"tba:242:room:24241":
+  name: Left Aisle
+  description: >
+    You're in the middle of the left aisle of the theater. You can see the stage up ahead, with some
+    bright lights shining on it. All along the sides of the aisle on the floor are small lights, leading
+    the way. It's very dark in here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24247
+    east:
+      to: tba:242:room:24242
+    south:
+      to: tba:242:room:24237
+
+"tba:242:room:24242":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, far in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24243
+    west:
+      to: tba:242:room:24241
+
+"tba:242:room:24243":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, far in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24244
+    west:
+      to: tba:242:room:24242
+
+"tba:242:room:24244":
+  name: Right Aisle
+  description: >
+    You're in the middle of the right aisle of the theater. You can see the stage up ahead, with some
+    bright lights shining on it. All along the sides of the aisle on the floor are small lights, leading
+    the way. It's very dark in here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24250
+    south:
+      to: tba:242:room:24239
+    west:
+      to: tba:242:room:24243
+
+"tba:242:room:24245":
+  name: Dressing Room Hallway
+  description: >
+    You're in the dressing room hallway, in the basement of the theater. It's fairly narrow, with dark
+    wallpaper covering the walls. A row of lights hangs from the ceiling. Dressing room doors can been
+    seen all along the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24251
+    east:
+      to: tba:242:room:24246
+    south:
+      to: tba:242:room:24240
+
+"tba:242:room:24246":
+  name: Dressing Room Four
+  description: >
+    You're in dressing room number four. It's fairly small, with a makeup counter along the northern
+    wall, and a small couch along the eastern wall. A large mirror, completely surrounded by lightbulbs,
+    sits against the wall behind the counter. A costume rack sits beside the door, packed with different
+    clothing and costumes.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24245
+
+"tba:242:room:24247":
+  name: Left Aisle
+  description: >
+    You're in the middle of the left aisle of the theater. You can see the stage up ahead, with some
+    bright lights shining on it. All along the sides of the aisle on the floor are small lights, leading
+    the way. It's very dark in here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24253
+    east:
+      to: tba:242:room:24248
+    south:
+      to: tba:242:room:24241
+
+"tba:242:room:24248":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, far in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24249
+    west:
+      to: tba:242:room:24247
+
+"tba:242:room:24249":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, far in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24250
+    west:
+      to: tba:242:room:24248
+
+"tba:242:room:24250":
+  name: Right Aisle
+  description: >
+    You're in the middle of the right aisle of the theater. You can see the stage up ahead, with some
+    bright lights shining on it. All along the sides of the aisle on the floor are small lights, leading
+    the way. It's very dark in here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24256
+    south:
+      to: tba:242:room:24244
+    west:
+      to: tba:242:room:24249
+
+"tba:242:room:24251":
+  name: Dressing Room Hallway
+  description: >
+    You're in the dressing room hallway, in the basement of the theater. It's fairly narrow, with dark
+    wallpaper covering the walls. A row of lights hangs from the ceiling. Dressing room doors can been
+    seen all along the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24257
+    east:
+      to: tba:242:room:24252
+    south:
+      to: tba:242:room:24245
+
+"tba:242:room:24252":
+  name: Dressing Room Three
+  description: >
+    You're in dressing room number three. It's fairly small, with a makeup counter along the northern
+    wall, and a small couch along the eastern wall. A large mirror, completely surrounded by lightbulbs,
+    sits against the wall behind the counter. A costume rack sits beside the door, packed with different
+    clothing and costumes.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24251
+
+"tba:242:room:24253":
+  name: Left Aisle
+  description: >
+    You're in the middle of the left aisle of the theater. The stage is now directly in front of you,
+    with some stairs leading up to it. Bright lights shine all across it, making it look quite bright.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:242:room:24254
+    south:
+      to: tba:242:room:24247
+    up:
+      to: tba:242:room:24260
+
+"tba:242:room:24254":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, just in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24255
+    west:
+      to: tba:242:room:24253
+
+"tba:242:room:24255":
+  name: In the Seats
+  description: >
+    You're in the seats of the theater. They're a dark red color, and they feel very soft. You can see
+    the stage, just in front of you. Except for the lights of the stage, this area is totally dark.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24256
+    west:
+      to: tba:242:room:24254
+
+"tba:242:room:24256":
+  name: Right Aisle
+  description: >
+    You're in the middle of the right aisle of the theater. The stage is now directly in front of you,
+    with some stairs leading up to it. Bright lights shine all across it, making it look quite bright.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:242:room:24250
+    west:
+      to: tba:242:room:24255
+    up:
+      to: tba:242:room:24262
+
+"tba:242:room:24257":
+  name: Dressing Room Hallway
+  description: >
+    You're in the dressing room hallway, in the basement of the theater. It's fairly narrow, with dark
+    wallpaper covering the walls. A row of lights hangs from the ceiling. Dressing room doors can been
+    seen all along the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24264
+    east:
+      to: tba:242:room:24258
+    south:
+      to: tba:242:room:24251
+
+"tba:242:room:24258":
+  name: Dressing Room Two
+  description: >
+    You're in dressing room number two. It's nicer than dressing rooms three and four, with a makeup
+    counter along the northern wall, and a large comfortable looking couch along the eastern wall. A large
+    mirror, completely surrounded by lightbulbs, sits against the wall behind the counter. A costume rack
+    sits beside the door, packed with different clothing and costumes.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24257
+
+"tba:242:room:24259":
+  name: Back Stage
+  description:
+  - >
+    You're standing backstage. The walls have been painted black, and you can see all sorts of cables
+    and ropes leading up here. A large thick curtain hides most of the stage to the west. A few tools are
+    scattered about here, things like mops, brooms, and a vacuum cleaner. A row of four chairs sits along
+    the northern wall. You see a black ladder leading up to the catwalk.
+  - You see a sign hanging beside the stage entrance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24260
+    up:
+      to: tba:242:room:24266
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign says:"
+    - QUIET!
+
+"tba:242:room:24260":
+  name: Left Stage
+  description: >
+    You're on stage, at the left end. Lights shine down from above, partially blinding you. No sets are
+    currently assembled, only a massive curtain hangs behind you. The floor is of solid wood, and makes
+    a slight creaking sound as you walk. You can see the entire theater from here. An opening in the
+    curtain leads west, backstage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24261
+    west:
+      to: tba:242:room:24259
+    down:
+      to: tba:242:room:24253
+
+"tba:242:room:24261":
+  name: Center Stage
+  description: >
+    Lights shine down from above, partially blinding you. No sets are currently assembled, only a
+    massive curtain hangs behind you. The floor is of solid wood, and makes a slight creaking sound as you
+    walk. You can see the entire theater from here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24262
+    west:
+      to: tba:242:room:24260
+
+"tba:242:room:24262":
+  name: Right Stage
+  description: >
+    You're on stage, at the right end. Lights shine down from above, partially blinding you. No sets
+    are currently assembled, only a massive curtain hangs behind you. The floor is of solid wood, and makes
+    a slight creaking sound as you walk. You can see the entire theater from here. An opening in the
+    curtain leads east, backstage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24263
+    west:
+      to: tba:242:room:24261
+    down:
+      to: tba:242:room:24256
+
+"tba:242:room:24263":
+  name: Back Stage
+  description:
+  - >
+    You're standing backstage. The walls have been painted black, and you can see all sorts of cables
+    and ropes leading up here. A large thick curtain hides most of the stage to the west. A few tools are
+    scattered about here, things like mops, brooms, and a vacuum cleaner. A large costume rack rests
+    here, and costumes of kinds hang from its hangers. A door leads down to the dressing rooms.
+  - You notice a sign hanging near the stage entrance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24262
+    down:
+      to: tba:242:room:24264
+  extras:
+  - keywords: [sign]
+    text:
+    - "The sign says:"
+    - QUIET!
+
+"tba:242:room:24264":
+  name: Dressing Room Hallway
+  description: >
+    You're in the dressing room hallway, in the basement of the theater. It's fairly narrow, with dark
+    wallpaper covering the walls. A row of lights hangs from the ceiling. Dressing room doors can been
+    seen all along the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24265
+    south:
+      to: tba:242:room:24257
+    up:
+      to: tba:242:room:24263
+
+"tba:242:room:24265":
+  name: Dressing Room One
+  description: >
+    You're in dressing room number one. It's the largest and nicest of all of the dressing rooms. A
+    beautifully carved wooden makeup counter stands against the eastern wall, with a gigantic mirror
+    standing above it. A soft looking recliner sits by the door, with a rack of magazines sitting beside it. A
+    filing cabinet sits in front of a tapestry that covers the entire northern wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24264
+
+"tba:242:room:24266":
+  name: Black Ladder
+  description: >
+    You are on a black metal ladder, leading up to the catwalks.  The ladder rungs are slick with
+    condensation and bits of rust break off in your hands. The rungs are almost ready to collapse.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:242:room:24267
+    down:
+      to: tba:242:room:24259
+
+"tba:242:room:24267":
+  name: Catwalk
+  description: >
+    You're at the top of the ladder, on the catwalks. The floor is built out of steel grating, and a
+    railing has been built out of metal bars. Everything has been painted black. From here, you have a
+    great view of the stage, as you can see everything perfectly.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24268
+    down:
+      to: tba:242:room:24266
+
+"tba:242:room:24268":
+  name: Catwalk
+  description: >
+    You're at the top of the theater, on the catwalks. The floor is built out of steel grating, and a
+    railing has been built out of metal bars. Everything has been painted black. From here, you have a
+    great view of the stage, as you can see everything perfectly.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24269
+    west:
+      to: tba:242:room:24267
+
+"tba:242:room:24269":
+  name: Catwalk
+  description: >
+    You're at the top of the theater, on the catwalks. The floor is built out of steel grating, and a
+    railing has been built out of metal bars. Everything has been painted black. From here, you have a
+    great view of the stage, as you can see everything perfectly.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24270
+    west:
+      to: tba:242:room:24268
+
+"tba:242:room:24270":
+  name: Catwalk
+  description: >
+    You're at the top of the theater, on the catwalks. The floor is built out of steel grating, and a
+    railing has been built out of metal bars. Everything has been painted black. From here, you have a
+    great view of the stage, as you can see everything perfectly.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24269
+
+"tba:242:room:24271":
+  name: Midgaard Curling Club Entrance Hall
+  description: >
+    You're in the entrance hall of the Midgaard Curling Club. A gray carpet runs down the hallway,
+    where it ends at a set of stairs leading up and to the east. The walls are a pale beige color, and an
+    ancient looking tile ceiling is slowly rotting away. This place looks like it's at least fifty years old.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24272
+    south:
+      to: tba:242:room:24216
+
+"tba:242:room:24272":
+  name: Curling Club Entrance Stairs
+  description: >
+    You're in the far end of the Midgaard Curling Club entrance hall. The gray carpet ends here, and a
+    short set of stairs leads up to east. A large wooden door leads north, but it's blocked off.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:242:room:24271
+    up:
+      to: tba:242:room:24273
+
+"tba:242:room:24273":
+  name: Curling Club
+  description: >
+    You're inside the Midgaard Curling Club. A bar is located along the western wall, and several large
+    round tables are scattered around. Each table has an ash tray on it, filled with ashes and cigarette
+    butts. A railing runs across the northern part of the room, and ten feet below it is the spectators
+    area. The wall in front of the spectators area is an enormous window, looking out onto the curling
+    rink. A small green safe with a beer sticker on it sits in front of the railing, by the stairs leading
+    down to the hallway.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24274
+    down:
+      to: tba:242:room:24272
+
+"tba:242:room:24274":
+  name: Curling Club
+  description: >
+    You're inside the Midgaard Curling Club. Directly behind you, on a table, sits a 60" TV. Several
+    large round tables are scattered around, and an ash trays sit on each one. A railing runs across the
+    northern part of the room, but it curves downwards here opening up to a staircase. The wall in front of
+    the spectators area is an enormous window, looking out onto the curling rink.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24275
+    west:
+      to: tba:242:room:24273
+    down:
+      to: tba:242:room:24278
+
+"tba:242:room:24275":
+  name: Curling Club
+  description: >
+    You're inside the Midgaard Curling Club. Several large round tables are scattered around. Each
+    table has an ash tray on it, filled with ashes and cigarette butts. A railing runs across the northern
+    part of the room, and ten feet below it is the spectators area. The wall in front of the spectators
+    area is an enormous window, looking out onto the curling rink.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24276
+    west:
+      to: tba:242:room:24274
+
+"tba:242:room:24276":
+  name: Curling Club Coffee Shop
+  description: >
+    You're inside the Midgaard Curling Club Coffee Shop. A rounded wooden bar sits along the eastern
+    wall, and behind it you see several tables covered with glasses, and a large stove. About a dozen
+    tables are here, waiting for people to sit at them. Several thickly plated windows look out onto the
+    street to the south. The actual building looks very solid, as if it was made to withstand an earthquake.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:242:room:24275
+
+"tba:242:room:24277":
+  name: Spectator's Area
+  description: >
+    You find yourself at the far left end of the spectator's area of the curling club. An enormous
+    window looks south onto the curling rink. Many wooden chairs are here, lined up facing the window. Behind
+    you, a large bulletin board has been attached to the wall. It's covered with posters and
+    advertisements. At the top of the wall is a railing. A set of doors leads north onto the ice.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24280
+    east:
+      to: tba:242:room:24278
+  extras:
+  - keywords: [advertisements, bulletin, board, posters]
+    text:
+      preformatted: |2
+           The posters look like this:
+                 *********************************************
+                 *              CURLING RESULTS              *
+                 *                                           *
+                 *          Friday, March 22, 2002           *
+                 *                 ____                      *
+                 *                 ___\\____                 *
+                 *                /_________\                *
+                 *               |___________|               *
+                 *                \_________/                *
+                 *                                           *
+                 *      TEAM PD, BD, NC, GS - DEFEATED       *
+                 *                                           *
+                 *      Quote: "Nice take out P Diddy!"      *
+                 *                                           *
+                 *********************************************
+
+"tba:242:room:24278":
+  name: Spectator's Area
+  description: >
+    You find yourself at the far left end of the spectator's area of the curling club. An enormous
+    window looks south onto the curling rink. Many wooden chairs are here, lined up facing the window. Behind
+    you, a stair case leads up to the curling club.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24279
+    west:
+      to: tba:242:room:24277
+    up:
+      to: tba:242:room:24274
+    down:
+      to: tba:242:room:24289
+
+"tba:242:room:24279":
+  name: Spectator's Area
+  description: >
+    You find yourself at the far left end of the spectator's area of the curling club. An enormous
+    window looks south onto the curling rink. Many wooden chairs are here, lined up facing the window. Behind
+    you, a large bulletin board has been attached to the wall. It's covered with posters and
+    advertisements. At the top of the wall is a railing. A set of doors leads north onto the ice.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24286
+    west:
+      to: tba:242:room:24278
+  extras:
+  - keywords: [advertisements, bulletin, board, posters]
+    text:
+      preformatted: |2
+           The posters look like this:
+                 *********************************************
+                 *          THE HARDCORE BONSPIEL            *
+                 *                                           *
+                 *        Wednesday, March 27, 2002          *
+                 *                                           *
+                 *                 ____                      *
+                 *                 ___\\____                 *
+                 *                /_________\                *
+                 *               |___________|               *
+                 *                \_________/                *
+                 *                                           *
+                 *                                           *
+                 *               $250 per team               *
+                 *                                           *
+                 *  No drunken antics on the ice this time!  *
+                 *                                           *
+                 *********************************************
+
+"tba:242:room:24280":
+  name: Sheet 1
+  description: >
+    You're standing at the southern end of sheet 1. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24281
+    east:
+      to: tba:242:room:24283
+    south:
+      to: tba:242:room:24277
+
+"tba:242:room:24281":
+  name: Sheet 1
+  description: >
+    You're standing on the very middle of sheet 1. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24282
+    east:
+      to: tba:242:room:24284
+    south:
+      to: tba:242:room:24280
+
+"tba:242:room:24282":
+  name: Sheet 1
+  description: >
+    You're standing at the northern end of sheet 1. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24285
+    south:
+      to: tba:242:room:24281
+
+"tba:242:room:24283":
+  name: Sheet 2
+  description: >
+    You're standing at the southern end of sheet 2. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24284
+    east:
+      to: tba:242:room:24286
+    west:
+      to: tba:242:room:24280
+
+"tba:242:room:24284":
+  name: Sheet 2
+  description: >
+    You're standing on the very middle of sheet 2. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24285
+    east:
+      to: tba:242:room:24287
+    south:
+      to: tba:242:room:24283
+    west:
+      to: tba:242:room:24281
+
+"tba:242:room:24285":
+  name: Sheet 2
+  description: >
+    You're standing at the northern end of sheet 2. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24288
+    south:
+      to: tba:242:room:24284
+    west:
+      to: tba:242:room:24282
+
+"tba:242:room:24286":
+  name: Sheet 3
+  description: >
+    You're standing at the southern end of sheet 3. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24287
+    south:
+      to: tba:242:room:24279
+    west:
+      to: tba:242:room:24283
+
+"tba:242:room:24287":
+  name: Sheet 3
+  description: >
+    You're standing on the very middle of sheet 3. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24288
+    south:
+      to: tba:242:room:24286
+    west:
+      to: tba:242:room:24284
+
+"tba:242:room:24288":
+  name: Sheet 3
+  description: >
+    You're standing at the northern end of sheet 3. The ice is slippery, and it's fairly cold in here.
+    You can hear the light humming of a machine somewhere. Bright lights shine down on you from above,
+    illuminating this area quite well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:242:room:24287
+    west:
+      to: tba:242:room:24285
+
+"tba:242:room:24289":
+  name: Washrooms
+  description: >
+    You're in the curling club washrooms. Surprisingly enough, this place is quite clean. Several
+    toilets are here, along with some urinals with motion detectors. No more touching filthy handles!
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:242:room:24290
+    up:
+      to: tba:242:room:24278
+
+"tba:242:room:24290":
+  name: Locker Room
+  description: >
+    You're in a locker room. Blue lockers run the entire length of the room, and benches sit in front
+    of them. You notice the odd gym bag sitting on top of the lockers. At the back of the room you notice
+    a door, leading north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:242:room:24291
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+    west:
+      to: tba:242:room:24289
+
+"tba:242:room:24291":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods. A rough wooden door here
+    leads south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24292
+    south:
+      to: tba:242:room:24290
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+
+"tba:242:room:24292":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24293
+    south:
+      to: tba:242:room:24291
+
+"tba:242:room:24293":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24294
+    south:
+      to: tba:242:room:24292
+
+"tba:242:room:24294":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24295
+    east:
+      to: tba:242:room:24297
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+    south:
+      to: tba:242:room:24293
+
+"tba:242:room:24295":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24296
+    south:
+      to: tba:242:room:24294
+
+"tba:242:room:24296":
+  name: Passageway
+  description: >
+    You're in an old dark passageway. The paint is peeling off the walls, and a single light bulb hangs
+    from the ceiling. The floor is cement, and has scuff marks all over it. The passage is quite wide.
+    It seems as though this hall used to be used for hauling equipment and goods. A wooden door leads
+    north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:242:room:24240
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+    south:
+      to: tba:242:room:24295
+
+"tba:242:room:24297":
+  name: A Storeroom
+  description: >
+    You're inside an old dusty storeroom. White sheets cover several large items, and they're covered
+    with dust and cobwebs. You notice a calender on the wall, and it's from over 30 years ago. This place
+    obviously isn't used anymore.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:242:room:24294
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:242:obj:24299
+        reset: locked
+
+"tba:242:room:24298":
+  name: The Mayor's Office
+  description: >
+    You are in the not very big office of the Mayor of Midgaard.  A large and polished but completely
+    empty desk is standing in front of an armchair that looks so comfortable that it most of all resembles
+    a bed with the head end raised slightly. Windows look in all directions, giving a great view of the
+    city.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:242:room:24227

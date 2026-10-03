@@ -1,0 +1,449 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 74.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:74:mob:7400":
+  keywords: [gray, dove]
+  short: a gray dove
+  long: A gray dove coos softly from the branches of the willow tree.
+  description: >
+    Peaceful and content, this dove sways slightly as it sings a soft, trilling song for any to hear. 
+    Now and again it appears to lean and breathe deeply the scents of the nearby blossoms.
+  level: 3
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, scavenger, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: sting
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7401":
+  keywords: [disheveled, boy]
+  short: the disheveled boy
+  long: A disheveled boy is here, digging in the dirt.
+  description: >
+    About six summers old, the young boy is covered to his elbows in dirt.  His reddish hair stands
+    about unkempt and his clothing is streaked with dirt.  As you look on, he wanders around, digging holes
+    in the carefully maintained lawn.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, wimpy, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: punch
+  abilities:
+    str: 8
+    int: 9
+    wis: 5
+    dex: 15
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7402":
+  keywords: [scrawny, little, girl]
+  short: the scrawny little girl
+  long: A scrawny little girl skips around, uprooting the flowers.
+  description: >
+    Long of limb and tooth, the thin and gangly little girl looks to be caught firmly in the awkward
+    age.  Her homespun dress is simple and fairly clean.  As you watch, she trots around the path,
+    uprooting flowers violently from the ground.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [sentinel, scavenger, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7403":
+  keywords: [squat, groundskeeper]
+  short: a squat groundskeeper
+  long: A squat groundskeeper is busy polishing the fence here.
+  description: >
+    Clad in woolen homespun clothing and sturdy leather boots, the groundskeeper is dressed for heavy
+    work.  He is rather short and more than a bit overweight, but intent on his job nonetheless.  His
+    russet hair is in a bit of a disarray and his fingers are stained with iron polish.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: pound
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7404":
+  keywords: [twisted, dwarf, graverobber]
+  short: the graverobber
+  long: A twisted dwarf wrestles with a monstrous shovel, attempting to dig a hole here.
+  description: >
+    One arm twisted by a birth defect, this ugly little dwarf has made a career of relieving the dead
+    of their valuables.  His face and clothes are streaked with grave-dirt and sweat, testimony to the
+    amount of work required to avoid honest labor.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, wimpy, no_summon]
+  affects: [sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: punch
+  abilities:
+    str: 15
+    int: 10
+    wis: 10
+    dex: 8
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7405":
+  keywords: [angry, young, man]
+  short: the angry young man
+  long: An angry young man stands screaming at a redstone grave marker.
+  description: >
+    His face flushed with anger, the young man seems to be scolding a large redstone grave marker.  His
+    arms flail about wildly as he screams and shouts at the unhearing tomb.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7406":
+  keywords: [mourner, distressed, mother]
+  short: the distressed mother
+  long: A distressed mother mourns her child's death.
+  description: >
+    Clad in black, the woman mourns her child's death.  Her face is lined with stress and sadness. 
+    Tears slide slowly down her cheeks as she cries selflessly for the loss of her poor, sweet child.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7407":
+  keywords: [groundskeeper, busy]
+  short: a busy groundskeeper
+  long: A groundskeeper is here, keeping busy.
+  description: >
+    Clad in homespun cottons, the groundskeeper takes turns either pulling weeds or polishing marble
+    statues.  His face is set and he keeps his attention to his duties, ignoring the passing mourners.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: punch
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7408":
+  keywords: [old, woman]
+  short: an old woman
+  long: An old woman is here, considering the purchase of a new plot.
+  description: >
+    Her face is a mapwork of wrinkles and her hair is spidersilk thin.  The old woman looks briefly
+    over at a couple empty plots and sinks deep into thought. In time, she turns and moves on in search of
+    another plot.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [stay_zone, wimpy, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7409":
+  keywords: [stern, man, groundskeeper, head]
+  short: the head groundskeeper
+  long: A stern man is here attempting to keep people off the empty plots.
+  description: >
+    A large and brutish man, the head groundskeeper enforces his policy on cleanliness with a stern
+    hand.  The beauty and order of the cemetery is a responsibility he takes very seriously.  With a loud
+    bark, he scares a young man off the soft grass.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, no_summon]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: pound
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7410":
+  keywords: [tawny, owl]
+  short: a tawny owl
+  long: A tawny owl is perched in the lower branches of the tree.
+  description: >
+    Colored a creamy tan with dark fletchings on its wing and tail feathers, this owl is fairly sedate
+    and unconcerned with its surroundings.  A thin leather thong is wrapped around one leg, apparently
+    for carrying messages.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_summon, no_bash]
+  affects: [no_track]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: resting
+    default: resting
+
+"tba:74:mob:7411":
+  keywords: [ancient, groundskeeper, wizened, old, woman]
+  short: the ancient groundskeeper
+  long: A wizened old woman uses a tall staff to prod pigeons from the crypt roof.
+  description: >
+    Her face is worn and wrinkled and her hair is white and sparse.  The old woman looks to be nearly
+    as old as some of the pitted and weathered statues nearby.  While you look on, she pokes at the
+    pigeons roosting on the crypt here with a long, ashwood staff.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7412":
+  keywords: [tall, thin, man, pickpocket]
+  short: the pickpocket
+  long: A tall, thin man lurks about the edge of the clearing.
+  description: >
+    Narrow of face and long of nose, the man is tall, nearly seven feet or so. His clothing is the drab
+    black most often worn by mourners, yet he hardly seems to be here to grieve a friend or family
+    member.  His eyes dart back and forth as he lurks here, watching everyone.
+  level: 3
+  sex: male
+  alignment: -250
+  flags: [sentinel, scavenger]
+  affects: [sneak, hide]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  abilities:
+    str: 12
+    int: 12
+    wis: 12
+    dex: 17
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7413":
+  keywords: [burned, zombie]
+  short: the badly burned zombie
+  long: A badly burned corpse haunts the place it was accidentally burned alive.
+  description: >
+    The corpse is of indeterminate gender or race.  Most noticeable is that it is moving about as no
+    corpse was meant to do and it is covered in huge, weeping wounds and crisp, blackened skin.  Even its
+    armor is seared and burned.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [curse]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  abilities:
+    str: 18
+    int: 3
+    wis: 3
+    dex: 6
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7414":
+  keywords: [shade, ghendry, alchemist]
+  short: the alchemist's shade
+  long: The shade of the alchemist, Ghendry, glares at nothing in particular.
+  description: >
+    Clearly long dead, the shade is merely a wisp of something physical, barely discernible among the
+    shadows.  In life, it was a man of great stature in society and much loved by the people of the
+    realm.  Now, however, the shade seems more a forgotten past than legend made to live again.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_summon, no_bash]
+  affects: [curse]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7415":
+  keywords: [bones, lord, mycea, skeleton]
+  short: Lord Mycea's skeleton
+  long: The bones of Lord Mycea reanimate in the center of the room.
+  description: >
+    Bones yellowed with age have reanimated themselves inside the molded burial rags of the great Lord
+    Mycea.  Rather than eyes, twin orbs of glowing greenish light rest inside the sockets of his skull.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_sleep, no_blind]
+  affects: [curse]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7416":
+  keywords: [frightening, apparition, ghost, fennywen]
+  short: Fennywen's ghost
+  long: A frightening apparition floats about, examining the huge locked chests here.
+  description: >
+    Given the bashed head leaking who knows what all over, this would seem to be the ghost of the great
+    halfling hero, Fennywen.  A bit translucent and thoroughly dead, the ghost is having some time
+    adjusting to its new circumstances.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggr_evil, no_charm, no_summon, no_sleep, no_bash]
+  affects: [protect_evil]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:74:mob:7417":
+  keywords: [mourner, black]
+  short: a mourner
+  long: A mourner, dressed all in black, wanders around consumed by grief.
+  description: >
+    Upset by a loved one's death and in no mood for socializing, the mourner turns away before you can
+    get a really good look.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing

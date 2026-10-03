@@ -1,0 +1,130 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 301.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:301:shop:30100":
+  keeper: tba:301:mob:30118
+  rooms: [tba:301:room:30104]
+  products:
+  - tba:301:obj:30135
+  - tba:301:obj:30136
+  - tba:301:obj:30140
+  profit:
+    buy: 3.0
+    sell: 0.1
+  messages:
+    no_such_item: "%s I'm sorry but I could not find that particular item."
+    you_dont_have_it: "%s Please do not stuff that in my coin slot."
+    does_not_buy: "%s Please do not stuff that in my coin slot."
+    shop_cannot_afford: "%s Go away."
+    you_cannot_afford: "%s Please insert additional coins."
+    bought: "%s That comes to about %d coins.  Have a awesome day, Eh?"
+    sold: "%s That also comes to %d coins.  Have a cool day, Eh?"
+  temper: 1
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 1
+    close: 24
+
+"tba:301:shop:30101":
+  keeper: tba:301:mob:30139
+  rooms: [tba:302:room:30245]
+  products:
+  - tba:301:obj:30136
+  - tba:301:obj:30140
+  - tba:301:obj:30141
+  - tba:301:obj:30152
+  - tba:301:obj:30151
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s I can't find that...it must be out of stock."
+    you_dont_have_it: "%s I don't buy from people."
+    does_not_buy: "%s I don't buy from people."
+    shop_cannot_afford: "%s I don't buy from people."
+    you_cannot_afford: "%s You don't have enough money!  Come back later."
+    bought: "%s That will run you %d coins.  Here you are."
+    sold: "%s I don't buy."
+  temper: 0
+  flags: 5
+  trade_with: 0
+  hours:
+  - open: 5
+    close: 12
+  - open: 13
+    close: 22
+
+"tba:301:shop:30102":
+  keeper: tba:301:mob:30140
+  rooms: [tba:301:room:30169]
+  products:
+  - tba:301:obj:30140
+  - tba:301:obj:30141
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s I'm sorry, I can nae help you there."
+    you_dont_have_it: "%s Are you sure you have one of those?"
+    does_not_buy: "%s Dream on, dude!"
+    shop_cannot_afford: "%s How about as a gift?"
+    you_cannot_afford: "%s Perhaps later, when you've got enough money, my friend."
+    bought: "%s That's %d coins."
+    sold: "%s Here's %d coins."
+  temper: 0
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 24
+
+"tba:301:shop:30103":
+  keeper: tba:301:mob:30141
+  rooms: [tba:301:room:30141]
+  products:
+  - tba:301:obj:30116
+  - tba:301:obj:30126
+  - tba:301:obj:30111
+  profit:
+    buy: 6.3
+    sell: 0.8
+  messages:
+    no_such_item: "%s I've never heard of that...what is it?"
+    you_dont_have_it: "%s I don't see the goods, neighbour."
+    does_not_buy: "%s I don't buy that junk."
+    shop_cannot_afford: "%s I'm a little short on the moolah, know what I mean?"
+    you_cannot_afford: "%s If you come back with more money, I may consider selling it...to you."
+    bought: "%s That's %d coins...can I wrap it up for you?"
+    sold: "%s Here's %d for that."
+  temper: 0
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 24
+
+"tba:301:shop:30104":
+  keeper: tba:301:mob:30142
+  rooms: [tba:301:room:30166]
+  products:
+  - tba:301:obj:30137
+  - tba:301:obj:30138
+  - tba:301:obj:30139
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s How do you mix one of those?"
+    you_dont_have_it: "%s I don't buy."
+    does_not_buy: "%s I don't buy."
+    shop_cannot_afford: "%s I don't buy."
+    you_cannot_afford: "%s No bar tabs.  Pay in advance, bub."
+    bought: "%s That's %d gold."
+    sold: "%s I don't buy."
+  temper: 0
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 0
+    close: 24

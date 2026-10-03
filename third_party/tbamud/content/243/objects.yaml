@@ -1,0 +1,238 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 243.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:243:obj:24300":
+  type: armor
+  keywords: [furry, belt]
+  short: a furry belt
+  long: An orange furry belt is here.
+  wear: [take, waist]
+  values:
+    armor: 7
+  weight: 2
+  cost: 750
+  rent: 250
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  extras:
+  - keywords: [furry, belt]
+    text: >
+      These are rather strange belts.  The fur is probably from a tiger or a lion, but why would someone
+      make a belt from that?  This particular belt is about 2. 5 inches thick.
+
+"tba:243:obj:24301":
+  type: weapon
+  keywords: [icicle]
+  short: a sharp icicle
+  long: A long sharp icicle is melting here.
+  wear: [take, wield]
+  values:
+    damage: 4d6
+    attack: stab
+  weight: 5
+  cost: 200
+  rent: 34
+  level: 0
+  extras:
+  - keywords: [sharp, icicle]
+    text: >
+      An icicle is just as dangerous as a sword.  This icicle is 3 feet long and capable of stabbing
+      things quite well.
+
+"tba:243:obj:24302":
+  type: armor
+  keywords: [ski, boots, black, boot]
+  short: some black ski boots
+  long: A pair of thick black ski boots are resting here.
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 8
+  cost: 200
+  rent: 45
+  level: 0
+  affects:
+  - apply: move
+    modifier: -15
+  extras:
+  - keywords: [ski, boots, black, boot]
+    text: >
+      These downhill ski boots are quite thick and sturdy.  They offer exceptional heel and ankle
+      protection, but they're very awkward to walk in.
+
+"tba:243:obj:24303":
+  type: armor
+  keywords: [baggy, pants, snowboarder]
+  short: some baggy pants
+  long: A pair of really baggy snowboarder pants.
+  wear: [take, legs]
+  values:
+    armor: 9
+  weight: 6
+  cost: 1000
+  rent: 350
+  level: 0
+  extras:
+  - keywords: [baggy, pants, snowboarder]
+    text: >
+      These pants sure are baggy.  It's amazing that the snowboarders who wear them can even move around
+      with them on!
+
+"tba:243:obj:24304":
+  type: armor
+  keywords: [belt, ancient, ancients]
+  short: a belt of the ancients
+  long: The belt of the ancients is lying here.
+  flags: [glow]
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 6
+  cost: 1000
+  rent: 40
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: 4
+  extras:
+  - keywords: [belt, ancients, ancient]
+    text: >
+      Long thought lost and destroyed, this is a legendary piece of equipment.  It was used thousands of
+      years ago by a hero in the Orc Wars.  This belt grants the wearer the ability to hit his enemies more
+      often and with greater damage.
+
+"tba:243:obj:24305":
+  type: armor
+  keywords: [ski, goggles, expensive]
+  short: some expensive ski goggles
+  long: A pair of expensive ski goggles are lying here.
+  wear: [take, neck]
+  values:
+    armor: 6
+  weight: 4
+  cost: 600
+  rent: 30
+  level: 0
+  affects:
+  - apply: cha
+    modifier: 2
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [ski, goggles, expensive]
+    text: >
+      More of a status symbol than a functional piece of equipment, these goggle must have cost a
+      fortune!  They block out sunlight just as well as a $20 pair of sunglasses.
+
+"tba:243:obj:24306":
+  type: key
+  keywords: [yellow, plastic, ski, pass, skipass, lift, ticket]
+  short: a yellow plastic ski pass
+  long: A shiny yellow plastic ski pass is here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 750
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [yellow, plastic, ski, pass, skipass]
+    text: >
+      This is a credit card sized yellow plastic ski pass.  It has a picture of your face on it, as well
+      as your name and address.  You need one of these to get into the skihill.
+
+"tba:243:obj:24307":
+  type: food
+  keywords: [hamburger, burger]
+  short: a tasty hamburger
+  long: A tasty looking hamburger has been left here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [hamburger, burger]
+    text: >
+      This hamburger was made at the Cooland Ski Hill.  It's still in its foil wrapper, so it's still
+      warm.
+
+"tba:243:obj:24308":
+  type: food
+  keywords: [poutine, box, cheesy]
+  short: a box of poutine
+  long: A box of cheesy poutine has been left here.
+  wear: [take]
+  values:
+    hours: 36
+    poisoned: false
+  weight: 1
+  cost: 15
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [poutine, box, cheesy]
+    text: >
+      This box of poutine is quite large.  For those who don't know, poutine is composed of french fries
+      covered with gravy and cheese curds.
+
+"tba:243:obj:24309":
+  type: food
+  keywords: [hotdog, foot, long, foot-long]
+  short: a foot-long hotdog
+  long: A foot-long is lying here.
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [hotdog, foot, long, foot-long]
+    text: This hot dog was made at the Cooland Ski Hill.  It looks pretty tasty.
+
+"tba:243:obj:24310":
+  type: drinkcon
+  keywords: [lemonade, can, lemonade]
+  short: a can
+  long: A can of lemonade is sitting here.
+  wear: [take]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: lemonade
+    poisoned: false
+  weight: 10
+  cost: 5
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [can, lemonade]
+    text: This can of lemonade is still nice and cold.
+
+"tba:243:obj:24398":
+  type: key
+  keywords: [small, rusty, key]
+  short: a small rusty key
+  long: A small rusty key is barely visible here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 25
+  level: 0
+  extras:
+  - keywords: [small, rusty, key]
+    text: >
+      This is a very small key.  Due to the excessive rust, you're not sure if it even works anymore!

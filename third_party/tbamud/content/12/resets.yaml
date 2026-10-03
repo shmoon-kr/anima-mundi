@@ -1,0 +1,56 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 12.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:12:obj:1228
+  room: tba:12:room:1206
+  limit: 99
+- mob: tba:12:mob:1212
+  room: tba:12:room:1200
+  limit: 1
+- object: tba:12:obj:1212
+  room: tba:12:room:1200
+  limit: 1
+- object: tba:30:obj:3099
+  room: tba:12:room:1203
+  limit: 99
+- object: tba:30:obj:3097
+  room: tba:12:room:1202
+  limit: 99
+- mob: tba:343:mob:34300
+  room: tba:12:room:1202
+  limit: 1
+- object: tba:30:obj:3098
+  room: tba:12:room:1204
+  limit: 99
+- object: tba:12:obj:1227
+  room: tba:12:room:1293
+  limit: 99
+- mob: tba:12:mob:1201
+  room: tba:12:room:1205
+  limit: 1
+- object: tba:12:obj:1226
+  room: tba:12:room:1291
+  limit: 99
+- object: tba:30:obj:3096
+  room: tba:12:room:1290
+  limit: 99
+- mob: tba:12:mob:1200
+  room: tba:12:room:1201
+  limit: 1
+removes:
+- room: tba:12:room:1206
+  object: tba:12:obj:1228
+- room: tba:12:room:1203
+  object: tba:30:obj:3099
+- room: tba:12:room:1202
+  object: tba:30:obj:3097
+- room: tba:12:room:1204
+  object: tba:30:obj:3098
+- room: tba:12:room:1293
+  object: tba:12:obj:1227
+- room: tba:12:room:1291
+  object: tba:12:obj:1226
+- room: tba:12:room:1290
+  object: tba:30:obj:3096

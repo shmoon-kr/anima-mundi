@@ -1,0 +1,321 @@
+# Conversion report
+
+Written by `mundi-convert` (tbaMUD world → content format). Regenerated with the content; do not edit.
+
+## Counts
+
+- mobs: 3705
+- objects: 4765
+- preformatted texts: 45
+- rooms: 12700
+- shops: 334
+- zones: 189
+
+## Converter notes (13)
+
+References in the original to things that do not exist (dropped), and unknown values.
+
+- shop 1200: no room 1208 in the world (dropped)
+- shop 1200: no room 1299 in the world (dropped)
+- shop 1201: no room 1208 in the world (dropped)
+- shop 1202: no room 1208 in the world (dropped)
+- room 10782 door 1 key: no obj 10754 in the world (dropped)
+- room 12038 door 0 key: no obj 12104 in the world (dropped)
+- obj 23629 container key: no obj 4030 in the world (dropped)
+- room 25628 door 4 key: no obj 25623 in the world (dropped)
+- obj 28716 container key: no obj 8105 in the world (dropped)
+- obj 28780 container key: no obj 8103 in the world (dropped)
+- obj 28781 container key: no obj 8111 in the world (dropped)
+- obj 28782 container key: no obj 8112 in the world (dropped)
+- obj 30149 container key: no obj 30199 in the world (dropped)
+
+## Warnings (281)
+
+Doors that differ between their two sides in the original world.
+
+- tba:0:shop:1: no keeper
+- tba:12:shop:1204: no keeper
+- tba:274:shop:27408: no keeper
+- tba:343:shop:34301: no keeper
+- tba:0:room:20 north: reset Some(Locked) here, None on the other side
+- tba:0:room:20 north: key differs from the other side
+- tba:0:room:21 south: reset None here, Some(Locked) on the other side
+- tba:0:room:21 south: key differs from the other side
+- tba:103:room:10305 east: key differs from the other side
+- tba:103:room:10362 west: key differs from the other side
+- tba:104:room:10455 west: a door here, none on the other side
+- tba:107:room:10750 west: key differs from the other side
+- tba:107:room:10756 east: reset Some(Locked) here, None on the other side
+- tba:107:room:10774 north: a door here, none on the other side
+- tba:107:room:10774 west: reset None here, Some(Locked) on the other side
+- tba:107:room:10782 east: key differs from the other side
+- tba:115:room:11500 north: a door here, none on the other side
+- tba:115:room:11507 north: reset Some(Locked) here, None on the other side
+- tba:115:room:11508 south: reset None here, Some(Locked) on the other side
+- tba:117:room:11704 down: a door here, none on the other side
+- tba:117:room:11706 down: reset Some(Locked) here, None on the other side
+- tba:117:room:11719 north: a door here, none on the other side
+- tba:117:room:11725 north: a door here, none on the other side
+- tba:117:room:11752 up: reset None here, Some(Locked) on the other side
+- tba:117:room:11753 south: a door here, none on the other side
+- tba:117:room:11755 down: a door here, none on the other side
+- tba:117:room:11759 east: reset Some(Locked) here, Some(Closed) on the other side
+- tba:117:room:11759 east: key differs from the other side
+- tba:117:room:11760 west: reset Some(Closed) here, Some(Locked) on the other side
+- tba:117:room:11760 west: key differs from the other side
+- tba:118:room:11823 north: reset Some(Locked) here, Some(Closed) on the other side
+- tba:118:room:11824 west: reset Some(Locked) here, Some(Closed) on the other side
+- tba:118:room:11824 west: key differs from the other side
+- tba:118:room:11825 south: reset Some(Closed) here, Some(Locked) on the other side
+- tba:118:room:11840 east: reset Some(Closed) here, Some(Locked) on the other side
+- tba:118:room:11840 east: key differs from the other side
+- tba:11:room:1144 east: reset Some(Locked) here, Some(Closed) on the other side
+- tba:11:room:1145 west: reset Some(Closed) here, Some(Locked) on the other side
+- tba:120:room:12037 south: key differs from the other side
+- tba:120:room:12038 north: key differs from the other side
+- tba:16:room:1608 south: reset Some(Closed) here, None on the other side
+- tba:16:room:1621 north: reset None here, Some(Closed) on the other side
+- tba:16:room:1648 down: reset Some(Closed) here, None on the other side
+- tba:16:room:1691 up: reset None here, Some(Closed) on the other side
+- tba:16:room:1692 down: reset Some(Closed) here, None on the other side
+- tba:16:room:1693 up: reset None here, Some(Closed) on the other side
+- tba:175:room:17513 west: key differs from the other side
+- tba:175:room:17522 east: key differs from the other side
+- tba:175:room:17522 west: reset Some(Locked) here, Some(Closed) on the other side
+- tba:175:room:17524 east: reset Some(Closed) here, Some(Locked) on the other side
+- tba:17:room:1731 west: reset None here, Some(Closed) on the other side
+- tba:17:room:1732 east: reset Some(Closed) here, None on the other side
+- tba:17:room:1732 west: reset Some(Closed) here, None on the other side
+- tba:17:room:1733 east: reset None here, Some(Closed) on the other side
+- tba:17:room:1771 south: reset None here, Some(Closed) on the other side
+- tba:17:room:1772 south: reset None here, Some(Closed) on the other side
+- tba:17:room:1773 south: reset None here, Some(Closed) on the other side
+- tba:17:room:1796 north: reset Some(Closed) here, None on the other side
+- tba:17:room:1797 north: reset Some(Closed) here, None on the other side
+- tba:17:room:1798 north: reset Some(Closed) here, None on the other side
+- tba:18:room:1837 north: reset Some(Locked) here, Some(Closed) on the other side
+- tba:18:room:1838 south: reset Some(Closed) here, Some(Locked) on the other side
+- tba:18:room:1887 north: reset Some(Locked) here, Some(Closed) on the other side
+- tba:18:room:1888 south: reset Some(Closed) here, Some(Locked) on the other side
+- tba:19:room:1931 north: reset Some(Open) here, None on the other side
+- tba:19:room:1933 south: reset None here, Some(Open) on the other side
+- tba:201:room:20102 west: reset Some(Locked) here, Some(Closed) on the other side
+- tba:201:room:20104 east: reset Some(Closed) here, Some(Locked) on the other side
+- tba:201:room:20108 north: reset Some(Closed) here, None on the other side
+- tba:201:room:20150 south: reset None here, Some(Closed) on the other side
+- tba:234:room:23403 north: reset Some(Closed) here, None on the other side
+- tba:234:room:23441 east: a door here, none on the other side
+- tba:234:room:23470 south: reset None here, Some(Closed) on the other side
+- tba:238:room:23845 south: a door here, none on the other side
+- tba:239:room:23936 east: a door here, none on the other side
+- tba:239:room:23938 down: a door here, none on the other side
+- tba:239:room:23961 south: reset Some(Locked) here, Some(Closed) on the other side
+- tba:239:room:23962 north: reset Some(Closed) here, Some(Locked) on the other side
+- tba:239:room:23969 south: a door here, none on the other side
+- tba:239:room:23973 north: reset Some(Closed) here, None on the other side
+- tba:239:room:23980 south: reset None here, Some(Closed) on the other side
+- tba:249:room:24907 north: a door here, none on the other side
+- tba:249:room:24912 north: a door here, none on the other side
+- tba:250:room:25047 north: a door here, none on the other side
+- tba:250:room:25048 north: a door here, none on the other side
+- tba:250:room:25056 north: a door here, none on the other side
+- tba:250:room:25057 north: a door here, none on the other side
+- tba:250:room:25058 north: a door here, none on the other side
+- tba:250:room:25062 north: a door here, none on the other side
+- tba:250:room:25063 north: a door here, none on the other side
+- tba:250:room:25070 west: key differs from the other side
+- tba:250:room:25074 east: key differs from the other side
+- tba:250:room:25078 south: reset None here, Some(Locked) on the other side
+- tba:250:room:25083 north: reset Some(Locked) here, None on the other side
+- tba:250:room:25083 south: a door here, none on the other side
+- tba:253:room:25320 east: a door here, none on the other side
+- tba:254:room:25400 east: key differs from the other side
+- tba:254:room:25401 west: key differs from the other side
+- tba:255:room:25521 east: reset Some(Closed) here, None on the other side
+- tba:255:room:25521 west: reset Some(Closed) here, None on the other side
+- tba:255:room:25529 west: reset None here, Some(Closed) on the other side
+- tba:255:room:25530 east: reset None here, Some(Closed) on the other side
+- tba:256:room:25636 south: key differs from the other side
+- tba:256:room:25642 north: key differs from the other side
+- tba:259:room:25908 east: reset Some(Locked) here, Some(Closed) on the other side
+- tba:259:room:25931 west: reset Some(Closed) here, Some(Locked) on the other side
+- tba:25:room:2581 up: reset Some(Closed) here, None on the other side
+- tba:261:room:26100 north: a door here, none on the other side
+- tba:261:room:26135 west: a door here, none on the other side
+- tba:261:room:26136 east: a door here, none on the other side
+- tba:261:room:26136 west: a door here, none on the other side
+- tba:265:room:26506 down: a door here, none on the other side
+- tba:265:room:26521 east: a door here, none on the other side
+- tba:265:room:26521 west: a door here, none on the other side
+- tba:265:room:26536 north: a door here, none on the other side
+- tba:267:room:26782 south: a door here, none on the other side
+- tba:268:room:26804 east: a door here, none on the other side
+- tba:26:room:2612 down: reset None here, Some(Closed) on the other side
+- tba:26:room:2636 west: reset None here, Some(Closed) on the other side
+- tba:26:room:2637 east: reset Some(Closed) here, None on the other side
+- tba:273:room:27344 east: key differs from the other side
+- tba:273:room:27362 east: a door here, none on the other side
+- tba:273:room:27362 west: key differs from the other side
+- tba:274:room:27452 west: a door here, none on the other side
+- tba:276:room:27607 south: a door here, none on the other side
+- tba:277:room:27724 south: a door here, none on the other side
+- tba:277:room:27734 north: a door here, none on the other side
+- tba:279:room:27903 south: reset None here, Some(Closed) on the other side
+- tba:279:room:27905 north: reset Some(Closed) here, None on the other side
+- tba:279:room:27991 east: reset Some(Closed) here, None on the other side
+- tba:279:room:27991 south: reset Some(Locked) here, Some(Closed) on the other side
+- tba:279:room:27991 south: key differs from the other side
+- tba:279:room:27992 west: reset None here, Some(Closed) on the other side
+- tba:279:room:27994 north: reset Some(Closed) here, Some(Locked) on the other side
+- tba:279:room:27994 north: key differs from the other side
+- tba:27:room:2710 north: reset Some(Locked) here, None on the other side
+- tba:27:room:2711 south: reset None here, Some(Locked) on the other side
+- tba:27:room:2772 north: key differs from the other side
+- tba:27:room:2780 south: key differs from the other side
+- tba:282:room:28208 south: reset Some(Closed) here, None on the other side
+- tba:282:room:28226 north: reset Some(Closed) here, None on the other side
+- tba:282:room:28228 south: a door here, none on the other side
+- tba:282:room:28230 north: reset None here, Some(Closed) on the other side
+- tba:282:room:28235 south: reset None here, Some(Closed) on the other side
+- tba:282:room:28258 north: reset Some(Closed) here, None on the other side
+- tba:282:room:28259 south: reset None here, Some(Closed) on the other side
+- tba:284:room:28400 down: reset Some(Locked) here, Some(Closed) on the other side
+- tba:284:room:28400 down: key differs from the other side
+- tba:284:room:28401 up: reset Some(Closed) here, Some(Locked) on the other side
+- tba:284:room:28401 up: key differs from the other side
+- tba:284:room:28419 north: a door here, none on the other side
+- tba:284:room:28421 south: a door here, none on the other side
+- tba:284:room:28423 north: a door here, none on the other side
+- tba:284:room:28433 up: a door here, none on the other side
+- tba:284:room:28434 up: a door here, none on the other side
+- tba:284:room:28457 north: a door here, none on the other side
+- tba:287:room:28760 south: key differs from the other side
+- tba:287:room:28761 south: key differs from the other side
+- tba:287:room:28774 north: key differs from the other side
+- tba:287:room:28775 north: key differs from the other side
+- tba:288:room:28839 up: reset Some(Locked) here, None on the other side
+- tba:288:room:28854 up: reset Some(Locked) here, None on the other side
+- tba:288:room:28854 down: reset None here, Some(Locked) on the other side
+- tba:288:room:28855 down: reset None here, Some(Locked) on the other side
+- tba:288:room:28859 east: reset Some(Locked) here, None on the other side
+- tba:288:room:28860 west: reset None here, Some(Locked) on the other side
+- tba:288:room:28863 south: reset Some(Locked) here, None on the other side
+- tba:288:room:28864 north: reset None here, Some(Locked) on the other side
+- tba:290:room:29013 east: key differs from the other side
+- tba:290:room:29014 west: key differs from the other side
+- tba:291:room:29180 west: a door here, none on the other side
+- tba:291:room:29190 north: reset Some(Locked) here, None on the other side
+- tba:291:room:29191 south: reset None here, Some(Locked) on the other side
+- tba:292:room:29239 east: key differs from the other side
+- tba:292:room:29240 west: key differs from the other side
+- tba:292:room:29249 north: a door here, none on the other side
+- tba:2:room:225 up: reset Some(Locked) here, None on the other side
+- tba:301:room:30167 down: reset Some(Closed) here, None on the other side
+- tba:301:room:30171 up: reset None here, Some(Closed) on the other side
+- tba:305:room:30502 down: a door here, none on the other side
+- tba:305:room:30585 east: a door here, none on the other side
+- tba:307:room:30703 north: a door here, none on the other side
+- tba:308:room:30822 east: a door here, none on the other side
+- tba:310:room:31043 down: a door here, none on the other side
+- tba:316:room:31621 north: reset Some(Closed) here, None on the other side
+- tba:316:room:31623 south: reset None here, Some(Closed) on the other side
+- tba:324:room:32414 east: reset Some(Closed) here, Some(Locked) on the other side
+- tba:326:room:32640 west: reset Some(Locked) here, Some(Closed) on the other side
+- tba:343:room:34386 east: a door here, none on the other side
+- tba:346:room:34643 south: a door here, none on the other side
+- tba:37:room:3735 south: reset Some(Locked) here, Some(Closed) on the other side
+- tba:37:room:3737 north: reset Some(Closed) here, Some(Locked) on the other side
+- tba:39:room:3911 east: reset Some(Closed) here, None on the other side
+- tba:39:room:3912 down: a door here, none on the other side
+- tba:39:room:3913 west: reset None here, Some(Closed) on the other side
+- tba:3:room:367 down: reset None here, Some(Locked) on the other side
+- tba:42:room:4214 south: reset Some(Locked) here, None on the other side
+- tba:42:room:4215 north: reset None here, Some(Locked) on the other side
+- tba:42:room:4227 up: reset None here, Some(Locked) on the other side
+- tba:42:room:4228 down: reset Some(Locked) here, None on the other side
+- tba:45:room:4511 south: reset None here, Some(Closed) on the other side
+- tba:45:room:4512 north: reset Some(Closed) here, None on the other side
+- tba:45:room:4514 east: reset None here, Some(Locked) on the other side
+- tba:45:room:4514 east: key differs from the other side
+- tba:45:room:4515 east: reset Some(Closed) here, None on the other side
+- tba:45:room:4515 west: reset Some(Locked) here, None on the other side
+- tba:45:room:4515 west: key differs from the other side
+- tba:45:room:4516 west: reset None here, Some(Closed) on the other side
+- tba:45:room:4517 down: reset None here, Some(Locked) on the other side
+- tba:45:room:4518 up: reset Some(Locked) here, None on the other side
+- tba:45:room:4519 east: reset Some(Closed) here, None on the other side
+- tba:45:room:4522 west: reset None here, Some(Closed) on the other side
+- tba:45:room:4523 down: reset Some(Closed) here, None on the other side
+- tba:45:room:4525 up: reset None here, Some(Closed) on the other side
+- tba:45:room:4527 west: a door here, none on the other side
+- tba:45:room:4528 west: a door here, none on the other side
+- tba:52:room:5210 east: a door here, none on the other side
+- tba:53:room:5326 west: key differs from the other side
+- tba:53:room:5327 east: key differs from the other side
+- tba:555:room:55501 north: a door here, none on the other side
+- tba:555:room:55508 east: a door here, none on the other side
+- tba:555:room:55513 west: a door here, none on the other side
+- tba:556:room:55607 south: reset Some(Closed) here, None on the other side
+- tba:556:room:55611 north: reset None here, Some(Closed) on the other side
+- tba:556:room:55628 south: reset Some(Closed) here, None on the other side
+- tba:556:room:55632 north: reset None here, Some(Closed) on the other side
+- tba:57:room:5701 south: a door here, none on the other side
+- tba:57:room:5703 up: a door here, none on the other side
+- tba:57:room:5711 south: a door here, none on the other side
+- tba:653:room:65397 south: a door here, none on the other side
+- tba:653:room:65398 east: a door here, none on the other side
+- tba:65:room:6512 east: key differs from the other side
+- tba:65:room:6525 west: key differs from the other side
+- tba:70:room:7045 west: a door here, none on the other side
+- tba:71:room:7111 down: reset Some(Closed) here, None on the other side
+- tba:71:room:7116 down: reset Some(Closed) here, None on the other side
+- tba:72:room:7207 west: a door here, none on the other side
+- tba:72:room:7279 up: reset None here, Some(Closed) on the other side
+- tba:72:room:7280 up: reset None here, Some(Closed) on the other side
+- tba:75:room:7504 down: reset Some(Closed) here, None on the other side
+- tba:75:room:7505 up: reset None here, Some(Closed) on the other side
+- tba:75:room:7520 down: reset Some(Closed) here, None on the other side
+- tba:75:room:7532 up: reset None here, Some(Closed) on the other side
+- tba:75:room:7555 east: reset Some(Closed) here, None on the other side
+- tba:75:room:7558 east: a door here, none on the other side
+- tba:75:room:7558 west: a door here, none on the other side
+- tba:75:room:7563 west: reset None here, Some(Closed) on the other side
+- tba:75:room:7564 north: a door here, none on the other side
+- tba:75:room:7564 south: a door here, none on the other side
+- tba:75:room:7570 west: reset Some(Closed) here, None on the other side
+- tba:75:room:7571 east: reset None here, Some(Closed) on the other side
+- tba:78:room:7819 north: a door here, none on the other side
+- tba:83:room:8378 west: reset Some(Closed) here, Some(Locked) on the other side
+- tba:83:room:8379 east: reset Some(Locked) here, Some(Closed) on the other side
+- tba:83:room:8392 south: key differs from the other side
+- tba:83:room:8393 down: key differs from the other side
+- tba:83:room:8394 north: key differs from the other side
+- tba:83:room:8395 up: key differs from the other side
+- tba:86:room:8602 north: a door here, none on the other side
+- tba:86:room:8608 north: reset Some(Locked) here, Some(Closed) on the other side
+- tba:86:room:8609 south: reset Some(Closed) here, Some(Locked) on the other side
+- tba:86:room:8614 east: reset None here, Some(Closed) on the other side
+- tba:86:room:8623 down: reset None here, Some(Closed) on the other side
+- tba:86:room:8624 east: reset Some(Closed) here, None on the other side
+- tba:86:room:8624 west: reset Some(Closed) here, None on the other side
+- tba:86:room:8625 up: reset Some(Closed) here, None on the other side
+- tba:86:room:8634 west: reset None here, Some(Closed) on the other side
+- tba:86:room:8640 north: key differs from the other side
+- tba:86:room:8641 south: key differs from the other side
+- tba:86:room:8647 east: reset Some(Closed) here, None on the other side
+- tba:86:room:8657 west: reset None here, Some(Closed) on the other side
+- tba:96:room:9645 west: reset Some(Locked) here, Some(Closed) on the other side
+- tba:96:room:9645 west: key differs from the other side
+- tba:96:room:9646 east: reset Some(Locked) here, Some(Closed) on the other side
+- tba:96:room:9646 east: key differs from the other side
+- tba:96:room:9647 west: reset Some(Closed) here, Some(Locked) on the other side
+- tba:96:room:9647 west: key differs from the other side
+- tba:96:room:9648 east: reset Some(Closed) here, Some(Locked) on the other side
+- tba:96:room:9648 east: key differs from the other side
+- tba:96:room:9653 south: reset Some(Locked) here, None on the other side
+- tba:96:room:9654 north: reset None here, Some(Locked) on the other side
+
+## Errors (0)
+
+Must be empty.
+

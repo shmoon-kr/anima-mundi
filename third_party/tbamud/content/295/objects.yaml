@@ -1,0 +1,209 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 295.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:295:obj:29500":
+  type: weapon
+  keywords: [spear]
+  short: a spear
+  long: A rather unremarkable spear lays here.
+  flags: [no_drop, anti_cleric, anti_thief]
+  wear: [take, wield]
+  values:
+    damage: 3d3
+    attack: pierce
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:295:obj:29501":
+  type: container
+  keywords: [fire]
+  short: a large fire
+  long: A large fire burns very brightly!
+  flags: [glow]
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [fire]
+    text: Hey, watch it, this thing is realy hot!
+
+"tba:295:obj:29502":
+  type: key
+  keywords: [heart]
+  short: a human heart
+  long: A human heart still beats slowly as it sits on the floor!
+  flags: [hum, no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [heart]
+    text: Urrgh!  It still beats in your hand!  What strange magic could do this?
+
+"tba:295:obj:29503":
+  type: other
+  keywords: [bones]
+  short: a pile of bones
+  long: A pile of bones rests on the ground.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bones]
+    text: WooWoo!  Human bones!  Lots of em to!  Must of been a good meal.
+
+"tba:295:obj:29504":
+  type: food
+  keywords: [meat, human]
+  short: a slab of meat
+  long: A slab of meat that look a little leg shaped sits on the floor.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 2
+  cost: 20
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [leg]
+    text: Ha!  A human leg!  Oyur not realy gonna eat this are you?
+
+"tba:295:obj:29505":
+  type: worn
+  keywords: [fur, skin]
+  short: some animal fur
+  long: An animal skin lays here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 200
+  rent: 0
+  level: 5
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 1
+  - apply: ac
+    modifier: -4
+  extras:
+  - keywords: [fur]
+    text: Well, its like furry!  Probably from a lion.
+
+"tba:295:obj:29506":
+  type: weapon
+  keywords: [bone, large]
+  short: a large bone club
+  long: A large club made from bone rests here.
+  flags: [no_donate, no_drop, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 6d6
+    attack: crush
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: int
+    modifier: -2
+  - apply: wis
+    modifier: -2
+
+"tba:295:obj:29507":
+  type: worn
+  keywords: [teeth, necklace]
+  short: a tooth necklace
+  long: A necklace made of teeth rests here.
+  flags: [hum]
+  wear: [take, neck, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 20
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: -1
+
+"tba:295:obj:29508":
+  type: trash
+  keywords: [branch]
+  short: a branch
+  long: A small branch rests here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [branch]
+    text: Made of wood!  What did you expect :)-
+
+"tba:295:obj:29509":
+  type: light
+  keywords: [skull, crystal]
+  short: a crystal skull
+  long: A crystal skull sits unattended!
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 10
+  cost: 300
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: int
+    modifier: 1
+  - apply: mana
+    modifier: 30
+  extras:
+  - keywords: [skull, crystal]
+    text: The skull seems to be made out of an unknow crystal!  Wonder what it is?!?
+
+"tba:295:obj:29510":
+  type: fountain
+  keywords: [water, fountain, water]
+  short: a fountain
+  long: A nice looking fountain sprays water about.
+  flags: [hum]
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 10000004
+  cost: 0
+  rent: 0
+  level: 0

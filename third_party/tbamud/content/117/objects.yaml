@@ -1,0 +1,904 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 117.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:117:obj:11700":
+  type: worn
+  keywords: [wedding, ring]
+  short: a wedding ring
+  long: >-
+    A simple ring made out of gold, it looks like a ring one would recieve at a wedding from their
+    spouse.
+  flags: [no_sell]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:117:obj:11701":
+  type: note
+  keywords: [sign]
+  short: a sign
+  long: A sign is posted in the ground
+  action: "Tower #1: Shops and excecutive officing"
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:117:obj:11702":
+  type: weapon
+  keywords: [yellow, straightsword]
+  short: "@YYellow@n straightsword"
+  long: A @YYellow@n straightsword is lying here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: slash
+  weight: 6
+  cost: 475
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [yellow, straightsword]
+    text: >
+      The long straight blade is stained a bright yellow.  It is well forged and the hilt is made of
+      gold.  On the hilt is a symbol that looks like the sun seems to make the sword glow.  The blade is
+      sharpened well and made of a sturdy metal. While somewhat heavy
+
+"tba:117:obj:11703":
+  type: armor
+  keywords: [yellow, field, plate]
+  short: "@YYellow@n field plate"
+  long: A @YYellow@n field plate is lying here.
+  flags: [hum, anti_thief]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 9
+  cost: 1
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [yellow, field, plate]
+    text: >
+      The field plate is stained a bright yellow.  The armor is made of extremely sturdy metal and will
+      sustain well against some pretty serious attacks.  The armor has a symbol that looks like a sun
+      engraved on the back near the top.
+
+"tba:117:obj:11704":
+  type: weapon
+  keywords: [silver, scimitar]
+  short: "@DSilver@n scimitar"
+  long: A @DSilver@n scimitar has been left here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 2d9
+    attack: slash
+  weight: 7
+  cost: 500
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [silver, scimitar]
+    text: >
+      The scimitar is well curved and very sharp.  The blade is made of silver and shines like the full
+      moon.  The hilt of the sword is also silver and very exquisite.
+
+"tba:117:obj:11705":
+  type: food
+  keywords: [broiled, turkey]
+  short: a Broiled Turkey
+  long: A Broiled Turkey has been left here.
+  wear: [take]
+  values:
+    hours: 15
+    poisoned: false
+  weight: 3
+  cost: 1250
+  rent: 0
+  level: 20
+  extras:
+  - keywords: [broiled, turkey]
+    text: >
+      This delicious meal was no doubt made by the chefs at The Turkey's Gobble. The famed food looks
+      juicy and tender, cooked to a perfect golden brown on the outside and a delicious white on the inside,
+      it can make even the most stubborn person's mouth water
+
+"tba:117:obj:11706":
+  type: armor
+  keywords: [silver, splint, mail]
+  short: a @DSilver@n splint mail
+  long: A @DSilver@n splint mail has been left here.
+  flags: [hum, anti_mage]
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 10
+  cost: 550
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [silver, splint, mail]
+    text: >
+      This unique armor has been made from forged scraps of silver, and is surprisingly durable.  The
+      inside of the armor is covered in a layer of red felt for comfort.  The silver seems to shine more than
+      you would expect it to.
+
+"tba:117:obj:11707":
+  type: food
+  keywords: [turkey, sandwich]
+  short: a Turkey Sandwich
+  long: A Turkey Sandwich has been left here.
+  wear: [take]
+  values:
+    hours: 2
+    poisoned: false
+  weight: 2
+  cost: 30
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [turkey, sandwich]
+    text: A turkey sandwich with a toothpick.  It looks quite tasty.
+
+"tba:117:obj:11708":
+  type: other
+  keywords: [wooden, cello]
+  short: a wooden cello
+  long: A wooden cello has been left here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, cello]
+    text: The cello is pretty and made of wood.  It is in tune and can be used well by masters.
+
+"tba:117:obj:11709":
+  type: food
+  keywords: [turkey, soup]
+  short: a Turkey Soup
+  long: A Turkey Soup has been left here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [turkey, soup]
+    text: >
+      The steaming soup is served in an ivory bowl.  The soup is a tanish color with bits of white turkey
+      meat floating in it.  There are also vegetables such as celery, tomatoes and carrots.
+
+"tba:117:obj:11710":
+  type: food
+  keywords: [turkey, surprise]
+  short: a Turkey Surprise
+  long: A Turkey Surprise has been left here.
+  wear: [take]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 4
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [turkey, surprise]
+    text: >
+      Nobody knows what they put in this meal.  Nobody really cares, since it isn't that great anyway.
+
+"tba:117:obj:11711":
+  type: fountain
+  keywords: [cranberry, juice]
+  short: a Cranberry Juice
+  long: A Cranberry Juice has been left here.
+  wear: [take]
+  values:
+    capacity: 2
+    contains: 2
+    liquid: water
+    poisoned: false
+  weight: 3
+  cost: 60
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cranberry, juice]
+    text: >
+      The dark red juice is served in a tall glass with cranberries at the bottom of the juice.  The
+      sweet and tart liquid is a favorite among many kids and adults.
+
+"tba:117:obj:11712":
+  type: fountain
+  keywords: [pumpkin, ale]
+  short: a Pumpkin Ale
+  long: A Pumpkin Ale has been left here.
+  wear: [take]
+  values:
+    capacity: 21
+    contains: 7
+    liquid: ale
+    poisoned: false
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pumpkin, ale]
+    text: >
+      The orange ale is served in a large glass mug.  It has a thick froth at the top and is really
+      bubbly.  On the side of the mug there is 'The Turkey's Gobble' written in calligraphy.
+
+"tba:117:obj:11713":
+  type: food
+  keywords: [pumpkin, pie]
+  short: a Pumpkin Pie
+  long: A Pumpkin Pie has been left here.
+  wear: [take]
+  values:
+    hours: 8
+    poisoned: false
+  weight: 9
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pumpkin, pie]
+    text: >
+      The pie is baked to perfection and is topped in the center with whip cream. It is steaming fresh
+      from the oven and a dark orange-brown color.
+
+"tba:117:obj:11714":
+  type: fountain
+  keywords: [road, heaven, wine]
+  short: "@RRoad@n @Yto@n @CHeaven@n"
+  long: A @RRoad@n @Yto@n @CHeaven@n has been left here.
+  wear: [take]
+  values:
+    capacity: 100
+    contains: 10
+    liquid: wine
+    poisoned: false
+  weight: 15
+  cost: 750
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [road, heaven, wine]
+    text: >
+      This dark red wine is called the @RRoad@n @Yto@n @CHeaven@n because it is extremely intoxicating
+      but filling.  The bottle that contains it is huge and probably will keep you busy for quite some time. 
+      The wine has a smell of a mixture of many fruits, though it is difficult to tell which ones were
+      used.
+
+"tba:117:obj:11715":
+  type: fountain
+  keywords: [wine, flask]
+  short: a Flask of White Wine
+  long: A Flask of White Wine has been left here.
+  wear: [take]
+  values:
+    capacity: 12
+    contains: 3
+    liquid: wine
+    poisoned: false
+  weight: 5
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [flask, wine]
+    text: >
+      The flask is brown, and not very big.  The wine inside it kind of smells like peaches, for some
+      reason.
+
+"tba:117:obj:11716":
+  type: fountain
+  keywords: [estanzia]
+  short: an Estanzia
+  long: An Estanzia has been left here.
+  wear: [take]
+  values:
+    capacity: 15
+    contains: 5
+    liquid: wine
+    poisoned: false
+  weight: 10
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [estanzia]
+    text: >
+      The wine in the bottle is a nice clear/white color.  The bottle itself is green and is wrapped with
+      a large label that says 'Estanzia'.
+
+"tba:117:obj:11717":
+  type: fountain
+  keywords: [glass, wine]
+  short: a glass of wine
+  long: A glass of wine has been left here.
+  wear: [take]
+  values:
+    capacity: 8
+    contains: 2
+    liquid: wine
+    poisoned: false
+  weight: 5
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [glass, wine]
+    text: >
+      The glass is made of an intricately cut crystal filled to the top with a sweet, red wine.  It
+      tastes like a mixture of grape and raspberry that feels warm on the tongue but cold in the hand.
+
+"tba:117:obj:11718":
+  type: key
+  keywords: [cellar, key]
+  short: the wine cellar key
+  long: The wine cellar key has been left here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key]
+    text: >
+      The key is pink and cut very nicely.  It is hanging off of a chain and it has 'Wine cellar'
+      engraved on it.
+
+"tba:117:obj:11719":
+  type: fountain
+  keywords: [chalice, red, something]
+  short: a Chalice of Red Something
+  long: A Chalice of Red Something has been left here.
+  wear: [take]
+  values:
+    capacity: 7
+    contains: 7
+    liquid: blood
+    poisoned: false
+  weight: 7
+  cost: 400
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [chalice, wine]
+    text: "@WO@n@DM@n@WG@n @WO@n@DM@n@WG@n that isn't @mwine@n it's @rblood!!!!!  @n"
+
+"tba:117:obj:11720":
+  type: weapon
+  keywords: [defender]
+  short: the @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n
+  long: The @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n has been left here.
+  flags: [glow, hum, no_donate, anti_mage, anti_cleric, anti_thief, no_sell]
+  wear: [take, wield]
+  values:
+    damage: 7d3
+    attack: thrash
+  weight: 15
+  cost: 2000000
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [defender]
+    text: >
+      The @rD@n@me@n@rf@n@me@n@rn@n@md@n@re@n@mr@n is a valiant sword only usable by masters of the
+      world.  The blade is a dull gray and the hilt is made of silver with a leather bound handle for a good
+      grip.  Legend goes it was used to protect Los Torres from i nvasion of the Valdurain Army.  It is only
+      wieldable by the warriors of the land.
+
+"tba:117:obj:11721":
+  type: armor
+  keywords: [optical, blue, helm]
+  short: an @DOptical@n @bBlue@n helm
+  long: An @DOptical@n @bBlue@n helm has been left here.
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 7
+  cost: 2750
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [optical, blue, helm]
+    text: >
+      Painted blue and black in a very, very thin striped pattern, the helmet makes your eyes hurt a
+      bit.  The helm completely covers your head and neck, and it's desgin makes it look like a hood.  There is
+      a mask covering the face, with eyeholes and holes in front of the mouth and nose for breathing.  The
+      empty holes for the eyes seem to have a piercing look to them.
+
+"tba:117:obj:11722":
+  type: armor
+  keywords: [large, boots]
+  short: some Large Boots
+  long: Some Large Boots have been left here.
+  wear: [take, legs, feet]
+  values:
+    armor: 10
+  weight: 10
+  cost: 2500
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [large, boots]
+    text: >
+      The boots are large and made of iron.  They are large enough to cover your shins as well as your
+      feet.
+
+"tba:117:obj:11723":
+  type: armor
+  keywords: [titanium, gauntlets]
+  short: some Titanium Gauntlets
+  long: Some Titanium Gauntlets have been left here.
+  flags: [hum]
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 5
+  cost: 2200
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [titanium, gauntlets]
+    text: >
+      These gauntlets have been forged with pure titanium.  They are sturdy yet flexible enough to fit
+      your fingers well.  The metal feels unexpectedly warm as it is worn.  The knuckles of the gauntlets
+      have small spikes on them for aesthetic purposes.
+
+"tba:117:obj:11724":
+  type: armor
+  keywords: [pair, greaves]
+  short: a pair of greaves
+  long: A pair of greaves have been left here.
+  wear: [take, legs]
+  values:
+    armor: 6
+  weight: 10
+  cost: 1500
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [pair, greaves]
+    text: >
+      The greaves are made of metal and strap around the user's legs with leather-bound buckles.  They
+      are very shiny and look brand new.
+
+"tba:117:obj:11725":
+  type: armor
+  keywords: [white, chainmail]
+  short: a White Chainmail
+  long: A White Chainmail has been left here.
+  wear: [take, body]
+  values:
+    armor: 9
+  weight: 13
+  cost: 4000
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [white, chainmail]
+    text: >
+      A chainmail made entirely of a white painted metal is here.  It has not been painted very well, for
+      tiny hatches of gray are still visible.  The chainmail feels somewhat heavy and it is longer than a
+      normal chainmail would be.
+
+"tba:117:obj:11726":
+  type: weapon
+  keywords: [red, wood, bow]
+  short: a bow made of dark, red wood
+  long: A bow made of dark, red wood has been left here.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, wield, hold]
+  values:
+    damage: 3d4
+    attack: sting
+  weight: 10
+  cost: 600
+  rent: 0
+  level: 14
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [bow, red, wood]
+    text: >
+      This is a bow intricately made of red wood from the Red Forest outside of Los Torres.  It has a
+      small jewel placed at the tip of the red wooden parabola. The coarse string of the bow is very stiff and
+      difficult to pull for even the strongest of people.  It makes a very quiet and constant 'twang'
+      sound when plucked.
+
+"tba:117:obj:11727":
+  type: weapon
+  keywords: [ousishi, katana]
+  short: an Ousishi Katana
+  long: An Ousishi Katana has been left here.
+  flags: [anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: slash
+  weight: 20
+  cost: 1500
+  rent: 0
+  level: 10
+  affects:
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [ousishi, katana]
+    text: >
+      This sword is a new model of the katana.  Unlike most models, it has a backward blade and is
+      somewhat heavier.  There is a small hole in the blade above the hilt so the blade will make less sound when
+      slashed.  It is also a little longer and there is a little bit more curve to the end of the blade
+      than a standard katana.
+
+"tba:117:obj:11728":
+  type: other
+  keywords: [red, arrow]
+  short: a red arrow
+  long: A red arrow has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [arrow]
+    text: >
+      The skinny arrow is painted red and has red feathers at the end of it.  It pierces the wind when
+      fired and doesn't make more than a really quiet whistle. The head of the arrow is made of red painted
+      iron.
+
+"tba:117:obj:11729":
+  type: container
+  keywords: [redwood, quiver]
+  short: a Redwood Quiver
+  long: A Redwood Quiver has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 10
+    lock_flags: 0
+    corpse: false
+  weight: 3
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [redwood, quiver]
+    text: >
+      Red painted wood signifies this quiver was made by the Red Assassins, an infamous group from Los
+      Torres.  It looks very deep and it might be able to hold a lot of arrows.  There are metal bindings at
+      the top and the bottom of the cylindrical quiver that keep the wood together.  They are fastened with
+      screws that are welded into the iron.
+
+"tba:117:obj:11730":
+  type: worn
+  keywords: [obscenity]
+  short: an @WO@n@Yb@n@Rs@n@Mc@n@Be@n@Cn@n@Gi@n@Kt@n@Wy@n
+  long: An @WO@n@Yb@n@Rs@n@Mc@n@Be@n@Cn@n@Gi@n@Kt@n@Wy@n has been left here.
+  flags: [glow, hum, no_donate, no_sell]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 5
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: dex
+    modifier: 2
+  - apply: con
+    modifier: 2
+
+"tba:117:obj:11731":
+  type: light
+  keywords: [beam, light]
+  short: a beam of light
+  long: A Beam of Light has been left here.
+  flags: [glow]
+  wear: [take]
+  values:
+    hours: -1
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 17
+  extras:
+  - keywords: [beam, light]
+    text: >
+      This is a strange source of light indeed.  It is a beam of eternal light from the sun enclosed
+      within a clear and weightless magical case.  It floats with it's carrier and clears away any darkness it
+      may see.
+
+"tba:117:obj:11732":
+  type: weapon
+  keywords: [kard]
+  short: a Kard
+  long: A Kard has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: stab
+  weight: 3
+  cost: 350
+  rent: 0
+  level: 13
+  affects:
+  - apply: dex
+    modifier: 1
+  extras:
+  - keywords: [kard]
+    text: >
+      The small and lightweight dagger was made so that nobody would see it when it is thrust at its
+      opponent.  The blade reaches over the hilt by about an inch and is about 5 inches in length.
+
+"tba:117:obj:11733":
+  type: worn
+  keywords: [red, cloth, costume]
+  short: a @RRed Cloth Costume@n
+  long: A @RRed Cloth Costume@n has been left here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 475
+  rent: 0
+  level: 15
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: con
+    modifier: 1
+  extras:
+  - keywords: [red, cloth, costume]
+    text: >
+      The costume is made of red cloths woven and tied together in a tight fashion, with some flaps at
+      the bottom.  It is apparently designed to be worn around the torso, with tiny arm holes and an opening
+      at the top and bottom.  The hems on the clothing are gold colored and so are the buttons.  There are
+      long, red strings around the costume to fasten it to its wearer.
+
+"tba:117:obj:11734":
+  type: key
+  keywords: [pewter, key]
+  short: a pewter key
+  long: A pewter key has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 100
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pewter, key]
+    text: The key is simply cut, and made of a dark gray colored stone.
+
+"tba:117:obj:11735":
+  type: trash
+  keywords: [bouquet, exotic, flowers]
+  short: a bouquet of exotic flowers
+  long: A bouquet of exotic flowers has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bouquet, exotic, flowers]
+    text: >
+      A hand picked bouquet of @rred@n, @ggreen@n, @yyellow@n and @bblue@n flowers nicely arranged into a
+      bouquet could make the perfect gift for anyone.
+
+"tba:117:obj:11736":
+  type: weapon
+  keywords: [red, breaker]
+  short: a red breaker
+  long: A Red Breaker has been left here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 3d6
+    attack: maul
+  weight: 12
+  cost: 900
+  rent: 0
+  level: 17
+  extras:
+  - keywords: [red, breaker]
+    text: >
+      This extremely large sword is also known as a 'breaker' It extends 4 feet making it extremely heavy
+      but powerful.  The blade has been colored a shade of red that matches the forest leaves.  The hilt
+      is embedded with a symbol of a blazing meteor.
+
+"tba:117:obj:11737":
+  type: trash
+  keywords: [broken, chandelier]
+  short: a broken chandelier
+  long: A broken chandelier has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 15
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [broken, chandelier]
+    text: >
+      The chandelier is broken and of no use.  The top of the chandelier where the wiring would poke out
+      has been cut off for some reason.
+
+"tba:117:obj:11738":
+  type: fountain
+  keywords: [marble, fountain]
+  short: a Marble Fountain
+  long: A Marble Fountain stands in the center of the plaza.
+  wear: [take]
+  values:
+    capacity: 500
+    contains: 500
+    liquid: clear_water
+    poisoned: false
+  weight: 505
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [marble, fountain]
+    text: >
+      The fountain is made of a black marble and is impossibly cut, making the shape of a tree with
+      hundreds of individual leaves!  What's more, every last leaf is squirting out a pure water for drinking
+      enjoyment.
+
+"tba:117:obj:11739":
+  type: weapon
+  keywords: [paintbrush]
+  short: a paintbrush
+  long: A paintbrush has been left here.
+  wear: [take, wield]
+  values:
+    damage: 1d6
+    attack: hit
+  weight: 3
+  cost: 60
+  rent: 0
+  level: 6
+  extras:
+  - keywords: [paintbrush]
+    text: The small paintbrush is dipped in blue paint.
+
+"tba:117:obj:11740":
+  type: weapon
+  keywords: [chef's, knife]
+  short: a Chef's Knife
+  long: A Chef's Knife has been left here.
+  wear: [take, wield]
+  values:
+    damage: 4d2
+    attack: stab
+  weight: 5
+  cost: 70
+  rent: 0
+  level: 10
+  extras:
+  - keywords: [chef's, knife]
+    text: >
+      The knife is a standard knife used in a kitchen.  It is very lare, and has a small handle for
+      holding.
+
+"tba:117:obj:11741":
+  type: note
+  keywords: [note]
+  short: a note
+  long: A note has been left here.
+  action: barbatsis
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 50
+  cost: 12
+  rent: 0
+  level: 0
+
+"tba:117:obj:11742":
+  type: worn
+  keywords: [black, belt]
+  short: a black belt
+  long: A black belt has been left here.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 150
+  rent: 0
+  level: 13
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [black, belt]
+    text: This is a belt made of thick rough cloth that should be tied around the waist.
+
+"tba:117:obj:11743":
+  type: other
+  keywords: [feather, duster]
+  short: a Feather Duster
+  long: A Feather Duster has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 75
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [feather, duster]
+    text: >
+      The feather duster has a wooden handle attached to numerous large brown feathers.  This seems ideal
+      for cleaning places.
+
+"tba:117:obj:11799":
+  type: note
+  keywords: [spoilers, list]
+  short: the Spoiler's List for Los Torres.
+  long: The Spoiler's List of Los Torres is waiting to be read.
+  action: |-
+    Trigger Commands:
+    In 11715- say hello
+    In 11701- get ring
+    In 11703- steal cello (pointless)
+    In 11751- touch display
+    Get to 11758
+    In 11721- open forest
+    In 11722- sit stump (just a hint)
+    In 11753- sit stump
+    In 11755- touch nest
+    In 11760- wake visconti
+    In 11723- pick flowers (pointless, but pretty)
+    In 11725- search fireplace (3n for password note)
+    Go to 11702 (must have Goblet of Red Something)
+    In 11705  unlock trapdoor, open trapdoor
+    In 11752- wake lesalie
+    In 11703- give ring(11700) man
+    In 11719- say barbatsis
+    Get to 11720
+    *QUEST COMPLETE*
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

@@ -1,0 +1,168 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 278.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:278:obj:27800":
+  type: armor
+  keywords: [scale, armor]
+  short: a beautiful green-metallic scale armor
+  long: A green scale armor has been tossed onto the ground.
+  flags: [glow, magic, anti_evil, anti_cleric]
+  wear: [take, body]
+  values:
+    armor: 7
+  weight: 10
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [scale, armor]
+    text: >
+      The scale armor is bright green; it looks like painted platinum, though why anyone would paint
+      platinum is beyond you.  It looks very sturdy and as if it could be very helpful in battle.
+
+"tba:278:obj:27801":
+  type: weapon
+  keywords: [dragon's, claws]
+  short: a pair of dragon's claws
+  long: A pair of dragon's claws have been thrown to the ground.
+  flags: [magic, anti_good, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: pierce
+  weight: 14
+  cost: 700
+  rent: 0
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+  extras:
+  - keywords: [claws]
+    text: >
+      These claws are huge, and fit over your hands just as if they were gloves. Amazing that they are so
+      large, and yet feel so light.
+
+"tba:278:obj:27802":
+  type: light
+  keywords: [staff, illumination, light]
+  short: the Staff of Illumination
+  long: A staff lies here on the ground, collecting dust.
+  flags: [glow, magic, anti_evil, anti_cleric]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 15
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [staff, light]
+    text: >
+      This staff glows softly, yet casts a clear illumination all over the room. It is made of a strange
+      purple metal, with two green sea serpants twining around the staff until they meet with extended
+      teeth at the top.
+
+"tba:278:obj:27803":
+  type: armor
+  keywords: [green, gauntlets]
+  short: some green gauntlets
+  long: A pair of green gauntlets has been left on the ground to tarnish.
+  flags: [anti_evil, anti_cleric]
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 8
+  cost: 300
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [gauntlets]
+    text: >
+      These gauntlets are strong and amazingly light.  They would probably be very valuable in battle. 
+      They are made of a strange, green metal that glints in the light.
+
+"tba:278:obj:27804":
+  type: armor
+  keywords: [green, leggings]
+  short: some green leggings
+  long: A pair of greenish metal leggings have been plunked onto the ground.
+  flags: [magic, anti_evil, anti_cleric]
+  wear: [take, legs]
+  values:
+    armor: 5
+  weight: 12
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: wis
+    modifier: -1
+  extras:
+  - keywords: [runes, inscriptions]
+    text: >
+      The runes have faded away to the point where they are unreadable.  The only phrase you can work out
+      is "Forward to Orlana.  "
+  - keywords: [leggings, green]
+    text: >
+      These leggings are made of a strange green-tinted metal.  Strange inscriptions and runes run up the
+      sides.
+
+"tba:278:obj:27805":
+  type: armor
+  keywords: [crown, coral]
+  short: the Coral Crown
+  long: A crown made of red and blue coral has been unwisely thrown to the ground.
+  flags: [magic, bless, anti_evil, anti_cleric]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 10
+  cost: 250
+  rent: 0
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 1
+  - apply: mana
+    modifier: 15
+  extras:
+  - keywords: [crown, pearls]
+    text: >
+      This crown is made of beautiful red and blue coral; pearls line the sharply- pointed top.  It
+      positively prickles with majick.
+
+"tba:278:obj:27806":
+  type: weapon
+  keywords: [crystal, trident]
+  short: the Crystal Trident
+  long: A trident, made of crystal, lies on the ground.
+  flags: [glow, magic, no_drop, anti_evil, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: pierce
+  weight: 24
+  cost: 950
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [trident, hoe, crystal]
+    text: >
+      This trident is of exquisite craftsmanship; though it is made of crystal, it is rock-hard.  It
+      looks quite unbreakable.

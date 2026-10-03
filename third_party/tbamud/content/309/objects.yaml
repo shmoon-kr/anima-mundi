@@ -1,0 +1,742 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 309.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:309:obj:30900":
+  type: armor
+  keywords: [breastplate, plate, red, steel]
+  short: a red steel breastplate
+  long: A red steel breastplate lies discarded on the ground.
+  wear: [take, body]
+  values:
+    armor: 0
+  weight: 11
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 25
+  - apply: damroll
+    modifier: 3
+  - apply: int
+    modifier: -2
+
+"tba:309:obj:30901":
+  type: armor
+  keywords: [plate, face, red, steel]
+  short: a red steel face plate
+  long: A red steel face plate lies on the ground.
+  wear: [take, neck, head]
+  values:
+    armor: 5
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hit
+    modifier: 30
+
+"tba:309:obj:30902":
+  type: weapon
+  keywords: [guardsman's, sword, red, steel]
+  short: a guardsman's sword
+  long: A guardsman's sword has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 3
+  - apply: dex
+    modifier: -3
+
+"tba:309:obj:30903":
+  type: drinkcon
+  keywords: [beer, barrel, beer]
+  short: a barrel
+  long: A barrel of beer lies on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 75
+    contains: 75
+    liquid: beer
+    poisoned: false
+  weight: 80
+  cost: 20
+  rent: 0
+  level: 1
+
+"tba:309:obj:30904":
+  type: container
+  keywords: [wheel, barrow]
+  short: a wheel barrow
+  long: A wheel barrow lies at the side of the road.
+  wear: [take, hold]
+  values:
+    capacity: 400
+    lock_flags: 0
+    corpse: false
+  weight: 18
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:309:obj:30905":
+  type: other
+  keywords: [shovel]
+  short: a shovel
+  long: A shovel has been left on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 250
+  rent: 0
+  level: 1
+
+"tba:309:obj:30906":
+  type: other
+  keywords: [beads, string]
+  short: a string of beads
+  long: A string of beads have been dropped here.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: hit
+    modifier: -20
+
+"tba:309:obj:30907":
+  type: drinkcon
+  keywords: [ale, pint, westlawn, ale]
+  short: a pint of Westlawn's Ale
+  long: A pint of container has been left on the ground.
+  wear: [take, hold]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: ale
+    poisoned: false
+  weight: 9
+  cost: 8
+  rent: 0
+  level: 1
+
+"tba:309:obj:30908":
+  type: drinkcon
+  keywords: [water, jar, water]
+  short: a jar of water
+  long: A clear jar has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: water
+    poisoned: false
+  weight: 9
+  cost: 3
+  rent: 0
+  level: 1
+
+"tba:309:obj:30909":
+  type: food
+  keywords: [steak, platter]
+  short: a steak platter
+  long: A steak platter lies on the ground.
+  wear: [take, hold]
+  values:
+    hours: 6
+    poisoned: false
+  weight: 3
+  cost: 11
+  rent: 0
+  level: 1
+
+"tba:309:obj:30910":
+  type: other
+  keywords: [paper, wadded, piece]
+  short: a wadded up piece of paper
+  long: A wadded up piece of paper lies on the ground.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 25
+  affects:
+  - apply: con
+    modifier: 3
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [paper]
+    text:
+    - To you my love, my dear Landestine -
+    - >
+      I have written you this very same letter a thousand times, rewriting and throwing away the same
+      words time after time. I do not know why I find myself always writing the same thing over and over,
+      knowing that our love is as futile as the attempted peace talks which go on between the Barons.
+    - >
+      I know that you have your realm and your people to consider, and I realize who I am - naught but a
+      lowly servant, and an old one now - but even so, I cannot stop the hunger for your touch which still
+      burns as strong as it did so many years ago.
+    - >
+      One day, when all is settled and no one can get hurt anymore, our love will have its chance and you
+      and I will live in blissful peace. I know it in my heart.
+    - Yours -
+    - Gilsby
+
+"tba:309:obj:30911":
+  type: armor
+  keywords: [cloak, jet, black]
+  short: a jet-black cloak
+  long: A jet-black cloak lies in a ball on the ground.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    armor: 9
+  weight: 7
+  cost: 1000
+  rent: 0
+  level: 26
+  affects:
+  - apply: mana
+    modifier: 40
+  - apply: int
+    modifier: 2
+  - apply: str
+    modifier: -3
+
+"tba:309:obj:30912":
+  type: staff
+  keywords: [etched, staff]
+  short: an etched staff
+  long: An etched staff has been left on the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    raw: [30, 3, 3, 3]
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: -30
+
+"tba:309:obj:30913":
+  type: worn
+  keywords: [rune, thumb]
+  short: a glowing thumb rune
+  long: A glowing thumb rune lies on the ground.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 103
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+  - apply: hit
+    modifier: 35
+
+"tba:309:obj:30914":
+  type: armor
+  keywords: [harness, leather]
+  short: a leather harness
+  long: A leather harness lies coiled on the ground.
+  wear: [take, neck, hold]
+  values:
+    armor: 6
+  weight: 6
+  cost: 50
+  rent: 0
+  level: 23
+  affects:
+  - apply: hit
+    modifier: 30
+
+"tba:309:obj:30915":
+  type: other
+  keywords: [pole, fishing]
+  short: a fishing pole
+  long: A fishing pole lies tossed aside.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:309:obj:30916":
+  type: other
+  keywords: [shiney, lure]
+  short: a shiny lure
+  long: A small shiny lure lies glinting on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:309:obj:30917":
+  type: container
+  keywords: [basket, wicker]
+  short: a wicker basket
+  long: A wicker basket has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 300
+    lock_flags: 5
+    corpse: false
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:309:obj:30918":
+  type: armor
+  keywords: [belt, might]
+  short: the Belt of Supreme Might
+  long: A glowing belt lies thrown to the ground.
+  wear: [take, waist]
+  values:
+    armor: 7
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 21
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: -3
+
+"tba:309:obj:30919":
+  type: armor
+  keywords: [shield, sorcery]
+  short: the Shield of Sorcery
+  long: A small, glowing purple shield lies on the ground.
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 6
+  cost: 1000
+  rent: 0
+  level: 22
+  affects:
+  - apply: hit
+    modifier: 35
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: -3
+
+"tba:309:obj:30920":
+  type: drinkcon
+  keywords: [beer, keg, beer]
+  short: a keg of beer
+  long: A keg of beer of beer lies on its side.
+  wear: [take, hold]
+  values:
+    capacity: 100
+    contains: 100
+    liquid: beer
+    poisoned: false
+  weight: 105
+  cost: 56
+  rent: 0
+  level: 1
+
+"tba:309:obj:30921":
+  type: worn
+  keywords: [eyepiece, glass]
+  short: a glass eyepiece
+  long: An odd-shaped glass eyepiece has been dropped.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 100
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 30
+
+"tba:309:obj:30922":
+  type: worn
+  keywords: [charm, elite]
+  short: an elite charm
+  long: An elite charm hangs from a red steel chain, dropped upon the floor.
+  flags: [glow]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+
+"tba:309:obj:30923":
+  type: weapon
+  keywords: [sword, red, steel, short]
+  short: a red steel short sword
+  long: A red steel short sword has been left here.
+  flags: [hum]
+  wear: [take, wield]
+  values:
+    damage: 4d7
+    attack: stab
+  weight: 8
+  cost: 400
+  rent: 0
+  level: 23
+  affects:
+  - apply: hitroll
+    modifier: 4
+  - apply: damroll
+    modifier: 3
+  - apply: str
+    modifier: -2
+
+"tba:309:obj:30924":
+  type: armor
+  keywords: [boots, bladed, pair]
+  short: a pair of bladed boots
+  long: A pair of bladed boots have been left on the floor.
+  wear: [take, feet]
+  values:
+    armor: 8
+  weight: 9
+  cost: 300
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+  - apply: hit
+    modifier: -35
+
+"tba:309:obj:30925":
+  type: weapon
+  keywords: [blade, titanium]
+  short: a titanium blade
+  long: A beautiful titanium blade has been somehow left behind.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 6d6
+    attack: slash
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 4
+  - apply: hit
+    modifier: -45
+
+"tba:309:obj:30926":
+  type: worn
+  keywords: [mantle, red]
+  short: a red mantle
+  long: A red mantle lies on the ground, waiting to be worn.
+  flags: [glow]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 154
+  rent: 0
+  level: 25
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 2
+  - apply: int
+    modifier: 2
+
+"tba:309:obj:30927":
+  type: worn
+  keywords: [red, clasp]
+  short: a red clasp
+  long: A red clasp has been dropped to the ground.
+  flags: [glow]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 300
+  rent: 0
+  level: 25
+  affects:
+  - apply: ac
+    modifier: -4
+  - apply: hit
+    modifier: 35
+  - apply: int
+    modifier: 2
+
+"tba:309:obj:30928":
+  type: note
+  keywords: [clipboard, board]
+  short: a clipboard
+  long: A clipboard has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:309:obj:30929":
+  type: weapon
+  keywords: [hammer, forgeman's]
+  short: a forgeman's hammer
+  long: A huge forgeman's hammer lies on the ground.
+  wear: [take, wield]
+  values:
+    damage: 6d8
+    attack: pound
+  weight: 14
+  cost: 100
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: str
+    modifier: 3
+  - apply: hitroll
+    modifier: -2
+
+"tba:309:obj:30930":
+  type: armor
+  keywords: [guard, brass, eye]
+  short: a brass eye guard
+  long: A brass eye guard has been dropped on the ground.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 23
+  affects:
+  - apply: hit
+    modifier: 35
+  - apply: dex
+    modifier: 2
+
+"tba:309:obj:30931":
+  type: other
+  keywords: [anvil]
+  short: an iron anvil
+  long: An iron anvil sits squarely in the center of the floor.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:309:obj:30932":
+  type: armor
+  keywords: [guards, forearm, arm]
+  short: a set of leather forearm guards
+  long: A set of leather forearm guards lie on the ground.
+  flags: [anti_mage, anti_cleric]
+  wear: [take, arms]
+  values:
+    armor: 7
+  weight: 6
+  cost: 100
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 3
+  - apply: hitroll
+    modifier: 3
+  - apply: hit
+    modifier: 20
+
+"tba:309:obj:30933":
+  type: worn
+  keywords: [red, steel, ring]
+  short: a red steel ring
+  long: A red steel ring had been dropped on the ground.
+  flags: [glow, anti_evil]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 300
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: -4
+  - apply: hit
+    modifier: -20
+
+"tba:309:obj:30934":
+  type: worn
+  keywords: [ring, plain, red, steel]
+  short: a plain red steel ring
+  long: A plain red steel ring lies on the ground.
+  flags: [anti_evil]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 25
+  affects:
+  - apply: ac
+    modifier: -3
+  - apply: hitroll
+    modifier: 4
+  - apply: dex
+    modifier: 2
+
+"tba:309:obj:30935":
+  type: armor
+  keywords: [leggings, red, chainmail]
+  short: a pair of red chainmail leggings
+  long: A pair of red chainmail leggings lie on the ground.
+  flags: [glow, anti_evil]
+  wear: [take, legs]
+  values:
+    armor: 9
+  weight: 9
+  cost: 1000
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: 5
+  - apply: str
+    modifier: -5
+
+"tba:309:obj:30936":
+  type: other
+  keywords: [spoon, large, wooden]
+  short: a large wooden spoon
+  long: A large wooden spoon has been left on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:309:obj:30937":
+  type: other
+  keywords: [straw, piece]
+  short: a piece of straw
+  long: A piece of straw lies thrown to the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1
+
+"tba:309:obj:30938":
+  type: armor
+  keywords: [boots, thick, leather]
+  short: a pair of thick leather boots
+  long: A pair of thick leather boots lie on the ground.
+  flags: [glow]
+  wear: [take, feet]
+  values:
+    armor: 6
+  weight: 8
+  cost: 100
+  rent: 0
+  level: 27
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+
+"tba:309:obj:30939":
+  type: armor
+  keywords: [hat, wide, brimmed, tall]
+  short: a tall, wide-brimmed hat
+  long: A tall, wide-brimmed hat lies thrown to the ground.
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 5
+  cost: 300
+  rent: 0
+  level: 28
+  affects:
+  - apply: damroll
+    modifier: 4
+  - apply: hitroll
+    modifier: 2
+  - apply: con
+    modifier: 1

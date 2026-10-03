@@ -1,0 +1,1101 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 232.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:232:room:23200":
+  name: Terringham
+  description: >
+    You have entered the town center of Terringham.  This center is large enough to hold hundreds of
+    people.  In the center of the square is a large fountain with a large dolphin statue coming out of the
+    fountain.  The dolphin is spitting water out of its mouth, which trickles down into the fountain
+    below.  The ground is made of red brick, which circles around the fountain and pans out until it gets to
+    the buildings.  The directions north, south, east, and west, been marked with a different shade of
+    brick as it looks like it cuts into the pie of bricks. Near the buildings, you see statues of many
+    forms, these statues seem to be untouched by time.  At a close glance of the statues, you can make out
+    the Gods Rumble, Welcor, Ferret, Detta, Heiach, Shamra, Relsqui, Elaseth, and Fyre.
+  sector: city
+  flags: [peaceful, no_magic]
+  exits:
+    north:
+      to: tba:232:room:23261
+    east:
+      to: tba:232:room:23201
+    south:
+      to: tba:232:room:23254
+    west:
+      to: tba:232:room:23258
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Builder   : Ferret
+        Zone         : 232 Terringham
+        Began        : 2001
+        Player Level : 21-24
+        Rooms        : 84
+        Mobs         : 9
+        Objects      : 26
+        Shops        : 7
+        Triggers     :
+        Theme        :
+        Plot         :
+        Links        : 18n, 31w, 43s
+
+"tba:232:room:23201":
+  name: Terringham road
+  description: >
+    You walk along a finely made road.  The surface of the road is very smooth, it looks like someone
+    took their time to make traveling easy.  The smell of fresh baked bread seems to be coming from the
+    north.  To the west you see a large fountain.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23273
+    east:
+      to: tba:232:room:23202
+    west:
+      to: tba:232:room:23200
+
+"tba:232:room:23202":
+  name: Terringham road
+  description: >
+    This road travels east and west, it is so well built that it feels like you are walking on air. 
+    The buildings to the north and south have great Murals on them.  You stand back to look at the lovely
+    pictures and wonder where it all happened.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23203
+    west:
+      to: tba:232:room:23201
+  extras:
+  - keywords: [mural, murals]
+    text: >
+      You see pictures of great Dragons killing horrible monsters.  You also see Warriors and Thieves
+      killing monsters that attacked some town.  The Wizards and Clerics are behind the warriors, casting
+      their spells.  They glow as they attempt to cast.  You see in small writing, the words Bellau wood.
+
+"tba:232:room:23203":
+  name: Terringham road
+  description: >
+    This well pathed road seems to have a split in it.  You can go east, west or south.  To the north
+    is a wall.  You can see a gate to the far east.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23204
+    south:
+      to: tba:232:room:23250
+    west:
+      to: tba:232:room:23202
+
+"tba:232:room:23204":
+  name: Terringham road
+  description: >
+    You have come to a cross road.  To the east you see a large gate.  To the north, south and west you
+    see a large stretch of road.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23206
+    east:
+      to: tba:232:room:23205
+    south:
+      to: tba:232:room:23249
+    west:
+      to: tba:232:room:23203
+
+"tba:232:room:23205":
+  name: East gate
+  description: >
+    You see a large gate here, with 2 guard shacks standing just inside of the gates.  The guards here
+    make it a point to keep mean old nasty mobs from coming inside.
+  sector: city
+  exits:
+    west:
+      to: tba:232:room:23204
+
+"tba:232:room:23206":
+  name: Star trail
+  description: >
+    You pull off onto a side street hoping to get away from the noise of the main city street.  To the
+    South is the main city street.  The only other exit is to the North
+  sector: inside
+  exits:
+    north:
+      to: tba:232:room:23207
+    south:
+      to: tba:232:room:23204
+
+"tba:232:room:23207":
+  name: Star trail
+  description: >
+    You come to a T intersection.  The north and south follow the eastern wall. You get an uneasy
+    feeling from the west, but it somehow calls to you.  The way west is well lit.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23211
+    south:
+      to: tba:232:room:23206
+    west:
+      to: tba:232:room:23208
+
+"tba:232:room:23208":
+  name: A clean alley
+  description: >
+    You enter an alley way which seems to be very clean.  There are murals on the wall of Gang fights. 
+    The pictures are excellently done.  You wonder if this is the place for you!
+  sector: inside
+  flags: [no_mob, peaceful, no_magic]
+  exits:
+    north:
+      to: tba:232:room:23209
+    east:
+      to: tba:232:room:23207
+
+"tba:232:room:23209":
+  name: A clean alley
+  description: >
+    This room looks to be in great condition.  It is hard to believe that an alley way would be kept up
+    this well.  Everything seems to be in its place. Even the lighting here is decent.  You hear some
+    noise coming from the north.
+  sector: inside
+  flags: [no_track]
+  exits:
+    north:
+      to: tba:232:room:23210
+    south:
+      to: tba:232:room:23208
+
+"tba:232:room:23210":
+  name: A ladder well going UP
+  description: >
+    In this room you see a large ladder leading up.  The ladder looks very strong and is mounted
+    sturdily in the wall.  You wonder what could be above you.
+  sector: inside
+  flags: [no_track, no_magic]
+  exits:
+    south:
+      to: tba:232:room:23209
+
+"tba:232:room:23211":
+  name: Star trail
+  description: >
+    You are just past the mini crossroads.  You can hear birds chirping and see cats roaming the
+    streets looking for somthing to eat.  There are only two exits that you can see one going north and the
+    other going South.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23212
+    south:
+      to: tba:232:room:23207
+
+"tba:232:room:23212":
+  name: Star trail
+  description: >
+    This small section of town is depicted with a mural of the towns history. When you walk through the
+    town you get a feeling of profound pride that your little town has done so well in the years since
+    it was created.  The only exits are North and South .
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23213
+    south:
+      to: tba:232:room:23211
+
+"tba:232:room:23213":
+  name: Star trail
+  description: >
+    This is the northeastern corner of the city.  It is very quiet here and has a drawing on the
+    group.  The only exits are West and South.
+  sector: city
+  exits:
+    south:
+      to: tba:232:room:23212
+    west:
+      to: tba:232:room:23214
+
+"tba:232:room:23214":
+  name: Rumble road
+  description: >
+    You are travelling along the northern wall on a quickened pace.  The sound of clanging still chimes
+    in your ears from the west.  The exits that you can see are to the West and North .
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23213
+    west:
+      to: tba:232:room:23215
+
+"tba:232:room:23215":
+  name: Rumble road
+  description: >
+    You are walking down a long paved street.  There are small pictures on the wall that looks like
+    they have been drawn on by children.  To the west you can hear the distant shouts of guards on duty. 
+    The only other exit that you can see is to the East.
+  sector: inside
+  exits:
+    east:
+      to: tba:232:room:23214
+    west:
+      to: tba:232:room:23216
+
+"tba:232:room:23216":
+  name: Rumble road
+  description: >
+    You see patrolmen walking down the long street watching for any infractions of the law.  You can
+    hear the steps of armored boots clinking on the ground to the West.  The only other exit is to the East.
+  sector: inside
+  exits:
+    east:
+      to: tba:232:room:23215
+    west:
+      to: tba:232:room:23217
+
+"tba:232:room:23217":
+  name: Terringham avenue
+  description: >
+    You are walking down a street that is the bustel of activity.  Guards patrol the street.  To the
+    North is the Nothern Gate.  Other exits lead to the South, East and West.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23218
+    east:
+      to: tba:232:room:23216
+    south:
+      to: tba:232:room:23265
+    west:
+      to: tba:232:room:23219
+
+"tba:232:room:23218":
+  name: North gate
+  description: >
+    You come to the northgate.  There are two guard posts here protecting the entrance to the city. 
+    These guards look very strong and should not be messed with.
+  sector: city
+  exits:
+    south:
+      to: tba:232:room:23217
+
+"tba:232:room:23219":
+  name: Rumble road
+  description: >
+    You can hear the sounds of guards barking orders and the sounds of opening gates to the north
+    east.  The only discenable exits are to the east and the west.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23217
+    west:
+      to: tba:232:room:23220
+
+"tba:232:room:23220":
+  name: Rumble road
+  description: >
+    The granite paved street looks like it stretches on for miles.  The walls to the north and south
+    side looms in front of you with no way to leave except east or west.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23219
+    west:
+      to: tba:232:room:23221
+
+"tba:232:room:23221":
+  name: Rumble road
+  description: >
+    The smooth paved street glides on towards the northwest corner of town.  To the north you see a
+    tall wall, while there are exits east, west and south.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23220
+    south:
+      to: tba:232:room:23222
+    west:
+      to: tba:232:room:23224
+
+"tba:232:room:23222":
+  name: An Alley way
+  description: >
+    You have entered a well kept Alley way.  You see no signs of rats, not even trash cans.  This is
+    not your average Alley way.  The lighting here seems a bit mystical.  You hear some chatter from the
+    south.
+  sector: inside
+  flags: [no_mob, no_track, no_magic]
+  exits:
+    north:
+      to: tba:232:room:23221
+    south:
+      to: tba:232:room:23223
+
+"tba:232:room:23223":
+  name: An Alley way
+  description: >
+    You see a beautifully decorated stair well leading up.  You can hear noises coming from up above,
+    as if a meeting is in order.  You wonder what could be going on here.
+  sector: inside
+  flags: [no_track, no_magic]
+  exits:
+    north:
+      to: tba:232:room:23222
+
+"tba:232:room:23224":
+  name: Rumble road
+  description: >
+    This is the northwest corner of town.  It looks well maintained for as little traffic as this
+    street would normally have.  To the south you can travel down the western wall and to the east you go
+    towards the Northern gate.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23221
+    south:
+      to: tba:232:room:23225
+
+"tba:232:room:23225":
+  name: West drive
+  description: >
+    You are walking along the west wall of the spectacular city.  The walls are whitewashed and very
+    smooth with no artistic talent to them at all.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23224
+    south:
+      to: tba:232:room:23226
+
+"tba:232:room:23226":
+  name: West drive
+  description: >
+    This street is a simple granite street that is so smooth it feels like walking on air.  The walls
+    are very tall and have little on them that would not give you any indication of where you are located.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23225
+    south:
+      to: tba:232:room:23227
+
+"tba:232:room:23227":
+  name: West drive
+  description: >
+    The street here is rough and ragged, it looks like this isn't a very nice area of the street.  The
+    walls of the buildings have writing on it.  The only exits are to the North and the South.
+  sector: inside
+  exits:
+    north:
+      to: tba:232:room:23226
+    south:
+      to: tba:232:room:23228
+
+"tba:232:room:23228":
+  name: West drive
+  description: >
+    The street is ragged looking as though it has had a lot of use lately.  The walls are lined with
+    magical figures of prominence.  To the east is the Magic shop and to the South you hear some guards
+    muttering, the only other discernable exit is to the North.
+  sector: inside
+  exits:
+    north:
+      to: tba:232:room:23227
+    east:
+      to: tba:232:room:23229
+    south:
+      to: tba:232:room:23230
+
+"tba:232:room:23229":
+  name: Magic shop
+  description: >
+    This is a wizards dream shop.  There are shelves of scrolls and potions all throughout this room. 
+    The items here are not limited to mages alone.  A recall is recommended for everyone, so don't
+    hesitate to buy them.
+  sector: city
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:232:room:23228
+
+"tba:232:room:23230":
+  name: Terringham street
+  description: >
+    You have come to a crossroad.  To the west you see a large gate.  You also see exits to the north,
+    south, and east.  The road here is in great condition.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23228
+    east:
+      to: tba:232:room:23260
+    south:
+      to: tba:232:room:23232
+    west:
+      to: tba:232:room:23231
+
+"tba:232:room:23231":
+  name: West gate
+  description: >
+    You have entered an area that is guarded well.  There are two guard shacks here, just inside of the
+    gate.  The guards watch you suspiciously.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23230
+
+"tba:232:room:23232":
+  name: West drive
+  description: >
+    This is the southwestern corner of the city, the road appears to be untouched.  There are no
+    paintings and no wagons lining the streets.  You can go East or North.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23230
+    east:
+      to: tba:232:room:23233
+
+"tba:232:room:23233":
+  name: West drive
+  description: >
+    You walk along a curvy street.  The street reminds you very much like a maze that is hard to
+    navigate through.  The exits go West and South.
+  sector: inside
+  exits:
+    south:
+      to: tba:232:room:23234
+    west:
+      to: tba:232:room:23232
+
+"tba:232:room:23234":
+  name: West drive
+  description: >
+    This is a continuation on the long maze.  The walls are covered by branches that hang down in your
+    face.  It doesn't look like any caretakers come this way. The exits go North and West.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23233
+    west:
+      to: tba:232:room:23235
+
+"tba:232:room:23235":
+  name: West drive
+  description: >
+    This street is very confusing and you don't know where you are going.  The street is paved with the
+    same shiny surface as the rest of the town except here it looks more for the lower classes of
+    civilians in the city.  The exits are East and South.
+  sector: inside
+  exits:
+    east:
+      to: tba:232:room:23234
+    south:
+      to: tba:232:room:23236
+
+"tba:232:room:23236":
+  name: West drive
+  description: >
+    The street continues turning in an unorthodoxed manner.  Some branches hang down and some you must
+    push out of the way.  The only exits that you can see are North and East.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23235
+    east:
+      to: tba:232:room:23237
+
+"tba:232:room:23237":
+  name: South park
+  description: >
+    The road here seems to fade out.  To the east you can see the road, and to the west you notice that
+    a jungle or something starts to form.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23238
+    west:
+      to: tba:232:room:23236
+
+"tba:232:room:23238":
+  name: South park
+  description: >
+    This is a straight road with a few curves.  The road doesn't look completely done, maybe it isn't. 
+    To the North you can hear some clanging.  The only other exits are to the East and West.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23239
+    east:
+      to: tba:232:room:23241
+    west:
+      to: tba:232:room:23237
+
+"tba:232:room:23239":
+  name: A side road
+  description: >
+    You hear a lot of clanging to the north.  Someone seems to be making something.  You also hear the
+    sound of someone chopping up wood....  Which is a weird sound to hear in the City.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23240
+    south:
+      to: tba:232:room:23238
+
+"tba:232:room:23240":
+  name: Weapons Shop
+  description: >
+    You see many arms hung up along the wall.  Some items glow and attract the attention of everyone. 
+    The prices are steep for the glowing items.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:232:room:23239
+
+"tba:232:room:23241":
+  name: South park
+  description: >
+    This is a long stretch of highway.  The pavement is cracking here under great strain.  The sun
+    seems to beat down more on this part of town than the others. Available exits are to the east and west.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23242
+    west:
+      to: tba:232:room:23238
+
+"tba:232:room:23242":
+  name: Terringham way
+  description: >
+    This looks as though it is the main street with exits going all directions. To the South you hear
+    boots clanging on the ground and orders being shouted. The other exits are to the East, West and South.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23255
+    east:
+      to: tba:232:room:23244
+    south:
+      to: tba:232:room:23243
+    west:
+      to: tba:232:room:23241
+
+"tba:232:room:23243":
+  name: South gate
+  description: >
+    A large gate looms up in front of you.  To both sides of the gates gaurds stand watching over all
+    who enter and leave.  In case you were trying to escape the law this way be careful because the gate
+    has sharp spear heads on the top.
+  sector: inside
+  exits:
+    north:
+      to: tba:232:room:23242
+
+"tba:232:room:23244":
+  name: South park
+  description: >
+    The long street continues.  Both sides of the street are lined with small saplings recently
+    planted.  The only exits are to the East and the West.
+  sector: inside
+  exits:
+    east:
+      to: tba:232:room:23245
+    west:
+      to: tba:232:room:23242
+
+"tba:232:room:23245":
+  name: South park
+  description: >
+    The street widens here.  There are room for 3 carts going by each other. The street is well
+    maintained by a street worker that is here cleaning up the street.  The only exits are to the East and the
+    West.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23246
+    west:
+      to: tba:232:room:23244
+
+"tba:232:room:23246":
+  name: South park
+  description: >
+    The street is cracked a bit here.  Also the street has some red on it.  It looks like there has
+    been blood spilled here before and someone didn't do there job to clean it up.  The other exits are East
+    and West.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23247
+    west:
+      to: tba:232:room:23245
+
+"tba:232:room:23247":
+  name: South park
+  description: >
+    You are standing at the SouthEastern corner of the city.  The walls are high and almost metallic
+    smooth.  The only exits you can see are North and West.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23248
+    west:
+      to: tba:232:room:23246
+
+"tba:232:room:23248":
+  name: Star trail
+  description: >
+    The street is narrow and has no marks of travel on it.  The building walls have pictures that stand
+    out more than normal paintings do.  The only exits you can see are North and South.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23249
+    south:
+      to: tba:232:room:23247
+  extras:
+  - keywords: [picture, pictures, mural]
+    text: >
+      You see a great battle in a cathedral.  At a closer glance, you can tell the battle was taken place
+      in Midgaard.  Drakkar the evil immortal seems to be standing on the alter and destroying everything
+      in sight, with his minions standing at his side.
+
+"tba:232:room:23249":
+  name: Star trail
+  description: >
+    There is a great wall which looks unpassable on the east.  To the west you see some houses, but the
+    access is blocked off to you.  To the north you can see the main street leading from the east gate. 
+    To the south you see a trail.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23204
+    south:
+      to: tba:232:room:23248
+
+"tba:232:room:23250":
+  name: An alley
+  description: >
+    This is not your typical alley.  This alley seems to be peaceful and glows with a brilliant blue. 
+    You notice a sign on a wall.
+  sector: city
+  flags: [no_mob, peaceful]
+  exits:
+    north:
+      to: tba:232:room:23203
+    south:
+      to: tba:232:room:23251
+  extras:
+  - keywords: [sign]
+    text: The Don room is to the Southwest.  Please do not fight in this sacred area.
+
+"tba:232:room:23251":
+  name: An alley
+  description: >
+    This place seems so peaceful.  You seem to be able to rest here without any hassles.  To the west
+    is the don room, to the north is your exit back to the city.
+  sector: city
+  flags: [peaceful]
+  exits:
+    north:
+      to: tba:232:room:23250
+    west:
+      to: tba:232:room:23252
+
+"tba:232:room:23252":
+  name: Don room
+  description: >
+    This where all the items come when players don the equipment they have.  All items here are up for
+    grabs.  Feel free to take what you need.  Please don't take everything, let the others get some
+    equipment too.  If there are 3 swords here..  Don't take all 3, you can't use 3 swords.  Please be
+    curtious.
+  sector: city
+  flags: [no_mob, peaceful]
+  exits:
+    east:
+      to: tba:232:room:23251
+
+"tba:232:room:23253":
+  name: The board room
+  description: >
+    This is where the mortal board sits.  Please read this board everyday.  It may contain new
+    information.  Feel free to make notes on this board.
+  sector: city
+  flags: [indoors, peaceful]
+  exits:
+    north:
+      to: tba:232:room:23258
+
+"tba:232:room:23254":
+  name: Terringham way
+  description: >
+    You are standin in a small section of town just south of the fountain.  The buildings to either
+    side are quite striking as they have been painted with pictures of dragons fighting knights.  The only
+    noticeable exits are to the north and south.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23200
+    south:
+      to: tba:232:room:23255
+
+"tba:232:room:23255":
+  name: Terringham way
+  description: >
+    This is the main street.  To the south is the gates.  There is a crossroads which lead to one of
+    the off streets.  The last exit is North.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23254
+    east:
+      to: tba:232:room:23256
+    south:
+      to: tba:232:room:23242
+
+"tba:232:room:23256":
+  name: A side street
+  description: >
+    You hear the sound of clanging to the north, as if someone is making something.  You notice that it
+    seems very warm here.  This definitely would not be a good place to rest, if need be.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23257
+    west:
+      to: tba:232:room:23255
+
+"tba:232:room:23257":
+  name: The armory
+  description: >
+    You see manaquines wearing all different kinds of armor.  They range from leather to full plate. 
+    If you need a special item, you have to ask for it.  It is not displayed in the open.
+  sector: city
+  flags: [indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:232:room:23256
+
+"tba:232:room:23258":
+  name: Terringham street
+  description: >
+    This room has a certain glow about it, it seems to show it has some importance.  To the South you
+    see a sign over the exit that says Board room. You can see a large fountain to the east.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23200
+    south:
+      to: tba:232:room:23253
+    west:
+      to: tba:232:room:23259
+
+"tba:232:room:23259":
+  name: Terringham street
+  description: >
+    The road here leads east and west.  The walls to the north and south, sport some fabulous pictures.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23281
+    east:
+      to: tba:232:room:23258
+    west:
+      to: tba:232:room:23260
+  extras:
+  - keywords: [wall, picture]
+    text: >
+      You see fabulous pictures of dragons in flight and a group of people in full armor gear.  You
+      notice some of these people..  You spot out Springfire, Gunthar, Buffy, Lilly, Angel, and Blaze.
+
+"tba:232:room:23260":
+  name: Terringham street
+  description: >
+    The road here continues to the east and west.  The walls seem to be untouched, and the lighting
+    here seems to be a bit poor.  It looks as if someone tried to rush their job.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23259
+    west:
+      to: tba:232:room:23230
+
+"tba:232:room:23261":
+  name: Terringham avenue
+  description: >
+    This room glows with a brilliant bright light.  The walls here have beautiful paintings on them. 
+    To the south you notice a large fountain.  To the west you see the Bank of Terringham.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23263
+    south:
+      to: tba:232:room:23200
+    west:
+      to: tba:232:room:23262
+  extras:
+  - keywords: [wall, walls, paintings]
+    text: >
+      The pictures here are of great warriors trying to guard a city from a band of orcs.  The orcs out
+      number the warriors, but the warriors are putting up a good fight.
+
+"tba:232:room:23262":
+  name: Terringham Bank
+  description: >
+    There is an Atm here where you can store your gold.  The Gods recommend that you use this bank
+    often.  We would hate to see an accident and you rejoin the game with no money.  The commands are easy. 
+    Dep $$$$.  With $$$$.  Or Bal.
+  sector: city
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:232:room:23261
+
+"tba:232:room:23263":
+  name: Terringham avenue
+  description: >
+    You walk along a finely made road.  The surface of the road is very smooth. The road looks like
+    someone took their time to make travelling easy.  To the south is the bank and to the east you can smell
+    the scents of leather and oils.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23264
+    east:
+      to: tba:232:room:23280
+    south:
+      to: tba:232:room:23261
+
+"tba:232:room:23264":
+  name: Terringham avenue
+  description: >
+    The smooth easy going road continues north to south.  You notice exits to the east and west.  Which
+    path shall you take?
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23265
+    east:
+      to: tba:232:room:23266
+    south:
+      to: tba:232:room:23263
+    west:
+      to: tba:232:room:23275
+
+"tba:232:room:23265":
+  name: Terringham avenue
+  description: >
+    You are travelling down a granite paved street.  The surrounding buildings have paintings of the
+    towns greatest heros.  The only visible exits are to the north and south.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23217
+    south:
+      to: tba:232:room:23264
+
+"tba:232:room:23266":
+  name: An Alley
+  description: >
+    You hear something moving behind you, but cannot see anything or anyone. You hear noises coming
+    from the east.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23267
+    west:
+      to: tba:232:room:23264
+
+"tba:232:room:23267":
+  name: Guild row
+  description: >
+    You see a bright blue light coming from the north.  There is emptiness coming from the south.  You
+    can guess that these are the cleric guilds and the thieves guild.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23268
+    south:
+      to: tba:232:room:23269
+    west:
+      to: tba:232:room:23266
+
+"tba:232:room:23268":
+  name: Entrance to the Cleric Guild
+  description: >
+    The clerics may come here to practice their skills when they have the need to expand their skills. 
+    The guildmaster awaits your arrival, please don't hesitate.
+  sector: city
+  exits:
+    south:
+      to: tba:232:room:23267
+    up:
+      to: tba:232:room:23276
+
+"tba:232:room:23269":
+  name: Entrance to the Thieves Guild.
+  description: >
+    The Thieves may come here to practice their skills when they have the need to expand their skills. 
+    The guildmaster awaits your arrival, please don't hesitate.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23267
+    up:
+      to: tba:232:room:23277
+
+"tba:232:room:23270":
+  name: Guild row
+  description: >
+    You have found the path to the warriors guild and the mages guild.  Which path do you take to reach
+    your guildmaster?
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23271
+    east:
+      to: tba:232:room:23275
+    south:
+      to: tba:232:room:23272
+
+"tba:232:room:23271":
+  name: Entrance to the Warriors Guild
+  description: >
+    The warriors may come here to practice their skills when they have the need to expand their
+    fighting skills and swordmanship.  The guildmaster awaits your arrival, please don't hesitate.
+  sector: city
+  exits:
+    south:
+      to: tba:232:room:23270
+    up:
+      to: tba:232:room:23278
+
+"tba:232:room:23272":
+  name: Entrance to the Mage Guild
+  description: >
+    Mages may come here to practice their skills when they have the need to expand their knowledge in
+    the lores of Arcane.  The guildmaster awaits your arrival, please don't hesitate.
+  sector: city
+  exits:
+    north:
+      to: tba:232:room:23270
+    up:
+      to: tba:232:room:23279
+
+"tba:232:room:23273":
+  name: Bread crumb road
+  description: >
+    Your mind is pulled away from the look of the granite street and is pulled to the east where you
+    can smell the best baked goods you can remember.  The only other way to go is to the south.
+  sector: inside
+  exits:
+    east:
+      to: tba:232:room:23274
+    south:
+      to: tba:232:room:23201
+
+"tba:232:room:23274":
+  name: The Bakery
+  description: >
+    You have entered the right room, if you are hungry.  There is a large glass counter, surrounding
+    this place.  You see all sorts of breads, pies and cakes. Which would you like for your travel.
+  sector: city
+  flags: [indoors, no_magic]
+  exits:
+    west:
+      to: tba:232:room:23273
+
+"tba:232:room:23275":
+  name: An Alley
+  description: >
+    You enter a very clean alley.  There is nothing here polluting the roads. You hear faint noises
+    coming for the west.  To the east is Terringham road.
+  sector: city
+  exits:
+    east:
+      to: tba:232:room:23264
+    west:
+      to: tba:232:room:23270
+
+"tba:232:room:23276":
+  name: Clerics Guild
+  description: >
+    The Cleric Guildsmaster is here waiting to help you.  This room has a very peaceful feeling about
+    it.  You feel enlightened when you enter here.
+  sector: city
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    down:
+      to: tba:232:room:23268
+
+"tba:232:room:23277":
+  name: Thieves Guild
+  description: >
+    You enter a room and notice it is empty.  You walk around with caution, knowing that something is
+    afoot.  You listen carefully and Turn about real fast....  Your Guildmaster slips out of the Darkness.
+  sector: city
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    down:
+      to: tba:232:room:23269
+
+"tba:232:room:23278":
+  name: Warriors guild
+  description: >
+    There are a lot of training dummies in this room.  You see a very large warrior practicing on these
+    dummies.  He does not look like the type to be messed with.  The Warrior stops his training and
+    advances towards you with a friendly smile, "Fresh meat" he says calmly.
+  sector: city
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    down:
+      to: tba:232:room:23271
+
+"tba:232:room:23279":
+  name: Mages Guild
+  description: >
+    This room is filled with books.  The air smells of different reagants, and mixed components.  This
+    is a mage's dream house.  Your guild master sits behind a large desk studying a book.
+  sector: city
+  flags: [no_mob, indoors, peaceful]
+  exits:
+    down:
+      to: tba:232:room:23272
+
+"tba:232:room:23280":
+  name: General Store
+  description: >
+    Ahhh, this is a great place to be for everyone.  Almost everything you need to go adventuring with
+    is in here.  You have your sacks and bags and lanterns all right here.  Please come in and shop
+    around.
+  sector: city
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:232:room:23263
+
+"tba:232:room:23281":
+  name: The Pet shop
+  description: >
+    This room is full of different animals and beasts.  They range from all different sizes and
+    prices.  All the pets seem to be very well trained.  A large muscular man is going around feeding all of the
+    pets.
+  sector: inside
+  flags: [no_mob, indoors, peaceful, no_magic]
+  exits:
+    south:
+      to: tba:232:room:23259
+
+"tba:232:room:23282":
+  name: PETSHOP STOREROOM
+  description: >
+    Make two rooms and some pets.  The rooms MUST be sequential.  If the first room is 315 then the
+    second must be 316.  The second room is known as the storeroom.  All that is required in the storeroom
+    is to load one of each mob you wish to be a pet.  This room can not have any exits and will never be
+    used by mortals.  Although a pet shopkeeper is not required it is recommended.  After all of this is
+    done ask your coder to implement the petshop.  It will not work until the code is changed and the MUD
+    is rebooted.  The cost of pets is 300 times their level.
+  sector: inside
+  flags: [private, godroom]

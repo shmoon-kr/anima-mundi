@@ -1,0 +1,314 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 103.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:103:obj:10300":
+  type: other
+  keywords: [Zone, Description, Sign]
+  short: the Zone Description Sign
+  long: The Zone Description Sign is staked in the ground here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - >
+      @RThe location of this zone is the dragonball setting of Earth and Planet Namek.  You can be any
+      level to enter this zone, it is just a place to have fun. You can also be any alignment to enter my
+      area.  The theme is of course DB DBZ and DBGT.  And the plot of my zone is to allow people to fight in a
+      dbz environment, letting them just have fun killing stuff.
+    - "@n @RRooms: 100"
+    - "Objects: A Few"
+    - "Mobs: A Few@n"
+
+"tba:103:obj:10301":
+  type: other
+  keywords: [sign]
+  short: a sign
+  long: A sign is nailed in to the wall here.
+  flags: [no_sell]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text: >
+      @RIf you wish to travel, there is only one way.  If you go up you will find a teleporter, and if
+      you go down you will find a teleporter.  They both will take you somewhere new.  @N @RTo enter either
+      teleporter, all you have to type is enter teleporter.  @n
+
+"tba:103:obj:10302":
+  type: other
+  keywords: [teleporter]
+  short: a teleporter
+  long: A teleporter sits in the middle of the room.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10303":
+  type: key
+  keywords: [teleporter]
+  short: a teleporter
+  long: A teleporter sits in the middle of the room.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10304":
+  type: key
+  keywords: [yellow, cloud]
+  short: a yellow cloud
+  long: A yellow cloud hovers here, makeing a slight noise
+  flags: [glow, no_sell]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cloud, nimbus]
+    text: A small yellow cloud puff.
+
+"tba:103:obj:10306":
+  type: worn
+  keywords: [Ruby, Emerald, Necklace]
+  short: a Ruby Emerald Necklace
+  long: A Ruby Emerald Necklace has fallen here.
+  flags: [glow]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:103:obj:10308":
+  type: other
+  keywords: [sign]
+  short: a sign
+  long: A sign is on the wall here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text: To enter the teleporter, just type 'enter teleporter' or 'enter tele' for short.
+
+"tba:103:obj:10309":
+  type: undefined
+  keywords: [test]
+  short: a test
+  long: This is a test
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10318":
+  type: trash
+  keywords: [fighters, carcass]
+  short: a fighters carcass
+  long: A newbie fighters carcass lies here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10319":
+  type: trash
+  keywords: [vegetas]
+  short: Vegetas corpse
+  long: Vegetas corpse lies here slain.
+  wear: [about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 30
+
+"tba:103:obj:10320":
+  type: other
+  keywords: [Teleporter]
+  short: a teleporter
+  long: A teleporter sits in the middle of the room glowing and humming.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10329":
+  type: armor
+  keywords: [Turtle, Hermit, headband]
+  short: a Turlte Hermit headband
+  long: It looks like an ordinary headband, but it looks a bit different.
+  wear: [take, head, wield]
+  values:
+    armor: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:103:obj:10333":
+  type: armor
+  keywords: [Turtle, Shell]
+  short: a Turtle Shell
+  long: A Turtle Shell that looks like Master Roshis' is here.
+  flags: [no_donate, no_sell]
+  wear: [take, about]
+  values:
+    armor: 0
+  weight: 50
+  cost: 25
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 10
+
+"tba:103:obj:10355":
+  type: other
+  keywords: [book]
+  short: a book
+  long: A book lies here open on the table
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [book]
+    text:
+      preformatted: |2
+                     +--------------+
+                     |Story of Sages|
+        +------------+--------------+-------------+
+        |  This is how you would do it, set it in |
+        |a table just to make it look better. That|
+        |is how you get it to be a better look,   |
+        |a little touch to the table for yourself.|
+        |                                         |
+        |                                         |
+        |  Created by: Taylor                     |
+        |                                         |
+        +-----------------------------------------+
+
+"tba:103:obj:10362":
+  type: other
+  keywords: [Dragon, Statue]
+  short: a Dragon Statue
+  long: A Dragon Statue is on the side of the gate.
+  flags: [magic]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10363":
+  type: key
+  keywords: [Gate, Key]
+  short: a Gate Key
+  long: A Gate Key is here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10369":
+  type: other
+  keywords: [circular, rock]
+  short: a circular rock
+  long: A circular rock lies right in the middle the trees.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10373":
+  type: light
+  keywords: [torch]
+  short: a torch
+  long: A torch rest in a crevice in the wall.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: 0
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:103:obj:10376":
+  type: light
+  keywords: [orb]
+  short: a orb
+  long: A orb sits in the middle of the room letting off light.
+  wear: []
+  values:
+    hours: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:103:obj:10389":
+  type: other
+  keywords: [Teleporter]
+  short: a Teleporter
+  long: A Teleporter sits in the middle of the room.
+  flags: [glow, hum]
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0

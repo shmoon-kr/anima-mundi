@@ -1,0 +1,130 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 255.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:255:obj:25500":
+  type: weapon
+  keywords: [cleaver, meat]
+  short: a meat cleaver
+  long: A shadowy meat cleaver has been left here
+  flags: [glow, anti_good]
+  wear: [take, wield]
+  values:
+    damage: 4d5
+    attack: slash
+  weight: 10
+  cost: 549
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: -2
+  extras:
+  - keywords: [scales, justice, scale]
+    text: >
+      As you look at the scales, you notice that they seem to sway back and forth of their own accord, as
+      if weighing something that is to you still unseen.
+
+"tba:255:obj:25501":
+  type: worn
+  keywords: [gold, ring]
+  short: a gold ring
+  long: A gold ring is sitting here on the ground.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 150
+  rent: 0
+  level: 0
+  affects:
+  - apply: move
+    modifier: 15
+  - apply: damroll
+    modifier: -1
+  extras:
+  - keywords: [gold, ring]
+    text: It is a simple golden ring, almost looks like the typical wedding band.
+
+"tba:255:obj:25502":
+  type: armor
+  keywords: [necklace, shark, tooth]
+  short: a shark-toothed necklace
+  long: A shark-toothed necklace has been left here.
+  flags: [glow, anti_good]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 2
+  extras:
+  - keywords: [sword, blazing]
+    text: >
+      The edge of the blade is lined with writing, religious verse apparently, in a fine, silver-laced
+      and flowing script.
+
+"tba:255:obj:25503":
+  type: worn
+  keywords: [eyepatch]
+  short: an eyepatch
+  long: An eyepatch has been left here.
+  flags: [hum]
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 10
+  rent: 0
+  level: 12
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: -1
+
+"tba:255:obj:25504":
+  type: weapon
+  keywords: [dagger, ghostly]
+  short: a ghostly dagger
+  long: A ghostly dagger has been left here.
+  flags: [invisible, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: pierce
+  weight: 5
+  cost: 651
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 3
+
+"tba:255:obj:25505":
+  type: weapon
+  keywords: [rapier, captains]
+  short: the Captain's rapier
+  long: The Captain's rapier has been left here.
+  flags: [hum, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 4d8
+    attack: stab
+  weight: 5
+  cost: 900
+  rent: 0
+  level: 16
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: 1
+  - apply: hit
+    modifier: 10

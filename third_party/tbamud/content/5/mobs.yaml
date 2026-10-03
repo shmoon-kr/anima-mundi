@@ -1,0 +1,828 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 5.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:5:mob:500":
+  keywords: [bunny]
+  short: a bunny
+  long: A cute little bunny is here.
+  description: She is white with red eyes and looks harmless, but looks can be deceiving.
+  level: 1
+  sex: female
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:501":
+  keywords: [apple, boy, thief]
+  short: the apple thief
+  long: A dirty boy is waiting for the next apple to fall.
+  description: >
+    This little thief is too short to reach the apples over his head.  Instead he waits for the ripe
+    apples to fall from the breeze.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:502":
+  keywords: [mouse]
+  short: a mouse
+  long: A small mouse is here.
+  description: >
+    He is rather small and scrawny looking.  His teeth look very sharp and would hurt terribly if he
+    bit you.
+  level: 1
+  sex: male
+  alignment: 250
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:503":
+  keywords: [old, farmer]
+  short: the old farmer
+  long: An old farmer sits underneath the shade of the apple tree.
+  description: He wears a set of old ratty coveralls and is picking his teeth with a bit of hay.
+  level: 3
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:504":
+  keywords: [rooster]
+  short: a rooster
+  long: An ugly little rooster is here.
+  description: >
+    He is perhaps the ugliest rooster you have ever seen.  He is missing over half of his feathers and
+    has a large scar over his left eye.
+  level: 2
+  sex: male
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:507":
+  keywords: [rat]
+  short: a rat
+  long: A large rat is here.
+  description: >
+    The creature looks up at you with it's big dark eyes.  They look black. The hair on the rat is
+    matted down, probably from some sewer water.
+  level: 2
+  sex: male
+  alignment: -250
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:508":
+  keywords: [weasel]
+  short: a weasel
+  long: A sly looking weasel is here.
+  description: She looks very sneaky and could easily sneak up on her prey.
+  level: 2
+  sex: female
+  alignment: -250
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: maul
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:510":
+  keywords: [goose]
+  short: a goose
+  long: A goose is here, walking along the trail.
+  description: Her feathers are as white as snow, she looks friendly enough to touch.
+  level: 1
+  sex: female
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:511":
+  keywords: [chick]
+  short: a chick
+  long: A furry little chick is here.
+  description: She is a small little thing and looks quite weak.
+  level: 3
+  sex: female
+  alignment: 250
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:514":
+  keywords: [hen]
+  short: a hen
+  long: A hen is here.
+  description: She is mean looking and quite ugly.  Her eyes give you the chilling feeling of death.
+  level: 4
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:518":
+  keywords: [dog]
+  short: a dog
+  long: A large dog is here.
+  description: He is very bony, but appears to be very tough.  It might be wise to leave him alone.
+  level: 5
+  sex: male
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:520":
+  keywords: [farmer, pete]
+  short: a farmer
+  long: Farmer Pete is here, busily working.
+  description: >
+    He is a husky man.  Well built, but friendly looking.  His silver hair reflects in the sunlight.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: pound
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:522":
+  keywords: [cow]
+  short: a cow
+  long: A cow is here.
+  description: She is very clean and well groomed.
+  level: 4
+  sex: female
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:523":
+  keywords: [barn, cat]
+  short: a barn cat
+  long: A lazy barn cat is roaming around here.
+  description: >
+    He is a large creature, and could probably use a diet.  His fur is orange with stripes of brown.
+  level: 5
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:524":
+  keywords: [crow]
+  short: a crow
+  long: An ugly crow is here.
+  description: >
+    He looks like he should be dead.  He is covered in scars.  You notice some blood on his beak.
+  level: 1
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:526":
+  keywords: [farmers, wife, Helen]
+  short: the farmer's wife
+  long: Helen, the farmers wife is standing here.
+  description: >
+    She is a kind looking old woman.  Her hair is still its natural brown.  She must be younger than
+    the farmer.
+  level: 8
+  sex: female
+  alignment: 350
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:527":
+  keywords: [sheep]
+  short: a sheep
+  long: A sheep is here.
+  description: She looks very tired.  Maybe you should let her rest.
+  level: 4
+  sex: female
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:529":
+  keywords: [calf]
+  short: a calf
+  long: A small calf is here.
+  description: She looks up at you with her young innocent eyes.  How could you ever harm her?
+  level: 2
+  sex: female
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: maul
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:536":
+  keywords: [farm, boy, Jonathan]
+  short: a farm boy
+  long: A young farm boy named Jonathan is here.
+  description: >
+    He is a scrawny little thing, but quite tall.  He makes you think of a twig. His face is boney and
+    looks like it's been caved in.  How gross!
+  level: 7
+  sex: male
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:542":
+  keywords: [owl]
+  short: an owl
+  long: An owl is here
+  description: >
+    She is quite large, but very beautiful.  Her white feathers look like freshly fallen snow.
+  level: 1
+  sex: female
+  alignment: 200
+  flags: [sentinel]
+  affects: [detect_align]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:543":
+  keywords: [sheepdog]
+  short: a sheepdog
+  long: A furry sheepdog is here.
+  description: He is quite friendly looking.  He must belong to the farmer.
+  level: 3
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:544":
+  keywords: [blackbird]
+  short: a blackbird
+  long: A blackbird is flying around above you.
+  description: She is old and mean looking.  She carries a lot of battle scars.
+  level: 2
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:545":
+  keywords: [raven]
+  short: a raven
+  long: A raven is here.
+  description: Her beak is long and sharp.  It would hurt greatly if she decided to bite you.
+  level: 9
+  sex: female
+  alignment: -600
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:546":
+  keywords: [wolf]
+  short: a wolf
+  long: A snarling wolf is here.
+  description: >
+    His teeth drip with drool as he snarls at you, warning you to stay back. Maybe you should just
+    leave him alone.
+  level: 6
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:547":
+  keywords: [squirrel]
+  short: a squirrel
+  long: A cute little squirrel is here.
+  description: He is a cute little thing and probably wouldn't attack you unless you provoked him.
+  level: 3
+  sex: male
+  alignment: -250
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: slash
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:548":
+  keywords: [gopher]
+  short: a gopher
+  long: A small gopher is here
+  description: She must be a baby.  She is half the size of a normal gopher.
+  level: 5
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:555":
+  keywords: [bat]
+  short: a bat
+  long: A small bat is hanging from the wall.
+  description: >
+    He is a small thing, but rather nasty looking.  His eyes look like 2 small black holes.  They
+    remind you of death.
+  level: 9
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:563":
+  keywords: [colt]
+  short: a colt
+  long: A fiery colt is here.
+  description: He looks quite mean.  He must be the bully of the farm.
+  level: 7
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: thrash
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:565":
+  keywords: [mare]
+  short: a mare
+  long: A mare is here.
+  description: She is a cute little thing, almost too weak to stand on her own.
+  level: 5
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:566":
+  keywords: [horse]
+  short: a horse
+  long: A beautiful horse stands here.
+  description: Her coat is a shiny brown.  You notice she has some white splotches on her legs.
+  level: 4
+  sex: female
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:568":
+  keywords: [stallion]
+  short: a stallion
+  long: A fierce looking stallion is here.
+  description: His eyes almost seem red as they stare at you, almost making you want to leave.
+  level: 8
+  sex: male
+  alignment: -500
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:580":
+  keywords: [turkey]
+  short: a turkey
+  long: An annoying turkey is here.
+  description: >
+    He is more than ugly.  He is hideous looking!  His eyes seem to have a fog in them.  Maybe he can't
+    see as well as he used to.
+  level: 3
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:582":
+  keywords: [butterfly]
+  short: a butterfly
+  long: A beautiful butterfly is here.
+  description: >
+    His wings are splotched in many bright colors.  He is the most beautiful creature you have ever
+    seen.
+  level: 10
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:584":
+  keywords: [arthur, man]
+  short: Arthur
+  long: Arthur is sitting here in his rocking chair, warming himself by the fire.
+  description: >
+    He smiles at you when you look at him.  He must work somewhere on the farm and hunt in his spare
+    time.
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: maul
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:586":
+  keywords: [coyote]
+  short: a coyote
+  long: A coyote is here.
+  description: He is fierce looking.  His teeth are probably razor sharp and could easily tear you open.
+  level: 10
+  sex: male
+  alignment: -800
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:587":
+  keywords: [hawk]
+  short: a hawk
+  long: A hawk is here.
+  description: >
+    She looks like a normal hawk, but her wings seems to be somewhat longer, enabling her to fly faster.
+  level: 7
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:591":
+  keywords: [roach]
+  short: a roach
+  long: A large roach is here.
+  description: >
+    He is an ugly thing.  He has hair growing off his legs and is head looks some what deformed.
+  level: 9
+  sex: male
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 91
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 90
+  exp: 8100
+  position:
+    load: standing
+    default: standing
+
+"tba:5:mob:599":
+  keywords: [sparrow]
+  short: a sparrow
+  long: A small sparrow is here.
+  description: She is delicate looking, but looks can be deceiving.
+  level: 7
+  sex: female
+  alignment: -300
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing

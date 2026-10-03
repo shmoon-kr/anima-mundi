@@ -1,0 +1,517 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 317.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:317:obj:31700":
+  type: container
+  keywords: [waiters, tray]
+  short: a waiters tray
+  long: A tray that was once used by an underpaid waiter lies here.
+  wear: [take, hold]
+  values:
+    capacity: 400
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:317:obj:31701":
+  type: armor
+  keywords: [sash]
+  short: a satin teal sash
+  long: A expensive silk sash lies here waiting for you.
+  flags: [hum, anti_evil, no_sell]
+  wear: [take, waist]
+  values:
+    armor: 2
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 18
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: int
+    modifier: -2
+
+"tba:317:obj:31702":
+  type: armor
+  keywords: [shirt, protection, stained]
+  short: a stained shirt of protection
+  long: A stained shirt lies here folded nicely.
+  wear: [take, body]
+  values:
+    armor: 4
+  weight: 3
+  cost: 500
+  rent: 0
+  level: 10
+  affects:
+  - apply: mana
+    modifier: 5
+  - apply: wis
+    modifier: 2
+
+"tba:317:obj:31703":
+  type: worn
+  keywords: [ring, topaz]
+  short: a topaz ring
+  long: A shiny topaz ring was left here.
+  wear: [take, finger, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 500
+  rent: 0
+  level: 12
+  affects:
+  - apply: mana
+    modifier: 10
+  - apply: int
+    modifier: 1
+
+"tba:317:obj:31704":
+  type: armor
+  keywords: [shoes, shiny, pair, black]
+  short: a pair of shiny black shoes
+  long: A pair of shiny black shoes are on the ground.
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 5
+  cost: 12
+  rent: 0
+  level: 11
+  extras:
+  - keywords: [shoes, shiny, pair, black]
+    text: >
+      These shoes are perfectly spotless, meticulously kept clean by someone with a fetish for cleaning
+      stuff.
+
+"tba:317:obj:31705":
+  type: weapon
+  keywords: [shovel]
+  short: a shovel
+  long: A dirty old shovel lies against the wall.
+  wear: [take, wield]
+  values:
+    damage: 1d1
+    attack: crush
+  weight: 7
+  cost: 9
+  rent: 0
+  level: 1
+
+"tba:317:obj:31706":
+  type: light
+  keywords: [dusty, lantern]
+  short: a dusty lantern
+  long: A dusty lantern lies tipped over on the ground.
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 17
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: move
+    modifier: -5
+
+"tba:317:obj:31707":
+  type: worn
+  keywords: [golden, sandals]
+  short: some golden sandals
+  long: A pair of gold sandals are buried under some dirt.
+  wear: [take, feet]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: move
+    modifier: 15
+  - apply: hitroll
+    modifier: -1
+  - apply: damroll
+    modifier: -1
+
+"tba:317:obj:31708":
+  type: container
+  keywords: [sachel]
+  short: a sachel
+  long: A plain looking sachel hangs here.
+  wear: [take, hold]
+  values:
+    capacity: 25
+    lock_flags: 1
+    corpse: false
+  weight: 12
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:317:obj:31709":
+  type: drinkcon
+  keywords: [whisky, flask, silver, whisky]
+  short: an engraved silver flask
+  long: A small flask has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 5
+    contains: 5
+    liquid: whisky
+    poisoned: false
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [whisky, flask, silver, whisky]
+    text: The engraving on the side reads CTW, whatever that means..
+
+"tba:317:obj:31710":
+  type: worn
+  keywords: [locket, golden]
+  short: a golden locket
+  long: A small piece of jewelry is on the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 100
+  rent: 0
+  level: 13
+  affects:
+  - apply: int
+    modifier: 2
+  - apply: wis
+    modifier: 1
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [locket, golden]
+    text: You try and try to prise this thing open, but it will not budge.
+
+"tba:317:obj:31711":
+  type: worn
+  keywords: [sash, cloth, embroidered]
+  short: an embroidered sash
+  long: A pile of cloth is on the ground.
+  wear: [take, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 200
+  rent: 0
+  level: 11
+  affects:
+  - apply: ac
+    modifier: -2
+  - apply: cha
+    modifier: 2
+  extras:
+  - keywords: [sash, cloth, embroidered]
+    text: Woven from the finest silk, this was obviously made for a woman of stature.
+
+"tba:317:obj:31712":
+  type: armor
+  keywords: [cloak, obscurity]
+  short: a Cloak of Obscurity
+  long: A dark pile of cloth is crumpled in the corner.
+  flags: [invisible]
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 15
+  affects:
+  - apply: dex
+    modifier: 2
+  - apply: hit
+    modifier: 20
+  - apply: damroll
+    modifier: -1
+
+"tba:317:obj:31713":
+  type: weapon
+  keywords: [stiletto, black]
+  short: a black stiletto
+  long: A deadly stiletto stands upright between two stones.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pierce
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+
+"tba:317:obj:31714":
+  type: armor
+  keywords: [cape, blending]
+  short: the Cape of Blending
+  long: It looks as if the floor has wrinkles.
+  flags: [hum, invisible]
+  wear: [take, about]
+  values:
+    armor: 7
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 15
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: move
+    modifier: 25
+  extras:
+  - keywords: [cape, blending]
+    text: This wonderful cape can camouflage you in almost any setting.
+
+"tba:317:obj:31715":
+  type: other
+  keywords: [rake]
+  short: a simple rake
+  long: A rake has been dropped on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [rake]
+    text: Metal pronged teeth and a wooden handle.  Looks a lot like a rake.
+
+"tba:317:obj:31716":
+  type: other
+  keywords: [peel, banana]
+  short: a banana peel
+  long: Someone left their banana peel here... tsk, tsk, someone could fall!
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [peel, banana]
+    text: No banana stuff inside, sorry, just the peel.
+
+"tba:317:obj:31717":
+  type: armor
+  keywords: [gloves, gardening]
+  short: some gardening gloves
+  long: A pair of gardening gloves have been left here.
+  wear: [take, hands]
+  values:
+    armor: 4
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [gloves, gardening]
+    text: >
+      They have a bit of dirt smudged on the fingertips, but other than that, they look perfectly usable.
+
+"tba:317:obj:31718":
+  type: other
+  keywords: [shovel, gardening]
+  short: a small gardening shovel
+  long: A small gardening shovel is laying in the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [shovel, gardening]
+    text: Looks like it could dig a mean hole or two...
+
+"tba:317:obj:31719":
+  type: other
+  keywords: [shovel]
+  short: a shovel
+  long: A shovel is propped up against a tree.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 9
+  cost: 1
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [shovel]
+    text: Kind of makes you queasy to know that this shovel is used only for burying people...
+
+"tba:317:obj:31720":
+  type: other
+  keywords: [sign, rules]
+  short: the rules of the game
+  long: A sign is hung on the wall just inside the door.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text:
+    - -House Rules-
+    - >
+      -To place a wager simply type GAMBLE (amnt) and the dealer will deal you one card and a card for
+      himself.  The player with the highest card wins the wager.
+    - >
+      In the event of a tie, there will be a War! and this will continue until there is a winner.
+
+"tba:317:obj:31721":
+  type: drinkcon
+  keywords: [beer, goblet, sparkling, beer]
+  short: a sparkling goblet
+  long: A sparkling goblet full of beer has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: beer
+    poisoned: false
+  weight: 5
+  cost: 19
+  rent: 0
+  level: 0
+
+"tba:317:obj:31722":
+  type: drinkcon
+  keywords: [wine, decanter, crystal, wine]
+  short: a crystal decanter
+  long: A crystal decanter filled with expensive wine has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 7
+    contains: 7
+    liquid: wine
+    poisoned: false
+  weight: 9
+  cost: 38
+  rent: 0
+  level: 0
+
+"tba:317:obj:31723":
+  type: food
+  keywords: [meat, plate, sizzling]
+  short: a sizzling plate of rare szgina meat
+  long: Someone left a REALLY tasty looking plate of food here.
+  wear: [take, hold]
+  values:
+    hours: 4
+    poisoned: false
+  weight: 6
+  cost: 40
+  rent: 0
+  level: 0
+
+"tba:317:obj:31724":
+  type: food
+  keywords: [tray, vegetable, steaming]
+  short: a steaming vegetable tray
+  long: A steaming vegetable is here, steaming.
+  wear: [take, hold]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 4
+  cost: 20
+  rent: 0
+  level: 0
+
+"tba:317:obj:31725":
+  type: food
+  keywords: [leg, yantha, beast]
+  short: leg of Yantha Beast
+  long: Someone left their leg of Yantha Beast here - what a waste of a delicacy!
+  wear: [take, hold]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 5
+  cost: 66
+  rent: 0
+  level: 0
+
+"tba:317:obj:31726":
+  type: food
+  keywords: [ribs, ilzaak, pomegranete, sauce]
+  short: some Ilzaak ribs in pomegranete sauce
+  long: There is a plate of Ilzaak ribs here steaming in pomegranete sauce.
+  wear: [take, hold]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 6
+  cost: 85
+  rent: 0
+  level: 0
+
+"tba:317:obj:31727":
+  type: food
+  keywords: [banana, red]
+  short: a red banana
+  long: A red banana has been dropped here.
+  wear: [take, hold]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 2
+  cost: 25
+  rent: 0
+  level: 0
+
+"tba:317:obj:31728":
+  type: food
+  keywords: [chupacabre, rotisseri]
+  short: some rotiserrie chupacabre
+  long: A warm, steaming rotiserri chupacabre has been left here.
+  wear: [take, hold]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 10
+  cost: 100
+  rent: 0
+  level: 0
+
+"tba:317:obj:31729":
+  type: drinkcon
+  keywords: [wine, glass, green, wine]
+  short: a beveled green glass
+  long: A beautifully beveled green glass has been left here.
+  wear: [take, hold]
+  values:
+    capacity: 3
+    contains: 3
+    liquid: wine
+    poisoned: false
+  weight: 3
+  cost: 30
+  rent: 0
+  level: 0

@@ -1,0 +1,809 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 239.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:239:mob:23900":
+  keywords: [snake, red, coral]
+  short: a red coral snake
+  long: A red coral snake squirms among the rocks here.
+  description: >
+    A slippery red coral snake slides about on his belly through the rocks and sand looking for
+    something to eat, it may even try to eat you.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23901":
+  keywords: [snake, diamond, rattle]
+  short: a diamond-back rattle snake
+  long: A diamond-back rattle snake is coiled up ready to strike.
+  description: >
+    A diamond-back rattle snake is coiled up amongst the rocks here ready to strike at anything that
+    moves or tries to step on it.
+  level: 17
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23902":
+  keywords: [brown, scorpion]
+  short: a brown scorpion
+  long: A brown scorpion crawls around the rocks stalking its prey.
+  description: >
+    A brown scorpion stalks amongst the rocks looking for victims to attack with it's sharp stinger and
+    suck its life force dry.
+  level: 16
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23903":
+  keywords: [red, scorpion]
+  short: a red scorpion
+  long: A red scorpion quivers its poisoned stinger at you.
+  description: >
+    A red scorpion is the largest of all scorpions and quivers its deadly stinger at you with
+    confidence of victory.
+  level: 17
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23904":
+  keywords: [black, scorpion]
+  short: a black scorpion
+  long: A black scorpion is sharpening its vicious stinger here.
+  description: >
+    A black scorpion passes its time while waiting for victims by polishing its armor and sharpening
+    its deadly stinger.
+  level: 16
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy, no_charm]
+  affects: [invisible, sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: sting
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23905":
+  keywords: [spider, red]
+  short: a red spider
+  long: A red spider is building a trap in the desert floor.
+  description: >
+    A red spider is passing time building a web trap in the desert floor in hopes of catching some food
+    for her new born babies.
+  level: 19
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23906":
+  keywords: [black, spider, hairy]
+  short: a hairy black spider
+  long: A hairy black spider crawls amongst the rocks of slate.
+  description: >
+    A hairy black spider is crawling in the rocks in quest of things to dine upon.  It looks famished
+    and would probably eat anything, even you.
+  level: 16
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23907":
+  keywords: [travelling, bugbear, weary]
+  short: a weary travelling bugbear
+  long: A weary travelling bugbear is limping aimlessly about the desert.
+  description: >
+    A weary travelling bugbear seems lost and dying as he wanders aimlessly about the desert.  He seems
+    lost and confused.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, wimpy, memory, no_charm, no_bash]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: pierce
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23908":
+  keywords: [sand, storm, twirling]
+  short: a sand storm
+  long: A twirling sand storm spins about picking up dust along its path.
+  description: >
+    A twirling cloud of dust raises up sand and dust and spins it around and around in a fearful vortex.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, wimpy, helper, no_charm, no_summon]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23909":
+  keywords: [angry, thorn, cactus]
+  short: a cactus
+  long: An angry thorn cactus is looking for some water.
+  description: >
+    An angry and thirsty cactus is desperately looking for some water to drink, and at this point would
+    even take the blood of any animal that it happens to wander into because its throat is so dry and
+    parched.
+  level: 19
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy, memory, helper]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: pierce
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23910":
+  keywords: [cave, dweller, hairy]
+  short: a hairy cave dweller
+  long: A hairy cave dweller is hiding behind a rock waiting to ambush you.
+  description: >
+    A hairy cave dweller is covered with matted hair and a long scraggly beard. He is hungry and would
+    do almost anything for some food.
+  level: 17
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: pound
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23911":
+  keywords: [gargantuan, hairy, bigfoot, sasquatch, beast]
+  short: a sasquatch
+  long: A gargantuan hairy beast with big feet is walking in the snow.
+  description: >
+    A gargantuan hairy beast with the stature of a slump-backed human with huge feet is roaming around
+    the mountain top looking for something to eat, maybe it's gonna be you?
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, helper, no_summon, no_bash]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23912":
+  keywords: [stone, dwarf, dwarven, sentinel, stern]
+  short: a dwarven sentinel
+  long: A stern faced dwarven sentinel peers across the lands.
+  description: >
+    A stern faced dwarven Sentinel guards the trail with a watchful eye for the NewHaven dwarves'
+    enemies.  It was crafted ages ago by dwarven stone cutters. Magical spells woven into the stone protect
+    the Sentinel from the harsh climate here.  The eyes stare northward and into the Southern Desert far
+    below.  The Sentinel has a stern countenance and wields a stone hammer and finely crafted shield.
+  level: 21
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, scavenger, aware, stay_zone, memory, no_charm, no_summon, no_sleep, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23913":
+  keywords: [dark]
+  short: the dark
+  long: The pitch black of the dark surrounds you.
+  description: >
+    The sea of dark around you in these chambers surrounds you, scares you, engulfs you in a total
+    pitch black sea of nothing, leaving you all alone.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, memory, no_summon, no_bash]
+  affects: [invisible, detect_invis, sense_life, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: blast
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23914":
+  keywords: [hawk, sharp, talon, bird]
+  short: a hawk
+  long: A hawk with sharp talons is on a limb here.
+  description: A hawk with sharp talons is guarding it's territory.  It hates competition and you.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [aware, stay_zone, memory]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23915":
+  keywords: [eagle, brown, bird]
+  short: a brown eagle
+  long: A brown eagle has sharp claws of steel.
+  description: >
+    The eagle is a magnificent bird of prey, has sharp eyesight, claws to grasp it's prey, and a 15
+    macra wingspan.
+  level: 20
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, memory]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23916":
+  keywords: [cardinal, bird]
+  short: a cardinal
+  long: A red-chested cardinal flies around gathering pinion nuts.
+  description: >
+    A beautiful red cardinal is busy gathering food and insects around the limbs of the tree.  It is
+    too busy to notice you.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23917":
+  keywords: [root, dark]
+  short: a dark root
+  long: A dark root of the tree penetrates the hard soil and supporting the tree.
+  description: >
+    A long cylinder of sinew and fiber below the ground supporting the tree. The fingers of the hand of
+    the tree grasping deep into the earth with the grip of a giant.
+  level: 21
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, aware, stay_zone, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23918":
+  keywords: [nice, shopkeeper, michelle]
+  short: a nice shop keeper
+  long: Michelle has a shop here that's going out of business.
+  description: >
+    Michelle has a friendly face and a nice smile.  She seems very busy but not so busy that she can't
+    help you with what you need.  The shop isn't doing that well but the owner still keeps her on because
+    she does such a good job and works for nothing.
+  level: 21
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: sting
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23919":
+  keywords: [rodent, chipmunk]
+  short: a chipmunk
+  long: A small chipmunk with puffy cheeks chatters and barks here.
+  description: >
+    A small rodent with a brown body and some yellow-white stripes down its back is running around the
+    shrubs and trees gathering fruit and nuts for its young.
+  level: 16
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy, helper, no_charm, no_blind]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23920":
+  keywords: [man, drow, mage]
+  short: a drow mage
+  long: A man in black robes stands here.
+  description: >
+    The Drow mage is a powerful magi with knowledge of spells long forgotten in other cultures.  He is
+    unhappy with his position in the Matriarch society of the Drow and could probably easily be angered
+    into a fight.
+  level: 18
+  sex: male
+  alignment: -500
+  flags: [stay_zone, helper, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23921":
+  keywords: [drow, cleric]
+  short: a drow cleric
+  long: A drow cleric walks along the passage.
+  description: >
+    A cleric of the drow social system is an evil healer and spell caster.  She is a young drow
+    matriarch with potential to be a drow priestess some day in her future.
+  level: 20
+  sex: female
+  alignment: -500
+  flags: [aware, stay_zone, wimpy, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis, sense_life, hide]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23922":
+  keywords: [cyclops, guardian]
+  short: a guardian cyclops
+  long: An enormous cyclops guardian is protecting the entrance.
+  description: >
+    An enormous cyclops guards the entrance.  It is about 8 metrons tall, weight is about 350 stonga,
+    very large muscles, one eye, and a bald head.
+  level: 21
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory, no_summon, no_sleep, no_blind]
+  affects: [detect_align, detect_invis, sense_life, protect_evil, no_track]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: pound
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23923":
+  keywords: [drow, guard]
+  short: a drow guard
+  long: A drow guard patrols the hallways.
+  description: >
+    A drow guard keeps intruders from entering the inner chambers of the drow sanctum.  The life of a
+    drow guard is usually short and honorable.  They would gladly sacrifice their lives to defend the
+    colony.
+  level: 21
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, no_charm, no_summon, no_sleep, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23924":
+  keywords: [drow, priestess]
+  short: a drow priestess
+  long: A powerful drow priestess chants some prayers to her gods here.
+  description: >
+    A drow priestess is barely clothed.  She has a blank expression on her face and pale white skin. 
+    The priestess eyes are pitch black and deep as the ocean and you can see the evil forces that dwell
+    within her dark soul through these windows of her mind.
+  level: 20
+  sex: female
+  alignment: 0
+  flags: [aware, stay_zone, aggr_good, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [invisible, detect_invis, sense_life]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23925":
+  keywords: [drow, guard]
+  short: a drow guard
+  long: A drow guard keeps watch here with a vigilance.
+  description: >
+    A male drow guard is stronger than the female drow guards but is lower in rank within the Matriarch
+    society.  He would gladly die defending the inner sanctum of the drow chapel.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: bludgeon
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23926":
+  keywords: [goblin, guard]
+  short: a goblin guard
+  long: A goblin guard stands here to keep out intruders.
+  description: >
+    A smelly fat blob of ugliness with short black hair and wide nose.  Thin long fingers with black
+    nails used to claw its enemy.  Not much is known of goblin culture, some think it was an early model of
+    the orc, crafted by some evil wizard in search of a slave type race that he could use in fighting
+    his battle and building his fortress.
+  level: 18
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone, helper, no_summon, no_sleep, no_blind]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: claw
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23927":
+  keywords: [old, guard, goblin]
+  short: an older goblin guard
+  long: An older goblin guard tries to hold in his pot belly as he keeps watch.
+  description: >
+    An older goblin guard has to keep working because he knows no other skills and there is no
+    retirement in the goblin society, they work till they die. This one looks like he won't have to work too much
+    longer.
+  level: 16
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, memory, helper, no_summon, no_blind]
+  affects: [sense_life]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23928":
+  keywords: [goblin, warrior]
+  short: a goblin warrior
+  long: A goblin warrior defends his land from invaders.
+  description: >
+    A goblin warrior has many battle scars.  The goblins are not very skilled warriors and have not
+    ever won a major battle in the history of the world. They are not known for their weapons or armor. 
+    They defend their lands out of necessity rather than desire.
+  level: 17
+  sex: neutral
+  alignment: 0
+  flags: [aware, stay_zone, no_sleep, no_bash]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23929":
+  keywords: [old, aged, hermit, man]
+  short: an old hermit
+  long: An old and decrepit hermit smokes his pipe here.
+  description: >
+    An old and decrepit hermit has decided he wants nothing to do with society anymore.  He has a
+    wrinkled brow, long scraggly gray beard, bent back, weak and frail arms and legs, and is smoking his pipe.
+  level: 21
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, stay_zone, memory, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, waterwalk, protect_evil]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23930":
+  keywords: [orc, slave]
+  short: an orc slave
+  long: An orc slave lays here grunting.
+  description: >
+    Captured in the caverns of the drow, this orc is their prisoner slave now. He is forced to mine
+    adamite along with all the other slaves that have been captured by the drow.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23931":
+  keywords: [dwarf, slave]
+  short: a dwarf slave
+  long: A dwarf slave lies not making a sound.
+  description: >
+    A dwarf slave was captured by the drow guards wandering in the caves trying to find NewHaven.  Now
+    he must live here till he can escape or is rescued by his fellow dwarves.  Until then he will be
+    forced to work in the slave labor camps of the drow.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23932":
+  keywords: [elf, slave]
+  short: an elf slave
+  long: An elf slave is pacing the cell.
+  description: >
+    An elf slave is anxious and wants to find a way to escape slavery by his drow captors.  He has been
+    forced to mine for them and has been beaten, whipped, and humiliated by the drow guards.  He is weak
+    and has lost hope of rescue by his friends.
+  level: 16
+  sex: male
+  alignment: 1000
+  flags: [sentinel, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:239:mob:23933":
+  keywords: [minotaur, slave]
+  short: a minotaur slave
+  long: A minotaur slave wants to be free to run.
+  description: >
+    A minotaur slave captured by the drow is very unhappy.  He is forced to live inside these caves,
+    working in the drow mines pulling carts of ore instead of roaming the surface of the world out in the
+    open and free, with fresh air and green grass.
+  level: 16
+  sex: male
+  alignment: 0
+  flags: [sentinel, stay_zone, no_charm, no_summon, no_bash]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing

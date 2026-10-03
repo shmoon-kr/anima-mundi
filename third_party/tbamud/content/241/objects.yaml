@@ -1,0 +1,558 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 241.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:241:obj:24100":
+  type: weapon
+  keywords: [standard, issue, starfleet, phaser]
+  short: a standard issue phaser
+  long: A standard issue Starfleet phaser has been left here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 5d5
+    attack: blast
+  weight: 3
+  cost: 200
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 2
+  extras:
+  - keywords: [phaser]
+    text: >
+      These phasers are the standard weapon of Starfleet officers.  It offers decent damage for its
+      fairly small size.
+
+"tba:241:obj:24101":
+  type: weapon
+  keywords: [phaser, rifle]
+  short: a phaser rifle
+  long: A large phaser rifle is lying here.
+  flags: [glow]
+  wear: [take, wield]
+  values:
+    damage: 7d6
+    attack: blast
+  weight: 8
+  cost: 400
+  rent: 1000
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 4
+  extras:
+  - keywords: [phaser, rifle]
+    text: >
+      This phaser rifle looks pretty powerful.  These weapons are used mainly on assault type missions,
+      where power is important.
+
+"tba:241:obj:24102":
+  type: armor
+  keywords: [burgandy, starfleet, command, uniform]
+  short: a burgandy Starfleet command uniform
+  long: A neatly folded burgandy Starfleet command uniform is lying here.
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 5
+  cost: 400
+  rent: 500
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+  - apply: age
+    modifier: 1
+  extras:
+  - keywords: [burgandy, command, uniform]
+    text: >
+      These uniforms are worn by command officers on Federation starships.  It's kind of tight, but it
+      looks pretty good.
+
+"tba:241:obj:24103":
+  type: armor
+  keywords: [gold, starfleet, engineering, uniform]
+  short: a gold Starfleet engineering uniform
+  long: A neatly folded gold Starfleet engineering uniform is lying here.
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 5
+  cost: 400
+  rent: 500
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: int
+    modifier: 1
+  - apply: hit
+    modifier: 1
+  extras:
+  - keywords: [gold, engineering, uniform]
+    text: >
+      These uniforms are worn by engineering officers on Federation starships. It's kind of tight, but it
+      looks pretty good.
+
+"tba:241:obj:24104":
+  type: armor
+  keywords: [blue, starfleet, medical, uniform]
+  short: a blue Starfleet medical uniform
+  long: A neatly folded blue Starfleet medical uniform is lying here.
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 5
+  cost: 400
+  rent: 500
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 1
+  - apply: con
+    modifier: 1
+  - apply: mana
+    modifier: 20
+  extras:
+  - keywords: [blue, medical, uniform]
+    text: >
+      These uniforms are worn by medical officers on Federation starships.  It's kind of tight, but it
+      looks pretty good.
+
+"tba:241:obj:24105":
+  type: armor
+  keywords: [starfleet, black, boots]
+  short: a pair of Starfleet black boots
+  long: A pair of Starfleet black boots are sitting here.
+  wear: [take, feet]
+  values:
+    armor: 5
+  weight: 3
+  cost: 500
+  rent: 250
+  level: 0
+  affects:
+  - apply: move
+    modifier: 50
+  extras:
+  - keywords: [starfleet, black, boots]
+    text: >
+      These boots must be worn by all Starfleet officers while on duty.  They're quite light, and offer
+      good protection for the feet.
+
+"tba:241:obj:24106":
+  type: armor
+  keywords: [starfleet, comm, com, communication, badge]
+  short: a Starfleet communication badge
+  long: A Starfleet communication badge is lying here.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 500
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [starfleet, communication, badge]
+    text:
+      preformatted: |2
+           These communication badges must be worn by all officers while on a starship.
+        It looks like a silver arrow head on top of a golden colored oval:
+        
+                                ____/\____
+                               /   /  \   \
+                              |   /    \   |
+                               \_/ _/\_ \_/
+                                //      \\
+        
+        It looks like it could be TAPped.
+
+"tba:241:obj:24107":
+  type: armor
+  keywords: [worf's, worf, sash]
+  short: Worf's sash
+  long: Worf's silver chain sash has been left here.
+  wear: [take, body]
+  values:
+    armor: 8
+  weight: 6
+  cost: 500
+  rent: 300
+  level: 0
+  affects:
+  - apply: str
+    modifier: 1
+  extras:
+  - keywords: [worf's, worf, sash]
+    text: >
+      Worf's sash is some sort of Klingon clothing.  Worf always wears it, which makes you wonder how you
+      managed to get a hold of it...
+
+"tba:241:obj:24108":
+  type: armor
+  keywords: [geordi, geordi's, visor]
+  short: Geordi's VISOR
+  long: Geordi's VISOR is lying here.
+  wear: [take, head]
+  values:
+    armor: 2
+  weight: 6
+  cost: 500
+  rent: 750
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: hitroll
+    modifier: 3
+  extras:
+  - keywords: [geordi, geordi's, visor]
+    text: >
+      Geordi's VISOR was made specially for him, because he's blind.  This piece of equipment allows him
+      to see things, but differently than normal eyes.  I wonder how Geordi is managing, now that you've
+      stolen his only way of seeing?
+
+"tba:241:obj:24109":
+  type: wand
+  keywords: [medical, tricorder]
+  short: a medical Tricorder
+  long: A medical Tricorder is lying here, ready to be used.
+  wear: [take, hold]
+  values:
+    raw: [10, 5, 5, 28]
+  weight: 6
+  cost: 500
+  rent: 500
+  level: 0
+  extras:
+  - keywords: [medical, tricorder]
+    text: >
+      This medical Tricorder is used to heal small wounds and cuts.  While it isn't made for major
+      injuries, it can help you limp home.  To use, hold it and then use it.  You can also use it to @gscan@n
+      someone for injuries.
+
+"tba:241:obj:24110":
+  type: light
+  keywords: [dilithium, crystal]
+  short: a dilithium crystal
+  long: A shard of dilithium crystal is lying here.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 2
+  cost: 500
+  rent: 250
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  extras:
+  - keywords: [dilithium, crystal]
+    text: >
+      Dilithium crystals are used to power warp cores of starships.  This particular crystal is glowing
+      brightly, and gives off a blue-ish tinge.
+
+"tba:241:obj:24111":
+  type: other
+  keywords: [picard, picard's, flute]
+  short: Picard's flute
+  long: Captain Picard's wooden flute is sitting here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 500
+  rent: 250
+  level: 0
+  affects:
+  - apply: wis
+    modifier: 3
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [picard, picard's, flute]
+    text: >
+      Captain Picard received this flute when he lost his memory and was stuck on some strange world. 
+      Now, he plays it to relieve stress.
+
+"tba:241:obj:24112":
+  type: other
+  keywords: [riker, riker's, trombone]
+  short: Riker's trombone
+  long: Commander Riker's trombone has been placed here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 500
+  rent: 250
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 3
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [riker, riker's, trombone]
+    text: >
+      Commander Riker considers himself to be a talented jazz musician.  He practices on this trombone
+      all the time.
+
+"tba:241:obj:24120":
+  type: drinkcon
+  keywords: [tea, cup, tea]
+  short: a small cup
+  long: A small cup of tea is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 4
+    contains: 4
+    liquid: tea
+    poisoned: false
+  weight: 9
+  cost: 15
+  rent: 10
+  level: 0
+
+"tba:241:obj:24121":
+  type: drinkcon
+  keywords: [wine, bottle, synthehol, wine]
+  short: a synthehol
+  long: A bottle of synthehol is standing here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: wine
+    poisoned: false
+  weight: 13
+  cost: 30
+  rent: 10
+  level: 0
+
+"tba:241:obj:24122":
+  type: drinkcon
+  keywords: [ale, ferengi, bottle, ale]
+  short: a Ferengi bottle
+  long: A bottle of Ferengi ale is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: ale
+    poisoned: false
+  weight: 13
+  cost: 30
+  rent: 10
+  level: 0
+
+"tba:241:obj:24123":
+  type: drinkcon
+  keywords: [hisky, whiskey, romulan, bottle, whisky]
+  short: a Romulan bottle
+  long: A bottle of Romulan whiskey is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: whisky
+    poisoned: false
+  weight: 13
+  cost: 45
+  rent: 10
+  level: 0
+
+"tba:241:obj:24124":
+  type: drinkcon
+  keywords: [lemonade, prune, juice, glass, lemonade]
+  short: a small glass
+  long: A small glass of prune juice is sitting here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: lemonade
+    poisoned: false
+  weight: 13
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:241:obj:24125":
+  type: drinkcon
+  keywords: [beer, vulcan, bottle, beer]
+  short: a Vulcan bottle
+  long: A bottle of Vulcan beer is standing here.
+  wear: [take, hold]
+  values:
+    capacity: 8
+    contains: 8
+    liquid: beer
+    poisoned: false
+  weight: 13
+  cost: 10
+  rent: 10
+  level: 0
+
+"tba:241:obj:24126":
+  type: armor
+  keywords: [spacesuit, suit]
+  short: a Starfleet regulation spacesuit
+  long: A Starfleet regulation spacesuit lies, crumpled on the floor.
+  wear: [take]
+  values:
+    armor: 0
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spacesuit, suit]
+    text: >
+      These suits come in pale shades of red, blue and gold, depending on ones rank.  Their tanks contain
+      plenty of oxygen.  Always wear one before going out into space!
+
+"tba:241:obj:24127":
+  type: armor
+  keywords: [spacesuit, suit]
+  short: a row of Starfleet regulation spacesuits
+  long: A row of Starfleet regulation spacesuits hang along the walls.
+  wear: []
+  values:
+    armor: 0
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spacesuit, suit]
+    text: >
+      This is a long row of Starfleet regulation spacesuits, enough for every member of the crew, and
+      then some.  They come in various colors, dependant on rank and have an almost limitless supply of oxygen.
+
+"tba:241:obj:24128":
+  type: other
+  keywords: [replicator]
+  short: a replicator
+  long: A replicator stands against one wall.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [replicator]
+    text: >
+      This is a very special and high-tech device used to replicatate any known (and programmed) food or
+      drink.  They can be configured to reproduce other things, like weapons and atomic elements.  But this
+      one hasn't got such a function, you'd want the ones in security for that.  One of the side-panels
+      appears to have some writing on it.
+  - keywords: [side, panel]
+    text:
+    - "Order:"
+    - Tea Bread Coffee Beer
+
+"tba:241:obj:24129":
+  type: drinkcon
+  keywords: [cup, earl, gray, tea]
+  short: a cup of earl gray tea
+  long: A cup of earl gray tea has been discarded.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: tea
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [cup, earl, gray, tea]
+    text: This is captain Picard's favorite beverage.
+
+"tba:241:obj:24130":
+  type: food
+  keywords: [loaf, warm, bread]
+  short: a loaf of warm bread
+  long: A loaf of warm bread has been dropped here.
+  wear: [take]
+  values:
+    hours: 0
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [loaf, warm, bread]
+    text: A delicious-looking loaf of warm bread.
+
+"tba:241:obj:24131":
+  type: drinkcon
+  keywords: [mug, black, coffee]
+  short: a mug of black coffee
+  long: A mug of black coffee lies steaming on the floor.
+  wear: [take]
+  values:
+    capacity: 1
+    contains: 1
+    liquid: coffee
+    poisoned: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [mug, black, coffee]
+    text: A lovely big mug of hot black coffee.
+
+"tba:241:obj:24132":
+  type: weapon
+  keywords: [worf, batleth]
+  short: Worf's batleth
+  long: A very dangerous-looking batleth has been carefully placed here.
+  wear: [take, wield]
+  values:
+    damage: 8d8
+    attack: slash
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [worf, batleth]
+    text: >
+      This is the native weapon of a Klingon, they are given one when they are old enough to stand and
+      are very adept with it before they reach puberty.  It consists of a long, curved blade with a slightly
+      shorter handle parallel to it, with appropriate grip holes.
+
+"tba:241:obj:24133":
+  type: armor
+  keywords: [spots, collar, red]
+  short: a small red collar
+  long: Spot seems to have lost his small red collar.
+  wear: [take, neck]
+  values:
+    armor: 1
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [spots, collar, red]
+    text: >
+      A very fine-looking red cat's collar.  It has a small metal tag that reads 'SPOT' hanging from it.

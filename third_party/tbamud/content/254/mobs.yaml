@@ -1,0 +1,329 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 254.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:254:mob:25400":
+  keywords: [villager, man]
+  short: the villager
+  long: A man is here, going about whatever business Mordecai has set him to.
+  description: >
+    The villager looks quite like any other man you might meet on any other street in any other town.
+  level: 6
+  sex: male
+  alignment: -200
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25401":
+  keywords: [skinny, woman, villager]
+  short: the skinny woman
+  long: A skinny woman stands here. She is pale, sickly and generally pathetic to see.
+  description: >
+    The woman would probably be quite a hottie if not for her ribs showing through the flimsy fabric of
+    her grubby, raggedy dress.
+  level: 6
+  sex: female
+  alignment: 400
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+    bare_hand_attack: claw
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25402":
+  keywords: [lieutenant, caspan, caspan, soldier]
+  short: Lieutenant Caspan
+  long: Caspan recognizes you as an intruder immediately and attacks!
+  description: Strong, tall, and mean as hell, this man could probably tear you limb from limb.
+  level: 29
+  sex: male
+  alignment: -600
+  flags: [sentinel, aggressive, memory, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: slash
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25403":
+  keywords: [penelope, penelope]
+  short: Penelope
+  long: Penelope stands here, looking beautiful as a Goddess.
+  description: >
+    Slightly plump, but all in the right places, Penelope looks as if she knows a trick or two with the
+    fellas.
+  level: 15
+  sex: female
+  alignment: 600
+  flags: [sentinel, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25404":
+  keywords: [soldier, mordecai]
+  short: the soldier
+  long: One of Mordecai's soldiers marches by, intent on his duties.
+  description: Dressed in matching rags, these soldiers present a pitiful ragtag bunch.
+  level: 18
+  sex: male
+  alignment: -400
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25405":
+  keywords: [little, village, whore]
+  short: the little whore
+  long: A poor twelve year old girl is here, offering herself to all men in the village.
+  description: >
+    The girl looks worn and beaten.  Perhaps you should have pity on her? Certainly, her way of life
+    has been ordered by Mordecai.
+  level: 8
+  sex: female
+  alignment: -50
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25406":
+  keywords: [pale, child, chanker]
+  short: the chanker ridden child
+  long: A child covered in nasty chankers trudges past.
+  description: >
+    The child, dressed in the dirtiest of rags, looks up at you through his pussy eyes, and smiles a
+    toothless smile.
+  level: 8
+  sex: male
+  alignment: -50
+  flags: [stay_zone, wimpy]
+  affects: [sneak]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25407":
+  keywords: [pregnant, woman]
+  short: the pregnant woman
+  long: A pregnant woman sits here, eating a peanut butter and pickle sandwich.
+  description: The woman looks at you with hope and asks, "Got any ice cream?!?  "
+  level: 12
+  sex: female
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: thrash
+  gold: 120
+  exp: 14400
+  position:
+    load: sitting
+    default: sitting
+
+"tba:254:mob:25408":
+  keywords: [three, legged, dog]
+  short: the three legged dog
+  long: A three legged dog limps by you.
+  description: >
+    This flea-bitten, beaten-half-to-death-every-day-of-its-life dog looks sadly at you and then
+    continues limping along.
+  level: 2
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 20
+    armor: 8
+    hit_points: 20
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 20
+  exp: 400
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25409":
+  keywords: [hag, toothless]
+  short: a toothless hag
+  long: A toothless hag lays here, smiling big, trying to look appealing.
+  description: >
+    As the hag notices your interest, her smile gets wider.  She turns slowly onto her back, spreads
+    her legs and raises a suggestive eyebrow.
+  level: 10
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:254:mob:25410":
+  keywords: [mordecai, mordecai]
+  short: Mordecai
+  long: Mordecai stand before you; proud, defiant... and dirty.
+  description: Mordecai is a menacing figure.  A true Lord of Grubs.
+  level: 30
+  sex: male
+  alignment: -999
+  flags: [sentinel, scavenger, aware, aggressive, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25411":
+  keywords: [wandering, chicken]
+  short: the chicken
+  long: A chicken wanders by you, no concerns in life but to cluck.
+  description: Sometimes you wonder if life would be better as a chicken.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25412":
+  keywords: [woman, filthy, shitting]
+  short: a squatting woman
+  long: A woman is here, squatting over a hole in the ground.
+  description: >
+    The woman seems only slightly upset to see you here as she tries to shit. You sense she is having a
+    tough time with her business.
+  level: 4
+  sex: female
+  alignment: 0
+  flags: [sentinel, memory]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+    bare_hand_attack: punch
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25413":
+  keywords: [bastard, sneaky]
+  short: the sneaky little bastard
+  long: A sneaky little bastard is here, counting his coins.
+  description: >
+    The grubby hands and shifty eyes give this little brat the look of a criminal.  He's rooting
+    through his purse inspecting his loot.  Perhaps some of it came from yours.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy]
+  affects: [sneak]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:254:mob:25414":
+  keywords: [man, old]
+  short: the grouchy old man
+  long: A grouchy old man is here, complaining about the weather.
+  description: What crawled up this guys arse?
+  level: 15
+  sex: male
+  alignment: -200
+  flags: [stay_zone, memory, no_charm]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing

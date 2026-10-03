@@ -1,0 +1,251 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 287.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:287:shop:28700":
+  keeper: tba:287:mob:28700
+  rooms: [tba:287:room:28728]
+  products:
+  - tba:287:obj:28720
+  - tba:287:obj:28713
+  - tba:287:obj:28721
+  - tba:287:obj:28722
+  profit:
+    buy: 1.15
+    sell: 0.15
+  messages:
+    no_such_item: "%s Sorry, I haven't got exactly that item."
+    you_dont_have_it: "%s Even if you had that, I wouldn't want it."
+    does_not_buy: "%s I don't buy anything from Midgaarders."
+    shop_cannot_afford: "%s Tell Pippin! I ain't supposed to buy!"
+    you_cannot_afford: "%s You can't afford it!"
+    bought: "%s That'll be %d coins, please."
+    sold: "%s Tell Pippin! I ain't supposed to buy!"
+  temper: 1
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 5
+    close: 24
+
+"tba:287:shop:28703":
+  keeper: tba:287:mob:28703
+  rooms: [tba:287:room:28719]
+  products:
+  - tba:287:obj:28739
+  - tba:287:obj:28738
+  - tba:287:obj:28735
+  - tba:287:obj:28734
+  - tba:287:obj:28733
+  - tba:287:obj:28737
+  - tba:287:obj:28730
+  - tba:3:obj:321
+  - tba:3:obj:324
+  buys:
+  - type: weapon
+  - type: armor
+  profit:
+    buy: 1.5
+    sell: 0.5
+  messages:
+    no_such_item: "%s Nope. Don't make that here."
+    you_dont_have_it: "%s Maybe I'd buy it, but you don't have it."
+    does_not_buy: "%s Keep it. I have no use for it."
+    shop_cannot_afford: "%s I am sorry, but I have bought too much already."
+    you_cannot_afford: "%s You need to pay for that, my friend."
+    bought: "%s All right. That'll be %d coins."
+    sold: "%s Fine. Here are %d crowns."
+  temper: 1
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 5
+    close: 18
+
+"tba:287:shop:28704":
+  keeper: tba:287:mob:28704
+  rooms: [tba:287:room:28714]
+  products:
+  - tba:287:obj:28750
+  - tba:287:obj:28736
+  - tba:287:obj:28749
+  - tba:3:obj:323
+  - tba:3:obj:342
+  profit:
+    buy: 1.5
+    sell: 0.4
+  messages:
+    no_such_item: "%s I haven't made any of those lately."
+    you_dont_have_it: "%s I think I could live without one of those."
+    does_not_buy: "%s I won't buy that."
+    shop_cannot_afford: "%s I only buy wood, from John the Lumberjack."
+    you_cannot_afford: "%s You can't afford it!"
+    bought: "%s That'll be %d coins, please."
+    sold: "%s Oops...a bug! I don't buy."
+  temper: 1
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 5
+    close: 18
+
+"tba:287:shop:28705":
+  keeper: tba:287:mob:28705
+  rooms: [tba:287:room:28720]
+  products:
+  - tba:287:obj:28746
+  - tba:287:obj:28745
+  - tba:287:obj:28744
+  - tba:287:obj:28742
+  - tba:3:obj:309
+  - tba:3:obj:337
+  - tba:3:obj:332
+  - tba:3:obj:331
+  buys:
+  - type: light
+  - type: scroll
+  - type: wand
+  - type: staff
+  - type: weapon
+  - type: treasure
+  - type: armor
+  - type: potion
+  - type: other
+  - type: container
+  - type: note
+  - type: drinkcon
+  - type: food
+  - type: pen
+  - type: boat
+  profit:
+    buy: 3.5
+    sell: 0.1
+  messages:
+    no_such_item: "%s Don't have one. Get lost!"
+    you_dont_have_it: "%s Take a look in your pack again, Sherlock!"
+    does_not_buy: "%s No. Don't buy it!"
+    shop_cannot_afford: "%s Not enough cash! Go soak your head!"
+    you_cannot_afford: "%s Sorry, but NO CREDIT!"
+    bought: "%s Gimme %d coins!"
+    sold: "%s I'll give you a whole %d coins for that."
+  temper: 1
+  flags: 7
+  trade_with: 0
+  hours:
+  - open: 9
+    close: 17
+
+"tba:287:shop:28706":
+  keeper: tba:287:mob:28706
+  rooms: [tba:287:room:28730]
+  products:
+  - tba:287:obj:28756
+  - tba:287:obj:28755
+  - tba:287:obj:28754
+  - tba:287:obj:28753
+  - tba:3:obj:351
+  buys:
+  - type: light
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s I don't see that here. Do you?"
+    you_dont_have_it: "%s Well, my friend, perhaps you hallucinate?"
+    does_not_buy: "%s I buy only things that bubble and fizz."
+    shop_cannot_afford: "%s Too expensive for THIS wizard."
+    you_cannot_afford: "%s Alas, you are too poor to buy that."
+    bought: "%s That'll be %d coins, please."
+    sold: "%s Here. I pay you %d coins. Is that enough?"
+  temper: 0
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 5
+    close: 12
+  - open: 13
+    close: 18
+
+"tba:287:shop:28707":
+  keeper: tba:287:mob:28707
+  rooms: [tba:287:room:28729]
+  products:
+  - tba:287:obj:28752
+  - tba:287:obj:28751
+  - tba:287:obj:28727
+  - tba:3:obj:386
+  - tba:3:obj:371
+  - tba:3:obj:376
+  - tba:3:obj:381
+  profit:
+    buy: 1.2
+    sell: 0.9
+  messages:
+    no_such_item: "%s Sorry...don't have that."
+    you_dont_have_it: "%s I don't buy anything."
+    does_not_buy: "%s I don't buy anything."
+    shop_cannot_afford: "%s I don't buy anything."
+    you_cannot_afford: "%s This fine armor is too costly for you."
+    bought: "%s Wear it in good health! That will be %d coins."
+    sold: "%s Here, you can have %d coins for that."
+  temper: 0
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 6
+    close: 22
+
+"tba:287:shop:28708":
+  keeper: tba:287:mob:28708
+  rooms: [tba:287:room:28731]
+  products:
+  - tba:3:obj:310
+  - tba:287:obj:28789
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s I know not the recipe for that."
+    you_dont_have_it: "%s Sorry, I don't buy from outsiders."
+    does_not_buy: "%s Sorry, I don't buy from outsiders."
+    shop_cannot_afford: "%s Sorry, I don't buy from outsiders."
+    you_cannot_afford: "%s Sorry, but here, no money means no goods!"
+    bought: "%s %d coins, please.  Don't talk with your mouth full."
+    sold: "%s Here, you can have %d coins for that."
+  temper: 2
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 3
+    close: 16
+
+"tba:287:shop:28709":
+  keeper: tba:287:mob:28709
+  rooms: [tba:287:room:28724]
+  products:
+  - tba:287:obj:28760
+  - tba:287:obj:28759
+  - tba:287:obj:28758
+  - tba:287:obj:28757
+  - tba:3:obj:352
+  - tba:3:obj:350
+  buys:
+  - type: scroll
+  - type: note
+  - type: pen
+  profit:
+    buy: 1.5
+    sell: 0.5
+  messages:
+    no_such_item: "%s The goblins must have stolen that."
+    you_dont_have_it: "%s Sorry, you don't have that to sell."
+    does_not_buy: "%s This is a library, not a general store."
+    shop_cannot_afford: "%s Would you donate it?"
+    you_cannot_afford: "%s I'm sorry, but you can't afford that."
+    bought: "%s That'll be %d crowns."
+    sold: "%s Here are %d crowns. Thank you very much."
+  temper: 2
+  flags: 7
+  trade_with: 2
+  hours:
+  - open: 5
+    close: 19

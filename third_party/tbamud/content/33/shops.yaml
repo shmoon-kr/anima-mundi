@@ -1,0 +1,82 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 33.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:33:shop:3301":
+  keeper: tba:33:mob:3304
+  rooms: [tba:33:room:3350]
+  products:
+  - tba:33:obj:3300
+  - tba:33:obj:3301
+  - tba:33:obj:3308
+  - tba:33:obj:3309
+  - tba:33:obj:3310
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s We didn't grow any of those this year."
+    you_dont_have_it: "%s You don't have that!"
+    does_not_buy: "%s I won't buy that!"
+    shop_cannot_afford: "%s I can't buy that!"
+    you_cannot_afford: "%s You can't buy that!"
+    bought: "%s Ok, %d coins please!"
+    sold: "%s Ok, %d coins please!"
+  temper: 2
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 8
+    close: 22
+
+"tba:33:shop:3302":
+  keeper: tba:33:mob:3301
+  rooms: [tba:33:room:3345]
+  products:
+  - tba:30:obj:3032
+  - tba:30:obj:3037
+  - tba:30:obj:3038
+  - tba:30:obj:3039
+  profit:
+    buy: 1.1
+    sell: 0.9
+  messages:
+    no_such_item: "%s Could you repeat that please?"
+    you_dont_have_it: "%s I don't buy!"
+    does_not_buy: "%s I don't buy!"
+    shop_cannot_afford: "%s I don't buy!"
+    you_cannot_afford: "%s But you haven't the money!"
+    bought: "%s Ok, %d gold please."
+    sold: "%s Ok, %d gold please."
+  temper: 2
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 8
+    close: 22
+
+"tba:33:shop:3303":
+  keeper: tba:33:mob:3314
+  rooms: [tba:33:room:3357]
+  products:
+  - tba:33:obj:3319
+  - tba:33:obj:3320
+  - tba:33:obj:3321
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s I don't know how to make one of those!"
+    you_dont_have_it: "%s We don't *buy* drinks... we sell 'em!"
+    does_not_buy: "%s We don't *buy* drinks... we sell 'em!"
+    shop_cannot_afford: "%s We don't *buy* drinks... we sell 'em!"
+    you_cannot_afford: "%s I don't give 'em away free, you know!"
+    bought: "%s That's %d gold."
+    sold: "%s We don't *buy* drinks... we sell 'em!"
+  temper: 2
+  flags: 6
+  trade_with: 0
+  hours:
+  - open: 11
+    close: 18
+  - open: 20
+    close: 22

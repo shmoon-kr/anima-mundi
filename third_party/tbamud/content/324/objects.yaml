@@ -1,0 +1,471 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 324.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:324:obj:32400":
+  type: other
+  keywords: [chair]
+  short: a chair
+  long: There is a chair that has been left in the center of the floor.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 1
+  extras:
+  - keywords: [chair]
+    text: >
+      It is a very uncomfortable looking piece of furniture which is designed to keep the user not only
+      awake, but on their feet at most times.
+
+"tba:324:obj:32401":
+  type: weapon
+  keywords: [hammer, heavy]
+  short: a heavy iron hammer
+  long: A heavy iron hammer has been left here.
+  wear: [take, wield]
+  values:
+    damage: 5d3
+    attack: pound
+  weight: 13
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+
+"tba:324:obj:32402":
+  type: weapon
+  keywords: [iron, branding]
+  short: a branding iron
+  long: A steaming branding iron has been dropped here.
+  wear: [take, wield, hold]
+  values:
+    damage: 3d5
+    attack: sting
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 16
+  affects:
+  - apply: wis
+    modifier: 2
+
+"tba:324:obj:32403":
+  type: scroll
+  keywords: [papers, command]
+  short: a set of official command papers
+  long: A set of official command papers have been left here.
+  action: Nothing.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [1, 36, -1, -1]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32404":
+  type: weapon
+  keywords: [arrows]
+  short: a bundle of arrows
+  long: A bundle of arrows are stacked neatly here.
+  wear: [take, wield, hold]
+  values:
+    damage: 2d3
+    attack: sting
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32405":
+  type: other
+  keywords: [pot, boiling, pitch]
+  short: a pot full of pitch
+  long: A pot full of pitch for boiling is waiting for a war.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 21
+
+"tba:324:obj:32406":
+  type: other
+  keywords: [ram, battering]
+  short: a battering ram
+  long: A stack of battering rams await times of war and siege.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:324:obj:32407":
+  type: food
+  keywords: [rations, military]
+  short: a bundle of military rations
+  long: A bundle of military rations have been dropped here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32408":
+  type: weapon
+  keywords: [sabre, proud]
+  short: a proud sabre
+  long: A very ornate, proud sabre has been left here.
+  flags: [glow, magic]
+  wear: [take, wield]
+  values:
+    damage: 5d4
+    attack: slash
+  weight: 7
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: int
+    modifier: 2
+
+"tba:324:obj:32409":
+  type: weapon
+  keywords: [knife, cavalry]
+  short: a cavalry knife
+  long: A cavalry knife has been dropped here.
+  wear: [take, wield]
+  values:
+    damage: 3d7
+    attack: pierce
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: 2
+
+"tba:324:obj:32410":
+  type: other
+  keywords: [rope]
+  short: a coil of rope
+  long: A coil of rope has been dropped here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32411":
+  type: other
+  keywords: [picks, lock]
+  short: a set of lock picks
+  long: A set of lock picks have been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: dex
+    modifier: 2
+
+"tba:324:obj:32412":
+  type: other
+  keywords: [spyglass, glass]
+  short: a spyglass
+  long: A spyglass has been left here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 19
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:324:obj:32413":
+  type: wand
+  keywords: [kit, first, aid]
+  short: a first aid kit
+  long: A first aid kit has been left here.
+  flags: [hum]
+  wear: [take, hold]
+  values:
+    raw: [20, 3, 3, 15]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32414":
+  type: staff
+  keywords: [kit, medic]
+  short: a medic's kit
+  long: A medic's kit has been left here.
+  wear: [take, hold]
+  values:
+    raw: [20, 5, 5, 16]
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32415":
+  type: worn
+  keywords: [crutch]
+  short: a crutch
+  long: A crutch has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: move
+    modifier: -20
+  - apply: weight
+    modifier: 20
+
+"tba:324:obj:32416":
+  type: worn
+  keywords: [badge, honor]
+  short: a Badge of Honor
+  long: A shiny badge has been left here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: con
+    modifier: 2
+
+"tba:324:obj:32417":
+  type: other
+  keywords: [stretcher]
+  short: a stretcher
+  long: A stretcher lies rolled up on the ground.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 1
+  affects:
+  - apply: weight
+    modifier: 20
+
+"tba:324:obj:32418":
+  type: container
+  keywords: [duffel, military]
+  short: a military issue duffel
+  long: A military issue duffel has been left here.
+  wear: [take]
+  values:
+    capacity: 300
+    lock_flags: 1
+    corpse: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 10
+
+"tba:324:obj:32419":
+  type: worn
+  keywords: [medals, slew]
+  short: a slew of medals
+  long: A slew of medals have been left here.
+  wear: [take, body]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 24
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: wis
+    modifier: 1
+
+"tba:324:obj:32420":
+  type: armor
+  keywords: [visor, steel]
+  short: a steel visor
+  long: A steel visor has been left here.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 7
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 1
+
+"tba:324:obj:32421":
+  type: other
+  keywords: [pump, bellows]
+  short: a bellows pump
+  long: A bellows pump has been left here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 13
+  cost: 10
+  rent: 0
+  level: 15
+  affects:
+  - apply: damroll
+    modifier: 2
+
+"tba:324:obj:32423":
+  type: armor
+  keywords: [ring, heavy, bronze]
+  short: a heavy bronze ring
+  long: A heavy bronze ring has been left here.
+  flags: [glow]
+  wear: [take, finger]
+  values:
+    armor: 2
+  weight: 8
+  cost: 10
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 2
+
+"tba:324:obj:32424":
+  type: weapon
+  keywords: [pitchfork, fork]
+  short: a pitchfork
+  long: A pitchfork has been left here.
+  wear: [take, wield]
+  values:
+    damage: 3d5
+    attack: stab
+  weight: 6
+  cost: 10
+  rent: 0
+  level: 14
+
+"tba:324:obj:32425":
+  type: armor
+  keywords: [apron, leather, stained]
+  short: a stained leather apron
+  long: A stained leather apron has been left here.
+  wear: [take, waist]
+  values:
+    armor: 5
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 1
+
+"tba:324:obj:32426":
+  type: drinkcon
+  keywords: [water, pail, water]
+  short: a metal pail
+  long: A metal pail lies here on its side.
+  wear: [take]
+  values:
+    capacity: 20
+    contains: 0
+    liquid: water
+    poisoned: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:324:obj:32427":
+  type: drinkcon
+  keywords: [milk, jug, milk]
+  short: a jug of cold milk
+  long: A jug of cold milk has been left here.
+  wear: [take]
+  values:
+    capacity: 10
+    contains: 10
+    liquid: milk
+    poisoned: false
+  weight: 15
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:324:obj:32428":
+  type: other
+  keywords: [meat, slab, frozen]
+  short: a slab of frozen meat
+  long: A slab of frozen meat hangs here on a hook.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:324:obj:32429":
+  type: food
+  keywords: [fruit, dried]
+  short: some dried fruits
+  long: Some dried fruits are laying the ground.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 3
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:324:obj:32430":
+  type: food
+  keywords: [rations, soldier's]
+  short: some soldier's rations
+  long: Some soldier's rations are stacked here in a pile.
+  wear: [take]
+  values:
+    hours: 10
+    poisoned: false
+  weight: 4
+  cost: 10
+  rent: 0
+  level: 0

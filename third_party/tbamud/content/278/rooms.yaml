@@ -1,0 +1,846 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 278.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:278:room:27800":
+  name: Ocean Pier
+  description: >
+    You are on what once was a very busy ocean pier.  With the advent of tele- portation, however, it
+    is seldom used.  Stacks of lobster crates and fishnets lie along the walk, and the cutting, salty
+    smell of the ocean stings your nose. You feel a sense of rejuvenation as you stare out into the sea.  You
+    know many adventures lie ahead.
+  sector: city
+  exits:
+    north:
+      to: tba:278:room:27802
+      look: To your north you can see the deep, wide ocean.
+    west:
+      look: To your west you can see a dark alley with a fishery.
+  extras:
+  - keywords: [fishnets, nets]
+    text: >
+      The fishnets are old and are turning into dust; large holes open to the sides.  They don't look
+      sturdy enough to use.
+  - keywords: [lobster, crates]
+    text: The lobster crates are old and rotting; they look as if they couldn't hold a sardine.
+  - keywords: [credits, info]
+    text: >
+      This is Oceania Proper, part one of a 5-part area called Oceania General. I have completed 2 pars
+      of this area, and am giving itto the general public. All I ask is that you give me proper credit you
+      may make any changes you feel are necessary, but try to keep it in the general theme I gave it. :) I'm
+      giving it to you to use, not to copy. Questor, Lord of Water, StrangeMUD, sleepy.cc.utexas.edu 9332
+      Kenneth Cavness. Oceania Proper, part 1 of a 5 part area. By Questor of StrangeMUD. Links: 00w
+      alley/fishery 01n island/ship, 13e white beach, 18s pier on stilts
+
+"tba:278:room:27801":
+  name: In the Ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize that this will be hard work. Seagulls chirp above, and whales spurt water far
+    off into the horizon.  The wind blows constantly here.  You can go your south.  To your north, you
+    notice a small island with a ship that appears to have been moored.  It looks board- able.
+  sector: water_noswim
+  exits:
+    north:
+      look: To your north you can see the entrance to a pirate's ship.
+    south:
+      to: tba:278:room:27802
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27802":
+  name: In the ocean by the Ocean Pier
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows const- antly here.  The current keeps you from going west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27801
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27803
+      look: To your east you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27800
+      look: >
+        To your south you can see the old ocean pier. It's rickety, but yachts and huge ships line the
+        harbor. It's a used port, albeit rarely.
+
+"tba:278:room:27803":
+  name: In the Ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constantly here.  You can only go south and west.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27804
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27802
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27804":
+  name: In the Ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows const- antly here.  The current allows passage only to the north and the
+    south.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27803
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27805
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27805":
+  name: At a bend in the current on the ocean.
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allows you to go north or east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27804
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27806
+      look: To your east you can see the deep, wide ocean.
+
+"tba:278:room:27806":
+  name: At another bend in the current on the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allows passage to the west and south.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27807
+      look: To your south is the deep, wide ocean.
+    west:
+      to: tba:278:room:27805
+      look: To your west is the deep, wide ocean.
+
+"tba:278:room:27807":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  To your west, a frothy system of cross-currents makes
+    the passage look too dangerous to cross; the current is impassable to your south.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27806
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27809
+      look: To your east you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27808
+      look: The current looks way too dangerous to attempt that way. You better stay away.
+
+"tba:278:room:27808":
+  name: The Impassible Current
+  description: >
+    Oh my!  The current here is dragging the boat extremely hard.  No matter what you try to do, it
+    won't stop churning!  Oh NO!  The current drags you and the boat down.
+  sector: city
+  flags: [no_mob, private]
+
+"tba:278:room:27809":
+  name: In the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current bends to your south.  The only other way
+    available is west.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27810
+      look: To your south is the deep, wide ocean.
+    west:
+      to: tba:278:room:27807
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27810":
+  name: At cross-currents in the deep, wide ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  You can go every direction but south.  To your
+    southeast you can see a huge island.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27809
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27818
+      look: To your east is the deep, wide ocean.
+    west:
+      to: tba:278:room:27811
+      look: To your west you can see the deep, wide ocean.
+  extras:
+  - keywords: [southeast, island]
+    text: >
+      To your southeast you see a dark island with a blindingly brightly white sand beach.  The island
+      looks very interesting; perhaps you should visit it?
+
+"tba:278:room:27811":
+  name: At a sharp turn in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allowes passage only to the east and south.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27810
+      look: To your east is the deep, wide ocean.
+    south:
+      to: tba:278:room:27812
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27812":
+  name: At a sharp turn in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current is too strong to go to the north, and a
+    huge island lies to your east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27811
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27813
+      look: To your east you can see the deep, wide ocean.
+
+"tba:278:room:27813":
+  name: In front of a pier at an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  A huge island lies to your east, and the current
+    continues to your south and west.
+  sector: water_noswim
+  exits:
+    east:
+      look: To your east you see a pier by a blindingly bright white beach.
+    south:
+      to: tba:278:room:27814
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27812
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27814":
+  name: At the beginning of a strong east-west current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  You see a huge island to your northeast; the current
+    allows passage to the north and east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27813
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27815
+      look: To your east you can see the deep, wide ocean.
+
+"tba:278:room:27815":
+  name: On a strong east-west current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current goes east and west.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27816
+      look: To your east you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27814
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27816":
+  name: At a cross-currents
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current continues east and west, and looks
+    passable to the north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27821
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27825
+      look: To your east you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27815
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27818":
+  name: In front of an island port
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize that this will be hard work. Seagulls chirp above, and wales spurt water far off
+    into the horizon.  The wind blows constantly here.  To your north you can make out a pier high in the
+    trees; the current continues to your north and west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27819
+      look: To your north you can see the deep, wide ocean.
+    south:
+      look: >
+        To your south you can see a pier into an island; it's set on stilts, and access to a net can be
+        seen through high trees.
+    west:
+      to: tba:278:room:27810
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27819":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27820
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27818
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27820":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27835
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27819
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27821":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27822
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27816
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27822":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current keeps you from going west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27823
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27827
+      look: To your east you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27821
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27823":
+  name: At a sharp turn in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allowes passage only to the east and south.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27828
+      look: To your east is the deep, wide ocean.
+    south:
+      to: tba:278:room:27822
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27824":
+  name: At a bend in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  You can go to your north or your east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27830
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27829
+      look: To your east you can see the deep, wide ocean.
+
+"tba:278:room:27825":
+  name: At a cross-currents
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current looks passable to the west and north.  A
+    huge, churning whirlpool lies directly to your east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27826
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27850
+      look: >
+        To your east is a huge, churning whirlpool. Not even the biggest ship in the world could survive
+        this one.
+    west:
+      to: tba:278:room:27816
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27826":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current keeps you from going west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27827
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27836
+      look: To your east you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27825
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27827":
+  name: In the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current bends to your south.  The only other way
+    available is west.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27826
+      look: To your south is the deep, wide ocean.
+    west:
+      to: tba:278:room:27822
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27828":
+  name: At a cross-currents
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current continues east and west, and looks
+    passable to the north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27829
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27832
+      look: To your east you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27823
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27829":
+  name: In the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current bends to your south.  The only other way
+    available is west.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27828
+      look: To your south is the deep, wide ocean.
+    west:
+      to: tba:278:room:27824
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27830":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current keeps you from going east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27837
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27824
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27835
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27831":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27832
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27836
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27832":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current keeps you from going east.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27833
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27831
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27828
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27833":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27834
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27832
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27834":
+  name: In the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current bends to your south.  The only other way
+    available is west.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27833
+      look: To your south is the deep, wide ocean.
+    west:
+      to: tba:278:room:27834
+      look: >
+        To your west you can see a beautiful island with a huge rose bush around it. Unfortunately, it's
+        under construction right now, so you won't get anywhere trying to go to it. :)
+
+"tba:278:room:27835":
+  name: At cross-currents in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current keeps you from going west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27843
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27830
+      look: To your east you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27820
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27836":
+  name: At a bend in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current bends to your west and north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27831
+      look: To your north you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27826
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27837":
+  name: At a sharp turn in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allowes passage only to the east and south.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27838
+      look: To your east is the deep, wide ocean.
+    south:
+      to: tba:278:room:27830
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27838":
+  name: At a bend in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current bends to your west and north.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27841
+      look: To your north you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27837
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27839":
+  name: At the harbor to Timeless Island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here, and you can see a beautiful island to your south.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27840
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27839
+      look: >
+        To your south you can see the beautiful Timeless Island with its rose bushes. Perhaps you should
+        come back when it's completed.
+
+"tba:278:room:27840":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27842
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27839
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27841":
+  name: At a sharp turn in the current
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.  The current allowes passage only to the east and south.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27842
+      look: To your east is the deep, wide ocean.
+    south:
+      to: tba:278:room:27838
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27842":
+  name: At the entrance to a harbor
+  description: >
+    You are in calmer waters here, as you see land as far as you can look.  A huge mountain rises to
+    your north, and the harbor seems to end at a huge cave in the mountain.  It appears as if you have
+    found a new continent.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27842
+      look: >
+        It would be hard to enter an unconstructed area. You might want to try again when it is. Riddle
+        Mountain and the New Continent to be delivered in about a month.
+    south:
+      to: tba:278:room:27840
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27841
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27843":
+  name: At a north-south current in the ocean
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from
+    off-course.  You realize this will be hard work.  Seagulls chirp above, and wales spurt water far off into
+    the horizon.  The wind blows constant- ly here.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27844
+      look: To your north you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27835
+      look: To your south you can see the deep, wide ocean.
+
+"tba:278:room:27844":
+  name: Going around an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your north.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27843
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27845
+      look: To your west you can see the deep, wide ocean.
+
+"tba:278:room:27845":
+  name: Going around an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your northeast.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27846
+      look: To your north you can see the deep, wide ocean.
+    east:
+      to: tba:278:room:27844
+      look: To your east you can see the deep, wide ocean.
+  extras:
+  - keywords: [northeast, island]
+    text: This is a very plain-looking island; a large mountain forms the northern half of it.
+
+"tba:278:room:27846":
+  name: Going around an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your southeast.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27847
+      look: To your east you can see the deep, wide ocean.
+    south:
+      to: tba:278:room:27845
+      look: To your south you can see the deep, wide ocean.
+  extras:
+  - keywords: [southeast, island]
+    text: This is a very plain-looking island; a large mountain forms the northern half of it.
+
+"tba:278:room:27847":
+  name: Going around an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your south.
+  sector: water_noswim
+  exits:
+    east:
+      to: tba:278:room:27848
+      look: To your east you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27846
+      look: To your west you can see the deep, wide ocean.
+  extras:
+  - keywords: [southern, island]
+    text: This is a very plain-looking island; a large mountain forms the northern half of it.
+
+"tba:278:room:27848":
+  name: Going around an island
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your southwest.
+  sector: water_noswim
+  exits:
+    south:
+      to: tba:278:room:27849
+      look: To your south you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27847
+      look: To your west you can see the deep, wide ocean.
+  extras:
+  - keywords: [southwest, island]
+    text: This is a very plain-looking island; a large mountain forms the northern half of it.
+
+"tba:278:room:27849":
+  name: In front of an island pier
+  description: >
+    You are on the ocean.  Large waves rock the boat, and you have a hard time keeping it from going
+    off-course.  You realize this will be hard work. Seagulls chirp above, and whales spurt water far off
+    into the horizon.  The wind blows constantly here.  The current appears to be winding around a large
+    island to your west.  An island pier lies to your west.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:278:room:27848
+      look: To your north you can see the deep, wide ocean.
+    west:
+      to: tba:278:room:27849
+      look: Sorry, but the Island of Chaos is still under construction.
+  extras:
+  - keywords: [western, island, pier]
+    text: This is a very plain-looking island; a large mountain forms the northern half of it.
+
+"tba:278:room:27850":
+  name: Schylla's Trap
+  description: >
+    The water here swirls into a churning whirlpool.  Try as you might, you cannot escape the boiling
+    mass of water--Schylla has got you.
+  sector: city
+  flags: [no_mob, private]

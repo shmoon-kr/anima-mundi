@@ -1,0 +1,60 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 244.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:244:mob:24400":
+  keywords: [fred, guard, prisonguard, prison]
+  short: Fred the prison guard
+  long: Fred the prison guard is standing here, staring at you.
+  description: >
+    Fred and his brother Joe guard the Cooland Prison.  Fred stands here, while his brother Joe sits on
+    the other side of the door.  Fred doesn't look too friendly.
+  level: 30
+  sex: male
+  alignment: -200
+  flags: [sentinel, stay_zone, memory, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: punch
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:244:mob:24401":
+  keywords: [joe, guard, prisonguard, prison]
+  short: Joe the prison guard
+  long: Joe the prison guard is standing here, staring at you.
+  description: >
+    Joe and his brother Fred guard the Cooland Prison.  Joe stands here, while his brother Fred sits on
+    the other side of the door.  Joe doesn't look too friendly.
+  level: 30
+  sex: male
+  alignment: -200
+  flags: [sentinel, stay_zone, memory, no_sleep, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: punch
+  abilities:
+    str: 16
+    int: 16
+    wis: 16
+    dex: 16
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

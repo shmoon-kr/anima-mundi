@@ -1,0 +1,95 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 278.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:278:mob:27800":
+  keywords: [yachtman, boatman, sailor, man, captain]
+  short: the crusty old Captain
+  long: The crusty old Captain is here, fishing in the ocean.
+  description: >
+    The old captain has skin like leather, and a mottled complexion.  He looks positively ancient; yet
+    his muscles and his countenance show that he is a capable warrior.  He glares at you menacingly,
+    suggesting you go away unless you want to <Buy ship>
+  level: 23
+  sex: male
+  alignment: 125
+  flags: [sentinel, scavenger, aware, stay_zone, wimpy]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:278:mob:27801":
+  keywords: [sea, serpent, seaserpent]
+  short: the huge, green Sea Serpent
+  long: The huge, green Sea Serpent is swimming in the ocean, hunting for food.
+  description: >
+    You see a huge monster before you.  Its glowing green eyes and sharp teeth terrify you.  Green
+    scales provide a spectacular defense armor.  They would probably make great armor on you too.
+  level: 22
+  sex: neutral
+  alignment: -875
+  flags: [stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:278:mob:27802":
+  keywords: [barracuda, fish]
+  short: a vicious barracuda
+  long: A mean barracuda is flopping around in the sea.
+  description: >
+    This horrid-looking fish looks very unhappy that you've infested his sea. His sharp, huge teeth
+    show just how unhappy he is as they clamp into you.
+  level: 21
+  sex: neutral
+  alignment: -150
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:278:mob:27803":
+  keywords: [leviathan]
+  short: the demigod, Leviathan
+  long: Leviathan is here, looking at you with a quizzical expression.
+  description: >
+    Leviathan, the guardian of the seas--an eternal power guaranteed by the gods to keep an eye on all
+    those travelers that enter Oceania.  He is totally green and has seaweed as his garb.  His ancient
+    eyes belie his youthful countenance.
+  level: 24
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,769 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 104.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:104:obj:10400":
+  type: fountain
+  keywords: [Beer, Keg]
+  short: a Beer Keg
+  long: A Beer Keg is here with the tap already in it.
+  flags: [anti_thief]
+  wear: []
+  values:
+    capacity: 50
+    contains: 50
+    liquid: beer
+    poisoned: false
+  weight: 55
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:104:obj:10401":
+  type: drinkcon
+  keywords: [beer, glass, beer]
+  short: a Beer Glass
+  long: A Beer Glass is on the ground here.
+  flags: [anti_thief]
+  wear: [take, hold]
+  values:
+    capacity: 50
+    contains: 50
+    liquid: beer
+    poisoned: false
+  weight: 55
+  cost: 10
+  rent: 0
+  level: 0
+
+"tba:104:obj:10402":
+  type: other
+  keywords: [forest, map]
+  short: a forest map
+  long: A forest map lies here rolled up.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 750
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [map, forest]
+    text:
+      preformatted: |
+        Area     : A Small Forest
+        Level    : Any Level
+        -------------------------------------------------------
+                          WOD
+                           |
+                     BET--WOP--NTF--FTF  ENF
+                      |    |         |    |
+                     HSE  LLP--ENF  SHK--LKE
+        -------------------------------------------------------
+        WOD: Further into the Woods    LLP: Lightly Lit Path
+        BET: Barricade of Trees        ENF: End of Forest
+        WOP: Woodland Path             NTF: Near the Tree Fort
+        FTF: Foot of the Fort          SHK: A Small Shack
+        LKE: Lake
+        -------------------------------------------------------
+
+"tba:104:obj:10403":
+  type: other
+  keywords: [tacky, wooden, sign]
+  short: a tacky wooden sign
+  long: A tacky wooden sign is tacked into the ground by a tall oak.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, sign, tacky]
+    text:
+      preformatted: |2
+          +----------------------------+
+          | @DMiz'real@n and Orchan Forest |
+        +----------------------------------+
+        |  The forest of @DMiz'real@n lies     |
+        |   to the north of this forest.   |
+        |----------------------------------|
+        |   To the south lies the Orchan   |
+        |   Forest In it lies danger and   |
+        |              fear.               |
+        |----------------------------------|
+        | To the west Lies Orchan Village, |
+        | a small elven village, where     |
+        | magic is not to be used.         |
+        +----------------------------------+
+
+"tba:104:obj:10404":
+  type: weapon
+  keywords: [long, sword]
+  short: a long sword
+  long: A long sword shines on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d12
+    attack: slash
+  weight: 8
+  cost: 347
+  rent: 0
+  level: 5
+
+"tba:104:obj:10405":
+  type: armor
+  keywords: [broze, armor]
+  short: bronze armor
+  long: Bronze aromor glimmers in the light.
+  wear: [take, body, legs]
+  values:
+    armor: 4
+  weight: 15
+  cost: 362
+  rent: 0
+  level: 4
+
+"tba:104:obj:10406":
+  type: armor
+  keywords: [bronze, helm]
+  short: a bronze helm
+  long: A bronze helm is on the ground.
+  wear: [take, head]
+  values:
+    armor: 9
+  weight: 5
+  cost: 346
+  rent: 0
+  level: 4
+
+"tba:104:obj:10407":
+  type: armor
+  keywords: [leather, boots]
+  short: a pair of leather boots
+  long: A pair of boots are strewn about here.
+  wear: [take, feet]
+  values:
+    armor: 4
+  weight: 3
+  cost: 150
+  rent: 0
+  level: 2
+
+"tba:104:obj:10408":
+  type: armor
+  keywords: [metal, gloves]
+  short: a pair of metal gloves
+  long: A pair of metal gloves lie here.
+  wear: [take, hands]
+  values:
+    armor: 5
+  weight: 5
+  cost: 124
+  rent: 0
+  level: 2
+
+"tba:104:obj:10409":
+  type: armor
+  keywords: [wooden, shield]
+  short: a wooden shield
+  long: A wooden shield is on the ground here.
+  wear: [take, shield]
+  values:
+    armor: 7
+  weight: 3
+  cost: 4
+  rent: 0
+  level: 3
+
+"tba:104:obj:10410":
+  type: other
+  keywords: [town, map]
+  short: a town map
+  long: A map has be carelessly droped here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 800
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [town, map]
+    text:
+      preformatted: |
+        Area    : Orchan Village
+        Level   : Any
+        -------------------------------------------------------
+                        MSH
+                         |
+                        MST--MST--VIW
+                                   |
+                                  ROR
+                                   |
+                        ROR--ACS  ROR--GTE
+                         |    |    |
+                        ELD  WPS--ROR
+        -------------------------------------------------------
+        GTE: Gate         ELD: Village Elder
+        ROR: Rock Road    VIW: Village Warrior
+        WPS: Weapon Shop  MST: Main Street
+        ACS: Amor Shop    MSH: Map Shop
+        -------------------------------------------------------
+
+"tba:104:obj:10411":
+  type: other
+  keywords: [road, sign]
+  short: a road sign
+  long: A road sign is staked into the ground on the side of the road
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [road, sign]
+    text:
+      preformatted: |2
+           +------+
+           | West |
+          /+------+--------+
+         / |To the west the|
+        /__|     main      |
+        \  |    street     |
+         \ |  continues.   |
+          \+---------------+
+        +------+
+        | East |
+        +------+--------+\
+        |To the east is | \
+        |   where the   |__\
+        |Village Warrior|  /
+        |    lives.     | /
+        +---------------+/
+
+"tba:104:obj:10412":
+  type: note
+  keywords: [parchment]
+  short: a sheet of map parchment
+  long: A sheet of map parchment has been droped.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 170
+  rent: 0
+  level: 0
+
+"tba:104:obj:10413":
+  type: pen
+  keywords: [ink, pen]
+  short: an ink pen
+  long: An ink pen is on the ground near your feet.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 225
+  rent: 0
+  level: 0
+
+"tba:104:obj:10414":
+  type: other
+  keywords: [house, sign]
+  short: a house sign
+  long: A sign has been placed neatly onto the door.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [sign]
+    text: >
+      +----------------+ | Ligerns' House | +-+----------------+---------------+ | In this house lives
+      the almighty | | village warrior Ligern. He killed| | hundreds of Ogres at onec with   | | his bare
+      hands. Now Ligern lives | | here alone, a retired old fighter| +----------------------------------+
+
+"tba:104:obj:10415":
+  type: weapon
+  keywords: [short, sword]
+  short: a short sword
+  long: A short sword shimmers from the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d8
+    attack: slash
+  weight: 5
+  cost: 312
+  rent: 0
+  level: 2
+
+"tba:104:obj:10416":
+  type: weapon
+  keywords: [dagger]
+  short: a dagger
+  long: A dagger is stuck in the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d5
+    attack: slash
+  weight: 2
+  cost: 224
+  rent: 0
+  level: 2
+
+"tba:104:obj:10417":
+  type: weapon
+  keywords: [silver, dagger]
+  short: a silver dagger
+  long: A silver dagger lies here.
+  wear: [take, wield]
+  values:
+    damage: 2d13
+    attack: slash
+  weight: 2
+  cost: 352
+  rent: 0
+  level: 2
+
+"tba:104:obj:10418":
+  type: weapon
+  keywords: [diamond, encrusted, long, sword]
+  short: a diamond encrusted long sword
+  long: A diamond encrusted long sword shimmers from the ground.
+  wear: [take, wield]
+  values:
+    damage: 3d12
+    attack: slash
+  weight: 8
+  cost: 647
+  rent: 0
+  level: 4
+
+"tba:104:obj:10419":
+  type: weapon
+  keywords: [spear]
+  short: a spear
+  long: A spear has benn oddly placed here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d8
+    attack: stab
+  weight: 3
+  cost: 274
+  rent: 0
+  level: 2
+
+"tba:104:obj:10420":
+  type: weapon
+  keywords: [war, hammer]
+  short: a war hammer
+  long: A war hammer lies on the ground.
+  wear: [take, wield]
+  values:
+    damage: 1d14
+    attack: pound
+  weight: 14
+  cost: 289
+  rent: 0
+  level: 3
+
+"tba:104:obj:10421":
+  type: armor
+  keywords: [diamond, encrusted, armor]
+  short: diamond encrusted armor
+  long: Diamond encrusted armor lies on the ground.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 10
+  cost: 624
+  rent: 0
+  level: 5
+
+"tba:104:obj:10422":
+  type: armor
+  keywords: [diamond, encrusted, leggings]
+  short: a pair of diamond encrusted leggings
+  long: A pair of diamond encrusted leggings lies on the ground here.
+  wear: [take, legs]
+  values:
+    armor: 10
+  weight: 8
+  cost: 675
+  rent: 0
+  level: 4
+
+"tba:104:obj:10423":
+  type: armor
+  keywords: [diamond, gloves]
+  short: a pair of diamond gloves
+  long: A pair of diamond gloves have been left here.
+  wear: [take, hands]
+  values:
+    armor: 10
+  weight: 5
+  cost: 657
+  rent: 0
+  level: 4
+
+"tba:104:obj:10424":
+  type: armor
+  keywords: [diamond, helm]
+  short: a diamond helm
+  long: A diamond helm has been placed here.
+  wear: [take, head]
+  values:
+    armor: 9
+  weight: 4
+  cost: 681
+  rent: 0
+  level: 4
+
+"tba:104:obj:10425":
+  type: armor
+  keywords: [siamond, shield]
+  short: a diamond shield
+  long: A diamond shield lies on the ground.
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 7
+  cost: 661
+  rent: 0
+  level: 4
+
+"tba:104:obj:10426":
+  type: armor
+  keywords: [silver, boots]
+  short: a pair of silve boots
+  long: A pair of silver boots lies on the ground.
+  wear: [take, feet]
+  values:
+    armor: 0
+  weight: 5
+  cost: 628
+  rent: 0
+  level: 0
+
+"tba:104:obj:10427":
+  type: other
+  keywords: [Zone, Description, Sign]
+  short: a Zone Description Sign
+  long: A Zone Description Sign Has been placed here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [Zone, Description, Sign]
+    text:
+      preformatted: |
+        +------------------+
+        | Zone Description |
+        +------------------+-----------------------------------------+
+        | Location=Real time country side, Around the place I live.  |
+        | Level=any alignment=Good theme=The theme of my zone will   |
+        | be based on my experiences in my everyday life, such as    |
+        | liveing in the country, shareing the majestic landscap     |
+        | and the beautiful animals with everyone I can. Plot=       |
+        | My plot will be let people enjoy the relaxing              |
+        | country side, there bars, and there stores.  Also to allow |
+        | them to get into fights with everyday people.  :P rooms=I  |
+        | Will not use all 99 rooms given to me, I will use about    |
+        | 45-50 of the rooms given to me. Mobs=somewhere in the      |
+        | vicenity of 2/4 of my rooms.  Objects=Nearly 1/4 of my     |
+        | rooms.                                                     |
+        +------------------------------------------------------------+
+
+"tba:104:obj:10428":
+  type: other
+  keywords: [maze, map]
+  short: a maze map (not for mortals)
+  long: A maze map (not for mortals)
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 30
+  extras:
+  - keywords: [map, maze]
+    text:
+      preformatted: |
+        @r-------------------------------------------------------
+        
+        @b                               DED
+        @b                                |
+        @b                DED  DED  DED--MOD--DED   X --MOD
+        @b                 |    |         |         |    |
+        @b            X -- X -- X   CNT-- X         X --MOD--DED
+        @b            |         |         |         |
+        @b      DED-- X    X --MOD-- X -- X -- X -- X
+        @b            |    |    |         |
+        @b  X -- X -- X   DED   X        MOD
+        @b  |                   |
+        @b  X                  DED
+        @b  |
+        @b ENT
+        
+        @r-------------------------------------------------------
+        @yENT: Beginning              MOD: Monsters Den
+        @yDED: Dead End                 X: Just a Regular Maze Room
+        @yCNT: Center of the Maze         @BRooms: 31
+        @r-------------------------------------------------------@n
+
+"tba:104:obj:10429":
+  type: armor
+  keywords: [Infa, Armor]
+  short: Infra Armor
+  long: Infra armor sits here
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 16
+  cost: 892
+  rent: 0
+  level: 7
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: ac
+    modifier: 10
+  - apply: con
+    modifier: 3
+  extras:
+  - keywords: [Infa, armor]
+    text: >
+      This looks like any other armor, but it is more finely made, it has a soft glowing aure, and it
+      hums slightly.
+
+"tba:104:obj:10430":
+  type: note
+  keywords: [Taylors, Journal]
+  short: Taylors Journal
+  long: Taylors Journal sits here for people to read.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:104:obj:10431":
+  type: other
+  keywords: [Master, Map]
+  short: a Master Map
+  long: A Master Map lies on the ground here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: ["3"]
+    text:
+      preformatted: |
+        @r-------------------------------------------------------
+        
+        @b                               DED
+        @b                                |
+        @b                DED  DED  DED--MOD--DED   X --MOD
+        @b                 |    |         |         |    |
+        @b            X -- X -- X   CNT-- X         X --MOD--DED
+        @b            |         |         |         |
+        @b      DED-- X    X --MOD-- X -- X -- X -- X
+        @b            |    |    |         |
+        @b  X -- X -- X   DED   X        MOD
+        @b  |                   |
+        @b  X                  DED
+        @b  |
+        @b ENT
+        
+        @r-------------------------------------------------------
+        @yENT: Beginning              MOD: Monsters Den
+        @yDED: Dead End                 X: Just a Regular Maze Room
+        @yCNT: Center of the Maze         @BRooms: 31
+        @r-------------------------------------------------------@n
+  - keywords: ["2"]
+    text:
+      preformatted: |
+        @bArea    : Orchan Village
+        Level   : Any
+        @r-------------------------------------------------------
+        @b
+                        MSH
+                         |
+                        MST--MST--VIW
+                                   |
+                                  ROR
+                                   |
+                        ROR--ACS  ROR--GTE
+                         |    |    |
+                        ELD  WPS--ROR
+        
+        @r-------------------------------------------------------
+        @bGTE: Gate         ELD: Village Elder
+        ROR: Rock Road    VIW: Village Warrior
+        WPS: Weapon Shop  MST: Main Street
+        ACS: Amor Shop    MSH: Map Shop
+        @r-------------------------------------------------------
+  - keywords: ["1"]
+    text:
+      preformatted: |
+        @bArea     : A Small Forest
+        @bLevel    : Any Level
+        @r-------------------------------------------------------
+        @b                  WOD
+                           |
+                     BET--WOP--NTF--FTF  ENF
+                      |    |         |    |
+                     HSE  LLP--ENF  SHK--LKE
+        @r-------------------------------------------------------
+        @bWOD: Further into the Woods    LLP: Lightly Lit Path
+        BET: Barricade of Trees        ENF: End of Forest
+        WOP: Woodland Path             NTF: Near the Tree Fort
+        FTF: Foot of the Fort          SHK: A Small Shack
+        LKE: Lake
+        @r-------------------------------------------------------
+  - keywords: [master, map]
+    text:
+      preformatted: |
+        @bMaster Map
+        @r*=================+==================================*
+        @r| @bPage 1        @r|            @bForest Map              @r|
+        @r| @bPage 2        @r|            @bVillage Map             @r|
+        @r| @bPage 3        @r|            @bMaze Map                @r|
+        @r+=================+==================================+
+        |                                                    |
+        |    @b@uTo look at any of these maps, it is look (#)@n@r    |
+        |                                                    |
+        *====================================================*@n
+
+"tba:104:obj:10432":
+  type: other
+  keywords: [map]
+  short: a map
+  long: DO NOT LOOK!
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [map]
+    text:
+      preformatted: |2
+          ______________________________     ___________________________
+         |                              |---|                           |
+         |   ___________________________|: :|________________________   |
+         |  |                            : :                         |  |
+         |  |             STB  STB  STB  : :____                     |  |
+         |  |              |    |    |   :____  :                    |  |
+         |  |             STB--STB--STB       GRD--GRD--GRD--GRD     |  |
+         |  |              |                   |    |    |    |      |  |
+         |  |             STB       PSH--PSH--CTY--CTY--CTY--CTY     |  |
+         |  |              |              |    |    |    |    |      |  |
+         |  |             DRD            PSH  CTY--CTY--CTY--CTY     |  |
+         |  |              |              |    |    |    |    |      |  |
+         |  |   :X:--:X:--DRD       PSH--PSH  ESH  CTY--CTY--CTY     |  |
+         |  |         |              |         |                     |  |
+         |  |   QLA--QLA--QLA  INN  BRD  ESH--EHS  :X:  CRD  WEL     |  |
+         |  |    |    |    |    |    |    |    |    |    |    |      |  |
+         |  |   QLA--QLA--QLA--INN--BRD--TSQ--SIN--TPT--CRD--DRD     |  |
+         |  |    |         |    |    |    |    |         |           |  |
+         |  |   QLA--QLA--QLA  INN  BRD  MST  CRD--BNK--CRD          |  |
+         |  |         |    |    |    |    |         |                |  |
+         |  |        QLA--DRD  INN  BRD  MST       BNK--BNK          |  |
+         |  |              |         |    |         |    |           |  |
+         |  |             JSH--BRD--BRD  MST       BNK--BNK          |  |
+         |  |              |    |         |                          |  |
+         |  |        PND--JSH--JSH--JSH  MST                         |  |
+         |  |                            : :                         |  |
+         |  |___________________________ : : ________________________|  |
+         |                              |: :|                           |
+         |______________________________|---|___________________________|
+        
+                                   To see the legend it is 'look legend'
+  - keywords: [legend]
+    text:
+      preformatted: |2
+                                     +------+
+                                     |LEGEND|
+               +---------------------+------+--------------------+
+               | ---:  Gate                :X::  A Dead End      |
+               | : ::  Golden Road         EHS:  Elders House    |
+               | MST:  Main Street         PSH:  Items Shop      |
+               | TSQ:  Town Square         BRD:  Brick Road      |
+               | SIN:  Small Intersection  INN:  Inn             |
+               | TPT:  Trodden Path        JSH:  Jaks Shop       |
+               | CRD:  Cement Road         PND:  Pond            |
+               | DRD:  Dirt Road           QLA:  Quan Road       |
+               | STB:  Stable              CTY:  Court Yard      |
+               | GRD:  Gold Road           WEL:  Well            |
+               +-------------------------------------------------+
+
+"tba:104:obj:10433":
+  type: other
+  keywords: [spy, glasses]
+  short: spy glasses
+  long: A pair of spy glasses lies here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 10
+
+"tba:104:obj:10434":
+  type: armor
+  keywords: [Infra, Armor]
+  short: the Infra Armor
+  long: Infra armor sits here
+  flags: [glow, magic]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 16
+  cost: 892
+  rent: 0
+  level: 7
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: ac
+    modifier: 10
+  - apply: con
+    modifier: 3
+
+"tba:104:obj:10499":
+  type: container
+  keywords: [a, bag]
+  short: a bag
+  long: A bag is neatly folded here.
+  wear: [take]
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0

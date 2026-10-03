@@ -1,0 +1,330 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 83.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:83:obj:8301":
+  type: boat
+  keywords: [small, boat, dingy]
+  short: a small boat
+  long: A small boat is tied up here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 100
+  rent: 10
+  level: 0
+  extras:
+  - keywords: [small, boat, dingy]
+    text: >
+      It may not be big, it may not be pretty, but it's a boat.  Appears to be somewhat seaworthy.
+
+"tba:83:obj:8302":
+  type: note
+  keywords: [old, wooden, sign]
+  short: a sign
+  long: An old wooden sign is stuck in the ground here.
+  action: |-
+    @y __________________
+    @y|                  |
+    @y|@w      BEWARE      @y|
+    @y|@w     --------     @y|
+    @y|@w These waters are @y|
+    @y|@w known to be home @y|
+    @y|@w  to pirates and  @y|
+    @y|@wdangerous monsters@y|
+    @y|@w  ENTER AT YOUR   @y|
+    @y|@w     OWN RISK     @y|
+    @y|__________________|
+    @y        | |
+    @y        | |
+    @y        | |
+    @y        | |
+    @y         \|@n
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:83:obj:8303":
+  type: weapon
+  keywords: [mop, old]
+  short: an old mop
+  long: A dirty, old mop lies here in a puddle of its own filth.
+  wear: [take, wield, hold]
+  values:
+    damage: 5d5
+    attack: pound
+  weight: 3
+  cost: 1
+  rent: 1
+  level: 0
+
+"tba:83:obj:8304":
+  type: food
+  keywords: [rations, iron]
+  short: some iron rations
+  long: A packet of iron rations lies here.
+  wear: [take]
+  values:
+    hours: 12
+    poisoned: false
+  weight: 1
+  cost: 2
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [rations, iron]
+    text: >
+      This packet of rations contains food high in iron and other nutrients. Rations of this type are
+      favorites of seamen on long voyages where storage space is limited and nutrition is invaluable.
+
+"tba:83:obj:8305":
+  type: key
+  keywords: [key, golden, small]
+  short: a small golden key
+  long: A small key made of solid gold lies here.
+  flags: [no_rent]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:83:obj:8306":
+  type: container
+  keywords: [crate, wooden]
+  short: a large crate
+  long: A large, wooden crate stands here.
+  wear: []
+  values:
+    capacity: 1000
+    lock_flags: 1
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [wooden, crate]
+    text: This huge crate was once full of food rations.
+
+"tba:83:obj:8307":
+  type: key
+  keywords: [key, iron, large]
+  short: an iron key
+  long: A large, iron key lies here.
+  flags: [no_rent]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:83:obj:8308":
+  type: money
+  keywords: [money, gold, cash, coins]
+  short: a huge mound of gold coins
+  long: A huge mound of gold coins is lying here.
+  wear: [take]
+  values:
+    coins: 842
+  weight: 10
+  cost: 842
+  rent: 0
+  level: 0
+
+"tba:83:obj:8309":
+  type: key
+  keywords: [key, small, steel]
+  short: a small, steel key
+  long: A small, steel key lies here.
+  flags: [no_rent]
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:83:obj:8312":
+  type: weapon
+  keywords: [saber, sabre, pirate, sword]
+  short: a pirate's saber
+  long: A pirate has left his saber here.
+  wear: [take, wield]
+  values:
+    damage: 3d10
+    attack: slash
+  weight: 3
+  cost: 500
+  rent: 10
+  level: 0
+
+"tba:83:obj:8313":
+  type: armor
+  keywords: [eyepatch, patch, pirate]
+  short: an eyepatch
+  long: Someone is missing an eye, and also an eyepatch, since it is lying here.
+  wear: [take, head]
+  values:
+    armor: 1
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -3
+
+"tba:83:obj:8314":
+  type: fountain
+  keywords: [barrel, wooden, cask]
+  short: a large barrel
+  long: A large barrel stands here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: beer
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [barrel, wooden, cask]
+    text: >
+      This huge barrel is full of beer--the fuel which keeps these pirates running on long voyages.
+
+"tba:83:obj:8315":
+  type: other
+  keywords: [bucket, tar, oil]
+  short: a bucket of steaming tar
+  long: A bucket of steaming tar sits here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [bucket, tar, oil]
+    text: >
+      The tar in this bucket is used by the pirates to quickly seal small leaks in the ship.  As the
+      mixture cools, it hardens, and forms a permanent seal against the elements.
+
+"tba:83:obj:8316":
+  type: other
+  keywords: [bucket, tar, oil]
+  short: a bucket of tar
+  long: A bucket of tar sits here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 20
+  cost: 1
+  rent: 1
+  level: 0
+  extras:
+  - keywords: [bucket, tar, oil]
+    text: >
+      The tar has cooled and sealed itself into the bucket.  The only way to remove the tar now would be
+      to reheat the bucket.
+
+"tba:83:obj:8317":
+  type: trash
+  keywords: [tar, clump, spill]
+  short: a clump of tar
+  long: Someone has carelessly spilled a clump of tar here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [tar, clump, spill]
+    text: >
+      Someone has sloshed some tar out of a bucket here and it has cooled and hardened to the ground. 
+      How careless!
+
+"tba:83:obj:8318":
+  type: weapon
+  keywords: [hook, pirate]
+  short: a pirate's hook
+  long: A steel hook, often used to replace a hand, lies here.
+  wear: [take, wield, hold]
+  values:
+    damage: 1d10
+    attack: claw
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -3
+
+"tba:83:obj:8319":
+  type: food
+  keywords: [crab, meat]
+  short: some crab meat
+  long: A piece of crab meat is lying here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 1
+  cost: 25
+  rent: 1
+  level: 0
+
+"tba:83:obj:8320":
+  type: boat
+  keywords: [life, boat, dingy]
+  short: a life boat
+  long: A life boat hangs from the side of the ship here.
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 100
+  rent: 10
+  level: 0
+
+"tba:83:obj:8397":
+  type: other
+  keywords: [dice, die, chinchirorin, bones]
+  short: "@yA set of @o@gChinchirorin@n @ydice@n"
+  long: "@yA set of @o@gChinchirorin@n @ydice lie here, waiting for someone to roll them.@n"
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 200
+  rent: 10
+  level: 0
+
+"tba:83:obj:8398":
+  type: food
+  keywords: [fish]
+  short: a small fish
+  long: A small fish is lying here.
+  wear: [take]
+  values:
+    hours: 3
+    poisoned: false
+  weight: 1
+  cost: 10
+  rent: 1
+  level: 0

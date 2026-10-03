@@ -1,0 +1,184 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 74.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:74:mob:7412
+  room: tba:74:room:7423
+  limit: 1
+  equip:
+    about:
+      object: tba:74:obj:7421
+      limit: 25
+    wield:
+      object: tba:74:obj:7422
+      limit: 50
+  carry:
+  - object: tba:74:obj:7420
+    limit: 1
+- mob: tba:74:mob:7414
+  room: tba:74:room:7427
+  limit: 1
+  equip:
+    waist:
+      object: tba:74:obj:7426
+      limit: 99
+  carry:
+  - object: tba:74:obj:7427
+    limit: 25
+  - object: tba:74:obj:7428
+    limit: 25
+- object: tba:74:obj:7400
+  room: tba:74:room:7400
+  limit: 1
+- mob: tba:74:mob:7409
+  room: tba:74:room:7417
+  limit: 1
+  equip:
+    wrist_right:
+      object: tba:74:obj:7415
+      limit: 1
+    waist:
+      object: tba:74:obj:7416
+      limit: 45
+  carry:
+  - object: tba:74:obj:7409
+    limit: 100
+- mob: tba:74:mob:7417
+  room: tba:74:room:7421
+  limit: 4
+  equip:
+    hold:
+      object: tba:74:obj:7435
+      limit: 100
+- mob: tba:74:mob:7416
+  room: tba:74:room:7429
+  limit: 1
+  equip:
+    wrist_left:
+      object: tba:74:obj:7431
+      limit: 100
+    head:
+      object: tba:74:obj:7432
+      limit: 100
+- object: tba:74:obj:7433
+  room: tba:74:room:7429
+  limit: 1
+- mob: tba:74:mob:7415
+  room: tba:74:room:7428
+  limit: 1
+  equip:
+    body:
+      object: tba:74:obj:7429
+      limit: 100
+    wield:
+      object: tba:74:obj:7430
+      limit: 1
+- mob: tba:74:mob:7411
+  room: tba:74:room:7426
+  limit: 1
+  equip:
+    wield:
+      object: tba:74:obj:7418
+      limit: 50
+    finger_right:
+      object: tba:74:obj:7419
+      limit: 100
+- mob: tba:74:mob:7413
+  room: tba:74:room:7431
+  limit: 1
+  equip:
+    arms:
+      object: tba:74:obj:7424
+      limit: 100
+    legs:
+      object: tba:74:obj:7425
+      limit: 100
+    body:
+      object: tba:74:obj:7423
+      limit: 100
+- mob: tba:74:mob:7410
+  room: tba:74:room:7420
+  limit: 1
+  equip:
+    feet:
+      object: tba:74:obj:7417
+      limit: 1
+- mob: tba:74:mob:7406
+  room: tba:74:room:7412
+  limit: 1
+  equip:
+    hands:
+      object: tba:74:obj:7410
+      limit: 25
+    head:
+      object: tba:74:obj:7411
+      limit: 70
+- object: tba:74:obj:7407
+  room: tba:74:room:7409
+  limit: 20
+- mob: tba:74:mob:7408
+  room: tba:74:room:7416
+  limit: 1
+  equip:
+    wrist_left:
+      object: tba:74:obj:7414
+      limit: 100
+- mob: tba:74:mob:7407
+  room: tba:74:room:7414
+  limit: 3
+  equip:
+    light:
+      object: tba:74:obj:7413
+      limit: 100
+  carry:
+  - object: tba:74:obj:7412
+    limit: 100
+- mob: tba:74:mob:7405
+  room: tba:74:room:7410
+  limit: 1
+  equip:
+    about:
+      object: tba:74:obj:7408
+      limit: 100
+- mob: tba:74:mob:7404
+  room: tba:74:room:7408
+  limit: 1
+  equip:
+    wield:
+      object: tba:74:obj:7406
+      limit: 15
+- mob: tba:74:mob:7403
+  room: tba:74:room:7406
+  limit: 1
+  equip:
+    feet:
+      object: tba:74:obj:7405
+      limit: 75
+- object: tba:74:obj:7402
+  room: tba:74:room:7404
+  limit: 1
+  contents:
+  - object: tba:74:obj:7403
+    limit: 50
+- mob: tba:74:mob:7401
+  room: tba:74:room:7404
+  limit: 1
+- mob: tba:74:mob:7402
+  room: tba:74:room:7404
+  limit: 1
+  equip:
+    hold:
+      object: tba:74:obj:7404
+      limit: 25
+- mob: tba:74:mob:7400
+  room: tba:74:room:7403
+  limit: 1
+- object: tba:74:obj:7401
+  room: tba:74:room:7401
+  limit: 1
+removes:
+- room: tba:74:room:7400
+  object: tba:74:obj:7400
+- room: tba:74:room:7409
+  object: tba:74:obj:7407

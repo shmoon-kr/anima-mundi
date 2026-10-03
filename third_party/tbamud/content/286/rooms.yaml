@@ -1,0 +1,1820 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 286.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:286:room:28600":
+  name: Strahd's Zone Description Room
+  description:
+    preformatted: |2
+         Descent to Hell Zone.
+      Originally written by Strahd
+      Zone 286 is linked to the following zones:
+      285 Descent to Hell                at 28672 (east ) ---> 28541
+      285 Descent to Hell                at 28673 (west ) ---> 28541
+      285 Descent to Hell                at 28682 (north) ---> 28541
+      285 Descent to Hell                at 28690 (south) ---> 28500
+      285 Descent to Hell                at 28692 (south) ---> 28502
+      285 Descent to Hell                at 28696 (south) ---> 28506
+      285 Descent to Hell                at 28698 (south) ---> 28508
+      285 Descent to Hell                at 28699 (east ) ---> 28500
+  sector: inside
+
+"tba:286:room:28601":
+  name: Stone Archway
+  description: >
+    This is a ancient stone archway.  Various faces of demons and other grim pictures are painted onto
+    it.  Stone gargoyles and demons glare down at you from atop the arch.  There is a bronze plaque above
+    the archway.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28602
+      look: It's too dark to see.
+  extras:
+  - keywords: [plaque]
+    text:
+      preformatted: |2
+           Descent to Hell
+        ************
+        You just GO TO HELL!!!!
+        *chuckle*
+        Made for levels 50-85
+        Brought to you by Strahd
+
+"tba:286:room:28602":
+  name: Ancient Room
+  description: >
+    You are standing in a large stone room.  Feels like a crypt.  Ancient murals of Hell and punishment
+    cover the walls.  In the middle of the room are stairs that lead down in to the darkness.  From the
+    stairway you can smell brimstone and sulfur.  To the west it looks as if there is a shrine.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28601
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28618
+      look: You see an ancient shrine.
+    down:
+      to: tba:286:room:28603
+      look: You see a dark stairway.
+
+"tba:286:room:28603":
+  name: Dark Stairway
+  description: >
+    You are standing at the bottom of long dark stairway.  The smells of brimstone and sulfur choke
+    you.  Screams of pain and terror fill the air. Stone faces carved into the walls seem to laugh at you. 
+    Maybe this is not such a good idea after all...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28604
+      look: Its too dark to see.
+    up:
+      to: tba:286:room:28602
+      look: You see a dark stairway.
+
+"tba:286:room:28604":
+  name: Landing
+  description: >
+    This landing has been scorched as if a large brushfire had swept through it. Bits of ash and burnt
+    vegetation cover everything.  The walls and floor are flawlessly smooth, and the ceiling is covered
+    with carved faces and ancient symbols and runes.  Large, black iron gates tower over you to the west. 
+    You see a large gateway to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28603
+      look: Its too dark to see.
+    west:
+      to: tba:286:room:28605
+      look: You see the Gates of Hell.
+      door:
+        keywords: [gates]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [gates]
+    text: >
+      These black iron gates are covered with grotesque faces and creatures in various poses and acts of
+      violence and lust.  The gates seem to make your blood run cold...
+
+"tba:286:room:28605":
+  name: Gateway to Hell
+  description: >
+    You stand next to the very gateway of Hell.  You are surrounded by the sounds of torture and pain. 
+    Screams pierce the air and rattle your nerves.  Displays of the treats of Hell are in all
+    directions.  Large black iron gates tower over you to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28616
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28604
+      look: The Gates of Hell.
+      door:
+        keywords: [gates]
+        kind: door
+        reset: closed
+    south:
+      to: tba:286:room:28626
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28606
+      look: It's too smoky to see.
+  extras:
+  - keywords: [gates]
+    text: >
+      These black iron gates are covered with grotesque faces and creatures in various poses and acts of
+      violence and lust.  The gates seem to make your blood run cold...
+
+"tba:286:room:28606":
+  name: Hall of the Damned
+  description: >
+    This hallway is a monument to the millions of damned souls in hell.  The walls are made up of
+    various body parts and other unidentifiable things.  Many of the faces that make up the wall scream out to
+    you for help.  Their arms desperately grasp at your clothing as you pass.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28615
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28605
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28625
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28607
+      look: It's too smoky to see.
+
+"tba:286:room:28607":
+  name: Hall of the Damned
+  description: >
+    This hallway is a monument to the millions of damned souls in hell.  The walls are made up of
+    various body parts and other unidentifiable things.  Many of the faces that make up the wall scream out to
+    you for help.  Their arms desperately grasp at your clothing as you pass.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28614
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28606
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28624
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28608
+      look: It's too smoky to see.
+
+"tba:286:room:28608":
+  name: Hall of the Damned
+  description: >
+    This hallway is a monument to the millions of damned souls in hell.  The walls are made up of
+    various body parts and other unidentifiable things.  Many of the faces that make up the wall scream out to
+    you for help.  Their arms desperately grasp at your clothing as you pass.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28613
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28607
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28623
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28609
+      look: It's too smoky to see.
+
+"tba:286:room:28609":
+  name: Hall of the Damned
+  description: >
+    This hallway is a monument to the millions of damned souls in hell.  The walls are made up of
+    various body parts and other unidentifiable things.  Many of the faces that make up the wall scream out to
+    you for help.  Their arms desperately grasp at your clothing as you pass.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28612
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28608
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28622
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28610
+      look: It's too smoky to see.
+    down:
+      to: tba:286:room:28621
+      look: You see a dark stairway leading down.
+
+"tba:286:room:28610":
+  name: Hall of the Damned
+  description: >
+    This hallway is a monument to the millions of damned souls in hell.  The walls are made up of
+    various body parts and other unidentifiable things.  Many of the faces that make up the wall scream out to
+    you for help.  Their arms desperately grasp at your clothing as you pass.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28611
+      look: It's too smoky to see.
+    east:
+      to: tba:286:room:28609
+      look: Its too smoky to see.
+
+"tba:286:room:28611":
+  name: Mural of the Dead
+  description: >
+    You stand before a large mural.  The mural depicts mountains of dead bodies piled up to the sky. 
+    The mural covers the whole north wall from floor to ceiling.  You can almost smell the stench of
+    decaying flesh.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28612
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28610
+      look: It's too smoky to see.
+
+"tba:286:room:28612":
+  name: Living Walls
+  description: >
+    The walls here actually consist of graying and sinewy flesh - faces, hands, broken bones, feet and
+    toes jutting from the surface.  You hear low moans of horror, pain and sorrow issuing from the walls.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28613
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28609
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28611
+      look: It's too smoky to see.
+
+"tba:286:room:28613":
+  name: Trapped souls
+  description: >
+    There are many souls trapped behind the walls of this room, almost as though they were trapped
+    beneath the surface of a frozen lake.  Even the floor and ceiling show the screaming faces behind them.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28614
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28608
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28612
+      look: It's too smoky to see.
+
+"tba:286:room:28614":
+  name: Tortured Beings
+  description: >
+    This room is filled with instruments of torture.  Beings of all shapes and sizes are being brought
+    to the thresholds of pain and beyond.  Some are being sliced into thousands of pieces.  Others are
+    being stretched as though they were made of rubber.  All are caught in an unending play of agony.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28615
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28607
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28613
+      look: It's too smoky to see.
+
+"tba:286:room:28615":
+  name: Gluttony
+  description: >
+    Before you is a room filled with all sorts of food.  The smells of pastries and hamburger assault
+    your senses.  All sorts of food lie everywhere you look. Cookies, twinkies, steak, prime rib, almost
+    anything you can think of, call out to you.  You suddenly feel VERY hungry.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28616
+      look: It's too smoky to see.
+    south:
+      to: tba:286:room:28606
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28614
+      look: It's too smoky to see.
+
+"tba:286:room:28616":
+  name: Greed
+  description: >
+    What luck!  A room full of treasure.  Gold, diamonds, riches beyond imagination!  Wait!  You
+    suddenly feel as if it is all slowly disappearing. Someone is taking your treasure.  They have no right! 
+    It is yours!  You found it first.  Let them go get their own treasures!  You see a door to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28617
+      look: You see a bedroom door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:286:room:28605
+      look: It's too smoky to see.
+    west:
+      to: tba:286:room:28615
+      look: It's too smoky to see.
+
+"tba:286:room:28617":
+  name: Bedroom
+  description: >
+    This is a small bedroom.  It is well furnished and a drastic change from the room you just stepped
+    out of.  A bed stands against the far wall.  Upon the headboard of the bed are carved two cherubic
+    looking figures, with the words 'DEE & DEE' written below them.  The door to the bedroom is to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28616
+      look: You see a bedroom door.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:286:room:28618":
+  name: Ancient Shrine
+  description: >
+    This is an ancient, abandoned shrine of some unknown god.  It has been vandalized and torn apart. 
+    What used to be the shrine has been reduced to a large pile of stones and other debris.  Various
+    runes and demonic faces have been spray-painted on the walls and floor.  Nailed to the ceiling are an
+    assortment of skeletons.  All seem to have been dead for a very long time.  All surfaces of the room are
+    covered with dried blood and dust.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28602
+      look: It is too dark to see.
+
+"tba:286:room:28619":
+  name: Room full of Body Parts
+  description: >
+    The room is filled with piles of arms, legs, heads, and other, unidentifiable, parts of many
+    different creatures.  The stench is overwhelming. The body parts seem to wiggle and scream as you get
+    closer.  They are still alive!!
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28620
+      look: It is too dark to see.
+    south:
+      to: tba:286:room:28629
+      look: It is too dark to see.
+
+"tba:286:room:28620":
+  name: Fountain of Blood
+  description: >
+    This room is made of a rough black stone.  The walls seem to ooze black sludge.  In the middle of
+    the room stands a stone fountain of a demon spitting blood.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28630
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28619
+      look: It is too dark to see.
+
+"tba:286:room:28621":
+  name: Bloody Stairway
+  description: >
+    You are standing on a very slippery stairway.  The walls and stairs are covered with blood and
+    gore.  Pieces of goo and ooze drip from the ceiling overhead.  You almost slip a couple times on the
+    stairway.  The stench here is overwhelming.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:286:room:28609
+      look: It is too dark to see.
+    down:
+      to: tba:286:room:28631
+      look: It is too dark to see.
+
+"tba:286:room:28622":
+  name: Ancient Room
+  description: >
+    This is a very old and dusty room.  It looks empty except for a few shards of bone and flesh.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28609
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28623
+      look: It is too dark to see.
+
+"tba:286:room:28623":
+  name: Room of Lost Souls
+  description: >
+    This looks like a waiting room of sorts.  Dust and cobwebs are everywhere. Wooden benches line the
+    walls.  A digital number sign is posted on the wall. It currently reads, 'Now Serving Number 1'.  A
+    ticket dispenser is bolted to the wall.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28608
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28624
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28622
+      look: It is too dark to see.
+  extras:
+  - keywords: [dispenser]
+    text: This is one of those red ticket dispensers that never seem to work right.
+
+"tba:286:room:28624":
+  name: Room of Lost Souls
+  description: >
+    This looks like a waiting room of sorts.  Dust and cobwebs are everywhere. Wooden benches line the
+    walls.  A digital number sign is posted on the wall. It currently reads, 'Now Serving Number 1'.  A
+    ticket dispenser is bolted to the wall.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28607
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28625
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28623
+      look: It is too dark to see.
+  extras:
+  - keywords: [dispenser]
+    text: This is one of those red ticket dispensers that never seem to work right.
+
+"tba:286:room:28625":
+  name: Pit of Fire
+  description: >
+    You enter a plain stone room with a large fire pit in the center of it.  As you look closer at the
+    pit you realize that hundreds of people are being burned inside it.  They scream out to you.  The
+    noise is deafening.  Several minor imps and workers push more people into the pit, whistling while they
+    work.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:286:room:28606
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28626
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28624
+      look: It is too dark to see.
+
+"tba:286:room:28626":
+  name: Blackened Hallway
+  description: >
+    This dark hallway looks as if it was made by a lavaworm...  All the surfaces in it are melted and
+    burnt.  The smell of brimstone and sulfur fills the air.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28605
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28627
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28625
+      look: It is too dark to see.
+
+"tba:286:room:28627":
+  name: Blackened Hallway
+  description: >
+    This dark hallway looks as if it was made by a lavaworm...  All the surfaces in it are melted and
+    burnt.  The smell of brimstone and sulfur fills the air.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28628
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28626
+      look: It is too dark to see.
+
+"tba:286:room:28628":
+  name: Blood Room
+  description: >
+    You enter the room and are immediately assaulted by the smell of rotting flesh and blood.  The
+    walls are covered with the crimson fluid as it runs down from the ceiling.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28629
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28627
+      look: It is too dark to see.
+
+"tba:286:room:28629":
+  name: Living Walls
+  description: >
+    The walls here actually consist of graying and sinewy flesh - faces, hands, broken bones, feet and
+    toes jutting from the surface.  You hear low moans of horror, pain and sorrow issuing from the walls.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28619
+      look: It is too dark to see.
+    east:
+      to: tba:286:room:28630
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28628
+      look: It is too dark to see.
+
+"tba:286:room:28630":
+  name: Skeleton Factory
+  description: >
+    This is probably where they make all the skeletons for nightmares and graveyards.  The room is
+    simply littered with bones.  A poster on the wall reads, "Remember...the head bone is connected to the
+    neck bone..."  The poster continues on...  But it seems to get very technical and boring.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28620
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28629
+      look: It is too dark to see.
+
+"tba:286:room:28631":
+  name: Bottom of Stairway
+  description: >
+    You are standing at the bottom of a bloody stairway.  Or at least you thought it was a stairway. 
+    It seems to be just a painting on the wall.  This is a roughly carved room with evil runes carved in
+    to the stone floor.  There is a hallway to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28632
+      look: It is too dark to see.
+
+"tba:286:room:28632":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hall continues to the south and the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28642
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28631
+      look: It is too dark to see.
+
+"tba:286:room:28633":
+  name: Cell
+  description: >
+    The cell is very damp and very musty.  The walls are covered with moisture and dirt.  The smell of
+    urine is very potent here.  The steel bars to the cell are to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28643
+      look: You see bars.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+
+"tba:286:room:28634":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway continues to the east and the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28635
+      look: It is too dark to see.
+    south:
+      to: tba:286:room:28644
+      look: It is too dark to see.
+
+"tba:286:room:28635":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  To the south you see the steel bars of a cell.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28636
+      look: It is too dark to see.
+    south:
+      to: tba:286:room:28645
+      look: You see the steel bars of a cell.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+    west:
+      to: tba:286:room:28634
+      look: It is too dark to see.
+
+"tba:286:room:28636":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the south and the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28646
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28635
+      look: It is too dark to see.
+
+"tba:286:room:28637":
+  name: Cell
+  description: >
+    The cell is very damp and very musty.  The walls are covered with moisture and dirt.  The smell of
+    urine is very potent here.  The steel bars to the cell are to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28647
+      look: You see bars.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+
+"tba:286:room:28638":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the south and the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28639
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28648
+      look: It is too dark to see.
+
+"tba:286:room:28639":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28640
+      look: You see the steel bars to a cell.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+    south:
+      to: tba:286:room:28649
+      look: You see the steel bars to a cell.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+    west:
+      to: tba:286:room:28638
+      look: It is too dark to see.
+    down:
+      to: tba:286:room:28650
+      look: You see a dark stairway down....
+
+"tba:286:room:28640":
+  name: Cell
+  description: >
+    The cell is very damp and very musty.  The walls are covered with moisture and dirt.  The smell of
+    urine is very potent here.  The steel bars to the cell are to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28639
+      look: You see bars.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+
+"tba:286:room:28641":
+  name: Hidden Room
+  description: >
+    This is a long forgotten room.  Ancient torture equipment stands around collecting dust.  Most of
+    this stuff was probably replaced with modern high tech torture devices and for sentimental reasons
+    wasn't thrown away.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28651
+      look: Its too dark to see.
+
+"tba:286:room:28642":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the north and east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28632
+      look: Its too dark to see.
+    east:
+      to: tba:286:room:28643
+      look: Its too dark to see.
+
+"tba:286:room:28643":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the east and west.  The bars to a
+    cell are to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28633
+      look: You see bars to a cell.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+    east:
+      to: tba:286:room:28644
+      look: Its too dark to see.
+    west:
+      to: tba:286:room:28642
+      look: Its too dark to see.
+
+"tba:286:room:28644":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28634
+      look: Its too dark to see.
+    west:
+      to: tba:286:room:28643
+      look: Its too dark to see.
+
+"tba:286:room:28645":
+  name: Cell
+  description: >
+    The cell is very damp and very musty.  The walls are covered with moisture and dirt.  The smell of
+    urine is very potent here.  The steel bars to the cell are to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28635
+      look: You see bars.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+
+"tba:286:room:28646":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the north and east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28636
+      look: Its too dark to see.
+    east:
+      to: tba:286:room:28647
+      look: Its too dark to see.
+
+"tba:286:room:28647":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the east and west.  You see bars to
+    a cell to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28637
+      look: You see bars to a cell.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+    east:
+      to: tba:286:room:28648
+      look: Its too dark to see.
+    west:
+      to: tba:286:room:28646
+      look: Its too dark to see.
+
+"tba:286:room:28648":
+  name: Stone Hall
+  description: >
+    This is a roughly carved hallway.  The air here is damp and musty.  You hear the sound of something
+    dripping in the distance.  Your footsteps echo down the hall as you walk.  There is a strange and
+    deathly silence that fills these halls...  The hallway contines to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28638
+      look: Its too dark to see.
+    west:
+      to: tba:286:room:28647
+      look: Its too dark to see.
+
+"tba:286:room:28649":
+  name: Cell
+  description: >
+    The cell is very damp and very musty.  The walls are covered with moisture and dirt.  The smell of
+    urine is very potent here.  The steel bars to the cell are to the north.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28639
+      look: You see bars.
+      door:
+        keywords: [bars]
+        kind: door
+        reset: closed
+
+"tba:286:room:28650":
+  name: Hot Stairs
+  description: >
+    You are standing on a long stairway.  The air around you is heavy and hot. The stone walls are hot
+    to the touch and your sweat sizzles as it hits the ground.  Cool air flows out from a crack in the
+    wall to the east.  The smell of brimstone and smoke is all around you.  The stairs continue down.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:286:room:28639
+      look: It is too dark to see.
+    down:
+      to: tba:286:room:28661
+      look: It is too dark to see.
+
+"tba:286:room:28651":
+  name: Crack in Wall
+  description: >
+    This is a rather large crack in the wall.  On closer inspection it appears to be a passageway that
+    was closed off long ago.  It was probably reopened by an earthquake or something.  An ancient
+    passageway continues to the north. Hot gusts of air come from the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28641
+      look: It is too dark to see.
+    west:
+      to: tba:286:room:28650
+      look: It is too dark to see.
+
+"tba:286:room:28652":
+  name: Stone Arch
+  description: >
+    Before you stands the a large stone arch decorated with many runes you cannot decifer.  It looks as
+    though it has been closed up for a long time.  To the east is a hallway of fire.  To the south you
+    see a large metal door with the words, 'FOREMAN' written on the door.  There is a dark stairway down
+    in the corner of the room.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28653
+      look: You see a hall of fire.
+    south:
+      to: tba:286:room:28662
+      look: You see the Foreman's office.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    down:
+      to: tba:286:room:28663
+      look: You see a dark stairway down.
+
+"tba:286:room:28653":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body. The hall of fire continues to the east.  You see a stone archway to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28654
+      look: You see a hall of fire.
+    west:
+      to: tba:286:room:28652
+      look: You see a stone archway.
+
+"tba:286:room:28654":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body. The hall of fire continues to the south and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28664
+      look: You see a hall of fire.
+    west:
+      to: tba:286:room:28653
+      look: You see a stone archway.
+
+"tba:286:room:28655":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28656
+      look: You see a construction area.
+    south:
+      to: tba:286:room:28665
+      look: You see a construction area.
+
+"tba:286:room:28656":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28657
+      look: You see a construction area.
+    south:
+      to: tba:286:room:28655
+      look: You see a construction area.
+
+"tba:286:room:28657":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the south and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28667
+      look: You see a construction area.
+    west:
+      to: tba:286:room:28656
+      look: You see a construction area.
+
+"tba:286:room:28658":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body. The hall of fire continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28659
+      look: You see a hall of fire.
+    south:
+      to: tba:286:room:28668
+      look: You see a hall of fire.
+
+"tba:286:room:28659":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body.  The hall of fire continues to the west.  A room full of fire pits lies to the east. A wall of
+    fire crackles merrily to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28660
+      look: You see a room full of fire pits.
+    south:
+      to: tba:286:room:28669
+      look: You see a wall of fire.
+    west:
+      to: tba:286:room:28658
+      look: You see a hall of fire.
+
+"tba:286:room:28660":
+  name: Fire Pits of Hades
+  description: >
+    This room is filled with many small fire pits.  Countless damned souls are being burnt and roasted
+    within the white flames that erupt from the many pits. Wailing and screams of pain chill your bones
+    in this hot room.  To the south you see a lake of fire.  A fire hall lies to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28670
+      look: You see a lake of fire.
+    west:
+      to: tba:286:room:28659
+      look: You see a hall of fire.
+
+"tba:286:room:28661":
+  name: Fire Mural
+  description: >
+    Upon all the walls of this room is an enormous mural.  Pictures of burning bodies and tortured
+    souls seem to be the main theme of the art.  Bright reds and hot blues are enphasized throughout the
+    mural.  As you stare at it, the characters within it seem to move and struggle in pain.  The hot air
+    around you smells of sulfur and methane.  To the south you see a stone hallway.  Hot air blows in at you
+    from the doorway.  The air stirs up the methane and steals your breath.  You choke and gag...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28671
+      look: You see a stone hallway.
+
+"tba:286:room:28662":
+  name: Foreman's Office
+  description: >
+    You stand in a crudely constructed office.  Blueprints and change orders are scattered everywhere. 
+    A metal filing cabinet stands in the corner.  Before you stands a stone table covered with
+    blueprints.  On the wall is a construction plaque that reads, "4th DEMONsion Construction"
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28652
+      look: You see the door to the office.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:286:room:28663":
+  name: Cold Stairway
+  description: >
+    You stand upon a cold stone stairway.  Hot air blows down on you from higher up the stairwell. 
+    From below you, freezing gusts bite at your skin and make you shiver.  Icicles drip slowly from the
+    ceiling onto the frosted stone floor.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    up:
+      to: tba:286:room:28652
+      look: It is too dark to see.
+    down:
+      to: tba:286:room:28676
+      look: It is too dark to see.
+
+"tba:286:room:28664":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body. The hall of fire continues to the north and east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28654
+      look: You see a hall of fire.
+    east:
+      to: tba:286:room:28665
+      look: You see a wall of fire.
+
+"tba:286:room:28665":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the north and east.  A hall of fire is to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28655
+      look: You see a construction area.
+    east:
+      to: tba:286:room:28666
+      look: You see a construction area.
+    west:
+      to: tba:286:room:28664
+      look: You see a Hall of fire.
+
+"tba:286:room:28666":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28667
+      look: You see a construction area.
+    west:
+      to: tba:286:room:28665
+      look: You see a construction area.
+
+"tba:286:room:28667":
+  name: Construction Area
+  description: >
+    This part of Hell seems to be under repair.  Workers are fixing and replacing what look like
+    various gas mains and other pipework.  You can see many gas lines and electrical conduits within the
+    dismantled walls.  Partially hidden fire sprinklers are being installed in the ceilings.  You see more
+    contruction to the north and west.  A hall of fire lies to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28657
+      look: You see a construction area.
+    east:
+      to: tba:286:room:28668
+      look: You see a hall of fire.
+    west:
+      to: tba:286:room:28666
+      look: You see a construction area.
+
+"tba:286:room:28668":
+  name: Hall of Fire
+  description: >
+    You are standing in a hallway made of fire.  The walls are ablaze with yellow and blue flames.  The
+    smell of the hot air and sulfur burns your lungs as you inhale, and dry your mouth as you exhale. 
+    The stone floor burns at your feet and hungrily drinks up every drop of sweat as they fall from your
+    body. The hall of fire continues to the north.  There are loud noises of contruction to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28658
+      look: You see a hall of fire.
+    west:
+      to: tba:286:room:28667
+      look: You see a construction area.
+
+"tba:286:room:28669":
+  name: Wall of Fire
+  description: >
+    This large room is cut into sections by small walls of fire.  The walls seem to move slowly,
+    changing the layout of the room.  As you examine the room further you notice various posts around the room
+    to which people are chained. The firewalls seem to move in patterns that leave the poor people
+    directly in the path of the oncoming fire.  The walls seem to creep ever so slowly towards them.  The
+    people blister and scream as the fire gets closer.  Their deaths seem like minutes of agony and pain, and
+    even as they burst into flames they seem incapable of grasping the merciful attention of death...  To
+    the north you see a hall of fire.  To the east you see a lake of fire.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28659
+      look: You see a hall of fire.
+    east:
+      to: tba:286:room:28670
+      look: You see a Lake of fire.
+
+"tba:286:room:28670":
+  name: Lake of Fire
+  description: >
+    You stand one the shore of a large lake of fire.  The smoke and heat fill this enormous room.  You
+    can barely make out shapes of something moving within the dancing flames of blue and gold...
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28660
+      look: It is too smoky to see.
+    east:
+      to: tba:286:room:28671
+      look: It is too smoky to see.
+    west:
+      to: tba:286:room:28669
+      look: It is too smoky to see.
+
+"tba:286:room:28671":
+  name: Hot Hall
+  description: >
+    The stone floor below you heats your feet uncomfortably.  The ceiling and walls glow a dull red and
+    you sweat uncomfortably under the heat.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28661
+      look: You see a Mural Room.
+    west:
+      to: tba:286:room:28670
+      look: It is too smoky to see.
+
+"tba:286:room:28672":
+  name: Icy Landing
+  description: >
+    This landing is made entirely of ice.  Its walls bear carvings of battle and hunting scenes in
+    bas-relief.  These carved scenes show ice devils slaying angels, hunting mortals and other gruesome
+    pictures.  To the east you see a room of ice.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28541
+      look: You see a room of ice.
+
+"tba:286:room:28673":
+  name: Ice Room
+  description: >
+    You are standing in a room of ice.  Icicles of every size hang from the ceiling.  Some shake with
+    every sound.  Your reflection off the ice walls seems to dance and wiggle as you move about.  To the
+    south you see more of the frozen room.  To the west you see an Icy landing.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28683
+      look: You see a room of ice.
+    west:
+      to: tba:285:room:28541
+      look: You see a room of ice.
+
+"tba:286:room:28674":
+  name: Meat Locker
+  description: >
+    You are standing in what looks like a meat locker.  Rows of beef and other meats hang from large
+    steel hooks.  You also notice that many of the things hanging from the hooks are corpses of people. 
+    They reach out to you as you pass them as if to plead for help from their frozen mouths.  The meat
+    locker continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28675
+      look: You see more of the Meat locker.
+    south:
+      to: tba:286:room:28684
+      look: You see more of the Meat locker.
+
+"tba:286:room:28675":
+  name: Meat Locker
+  description: >
+    Rows of beef and other meats hang from large steel hooks.  You notice that many of the things
+    hanging from the hooks are corpses of people.  They reach out to you as you pass them as if to plead for
+    help from their frozen mouths. The meat locker continues to the south and west.  There is a freezer
+    door to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28676
+      look: You see a freezer door.
+      door:
+        keywords: [freezer]
+        kind: door
+        reset: closed
+    south:
+      to: tba:286:room:28685
+      look: You see more of the Meat locker.
+
+"tba:286:room:28676":
+  name: Penguin Room
+  description: >
+    This is what appears to be a replica of an iceberg.  Penguins waddle about the room pecking at many
+    poor souls half trapped in the icy floor.  You seem to be outside, as the walls are painted to seem
+    as if you are standing on a vast icy slab with nothing but ocean around you.  The iceberg continues
+    to the south and east.  There is a freezer door to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28677
+      look: You see lots and lots of ice.
+    south:
+      to: tba:286:room:28686
+      look: You see lots and lots of ice.
+    west:
+      to: tba:286:room:28675
+      look: You see a freezer door.
+      door:
+        keywords: [door, freezer]
+        kind: door
+        reset: closed
+
+"tba:286:room:28677":
+  name: Penguin Room
+  description: >
+    This is what appears to be a replica of an iceberg.  Penguins waddle about the room pecking at many
+    poor souls half trapped in the icy floor.  You seem to be outside, as the walls are painted to seem
+    as if you are standing on a vast icy slab with nothing but ocean around you.  The iceberg continues
+    to the south and east.  There is a freezer door to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28687
+      look: You see lots and lots of ice.
+    west:
+      to: tba:286:room:28676
+      look: You see lots and lots of ice.
+
+"tba:286:room:28678":
+  name: Ice-Creamery
+  description: >
+    You appear to be standing in a ice-creamery.  Many ice-cream workers run frantically around tending
+    to the various machines.  The factory continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28679
+      look: You see lots of ice-cream machines.
+    south:
+      to: tba:286:room:28688
+      look: You see lots of ice-cream machines.
+
+"tba:286:room:28679":
+  name: Ice-Creamery
+  description: >
+    You appear to be standing in a ice-creamery.  There seems to be a group of people here shouting
+    into containers and then quickly covering them.  How odd...  The factory continues to the south and
+    west.  There is a steel door to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28680
+      look: You see a steel door.
+      door:
+        keywords: [door, steel]
+        kind: door
+        reset: closed
+    south:
+      to: tba:286:room:28689
+      look: You see lots of ice-cream machines.
+    west:
+      to: tba:286:room:28678
+      look: You see lots of ice-cream machines.
+
+"tba:286:room:28680":
+  name: White Marble Hall
+  description: >
+    You are standing in a white marble hallway.  It is dry and clean.  Many portraits of demons and
+    devils in business suits adorn the walls on either side of you.  The hall continues to the south.  To
+    the west is a steel door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:286:room:28690
+      look: You see a marble hallway.
+    west:
+      to: tba:286:room:28679
+      look: You see a steel door.
+      door:
+        keywords: [door, steel]
+        kind: door
+        reset: closed
+
+"tba:286:room:28681":
+  name: Refrigerator Room
+  description: >
+    This room is filled with giant refrigerators.  All of them have no doors and their contents have
+    spilled onto the floor.  The only exit is east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28682
+      look: You see a room of ice.
+
+"tba:286:room:28682":
+  name: Ice Room
+  description: >
+    You are standing in a room of ice.  Icicles of every size hang from the ceiling.  Some shake with
+    every sound.  Your reflection off the ice walls seems to dance and wiggle as you move about.  To the
+    north and east you see more of the frozen room.  To the west you see a room full of refrigerators.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:285:room:28541
+      look: You see a room of ice.
+    east:
+      to: tba:286:room:28683
+      look: You see a room of ice.
+    west:
+      to: tba:286:room:28681
+      look: You see a room full of refrigerators.
+
+"tba:286:room:28683":
+  name: Ice Room
+  description: >
+    You are standing in a room of ice.  Icicles of every size hang from the ceiling.  Some shake with
+    every sound.  Your reflection off the ice walls seems to dance and wiggle as you move about.  To the
+    north and west you see more of the frozen room.  To the east you see a freezer door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28673
+      look: You see a room of ice.
+    east:
+      to: tba:286:room:28684
+      look: You see a freezer door.
+      door:
+        keywords: [door, freezer]
+        kind: door
+        reset: closed
+    west:
+      to: tba:286:room:28682
+      look: You see a room of ice.
+
+"tba:286:room:28684":
+  name: Meat Locker
+  description: >
+    You stand in a large meat locker.  Chunks of meat hang on the wall and larger corpses hang from
+    steel hooks.  Frozen blood and other unrecognizable pieces are littered on the floor.  The meat locker
+    continues to the north and east.  There is a freezer door to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28674
+      look: You see more of the Meat locker.
+    east:
+      to: tba:286:room:28685
+      look: You see more of the Meat locker.
+    west:
+      to: tba:286:room:28683
+      look: You see a freezer door.
+      door:
+        keywords: [door, freezer]
+        kind: door
+        reset: closed
+
+"tba:286:room:28685":
+  name: Meat Locker
+  description: >
+    Rows of beef and other meats hang from large steel hooks.  The meat locker continues to the north
+    and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28675
+      look: You see more of the Meat locker.
+    west:
+      to: tba:286:room:28684
+      look: You see more of the Meat locker.
+
+"tba:286:room:28686":
+  name: Penguin Room
+  description: >
+    This is what appears to be a replica of an iceberg.  Penguins waddle about the room pecking at many
+    poor souls half trapped in the icy floor.  You seem to be outside, as the walls are painted to seem
+    as if you are standing on a vast icy slab with nothing but ocean around you.  The iceberg continues
+    to the north and east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28676
+      look: You see lots and lots of ice.
+    east:
+      to: tba:286:room:28687
+      look: You see lots and lots of ice.
+
+"tba:286:room:28687":
+  name: Penguin Room
+  description: >
+    This is what appears to be a replica of an iceberg.  Penguins waddle about the room pecking at many
+    poor souls half trapped in the icy floor.  You seem to be outside, as the walls are painted to seem
+    as if you are standing on a vast icy slab with nothing but ocean around you.  The iceberg continues
+    to the north and west.  You can hear sounds of machinery to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28677
+      look: You see lots and lots of ice.
+    east:
+      to: tba:286:room:28688
+      look: You see a dark passageway.
+
+"tba:286:room:28688":
+  name: Ice-Creamery
+  description: >
+    You walk into part of an ice-cream factory.  Many different types of ice-cream and other deserts
+    are made by these machines.  Above one of the machines a sign reads, 'Eye Splean I Screamery'.  The
+    factory continues to the north and east.  You can hear sounds of penguins to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28678
+      look: You see lots of ice-cream machines.
+    east:
+      to: tba:286:room:28689
+      look: You see lots of ice-cream machines.
+    west:
+      to: tba:286:room:28687
+      look: You see a dark passageway.
+
+"tba:286:room:28689":
+  name: Ice-Creamery
+  description: >
+    You stand amidst dozens of ice-cream machines.  Workers rush about for machine to machine,
+    adjusting dials and checking gauges.  The factory continues to the north and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28679
+      look: You see lots of ice-cream machines.
+    west:
+      to: tba:286:room:28688
+      look: You see lots of ice-cream machines.
+
+"tba:286:room:28690":
+  name: Marble Hall
+  description: >
+    You are walking down a white marble hallway.  Large portraits of demons and devils adorn the walls
+    on either side of you.  As you look again you realize that they aren't demons and devils after all,
+    but lawyers...well ok...depends on your point of view...  The hallway continues to the north.  There
+    is an office to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:286:room:28680
+      look: You see a white marble hallway.
+    south:
+      to: tba:285:room:28500
+      look: You see an office.
+
+"tba:286:room:28691":
+  name: Records Hall
+  description: >
+    This Hallway is actually an enormous records library.  Millions of records are kept here detailing
+    the status of people's lives.  These are confidential files and only authorized personnel are allowed
+    to view them.  The records room continues to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28692
+      look: You see rows and rows of records.
+
+"tba:286:room:28692":
+  name: Records Hall
+  description: >
+    This Hallway is actually an enormous records library.  Millions of records are kept here detailing
+    the status of people's lives.  These are confidential files and only authorized personnel are allowed
+    to view them.  The records room continues to the east and west.  There is another hallway to the
+    south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28693
+      look: You see rows and rows of records.
+    south:
+      to: tba:285:room:28502
+      look: You see the Halls of Judgement.
+    west:
+      to: tba:286:room:28691
+      look: You see rows and rows of records.
+
+"tba:286:room:28693":
+  name: Records Hall
+  description: >
+    This Hallway is actually an enormous records library.  Millions of records are kept here detailing
+    the status of people's lives.  These are confidential files and only authorized personnel are allowed
+    to view them.  The records room continues to the east and west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28694
+      look: You see rows and rows of records.
+    west:
+      to: tba:286:room:28692
+      look: You see rows and rows of records.
+
+"tba:286:room:28694":
+  name: Records Hall
+  description: >
+    This Hallway is actually an enormous records library.  Millions of records are kept here detailing
+    the status of people's lives.  These are confidential files and only authorized personnel are allowed
+    to view them.  The records room continues to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28693
+      look: You see rows and rows of records.
+
+"tba:286:room:28695":
+  name: Small Altar
+  description: >
+    This is the private prayer room of the high priest.  A small altar stands against the west wall. 
+    Evil symbols and pictures are plastered everywhere. The new propaganda posters for Hell are posted
+    behind the altar.  You see a blackened hall to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28696
+      look: You see a blackened hallway.
+  extras:
+  - keywords: [poster]
+    text:
+      preformatted: |
+        Don't go to heaven....  They're boring....
+        
+        ***GO TO HELL!!!  ****
+        
+        You'll be damned if you don't  ;)
+
+"tba:286:room:28696":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  The hall continues to the south.  There is a stone door to the east and a prayer
+    room to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28697
+      look: You see a stone door.
+      door:
+        keywords: [door, stone]
+        kind: door
+        reset: closed
+    south:
+      to: tba:285:room:28506
+      look: You see a blackened hall.
+    west:
+      to: tba:286:room:28695
+      look: You see a prayer room.
+
+"tba:286:room:28697":
+  name: Office of the High Priest
+  description: >
+    This is the office of the High Priest of Hell.  A black stone desk stands before you.  The office
+    is lavishly furnished with gold, gems and many antiques. A large portrait of a demon's face is on the
+    wall behind his desk.  You see a stone door to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:286:room:28696
+      look: You see a stone door.
+      door:
+        keywords: [door, stone]
+        kind: door
+        reset: closed
+
+"tba:286:room:28698":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  The hall continues to the east and south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:286:room:28699
+      look: You see a blackened hall.
+    south:
+      to: tba:285:room:28508
+      look: You see a blackened hall.
+
+"tba:286:room:28699":
+  name: Blackened Hall
+  description: >
+    This hall looks as if it was burned out recently.  The walls are charred and smoking.  Ashes and
+    bits of burnt timber crunch under your feet as you walk down the hall.  A sign on the wall reads, 'No
+    Non-smoking Please'.  The hall continues to the west.  A glass door is to the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:285:room:28500
+      look: You see a glass door.
+      door:
+        keywords: [door, glass]
+        kind: door
+        reset: closed
+    west:
+      to: tba:286:room:28698
+      look: You see a blackened hall.

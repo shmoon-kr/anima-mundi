@@ -1,0 +1,1580 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 555.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:555:room:55500":
+  name: Ultima Description Room
+  description:
+  - >
+    A port of the Merc. Ultima area by Casret. It is mostly ported from a mostly finished port to
+    Smaug. The area starts down in room 55685 and uses zone 555 and 556.
+  - The area ranges through all levels.
+  - >
+    The two mazes (Desert and Whirlpool) may have to be adjusted. The maze progs of 130 (Welcor's Mist
+    Maze) are much better but seemed a bit too strong for the area.
+  - Edits made for tbaMUD by Parna.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:556:room:55685
+
+"tba:555:room:55501":
+  name: New Magincia Road
+  description: >
+    This is the main road of New Magincia.  To the south the dirt path continues and a huge gate lies
+    to the north.
+  sector: city
+  exits:
+    north:
+      to: tba:556:room:55685
+      look: There is a huge gate.
+      door:
+        keywords: [gate, "n", north]
+        kind: door
+    south:
+      to: tba:555:room:55502
+      look: A path leads to the south.
+
+"tba:555:room:55502":
+  name: New Magincia Road
+  description: The path continues to the south and the north.  You see the tracks of sheep here.
+  sector: city
+  exits:
+    north:
+      to: tba:555:room:55501
+      look: The path continues to the north.
+    south:
+      to: tba:555:room:55503
+      look: There is a shimmering light to the south.
+
+"tba:555:room:55503":
+  name: The New Magincia Moongate
+  description: >
+    You see another moongate here, exactly between the crossing of two paths. You can see dim shapes
+    through it.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:555:room:55502
+      look: The path continues to the north.
+    east:
+      to: tba:555:room:55513
+      look: A small path leads east.
+    south:
+      to: tba:555:room:55504
+      look: The path continues south.
+    west:
+      to: tba:555:room:55508
+      look: A small path leads west.
+    up:
+      to: tba:555:room:55516
+      look: Through the translucent moongate you think you see... books?
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55508
+        reset: locked
+
+"tba:555:room:55504":
+  name: New Magincia Road
+  description: >
+    The path continues to the south and north.  On the east there seems to be administrative building.
+  sector: city
+  exits:
+    north:
+      to: tba:555:room:55503
+      look: There is a shimmering light.
+    east:
+      to: tba:555:room:55514
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:555:room:55505
+
+"tba:555:room:55505":
+  name: New Magincia Road
+  description: >
+    The dirt road path ends here in a grove.  You can continue back to the north, and there is an old
+    abandoned house to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:555:room:55504
+    west:
+      to: tba:555:room:55510
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:555:room:55506":
+  name: Stables
+  description: >
+    These are the stables for the shepherd.  There are many fine horses here. You can return to the
+    barn to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55507
+      look: The front part of the barn is to the south.
+
+"tba:555:room:55507":
+  name: Barn
+  description: >
+    This is your basic barn, with hay and stables to the north.  Something on the floor seems to be
+    attracting insects.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55506
+      look: You hear neighing, intermixed with a strange talking.
+    south:
+      to: tba:555:room:55508
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: closed
+
+"tba:555:room:55508":
+  name: Humility Lane
+  description: >
+    This is an even smaller dirt path that crosses New Maginica Road.  To your north there is a barn,
+    and to the south you see a condemned building, though you cannot enter this way.  West is blocked off
+    a herd of sheep.
+  sector: city
+  exits:
+    north:
+      to: tba:555:room:55507
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: closed
+    east:
+      to: tba:555:room:55503
+      look: There is a shimmering light to the east.
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:555:room:55509":
+  name: Condemned House
+  description: >
+    This place is wrecked, the rafters have fallen, and light shines through a large hole in the roof. 
+    You wonder what kinds of animals have taken home here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55510
+
+"tba:555:room:55510":
+  name: Condemned House
+  description: >
+    As you walk into the house, you realize that this house must not have been reconstructed yet from
+    the ruin of Old Magincia.  Faint intimations of foolish pride still can be seen through the wreckage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55509
+    east:
+      to: tba:555:room:55505
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+
+"tba:555:room:55511":
+  name: Attic
+  description: >
+    The attic is dark, and you smell some vestiges of bat guano.  Is that the sound of wings flapping?
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:555:room:55512
+      look: The rest of the house is down.
+      door:
+        keywords: [trapdoor, d, down]
+        kind: door
+        reset: closed
+
+"tba:555:room:55512":
+  name: House
+  description: >
+    This is a small humble house.  You do not see much here, though there are some faint squeakings.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55513
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: closed
+    up:
+      to: tba:555:room:55511
+      look: You see the faint outline of a trapdoor.
+      door:
+        keywords: [trapdoor, u, up]
+        kind: door
+        reset: closed
+
+"tba:555:room:55513":
+  name: Humility Lane
+  description: >
+    This is a very small path.  It ends here with a fence to the east.  To the west is the Moongate,
+    and to the north there is a small house.
+  sector: field
+  exits:
+    north:
+      to: tba:555:room:55512
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: closed
+    west:
+      to: tba:555:room:55503
+      door:
+        keywords: [door, w, west]
+        kind: door
+
+"tba:555:room:55514":
+  name: Entrance to the Office
+  description: >
+    Though this room is small, it acts as a meeting place for Katrina and any other person that she has
+    to meet.  You can exit to the west or enter an office to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55515
+    west:
+      to: tba:555:room:55504
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:555:room:55515":
+  name: Katrina's Office
+  description: >
+    This is office is very sparse...  And humble.  There are no decorations, in fact the room is bare
+    except for a simple desk and its chair.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55514
+
+"tba:555:room:55516":
+  name: Library
+  description: >
+    This is an amazing HUGE library.  Its musty smell, and the collapsed bookshelf to your north, tell
+    you that it also must be ancient.  In any case, you can't get out of the Library (remember the
+    collapsed shelves?  ) so just pick a book and start reading.  The stacks continue to the east and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55517
+    west:
+      to: tba:555:room:55536
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      These shelves deal with the fascinating letter A.  Among the more interesting books are,
+      "Andersen's tips on Area Building."  "The Art of Spamming" and "Axes and You."
+
+"tba:555:room:55517":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55518
+    west:
+      to: tba:555:room:55516
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      These books are about the letters B and C.  Some titles are: 'Boom Boxes: How large will they
+      become?'  And 'Cutlery: The fine points of Killing' and of course the classic, 'Casret's Titles.'
+
+"tba:555:room:55518":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55519
+    west:
+      to: tba:555:room:55517
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      This shelf has books dealing with the 'D's'.  'Dracula, Blood Sucker or Beavis fan?'  Seems to be
+      the most interesting book here.
+
+"tba:555:room:55519":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55520
+    west:
+      to: tba:555:room:55518
+  extras:
+  - keywords: [book, books, shelves]
+    text: The 'E' section is here.  One book, "Howard Stern" doesn't seem to belong here.
+
+"tba:555:room:55520":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55519
+    west:
+      to: tba:555:room:55521
+      look: You see a big desk and a man.
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      You find 'Fax Fun' and 'Farts: How to Blame it on the Dog.'  In this section of the library.
+
+"tba:555:room:55521":
+  name: Library Office
+  description: >
+    A big desk dominates this room.  All books must go through this office before getting taken out. 
+    Through this office, and through this man.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55520
+    west:
+      to: tba:555:room:55522
+
+"tba:555:room:55522":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55521
+      look: You see a huge desk and a man.
+    west:
+      to: tba:555:room:55523
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      The books here start with 'G'.  'Grating Cheese with Julia Childs' and 'Garamond: What kind of font
+      is this anyway?'  Lie here.
+
+"tba:555:room:55523":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55522
+    south:
+      to: tba:555:room:55524
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      The books here comprise 'H' and 'I'.  'Hiya: The Women who Use it, and the Men who Use the Women'
+      and 'Icaza Loves Ya' are here in gaudy and annoying covers.
+
+"tba:555:room:55524":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55523
+    east:
+      to: tba:555:room:55525
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      These books start with the letter 'J'.  'Jokey Smurf's Greatest Explosions' and 'The Judge takes on
+      New York' seem to be the most popular books.
+
+"tba:555:room:55525":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55526
+    west:
+      to: tba:555:room:55524
+  extras:
+  - keywords: [book, books, shelves]
+    text: Hmmm this is the 'K' section, and 'Kicking Vs.  Bashing' is here.
+
+"tba:555:room:55526":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55527
+    west:
+      to: tba:555:room:55525
+  extras:
+  - keywords: [book, books, shelves]
+    text: A book titled, 'Lick me, Lick you' is here along with 'Libraries for Lovers'.
+
+"tba:555:room:55527":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55529
+    west:
+      to: tba:555:room:55526
+  extras:
+  - keywords: [book, books, shelves]
+    text: "'Mahatma Teachs French' and 'MC Escher: The Rap Star and Paradoxical Artist'."
+
+"tba:555:room:55528":
+  name: The Library Moongate
+  description: >
+    A blue moongate is here, lighting up the storage room.  An empty shelf is against the north wall,
+    probably awaiting books.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:555:room:55532
+      door:
+        keywords: [shelf]
+        kind: door
+        reset: closed
+    up:
+      to: tba:555:room:55537
+      look: Through the moongate, there is a party.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55509
+        reset: locked
+  extras:
+  - keywords: [shelf]
+    text: The shelf looks a bit odd.  It's exactly the size of a door.
+
+"tba:555:room:55529":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55527
+    west:
+      to: tba:555:room:55530
+  extras:
+  - keywords: [book, books, shelves]
+    text: Hmmm...  This is the 'N' section...  But 'Nothing' seems to be here.
+
+"tba:555:room:55530":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55529
+    west:
+      to: tba:555:room:55531
+  extras:
+  - keywords: [book, books, shelves]
+    text: >
+      This is the 'OP' section.  You hear moaning behind those stacks and, yup, there there on the floor
+      there is another P.
+
+"tba:555:room:55531":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55530
+    west:
+      to: tba:555:room:55532
+  extras:
+  - keywords: [book, books, shelves]
+    text: "'Quai Mackdaddy Monk' and 'Rhinoplasty, or The Inebriation of Wild Animals' are here."
+
+"tba:555:room:55532":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55531
+    west:
+      to: tba:555:room:55533
+  extras:
+  - keywords: [undefined]
+    text: "'Secret Door: The Shelf' is on the shelf."
+  - keywords: [shelf, shelves, bookshelves, bookcases]
+    text: The shelf to the south looks a bit strange.  It might be possible to open the shelf.
+
+"tba:555:room:55533":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55534
+    east:
+      to: tba:555:room:55532
+  extras:
+  - keywords: [book, books, shelves]
+    text: "'Textile Farming' and 'Tempting Miss Daisy' is here."
+
+"tba:555:room:55534":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55535
+      look: There is an odd chittering to the north.
+    south:
+      to: tba:555:room:55533
+  extras:
+  - keywords: [book, books, shelves]
+    text: "'Ultima: The Building of an Area' and 'Vulva Void' are here."
+
+"tba:555:room:55535":
+  name: Web
+  description: >
+    There is a Huge Web sitting here, stretching from shelf to shelf.  And stupid you wandered into it.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55536
+    south:
+      to: tba:555:room:55534
+
+"tba:555:room:55536":
+  name: Library
+  description: >
+    The Library continues here, with exits to the east and west.  There should be some interesting
+    books here somewhere.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55516
+    south:
+      to: tba:555:room:55535
+      look: There is a strange chittering noise to the south.
+  extras:
+  - keywords: [book, books, shelves]
+    text: "\"Yaz: Grooming Tips\" is here."
+
+"tba:555:room:55537":
+  name: The Center of the Tavern
+  description: >
+    The moongate has opened inside of a huge party.  There are bards and other townsmen.  This must be
+    Britain.  There are people everywhere carrying their drinks and singing is all around.  The party
+    continues to the north, east, south and west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55539
+    east:
+      to: tba:555:room:55542
+    south:
+      to: tba:555:room:55544
+    west:
+      to: tba:555:room:55541
+
+"tba:555:room:55538":
+  name: The Northwest Corner of the Tavern
+  description: >
+    This is where the tavern entrance would be if it wasn't packed with humans trying to get in or get
+    out.  There is no chance of you leaving the tavern tonight.  You can move to the part to the east and
+    the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55539
+    south:
+      to: tba:555:room:55541
+
+"tba:555:room:55539":
+  name: The North Wall of the Tavern
+  description: >
+    Party-goers mingle here in front of the bar.  They seem to be having a great time and wish for you
+    to join them.  You can continue on to the south, east or north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55540
+    south:
+      to: tba:555:room:55537
+    west:
+      to: tba:555:room:55538
+
+"tba:555:room:55540":
+  name: The Northeast corner of the Tavern
+  description: >
+    Along this east wall of the tavern are all the tables for the meals. Outside the windows you see
+    cobblestone streets.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55542
+    west:
+      to: tba:555:room:55539
+
+"tba:555:room:55541":
+  name: The West Wall of the Tavern
+  description: The band has set up here, against the west wall.  Many people dance to the music.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55538
+    east:
+      to: tba:555:room:55537
+    south:
+      to: tba:555:room:55543
+
+"tba:555:room:55542":
+  name: The East Wall of the Tavern
+  description: >
+    The tables are set up here.  You see many couples and group just sitting and talking.  They have
+    drinks on their tables and smiles on their faces.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55540
+    south:
+      to: tba:555:room:55545
+    west:
+      to: tba:555:room:55537
+
+"tba:555:room:55543":
+  name: The Southwest Corner of the Tavern
+  description: >
+    There are many people here, but even through their scent, there seems to be a slight stench.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55541
+    east:
+      to: tba:555:room:55544
+    down:
+      to: tba:555:room:55546
+      door:
+        keywords: [cellar]
+        kind: door
+        reset: closed
+
+"tba:555:room:55544":
+  name: The South Wall of the Tavern
+  description: >
+    The South Wall windows overlook the sea.  There seems to be a island far to the south, and boats
+    just floating in the ports.  The party-goers just wander around here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55537
+    east:
+      to: tba:555:room:55545
+    west:
+      to: tba:555:room:55543
+
+"tba:555:room:55545":
+  name: The Southeast Corner of the Tavern
+  description: >
+    There are tables here that continue to the north.  The party-goers just mingle and hit on each
+    other.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55542
+    west:
+      to: tba:555:room:55544
+
+"tba:555:room:55546":
+  name: Cellar
+  description: The stairway seems to lie down into the cellar.  It stinks of wine, beer and snakes here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55547
+    south:
+      to: tba:555:room:55549
+    up:
+      to: tba:555:room:55543
+      door:
+        keywords: [stairs]
+        kind: door
+        reset: closed
+
+"tba:555:room:55547":
+  name: Cellar
+  description: >
+    There are huge wine casks against this wall.  Most seem intact though one is eaten through, and the
+    inside seems to have a gooey green substance.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55548
+      look: There is the sound of singing in that corner.
+    south:
+      to: tba:555:room:55550
+      look: There is a shimmering light to the south.
+    west:
+      to: tba:555:room:55546
+
+"tba:555:room:55548":
+  name: Cellar
+  description: >
+    There is a chair in the corner and plenty of empty bottles.  There is also the evidence of the
+    green substance here as well.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55551
+    west:
+      to: tba:555:room:55547
+
+"tba:555:room:55549":
+  name: Cellar
+  description: >
+    There is a slime trail here.  There seems to be much broken glass down here, some if it covered
+    with slime.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55546
+    east:
+      to: tba:555:room:55550
+      look: There is a shimmering to the east.
+    south:
+      to: tba:555:room:55552
+
+"tba:555:room:55550":
+  name: The Britain Moongate
+  description: >
+    The place around the moongate, as always, seems clean and neat.  The blue light of the moongate has
+    become a comforting sight to you.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:555:room:55547
+    east:
+      to: tba:555:room:55551
+    south:
+      to: tba:555:room:55553
+    west:
+      to: tba:555:room:55549
+    up:
+      to: tba:555:room:55556
+      look: Through the moongate there is a large courtroom.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55510
+        reset: locked
+
+"tba:555:room:55551":
+  name: Cellar
+  description: >
+    The walls are leaking here.  You hear the bang of feet and the shifting of chairs from above.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55548
+    south:
+      to: tba:555:room:55554
+    west:
+      to: tba:555:room:55550
+      look: There is a shimmering to the west.
+
+"tba:555:room:55552":
+  name: Cellar
+  description: >
+    The damp walls of this corner bother you...  Not because it's damp.  Because it's not water!
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55549
+    east:
+      to: tba:555:room:55553
+
+"tba:555:room:55553":
+  name: Cellar
+  description: The smells of this cellar are overpowering.  There doesn't seem to be much ventilation.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55550
+      look: There is a shimmering light.
+    east:
+      to: tba:555:room:55554
+    west:
+      to: tba:555:room:55552
+
+"tba:555:room:55554":
+  name: Cellar
+  description: >
+    This corner of the cellar is the ugliest.  From the smell in the corner it is obvious where the
+    Drunks clear their guts.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55551
+    west:
+      to: tba:555:room:55553
+
+"tba:555:room:55555":
+  name: The Yew Entrance
+  description: >
+    To the south you see a large courthouse and a small part of Yew.  Most of Yew is secretly hidden in
+    the branches of the forest.  To the north you see one of the most dangerous parts of this same
+    forest.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:555:room:55570
+    south:
+      to: tba:555:room:55556
+
+"tba:555:room:55556":
+  name: In Front of the Courthouse
+  description: >
+    The immense Courthouse faces this street.  All of Britania's crime comes here to be tried.  There
+    is little crime anymore though, after the great enlightenment.  There is also a pub to the west.
+  sector: city
+  exits:
+    north:
+      to: tba:555:room:55555
+    east:
+      to: tba:555:room:55557
+    south:
+      to: tba:556:room:55685
+      look: You can see dim shapes behind the moongate.
+      door:
+        keywords: [moongate]
+        kind: door
+        reset: closed
+    west:
+      to: tba:555:room:55562
+
+"tba:555:room:55557":
+  name: Justice Row
+  description: >
+    The cobblestone road leads into a clearing of the woods to the east and to a pub to the west.  To
+    your south you see a great Courthouse, but its entrance is on the east.
+  sector: city
+  exits:
+    east:
+      to: tba:555:room:55558
+    west:
+      to: tba:555:room:55556
+
+"tba:555:room:55558":
+  name: Under the Stone Arch
+  description: >
+    You stand under a large stone arch.  To your east there is a bonfire. Around the bonfire are these
+    same stone arches; they form a circle around the clearing.
+  sector: forest
+  exits:
+    east:
+      to: tba:555:room:55559
+      look: There are chanting druids and a large bonfire to the east.
+    west:
+      to: tba:555:room:55557
+
+"tba:555:room:55559":
+  name: Bonfire
+  description: >
+    The heat from the bonfire warms you even at the fringe of the ceremony. Here, Druids form a circle
+    and chant the sacred mantra.
+  sector: forest
+  exits:
+    west:
+      to: tba:555:room:55558
+
+"tba:555:room:55560":
+  name: Pub
+  description: >
+    You are in a happy little pub.  There are many little tables and citizens are talking here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55561
+
+"tba:555:room:55561":
+  name: Justice Row
+  description: There are some citizens strolling along the road.  There is a Pub to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:555:room:55562
+    west:
+      to: tba:555:room:55560
+
+"tba:555:room:55562":
+  name: Justice Row
+  description: >
+    Perhaps the only real street in a city where all the citizens are nestled in trees, it leads east
+    to west.
+  sector: city
+  exits:
+    east:
+      to: tba:555:room:55556
+    west:
+      to: tba:555:room:55561
+
+"tba:555:room:55563":
+  name: The Audience Room
+  description: >
+    This is where people would sit to see the cases and wait for the Judge.  To the North you see the
+    actual Bench.  All around are the pew-like seats.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55556
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: closed
+    south:
+      to: tba:555:room:55564
+
+"tba:555:room:55564":
+  name: The Bench
+  description: >
+    The Bench is one of the most imposing things you've seen.  You have to crane your neck to even
+    glimpse at the Judge.  There are no lawyers, there is only Justice.  To the east and west are the prisons.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55563
+    east:
+      to: tba:555:room:55565
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+    west:
+      to: tba:555:room:55566
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:555:room:55565":
+  name: Prison
+  description: >
+    To the north you see a cell.  Locks are unnecessary, because the prisoners are kept in their cells
+    by magic.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55568
+      look: The prisoner looks at you and growls.
+    west:
+      to: tba:555:room:55564
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:555:room:55566":
+  name: Prison
+  description: >
+    To the north you see a cell.  Locks are unnecessary, because the prisoners are kept in their cells
+    by magic.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:555:room:55567
+      look: The prisoner is a small man.
+    east:
+      to: tba:555:room:55564
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+
+"tba:555:room:55567":
+  name: Prison Cell
+  description: >
+    This is a cell where they keep dangerous prisoners.  You hope the magic barriers don't give out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55566
+
+"tba:555:room:55568":
+  name: Prison Cell
+  description: >
+    This is a cell where they keep dangerous prisoners.  You hope the magic barriers don't give out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55565
+
+"tba:555:room:55569":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55570
+      look: You see trees.
+    east:
+      to: tba:555:room:55579
+      look: You see trees.
+    south:
+      to: tba:555:room:55573
+      look: You see trees.
+    west:
+      to: tba:555:room:55578
+      look: You see trees.
+
+"tba:555:room:55570":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55577
+      look: You see trees.
+    east:
+      to: tba:555:room:55571
+      look: You see trees.
+    south:
+      to: tba:555:room:55555
+      look: You see the entrance to Yew.
+    west:
+      to: tba:555:room:55569
+      look: You see trees.
+
+"tba:555:room:55571":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55572
+      look: You see trees.
+    east:
+      to: tba:555:room:55581
+      look: You see trees.
+    south:
+      to: tba:555:room:55570
+      look: You see trees.
+    west:
+      to: tba:555:room:55576
+      look: You see trees.
+
+"tba:555:room:55572":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55575
+      look: You see trees.
+    east:
+      to: tba:555:room:55573
+      look: You see trees.
+    south:
+      to: tba:555:room:55582
+      look: You see trees.
+    west:
+      to: tba:555:room:55571
+      look: You see trees.
+
+"tba:555:room:55573":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55574
+      look: You see trees.
+    east:
+      to: tba:555:room:55569
+      look: You see trees.
+    south:
+      to: tba:555:room:55583
+      look: You see trees.
+    west:
+      to: tba:555:room:55572
+      look: You see trees.
+
+"tba:555:room:55574":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55583
+      look: You see trees.
+    east:
+      to: tba:555:room:55578
+      look: You see trees.
+    south:
+      to: tba:555:room:55573
+      look: You see trees.
+    west:
+      to: tba:555:room:55575
+      look: You see trees.
+
+"tba:555:room:55575":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55582
+      look: You see trees.
+    east:
+      to: tba:555:room:55574
+      look: You see trees.
+    south:
+      to: tba:555:room:55572
+      look: You see trees.
+    west:
+      to: tba:555:room:55576
+      look: You see trees.
+
+"tba:555:room:55576":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55581
+      look: You see trees.
+    east:
+      to: tba:555:room:55575
+      look: You see trees.
+    south:
+      to: tba:555:room:55571
+      look: You see trees.
+    west:
+      to: tba:555:room:55577
+      look: You see trees.
+
+"tba:555:room:55577":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55580
+      look: You see trees.
+    east:
+      to: tba:555:room:55576
+      look: You see trees.
+    south:
+      to: tba:555:room:55570
+      look: You see trees.
+    west:
+      to: tba:555:room:55578
+      look: You see trees.
+
+"tba:555:room:55578":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55579
+      look: You see trees.
+    east:
+      to: tba:555:room:55577
+      look: You see trees.
+    south:
+      to: tba:555:room:55569
+      look: You see trees.
+    west:
+      to: tba:555:room:55574
+      look: You see trees.
+
+"tba:555:room:55579":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55569
+      look: You see trees.
+    east:
+      to: tba:555:room:55580
+      look: You see trees.
+    south:
+      to: tba:555:room:55578
+      look: You see trees.
+    west:
+      to: tba:555:room:55583
+      look: You see trees.
+
+"tba:555:room:55580":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55584
+      look: You see a shimmering light.
+    east:
+      to: tba:555:room:55581
+      look: You see trees.
+    south:
+      to: tba:555:room:55577
+      look: You see trees.
+    west:
+      to: tba:555:room:55579
+      look: You see trees.
+
+"tba:555:room:55581":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55571
+      look: You see trees.
+    east:
+      to: tba:555:room:55582
+      look: You see trees.
+    south:
+      to: tba:555:room:55576
+      look: You see trees.
+    west:
+      to: tba:555:room:55580
+      look: You see trees.
+
+"tba:555:room:55582":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55572
+      look: You see trees.
+    east:
+      to: tba:555:room:55583
+      look: You see trees.
+    south:
+      to: tba:555:room:55575
+      look: You see trees.
+    west:
+      to: tba:555:room:55581
+      look: You see trees.
+
+"tba:555:room:55583":
+  name: Yew Forest
+  description: This is the Yew Forest.  The trees look all the same.  Consequently you are lost.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:555:room:55573
+      look: You see trees.
+    east:
+      to: tba:555:room:55579
+      look: You see trees.
+    south:
+      to: tba:555:room:55574
+      look: You see trees.
+    west:
+      to: tba:555:room:55582
+      look: You see trees.
+
+"tba:555:room:55584":
+  name: The Yew Moongate
+  description: There is your way out, through the blue moongate.  You can see dimly through it.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:555:room:55580
+      look: You see trees.
+    up:
+      to: tba:555:room:55585
+      look: Through the moongate you see a cave opening.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55511
+        reset: locked
+
+"tba:555:room:55585":
+  name: Dungeon Entrance
+  description: >
+    There is a huge maw of an entrance to one of the terrible Dungeons.  After the Age of Enlightenment
+    only 8 sources of evil still survive in the world. These are the eight Dungeons.  Now they are being
+    cleaned out.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:555:room:55587
+      look: A cold draft pours out of the dungeon.
+
+"tba:555:room:55586":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55590
+
+"tba:555:room:55587":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55591
+    south:
+      to: tba:555:room:55585
+
+"tba:555:room:55588":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55592
+    east:
+      to: tba:555:room:55589
+
+"tba:555:room:55589":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:555:room:55588
+
+"tba:555:room:55590":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55594
+    east:
+      to: tba:555:room:55591
+    south:
+      to: tba:555:room:55586
+
+"tba:555:room:55591":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55595
+    east:
+      to: tba:555:room:55592
+    south:
+      to: tba:555:room:55587
+    west:
+      to: tba:555:room:55590
+
+"tba:555:room:55592":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:555:room:55593
+    south:
+      to: tba:555:room:55588
+    west:
+      to: tba:555:room:55591
+
+"tba:555:room:55593":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55597
+    west:
+      to: tba:555:room:55592
+
+"tba:555:room:55594":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55598
+    south:
+      to: tba:555:room:55590
+
+"tba:555:room:55595":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:555:room:55599
+    east:
+      to: tba:555:room:55596
+    south:
+      to: tba:555:room:55591
+
+"tba:555:room:55596":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:556:room:55600
+    west:
+      to: tba:555:room:55595
+
+"tba:555:room:55597":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:555:room:55593
+
+"tba:555:room:55598":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:555:room:55594
+
+"tba:555:room:55599":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:555:room:55595

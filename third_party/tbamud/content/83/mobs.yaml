@@ -1,0 +1,357 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 83.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:83:mob:8301":
+  keywords: [small, fish]
+  short: a small fish
+  long: A small fish swims by.
+  description: >
+    These small fish tend to school together, in order to improve their chances of survival against
+    larger predators.  Their bright colors disorient the foe, and their numbers ensure that the majority
+    survive.
+  level: 5
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  affects: [waterwalk]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: whip
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8302":
+  keywords: [large, fish]
+  short: a large fish
+  long: A large fish swims by.
+  description: >
+    These large fish are more solitary than the small ones.  They have less to fear in the sea, and
+    thus concentrate most of their efforts on hunting smaller fish.
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  affects: [waterwalk]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: whip
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8303":
+  keywords: [eel, moray, hungry]
+  short: a moray eel
+  long: A hungry moray eel swims by.
+  description: >
+    This long, slender creature is fond of small caves and passages in the rocks on the ocean floor. 
+    They scavenge for food, but will sometimes attack other creatures when hungry.
+  level: 15
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, aggressive, stay_zone, wimpy]
+  affects: [waterwalk]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8304":
+  keywords: [shark, great, white]
+  short: a Great White Shark
+  long: A Great White Shark swims by, watching you very closely...
+  description: >
+    This sleek, gray creature is one of nature's most deadly predators.  They feed on almost every
+    creature in the sea, including you!
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  affects: [waterwalk]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8305":
+  keywords: [ship, pirate, Glumgold]
+  short: a Pirate's Ship
+  long: A huge ship flying a black flag sails by here.
+  description:
+  - >
+    This large vessel appears to be very heavily armed.  The sailors don't exactly seem to be friendly
+    as they sneer at you from the deck.  A large, black flag bearing a skull and crossbones indicates
+    that these men are pirates.
+  - >
+    Pirates are not usually fond of prisoners, but sometimes exceptions are made; If they seem too
+    tough for you, say or just type @oSURRENDER@n at the prompt.
+  level: 30
+  sex: neutral
+  alignment: -999
+  flags: [scavenger, aggressive, stay_zone]
+  affects: [waterwalk, no_track]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: blast
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8306":
+  keywords: [pirate, man, navigator, sailor]
+  short: the navigator
+  long: A grizzly pirate stands here, steering the boat.
+  description: >
+    Long exposure to the sea air has given this man's face and hair a light dusting of salt.  His tired
+    eyes are focused intently on the horizon, searching for new lands or other ships to loot.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8307":
+  keywords: [boy, cabin, man]
+  short: the cabin boy
+  long: The cabin boy stands here, wearily swabbing the deck.
+  description: >
+    The cabin boy has dreamed of being a pirate since they plundered his village when he was a child. 
+    Hey, if you can't beat them, join them!
+  level: 5
+  sex: male
+  alignment: 200
+  flags: [scavenger, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: punch
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8308":
+  keywords: [pirate, jailer, guard]
+  short: a pirate guard
+  long: A pirate stands here, guarding the brig.
+  description: >
+    If there is one thing you can always count on, it's pirate's greed.  This man is paid to make sure
+    prisoners stay in their cell, but everyone has a price...  The going rate for a set of keys is 100
+    gold down here in the brig.
+  level: 10
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8309":
+  keywords: [pirate, drunk, man]
+  short: a drunken pirate
+  long: A drunken pirate sits here, taking a swig of booze.
+  description: >
+    This pirate is quite enjoying his time off duty.  Right now he's so plastered he can barely move,
+    so he'll be stuck in that chair for a while.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 150
+  exp: 22500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:83:mob:8310":
+  keywords: [drunk, pirate, man]
+  short: a drunken pirate
+  long: A drunken pirate sits here, taking a swig of booze.
+  description: >
+    This pirate is quite enjoying his time off duty.  Right now he's so plastered he can barely move,
+    so he'll be stuck in that chair for a while.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: punch
+  gold: 150
+  exp: 22500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:83:mob:8311":
+  keywords: [Glumgold, pirate]
+  short: Glumgold the Pirate
+  long: "@o@cGlumgold the Pirate@n@y, Captain of this Vessel, stands here.@n"
+  description: >
+    He looks very mean!  He's missing an eye, a hand, and a leg, each replaced some way or another.
+  level: 30
+  sex: male
+  alignment: -600
+  flags: [sentinel, helper, no_summon]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: claw
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8313":
+  keywords: [Polly, parrot]
+  short: Polly the Parrot
+  long: "@yA @o@gb@cr@ri@gg@ch@rt@cl@gy @cc@ro@gl@co@rr@ge@cd@n@y parrot is perched here.@n"
+  description: >
+    This parrot, Polly, comes from a far away tropical land that these pirates have visited.  Parrots
+    are believed to have the ability to hold a conversation, but in reality they only repeat simple
+    phrases that they've heard others speak.
+  level: 5
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8319":
+  keywords: [crab, hermit, red]
+  short: a small crab
+  long: A small crab is here, scurrying about in the sand.
+  description: It's a small, red, crab.  He looks quite content just sitting here on the beach.
+  level: 1
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:83:mob:8397":
+  keywords: [tai, ho, taiho, fisherman]
+  short: Tai Ho
+  long: Tai Ho, a famous fisherman, sits on the side of the boat waiting for a fish to bite his line.
+  description: >
+    Tai Ho is a fisherman from a far away town called Kaku, in the Toran Republic.  He and his brother
+    Yam Koo travel far and wide searching for good spots to fish and good people to gamble with.
+  level: 20
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 200
+  exp: 40000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:83:mob:8398":
+  keywords: [Yam, Koo]
+  short: Yam Koo
+  long: Yam Koo, a fisherman, stands here.
+  description: >
+    Yam Koo is the brother of Tai Ho.  The two come from the town of Kaku in the Toran Republic in
+    search of good times and good fishing.
+  level: 20
+  sex: male
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing

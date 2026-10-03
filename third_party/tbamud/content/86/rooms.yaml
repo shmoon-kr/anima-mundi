@@ -1,0 +1,900 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 86.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:86:room:8600":
+  name: Destiny's Zone Description Room
+  description:
+    preformatted: |2
+         Builder   : Destiny
+      Zone         : 86 Duke Kalithorn's Keep
+      Began        :
+      Player Level : 3-14
+      Rooms        : 45
+      Mobs         : 14
+      Objects      : 14
+      Shops        : 0
+      Triggers     : 0
+      Plot         : This will be the Keep of Grand Duke Kalithorn (it can be renamed
+         to fit into the mud..it was just something I came up with) a mercenary
+         turned politician/good guy after his wife was kidnapped by bandits. The Duke
+         swore that he would not rest until his wife was found and the bandits
+         punished.so he is 'haunting' (for lack of a better word) the Keep.
+      Links        : 60s, 01w
+      Notes        : Within a forest or perhaps a little set back from a main road.
+         Neutral to slightly evil. Most of the mobs would be rats, bats and sprites
+         which would be the evil aligned mobs. Kalithorn and his undead guards and
+         sentinels would be of neutral align.
+      Zone 86 was linked to the following zones:
+      34 Arctic Zone          at  8601 (west ) --->  4396
+  sector: inside
+  flags: [private]
+
+"tba:86:room:8601":
+  name: A Dirt Road
+  description: >
+    The trees part just north revealing an even smaller dirt road.  The road casually winds up the
+    steep hill to a dark appearing Keep atop the hill. Ravens call from the nearby trees and smoke can be
+    seen to the north.  While a small muddy trail leads off to the west.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8602
+      look: The trees slowly inch back, revealing more of the road to the north.
+    south:
+      to: tba:86:room:8659
+  extras:
+  - keywords: [smoke]
+    text: >
+      Charcoal gray smoke rises straight and true from some chimney set deep into the heart of the Keep.
+
+"tba:86:room:8602":
+  name: A Dirt Road
+  description: >
+    The small dirt path ends at the rusty remains of a once gilded fence.  The gates are half buried in
+    the dust of the path and small vines have overtaken the spokes.  The vines have twined themselves
+    tightly but do not hinder movement to the north.  The path also curves to the east and fades as it
+    slopes down the steep hill.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8603
+      look: This old rusted wrought iron fence lays open to the north.
+      door:
+        keywords: [door, weathered, wooden]
+        kind: door
+    east:
+      to: tba:86:room:8612
+      look: This small dirth path curves gently down a semi-steep hill to some sort of clearing.
+    south:
+      to: tba:86:room:8601
+      look: A dirt road twists off into the woods.
+  extras:
+  - keywords: [fence, gate]
+    text: Old and weathered this wrought iron fence and its gate have seen many'a traveller.
+
+"tba:86:room:8603":
+  name: Before the Keep
+  description: >
+    The rusty gates give way to a dark, imposing keep.  The weathered wooden doors hang on their
+    hinges, neither inviting nor imparing entrance.  Thick dust lays everywhere and spiderwebs fill the corners
+    dampening the sounds that come from deep within the keep.
+  sector: field
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8604
+      look: This old weather beaten wooden door barely keeps the weather and critters out.
+      door:
+        keywords: [wooden, weathered, door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:86:room:8602
+      look: A wrought iron fence leads out to a dirt path.
+
+"tba:86:room:8604":
+  name: The Foyer
+  description: >
+    Stepping into the foyer the smell of decay and dust is evident.  Pictures half hang on the walls
+    and the curtains of the once grand windows lay in shambles.  Broken glass and the dusty remains of a
+    pair of french doors are to the east.  The hallway continues on to the north.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8605
+      look: A small hallway continues on to the north.
+    east:
+      to: tba:86:room:8614
+      look: >
+        These french doors are rusty and barely holding themselves up.  They hang langerously from their
+        hinges and groan with each passing breeze.
+      door:
+        keywords: [french, door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:86:room:8603
+      look: >
+        Weather beaten and cracked this door barely blocks the critters that skitter about here from
+        getting inside.
+      door:
+        keywords: [wooden, door, weathered]
+        kind: door
+        reset: closed
+
+"tba:86:room:8605":
+  name: Short Hallway
+  description: >
+    This narrow hallway passes between the foyer and the once beautiful gentle curving stairway to the
+    north.  Cobwebs and the chittering of the mice fill the hallway along with a nasty draft from the
+    foyer.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8606
+    south:
+      to: tba:86:room:8604
+
+"tba:86:room:8606":
+  name: Stairway
+  description: >
+    A magnificent stairway leads upwards into the darkness of the keep here. The marble is scratched
+    and pockmarked with age but the stairs seem relatively safe.  The walls along the staircase are
+    unevenly covered with gaudy striped wallpaper and the bannister is unsteady.  The hallway runs south from
+    here and a large dining room is to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:86:room:8616
+      look: Travel eastward leads into the Dining Room.
+    south:
+      to: tba:86:room:8605
+      look: The hallway continues on in this direction.
+    up:
+      to: tba:86:room:8607
+      look: Ascending the staircase leads to a second floor, which is dark and foreboding.
+
+"tba:86:room:8607":
+  name: Upstairs
+  description: >
+    Atop the staircase lay two hallyways and a small alcove to the north.  One hallway extends to the
+    east and the other to the west.  The scent of decay and rotting wood is stronger to the west, while a
+    faint light seems to flicker to the east.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8608
+      look: A small alcove is nestled into the wall.
+    east:
+      to: tba:86:room:8617
+      look: A long, dark, hallway stretches out this way.
+    west:
+      to: tba:86:room:8699
+      look: A long dark hallway extends out this way.
+    down:
+      to: tba:86:room:8606
+      look: The stairs descend in this direction.
+
+"tba:86:room:8608":
+  name: Alcove
+  description: >
+    A huge, full-length mirror once hung from this crumbled alcove wall.  An enormous crack runs
+    diagonally from the top left corner downwards to the bottom right corner, strangely doubling every image. 
+    Along the gaudy golden frame there are many, many cracks and dents and the bottom left forner of the
+    mirror has been broken off.  The wall paper had long ago cracked and peeled off the western wall, but
+    the eastern wall still holds a small wooden shelf with a few cobweb covered books.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8609
+      look: This mirror is more than meets the shattered eye.
+      door:
+        keywords: [mirror]
+        kind: door
+        key: tba:86:obj:8602
+        reset: locked
+    south:
+      to: tba:86:room:8607
+      look: The hallway is dark and the faint outline of a bannister can barely be seen.
+  extras:
+  - keywords: [shelf]
+    text: >
+      A small wooden shelf hangs precariously from the faded and papered wall.  A few books, encrusted
+      with cobwebs still remain.  Arms and Armor, The Armilana Defense to name a few.  There is a small
+      cermaic swan on the top shelf that almost escaped your notice.
+  - keywords: [mirror, cracked, corner]
+    text: >
+      A faint moldy, damp smell greets your nostrils as you bend closer.  Your image distorts further
+      until you are nothing but a blur.
+
+"tba:86:room:8609":
+  name: Dim Flight of Stairs
+  description: >
+    The mirror slides closed with an awful grating sound and all that is left is a long, slippery
+    flight of badly made stairs.  Rats squeal somewhere far below, echoing hollowly in the empty space between.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:86:room:8608
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:86:obj:8602
+        reset: closed
+    down:
+      to: tba:86:room:8610
+
+"tba:86:room:8610":
+  name: Dim Flight of Stairs
+  description: >
+    The squeals and chitters of the rats are becoming closer and less hollow as the descent continues. 
+    The moist smell of mildew and hundred year old mold is tart and hangs in the air like a miasma.  The
+    walls are uneven and have a rough finish to them.
+  sector: inside
+  flags: [dark]
+  exits:
+    up:
+      to: tba:86:room:8609
+    down:
+      to: tba:86:room:8620
+
+"tba:86:room:8611":
+  name: Dirt Path
+  description: >
+    The trees are tall and have grown quite close together here.  Birds chirp and fill the air with the
+    rustling of their feathers.  The path leads in two directions the east and west.  Tall hedges and a
+    wrought iron fence prevent movement to the north and south.
+  sector: field
+  flags: [no_track]
+  exits:
+    east:
+      to: tba:86:room:8622
+      look: A dirt path winds along in this direction.
+    west:
+      to: tba:86:room:8601
+      look: A dirt path wanders in this direction.
+
+"tba:86:room:8612":
+  name: Old Courtyard
+  description: >
+    The path ends at the remains of an old stone courtyard.  The stones are cracked and piled to about
+    waist height.  The dark stone facing of the Keep looms nearby and an old balcony can be seen just
+    above the first floor windows. The trees have grown in about the old courtyard making travel in all
+    directions impossible, save to the west.
+  sector: field
+  flags: [dark]
+  exits:
+    west:
+      to: tba:86:room:8602
+
+"tba:86:room:8614":
+  name: The Grand Room
+  description: >
+    This room was once the grand ballroom but now it is strewn with the remains of broken glass and
+    wooden furniture.  The ceiling and walls are covered with cobwebs and flaking paint.  A hardwood table
+    stands against the eastern wall with a massive candelabra at its center it, too, is tangled with
+    cobwebs. There is a bland looking door to the east and an open archway to the north. The foyer is to the
+    west.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8615
+      look: A beautiful archway continues on to the north.
+    east:
+      to: tba:86:room:8624
+      look: A small white painted door leads to the east.
+      door:
+        keywords: [door]
+        kind: door
+    west:
+      to: tba:86:room:8604
+      look: A pair of weathered french doors lead back toward the foyer.
+      door:
+        keywords: [french, door]
+        kind: door
+        reset: closed
+
+"tba:86:room:8615":
+  name: An Open Archway
+  description: >
+    This grand archway was once gilded over with fine ornaments and hand painted designs, now it is
+    flaking and faded.  Cobwebs hang like thin curtains from different points on the archway.  A small
+    breath of air causes the cobwebs to shimmer and part for a moment.  There is a hazy light coming from the
+    north and the grand ballroom is to the south.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8616
+      look: The Dining Room is just north of here.
+    south:
+      to: tba:86:room:8614
+      look: The grand ballroom is to the south.
+
+"tba:86:room:8616":
+  name: Dining Room
+  description: >
+    A huge oak and wrought iron table runs the length of this room.  Candlabras line the center of the
+    tattered and moth eaten table linens.  Rat chewed chairs are perfectly placed at even intervals along
+    the table.  Tremendous amounts of fabric lay in heaps along the outer walls and windows they, too,
+    are chewed and moth eaten.  There is an intricate design on the eastern wall while another archway
+    leads to the west.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:86:room:8615
+      look: An open archway leads south to the grand ballroom.
+    west:
+      to: tba:86:room:8606
+      look: This archway opens up to a flight of slightly decreped stairs.
+  extras:
+  - keywords: [intricate, design]
+    text: >
+      This design is a complicated pattern of silver and wrought iron.  Curiously though it doesn't seem
+      as rusted or faded as the rest of the Keep.
+
+"tba:86:room:8617":
+  name: Eastern Wing
+  description: >
+    This hallway is clogged with dust and debris.  Torn paintings and broken pottery are strewn across
+    the once beautiful hardwood floors and the thick striped wallpaper is peeling in great rends from the
+    walls themselves.  Doors line this hallway and a faint light shines beneath the eastern most door.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8627
+      look: The hallway continues on into the darkness.
+    west:
+      to: tba:86:room:8607
+      look: The faint outline of stairs can be seen in this direction.
+
+"tba:86:room:8620":
+  name: Bottom of the Stairs
+  description: >
+    A giant curved doorway bars travel to the east.  It's surface is covered with strange symbols and
+    bears a giagantic replica of the Grand Duke's coat of arms.  Large barrels lay stacked neatly next to
+    the huge door and the rest of the floor is riddled with pockmarks and rat droppings.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8621
+    up:
+      to: tba:86:room:8610
+  extras:
+  - keywords: [inscriptions, doorway, curved]
+    text: >
+      Strange runes cover the entire surface of the door frame.  The runes themselves are unintelligable
+      but their mere presence seems to be a warning of what lays beyond.
+
+"tba:86:room:8621":
+  name: Caverns Beneath the Keep
+  description: >
+    A long twisting pathway runs off into the darkness.  The scent of water grows stronger here and the
+    rough hewn walls are covered with an unhealthy looking slime.  The caverns seem to extend deep into
+    the earth beneath the Keep to the east.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8631
+    west:
+      to: tba:86:room:8620
+
+"tba:86:room:8622":
+  name: Dirt Path
+  description: >
+    The trees spread out a little allowing for small breezes to rustle through the leaves and sway some
+    of the lighter branches along this dirt path.  A break in the foliage appears to the north and the
+    dirt path continues on to the west.
+  sector: field
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8623
+      look: A small clearing lays beyond the tree break.
+    west:
+      to: tba:86:room:8611
+      look: The dirth path continues back this way.
+
+"tba:86:room:8623":
+  name: End of the Dirt Path
+  description: >
+    The dirt path abruptly ends here in the midst of the forest surrounding Grand Duke Kalithorn's
+    Keep.  In every direction trees block the view and low growing raspberr and prickly rose bushes block
+    further travel.  A small rock formation lay at the very edge of the path.
+  sector: field
+  flags: [dark, peaceful, no_track]
+  exits:
+    south:
+      to: tba:86:room:8622
+      look: A dirt path continues on in this direction.
+    down:
+      to: tba:86:room:8625
+      look: >
+        A large stone formation rests at the end of this path.  Curious holes and notches have been etched
+        into the largest rock in the formation.
+      door:
+        keywords: [formation, stone, hole, notch, door]
+        kind: pickproof
+        key: tba:86:obj:8616
+
+"tba:86:room:8624":
+  name: Butler's Pantry
+  description: >
+    This is a small pantry which holds the dry goods for the kitchens.  The shelves are still fully
+    stocked, but covered in three inches of dust and other assorted debris.  There is a small door to the
+    east and west.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8634
+      look: Another white painted double hinged door leads toward the kitchens.
+      door:
+        keywords: [white, door, hinged, double]
+        kind: door
+        reset: closed
+    west:
+      to: tba:86:room:8614
+      look: A bland looking door leads back to the grand room.
+      door:
+        keywords: [bland, white, door]
+        kind: door
+        reset: closed
+
+"tba:86:room:8625":
+  name: Underground
+  description: >
+    The heavy smell of fresh earth hangs in the air.  There are no sounds to be heard.  Thick wooden
+    support posts keep the earth from caving into this small tunnel that leads forever downwards.  There is
+    a wooden ladder that leads down and up.
+  sector: mountains
+  flags: [dark]
+  exits:
+    up:
+      to: tba:86:room:8623
+      look: There is a large stone door above.
+      door:
+        keywords: [stone, door, formation]
+        kind: door
+        key: tba:86:obj:8616
+        reset: closed
+    down:
+      to: tba:86:room:8626
+      look: The ladder extends down into the darkness of the earth.
+  extras:
+  - keywords: [keg]
+    text: One of the two kegs is open and contains beer and a floating rat.  Eww!
+
+"tba:86:room:8626":
+  name: Bandit's Lair
+  description: >
+    The earth has been cut away here to make a small room for the bandit's hide-a-way.  Bits of meat
+    and pallets are strewn about here and the smell of the earth is overpowered by the rank stench of body
+    odor.  Two kegs lay along the outer most wall between two thick wooden supports.
+  sector: inside
+  flags: [dark]
+  exits:
+    up:
+      to: tba:86:room:8625
+
+"tba:86:room:8627":
+  name: Eastern Wing
+  description: >
+    The hardwood floor is scratched is this section of the eastern wing.  Pieces of glass and pottery
+    grind underfoot and a huge urn lays shattered in its display alove along the northern wall.  Doors are
+    boarded shut to the north and south and the hallway continues east and west.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      look: This sturdy looking oak door appears to be jammed shut.
+    east:
+      to: tba:86:room:8637
+      look: The hallway continues on into the darkness.
+    south:
+      look: Large boards of weathered wood block this doorway.
+    west:
+      to: tba:86:room:8617
+      look: The hallway lightens in this direction.
+  extras:
+  - keywords: [door, oak, sturdy]
+    text: This sturdy oak door appears to be jammed shut
+
+"tba:86:room:8631":
+  name: Caverns
+  description: >
+    The cavern walls are slick with slime and the floor itself is deeply scarred with pockmarks from
+    falling water.  Stalagmites have grown down from the ceiling making travel difficult, but by no means
+    impossible.  An odd hollow sound comes from deep within the carverns.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8641
+    west:
+      to: tba:86:room:8621
+
+"tba:86:room:8634":
+  name: The Kitchens
+  description: >
+    A massive blackened stove is set into the back wall of the kitchen.  Waist hight wooden tables run
+    lengthwise, presumably for servants to prepare the food upon.  The rough stone walls are smeared with
+    grease and soot from the years of cooking that occurred here.  A few platters piled with dust and
+    rat droppings are scattered about this place.  The sole exit is to the west.
+  sector: inside
+  flags: [dark]
+  exits:
+    west:
+      to: tba:86:room:8624
+      look: This small white double hinged door leads out to the pantry.
+      door:
+        keywords: [door]
+        kind: door
+
+"tba:86:room:8636":
+  name: Sitting Room
+  description: >
+    This must have been Lady Kalithorn's sitting room.  The pink drapes are moth eaten and lay in a
+    heap at the base of the row of windows along the southern wall.  Chairs and small couches have been
+    overturned and chewed to near pieces. An antique loom and its chair lay in fair condition against the
+    western most wall while a grand harp rests in its stand in the middle of the sitting room.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8637
+  extras:
+  - keywords: [harp, grand]
+    text: >
+      This grand harp stands one human man-height tall.  Alas, the strings have been snapped and lay
+      uselessly against the floor.
+
+"tba:86:room:8637":
+  name: Eastern Wing
+  description: >
+    Most of the hallway here has been ravaged by the elements and animals of the wilderness.  Evidence
+    of chewing and small piles of rat droppings are everywhere.  Most of the walls have been stripped of
+    their original wallpaper and the bare lath remains to be seen.  The door to the north has completely
+    caved inwards and the frame is covered with a heavy spidery webbing, preventing passage.  There is an
+    old oak door to the south and a faint light comes from beneath the eastern most door.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8647
+      look: The hallway ends in a stout paneled doorway.
+    south:
+      to: tba:86:room:8636
+      look: There is a faint light coming from this direction.
+    west:
+      to: tba:86:room:8627
+      look: The hallway recedes into the darkness.
+
+"tba:86:room:8639":
+  name: Dead End
+  description: >
+    This end of the cavern is extremely rough and unfinished.  The wall is covered with a reddish-green
+    ooze and the water has pooled deeply at the far end of the passage.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8640
+
+"tba:86:room:8640":
+  name: Deeper Within the Caverns
+  description: >
+    The whistling hollow sound is almost a dull roar as the cavern ahead opens up into a large
+    anti-chamber.  Bones of unknown origin lay strewn about.  A few are reclining against the rough walls while
+    others lay twisted and broken on the cavern floor.  Two exits are visible, one to the east and the
+    other to the south.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8641
+      door:
+        keywords: [fence, gate, iron]
+        kind: door
+        reset: closed
+    east:
+      to: tba:86:room:8650
+    south:
+      to: tba:86:room:8639
+
+"tba:86:room:8641":
+  name: Caverns
+  description: >
+    The floor gently begins to slope into the earth here.  Pools of stagnant water fill the many holes
+    in the floor and the same unhealthy looking slime coats the walls.  The hollow sound can still be
+    heard whistling through the caverns.  There is an old wrought iron fence barring passage to the south.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:86:room:8640
+      look: >
+        This is an old but strong wrought iron fence that reaches from floor to ceiling.  There seems to be
+        a strangely shaped lock on the far right side of the gate.
+      door:
+        keywords: [wrought, iron, old, fence]
+        kind: door
+        key: tba:86:obj:8610
+        reset: closed
+    west:
+      to: tba:86:room:8631
+  extras:
+  - keywords: [fence, wrought, iron]
+    text: >
+      This fence reaches from the somewhat dry cavern floor straight to the ceiling.  There is a large
+      spider-shaped lock on the far right bar.
+
+"tba:86:room:8646":
+  name: Servants Quarters
+  description: >
+    Bunk beds made from stout wrist thick poles of wood stand in the far corners of this small room. 
+    The pallets are made of planks of pitted and rotten wood with rat chewed bits of cloth over them. 
+    Tattered blankets hang over the sides of each bunk and a moth eaten, ratty bed sheet covers the sole
+    window on the southern wall.  A small wash basin lays atop a rough, handmade dresser which is missing
+    its drawers in the eastern corner of the room.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8647
+  extras:
+  - keywords: [basin, wash]
+    text: This old and worm metallic basin couldn't hold water if it wanted too.
+  - keywords: [dresser, wooden]
+    text: >
+      This old wooden dresser had four drawers in which the servants stored their meager clothing and
+      uniforms.  However, only the top drawer reamins in tact after all this time.
+
+"tba:86:room:8647":
+  name: Eastern Wing
+  description: >
+    More smashed pots and ripped paintings litter the floor and walls in this section of the eastern
+    wing The sound of the vermin shifting about is absent and the scent of rotting food and unwashed bodies
+    hangs in the air.  Doors to the north and south have splashes of blood upon their surfaces and a
+    faint light flickers underneath the paneled door to the east.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8648
+      look: The putrid scent of decay wafts in from the north.
+    east:
+      to: tba:86:room:8657
+      look: >
+        These ornately paneled thick wooden doors must be at least four handlengths wide.  The silvery
+        doorknobs are a little tarnished.
+      door:
+        keywords: [paneled, door, bedroom]
+        kind: door
+        reset: closed
+    south:
+      to: tba:86:room:8646
+      look: A small room is to the south.
+    west:
+      to: tba:86:room:8637
+
+"tba:86:room:8648":
+  name: Wash Room
+  description: >
+    Bits of blood soaked clothing hang over almost every surface of this once white-washed bathing
+    chamber.  The faucet drips continuously into a puddle of dingy looking water.  The mirrors have been
+    smashed to bits and the bathing curtain that surrounded the clawfoot tub is torn in half.  The chamber
+    pot has been used beyond its capacity more than once and lays in the furthest corner of the bathing
+    room, seething with maggots.
+  sector: inside
+  exits:
+    south:
+      to: tba:86:room:8647
+
+"tba:86:room:8650":
+  name: Caverns
+  description: >
+    The air is growing heavier with the scent of running water.  The murky mildew smell has receeded
+    some and thankfully the walls no longer drip with slime.  The hollow sound eminates from a cavern not
+    to far ahead as the sound has grown in both tone and pitch.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8651
+    west:
+      to: tba:86:room:8640
+
+"tba:86:room:8651":
+  name: Caverns
+  description: >
+    The floor of the cavern is getting softer with each passing cavern.  The scent of running water is
+    a refreshing break from the damp murkiness of the caverns.  The walls here do not drip with slime,
+    but rather trickle a steady flow of water over the calcified rocks and weave a trail toward the next
+    cavern.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8652
+    west:
+      to: tba:86:room:8650
+
+"tba:86:room:8652":
+  name: Caverns
+  description: >
+    The scent of water and the hollow rushing sound are getting stronger and stronger with each passing
+    cavern.  The walls are covered with yellowish-white calcium deposits and the floor, as well, is
+    marked with tiny rivulets of the same deposit.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:86:room:8653
+    west:
+      to: tba:86:room:8651
+
+"tba:86:room:8653":
+  name: Open Cavern
+  description: >
+    This cavern opens into a circular room with a cathedral ceiling.  The rock walls are smooth and
+    covered with tapestries at random intervals.  Some bear scenes of battles, castles and another on the
+    far east wall bears the likeness of Grand Duke Kalithorn himself!  A gently cascading waterfall is the
+    source of the rushing noise that echoes through the other caverns.  It gently pours from the southern
+    wall and the small pool reaches the midpoint of this room.
+  sector: inside
+  flags: [dark]
+  exits:
+    west:
+      to: tba:86:room:8652
+  extras:
+  - keywords: [tapestry]
+    text: >
+      The tapestries hang at random intervals around the circular room.  The tapestry nearest depicts
+      knights in battle.
+  - keywords: [old, tapestry]
+    text: A masterpiece!  This tapestry depicts the famous battle of Ondor.
+  - keywords: [castle, tapestry]
+    text: >
+      Generously woven into this tapestry is the finest of threads.  This scene is of the taking of
+      Demoria Castle.
+  - keywords: [face, handsome, tapestry]
+    text: >
+      This lovingly kept tapestry bears the handsome face of Grand Duke Kalithorn. His strong features
+      and deep green eyes peer out, keeping watch over his Keep. In the bottom corner of the panel the
+      letters E-M-I-L-Y is divinely embrodiered in siver flax.
+  - keywords: [waterfall]
+    text: >
+      Pouring gently from a few feet above the rough stone floor this waterfall splashes down and pools
+      outward to the midpoint of this room.
+
+"tba:86:room:8656":
+  name: Balcony
+  description: >
+    This second floor balcony looks out over the ornamental gardens of Kalithorn Keep.  Gardeners once
+    scurried about weeding and tending to these once beautiful gardens, now they lay in an overgrown yet
+    multi-colored mass.  Trees extend for miles in either direction and the dirt road that leads to the
+    main gate is barely visible.  The wrought iron railing prevents its occupants from falling forward
+    with it delicate scroll work and rusty strength.  The glass doors lead back into the master bedroom.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8657
+      look: >
+        These glass panels have been painstakingly etched with swirled patterns. Half of the panels have
+        been smashes beyond recognition and others are scratched and shattered.
+      door:
+        keywords: [shattered, glass, door]
+        kind: door
+
+"tba:86:room:8657":
+  name: Master Bedroom
+  description: >
+    The hardwood floors of the hallway give way to thick, deep red carpeting. An enormous king sized
+    bed stands in the center of this huge master bedroom. The bed curtains are the same deep red and have
+    been tied off at the four posts.  The bed clothes are dusty and rumpled.  The walls are covered with
+    ornamental tapestries that have faded over time and the red striped wallpaper is bubbled in spots and
+    is peeling from the walls between them.  A medium sized closet stands open to the north and a pair of
+    etched glass doors lead out to a balcony.
+  sector: inside
+  flags: [dark]
+  exits:
+    north:
+      to: tba:86:room:8658
+      look: A medium sized closet lays in this direction.
+    south:
+      to: tba:86:room:8656
+      look: >
+        The painstakingly stched glass paneled doors were once beautiful.  Now a few panels are shattered
+        and the others are scratched beyond repair.
+      door:
+        keywords: [shattered, glass, door]
+        kind: door
+    west:
+      to: tba:86:room:8647
+      look: >
+        These huge paneled doors must be at least four handlengths wide.  The panels depict scenes from
+        various battles in history.  The silver handles are tarnished, but not too worn.
+      door:
+        keywords: [paneled, door]
+        kind: door
+  extras:
+  - keywords: [etched, glass, doors]
+    text: >
+      The balcony doors are covered with eteched glass panels.  Some have been broken and others are
+      scratched beyond repair.
+  - keywords: [tapestries, tapestry]
+    text: >
+      Most of the tapestries have faded beyond recognition but one singular tapestry nearest to the main
+      doors proudly displays the Kalithorn coat of arm.
+
+"tba:86:room:8658":
+  name: Bedroom Closet
+  description: >
+    Cobwebbed and moth infested this closet once held the beautiful and numerous dresses of Lady
+    Kalithorn.  Hangers dangle on the somewhat empty racks and rat-chewed shoes lay in haphazard piles along
+    the floor.  Curiously, though, the row of boxes on the uppermost shelf seem untouched.  The master
+    bedroom is to the south.
+  sector: inside
+  flags: [dark]
+  exits:
+    south:
+      to: tba:86:room:8657
+      look: The master bedroom lays in this direction.
+
+"tba:86:room:8659":
+  name: A Dirt Road
+  description: >
+    The path winds gently around fallen trees and brush.  To the north it begins to ascend up a hill. 
+    The wind feels colder and the forest is quieter.  A disturbing silence fills this part of the woods.
+  sector: inside
+  exits:
+    north:
+      to: tba:86:room:8601
+    south:
+      to: tba:86:room:8660
+  extras:
+  - keywords: [smoke]
+    text: >
+      Charcoal gray smoke rises straight and true from some chimney set deep into the heart of the Keep.
+
+"tba:86:room:8660":
+  name: A Dirt Road
+  description: >
+    The woods around you consists mostly of pine and small fir.  Small animals can be heard, but not
+    seen, scurrying away as you intrude upon their home. The path is beginning to fade and recede back into
+    the forest.
+  sector: inside
+  exits:
+    north:
+      to: tba:86:room:8659
+  extras:
+  - keywords: [smoke]
+    text: >
+      Charcoal gray smoke rises straight and true from some chimney set deep into the heart of the Keep.
+
+"tba:86:room:8699":
+  name: Western Wing
+  description: >
+    The floorboards creak and groan dangerously underfoot.  The splintering of wood and the muffled
+    sqeaks of rats and other unsavory creatures can be heard to the west.  Unfortunetly, the walls have
+    caved in to the north and south. To the west the floor slopes sharply downward into the darkness.
+  sector: inside
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:86:room:8607

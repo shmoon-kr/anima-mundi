@@ -1,0 +1,33 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 211.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:211:mob:21102
+  room: tba:211:room:21130
+  limit: 1
+- mob: tba:211:mob:21103
+  room: tba:211:room:21150
+  limit: 1
+- object: tba:211:obj:21181
+  room: tba:211:room:21102
+  limit: 1
+- object: tba:211:obj:21182
+  room: tba:211:room:21102
+  limit: 100
+- object: tba:211:obj:21180
+  room: tba:211:room:21102
+  limit: 100
+- mob: tba:211:mob:21104
+  room: tba:211:room:21102
+  limit: 1
+- mob: tba:211:mob:21101
+  room: tba:211:room:21110
+  limit: 1
+removes:
+- room: tba:211:room:21102
+  object: tba:211:obj:21181
+- room: tba:211:room:21102
+  object: tba:211:obj:21182
+- room: tba:211:room:21102
+  object: tba:211:obj:21180

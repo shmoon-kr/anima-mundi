@@ -1,0 +1,143 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 31.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:30:mob:3060
+  room: tba:31:room:3111
+  limit: 20
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 100
+  carry:
+  - object: tba:31:obj:3105
+    limit: 2
+- mob: tba:30:mob:3060
+  room: tba:31:room:3111
+  limit: 20
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 100
+- mob: tba:30:mob:3060
+  room: tba:31:room:3111
+  limit: 20
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 100
+- mob: tba:30:mob:3060
+  room: tba:31:room:3111
+  limit: 20
+  equip:
+    wield:
+      object: tba:30:obj:3022
+      limit: 100
+- mob: tba:30:mob:3068
+  room: tba:31:room:3106
+  limit: 4
+- mob: tba:31:mob:3100
+  room: tba:31:room:3106
+  limit: 1
+  carry:
+  - object: tba:31:obj:3100
+    limit: 500
+  - object: tba:31:obj:3101
+    limit: 500
+  - object: tba:31:obj:3102
+    limit: 500
+- mob: tba:31:mob:3101
+  room: tba:31:room:3106
+  limit: 1
+  carry:
+  - object: tba:31:obj:3106
+    limit: 2
+- mob: tba:31:mob:3102
+  room: tba:31:room:3110
+  limit: 1
+  carry:
+  - object: tba:31:obj:3107
+    limit: 2
+- mob: tba:31:mob:3103
+  room: tba:31:room:3110
+  limit: 4
+- mob: tba:31:mob:3103
+  room: tba:31:room:3110
+  limit: 4
+- mob: tba:31:mob:3103
+  room: tba:31:room:3110
+  limit: 4
+- mob: tba:31:mob:3103
+  room: tba:31:room:3110
+  limit: 4
+- mob: tba:31:mob:3104
+  room: tba:31:room:3137
+  limit: 1
+- mob: tba:31:mob:3105
+  room: tba:31:room:3138
+  limit: 1
+  equip:
+    hold:
+      object: tba:31:obj:3112
+      limit: 1
+- mob: tba:31:mob:3106
+  room: tba:31:room:3120
+  limit: 1
+- mob: tba:31:mob:3120
+  room: tba:31:room:3114
+  limit: 1
+- mob: tba:31:mob:3121
+  room: tba:31:room:3114
+  limit: 1
+- mob: tba:31:mob:3122
+  room: tba:31:room:3109
+  limit: 1
+- mob: tba:31:mob:3123
+  room: tba:31:room:3113
+  limit: 2
+- mob: tba:31:mob:3123
+  room: tba:31:room:3115
+  limit: 2
+- object: tba:31:obj:3109
+  room: tba:31:room:3110
+  limit: 1
+  contents:
+  - object: tba:31:obj:3108
+    limit: 1
+- object: tba:31:obj:3110
+  room: tba:31:room:3110
+  limit: 1
+  contents:
+  - object: tba:31:obj:3115
+    limit: 1
+- object: tba:31:obj:3111
+  room: tba:31:room:3101
+  limit: 3
+- object: tba:31:obj:3111
+  room: tba:31:room:3102
+  limit: 3
+- object: tba:31:obj:3111
+  room: tba:31:room:3103
+  limit: 3
+- object: tba:31:obj:3113
+  room: tba:31:room:3141
+  limit: 1
+- object: tba:31:obj:3114
+  room: tba:31:room:3141
+  limit: 1
+- object: tba:31:obj:3116
+  room: tba:31:room:3155
+  limit: 1
+- object: tba:31:obj:3117
+  room: tba:31:room:3124
+  limit: 1
+removes:
+- room: tba:31:room:3101
+  object: tba:31:obj:3111
+- room: tba:31:room:3102
+  object: tba:31:obj:3111
+- room: tba:31:room:3103
+  object: tba:31:obj:3111
+- room: tba:31:room:3141
+  object: tba:31:obj:3113

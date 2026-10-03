@@ -1,0 +1,1067 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 306.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:306:room:30600":
+  name: Lower Trunk of the Great Tree
+  description: >
+    The base of the Great Tree lies below, the newbie area just a short jump from the trunk upon which
+    you precariously cling.  Up above are the many branchings of the Great Tree, the system of branches
+    making a vweritable highway in the sky where movement can be seen from the many creatures which
+    inhabit the tree even from here.  A hole in the trunk opens up into the tree northward, a small home
+    visible inside.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:306:room:30604
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:306:room:30601
+  extras:
+  - keywords: [credits, info]
+    text: >
+      Great Newbie Tree * Built by Kaan for Dibrova Level: 1 - 10 78 rooms 19 mobs 7 objs Connector
+      Zone(s): None, this is a floating newbie area This is a huge tree that newbie players may climb into and
+      find all manner of tree-dwelling creatures. Eq has extremely low stats, as do all mobs.
+
+"tba:306:room:30601":
+  name: On the Trunk at the Lower Branch System
+  description: >
+    The tree's branches open out wide and full over the entire newbie area, making it possible to
+    wander about the tree limbs, looking down upon Dibrova's world.  The way down to the main Newbie Area lies
+    just below, a steady climb upward is also possible.  Branches lead out in every direction.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:306:room:30606
+    east:
+      to: tba:306:room:30608
+    south:
+      to: tba:306:room:30610
+    west:
+      to: tba:306:room:30612
+    up:
+      to: tba:306:room:30602
+    down:
+      to: tba:306:room:30600
+
+"tba:306:room:30602":
+  name: On the Trunk at Mid Branch System
+  description: >
+    The tree's branches open out wide and full over the entire newbie area, making it possible to
+    wander about the tree limbs, looking down upon Dibrova's world.  The way down to the main Newbie Area lies
+    just below, a steady climb upward is also possible.  Branches lead out in every direction.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:306:room:30630
+    east:
+      to: tba:306:room:30632
+    south:
+      to: tba:306:room:30634
+    west:
+      to: tba:306:room:30636
+    up:
+      to: tba:306:room:30603
+    down:
+      to: tba:306:room:30601
+
+"tba:306:room:30603":
+  name: On the Trunk at the Upper Branch System
+  description: >
+    This is as far up as is safely possible within the Great Tree.  The trunk above this point is not
+    strong enough to hold any substantial weight. Branches lead off in every direction, the upper branch
+    system still just as strong as the branches below.
+  sector: inside
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:306:room:30654
+    east:
+      to: tba:306:room:30656
+    south:
+      to: tba:306:room:30658
+    west:
+      to: tba:306:room:30660
+    down:
+      to: tba:306:room:30602
+
+"tba:306:room:30604":
+  name: Inside the Trunk
+  description: >
+    This inner trunk has been carved out and made into a cozy little home complete with a lounge chair
+    and small bed made from twigs and leaves. Another small chamber is connected to the north through a
+    short archway.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30605
+    south:
+      to: tba:306:room:30600
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:306:room:30605":
+  name: Inside the Trunk
+  description: >
+    This is the inner abode of a treant, a being made from the very essence of the tree in which it
+    resides.  Only the most foolish would attempt to defy a treant within its own home.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30604
+
+"tba:306:room:30606":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off in every direction, the trunk being just to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30615
+    east:
+      to: tba:306:room:30607
+    south:
+      to: tba:306:room:30601
+    west:
+      to: tba:306:room:30613
+
+"tba:306:room:30607":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off to the south and the west from here.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30608
+    west:
+      to: tba:306:room:30606
+
+"tba:306:room:30608":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off in every direction, the trunk being just to the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30607
+    east:
+      to: tba:306:room:30618
+    south:
+      to: tba:306:room:30609
+    west:
+      to: tba:306:room:30601
+
+"tba:306:room:30609":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off to the north and the west from here.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30608
+    west:
+      to: tba:306:room:30610
+
+"tba:306:room:30610":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off in every direction, the trunk being just to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30601
+    east:
+      to: tba:306:room:30609
+    south:
+      to: tba:306:room:30621
+    west:
+      to: tba:306:room:30611
+
+"tba:306:room:30611":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off to the north and the east from here.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30612
+    east:
+      to: tba:306:room:30610
+
+"tba:306:room:30612":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off in every direction, the trunk being just to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30613
+    east:
+      to: tba:306:room:30601
+    south:
+      to: tba:306:room:30611
+    west:
+      to: tba:306:room:30624
+
+"tba:306:room:30613":
+  name: Traveling the Inner Branches
+  description: >
+    The branches here are very strong and thick due to their proximity to the trunk itself.  Branchings
+    lead off to the south and the east from here.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30606
+    south:
+      to: tba:306:room:30612
+
+"tba:306:room:30614":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the tree lies to
+    the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30615
+
+"tba:306:room:30615":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  Exits lead in every direction via the branch system, the
+    inner branches lie just to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30626
+    east:
+      to: tba:306:room:30616
+    south:
+      to: tba:306:room:30606
+    west:
+      to: tba:306:room:30614
+
+"tba:306:room:30616":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the tree lies to
+    the west.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30615
+
+"tba:306:room:30617":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the south.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30618
+
+"tba:306:room:30618":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  Exits lead in every direction via the branch system, the
+    inner branches lie just to the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30617
+    east:
+      to: tba:306:room:30627
+    south:
+      to: tba:306:room:30619
+    west:
+      to: tba:306:room:30608
+
+"tba:306:room:30619":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30618
+
+"tba:306:room:30620":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the west.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30621
+
+"tba:306:room:30621":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  Exits lead in every direction via the branch system, the
+    inner branches lie just to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30610
+    east:
+      to: tba:306:room:30620
+    south:
+      to: tba:306:room:30628
+    west:
+      to: tba:306:room:30622
+
+"tba:306:room:30622":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30621
+
+"tba:306:room:30623":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30624
+
+"tba:306:room:30624":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  Exits lead in every direction via the branch system, the
+    inner branches lie just to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30625
+    east:
+      to: tba:306:room:30612
+    south:
+      to: tba:306:room:30623
+    west:
+      to: tba:306:room:30629
+
+"tba:306:room:30625":
+  name: The Outer Branches
+  description: >
+    The branches are still strong enough to hold a good amount of weight, however it would not be
+    recommended that the limits be pushed too far.  The only way back to another section of the Great Tree
+    lies to the south.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30624
+
+"tba:306:room:30626":
+  name: Out on a Limb
+  description: >
+    Although the current level of height is not as high as it could be, judging from the branches that
+    can be seen overhead, it still seems quite high when standing at the end of this tree limb, feeling
+    it sway in the breeze.  The way back lies south.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30615
+
+"tba:306:room:30627":
+  name: Out on a Limb
+  description: >
+    Although the current level of height is not as high as it could be, judging from the branches that
+    can be seen overhead, it still seems quite high when standing at the end of this tree limb, feeling
+    it sway in the breeze.  The way back lies west.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30618
+
+"tba:306:room:30628":
+  name: Out on a Limb
+  description: >
+    Although the current level of height is not as high as it could be, judging from the branches that
+    can be seen overhead, it still seems quite high when standing at the end of this tree limb, feeling
+    it sway in the breeze.  The way back lies north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30621
+
+"tba:306:room:30629":
+  name: Out on a Limb
+  description: >
+    Although the current level of height is not as high as it could be, judging from the branches that
+    can be seen overhead, it still seems quite high when standing at the end of this tree limb, feeling
+    it sway in the breeze.  The way back lies east.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30624
+
+"tba:306:room:30630":
+  name: Traveling the Inner Branches
+  description: >
+    The branches lead out from the trunk of the tree, about halfway up from the ground at this point. 
+    The branches are still very strong, able to hold enormous weight if needed.  Exits lead in every
+    direction, the main trunk just to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30639
+    east:
+      to: tba:306:room:30631
+    south:
+      to: tba:306:room:30602
+    west:
+      to: tba:306:room:30637
+
+"tba:306:room:30631":
+  name: Traveling the Inner Branches
+  description: >
+    The branches of the Great Tree span a very large area, allowing homes for a number of exotic
+    creatures which somehow coexist within this tree in peace. Branchings lie to the south and the west.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30632
+    west:
+      to: tba:306:room:30630
+
+"tba:306:room:30632":
+  name: Traveling the Inner Branches
+  description: >
+    The branches lead out from the trunk of the tree, about halfway up from the ground at this point. 
+    The branches are still very strong, able to hold enormous weight if needed.  Exits lead in every
+    direction, the main trunk just to the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30631
+    east:
+      to: tba:306:room:30642
+    south:
+      to: tba:306:room:30633
+    west:
+      to: tba:306:room:30602
+
+"tba:306:room:30633":
+  name: Traveling the Inner Branches
+  description: >
+    The branches of the Great Tree span a very large area, allowing homes for a number of exotic
+    creatures which somehow coexist within this tree in peace. Branchings lie to the north and the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30632
+    west:
+      to: tba:306:room:30634
+
+"tba:306:room:30634":
+  name: Traveling the Inner Branches
+  description: >
+    The branches lead out from the trunk of the tree, about halfway up from the ground at this point. 
+    The branches are still very strong, able to hold enormous weight if needed.  Exits lead in every
+    direction, the main trunk just to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30602
+    east:
+      to: tba:306:room:30633
+    south:
+      to: tba:306:room:30645
+    west:
+      to: tba:306:room:30635
+
+"tba:306:room:30635":
+  name: Traveling the Inner Branches
+  description: >
+    The branches of the Great Tree span a very large area, allowing homes for a number of exotic
+    creatures which somehow coexist within this tree in peace. Branchings lie to the north and the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30636
+    east:
+      to: tba:306:room:30634
+
+"tba:306:room:30636":
+  name: Traveling the Inner Branches
+  description: >
+    The branches lead out from the trunk of the tree, about halfway up from the ground at this point. 
+    The branches are still very strong, able to hold enormous weight if needed.  Exits lead in every
+    direction, the main trunk just to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30637
+    east:
+      to: tba:306:room:30602
+    south:
+      to: tba:306:room:30635
+    west:
+      to: tba:306:room:30648
+
+"tba:306:room:30637":
+  name: Traveling the Inner Branches
+  description: >
+    The branches of the Great Tree span a very large area, allowing homes for a number of exotic
+    creatures which somehow coexist within this tree in peace. Branchings lie to the south and the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30630
+    south:
+      to: tba:306:room:30636
+
+"tba:306:room:30638":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only way back along a branch is to the east.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30639
+
+"tba:306:room:30639":
+  name: The Outer Branches
+  description: >
+    The branches lead off in every direction from this point, the only solid-looking pathway along the
+    branches is to the south.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30650
+    east:
+      to: tba:306:room:30640
+    south:
+      to: tba:306:room:30630
+    west:
+      to: tba:306:room:30638
+
+"tba:306:room:30640":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the west.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30639
+
+"tba:306:room:30641":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the south.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30642
+
+"tba:306:room:30642":
+  name: The Outer Branches
+  description: >
+    The branches lead off in every direction from this point, the only solid-looking pathway along the
+    branches is to the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30641
+    east:
+      to: tba:306:room:30651
+    south:
+      to: tba:306:room:30643
+    west:
+      to: tba:306:room:30632
+
+"tba:306:room:30643":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30642
+
+"tba:306:room:30644":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the west.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30645
+
+"tba:306:room:30645":
+  name: The Outer Branches
+  description: >
+    The branches lead off in every direction from this point, the only solid-looking pathway along the
+    branches is to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30634
+    east:
+      to: tba:306:room:30644
+    south:
+      to: tba:306:room:30652
+    west:
+      to: tba:306:room:30678
+
+"tba:306:room:30646":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the east.
+  sector: inside
+
+"tba:306:room:30647":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the north.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30648
+
+"tba:306:room:30648":
+  name: The Outer Branches
+  description: >
+    The branches lead off in every direction from this point, the only solid-looking pathway along the
+    branches is to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30649
+    east:
+      to: tba:306:room:30636
+    south:
+      to: tba:306:room:30647
+    west:
+      to: tba:306:room:30653
+
+"tba:306:room:30649":
+  name: The Outer Branches
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the south.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30648
+
+"tba:306:room:30650":
+  name: Out on a Limb
+  description: >
+    The branch comes to a dead end, hanging high above the newbie area.  The branch continues out a bit
+    further, however is is certainly not strong enough to hold any large amount of weight.  The only
+    direction to go is back toward the trunk.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30639
+
+"tba:306:room:30651":
+  name: Out on a Limb
+  description: >
+    The branch comes to a dead end, hanging high above the newbie area.  The branch continues out a bit
+    further, however is is certainly not strong enough to hold any large amount of weight.  The only
+    direction to go is back toward the trunk.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30642
+
+"tba:306:room:30652":
+  name: Out on a Limb
+  description: >
+    The branch comes to a dead end, hanging high above the newbie area.  The branch continues out a bit
+    further, however is is certainly not strong enough to hold any large amount of weight.  The only
+    direction to go is back toward the trunk.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30645
+
+"tba:306:room:30653":
+  name: Out on a Limb
+  description: >
+    The branch comes to a dead end, hanging high above the newbie area.  The branch continues out a bit
+    further, however is is certainly not strong enough to hold any large amount of weight.  The only
+    direction to go is back toward the trunk.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30648
+
+"tba:306:room:30654":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30663
+    east:
+      to: tba:306:room:30655
+    south:
+      to: tba:306:room:30603
+    west:
+      to: tba:306:room:30661
+
+"tba:306:room:30655":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30656
+    west:
+      to: tba:306:room:30654
+
+"tba:306:room:30656":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30655
+    east:
+      to: tba:306:room:30666
+    south:
+      to: tba:306:room:30657
+    west:
+      to: tba:306:room:30603
+
+"tba:306:room:30657":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30656
+    west:
+      to: tba:306:room:30658
+
+"tba:306:room:30658":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30603
+    east:
+      to: tba:306:room:30657
+    south:
+      to: tba:306:room:30669
+    west:
+      to: tba:306:room:30659
+
+"tba:306:room:30659":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30660
+    east:
+      to: tba:306:room:30658
+
+"tba:306:room:30660":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30661
+    east:
+      to: tba:306:room:30603
+    south:
+      to: tba:306:room:30659
+    west:
+      to: tba:306:room:30672
+
+"tba:306:room:30661":
+  name: Traveling the Inner Branches
+  description: >
+    These are the strongest of the upper branches, easily as thick as a giant's armspan.  Still, even
+    with the strength of the Tree's trunk so close and the thickness of the branches themselves, they sway
+    alarmingly with the wind.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30654
+    south:
+      to: tba:306:room:30660
+
+"tba:306:room:30662":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30663
+
+"tba:306:room:30663":
+  name: The Outer Branches
+  description: >
+    The steady swaying of the Tree from the winds which buffet it at this altitude is strangely
+    pacific, a very nonassuming sway which is absolutely no cause for alarm.  Branches of the Tree lie in every
+    direction.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30674
+    east:
+      to: tba:306:room:30664
+    south:
+      to: tba:306:room:30654
+    west:
+      to: tba:306:room:30662
+
+"tba:306:room:30664":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30663
+
+"tba:306:room:30665":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30666
+
+"tba:306:room:30666":
+  name: The Outer Branches
+  description: >
+    The steady swaying of the Tree from the winds which buffet it at this altitude is strangely
+    pacific, a very nonassuming sway which is absolutely no cause for alarm.  Branches of the Tree lie in every
+    direction.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30665
+    east:
+      to: tba:306:room:30675
+    south:
+      to: tba:306:room:30667
+    west:
+      to: tba:306:room:30656
+
+"tba:306:room:30667":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30666
+
+"tba:306:room:30668":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30669
+
+"tba:306:room:30669":
+  name: The Outer Branches
+  description: >
+    The steady swaying of the Tree from the winds which buffet it at this altitude is strangely
+    pacific, a very nonassuming sway which is absolutely no cause for alarm.  Branches of the Tree lie in every
+    direction.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30658
+    east:
+      to: tba:306:room:30668
+    south:
+      to: tba:306:room:30676
+    west:
+      to: tba:306:room:30670
+
+"tba:306:room:30670":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30669
+
+"tba:306:room:30671":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30672
+
+"tba:306:room:30672":
+  name: The Outer Branches
+  description: >
+    The steady swaying of the Tree from the winds which buffet it at this altitude is strangely
+    pacific, a very nonassuming sway which is absolutely no cause for alarm.  Branches of the Tree lie in every
+    direction.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30673
+    east:
+      to: tba:306:room:30660
+    south:
+      to: tba:306:room:30671
+    west:
+      to: tba:306:room:30677
+
+"tba:306:room:30673":
+  name: The Outer Branches
+  description: >
+    The top of the Great Tree is a beautiful, stunning panorama of views and vistas which look out over
+    the entire world in all its splendor.  A slow wind blows by, ruffling the leaves all around, causing
+    the branches to sway ever so slightly.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30672
+
+"tba:306:room:30674":
+  name: Out on a Limb
+  description: >
+    This is the absolute limit of the Tree's reach in both height and direction. The only way to go is
+    back toward the trunk.
+  sector: inside
+  exits:
+    south:
+      to: tba:306:room:30663
+
+"tba:306:room:30675":
+  name: Out on a Limb
+  description: >
+    This is the absolute limit of the Tree's reach in both height and direction. The only way to go is
+    back toward the trunk.
+  sector: inside
+  exits:
+    west:
+      to: tba:306:room:30666
+
+"tba:306:room:30676":
+  name: Out on a Limb
+  description: >
+    This is the absolute limit of the Tree's reach in both height and direction. The only way to go is
+    back toward the trunk.
+  sector: inside
+  exits:
+    north:
+      to: tba:306:room:30669
+
+"tba:306:room:30677":
+  name: Out on a Limb
+  description: >
+    This is the absolute limit of the Tree's reach in both height and direction. The only way to go is
+    back toward the trunk.
+  sector: inside
+  exits:
+    east:
+      to: tba:306:room:30672
+
+"tba:306:room:30678":
+  name: Out on a Limb
+  description: >
+    The drop down below is a bit further than would be comfortable, bit in glancing up higher it is
+    seen that there is still more height to be attained. The only direction to travel is back along a branch
+    to the east.
+  sector: forest
+  exits:
+    east:
+      to: tba:306:room:30645

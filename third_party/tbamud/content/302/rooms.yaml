@@ -1,0 +1,2116 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 302.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:302:room:30200":
+  name: The Top of the Greasepole
+  description: You've made it to the top! All you have to do now is get down.
+  sector: mountains
+  flags: [no_mob]
+  exits:
+    down:
+      to: tba:301:room:30192
+      look: It's a long slide down.
+  extras:
+  - keywords: [pole, greasepole]
+    text: The pole still looks pretty bad, but it doesn't look quite as bad as before.
+  - keywords: [info, credits]
+    text:
+      preformatted: |2
+           See zone description room for Campus.
+        Zone 302 is linked to the following zones:
+        301 Campus                         at 30200 (down ) ---> 30192
+        301 Campus                         at 30201 (south) ---> 30142
+        301 Campus                         at 30203 (west ) ---> 30142
+        301 Campus                         at 30236 (north) ---> 30123
+        301 Campus                         at 30250 (south) ---> 30124
+        301 Campus                         at 30260 (north) ---> 30140
+        301 Campus                         at 30266 (west ) ---> 30136
+        301 Campus                         at 30283 (east ) ---> 30134
+        301 Campus                         at 30284 (north) ---> 30109
+        301 Campus                         at 30284 (east ) ---> 30115
+        301 Campus                         at 30284 (south) ---> 30104
+        301 Campus                         at 30284 (up   ) ---> 30120
+        301 Campus                         at 30284 (down ) ---> 30106
+        301 Campus                         at 30285 (north) ---> 30138
+        301 Campus                         at 30285 (west ) ---> 30132
+        301 Campus                         at 30285 (up   ) ---> 30139
+        301 Campus                         at 30285 (down ) ---> 30169
+        301 Campus                         at 30286 (north) ---> 30168
+        303 Campus                         at 30286 (south) ---> 30302
+        303 Campus                         at 30286 (west ) ---> 30312
+        303 Campus                         at 30286 (up   ) ---> 30315
+        301 Campus                         at 30286 (down ) ---> 30175
+        301 Campus                         at 30287 (north) ---> 30170
+        301 Campus                         at 30291 (east ) ---> 30135
+        301 Campus                         at 30292 (east ) ---> 30135
+        301 Campus                         at 30294 (west ) ---> 30126
+        301 Campus                         at 30295 (east ) ---> 30126
+        303 Campus                         at 30295 (up   ) ---> 30312
+        303 Campus                         at 30296 (south) ---> 30302
+        303 Campus                         at 30299 (north) ---> 30300
+        303 Campus                         at 30299 (east ) ---> 30301
+        Links: 64e to catacombs
+        
+           (Mobs Stay_Zone flags have all been disabled to allow free access between
+        301, 302 and 303.  Please ensure that any entrances into the area are flagged
+        nomob to keep them in.  -  Parna for TBAMud.)
+
+"tba:302:room:30201":
+  name: Reception Desk
+  description: >
+    This is the main reception desk for the Wally World residence.  You are able to see the incoming
+    mail behind the desk as well as hooks for keys to hang upon.  To the east there is a door and just
+    south of you is the lobby.
+  sector: city
+  flags: [indoors, no_magic]
+  exits:
+    east:
+      to: tba:302:room:30202
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30103
+        reset: locked
+    south:
+      to: tba:301:room:30142
+  extras:
+  - keywords: [hooks, hook, key, keys]
+    text: Unfortunately you don't see any keys hanging off of any of the hooks.
+  - keywords: [mail]
+    text: Why are you trying to look at the mail, it's private!
+
+"tba:302:room:30202":
+  name: Main Office
+  description: >
+    This is the main office associated with the Wally World residence.  There is a desk, chair and
+    filing cabinet in the room.  There is only one exit from the room, west.
+  sector: city
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:302:room:30201
+      look: This way leads back to the reception desk.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30103
+        reset: locked
+  extras:
+  - keywords: [filing, cabinet, files]
+    text: >
+      Looking through the files you see that Wally World was originally slated to have at least eleven
+      levels but the designers got sick and tired of it and gave up after just a few levels.
+  - keywords: [desk]
+    text: The desk, like the chair, is completely normal.  The desk is also in excellent condition.
+  - keywords: [chair]
+    text: The chair is not unusual in any way whatsoever.  The chair is in excellent condition.
+
+"tba:302:room:30203":
+  name: Lobby
+  description: >
+    This lobby is the perfect area to make a meeting place, assuming of course that you can find it
+    again.  Just to make it easy to rediscover, exits have been handily located to both the east and west.
+  sector: hills
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30204
+      look: This leads to a handy stairwell.
+    west:
+      to: tba:301:room:30142
+      look: This leads towards the exit.
+
+"tba:302:room:30204":
+  name: Stairwell
+  description: This is, as it says, a stairwell.  The exits are west and up.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30203
+      look: This leads to the lobby.
+    up:
+      to: tba:302:room:30205
+      look: This leads up into the unknown.
+
+"tba:302:room:30205":
+  name: Stairwell
+  description: This is another stairwell.  The exits are west, up, and down.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30206
+      look: You can't tell where this leads.
+    up:
+      to: tba:302:room:30222
+      look: This leads up into the unknown.
+    down:
+      to: tba:302:room:30204
+      look: This leads down into the known.
+
+"tba:302:room:30206":
+  name: Landing
+  description: >
+    This is a landing with halls heading off in all the cardinal directions. The only problem is that,
+    the hall to the west is blocked by a door.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30208
+      look: You can't tell where this leads.
+    east:
+      to: tba:302:room:30205
+      look: You can't tell where this leads.
+    south:
+      to: tba:302:room:30215
+      look: You can't tell where this leads.
+    west:
+      to: tba:302:room:30207
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30207":
+  name: Broom Closet
+  description: >
+    What a waste of effort it was to come in here...  There is absolutely nothing, not even brooms. 
+    And there is no other exit to boot, just the one you came in!
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30206
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30208":
+  name: Hallway
+  description: The hall continues north-south and there is a doorway on either side of the hall.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30211
+      look: You can't tell where this leads.
+    east:
+      to: tba:302:room:30209
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30206
+      look: You can't tell where this leads.
+    west:
+      to: tba:302:room:30210
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [floor, carpet]
+    text: This is a nice, groovy, red patterned carpet which extends all the way down the hall.
+  - keywords: [door]
+    text: The door on the west has the number 206 and the door on the east, 205.
+
+"tba:302:room:30209":
+  name: Private Room 205
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30208
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30210":
+  name: Private Room 206
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30208
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30211":
+  name: Hallway
+  description: >
+    The hall leads to the south and there is a doorway on either side of the hall as well as one to the
+    north.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30214
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:302:room:30212
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30208
+      look: You can't tell where this leads.
+    west:
+      to: tba:302:room:30213
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [floor, carpet]
+    text: This is a nice, groovy, red patterned carpet which extends all the way down the hall.
+  - keywords: [door]
+    text: >
+      The door on the west has the number 204 and the door on the east, 203 while the door to the north
+      has the number 201.
+
+"tba:302:room:30212":
+  name: Private Room 203
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30211
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30213":
+  name: Private Room 204
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30211
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30214":
+  name: Private Room 201
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:302:room:30211
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30215":
+  name: Hallway
+  description: The hall continues north-south and there is a doorway on either side of the hall.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30206
+      look: You can't tell where this leads.
+    east:
+      to: tba:302:room:30216
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30218
+      look: You can't tell where this leads.
+    west:
+      to: tba:302:room:30217
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [floor, carpet]
+    text: This is a nice, groovy, red patterned carpet which extends all the way down the hall.
+  - keywords: [door]
+    text: The door on the west has the number 208 and the door on the east, 207.
+
+"tba:302:room:30216":
+  name: Private Room 207
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30215
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30217":
+  name: Private Room 208
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30215
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30218":
+  name: Hallway
+  description: >
+    The hall leads to the north and there is a doorway on either side of the hall as well as one to the
+    south.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30215
+      look: You can't tell where this leads.
+    east:
+      to: tba:302:room:30219
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30221
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:302:room:30220
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [floor, carpet]
+    text: This is a nice, groovy, red patterned carpet which extends all the way down the hall.
+  - keywords: [door]
+    text: >
+      The door on the west has the number 210 and the door on the east, 209 and the door to the south has
+      the number 202.
+
+"tba:302:room:30219":
+  name: Private Room 209
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30218
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30220":
+  name: Private Room 210
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30218
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30221":
+  name: Private Room 202
+  description: >
+    This room is sparsely furnished but you notice one thing upon entering... The floor is tiled, while
+    the hallways are carpeted.  I wonder why?  There is only one exit...  The one you came in...
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30218
+      look: This leads back to the hall.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [tile, floor]
+    text: It is a nice friendly ceramic tile floor.
+
+"tba:302:room:30222":
+  name: Stairwell
+  description: This is another stairwell.  The exits are west, up, and down.
+  sector: hills
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30223
+      look: You can't tell where this leads.
+    up:
+      to: tba:302:room:30205
+      look: This leads up into the unknown.
+    down:
+      to: tba:302:room:30205
+      look: This leads down into the known.
+
+"tba:302:room:30223":
+  name: Landing
+  description: >
+    This is a landing with halls heading off in all the cardinal directions. The only problem is that,
+    the hall to the west is blocked by a door.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30225
+      look: You can't tell where this leads.
+    east:
+      to: tba:302:room:30222
+      look: You can't tell where this leads.
+    south:
+      to: tba:302:room:30229
+      look: You can't tell where this leads.
+    west:
+      to: tba:302:room:30224
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30224":
+  name: Broom Closet
+  description: >
+    What a waste of effort it was to come in here...  There is absolutely nothing, not even brooms. 
+    And to boot there is no other exit, just the one you came in!
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30223
+      look: You can't tell where this leads.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30225":
+  name: Hallway
+  description: >
+    This hallway comes to an abrupt halt as there is a door in its way directly to the north. 
+    Coincidentally, there are also doors to the east and west.  The only exit without a door in fact is to the
+    south!
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30228
+      look: The door is locked, so therefore you cannot see through it.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30104
+        reset: locked
+    east:
+      to: tba:302:room:30226
+      look: The door is the door of room 301.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30223
+      look: The hallway continues to the south.
+    west:
+      to: tba:302:room:30227
+      look: The door is the door of room 302.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [door]
+    text: The doors all lead to rooms.
+
+"tba:302:room:30226":
+  name: Private Room 301
+  description: >
+    This room is quite well furnished and could probably comfortably house two people.  It is much
+    larger than the rooms downstairs.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30225
+      look: The door leads back into the hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30227":
+  name: Private Room 302
+  description: >
+    This room is quite well furnished and could probably comfortably house two people.  It is much
+    larger than the rooms downstairs.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30225
+      look: The door leads back into the hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30228":
+  name: Main Residence Office
+  description: >
+    This office is the main office for all the residences of the University of North XXX.  There is a
+    large desk here as well as two plush chairs.  In the north-west corner of the room there is a trapdoor
+    in the ceiling.
+  sector: field
+  flags: [dark, no_mob, indoors]
+  exits:
+    south:
+      to: tba:302:room:30225
+      look: The door leads to the hallway.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:301:obj:30104
+        reset: locked
+    up:
+      to: tba:302:room:30233
+      look: The trapdoor leads up... beyond that, you aren't sure where it goes.
+      door:
+        keywords: [trapdoor, door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [trapdoor]
+    text: The trapdoor is neatly fastened with a small hook.
+  - keywords: [desk, chair, plush]
+    text: >
+      The desk and chairs are neatly arranged as if in preparation for an upcoming meeting or something
+      of the sort.
+
+"tba:302:room:30229":
+  name: Hallway
+  description: >
+    This hallway comes to an abrupt halt as there is a door in its way directly to the south. 
+    Coincidentally, there are also doors to the east and west.  The only exit without a door in fact is to the
+    north!
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30223
+      look: The hallway continues to the north.
+    east:
+      to: tba:302:room:30231
+      look: The door is the door of room 303.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30232
+      look: The door is for room 305.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:302:room:30230
+      look: The door is the door of room 304.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [door]
+    text: The doors all lead to rooms.
+
+"tba:302:room:30230":
+  name: Private Room 304
+  description: >
+    This room is quite well furnished and could probably comfortably house two people.  It is much
+    larger than the rooms downstairs.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30229
+      look: The door leads back into the hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30231":
+  name: Private Room 303
+  description: >
+    This room is quite well furnished and could probably comfortably house two people.  It is much
+    larger than the rooms downstairs.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30229
+      look: The door leads back into the hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30232":
+  name: Private Room 300
+  description: >
+    This room is quite well furnished and could probably comfortably house two people.  It is much
+    larger than the rooms downstairs.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30229
+      look: The door leads back into the hallway.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:302:room:30233":
+  name: Attic
+  description: >
+    This attic is carefully hidden away from sight as it is used as a secret storeroom.  The only exit
+    is down.
+  sector: hills
+  flags: [dark, no_mob, indoors]
+  exits:
+    south:
+      to: tba:302:room:30234
+      look: You see nothing special.
+      door:
+        keywords: [grate]
+        kind: door
+        reset: closed
+    down:
+      to: tba:302:room:30228
+      look: You see the office below.
+      door:
+        keywords: [trapdoor]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [grate]
+    text: Beyond the grate you can see another small storage room.
+
+"tba:302:room:30234":
+  name: Small Storage Room
+  description: >
+    This is the really secret storage room attached to the attic.  There are two exits from it.  The
+    main exit is through the grate to the north but there is a chute down to the first floor located in the
+    floor.
+  sector: forest
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30233
+      look: The attic is just north of here.
+      door:
+        keywords: [grate]
+        kind: door
+        reset: closed
+    down:
+      to: tba:302:room:30235
+      look: A chute leads down from this room.
+  extras:
+  - keywords: [grate]
+    text: Beyond the grate you can see the attic.
+  - keywords: [chute]
+    text: The chute is rather smooth and looks to be a fun ride.
+
+"tba:302:room:30235":
+  name: The Chute
+  description: WHEEEEEEEEEEEE!  What a fun ride!!!!  Fortunately the only exit is down.
+  sector: inside
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:302:room:30203
+      look: The chute continues down.
+  extras:
+  - keywords: [chute]
+    text: The chute is rather smooth and is quite a fun ride.
+
+"tba:302:room:30236":
+  name: The Ghetto
+  description: >
+    The road would normally run north-south, but the way south is blocked by a small obstacle...  An
+    overturned policemobile.  There are houses on either side of the road.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:301:room:30123
+      look: To escape the ghetto, you can head this way.
+    east:
+      to: tba:302:room:30237
+      look: A shack-like ghetto house stands (barely) there.
+    west:
+      to: tba:302:room:30238
+      look: A shack-like ghetto house stands (barely) there.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [overturned, police, policemobile, mobile]
+    text: It is blocking the road quite nicely.  Maybe it is meant to impede passage.
+
+"tba:302:room:30237":
+  name: Ghetto House
+  description: It's a mess.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30236
+      look: An exit from this hellhole.
+  extras:
+  - keywords: [mess]
+    text: Need you ask?
+
+"tba:302:room:30238":
+  name: Frec House
+  description: You feel a little apprehensive as you enter this house...  It's a mess.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30236
+      look: An exit from this hellhole.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30239
+      look: An exit from this hellhole.  Looks like another hellhole though.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [mess]
+    text: Need you ask?
+
+"tba:302:room:30239":
+  name: Ghetto House
+  description: It looks like a hellhole...  It's a mess.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30238
+      look: An exit from this hellhole to yet another hellhole.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      to: tba:302:room:30240
+      look: An exit from this hellhole.
+  extras:
+  - keywords: [hell, hole, hellhole]
+    text: Never seen one before?
+  - keywords: [mess]
+    text: Need you ask?
+
+"tba:302:room:30240":
+  name: The Ghetto
+  description: >
+    The road would normally run north-south, but the way north is blocked by a small obstacle...  An
+    overturned policemobile.  There is a house to the west.
+  sector: hills
+  flags: [dark]
+  exits:
+    south:
+      to: tba:302:room:30241
+      look: The ghetto continues south.
+    west:
+      to: tba:302:room:30239
+      look: A run-down house lies to the west.
+  extras:
+  - keywords: [overturned, police, policemobile, mobile]
+    text: It is blocking the road quite nicely.  Maybe it is meant to impede passage.
+  - keywords: [house, run-down]
+    text: It's in bad shape.
+
+"tba:302:room:30241":
+  name: The Ghetto Intersection
+  description: >
+    This intersection is the joining point of what's left of University Avenue and Earl Road which
+    heads off to the east.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30240
+      look: The ghetto continues north.
+    east:
+      to: tba:302:room:30242
+      look: It seems to be less run-down in this direction.
+    south:
+      to: tba:302:room:30247
+      look: The ghetto continues south.
+    west:
+      to: tba:302:room:30255
+      look: A fairly well-kept house lies to the west.
+  extras:
+  - keywords: [house, run-down]
+    text: It's not run-down.
+
+"tba:302:room:30242":
+  name: The Ghetto
+  description: >
+    This part of the ghetto has survived in a better condition than the rest of the ghetto.  A house
+    lies to the north.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30246
+      look: A fairly well-kept house is north.
+    east:
+      to: tba:302:room:30243
+      look: The ghetto continues east.
+    west:
+      to: tba:302:room:30241
+      look: The ghetto continues west.
+  extras:
+  - keywords: [house, run-down]
+    text: It's not run-down.
+
+"tba:302:room:30243":
+  name: The Ghetto
+  description: >
+    Earl Road ends abruptly as there is a house built immediately to the east. Another stands to the
+    south.
+  sector: forest
+  flags: [dark]
+  exits:
+    east:
+      to: tba:302:room:30244
+      look: A very well-kept house is east.
+    south:
+      to: tba:302:room:30245
+      look: A very well-kept house is south.
+    west:
+      to: tba:302:room:30242
+      look: The ghetto continues west.
+  extras:
+  - keywords: [house, run-down]
+    text: It's not run-down at all.
+
+"tba:302:room:30244":
+  name: Gael House
+  description: This house reminds you of home, your parent's home.  It's mind-boggling.
+  sector: forest
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:302:room:30243
+      look: You may exit to the west.
+
+"tba:302:room:30245":
+  name: Gael House
+  description: This house reminds you of home, your aunt's home.  Now, that's absurd.
+  sector: forest
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30243
+      look: You may exit to the north.
+
+"tba:302:room:30246":
+  name: Boss House
+  description: Papers and calculators litter the room, making an otherwise neat house, messy.
+  sector: hills
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:302:room:30242
+      look: You may exit to the south.
+  extras:
+  - keywords: [calculators, papers]
+    text: >
+      Illegible notes are scribbled on the papers.  Large numbers are punched in on the calculators,
+      making them seem important.
+
+"tba:302:room:30247":
+  name: The Ghetto
+  description: >
+    This part of the ghetto seems to have survived.  To the west, you can see, behind the rubble, the
+    vague outlines of a house.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30241
+      look: The ghetto continues north.
+    south:
+      to: tba:302:room:30248
+      look: The ghetto continues south.
+  extras:
+  - keywords: [house, run-down]
+    text: It's run-down.
+
+"tba:302:room:30248":
+  name: The Ghetto
+  description: >
+    This part of the ghetto seems to have survived.  To the east, you can see the A & Z Supermarket.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30247
+      look: The ghetto continues north.
+    east:
+      to: tba:302:room:30251
+      look: The A & Z Supermarket looms to the east.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:302:room:30249
+      look: The ghetto continues south.
+  extras:
+  - keywords: [supermarket, market]
+    text: Seems to be the only supermarket around.
+
+"tba:302:room:30249":
+  name: The Ghetto
+  description: >
+    This part of the ghetto seems to have survived.  There are houses on either side of the road.
+  sector: forest
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30248
+      look: The ghetto continues north.
+    east:
+      to: tba:302:room:30252
+      look: There is a run-down house to the east.
+    south:
+      to: tba:302:room:30250
+      look: The ghetto continues south.
+    west:
+      to: tba:302:room:30253
+      look: There is a fairly well-kept house to the west.
+  extras:
+  - keywords: [houses, house]
+    text: The houses are in relatively ok condition.
+
+"tba:302:room:30250":
+  name: The Ghetto
+  description: >
+    This part of the ghetto seems to have survived.  There is a house to the east.  South of you, you
+    can see the end of the ghetto.
+  sector: hills
+  flags: [dark]
+  exits:
+    north:
+      to: tba:302:room:30249
+      look: The ghetto continues north.
+    east:
+      to: tba:302:room:30254
+      look: There is a very well-kept house to the east.
+    south:
+      to: tba:301:room:30124
+      look: The ghetto continues south.
+  extras:
+  - keywords: [houses, house]
+    text: The houses are in relatively ok condition.
+
+"tba:302:room:30251":
+  name: The A & Z Supermarket
+  description: Aisles and aisles of foodstuffs are waiting to be bought by unknowing customers.
+  sector: field
+  flags: [no_mob, indoors, no_magic]
+  exits:
+    west:
+      to: tba:302:room:30248
+      look: The automatic doors hide the ghetto.
+      door:
+        keywords: [door, doors]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [aisle, aisles, food, foodstuffs]
+    text: It's a supermarket, what did you expect?
+
+"tba:302:room:30252":
+  name: Frec House
+  description: >
+    This house reminds you of your room, only worse.  It seems to be a post-holocaust version of it.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:302:room:30249
+      look: You will exit to the west.
+
+"tba:302:room:30253":
+  name: Boss House
+  description: Papers and calculators litter the room, making an otherwise neat house, messy.
+  sector: hills
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30249
+      look: You may exit to the east.
+  extras:
+  - keywords: [calculators, papers]
+    text: >
+      Illegible notes are scribbled on the papers.  Large numbers are punched in on the calculators,
+      making them seem important.
+
+"tba:302:room:30254":
+  name: Gael House
+  description: This house reminds you of home, your grandma's home.  It's insane.
+  sector: forest
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:302:room:30250
+      look: You may exit to the west.
+
+"tba:302:room:30255":
+  name: Boss House
+  description: Papers and calculators litter the room, making an otherwise neat house, messy.
+  sector: hills
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30241
+      look: You may exit to the east.
+    south:
+      to: tba:302:room:30256
+      look: You may exit to the south, but it would probably not be a wise idea.
+  extras:
+  - keywords: [calculators, papers]
+    text: >
+      Illegible notes are scribbled on the papers.  Large numbers are punched in on the calculators,
+      making them seem important.
+
+"tba:302:room:30256":
+  name: Frec House
+  description: >
+    This house reminds you of your room, only worse.  It seems to be a post-holocaust version of it.
+  sector: mountains
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30255
+      look: You will exit to the north.  Even if it is to another ghetto house.
+
+"tba:302:room:30257":
+  name: Stairwell
+  description: >
+    A spiralling stairwell leads both up and down.  To the east, there is an exit to the auditorium.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30258
+      look: As I said, there is an exit to the auditorium.
+    up:
+      to: tba:302:room:30262
+      look: Upstairs is the balcony, you believe.
+    down:
+      to: tba:302:room:30264
+      look: It is too dark to tell.
+
+"tba:302:room:30258":
+  name: The West Aisle Of The Auditorium
+  description: >
+    Many rows of seats line the floor of the auditorium.  This is where are the important get-togethers
+    are held.  It is quite impressive.  But there seems to be some splotches on the seats.  To the west
+    is a stairwell, and the auditorium continues east.  A balcony looms overhead.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30259
+      look: The auditorium continues.
+    west:
+      to: tba:302:room:30257
+      look: To the west, is a stairwell.
+  extras:
+  - keywords: [seats, splotches, seat, splotch]
+    text: >
+      The splotches on the seats seem to be some sort of purple dye which rained down upon them. 
+      (Strange!  )
+
+"tba:302:room:30259":
+  name: The Center Aisle Of The Auditorium
+  description: >
+    Many rows of seats line the floor of the auditorium.  This is where are the important get-togethers
+    are held.  It is quite impressive.  But there seems to be some splotches on the seats.  The
+    auditorium continues east and west.  A balcony looms overhead.  To the south is the stage.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30260
+      look: The auditorium continues.
+    south:
+      to: tba:302:room:30261
+      look: The stage is to the south.
+    west:
+      to: tba:302:room:30258
+      look: The auditorium continues.
+  extras:
+  - keywords: [seats, splotches, seat, splotch]
+    text: >
+      The splotches on the seats seem to be some sort of purple dye which rained down upon them. 
+      (Strange!  )
+
+"tba:302:room:30260":
+  name: The East Aisle Of The Auditorium
+  description: >
+    Many rows of seats line the floor of the auditorium.  This is where are the important get-togethers
+    are held.  It is quite impressive.  But there seems to be some splotches on the seats.  To the north
+    is the entry hall, and the auditorium continues west.  A balcony looms overhead.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:301:room:30140
+      look: The entry hall lies to the north.
+    west:
+      to: tba:302:room:30259
+      look: The auditorium continues.
+  extras:
+  - keywords: [seats, splotches, seat, splotch]
+    text: >
+      The splotches on the seats seem to be some sort of purple dye which rained down upon them. 
+      (Strange!  )
+
+"tba:302:room:30261":
+  name: The Stage
+  description: >
+    This is the stage which overlooks the entire auditorium.  The stage is about three to four feet off
+    the main floor.  Drab brown curtains frame the outside of the stage, giving it a stage-like
+    appearance.  Huge cords and pulleys swing overhead, obviously used for special effects for the non magically
+    active. The floor is made of sturdy wooden planks.  Backstage, you can see several props and huge
+    objects to fill in the background of the stage.  Looking out into the auditorium, you can see rows and
+    rows of seats and a milk dispenser in the back.  The walls are...  Why am I doing this?  Most people
+    don't even read the descriptions of the rooms unless looking for a door of some sort!  Well there is
+    no door here.  I bet you have brief mode on, don't you?  So you are probably missing several of our
+    witty jokes!  Why must we go through all this painstaking writing of descriptions, if they aren't going
+    to be read?  You probably aren't even reading this!  [Editorial :)] Well, anyways, the only exit is
+    to the north.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30259
+      look: The auditorium is to the north.
+  extras:
+  - keywords: [sturdy, wooden, plank, planks]
+    text: They are sturdy.  They are wooden.  They are planks.
+  - keywords: [cords, cord, pulley, pulleys]
+    text: Hey!  It can make you look like you are flying!
+  - keywords: [drab, brown, curtains, curtain]
+    text: They are just your average, everyday, drab brown curtains.
+
+"tba:302:room:30262":
+  name: Upper Stairwell
+  description: The stairwell spirals upwards and downwards.  The balcony lies to the east.
+  sector: field
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30263
+      look: As I said, the balcony lies to the east.
+    up:
+      to: tba:302:room:30265
+      look: This leads to the clock tower.
+    down:
+      to: tba:302:room:30257
+      look: You came from downstairs, don't you remember?
+
+"tba:302:room:30263":
+  name: The Balcony
+  description: Wow!  Finally in the balcony!  Now what?
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:302:room:30262
+      look: It's the stairwell again!  Imagine that!
+
+"tba:302:room:30264":
+  name: Entrance To The Catacombs
+  description: >
+    The spiralling stairs lead down into a cold, dark, damp room.  The walls are stone, with a few
+    unsightly cracks caused by the sands of time.  Cobwebs cling to the walls, undisturbed for a long time. 
+    Dust lines the floor.  A huge stone door lies to the east.  A stairwell sits quietly in the corner.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    up:
+      to: tba:302:room:30257
+      look: It's the same stairwell.
+  extras:
+  - keywords: [huge, stone, door]
+    text: The huge stone door looks very inviting.
+  - keywords: [cobweb, cobwebs, web, webs]
+    text: Don't disturb them now!
+
+"tba:302:room:30265":
+  name: The Grant Hall Clock
+  description: >
+    This room seems to be the inside of the large clock which covers all sides of the Grant Hall clock
+    tower.  You can see lots of little gears connected to lots of big gears.  There is absolutely no view
+    seeing that the clock faces are opaque.  But, there is an exit that you can use by going down.
+  sector: forest
+  flags: [indoors]
+  exits:
+    down:
+      to: tba:302:room:30262
+      look: This leads back into the stairwell.
+
+"tba:302:room:30266":
+  name: Hallway
+  description: >
+    This hallway leads through the older building called Frosty Annex. Unfortunately, the building
+    seems to be living up to its name.  The hallway leads east-west with a room to the north and a door to
+    the south.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30273
+      look: There is a fairly large room to the north.
+    east:
+      to: tba:302:room:30267
+      look: The hall continues to the east.
+    south:
+      to: tba:302:room:30269
+      look: There is a door blocking the way to the south.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:301:room:30136
+      look: The hall continues towards the entrance.
+  extras:
+  - keywords: [door]
+    text: This is a standard solid metal door with no window in it whatsoever.
+
+"tba:302:room:30267":
+  name: Hallway
+  description: >
+    The hallway continues along here.  In fact it continues both east and west. There is however a door
+    to the south.
+  sector: city
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:302:room:30268
+      look: The hallway continues.
+    south:
+      to: tba:302:room:30270
+      look: There is another of those large metal doors to the south without a window.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    west:
+      to: tba:302:room:30266
+      look: The hallway continues in this direction as well.
+  extras:
+  - keywords: [door]
+    text: >
+      This door is the main reason for having this room where it is...  Anyways, the is a large metal
+      affair with no window.
+
+"tba:302:room:30268":
+  name: Hallway
+  description: >
+    The hallway continues here, but only in one direction.  West.  There is a door to the north and
+    stairs leading down, but otherwise this section of the hall is no different than the rest.
+  sector: city
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30271
+      look: A door with the word "OFFICE" emblazoned on it stands to your north.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    east:
+      look: The hallway does not continue in this direction.
+    west:
+      to: tba:302:room:30267
+      look: The hallway continues in this direction.
+    down:
+      to: tba:302:room:30272
+      look: A stairwell leads down into the darkness.
+
+"tba:302:room:30269":
+  name: Mike-Lab
+  description: >
+    This room is actually quite a large laboratory.  It contains all of those neat things that you
+    would expect to find in a laboratory, like, well, lab equipment.  You can see all of the equipment that
+    you see in your 8:30 am Monday Chemistry Lab.  But hey, don't think I'm bitter about this, no, it's
+    not that I have to actually get up early after a nice relaxing weekend, but you are probably in
+    situation like this, and if you aren't, boy do I ever envy you. Anyways, there is a door to the north.
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30266
+      look: A large, steel door stands to the north.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [equipment]
+    text: This is just ordinary lab equipment that you would find in any normal laboratory.
+
+"tba:302:room:30270":
+  name: John-Lab
+  description: >
+    This lab is well decked out with all sorts of modern devices, of course, your definition of modern
+    is probably extremely different from the scientists' definition as all of the devices would make
+    Stone-Age devices look like technological marvels.  This lab is devoid of personnel but all of the
+    machines are making scary humming noises.  You should probably make a beeline out the door to the north.
+  sector: field
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:302:room:30267
+      look: A door stands to the north.  This door is made of steel and is fairly large.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [machines, devices, machine, device]
+    text: >
+      These Stone-Age marvels sound like they are going to explode any minute, better take cover soon!
+
+"tba:302:room:30271":
+  name: Office
+  description: >
+    This office looks extremely comfortable, that is if you don't mind an awful row coming from below
+    and if you don't mind breezes coming through the large gaps in the wall.  Other than that, it does
+    look alright.  There is one exit, the one to the south, which just happens to be blocked by a door.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:302:room:30268
+      look: >
+        The door blocking your way is well made.  It seems to be made of Oak with a well designed brass
+        doorknob.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [wall, gaps]
+    text: >
+      There are some horrendously large holes in the wall which are letting all the warm air out, and all
+      the colder outside air in.
+
+"tba:302:room:30272":
+  name: Jeff-Lab
+  description: >
+    This lab is unlike any of the other labs you have seen in this building. If perchance you haven't
+    seen any, then the reason is quite obvious.  If, however, you have passed through one or two labs on
+    the way, the reason is even more obvious, as this room contains all sorts of nice computer equipment.
+    There is a staircase leading up is one corner of the room.
+  sector: city
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:302:room:30268
+      look: The staircase in the north-east corner leads up towards the main floor of the building.
+
+"tba:302:room:30273":
+  name: A Classroom
+  description: >
+    This is another of the seemingly neverending series of classrooms on Campus. Of course, you don't
+    expect anything less, this being a university, but I presume that you agree with me that enough is
+    enough.  There is a hallway to the south.
+  sector: city
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:302:room:30266
+      look: The hallway lies to the south.
+
+"tba:302:room:30274":
+  name: A Hallway
+  description: This hallway leads through the building in all cardinal directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+    east:
+      to: tba:302:room:30279
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30278
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+    up:
+      to: tba:302:room:30281
+      look: It is too dark to tell.
+
+"tba:302:room:30275":
+  name: A Hallway
+  description: This hallway leads through the building in most directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30280
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30276
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30277
+      look: It is too dark to tell.
+
+"tba:302:room:30276":
+  name: A Hallway
+  description: This hallway leads through the building in most directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30274
+      look: It is too dark to tell.
+    east:
+      to: tba:302:room:30279
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30281
+      look: It is too dark to tell.
+
+"tba:302:room:30277":
+  name: A Hallway
+  description: This hallway leads through the building in most directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30280
+      look: It is too dark to tell.
+    east:
+      to: tba:302:room:30276
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30282
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30275
+      look: It is far too dark to tell.
+
+"tba:302:room:30278":
+  name: A Hallway
+  description: This hallway leads through the building in most directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30280
+      look: It is too dark to tell.
+    east:
+      to: tba:302:room:30281
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30276
+      look: It is too dark to tell.
+
+"tba:302:room:30279":
+  name: A Hallway
+  description: This hallway leads through the building in most directions.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30274
+      look: It is too dark to tell.
+    east:
+      to: tba:302:room:30281
+      look: It is really to the east, too dark to tell.
+    south:
+      to: tba:302:room:30280
+      look: It is too dark to tell.
+    west:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+
+"tba:302:room:30280":
+  name: A Classroom
+  description: This room suddenly dispels the monotony of the halls you were just passing through.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30278
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30274
+      look: It is too dark to tell.
+    down:
+      to: tba:302:room:30276
+      look: It is too dark to tell.
+  extras:
+  - keywords: [sigils]
+    text:
+    - "The sigils seem to form some strange shapes:"
+    - SSSSS
+    - SSS  SS
+    - SSS
+    - SSS
+    - SSS
+    - SSS
+    - SSS
+    - SSS
+    - SSS
+    - SSS
+    - SS  SSS
+    - SSSSS I wonder what it could be?
+  - keywords: [door]
+    text: This door is covered with all types of non-magical sigils.
+
+"tba:302:room:30281":
+  name: A Classroom
+  description: This room suddenly dispels the monotony of the halls you were just passing through.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30275
+      look: It is too dark to tell.
+    south:
+      to: tba:302:room:30278
+    west:
+      to: tba:302:room:30280
+      look: It is too dark to tell.
+    up:
+      to: tba:302:room:30282
+      look: It is too dark to tell.
+
+"tba:302:room:30282":
+  name: A Hallway
+  description: >
+    This hallway is radically different from all the others in that it only has two exits.  One exits
+    to the east towards light, while the other heads west back into the darkness.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:302:room:30283
+      look: This way draws you towards it...probably because you are suffering from light withdrawl.
+    west:
+      to: tba:302:room:30274
+      look: You are repulsed by this exit since the exit to the east is well lit.
+  extras:
+  - keywords: [dark]
+    text: Are you mad?
+  - keywords: [light]
+    text: It's nice, warm, and inviting.
+
+"tba:302:room:30283":
+  name: The Exit
+  description: This long corridor leads out onto the street.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:301:room:30134
+      look: The light beckons you.
+    west:
+      to: tba:302:room:30282
+      look: Back into darkness, I don't think so!
+  extras:
+  - keywords: [dark]
+    text: Are you mad?
+  - keywords: [light]
+    text: It's nice, warm, and inviting.
+
+"tba:302:room:30284":
+  name: Mob Chute A
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This goes all over Campus.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:301:room:30109
+      look: This is just an exit.
+    east:
+      to: tba:301:room:30115
+      look: This is just an exit.
+    south:
+      to: tba:301:room:30104
+      look: This is just an exit.
+    up:
+      to: tba:301:room:30120
+      look: This is just an exit.
+    down:
+      to: tba:301:room:30106
+      look: This is just an exit.
+  extras:
+  - keywords: [sigils]
+    text:
+      preformatted: |2
+           The sigils seem to form some strange shapes:
+                MMM     MMM    OOO      OOO    !!
+                MMMM   MMMM   OO OO    OO OO   !!
+                MM MM MM MM  OO   OO  OO   OO  !!
+                MM  MMM  MM  OO   OO  OO   OO  !!
+                MM   M   MM   OO OO    OO OO
+                MM       MM    OOO      OOO    !!
+  - keywords: [door]
+    text: This door is covered with all types of non-magical sigils.
+
+"tba:302:room:30285":
+  name: Mob Chute B
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This is for It Mobs.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:301:room:30138
+      look: This is just an exit.
+    east:
+      to: tba:302:room:30206
+      look: This is just an exit.
+    south:
+      to: tba:302:room:30229
+      look: This is just an exit.
+    west:
+      to: tba:301:room:30132
+      look: This is just an exit.
+    up:
+      to: tba:301:room:30139
+      look: This is just an exit.
+    down:
+      to: tba:301:room:30169
+      look: This is just an exit.
+
+"tba:302:room:30286":
+  name: Mob Chute C
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This is for Male Mobs.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:301:room:30168
+      look: This is just an exit.
+    east:
+      to: tba:302:room:30297
+      look: This is just an exit.
+    south:
+      to: tba:303:room:30302
+      look: This is just an exit.
+    west:
+      to: tba:303:room:30312
+      look: This is just an exit.
+    up:
+      to: tba:303:room:30315
+      look: This is just an exit.
+    down:
+      to: tba:301:room:30175
+      look: This is just an exit.
+
+"tba:302:room:30287":
+  name: Mob Chute D
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This is for Female Mobs.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:301:room:30170
+      look: This is just an exit.
+    east:
+      to: tba:302:room:30203
+      look: This is just an exit.
+    south:
+      to: tba:302:room:30218
+      look: This is just an exit.
+    west:
+      to: tba:302:room:30258
+      look: This is just an exit.
+    up:
+      to: tba:302:room:30267
+      look: This is just an exit.
+    down:
+      to: tba:302:room:30279
+      look: This is just an exit.
+
+"tba:302:room:30288":
+  name: Mob Chute E
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This leads to the Ghetto.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:302:room:30237
+      look: This is just an exit.
+    east:
+      to: tba:302:room:30247
+      look: This is just an exit.
+    south:
+      to: tba:302:room:30243
+      look: This is just an exit.
+    west:
+      to: tba:302:room:30248
+      look: This is just an exit.
+    up:
+      to: tba:302:room:30241
+      look: This is just an exit.
+    down:
+      to: tba:302:room:30250
+      look: This is just an exit.
+
+"tba:302:room:30289":
+  name: Mob Chute F
+  description: >
+    Oops, you are not supposed to be here.  This is a programmer's tool to disperse mobs all over
+    campus.  Exits go in all directions.  This is for Profs but leads to various classrooms around Campus.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:302:room:30280
+      look: This is just an exit.
+    east:
+      to: tba:302:room:30276
+      look: This is just an exit.
+    south:
+      to: tba:302:room:30273
+      look: This is just an exit.
+    west:
+      to: tba:302:room:30273
+      look: This is just an exit.
+    up:
+      to: tba:302:room:30259
+      look: This is just an exit.
+    down:
+      to: tba:302:room:30291
+      look: This is just an exit.
+
+"tba:302:room:30290":
+  name: Central Mob Chute
+  description: >
+    This is the central chute for mob dispersal.  The exits lead to the other mob chutes.  You are not
+    supposed to be here.  This is essentially for every other Mob so that they can be spread out at
+    complete random.
+  sector: inside
+  flags: [indoors, no_magic]
+  exits:
+    north:
+      to: tba:302:room:30284
+      look: This is leads to Mob Chute A.
+    east:
+      to: tba:302:room:30285
+      look: This is leads to Mob Chute B.
+    south:
+      to: tba:302:room:30286
+      look: This is leads to Mob Chute C.
+    west:
+      to: tba:302:room:30287
+      look: This is leads to Mob Chute D.
+    up:
+      to: tba:302:room:30288
+      look: This is leads to Mob Chute E.
+    down:
+      to: tba:302:room:30289
+      look: This is leads to Mob Chute F.
+
+"tba:302:room:30291":
+  name: Dunning Auditorium
+  description: >
+    This large spacious lecture theater would probably seat close to 300 and reminds you of movie
+    theaters of old (like when they sat more than 10).  Its main purpose seems to exist and collect dust. 
+    Maybe someone is doing some kind of study here.  There is a sign on the east wall near the front of the
+    room.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30135
+      look: This leads towards the street.
+  extras:
+  - keywords: [sign]
+    text: >
+      The sign on the wall seems to have something to do with fire regulations, but it is so old and
+      faded, you cannot read it.
+
+"tba:302:room:30292":
+  name: A Completely Empty Hallway
+  description: >
+    This hallway is not completely empty but looks like it is.  Must be something related to the
+    Infinite Improbability Principle.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30293
+      look: There is a classroom to the north.
+    east:
+      to: tba:301:room:30135
+      look: The lobby is back towards the east through some strange freak of nature.
+  extras:
+  - keywords: [infinite, improbability, principle]
+    text: See the Douglas Adams Hitchhiker's Guide to the Galaxy series.
+
+"tba:302:room:30293":
+  name: Classroom
+  description: >
+    This seems to be the only classroom in Dunning Hall.  Strange, the building looked larger on the
+    outside.  Obviously some sort of principle related to the TARDIS principle on Doctor Who....
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:302:room:30292
+      look: A hallway leads off to the south.
+  extras:
+  - keywords: [tardis, doctor, who]
+    text: The TARDIS is the ship that Doctor Who travelled the universe and the timestreams with.
+
+"tba:302:room:30294":
+  name: East Stairwell
+  description: This stairwell leads up into the heights of Leonard Hall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    west:
+      to: tba:301:room:30126
+      look: This leads back to the lobby.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30106
+        reset: locked
+    up:
+      to: tba:302:room:30296
+      look: This leads up.  Nuff said.
+
+"tba:302:room:30295":
+  name: West Stairwell
+  description: This leads up into the heights of Leonard Hall.
+  sector: forest
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:301:room:30126
+      look: This leads back to the lobby.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:301:obj:30105
+        reset: locked
+    up:
+      to: tba:303:room:30312
+      look: This stairwell goes up into the darkness.
+
+"tba:302:room:30296":
+  name: Junction
+  description: >
+    This hallway leads north and south and there is a stairwell leading down in the place where the
+    western wall should be found.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30297
+      look: The hallway continues north.
+    south:
+      to: tba:303:room:30302
+      look: The hallway also continues south.
+    down:
+      to: tba:302:room:30294
+      look: The stairwell leads down towards the lobby.
+
+"tba:302:room:30297":
+  name: Hallway
+  description: The hallway turns east-south here and there is an opening to the north.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:302:room:30298
+      look: There is a room of sorts to the north.
+    east:
+      to: tba:302:room:30299
+      look: The hallway continues east.
+    south:
+      to: tba:302:room:30296
+      look: The hallway continues south.
+
+"tba:302:room:30298":
+  name: Dorm Room
+  description: >
+    This an ordinary dorm room that is unoccupied at the moment.  The furniture consists of a bed, and
+    a desk.  Nothing else.  Just a bed and a desk.  But there is an exit to the south.
+  sector: city
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:302:room:30297
+      look: The hallway is south of here.
+  extras:
+  - keywords: [bed, desk]
+    text: The bed and the desk seem to be the only furnishings of this room.
+
+"tba:302:room:30299":
+  name: Hallway
+  description: >
+    This hallway comes to an abrupt end here.  However, there are exits in all cardinal directions
+    except up and down.
+  sector: field
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:303:room:30300
+      look: There seems to be a room to the north.
+    east:
+      to: tba:303:room:30301
+      look: There seems to be a room to the east.
+    south:
+      look: >
+        Regardless of what the description says, there is no exit in this direction.  Please try again.
+    west:
+      to: tba:302:room:30297
+      look: The hallway continues west.
+    up:
+      look: This is not an exit.  Read the description again.
+    down:
+      look: This is not an exit.  Read the description again.

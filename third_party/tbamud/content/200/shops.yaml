@@ -1,0 +1,38 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 200.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:200:shop:20040":
+  keeper: tba:200:mob:20007
+  rooms: [tba:200:room:20040]
+  products:
+  - tba:200:obj:20007
+  - tba:200:obj:20012
+  - tba:200:obj:20013
+  - tba:200:obj:20014
+  - tba:200:obj:20020
+  - tba:200:obj:20015
+  - tba:200:obj:20017
+  - tba:200:obj:20021
+  - tba:200:obj:20022
+  - tba:200:obj:20023
+  buys:
+  - type: armor
+    keywords: fur
+  - type: other
+    keywords: fur
+  - type: worn
+    keywords: fur
+  profit:
+    buy: 1.2
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 6
+  trade_with: 0

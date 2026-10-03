@@ -1,0 +1,222 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 254.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:254:obj:25404":
+  type: armor
+  keywords: [armor, lieutenant, silver, chain, mesh]
+  short: the lieutenant's armor
+  long: Some armor made of silver chain mesh lies here.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 30
+  cost: 700
+  rent: 0
+  level: 30
+  affects:
+  - apply: dex
+    modifier: 3
+  extras:
+  - keywords: [armor]
+    text: >
+      It look well-used and well worn by its previous owner.  The mesh is turned black in some places
+      from rubbing against itself, but all in all it seems a good piece of armor.
+
+"tba:254:obj:25405":
+  type: armor
+  keywords: [locket, golden]
+  short: Penelope's Golden Locket
+  long: A golden locket lies here.
+  flags: [glow, magic, anti_evil]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 6
+  cost: 450
+  rent: 0
+  level: 20
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: move
+    modifier: 10
+  extras:
+  - keywords: [text]
+    text: >
+      To my darling daughter Penelope for her 16th birthday.  Much love, Arnold - Lord of Jareth.
+  - keywords: [locket]
+    text: It is engraved with a line of text etched in fine writing.
+
+"tba:254:obj:25406":
+  type: weapon
+  keywords: [fishtail, fish, tail, dagger]
+  short: a fishtail dagger
+  long: A fishtail dagger lays here.
+  flags: [glow, anti_mage, anti_cleric]
+  wear: [take, wield]
+  values:
+    damage: 2d7
+    attack: pierce
+  weight: 12
+  cost: 10
+  rent: 0
+  level: 10
+  affects:
+  - apply: str
+    modifier: 1
+  - apply: dex
+    modifier: 1
+
+"tba:254:obj:25407":
+  type: armor
+  keywords: [leather, scrap, armor]
+  short: the leather scrap armor
+  long: Some armor made from leather scraps is here.
+  wear: [take, body]
+  values:
+    armor: 6
+  weight: 18
+  cost: 10
+  rent: 0
+  level: 5
+
+"tba:254:obj:25409":
+  type: food
+  keywords: [peanut, butter, pickle, sandwich]
+  short: a peanut butter and pickle sandwich
+  long: A peanut butter and pickle sandwich lies in the dust here.
+  wear: [take]
+  values:
+    hours: 1
+    poisoned: false
+  weight: 3
+  cost: 2
+  rent: 0
+  level: 0
+
+"tba:254:obj:25412":
+  type: armor
+  keywords: [mordecai's, robe]
+  short: Mordecai's Robe
+  long: Mordecai's Robe lies here.
+  flags: [bless, anti_good]
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 20
+  cost: 850
+  rent: 0
+  level: 20
+  affects:
+  - apply: cha
+    modifier: 3
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [robe]
+    text: >
+      It is a long, black robe with a flowing cape.  It is jet black with a thin white collar encircling
+      the neck.  It seems very formal, and very elegant.  Too bad it smells so bad.
+
+"tba:254:obj:25413":
+  type: food
+  keywords: [piece, chicken, drumstick]
+  short: the chicken drumstick
+  long: A scrumptous looking chicken drumstick lies here.
+  wear: [take]
+  values:
+    hours: 5
+    poisoned: false
+  weight: 3
+  cost: 5
+  rent: 0
+  level: 0
+
+"tba:254:obj:25414":
+  type: key
+  keywords: [key, bamboo]
+  short: the Bamboo Key
+  long: There is a bamboo key lying here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [3600, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:254:obj:25415":
+  type: key
+  keywords: [key, skull]
+  short: the skull-shaped key
+  long: There is a skull-shaped key lying here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [3652, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+
+"tba:254:obj:25416":
+  type: money
+  keywords: [coins, gold, stash]
+  short: Mordecai's Stash
+  long: Mordecai's stash has been left here.
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:254:obj:25417":
+  type: key
+  keywords: [key, dull, gray]
+  short: the dull gray key
+  long: A dull gray key has been left here.
+  flags: [no_rent, no_donate, no_sell]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:254:obj:25418":
+  type: container
+  keywords: [hole]
+  short: a hole
+  long: .A hidden hole in the ground.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 0
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [hole]
+    text: >
+      It is a putrid, rotting, grub-infested mud hole in the ground that stinks worse than anything you
+      have ever had to smell in your life.
+
+"tba:254:obj:25419":
+  type: staff
+  keywords: [corn, cob]
+  short: a corn cob
+  long: A cob, stipped of its corn is here.
+  flags: [no_sell]
+  wear: [take]
+  values:
+    raw: [4, 1, 1, 17]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 1

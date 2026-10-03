@@ -1,0 +1,71 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 317.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:317:shop:31700":
+  keeper: tba:317:mob:31701
+  rooms: [tba:317:room:31734]
+  products:
+  - tba:3:obj:301
+  buys:
+  - type: other
+  profit:
+    buy: 1.28
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 7
+  trade_with: 0
+
+"tba:317:shop:31701":
+  keeper: tba:317:mob:31717
+  rooms: [tba:317:room:31718]
+  products:
+  - tba:317:obj:31721
+  - tba:317:obj:31722
+  - tba:317:obj:31723
+  - tba:317:obj:31724
+  profit:
+    buy: 1.8
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0
+
+"tba:317:shop:31702":
+  keeper: tba:317:mob:31720
+  rooms: [tba:317:room:31725]
+  products:
+  - tba:317:obj:31725
+  - tba:317:obj:31726
+  - tba:317:obj:31727
+  - tba:317:obj:31728
+  - tba:317:obj:31729
+  profit:
+    buy: 1.67
+    sell: 0.8
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 4
+  trade_with: 0

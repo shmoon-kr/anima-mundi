@@ -1,0 +1,307 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 269.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:269:mob:26900":
+  keywords: [armadillo, rodent]
+  short: the armadillo
+  long: A small rodent with armored scales slowly crosses the path.
+  description: >
+    This wee armadillo looks fairly well-armored.  Doesn't look like he could do much damage, but would
+    still be difficult to kill.
+  level: 17
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone, wimpy, memory, helper]
+  affects: [sneak]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26901":
+  keywords: [spider, tarantula]
+  short: the tarantula
+  long: An oversized, hairy spider scuttles away.
+  description: The tarantula loves its privacy, and hopes you will soon leave.
+  level: 18
+  sex: male
+  alignment: -400
+  flags: [aware, stay_zone, memory, helper, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26902":
+  keywords: [cactus]
+  short: the creeping cactus
+  long: There is a strange looking cactus here.
+  description: >
+    You have never seen anything like it.  This plant can actually change its position over time! 
+    Sharp spines stick out dangerously, threatening to prick you.
+  level: 18
+  sex: male
+  alignment: 0
+  flags: [stay_zone, no_charm, no_sleep, no_blind]
+  affects: [detect_align, sense_life, no_track, scuba]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26903":
+  keywords: [beast, thin, mangy]
+  short: the wild dog
+  long: A thin, mangy beast lurks about here.
+  description: >
+    This dog looks like it has never been tamed.  Its fur stands on end, and it is full of brambles. 
+    You don't think you should pet it.
+  level: 18
+  sex: male
+  alignment: -200
+  flags: [scavenger, aware, stay_zone, wimpy, memory, helper]
+  affects: [sneak]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26904":
+  keywords: [rodent, lemming]
+  short: the lemming
+  long: A lemming pauses here, looking for a cliff to leap off.
+  description: >
+    This small but feisty rodent has absolutely no brains.  It is sitting here, just waiting to follow
+    a crowd.
+  level: 17
+  sex: male
+  alignment: 200
+  flags: [stay_zone, helper]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+    bare_hand_attack: bite
+  abilities:
+    int: 3
+    wis: 3
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26905":
+  keywords: [pig, hog, boar, razorback]
+  short: the razorback boar
+  long: A razorback boar stands here, looking angry as hell.
+  description: >
+    This vicious-looking animal looks both angry and hungry.  Provocation would surely bring him to a
+    spastic frenzy!
+  level: 19
+  sex: male
+  alignment: 100
+  flags: [scavenger, stay_zone, memory, helper, no_sleep]
+  affects: [sense_life]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+    bare_hand_attack: thrash
+  abilities:
+    str: 15
+    dex: 18
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26906":
+  keywords: [snake, rattle]
+  short: the diamondback rattler
+  long: A rattler is coiled up here, trying to be invisible.
+  description: >
+    This snake is doing its best to blend in with its surroundings.  Most of its victims usually bet
+    attacked because they step on it.
+  level: 19
+  sex: neutral
+  alignment: -400
+  flags: [sentinel, stay_zone]
+  affects: [invisible, hide]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: sitting
+    default: resting
+
+"tba:269:mob:26907":
+  keywords: [indian, scout]
+  short: the Indian scout
+  long: An Indian scout sneaks about here, glaring at you with suspicious eyes.
+  description: This man is sent out into the desert for one reason, to keep you away from something.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [scavenger, aware, stay_zone, wimpy, memory, helper]
+  affects: [detect_invis, sense_life, sneak]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26908":
+  keywords: [hermit, mad]
+  short: the mad hermit
+  long: A mad hermit is here, getting ready to mutilate you!
+  description: >
+    You see an old man, covered with wrinkles and other deformities.  He is obviously very displeased
+    with your presence, and wants to kill you for your knowledge of where he lives.
+  level: 19
+  sex: male
+  alignment: -300
+  flags: [sentinel, aware, memory]
+  affects: [blind, curse]
+  combat:
+    thac0: 14
+    armor: -1
+    hit_points: 3d3+190
+    damage: 3d3+3
+  gold: 190
+  exp: 36100
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26909":
+  keywords: [Indian, guard]
+  short: the massive Indian guard
+  long: A massive Indian guard is here, ready to defend his post to the death!
+  description: >
+    This large man has very dark skin, from standing at attention in the desert sun for hours on end. 
+    He eats cactus thorns for breakfast, and sleeps on rocks.  You wish you were this tough.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [sentinel, aware, memory, helper, no_charm]
+  affects: [detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26910":
+  keywords: [chief, Indian, slashing, boar]
+  short: the Indian chief
+  long: The Indian ruler of the south is here, smoking a strange weed.
+  description: >
+    Slashing Boar looks right back at you, and you can somehow sense that he would just as soon kill
+    you as look at you.
+  level: 20
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, memory, helper, no_summon]
+  affects: [invisible, detect_invis, detect_magic, sense_life, protect_evil]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  abilities:
+    str: 18
+    str_add: 100
+    int: 18
+    wis: 18
+    dex: 18
+  gold: 200
+  exp: 40000
+  position:
+    load: resting
+    default: resting
+
+"tba:269:mob:26911":
+  keywords: [bird, giant, condor]
+  short: the giant condor
+  long: The Giant condor peers off into the south...
+  description: >
+    You are amazed at this bird's size.  You are awed at its grand presence. You really shouldn't kill
+    it, it might be illegal.
+  level: 18
+  sex: female
+  alignment: 0
+  flags: [aware, stay_zone, memory, helper, no_blind]
+  affects: [waterwalk]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:269:mob:26912":
+  keywords: [toad, horny]
+  short: the horny toad
+  long: A spiky-looking horny toad is here, taking an afternoon nap.
+  description: This little beast would be very frightening if it were larger.
+  level: 17
+  sex: female
+  alignment: 1000
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: resting
+    default: resting

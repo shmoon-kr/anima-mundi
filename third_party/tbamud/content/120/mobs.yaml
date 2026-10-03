@@ -1,0 +1,840 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 120.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:120:mob:12000":
+  keywords: [judge, adjudicator]
+  short: the adjudicator
+  long: An adjudicator is watching the games intently.
+  description: >
+    The adjudicator is a retired gladiator and scars cover all exposed parts of his body.  Although he
+    is getting on in years, he remains healthy and fit.
+  level: 12
+  sex: male
+  alignment: 100
+  flags: [sentinel, memory]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12001":
+  keywords: [scorekeeper]
+  short: the scorekeeper
+  long: A scorekeeper has one eye on his stopwatch and the other on a clipboard.
+  description: >
+    The scorekeeper is a young man of about 25 years of age and is very intently studying his clipboard.
+  level: 7
+  sex: male
+  alignment: 100
+  flags: [sentinel, memory]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12003":
+  keywords: [spectator, fan]
+  short: the spectator
+  long: A spectator is here watching the games.
+  description: The spectator is filthy, half drunk and screaming his head off.
+  level: 5
+  sex: neutral
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: sitting
+    default: sitting
+
+"tba:120:mob:12004":
+  keywords: [noble, nobleman]
+  short: the nobleman
+  long: A nobleman stands here looking aloof.
+  description: >
+    The nobleman is dressed in fine clothes and jewelry and has a very snobbish attitude.  While he is
+    getting old and his hair and beard are streaked with gray, he is by no means an easy target.
+  level: 12
+  sex: male
+  alignment: 500
+  flags: [sentinel, wimpy, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12005":
+  keywords: [slave]
+  short: the slave
+  long: A slave stands here, wishing that she was free.
+  description: >
+    A very pretty young woman who was captured instead of being killed when the Roman legions
+    subjugated her land.
+  level: 3
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12006":
+  keywords: [gladiator]
+  short: the gladiator
+  long: There is a gladiator standing here.
+  description: >
+    A well muscled man who is very heavily armored and armed to the teeth.  He lives for combat.
+  level: 14
+  sex: male
+  alignment: -250
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12007":
+  keywords: [driver]
+  short: the chariot driver
+  long: There is a chariot driver here.
+  description: >
+    You see a very slight and small individual whose whole life is centered around nothing but horses
+    and speed.
+  level: 10
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12008":
+  keywords: [coach, trainer]
+  short: the coach
+  long: There is a coach standing here, going over last minute strategy.
+  description: >
+    As you try to look over his shoulder and listen in on his mumbling, he looks up at you and gives
+    you a glare that chills you to the bone.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [sentinel, memory]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12009":
+  keywords: [healer]
+  short: the healer
+  long: A healer is standing here.
+  description: >
+    You see a young man, still learning about magical healing, wearing a white coat and using a
+    stethoscope.
+  level: 14
+  sex: male
+  alignment: 900
+  flags: [sentinel, aware, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12010":
+  keywords: [herbalist, young, lady, beautiful]
+  short: the herbalist
+  long: There is a beautiful young lady here, carrying herbs to help the healer with.
+  description: >
+    The herbalist is a very beautiful young lady who is about 22 years old.  She has deep brown eyes
+    and shoulder-length chestnut hair.  Her body is perfectly proportioned and she stands about 5' 5" tall.
+  level: 10
+  sex: female
+  alignment: 1000
+  flags: [sentinel, wimpy, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12011":
+  keywords: [shopkeeper]
+  short: Titus' shopkeeper
+  long: Titus' shopkeeper is here, minding the store.
+  description: >
+    The shopkeeper is an older man in his middle to late fifties and looks like he enjoys the quiet
+    life.  There is a long scar running from the edge of his mouth to his right ear, making it look like he
+    is always smiling.
+  level: 23
+  sex: male
+  alignment: 750
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12012":
+  keywords: [peddler]
+  short: the peddler
+  long: A poor peddler is standing here, trying to support his meager existence.
+  description: You see a small, dirty man who doesn't look very healthy.
+  level: 4
+  sex: male
+  alignment: 250
+  flags: [sentinel, stay_zone, wimpy, no_charm]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 40
+    damage: 1d2
+  gold: 40
+  exp: 1600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12013":
+  keywords: [page]
+  short: the page
+  long: A page stands here, waiting to run an errand.
+  description: >
+    You see a young boy who looks very strong and very fast.  He has the look of a scholar about him.
+  level: 6
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12014":
+  keywords: [plaintiff]
+  short: the plaintiff
+  long: The plaintiff stands here, pleading his case.
+  description: He looks pitiful.  Absolutely pitiful.
+  level: 11
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12015":
+  keywords: [master]
+  short: the ticket master
+  long: A ticket master is here, looking at you expectantly.
+  description: >
+    He seems to be waiting for you to either buy a ticket or to get out of his way so that he can sell
+    tickets to people that actually want them.
+  level: 17
+  sex: male
+  alignment: 100
+  flags: [sentinel, memory]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12016":
+  keywords: [vendor]
+  short: the stadium vendor
+  long: A stadium vendor is walking here, selling overpriced hotdogs and beer.
+  description: >
+    The vendor is a scruffy looking man who isn't afraid of a fight and looks like he has had just
+    about enough of smart-mouthed spectators.
+  level: 8
+  sex: male
+  alignment: -150
+  flags: [stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12017":
+  keywords: [citizen]
+  short: the citizen
+  long: A citizen of Rome is standing here.
+  description: It appears to be your ordinary citizen going about his business.
+  level: 5
+  sex: male
+  alignment: 900
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 19
+    armor: 7
+    hit_points: 51
+    damage: 1d2
+  gold: 50
+  exp: 2500
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12018":
+  keywords: [gateguard, guard]
+  short: the gateguard
+  long: A gateguard stands here, tending the gate.
+  description: You see a strong, loyal public defender.
+  level: 11
+  sex: male
+  alignment: 1000
+  flags: [sentinel, scavenger, aware, memory]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12019":
+  keywords: [soldier]
+  short: the soldier
+  long: A soldier on leave is walking around looking for entertainment.
+  description: >
+    You see a member of one of the Emperor's elite legions.  He looks VERY strong.  You have this vague
+    feeling that his entertainment isn't going to be a very wholesome activity.
+  level: 17
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12020":
+  keywords: [emperor, julius, caesar]
+  short: Julius Caesar
+  long: Julius Caesar, the Emperor of Rome, is sitting here.
+  description: >
+    You see a man who is dressed in the finest of clothes, has eaten the best of foods and lived in the
+    most opulent palace that Rome has ever known.
+  level: 27
+  sex: male
+  alignment: 990
+  flags: [sentinel, memory]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12021":
+  keywords: [guard, royal, bodyguard]
+  short: the royal bodyguard
+  long: There is a royal bodyguard here, ready to die for the Emperor, if necessary.
+  description: >
+    The bodyguard is dressed in the finest of armor and wields only the deadliest of weapons.  He is
+    very strong and would put up one hell of a fight.  He has been trained to be suspicious of all but the
+    most innocent visitors, and likely to take offense of anyone with less than pure intentions.
+  level: 18
+  sex: male
+  alignment: 990
+  flags: [sentinel, aggr_evil, aggr_neutral, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: 0
+    hit_points: 3d3+180
+    damage: 3d3+3
+    bare_hand_attack: crush
+  abilities:
+    str: 18
+    str_add: 90
+  gold: 180
+  exp: 32400
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12022":
+  keywords: [judge, justice]
+  short: the judge
+  long: A judge is standing here, reading a case.
+  description: >
+    He seems to be quite interested in the case, perhaps you shouldn't disturb him now, later would
+    probably be a better time.
+  level: 21
+  sex: male
+  alignment: 990
+  flags: [sentinel, memory]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: sitting
+    default: sitting
+
+"tba:120:mob:12023":
+  keywords: [master, scheduler]
+  short: the master scheduler
+  long: The master scheduler is here, writing in an appointment book.
+  description: >
+    As you look at him, he looks up at you and asks, 'Do you have an appointment? ' He waits for a few
+    seconds and then asks, 'Would you like one?  '
+  level: 17
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12024":
+  keywords: [slimeball, slime, ball, green]
+  short: the slimeball
+  long: A green ball of slime is hanging over you, oozing downward.
+  description: There is a green 'ball' of slime oozing from the coating on the walls.
+  level: 12
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, scavenger, aggressive, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: maul
+  abilities:
+    int: 3
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12025":
+  keywords: [froboz, wizard]
+  short: Froboz
+  long: Froboz the wizard is standing here, working on a new spell.
+  description: >
+    You see a middle-aged man whose knowledge of magic, both offensive and defensive, is legendary.  He
+    literally glows with a pink aura.
+  level: 23
+  sex: male
+  alignment: 300
+  flags: [sentinel, aware, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12026":
+  keywords: [titus, andronicus]
+  short: Titus Andronicus
+  long: Titus Andronicus is standing here, polishing a few swords.
+  description: As you look at him, he suddenly swings a newly sharpened sword at you! Watch out!
+  level: 24
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+    bare_hand_attack: slash
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12027":
+  keywords: [senator]
+  short: the senator
+  long: A senator is here, waiting for debate to begin.
+  description: He seems to be quite bored and is playing with the edge of his toga.
+  level: 10
+  sex: male
+  alignment: 350
+  flags: [sentinel, memory]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12028":
+  keywords: [bailiff]
+  short: the bailiff
+  long: The bailiff stands here, keeping order in the courtroom.
+  description: >
+    He is a very stern man and insists on absolute quiet in his courtroom unless the judge has given
+    someone permission to speak.
+  level: 16
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+160
+    damage: 2d2+2
+  gold: 160
+  exp: 25600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12029":
+  keywords: [defendant]
+  short: the defendant
+  long: The defendant stands here, pleading her case.
+  description: She looks to be well organized and full of confidence.
+  level: 11
+  sex: female
+  alignment: 200
+  flags: [sentinel, memory]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12030":
+  keywords: [jupiter, king, god]
+  short: Jupiter
+  long: Jupiter, King of the Gods, is watching over his realm here.
+  description: >
+    He is the strongest of the Gods, and certainly no easy mark!  His powers transcend the plane of the
+    physical, and could easily kill an unprepared mortal.
+  level: 34
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, aggr_evil, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+    bare_hand_attack: thrash
+  abilities:
+    str: 25
+    int: 25
+    wis: 25
+    dex: 25
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12031":
+  keywords: [venus, goddess]
+  short: Venus
+  long: Venus, the Goddess of Beauty and Knowledge, is resting here.
+  description: >
+    Venus is probably one of the most beautiful women you have ever seen if not THE most beautiful. 
+    She is very powerful and tough under that outer image of beauty.
+  level: 28
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+    bare_hand_attack: blast
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 280
+  exp: 78400
+  position:
+    load: resting
+    default: resting
+
+"tba:120:mob:12032":
+  keywords: [mars, god]
+  short: Mars
+  long: Mars, the God of War and State, is sitting down here.
+  description: Mars is a tall God with burning, hateful eyes and a large scowl on his face.
+  level: 27
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+    bare_hand_attack: pound
+  abilities:
+    str: 25
+    int: 20
+    wis: 20
+    dex: 20
+  gold: 270
+  exp: 72900
+  position:
+    load: sitting
+    default: sitting
+
+"tba:120:mob:12033":
+  keywords: [mercury, messenger, god]
+  short: Mercury
+  long: Mercury, the messenger of the Gods, is standing here.
+  description: Mercury is a handsome, youthful God and wears a large grin on his face.
+  level: 26
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+    bare_hand_attack: punch
+  abilities:
+    str: 20
+    int: 20
+    wis: 20
+    dex: 25
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12034":
+  keywords: [shopkeeper]
+  short: Froboz' shopkeeper
+  long: Froboz' shopkeeper is here, minding the store.
+  description: >
+    The shopkeeper is an older man in his middle to late fifties and looks like he enjoys the quiet
+    life.  There is a long scar running from the edge of his mouth to his right ear, making it look like he
+    is always smiling.
+  level: 23
+  sex: male
+  alignment: 650
+  flags: [sentinel, memory, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12035":
+  keywords: [executioner]
+  short: the executioner
+  long: The executioner stands here, waiting to torture some sorry soul.
+  description: >
+    You see a burly man who is wearing a black hood that obscures his face.  He has a very sadistic
+    attitude and clearly loves his work.
+  level: 20
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, aggressive, no_charm, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12036":
+  keywords: [baker]
+  short: the baker
+  long: The baker looks at you calmly, wiping flour from his face with one hand.
+  description: A fat, nice looking baker.  But you can see that he has many scars on his body.
+  level: 33
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing
+
+"tba:120:mob:12037":
+  keywords: [grocer]
+  short: the grocer
+  long: A grocer stands at the counter, with a slightly impatient look on his face.
+  description: A tall grocer, who moves two 200 pounds bag of flour around on his shoulders.
+  level: 33
+  sex: male
+  alignment: 900
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 9
+    armor: -9
+    hit_points: 6d6+330
+    damage: 5d5+5
+  gold: 330
+  exp: 108900
+  position:
+    load: standing
+    default: standing

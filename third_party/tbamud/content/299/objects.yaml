@@ -1,0 +1,353 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 299.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:299:obj:29900":
+  type: container
+  keywords: [cadaver, altar]
+  short: a cadaver
+  long: A cadaver is pinned to the altar with a large knife
+  wear: [take]
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 25
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [corpse, fresh]
+    text: >
+      The corpse lying here is disgusting at best.  Looking closely at it, you notice that it has been
+      disembowled, but can find no trace of the entrails whatsoever.
+  - keywords: [altar]
+    text: >
+      The altar before you is covered with glyphs and symbols that mean nothing to you.  It obviously is
+      not the original altar that was in this cathedral.  There are fresh blood stains down the side of it
+      and the top is stained a very deep brown.
+
+"tba:299:obj:29901":
+  type: weapon
+  keywords: [knife, long, curved]
+  short: a long, curved knife
+  long: A long curved knife.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: slash
+  weight: 2
+  cost: 350
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [knife, long, curved]
+    text: >
+      This long knife has a long curved blade with a bone handle.  The blade is very plain, but looks
+      surprisingly sharp.
+
+"tba:299:obj:29902":
+  type: armor
+  keywords: [amulet, sapphire]
+  short: a sapphire amulet
+  long: A strange sapphire amulet rests on the ground here.
+  flags: [magic]
+  wear: [take, neck]
+  values:
+    armor: 0
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: -1
+  - apply: con
+    modifier: 2
+  extras:
+  - keywords: [amulet, sapphire]
+    text: >
+      This necklace is comprised of a large sapphire hanging on a brass chain. There are some runes in
+      the back of the sapphire, but they are almost totally indecipherable.
+  - keywords: [runes]
+    text: My mistake.  They are *totally* indecipherable.
+
+"tba:299:obj:29903":
+  type: key
+  keywords: [key, ivory, bone]
+  short: an ivory key
+  long: An ivory key has been left here.
+  wear: [take, hold]
+  values:
+    raw: [29909, 0, 0, 0]
+  weight: 10
+  cost: 5
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, ivory, bone]
+    text: >
+      You stare at the shiny white surface of this key, noticing strange brownish marks marring its
+      surface.  Suddenly you realize that the key is made not of ivory, but rather of bone.  Erk.
+
+"tba:299:obj:29904":
+  type: container
+  keywords: [coffin, ebony]
+  short: the coffin
+  long: .hidden coffin
+  wear: []
+  values:
+    capacity: 500
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+
+"tba:299:obj:29905":
+  type: container
+  keywords: [carcass, evalynn]
+  short: the carcass of Evalynn
+  long: The carcass of Evalynn is lying here almost as if she had just died
+  wear: [take]
+  values:
+    capacity: 0
+    lock_flags: 0
+    corpse: false
+  weight: 29
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [corpse, evalynn]
+    text: >
+      Evalynn's corpse does not seem to have decayed at all over the past few hundred years.  It appears
+      to be clutching a sword of some sort.
+
+"tba:299:obj:29906":
+  type: potion
+  keywords: [potion, dark]
+  short: a dark potion
+  long: A dark potion is sitting here on the floor, sucking up all the light.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [30, 38, -1, -1]
+  weight: 10
+  cost: 200
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [potion, dark]
+    text: >
+      This potion almost seems to be made of the complete and utter absence of light.  Boy, is it ever
+      weird.
+
+"tba:299:obj:29907":
+  type: staff
+  keywords: [staff, ivory]
+  short: an ivory staff
+  long: An elegant ivory staff rests here, giving off a strange pure white light.
+  flags: [magic]
+  wear: [take, hold]
+  values:
+    raw: [15, 3, 3, 36]
+  weight: 20
+  cost: 800
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [staff, ivory]
+    text: >
+      This staff is really weird.  Not only is it carved from a beautiful white ivory, but it is giving
+      off a strange white light that bedazzles you with its brilliance.
+
+"tba:299:obj:29908":
+  type: money
+  keywords: [coins, pile]
+  short: a mid-sized pile of coins
+  long: A not-too-small, not-too-large pile of coins glistens in the light.
+  wear: [take]
+  values:
+    coins: 1500
+  weight: 15
+  cost: 150
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [coins, pile]
+    text: >
+      The coins look to be quite pretty.  The pile before you isn't that big, but nor is it all that
+      small.  All in all, you would guess that it is 'mid-sized'.
+
+"tba:299:obj:29909":
+  type: weapon
+  keywords: [sword, rune]
+  short: the rune sword
+  long: A strange sword lies here.
+  flags: [anti_good]
+  wear: [take, wield]
+  values:
+    damage: 2d8
+    attack: slash
+  weight: 10
+  cost: 500
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 2
+  extras:
+  - keywords: [sword, rune]
+    text: The sword looks rather strange, and has cryptic runes engraved into the blade.
+
+"tba:299:obj:29910":
+  type: key
+  keywords: [key, gold, golden]
+  short: a beautiful golden key
+  long: A key made of gold seems to have been forgotten on the ground here.
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, gold, golden]
+    text: >
+      This fine key is made out of gold.  There is a very tiny ruby set into the teeth of the key.
+
+"tba:299:obj:29911":
+  type: key
+  keywords: [key, blood]
+  short: a strange blood key
+  long: A sinister key of blood beckons...
+  flags: [magic, no_drop]
+  wear: [take, hold]
+  values:
+    raw: [29911, 0, 0, 0]
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [key, blood]
+    text: >
+      This key seems to have been formed by mystically forming human blood into the shape of a rather
+      sinister key.
+
+"tba:299:obj:29912":
+  type: trash
+  keywords: [bones, pile, crushed]
+  short: a pile of crushed bones
+  long: A pile of well-crushed bones is lying on the floor here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [bones, pile, crushed]
+    text: >
+      The bones in this pile look to have been crushed by a large force.  Like that wasn't expected. 
+      They have all been splintered and most are shattered in addition.  You can think of no good reason to
+      pick them up and carry them with you.
+
+"tba:299:obj:29913":
+  type: armor
+  keywords: [cape, black, satin]
+  short: a black cape with a red satin lining
+  long: A strange black cape lies here.
+  flags: [anti_good]
+  wear: [take, about]
+  values:
+    armor: 5
+  weight: 3
+  cost: 400
+  rent: 0
+  level: 0
+  affects:
+  - apply: int
+    modifier: 1
+  - apply: wis
+    modifier: 1
+  extras:
+  - keywords: [cape, black, satin]
+    text: >
+      This cape seems to be rather black.  It feels like it is made of velvet or some similar material. 
+      Turning it over, you notice that the inside lining is made of red satin.  A small gold link holds the
+      neck of the cape together.
+
+"tba:299:obj:29914":
+  type: armor
+  keywords: [necklace, onyx]
+  short: an onyx necklace
+  long: A strange necklace made of onyx stones lies here.
+  flags: [magic, no_drop]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: con
+    modifier: -2
+  extras:
+  - keywords: [necklace, onyx]
+    text: >
+      This necklace is pretty much just a string with a number of black onyx stones attached to it.  It
+      gives you a sinister feeling simultaneously with a feeling of wonderment.
+
+"tba:299:obj:29915":
+  type: weapon
+  keywords: [halberd, giant]
+  short: a giant halberd
+  long: A tremendously large halberd stained with blood rests here.
+  wear: [take, wield]
+  values:
+    damage: 2d15
+    attack: slash
+  weight: 30
+  cost: 800
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: -2
+  - apply: damroll
+    modifier: 3
+  extras:
+  - keywords: [halberd, giant]
+    text: >
+      This has got to be the largest weapon you have ever seen.  Sure, halberds are normally big, but
+      this has got to be at least twice as big as any other halberd you've seen.  How any mortal can even hope
+      to use it, you are not sure, but it is definitely something you wouldn't want to get hit by....
+
+"tba:299:obj:29916":
+  type: weapon
+  keywords: [avenger, holy, sword]
+  short: the Holy Avenger
+  long: A beautiful sword glowing white is floating upright here.
+  flags: [glow, anti_evil, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 2d10
+    attack: slash
+  weight: 10
+  cost: 800
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [avenger, holy, sword]
+    text: >
+      This beautiful weapon has been forged out of an unknown metal and seems to glow with an inner light
+      of its own.  The hilt is made of what seems to be gold tightly wrapped with a silken material.

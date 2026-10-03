@@ -1,0 +1,949 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 309.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:309:mob:30900":
+  keywords: [guardsman, man]
+  short: a guardsman
+  long: A guardsman stands at ease near the barrier, casually watching your arrival.
+  description: >
+    The guardsman looks at you with a mixture of curiosity and mild animosity. Seeing that you wear no
+    colors for any of the Barons, he is not sure what to make of you.
+  level: 26
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, memory, helper]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30901":
+  keywords: [tradesman, man]
+  short: a tradesman
+  long: A tradesman laden down with barrels of Westlawn's finest trudges past.
+  description: >
+    The man must have traveled some distance to get the brew that only Westlawn can make so well.  He
+    carries the barrels, one on each shoulder, a bead of sweat running down the bridge of his nose.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30902":
+  keywords: [serf, worker]
+  short: a serf worker
+  long: A man with a crude wheel barrow works on the road.
+  description: >
+    The road being so rutted and in poor shape, it requires constant attention from the workers of the
+    area.  The serf carts dirt from dry areas onto the road, trying to dry up the areas of the road that
+    are muddiest.
+  level: 25
+  sex: neutral
+  alignment: 300
+  flags: [sentinel, helper]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30903":
+  keywords: [muddy, little, boy]
+  short: a muddy little boy
+  long: A little boy covered in mud and filth plays with a pile of mud.
+  description: >
+    He smiles up at you with a beguiling twinkle in his eye.  How could he know that his life is less
+    than perfect with such a fine pile of mud right outside his front door?
+  level: 25
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30904":
+  keywords: [sad, little, girl]
+  short: a sad little girl
+  long: A little girl stands forlornly at the door to her family's hut.
+  description: >
+    The poor dear does not wish to step off the doorstep because she knows she will instantly be a mess
+    from the muddy yard, but she does not wish to stay indoors all day.
+  level: 25
+  sex: female
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30905":
+  keywords: [serf, man]
+  short: a serf
+  long: A man makes his way home after a long day's work.
+  description: >
+    He is filthy, covered in dirt and grime that seems almost a pigment to his skin rather than a
+    covering of extra mess.
+  level: 26
+  sex: male
+  alignment: 700
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30906":
+  keywords: [wizened, old, woman]
+  short: a wizened old woman
+  long: An old woman with a wrinkled and careworn face stands outside her hovel.
+  description: >
+    Her eyes perpetually squint from the sun, her face pinched and leathery as she watches the children
+    at play.
+  level: 26
+  sex: female
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30907":
+  keywords: [young, child]
+  short: a young child
+  long: A young child plays outside his home under the watchful eyes of his mother.
+  description: >
+    He is a dirty, filthy child - a child of the dregs, who's lot it is in life to do nothing but labor
+    for others.
+  level: 26
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30908":
+  keywords: [gilsby, innkeep, man, servant]
+  short: Gilsby
+  long: An old man stands behind the bar slowly and deliberately serving drinks and food.
+  description: >
+    Gilsby was in the service of the old Baron, Westlawn's father for many years before Westlawn took
+    on the mantle of Baron.  Gilsby has seen them come and seen them go and holds within his old head many
+    secrets to the keep and the surrounding area.
+  level: 27
+  sex: male
+  alignment: 800
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30909":
+  keywords: [tired, man]
+  short: a tired-looking man
+  long: A tired-looking man leans on a table, tiredly sipping at his ale.
+  description: >
+    He sits at a chair at a table, both elbows propped up on the table, slumped over with all his
+    weight on those elbows.
+  level: 27
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30910":
+  keywords: [man, beady, eyes, secretive]
+  short: a secretive man
+  long: A man leans against the far side of the bar, his eyes trained upon you.
+  description: >
+    It is his eyes, those secretive eyes, that give you pause when you look his way.  He is certainly
+    not one of the serfs of the area, and does not wear the red of Baron Westlawn.
+  level: 30
+  sex: male
+  alignment: -400
+  flags: [sentinel, no_charm, no_summon, no_bash]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30911":
+  keywords: [woman, servant, serf]
+  short: a worn-looking woman
+  long: A woman sits upon a barrel working the leather of a harness.
+  description: >
+    Her wrinkled hands move with strength and fluidity which belies the image she presents upon first
+    look.
+  level: 28
+  sex: female
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30912":
+  keywords: [little, boy, playing]
+  short: a little boy
+  long: A little boy plays on the stacks of hay, laughing in delight.
+  description: >
+    He climbs high up into the heights of the hay stacks, looking down every once in a while to assure
+    himself that he is truly ascending.
+  level: 25
+  sex: male
+  alignment: 800
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30913":
+  keywords: [little, girl]
+  short: a little girl
+  long: A little girl coquettishly tries to act as if she isn't chasing the boy.
+  description: >
+    She nonchalantly climbs the stacks after the boy, trying to make it appear that all of this hay
+    climbing is foolish and beneath her, but she never takes her eyes of the boy and there is a slight smile
+    at the corners of her mouth.
+  level: 25
+  sex: female
+  alignment: 700
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30914":
+  keywords: [cow, old]
+  short: an old, sagging cow
+  long: An old cow with sagging udders lazily wanders the field.
+  description: Its tail swishes back and forth, lazily swatting the flies that buzz about.
+  level: 25
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30915":
+  keywords: [nag, mare, old]
+  short: an old nag
+  long: An old nag slowly makes its way around the area, looking for fresh grass.
+  description: Her back is bowed in the center, her coat patched and in poor condition.
+  level: 25
+  sex: female
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30916":
+  keywords: [local, man, fishing]
+  short: a local
+  long: One of the locals sits on the bridge's edge with a fishing pole.
+  description: >
+    He idly dangles his legs over the side, swinging them lazily as the day passes.  It doesn't appear
+    that he really cares whether or not he catches anything, he is just enjoying the quiet.
+  level: 26
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30917":
+  keywords: [woman, basket]
+  short: a woman carrying a basket
+  long: A woman hoists a large wicker basket on one shoulder, carrying it through the yard.
+  description: >
+    She walks slightly bent over to one side, the contents of the basket obviously heavy and awkward.
+  level: 26
+  sex: female
+  alignment: 500
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30918":
+  keywords: [man, keg]
+  short: a man rolling a keg
+  long: A man pushes a wooden keg through the keep, taking it to another room.
+  description: >
+    This man is one of Westlawn's many servants whose main job it is to make sure that the dining and
+    kitchen area is always well-stocked with ale.
+  level: 27
+  sex: male
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30919":
+  keywords: [watchman, soldier]
+  short: a watchman
+  long: A soldier stands at post, scanning the horizon for any signs of invasion.
+  description: >
+    His keen eyes do not for one moment waver from their incessant scanning of the lands around the
+    keep.  If this man fails in his job, many people could die.
+  level: 28
+  sex: male
+  alignment: 500
+  flags: [sentinel, aware, memory, no_charm, no_summon, no_sleep, no_bash]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30920":
+  keywords: [soldier, man]
+  short: a soldier
+  long: A soldier tromps about the keep, stepping in clean rhythm even though he is alone.
+  description: >
+    All of Westlawn's men have been trained so well that they continue to march in formation even when
+    there is no formation.
+  level: 28
+  sex: male
+  alignment: 500
+  flags: [scavenger, stay_zone, memory, helper]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30921":
+  keywords: [soldier, guard, finest]
+  short: one of Westlawn's Elite
+  long: A soldier wearing the sigil of an Elite strides past.
+  description: >
+    Westlawn's Elite are feared throughout the realm by all Barons and common folk alike.  They have
+    been trained in the arts of battle to such a degree as to be masters, respected as the best in nearly
+    every fight.
+  level: 29
+  sex: male
+  alignment: 700
+  flags: [aware, stay_zone, memory, helper, no_bash]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30922":
+  keywords: [jerrod, swordsman, elite, captain]
+  short: Jerrod
+  long: People stand aside as Jerrod, the captain of the Elite, makes his way through.
+  description: >
+    Jerrod smiles and nods as he passes by, his face set in an expression of open kindness.  The people
+    who he smiles at, however, smile nervously back, hoping not to offend in any way.  Jerrod is never
+    petty or unkind to the common folk of the keep or the surrounding land, but the stories of his tirades
+    on his men are legendary - thus the reason for the wide berth that people give when he passes.
+  level: 30
+  sex: male
+  alignment: 700
+  flags: [stay_zone, memory, helper, no_charm]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30923":
+  keywords: [raggedy, commoner]
+  short: a raggedy commoner
+  long: A raggedy commoner walks past.
+  description: >
+    He is nondescript in nearly every way possible.  His clothes are those of a common man's - brown
+    jerkin with a pair of sandals.
+  level: 26
+  sex: male
+  alignment: 200
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30924":
+  keywords: [foreman, man, boss]
+  short: the foreman
+  long: The foreman of the farm crew stands scribbling in a clipboard.
+  description: >
+    He is probably the only man in the immediate area who is not covered in mud and filth from head to
+    toe.
+  level: 29
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30925":
+  keywords: [donld, smithy]
+  short: Donld
+  long: Donld the smithy pounds away at his anvil.
+  description: >
+    He is tall and lean, well muscled but not huge like many stereotypical smiths of the area.  He
+    looks up at you without stopping his pounding, winks with a sly smile, and goes back to concentrating on
+    his anvil.
+  level: 29
+  sex: male
+  alignment: 800
+  flags: [sentinel, memory, no_charm, no_summon, no_sleep, no_bash]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30926":
+  keywords: [Westlawn, Baron]
+  short: the Baron Westlawn
+  long: The Baron Westlawn is here, talking with Donld.
+  description: >
+    He is not a particularly large or imposing man, he is simply a man.  He is better than average
+    looking, about six foot even in height and carries himself with a strong dignity.
+  level: 30
+  sex: male
+  alignment: 750
+  flags: [sentinel, memory]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30927":
+  keywords: [serving, wench]
+  short: a serving wench
+  long: A serving wench moves about the keep, performing her duties.
+  description: >
+    She is dressed in a very fetching homespun dress that amplifies her bosoms to the full extent.  Her
+    hair is done up high in a nest of sorts, stray wisps falling about her face.
+  level: 26
+  sex: female
+  alignment: 600
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30928":
+  keywords: [cook]
+  short: a cook
+  long: A cook hustles about the kitchen, staying clear of Salida's spoon.
+  description: >
+    He is dressed in a white kitchen-workers outfit, stained and nastified by the many juices and
+    fluids of the food he prepares.
+  level: 26
+  sex: male
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30929":
+  keywords: [cook]
+  short: a cook
+  long: A cook works feverishly at scrubbing the pots and pans for the next meal.
+  description: >
+    She is up to her elbows in dirty dish water, her face covered in a sheen of sweat and grime.  But
+    she is smiling.  Who can understand women?
+  level: 26
+  sex: female
+  alignment: 300
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30930":
+  keywords: [salida, chief, cook]
+  short: Salida
+  long: Salida booms orders in her huge voice, her large wooden spoon held at ready.
+  description: >
+    Anyone who has frequented the kitchen at all knows to stay clear of this big woman's spoon and the
+    lashings it will endow.  Just the same, she runs a great kitchen with great food.
+  level: 29
+  sex: female
+  alignment: -50
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30931":
+  keywords: [pig, stray]
+  short: a stray pig
+  long: A stray pig runs about the yard, snorting and oinking.
+  description: >
+    From the looks of it, this nasty creature couldn't be happier as it rolls and twists about in the
+    mud.
+  level: 26
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30932":
+  keywords: [old, man, serf]
+  short: an old man
+  long: An old man, one of the original serfs of the area, lounges on the floor.
+  description: >
+    He looks up at you pitifully with pain-filled eyes, silently beseeching that you let him alone.
+  level: 26
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30933":
+  keywords: [stableman, man, servant]
+  short: a stableman
+  long: One of Westlawn's servants tends to the horses.
+  description: >
+    He is a younger lad - possibly fourteen or fifteen years of age - who wishes to make a go at
+    becoming one of the Elite.  All of the younger generation here at Warrior's Keep have that same desire - to
+    one day be a proud warrior who fights at the Baron's side.
+  level: 27
+  sex: male
+  alignment: 600
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30934":
+  keywords: [roscoe, chief, stablemaster, horse, breaker]
+  short: Roscoe
+  long: Roscoe, the chief stablemaster and horsebreaker, leans on the fence.
+  description: >
+    He chews a piece of straw slowly, deliberately, as he watches one of the newest of the steeds trot
+    about the field.
+  level: 28
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30935":
+  keywords: [lounging, soldier]
+  short: a lounging soldier
+  long: A soldier lounges on a cot, taking a break before he goes on watch.
+  description: He stares up at the ceiling, not really paying any attention to anything at all.
+  level: 28
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30936":
+  keywords: [child, mischievous]
+  short: a mischievous child
+  long: A mischievous child darts through the kitchen, stealing any scraps she can find.
+  description: >
+    She somehow stays just of reach from Salida's spoon, winking slyly and dodging around piles of pots
+    and pans.
+  level: 25
+  sex: female
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30937":
+  keywords: [noble, man, conniving]
+  short: a secretive noble
+  long: A noble whispers quietly to the others gathered around him.
+  description: >
+    He has a look of confidentiality about him - as if what he whispers is of great import and
+    groundbreaking news.
+  level: 29
+  sex: male
+  alignment: -200
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30938":
+  keywords: [young, noble]
+  short: a young noble
+  long: A young noble listens as the secretive one whispers.
+  description: >
+    The young man looks quite open and trusting - perhaps too trusting.  He listens raptly, nodding
+    every now and again to what is being said.
+  level: 28
+  sex: male
+  alignment: 800
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30939":
+  keywords: [haughty, noble]
+  short: a haughty noble
+  long: A haughty noble listens to it all with an air of disdain.
+  description: >
+    He frequently rolls his eyes, looking for all the world as if he couldn't disagree more or be more
+    bored - but he doesn't leave.
+  level: 29
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30940":
+  keywords: [bold, noblewoman]
+  short: a bold noblewoman
+  long: A noblewoman stands boldly with the men, taking her chances at being laughed out.
+  description: >
+    She holds her head defiantly, listening only slightly to what the noble whispers, worried more
+    about her status being called down.
+  level: 26
+  sex: female
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30941":
+  keywords: [visiting, merchant]
+  short: a visiting merchant
+  long: A visiting merchant walks through the yard, enjoying some time to himself.
+  description: >
+    He carries most of what he owns in a bag slung over one shoulder - the rest must be stashed away
+    somewhere in one of the guest rooms.
+  level: 27
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+270
+    damage: 4d4+4
+  gold: 270
+  exp: 72900
+  position:
+    load: standing
+    default: standing
+
+"tba:309:mob:30942":
+  keywords: [bud, alemaster]
+  short: Bud
+  long: Bud, the alemaster of the keep, brews his finest.
+  description: >
+    Some people carry pride in themselves at being very fast, some are proud of their ability to fight,
+    others love the adventure of learning new spells.  Bud is proud of one thing only - the man loves
+    his beer.  Crisp and clean, always cold-filtered, never heat pasteurized.
+  level: 28
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  combat:
+    thac0: 11
+    armor: -6
+    hit_points: 5d5+280
+    damage: 4d4+4
+  gold: 280
+  exp: 78400
+  position:
+    load: standing
+    default: standing

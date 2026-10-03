@@ -1,0 +1,277 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 175.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:175:obj:17500":
+  type: key
+  keywords: [scroll, Shadimar, quest]
+  short: Shadimar's quest scroll
+  long: An important-looking scroll is lying here.
+  flags: [no_rent]
+  wear: [take]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 50
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [scroll]
+    text:
+    - Greetings, adventurer!
+    - >
+      I have hoped for many years that one such as you would come! I have great need of your aid to help
+      me in my plight. I am the Eastern Wizard, one of the two Wizardly champions of Neutrality.
+    - >
+      My counterpart, Tokar of the West, has been kidnapped by Carcophan, the evil Wizard of the South
+      and Trilless, the Northen Sorceress of Good. The two locked him away behind two doors, and each has a
+      key.
+    - >
+      Tokar's enslavement has weakened me severely, and whilst he is trapped I am far too weak to
+      challenge both Carcophan and Trilless on my own.
+    - >
+      Without you to stop them, Carcophan and Trilless will battle throughout eternity and eventually all
+      the balance that Tokar and I have spent our lives trying to achieve will come to nothing. I beg you
+      for your aid in this.
+    - >
+      If you accept this duty from me, go to the northern wall. There is a hidden door in the stone of
+      the cliff, which can be unlocked magically with this scroll in your possession.
+    - >
+      Beyond the door, you will find an entrance to the Wizard's Mansion, and from there you can find
+      both Trilless and Carcophan. But beware, both are well guarded, and you would do well to buy equipment
+      from me for your quest.
+    - I wish you luck, my friend. You'll need it. - Shadimar
+
+"tba:175:obj:17501":
+  type: wand
+  keywords: [fire, wand]
+  short: a fire wand
+  long: A fiery wand lies on the ground here, warming the area slightly.
+  flags: [glow, magic, bless]
+  wear: [take, hold]
+  values:
+    raw: [12, 1, 1, 26]
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+  extras:
+  - keywords: [wand]
+    text: >
+      The wand looks like a silver of liquid fire, frozen and carved into a form that can be easily held
+      by your hand.
+
+"tba:175:obj:17502":
+  type: wand
+  keywords: [black, void, wand]
+  short: a void wand
+  long: A void wand lies here, absorbing the light and the warmth.
+  flags: [magic, anti_good]
+  wear: [take, hold]
+  values:
+    raw: [12, 5, 5, 25]
+  weight: 3
+  cost: 800
+  rent: 80
+  level: 0
+  extras:
+  - keywords: [void]
+    text: >
+      The wand looks as if a hole has been cut in the fabric of reality and it is allowing the blackness
+      beyond to show through.  It sucks the light and warmth from the room, and gives off a nearly
+      suffocating odour of vile evil.
+
+"tba:175:obj:17503":
+  type: other
+  keywords: [inscription]
+  short: an inscription
+  long: An inscription is carved into the wall here.
+  wear: []
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [inscription]
+    text:
+    - Good friend,
+    - >
+      At great expense to myself I have sent you this warning. Trilless the Northern Sorceress defends
+      herself with strong creatures of the deep and raging waters. Once you enter her river, it will sweep
+      you forth with no respite.
+    - >
+      I strongly advise against taking the Northern Sorceress's river without proper preparations. She is
+      well defended, and if underprepared you will surely perish.
+    - -Shadimar
+
+"tba:175:obj:17504":
+  type: fountain
+  keywords: [trickle]
+  short: a trickle of water
+  long: A trickle of clean water runs down the wall here.
+  wear: []
+  values:
+    capacity: 500
+    contains: 500
+    liquid: water
+    poisoned: false
+  weight: 505
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [trickle]
+    text: >
+      Closer examination shows that a trickle of clean water does in fact run down the wall here.  What's
+      the matter?  Don't you trust the long description?
+
+"tba:175:obj:17505":
+  type: weapon
+  keywords: [lesser, Kraken, spike]
+  short: a lesser Kraken's spike
+  long: A lesser Kraken's spike bobs in a rock pool here.
+  flags: [magic]
+  wear: [take, wield, hold]
+  values:
+    damage: 8d5
+    attack: pierce
+  weight: 5
+  cost: 50
+  rent: 5
+  level: 0
+  extras:
+  - keywords: [spike]
+    text: The lesser Kraken's spike is long and sharp.
+
+"tba:175:obj:17506":
+  type: potion
+  keywords: [glow, glowing, white, potion]
+  short: a glowing white potion
+  long: A glowing white potion is on the ground here.
+  wear: [take]
+  values:
+    raw: [12, 1, -1, -1]
+  weight: 3
+  cost: 1000
+  rent: 100
+  level: 0
+
+"tba:175:obj:17509":
+  type: worn
+  keywords: [Trilless, bracelet, white]
+  short: Trilless' white bracelet
+  long: A small white bracelet hovers half an inch above the ground here, rotating gently.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 1000
+  rent: 130
+  level: 0
+  affects:
+  - apply: str
+    modifier: -1
+  - apply: mana
+    modifier: 10
+
+"tba:175:obj:17510":
+  type: key
+  keywords: [sanctuary, glyph, Trilless]
+  short: Trilless' sanctuary glyph
+  long: A small white glyph lies on the ground here.
+  flags: [glow, hum, no_rent, magic, bless]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 120
+  rent: 12
+  level: 0
+
+"tba:175:obj:17511":
+  type: weapon
+  keywords: [white, blade, Tranquil]
+  short: Tranquil
+  long: A white blade rests here, shining brightly. It has the word 'Tranquil' etched along the blade.
+  flags: [magic, anti_evil, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 8d7
+    attack: slash
+  weight: 10
+  cost: 950
+  rent: 120
+  level: 0
+
+"tba:175:obj:17512":
+  type: weapon
+  keywords: [black, blade, Ristoril]
+  short: Ristoril
+  long: >-
+    A blade of pure blackness lies here, absorbing the light. It has the word 'Ristoril' etched across
+    the blade.
+  flags: [magic, anti_good, anti_neutral]
+  wear: [take, wield]
+  values:
+    damage: 8d8
+    attack: pierce
+  weight: 10
+  cost: 300
+  rent: 30
+  level: 0
+
+"tba:175:obj:17513":
+  type: key
+  keywords: [sigil, darkness]
+  short: a sigil of darkness
+  long: A dark sigil is here, glowing with a dark aura of magic.
+  flags: [no_rent, magic]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 3
+  cost: 150
+  rent: 15
+  level: 0
+
+"tba:175:obj:17514":
+  type: worn
+  keywords: [carcophans, black, bracelet]
+  short: Carcophan's black bracelet
+  long: A dark bracelet lies on the ground here, consuming light and warmth.
+  flags: [magic]
+  wear: [take, wrist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 350
+  rent: 40
+  level: 0
+  affects:
+  - apply: hit
+    modifier: -25
+  - apply: mana
+    modifier: 50
+
+"tba:175:obj:17515":
+  type: weapon
+  keywords: [staff, night, carcophan]
+  short: Carcophan's Staff of Night
+  long: A black staff is waiting for someone to pick it up.
+  flags: [magic, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 3d8
+    attack: bludgeon
+  weight: 8
+  cost: 40
+  rent: 4
+  level: 0
+  extras:
+  - keywords: [staff, night, carcophan]
+    text: >
+      The staff is made from a strange black material that must have been magically enhanced.  It is far
+      too light for it's size.  An inscription is written along the handle in a language that you have
+      never seen before.

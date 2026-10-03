@@ -1,0 +1,91 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 295.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:295:mob:29506
+  room: tba:295:room:29508
+  limit: 1
+  equip:
+    wield:
+      object: tba:295:obj:29506
+      limit: 1
+    neck_1:
+      object: tba:295:obj:29507
+      limit: 1
+- object: tba:295:obj:29508
+  room: tba:295:room:29514
+  limit: 5
+- mob: tba:295:mob:29509
+  room: tba:295:room:29514
+  limit: 3
+- mob: tba:295:mob:29510
+  room: tba:295:room:29514
+  limit: 3
+- mob: tba:295:mob:29511
+  room: tba:295:room:29514
+  limit: 1
+  equip:
+    light:
+      object: tba:295:obj:29509
+      limit: 2
+- object: tba:295:obj:29510
+  room: tba:295:room:29515
+  limit: 1
+- mob: tba:295:mob:29509
+  room: tba:295:room:29515
+  limit: 1
+- mob: tba:295:mob:29510
+  room: tba:295:room:29515
+  limit: 1
+- mob: tba:295:mob:29508
+  room: tba:295:room:29513
+  limit: 4
+- mob: tba:295:mob:29507
+  room: tba:295:room:29512
+  limit: 4
+- object: tba:295:obj:29501
+  room: tba:295:room:29505
+  limit: 1
+  contents:
+  - object: tba:295:obj:29502
+    limit: 1
+- mob: tba:295:mob:29502
+  room: tba:295:room:29505
+  limit: 2
+  equip:
+    wield:
+      object: tba:295:obj:29500
+      limit: 2
+- mob: tba:295:mob:29503
+  room: tba:295:room:29505
+  limit: 2
+  equip:
+    wield:
+      object: tba:295:obj:29500
+      limit: 2
+- object: tba:295:obj:29503
+  room: tba:295:room:29505
+  limit: 1
+- mob: tba:295:mob:29505
+  room: tba:295:room:29507
+  limit: 4
+- object: tba:295:obj:29505
+  room: tba:295:room:29507
+  limit: 2
+- object: tba:295:obj:29504
+  room: tba:295:room:29506
+  limit: 2
+- mob: tba:295:mob:29504
+  room: tba:295:room:29506
+  limit: 1
+- mob: tba:295:mob:29501
+  room: tba:295:room:29504
+  limit: 4
+  equip:
+    wield:
+      object: tba:295:obj:29500
+      limit: 4
+- mob: tba:295:mob:29500
+  room: tba:295:room:29501
+  limit: 4

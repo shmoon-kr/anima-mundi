@@ -1,0 +1,130 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 40.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:40:obj:4000":
+  type: armor
+  keywords: [ring, yellow, green]
+  short: a yellow and green ring
+  long: A ring is here, with yellow and green ornamentation.  It looks very old.
+  flags: [no_donate, no_drop, no_sell]
+  wear: [take, finger]
+  values:
+    armor: 0
+  weight: 1
+  cost: 50
+  rent: 20
+  level: 0
+  affects:
+  - apply: str
+    modifier: -2
+  extras:
+  - keywords: [ring, yellow, green]
+    text: It feels heavy.
+
+"tba:40:obj:4001":
+  type: container
+  keywords: [carcass, goblin]
+  short: a goblin's carcass
+  long: A halfway decayed carcass of a goblin is here, giving off a foul odor.
+  wear: [take]
+  values:
+    capacity: 1
+    lock_flags: 0
+    corpse: false
+  weight: 20
+  cost: 1
+  rent: 500
+  level: 0
+
+"tba:40:obj:4002":
+  type: money
+  keywords: [coins]
+  short: some coins
+  long: A small pile of coins is on the ground.
+  wear: [take]
+  values:
+    coins: 500
+  weight: 1
+  cost: 1
+  rent: 0
+  level: 0
+
+"tba:40:obj:4050":
+  type: potion
+  keywords: [potion, purple]
+  short: a purple potion
+  long: A purple potion is here.
+  wear: [take, hold]
+  values:
+    raw: [17, 14, 36, 33]
+  weight: 1
+  cost: 355
+  rent: 20
+  level: 0
+  extras:
+  - keywords: [potion, purple]
+    text: It looks rather strange!
+
+"tba:40:obj:4051":
+  type: armor
+  keywords: [helmet, metal]
+  short: a metal helmet
+  long: A metal helmet in here.
+  flags: [magic]
+  wear: [take, head]
+  values:
+    armor: -5
+  weight: 4
+  cost: 300
+  rent: 100
+  level: 0
+  affects:
+  - apply: save_spell
+    modifier: -2
+  - apply: save_breath
+    modifier: -2
+  extras:
+  - keywords: [helmet, metal]
+    text: It looks somehow magical!.
+
+"tba:40:obj:4052":
+  type: food
+  keywords: [mushroom]
+  short: a mushroom
+  long: A small mushroom is here.
+  wear: [take, hold]
+  values:
+    hours: 2
+    poisoned: true
+  weight: 1
+  cost: 9
+  rent: 3
+  level: 0
+  extras:
+  - keywords: [mushroom]
+    text: Let's put it this way - I wouldn't eat it!!
+
+"tba:40:obj:4053":
+  type: weapon
+  keywords: [dirk]
+  short: a thieves' dirk
+  long: A beautifully crafted dirk is lying here.
+  flags: [anti_cleric, anti_warrior]
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: pierce
+  weight: 2
+  cost: 850
+  rent: 500
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 1
+  - apply: damroll
+    modifier: 1
+  extras:
+  - keywords: [dirk]
+    text: >
+      It is a medium sized, beautifully crafted dirk made from some grayish alloy. Its blade is
+      double-edged and very thin...  This looks like a good thieves' weapon.

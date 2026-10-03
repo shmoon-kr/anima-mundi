@@ -1,0 +1,253 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 51.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:51:mob:5100":
+  keywords: [goblin, slave]
+  short: the goblin slave
+  long: A goblin slave lies here asleep.
+  description: The defenseless goblin begs for mercy.
+  level: 1
+  sex: male
+  alignment: 350
+  flags: [sentinel, wimpy]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: sleeping
+    default: sleeping
+
+"tba:51:mob:5101":
+  keywords: [drow, commoner]
+  short: the Drow commoner
+  long: A drow commoner is here, walking around on guard duty.
+  description: I doubt he is the type to give directions.
+  level: 10
+  sex: male
+  alignment: -1000
+  flags: [aggressive, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5102":
+  keywords: [drow, noble, warrior]
+  short: the drow warrior
+  long: A drow warrior stands here guarding his home.
+  description: He looks kind of annoyed!
+  level: 12
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5103":
+  keywords: [drow, noble, mage]
+  short: the drow mage
+  long: A drow mage is here protecting his home.
+  description: The mage prepares to cast a spell...  At you!!
+  level: 15
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5104":
+  keywords: [drow, priestess]
+  short: the drow priestess
+  long: A drow priestess is here shouting orders.
+  description: I wouldn't want go get on her bad side!
+  level: 17
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aggressive, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 15
+    armor: 0
+    hit_points: 3d3+170
+    damage: 2d2+2
+  gold: 170
+  exp: 28900
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5105":
+  keywords: [drow, master]
+  short: the drow master
+  long: A drow master stares at you angrily.
+  description: The drow master is ALWAYS ready for a fight.
+  level: 21
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5106":
+  keywords: [drow, weaponsmaster]
+  short: the weaponsmaster
+  long: A drow weaponsmaster is here shadow boxing.
+  description: He definitely know his way around in combat.
+  level: 23
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggressive, memory, helper]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5107":
+  keywords: [drow, matron, mother]
+  short: the Matron Mother
+  long: The Matron Mother of the house is standing here.
+  description: She looks really and truly annoyed that you have found your way here.
+  level: 24
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -4
+    hit_points: 4d4+240
+    damage: 4d4+4
+  gold: 240
+  exp: 57600
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5108":
+  keywords: [drow, matron, mother]
+  short: the Matron Mother
+  long: The Matron Mother of the first house is waiting for you.
+  description: She looks like she is about to rip your head of and eat it.
+  level: 25
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5109":
+  keywords: [drider]
+  short: the drider
+  long: The drider looks at you viciously while it draws its sword.
+  description: This half-spider, half-drow creature is a formidable opponent.
+  level: 8
+  sex: neutral
+  alignment: -1000
+  flags: [aggressive, stay_zone, no_charm, no_summon]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5110":
+  keywords: [drider]
+  short: the drider
+  long: The drider looks at you viciously while it draws its sword.
+  description: This half-spider, half-drow creature is a formidable opponent.
+  level: 11
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive, stay_zone, no_charm, no_summon]
+  affects: [detect_invis, no_track]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:51:mob:5111":
+  keywords: [yochlol]
+  short: the yochlol
+  long: A yochlol forms out of a swirling mist...
+  description: The yochlol is not in a good mood.
+  level: 23
+  sex: female
+  alignment: -1000
+  flags: [sentinel, aware, aggressive, memory, no_charm, no_summon, no_bash, no_blind]
+  affects: [detect_invis, sense_life, no_track]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+230
+    damage: 3d3+3
+  gold: 230
+  exp: 52900
+  position:
+    load: standing
+    default: standing

@@ -1,0 +1,198 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 266.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:266:obj:26600":
+  type: armor
+  keywords: [collar, black, spiked]
+  short: a spiked collar
+  long: A spiked collar has been dropped here.
+  flags: [glow, anti_good]
+  wear: [take, neck]
+  values:
+    armor: 5
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 18
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: dex
+    modifier: -1
+  - apply: str
+    modifier: -1
+  extras:
+  - keywords: [collar, black, spiked]
+    text: If this is a dog's collar, then it must've been one huge dog.
+
+"tba:266:obj:26601":
+  type: armor
+  keywords: [cape, night]
+  short: the Night Cape
+  long: A black pile of cloth is in the ground.
+  flags: [hum, anti_good, anti_neutral]
+  wear: [take, about]
+  values:
+    armor: 6
+  weight: 6
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: hitroll
+    modifier: 2
+  - apply: damroll
+    modifier: 1
+  - apply: hit
+    modifier: -25
+  extras:
+  - keywords: [cape, night]
+    text: >
+      This beautiful cape looks to be made from an unknown material, at least unknown to this world.
+
+"tba:266:obj:26602":
+  type: armor
+  keywords: [gloves, soul, stealing]
+  short: the Gloves of Soul Stealing
+  long: The Gloves of Soul Stealing have been dropped here.
+  flags: [glow, anti_good, anti_neutral]
+  wear: [take, hands]
+  values:
+    armor: 8
+  weight: 8
+  cost: 1
+  rent: 0
+  level: 25
+  affects:
+  - apply: damroll
+    modifier: 2
+  - apply: hitroll
+    modifier: 2
+  - apply: str
+    modifier: -3
+  extras:
+  - keywords: [gloves, soul, stealing]
+    text: These black chain mesh gloves have stolen many souls and taken them straight to Hell.
+
+"tba:266:obj:26603":
+  type: armor
+  keywords: [helm, shimmering]
+  short: a shimmering helm
+  long: A shimmering helm is the ground.
+  flags: [glow, anti_good]
+  wear: [take, head]
+  values:
+    armor: 9
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: con
+    modifier: 2
+  - apply: hit
+    modifier: 15
+  extras:
+  - keywords: [helm, shimmering]
+    text: This ethereal helm shimmers faintly with arcane energies.
+
+"tba:266:obj:26604":
+  type: armor
+  keywords: [eyelets, red, glowing]
+  short: some glowing red eyelets
+  long: Some glowing red eyelets are glowing on the floor.
+  flags: [glow]
+  wear: [take, head]
+  values:
+    armor: 4
+  weight: 3
+  cost: 1
+  rent: 0
+  level: 15
+  affects:
+  - apply: damroll
+    modifier: 1
+  - apply: hitroll
+    modifier: 2
+  - apply: dex
+    modifier: -2
+  extras:
+  - keywords: [eyelets, red, glowing]
+    text: They look as if they radiate evil's essence.
+
+"tba:266:obj:26605":
+  type: armor
+  keywords: [breast, plate, spectral]
+  short: a spectral breast plate
+  long: A strange looking breast plate is here.
+  flags: [glow]
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 15
+  cost: 1
+  rent: 0
+  level: 20
+  affects:
+  - apply: hit
+    modifier: 50
+  extras:
+  - keywords: [breast, plate, spectral]
+    text: It is engraved and carved in intricate ancient symbols.
+
+"tba:266:obj:26606":
+  type: container
+  keywords: [back, pack]
+  short: a backpack
+  long: A strong looking brown leather backpack lies here on the floor.
+  wear: [take, hold]
+  values:
+    capacity: 300
+    lock_flags: 1
+    corpse: false
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [backpack, pack]
+    text: Dusty and worn, it looks very usable.
+
+"tba:266:obj:26607":
+  type: weapon
+  keywords: [stake, wooden]
+  short: a wooden stake
+  long: Someone left a wooden stake here.
+  wear: [take, wield]
+  values:
+    damage: 2d4
+    attack: stab
+  weight: 5
+  cost: 1
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 2
+  - apply: hit
+    modifier: 25
+  extras:
+  - keywords: [stake, wooden]
+    text: It looks to have been fashioned more as a weapon than as a tool for anchoring.
+
+"tba:266:obj:26608":
+  type: worn
+  keywords: [garlic, string]
+  short: a string of garlic
+  long: A string of garlic has been left here.
+  flags: [magic, bless]
+  wear: [take, neck, waist]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 7
+  cost: 1
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [garlic, string]
+    text: It is long enough to be worn around neck or waist, take your pick.

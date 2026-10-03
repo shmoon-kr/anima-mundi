@@ -1,0 +1,268 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 237.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:237:mob:23700":
+  keywords: [construction, worker, dwarf]
+  short: a dwarven worker
+  long: A dwarven construction worker is here, tending the road.
+  description: >
+    He's small and quite ugly.  But the way he takes care of the road, you know he loves his work.
+  level: 7
+  sex: male
+  alignment: 100
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23701":
+  keywords: [construction, worker, dwarf, foreman]
+  short: the foreman
+  long: The foreman for the construction workers is here, getting an overview.
+  description: >
+    A little higher than the original construction worker, this dwarf has been instructed by his
+    superiors to keep an eye on his fellow workers.  He rather enjoys that power...
+  level: 10
+  sex: male
+  alignment: 100
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23702":
+  keywords: [guard, dwarven]
+  short: a dwarven guard
+  long: A dwarven guard is standing here, guarding.
+  description: >
+    This guard looks to be in exceptional shape, and very tough.  For a dwarf he's look like he might
+    actually pose a threat, should you encounter him in battle.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23703":
+  keywords: [guard, dwarven]
+  short: a dwarven guard
+  long: A dwarven guard is walking here, guarding the area.
+  description: >
+    This guard looks to be in exceptional shape, and very tough.  For a dwarf he's look like he might
+    actually pose a threat, should you encounter him in battle.
+  level: 10
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23704":
+  keywords: [lookout, guard, dwarf, dwarven]
+  short: the lookout
+  long: The dwarven lookout is here, watching over the trade route.
+  description: >
+    This is one dwarf you do not want to mess with.  He's so high in the ranks, that he alone can
+    determine when to set off the traps, you've noticed further down the road.
+  level: 10
+  sex: male
+  alignment: 500
+  flags: [sentinel, memory, helper, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: punch
+  gold: 100
+  exp: 10000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:237:mob:23705":
+  keywords: [trader, dwarven]
+  short: the dwarven trader
+  long: The dwarven trader is on his way to a meeting with fellow traders.
+  description: >
+    The dwarves has long known not to trust anybody except dwarves.  This dwarf has been given only the
+    amount of gold necessary to perform his duties, and has been assigned an escort.  He walks as if he
+    owns the world, as traders have always done, and keeps his money in his hands always, lest someone
+    steal them.
+  level: 7
+  sex: male
+  alignment: 400
+  flags: [sentinel, scavenger, aware, memory, helper, no_charm, no_summon]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23706":
+  keywords: [bodyguard, guard, dwarf]
+  short: a bodyguard
+  long: A bodyguard for the dwarven trader, is here, guarding.
+  description: >
+    When he volunteered for this duty, he was certain to see the world.  And sure enough.  Following
+    the trader wherever he goes, takes him around to parts of the world he only dreamed about.
+  level: 7
+  sex: male
+  alignment: 400
+  flags: [sentinel, memory, helper]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23707":
+  keywords: [dog, cur]
+  short: a cur dog
+  long: A cur dog is here, barking at you.
+  description: It looks as though it's almost starved to death.  And smells if its been buried a week.
+  level: 3
+  sex: neutral
+  alignment: -100
+  flags: [aggressive, stay_zone, wimpy]
+  affects: [sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23708":
+  keywords: [mouse]
+  short: a small mouse
+  long: A small mouse scurries about here.
+  description: It looks soft and ready for your blade..
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  affects: [sneak]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23709":
+  keywords: [crow]
+  short: a crow
+  long: A crow is flying around here, looking for carcasses.
+  description: A black crow.  Just another black crow.  How should that be anything worth looking at.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23710":
+  keywords: [hawk]
+  short: a hawk
+  long: A hawk has landed not far from you. It stares at you with one eye.
+  description: A hawk, seemingly untamed and ready to put both beak and claws to use.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [aggressive, stay_zone, wimpy]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: claw
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing
+
+"tba:237:mob:23711":
+  keywords: [centipede, white]
+  short: a small white centipede
+  long: A small white centipede tries to hide under a nearby rock.
+  description: >
+    Well, it doesn't have a hundred legs.  But it's a close race.  And it's really not worth looking at.
+  level: 3
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 19
+    armor: 8
+    hit_points: 30
+    damage: 1d2
+    bare_hand_attack: bite
+  gold: 30
+  exp: 900
+  position:
+    load: standing
+    default: standing

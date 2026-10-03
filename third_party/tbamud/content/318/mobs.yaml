@@ -1,0 +1,498 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 318.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:318:mob:31800":
+  keywords: [sailor, drunk]
+  short: the drunken sailor
+  long: A drunken sailor stumbles past you, the fumes all whiskey and vomit.
+  description: >
+    His white and black striped shirt is speckled with the stains from his last meal.  The stubble on
+    his face is only overshadowed by the hair which grows out of the top of the back of his shirt.
+  level: 20
+  sex: male
+  alignment: 0
+  flags: [stay_zone, wimpy]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31801":
+  keywords: [gambler, shouting]
+  short: a shouting gambler
+  long: A gambler is here, shouting at the top of his lungs at the cocks fighting in the street.
+  description: >
+    You want to tell him the cocks don't understand, but then you realize that HE would probably not
+    understand.
+  level: 12
+  sex: male
+  alignment: 100
+  flags: [sentinel]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31802":
+  keywords: [dead, boy]
+  short: a Dead Boy
+  long: A Dead Boy eyes you evilly.
+  description: >
+    The unwashed boy seems to be eying you rather fiercely.  You don't know what you did to offend him
+    but hey, it could be any...  Nothing.
+  level: 20
+  sex: male
+  alignment: -700
+  flags: [stay_zone, aggr_good, helper]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31803":
+  keywords: [bloody, scythe, boy]
+  short: a Bloody Scythe gang member
+  long: A member of Bloody Scythe eyes you evilly.
+  description: >
+    The unwashed boy seems to be eyeing you rather fiercely.  You don't know what you did to offend him
+    but hey, it could be any...  Nothing.
+  level: 20
+  sex: male
+  alignment: -700
+  flags: [stay_zone, aggr_good, helper]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+    bare_hand_attack: punch
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31804":
+  keywords: [giant, cockroach]
+  short: a giant cockroach
+  long: A giant cockroach looks about ready to eat you.
+  description: QUICK!!!  Squish it, before it squishes you!!
+  level: 10
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31805":
+  keywords: [beggar]
+  short: an old beggar
+  long: A beggar stands here, pleading for a few coins.
+  description: You see an old dirty beggar with no teeth trying to get coins by passer byes.
+  level: 21
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 13
+    armor: -2
+    hit_points: 4d4+210
+    damage: 3d3+3
+    bare_hand_attack: bite
+  gold: 210
+  exp: 44100
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31806":
+  keywords: [Marcko, Dead, Boy]
+  short: Marcko, the Dead Boy's leader
+  long: Marcko, gives you a slight smirk.
+  description: >
+    Less dirty than the rest of his disciples, he no less ruthless.  He grins at you, almost
+    pleasantly, until he flashes the knife in his hand, in which his pleasant smile fades.
+  level: 34
+  sex: male
+  alignment: -1000
+  flags: [sentinel, aggr_good, helper, no_summon, no_blind]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+    bare_hand_attack: stab
+  gold: 340
+  exp: 115600
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31807":
+  keywords: [Ie, Bloody, scythe, boy]
+  short: Ie, Bloody Scythe's leader
+  long: Ie, sits here reviewing the days collections.
+  description: >
+    A woman sits before you, ruffling through papers, not bothering to look up to see or greet you. 
+    She drops one of her papers onto the floor, as she bends down to pick it up she notices your boot and
+    gets up suddenly, preparing for your attack.  She taps her boot heel to the ground and a razor juts
+    out the toe of her boot.  You sense that this isn't going to be pretty.
+  level: 34
+  sex: female
+  alignment: -1000
+  flags: [sentinel, memory, helper, no_summon, no_blind]
+  combat:
+    thac0: 9
+    armor: -10
+    hit_points: 6d6+340
+    damage: 5d5+5
+    bare_hand_attack: blast
+  gold: 340
+  exp: 115600
+  position:
+    load: sitting
+    default: sitting
+
+"tba:318:mob:31808":
+  keywords: [carpenter, man, worker]
+  short: a carpenter
+  long: A man is here, hammering on some rounded ship's boards.
+  description: >
+    Bathed in sweat and looking quite the strong type, you can't help but wonder what motivates a man
+    who does a job such as this to get up every morning.
+  level: 22
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 13
+    armor: -3
+    hit_points: 4d4+220
+    damage: 3d3+3
+  gold: 220
+  exp: 48400
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31809":
+  keywords: [foreman, shipyard]
+  short: the shipyard foreman
+  long: The shipyard foreman struts through the room, kicking his workers, telling them to work harder.
+  description: Complete with his fat cigar, this man is the poster child for alcoholics anonymous.
+  level: 25
+  sex: male
+  alignment: -400
+  flags: [sentinel]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31810":
+  keywords: [sailor]
+  short: a hard working sailor
+  long: A hard working sailor struggles along, loaded down with nets and rigging.
+  description: Poor fella, almost makes you want to help him with his load, but then, nahhhh...
+  level: 20
+  sex: male
+  alignment: 300
+  flags: [stay_zone]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31811":
+  keywords: [dock, master, woman]
+  short: the Dockmaster
+  long: A very self important woman stands here with a clipboard.
+  description: >
+    She supervises and regulates the loading and unloading of cargo and passengers to every ship that
+    docks in this cove.
+  level: 30
+  sex: female
+  alignment: 0
+  flags: [stay_zone, wimpy, memory]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31812":
+  keywords: [assistant]
+  short: the Dockmaster's assistant
+  long: The Dockmaster's assistant proudly follows along beside her.
+  description: >
+    This little guy looks like he finally found someone bigger than him that wouldn't kick his ass, so
+    he's hanging on for dear life.
+  level: 20
+  sex: male
+  alignment: 300
+  flags: [stay_zone, memory, helper]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31813":
+  keywords: [bum]
+  short: a bum
+  long: A bum lays on a bench, snoring softly.
+  description: You might even be doing this guy a favor...  One good bop to the noggin and he's done.
+  level: 10
+  sex: male
+  alignment: 200
+  flags: [sentinel]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31814":
+  keywords: [ticket, travel, woman, receptionist]
+  short: a travel agent
+  long: A woman sits behind the glass, selling boat tickets.
+  description: >
+    She moves at lightning speed, with the assurance of one who has done her job for a long time.
+  level: 1
+  sex: female
+  alignment: 0
+  flags: [sentinel, no_summon]
+  combat:
+    thac0: 20
+    armor: 9
+    hit_points: 10
+    damage: 1d2
+  gold: 10
+  exp: 100
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31815":
+  keywords: [midshipman]
+  short: a midshipman
+  long: A midshipman passes by you, mumbling something.
+  description: >
+    The man walks with hands in his pockets and head bowed, continually mumbling something to himself. 
+    Perhaps he's looking for a bar or a fight, who knows.
+  level: 25
+  sex: male
+  alignment: 0
+  flags: [aggressive, stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: maul
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31816":
+  keywords: [pack, rat]
+  short: a pack rat
+  long: A pack rat is sifting through trash.
+  description: It's a large, fat rat, what else would it be.
+  level: 7
+  sex: neutral
+  alignment: 0
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 71
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 70
+  exp: 4900
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31817":
+  keywords: [Cap'n, Darby]
+  short: Cap'n Darby
+  long: Cap'n Darby is here, fighting.
+  description: >
+    It seems like every time you see Cap'n Darby, the guy is fighting.  Doesn't this old sailor EVER
+    take a break?!?
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [stay_zone, memory, no_charm, no_summon, no_sleep, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: punch
+  gold: 300
+  exp: 90000
+  position:
+    load: fighting
+    default: fighting
+
+"tba:318:mob:31818":
+  keywords: [net, weaver]
+  short: the netweaver
+  long: The netweaver is here, sewing some netting together.
+  description: >
+    He has small, horn rimmed glasses, and a large net draped across his body, which he is currently
+    working on.
+  level: 20
+  sex: male
+  alignment: 500
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:318:mob:31819":
+  keywords: [punk, street]
+  short: the street punk
+  long: A street punk is here, getting to throw a set of dice.
+  description: He looks up and growls.  It must be that no one usually upsets the game.
+  level: 25
+  sex: male
+  alignment: -300
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31820":
+  keywords: [sailor, drunk, sing]
+  short: the singing drunken sailor
+  long: A sailor is lounging near the piano, singing his heart out.
+  description: He looks like if he were to let go of the piano, he may not end up on his feet still.
+  level: 20
+  sex: male
+  alignment: -100
+  flags: [sentinel]
+  combat:
+    thac0: 14
+    armor: -2
+    hit_points: 4d4+200
+    damage: 3d3+3
+  gold: 200
+  exp: 40000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31821":
+  keywords: [myra, madame]
+  short: Madame Myra
+  long: Madame Myra is here, selling herself and any of her girls for the right price.
+  description: >
+    Large breasted, large assed, and smothered in make-up and perfume, this lady is one nasty specimen.
+  level: 30
+  sex: female
+  alignment: 400
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:318:mob:31822":
+  keywords: [motel, man, attendant]
+  short: the motel attendant
+  long: The man reads his book behind the glass without glancing up.
+  description: You clear your throat, but he just continues to ignore you.
+  level: 30
+  sex: male
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

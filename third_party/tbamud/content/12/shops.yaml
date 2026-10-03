@@ -1,0 +1,84 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 12.
+# keeper (mob), rooms, products (always for sale), buys (item types, optionally with keywords),
+# profit (we pay cost x buy, get cost x min(sell, buy)), messages (%s customer, %d price), hours (empty: always open).
+"tba:12:shop:1200":
+  keeper: tba:12:mob:1204
+  rooms: []
+  buys:
+  - type: light
+    keywords: torch & MAGIC
+  - type: armor
+    keywords: HUM | GLOW | MAGIC
+  - type: wand
+  profit:
+    buy: 1.5
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:12:shop:1201":
+  keeper: tba:12:mob:1203
+  rooms: [tba:12:room:1204]
+  products:
+  - tba:13:obj:1300
+  buys:
+  - type: wand
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s werw"
+    you_dont_have_it: "%s sdfsdfsd"
+    does_not_buy: "%s fdfgddfg"
+    shop_cannot_afford: "%s sdfsdf"
+    you_cannot_afford: "%s 1212323534"
+    bought: "%s sdfsdfsd"
+    sold: "%s %d 4353rewrterdfbcv fghfghrt"
+  temper: 0
+  flags: 3
+  trade_with: 0
+
+"tba:12:shop:1202":
+  keeper: tba:12:mob:1203
+  rooms: [tba:12:room:1204]
+  profit:
+    buy: 2.0
+    sell: 0.5
+  messages:
+    no_such_item: "%s Sorry, I don't stock that item."
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0
+
+"tba:12:shop:1204":
+  keeper: null
+  rooms: []
+  profit:
+    buy: 1.0
+    sell: 1.0
+  messages:
+    no_such_item: "%s test"
+    you_dont_have_it: "%s You don't seem to have that."
+    does_not_buy: "%s I don't trade in such items."
+    shop_cannot_afford: "%s I can't afford that!"
+    you_cannot_afford: "%s You are too poor!"
+    bought: "%s That'll be %d coins, thanks."
+    sold: "%s I'll give you %d coins for that."
+  temper: 0
+  flags: 0
+  trade_with: 0

@@ -1,0 +1,449 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 78.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:78:room:7800":
+  name: Gideon - Arina
+  description: >
+    Ths Following zone is a town level 10-15 with a general store and so on its made up of a human/elf
+    population the connecting point is 3339 to 7801 have fun
+  sector: inside
+  flags: [private]
+  extras:
+  - keywords: [credits, info]
+    text: "Arina Links: 01n"
+
+"tba:78:room:7801":
+  name: Narrow Path
+  description: >
+    Dust devils swirl around your ankles as you continue your journey southerly. Tall, majestic fir
+    trees line the path on each side giving relief from the hot sun.  Strange sounds echo in the trees as
+    animals call out to those of their own kind.  Northward lies the Western Highway and to the south you
+    can make out what seems to be a small village.
+  sector: forest
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:78:room:7802
+  extras:
+  - keywords: [tree, fir]
+    text: >
+      Tall and stately, the fir trees sway gently in the breeze.  The tops reaching seemingly endlessly
+      toward the heavens with branches so heavily laden with moss the lower ones droop to the ground.
+
+"tba:78:room:7802":
+  name: Narrow Path
+  description: >
+    The path becomes a somewhat cobbled stone road, stray stones litter the pathway here looking as if
+    something frightened the workers away in the middle of their task.  A light breeze blows gently from
+    the south.  Gazing at the horizon, tops of chimneys can be seen.  You get an eerie feeling you are
+    being watched.  The path runs north and west, westerly you can make out the sounds of merchants calling
+    out their wares.
+  sector: forest
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7801
+    west:
+      to: tba:78:room:7803
+
+"tba:78:room:7803":
+  name: Village of Gideon, Gate
+  description: >
+    Standing before you is the gate leading to the Village of Gideon, open wide and seemingly beckoning
+    you to enter.  Smells of home cooked meals drift on the breeze and you can hear the sound of
+    children playing in the distance.  The cobbled road is well constructed and durable, looking as if each
+    stone was carefully hand picked and polished before being skillfully laid into the dirt. Easterly will
+    take you back to the Western Highway, while just through the gate is the Village of Gideon to the south.
+  sector: forest
+  flags: [no_mob, bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7802
+    south:
+      to: tba:78:room:7804
+      look: You see the gate leading to the Village of Gideon.
+  extras:
+  - keywords: [gate]
+    text: A carefully painted sign is hanging on the gate.
+  - keywords: [sign]
+    text: The sign reads "Welcome to the Village of Gideon".
+  - keywords: [south]
+    text: You see the gate leading to the Village of Gideon.
+
+"tba:78:room:7804":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    Sights and sounds fill your senses, the smells from the bakery waft lightly on the air.  Shops dot
+    the landscape along this busy yet peaceful road. Children playing amongst the crowd cause the
+    occasional shopper to almost lose their packages.  Flowers grow in clay pots that line the road, adding to
+    the beauty of the village.  Butterflies dance lazily over the flowers only swept away by the
+    occasional breeze.  To the north lies the village gate, while Mahnra Road continues on east and west where you
+    will find various shops and merchants.  To the south you hear water bubbling.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7803
+    east:
+      to: tba:78:room:7805
+    south:
+      to: tba:78:room:7818
+    west:
+      to: tba:78:room:7815
+
+"tba:78:room:7805":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    Villagers laugh heartily as they greet each other warmly in passing. Maidens can be seen carrying
+    water vessels from the fountain that is to the southwest.  A stray cat lies in the middle of the road
+    cleaning itself gingerly.  Mahnra road runs easterly and westerly and to the south is Vestra Court
+    that leads to the village fountain.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7806
+    south:
+      to: tba:78:room:7814
+    west:
+      to: tba:78:room:7804
+
+"tba:78:room:7806":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    A young couple in love walks past you arm in arm, smiling at each other and oblivious to your
+    presence.  An old man in a rocking chair sits watching them from a front porch with a knowing look on his
+    face.  The homes are modest but look well kept and each has a feeling of comfort to them.  Mahnra
+    Road continues to the east and west.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7807
+    west:
+      to: tba:78:room:7805
+
+"tba:78:room:7807":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    The houses are sparse here but children abound, laughing merrily as the play tag.  The flowers have
+    all been somewhat tramped by their roughhousing.  Girls stand in groups giggling at the boys as they
+    play in the street.  To the north you can see a small park, west will take you back to the gate, and
+    to the south lies Shantrell Lane.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7808
+    south:
+      to: tba:78:room:7809
+    west:
+      to: tba:78:room:7806
+
+"tba:78:room:7808":
+  name: Village of Gideon, Mahnra Park
+  description: >
+    An ivy covered fence surrounds this peaceful park.  Directly in the center you see a pond with
+    lilypads floating lazily upon it.  Frogs jump from the bank into the pond causing a slight splash, as
+    birds sing merrily in the trees.  A lone fisherman sits on the opposite bank, nodding off into slumber,
+    waiting for the big one to bite.  Southward will take you back to Mahnra Road.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:78:room:7807
+  extras:
+  - keywords: [pond]
+    text: >
+      The water laps at the banks of the pond.  Fish swim lazily around, but wait.. One just jumped out
+      of the water!  What a beauty!
+
+"tba:78:room:7809":
+  name: Village of Gideon, Shantrell Lane
+  description: >
+    Shantrell Lane, not much more than a narrow path, contects the two major roads of Gideon.  No homes
+    can be found here but yet it is meticulously groomed.  The flowers grow tall under the trees that
+    shade them from the noon sun.  Northward is Mahnra Road and to the south is Talipia Way.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7807
+    south:
+      to: tba:78:room:7810
+
+"tba:78:room:7810":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Small cottages line the street here.  Not much to look at but still well maintained as if the
+    owners take great pride in them.  A playful puppy romps from house to house begging for scraps.  A young
+    woman works carefully tending her garden, stoping occasionally to fan herself.  Talipia Way continues
+    on westward, while to the north lies Shantrell Lane.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7809
+    west:
+      to: tba:78:room:7811
+
+"tba:78:room:7811":
+  name: Village of Gideon, Talipia Way
+  description: >
+    This residential area of Gideon is somewhat over populated, houses are rather close together just
+    as the neighbors seem to be close with each other. Two women sit on a veranda sipping refreshing
+    drinks watching their children play together.  Talipia Way continues on to the east and west.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7810
+    west:
+      to: tba:78:room:7812
+
+"tba:78:room:7812":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Brick houses with ivy running up the sides sit quietly along the side of the road.  It is peaceful
+    and calm here, the only sound you hear are those of the birds in the trees.  To the northwest you can
+    just make out the sound of bubbling water, while Talipia Way continues on east and west.  Northward
+    will lead you to Vestra Court and the village gate.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7814
+    east:
+      to: tba:78:room:7811
+    west:
+      to: tba:78:room:7813
+
+"tba:78:room:7813":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Villagers frequent this area as they go to market and to fetch water from the fountain.  Burly men
+    stop to share an anecdote or two with each other, while the womenfolk move on about their business
+    humming slightly to themselves.  Houses are scattered here and there each with a small garden to the
+    side of them.  Directly north the fountian lies, while Talipia Way continues to the east and west.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7818
+    east:
+      to: tba:78:room:7812
+    west:
+      to: tba:78:room:7817
+
+"tba:78:room:7814":
+  name: Village of Gideon, Vestra Court
+  description: >
+    This well traveled path leads between the the major roads of the village, northward Mahnra Road and
+    southward Talipia Way.  Westward you can see a row of high hedges that border the village fountain. 
+    Along the hedgeline flowers bloom scenting the air with a slight fragrance.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7805
+    south:
+      to: tba:78:room:7812
+    west:
+      to: tba:78:room:7818
+
+"tba:78:room:7815":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    Small shops are staggered along this road, some with owners sweeping their porches, but the
+    evidence of one hangs in the air as the smell of freshly baked cookies make your mouth water.  Children can
+    be seen ducking in and out from behind trees as the echos of dogs barking ring through the air.  To
+    the west you see the baker's shop, eastward the continuation of Mahnra Road and southerly Lantoom
+    Court.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7804
+    south:
+      to: tba:78:room:7816
+    west:
+      to: tba:78:room:7819
+
+"tba:78:room:7816":
+  name: Village of Gideon, Lantoom Court
+  description: >
+    Neatly cobbled stones comprise this short road that is bordered by pink and blue flowers growing in
+    marble pots.  High hedges can be seen to the east, providing privacy for the fountain.  Northward
+    will take you to Mahnra Road, while southward is Talipia Way.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7815
+    east:
+      to: tba:78:room:7818
+    south:
+      to: tba:78:room:7817
+
+"tba:78:room:7817":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Homes sit quietly here, the silence is only broken by a slight sound of water that can be heard to
+    the northeast.  Northward takes you to Vestra Court and then on to Mahnra Road, while to the east and
+    west Talipia Way continues.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7816
+    east:
+      to: tba:78:room:7813
+    west:
+      to: tba:78:room:7825
+
+"tba:78:room:7818":
+  name: Village of Gideon, Village Square Fountain
+  description: >
+    Tall hedges border this fountain lending a feeling of seclusion and peacefulness.  Benches are
+    carefully placed around the bubbling fountain providing a place for the villagers to gather and gossip. 
+    Squirrels scurry along the ground batting playfully at leaves and twigs, while the birds sing their
+    love songs soothingly.  A slight mist rises from the fountain and is carried along the air, cooling it
+    slightly.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7804
+    east:
+      to: tba:78:room:7814
+    south:
+      to: tba:78:room:7813
+    west:
+      to: tba:78:room:7816
+
+"tba:78:room:7819":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    A white cottage with a pine door catches your eye here as well as the smells coming from it.  A
+    sign, in the shape of a loaf of bread, hangs from the post on the porch.  The stones on the road look a
+    bit worn as if this is a popular spot in the village.  Northward is the door leading to the bakery. 
+    Westward you see the general store, while eastward Mahnra Road leads back to the village gate and
+    fountain.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7820
+      look: >
+        The pine door is open facing the street.  The smells coming from the opening entice your olfactory
+        as well as your tummy.
+      door:
+        keywords: [pine, door]
+        kind: door
+    east:
+      to: tba:78:room:7815
+    west:
+      to: tba:78:room:7821
+  extras:
+  - keywords: [sign]
+    text: Stamnell's Bakery
+
+"tba:78:room:7820":
+  name: Stamnell's Bakery
+  description: >
+    Shelves and counters line this small shop, each covered with delectable pastries, pies, cookies and
+    cakes.  The shop is immaculate, not a speck of dust can be found anywhere.  In the window a cat lays
+    purring as it sleeps.  It twiches occasionally, most likely dreaming of the mouse that got away.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:78:room:7819
+
+"tba:78:room:7821":
+  name: Village of Gideon, Mahnra Road
+  description: >
+    A small pine cottage stands before you to the north that has a sign tacked to the post.  Villagers
+    rush past you on the way to do errands, each with a pleasant smile on their face.  To the south
+    Pinery Lane leads to the west gate and Talipia way continues on the east.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7822
+    east:
+      to: tba:78:room:7819
+    south:
+      to: tba:78:room:7823
+  extras:
+  - keywords: [sign]
+    text: The sign reads "Vhispera's General Store"
+
+"tba:78:room:7822":
+  name: Vhispera's General Store
+  description: >
+    Shelves line this small store, with most everything a traveler could hope for.  Vhispera stands
+    behind the counter, humming softly to herself as she nealty folds blankets.  An old dog is curled up on
+    an old bearskin in the corner, sleeping soundly.
+  sector: inside
+  flags: [bfs_mark]
+  exits:
+    south:
+      to: tba:78:room:7821
+
+"tba:78:room:7823":
+  name: Village of Gideon, Pinery Lane
+  description: >
+    A young woman with a small package passes you and flashes you a warm smile. Children run past you
+    laughing merrily.  To the north you can make out what looks to be the general store, while on to the
+    south is a residential area. Directly west stands a gate.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7821
+    south:
+      to: tba:78:room:7824
+    west:
+      to: tba:78:room:7826
+
+"tba:78:room:7824":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Two birds fight in the street over a crust of bread, startled by a hungry cat they take to flight
+    immediately.  A woman rushes out of her home seemily in a grand hurry as she heads northward toward
+    Pinery Lane.  Talipia Way leads east back to the residential area of Gideon.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    north:
+      to: tba:78:room:7823
+    east:
+      to: tba:78:room:7825
+
+"tba:78:room:7825":
+  name: Village of Gideon, Talipia Way
+  description: >
+    Tall oak trees dominate the scenery, almost out numbering the homes here. They rise to the sky tall
+    and stately.  Talipia Way continues on easterly and westerly, and to the south, there appears to be
+    a forest.
+  sector: city
+  flags: [bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7817
+    west:
+      to: tba:78:room:7824
+
+"tba:78:room:7826":
+  name: Village of Gideon, Western Gate
+  description: >
+    A large iron gate that has one side rusted shut stands here.  To the east you will find Pinery Lane
+    that will take you to Talipia Way to the south, the residential area of Gideon and to the north
+    Mahnra Road where you can find the general store, bakery and the northern gate.
+  sector: city
+  flags: [no_mob, bfs_mark]
+  exits:
+    east:
+      to: tba:78:room:7823

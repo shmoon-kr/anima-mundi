@@ -1,0 +1,54 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 41.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- mob: tba:41:mob:4100
+  room: tba:41:room:4114
+  limit: 1
+  carry:
+  - object: tba:41:obj:4102
+    limit: 2
+- mob: tba:41:mob:4101
+  room: tba:41:room:4122
+  limit: 1
+  carry:
+  - object: tba:41:obj:4100
+    limit: 2
+- mob: tba:41:mob:4102
+  room: tba:41:room:4111
+  limit: 3
+  carry:
+  - object: tba:41:obj:4103
+    limit: 10
+- mob: tba:41:mob:4102
+  room: tba:41:room:4111
+  limit: 3
+  carry:
+  - object: tba:41:obj:4104
+    limit: 3
+- mob: tba:41:mob:4103
+  room: tba:41:room:4103
+  limit: 6
+- mob: tba:41:mob:4103
+  room: tba:41:room:4124
+  limit: 2
+  equip:
+    wield:
+      object: tba:40:obj:4053
+      limit: 3
+- mob: tba:41:mob:4105
+  room: tba:41:room:4108
+  limit: 3
+- mob: tba:41:mob:4106
+  room: tba:41:room:4113
+  limit: 2
+  carry:
+  - object: tba:41:obj:4101
+    limit: 1
+- mob: tba:41:mob:4107
+  room: tba:41:room:4119
+  limit: 1
+  carry:
+  - object: tba:41:obj:4104
+    limit: 10

@@ -1,0 +1,784 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 284.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:284:mob:28400":
+  keywords: [shamus, wanderer]
+  short: Shamus
+  long: Shamus, the wandering liege, wants to protect you from the evil here.
+  description: >
+    You see a human male, bald of head and thick of frame, wearing a white robe. He has heard tales of
+    this city of evil, and has come here as a missionary.
+  level: 30
+  sex: female
+  alignment: 1000
+  flags: [scavenger, stay_zone, memory, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28401":
+  keywords: [ghenna, barrow, wight]
+  short: the barrow wight
+  long: A twisted pile of cloth and bones lies here.
+  description: >
+    You see an undead being whose sole purpose is to protect its barrow mound. Flesh hangs from its
+    wretched body, and it looks more dead than alive.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, stay_zone, no_charm, no_blind]
+  affects: [detect_invis, hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28402":
+  keywords: [ghenna, banshee]
+  short: the Banshee
+  long: The groaning spirit of a long-dead woman floats here.
+  description: >
+    This is the spirit of an evil female elf, a very rare thing indeed.  Her hair is wild and unkempt,
+    and she is dressed in tattered rags.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [scavenger, stay_zone, no_bash, no_blind]
+  affects: [detect_invis, sneak]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28403":
+  keywords: [ghenna, argos]
+  short: the Argos
+  long: A multi-mouthed pseudopod of great girth is standing here.
+  description: >
+    This is a large, amoeba-like being with one central eye which has a tripartite pupil, and a hundred
+    lashless inhuman eyes set above many sharp-toothed mouths..
+  level: 30
+  sex: neutral
+  alignment: -666
+  flags: [scavenger, stay_zone, memory, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28404":
+  keywords: [ghenna, bugbear]
+  short: the bugbear
+  long: A tall Bugbear stands here, poised for action.
+  description: >
+    Large and very muscular, this guy is covered in brick red fur.  Though vaguely humanoid in
+    appearance, he seems to contain the blood of some large carnivore.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [scavenger, stay_zone]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28405":
+  keywords: [ghenna, broken, one]
+  short: a Broken One
+  long: A Broken One stands here looking gruesome.
+  description: >
+    This guy sure is ugly!  He has the head of an ogre, one webbed foot, one human foot, and various
+    other body parts that don't match.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [scavenger, stay_zone, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28406":
+  keywords: [ghenna, bullywug]
+  short: the Bullywug
+  long: A Bullywug is standing here, ready to defend his master's lair.
+  description: This guy looks kinda like a ninja turtle, except he's a frog.
+  level: 30
+  sex: male
+  alignment: -699
+  flags: [sentinel, stay_zone, no_charm]
+  affects: [detect_invis, hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28407":
+  keywords: [ghenna, plant]
+  short: a Man-Eating plant
+  long: A large plant that reeks of carrion stands here stinking up the place.
+  description: You see a giant, venus fly trap with 6 inch fangs.
+  level: 30
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, scavenger, no_summon, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28408":
+  keywords: [ghenna, gorgimera]
+  short: the Gorgimera
+  long: A Gorgimera roars at your entrance, and ATTACKS!!!
+  description: >
+    This monster has three heads, those of a gorgon, a lion, and a fierce dragon.  It has the
+    hindquarters of a large, black gorgon and the forequarters of a huge, tawny lion, with brownish-black wings
+    like those of a dragon.
+  level: 31
+  sex: neutral
+  alignment: 100
+  flags: [sentinel, stay_zone, no_summon, no_bash, no_blind]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28409":
+  keywords: [ghenna, death, knight]
+  short: the Death Knight
+  long: A Death Knight stands here, lowering at you.
+  description: >
+    A hulking skeleton, its face a blackened skull covered with shards of shriveled rotting flesh,
+    chillingly returns your gaze.
+  level: 31
+  sex: male
+  alignment: -1000
+  flags: [scavenger, stay_zone, no_charm, no_sleep, no_blind]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28410":
+  keywords: [ghenna, deep, dragon]
+  short: the Deep Dragon
+  long: A large snake sits here, munching on a human body.
+  description: >
+    The Deep dragon is an iridescent maroon colored beast about 25 feet long. Known for assuming
+    various shapes, this animal is highly dangerous and you would do best to exit its lair immediately.
+  level: 32
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, scavenger, memory, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -9
+    hit_points: 6d6+320
+    damage: 5d5+5
+  gold: 320
+  exp: 102400
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28411":
+  keywords: [ghenna, derro]
+  short: the Derro
+  long: The Derro is standing here, barking orders.
+  description: >
+    You see a dwarf with glowing white eyes which have no pupils.  His skin is pasty white, but he
+    looks stout enough.
+  level: 30
+  sex: male
+  alignment: -250
+  flags: [sentinel, scavenger, stay_zone, no_charm]
+  affects: [detect_invis, curse]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28412":
+  keywords: [ghenna, elf]
+  short: the errant Elf
+  long: An errant Elf is here, looking for denizens of evil.
+  description: >
+    You see an attractive young man, about 5 feet tall, with gleaming eyes and a pale complexion. 
+    Though small, he appears to be very lithe and agile.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [scavenger, stay_zone, wimpy, helper]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28413":
+  keywords: [ghenna, efreeti, genie]
+  short: the Efreeti
+  long: A Genie is levitating here with an evil grin on his face.
+  description: >
+    You see a powerful mage naked to the waist, wearing only a pair of slippers, some baggy purple
+    pants, and a bracelet which sparkles with a multi-hued color.
+  level: 31
+  sex: male
+  alignment: 0
+  flags: [sentinel, no_charm, no_summon, no_bash, no_blind]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28414":
+  keywords: [ghenna, medusa]
+  short: the Medusa
+  long: A woman sits here on the bed, with her back to you.
+  description: >
+    Well, you probably shouldn't have looked at this chick, cause she sure is ugly.  But I guess you
+    are about to see HOW ugly.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28415":
+  keywords: [ghenna, stupid, orc]
+  short: the Orc
+  long: A big, stupid Orc is lumbering through here.
+  description: He's just ugly as sin...  Lets leave it at that.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28416":
+  keywords: [ghenna, barkeep]
+  short: the barkeep
+  long: There is a barkeep standing here, waiting to take your order.
+  description: >
+    The barkeep is a waifish little guy, with safety pins piercing the flesh all over his face...  He
+    even has safety pins through his eyelids.
+  level: 30
+  sex: male
+  alignment: -100
+  flags: [sentinel, stay_zone, no_charm]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28417":
+  keywords: [ghenna, citizen]
+  short: a citizen of Ghenna
+  long: A citizen of Ghenna stands here.
+  description: You see a grungy human, long since gone insane at the fall of his once proud city.
+  level: 30
+  sex: male
+  alignment: 666
+  flags: [scavenger, stay_zone]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28418":
+  keywords: [ghenna, avon, lady]
+  short: the Avon lady
+  long: |-
+    An old lady (who is obviously lost) is trying to sell you some makeup
+    here.
+  description: >
+    You see a little old lady, dressed all in pink chiffon.  On her arm she carries a heart shaped box
+    made of crepe paper.
+  level: 30
+  sex: female
+  alignment: 1000
+  flags: [scavenger, stay_zone, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28423":
+  keywords: [ghenna, swordmaster]
+  short: the Ghenna Swordmaster
+  long: A broad shouldered man lies prostrate here, apparently praying.
+  description: >
+    A huge man with a long black beard, the Ghenna Swordmaster is tatooed with rune-like scars from
+    head to toe.  Shrouded in vermillion, he wields a sword of stunning beauty, which sings through the air
+    as he attacks you.
+  level: 31
+  sex: male
+  alignment: -1000
+  flags: [sentinel, no_summon, no_bash, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28431":
+  keywords: [ghenna, wall, foot]
+  short: a claw toed foot protruding from the wall
+  long: ""
+  description: It looks just like a foot sticking out of the wall.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28432":
+  keywords: [ghenna, wall, arm]
+  short: a claw fingered arm protruding from the wall
+  long: A claw fingered arm protrudes out of the wall.
+  description: It looks just like an arm sticking out of the wall.
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28433":
+  keywords: [ghenna, statue, stone, golem]
+  short: the stone golem
+  long: A large statue of a humanoid male has been cut out of the granite here.
+  description: >
+    It looks like a stone sculpture of Frankenstein's monster.  It stands twelve feet tall, casting a
+    long shadow over you.
+  level: 31
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, scavenger, no_charm]
+  affects: [invisible, detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+310
+    damage: 5d5+5
+  gold: 310
+  exp: 96100
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28458":
+  keywords: [ghenna, dominatrix, woman]
+  short: the Dominatrix
+  long: >-
+    An ugly woman clad in studded black leather turns toward you and shouts, "Down on your knees,
+    maggot!!"
+  description: >
+    This ugly wench is clad in studded black leather from head to toe.  Her nipples protrude
+    conspicuously from a leather push-up bra.  A thong around her waist disappears into her crotch, which hasn't
+    been waxed in a millenia.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, scavenger, no_summon]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28464":
+  keywords: [ghenna, doll, golem]
+  short: the Doll Golem
+  long: A doll sits here leaning against the wall, forgotten by the child who owns it.
+  description: >
+    This looks like your typical child's doll.  Its about one foot tall, and looks like it is made of
+    plastic.
+  level: 30
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, no_sleep]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28471":
+  keywords: [ghenna, woman, prostitute]
+  short: the prostitute
+  long: A young, innocent looking woman is sitting here reading a magazine.
+  description: >
+    She is so cute that you wonder how she ever fell into a lifestyle such as this.  She notices your
+    gaze, and gives you a cloying look.
+  level: 30
+  sex: female
+  alignment: 1000
+  flags: [sentinel, scavenger, memory]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28472":
+  keywords: [ghenna, lester, molester]
+  short: Lester the molester
+  long: Lester the molester is here with a pair of womens panties on his head.
+  description: >
+    You see a sicko with bulging eyes, and a tiny bit of white spittle in the corners of his mouth.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel, scavenger, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28475":
+  keywords: [ghenna, whore]
+  short: the whore
+  long: A toothless whore is sitting here on the bed, inviting you to join her.
+  description: One eye, no teeth and pasty white skin, this chick looks like your worst nightmare.
+  level: 30
+  sex: female
+  alignment: -1000
+  flags: [sentinel, memory]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28481":
+  keywords: [ghenna, dead, dwarf]
+  short: the Dwarf
+  long: A dwarf is lying here, stunned.
+  description: You see nothing special.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [sentinel]
+  affects: [hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: sitting
+    default: sitting
+
+"tba:284:mob:28485":
+  keywords: [ghenna, maedar]
+  short: the Maedar
+  long: A Maedar stands here in the darkness smacking his lips.
+  description: You see a muscular, hairless humanoid male dressed in a tunic.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28486":
+  keywords: [ghenna, maedar, master]
+  short: the Maedar master
+  long: A Maedar stands here in the darkness smacking his lips.
+  description: You see a muscular, hairless humanoid male dressed in a tunic.
+  level: 30
+  sex: male
+  alignment: -1000
+  flags: [sentinel]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28487":
+  keywords: [ghenna, roger, dodger]
+  short: Roger the dodger
+  long: Roger, the elven apostle is looking for evil guys to kill here.
+  description: >
+    You see a young elf, only about 130 years old, who acts as though he is on a crusade.  Dressed in
+    light armor, he seeks out evil doers in order to eradicate them from the face of the planet.
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [scavenger, stay_zone, memory, no_charm, no_blind]
+  affects: [detect_invis, sneak, hide]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28489":
+  keywords: [ghenna, deep, dragon, dragonet]
+  short: the Dragonet
+  long: A wimpy little dragon is standing here, looking at you with deep blue eyes.
+  description: >
+    You see what appears to be a tiny dragon, about the size of a chihuahua. What a pansy he is too!
+  level: 30
+  sex: male
+  alignment: 1000
+  flags: [stay_zone, no_sleep]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28494":
+  keywords: [ghenna, cockroach]
+  short: the cockroach
+  long: The biggest cockroach you have ever seen is standing here, looking down at you.
+  description: You see a cockroach about 8 feet tall - apparently a mutant breed.
+  level: 30
+  sex: neutral
+  alignment: -351
+  flags: [sentinel, no_summon]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:284:mob:28497":
+  keywords: [ghenna, deepspawn]
+  short: the Deepspawn
+  long: The Deepspawn is standing here, ready to kill you.
+  description: >
+    It looks like a large, rubbery sphere of mottled gray and brown.  Six arms project from its body;
+    three are tentacle-arms, and three are jaw-arms, ending in mouths of many teeth.  It also has about 40
+    long, retractable, flexible eye stalks that wave at you menacingly.
+  level: 30
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, stay_zone, no_summon, no_bash]
+  affects: [detect_invis]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing

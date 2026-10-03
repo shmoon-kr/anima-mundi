@@ -1,0 +1,277 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 45.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:45:mob:4500":
+  keywords: [monk, priest]
+  short: the monk
+  long: A ferret wearing monk robes stands here.
+  description: >
+    You see a very calm monk.  He walks around with a serene look on his face. This is a creature
+    completely at peace with him self.  He is dressed in some nice red robes, and wearing a pair of worn out
+    sandals.
+  level: 12
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone, wimpy, aggr_evil, memory, helper]
+  affects: [detect_align, protect_evil]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4501":
+  keywords: [monk, mouse]
+  short: the monk
+  long: A mousy looking monk stands here.
+  description: You see a mouse wearing a monk's robe.  He is walking about intently.
+  level: 14
+  sex: neutral
+  alignment: 1000
+  flags: [stay_zone, wimpy, aggr_evil, memory, helper]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4502":
+  keywords: [squirrel, monk]
+  short: the monk
+  long: A squirrel monk darts around.
+  description: >
+    You see a monk.  This one has a rather large, bushy tail, and seems to have a weird twitch.
+  level: 14
+  sex: neutral
+  alignment: 1000
+  flags: [scavenger, stay_zone, aggr_evil, memory, helper]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: bite
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4504":
+  keywords: [assistant]
+  short: the assistant
+  long: An assistant stands here nervously.
+  description: >
+    You see a rabbit wearing an apron.  He looks exhausted and overworked. Maybe his shift has been a
+    little too long...
+  level: 10
+  sex: male
+  alignment: 1000
+  flags: [sentinel, wimpy, helper]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4509":
+  keywords: [cook, badger]
+  short: Buttercup
+  long: A large badger stands here, barking orders.
+  description: >
+    You see a VERY large badger.  She is ranting and raving at various helpers within the kitchen.  She
+    looks upset.
+  level: 10
+  sex: female
+  alignment: 1000
+  flags: [sentinel, aggr_evil, helper, no_sleep]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4516":
+  keywords: [Pyrobos, phoenix, bird, fire, firebird]
+  short: Pyrobos
+  long: A phoenix nests here.
+  description: >
+    You see one of the legendary phoenix's here.  It is scarred and is missing patches of feathers. 
+    One wing hangs slightly limp.  It's head contains a crest with several very long ornamental feathers.
+  level: 14
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, scavenger, aggr_evil, memory, helper, no_charm, no_sleep, no_blind]
+  affects: [detect_invis, sense_life, protect_evil]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: pierce
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4518":
+  keywords: [Yeral, abbot, monk, priest, otter]
+  short: Yeral
+  long: The abbot calmly stands here.
+  description: >
+    You see a large otter wearing saintly robes.  He is standing quietly, watching the people sitting
+    within the pews as the choir behind him sings quietly.
+  level: 13
+  sex: male
+  alignment: 1000
+  flags: [sentinel, aggr_evil, memory, helper, no_charm]
+  affects: [protect_evil]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4525":
+  keywords: [gopher, furball]
+  short: the gopher
+  long: A gopher sits here, watching you intently.
+  description: You see an ordinary gopher.  It seems a little big for it's kind.
+  level: 10
+  sex: neutral
+  alignment: 1000
+  flags: [sentinel, scavenger]
+  combat:
+    thac0: 17
+    armor: 4
+    hit_points: 2d2+100
+    damage: 1d2+1
+    bare_hand_attack: bite
+  gold: 100
+  exp: 10000
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4527":
+  keywords: [guard, gate, man]
+  short: the guard
+  long: A guard stands here.
+  description: >
+    You see a cleanly shaven man in a military uniform.  He is dressed in a green suit.  On his back
+    hangs a quiver and a bow.  A sword hangs loosely by his side. He stares at you, waiting for a response.
+  level: 13
+  sex: male
+  alignment: 700
+  flags: [sentinel, scavenger, memory, helper]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+130
+    damage: 2d2+2
+    bare_hand_attack: slash
+  gold: 130
+  exp: 16900
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4543":
+  keywords: [sentry, guard, archer, ranger]
+  short: the sentry
+  long: A sentry stands here.
+  description: You see a very alert guard, intently gazing into the surrounding territory.
+  level: 11
+  sex: neutral
+  alignment: 0
+  flags: [stay_zone]
+  combat:
+    thac0: 17
+    armor: 3
+    hit_points: 2d2+110
+    damage: 1d2+1
+  gold: 110
+  exp: 12100
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4570":
+  keywords: [forest, Dragon]
+  short: the forest dragon
+  long: A large green dragon prowls here.
+  description: >
+    A large green wall of muscle stands before you.  As it moves, you can see large thick muscles
+    ripple under is skin as it moves silently through the forest.  To large red eyes turn and concentrate on
+    you.  You shudder as you feel a wave of hate and anger ripple through you from the dragon.
+  level: 15
+  sex: male
+  alignment: 0
+  flags: [sentinel, scavenger, aware, memory, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [protect_evil]
+  combat:
+    thac0: 15
+    armor: 1
+    hit_points: 3d3+150
+    damage: 2d2+2
+    bare_hand_attack: claw
+  gold: 150
+  exp: 22500
+  position:
+    load: standing
+    default: standing
+
+"tba:45:mob:4588":
+  keywords: [archer, guard, patrol]
+  short: the Archer
+  long: An archer patrols the walls.
+  description: >
+    You see a strongly build guard.  He walks around, watching over the wall for any sign of movement
+    in the forest, which he takes care of with one quickly shot arrow.
+  level: 14
+  sex: male
+  alignment: 350
+  flags: [scavenger, stay_zone, aggr_neutral, memory, helper, no_charm, no_sleep, no_blind]
+  affects: [detect_invis]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+    bare_hand_attack: blast
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing

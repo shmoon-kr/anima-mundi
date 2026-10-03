@@ -1,0 +1,158 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 12.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:12:room:1200":
+  name: The Meeting Room Of The Gods
+  description: >
+    The meeting room is plain and very simple.  A circular table sits in the middle of the room, lit by
+    some unseen light source.  There are many chairs around the table, all empty.  The Immortal Board
+    Room is to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:343:room:34310
+      look: >
+        A frosted glass door with huge silver hinges and silver fixtures are here marking the main meeting
+        room with the TBA company Logo upon the door.  The door is open.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:12:room:1201":
+  name: The Inn Of The Gods
+  description: >
+    The Inn of the Gods is a small room, holding only a shelf with many small precious stones on it. 
+    When a God comes to rent his belongings, his essence is stored in the stones.  The north foyer is to
+    the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:343:room:34307
+
+"tba:12:room:1202":
+  name: The Ice Box Of The Gods
+  description: >
+    The Ice Box is for little boys and girls that cannot play nice. Be good and maybe someone will come
+    and get you.
+  sector: inside
+  flags: [indoors, peaceful, soundproof, no_magic]
+
+"tba:12:room:1203":
+  name: The Gods' Mortal Board Room
+  description: >
+    Here the Gods have magically created an exact copy of the mortal board room. Any God can easily
+    post and read messages from the mortal board room without being seen by any mortals.  The eastern foyer
+    is to the north.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:343:room:34308
+
+"tba:12:room:1204":
+  name: The Immortal Board Room
+  description: >
+    The main hang out of the Gods, the Immortal Board Room is the place to be. Gods exchange messages
+    here most every day.  The eastern foyer is to the south.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:343:room:34308
+      look: The Gods' Meeting Room is located to the south.
+  extras:
+  - keywords: [original]
+    text: >
+      The main hang out of the Gods, the Immortal Board Room is the place to be. Gods exchange messages
+      here most every day.  The mortal board room is to the east and the meeting room for the gods is to the
+      south.  To the north is the Gods' Inn and to the west is a post office for Gods.  In the northeast
+      corner you spot a small staircase leading upwards.
+
+"tba:12:room:1205":
+  name: The Post Office Of The Gods
+  description: >
+    The Post Office Of The Gods is the same as most Post Offices except that it is not as slow.  Even
+    the Postal service knows not to anger the Gods.  Piles of junk mail line the walls.  I guess even Gods
+    get on mailing lists.  The northern foyer is to the west.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:343:room:34307
+
+"tba:12:room:1206":
+  name: Advertising/Business Center
+  description: >
+    This is the advertising room.  It is a very large room with several tables and chairs lining the
+    room that have computers on them and a lone printer in the corner.  It is a business center of the
+    Gods.  It also has what appears to be several bulletin boards for notices.  The only exit is west through
+    an arch into the southern foyer.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:343:room:34309
+
+"tba:12:room:1290":
+  name: The Immortal Board Hall
+  description: >
+    You are standing in a large hall, exits lead off to the board rooms of the immortals.  You can
+    enter the hall of builders to the north, to the south are the halls of justice, while to the west you can
+    find the immortal board room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:12:room:1291
+    south:
+      to: tba:12:room:1293
+    west:
+      to: tba:12:room:1204
+
+"tba:12:room:1291":
+  name: The Builders' Board Room
+  description: >
+    The Builder Academy zone begins in room 3.  @RGOTO 3@n to begin your training or if you need a
+    refresher.  TBA zone should be able to teach anyone, no matter how new, the basics of building.  The
+    southern foyer is to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:343:room:34309
+
+"tba:12:room:1292":
+  name: The Immortals' Mortal Board Room
+  description: >
+    Here the Gods have magically created an exact copy of the mortal board room. Any God can easily
+    post and read messages from the mortal board room without being seen by any mortals.  The Immortal Board
+    Hall is to the west.
+  sector: inside
+  exits:
+    west:
+      to: tba:12:room:1290
+
+"tba:12:room:1293":
+  name: The Halls Of Justice
+  description: >
+    You are standing in a magnificent marble hall, the only exit is back to the north.  Statues of
+    Karileena the goddess of Honor and Justice, are lining the walls.  You realize this is where the exalted
+    gods meet to discuss what course of action to take against offenders in the realms.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:343:room:34310
+      look: >
+        A frosted glass door with huge silver hinges and silver fixtures are here marking the Hall of
+        Justice with the Rune of Justice etched in the glass in the exact center of it.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    up:
+      to: tba:343:room:34399

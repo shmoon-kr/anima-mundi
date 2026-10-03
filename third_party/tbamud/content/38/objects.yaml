@@ -1,0 +1,131 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 38.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:38:obj:3800":
+  type: weapon
+  keywords: [rat, tail]
+  short: a rat tail
+  long: A disgusting, fat tail is slowly rotting away here.
+  wear: [take, wield]
+  values:
+    damage: 1d10
+    attack: whip
+  weight: 3
+  cost: 15
+  rent: 1
+  level: 0
+  affects:
+  - apply: cha
+    modifier: -2
+  extras:
+  - keywords: [rat, tail]
+    text: >
+      The apparant tail of what seems to be an unusually large rat.  Though it seems to give you quivers
+      of sickness, it must be a fierce weapon.
+
+"tba:38:obj:3801":
+  type: container
+  keywords: [secret, safe]
+  short: a secret safe
+  long: .A hidden safe.
+  wear: []
+  values:
+    capacity: 100
+    lock_flags: 5
+    corpse: false
+  weight: 0
+  cost: 0
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [secret, safe]
+    text: >
+      It is a titanium safe that is implanted into the wall.  It has a industrial strength lock that only
+      not even the craftiest thief could pick.  Otherwise, it could easily go unnoticed.
+
+"tba:38:obj:3802":
+  type: weapon
+  keywords: [Backstabber]
+  short: Backstabber
+  long: The legendary Backstabber has been left here.
+  flags: [hum, no_rent]
+  wear: [take, wield]
+  values:
+    damage: 2d6
+    attack: pierce
+  weight: 5
+  cost: 250
+  rent: 25
+  level: 0
+  affects:
+  - apply: move
+    modifier: -3
+  - apply: ac
+    modifier: 3
+  - apply: int
+    modifier: 2
+  extras:
+  - keywords: [Backstabber]
+    text: >
+      This is the legendary Backstabber.  It is the ultimate symbol of all that thieves believe in.  The
+      bronze blade is of Roman design and is reinforced with iron and what appears to be gold.  Legend has
+      it that it was the same dagger that commited the first backstabbing, done on Julius Ceasar.  It has
+      black runes on it, the ancient code of the thieves.  Just holding makes you feel like you feel not
+      just like a million dollars, but that you could steal a million dollars.
+
+"tba:38:obj:3803":
+  type: money
+  keywords: [pile, riches]
+  short: huge pile of stolen riches
+  long: A huge pile of stolen riches lies here!
+  wear: [take]
+  values:
+    coins: 1000
+  weight: 1
+  cost: 1000
+  rent: 0
+  level: 0
+  extras:
+  - keywords: [pile, riches]
+    text: >
+      A huge pile of riches.  There must be thousands of coins here!  The gold and platinum pile up!
+
+"tba:38:obj:3804":
+  type: key
+  keywords: [smelly, key]
+  short: a red smelly key
+  long: A smelly key with flaking red paint is lying on the floor.
+  flags: [no_rent]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 2
+  cost: 100
+  rent: 10
+  level: 0
+  affects:
+  - apply: ac
+    modifier: 2
+  - apply: str
+    modifier: -1
+  extras:
+  - keywords: [smelly, red, key]
+    text: >
+      It is an iron key.  It seems to have flakes of red paint that give the key a red look.  It is
+      slightly heavy, but you hardly care.  What seems to matter is that it is extremely smelly, probably from
+      years in the sewers.
+
+"tba:38:obj:3805":
+  type: food
+  keywords: [crap, pile]
+  short: a stinking pile of crap
+  long: A stinking pile of crap is lying here, filling the whole place with a nasty stink!
+  flags: [no_donate]
+  wear: [take]
+  values:
+    hours: 24
+    poisoned: true
+  weight: 10
+  cost: 1
+  rent: 0
+  level: 0

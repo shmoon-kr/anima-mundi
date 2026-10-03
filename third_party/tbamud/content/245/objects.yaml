@@ -1,0 +1,283 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 245.
+# values are named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, contains, liquid...).
+# level: minimum level to use it. affects: apply + modifier while worn.
+"tba:245:obj:24500":
+  type: armor
+  keywords: [piece, skull, blackened]
+  short: a blackened skull piece
+  long: A charred piece of skull lies on the floor.
+  wear: [take, head]
+  values:
+    armor: 10
+  weight: 3
+  cost: 176
+  rent: 0
+  level: 0
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hit
+    modifier: 50
+  - apply: str
+    modifier: -4
+
+"tba:245:obj:24502":
+  type: worn
+  keywords: [mask, anguish]
+  short: a mask of anguish
+  long: A mask is on the floor, emitting pain and anguish.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 8
+  cost: 154
+  rent: 0
+  level: 0
+  affects:
+  - apply: dex
+    modifier: 3
+  - apply: hit
+    modifier: 50
+  - apply: mana
+    modifier: 50
+
+"tba:245:obj:24503":
+  type: worn
+  keywords: [eyes, orange, red, peryton]
+  short: the dull, orange-red eyes of a peryton
+  long: A strange set of eyes lie here.
+  wear: [take, head]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 4
+  cost: 100
+  rent: 0
+  level: 0
+  affects:
+  - apply: ac
+    modifier: -5
+  - apply: move
+    modifier: 30
+  - apply: str
+    modifier: -2
+
+"tba:245:obj:24504":
+  type: worn
+  keywords: [shawl, glimmering, white]
+  short: a glimmering white shawl
+  long: A glimmering white shawl lies upon the ground.
+  wear: [take, neck]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 6
+  cost: 104
+  rent: 0
+  level: 0
+  affects:
+  - apply: hit
+    modifier: 50
+  - apply: mana
+    modifier: 50
+
+"tba:245:obj:24505":
+  type: armor
+  keywords: [trappings, power, body, armor]
+  short: the Trappings of Power
+  long: A glowing set of body armor lies on the ground.
+  wear: [take, body]
+  values:
+    armor: 10
+  weight: 21
+  cost: 556
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hitroll
+    modifier: 4
+  - apply: hit
+    modifier: -50
+
+"tba:245:obj:24507":
+  type: armor
+  keywords: [brace, wrist, warrior's]
+  short: a warrior's wrist brace
+  long: A large metal wrist brace has been left here.
+  flags: [hum]
+  wear: [take, wrist]
+  values:
+    armor: 8
+  weight: 7
+  cost: 543
+  rent: 0
+  level: 0
+  affects:
+  - apply: str
+    modifier: 3
+  - apply: hit
+    modifier: -50
+  - apply: dex
+    modifier: -2
+
+"tba:245:obj:24508":
+  type: armor
+  keywords: [claws, ghoul]
+  short: the claws of a ghoul
+  long: A set of moldy, green claws lie on the ground.
+  wear: [take, hands]
+  values:
+    armor: 7
+  weight: 12
+  cost: 165
+  rent: 0
+  level: 19
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: hit
+    modifier: -50
+  - apply: int
+    modifier: -3
+
+"tba:245:obj:24510":
+  type: worn
+  keywords: [twine, nether, lord, ring]
+  short: the Twine of the Nether Lord
+  long: A twined ring lies on the ground, thrumming with power.
+  flags: [glow, invisible, anti_good, anti_mage, anti_cleric]
+  wear: [take, finger]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 5
+  cost: 10
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  - apply: hit
+    modifier: -50
+
+"tba:245:obj:24512":
+  type: armor
+  keywords: [dress, remnants, tattered, banshee's, cloth]
+  short: the tattered remnants of a banshee's dress
+  long: A soiled scrap of cloth lies upon the ground.
+  flags: [anti_warrior]
+  wear: [take, about]
+  values:
+    armor: 10
+  weight: 11
+  cost: 543
+  rent: 0
+  level: 0
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+  - apply: str
+    modifier: -3
+
+"tba:245:obj:24513":
+  type: armor
+  keywords: [tail, barbed, ixitxachitl]
+  short: the barbed tail of an ixitxachitl
+  long: A greenish, barbed-tail lies upon the ground.
+  wear: [take, waist]
+  values:
+    armor: 8
+  weight: 14
+  cost: 104
+  rent: 0
+  level: 19
+  affects:
+  - apply: mana
+    modifier: 50
+  - apply: hit
+    modifier: 50
+  - apply: str
+    modifier: 2
+
+"tba:245:obj:24517":
+  type: other
+  keywords: [bone, piece, brittle]
+  short: a brittle piece of bone
+  long: A human bone lies upon the ground.
+  flags: [hum, anti_good, anti_mage, anti_cleric]
+  wear: [take, hold]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 11
+  cost: 143
+  rent: 0
+  level: 21
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5
+
+"tba:245:obj:24518":
+  type: other
+  keywords: [wisp, darkness]
+  short: a wisp of darkness
+  long: A rolling darkness floats just above the ground.
+  flags: [magic, anti_mage, anti_cleric, anti_thief]
+  wear: [take, about]
+  values:
+    raw: [0, 0, 0, 0]
+  weight: 1
+  cost: 776
+  rent: 0
+  level: 22
+  affects:
+  - apply: damroll
+    modifier: 5
+  - apply: hitroll
+    modifier: 5
+  - apply: hit
+    modifier: -50
+
+"tba:245:obj:24519":
+  type: light
+  keywords: [essence, nether, light, coalescation]
+  short: the Essence of the Nether
+  long: A glowing coalescation of light lies gleaming upon the ground.
+  flags: [glow]
+  wear: [take, hold]
+  values:
+    hours: -1
+  weight: 15
+  cost: 767
+  rent: 0
+  level: 22
+  affects:
+  - apply: wis
+    modifier: 2
+  - apply: con
+    modifier: 2
+  - apply: hit
+    modifier: -40
+
+"tba:245:obj:24520":
+  type: armor
+  keywords: [scale, translucent]
+  short: a translucent scale
+  long: A translucent scale lies upon the ground.
+  flags: [invisible, anti_good]
+  wear: [take, shield]
+  values:
+    armor: 10
+  weight: 11
+  cost: 721
+  rent: 0
+  level: 22
+  affects:
+  - apply: hitroll
+    modifier: 5
+  - apply: damroll
+    modifier: 5

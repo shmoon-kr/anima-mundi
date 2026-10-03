@@ -1,0 +1,124 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 201.
+# What the zone reset puts back. A spawn is a mob in a room (with what it wears and carries) or an object
+# in a room (with its contents). limit: at most this many of it may exist in the whole world; the item
+# is not loaded if there are already that many. Door states are on the doors (rooms.yaml).
+spawns:
+- object: tba:201:obj:20100
+  room: tba:201:room:20100
+  limit: 1
+- mob: tba:201:mob:20197
+  room: tba:201:room:20100
+  limit: 1
+- mob: tba:201:mob:20101
+  room: tba:201:room:20109
+  limit: 15
+- object: tba:201:obj:20105
+  room: tba:201:room:20109
+  limit: 1
+- mob: tba:201:mob:20105
+  room: tba:201:room:20150
+  limit: 1
+  carry:
+  - object: tba:201:obj:20197
+    limit: 100
+  - object: tba:201:obj:20119
+    limit: 50
+  - object: tba:201:obj:20118
+    limit: 50
+  - object: tba:201:obj:20117
+    limit: 50
+  - object: tba:201:obj:20113
+    limit: 20
+- mob: tba:201:mob:20104
+  room: tba:201:room:20129
+  limit: 1
+  carry:
+  - object: tba:201:obj:20109
+    limit: 20
+- object: tba:201:obj:20123
+  room: tba:201:room:20147
+  limit: 1
+- mob: tba:201:mob:20106
+  room: tba:201:room:20158
+  limit: 1
+- mob: tba:201:mob:20101
+  room: tba:201:room:20108
+  limit: 15
+- mob: tba:201:mob:20101
+  room: tba:201:room:20115
+  limit: 15
+- object: tba:201:obj:20110
+  room: tba:201:room:20115
+  limit: 15
+- object: tba:201:obj:20110
+  room: tba:201:room:20126
+  limit: 15
+- mob: tba:201:mob:20101
+  room: tba:201:room:20110
+  limit: 15
+- mob: tba:201:mob:20101
+  room: tba:201:room:20110
+  limit: 15
+- object: tba:201:obj:20106
+  room: tba:201:room:20110
+  limit: 5
+- object: tba:201:obj:20107
+  room: tba:201:room:20110
+  limit: 1
+  contents:
+  - object: tba:201:obj:20108
+    limit: 3
+- mob: tba:201:mob:20103
+  room: tba:201:room:20110
+  limit: 1
+- mob: tba:201:mob:20198
+  room: tba:201:room:20104
+  limit: 1
+- object: tba:201:obj:20102
+  room: tba:201:room:20120
+  limit: 20
+- object: tba:201:obj:20101
+  room: tba:201:room:20113
+  limit: 50
+- object: tba:201:obj:20106
+  room: tba:201:room:20113
+  limit: 5
+- mob: tba:201:mob:20102
+  room: tba:201:room:20117
+  limit: 10
+- mob: tba:201:mob:20102
+  room: tba:201:room:20118
+  limit: 10
+- mob: tba:201:mob:20102
+  room: tba:201:room:20119
+  limit: 10
+- mob: tba:201:mob:20102
+  room: tba:201:room:20107
+  limit: 10
+- mob: tba:201:mob:20101
+  room: tba:201:room:20105
+  limit: 15
+- object: tba:201:obj:20102
+  room: tba:201:room:20111
+  limit: 10
+- object: tba:201:obj:20101
+  room: tba:201:room:20106
+  limit: 50
+- object: tba:201:obj:20103
+  room: tba:201:room:20103
+  limit: 1
+removes:
+- room: tba:201:room:20115
+  object: tba:201:obj:20110
+- room: tba:201:room:20126
+  object: tba:201:obj:20110
+- room: tba:201:room:20120
+  object: tba:201:obj:20102
+- room: tba:201:room:20113
+  object: tba:201:obj:20101
+- room: tba:201:room:20113
+  object: tba:201:obj:20106
+- room: tba:201:room:20111
+  object: tba:201:obj:20102
+- room: tba:201:room:20106
+  object: tba:201:obj:20101

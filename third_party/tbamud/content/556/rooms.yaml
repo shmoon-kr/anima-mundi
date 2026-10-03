@@ -1,0 +1,1346 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 556.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:556:room:55600":
+  name: The Dungeon
+  description: These dungeon rooms seem all the same.  There are signs of recent battling everywhere.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:556:room:55601
+      look: There is a shimmering light.
+    south:
+      to: tba:555:room:55596
+
+"tba:556:room:55601":
+  name: The Dungeon Moongate
+  description: >
+    You feel safe within the blue glow of the moongate.  The dungeon creatures seem to be afraid of it.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:556:room:55600
+    up:
+      to: tba:556:room:55602
+      look: There seems to be a beach.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55512
+        reset: locked
+
+"tba:556:room:55602":
+  name: Minoc
+  description: >
+    The moongate has led to the oceanside city of Minoc.  To the north, there is the sea and to the
+    south there is the town of Minoc.
+  sector: field
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:556:room:55615
+    south:
+      to: tba:556:room:55604
+
+"tba:556:room:55603":
+  name: The Armorer
+  description: >
+    The Armorer buys and sells armor.  His smithy is impressive with all of his greatest works hanging
+    on the walls.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:556:room:55604
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+
+"tba:556:room:55604":
+  name: Minoc's Fountain
+  description: >
+    This is the entrance of Minoc.  To the east you see the weaponsmith, and to the west is the
+    Armorer.  To the south there seems to be a large road.
+  sector: city
+  exits:
+    north:
+      to: tba:556:room:55602
+    east:
+      to: tba:556:room:55605
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:556:room:55608
+    west:
+      to: tba:556:room:55603
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55605":
+  name: The Weaponsmith
+  description: The best Weaponsmith in the realm is here.  His shop is full of hanging weapons.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:556:room:55604
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55606":
+  name: The Boatseller
+  description: >
+    This is the shop where you can purchase vehicles to cross the sea.  There isn't much choice though.
+  sector: mountains
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:556:room:55607
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+
+"tba:556:room:55607":
+  name: Sacrifice Street
+  description: This Street goes from east to west.  To the west is a shop and to the south is a home.
+  sector: city
+  exits:
+    east:
+      to: tba:556:room:55608
+    south:
+      to: tba:556:room:55611
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: closed
+    west:
+      to: tba:556:room:55606
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55608":
+  name: Sacrifice Street
+  description: >
+    This Street runs from east to west.  To the west there is a shop, and to there east there is a
+    forge.
+  sector: city
+  exits:
+    north:
+      to: tba:556:room:55604
+    east:
+      to: tba:556:room:55609
+    west:
+      to: tba:556:room:55607
+
+"tba:556:room:55609":
+  name: Sacrifice Street
+  description: This Street runs from west to east.  There is a home to the south and forge to the east.
+  sector: city
+  exits:
+    east:
+      to: tba:556:room:55610
+      door:
+        keywords: [door, e, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:556:room:55612
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: closed
+    west:
+      to: tba:556:room:55608
+
+"tba:556:room:55610":
+  name: Forge
+  description: >
+    The heat of the place cause blisters to form.  The rhythmic beat of hammer against the forge causes
+    you to believe that someone is working here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:556:room:55609
+      door:
+        keywords: [door, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55611":
+  name: Residence
+  description: >
+    This residence is very small.  It befits the teaching of sacrifice without any item that is extra.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55607
+      door:
+        keywords: [door, "n", north]
+        kind: door
+
+"tba:556:room:55612":
+  name: Residence
+  description: >
+    This residence is very small.  It befits the teaching of sacrifice without any item that is extra.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55609
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: closed
+
+"tba:556:room:55613":
+  name: The Beach
+  description: This beach ends here.  You can enter the ocean through the calm lagoon to the west.
+  sector: field
+  exits:
+    east:
+      to: tba:556:room:55614
+    west:
+      to: tba:556:room:55684
+
+"tba:556:room:55614":
+  name: The Beach
+  description: The beach extends from west to east but the waves are too heavy here to enter the ocean.
+  sector: field
+  exits:
+    east:
+      to: tba:556:room:55615
+    west:
+      to: tba:556:room:55613
+
+"tba:556:room:55615":
+  name: The Beach
+  description: >
+    The beach here is perfect, glistening white sands, perfect sun.  Too bad there is a monster
+    infestation....
+  sector: field
+  exits:
+    east:
+      to: tba:556:room:55616
+    south:
+      to: tba:556:room:55602
+    west:
+      to: tba:556:room:55614
+
+"tba:556:room:55616":
+  name: The Beach
+  description: The Beach seems so idyllic.  It's too bad that these monsters keep showing up.
+  sector: field
+  exits:
+    east:
+      to: tba:556:room:55617
+    west:
+      to: tba:556:room:55615
+
+"tba:556:room:55617":
+  name: The Beach
+  description: >
+    The Beach ends here.  It's impossible to enter the ocean from here.  You'll have to turn back.
+  sector: field
+  exits:
+    west:
+      to: tba:556:room:55616
+
+"tba:556:room:55618":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55620
+    east:
+      to: tba:556:room:55621
+    south:
+      to: tba:556:room:55684
+      look: A swampy lagoon.
+    west:
+      to: tba:556:room:55619
+
+"tba:556:room:55619":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55622
+    east:
+      to: tba:556:room:55620
+    south:
+      to: tba:556:room:55625
+    west:
+      to: tba:556:room:55618
+
+"tba:556:room:55620":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55623
+    east:
+      to: tba:556:room:55618
+    south:
+      to: tba:556:room:55626
+    west:
+      to: tba:556:room:55619
+
+"tba:556:room:55621":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55624
+    east:
+      to: tba:556:room:55622
+    south:
+      to: tba:556:room:55618
+    west:
+      to: tba:556:room:55623
+
+"tba:556:room:55622":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55625
+    east:
+      to: tba:556:room:55623
+    south:
+      to: tba:556:room:55619
+    west:
+      to: tba:556:room:55621
+
+"tba:556:room:55623":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55626
+    east:
+      to: tba:556:room:55621
+    south:
+      to: tba:556:room:55620
+    west:
+      to: tba:556:room:55622
+
+"tba:556:room:55624":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55627
+      look: There is a shimmering light to the north.
+    east:
+      to: tba:556:room:55626
+    south:
+      to: tba:556:room:55625
+    west:
+      to: tba:556:room:55621
+
+"tba:556:room:55625":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55619
+    east:
+      to: tba:556:room:55626
+    south:
+      to: tba:556:room:55622
+    west:
+      to: tba:556:room:55624
+
+"tba:556:room:55626":
+  name: The Whirlpool
+  description: This is a nasty whirlpool.  Huge waves threaten to crush everything in sight.
+  sector: water_noswim
+  exits:
+    north:
+      to: tba:556:room:55620
+    east:
+      to: tba:556:room:55624
+    south:
+      to: tba:556:room:55623
+    west:
+      to: tba:556:room:55625
+
+"tba:556:room:55627":
+  name: The Minoc Moongate
+  description: >
+    The sea waves lap up against the Moongate.  The blue reflection disappears into the ripples.
+  sector: water_noswim
+  flags: [no_mob]
+  exits:
+    south:
+      to: tba:556:room:55624
+    up:
+      to: tba:556:room:55628
+      look: Through the moongate you see a large campfire.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55513
+        reset: locked
+
+"tba:556:room:55628":
+  name: A Campfire
+  description: >
+    This campfire sits in the middle of the camp.  Many of the paladins stand by it looking it the
+    desert beyond.  Some just wander by.  To the south is a small tent, to the north are more tents.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:556:room:55638
+    east:
+      to: tba:556:room:55629
+    south:
+      to: tba:556:room:55632
+      door:
+        keywords: [tent, s, south]
+        kind: door
+        reset: closed
+
+"tba:556:room:55629":
+  name: Between the Tents
+  description: There is a grand tent to the south.  The tent flap entrance can be seen to the east.
+  sector: hills
+  exits:
+    east:
+      to: tba:556:room:55630
+    west:
+      to: tba:556:room:55628
+
+"tba:556:room:55630":
+  name: In Front of the Grand Tent
+  description: To the south, there is a huge tent.  To the east lies a smaller, more ordinary, tent.
+  sector: hills
+  exits:
+    east:
+      to: tba:556:room:55631
+      door:
+        keywords: [tent, e, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:556:room:55634
+      door:
+        keywords: [tent, s, south]
+        kind: door
+        reset: closed
+    west:
+      to: tba:556:room:55629
+
+"tba:556:room:55631":
+  name: A Small Tent
+  description: >
+    The paladin's tent is very Spartan, as he has to live without much in order to develop his Honor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:556:room:55630
+      door:
+        keywords: [tent, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55632":
+  name: A Small Tent
+  description: >
+    The paladin's tent is very Spartan, as he has to live without much in order to develop his Honor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55628
+      door:
+        keywords: [tent, "n", north]
+        kind: door
+
+"tba:556:room:55633":
+  name: The Treasure Tent
+  description: >
+    There is a HUGE stack of treasure here.  It is truly immense.  It would make you easily a
+    millionaire.  If you could even take a tenth of it, you could buy your levels.  But the treasure is surrounded
+    by a shield.  A shield that only the truly Honorable could get through.  And if you were truly
+    honorable you wouldn't take the treasure.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:556:room:55634
+
+"tba:556:room:55634":
+  name: The Grand Tent
+  description: >
+    This tent is absolutely huge.  To the east is the map room.  To the south there is Dupre.  To the
+    east is the treasure room.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55630
+      door:
+        keywords: [tent, "n", north]
+        kind: door
+        reset: closed
+    east:
+      to: tba:556:room:55635
+    south:
+      to: tba:556:room:55636
+    west:
+      to: tba:556:room:55633
+
+"tba:556:room:55635":
+  name: The Map Tent
+  description: >
+    This room has many maps and scrolls all over the table.  There is one in particular that interest
+    you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:556:room:55634
+  extras:
+  - keywords: [scroll]
+    text:
+    - "The scroll reads as follows:"
+    - Dear Lord British,
+    - >
+      This is Dupre reporting about the paladin expedition.  We are in the process of clearing the desert
+      of those annoying sandtraps.  Unfortunately one of my men had wandered into the dragon cave and was
+      slayed by that evil creature.  We need another knight, and also he had a moonstone.  Thank you, my
+      liege.
+    - Your Servant,
+    - Dupre
+  - keywords: [map]
+    text: >
+      The map has a rough drawing of the camp and to the north a small segment of the desert, and a
+      drawing of a winged lizard near the very north.
+
+"tba:556:room:55636":
+  name: Dupre's Tent
+  description: >
+    This is the commander's tent.  It is full of commander type things.  It's simple, as befits a
+    paladin.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55634
+
+"tba:556:room:55637":
+  name: A Small Tent
+  description: >
+    The paladin's tent is very Spartan, as he has to live without much in order to develop his Honor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:556:room:55638
+      door:
+        keywords: [tent, e, east]
+        kind: door
+        reset: closed
+
+"tba:556:room:55638":
+  name: Desert Entrance
+  description: You feel the hot desert wind blow sand into your face as you look at those dunes.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:556:room:55641
+    east:
+      to: tba:556:room:55639
+      door:
+        keywords: [tent, e, east]
+        kind: door
+        reset: closed
+    south:
+      to: tba:556:room:55628
+    west:
+      to: tba:556:room:55637
+      door:
+        keywords: [tent, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55639":
+  name: A Small Tent
+  description: >
+    The paladin's tent is very Spartan, as he has to live without much in order to develop his Honor.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:556:room:55638
+      door:
+        keywords: [tent, w, west]
+        kind: door
+        reset: closed
+
+"tba:556:room:55640":
+  name: The Desert
+  description: >
+    The desert in the northeast part of Britannia is a perfect example of its kind.  Dry, ugly, and
+    lots of sand.
+  sector: hills
+  exits:
+    north:
+      to: tba:556:room:55644
+      look: There is a shimmering light.
+    east:
+      to: tba:556:room:55641
+
+"tba:556:room:55641":
+  name: The Desert
+  description: >
+    The Desert is an ugly place.  Sand whips into your eyes, making you unsure of where you are and
+    what you see.
+  sector: hills
+  exits:
+    east:
+      to: tba:556:room:55642
+    south:
+      to: tba:556:room:55638
+    west:
+      to: tba:556:room:55640
+
+"tba:556:room:55642":
+  name: The Desert
+  description: >
+    You trudge on.  This desert seems endless.  You'd even welcome a mirage, to break up the monotony.
+  sector: hills
+  exits:
+    north:
+      to: tba:556:room:55646
+    east:
+      to: tba:556:room:55643
+    west:
+      to: tba:556:room:55641
+
+"tba:556:room:55643":
+  name: The Desert Moongate
+  description: >
+    Your thirst seems to slacken as you see the comforting glow of the moongate. You'll soon be out of
+    this desert.
+  sector: hills
+  flags: [no_mob]
+  exits:
+    west:
+      to: tba:556:room:55642
+    up:
+      to: tba:556:room:55649
+      look: Through the moongate you seem to see a shrine.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55514
+        reset: locked
+
+"tba:556:room:55644":
+  name: The Desert Moongate
+  description: >
+    Your thirst seems to slacken as you see the comforting glow of the moongate. You'll soon be out of
+    this desert.
+  sector: hills
+  exits:
+    south:
+      to: tba:556:room:55640
+    up:
+      to: tba:556:room:55644
+      look: There is just blue.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55514
+        reset: locked
+
+"tba:556:room:55645":
+  name: The Desert
+  description: There is a large cave to the north.  Smoke pours out of it at regular intervals.
+  sector: hills
+  exits:
+    north:
+      to: tba:556:room:55648
+      look: The smoke obscures all vision.
+    east:
+      to: tba:556:room:55646
+
+"tba:556:room:55646":
+  name: The Desert
+  description: >
+    The sands blows into your ears and eyes and scours your skin.  You may not have much skin left by
+    the time you get out of here.
+  sector: hills
+  exits:
+    east:
+      to: tba:556:room:55647
+      look: There is a shimmering light.
+    south:
+      to: tba:556:room:55642
+    west:
+      to: tba:556:room:55645
+
+"tba:556:room:55647":
+  name: The Desert Moongate
+  description: >
+    Your thirst seems to slacken as you see the comforting glow of the moongate. You'll soon be out of
+    this desert.
+  sector: hills
+  exits:
+    west:
+      to: tba:556:room:55646
+    up:
+      to: tba:556:room:55685
+      look: There is just blue.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55514
+        reset: locked
+
+"tba:556:room:55648":
+  name: The Dragon Cave
+  description: >
+    The cave is smoky.  There is a glint of gold.  The smell of sulfur fills the air, choking you.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    south:
+      to: tba:556:room:55645
+
+"tba:556:room:55649":
+  name: The Shrine of Spirituality
+  description: >
+    In this room a huge ankh sits on a pedestal.  The Shrine is the source of all magical power.  The
+    Timelord himself lives here.  There is a moongate here also. And last of all there is a huge engraving
+    taking up the west wall.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:556:room:55654
+      look: You peer into the blackness, and hear shrieks and sounds totally inhuman.
+    south:
+      to: tba:556:room:55657
+      look: Peace infuses your body.  The graveyard is a solemn and sobering place.
+    up:
+      to: tba:556:room:55662
+      look: Through the moongate you see a castle.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55515
+        reset: locked
+  extras:
+  - keywords: [engraving]
+    text:
+    - "@n Pilgrim,"
+    - >
+      You have reached the final step on your way to enlightenment. In this last step you will be shown
+      ultimate evil to your north, and ultimate good to your south.  This is the land of the undead.
+    - >
+      The dead of both those whose goodness links them to the land, and those whose evilness was rejected
+      are here.  To have true spirituality one must know both.  Once you have been strengthened and forge
+      through the evil, there is one final test before you prove yourself equal to the Avatar himself.  You
+      must endure the test of time.
+  - keywords: [ankh]
+    text: >
+      Through your entire journey you have not understood the real symbol of the ankh.  Its true beauty
+      only reveals itself to you now.  This knowledge transcends all that came before.
+
+"tba:556:room:55650":
+  name: The Place of Ultimate Evil
+  description: The ground itself seems malevolent.  It seems to suck at you as it tries to engulf you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:556:room:55651
+    south:
+      to: tba:556:room:55653
+
+"tba:556:room:55651":
+  name: The Place of Ultimate Evil
+  description: The air sickens you.  You choke on whatever flows through the air as you gasp for oxygen.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:556:room:55652
+    south:
+      to: tba:556:room:55654
+    west:
+      to: tba:556:room:55650
+
+"tba:556:room:55652":
+  name: The Place of Ultimate Evil
+  description: >
+    It is dark, there is no evidence of light except what you have with you. And this is swallowed by
+    the darkness within 2 feet.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:556:room:55655
+    west:
+      to: tba:556:room:55651
+
+"tba:556:room:55653":
+  name: The Place of Ultimate Evil
+  description: >
+    Sounds are very weird in this place.  Some sounds, like shrieks and blood-curdling shouts, are
+    amplified, and you hear them frequently.  Others, like your own voice, will not travel to beyond a inch
+    from your face.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:556:room:55650
+    east:
+      to: tba:556:room:55654
+
+"tba:556:room:55654":
+  name: The Place of Ultimate Evil
+  description: >
+    When you enter this place all of your senses are immediately blasted.  You breathe in that total
+    evilness and feel dirty.  You want to leave right now.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:556:room:55651
+    east:
+      to: tba:556:room:55655
+    south:
+      to: tba:556:room:55649
+    west:
+      to: tba:556:room:55653
+
+"tba:556:room:55655":
+  name: The Place of Ultimate Evil
+  description: You feel invisible things all over your body, sucking and poking at you, hurting you.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:556:room:55652
+    west:
+      to: tba:556:room:55654
+
+"tba:556:room:55656":
+  name: The Graveyard
+  description: >
+    The graveyard background noises seem to soothe you.  They are light and peaceful.  Your own voices
+    carries so well and softly that you seem to be telepathically communicating.
+  sector: field
+  exits:
+    east:
+      to: tba:556:room:55657
+    south:
+      to: tba:556:room:55659
+
+"tba:556:room:55657":
+  name: The Graveyard
+  description: >
+    When you walk into here you are immediately soothed.  Nothing could be wrong with the world.  All
+    your senses are pleased.
+  sector: field
+  exits:
+    north:
+      to: tba:556:room:55649
+      look: There is a shimmering light.
+    east:
+      to: tba:556:room:55658
+    south:
+      to: tba:556:room:55660
+    west:
+      to: tba:556:room:55656
+
+"tba:556:room:55658":
+  name: The Graveyard
+  description: You feel a light breath of air under your clothing.  It gently massages you.
+  sector: field
+  exits:
+    south:
+      to: tba:556:room:55661
+    west:
+      to: tba:556:room:55657
+
+"tba:556:room:55659":
+  name: The Graveyard
+  description: >
+    The ground itself here seems to welcome your footsteps.  It is springy and causes you little
+    fatigue.
+  sector: field
+  exits:
+    north:
+      to: tba:556:room:55656
+    east:
+      to: tba:556:room:55660
+
+"tba:556:room:55660":
+  name: The Graveyard
+  description: >
+    The scent of the air refreshes you.  It is sweet and lovely.  Flowers on the graves release their
+    perfumes into the air.
+  sector: field
+  exits:
+    north:
+      to: tba:556:room:55657
+    east:
+      to: tba:556:room:55661
+    west:
+      to: tba:556:room:55659
+
+"tba:556:room:55661":
+  name: The Graveyard
+  description: >
+    The light here is bright and lovely.  It shines on the gravestones as if laying a benediction on
+    the dead.
+  sector: field
+  exits:
+    north:
+      to: tba:556:room:55658
+    west:
+      to: tba:556:room:55660
+
+"tba:556:room:55662":
+  name: Lord British's Castle Entrance
+  description: This building is awe-inspiring.  Lord British's personal Jester is here to entertain you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55663
+      look: You see a fountain.
+
+"tba:556:room:55663":
+  name: Castle Fountain
+  description: >
+    A lovely fountain sits here.  Light sparkles the water droplets, making them look like diamonds. 
+    To the north you see a guard.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55665
+    south:
+      to: tba:556:room:55662
+
+"tba:556:room:55664":
+  name: A Staircase
+  description: >
+    There is a magical staircase going up.  Beware, for those who go up shall not return down.  The
+    other exits except for the west are closed for construction.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:556:room:55665
+    up:
+      to: tba:556:room:55669
+      look: You see the altars of enlightenment.
+
+"tba:556:room:55665":
+  name: Hallway
+  description: >
+    This is the entrance for Lord British.  Through the great doors to the north you can enter. 
+    Another hallways passes across this one.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55667
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: open
+    east:
+      to: tba:556:room:55666
+    south:
+      to: tba:556:room:55663
+    west:
+      to: tba:556:room:55664
+
+"tba:556:room:55666":
+  name: Hallway
+  description: >
+    This is a hallway that would regularly extend from west to east, but it is closed for
+    reconstruction.  There is though a room to your north that can be entered.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55668
+      door:
+        keywords: [door, "n", north]
+        kind: door
+        reset: closed
+    west:
+      to: tba:556:room:55665
+
+"tba:556:room:55667":
+  name: The Throne Room
+  description: >
+    In the Throne Room there are the two most important figures in the world; the avatar and Lord
+    British himself.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:556:room:55665
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: open
+
+"tba:556:room:55668":
+  name: Batlin's Room
+  description: >
+    Batlin, molester of animals and general jerk, lives here.  The room looks peaceful but, like its
+    occupant, probably hides evil.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:556:room:55666
+      door:
+        keywords: [door, s, south]
+        kind: door
+        reset: closed
+
+"tba:556:room:55669":
+  name: The Altar of Honesty
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55670
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55504
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Honesty is the scrupulous respect for truth-the willingness never to deceive oneself or another.
+
+"tba:556:room:55670":
+  name: The Altar of Compassion
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55671
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55500
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: Compassion is nonjudgmental empathy for one's fellow creatures.  It is pure love.
+
+"tba:556:room:55671":
+  name: The Altar of Valor
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55672
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55506
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: Valor is the courage to take actions in support of one's convictions.
+
+"tba:556:room:55672":
+  name: The Altar of Justice
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55673
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55502
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: Justice is devotion to truth, tempered by love.
+
+"tba:556:room:55673":
+  name: The Altar of Sacrifice
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55674
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55505
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: Sacrifice is the courage to give of oneself in the name of love.
+
+"tba:556:room:55674":
+  name: The Altar of Honor
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55675
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55507
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: Honor is the courage to stand for truth, against any odds.
+
+"tba:556:room:55675":
+  name: The Altar of Spirituality
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55676
+      look: The Path Of Enlightenment leads on.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55503
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Spirituality is the concern with one's inner being and how one deals with truth, love, and courage.
+
+"tba:556:room:55676":
+  name: The Altar of Humility
+  description: >
+    You may gain true enlightenment here.  There is a large plaque on the wall. The path continues only
+    if you use the mantra, to gain enlightenment.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:556:room:55677
+      look: The Path Of Enlightenment ends there.
+      door:
+        keywords: [Path]
+        kind: pickproof
+        key: tba:555:obj:55501
+        reset: locked
+  extras:
+  - keywords: [plaque]
+    text: >
+      Humility is perceiving one's place in the world, not according to one's own accomplishments, but
+      according to the intrinsic value of all individuals.
+
+"tba:556:room:55677":
+  name: The Enlightenment
+  description: >
+    A voice booms out, "You are now eight parts enlightened.  To truly become an Avatar though you must
+    experience what he has experienced.  Go through the time warp and fight his enemies.  Beware!  Only
+    High Mortals should attempt this challenge."
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55679
+      look: The Time Warp leads you to another place.
+      door:
+        keywords: [warp]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55678":
+  name: In the Warp
+  description: >
+    This is a forest.  You were sent very far back in time.  Before there was a Britannia.  Almost
+    before there was a Lord British.  This is the time of Mondain.  The first enemy that the Avatar met.
+  sector: forest
+
+"tba:556:room:55679":
+  name: In the Warp
+  description: >
+    You are in a featureless room.  You see the apprentice and lover of Mondain here.  Minax.  She does
+    not seem happy to see you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55680
+      look: The Time Warp zips to the future.
+      door:
+        keywords: [warp]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55680":
+  name: In the Warp
+  description: >
+    You see the last of the Triad of Evil.  With its destruction came the breaking of the world.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55681
+      look: The Time Warp continues on.
+      door:
+        keywords: [warp]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55681":
+  name: The Enlightenment
+  description: >
+    A voice booms out, "You have now truly became Enlightened.  You have fought and defeated the
+    Avatar's enemies of the past.  Now the time warp leads to the future.  Only the truly courageous can
+    survive the enemies there."
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55682
+      look: The Time Warp changes space, and fluxes its surroundings.
+      door:
+        keywords: [warp]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55682":
+  name: In the Warp
+  description: You seem to be in a castle.  But there are torture devices here, and an angry King.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55683
+      look: The Time Warp sputters and crackles.
+      door:
+        keywords: [warp]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55683":
+  name: In the Warp
+  description: >
+    You seem to be in a blue room.  It seems to be only 2 dimensional as it sparkles.  There is also a
+    big red face here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    up:
+      to: tba:556:room:55685
+      look: All looks peaceful beyond the moongate.
+      door:
+        keywords: [moongate]
+        kind: pickproof
+        key: tba:555:obj:55516
+        reset: locked
+
+"tba:556:room:55684":
+  name: The Lagoon
+  description: >
+    The whirlpool-like ocean is to the north, and the beach is back to the east. The beach looks much
+    safer.
+  sector: water_noswim
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:556:room:55618
+      look: The Ocean Roars.
+    east:
+      to: tba:556:room:55613
+      look: The beach sparkles.
+
+"tba:556:room:55685":
+  name: Entrance to Ultima
+  description: >
+    The blue moongate casts a strange blue light upon a huge gate to the south. The gate is open and
+    beyond it you see a simple village.  Around the gate there are two pedestals.  On the first pedestal is
+    a magic scroll.  On the second is a plaque.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:555:room:55501
+      look: There is a huge gate.
+  extras:
+  - keywords: [magic, scroll]
+    text: >
+      An image flies out of the scroll and creates a huge image of a face approximately ten feet off the
+      ground.  It says, "Welcome to Ultima, where adventure and excitement may be found for all people, and
+      all levels.  Each of the separate planes increase in level.  Have a nice day!"
+  - keywords: [plaque]
+    text: The plaque reads, "The Ultima Area was originally made for Merc 2.0."

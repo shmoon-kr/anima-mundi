@@ -1,0 +1,1057 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 125.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:125:room:12500":
+  name: At the gates of the Grand City of Hannah
+  description: >
+    You have come to the entrance of the Grand City of Hannah.  The iron gates are rusted but still
+    look sturdy.  You hear grunting noises and high pitched shrills coming from within the city.  You think
+    to yourself that you need to be ready for anything as you enter the gates.  An old sign is here,
+    depicting a map of the city.
+  sector: city
+  flags: [no_mob]
+  exits:
+    north:
+      to: tba:125:room:12501
+      look: Nothing.
+      door:
+        keywords: [gateway]
+        kind: door
+        key: tba:125:obj:12500
+        reset: locked
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Builders  : Rhunter
+        Zone         : 125 Hannah
+        Began        : 1999
+        Player Level : 7-10
+        Rooms        : 75
+        Mobs         : 20
+        Objects      : 22
+        Shops        : 4
+        Triggers     : 1
+        Theme        : A city that was slaughtered by orcs, goblins, and trolls.
+        Notes        : The remaining citizens are hiding out in the temple while the
+                       city guards are trying to clean up the streets.
+        
+        Zone: 125 was linked to the following zones:
+        106 Elcardo                        at 12500 (south) ---> 10657
+  - keywords: [map, sign]
+    text:
+      preformatted: |2
+           +---------------+
+           |###############|
+           |#------#------#|
+           |#------#------#|
+           |#------#------#|
+           |########^######|
+           |#------#------#|
+           |#------#------#|
+           |#------#------#|
+           |###############|
+           +-------#-------+
+
+"tba:125:room:12501":
+  name: Intersection of Trenton Avenue and Main Street.
+  description: >
+    You have entered what was once the great city of Hannah.  Main street leads to the north, while
+    Trenton avenue leads east and west
+  sector: city
+  exits:
+    north:
+      to: tba:125:room:12502
+    east:
+      to: tba:125:room:12519
+    south:
+      to: tba:125:room:12500
+      door:
+        keywords: [gateway]
+        kind: door
+        key: tba:125:obj:12500
+        reset: locked
+    west:
+      to: tba:125:room:12518
+
+"tba:125:room:12502":
+  name: Main Street
+  description: >
+    You are walking along the main street of the City of Hannah.  As you look at the beautifully
+    designed buildings which line the street, you expect hundreds of townspeople to appear going about their
+    daily chores.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12503
+    south:
+      to: tba:125:room:12501
+
+"tba:125:room:12503":
+  name: Main Street
+  description: >
+    You are walking along the main street of the City of Hannah.  As you look at the beautifully
+    designed buildings which line the street, you expect hundreds of townspeople to appear going about their
+    daily chores.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12504
+    south:
+      to: tba:125:room:12502
+
+"tba:125:room:12504":
+  name: Temple Square
+  description: >
+    You have reached the center most part of the city of Hannah.  Beautifully designed shops and
+    marketplaces line the streets.  Although they are in ruins you can tell that someone took a lot of time
+    designing and building them.  As you sit back and sip the cool, clear water from the fountain you
+    silently wonder to yourself what kind of barbarians would destroy such a lovely place.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12505
+    east:
+      to: tba:125:room:12532
+    south:
+      to: tba:125:room:12503
+    west:
+      to: tba:125:room:12533
+    up:
+      to: tba:125:room:12528
+
+"tba:125:room:12505":
+  name: Main Street
+  description: >
+    You are walking along the main street of the City of Hannah.  As you look at the beautifully
+    designed buildings which line the street, you expect hundreds of townspeople to appear going about their
+    daily chores.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12506
+    south:
+      to: tba:125:room:12504
+
+"tba:125:room:12506":
+  name: Main Street
+  description: >
+    You are walking along the main street of the City of Hannah.  As you look at the beautifully
+    designed buildings which line the street, you expect hundreds of townspeople to appear going about their
+    daily chores.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12507
+    south:
+      to: tba:125:room:12505
+
+"tba:125:room:12507":
+  name: Intersection of Main Street and High Street
+  description: >
+    You have come upon yet another intersection.  To the south you see main street and the Temple of
+    Hannah.  High Street runs east and west from here. You are still amazed at the carnage that must have
+    taken place here a long time age as skeletal remains are shoveled up into large piles everywhere. 
+    Someone or something must really care about this city to be working so hard to clean it.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12529
+    south:
+      to: tba:125:room:12506
+    west:
+      to: tba:125:room:12508
+
+"tba:125:room:12508":
+  name: High Street
+  description: >
+    You are walking along the northern most street in the City of Hannah.  The area is a total disaster
+    scene.  Armor and skeletal remains are strewn about. It looks as if whatever battle happened here
+    focused through this area.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12507
+    west:
+      to: tba:125:room:12509
+
+"tba:125:room:12509":
+  name: High Street
+  description: >
+    You are walking along the northern most street in the City of Hannah.  The area is a total disaster
+    scene.  Armor and skeletal remains are strewn about. It looks as if whatever battle happened here
+    focused through this area.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12508
+    west:
+      to: tba:125:room:12510
+
+"tba:125:room:12510":
+  name: Intersection of Onyx Avenue and High Street
+  description: >
+    You have come to a large vacated intersection.  Debris lays about everywhere and the area is a
+    total wreck.  A sign here reads that Onyx Avenue leads to the south while High Street leads east.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12509
+    south:
+      to: tba:125:room:12511
+
+"tba:125:room:12511":
+  name: Onyx Avenue
+  description: >
+    You are walking along an avenue carved of pure onyx.  Even though it is in disrepair you can tell
+    at one time this was a grand avenue.  You walk carefully as the onyx is very slick.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12510
+    south:
+      to: tba:125:room:12512
+
+"tba:125:room:12512":
+  name: Onyx Avenue
+  description: >
+    You are walking along an avenue carved of pure onyx.  Even though it is in disrepair you can tell
+    at one time this was a grand avenue.  You walk carefully as the onyx is very slick.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12511
+    south:
+      to: tba:125:room:12513
+
+"tba:125:room:12513":
+  name: Onyx Avenue
+  description: >
+    You are walking along an avenue carved of pure onyx.  Something is different here than any other
+    area along the avenue.  As you look around you notice a hidden alley to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12512
+    east:
+      to: tba:125:room:12534
+    south:
+      to: tba:125:room:12514
+
+"tba:125:room:12514":
+  name: Onyx Avenue
+  description: >
+    You are walking along an avenue carved of pure onyx.  Even though it is in disrepair you can tell
+    at one time this was a grand avenue.  You walk carefully as the onyx is very slick.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12513
+    south:
+      to: tba:125:room:12515
+
+"tba:125:room:12515":
+  name: Onyx Avenue
+  description: >
+    You are walking along an avenue carved of pure onyx.  Even though it is in disrepair you can tell
+    at one time this was a grand avenue.  You walk carefully as the onyx is very slick.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12514
+    south:
+      to: tba:125:room:12516
+
+"tba:125:room:12516":
+  name: Intersection of Onyx Avenue and Trenton Street
+  description: >
+    You have come upon a desolate intersection.  A lonely sign reads that Onyx Avenue leads to the
+    north as Trenton Avenue leads to the east.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12515
+    east:
+      to: tba:125:room:12517
+
+"tba:125:room:12517":
+  name: Trenton Avenue
+  description: >
+    You are walking along a crumbling avenue.  It appears someone or something is trying to clean up
+    the area as several large piles of debris are swept up into heaps of trash.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12518
+    west:
+      to: tba:125:room:12516
+
+"tba:125:room:12518":
+  name: Trenton Avenue
+  description: >
+    You are walking along a crumbling avenue.  It appears someone or something is trying to clean up
+    the area as several large piles of debris are swept up into heaps of trash.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12501
+    west:
+      to: tba:125:room:12517
+
+"tba:125:room:12519":
+  name: Trenton Avenue
+  description: >
+    You are walking along a crumbling avenue.  It appears someone or something is trying to clean up
+    the area as several large piles of debris are swept up into heaps of trash.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12520
+    west:
+      to: tba:125:room:12501
+
+"tba:125:room:12520":
+  name: Trenton Avenue
+  description: >
+    You are walking along a crumbling avenue.  It appears someone or something is trying to clean up
+    the area as several large piles of debris are swept up into heaps of trash.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12521
+    west:
+      to: tba:125:room:12519
+
+"tba:125:room:12521":
+  name: Intersection of Trenton Avenue and Plexus Street
+  description: >
+    You have come upon what appears to have once been a busy intersection.  A sign says that Plexus
+    Avenue leads to the north while Trenton Avenue leads west.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12522
+    west:
+      to: tba:125:room:12520
+
+"tba:125:room:12522":
+  name: Plexus Street
+  description: >
+    This avenue appears to be a lot cleaner than the rest.  Some of the shops and restaurants that line
+    the street seem to have been cleaned up and look as if you could start a business here.  Whomever
+    has been working here has obviously spent many a day here.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12523
+    south:
+      to: tba:125:room:12521
+
+"tba:125:room:12523":
+  name: Plexus Street
+  description: >
+    This avenue appears to be a lot cleaner than the rest.  Some of the shops and restaurants that line
+    the street seem to have been cleaned up and look as if you could start a business here.  Whomever
+    has been working here has obviously spent many a day here.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12524
+    south:
+      to: tba:125:room:12522
+
+"tba:125:room:12524":
+  name: Plexus Street
+  description: >
+    You are traveling along Plexus Street but you notice something different. As you look around the
+    area you suddenly notice a hidden alley to the west.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12525
+    south:
+      to: tba:125:room:12523
+    west:
+      to: tba:125:room:12531
+
+"tba:125:room:12525":
+  name: Plexus Street
+  description: >
+    This avenue appears to be a lot cleaner than the rest.  Some of the shops and restaurants that line
+    the street seem to have been cleaned up and look as if you could start a business here.  Whomever
+    has been working here has obviously spent many a day here.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12526
+    south:
+      to: tba:125:room:12524
+
+"tba:125:room:12526":
+  name: Plexus Street
+  description: >
+    This avenue appears to be a lot cleaner than the rest.  Some of the shops and restaurants that line
+    the street seem to have been cleaned up and look as if you could start a business here.  Whomever
+    has been working here has obviously spent many a day here.
+  sector: inside
+  exits:
+    north:
+      to: tba:125:room:12527
+    south:
+      to: tba:125:room:12525
+
+"tba:125:room:12527":
+  name: Intersection of High Street and Plexus Avenue
+  description: >
+    You have come upon another intersection.  This one isn't as large as all the other intersections
+    but it still looks as if it were well used.  A sign here says High Street leads to the west while
+    Plexus Avenue leads south.
+  sector: inside
+  exits:
+    south:
+      to: tba:125:room:12526
+    west:
+      to: tba:125:room:12530
+
+"tba:125:room:12528":
+  name: Entrance to the Temple
+  description: >
+    You have entered the Temple of Hannah.  This room looks completely untouched as if the carnage that
+    happened to the town never happened.  Whomever attacked this town obviously did not reach this
+    area.  You are startled to hear voices. Human voices coming from further within the temple!
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:125:room:12595
+    down:
+      to: tba:125:room:12504
+
+"tba:125:room:12529":
+  name: High Street
+  description: >
+    You are walking along the northern most street in the City of Hannah.  The area is a total disaster
+    scene.  Armor and skeletal remains are strewn about. It looks as if whatever battle happened here
+    focused through this area.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12530
+    west:
+      to: tba:125:room:12507
+
+"tba:125:room:12530":
+  name: High Street
+  description: >
+    You are walking along the northern most street in the City of Hannah.  The area is a total disaster
+    scene.  Armor and skeletal remains are strewn about. It looks as if whatever battle happened here
+    focused through this area.
+  sector: inside
+  exits:
+    east:
+      to: tba:125:room:12527
+    west:
+      to: tba:125:room:12529
+
+"tba:125:room:12531":
+  name: A dark, hidden alley
+  description: >
+    You have entered an area that you probably shouldn't have.  It is very dark here and you hear all
+    kinds of weird noises.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:125:room:12524
+    west:
+      to: tba:125:room:12532
+
+"tba:125:room:12532":
+  name: A dark, hidden alley
+  description: >
+    You have entered an area that you probably shouldn't have.  It is very dark here and you hear all
+    kinds of weird noises.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:125:room:12531
+    west:
+      to: tba:125:room:12504
+
+"tba:125:room:12533":
+  name: A dark, hidden alley
+  description: >
+    You have entered an area that you probably shouldn't have.  It is very dark here and you hear all
+    kinds of weird noises.
+  sector: inside
+  flags: [dark]
+  exits:
+    east:
+      to: tba:125:room:12504
+    west:
+      to: tba:125:room:12534
+
+"tba:125:room:12534":
+  name: A dark, hidden alley
+  description: >
+    You have entered an area that you probably shouldn't have.  It is very dark here and you hear all
+    kinds of weird noises.
+  sector: inside
+  flags: [dark, no_mob]
+  exits:
+    east:
+      to: tba:125:room:12533
+    west:
+      to: tba:125:room:12513
+
+"tba:125:room:12535":
+  name: A hall in the Temple
+  description: >
+    Pictures of ex-mayors line the walls.  A few townspeople wonder around here chatting with one
+    another.  You notice that the hallway ends in the next room and splits off into two directions.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12536
+    south:
+      to: tba:125:room:12596
+
+"tba:125:room:12536":
+  name: An intersection inside the Temple of Hannah
+  description: >
+    Townspeople walk about and you notice a few guards here and there.  People glance at you as they
+    walk past.  You notice several holy men standing in a small circle chanting.  The hallway leads to the
+    east and west from here.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12540
+    south:
+      to: tba:125:room:12535
+    west:
+      to: tba:125:room:12537
+
+"tba:125:room:12537":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12536
+    west:
+      to: tba:125:room:12538
+
+"tba:125:room:12538":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12537
+    west:
+      to: tba:125:room:12539
+
+"tba:125:room:12539":
+  name: A corner in a hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12547
+    east:
+      to: tba:125:room:12538
+
+"tba:125:room:12540":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12541
+    east:
+      to: tba:125:room:12559
+    west:
+      to: tba:125:room:12536
+
+"tba:125:room:12541":
+  name: A beautifully manicured courtyard
+  description: >
+    Large rose bushes line the walkway as small birds chirp around the courtyard.  A row of benches sit
+    on either side of the walkway as citizens of the town sit about talking with each other.  You notice
+    a shaded empty bench beneath a large pin oak tree that looks like a nice place to take a break.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12542
+    south:
+      to: tba:125:room:12540
+
+"tba:125:room:12542":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12560
+    east:
+      to: tba:125:room:12548
+    south:
+      to: tba:125:room:12541
+    west:
+      to: tba:125:room:12543
+
+"tba:125:room:12543":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12542
+    west:
+      to: tba:125:room:12544
+
+"tba:125:room:12544":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12543
+    west:
+      to: tba:125:room:12545
+
+"tba:125:room:12545":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12544
+    west:
+      to: tba:125:room:12546
+
+"tba:125:room:12546":
+  name: A corner in the hallway in the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12545
+    south:
+      to: tba:125:room:12547
+
+"tba:125:room:12547":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12546
+    south:
+      to: tba:125:room:12539
+
+"tba:125:room:12548":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12549
+    west:
+      to: tba:125:room:12542
+
+"tba:125:room:12549":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12550
+    west:
+      to: tba:125:room:12548
+
+"tba:125:room:12550":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12551
+    west:
+      to: tba:125:room:12549
+
+"tba:125:room:12551":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12552
+    west:
+      to: tba:125:room:12550
+
+"tba:125:room:12552":
+  name: A corner in the hallway in the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:125:room:12553
+    west:
+      to: tba:125:room:12551
+
+"tba:125:room:12553":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12552
+    south:
+      to: tba:125:room:12554
+
+"tba:125:room:12554":
+  name: A corner in the hallway in the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12553
+    west:
+      to: tba:125:room:12555
+
+"tba:125:room:12555":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12554
+    west:
+      to: tba:125:room:12556
+
+"tba:125:room:12556":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12555
+    west:
+      to: tba:125:room:12557
+
+"tba:125:room:12557":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12556
+    west:
+      to: tba:125:room:12558
+
+"tba:125:room:12558":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12557
+    west:
+      to: tba:125:room:12559
+
+"tba:125:room:12559":
+  name: A grand hallway inside the Temple of Hannah
+  description: >
+    Large chandeliers hang from vaulted ceilings here dimly lighting the area. As you walk along the
+    plush red carpets mingling with the townspeople, you hear people laughing and chatting as if they are
+    completely relaxed.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12558
+    west:
+      to: tba:125:room:12540
+
+"tba:125:room:12560":
+  name: Temple Hannah Market Place
+  description: >
+    Citizens and peasants move about the area laughing and socializing as they attend to their daily
+    chores.  The air is filled with the smell of freshly baked bread coming from the bakery in the
+    near-vicinity.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12561
+    south:
+      to: tba:125:room:12542
+
+"tba:125:room:12561":
+  name: Temple Hannah Market Place
+  description: >
+    Citizens and peasants move about the area laughing and socializing as they attend to their daily
+    chores.  The air is filled with the smell of freshly baked bread coming from the bakery in the
+    near-vicinity.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12563
+    east:
+      to: tba:125:room:12562
+    south:
+      to: tba:125:room:12560
+
+"tba:125:room:12562":
+  name: Hannah Bakery
+  description: >
+    You have entered a nicely decorated bakery.  Loaves of breads are displayed around the bakery in a
+    caring way.  You see a large case filled with cookies and other sweet baked goods.  Mikel the baker
+    smiles at you and asks if he may help you.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    west:
+      to: tba:125:room:12561
+
+"tba:125:room:12563":
+  name: Temple Hannah Market Place
+  description: >
+    Citizens and peasants move about the area laughing and socializing as they attend to their daily
+    chores.  The air is filled with the smell of freshly baked bread coming from the bakery in the
+    near-vicinity.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12565
+    south:
+      to: tba:125:room:12561
+    west:
+      to: tba:125:room:12564
+
+"tba:125:room:12564":
+  name: Temporary Housing
+  description: >
+    Since the city was ransacked everyone has taken up temporary refuge in the temple.  Bunks line the
+    walls and mattresses litter the floors.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    east:
+      to: tba:125:room:12563
+
+"tba:125:room:12565":
+  name: Temple Hannah Market Place
+  description: >
+    Citizens and peasants move about the area laughing and socializing as they attend to their daily
+    chores.  The air is filled with the smell of freshly baked bread coming from the bakery in the
+    near-vicinity.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12566
+    south:
+      to: tba:125:room:12563
+
+"tba:125:room:12566":
+  name: Temple Hannah Market Place
+  description: >
+    Citizens and peasants move about the area laughing and socializing as they attend to their daily
+    chores.  The air is filled with the smell of freshly baked bread coming from the bakery in the
+    near-vicinity.
+  sector: inside
+  flags: [no_mob, indoors]
+  exits:
+    north:
+      to: tba:125:room:12569
+    east:
+      to: tba:125:room:12568
+    south:
+      to: tba:125:room:12565
+    west:
+      to: tba:125:room:12567
+
+"tba:125:room:12567":
+  name: Taber's Butcher Shop
+  description: >
+    Large cabinets display juicy cuts of the finest meats you've ever seen. You notice a short fat man
+    with a bloodstained apron on put down a large cleaver and approach you smiling.  He uncovers another
+    cabinet and asks if he may help you in any way.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:125:room:12566
+
+"tba:125:room:12568":
+  name: Temple of Hannah General Store and Goods
+  description: >
+    You have entered a large general store.  Lots of new equipment hangs about the walls as if begging
+    you to buy it.  The shopkeeper turns and smiles at you then returns to his work.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:125:room:12566
+
+"tba:125:room:12569":
+  name: Temple of Hannah Health Services
+  description: >
+    You have entered a room full of sick and injured people.  Teams of doctors and nurses move about
+    the room at a rapid pace trying to treat everyone.  It is very cool here and although it is hectic you
+    feel like you start to relax a little.
+  sector: inside
+  flags: [indoors]
+  exits:
+    south:
+      to: tba:125:room:12566
+
+"tba:125:room:12595":
+  name: Check Station in the Temple
+  description: >
+    You have been stopped at a guard post.  Fierce looking warriors stand here checking people as the
+    pass through.  You notice one poor soul who was trying to sneak a weapon in brutally beaten and slain
+    before you.  Suddenly one of the warriors turn towards you and motions you forward.  Several more
+    guards enter the room from the guard barracks to the east.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12597
+    east:
+      to: tba:125:room:12598
+    south:
+      to: tba:125:room:12528
+
+"tba:125:room:12596":
+  name: A hall in the Temple
+  description: >
+    Pictures of ex-mayors line the walls.  A few townspeople wonder around here chatting with one
+    another.  You notice that the hallway ends in the next room and splits off into two directions.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12535
+    south:
+      to: tba:125:room:12597
+
+"tba:125:room:12597":
+  name: A hall in the Temple
+  description: >
+    Large picture windows line this hallway.  This is the first time you've been able to see the
+    destruction that has occurred in the city.  The town is in complete ruins.  As you look below you see
+    Assassins attacking Korreds and orcs wondering aimlessly through out town.  You wonder to yourself if this
+    town will ever be the way it once was.
+  sector: inside
+  flags: [indoors]
+  exits:
+    north:
+      to: tba:125:room:12596
+    south:
+      to: tba:125:room:12595
+
+"tba:125:room:12598":
+  name: Temple Guards' Barracks
+  description: >
+    Beds full of slumbering guards line the walls as several guards walk around tending to their daily
+    business.  You notice an arena at the far end of the barracks where several guards are sparring with
+    each other.  A guard notices you and start to move towards you.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:125:room:12595

@@ -1,0 +1,1461 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 247.
+# Entries by ID, in vnum order. Prose is folded (>): wrapped here, several paragraphs are a list, the
+# renderer wraps it per language. exits.<dir>: to (room ID), look (what `look <dir>` shows), door
+# (keywords, kind door|pickproof, key, reset: the state the zone reset puts it in).
+"tba:247:room:24700":
+  name: A Gravel Road on the Graveyard
+  description: >
+    You are on a well-kept gravel road that leads north-south through the graveyard.  On both sides of
+    the road, grave markers poke up out of the ground. An iron grate is to the north.
+  sector: city
+  exits:
+    east:
+      to: tba:247:room:24706
+      look: Headstones are arranged in neat rows to the east.
+    south:
+      to: tba:247:room:24701
+      look: The gravel road continues southward.
+    west:
+      to: tba:247:room:24718
+      look: The tombstones to the west look a bit older than the ones to the east.
+  extras:
+  - keywords: [credits, info]
+    text:
+      preformatted: |2
+           Graveyard by Rasta (Eric Pilcher) for KallistiMUD
+        In spite of it being my first attempt at an area, it didn't turn out to bad.
+        In fact, I was a bit shocked to receive praise now and then. The area connects
+        to South Midgaard at the grate (sexton has key).  It includes, although they
+        are modified, the original path amongst the evergreens and chapel that is found
+        in stock diku.
+        I recommend you do the following:
+        Replace the name "Someone" on the tombstones (.wld file) with the names of some
+        of your past players, gods, or your own creative names.  On Kallisti, I used
+        the Gods.  The collesuim belonging to the Implementor. Vary the contents of the
+        tombstones.  These are containers you can put small items in. If you have a
+        problem with key hoarders, consider a second entrance to the catacombs.
+        Perhaps through the sewers. Most of all, enjoy!
+        Builder      : Rasta
+        Zone         : 247 Graveyard
+        Began        : 1996
+        Player Level : 20-24
+        Rooms        : 72
+        Mobs         : 18
+        Objects      : 34
+        Links        : 00n
+
+"tba:247:room:24701":
+  name: A Gravel Road on the Graveyard
+  description: >
+    You are on a well-kept gravel road that leads north and south through the graveyard.  Both sides of
+    the road are lined with grave markers poking up out of the ground.
+  sector: city
+  exits:
+    north:
+      to: tba:247:room:24700
+      look: The gravel road continues northward.
+    east:
+      to: tba:247:room:24709
+      look: Headstones are arranged in neat rows to the east.
+    south:
+      to: tba:247:room:24702
+      look: The gravel road continues southward.
+    west:
+      to: tba:247:room:24721
+      look: The tombstones to the west look a bit older than the ones to the east.
+
+"tba:247:room:24702":
+  name: A Gravel Road on the Graveyard
+  description: >
+    You are on a well-kept gravel road that leads north and south through the graveyard.  Both sides of
+    the road are lined with grave markers poking up out of the ground.
+  sector: city
+  exits:
+    north:
+      to: tba:247:room:24701
+      look: The gravel road continues northward.
+    east:
+      to: tba:247:room:24711
+      look: Headstones are arranged in neat rows to the east.
+    south:
+      to: tba:247:room:24703
+      look: The gravel road continues southward.
+    west:
+      to: tba:247:room:24724
+      look: The tombstones to the west look a bit older than the ones to the east.
+
+"tba:247:room:24703":
+  name: A Gravel Road on the Graveyard
+  description: >
+    You are on a well-kept gravel road that leads north and south through the graveyard.  Both sides of
+    the road are lined with grave markers poking up out of the ground.
+  sector: city
+  exits:
+    north:
+      to: tba:247:room:24702
+      look: The gravel road continues northward.
+    east:
+      to: tba:247:room:24713
+      look: Headstones are arranged in neat rows to the east.
+    south:
+      to: tba:247:room:24704
+      look: The gravel road continues southward to an open space before a small building.
+    west:
+      to: tba:247:room:24727
+      look: The tombstones to the west look a bit older than the ones to the east.
+
+"tba:247:room:24704":
+  name: In front of the Chapel
+  description: >
+    You are on an open space before a small chapel.  A gravel road leads north through the graveyard
+    and the chapel entrance is to the south.  A few flowers have been trampled into the dirt.
+  sector: city
+  exits:
+    north:
+      to: tba:247:room:24703
+      look: The gravel road continues northward.
+    south:
+      to: tba:247:room:24705
+      look: The chapel door is made of dark wood.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:247:room:24705":
+  name: Inside the Chapel
+  description: >
+    You are in a small, dark chapel.  The dark brown glass in the tiny windows does not let much light
+    through.  A few rows of worn wooden benches stand here.
+  sector: city
+  exits:
+    north:
+      to: tba:247:room:24704
+      look: The chapel door is made of dark wood.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+  extras:
+  - keywords: [benches, rows]
+    text: The benches are not of the comfortable kind.
+  - keywords: [glass, windows]
+    text: The windows must be meant to be dark.  At least they are completely clean.
+
+"tba:247:room:24706":
+  name: A Grave
+  description: >
+    This area of the cemetery is relatively new.  The ground seems to settle beneath your feet and the
+    smell of freshly dug dirt hits your nostrils.  The gravel path is to the west and there are more
+    graves to the east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24707
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24709
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24700
+      look: The gravel path is to the west.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24707":
+  name: A Grave
+  description: >
+    This area of the cemetery is relatively new.  The ground seems to settle beneath your feet and the
+    smell of freshly dug dirt hits your nostrils.  The gravel path is to the west and there are more
+    graves to the east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24708
+      look: A small shack is east of here.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+    south:
+      to: tba:247:room:24710
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24706
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24708":
+  name: The undertaker's cottage
+  description: >
+    This is a sparsely furnished run-down shack.  There's not really much of anything here at all. 
+    Sections of the wall have been scarred by what appears to be someone trying to break out.
+  sector: inside
+  flags: [indoors]
+  exits:
+    west:
+      to: tba:247:room:24707
+      look: The doorway leads back out into the cemetery.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:247:room:24709":
+  name: A Grave
+  description: >
+    The graves here are kept neatly tended.  The groundskeeper must take pride in his work.  The gravel
+    path is to the west and more plots lie to the north, east and south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24706
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24710
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24711
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24701
+      look: The gravel path is to the west.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P
+
+"tba:247:room:24710":
+  name: A Grave
+  description: >
+    The graves here are kept neatly tended.  The groundskeeper must take pride in his work.  Dark
+    evergreen trees grow to the east.  More plots lie to the north, west and south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24707
+      look: To the north lies another cemetery plot.
+    south:
+      to: tba:247:room:24712
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24709
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24711":
+  name: A Grave
+  description: >
+    The graves here are kept neatly tended.  The groundskeeper must take pride in his work.  More plots
+    lie to the north, east and south and the gravel path lies west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24709
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24712
+    south:
+      to: tba:247:room:24713
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24702
+      look: The gravel path is to the west.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24712":
+  name: A Grave
+  description: >
+    The graves here are kept neatly tended.  The groundskeeper must take pride in his work.  Dark
+    evergreen trees grow east of here.  More plots lie to the north, west and south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24710
+      look: To the north lies another cemetery plot.
+    south:
+      to: tba:247:room:24714
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24711
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24713":
+  name: A Grave
+  description: >
+    The graves here are kept neatly tended.  The groundskeeper must take pride in his work.  Dark
+    evergreen trees grow to the south.  To the west is the gravel path and more plots lie to the north and
+    east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24711
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24714
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24703
+      look: The gravel path is to the west.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24714":
+  name: The desecrated plot
+  description: >
+    This grave has been disturbed recently.  It looks as though something has dug it's way out from
+    underneath.  The grave stone itself has been knocked over and where once an epitaph appeared, there is
+    now only claw marks.  Dark evergreen trees grow to the south and east, although there is an opening to
+    east where something has smashed through the tree limbs.  More plots lie to the north and west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24712
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24715
+      look: To the east, a small path has been created through the trees.
+    west:
+      to: tba:247:room:24713
+      look: To the west lies another cemetery plot.
+
+"tba:247:room:24715":
+  name: A makeshift trail
+  description: >
+    This trail seems to have been created recently.  There are claw marks on the trees and broken
+    branches litter the ground.  Although the trail is dark, these markers clearly show you the path.  The
+    trail continues to the east, the cemetery lies west.
+  sector: forest
+  flags: [no_mob]
+  exits:
+    east:
+      to: tba:247:room:24716
+      look: Without the broken branches to show you the way, the trail would be impossible to follow.
+    west:
+      to: tba:247:room:24714
+      look: The cemetery lies back to the west.
+
+"tba:247:room:24716":
+  name: A small clearing
+  description: >
+    The trail opens up into a larger area.  The trees surrounding this area are all dead and bare earth
+    covers the ground.  Several of the trees have fallen over creating impassable deadfalls to the north
+    and east.  Similar dead trees have form what resembles a cave to the south.  The nauseating stench
+    of decay drifts from somewhere and you sense a powerful evil nearby.
+  sector: field
+  exits:
+    south:
+      to: tba:247:room:24717
+      look: It looks very dark and foreboding in there.
+    west:
+      to: tba:247:room:24715
+      look: The path leading back to the cemetery.
+
+"tba:247:room:24717":
+  name: The barrow
+  description: >
+    You have stumbled into the lair of a barrow wight and his ghoul followers. This place reeks of
+    decay.  Bones and decaying corpses are strewn about the place, and you really hope that you don't become
+    part of this carnage.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24716
+      look: The clearing lies back to the north.
+
+"tba:247:room:24718":
+  name: A Grave
+  description: >
+    The graves here are slightly older than the ones to the east of the gravel path.  A light fog seems
+    to hang over this part of the cemetery and the mist sometimes seems to take humanoid forms as
+    ghostly apparitions.  The cemetery continues to the west and south.  The gravel path is back to the east.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24700
+      look: To the east lies the gravel path.
+    south:
+      to: tba:247:room:24721
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24719
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24719":
+  name: A Grave
+  description: >
+    A light fog seems to hang over this part of the cemetery and the mist sometimes seems to take
+    humanoid forms as ghostly apparitions.  The cemetery continues to the west, south and east.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24718
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24722
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24720
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24720":
+  name: A Grave
+  description: >
+    A light fog seems to hang over this part of the cemetery and the mist sometimes seems to take
+    humanoid forms as ghostly apparitions.  The cemetery continues to the east, south and west.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24719
+      look: To the east lies the another cemetery plot.
+    south:
+      to: tba:247:room:24723
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24762
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24721":
+  name: A Grave
+  description: >
+    The graves here are slightly older than the ones to the east of the gravel path.  A light fog seems
+    to hang over this part of the cemetery and the mist sometimes seems to take humanoid forms as
+    ghostly apparitions.  The cemetery continues to the north, west and south.  The gravel path is back to the
+    east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24718
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24701
+      look: To the east lies the gravel path.
+    south:
+      to: tba:247:room:24724
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24722
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24722":
+  name: A Grave
+  description: >
+    The fog is much more dense in this part of the cemetery and the mist seems to take humanoid forms
+    as ghostly apparitions.  You feel a rising power of some sort emanating from the southwest.  The
+    cemetery continues in all directions.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24719
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24721
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24725
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24723
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24723":
+  name: A Grave
+  description: >
+    The fog is much more dense in this part of the cemetery and the mist seems to take humanoid forms
+    as ghostly apparitions.  You feel a rising power emanating from the south.  The cemetery continues in
+    all directions.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24720
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24722
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24726
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24763
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24724":
+  name: A Grave
+  description: >
+    The graves here are slightly older than the ones to the east of the gravel path.  A light fog seems
+    to hang over this part of the cemetery and the mist sometimes seems to take humanoid forms as
+    ghostly apparitions.  The cemetery continues to the north, west and south.  The gravel path is back to the
+    east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24721
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24702
+      look: To the east lies the gravel path.
+    south:
+      to: tba:247:room:24727
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24725
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24725":
+  name: A Grave
+  description: >
+    The fog seems much heavier in this part of the cemetery and the mist seems to take humanoid forms
+    as ghostly apparitions.  You feel a rising power emanating from the west.  The cemetery continues in
+    all directions.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24722
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24724
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24728
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24726
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24726":
+  name: A Grave
+  description: >
+    The fog seems to hang over this part of the cemetery and the mist seems to take humanoid forms as
+    ghostly apparitions.  There is a very strong power field of some sort emanating from a mausoleum to
+    the west.  The cemetery continues to the north, east and south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24723
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24725
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24729
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24730
+      look: >
+        To the west stands a mausoleum with a huge iron door.   There is some writing on the door.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:247:obj:24730
+        reset: locked
+  extras:
+  - keywords: [door, writing]
+    text: The Great Tomb
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24727":
+  name: A Grave
+  description: >
+    The graves here are slightly older than the ones to the east of the gravel path.  A light fog seems
+    to hang over this part of the cemetery and the mist sometimes seems to take humanoid forms as
+    ghostly apparitions.  Dark evergreen trees grow to the south.  The cemetery continues north and west.  The
+    gravel path is back to the east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24724
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24703
+      look: To the east lies the gravel path.
+    west:
+      to: tba:247:room:24728
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24728":
+  name: A Grave
+  description: >
+    The fog seems to hang over this part of the cemetery and the mist seems to take humanoid forms as
+    ghostly apparitions.  A rising power emanates from the northwest.  Dark evergreen trees grow to the
+    south.  The cemetery continues to the north, east and west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24725
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24727
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24729
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24729":
+  name: A Grave
+  description: >
+    The fog seems to hang over this part of the cemetery and the mist seems to take humanoid forms as
+    ghostly apparitions.  A rising power emanates from the north.  The cemetery continues to the north,
+    east and west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24726
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24728
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24764
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24730":
+  name: The Great Tomb
+  description: >
+    The mausoleum is made of smooth marble.  It is quite cold in here but feels peaceful enough.  The
+    very walls seem to glow blue and it showers the room in a ghostly light.  There is an iron vault
+    embedded into the west wall.
+  sector: inside
+  flags: [indoors]
+  exits:
+    east:
+      to: tba:247:room:24726
+      look: The iron door leads back out into the cemetery.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:247:obj:24730
+        reset: locked
+    west:
+      to: tba:247:room:24731
+      look: The vault is made of wrought iron.
+      door:
+        keywords: [vault]
+        kind: door
+        key: tba:247:obj:24731
+        reset: locked
+  extras:
+  - keywords: [vault]
+    text: It looks very solid.  You'd probably need something like a crowbar to open it.
+
+"tba:247:room:24731":
+  name: Inside the Vault
+  description: >
+    You climb inside the iron vault.  It is a very tight squeeze in here.  You rest your hand on the
+    north wall of the vault for support, except that your hand disappears into the darkness.  This north
+    wall must be only a clever illusion and not really exist at all!  You wonder what lies down there.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    north:
+      to: tba:247:room:24733
+      look: Total darkness.
+    south:
+      to: tba:247:room:24730
+      look: That way leads back into the main room of the mausoleum.
+      door:
+        keywords: [vault]
+        kind: door
+        key: tba:247:obj:24731
+        reset: locked
+
+"tba:247:room:24732":
+  name: A very dark room
+  description: >
+    Your feeble light source does little to penetrate the darkness in here. Blackness surrounds you,
+    you can't even see the walls in this room.  Even the doorway behind you seems to have disappeared. 
+    Suddenly something occurs to you that sends chills up and down your spine.  You get a bad feeling that
+    you are not alone in here!
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    east:
+      to: tba:247:room:24733
+      look: You can't see a blasted thing!
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:247:room:24733":
+  name: Catacomb entrance
+  description: >
+    This stonework in this area looks quite a bit older than upstairs in the mausoleum.  You wonder
+    when it was built, and why.  Small rodents (not worth killing) run around on the floor.  There is a door
+    to the west which is pitch black in color.  The hallway continues to the east, you hear a faint
+    moaning coming from that direction.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24735
+      look: The hallway continues to the east.
+    south:
+      to: tba:247:room:24731
+      look: A narrow crawlway leads back inside the vault.
+    west:
+      to: tba:247:room:24732
+      look: The door is a dull black color.
+      door:
+        keywords: [door]
+        kind: door
+        reset: closed
+
+"tba:247:room:24735":
+  name: The Catacombs
+  description: >
+    The corridor continues both east and west.  It is very dirty in here, cobwebs hang from the ceiling
+    corners and small bones litter the floor.  A faint moaning is coming from the east.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24736
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24733
+      look: The corridor continues in that direction.
+
+"tba:247:room:24736":
+  name: A Split in the Corridor
+  description: >
+    There is a triple junction here, with the corridor running both east, west and south.  The passage
+    way east looks as it hasn't been disturbed for some time and cobwebs seem to grow thick in that
+    direction.  A faint moaning sound can be heard to the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24737
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24742
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24735
+      look: The corridor continues in that direction.
+
+"tba:247:room:24737":
+  name: The Catacombs
+  description: >
+    The corridor continues both east and west.  It is very dirty in here, cobwebs hang from the ceiling
+    corners and small bones litter the floor.  A faint moaning is coming from the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24738
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24736
+      look: The corridor continues in that direction.
+
+"tba:247:room:24738":
+  name: The Catacombs
+  description: >
+    The corridor continues both east and west.  It is very dirty in here, cobwebs are everywhere and
+    seem to be getting thicker to the east.  You have a feeling that it's been a very long time since
+    anyone has been in this part of the catacombs.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24739
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24737
+      look: The corridor continues in that direction.
+
+"tba:247:room:24739":
+  name: The Catacombs
+  description: >
+    The corridor continues both east and west.  You are almost completely covered head to toe with
+    cobwebs now.  They seem to cling to your body like glue and it is impossible for you to avoid them. 
+    You've yet to notice a single spider, however.  The northern wall is in ruins as if something has broken
+    it's way through.  Large blocks of stone litter the corridor.  You could probably squeeze through the
+    hole if you so desired.
+  sector: inside
+  flags: [dark, no_mob, indoors]
+  exits:
+    east:
+      to: tba:247:room:24740
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24738
+      look: The corridor continues in that direction.
+
+"tba:247:room:24740":
+  name: The Cobwebbed Catacomb
+  description: >
+    This area is almost solid cobwebs.  You trudge through them, trying to clear a path.  As you brush
+    them aside you notice that you've come to a dead end. Closer examination reveals an archway to the
+    south.  But so many cobwebs cover the archway that they've formed a completely opaque door.  The
+    corridor continues back to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:247:room:24741
+      look: The archway is blocked by a wall of cobwebs.
+      door:
+        keywords: [cobweb]
+        kind: door
+        reset: closed
+    west:
+      to: tba:247:room:24739
+      look: The corridor continues in that direction.
+
+"tba:247:room:24741":
+  name: The Ancient Tomb
+  description: >
+    The air is very stale in here.  Cobwebs cover the walls and ceiling, however the middle of the room
+    is relatively clear of them.  In each corner of this chamber, an ancient sarcophagus lies against
+    the wall.  There is a low grinding noise as they all start to open.  The only exit is north.
+  sector: inside
+  flags: [indoors, private]
+  exits:
+    north:
+      to: tba:247:room:24740
+      look: A thick wall of cobwebs.
+      door:
+        keywords: [cobweb]
+        kind: door
+        reset: closed
+
+"tba:247:room:24742":
+  name: The Catacombs
+  description: >
+    The corridor continues both north and south.  The floor is littered with broken bits of bone and
+    small scraps of burial wrappings.  You hear a distinct moaning sound coming from the south.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24736
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24743
+      look: The corridor continues in that direction.
+
+"tba:247:room:24743":
+  name: The Catacombs
+  description: >
+    The corridor continues both north and east.  The floor is littered with broken bits of bone and
+    small scraps of burial wrappings.  There is an iron door to the south and a loud moaning seems to be
+    coming from the other side of it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24742
+      look: The corridor continues in that direction.
+    east:
+      to: tba:247:room:24745
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24744
+      look: An iron door.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:247:obj:24744
+        reset: closed
+
+"tba:247:room:24744":
+  name: The Chamber of Sorrow
+  description: >
+    This is the source of moaning.  The room is decorated with black curtains. They look very moth
+    eaten and mildewed.  A black sarcophagus lies on the floor in the center of the room, and leaning over
+    it, sobbing deeply, rests a banshee.  She seems to be too interested in crying and wailing than to
+    notice you.  The door stands to the north and there are no other exits.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    north:
+      to: tba:247:room:24743
+      look: The catacombs are back to the north.
+      door:
+        keywords: [door]
+        kind: door
+        key: tba:247:obj:24744
+        reset: closed
+
+"tba:247:room:24745":
+  name: The Catacombs
+  description: >
+    The corridor continues both east and west.  The floor is littered with broken bits of bone and
+    small scraps of burial wrappings.  A distinct moaning sound can be heard back to the west.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24746
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24743
+      look: The corridor continues in that direction.
+
+"tba:247:room:24746":
+  name: The Catacombs
+  description: >
+    The corridor bends here and continues to the west and south.  A faint moaning sound can be heard to
+    the west.  The air is very stale in here.  The floor is littered with the decaying corpses of small
+    rodents and splinters of broken bones.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:247:room:24747
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24745
+      look: The corridor continues in that direction.
+
+"tba:247:room:24747":
+  name: The Catacombs
+  description: >
+    The corridor splits here leaving exits to the north, east and south.  The air seems hot and dry and
+    reeks of staleness.  Splinters of broken bone litter the floor and a few cobwebs hang from the
+    ceiling.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24746
+      look: The corridor continues in that direction.
+    east:
+      to: tba:247:room:24748
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24750
+      look: The corridor continues in that direction.
+
+"tba:247:room:24748":
+  name: The Catacombs
+  description: >
+    The corridor here forms a small alcove with the passageway back to the west and a warped looking
+    hardwood door to the east.  You fell chills up and down your spine as you approach the door.  You
+    wonder what might lie behind it.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24749
+      look: There lies before you a wooden door.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24749
+        reset: locked
+    west:
+      to: tba:247:room:24747
+      look: The corridor continues in that direction.
+
+"tba:247:room:24749":
+  name: The Coffers
+  description: >
+    The floor of this room is littered with coins.  Many of which have tarnished with age throughout
+    the centuries.  There must be a fortune in here and you wonder who it once belonged to.  Transparent
+    figures guard this treasure and they don't look happy that you have found it.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    west:
+      to: tba:247:room:24748
+      look: The doorway leads back into the catacombs.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24749
+        reset: locked
+
+"tba:247:room:24750":
+  name: The Catacombs
+  description: >
+    The corridor here continues north and south.  The air here is very stale and the smell of decay and
+    dry rot reeks heavily.  You wonder where exactly these catacombs lead.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24747
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24751
+      look: The corridor continues in that direction.
+
+"tba:247:room:24751":
+  name: The Catacombs
+  description: >
+    The corridor here bends and takes off to the north and west.  There is a golden door to the east
+    with a flaming skull emblazoned on it.  The air is cold here and there is sort of a light draft.  The
+    air seems to seep out from the cracks in the doorframe.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24750
+      look: The corridor continues in that direction.
+    east:
+      to: tba:247:room:24760
+      look: The door is smooth, gold, and cold to the touch.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24760
+        reset: locked
+    west:
+      to: tba:247:room:24752
+      look: The corridor continues in that direction.
+
+"tba:247:room:24752":
+  name: The Catacombs
+  description: >
+    There is a slight breeze in this part of the corridor.  You stand in a long hall running east to
+    west.  This corridor looks ancient.  Chunks of ceiling have fallen to the floor and there are small
+    scraps of leather, bone, cloth, and other such items strewn about.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24751
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24753
+      look: The corridor continues in that direction.
+
+"tba:247:room:24753":
+  name: The Catacombs
+  description: >
+    There is a gentle breeze in this part of the corridor.  You stand in a long hall running east to
+    west.  This corridor looks ancient.  Chunks of ceiling have fallen to the floor and there are small
+    scraps of leather, bone, cloth, and other such items strewn about.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24752
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24754
+      look: The corridor continues in that direction.
+
+"tba:247:room:24754":
+  name: The Catacombs
+  description: >
+    There is a strong breeze in this part of the corridor.  You stand in a long hall running east to
+    west.  This corridor looks ancient.  Chunks of ceiling have fallen to the floor and there are small
+    scraps of leather, bone, cloth, and other such items strewn about.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    east:
+      to: tba:247:room:24753
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24755
+      look: The corridor continues in that direction.
+
+"tba:247:room:24755":
+  name: The Catacombs
+  description: >
+    There is a strong wind in this part of the corridor.  You stand in a long hall running east to
+    west.  The west looks very dark ahead and you can no longer see the floor in that direction.  There is
+    another passageway to the north.  The there are small cracks in the walls here and the floor is
+    littered with debris from the ceiling.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24757
+      look: The corridor continues in that direction.
+    east:
+      to: tba:247:room:24754
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24756
+      look: The corridor continues in that direction but you can no longer see the floor.
+
+"tba:247:room:24756":
+  name: The Pit of Lost Souls
+  description: >
+    You step into the area and suddenly realize that there is no floor beneath your feet.  You are
+    falling, and you think to yourself, "Oh, no, I hit a DT". However, moments before you would have
+    splattered to your death, a decaying corpse breaks your fall.  Looking around, you see that corpses fill this
+    room. There are no exits.
+  sector: inside
+  flags: [dark, no_mob, indoors, no_magic, private]
+  extras:
+  - keywords: [corpse, body]
+    text: >
+      They look like they've been here a while.  You hope you don't have to stay here with them much
+      longer!
+
+"tba:247:room:24757":
+  name: The Catacombs
+  description: >
+    The corridor here stretches north to south.  This area looks extremely old and the ceiling seems to
+    want to cave in.  There are larger and larger chunks of stone that have fallen in.  You wonder just
+    how save this passageway is.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    north:
+      to: tba:247:room:24758
+      look: The corridor continues in that direction.
+    south:
+      to: tba:247:room:24755
+      look: The corridor continues in that direction.
+
+"tba:247:room:24758":
+  name: The Catacombs
+  description: >
+    You have cone to a dead end.  Large block lie strewn around the ground here and you feel that if
+    the passage did continue it wouldn't go much further without being blocked by rubble anyway.  The
+    passageway heads south and there is a stone door to the west.  Looks like there is an inscription on the
+    door.
+  sector: inside
+  flags: [dark, indoors]
+  exits:
+    south:
+      to: tba:247:room:24757
+      look: The corridor continues in that direction.
+    west:
+      to: tba:247:room:24759
+      look: There lies before you a stone door.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24759
+        reset: locked
+  extras:
+  - keywords: [writing, inscription]
+    text:
+    - "\"That is not dead"
+    - Which can eternal lie,
+    - Yet with strange aeons
+    - Even death may die."
+    - -H. P. Lovecraft
+
+"tba:247:room:24759":
+  name: The Ancient Tomb
+  description: >
+    You see before you an altar which rests on dais steps against the west wall. Upon the altar lies a
+    skull on top of a pile of fine white dust.  Two large rubies are placed within its eye sockets and
+    its teeth glint of sparkling diamonds.  You do not like the way it looks back at you and seems to grin.
+    You feel a presence of great evil in this room and you feel that you should turn back, before
+    something bad happens.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    east:
+      to: tba:247:room:24758
+      look: The only exit to this room lies in that direction.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24759
+        reset: locked
+
+"tba:247:room:24760":
+  name: The Guardian Chamber
+  description: >
+    You have entered what looks like a waiting room.  There is a high vaulted ceiling here and an
+    archway leads to the east.  There is a faint red light coming from the east and you hear what sounds like
+    high voltage electricity.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    east:
+      to: tba:247:room:24761
+      look: You wonder what must lie beyond that archway.
+    west:
+      to: tba:247:room:24751
+      look: The doorway leads back into the catacombs.
+      door:
+        keywords: [door]
+        kind: pickproof
+        key: tba:247:obj:24760
+        reset: locked
+
+"tba:247:room:24761":
+  name: The Death Master's Laboratory
+  description: >
+    You have entered the laboratory of the Death Master.  He was once a high level cleric, but laughed
+    in the face of the gods, so we put him down here for you to try and kill.  Black candles provide
+    light as the Death Master attempts to bring life back into a once dead corpse.
+  sector: inside
+  flags: [dark, indoors, private]
+  exits:
+    west:
+      to: tba:247:room:24760
+      look: The waiting room from which you came.
+
+"tba:247:room:24762":
+  name: A Grave
+  description: >
+    The mist chills your bones as you enter this area, yet you feel a calm peace.  Figures move through
+    the swirling fog.  The cemetery continues to the west east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24720
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24763
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24768
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24763":
+  name: A Grave
+  description: >
+    The mist chills your bones as you enter this area, yet you feel a calm peace.  Figures move through
+    the swirling fog.  The smooth stone wall of a mausoleum is to the south.  The cemetery continues to
+    the north, east and west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24762
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24723
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24767
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24764":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    put your thoughts at ease as you stare into the swirling fog.  Dark evergreen trees grow to the south. 
+    The smooth stone wall of a mausoleum is to the north, and the cemetery continues to the east and
+    west.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24729
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24765
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24765":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still clam
+    put your thoughts at ease as you stare into the swirling fog.  The cemetery continues to the west,
+    north and east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24766
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24764
+      look: To the east lies another cemetery plot.
+    west:
+      to: tba:247:room:24769
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24766":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    put your thoughts at ease as you stare into the swirling fog.  The smooth stone wall of a mausoleum is
+    to the east, and the cemetery continues to the north, south and west.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24767
+      look: To the north lies another cemetery plot.
+    south:
+      to: tba:247:room:24765
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24770
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24767":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    put your thoughts at ease as you stare into the swirling fog.  The cemetery continues in all directions.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24768
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24763
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24766
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24771
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24768":
+  name: A Grave
+  description: >
+    The cold earth and the light mist, and the pale moonlight mix to give you a cold clammy feel.  A
+    faint sweet smell of decay hangs in the air, yet you feel calm and at peace in this place.  The
+    cemetery continues to the west, east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24762
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24767
+      look: To the south lies another cemetery plot.
+    west:
+      to: tba:247:room:24772
+      look: To the west lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24769":
+  name: A cemetery plot
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    puts your thoughts at ease as you stare into the swirling fog.  Dark evergreen trees grow to the south
+    and west.  The cemetery continues to the north and east.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24770
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24765
+      look: To the east lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: A blank stone rests here......  Maybe it will have your name on it.
+
+"tba:247:room:24770":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    put your thoughts at ease as you stare into the swirling fog.  Dark evergreen trees grow to the west. 
+    The smooth stone wall of a mausoleum is to the east, and the cemetery continues to the north and
+    south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24771
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24766
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24769
+      look: To the south lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24771":
+  name: A Grave
+  description: >
+    Leaves crunch beneath your feet, your breath gently turns to mist as you exhale.  The still calm
+    put your thoughts at ease as you stare into the swirling fog.  Dark evergreen trees grow to the west. 
+    The cemetery continues to the north, east and south.
+  sector: field
+  exits:
+    north:
+      to: tba:247:room:24772
+      look: To the north lies another cemetery plot.
+    east:
+      to: tba:247:room:24767
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24770
+      look: To the south lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.
+
+"tba:247:room:24772":
+  name: A Grave
+  description: >
+    The cold earth and the light mist, and the pale moonlight mix to give you a cold clammy feel.  A
+    faint sweet smell of decay hangs in the air, yet you feel calm and at peace in this place.  Dark
+    evergreen trees grow to the west and the cemetery continues to the east and south.
+  sector: field
+  exits:
+    east:
+      to: tba:247:room:24768
+      look: To the east lies another cemetery plot.
+    south:
+      to: tba:247:room:24771
+      look: To the south lies another cemetery plot.
+  extras:
+  - keywords: [grave, stone]
+    text: Here lies Someone.  R.  I.  P.

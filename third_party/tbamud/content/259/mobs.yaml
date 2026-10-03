@@ -1,0 +1,210 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 259.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:259:mob:25900":
+  keywords: [fetch, undead, spectre]
+  short: the Fetch
+  long: A Fetch, dressed in black tattered robes which seem to float about its body, stands here.
+  description: >
+    A Fetch can mean one thing and one thing only - someone is going to die. The primary function of a
+    Fetch is to foretell death.  The question is - is this Fetch foretelling your death, or someone
+    else's?
+  level: 30
+  sex: neutral
+  alignment: 0
+  flags: [sentinel, aware, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_align, detect_invis, sense_life]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25901":
+  keywords: [mother, spectre, ghost]
+  short: the Spectre of a Woman
+  long: A womanish spectre floats through the manse, her eyes crying blood.
+  description: >
+    Her sad eyes tell a story of loss and regret, an anguish as ancient as this home, possibly even
+    older.  She constantly wrings her hands, looking about as if in search for someone or something.
+  level: 26
+  sex: female
+  alignment: -200
+  flags: [aggressive, stay_zone, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life, curse]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25902":
+  keywords: [web, spiderweb]
+  short: a sticky spiderweb
+  long: A sticky spiderweb lunges out at you, trying to draw you into its web.
+  description: >
+    It is a very intricate and thick pattern that has been woven here, you could stare at it for hours
+    and travel its full length.  Strange, it seems almost as if it might have just moved...
+  level: 26
+  sex: neutral
+  alignment: -500
+  flags: [sentinel, aggressive, no_charm, no_summon, no_sleep, no_bash, no_blind]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+260
+    damage: 4d4+4
+  gold: 260
+  exp: 67600
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25903":
+  keywords: [man, spectre, ghost]
+  short: the spectre of the master of the house
+  long: >-
+    A spectre of a distinguished man floats a foot above the chair at the desk, intent on something
+    there at the desk.
+  description: >
+    The spectre notices your arrival and - with bared teeth - lunges at you, obviously intent on your
+    destruction.
+  level: 29
+  sex: male
+  alignment: 0
+  flags: [sentinel, aggressive, memory]
+  affects: [detect_invis, sense_life, scuba]
+  combat:
+    thac0: 11
+    armor: -7
+    hit_points: 5d5+290
+    damage: 4d4+4
+    bare_hand_attack: blast
+  gold: 290
+  exp: 84100
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25904":
+  keywords: [churel, woman, moaning]
+  short: the churel
+  long: A moaning churel floats through the house, weeping for all the lost children.
+  description: >
+    Its feet seem a bit askew, almost as if they were turned backward on the ankles, and the constant
+    moaning is enough to drive a crazy man sane.
+  level: 30
+  sex: female
+  alignment: -300
+  flags: [stay_zone, no_bash, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25905":
+  keywords: [spider]
+  short: a large black spider
+  long: A large black spider crawls along the floor just ahead of you.
+  description: It has hair all over its small but grotesque body.
+  level: 25
+  sex: neutral
+  alignment: -300
+  flags: [stay_zone, no_bash]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: bite
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25906":
+  keywords: [phantom, howling]
+  short: a Howling Phantom
+  long: A howling Phantom floats through the halls, looking for others to join it in its eternal Hell.
+  description: >
+    You can not distinguish any specific features of this terrible force of evil, only a vague humanish
+    shape, baleful glowing eyes, and what appears to a flowing robe cloak all about it.
+  level: 30
+  sex: neutral
+  alignment: -800
+  flags: [aggressive, stay_zone, no_sleep, no_blind]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: maul
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25907":
+  keywords: [apparition, angry, screeching]
+  short: a Screeching Apparition
+  long: A Screeching Apparition comes flying at you, screaming its anger and hatred.
+  description: >
+    Its insubstantial form gathers together into a blackish cloud, all mottled and shot through with
+    streaks of reddish-orange flames.
+  level: 30
+  sex: neutral
+  alignment: -1000
+  flags: [sentinel, aggressive, no_sleep, no_bash]
+  combat:
+    thac0: 10
+    armor: -8
+    hit_points: 6d6+300
+    damage: 5d5+5
+    bare_hand_attack: blast
+  gold: 300
+  exp: 90000
+  position:
+    load: standing
+    default: standing
+
+"tba:259:mob:25908":
+  keywords: [rat, scurrying]
+  short: a scurrying rat
+  long: A rat scurries across the floor in front of you.
+  description: >
+    With its short, stubby hairs all raised on its back and its tail ramrod straight, you would almost
+    think this rat meant to attack you!  Best not to find out - better kill it.
+  level: 25
+  sex: neutral
+  alignment: -500
+  flags: [stay_zone]
+  combat:
+    thac0: 12
+    armor: -5
+    hit_points: 5d5+250
+    damage: 4d4+4
+    bare_hand_attack: claw
+  gold: 250
+  exp: 62500
+  position:
+    load: standing
+    default: standing

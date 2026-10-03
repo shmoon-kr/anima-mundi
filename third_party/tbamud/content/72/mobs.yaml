@@ -1,0 +1,115 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Converted from tbaMUD zone 72.
+# keywords: words to name it in commands; short: in sentences ("the pit beast"); long: its line in a room.
+# combat.armor is tbaMUD's armor class / 10 (lower is better); hit_points and damage: a number, or dice NdS+B when rolled.
+"tba:72:mob:7200":
+  keywords: [mindflayer, master, mind]
+  short: the master mindflayer
+  long: The master mindflayer is here, looking at you with an evil look.
+  description: >
+    It is a seven foot tall humanoid dressed in a purple cloak, and swinging a black and purple rod
+    above its head as if it was going to attack you any moment now.  In the middle of its head are four
+    tentacles with sharp points.
+  level: 14
+  sex: neutral
+  alignment: -800
+  flags: [scavenger, aware, aggressive, stay_zone, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 16
+    armor: 1
+    hit_points: 2d2+140
+    damage: 2d2+2
+  gold: 140
+  exp: 19600
+  position:
+    load: standing
+    default: standing
+
+"tba:72:mob:7201":
+  keywords: [mindflayer, senior, mind]
+  short: the senior mindflayer
+  long: The senior mindflayer walks around here, looking for something useful.
+  description: >
+    This is a horrifying monster indeed, 6'6" high.  Dressed in purple and black, and carrying a large
+    mace in its hand.  In the center of its head are four large tentacles with very sharp points.
+  level: 8
+  sex: neutral
+  alignment: -600
+  flags: [scavenger, aware, stay_zone, aggr_good, aggr_neutral, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 5
+    hit_points: 81
+    damage: 1d2+1
+  gold: 80
+  exp: 6400
+  position:
+    load: standing
+    default: standing
+
+"tba:72:mob:7202":
+  keywords: [mindflayer, junior, mind]
+  short: the junior mindflayer
+  long: The junior mindflayer is here, watching you carefully from the corner.
+  description: >
+    This mindflayer is six feet high.  It has a small mace in its belt, and is dressed in purple and
+    black cloth.  It has four small tentacles in the center of its head.
+  level: 6
+  sex: neutral
+  alignment: -350
+  flags: [scavenger, aware, stay_zone, wimpy, memory, helper]
+  affects: [detect_invis, sense_life]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:72:mob:7203":
+  keywords: [wererat, rat]
+  short: the ugly wererat
+  long: An ugly wererat is here, looking at you with a strange flick in his eyes.
+  description: >
+    The wererat is about four feet tall.  It looks very much like rat, except that it is standing.
+  level: 6
+  sex: neutral
+  alignment: -700
+  flags: [scavenger, stay_zone, aggr_good, aggr_neutral, memory]
+  combat:
+    thac0: 18
+    armor: 6
+    hit_points: 61
+    damage: 1d2+1
+  gold: 60
+  exp: 3600
+  position:
+    load: standing
+    default: standing
+
+"tba:72:mob:7204":
+  keywords: [rat, gigantic]
+  short: the gigantic rat
+  long: There is a gigantic rat here, looking at you with a hungry look.
+  description: >
+    The gigantic rat is about ten feet long from head to tail and has claws the size of your head,
+    looking very nasty.
+  level: 12
+  sex: male
+  alignment: -800
+  flags: [sentinel, aggressive]
+  combat:
+    thac0: 16
+    armor: 2
+    hit_points: 2d2+120
+    damage: 2d2+2
+  gold: 120
+  exp: 14400
+  position:
+    load: standing
+    default: standing
