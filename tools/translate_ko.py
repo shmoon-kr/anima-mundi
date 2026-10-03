@@ -25,7 +25,8 @@
   reviews a random sample (REVIEW_N fields): ok / awkward / wrong. The review is kept in
   locales/ko/reviews/<zone>.yaml (the trend), its proposed terms and examples go into the glossary
   marked `added_by` (a person confirms them in the daily report: tools/translate_report.py), and a
-  wrong rate above STOP_RATE stops the batch before the next zone, so bad work does not pile up overnight.
+  wrong rate above STOP_RATE sends the whole zone through Claude (review_all) before the next zone, so bad
+  work does not pile up overnight; if that review cannot run, the batch stops.
 - Combat messages: one entry per attack variant, its lines keyed `die.attacker` .. `god.room`. act() codes:
   $n (the attacker; 당신 when it is the reader) and $N (the victim) stay, a particle after one is a pair in braces
   (`$N{을/를}`, D23), $p (the weapon) stays, and the pronoun codes ($e $m $s, $E $M $S) become the name again.
@@ -843,8 +844,12 @@ def main():
             before = len(load_glossary()[1])
             wrong = review(z, reviewer, log)
             if wrong is not None and wrong > STOP_RATE:
-                log(f"zone {z}: {wrong:.0%} of the sample is wrong (> {STOP_RATE:.0%}): stopping before the next zone")
-                sys.exit(3)
+                # too often wrong: Claude goes through every field before the next zone (what was
+                # done by hand for zones 60 and 62). If that cannot run, stop as before.
+                log(f"zone {z}: {wrong:.0%} of the sample is wrong (> {STOP_RATE:.0%}): full review before the next zone")
+                if review_all(z, reviewer, log) is None:
+                    log(f"zone {z}: full review failed: stopping before the next zone")
+                    sys.exit(3)
             conventions, terms = load_glossary()
             _RULES = None
             if len(terms) > before:
