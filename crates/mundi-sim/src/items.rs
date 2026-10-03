@@ -441,6 +441,10 @@ impl Sim {
     }
 
     fn drop_one(&mut self, k: Key, o: Key) {
+        // The room's drop trigger comes first (act.item.c perform_drop: drop_wtrigger).
+        if self.drop_trigger(k, o) {
+            return;
+        }
         if self.objs.get(o).unwrap().flags.contains(&ObjFlag::NoDrop) {
             return self.fail_obj(k, ItemAction::Drop, ItemFailure::Cursed, o);
         }

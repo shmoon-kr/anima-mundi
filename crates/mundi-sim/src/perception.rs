@@ -53,7 +53,7 @@ impl Sim {
             if must_see && !seen {
                 continue;
             }
-            let event = if seen { make(name.clone(), Some(char_id(&name))) } else { make("someone".into(), None) };
+            let event = if seen { make(name.clone(), self.id_of(actor)) } else { make("someone".into(), None) };
             self.deliver(k, event);
         }
     }

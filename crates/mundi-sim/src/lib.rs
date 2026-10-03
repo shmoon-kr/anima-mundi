@@ -33,6 +33,7 @@ mod specials;
 mod spells;
 pub mod store;
 mod talk;
+mod triggers;
 mod tick;
 pub mod world;
 
@@ -166,6 +167,8 @@ pub struct Sim {
     /// Who is fighting, the one who started last first (fight.c combat_list).
     combat: Vec<Key>,
     groups: Store<Group>,
+    /// Scripts' steps waiting for their time (triggers.rs).
+    scheduled: Vec<(u64, triggers::Scheduled)>,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
@@ -197,6 +200,7 @@ impl Sim {
             test_lights: Vec::new(),
             combat: Vec::new(),
             groups: Store::default(),
+            scheduled: Vec::new(),
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,
@@ -295,6 +299,10 @@ impl Sim {
             }
             let Some(text) = c.queue.pop_front() else { continue };
             self.command(key, &text);
+        }
+        self.run_scheduled();
+        if self.tick % triggers::PULSE_SCRIPT == 0 {
+            self.script_check();
         }
         if self.tick % (10 * PULSES_PER_SEC) == 0 {
             self.zone_update();

@@ -16,6 +16,7 @@ impl Sim {
             return;
         }
         let start = self.world.index.get(&self.tables.world.config.start_room).copied().unwrap_or(0);
+        let fresh = save.is_none();
         let key = match save {
             Some(s) => {
                 let room = s.room.as_deref().and_then(|r| self.world.index.get(r)).copied().unwrap_or(start);
@@ -33,8 +34,13 @@ impl Sim {
         self.order.push(key);
         self.people[room].insert(0, key);
         self.deliver(key, Event::InGame { how: InGameHow::Entered });
+        self.login_triggers(key);
         self.to_room(key, room, true, |who, who_id| Event::Arrived { who, who_id, from_dir: None, how: Some(ArrivedHow::EnteredGame) });
+        if fresh {
+            self.deliver(key, Event::NewCharacter {});
+        }
         self.look(key);
+        self.greet(key);
     }
 
     /// MECHANICS §17.2: stats by 4d6-drop-lowest in the class's order, level 1, one level gained.

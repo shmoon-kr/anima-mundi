@@ -527,7 +527,7 @@ pub fn read_tables(src: &Path) -> Result<Tables, String> {
         },
     };
     let header = read(&src.join("spells.h"))?;
-    Ok(Tables { commands: commands(&interp)?, abilities, specials: specials(src, &class)?, spells: spells(&header, &parser, &class)?, classes, world })
+    Ok(Tables { commands: commands(&interp)?, abilities, specials: specials(src, &class)?, triggers: Default::default(), spells: spells(&header, &parser, &class)?, classes, world })
 }
 
 /// Reads tbaMUD's `lib/misc/messages`: `M`, the number, then twelve lines (die, miss, hit, god, each

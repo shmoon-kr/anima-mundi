@@ -533,6 +533,9 @@ impl Renderer {
                 (_, Some(r)) => vec![m(&format!("practiced-{r}"))],
                 _ => vec![],
             },
+            Event::Emote { who: w, who_id, text } => one("emote", &[("who", who(w, who_id)), ("text", escape(text))]),
+            Event::Echo { text } => vec![escape(text)],
+            Event::NewCharacter {} => vec![m("new-character-1"), m("new-character-2"), m("new-character-3")],
             Event::Toggle { name, value } if value.is_boolean() => {
                 vec![m(&format!("toggle-{}-{name}", if value.as_bool() == Some(true) { "on" } else { "off" }))]
             }

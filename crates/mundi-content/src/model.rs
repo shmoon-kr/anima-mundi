@@ -149,6 +149,9 @@ pub struct Room {
     pub exits: IndexMap<Dir, Exit>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub extras: Vec<Extra>,
+    /// DG Script triggers attached (`tba:<zone>:trg:<vnum>`); Mundi runs some as native rules (MECHANICS §14.3).
+    #[serde(default, skip_serializing_if = "Vec::is_empty", serialize_with = "flow")]
+    pub triggers: Vec<Id>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -212,6 +215,9 @@ pub struct Mob {
     pub gold: i64,
     pub exp: i64,
     pub position: Positions,
+    /// DG Script triggers attached (`tba:<zone>:trg:<vnum>`); Mundi runs some as native rules (MECHANICS §14.3).
+    #[serde(default, skip_serializing_if = "Vec::is_empty", serialize_with = "flow")]
+    pub triggers: Vec<Id>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -261,6 +267,9 @@ pub struct Object {
     pub affects: Vec<ObjAffect>,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub extras: Vec<Extra>,
+    /// DG Script triggers attached (`tba:<zone>:trg:<vnum>`); Mundi runs some as native rules (MECHANICS §14.3).
+    #[serde(default, skip_serializing_if = "Vec::is_empty", serialize_with = "flow")]
+    pub triggers: Vec<Id>,
 }
 
 /// An object's values, named per type (armor: armor; weapon: damage, attack; drinkcon: capacity, ...).

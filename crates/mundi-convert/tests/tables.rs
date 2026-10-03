@@ -18,7 +18,10 @@ fn ours() -> PathBuf {
 #[test]
 fn tables_match_the_source() {
     let Some(t) = tbamud() else { return };
-    assert_eq!(read_tables(&t.join("src")).unwrap(), load_tables(&ours().join("tables")).unwrap());
+    // triggers.yaml is written by hand from the scripts; the rest comes from the source.
+    let mut committed = load_tables(&ours().join("tables")).unwrap();
+    committed.triggers.clear();
+    assert_eq!(read_tables(&t.join("src")).unwrap(), committed);
 }
 
 #[test]

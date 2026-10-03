@@ -229,6 +229,7 @@ pub fn read_rooms(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, Roo
             flags: head.get(1).map(|t| flags(t, RoomFlag::ALL, 0, &[], &what, notes)).unwrap_or_default(),
             exits: IndexMap::new(),
             extras: Vec::new(),
+            triggers: Vec::new(),
         };
         let mut exits: BTreeMap<usize, Exit> = BTreeMap::new();
         while i < ls.len() && ls[i].trim() != "S" {
@@ -271,7 +272,22 @@ pub fn read_rooms(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, Roo
             }
         }
         room.exits = exits.into_iter().map(|(d, e)| (Dir::from_index(d).unwrap(), e)).collect();
+        // Triggers follow the room's S (DG Scripts: "T <vnum>").
+        room.triggers = triggers_after(&ls, i + 1, ids);
         out.insert(ids.id("room", v), room);
+    }
+    out
+}
+
+/// The "T <vnum>" lines from `from` up to the next record.
+fn triggers_after(ls: &[String], from: usize, ids: &Ids) -> Vec<Id> {
+    let mut out = Vec::new();
+    let mut i = from;
+    while i < ls.len() && vnum_header(&ls[i]).is_none() && !ls[i].starts_with('$') {
+        if let Some(n) = ls[i].strip_prefix("T ").and_then(|t| t.trim().parse::<u32>().ok()) {
+            out.push(ids.id("trg", n));
+        }
+        i += 1;
     }
     out
 }
@@ -341,6 +357,7 @@ pub fn read_mobs(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, Mob>
                 load: pos.first().and_then(|x| x.parse().ok()).and_then(Position::from_index).unwrap_or(Position::Standing),
                 default: pos.get(1).and_then(|x| x.parse().ok()).and_then(Position::from_index).unwrap_or(Position::Standing),
             },
+            triggers: triggers_after(&ls, i, ids),
         };
         out.insert(ids.id("mob", v), mob);
     }
@@ -422,9 +439,15 @@ pub fn read_objects(path: &Path, ids: &Ids, notes: &mut Notes) -> IndexMap<Id, O
             level: n(3) as i32,
             affects: Vec::new(),
             extras: Vec::new(),
+            triggers: Vec::new(),
         };
         while i < ls.len() && vnum_header(&ls[i]).is_none() && !ls[i].starts_with('$') {
-            if ls[i].starts_with('A') {
+            if let Some(t) = ls[i].strip_prefix("T ") {
+                if let Ok(n) = t.trim().parse::<u32>() {
+                    obj.triggers.push(ids.id("trg", n));
+                }
+                i += 1;
+            } else if ls[i].starts_with('A') {
                 let a: Vec<i64> = ls.get(i + 1).map(|l| l.split_whitespace().map(int).collect()).unwrap_or_default();
                 if let (Some(&loc), Some(&m)) = (a.first(), a.get(1)) {
                     match Apply::from_code(loc) {

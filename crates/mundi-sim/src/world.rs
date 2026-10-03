@@ -38,6 +38,7 @@ pub struct Room {
     pub exits: [Option<Exit>; 6],
     /// The keywords of the room's extra descriptions (things to look at, not to take).
     pub extras: Vec<Vec<String>>,
+    pub triggers: Vec<String>,
 }
 
 #[derive(Debug, Clone, Default)]
@@ -107,6 +108,7 @@ impl World {
                     flags: r.flags.clone(),
                     exits: Default::default(),
                     extras: r.extras.iter().map(|e| e.keywords.clone()).collect(),
+                    triggers: r.triggers.clone(),
                 });
             }
         }

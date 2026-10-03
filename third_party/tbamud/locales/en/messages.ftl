@@ -681,3 +681,9 @@ practiced-unknown_skill-spells = You do not know of that spell.
 practiced-unknown_skill-skills = You do not know of that skill.
 practiced-not_here = You can only practice skills in your guild.
 refused-not-here-shop = Sorry, but you cannot do that here!
+
+## scripts and the start (config.c START_MESSG)
+emote = { $who } { $text }
+new-character-1 = Welcome.  This is your new tbaMUD character!  You can now earn gold,
+new-character-2 = gain experience, find weapons and equipment, and much more -- while
+new-character-3 = meeting people from around the world!

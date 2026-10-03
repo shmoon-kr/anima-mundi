@@ -1052,6 +1052,20 @@ pub enum Event {
         reason: Option<String>,
         spells: bool,
     },
+    /// A mob's emote ("$n savagely devours a corpse."). Mundi addition.
+    #[serde(rename = "comm.emote")]
+    Emote {
+        who: String,
+        #[serde(default, skip_serializing_if = "Option::is_none")]
+        who_id: Option<String>,
+        text: String,
+    },
+    /// A script's line, already with its names (zone echoes, sends): the world's text. Mundi addition.
+    #[serde(rename = "world.echo")]
+    Echo { text: String },
+    /// tbaMUD's start message for a character's first entry (config.c START_MESSG). Mundi addition.
+    #[serde(rename = "connection.new_character")]
+    NewCharacter {},
     #[serde(rename = "toggle.state")]
     Toggle {
         name: String,

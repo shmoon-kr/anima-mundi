@@ -33,6 +33,11 @@ fn cmd(sim: &mut Sim, name: &str, text: &str) -> Vec<Delivery> {
     sim.step()
 }
 
+/// The room view among a delivery set (entering also sends the in-game and start lines).
+fn room_seen<'a>(out: &'a [Delivery], name: &str) -> &'a Event {
+    to(out, name).into_iter().find(|e| matches!(e, Event::Room(_) | Event::RoomDark { .. })).expect("a room view")
+}
+
 fn to<'a>(out: &'a [Delivery], name: &str) -> Vec<&'a Event> {
     out.iter().filter(|d| d.to == name).map(|d| &d.event).filter(|e| !matches!(e, Event::Prompt { .. })).collect()
 }
@@ -42,12 +47,11 @@ fn entering_and_moving_seen_from_each_side() {
     let zones = midgaard();
     let mut sim = Sim::new(&zones, &tables(), 1, 12);
     let out = enter(&mut sim, "Ana", None);
-    let ana = to(&out, "Ana");
-    assert!(matches!(ana[1], Event::Room(v) if v.id.as_deref() == Some(START_ROOM) && v.occupants.is_empty()));
+    assert!(matches!(room_seen(&out, "Ana"), Event::Room(v) if v.id.as_deref() == Some(START_ROOM) && v.occupants.is_empty()));
 
     let out = enter(&mut sim, "Bo", None);
     assert!(matches!(to(&out, "Ana")[..], [Event::Arrived { who, how: Some(ArrivedHow::EnteredGame), .. }] if who == "Bo"));
-    let Event::Room(view) = to(&out, "Bo")[1] else { panic!() };
+    let Event::Room(view) = room_seen(&out, "Bo") else { panic!() };
     assert_eq!(view.occupants[0].name, "Ana");
 
     // Ana walks out of the temple; Bo sees her leave, Ana sees the next room.
@@ -94,7 +98,7 @@ fn quitting_leaves_the_game_and_reports_the_place() {
     // Entering again from the save.
     sim.submit(Input::Enter { name: "Ana".into(), save: Some(Box::new(gone[0].save.clone())), new: NewChar::default() });
     let out = sim.step();
-    assert!(matches!(to(&out, "Ana")[1], Event::Room(v) if v.id.as_deref() == Some(START_ROOM)));
+    assert!(matches!(room_seen(&out, "Ana"), Event::Room(v) if v.id.as_deref() == Some(START_ROOM)));
 }
 
 #[test]
@@ -130,7 +134,7 @@ fn outdoors_is_dark_at_night_and_hides_who_arrives() {
         .expect("Midgaard has fields");
     let mut sim = Sim::new(&zones, &tables(), 1, 23);
     let out = enter(&mut sim, "Ana", Some(&room));
-    assert!(matches!(to(&out, "Ana")[1], Event::RoomDark { .. }));
+    assert!(matches!(room_seen(&out, "Ana"), Event::RoomDark { .. }));
     let out = enter(&mut sim, "Bo", Some(&room));
     assert!(to(&out, "Ana").is_empty(), "arrivals in the dark are not seen");
     let out = cmd(&mut sim, "Bo", "say who is there");

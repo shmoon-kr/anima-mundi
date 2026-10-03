@@ -18,6 +18,9 @@ pub struct Tables {
     pub abilities: Abilities,
     /// Special procedures tbaMUD assigns in code (spec_assign.c) and the guild guards (class.c).
     pub specials: Specials,
+    /// Native rules for the DG Script triggers the party meets (MECHANICS §14.3), by trigger ID.
+    #[serde(default)]
+    pub triggers: IndexMap<String, Trigger>,
     /// Spells and skills (spell_parser.c spello/skillo, class.c init_spell_levels; MECHANICS §10, §11).
     pub spells: Vec<Spell>,
     /// By class name: magic_user, cleric, thief, warrior.
@@ -49,6 +52,46 @@ pub struct Specials {
     pub rooms: IndexMap<String, String>,
     /// Guild guards: in `room`, going `dir`, only `class` (or none: "all" is blocked) passes.
     pub guild_guards: Vec<GuildGuard>,
+}
+
+/// One trigger's native rule. `kind`: guild_guard, mortal_greet, kind_soul, cityguard, fido,
+/// janitor, dump, teleporter. The lines are the script's, `%s` the name it puts in.
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct Trigger {
+    pub kind: String,
+    /// lib/world/trg file and number, for reading the script.
+    pub source: String,
+    /// Random triggers: the percent each 13-second check.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub chance: Option<i32>,
+    /// The script's `wait` before it acts, in seconds.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub delay: Option<i32>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub below_level: Option<i32>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub max_cost: Option<i64>,
+    #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
+    pub lines: IndexMap<String, String>,
+    /// kind_soul: what it hands out, in the order it checks.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub kit: Vec<KitPiece>,
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct KitPiece {
+    /// The slots it checks (a pair for rings, neck, wrists): missing any, it gives this.
+    pub slots: Vec<crate::names::EquipPos>,
+    pub object: String,
+    /// Only in the full kit (the held staff).
+    #[serde(default, skip_serializing_if = "std::ops::Not::not")]
+    pub full_only: bool,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub say: Option<String>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub social: Option<String>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
@@ -288,6 +331,7 @@ pub fn load_tables(dir: &Path) -> Result<Tables, LoadError> {
         commands: read(&dir.join("commands.yaml"))?,
         abilities: read(&dir.join("abilities.yaml"))?,
         specials: read(&dir.join("specials.yaml"))?,
+        triggers: read(&dir.join("triggers.yaml"))?,
         spells: read(&dir.join("spells.yaml"))?,
         classes: read(&dir.join("classes.yaml"))?,
         world: read(&dir.join("world.yaml"))?,

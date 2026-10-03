@@ -12,6 +12,7 @@
   exits:
     up:
       to: tba:1:room:100
+  triggers: [tba:12:trg:1200]
 
 "tba:0:room:1":
   name: Limbo
@@ -50,6 +51,7 @@
   exits:
     north:
       to: tba:0:room:3
+  triggers: [tba:1:trg:199]
 
 "tba:0:room:3":
   name: The Builder Academy
@@ -66,6 +68,7 @@
   exits:
     east:
       to: tba:0:room:4
+  triggers: [tba:0:trg:56]
 
 "tba:0:room:4":
   name: The Beginning
@@ -471,6 +474,7 @@
   exits:
     west:
       to: tba:0:room:21
+  triggers: [tba:1:trg:189]
 
 "tba:0:room:23":
   name: Trigger Help Files
@@ -499,6 +503,7 @@
     men than himself. John Stuart Mill HELP QUOTE
   sector: inside
   flags: [indoors]
+  triggers: [tba:3:trg:308]
 
 "tba:0:room:34":
   name: Pool of Images
@@ -592,6 +597,7 @@
     text: >
       The metal shower head has a plastic variable setting cap complete with a massage setting. The cap
       looks a bit damaged like someone may have opened it before.
+  triggers: [tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:92":
   name: Plato's Prison Cell
@@ -601,6 +607,7 @@
     the eyes ache.
   sector: inside
   flags: [indoors]
+  triggers: [tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:93":
   name: Friedrich Nietzsche's Prison Cell
@@ -610,6 +617,7 @@
     wall.
   sector: inside
   flags: [indoors]
+  triggers: [tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:94":
   name: Socrates' Prison Cell
@@ -618,6 +626,7 @@
     is out of reach. The only break in the block walls is a steel door that is closed and locked.
   sector: inside
   flags: [indoors]
+  triggers: [tba:1:trg:172, tba:1:trg:171]
 
 "tba:0:room:95":
   name: Confucius' Prison Cell
@@ -627,6 +636,7 @@
     converted into a prison cell.
   sector: inside
   flags: [indoors]
+  triggers: [tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:96":
   name: James Stockdale's Prison Cell
@@ -635,6 +645,7 @@
     designs scratched into the dirt. The ceiling consists of a single sheet of unpainted plywood.
   sector: inside
   flags: [indoors]
+  triggers: [tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:97":
   name: A Prison Cell
@@ -651,6 +662,7 @@
         keywords: [lock]
         kind: pickproof
         reset: locked
+  triggers: [tba:1:trg:170, tba:1:trg:171, tba:1:trg:172]
 
 "tba:0:room:98":
   name: The End of the Beginning

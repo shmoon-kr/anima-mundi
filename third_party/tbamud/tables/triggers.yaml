@@ -1,0 +1,85 @@
+# tbaMUD-derived (third_party/tbamud/NOTICE.md). Native rules for the DG Script triggers of the zones
+# the party plays (lib/world/trg/30.trg), written from the scripts by hand: Mundi does not run DG
+# Scripts (MECHANICS §14.3). Each entry says what its script does; the lines are the script's own.
+# Checked on the live server (S5 comparison): the kind soul's kit, the welcome, no kit at login.
+
+# Guild guards: class.c guild_info has the same rooms, ways and classes (tables/specials.yaml).
+tba:30:trg:3000: {kind: guild_guard, source: "30.trg #3000"}
+tba:30:trg:3001: {kind: guild_guard, source: "30.trg #3001"}
+tba:30:trg:3002: {kind: guild_guard, source: "30.trg #3002"}
+tba:30:trg:3003: {kind: guild_guard, source: "30.trg #3003"}
+
+# Room 3030, the dump: a drop is rewarded (cost / 10, 1 to 50) in exp below level 3, else gold,
+# and the thing is gone.
+tba:30:trg:3004:
+  kind: dump
+  source: "30.trg #3004"
+  below_level: 3
+  lines:
+    you: You are awarded for outstanding performance.
+    room: "%s has been awarded for being a good citizen."
+
+# Cityguards (random 50%): a random one in the room they see; spit at charisma under 6; join a
+# fight where the attacker's alignment is lower than a victim's that is 0 or more.
+tba:30:trg:3009:
+  kind: cityguard
+  source: "30.trg #3009"
+  chance: 50
+  lines:
+    spit_you: "%s spits in your face."
+    spit_room: "%s spits in %s's face."
+    protect: screams 'PROTECT THE INNOCENT!  BANZAI!  CHARGE!  ARARARAGGGHH!'
+
+# Fido (random 100%): eats the first corpse in the room.
+tba:30:trg:3010:
+  kind: fido
+  source: "30.trg #3010"
+  chance: 100
+  lines:
+    devours: savagely devours a corpse.
+
+# Janitor (random 100%): takes every thing in the room that is not a fountain and costs 15 or less.
+tba:30:trg:3011:
+  kind: janitor
+  source: "30.trg #3011"
+  chance: 100
+  max_cost: 15
+
+# The teleporter (object 3006): only the login kit gives it, which never runs (below).
+tba:30:trg:3014: {kind: teleporter, source: "30.trg #3014"}
+tba:30:trg:3015: {kind: teleporter, source: "30.trg #3015"}
+
+# The kind soul (mob 3012, greet): a player under level 5 who comes in, 2 seconds later: wearing
+# nothing, the whole kit worn; else the first missing piece, said and given.
+tba:30:trg:3016:
+  kind: kind_soul
+  source: "30.trg #3016"
+  delay: 2
+  below_level: 5
+  lines:
+    full: get some clothes on! Here, I will help.
+  kit:
+    - {slots: [light], object: "tba:30:obj:3037", say: "you really shouldn't be wandering these parts without a light source %s.", social: shake}
+    - {slots: [finger_right, finger_left], object: "tba:30:obj:3083", say: did you lose one of your rings?, social: sigh}
+    - {slots: [neck_1, neck_2], object: "tba:30:obj:3082", say: "you lose everything don't you?", social: roll}
+    - {slots: [body], object: "tba:30:obj:3040", say: "you won't get far without some body armor %s."}
+    - {slots: [head], object: "tba:30:obj:3076", say: "protect that noggin of yours, %s."}
+    - {slots: [legs], object: "tba:30:obj:3080", say: "why do you always lose your pants %s?"}
+    - {slots: [feet], object: "tba:30:obj:3084", say: "you can't go around barefoot %s."}
+    - {slots: [hands], object: "tba:30:obj:3071", say: "need some gloves %s?"}
+    - {slots: [arms], object: "tba:30:obj:3086", say: "you must be freezing %s."}
+    - {slots: [shield], object: "tba:30:obj:3042", say: "you need one of these to protect yourself %s."}
+    - {slots: [about], object: "tba:30:obj:3087", say: "you are going to catch a cold %s."}
+    - {slots: [waist], object: "tba:30:obj:3088", say: "better use this to hold your pants up %s."}
+    - {slots: [wrist_right, wrist_left], object: "tba:30:obj:3089", say: misplace something?, social: smile}
+    - {slots: [wield], object: "tba:30:obj:3021", say: "without a weapon you will be Fido food %s."}
+    - {slots: [hold], object: "tba:30:obj:3055", full_only: true}
+
+# Room 3001, login: 4 seconds later the zone hears the welcome. The script's kit for level 0 never
+# runs: do_start makes a new player level 1 before its 1-second wait ends (seen live).
+tba:30:trg:3017:
+  kind: mortal_greet
+  source: "30.trg #3017"
+  delay: 4
+  lines:
+    welcome: "A booming voice announces, 'Welcome %s to the realm!'"

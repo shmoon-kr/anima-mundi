@@ -77,9 +77,12 @@ fn a_fight_to_the_death_gives_experience_and_a_corpse() {
     t.cmd("War", "look");
     let Some(Event::Room(v)) = t.to("War").into_iter().rev().find(|e| matches!(e, Event::Room(_))) else { panic!() };
     assert!(v.objects.iter().any(|o| o.text == "The corpse of the beggar is lying here."), "{:?}", v.objects);
-    // It rots in 5 ticks (config.c:77).
+    // It rots in 5 ticks (config.c:77), unless Midgaard's fido eats it or its janitor takes it first
+    // (their triggers, 30.trg #3010, #3011).
     t.run(5 * PULSES_PER_TICK);
-    assert!(t.to("War").iter().any(|e| matches!(e, Event::Decayed { carried: false, .. })));
+    assert!(t.to("War").iter().any(|e| matches!(e, Event::Decayed { carried: false, .. })
+        || matches!(e, Event::Emote { text, .. } if text.contains("devours"))
+        || matches!(e, Event::OccupantItem { text, .. } if text.contains("corpse"))));
 }
 
 #[test]
