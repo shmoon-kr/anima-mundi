@@ -220,12 +220,18 @@ impl Sim {
         }
     }
 
-    /// The end of a block of output: everyone who got something this pulse gets their numbers.
+    /// The end of a block of output: everyone who got something this pulse gets their numbers, and
+    /// everyone whose command was handled (comm.c:992, "prompts for those who had no other output").
     pub(crate) fn prompts(&mut self) {
         let mut seen = Vec::new();
         for d in &self.out {
             if !seen.contains(&d.to) {
                 seen.push(d.to.clone());
+            }
+        }
+        for name in std::mem::take(&mut self.prompt_due) {
+            if !seen.contains(&name) {
+                seen.push(name);
             }
         }
         for name in seen {

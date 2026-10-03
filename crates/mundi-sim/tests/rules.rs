@@ -163,3 +163,20 @@ fn score_says_what_do_score_says() {
     assert_eq!(sc.position, mundi_protocol::Position::Standing);
     assert!(sc.states.is_empty());
 }
+
+#[test]
+fn any_input_gets_a_prompt_and_a_tick_alone_does_not() {
+    // MECHANICS §1.1: comm.c:961, 992
+    let mut sim = Sim::new(&zones(&[30]), &tables(), 1, 12);
+    enter(&mut sim, "War", Class::Warrior, None);
+    sim.submit(Input::SetPoints { name: "War".into(), hp: Some(1), mana: None, mv: None, conditions: None, gold: None });
+    for _ in 0..PULSES_PER_TICK {
+        let out = sim.step();
+        let mine: Vec<_> = out.iter().filter(|d| d.to == "War").collect();
+        let prompt = mine.iter().any(|d| matches!(d.event, Event::Prompt { .. }));
+        assert!(!prompt || mine.len() > 1, "a prompt only with other output: {mine:?}");
+    }
+    sim.submit(Input::Command { name: "War".into(), text: String::new() });
+    let out = sim.step();
+    assert!(out.iter().any(|d| d.to == "War" && matches!(d.event, Event::Prompt { hp: Some(h), .. } if h > 1)));
+}

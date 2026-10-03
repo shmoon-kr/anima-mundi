@@ -170,6 +170,8 @@ pub struct Sim {
     groups: Store<Group>,
     /// Scripts' steps waiting for their time (triggers.rs).
     scheduled: Vec<(u64, triggers::Scheduled)>,
+    /// Players whose command was handled this pulse: they get a prompt even without output.
+    prompt_due: Vec<String>,
     pending: Vec<Input>,
     tick: u64,
     hour: u32,
@@ -202,6 +204,7 @@ impl Sim {
             combat: Vec::new(),
             groups: Store::default(),
             scheduled: Vec::new(),
+            prompt_due: Vec::new(),
             pending: Vec::new(),
             tick: 0,
             hour: hour % 24,
@@ -300,6 +303,9 @@ impl Sim {
             }
             let Some(text) = c.queue.pop_front() else { continue };
             self.command(key, &text);
+            // Input always gets a prompt, output or not (comm.c:961, 992): an empty line asks for one.
+            let name = self.chars.get(key).map(|c| c.name.clone()).unwrap_or_default();
+            self.prompt_due.push(name);
         }
         self.run_scheduled();
         if self.tick % triggers::PULSE_SCRIPT == 0 {
