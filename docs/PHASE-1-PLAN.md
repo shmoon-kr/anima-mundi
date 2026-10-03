@@ -171,10 +171,17 @@ MECHANICS.md 의 절 번호를 가리키며, 규칙마다 단위 테스트. **an
 - [ ] anima 쪽: WebSocket 어댑터(`anima/adapters/mundi_ws/`). 엔진이 이미 프로토콜 이벤트를 내므로 텍스트 해석이 없다. 로그인은 세션이 처리
 - [x] anima 의 Memoria 는 **새 형식을 읽는다** (Mundi 콘텐츠 가져오기 추가). 엔진이 내는 `id` 와 Memoria 의 ID 가 같아서 대응표가 필요 없다.
   tbaMUD 텍스트 경로(지금의 어댑터와 tbaMUD 가져오기)는 비교 실행(S7)을 위해 그대로 둔다
-- [ ] 텔넷 게이트웨이(문장 스트림, 색), `anima play` 의 머드 화면이 Mundi 에서도 그대로 나오게
+- [x] 텔넷 게이트웨이(문장 스트림, 색): `mundi-telnet` (D5, 별도 프로그램). `anima play` 는 Mundi 가 그린 줄을 그대로 보여 준다(`[server] lang` 으로 한국어)
+- [x] anima 쪽 어댑터 `anima/adapters/mundi_ws/`, `ANIMA_PROFILE=mundi` (설정·run·녹화 분리). Memoria 는 아직 tbaMUD 세계 파일을 읽는다(같은 내용이라 맞음) — Mundi 콘텐츠 가져오기는 **안 됨** (이전의 [x] 는 잘못)
+- 시험 환경 (S6): 로컬 Mundi `127.0.0.1:4100`, 저장 `anima-mundi/run/s6/data/mundi.db`, anima `config/secret.mundi.toml`
+  - **시험 캐릭터 설정 — 배고프지 않음**: Vallen Carmilla Elysia Lil Lumina Senia (위 DB, Mundi 시험 캐릭터만) 의 배부름·갈증·술 = -1
+    (tbaMUD 불멸자 값, 엔진 규칙은 그대로). 이유: 돈 없는 레벨 1 파티가 굶어 회복이 ¼ (2026-10-03, 사용자 결정). `tools/never_hungry.py`
+  - 런타임 덮어쓰기: 거점·순환을 초보자 지역으로 (`anima animus set party policy.rally/circuit`, 사다리가 레벨 1 을 못 가는 지역 40 으로 보냄)
 - 확인: anima 6인이 Mundi 에 로그인·그룹·사냥·야영·사망 후 복귀
 
 ## S7. 비교와 다국어 확인 (M8)
+- [ ] **먼저 S6 의 시험 설정을 끈다**: `python tools/never_hungry.py <mundi.db> off <6인>` — 배고픔은 회복을 ¼ 로 줄여 야영 시간과 성장 지표에 직접 영향.
+  거점 덮어쓰기도 끈다(`anima animus revert --all`). 두 서버의 조건이 같아야 비교가 된다
 - 같은 파티를 tbaMUD 와 Mundi 에서 각 1시간: `anima stats` 의 성장(레벨/시간, D34)·사망·이탈. 차이는 원인과 함께 기록
 - 한국어 화면으로 사람이 둘러보기(조사·키워드 병기·정렬), 병기된 키워드만 보고 영어 명령을 쳐서 대상이 맞는지
 - 완료 조건 대조 (`PHASE-1.md`)
