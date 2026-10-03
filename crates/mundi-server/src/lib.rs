@@ -13,7 +13,7 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 
 use mundi_content::{load_tables, load_world};
 use mundi_net::{ConnId, Net, NetEvent};
-use mundi_protocol::{ClientMessage, Envelope, Event, KoFinal, LoginFailure, LoginStage, Sex, VERSION};
+use mundi_protocol::{ClientMessage, Envelope, Event, KoFinal, Lang, LoginFailure, LoginStage, Sex, VERSION};
 use mundi_render::{ansi, plain, Renderer, Viewer};
 use mundi_sim::{Class, Input, NewChar, Save, Sim, PULSES_PER_SEC};
 use mundi_store::{valid_name, Login, Store};
@@ -42,6 +42,8 @@ const SAVE_EVERY: u64 = 10 * PULSES_PER_SEC;
 
 struct Conn {
     viewer: Viewer,
+    /// Languages rendered as well, into the envelope's `texts` (a spectator page's other readers).
+    also: Vec<Lang>,
     plain: bool,
     /// The character, once logged in.
     name: Option<String>,
@@ -104,15 +106,16 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
         while let Ok(e) = incoming.try_recv() {
             match e {
                 NetEvent::Connected(c) => {
-                    conns.insert(c, Conn { viewer: Viewer::default(), plain: false, name: None, seq: 0 });
+                    conns.insert(c, Conn { viewer: Viewer::default(), also: Vec::new(), plain: false, name: None, seq: 0 });
                     send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginPrompt { stage: LoginStage::Name });
                 }
-                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain, keywords, sex, ko_final, class }) => {
+                NetEvent::Message(c, ClientMessage::Login { name, password, lang, plain, keywords, sex, ko_final, class, also }) => {
                     let Some(conn) = conns.get_mut(&c) else { continue };
                     if conn.name.is_some() {
                         continue;
                     }
                     conn.viewer = Viewer { lang, keywords };
+                    conn.also = also.into_iter().filter(|l| *l != lang).collect();
                     conn.plain = plain;
                     if !valid_name(&name) {
                         send(&net, &renderer, &mut conns, c, sim.tick(), Event::LoginFailed { reason: LoginFailure::InvalidName });
@@ -146,11 +149,16 @@ pub async fn run(cfg: Config, shutdown: oneshot::Receiver<()>, ready: oneshot::S
                         sim.submit(Input::Command { name, text });
                     }
                 }
-                NetEvent::Message(c, ClientMessage::Settings { keywords, lang, plain }) => {
+                NetEvent::Message(c, ClientMessage::Settings { keywords, lang, plain, also }) => {
                     if let Some(conn) = conns.get_mut(&c) {
                         conn.viewer.keywords = keywords.unwrap_or(conn.viewer.keywords);
                         conn.viewer.lang = lang.unwrap_or(conn.viewer.lang);
                         conn.plain = plain.unwrap_or(conn.plain);
+                        if let Some(also) = also {
+                            conn.also = also;
+                        }
+                        let primary = conn.viewer.lang;
+                        conn.also.retain(|l| *l != primary);
                     }
                 }
                 NetEvent::Malformed(_) => {}
@@ -230,10 +238,13 @@ fn save_saves(store: &mut Store, saves: &[(String, Save)]) {
 /// Renders an event for one connection and sends it as an envelope.
 fn send(net: &Net, renderer: &Renderer, conns: &mut HashMap<ConnId, Conn>, c: ConnId, tick: u64, mut event: Event) {
     let Some(conn) = conns.get_mut(&c) else { return };
-    let text = renderer
-        .lines(&event, conn.viewer)
+    let style = |lines: Vec<String>| -> Vec<String> { lines.iter().map(|l| if conn.plain { plain(l) } else { ansi(l) }).collect() };
+    let text = style(renderer.lines(&event, conn.viewer));
+    let texts = conn
+        .also
         .iter()
-        .map(|l| if conn.plain { plain(l) } else { ansi(l) })
+        .map(|l| (*l, style(renderer.lines(&event, Viewer { lang: *l, ..conn.viewer }))))
+        .filter(|(_, lines)| !lines.is_empty())
         .collect();
     renderer.fill(&mut event);
     conn.seq += 1;
@@ -245,6 +256,7 @@ fn send(net: &Net, renderer: &Renderer, conns: &mut HashMap<ConnId, Conn>, c: Co
         agent: conn.name.clone().unwrap_or_default(),
         event,
         text,
+        texts,
     };
     net.send(c, serde_json::to_string(&envelope).unwrap());
 }

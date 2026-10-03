@@ -131,6 +131,26 @@ async fn one_scene_in_english_and_korean_at_once() {
 }
 
 #[tokio::test(flavor = "multi_thread")]
+async fn a_connection_may_ask_for_its_lines_in_other_languages_too() {
+    // A spectator page shows one character's screen to readers of different languages: the
+    // envelope's `texts` carries the same lines in the languages asked for with `also`.
+    let tmp = tempfile::tempdir().unwrap();
+    let (content, data) = midgaard(tmp.path());
+    let server = start(&content, &data).await;
+    let mut min = login_as(&server.url, json!({"type": "login", "name": "Min", "password": "pw-m", "plain": true,
+                                                "lang": "ko", "also": ["en", "ko"], "sex": "female"})).await;
+    let room = until(&mut min, |e| e["type"] == "room").await;
+    assert_eq!(room["text"][0], "미드가르드 신전");
+    assert_eq!(room["texts"]["en"][0], "The Temple Of Midgaard");
+    assert!(room["texts"].get("ko").is_none(), "the main language is not repeated");
+    min.send(Message::text(json!({"type": "settings", "also": []}).to_string())).await.unwrap();
+    command(&mut min, "look").await;
+    let room = until(&mut min, |e| e["type"] == "room").await;
+    assert!(room.get("texts").is_none(), "asked for no other language: none");
+    server.stop().await;
+}
+
+#[tokio::test(flavor = "multi_thread")]
 async fn two_clients_see_each_other_and_places_survive_a_restart() {
     let tmp = tempfile::tempdir().unwrap();
     let (content, data) = midgaard(tmp.path());

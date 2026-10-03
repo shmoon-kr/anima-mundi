@@ -9,6 +9,8 @@
 //! the same JSON. Mundi only adds (D22): where it knows more it fills the optional fields (`id`, `who_id`)
 //! and puts new fields beside the old ones (`Occupant.name` beside `Occupant.text`), never instead.
 
+use std::collections::BTreeMap;
+
 use serde::{Deserialize, Serialize};
 
 /// Protocol version (PROTOCOL.md §2).
@@ -30,10 +32,14 @@ pub struct Envelope {
     pub event: Event,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub text: Vec<String>,
+    /// The same lines in the other languages the client asked for (`also`): a client that shows
+    /// one character's screen to people who read different languages (a web spectator page).
+    #[serde(default, skip_serializing_if = "BTreeMap::is_empty")]
+    pub texts: BTreeMap<Lang, Vec<String>>,
 }
 
 /// Languages a client may ask for (D14). Unknown or missing means English.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Default, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum Lang {
     #[default]
@@ -1236,6 +1242,9 @@ pub enum ClientMessage {
         /// magic_user, cleric, thief or warrior (default warrior), for a new character.
         #[serde(default)]
         class: Option<String>,
+        /// Languages to render as well, into the envelope's `texts`.
+        #[serde(default)]
+        also: Vec<Lang>,
     },
     Command { text: String },
     /// Display settings, any time after login.
@@ -1246,6 +1255,8 @@ pub enum ClientMessage {
         lang: Option<Lang>,
         #[serde(default)]
         plain: Option<bool>,
+        #[serde(default)]
+        also: Option<Vec<Lang>>,
     },
 }
 
@@ -1253,7 +1264,7 @@ pub enum ClientMessage {
 impl std::fmt::Debug for ClientMessage {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            ClientMessage::Login { name, lang, plain, keywords, sex, ko_final, class, .. } => f
+            ClientMessage::Login { name, lang, plain, keywords, sex, ko_final, class, also, .. } => f
                 .debug_struct("Login")
                 .field("name", name)
                 .field("password", &"***")
@@ -1263,10 +1274,11 @@ impl std::fmt::Debug for ClientMessage {
                 .field("sex", sex)
                 .field("ko_final", ko_final)
                 .field("class", class)
+                .field("also", also)
                 .finish(),
             ClientMessage::Command { text } => f.debug_struct("Command").field("text", text).finish(),
-            ClientMessage::Settings { keywords, lang, plain } => {
-                f.debug_struct("Settings").field("keywords", keywords).field("lang", lang).field("plain", plain).finish()
+            ClientMessage::Settings { keywords, lang, plain, also } => {
+                f.debug_struct("Settings").field("keywords", keywords).field("lang", lang).field("plain", plain).field("also", also).finish()
             }
         }
     }
@@ -1286,8 +1298,10 @@ mod tests {
             agent: "Vallen".into(),
             event: Event::Say { from: SELF.into(), from_id: None, text: "hi".into(), direction: Direction::Out, line: None },
             text: vec!["You say, 'hi'".into()],
+            texts: BTreeMap::new(),
         };
         let json = serde_json::to_value(&e).unwrap();
+        assert!(json.get("texts").is_none(), "only when other languages were asked for");
         assert_eq!(json["type"], "comm.say");
         assert_eq!(json["data"]["from"], "self");
         assert_eq!(json["data"]["direction"], "out");
@@ -1301,6 +1315,8 @@ mod tests {
         let m: ClientMessage = serde_json::from_str(r#"{"type":"login","name":"Ana","password":"hunter2","lang":"ko"}"#).unwrap();
         assert!(matches!(&m, ClientMessage::Login { lang: Lang::Ko, plain: false, .. }));
         assert!(!format!("{m:?}").contains("hunter2"));
+        let m: ClientMessage = serde_json::from_str(r#"{"type":"login","name":"Ana","password":"x","lang":"ko","also":["en"]}"#).unwrap();
+        assert!(matches!(&m, ClientMessage::Login { also, .. } if also == &vec![Lang::En]));
         let c: ClientMessage = serde_json::from_str(r#"{"type":"command","text":"look"}"#).unwrap();
         assert_eq!(c, ClientMessage::Command { text: "look".into() });
     }
