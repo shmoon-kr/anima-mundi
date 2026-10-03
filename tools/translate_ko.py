@@ -167,10 +167,43 @@ def text_of(f):
     return " ".join(v if isinstance(v, str) else " ".join(v) for v in f.values())
 
 
+def _has(low, phrase):
+    return re.search(r"(?<![a-z])" + re.escape(phrase.lower()) + r"(?![a-z])", low) is not None
+
+
 def terms_in(text, terms):
-    """Glossary entries that occur in an English text (whole words, case-insensitive)."""
+    """Glossary entries that occur in an English text (whole words, case-insensitive). A term with `with`
+    (words of its context, e.g. crown with tree: 우듬지 is the crown of a tree, not a king's) only when
+    one of them is in the text too."""
     low = text.lower()
-    return [t for t in terms if re.search(r"(?<![a-z])" + re.escape(t["en"].lower()) + r"(?![a-z])", low)]
+    return [t for t in terms if _has(low, t["en"]) and (not t.get("with") or any(_has(low, w) for w in t["with"]))]
+
+
+_STOP = {"of", "a", "an", "the", "in", "on", "to", "and", "or", "adj", "set", "item", "worn", "someone", "etc", "as"}
+
+
+def plain_terms(en, ko, note=""):
+    """A review's term as plain phrases a text can contain: "crown (of a tree)" -> crown, note "(of a
+    tree)", with [tree, trees]; "main path / main trail" -> two terms (ko split the same way if it is).
+    The 2026-10-04 cleanup found 117 of 488 terms that no text could ever match."""
+    quals = re.findall(r"\(([^)]*)\)", en)
+    base = re.sub(r"\s*\([^)]*\)\s*", " ", en).strip()
+    alts = [re.sub(r"\s+", " ", a.strip()) for a in re.split(r"\s*/\s*", base) if a.strip()]
+    kos = [k.strip() for k in re.split(r"\s*/\s*", ko)]
+    out = []
+    for i, a in enumerate(alts):
+        if not re.search(r"[A-Za-z]", a):
+            continue
+        t = {"en": a, "ko": kos[i] if len(kos) == len(alts) else ko}
+        if quals:
+            t["note"] = ("(" + "; ".join(quals) + ") " + note).strip()
+            words = [w for w in re.findall(r"[a-z]{3,}", " ".join(quals).lower()) if w not in _STOP]
+            if words and len(a.split()) == 1:
+                t["with"] = sorted(set(words + [w + "s" for w in words if not w.endswith("s")]))
+        elif note:
+            t["note"] = note
+        out.append(t)
+    return out
 
 
 def term_hash(t):
@@ -735,19 +768,20 @@ def apply_proposals(zone, terms, examples):
     mark = f"review {zone} {time.strftime('%Y-%m-%d')}"
     text = GLOSSARY.read_text(encoding="utf-8").rstrip("\n") + "\n"
     added = []
-    for t in terms:
-        if not t.get("en") or not t.get("ko") or t["en"].lower() in have:
+    for proposed in terms:
+        if not proposed.get("en") or not proposed.get("ko"):
             continue
-        # guidance in the prompt until a person confirms it: not enforced (strict false), and its words
-        # to avoid only proposed (a review's "trail -> 오솔길, not 산길" would reject a mountain trail)
-        entry = {"en": t["en"], "ko": t["ko"], "kind": "review", "strict": False, "added_by": mark}
-        if t.get("avoid"):
-            entry["avoid_proposed"] = list(t["avoid"])
-        if t.get("why"):
-            entry["note"] = t["why"]
-        text += "  - " + json.dumps(entry, ensure_ascii=False) + "\n"
-        have.add(t["en"].lower())
-        added.append(f"term {t['en']} -> {t['ko']}")
+        for t in plain_terms(proposed["en"], proposed["ko"], proposed.get("why", "")):
+            if t["en"].lower() in have:
+                continue
+            # guidance in the prompt until a person confirms it: not enforced (strict false), and its words
+            # to avoid only proposed (a review's "trail -> 오솔길, not 산길" would reject a mountain trail)
+            entry = {**t, "kind": "review", "strict": False, "added_by": mark}
+            if proposed.get("avoid"):
+                entry["avoid_proposed"] = list(proposed["avoid"])
+            text += "  - " + json.dumps(entry, ensure_ascii=False) + "\n"
+            have.add(t["en"].lower())
+            added.append(f"term {t['en']} -> {t['ko']}")
     fresh = [e for e in examples if e.get("en") and e.get("bad") and e.get("good") and e["en"].lower() not in seen]
     if fresh:
         block = "".join("  - " + json.dumps({"en": e["en"], "bad": e["bad"], "good": e["good"], "added_by": mark},
