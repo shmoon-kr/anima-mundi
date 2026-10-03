@@ -302,11 +302,35 @@ pub enum Event {
     },
 }
 
-/// A text command from a client (PROTOCOL.md §4, the part the engine sees: `source` and `secret`
-/// are the runtime's and never reach the simulation).
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-pub struct Command {
-    pub text: String,
+/// What a client sends, one JSON object per WebSocket text frame. A Mundi addition: the text adapter
+/// talks telnet. `command` carries the text of PROTOCOL.md §4 `command.send` (its `source` and `secret`
+/// are the runtime's and never reach the engine).
+#[derive(Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(tag = "type", rename_all = "snake_case")]
+pub enum ClientMessage {
+    /// Logs in, creating the character the first time a name is used. `lang` picks the language of
+    /// the rendered text (D14); `plain` asks for text without colour codes (agents, D20).
+    Login {
+        name: String,
+        password: String,
+        #[serde(default)]
+        lang: Lang,
+        #[serde(default)]
+        plain: bool,
+    },
+    Command { text: String },
+}
+
+/// Never prints the password (PROTOCOL.md §5).
+impl std::fmt::Debug for ClientMessage {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            ClientMessage::Login { name, lang, plain, .. } => {
+                f.debug_struct("Login").field("name", name).field("password", &"***").field("lang", lang).field("plain", plain).finish()
+            }
+            ClientMessage::Command { text } => f.debug_struct("Command").field("text", text).finish(),
+        }
+    }
 }
 
 #[cfg(test)]
@@ -331,6 +355,15 @@ mod tests {
         assert_eq!(json["text"][0], "You say, 'hi'");
         let back: Envelope = serde_json::from_value(json).unwrap();
         assert_eq!(back, e);
+    }
+
+    #[test]
+    fn client_messages_hide_the_password() {
+        let m: ClientMessage = serde_json::from_str(r#"{"type":"login","name":"Ana","password":"hunter2","lang":"ko"}"#).unwrap();
+        assert!(matches!(&m, ClientMessage::Login { lang: Lang::Ko, plain: false, .. }));
+        assert!(!format!("{m:?}").contains("hunter2"));
+        let c: ClientMessage = serde_json::from_str(r#"{"type":"command","text":"look"}"#).unwrap();
+        assert_eq!(c, ClientMessage::Command { text: "look".into() });
     }
 
     #[test]

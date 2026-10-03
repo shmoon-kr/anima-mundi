@@ -158,6 +158,15 @@ impl Sim {
         Some(&self.world.rooms[c.room].id)
     }
 
+    /// Every character in the game and where they are, in the order they entered.
+    pub fn places(&self) -> Vec<(String, String)> {
+        self.order
+            .iter()
+            .filter_map(|k| self.chars.get(*k))
+            .map(|c| (c.name.clone(), self.world.rooms[c.room].id.clone()))
+            .collect()
+    }
+
     /// Characters that left the game in the last steps, drained.
     pub fn take_departures(&mut self) -> Vec<Departure> {
         std::mem::take(&mut self.departed)
