@@ -153,11 +153,14 @@ def prompt(batch, conventions, terms):
             f"<|im_start|>assistant\n<think>\n\n</think>\n\n"), used
 
 
-def ask(text, size):
+def ask(text, size, attempt=1):
     """`size`: characters of the batch's source JSON. The answer gets about as many tokens (Korean takes
-    more tokens per character than English), so a model stuck repeating itself stops early."""
+    more tokens per character than English), so a model stuck repeating itself stops early. A retry
+    is hotter and penalises repeats: the model sometimes loops on one clause until the cap."""
     limit = min(6000, max(800, size))
-    body = {"model": MODEL, "prompt": text, "temperature": 0.2, "max_tokens": limit, "stop": ["<|im_end|>"]}
+    body = {"model": MODEL, "prompt": text, "max_tokens": limit, "stop": ["<|im_end|>"],
+            "temperature": 0.2 + 0.25 * (attempt - 1), "repeat_penalty": 1.0 + 0.1 * (attempt - 1),
+            "frequency_penalty": 0.3 * (attempt - 1)}
     rq = urllib.request.Request(URL, json.dumps(body).encode(), {"Content-Type": "application/json"})
     with urllib.request.urlopen(rq, timeout=1800) as r:
         out = json.loads(r.read())
@@ -301,7 +304,7 @@ def translate(zone, conventions, terms, log):
         for attempt in range(1, TRIES + 1):
             text, used = prompt(batch, conventions, terms)
             try:
-                raw, usage = ask(text, len(json.dumps(batch, ensure_ascii=False)))
+                raw, usage = ask(text, len(json.dumps(batch, ensure_ascii=False)), attempt)
                 out = parse(raw)
                 bad = problems(batch, out, list(used.values()))
             except (ValueError, KeyError, OSError) as e:
