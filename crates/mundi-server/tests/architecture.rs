@@ -24,6 +24,7 @@ fn rules() -> BTreeMap<&'static str, (&'static [&'static str], &'static [&'stati
         ("mundi-store", (&["mundi-sim", "mundi-render", "mundi-net"][..], &["tokio-tungstenite", "fluent", "fluent-bundle"][..])),
         ("mundi-net", (&["mundi-sim", "mundi-store"][..], &["rusqlite"][..])),
         ("mundi-convert", (&["mundi-sim", "mundi-render", "mundi-store", "mundi-net"][..], &[][..])),
+        ("mundi-telnet", (&["mundi-content", "mundi-sim", "mundi-render", "mundi-store", "mundi-net"][..], &["rusqlite", "fluent", "fluent-bundle"][..])),
         ("mundi-server", (&[][..], &[][..])),
     ])
 }

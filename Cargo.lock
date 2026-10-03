@@ -552,6 +552,7 @@ dependencies = [
  "mundi-render",
  "mundi-sim",
  "mundi-store",
+ "mundi-telnet",
  "serde",
  "serde_json",
  "tempfile",
@@ -579,6 +580,16 @@ dependencies = [
  "argon2",
  "rusqlite",
  "tempfile",
+]
+
+[[package]]
+name = "mundi-telnet"
+version = "0.1.0"
+dependencies = [
+ "futures-util",
+ "serde_json",
+ "tokio",
+ "tokio-tungstenite",
 ]
 
 [[package]]
