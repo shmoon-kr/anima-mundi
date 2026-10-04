@@ -33,20 +33,27 @@ def report(days):
     lines.append(f"## Zones reviewed in the last {days} day(s): {len(recent)}")
     for r in recent:
         flag = f"  ** over the stop line ({t.STOP_RATE:.0%}) **" if r.get("stopped") else ""
-        lines.append(f"- zone {r['zone']} ({r['date']}): wrong {r['wrong_rate']:.0%}, awkward {r['awkward_rate']:.0%}"
+        kind = f"full review, {len(r.get('fixed', []))} fixed" if r.get("full") else "sample"
+        lines.append(f"- zone {r['zone']} ({r['date']}, {kind}): wrong {r['wrong_rate']:.0%}, awkward {r['awkward_rate']:.0%}"
                      f" of {r['n']}{flag}")
     lines += ["", "## Trend (every review, oldest first): wrong / awkward"]
-    lines.append("  " + ", ".join(f"{r['zone']} {r['wrong_rate']:.0%}/{r['awkward_rate']:.0%}" for _, r in all_reviews)
-                 or "  (none)")
-    lines += ["", "## For a person: what the reviews called wrong"]
+    lines.append("  " + ", ".join(f"{r['zone']}{' (full)' if r.get('full') else ''} {r['wrong_rate']:.0%}/{r['awkward_rate']:.0%}"
+                                  for _, r in all_reviews) or "  (none)")
+    lines += ["", "## For a person: what the reviews called wrong (sample reviews; full reviews fixed theirs)"]
     for r in recent:
-        for it in r["sample"]:
+        if r.get("full"):
+            continue
+        for it in r.get("sample", []):
             if it.get("verdict") == "wrong":
                 lines.append(f"- {it['id']} {it['field']}: {it['note']}")
     g = yaml.safe_load(t.GLOSSARY.read_text(encoding="utf-8"))
-    pending = [x for x in g["terms"] if x.get("kind") == "review"]
-    examples = [x for x in g.get("examples", []) if x.get("added_by")]
-    lines += ["", f"## Proposed by reviews, to confirm or drop ({len(pending)} terms, {len(examples)} examples)"]
+    cutoff = time.strftime("%Y-%m-%d", time.localtime(time.time() - days * 86400))
+    added_on = lambda x: (x.get("added_by") or "").rsplit(" ", 1)[-1]
+    all_pending = [x for x in g["terms"] if x.get("kind") == "review"]
+    pending = [x for x in all_pending if added_on(x) >= cutoff]
+    examples = [x for x in g.get("examples", []) if x.get("added_by") and added_on(x) >= cutoff]
+    lines += ["", f"## Proposed by reviews in the last {days} day(s), to confirm or drop ({len(pending)} terms, "
+                  f"{len(examples)} examples; {len(all_pending) - len(pending)} older terms still unconfirmed)"]
     for x in pending:
         avoid = f", not {', '.join(x.get('avoid_proposed', []))}" if x.get("avoid_proposed") else ""
         lines.append(f"- term {x['en']} -> {x['ko']}{avoid} ({x['added_by']}): {x.get('note', '')}")
@@ -65,29 +72,24 @@ def report(days):
 
 
 def edit_term(en, confirm):
-    text = t.GLOSSARY.read_text(encoding="utf-8")
-    out, found = [], False
-    for line in text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("- {") and '"kind": "review"' in line:
-            entry = yaml.safe_load(stripped[2:])
-            if entry.get("en", "").lower() == en.lower():
-                found = True
-                if not confirm:
-                    continue
-                entry.pop("strict", None)
-                entry["kind"] = "term"
-                if entry.get("avoid_proposed"):
-                    entry["avoid"] = entry.pop("avoid_proposed")
-                entry["confirmed"] = time.strftime("%Y-%m-%d")
-                import json
-                line = "  - " + json.dumps(entry, ensure_ascii=False)
-        out.append(line)
+    """On the parsed glossary (it is block YAML since the 2026-10-04 cleanup, not one JSON line a term)."""
+    g = yaml.safe_load(t.GLOSSARY.read_text(encoding="utf-8"))
+    terms, found = [], False
+    for entry in g["terms"]:
+        if entry.get("kind") == "review" and entry.get("en", "").lower() == en.lower():
+            found = True
+            if not confirm:
+                continue
+            entry.pop("strict", None)
+            entry["kind"] = "term"
+            if entry.get("avoid_proposed"):
+                entry["avoid"] = entry.pop("avoid_proposed")
+            entry["confirmed"] = time.strftime("%Y-%m-%d")
+        terms.append(entry)
     if not found:
         sys.exit(f"no review term {en!r}")
-    new = "\n".join(out) + "\n"
-    yaml.safe_load(new)
-    t.GLOSSARY.write_text(new, encoding="utf-8")
+    g["terms"] = terms
+    t.GLOSSARY.write_text(yaml.safe_dump(g, allow_unicode=True, sort_keys=False, width=120), encoding="utf-8")
     print(("confirmed " if confirm else "dropped ") + en)
 
 

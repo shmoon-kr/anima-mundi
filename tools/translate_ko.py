@@ -767,7 +767,6 @@ def apply_proposals(zone, terms, examples):
     have = {t["en"].lower() for t in g["terms"]}
     seen = {e["en"].lower() for e in g.get("examples", [])}
     mark = f"review {zone} {time.strftime('%Y-%m-%d')}"
-    text = GLOSSARY.read_text(encoding="utf-8").rstrip("\n") + "\n"
     added = []
     for proposed in terms:
         if not proposed.get("en") or not proposed.get("ko"):
@@ -780,19 +779,16 @@ def apply_proposals(zone, terms, examples):
             entry = {**t, "kind": "review", "strict": False, "added_by": mark}
             if proposed.get("avoid"):
                 entry["avoid_proposed"] = list(proposed["avoid"])
-            text += "  - " + json.dumps(entry, ensure_ascii=False) + "\n"
+            g["terms"].append(entry)
             have.add(t["en"].lower())
             added.append(f"term {t['en']} -> {t['ko']}")
-    fresh = [e for e in examples if e.get("en") and e.get("bad") and e.get("good") and e["en"].lower() not in seen]
-    if fresh:
-        block = "".join("  - " + json.dumps({"en": e["en"], "bad": e["bad"], "good": e["good"], "added_by": mark},
-                                            ensure_ascii=False) + "\n" for e in fresh)
-        i = text.find("\nforbid:")
-        if i >= 0:
-            text = text[:i].rstrip("\n") + "\n" + block + text[i:]
-            added += [f"example {e['en']}" for e in fresh]
-    yaml.safe_load(text)                      # still a glossary
-    GLOSSARY.write_text(text, encoding="utf-8")
+    for e in examples:
+        if e.get("en") and e.get("bad") and e.get("good") and e["en"].lower() not in seen:
+            g.setdefault("examples", []).append({"en": e["en"], "bad": e["bad"], "good": e["good"], "added_by": mark})
+            seen.add(e["en"].lower())
+            added.append(f"example {e['en']}")
+    # the parsed glossary written back (block YAML since the 2026-10-04 cleanup: no lines appended by hand)
+    GLOSSARY.write_text(yaml.safe_dump(g, allow_unicode=True, sort_keys=False, width=120), encoding="utf-8")
     return added
 
 
