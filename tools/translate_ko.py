@@ -172,12 +172,27 @@ def _has(low, phrase):
     return re.search(r"(?<![a-z])" + re.escape(phrase.lower()) + r"(?![a-z])", low) is not None
 
 
+def _has_exact(text, phrase):
+    return re.search(r"(?<![A-Za-z])" + re.escape(phrase) + r"(?![A-Za-z])", text) is not None
+
+
 def terms_in(text, terms):
-    """Glossary entries that occur in an English text (whole words, case-insensitive). A term with `with`
-    (words of its context, e.g. crown with tree: 우듬지 is the crown of a tree, not a king's) only when
-    one of them is in the text too."""
+    """Glossary entries that occur in an English text (whole words). Case-insensitive, except a term
+    with `case_sensitive` (a proper noun spelled like a word: Faith, Cancer) - only when written so. A
+    term with `with` (words of its context, e.g. crown with tree: 우듬지 is the crown of a tree, not a
+    king's) only when one of them is in the text too."""
     low = text.lower()
-    return [t for t in terms if _has(low, t["en"]) and (not t.get("with") or any(_has(low, w) for w in t["with"]))]
+
+    def occurs(t):
+        return _has_exact(text, t["en"]) if t.get("case_sensitive") else _has(low, t["en"])
+    return [t for t in terms if occurs(t) and (not t.get("with") or any(_has(low, w) for w in t["with"]))]
+
+
+def for_zone(terms, zone):
+    """The terms that apply in a zone: every world term, and a zone term (`zones: [..]`, a list because
+    one area can span zones, Midgaard 30-32) only in its own zones (square = 칸 on the chessboard only)."""
+    z = str(zone)
+    return [t for t in terms if not t.get("zones") or z in {str(x) for x in t["zones"]}]
 
 
 _STOP = {"of", "a", "an", "the", "in", "on", "to", "and", "or", "adj", "set", "item", "worn", "someone", "etc", "as"}
@@ -527,6 +542,7 @@ def memory(terms=()):
 
 
 def translate(zone, conventions, terms, log):
+    terms = for_zone(terms, zone)                  # another zone's terms never reach this zone's prompts
     src = load_zone(zone)
     tm = memory(terms) if zone != "combat" else {}
     state_path = LOCALE / f"{zone}.state.json"
